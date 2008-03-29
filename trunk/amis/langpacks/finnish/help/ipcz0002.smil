@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="ncc:timeInThisSmil" content="00:00:47.469"/>
+		<meta name="ncc:totalElapsedTime" content="00:00:12.173"/>
+		<layout>
+			<region id="txt-view"/>
+		</layout>
+		<meta name="ncc:generator" content="EasePublisher 2.02 Build 025 # 091650"/>
+        <meta name="title" content="Mikä on AMIS?"/>
+        <meta name="dc:title" content="help"/>
+        <meta name="dc:identifier" content="celia"/>
+    </head>
+	<body>
+		<seq dur="47.469s">
+			<par endsync="last" id="ifbo_0002">
+				<text src="amishelp.html#ifbo_0004" id="ifbo_000a"/>
+				<seq>
+					<audio src="02_Mik__on_AMIS_.mp3" clip-begin="npt=0.000s" clip-end="npt=2.339s" id="audio_0001"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0003">
+				<text src="amishelp.html#ifbo_0005" id="ifbo_000b"/>
+				<seq>
+					<audio src="02_Mik__on_AMIS_.mp3" clip-begin="npt=2.339s" clip-end="npt=9.539s" id="audio_0002"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0004">
+				<text src="amishelp.html#ifbo_0006" id="ifbo_000c"/>
+				<seq>
+					<audio src="02_Mik__on_AMIS_.mp3" clip-begin="npt=9.539s" clip-end="npt=18.359s" id="audio_0003"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0005">
+				<text src="amishelp.html#ifbo_0007" id="ifbo_000d"/>
+				<seq>
+					<audio src="02_Mik__on_AMIS_.mp3" clip-begin="npt=18.359s" clip-end="npt=24.419s" id="audio_0004"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0006">
+				<text src="amishelp.html#ifbo_0008" id="ifbo_000e"/>
+				<seq>
+					<audio src="02_Mik__on_AMIS_.mp3" clip-begin="npt=24.419s" clip-end="npt=33.597s" id="audio_0005"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0007">
+				<text src="amishelp.html#ifbo_0009" id="ifbo_000f"/>
+				<seq>
+					<audio src="02_Mik__on_AMIS_.mp3" clip-begin="npt=33.597s" clip-end="npt=38.347s" id="audio_0006"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0008">
+				<text src="amishelp.html#ifbo_0010" id="ifbo_0010"/>
+				<seq>
+					<audio src="02_Mik__on_AMIS_.mp3" clip-begin="npt=38.347s" clip-end="npt=43.207s" id="audio_0007"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0009">
+				<text src="amishelp.html#ifbo_0011" id="ifbo_0011"/>
+				<seq>
+					<audio src="02_Mik__on_AMIS_.mp3" clip-begin="npt=43.207s" clip-end="npt=47.469s" id="audio_0008"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

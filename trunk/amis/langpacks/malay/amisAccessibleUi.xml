@@ -1,0 +1,2345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui xml:lang="en">
+  <containers>
+    <container id="file">
+      <note>This is the menu header "File"</note>
+      <caption>
+        <text id="_id52736" xml:lang="ms" status="ok">Fail</text>
+        <originalText>File</originalText>
+        
+      <audio src="./audio/002_Fail.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0003.smil#text_0003"/></caption>
+      <action mfcid="ID_MENU_FILE_OPEN" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and a toolbar item</note>
+        <icon src="./open.png" type="smallIcon"/>
+        <caption>
+          <text id="_id52773" xml:lang="ms" status="ok">Buka</text>
+          <originalText>Open...</originalText>
+          
+        <audio src="./audio/003_Buka.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0004.smil#text_0004"/></caption>
+        <description>
+          <text id="_id52791" xml:lang="ms" status="ok">Buka Buku DAISY Dari Sistem Fail Lokal</text>
+          <originalText>Open a Daisy book from the local file system</originalText>
+          
+        <audio src="./audio/004_Buka_Buku_DAISY_Dari_Sistem_Fa.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0005.smil#text_0005"/></description>
+        <accelerator>
+          <text id="_id52810">Ctrl+O</text>
+          <originalText>Ctrl+O</originalText>
+          
+        <audio src="./audio/005_CtrlO.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0006.smil#text_0006"/></accelerator>
+        <mnemonic>
+          <text id="_id52828">O</text>
+          <originalText>O</originalText>
+          
+        <audio src="./audio/006_O.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0007.smil#text_0007"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_LOADCD" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and a toolbar item</note>
+        <icon src="./settings/img/cd3.ico" type="smallIcon"/>
+        <icon src="./settings/img/cd_big.ico" type="largeIcon"/>
+        <caption>
+          <text id="_id52872" xml:lang="ms" status="ok">Memuat Cakera Padat</text>
+          <originalText>Load CD</originalText>
+          
+        <audio src="./audio/007_Memuat_Cakera_Padat.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0008.smil#text_0008"/></caption>
+        <description>
+          <text id="_id52889" xml:lang="ms" status="ok">Memuat Buku DAISY Dari Cakera Padat</text>
+          <originalText>Load a DAISY book from CD ROM</originalText>
+          
+        <audio src="./audio/008_Memuat_Buku_DAISY_Dari_Cakera_.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0009.smil#text_0009"/></description>
+        <accelerator>
+          <text id="_id52908">Ctrl+L</text>
+          <originalText>Ctrl+L</originalText>
+          
+        <audio src="./audio/009_CtrlL.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis000a.smil#text_000a"/></accelerator>
+        <mnemonic>
+          <text id="_id52926">L</text>
+          <originalText>L</originalText>
+          
+        <audio src="./audio/010_L.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis000b.smil#text_000b"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_SEARCHDRIVE" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id52955" xml:lang="ms" status="ok">Carian</text>
+          <originalText>Search...</originalText>
+          
+        <audio src="./audio/011_Carian.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis000c.smil#text_000c"/></caption>
+        <description>
+          <text id="_id52973" xml:lang="ms" status="ok">Mencari Buku DAISY Dalam Lokal Drive</text>
+          <originalText>Search local drives for DAISY books</originalText>
+          
+        <audio src="./audio/012_Mencari_Buku_DAISY_Dalam_Lokal.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis000d.smil#text_000d"/></description>
+        <mnemonic>
+          <text id="_id52992">S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/013_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis000e.smil#text_000e"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_PREFERENCES" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id53021" xml:lang="ms" status="ok">Pilihan</text>
+          <originalText>Preferences...</originalText>
+          
+        <audio src="./audio/014_Pilihan.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis000f.smil#text_000f"/></caption>
+        <description>
+          <text id="_id53039" xml:lang="ms" status="ok">Ini Adalah Pilihan Applikasi Dialog</text>
+          <originalText>This is the application preferences dialog.</originalText>
+          
+        <audio src="./audio/015_Ini_Adalah_Pilihan_Applikasi_D.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0010.smil#text_0010"/></description>
+        <mnemonic>
+          <text id="_id53058">P</text>
+          <originalText>P</originalText>
+          
+        <audio src="./audio/016_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0011.smil#text_0011"/></mnemonic>
+      </action>
+      <container id="recentBooksList">
+        <note>This is the menu header for the recent books sub-menu.</note>
+        <caption>
+          <text id="_id53085" xml:lang="ms" status="ok">Terkini</text>
+          <originalText>Recent</originalText>
+          
+        <audio src="./audio/017_Terkini.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0012.smil#text_0012"/></caption>
+        <switch element="action">
+          <action mfcid="ID_FILE_RECENT_EMPTY" widget="menuItem" condition="ID_FILE_RECENT_EMPTY">
+            <note>This is going to be a menu item</note>
+            <caption>
+              <text id="_id53121" xml:lang="ms" status="ok">Kosong</text>
+              <originalText>Empty</originalText>
+              
+            <audio src="./audio/018_Kosong.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0013.smil#text_0013"/></caption>
+            <description>
+              <text id="_id53138" xml:lang="ms" status="ok">Tiada Buku DAISY Dibaca Baru-baru Ini</text>
+              <originalText>There are no recently read books.</originalText>
+              
+            <audio src="./audio/019_Tiada_Buku_DAISY_Dibaca_Baruba.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0014.smil#text_0014"/></description>
+          </action>
+          <action mfcid="BOOK_BASE_ID" widget="menuItem" condition="BOOK_BASE_ID">
+            <note>This is going to be a menu item</note>
+            <list repeat="yes">
+              <caption>
+                <promptVar name="RECENT_BOOK_TITLE"/>
+              </caption>
+            </list>
+          </action>
+        </switch>
+        <mnemonic>
+          <text id="_id53185">R</text>
+          <originalText>R</originalText>
+          
+        <audio src="./audio/020_R.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0015.smil#text_0015"/></mnemonic>
+      </container>
+      <action mfcid="ID_MENU_FILE_EXIT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id53213" xml:lang="ms" status="ok">Keluar</text>
+          <originalText>Exit</originalText>
+          
+        <audio src="./audio/021_Keluar.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0016.smil#text_0016"/></caption>
+        <description>
+          <text id="_id53231" xml:lang="ms" status="ok">Keluar Dari AMIS</text>
+          <originalText>Exit AMIS</originalText>
+          
+        <audio src="./audio/022_Keluar_Dari_AMIS.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0017.smil#text_0017"/></description>
+        <accelerator>
+          <text id="_id53249">Alt+F4</text>
+          <originalText>Alt+F4</originalText>
+          
+        <audio src="./audio/023_AltF4.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0018.smil#text_0018"/></accelerator>
+        <mnemonic>
+          <text id="_id53266">x</text>
+          <originalText>x</originalText>
+          
+        <audio src="./audio/024_x.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0019.smil#text_0019"/></mnemonic>
+      </action>
+      <accelerator>
+        <text id="_id53285">Alt+F</text>
+        <originalText>Alt+F</originalText>
+        
+      <audio src="./audio/025_AltF.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis001a.smil#text_001a"/></accelerator>
+      <mnemonic>
+        <text id="_id53303">F</text>
+        <originalText>F</originalText>
+        
+      <audio src="./audio/026_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis001b.smil#text_001b"/></mnemonic>
+    </container>
+    <container id="view">
+      <note>This is the menu header "View"</note>
+      <caption>
+        <text id="_id53329" xml:lang="ms" status="ok">Paparan</text>
+        <originalText>View</originalText>
+        
+      <audio src="./audio/027_Paparan.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis001c.smil#text_001c"/></caption>
+      <action mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id53358" xml:lang="ms" status="ok">Bar Sisi</text>
+          <originalText>Sidebar</originalText>
+          
+        <audio src="./audio/028_Bar_Sisi.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis001d.smil#text_001d"/></caption>
+        <description>
+          <text id="_id53376" xml:lang="ms" status="ok">Membuka atau Menutup Bar Sisi</text>
+          <originalText>Turn the sidebar on or off.</originalText>
+          
+        <audio src="./audio/029_Membuka_atau_Menutup_Bar_Sisi.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis001e.smil#text_001e"/></description>
+        <mnemonic>
+          <text id="_id53394">S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/030_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis001f.smil#text_001f"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_BASIC" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id53423" xml:lang="ms" status="ok">Mod Paparan Asas</text>
+          <originalText>Basic View Mode</originalText>
+          
+        <audio src="./audio/031_Mod_Paparan_Asas.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0020.smil#text_0020"/></caption>
+        <description>
+          <text id="_id53441" xml:lang="ms" status="ok">Menukar Paparan Ke Mod Asas</text>
+          <originalText>Switch the view to basic mode.</originalText>
+          
+        <audio src="./audio/032_Menukar_Paparan_Ke_Mod_Asas.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0021.smil#text_0021"/></description>
+        <accelerator>
+          <text id="_id53460">F11</text>
+          <originalText>F11</originalText>
+          
+        <audio src="./audio/033_F11.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0022.smil#text_0022"/></accelerator>
+        <mnemonic>
+          <text id="_id53477">B</text>
+          <originalText>B</originalText>
+          
+        <audio src="./audio/034_B.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0023.smil#text_0023"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_CONTRAST" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item</note>
+        <icon src="./settings/img/contrast.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id53513" xml:lang="ms" status="ok">Beza Jelas Tinggi</text>
+          <originalText>High Contrast</originalText>
+          
+        <audio src="./audio/035_Beza_Jelas_Tinggi.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0024.smil#text_0024"/></caption>
+        <description>
+          <text id="_id53530" xml:lang="ms" status="ok">Gunakan Warna Beza Jelas Untuk Teks Yang Dipaparkan</text>
+          <originalText>Use high contrast colors for the text display.</originalText>
+          
+        <audio src="./audio/036_Gunakan_Warna_Beza_Jelas_Untuk.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0025.smil#text_0025"/></description>
+        <accelerator>
+          <text id="_id53550">Ctrl+S</text>
+          <originalText>Ctrl+S</originalText>
+          
+        <audio src="./audio/037_CtrlS.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0026.smil#text_0026"/></accelerator>
+        <mnemonic>
+          <text id="_id53568">C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/038_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0027.smil#text_0027"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_LARGEFONT" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/font.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id53604" xml:lang="ms" status="ok">Tingkatkan Saiz Fon</text>
+          <originalText>Increase Font Size</originalText>
+          
+        <audio src="./audio/039_Tingkatkan_Saiz_Fon.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0028.smil#text_0028"/></caption>
+        <description>
+          <text id="_id53622" xml:lang="ms" status="ok">Tingkatkan Saiz Fon Sedikit Demi Sedikit</text>
+          <originalText>Gradually increase the font size.</originalText>
+          
+        <audio src="./audio/040_Tingkatkan_Saiz_Fon_Sedikit_De.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0029.smil#text_0029"/></description>
+        <mnemonic>
+          <text id="_id53642">I</text>
+          <originalText>I</originalText>
+          
+        <audio src="./audio/041_I.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis002a.smil#text_002a"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_RESETFONT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id53670" xml:lang="ms" status="ok">Kembalikan Saiz Fon</text>
+          <originalText>Reset Font Size</originalText>
+          
+        <audio src="./audio/042_Kembalikan_Saiz_Fon.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis002b.smil#text_002b"/></caption>
+        <description>
+          <text id="_id53688" xml:lang="ms" status="ok">Tetapkan Saiz Fon Ke Saiz Asal</text>
+          <originalText>Set the font size to the default setting.</originalText>
+          
+        <audio src="./audio/043_Tetapkan_Saiz_Fon_Ke_Saiz_Asal.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis002c.smil#text_002c"/></description>
+        <mnemonic>
+          <text id="_id53708">R</text>
+          <originalText>R</originalText>
+          
+        <audio src="./audio/044_R.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis002d.smil#text_002d"/></mnemonic>
+      </action>
+      <action mfcid="NAVLIST_BASE_ID" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <promptVar name="NAV_LIST_NAME"/>
+        </caption>
+        <description>
+          <promptVar name="NAV_LIST_DESCRIPTION"/>
+        </description>
+      </action>
+      <accelerator>
+        <text id="_id53752">Alt+V</text>
+        <originalText>Alt+V</originalText>
+        
+      <audio src="./audio/045_AltV.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis002e.smil#text_002e"/></accelerator>
+      <mnemonic>
+        <text id="_id53770">V</text>
+        <originalText>V</originalText>
+        
+      <audio src="./audio/046_V.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis002f.smil#text_002f"/></mnemonic>
+    </container>
+    <container id="play">
+      <note>This is the menu header "Play"</note>
+      <caption>
+        <text id="_id53797" xml:lang="ms" status="ok">Mainkan</text>
+        <originalText>Play</originalText>
+        
+      <audio src="./audio/047_Mainkan.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0030.smil#text_0030"/></caption>
+      <switch element="action">
+        <action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" condition="canPlay">
+          <note>This is going to be a menu item and toolbar item</note>
+          <icon src="./settings/img/play-big.ico" type="smallIcon"/>
+          <icon src="./settings/img/play_big.ico" type="largeIcon"/>
+          <caption>
+            <text id="_id53845" xml:lang="ms" status="ok">Mainkan</text>
+            <originalText>Play</originalText>
+            
+          <audio src="./audio/048_Mainkan.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0031.smil#text_0031"/></caption>
+          <description>
+            <text id="_id53863" xml:lang="ms" status="ok">Mulakan Penyelarasan Main Semula</text>
+            <originalText>Start synchronized playback.</originalText>
+            
+          <audio src="./audio/049_Mulakan_Penyelarasan_Main_Semu.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0032.smil#text_0032"/></description>
+          <accelerator>
+            <text id="_id53882">Space</text>
+            <originalText>Space</originalText>
+            
+          <audio src="./audio/050_Space.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0033.smil#text_0033"/></accelerator>
+          <mnemonic>
+            <text id="_id53900">P</text>
+            <originalText>P</originalText>
+            
+          <audio src="./audio/051_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0034.smil#text_0034"/></mnemonic>
+        </action>
+        <action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" condition="canPause">
+          <note>This is going to be a menu item and toolbar item</note>
+          <icon src="./settings/img/pause.ico" type="smallIcon"/>
+          <icon src="./settings/img/pause_big.ico" type="largeIcon"/>
+          <caption>
+            <text id="_id53945" xml:lang="ms" status="ok">Berhenti Sebentar</text>
+            <originalText>Pause</originalText>
+            
+          <audio src="./audio/052_Berhenti_Sebentar.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0035.smil#text_0035"/></caption>
+          <description>
+            <text id="_id53963" xml:lang="ms" status="ok">Hentikan Main Semula Buku DAISY Ini</text>
+            <originalText>Pause playback of this DAISY book.</originalText>
+            
+          <audio src="./audio/053_Hentikan_Main_Semula_Buku_DAIS.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0036.smil#text_0036"/></description>
+          <accelerator>
+            <text id="_id53982">Space</text>
+            <originalText>Space</originalText>
+            
+          <audio src="./audio/054_Space.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0037.smil#text_0037"/></accelerator>
+          <mnemonic>
+            <text id="_id54000">a</text>
+            <originalText>a</originalText>
+            
+          <audio src="./audio/055_a.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0038.smil#text_0038"/></mnemonic>
+        </action>
+      </switch>
+      <action mfcid="ID_MENU_PLAY_ESCAPE" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id54030" xml:lang="en" status="todo">Escape</text>
+          <originalText>Escape</originalText>
+          
+        <audio src="./audio/056_Escape.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0039.smil#text_0039"/></caption>
+        <description>
+          <text id="_id54048" xml:lang="ms" status="ok">Keluar Dari Item Yang Sedang Dimainkan</text>
+          <originalText>Jump out of the currently playing item or structure.</originalText>
+          
+        <audio src="./audio/057_Keluar_Dari_Item_Yang_Sedang_D.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis003a.smil#text_003a"/></description>
+        <accelerator>
+          <text id="_id54067">Esc</text>
+          <originalText>Esc</originalText>
+          
+        <audio src="./audio/058_Esc.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis003b.smil#text_003b"/></accelerator>
+        <mnemonic>
+          <text id="_id54085">E</text>
+          <originalText>E</originalText>
+          
+        <audio src="./audio/059_E.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis003c.smil#text_003c"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_FASTER" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/fullspeedahead.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id54121" xml:lang="ms" status="ok">Lajukan</text>
+          <originalText>Faster</originalText>
+          
+        <audio src="./audio/060_Lajukan.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis003d.smil#text_003d"/></caption>
+        <description>
+          <text id="_id54139" xml:lang="ms" status="ok">Lajukan Kadar Kelajuan Main Semula</text>
+          <originalText>Increase the playback rate.</originalText>
+          
+        <audio src="./audio/061_Lajukan_Kadar_Kelajuan_Main_Se.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis003e.smil#text_003e"/></description>
+        <accelerator>
+          <text id="_id54158">Ctrl++</text>
+          <originalText>Ctrl++</originalText>
+          
+        <audio src="./audio/062_Ctrl.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis003f.smil#text_003f"/></accelerator>
+        <mnemonic>
+          <text id="_id54176">F</text>
+          <originalText>F</originalText>
+          
+        <audio src="./audio/063_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0040.smil#text_0040"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_SLOWER" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/slowdown.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id54212" xml:lang="ms" status="ok">Perlahankan</text>
+          <originalText>Slower</originalText>
+          
+        <audio src="./audio/064_Perlahankan.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0041.smil#text_0041"/></caption>
+        <description>
+          <text id="_id54230" xml:lang="ms" status="ok">Perlahankan Kadar Kelajuan Main Semula</text>
+          <originalText>Slow down the playback rate.</originalText>
+          
+        <audio src="./audio/065_Perlahankan_Kadar_Kelajuan_Mai.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0042.smil#text_0042"/></description>
+        <accelerator>
+          <text id="_id54248">Ctrl+-</text>
+          <originalText>Ctrl+-</originalText>
+          
+        <audio src="./audio/066_Ctrl.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0043.smil#text_0043"/></accelerator>
+        <mnemonic>
+          <text id="_id54266">S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/067_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0044.smil#text_0044"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_NORMALSPEED" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/normalspeed.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id54302" xml:lang="ms" status="ok">Kelajuan Normal</text>
+          <originalText>Normal Speed</originalText>
+          
+        <audio src="./audio/068_Kelajuan_Normal.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0045.smil#text_0045"/></caption>
+        <description>
+          <text id="_id54320" xml:lang="ms" status="ok">Kembalikan Kadar Main Semula Ke Normal</text>
+          <originalText>Reset the playback rate to normal.</originalText>
+          
+        <audio src="./audio/069_Kembalikan_Kadar_Main_Semula_K.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0046.smil#text_0046"/></description>
+        <accelerator>
+          <text id="_id54340">Ctrl+0</text>
+          <originalText>Ctrl+0</originalText>
+          
+        <audio src="./audio/070_Ctrl0.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0047.smil#text_0047"/></accelerator>
+        <mnemonic>
+          <text id="_id54357">N</text>
+          <originalText>N</originalText>
+          
+        <audio src="./audio/071_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0048.smil#text_0048"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_VOLUP" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id54386" xml:lang="ms" status="ok">Naikkan Kekuatan Suara</text>
+          <originalText>Increase Volume</originalText>
+          
+        <audio src="./audio/072_Naikkan_Kekuatan_Suara.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0049.smil#text_0049"/></caption>
+        <description>
+          <text id="_id54404" xml:lang="ms" status="ok">Naikkan Kekuatan Suara Sedikit Demi Sedikit</text>
+          <originalText>Gradually raise the volume.</originalText>
+          
+        <audio src="./audio/073_Naikkan_Kekuatan_Suara_Sedikit.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis004a.smil#text_004a"/></description>
+        <accelerator>
+          <text id="_id54423">Ctrl+Up</text>
+          <originalText>Ctrl+Up</originalText>
+          
+        <audio src="./audio/074_CtrlUp.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis004b.smil#text_004b"/></accelerator>
+        <mnemonic>
+          <text id="_id54441">I</text>
+          <originalText>I</originalText>
+          
+        <audio src="./audio/075_I.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis004c.smil#text_004c"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_VOLDOWN" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id54470" xml:lang="ms" status="ok">Kurangkan Kekuatan Suara</text>
+          <originalText>Decrease Volume</originalText>
+          
+        <audio src="./audio/076_Kurangkan_Kekuatan_Suara.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis004d.smil#text_004d"/></caption>
+        <description>
+          <text id="_id54488" xml:lang="ms" status="ok">Kurangkan Kekuatan Suara Sedikit Demi Sedikit</text>
+          <originalText>Gradually lower the volume.</originalText>
+          
+        <audio src="./audio/077_Kurangkan_Kekuatan_Suara_Sedik.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis004e.smil#text_004e"/></description>
+        <accelerator>
+          <text id="_id54506">Ctrl+Down</text>
+          <originalText>Ctrl+Down</originalText>
+          
+        <audio src="./audio/078_CtrlDown.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis004f.smil#text_004f"/></accelerator>
+        <mnemonic>
+          <text id="_id54524">D</text>
+          <originalText>D</originalText>
+          
+        <audio src="./audio/079_D.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0050.smil#text_0050"/></mnemonic>
+      </action>
+      <accelerator>
+        <text id="_id54542">Alt+P</text>
+        <originalText>Alt+P</originalText>
+        
+      <audio src="./audio/080_AltP.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0051.smil#text_0051"/></accelerator>
+      <mnemonic>
+        <text id="_id54560">P</text>
+        <originalText>P</originalText>
+        
+      <audio src="./audio/081_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0052.smil#text_0052"/></mnemonic>
+    </container>
+    <container id="navigate">
+      <note>This is the menu header "Navigate"</note>
+      <caption>
+        <text id="_id54587" xml:lang="ms" status="ok">Bergerak</text>
+        <originalText>Navigate</originalText>
+        
+      <audio src="./audio/082_Bergerak.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0053.smil#text_0053"/></caption>
+      <action mfcid="ID_MENU_NAV_PREVSECTION" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevsection.ico" type="smallIcon"/>
+        <icon src="./settings/img/prevsection_big.ico" type="largeIcon"/>
+        <caption>
+          <text id="_id54630" xml:lang="ms" status="ok">Seksyen Terdahulu</text>
+          <originalText>Previous Section</originalText>
+          
+        <audio src="./audio/083_Seksyen_Terdahulu.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0054.smil#text_0054"/></caption>
+        <description>
+          <text id="_id54648" xml:lang="ms" status="ok">Pergi Ke Seksyen Terdahulu</text>
+          <originalText>Go to the previous section.</originalText>
+          
+        <audio src="./audio/084_Pergi_Ke_Seksyen_Terdahulu.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0055.smil#text_0055"/></description>
+        <accelerator>
+          <text id="_id54667">Up</text>
+          <originalText>Up</originalText>
+          
+        <audio src="./audio/085_Up.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0056.smil#text_0056"/></accelerator>
+        <mnemonic>
+          <text id="_id54684">P</text>
+          <originalText>P</originalText>
+          
+        <audio src="./audio/086_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0057.smil#text_0057"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTSECTION" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextsection.ico" type="smallIcon"/>
+        <icon src="./settings/img/nextsection_big.ico" type="largeIcon"/>
+        <caption>
+          <text id="_id54728" xml:lang="ms" status="ok">Seksyen Berikut</text>
+          <originalText>Next Section</originalText>
+          
+        <audio src="./audio/087_Seksyen_Berikut.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0058.smil#text_0058"/></caption>
+        <description>
+          <text id="_id54745" xml:lang="ms" status="ok">Pergi Ke Seksyen Berikut</text>
+          <originalText>Go to the next section.</originalText>
+          
+        <audio src="./audio/088_Pergi_Ke_Seksyen_Berikut.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0059.smil#text_0059"/></description>
+        <accelerator>
+          <text id="_id54764">Down</text>
+          <originalText>Down</originalText>
+          
+        <audio src="./audio/089_Down.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis005a.smil#text_005a"/></accelerator>
+        <mnemonic>
+          <text id="_id54782">N</text>
+          <originalText>N</originalText>
+          
+        <audio src="./audio/090_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis005b.smil#text_005b"/></mnemonic>
+      </action>
+      <container id="sectiondepth">
+        <note>This is the "show section depth" sub-menu pop-up</note>
+        <caption>
+          <text id="_id54809" xml:lang="ms" status="ok">Tunjukkan Hiraki Seksyen</text>
+          <originalText>Show Section Depth</originalText>
+          
+        <audio src="./audio/091_Tunjukkan_Hiraki_Seksyen.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis005c.smil#text_005c"/></caption>
+        <switch element="action">
+          <action mfcid="ID_EMPTY" widget="menuItem" condition="ID_EMPTY">
+            <note>This is going to be a menu item</note>
+            <caption>
+              <text id="_id54844" xml:lang="ms" status="ok">Kosong</text>
+              <originalText>Empty</originalText>
+              
+            <audio src="./audio/092_Kosong.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis005d.smil#text_005d"/></caption>
+            <description>
+              <text id="_id54862" xml:lang="ms" status="ok">Tiada Tahap Seksyen</text>
+              <originalText>There are no section levels.</originalText>
+              
+            <audio src="./audio/093_Tiada_Tahap_Seksyen.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis005e.smil#text_005e"/></description>
+          </action>
+          <action mfcid="SECTION_DEPTH_BASE_ID" widget="menuItem" condition="SECTION_DEPTH_BASE_ID">
+            <note>This is going to be a menu item</note>
+            <list repeat="yes">
+              <caption>
+                <promptVar name="SECTION_DEPTH_OPTION"/>
+              </caption>
+            </list>
+          </action>
+        </switch>
+        <mnemonic>
+          <text id="_id54909">S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/094_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis005f.smil#text_005f"/></mnemonic>
+      </container>
+      <action mfcid="ID_MENU_NAV_PREVPHRASE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevphasecirc.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id54946" xml:lang="ms" status="ok">Frasa Terdahulu</text>
+          <originalText>Previous Phrase</originalText>
+          
+        <audio src="./audio/095_Frasa_Terdahulu.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0060.smil#text_0060"/></caption>
+        <description>
+          <text id="_id54964" xml:lang="ms" status="ok">Pergi Ke Frasa Terdahulu</text>
+          <originalText>Go to the previous phrase.</originalText>
+          
+        <audio src="./audio/096_Pergi_Ke_Frasa_Terdahulu.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0061.smil#text_0061"/></description>
+        <accelerator>
+          <text id="_id54982">Left</text>
+          <originalText>Left</originalText>
+          
+        <audio src="./audio/097_Left.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0062.smil#text_0062"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTPHRASE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextphrasecirc.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id55020" xml:lang="ms" status="ok">Frasa Berikut</text>
+          <originalText>Next Phrase</originalText>
+          
+        <audio src="./audio/098_Frasa_Berikut.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0063.smil#text_0063"/></caption>
+        <description>
+          <text id="_id55037" xml:lang="ms" status="ok">Pergi Ke Frasa Berikut</text>
+          <originalText>Go to the next phrase.</originalText>
+          
+        <audio src="./audio/099_Pergi_Ke_Frasa_Berikut.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0064.smil#text_0064"/></description>
+        <accelerator>
+          <text id="_id55056">Right</text>
+          <originalText>Right</originalText>
+          
+        <audio src="./audio/100_Right.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0065.smil#text_0065"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_PREVPAGE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevpage.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id55093" xml:lang="ms" status="ok">Halaman Terdahulu</text>
+          <originalText>Previous Page</originalText>
+          
+        <audio src="./audio/101_Halaman_Terdahulu.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0066.smil#text_0066"/></caption>
+        <description>
+          <text id="_id55111" xml:lang="ms" status="ok">Pergi Ke Halaman Terdahulu</text>
+          <originalText>Go to the previous page.</originalText>
+          
+        <audio src="./audio/102_Pergi_Ke_Halaman_Terdahulu.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0067.smil#text_0067"/></description>
+        <accelerator>
+          <text id="_id55129">Ctrl+Left</text>
+          <originalText>Ctrl+Left</originalText>
+          
+        <audio src="./audio/103_CtrlLeft.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0068.smil#text_0068"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTPAGE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextpage.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id55166" xml:lang="ms" status="ok">Halaman Berikut</text>
+          <originalText>Next Page</originalText>
+          
+        <audio src="./audio/104_Halaman_Berikut.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0069.smil#text_0069"/></caption>
+        <description>
+          <text id="_id55184" xml:lang="ms" status="ok">Pergi Ke Halaman Berikut</text>
+          <originalText>Go to the next page.</originalText>
+          
+        <audio src="./audio/105_Pergi_Ke_Halaman_Berikut.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis006a.smil#text_006a"/></description>
+        <accelerator>
+          <text id="_id55203">Ctrl+Right</text>
+          <originalText>Ctrl+Right</originalText>
+          
+        <audio src="./audio/106_CtrlRight.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis006b.smil#text_006b"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_GOTOPAGE" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id55232" xml:lang="ms" status="ok">Pergi Ke Halaman...</text>
+          <originalText>Go to Page...</originalText>
+          
+        <audio src="./audio/107_Pergi_Ke_Halaman.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis006c.smil#text_006c"/></caption>
+        <description>
+          <text id="_id55250" xml:lang="ms" status="ok">Pergi Ke Halaman Tertentu</text>
+          <originalText>Go to a specific page.</originalText>
+          
+        <audio src="./audio/108_Pergi_Ke_Halaman_Tertentu.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis006d.smil#text_006d"/></description>
+        <accelerator>
+          <text id="_id55269">Ctrl+G</text>
+          <originalText>Ctrl+G</originalText>
+          
+        <audio src="./audio/109_CtrlG.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis006e.smil#text_006e"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_FINDINTEXT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id55298" xml:lang="ms" status="ok">Mencari Dalam Teks</text>
+          <originalText>Find in Text</originalText>
+          
+        <audio src="./audio/110_Mencari_Dalam_Teks.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis006f.smil#text_006f"/></caption>
+        <description>
+          <text id="_id55316" xml:lang="ms" status="ok">Mencari Perkataan Atau Frasa Dalam Teks</text>
+          <originalText>Search for a word or phrase in the text.</originalText>
+          
+        <audio src="./audio/111_Mencari_Perkataan_Atau_Frasa_D.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0070.smil#text_0070"/></description>
+        <accelerator>
+          <text id="_id55335">Ctrl+F</text>
+          <originalText>Ctrl+F</originalText>
+          
+        <audio src="./audio/112_CtrlF.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0071.smil#text_0071"/></accelerator>
+        <mnemonic>
+          <text id="_id55353">F</text>
+          <originalText>F</originalText>
+          
+        <audio src="./audio/113_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0072.smil#text_0072"/></mnemonic>
+      </action>
+      <accelerator>
+        <text id="_id55371">Alt+N</text>
+        <originalText>Alt+N</originalText>
+        
+      <audio src="./audio/114_AltN.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0073.smil#text_0073"/></accelerator>
+      <mnemonic>
+        <text id="_id55389">N</text>
+        <originalText>N</originalText>
+        
+      <audio src="./audio/115_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0074.smil#text_0074"/></mnemonic>
+    </container>
+    <container id="bookmarks">
+      <note>This is the menu header "Bookmarks"</note>
+      <caption>
+        <text id="_id55416" xml:lang="ms" status="ok">Penanda Buku</text>
+        <originalText>Bookmarks</originalText>
+        
+      <audio src="./audio/116_Penanda_Buku.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0075.smil#text_0075"/></caption>
+      <action mfcid="ID_MENU_BMK_ADD" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/adbookmark.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id55451" xml:lang="ms" status="ok">Menambah Penanda Buku</text>
+          <originalText>Add Bookmark</originalText>
+          
+        <audio src="./audio/117_Menambah_Penanda_Buku.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0076.smil#text_0076"/></caption>
+        <description>
+          <text id="_id55469" xml:lang="ms" status="ok">Tandakan Posisi Anda Sekarang</text>
+          <originalText>Bookmark your current position.</originalText>
+          
+        <audio src="./audio/118_Tandakan_Posisi_Anda_Sekarang.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0077.smil#text_0077"/></description>
+        <accelerator>
+          <text id="_id55488">Ctrl+D</text>
+          <originalText>Ctrl+D</originalText>
+          
+        <audio src="./audio/119_CtrlD.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0078.smil#text_0078"/></accelerator>
+        <mnemonic>
+          <text id="_id55506">A</text>
+          <originalText>A</originalText>
+          
+        <audio src="./audio/120_A.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0079.smil#text_0079"/></mnemonic>
+      </action>
+      <action mfcid="BOOKMARK_BASE_ID" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOKMARK_TITLE"/>
+          </caption>
+        </list>
+      </action>
+      <accelerator>
+        <text id="_id55548">Alt+B</text>
+        <originalText>Alt+B</originalText>
+        
+      <audio src="./audio/121_AltB.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis007a.smil#text_007a"/></accelerator>
+      <mnemonic>
+        <text id="_id55566">B</text>
+        <originalText>B</originalText>
+        
+      <audio src="./audio/122_B.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis007b.smil#text_007b"/></mnemonic>
+    </container>
+    <container id="info">
+      <note>This is the menu header "Info"</note>
+      <caption>
+        <text id="_id55593" xml:lang="en" status="todo">Info</text>
+        <originalText>Info</originalText>
+        
+      <audio src="./audio/123_Info.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis007c.smil#text_007c"/></caption>
+      <action mfcid="ID_MENU_INFO_SKIP" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id55621" xml:lang="ms" status="ok">Item Yang Boleh DiLangkau...</text>
+          <originalText>Skippable Items...</originalText>
+          
+        <audio src="./audio/124_Item_Yang_Boleh_DiLangkau.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis007d.smil#text_007d"/></caption>
+        <description>
+          <text id="_id55639" xml:lang="ms" status="ok">Melihat Item-item Yang Boleh Dilangkau Dalam Terbitan Ini</text>
+          <originalText>View the skippable items for this publication.</originalText>
+          
+        <audio src="./audio/125_Melihat_Itemitem_Yang_Boleh_Di.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis007e.smil#text_007e"/></description>
+        <mnemonic>
+          <text id="_id55658">S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/126_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis007f.smil#text_007f"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_SUMMARY" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/info.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id55695" xml:lang="ms" status="ok">Ringkasan Lengkap</text>
+          <originalText>Full Summary</originalText>
+          
+        <audio src="./audio/127_Ringkasan_Lengkap.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0080.smil#text_0080"/></caption>
+        <description>
+          <text id="_id55713" xml:lang="ms" status="ok">Dapatkan Semua Info Ringkasan Untuk Terbitan Ini</text>
+          <originalText>Get all summary info for this publication.</originalText>
+          
+        <audio src="./audio/128_Dapatkan_Semua_Info_Ringkasan_.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0081.smil#text_0081"/></description>
+        <mnemonic>
+          <text id="_id55732">F</text>
+          <originalText>F</originalText>
+          
+        <audio src="./audio/129_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0082.smil#text_0082"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_CURRENTPOSITION" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id55761" xml:lang="ms" status="ok">Posisi Sekarang</text>
+          <originalText>Current Position</originalText>
+          
+        <audio src="./audio/130_Posisi_Sekarang.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0083.smil#text_0083"/></caption>
+        <description>
+          <text id="_id55779" xml:lang="ms" status="ok">Dapatkan Informasi Untuk Posisi Anda Sekarang</text>
+          <originalText>Get information about your current position.</originalText>
+          
+        <audio src="./audio/131_Dapatkan_Informasi_Untuk_Posis.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0084.smil#text_0084"/></description>
+        <mnemonic>
+          <text id="_id55798">C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/132_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0085.smil#text_0085"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_NAVOPTIONS" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id55827" xml:lang="ms" status="ok">Opsyen Navigasi</text>
+          <originalText>Navigation Options</originalText>
+          
+        <audio src="./audio/133_Opsyen_Navigasi.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0086.smil#text_0086"/></caption>
+        <description>
+          <text id="_id55846" xml:lang="ms" status="ok">Belajar Tentang Opsyen Navigasi Untuk Terbitan Ini</text>
+          <originalText>Learn about your navigation options for this publication.</originalText>
+          
+        <audio src="./audio/134_Belajar_Tentang_Opsyen_Navigas.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0087.smil#text_0087"/></description>
+        <mnemonic>
+          <text id="_id55866">N</text>
+          <originalText>N</originalText>
+          
+        <audio src="./audio/135_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0088.smil#text_0088"/></mnemonic>
+      </action>
+      <accelerator>
+        <text id="_id55884">Alt+I</text>
+        <originalText>Alt+I</originalText>
+        
+      <audio src="./audio/136_AltI.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0089.smil#text_0089"/></accelerator>
+      <mnemonic>
+        <text id="_id55902">I</text>
+        <originalText>I</originalText>
+        
+      <audio src="./audio/137_I.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis008a.smil#text_008a"/></mnemonic>
+    </container>
+    <container id="help">
+      <note>This is the menu header "Help"</note>
+      <caption>
+        <text id="_id55928" xml:lang="ms" status="ok">Bantuan</text>
+        <originalText>Help</originalText>
+        
+      <audio src="./audio/138_Bantuan.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis008b.smil#text_008b"/></caption>
+      <action mfcid="ID_MENU_HELP_CONTENTS" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/help.ico" type="smallIcon"/>
+        <icon src="./settings/img/help_big.ico" type="largeIcon"/>
+        <caption>
+          <text id="_id55971" xml:lang="ms" status="ok">Isi Kandungan</text>
+          <originalText>Contents</originalText>
+          
+        <audio src="./audio/139_Isi_Kandungan.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis008c.smil#text_008c"/></caption>
+        <description>
+          <text id="_id55989" xml:lang="ms" status="ok">Dapatkan Bantuan Mengguna AMIS</text>
+          <originalText>Get help using AMIS</originalText>
+          
+        <audio src="./audio/140_Dapatkan_Bantuan_Mengguna_AMIS.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis008d.smil#text_008d"/></description>
+        <mnemonic>
+          <text id="_id56007">C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/141_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis008e.smil#text_008e"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_HELP_ABOUT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id56036" xml:lang="ms" status="ok">Berkenaan AMIS</text>
+          <originalText>About AMIS</originalText>
+          
+        <audio src="./audio/142_Berkenaan_AMIS.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis008f.smil#text_008f"/></caption>
+        <description>
+          <text id="_id56054" xml:lang="ms" status="ok">Mengetahui Berkenaan AMIS Dan DAISY Untuk Semua</text>
+          <originalText>Find out about AMIS and DAISY-for-All.</originalText>
+          
+        <audio src="./audio/143_Mengetahui_Berkenaan_AMIS_Dan_.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0090.smil#text_0090"/></description>
+        <mnemonic>
+          <text id="_id56073">A</text>
+          <originalText>A</originalText>
+          
+        <audio src="./audio/144_A.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0091.smil#text_0091"/></mnemonic>
+      </action>
+      <accelerator>
+        <text id="_id56092">Alt+H</text>
+        <originalText>Alt+H</originalText>
+        
+      <audio src="./audio/145_AltH.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0092.smil#text_0092"/></accelerator>
+      <mnemonic>
+        <text id="_id56109">H</text>
+        <originalText>H</originalText>
+        
+      <audio src="./audio/146_H.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0093.smil#text_0093"/></mnemonic>
+    </container>
+  </containers>
+  <dialogs>
+    <dialog mfcid="IDD_FIND">
+      <note>This is the find in text dialog</note>
+      <caption>
+        <text id="_id56139" xml:lang="ms" status="ok">Mencari Dalam Teks</text>
+        <originalText>Find in Text</originalText>
+        
+      <audio src="./audio/147_Mencari_Dalam_Teks.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0094.smil#text_0094"/></caption>
+      <description>
+        <text id="_id56157" xml:lang="ms" status="ok">Anda Boleh Mencari Teks Dalam Mana-mana Arah</text>
+        <originalText>Here you can search the full text in either direction.</originalText>
+        
+      <audio src="./audio/148_Anda_Boleh_Mencari_Teks_Dalam_.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0095.smil#text_0095"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem>
+          <text id="_id56185" xml:lang="ms" status="ok">Tekan Enter Untuk Memulakan Carian Sesudah Menaip Carian</text>
+          <originalText>After typing in your search, press enter to begin searching.</originalText>
+          
+        <audio src="./audio/149_Tekan_Enter_Untuk_Memulakan_Ca.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0096.smil#text_0096"/></promptItem>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        
+        
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <text id="_id56242" xml:lang="ms" status="ok">Tekan Enter Untuk Memulakan Carian Teks Dalam Fail</text>
+          <originalText>Press to begin searching for text in the file.</originalText>
+          
+        <audio src="./audio/150_Tekan_Enter_Untuk_Memulakan_Ca.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0097.smil#text_0097"/></description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text id="_id56284">C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/151_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0098.smil#text_0098"/></mnemonic>
+      </control>
+      <control mfcid="IDC_SEARCHSTRING" widget="textfield">
+        <description>
+          <text id="_id56306" xml:lang="ms" status="ok">Taipkan Teks Yang Hendak Dicari</text>
+          <originalText>Type the text to search for.</originalText>
+          
+        <audio src="./audio/152_Taipkan_Teks_Yang_Hendak_Dicar.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0099.smil#text_0099"/></description>
+      </control>
+      <control mfcid="IDC_FINDNEXT" widget="radiobutton">
+        <note>This indicates the direction of the search</note>
+        <caption>
+          <text id="_id56336" xml:lang="ms" status="ok">Carian Berikut</text>
+          <originalText>Find Next</originalText>
+          
+        <audio src="./audio/153_Carian_Berikut.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis009a.smil#text_009a"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="SELECTED_OR_DESELECTED" param="FIND_NEXT_IN_TEXT"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_FINDPREV" widget="radiobutton">
+        <note>This indicates the direction of the search</note>
+        <caption>
+          <text id="_id56384" xml:lang="ms" status="ok">Carian Terdahulu</text>
+          <originalText>Find Previous</originalText>
+          
+        <audio src="./audio/154_Carian_Terdahulu.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis009b.smil#text_009b"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptName name="SELECTED_OR_DESELECTED" param="FIND_PREV_IN_TEXT"/>
+          </prompt>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_CDSEARCH">
+      <note>This dialog appears when more than one book is on a CD-ROM</note>
+      <caption>
+        <text id="_id56430" xml:lang="ms" status="ok">Pelbagai Buku Ditemui</text>
+        <originalText>Multiple books found</originalText>
+        
+      <audio src="./audio/155_Pelbagai_Buku_Ditemui.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis009c.smil#text_009c"/></caption>
+      <description mfcid="IDC_STATIC">
+        <text id="_id56451" xml:lang="ms" status="ok">Lebih Dari Sebuah Buku DAISY Ditemui Dalam Cakera Padat Ini. Sila Pilih Sebuah Buku Dari Senarai Di Bawah Dan Tekan Alt O Untuk Membuka</text>
+        <originalText>More than one book was found on this CD. Please select a book from the list below and press Alt + O to open.</originalText>
+        
+      <audio src="./audio/156_Lebih_Dari_Sebuah_Buku_DAISY_D.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis009d.smil#text_009d"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_CANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text id="_id56515">C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/157_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis009e.smil#text_009e"/></mnemonic>
+      </control>
+      <control mfcid="IDC_OPENBOOK" widget="button">
+        <caption>
+          <text id="_id56537" xml:lang="ms" status="ok">Buka</text>
+          <originalText>Open</originalText>
+          
+        <audio src="./audio/158_Buka.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis009f.smil#text_009f"/></caption>
+        <description>
+          <text id="_id56554" xml:lang="ms" status="ok">Tekan Enter Untuk Menutup Kekotak Dialog Ini Dan Membuka Buku Yang Dipilih</text>
+          <originalText>Press to close this dialog and open the selected book.</originalText>
+          
+        <audio src="./audio/159_Tekan_Enter_Untuk_Menutup_Keko.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00a0.smil#text_00a0"/></description>
+        <mnemonic>
+          <text id="_id56574">O</text>
+          <originalText>O</originalText>
+          
+        <audio src="./audio/160_O.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00a1.smil#text_00a1"/></mnemonic>
+      </control>
+      <control mfcid="IDC_BOOKLIST" widget="list">
+        <description>
+          <text id="_id56599" xml:lang="ms" status="ok">Gunakan Kekunci Arah Untuk Bergerak Dalam Senarai Tajuk-tajuk</text>
+          <originalText>Use the arrow keys to move around this list of titles.</originalText>
+          
+        <audio src="./audio/161_Gunakan_Kekunci_Arah_Untuk_Ber.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00a2.smil#text_00a2"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOK_TITLE"/>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_ABOUTBOX">
+      <note>This dialog gives some basic information about AMIS.</note>
+      <caption>
+        <text id="_id56642" xml:lang="ms" status="ok">Tentang AMIS</text>
+        <originalText>About AMIS</originalText>
+        
+      <audio src="./audio/162_Tentang_AMIS.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00a3.smil#text_00a3"/></caption>
+      <description>
+        <text id="_id56660" xml:lang="ms" status="ok">Dialog Informasi Untuk Perisian AMIS</text>
+        <originalText>Dialog with information about AMIS software.</originalText>
+        
+      <audio src="./audio/163_Dialog_Informasi_Untuk_Perisia.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00a4.smil#text_00a4"/></description>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_AMISNAME" widget="textlabel">
+        <caption>
+          <text id="_id56704" xml:lang="ms" status="ok">AMIS: Sistem Informasi Multimedia Adaptif</text>
+          <originalText>AMIS: \nAdaptive Multimedia Information System</originalText>
+          
+        <audio src="./audio/164_AMIS_Sistem_Informasi_Multimed.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00a5.smil#text_00a5"/></caption>
+      </control>
+      <control mfcid="IDC_VERSION" translate="no">
+        <caption>
+          <text id="_id56730">Version 2.0</text>
+          <originalText>Version 2.0</originalText>
+          
+        <audio src="./audio/165_Version_20.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00a6.smil#text_00a6"/></caption>
+      </control>
+      <control mfcid="IDC_VERSIONNOTE" translate="no">
+        <caption>
+          <text id="_id56756">Release Date: 23 Oct 2005</text>
+          <originalText>Release Date: 23 Oct 2005</originalText>
+          
+        <audio src="./audio/166_Release_Date_23_Oct_2005.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00a7.smil#text_00a7"/></caption>
+      </control>
+      <control mfcid="IDC_COPYRIGHT" widget="textlabel" translate="no">
+        <caption>
+          <text id="_id56783">Copyright © 2006 DAISY for All</text>
+          <originalText>Copyright © 2006 DAISY for All</originalText>
+          
+        <audio src="./audio/167_Copyright__2006_DAISY_for_All.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00a8.smil#text_00a8"/></caption>
+      </control>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_SEARCHDAISY">
+      <note>This dialog is for searching your hard drive for DAISY books.</note>
+      <caption>
+        <text id="_id56837" xml:lang="ms" status="ok">Mencari Buku DAISY</text>
+        <originalText>Search for DAISY Books</originalText>
+        
+      <audio src="./audio/168_Mencari_Buku_DAISY.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00a9.smil#text_00a9"/></caption>
+      <description mfcid="IDC_STATIC">
+        <text id="_id56857" xml:lang="ms" status="ok">Anda Boleh Mencari Buku DAISY Dalam Komputer Anda. Masukkan Laluan Atau Layari Folder Untuk Mencari, Dan Tekan Carian Untuk Memulakan Carian.</text>
+        <originalText>You can search your computer for DAISY books.  Enter a path or browse for a folder to search, then press Search to begin searching.</originalText>
+        
+      <audio src="./audio/169_Anda_Boleh_Mencari_Buku_DAISY_.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00aa.smil#text_00aa"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        
+        
+      </prompt>
+      <control mfcid="IDC_SEARCHPATH" widget="textfield">
+        <description>
+          <text id="_id56918" xml:lang="ms" status="ok">Taipkan Laluan Untuk Folder Dalam Petak Ini</text>
+          <originalText>Type the path to the folder in this field.</originalText>
+          
+        <audio src="./audio/170_Taipkan_Laluan_Untuk_Folder_Da.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00ab.smil#text_00ab"/></description>
+      </control>
+      <control mfcid="IDC_BROWSE" widget="button">
+        <caption>
+          <promptItem refid="browse_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="browse_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_STARTSEARCH" widget="button">
+        <caption>
+          <text id="_id56968" xml:lang="ms" status="ok">Carian</text>
+          <originalText>Search</originalText>
+          
+        <audio src="./audio/171_Carian.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00ac.smil#text_00ac"/></caption>
+        <description>
+          <text id="_id56985" xml:lang="ms" status="ok">Tekan Enter Untuk Memulakan Carian</text>
+          <originalText>Press to start searching.</originalText>
+          
+        <audio src="./audio/172_Tekan_Enter_Untuk_Memulakan_Ca.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00ad.smil#text_00ad"/></description>
+        <mnemonic>
+          <text id="_id57004">S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/173_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00ae.smil#text_00ae"/></mnemonic>
+      </control>
+      <control mfcid="IDC_STOPSEARCH" widget="button">
+        <caption>
+          <text id="_id57029" xml:lang="ms" status="ok">Hentikan</text>
+          <originalText>Stop</originalText>
+          
+        <audio src="./audio/174_Hentikan.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00af.smil#text_00af"/></caption>
+        <description>
+          <text id="_id57047" xml:lang="ms" status="ok">Tekan Enter Untuk Hentikan Carian</text>
+          <originalText>Press to stop searching.</originalText>
+          
+        <audio src="./audio/175_Tekan_Enter_Untuk_Hentikan_Car.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00b0.smil#text_00b0"/></description>
+        <mnemonic>
+          <text id="_id57065">t</text>
+          <originalText>t</originalText>
+          
+        <audio src="./audio/176_t.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00b1.smil#text_00b1"/></mnemonic>
+      </control>
+      <control mfcid="IDC_SEARCHING" widget="textlabel">
+        <switch element="caption">
+          <caption condition="default">
+            <text id="_id57097" xml:lang="ms" status="ok">Sedia</text>
+            <originalText>Ready</originalText>
+            
+          <audio src="./audio/177_Sedia.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00b2.smil#text_00b2"/></caption>
+          <caption condition="WhileSearching">
+            <text id="_id57117" xml:lang="ms" status="ok">Mencari...</text>
+            <originalText>Searching...</originalText>
+            
+          <audio src="./audio/178_Mencari.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00b3.smil#text_00b3"/></caption>
+          <caption condition="SearchAborted">
+            <text id="_id57137" xml:lang="ms" status="ok">Carian Berhenti</text>
+            <originalText>Search stopped.</originalText>
+            
+          <audio src="./audio/179_Carian_Berhenti.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00b4.smil#text_00b4"/></caption>
+          <caption condition="SearchCompleteNoFilesFound">
+            <text id="_id57157" xml:lang="ms" status="ok">Carian Selesai: Tiada Fail Ditemui</text>
+            <originalText>Search complete: No files found.</originalText>
+            
+          <audio src="./audio/180_Carian_Selesai_Tiada_Fail_Dite.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00b5.smil#text_00b5"/></caption>
+          <caption condition="SearchCompleteOneFileFound">
+            <text id="_id57179" xml:lang="ms" status="ok">Carian Selesai: Sebuah Fail Ditemui</text>
+            <originalText>Search complete: One file found.</originalText>
+            
+          <audio src="./audio/181_Carian_Selesai_Sebuah_Fail_Dit.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00b6.smil#text_00b6"/></caption>
+          <caption condition="SearchCompleteFilesFound">
+            <prompt>
+              <promptVar name="NUM_FILES_FOUND"/>
+              <promptItem>
+                <note>This is used in the sentence "7 files were found"</note>
+                <text id="_id57213" xml:lang="ms" status="ok">Fail Ditemui</text>
+                <originalText>files were found.</originalText>
+                
+              <audio src="./audio/182_Fail_Ditemui.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00b7.smil#text_00b7"/></promptItem>
+            </prompt>
+          </caption>
+        </switch>
+      </control>
+      <control mfcid="IDC_FILESFOUND" widget="list">
+        <description>
+          <text id="_id57242" xml:lang="ms" status="ok">Gunakan Kekunci Arah Untuk Bergerak Dalam Senarai Tajuk-tajuk</text>
+          <originalText>Use the arrow keys to move around this list of titles.</originalText>
+          
+        <audio src="./audio/183_Gunakan_Kekunci_Arah_Untuk_Ber.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00b8.smil#text_00b8"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOK_TITLE"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_OPENBOOK" widget="button">
+        <caption>
+          <text id="_id57282" xml:lang="ms" status="ok">Buka</text>
+          <originalText>Open</originalText>
+          
+        <audio src="./audio/184_Buka.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00b9.smil#text_00b9"/></caption>
+        <description>
+          <text id="_id57300" xml:lang="ms" status="ok">Tekan Enter Untuk Membuka Jodol Yang Dipilih</text>
+          <originalText>Press to open the selected title.</originalText>
+          
+        <audio src="./audio/185_Tekan_Enter_Untuk_Membuka_Jodo.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00ba.smil#text_00ba"/></description>
+        <mnemonic>
+          <text id="_id57319">O</text>
+          <originalText>O</originalText>
+          
+        <audio src="./audio/186_O.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00bb.smil#text_00bb"/></mnemonic>
+      </control>
+      <control mfcid="IDC_CANCELBUTTON">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text id="_id57358">C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/187_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00bc.smil#text_00bc"/></mnemonic>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_SKIP">
+      <note>This dialog lets the user control rendering of skippable structures.</note>
+      <caption>
+        <text id="_id57383" xml:lang="ms" status="ok">Item-Item Yang Boleh Dilangkau</text>
+        <originalText>Skippable Items</originalText>
+        
+      <audio src="./audio/188_ItemItem_Yang_Boleh_Dilangkau.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00bd.smil#text_00bd"/></caption>
+      <switch element="description">
+        <description mfcid="IDC_STATIC" condition="hasSkippableStructures">
+          <text id="_id57409" xml:lang="ms" status="ok">Buku Ini Mengandungi Struktur Khas Berikut. Tandakan Item Yang Hendak Dilangkau.</text>
+          <originalText>This book contains the following special structures.  Check the ones you want skipped.</originalText>
+          
+        <audio src="./audio/189_Buku_Ini_Mengandungi_Struktur_.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00be.smil#text_00be"/></description>
+        <description mfcid="IDC_STATIC" condition="hasNoSkippableStructures">
+          <text id="_id57435" xml:lang="ms" status="ok">Tiada Elimen Yang Boleh Dilangkau Dalam Terbitan Ini</text>
+          <originalText>This publication has no skippable elements.</originalText>
+          
+        <audio src="./audio/190_Tiada_Elimen_Yang_Boleh_Dilang.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00bf.smil#text_00bf"/></description>
+      </switch>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SKIPS" widget="list">
+        <caption>
+          <text id="_id57507" xml:lang="ms" status="ok">Item-item Yang Boleh Dilangkau</text>
+          <originalText>Skippable items</originalText>
+          
+        <audio src="./audio/191_Itemitem_Yang_Boleh_Dilangkau.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00c0.smil#text_00c0"/></caption>
+        <description>
+          <text id="_id57525" xml:lang="ms" status="ok">Gunakan Kekunci Arah Untuk Bergerak Dalam Senarai Item-item Yang Boleh Dilangkau</text>
+          <originalText>Use the arrow keys to move around this list of skippable items.</originalText>
+          
+        <audio src="./audio/192_Gunakan_Kekunci_Arah_Untuk_Ber.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00c1.smil#text_00c1"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="SKIPPABLE_ITEM"/>
+          </caption>
+          <description>
+            <prompt>
+              <promptVar name="SKIPPABLE_ITEM"/>
+              <promptItem refid="thisItem"/>
+              <promptVar name="WILL_SKIP_OR_NOT" param="SKIPPABLE_ITEM_ID"/>
+            </prompt>
+          </description>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE4">
+      <note>This dialog lets the user select a language pack.</note>
+      <caption>
+        <text id="_id57590" xml:lang="ms" status="ok">Bahasa</text>
+        <originalText>Language</originalText>
+        
+      <audio src="./audio/193_Bahasa.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00c2.smil#text_00c2"/></caption>
+      <description mfcid="IDC_STATIC">
+        <text id="_id57610" xml:lang="ms" status="ok">Anda Boleh Menukar Bahasa Untuk Perisian Ini. Pakej Bahasa Yang Barau Akan Dikesan Secara Automatik.</text>
+        <originalText>Here you can change the language of the software.  New language packs are detected automatically.</originalText>
+        
+      <audio src="./audio/194_Anda_Boleh_Menukar_Bahasa_Untu.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00c3.smil#text_00c3"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="ctrl1_for_prefsdialog"/>
+        <promptItem refid="ctrl2_for_colorsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_BTN_SELECTLANG" widget="button">
+        <caption>
+          <text id="_id57668" xml:lang="ms" status="ok">Pilih Bahasa</text>
+          <originalText>Select Language</originalText>
+          
+        <audio src="./audio/195_Pilih_Bahasa.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00c4.smil#text_00c4"/></caption>
+        <description>
+          <text id="_id57686" xml:lang="ms" status="ok">Tekan Enter Untuk Mengesahkan Pilihan Bahasa Bagi Antaramuka Pengguna AMIS</text>
+          <originalText>Press to confirm your language selection for the AMIS user interface</originalText>
+          
+        <audio src="./audio/196_Tekan_Enter_Untuk_Mengesahkan_.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00c5.smil#text_00c5"/></description>
+      </control>
+      <control mfcid="IDC_LANGLIST" widget="list">
+        <caption mfcid="IDC_STATIC">
+          <text id="_id57716" xml:lang="ms" status="ok">Pilihan Bahasa Anda Ialah:</text>
+          <originalText>Your language choices are:</originalText>
+          
+        <audio src="./audio/197_Pilihan_Bahasa_Anda_Ialah.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00c6.smil#text_00c6"/></caption>
+        <description>
+          <text id="_id57734" xml:lang="ms" status="ok">Gunakan Kekunci Arah Untuk Bergerak Dalam Senarai Bahasa-bahasa</text>
+          <originalText>Use the arrow keys to move around this list of languages.</originalText>
+          
+        <audio src="./audio/198_Gunakan_Kekunci_Arah_Untuk_Ber.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00c7.smil#text_00c7"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="LANGUAGE_NAME"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_CURRLANG">
+        <caption>
+          <prompt>
+            <promptItem>
+              <text id="_id57776" xml:lang="ms" status="ok">Anda Sedang Mengguna AMIS Dalam</text>
+              <originalText>You are currently using AMIS in</originalText>
+              
+            <audio src="./audio/199_Anda_Sedang_Mengguna_AMIS_Dala.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00c8.smil#text_00c8"/></promptItem>
+            <promptVar name="CURR_LANGUAGE_NAME"/>
+          </prompt>
+        </caption>
+      </control>
+      <accelerator>
+        <text id="_id57803">Ctrl+3</text>
+        <originalText>Ctrl+3</originalText>
+        
+      <audio src="./audio/200_Ctrl3.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00c9.smil#text_00c9"/></accelerator>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE2">
+      <note>This dialog lets the user select which colors AMIS uses</note>
+      <caption>
+        <text id="_id57830" xml:lang="ms" status="ok">Tetapkan Warna</text>
+        <originalText>Set Colors</originalText>
+        
+      <audio src="./audio/201_Tetapkan_Warna.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00ca.smil#text_00ca"/></caption>
+      <description>
+        <text id="_id57848" xml:lang="ms" status="ok">Anda Boleh Menetapkan Opsyen Warna Untuk AMIS Di Sini</text>
+        <originalText>Here you can set color options for AMIS.</originalText>
+        
+      <audio src="./audio/202_Anda_Boleh_Menetapkan_Opsyen_W.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00cb.smil#text_00cb"/></description>
+      <prompt type="instructions">
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem refid="ctrl1_for_prefsdialog"/>
+        <promptItem refid="ctrl3_for_langsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+      </prompt>
+      <control mfcid="IDC_PHRASES" widget="other">
+        <caption>
+          <text id="_id57897" xml:lang="ms" status="ok">Menerangkan Frasa</text>
+          <originalText>Phrase Highlighting</originalText>
+          
+        <audio src="./audio/203_Menerangkan_Frasa.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00cc.smil#text_00cc"/></caption>
+      </control>
+      <control mfcid="IDC_TEXTFG" widget="textlabel">
+        <caption>
+          <text id="_id57923" xml:lang="ms" status="ok">Latardepan Teks:</text>
+          <originalText>Text Foreground: </originalText>
+          
+        <audio src="./audio/204_Latardepan_Teks.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00cd.smil#text_00cd"/></caption>
+      </control>
+      <control mfcid="IDC_TEXTBG" widget="textlabel">
+        <caption>
+          <text id="_id57949" xml:lang="ms" status="ok">Latarbelakang Teks:</text>
+          <originalText>Text Background: </originalText>
+          
+        <audio src="./audio/205_Latarbelakang_Teks.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00ce.smil#text_00ce"/></caption>
+      </control>
+      <control mfcid="IDC_BORDER" widget="textlabel">
+        <caption>
+          <text id="_id57975" xml:lang="ms" status="ok">Sempadan Pilihan:</text>
+          <originalText>Selection Border: </originalText>
+          
+        <audio src="./audio/206_Sempadan_Pilihan.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00cf.smil#text_00cf"/></caption>
+      </control>
+      <control mfcid="IDC_CONTRAST" widget="other">
+        <caption>
+          <text id="_id58001" xml:lang="ms" status="ok">Tetapan Beza Jelas</text>
+          <originalText>High Contrast Settings</originalText>
+          
+        <audio src="./audio/207_Tetapan_Beza_Jelas.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00d0.smil#text_00d0"/></caption>
+      </control>
+      <control mfcid="IDC_PAGEFG" widget="textlabel">
+        <caption>
+          <text id="_id58027" xml:lang="ms" status="ok">Latardepan Halaman:</text>
+          <originalText>Page Foreground: </originalText>
+          
+        <audio src="./audio/208_Latardepan_Halaman.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00d1.smil#text_00d1"/></caption>
+      </control>
+      <control mfcid="IDC_PAGEBG" widget="textlabel">
+        <caption>
+          <text id="_id58053" xml:lang="ms" status="ok">Latarbelakang Halaman:</text>
+          <originalText>Page Background: </originalText>
+          
+        <audio src="./audio/209_Latarbelakang_Halaman.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00d2.smil#text_00d2"/></caption>
+      </control>
+      <control mfcid="IDC_BTN_RESETCOLORS" widget="button">
+        <caption>
+          <text id="_id58079" xml:lang="ms" status="ok">Kembalikan Warna-warna</text>
+          <originalText>Reset Colors</originalText>
+          
+        <audio src="./audio/210_Kembalikan_Warnawarna.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00d3.smil#text_00d3"/></caption>
+      </control>
+      <control mfcid="IDC_PHRASEPREVIEW" widget="textfield">
+        <caption>
+          <text id="_id58105" xml:lang="ms" status="ok">Melihat dahulu Warna-warna Frasa</text>
+          <originalText>Preview of phrase highlight colors.</originalText>
+          
+        <audio src="./audio/211_Melihat_dahulu_Warnawarna_Fras.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00d4.smil#text_00d4"/></caption>
+      </control>
+      <control mfcid="IDC_CONTRASTPREVIEW" widget="textfield">
+        <caption>
+          <text id="_id58132" xml:lang="ms" status="ok">Melihat Dahulu Warna-warna Beza Jelas Halaman</text>
+          <originalText>Preview of page contrast colors.</originalText>
+          
+        <audio src="./audio/212_Melihat_Dahulu_Warnawarna_Beza.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00d5.smil#text_00d5"/></caption>
+      </control>
+      <accelerator>
+        <text id="_id58152">Ctrl+2</text>
+        <originalText>Ctrl+2</originalText>
+        
+      <audio src="./audio/213_Ctrl2.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00d6.smil#text_00d6"/></accelerator>
+    </dialog>
+    <dialog mfcid="IDD_CURRENTPOSITION">
+      <note>This dialog gives the user information about their current position in the publication.</note>
+      <caption>
+        <text id="_id58180" xml:lang="ms" status="ok">Posisi Sekarang</text>
+        <originalText>Current Position</originalText>
+        
+      <audio src="./audio/214_Posisi_Sekarang.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00d7.smil#text_00d7"/></caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text id="_id58249" xml:lang="ms" status="ok">Ini Adalah Senarai Data Berkenaan Posisi Anda Sekarang</text>
+          <originalText>This is a list of data about your current position.</originalText>
+          
+        <audio src="./audio/215_Ini_Adalah_Senarai_Data_Berken.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00d8.smil#text_00d8"/></caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="no">
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id58285" xml:lang="ms" status="ok">Seksyen Anda Sekarang Ialah Tajuk:</text>
+                <originalText>Your current section is titled:</originalText>
+                
+              <audio src="./audio/216_Seksyen_Anda_Sekarang_Ialah_Ta.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00d9.smil#text_00d9"/></promptItem>
+              <promptVar name="CURRENT_SECTION_TITLE"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id58317" xml:lang="ms" status="ok">Jumlah Halaman Dalam Seksyen Ini:</text>
+                <originalText>Number of pages in this section:</originalText>
+                
+              <audio src="./audio/217_Jumlah_Halaman_Dalam_Seksyen_I.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00da.smil#text_00da"/></promptItem>
+              <promptVar name="CURRENT_SECTION_NUM_PAGES"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id58347" xml:lang="ms" status="ok">Jumlah Seksyen Kecil Dalam Seksyen Ini:</text>
+                <originalText>Number of subsections in this section:</originalText>
+                
+              <audio src="./audio/218_Jumlah_Seksyen_Kecil_Dalam_Sek.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00db.smil#text_00db"/></promptItem>
+              <promptVar name="CURRENT_SECTION_NUM_SUBSECTIONS"/>
+            </prompt>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE1">
+      <note>This dialog lets the user set some basic preferences for AMIS.</note>
+      <caption>
+        <text id="_id58384" xml:lang="ms" status="ok">Pilihan Umum</text>
+        <originalText>General Preferences</originalText>
+        
+      <audio src="./audio/219_Pilihan_Umum.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00dc.smil#text_00dc"/></caption>
+      <description>
+        <text id="_id58403" xml:lang="ms" status="ok">Anda Boleh Mendapatkan Pilihan Umum Untuk AMIS Di Sini</text>
+        <originalText>Here you can set general preferences for AMIS.</originalText>
+        
+      <audio src="./audio/220_Anda_Boleh_Mendapatkan_Pilihan.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00dd.smil#text_00dd"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="ctrl2_for_colorsdialog"/>
+        <promptItem refid="ctrl3_for_langsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        
+        
+      </prompt>
+      <control mfcid="IDC_BMKDIRBROWSE" widget="button">
+        <caption>
+          <promptItem refid="browse_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="browse_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SELFVOICING" widget="checkbox">
+        <caption>
+          <text id="_id58493" xml:lang="ms" status="ok">Gunakan Self Voicing</text>
+          <originalText>Use self-voicing</originalText>
+          
+        <audio src="./audio/221_Gunakan_Self_Voicing.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00de.smil#text_00de"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="SELF_VOICING_FEATURE"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_TTSVOICE" widget="list">
+        <caption mfcid="IDC_SELTTSLABEL">
+          <text id="_id58538" xml:lang="ms" status="ok">Pilih Suara TTS</text>
+          <originalText>Select TTS voice:</originalText>
+          
+        <audio src="./audio/222_Pilih_Suara_TTS.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00df.smil#text_00df"/></caption>
+        <description>
+          <text id="_id58557" xml:lang="ms" status="ok">Gunakan Kekunci Arah Untuk Bergerak Dalam Senarai Suara-suara</text>
+          <originalText>Use the arrow keys to move around this list of voices</originalText>
+          
+        <audio src="./audio/223_Gunakan_Kekunci_Arah_Untuk_Ber.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00e0.smil#text_00e0"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="TTS_VOICE_NAME"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_BASIC" widget="checkbox">
+        <caption>
+          <text id="_id58597" xml:lang="ms" status="ok">Mulakan AMIS Dalam Mod Paparan Asas</text>
+          <originalText>Start AMIS in the basic view mode.</originalText>
+          
+        <audio src="./audio/224_Mulakan_AMIS_Dalam_Mod_Paparan.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00e1.smil#text_00e1"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="BASIC_VIEW_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_PROMPTONBASICVIEW" widget="checkbox">
+        <caption>
+          <text id="_id58645" xml:lang="ms" status="ok">Setelah Berpindah Ke Paparan Asas, Maklumkan Kepada Pengguna Cara Untuk Kembali Ke Paparan Asal</text>
+          <originalText>Upon switching to basic view, tell the user how to go back to the default view.</originalText>
+          
+        <audio src="./audio/225_Setelah_Berpindah_Ke_Paparan_A.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00e2.smil#text_00e2"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="PROMPT_ON_BASIC_VIEW_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_LOADLASTDTB" widget="checkbox">
+        <caption>
+          <text id="_id58695" xml:lang="ms" status="ok">Muatkan Buku Yang Dibaca Baru-baru Ini Ketika Perisian Bermula</text>
+          <originalText>Load the most recently read book when the software starts.</originalText>
+          
+        <audio src="./audio/226_Muatkan_Buku_Yang_Dibaca_Barub.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00e3.smil#text_00e3"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="LOAD_LAST_READ_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_BMKDIR" widget="textfield">
+        <caption mfcid="IDC_BMKDIRLABEL">
+          <text id="_id58746" xml:lang="ms" status="ok">Direktori Penanda Buku:</text>
+          <originalText>Bookmarks directory:</originalText>
+          
+        <audio src="./audio/227_Direktori_Penanda_Buku.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00e4.smil#text_00e4"/></caption>
+        <description>
+          <text id="_id58765" xml:lang="ms" status="ok">Taipkan Laluan Ke Folder Penanda Buku Dalam Petak Ini</text>
+          <originalText>Type the path to the bookmarks folder in this field.</originalText>
+          
+        <audio src="./audio/228_Taipkan_Laluan_Ke_Folder_Penan.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00e5.smil#text_00e5"/></description>
+      </control>
+      <accelerator>
+        <text id="_id58786">Ctrl+1</text>
+        <originalText>Ctrl+1</originalText>
+        
+      <audio src="./audio/229_Ctrl1.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00e6.smil#text_00e6"/></accelerator>
+    </dialog>
+    <dialog mfcid="IDD_NAVIGATIONOPTIONS">
+      <note>This dialog lists navigation options for the current publication.</note>
+      <caption>
+        <text id="_id58814" xml:lang="ms" status="ok">Opsyen Navigasi</text>
+        <originalText>Navigation Options</originalText>
+        
+      <audio src="./audio/230_Opsyen_Navigasi.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00e7.smil#text_00e7"/></caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text id="_id58882" xml:lang="ms" status="ok">Ini Adalah Senarai Item-item Yang Boleh Dilayari Secara Langsung</text>
+          <originalText>This is a list of items to which you may navigate directly.</originalText>
+          
+        <audio src="./audio/231_Ini_Adalah_Senarai_Itemitem_Ya.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00e8.smil#text_00e8"/></caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="TOC_CATEGORIES"/>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_GOTOPAGE">
+      <note>This dialog lets the user jump to a certain page</note>
+      <caption>
+        <text id="_id58933" xml:lang="ms" status="ok">Pergi Ke Halaman</text>
+        <originalText>Go To Page</originalText>
+        
+      <audio src="./audio/232_Pergi_Ke_Halaman.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00e9.smil#text_00e9"/></caption>
+      <description>
+        <text id="_id58951" xml:lang="ms" status="ok">Anda Boleh Bergerak Terus Ke Nombor Halaman Atau Label Halaman</text>
+        <originalText>Here you can jump to a page number or page label.</originalText>
+        
+      <audio src="./audio/233_Anda_Boleh_Bergerak_Terus_Ke_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00ea.smil#text_00ea"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem>
+          <text id="_id58979" xml:lang="ms" status="ok">Selepas Menaip Nombor Halaman, Tekan Enter Untuk Pergi Ke Sana</text>
+          <originalText>After typing in your page number, press enter to go there.</originalText>
+          
+        <audio src="./audio/234_Selepas_Menaip_Nombor_Halaman_.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00eb.smil#text_00eb"/></promptItem>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        
+        
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <text id="_id59034" xml:lang="ms" status="ok">Tekan Bebutang Ini Untuk Pergi Ke Halaman Yang Dikehendaki</text>
+          <originalText>Press this button to go to the desired page.</originalText>
+          
+        <audio src="./audio/235_Tekan_Bebutang_Ini_Untuk_Pergi.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00ec.smil#text_00ec"/></description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text id="_id59077">C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/236_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00ed.smil#text_00ed"/></mnemonic>
+      </control>
+      <control mfcid="IDC_PAGENUM" widget="textfield">
+        <caption mfcid="IDC_STATIC">
+          <text id="_id59100" xml:lang="ms" status="ok">Masukkan Nombor Halaman</text>
+          <originalText>Enter a page number:</originalText>
+          
+        <audio src="./audio/237_Masukkan_Nombor_Halaman.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00ee.smil#text_00ee"/></caption>
+        <description>
+          <text id="_id59119" xml:lang="ms" status="ok">Taipkan Nombor Atau Label Halaman Yang Dikehendaki</text>
+          <originalText>Type the number or label of the page you want to go to.</originalText>
+          
+        <audio src="./audio/238_Taipkan_Nombor_Atau_Label_Hala.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00ef.smil#text_00ef"/></description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_FULLSUMMARY">
+      <note>This dialog lists key publication metadata.</note>
+      <caption>
+        <text id="_id59149" xml:lang="ms" status="ok">Ringkasan Terbitan</text>
+        <originalText>Publication Summary</originalText>
+        
+      <audio src="./audio/239_Ringkasan_Terbitan.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00f0.smil#text_00f0"/></caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text id="_id59218" xml:lang="ms" status="ok">Ini Adalah Senarai Metadata Untuk Terbitan</text>
+          <originalText>This is a list of publication metadata.</originalText>
+          
+        <audio src="./audio/240_Ini_Adalah_Senarai_Metadata_Un.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00f1.smil#text_00f1"/></caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="no">
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id59253" xml:lang="ms" status="ok">Tajuk Buku Ini Ialah:</text>
+                <originalText>This book is titled:</originalText>
+                
+              <audio src="./audio/241_Tajuk_Buku_Ini_Ialah.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00f2.smil#text_00f2"/></promptItem>
+              <promptVar name="META_TITLE"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id59282" xml:lang="ms" status="ok">Ditulis Oleh:</text>
+                <originalText>Written by:</originalText>
+                
+              <audio src="./audio/242_Ditulis_Oleh.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00f3.smil#text_00f3"/></promptItem>
+              <promptVar name="META_CREATOR"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id59311" xml:lang="ms" status="ok">Diterbitkan Oleh:</text>
+                <originalText>Published by:</originalText>
+                
+              <audio src="./audio/243_Diterbitkan_Oleh.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00f4.smil#text_00f4"/></promptItem>
+              <promptVar name="META_PUBLISHER"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_DESCRIPTION">
+            <prompt>
+              <promptItem>
+                <text id="_id59342" xml:lang="ms" status="ok">Penerangan:</text>
+                <originalText>Description:</originalText>
+                
+              <audio src="./audio/244_Penerangan.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00f5.smil#text_00f5"/></promptItem>
+              <promptVar name="META_DESC"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id59370" xml:lang="ms" status="ok">Jumlah Titik-titik Navigasi Dalam Kandungan:</text>
+                <originalText>Number of navigation points in the table of contents:</originalText>
+                
+              <audio src="./audio/245_Jumlah_Titiktitik_Navigasi_Dal.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00f6.smil#text_00f6"/></promptItem>
+              <promptVar name="META_TOCITEMS"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id59401" xml:lang="ms" status="ok">Hiraki Maksimum Seksyen:</text>
+                <originalText>Maximum section depth:</originalText>
+                
+              <audio src="./audio/246_Hiraki_Maksimum_Seksyen.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00f7.smil#text_00f7"/></promptItem>
+              <promptVar name="META_DEPTH"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id59432" xml:lang="ms" status="ok">Hal-hal Halaman Depan:</text>
+                <originalText>Front matter pages:</originalText>
+                
+              <audio src="./audio/247_Halhal_Halaman_Depan.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00f8.smil#text_00f8"/></promptItem>
+              <promptVar name="META_PAGEFRONT"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id59464" xml:lang="ms" status="ok">Halaman-halaman Biasa</text>
+                <originalText>Regular pages:</originalText>
+                
+              <audio src="./audio/248_Halamanhalaman_Biasa.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00f9.smil#text_00f9"/></promptItem>
+              <promptVar name="META_PAGENORMAL"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id59494" xml:lang="ms" status="ok">Halaman-halaman Khas:</text>
+                <originalText>Special pages:</originalText>
+                
+              <audio src="./audio/249_Halamanhalaman_Khas.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00fa.smil#text_00fa"/></promptItem>
+              <promptVar name="META_PAGESPECIAL"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id59523" xml:lang="ms" status="ok">Jangkamasa Keseluruhan:</text>
+                <originalText>Total duration:</originalText>
+                
+              <audio src="./audio/250_Jangkamasa_Keseluruhan.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00fb.smil#text_00fb"/></promptItem>
+              <promptVar name="META_TOTALTIME"/>
+            </prompt>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+  </dialogs>
+  <prompts>
+    <promptItemRefs>
+      <promptItem id="altC_to_close">
+        <text id="_id59558" xml:lang="ms" status="ok">Tekan Alt C Untuk Menutup Kekotak Dialog</text>
+        <originalText>Press Alt + C to close the dialog.</originalText>
+        
+      <audio src="./audio/251_Tekan_Alt_C_Untuk_Menutup_Keko.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00fc.smil#text_00fc"/></promptItem>
+      <promptItem id="altC_to_cancel">
+        <text id="_id59580" xml:lang="ms" status="ok">Tekan Alt C Untuk Batalkan Kekotak Dialog</text>
+        <originalText>Press Alt + C to cancel the dialog.</originalText>
+        
+      <audio src="./audio/252_Tekan_Alt_C_Untuk_Batalkan_Kek.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00fd.smil#text_00fd"/></promptItem>
+      <promptItem id="thisItem">
+        <text id="_id59601" xml:lang="ms" status="ok">Item Ini</text>
+        <originalText>This item</originalText>
+        
+      <audio src="./audio/253_Item_Ini.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00fe.smil#text_00fe"/></promptItem>
+      <promptItem id="spaceToToggle">
+        <text id="_id59621" xml:lang="ms" status="ok">Tekan Space Untuk Menukar Nilai</text>
+        <originalText>Press the space bar to toggle the value.</originalText>
+        
+      <audio src="./audio/254_Tekan_Space_Untuk_Menukar_Nila.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis00ff.smil#text_00ff"/></promptItem>
+      <promptItem id="tabAround">
+        <text id="_id59642" xml:lang="ms" status="ok">Tekan Tab Untuk Bergerak Dalam Opsyen Dalam Kekotak Dialog</text>
+        <originalText>Hit tab to move around the options on the dialog.</originalText>
+        
+      <audio src="./audio/255_Tekan_Tab_Untuk_Bergerak_Dalam.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0100.smil#text_0100"/></promptItem>
+      <promptItem id="ctrl2_for_colorsdialog">
+        <text id="_id59664" xml:lang="ms" status="ok">Tekan Kontrol 2 Untuk Berpindah Ke Kekotak Dialog Warna</text>
+        <originalText>Press control + 2 to switch to the colors dialog.</originalText>
+        
+      <audio src="./audio/256_Tekan_Kontrol_2_Untuk_Berpinda.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0101.smil#text_0101"/></promptItem>
+      <promptItem id="ctrl3_for_langsdialog">
+        <text id="_id59686" xml:lang="ms" status="ok">Tekan Kontrol 3 Untuk Berpindah Ke Opsyen Kekotak Dialog Bahasa</text>
+        <originalText>Press control + 3 to switch to the language options dialog.</originalText>
+        
+      <audio src="./audio/257_Tekan_Kontrol_3_Untuk_Berpinda.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0102.smil#text_0102"/></promptItem>
+      <promptItem id="ctrl1_for_prefsdialog">
+        <text id="_id59709" xml:lang="ms" status="ok">Tekan Kontrol 1 Untuk Berpindah Ke Kekotak Dialog Pilihan Umum</text>
+        <originalText>Press control + 1 to switch to the general preferences dialog.</originalText>
+        
+      <audio src="./audio/258_Tekan_Kontrol_1_Untuk_Berpinda.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0103.smil#text_0103"/></promptItem>
+      <promptItem id="thisItemIsCurrently">
+        <text id="_id59731" xml:lang="ms" status="ok">Item Ini Sekarang</text>
+        <originalText>This item is currently</originalText>
+        
+      <audio src="./audio/259_Item_Ini_Sekarang.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0104.smil#text_0104"/></promptItem>
+      <promptItem id="enter_to_close">
+        <text id="_id59752" xml:lang="ms" status="ok">Tekan Enter Untuk Menutup Kekotak Dialog</text>
+        <originalText>Press enter to close the dialog.</originalText>
+        
+      <audio src="./audio/260_Tekan_Enter_Untuk_Menutup_Keko.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0105.smil#text_0105"/></promptItem>
+      <promptItem id="browse_button_caption">
+        <text id="_id59773" xml:lang="ms" status="ok">Layari...</text>
+        <originalText>Browse...</originalText>
+        
+      <audio src="./audio/261_Layari.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0106.smil#text_0106"/></promptItem>
+      <promptItem id="browse_button_description">
+        <text id="_id59793" xml:lang="ms" status="ok">Tekan Enter Untuk Membuka Dialog Folder Layaran</text>
+        <originalText>Press to open the folder browse dialog.</originalText>
+        
+      <audio src="./audio/262_Tekan_Enter_Untuk_Membuka_Dial.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0107.smil#text_0107"/></promptItem>
+      <promptItem id="ok_button_caption">
+        <text id="_id59815" xml:lang="en" status="todo">OK</text>
+        <originalText>OK</originalText>
+        
+      <audio src="./audio/263_OK.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0108.smil#text_0108"/></promptItem>
+      <promptItem id="ok_button_description">
+        <text id="_id59835" xml:lang="ms" status="ok">Tekan OK Untuk Menutup Dialog Ini</text>
+        <originalText>Press OK to close this dialog.</originalText>
+        
+      <audio src="./audio/264_Tekan_OK_Untuk_Menutup_Dialog_.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0109.smil#text_0109"/></promptItem>
+      <promptItem id="cancel_button_caption">
+        <text id="_id59856" mnemonic="C" xml:lang="ms" status="ok">Batal</text>
+        <originalText>Cancel</originalText>
+        
+      <audio src="./audio/265_Batal.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis010a.smil#text_010a"/></promptItem>
+      <promptItem id="cancel_button_description">
+        <text id="_id59878" xml:lang="ms" status="ok">Tekan Enter Untuk Membatal Dialog Ini</text>
+        <originalText>Press to cancel this dialog.</originalText>
+        
+      <audio src="./audio/266_Tekan_Enter_Untuk_Membatal_Dia.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis010b.smil#text_010b"/></promptItem>
+      <promptItem id="list_reads_automatically">
+        <text id="_id59899" xml:lang="ms" status="ok">Senarai Ini Akan Dibaca Secara Automatik</text>
+        <originalText>This list will be read automatically.</originalText>
+        
+      <audio src="./audio/267_Senarai_Ini_Akan_Dibaca_Secara.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis010c.smil#text_010c"/></promptItem>
+      <promptItem id="repeatLastPromptInstr">
+        <text id="_id59921" xml:lang="ms" status="ok">Tekan Kontrol R Untuk Mengulangi Arahan Terakhir</text>
+        <originalText>Press Control + R to repeat the last prompt.</originalText>
+        
+      <audio src="./audio/268_Tekan_Kontrol_R_Untuk_Mengulan.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis010d.smil#text_010d"/></promptItem>
+      <promptItem id="thisDialogNotSelfVoicing">
+        <text id="_id59942" xml:lang="ms" status="ok">Dialog Ini Belum Lagi Mempunyai Self Voicing</text>
+        <originalText>This dialog is not yet self-voicing.</originalText>
+        
+      <audio src="./audio/269_Dialog_Ini_Belum_Lagi_Mempunya.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis010e.smil#text_010e"/></promptItem>
+      <promptItem id="escapeToCancel">
+        <text id="_id59964" xml:lang="ms" status="ok">Tekan Escape Untuk Batal</text>
+        <originalText>Press escape to cancel</originalText>
+        
+      <audio src="./audio/270_Tekan_Escape_Untuk_Batal.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis010f.smil#text_010f"/></promptItem>
+      <promptItem id="hearDlgInstructions">
+        <text id="_id59985" xml:lang="ms" status="ok">Tekan Kontrol I Untuk Mendengar Arahan Untuk Dialog Ini</text>
+        <originalText>Press Control + I to hear instructions for this dialog.</originalText>
+        
+      <audio src="./audio/271_Tekan_Kontrol_I_Untuk_Mendenga.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0110.smil#text_0110"/></promptItem>
+      <promptItem id="textBoxRepeatInstr">
+        <text id="_id60007" xml:lang="ms" status="ok">Tekan Kontrol T Untuk Mengulangi Bacaan Teks Di Dalam Kekotak Teks Terakhir</text>
+        <originalText>Press Control + T to repeat the text in the last text box.</originalText>
+        
+      <audio src="./audio/272_Tekan_Kontrol_T_Untuk_Mengulan.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0111.smil#text_0111"/></promptItem>
+      <promptItem id="nav_window">
+        <text id="_id60029" xml:lang="ms" status="ok">Navigasi</text>
+        <originalText>Navigation</originalText>
+        
+      <audio src="./audio/273_Navigasi.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0112.smil#text_0112"/></promptItem>
+      <promptItem id="sections">
+        <text id="_id60049" xml:lang="ms" status="ok">Seksyen-seksyen</text>
+        <originalText>Sections</originalText>
+        
+      <audio src="./audio/274_Seksyenseksyen.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0113.smil#text_0113"/></promptItem>
+      <promptItem id="pages">
+        <text id="_id60069" xml:lang="ms" status="ok">Halaman-halaman</text>
+        <originalText>Pages</originalText>
+        
+      <audio src="./audio/275_Halamanhalaman.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0114.smil#text_0114"/></promptItem>
+      <promptItem id="noterefs">
+        <text id="_id60089" xml:lang="ms" status="ok">Nota Kaki</text>
+        <originalText>Footnotes</originalText>
+        
+      <audio src="./audio/276_Nota_Kaki.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0115.smil#text_0115"/></promptItem>
+      <promptItem id="prodnotes">
+        <text id="_id60109" xml:lang="ms" status="ok">Nota Penerbit</text>
+        <originalText>Producer notes</originalText>
+        
+      <audio src="./audio/277_Nota_Penerbit.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0116.smil#text_0116"/></promptItem>
+      <promptItem id="sidebars">
+        <text id="_id60129" xml:lang="ms" status="ok">Bar Sisi</text>
+        <originalText>Sidebars</originalText>
+        
+      <audio src="./audio/278_Bar_Sisi.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0117.smil#text_0117"/></promptItem>
+      <promptItem id="groups">
+        <text id="_id60149" xml:lang="ms" status="ok">Item-item Berkumpulan</text>
+        <originalText>Grouped items</originalText>
+        
+      <audio src="./audio/279_Itemitem_Berkumpulan.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0118.smil#text_0118"/></promptItem>
+      <promptItem id="navigation_sidebar_caption">
+        <text id="_id60169" xml:lang="ms" status="ok">Navigasi</text>
+        <originalText>Navigation</originalText>
+        
+      <audio src="./audio/280_Navigasi.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0119.smil#text_0119"/></promptItem>
+      <promptItem id="ready">
+        <text id="_id60189" xml:lang="ms" status="ok">Sedia</text>
+        <originalText>Ready</originalText>
+        
+      <audio src="./audio/281_Sedia.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis011a.smil#text_011a"/></promptItem>
+      <promptItem id="property_sheet_caption">
+        <text id="_id60209" xml:lang="ms" status="ok">Pilihan</text>
+        <originalText>Preferences</originalText>
+        
+      <audio src="./audio/282_Pilihan.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis011b.smil#text_011b"/></promptItem>
+      <promptItem id="selfolder_title">
+        <text id="_id60229" xml:lang="ms" status="ok">Pilih Folder</text>
+        <originalText>Select a Folder</originalText>
+        
+      <audio src="./audio/283_Pilih_Folder.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis011c.smil#text_011c"/></promptItem>
+      <promptItem id="selfolder_instr">
+        <text id="_id60249" xml:lang="ms" status="ok">Pilih Folder Dari Direktori Di Bawah</text>
+        <originalText>Select a folder from the directory below.</originalText>
+        
+      <audio src="./audio/284_Pilih_Folder_Dari_Direktori_Di.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis011d.smil#text_011d"/></promptItem>
+      <promptItem id="daisy_books">
+        <text id="_id60270" xml:lang="ms" status="ok">Buku-buku DAISY</text>
+        <originalText>DAISY Books</originalText>
+        
+      <audio src="./audio/285_Bukubuku_DAISY.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis011e.smil#text_011e"/></promptItem>
+      <promptItem id="folder_does_not_exist">
+        <text id="_id60291" xml:lang="ms" status="ok">Folder Tidak Wujud. Adakah Anda Mahu Membuat Folder Ini?</text>
+        <originalText>The folder %s does not exist. Do you want the folder to be created?</originalText>
+        
+      <audio src="./audio/286_Folder_Tidak_Wujud_Adakah_Anda.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis011f.smil#text_011f"/></promptItem>
+      <promptItem id="folder_invalid">
+        <text id="_id60313" xml:lang="ms" status="ok">Folder Ini Tidak Sah. Sila Pilih Yang Lain</text>
+        <originalText>This folder name is invalid. Please choose another.</originalText>
+        
+      <audio src="./audio/287_Folder_Ini_Tidak_Sah_Sila_Pili.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0120.smil#text_0120"/></promptItem>
+      <promptItem id="cant_create_folder">
+        <text id="_id60335" xml:lang="ms" status="ok">Folder Ini Tidak Dapat Dicipta. Sila Semak Semula.</text>
+        <originalText>This folder can not be created. Please double check.</originalText>
+        
+      <audio src="./audio/288_Folder_Ini_Tidak_Dapat_Dicipta.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0121.smil#text_0121"/></promptItem>
+      <promptItem id="not_available">
+        <text id="_id60357" xml:lang="ms" status="ok">Tiada</text>
+        <originalText>Not available</originalText>
+        
+      <audio src="./audio/289_Tiada.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0122.smil#text_0122"/></promptItem>
+      <promptItem id="numeric_zero">
+        <note>All numerals should be translated into numerals, not words.</note>
+        <text id="_id60381" xml:lang="en" status="todo">0</text>
+        <originalText>0</originalText>
+        
+      <audio src="./audio/290_0.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0123.smil#text_0123"/></promptItem>
+      <promptItem id="numeric_one">
+        <text id="_id60401" xml:lang="en" status="todo">1</text>
+        <originalText>1</originalText>
+        
+      <audio src="./audio/291_1.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0124.smil#text_0124"/></promptItem>
+      <promptItem id="numeric_two">
+        <text id="_id60421" xml:lang="en" status="todo">2</text>
+        <originalText>2</originalText>
+        
+      <audio src="./audio/292_2.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0125.smil#text_0125"/></promptItem>
+      <promptItem id="numeric_three">
+        <text id="_id60440" xml:lang="en" status="todo">3</text>
+        <originalText>3</originalText>
+        
+      <audio src="./audio/293_3.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0126.smil#text_0126"/></promptItem>
+      <promptItem id="numeric_four">
+        <text id="_id60460" xml:lang="en" status="todo">4</text>
+        <originalText>4</originalText>
+        
+      <audio src="./audio/294_4.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0127.smil#text_0127"/></promptItem>
+      <promptItem id="numeric_five">
+        <text id="_id60480" xml:lang="en" status="todo">5</text>
+        <originalText>5</originalText>
+        
+      <audio src="./audio/295_5.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0128.smil#text_0128"/></promptItem>
+      <promptItem id="numeric_six">
+        <text id="_id60499" xml:lang="en" status="todo">6</text>
+        <originalText>6</originalText>
+        
+      <audio src="./audio/296_6.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0129.smil#text_0129"/></promptItem>
+      <promptItem id="numeric_seven">
+        <text id="_id60519" xml:lang="en" status="todo">7</text>
+        <originalText>7</originalText>
+        
+      <audio src="./audio/297_7.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis012a.smil#text_012a"/></promptItem>
+      <promptItem id="numeric_eight">
+        <text id="_id60538" xml:lang="en" status="todo">8</text>
+        <originalText>8</originalText>
+        
+      <audio src="./audio/298_8.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis012b.smil#text_012b"/></promptItem>
+      <promptItem id="numeric_nine">
+        <text id="_id60558" xml:lang="en" status="todo">9</text>
+        <originalText>9</originalText>
+        
+      <audio src="./audio/299_9.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis012c.smil#text_012c"/></promptItem>
+      <promptItem id="deleted">
+        <text id="_id60578" xml:lang="ms" status="ok">Padam</text>
+        <originalText>deleted</originalText>
+        
+      <audio src="./audio/300_Padam.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis012d.smil#text_012d"/></promptItem>
+      <promptItem id="will_be_skipped">
+        <text id="_id60598" xml:lang="ms" status="ok">Akan Dilangkau</text>
+        <originalText>will be skipped</originalText>
+        
+      <audio src="./audio/301_Akan_Dilangkau.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis012e.smil#text_012e"/></promptItem>
+      <promptItem id="will_be_played">
+        <text id="_id60618" xml:lang="ms" status="ok">Akan Dimainkan</text>
+        <originalText>will be played</originalText>
+        
+      <audio src="./audio/302_Akan_Dimainkan.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis012f.smil#text_012f"/></promptItem>
+      <promptItem id="item_on">
+        <text id="_id60638" xml:lang="ms" status="ok">Hidupkan</text>
+        <originalText>on</originalText>
+        
+      <audio src="./audio/303_Hidupkan.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0130.smil#text_0130"/></promptItem>
+      <promptItem id="item_off">
+        <text id="_id60657" xml:lang="ms" status="ok">Matikan</text>
+        <originalText>off</originalText>
+        
+      <audio src="./audio/304_Matikan.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0131.smil#text_0131"/></promptItem>
+      <promptItem id="item_selected">
+        <text id="_id60677" xml:lang="ms" status="ok">Terpilih</text>
+        <originalText>selected</originalText>
+        
+      <audio src="./audio/305_Terpilih.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0132.smil#text_0132"/></promptItem>
+      <promptItem id="item_deselected">
+        <text id="_id60697" xml:lang="ms" status="ok">Pilihan Terbatal</text>
+        <originalText>deselected</originalText>
+        
+      <audio src="./audio/306_Pilihan_Terbatal.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0133.smil#text_0133"/></promptItem>
+      <promptItem id="keyboardShortcut">
+        <text id="_id60717" xml:lang="ms" status="ok">Jalan Pintas Papan Kekunci</text>
+        <originalText>Keyboard Shortcut</originalText>
+        
+      <audio src="./audio/307_Jalan_Pintas_Papan_Kekunci.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0134.smil#text_0134"/></promptItem>
+      <promptItem id="icon">
+        <text id="_id60738" xml:lang="ms" status="ok">Ikon</text>
+        <originalText>Icon</originalText>
+        
+      <audio src="./audio/308_Ikon.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0135.smil#text_0135"/></promptItem>
+      <promptItem id="menu">
+        <text id="_id60758" xml:lang="en" status="todo">Menu</text>
+        <originalText>Menu</originalText>
+        
+      <audio src="./audio/309_Menu.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0136.smil#text_0136"/></promptItem>
+      <promptItem id="followedBy">
+        <note>This is used in the context of a sequence of key presses, as in "Press Alt + V, followed by S"</note>
+        <text id="_id60782" xml:lang="ms" status="ok">Diikuti Oleh</text>
+        <originalText>followed by</originalText>
+        
+      <audio src="./audio/310_Diikuti_Oleh.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0137.smil#text_0137"/></promptItem>
+      <promptItem id="submenu">
+        <text id="_id60802" xml:lang="ms" status="ok">Menu Kecil</text>
+        <originalText>Sub Menu</originalText>
+        
+      <audio src="./audio/311_Menu_Kecil.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0138.smil#text_0138"/></promptItem>
+    </promptItemRefs>
+    <generalPrompts>
+      <prompt id="dialogClosed">
+        <promptItem>
+          <text id="_id60828" xml:lang="ms" status="ok">Dialog Tertutup</text>
+          <originalText>Dialog closed.</originalText>
+          
+        <audio src="./audio/312_Dialog_Tertutup.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0139.smil#text_0139"/></promptItem>
+      </prompt>
+      <prompt id="textFieldEntry">
+        <promptItem>
+          <text id="_id60851" xml:lang="ms" status="ok">Petak Teks Ialah:</text>
+          <originalText>Text field entry is:</originalText>
+          
+        <audio src="./audio/313_Petak_Teks_Ialah.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis013a.smil#text_013a"/></promptItem>
+        <promptVar name="TEXT_FIELD"/>
+      </prompt>
+      <prompt id="notSelfVoicing">
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+      </prompt>
+      <prompt id="bookAtPathChanged">
+        <promptItem>
+          <text id="_id60889" xml:lang="ms" status="ok">Lokasi Buku Yang Anda Cari Sudah Berubah. Sebaliknya, Buku Lain Yang Ditemui. Adakah Kandungan Cakera Padat Anda Berubah?</text>
+          <originalText>The location of the book you are looking for has changed.  A different book was found instead.  Did the contents of your CD-ROM drive change?</originalText>
+          
+        <audio src="./audio/314_Lokasi_Buku_Yang_Anda_Cari_Sud.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis013b.smil#text_013b"/></promptItem>
+      </prompt>
+      <prompt id="generalBookError">
+        <promptItem>
+          <text id="_id60917" xml:lang="ms" status="ok">Terdapat Kesilapan Ketika Cuba Membuka Buku</text>
+          <originalText>An error occurred while trying to open the book.</originalText>
+          
+        <audio src="./audio/315_Terdapat_Kesilapan_Ketika_Cuba.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis013c.smil#text_013c"/></promptItem>
+        <promptVar name="BOOK_PATH"/>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+      <prompt id="noCdLoaded">
+        <promptItem>
+          <text id="_id60951" xml:lang="ms" status="ok">Tiada Cakera Padat Dalam Pemacu CD</text>
+          <originalText>There is not a CD in the CD-ROM drive.</originalText>
+          
+        <audio src="./audio/316_Tiada_Cakera_Padat_Dalam_Pemac.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis013d.smil#text_013d"/></promptItem>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+      <prompt id="pluginErrorInit">
+        <promptItem>
+          <text id="_id60980" xml:lang="ms" status="ok">Kesilapan Pemalam: Fungsi INIT () Tidak Ditemui Dalam Pemalam DLL</text>
+          <originalText>Plug-in error: init() function not found in the plug-in DLL.</originalText>
+          
+        <audio src="./audio/317_Kesilapan_Pemalam_Fungsi_INIT_.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis013e.smil#text_013e"/></promptItem>
+      </prompt>
+      <prompt id="pluginErrorDll">
+        <promptItem>
+          <text id="_id61005" xml:lang="ms" status="ok">Kesilapan Pemalam: Gedung Pemalam Berikut Gagal Dimuatkan</text>
+          <originalText>Plug-in error: The following plug-in library could not be loaded: </originalText>
+          
+        <audio src="./audio/318_Kesilapan_Pemalam_Gedung_Pemal.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis013f.smil#text_013f"/></promptItem>
+        <promptVar name="PLUGIN_LIB"/>
+      </prompt>
+      <prompt id="basicViewPrompt">
+        <promptItem>
+          <text id="_id61035" xml:lang="ms" status="ok">Anda Sedang Menggunakan Mod Paparan Asas. Press F11 Untuk Berpindah Semula Ke Mod Paparan Asal</text>
+          <originalText>You are now using the basic view mode.  Press F11 to switch back to the default view mode.</originalText>
+          
+        <audio src="./audio/319_Anda_Sedang_Menggunakan_Mod_Pa.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0140.smil#text_0140"/></promptItem>
+      </prompt>
+      <prompt id="OpenFile_notSelfVoicing">
+        <promptItem>
+          <text id="_id61061" xml:lang="ms" status="ok">Dialog Buka Fail</text>
+          <originalText>Open File Dialog</originalText>
+          
+        <audio src="./audio/320_Dialog_Buka_Fail.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0141.smil#text_0141"/></promptItem>
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem>
+          <text id="_id61084" xml:lang="ms" status="ok">Gunakan "Ciri Carian Buku" Dalam Menu Fail Untuk Mencari Buku DAISY Di Dalam Cakera Keras</text>
+          <originalText>Use the "search for books" feature, under the file menu, to find DAISY books on your hard drive.</originalText>
+          
+        <audio src="./audio/321_Gunakan_Ciri_Carian_Buku_Dalam.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0142.smil#text_0142"/></promptItem>
+        <promptItem refid="escapeToCancel"/>
+      </prompt>
+      <prompt id="BrowseForFolder_notSelfVoicing">
+        <promptItem>
+          <text id="_id61114" xml:lang="ms" status="ok">Dialog Melayari Folder</text>
+          <originalText>Browse for folder dialog</originalText>
+          
+        <audio src="./audio/322_Dialog_Melayari_Folder.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0143.smil#text_0143"/></promptItem>
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem refid="escapeToCancel"/>
+        <promptItem>
+          <text id="_id61141" xml:lang="ms" status="ok">Kemudian, Taipkan Laluan Folder Yang Anda Kehendaki Di dalam Kekotak Teks</text>
+          <originalText>Then, type the path of the folder you want in the text box.</originalText>
+          
+        <audio src="./audio/323_Kemudian_Taipkan_Laluan_Folder.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0144.smil#text_0144"/></promptItem>
+      </prompt>
+      <prompt id="canceled">
+        <promptItem>
+          <text id="_id61166" xml:lang="ms" status="ok">Batal</text>
+          <originalText>Canceled</originalText>
+          
+        <audio src="./audio/324_Batal.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0145.smil#text_0145"/></promptItem>
+      </prompt>
+      <prompt id="loading">
+        <promptItem>
+          <text id="_id61189" xml:lang="ms" status="ok">Memuatkan</text>
+          <originalText>Loading</originalText>
+          
+        <audio src="./audio/325_Memuatkan.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0146.smil#text_0146"/></promptItem>
+      </prompt>
+      <prompt id="restartForChanges">
+        <promptItem>
+          <text id="_id61213" xml:lang="ms" status="ok">Sila Mulakan Semula Untuk Melihat Perubahan</text>
+          <originalText>Please restart to see your changes.</originalText>
+          
+        <audio src="./audio/326_Sila_Mulakan_Semula_Untuk_Meli.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0147.smil#text_0147"/></promptItem>
+      </prompt>
+      <prompt id="noBooksFoundOnCd">
+        <promptItem>
+          <text id="_id61238" xml:lang="ms" status="ok">Tiada Buku DAISY Ditemui Dalam Cakera Padat</text>
+          <originalText>No DAISY books were found on this CD-ROM.</originalText>
+          
+        <audio src="./audio/327_Tiada_Buku_DAISY_Ditemui_Dalam.mp3" from="file://c:/devel/amis/trunk/Langpacks/malay/prompts/amis0148.smil#text_0148"/></promptItem>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+    </generalPrompts>
+  </prompts>
+</ui>
+

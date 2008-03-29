@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.7" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Danh s&#225;ch t&#237;nh n&#259;ng &#273;&#7847;y &#273;&#7911; c&#7911;a AMIS" />
+<meta name="dc:title" content="AMIS Version 2.0 Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:04" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="3.657s">
+<par endsync="last">
+<text src="amishelp-entity.html#amis_0008" id="amis_0008" />
+<seq>
+<audio src="07_Danh_sch_tnh_nang_dy_d_ca_AMIS.mp2" clip-begin="npt=0.000s" clip-end="npt=0.953s" id="qwrt_0001" />
+<audio src="07_Danh_sch_tnh_nang_dy_d_ca_AMIS.mp2" clip-begin="npt=0.953s" clip-end="npt=3.657s" id="qwrt_0002" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

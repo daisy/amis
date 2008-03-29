@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.7" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="T&#7889;c &#273;&#7897; b&#236;nh th&#432;&#7901;ng" />
+<meta name="dc:title" content="AMIS Version 2.0 Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:15" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="14.994s">
+<par endsync="last">
+<text src="amishelp-entity.html#amis_0025" id="amis_0025" />
+<seq>
+<audio src="36_Tc_d_bnh_thung.mp2" clip-begin="npt=0.000s" clip-end="npt=1.399s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0063" id="xami_0063" />
+<seq>
+<audio src="36_Tc_d_bnh_thung.mp2" clip-begin="npt=1.399s" clip-end="npt=1.920s" id="qwrt_0002" />
+<audio src="36_Tc_d_bnh_thung.mp2" clip-begin="npt=1.920s" clip-end="npt=5.329s" id="qwrt_0003" />
+<audio src="36_Tc_d_bnh_thung.mp2" clip-begin="npt=5.329s" clip-end="npt=6.199s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0064" id="xami_0064" />
+<seq>
+<audio src="36_Tc_d_bnh_thung.mp2" clip-begin="npt=6.199s" clip-end="npt=6.596s" id="qwrt_0005" />
+<audio src="36_Tc_d_bnh_thung.mp2" clip-begin="npt=6.596s" clip-end="npt=8.599s" id="qwrt_0006" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0065" id="xami_0065" />
+<seq>
+<audio src="36_Tc_d_bnh_thung.mp2" clip-begin="npt=8.599s" clip-end="npt=9.613s" id="qwrt_0007" />
+<audio src="36_Tc_d_bnh_thung.mp2" clip-begin="npt=9.613s" clip-end="npt=11.599s" id="qwrt_0008" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0066" id="xami_0066" />
+<seq>
+<audio src="36_Tc_d_bnh_thung.mp2" clip-begin="npt=11.599s" clip-end="npt=11.807s" id="qwrt_0009" />
+<audio src="36_Tc_d_bnh_thung.mp2" clip-begin="npt=11.807s" clip-end="npt=13.166s" id="qwrt_000A" />
+<audio src="36_Tc_d_bnh_thung.mp2" clip-begin="npt=13.166s" clip-end="npt=14.994s" id="qwrt_000B" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

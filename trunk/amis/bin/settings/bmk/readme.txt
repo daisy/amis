@@ -1,0 +1,1 @@
+This is the default user bookmark directory.  Do not delete it.

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Seksyen Terdahulu" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:15" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="14.589s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_0028" id="amis_0028" />
+<seq>
+<audio src="39_Seksyen_Terdahulu.mp3" clip-begin="npt=0.000s" clip-end="npt=0.640s" id="qwrt_0001" />
+<audio src="39_Seksyen_Terdahulu.mp3" clip-begin="npt=0.640s" clip-end="npt=2.599s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_006a" id="xami_006a" />
+<seq>
+<audio src="39_Seksyen_Terdahulu.mp3" clip-begin="npt=2.599s" clip-end="npt=3.043s" id="qwrt_0003" />
+<audio src="39_Seksyen_Terdahulu.mp3" clip-begin="npt=3.043s" clip-end="npt=5.198s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_006b" id="xami_006b" />
+<seq>
+<audio src="39_Seksyen_Terdahulu.mp3" clip-begin="npt=5.198s" clip-end="npt=5.838s" id="qwrt_0005" />
+<audio src="39_Seksyen_Terdahulu.mp3" clip-begin="npt=5.838s" clip-end="npt=8.085s" id="qwrt_0006" />
+<audio src="39_Seksyen_Terdahulu.mp3" clip-begin="npt=8.085s" clip-end="npt=9.796s" id="qwrt_0007" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_006c" id="xami_006c" />
+<seq>
+<audio src="39_Seksyen_Terdahulu.mp3" clip-begin="npt=9.796s" clip-end="npt=10.371s" id="qwrt_0008" />
+<audio src="39_Seksyen_Terdahulu.mp3" clip-begin="npt=10.371s" clip-end="npt=11.520s" id="qwrt_0009" />
+<audio src="39_Seksyen_Terdahulu.mp3" clip-begin="npt=11.520s" clip-end="npt=12.970s" id="qwrt_000A" />
+<audio src="39_Seksyen_Terdahulu.mp3" clip-begin="npt=12.970s" clip-end="npt=14.589s" id="qwrt_000B" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

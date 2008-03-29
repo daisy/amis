@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+    <meta name="ncc:generator" content="LpStudioPlusEdit 3.0.17" />
+    <meta name="dc:format" content="Daisy 2.02" />
+    <meta name="title" content="&#2949;&#2990;&#3007;&#2970;&#3021;" />
+    <meta name="dc:title" content="Welcome to AMIS" />
+    <meta name="ncc:timeInThisSmil" content="0:00:14:590" />
+    <layout>
+        <region id="txtView" />
+    </layout>
+</head>
+<body>
+<seq dur="14.590s">
+    <par endsync="last">
+        <text src="start-entity.html#welc_0001" id="welc_0001" />
+        <seq>
+            <audio src="1.mp3" clip-begin="npt=0.000s" clip-end="npt=0.438s" id="qwrt_0001" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="start-entity.html#xwel_0001" id="xwel_0001" />
+        <seq>
+            <audio src="1.mp3" clip-begin="npt=0.438s" clip-end="npt=3.455s" id="qwrt_0002" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="start-entity.html#xwel_0002" id="xwel_0002" />
+        <seq>
+            <audio src="1.mp3" clip-begin="npt=3.455s" clip-end="npt=8.614s" id="qwrt_0003" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="start-entity.html#xwel_0003" id="xwel_0003" />
+        <seq>
+            <audio src="1.mp3" clip-begin="npt=0.000s" clip-end="npt=0.438s" id="qwrt_0004" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="start-entity.html#xwel_0004" id="xwel_0004" />
+        <seq>
+            <audio src="1.mp3" clip-begin="npt=8.614s" clip-end="npt=11.579s" id="qwrt_0005" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="start-entity.html#xwel_0005" id="xwel_0005" />
+        <seq>
+            <audio src="1.mp3" clip-begin="npt=11.579s" clip-end="npt=14.152s" id="qwrt_0006" />
+        </seq>
+    </par>
+</seq>
+</body>
+</smil>

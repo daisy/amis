@@ -1,0 +1,2344 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ui xml:lang="en">
+  <containers>
+    <container id="file">
+      <note>This is the menu header "File"</note>
+      <caption>
+        <text>Fil</text>
+        <originalText>File</originalText>
+        
+      <audio src="./audio/002_Fil.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0003.smil#text_0003"/></caption>
+      <action mfcid="ID_MENU_FILE_OPEN" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and a toolbar item</note>
+        <icon src="./open.png" type="smallIcon"/>
+        <caption>
+          <text>Öppna...</text>
+          <originalText>Open...</originalText>
+          
+        <audio src="./audio/003_ppna.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0004.smil#text_0004"/></caption>
+        <description>
+          <text>Öppna en Daisybok i det lokala filsystemet</text>
+          <originalText>Open a Daisy book from the local file system</originalText>
+          
+        <audio src="./audio/004_ppna_en_Daisybok_i_det_lokala_.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0005.smil#text_0005"/></description>
+        <accelerator>
+          <text>Ctrl+O</text>
+          <originalText>Ctrl+O</originalText>
+          
+        <audio src="./audio/005_CtrlO.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0006.smil#text_0006"/></accelerator>
+        <mnemonic>
+          <text>O</text>
+          <originalText>O</originalText>
+          
+        <audio src="./audio/006_O.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0007.smil#text_0007"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_LOADCD" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and a toolbar item</note>
+        <icon src="./settings/img/cd3.ico" type="smallIcon"/>
+        <icon src="./settings/img/cd_big.ico" type="largeIcon"/>
+        <caption>
+          <text>Ladda CD</text>
+          <originalText>Load CD</originalText>
+          
+        <audio src="./audio/007_Ladda_CD.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0008.smil#text_0008"/></caption>
+        <description>
+          <text>Ladda en DAISY-bok från CD ROM</text>
+          <originalText>Load a DAISY book from CD ROM</originalText>
+          
+        <audio src="./audio/008_Ladda_en_DAISYbok_frn_CD_ROM.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0009.smil#text_0009"/></description>
+        <accelerator>
+          <text>Ctrl+L</text>
+          <originalText>Ctrl+L</originalText>
+          
+        <audio src="./audio/009_CtrlL.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed000a.smil#text_000a"/></accelerator>
+        <mnemonic>
+          <text>L</text>
+          <originalText>L</originalText>
+          
+        <audio src="./audio/010_L.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed000b.smil#text_000b"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_SEARCHDRIVE" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>Sök...</text>
+          <originalText>Search...</originalText>
+          
+        <audio src="./audio/011_Sk.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed000c.smil#text_000c"/></caption>
+        <description>
+          <text>Sök på hårddiskar efter DAISY-böcker</text>
+          <originalText>Search local drives for DAISY books</originalText>
+          
+        <audio src="./audio/012_Sk_p_hrddiskar_efter_DAISYbcke.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed000d.smil#text_000d"/></description>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/013_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed000e.smil#text_000e"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_PREFERENCES" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>Inställningar...</text>
+          <originalText>Preferences...</originalText>
+          
+        <audio src="./audio/014_Instllningar.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed000f.smil#text_000f"/></caption>
+        <description>
+          <text>Detta är dialogrutan för Inställningar</text>
+          <originalText>This is the application preferences dialog.</originalText>
+          
+        <audio src="./audio/015_Detta_r_dialogrutan_fr_Instlln.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0010.smil#text_0010"/></description>
+        <mnemonic>
+          <text>P</text>
+          <originalText>P</originalText>
+          
+        <audio src="./audio/016_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0011.smil#text_0011"/></mnemonic>
+      </action>
+      <container id="recentBooksList">
+        <note>This is the menu header for the recent books sub-menu.</note>
+        <caption>
+          <text>Senast läst</text>
+          <originalText>Recent</originalText>
+          
+        <audio src="./audio/017_Senast_lst.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0012.smil#text_0012"/></caption>
+        <switch element="action">
+          <action mfcid="ID_FILE_RECENT_EMPTY" widget="menuItem" condition="ID_FILE_RECENT_EMPTY">
+            <note>This is going to be a menu item</note>
+            <caption>
+              <text>Tom</text>
+              <originalText>Empty</originalText>
+              
+            <audio src="./audio/018_Tom.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0013.smil#text_0013"/></caption>
+            <description>
+              <text>Det finns inga böcker i Senast läst.</text>
+              <originalText>There are no recently read books.</originalText>
+              
+            <audio src="./audio/019_Det_finns_inga_bcker_i_Senast_.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0014.smil#text_0014"/></description>
+          </action>
+          <action mfcid="BOOK_BASE_ID" widget="menuItem" condition="BOOK_BASE_ID">
+            <note>This is going to be a menu item</note>
+            <list repeat="yes">
+              <caption>
+                <promptVar name="RECENT_BOOK_TITLE"/>
+              </caption>
+            </list>
+          </action>
+        </switch>
+        <mnemonic>
+          <text>R</text>
+          <originalText>R</originalText>
+          
+        <audio src="./audio/020_R.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0015.smil#text_0015"/></mnemonic>
+      </container>
+      <action mfcid="ID_MENU_FILE_EXIT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>Avsluta</text>
+          <originalText>Exit</originalText>
+          
+        <audio src="./audio/021_Avsluta.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0016.smil#text_0016"/></caption>
+        <description>
+          <text>Avsluta AMIS</text>
+          <originalText>Exit AMIS</originalText>
+          
+        <audio src="./audio/022_Avsluta_AMIS.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0017.smil#text_0017"/></description>
+        <accelerator>
+          <text>Alt+F4</text>
+          <originalText>Alt+F4</originalText>
+          
+        <audio src="./audio/023_AltF4.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0018.smil#text_0018"/></accelerator>
+        <mnemonic>
+          <text>x</text>
+          <originalText>x</originalText>
+          
+        <audio src="./audio/024_x.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0019.smil#text_0019"/></mnemonic>
+      </action>
+      <accelerator>
+        <text>Alt+F</text>
+        <originalText>Alt+F</originalText>
+        
+      <audio src="./audio/025_AltF.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed001a.smil#text_001a"/></accelerator>
+      <mnemonic>
+        <text>F</text>
+        <originalText>F</originalText>
+        
+      <audio src="./audio/026_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed001b.smil#text_001b"/></mnemonic>
+    </container>
+    <container id="view">
+      <note>This is the menu header "View"</note>
+      <caption>
+        <text>Visa</text>
+        <originalText>View</originalText>
+        
+      <audio src="./audio/027_Visa.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed001c.smil#text_001c"/></caption>
+      <action mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>Marginaltext</text>
+          <originalText>Sidebar</originalText>
+          
+        <audio src="./audio/028_Marginaltext.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed001d.smil#text_001d"/></caption>
+        <description>
+          <text>Dölj eller visa marginaltext.</text>
+          <originalText>Turn the sidebar on or off.</originalText>
+          
+        <audio src="./audio/029_Dlj_eller_visa_marginaltext.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed001e.smil#text_001e"/></description>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/030_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed001f.smil#text_001f"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_BASIC" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>Enkel visning</text>
+          <originalText>Basic View Mode</originalText>
+          
+        <audio src="./audio/031_Enkel_visning.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0020.smil#text_0020"/></caption>
+        <description>
+          <text>Byt till Enkel visning</text>
+          <originalText>Switch the view to basic mode.</originalText>
+          
+        <audio src="./audio/032_Byt_till_Enkel_visning.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0021.smil#text_0021"/></description>
+        <accelerator>
+          <text>F11</text>
+          <originalText>F11</originalText>
+          
+        <audio src="./audio/033_F11.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0022.smil#text_0022"/></accelerator>
+        <mnemonic>
+          <text>B</text>
+          <originalText>B</originalText>
+          
+        <audio src="./audio/034_B.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0023.smil#text_0023"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_CONTRAST" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item</note>
+        <icon src="./settings/img/contrast.ico" type="smallIcon"/>
+        <caption>
+          <text>Högkontrast</text>
+          <originalText>High Contrast</originalText>
+          
+        <audio src="./audio/035_Hgkontrast.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0024.smil#text_0024"/></caption>
+        <description>
+          <text>Använd högkontrastfärger för textvisning.</text>
+          <originalText>Use high contrast colors for the text display.</originalText>
+          
+        <audio src="./audio/036_Anvnd_hgkontrastfrger_fr_textv.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0025.smil#text_0025"/></description>
+        <accelerator>
+          <text>Ctrl+S</text>
+          <originalText>Ctrl+S</originalText>
+          
+        <audio src="./audio/037_CtrlS.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0026.smil#text_0026"/></accelerator>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/038_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0027.smil#text_0027"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_LARGEFONT" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/font.ico" type="smallIcon"/>
+        <caption>
+          <text>Öka stilstorlek</text>
+          <originalText>Increase Font Size</originalText>
+          
+        <audio src="./audio/039_ka_stilstorlek.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0028.smil#text_0028"/></caption>
+        <description>
+          <text>Öka stilstorleken gradvis.</text>
+          <originalText>Gradually increase the font size.</originalText>
+          
+        <audio src="./audio/040_ka_stilstorleken_gradvis.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0029.smil#text_0029"/></description>
+        <mnemonic>
+          <text>I</text>
+          <originalText>I</originalText>
+          
+        <audio src="./audio/041_I.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed002a.smil#text_002a"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_RESETFONT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>Återställ stilstorlek</text>
+          <originalText>Reset Font Size</originalText>
+          
+        <audio src="./audio/042_terstll_stilstorlek.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed002b.smil#text_002b"/></caption>
+        <description>
+          <text>Sätt stilstorleken till Normal.</text>
+          <originalText>Set the font size to the default setting.</originalText>
+          
+        <audio src="./audio/043_Stt_stilstorleken_till_Normal.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed002c.smil#text_002c"/></description>
+        <mnemonic>
+          <text>R</text>
+          <originalText>R</originalText>
+          
+        <audio src="./audio/044_R.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed002d.smil#text_002d"/></mnemonic>
+      </action>
+      <action mfcid="NAVLIST_BASE_ID" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <promptVar name="NAV_LIST_NAME"/>
+        </caption>
+        <description>
+          <promptVar name="NAV_LIST_DESCRIPTION"/>
+        </description>
+      </action>
+      <accelerator>
+        <text>Alt+V</text>
+        <originalText>Alt+V</originalText>
+        
+      <audio src="./audio/045_AltV.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed002e.smil#text_002e"/></accelerator>
+      <mnemonic>
+        <text>V</text>
+        <originalText>V</originalText>
+        
+      <audio src="./audio/046_V.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed002f.smil#text_002f"/></mnemonic>
+    </container>
+    <container id="play">
+      <note>This is the menu header "Play"</note>
+      <caption>
+        <text>Spela upp</text>
+        <originalText>Play</originalText>
+        
+      <audio src="./audio/047_Spela_upp.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0030.smil#text_0030"/></caption>
+      <switch element="action">
+        <action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" condition="canPlay">
+          <note>This is going to be a menu item and toolbar item</note>
+          <icon src="./settings/img/play-big.ico" type="smallIcon"/>
+          <icon src="./settings/img/play_big.ico" type="largeIcon"/>
+          <caption>
+            <text>Spela upp</text>
+            <originalText>Play</originalText>
+            
+          <audio src="./audio/048_Spela_upp.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0031.smil#text_0031"/></caption>
+          <description>
+            <text>Starta synkroniserad uppspelning.</text>
+            <originalText>Start synchronized playback.</originalText>
+            
+          <audio src="./audio/049_Starta_synkroniserad_uppspelni.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0032.smil#text_0032"/></description>
+          <accelerator>
+            <text>Mellanslag</text>
+            <originalText>Space</originalText>
+            
+          <audio src="./audio/050_Mellanslag.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0033.smil#text_0033"/></accelerator>
+          <mnemonic>
+            <text>P</text>
+            <originalText>P</originalText>
+            
+          <audio src="./audio/051_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0034.smil#text_0034"/></mnemonic>
+        </action>
+        <action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" condition="canPause">
+          <note>This is going to be a menu item and toolbar item</note>
+          <icon src="./settings/img/pause.ico" type="smallIcon"/>
+          <icon src="./settings/img/pause_big.ico" type="largeIcon"/>
+          <caption>
+            <text>Paus</text>
+            <originalText>Pause</originalText>
+            
+          <audio src="./audio/052_Paus.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0035.smil#text_0035"/></caption>
+          <description>
+            <text>Gör paus i uppspelningen av denna DAISY-bok.</text>
+            <originalText>Pause playback of this DAISY book.</originalText>
+            
+          <audio src="./audio/053_Gr_paus_i_uppspelningen_av_den.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0036.smil#text_0036"/></description>
+          <accelerator>
+            <text>Mellanslag</text>
+            <originalText>Space</originalText>
+            
+          <audio src="./audio/054_Mellanslag.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0037.smil#text_0037"/></accelerator>
+          <mnemonic>
+            <text>a</text>
+            <originalText>a</originalText>
+            
+          <audio src="./audio/055_a.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0038.smil#text_0038"/></mnemonic>
+        </action>
+      </switch>
+      <action mfcid="ID_MENU_PLAY_ESCAPE" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>Hoppa ur</text>
+          <originalText>Escape</originalText>
+          
+        <audio src="./audio/056_Escape.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0039.smil#text_0039"/></caption>
+        <description>
+          <text>Hoppa över läsning av aktuellt avsnitt.</text>
+          <originalText>Jump out of the currently playing item or structure.</originalText>
+          
+        <audio src="./audio/057_Hoppa_ver_lsning_av_aktuellt_a.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed003a.smil#text_003a"/></description>
+        <accelerator>
+          <text>Esc</text>
+          <originalText>Esc</originalText>
+          
+        <audio src="./audio/058_Esc.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed003b.smil#text_003b"/></accelerator>
+        <mnemonic>
+          <text>E</text>
+          <originalText>E</originalText>
+          
+        <audio src="./audio/059_E.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed003c.smil#text_003c"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_FASTER" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/fullspeedahead.ico" type="smallIcon"/>
+        <caption>
+          <text>Snabbare</text>
+          <originalText>Faster</originalText>
+          
+        <audio src="./audio/060_Snabbare.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed003d.smil#text_003d"/></caption>
+        <description>
+          <text>Öka uppspelningshastigheten.</text>
+          <originalText>Increase the playback rate.</originalText>
+          
+        <audio src="./audio/061_ka_uppspelningshastigheten.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed003e.smil#text_003e"/></description>
+        <accelerator>
+          <text>Ctrl++</text>
+          <originalText>Ctrl++</originalText>
+          
+        <audio src="./audio/062_Ctrl.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed003f.smil#text_003f"/></accelerator>
+        <mnemonic>
+          <text>F</text>
+          <originalText>F</originalText>
+          
+        <audio src="./audio/063_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0040.smil#text_0040"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_SLOWER" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/slowdown.ico" type="smallIcon"/>
+        <caption>
+          <text>Långsammare</text>
+          <originalText>Slower</originalText>
+          
+        <audio src="./audio/064_Lngsammare.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0041.smil#text_0041"/></caption>
+        <description>
+          <text>Minska uppspelningshastigheten.</text>
+          <originalText>Slow down the playback rate.</originalText>
+          
+        <audio src="./audio/065_Minska_uppspelningshastigheten.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0042.smil#text_0042"/></description>
+        <accelerator>
+          <text>Ctrl+-</text>
+          <originalText>Ctrl+-</originalText>
+          
+        <audio src="./audio/066_Ctrl.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0043.smil#text_0043"/></accelerator>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/067_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0044.smil#text_0044"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_NORMALSPEED" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/normalspeed.ico" type="smallIcon"/>
+        <caption>
+          <text>Normal hastighet</text>
+          <originalText>Normal Speed</originalText>
+          
+        <audio src="./audio/068_Normal_hastighet.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0045.smil#text_0045"/></caption>
+        <description>
+          <text>Återställ uppspelningshastigheten till normal.</text>
+          <originalText>Reset the playback rate to normal.</originalText>
+          
+        <audio src="./audio/069_terstll_uppspelningshastighete.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0046.smil#text_0046"/></description>
+        <accelerator>
+          <text>Ctrl+0</text>
+          <originalText>Ctrl+0</originalText>
+          
+        <audio src="./audio/070_Ctrl0.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0047.smil#text_0047"/></accelerator>
+        <mnemonic>
+          <text>N</text>
+          <originalText>N</originalText>
+          
+        <audio src="./audio/071_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0048.smil#text_0048"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_VOLUP" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>Öka volymen</text>
+          <originalText>Increase Volume</originalText>
+          
+        <audio src="./audio/072_ka_volymen.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0049.smil#text_0049"/></caption>
+        <description>
+          <text>Höj volymen gradvis.</text>
+          <originalText>Gradually raise the volume.</originalText>
+          
+        <audio src="./audio/073_Hj_volymen_gradvis.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed004a.smil#text_004a"/></description>
+        <accelerator>
+          <text>Ctrl+Pil upp</text>
+          <originalText>Ctrl+Up</originalText>
+          
+        <audio src="./audio/074_CtrlPil_upp.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed004b.smil#text_004b"/></accelerator>
+        <mnemonic>
+          <text>I</text>
+          <originalText>I</originalText>
+          
+        <audio src="./audio/075_I.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed004c.smil#text_004c"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_VOLDOWN" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>Minska volymen</text>
+          <originalText>Decrease Volume</originalText>
+          
+        <audio src="./audio/076_Minska_volymen.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed004d.smil#text_004d"/></caption>
+        <description>
+          <text>Sänk volymen gradvis.</text>
+          <originalText>Gradually lower the volume.</originalText>
+          
+        <audio src="./audio/077_Snk_volymen_gradvis.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed004e.smil#text_004e"/></description>
+        <accelerator>
+          <text>Ctrl+Pil ner</text>
+          <originalText>Ctrl+Down</originalText>
+          
+        <audio src="./audio/078_CtrlPil_ner.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed004f.smil#text_004f"/></accelerator>
+        <mnemonic>
+          <text>D</text>
+          <originalText>D</originalText>
+          
+        <audio src="./audio/079_D.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0050.smil#text_0050"/></mnemonic>
+      </action>
+      <accelerator>
+        <text>Alt+P</text>
+        <originalText>Alt+P</originalText>
+        
+      <audio src="./audio/080_AltP.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0051.smil#text_0051"/></accelerator>
+      <mnemonic>
+        <text>P</text>
+        <originalText>P</originalText>
+        
+      <audio src="./audio/081_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0052.smil#text_0052"/></mnemonic>
+    </container>
+    <container id="navigate">
+      <note>This is the menu header "Navigate"</note>
+      <caption>
+        <text>Navigera</text>
+        <originalText>Navigate</originalText>
+        
+      <audio src="./audio/082_Navigera.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0053.smil#text_0053"/></caption>
+      <action mfcid="ID_MENU_NAV_PREVSECTION" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevsection.ico" type="smallIcon"/>
+        <icon src="./settings/img/prevsection_big.ico" type="largeIcon"/>
+        <caption>
+          <text>Föregående sektion</text>
+          <originalText>Previous Section</originalText>
+          
+        <audio src="./audio/083_Fregende_sektion.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0054.smil#text_0054"/></caption>
+        <description>
+          <text>Gå till föregående sektion.</text>
+          <originalText>Go to the previous section.</originalText>
+          
+        <audio src="./audio/084_G_till_fregende_sektion.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0055.smil#text_0055"/></description>
+        <accelerator>
+          <text>Pil upp</text>
+          <originalText>Up</originalText>
+          
+        <audio src="./audio/085_Pil_upp.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0056.smil#text_0056"/></accelerator>
+        <mnemonic>
+          <text>P</text>
+          <originalText>P</originalText>
+          
+        <audio src="./audio/086_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0057.smil#text_0057"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTSECTION" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextsection.ico" type="smallIcon"/>
+        <icon src="./settings/img/nextsection_big.ico" type="largeIcon"/>
+        <caption>
+          <text>Nästa sektion</text>
+          <originalText>Next Section</originalText>
+          
+        <audio src="./audio/087_Nsta_sektion.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0058.smil#text_0058"/></caption>
+        <description>
+          <text>Gå till nästa sektion.</text>
+          <originalText>Go to the next section.</originalText>
+          
+        <audio src="./audio/088_G_till_nsta_sektion.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0059.smil#text_0059"/></description>
+        <accelerator>
+          <text>Pil ner</text>
+          <originalText>Down</originalText>
+          
+        <audio src="./audio/089_Pil_ner.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed005a.smil#text_005a"/></accelerator>
+        <mnemonic>
+          <text>N</text>
+          <originalText>N</originalText>
+          
+        <audio src="./audio/090_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed005b.smil#text_005b"/></mnemonic>
+      </action>
+      <container id="sectiondepth">
+        <note>This is the "show section depth" sub-menu pop-up</note>
+        <caption>
+          <text>Visa sektionsnivå</text>
+          <originalText>Show Section Depth</originalText>
+          
+        <audio src="./audio/091_Visa_sektionsniv.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed005c.smil#text_005c"/></caption>
+        <switch element="action">
+          <action mfcid="ID_EMPTY" widget="menuItem" condition="ID_EMPTY">
+            <note>This is going to be a menu item</note>
+            <caption>
+              <text>Tom</text>
+              <originalText>Empty</originalText>
+              
+            <audio src="./audio/092_Tom.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed005d.smil#text_005d"/></caption>
+            <description>
+              <text>Det finns inga sektionsnivåer.</text>
+              <originalText>There are no section levels.</originalText>
+              
+            <audio src="./audio/093_Det_finns_inga_sektionsniver.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed005e.smil#text_005e"/></description>
+          </action>
+          <action mfcid="SECTION_DEPTH_BASE_ID" widget="menuItem" condition="SECTION_DEPTH_BASE_ID">
+            <note>This is going to be a menu item</note>
+            <list repeat="yes">
+              <caption>
+                <promptVar name="SECTION_DEPTH_OPTION"/>
+              </caption>
+            </list>
+          </action>
+        </switch>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/094_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed005f.smil#text_005f"/></mnemonic>
+      </container>
+      <action mfcid="ID_MENU_NAV_PREVPHRASE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevphasecirc.ico" type="smallIcon"/>
+        <caption>
+          <text>Föregående fras</text>
+          <originalText>Previous Phrase</originalText>
+          
+        <audio src="./audio/095_Fregende_fras.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0060.smil#text_0060"/></caption>
+        <description>
+          <text>Gå till föregående fras.</text>
+          <originalText>Go to the previous phrase.</originalText>
+          
+        <audio src="./audio/096_G_till_fregende_fras.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0061.smil#text_0061"/></description>
+        <accelerator>
+          <text>Pil vänster</text>
+          <originalText>Left</originalText>
+          
+        <audio src="./audio/097_Pil_vnster.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0062.smil#text_0062"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTPHRASE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextphrasecirc.ico" type="smallIcon"/>
+        <caption>
+          <text>Nästa fras</text>
+          <originalText>Next Phrase</originalText>
+          
+        <audio src="./audio/098_Nsta_fras.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0063.smil#text_0063"/></caption>
+        <description>
+          <text>Gå till nästa fras.</text>
+          <originalText>Go to the next phrase.</originalText>
+          
+        <audio src="./audio/099_G_till_nsta_fras.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0064.smil#text_0064"/></description>
+        <accelerator>
+          <text>Pil höger</text>
+          <originalText>Right</originalText>
+          
+        <audio src="./audio/100_Pil_hger.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0065.smil#text_0065"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_PREVPAGE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevpage.ico" type="smallIcon"/>
+        <caption>
+          <text>Föregående sida</text>
+          <originalText>Previous Page</originalText>
+          
+        <audio src="./audio/101_Fregende_sida.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0066.smil#text_0066"/></caption>
+        <description>
+          <text>Gå till föregående sida.</text>
+          <originalText>Go to the previous page.</originalText>
+          
+        <audio src="./audio/102_G_till_fregende_sida.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0067.smil#text_0067"/></description>
+        <accelerator>
+          <text>Ctrl+Pil vänster</text>
+          <originalText>Ctrl+Left</originalText>
+          
+        <audio src="./audio/103_CtrlPil_vnster.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0068.smil#text_0068"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTPAGE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextpage.ico" type="smallIcon"/>
+        <caption>
+          <text>Nästa sida</text>
+          <originalText>Next Page</originalText>
+          
+        <audio src="./audio/104_Nsta_sida.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0069.smil#text_0069"/></caption>
+        <description>
+          <text>Gå till nästa sida.</text>
+          <originalText>Go to the next page.</originalText>
+          
+        <audio src="./audio/105_G_till_nsta_sida.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed006a.smil#text_006a"/></description>
+        <accelerator>
+          <text>Ctrl+Pil höger</text>
+          <originalText>Ctrl+Right</originalText>
+          
+        <audio src="./audio/106_CtrlPil_hger.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed006b.smil#text_006b"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_GOTOPAGE" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>Gå till sidan...</text>
+          <originalText>Go to Page...</originalText>
+          
+        <audio src="./audio/107_G_till_sidan.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed006c.smil#text_006c"/></caption>
+        <description>
+          <text>Gå till angiven sida.</text>
+          <originalText>Go to a specific page.</originalText>
+          
+        <audio src="./audio/108_G_till_angiven_sida.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed006d.smil#text_006d"/></description>
+        <accelerator>
+          <text>Ctrl+G</text>
+          <originalText>Ctrl+G</originalText>
+          
+        <audio src="./audio/109_CtrlG.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed006e.smil#text_006e"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_FINDINTEXT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>Finn i texten</text>
+          <originalText>Find in Text</originalText>
+          
+        <audio src="./audio/110_Finn_i_texten.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed006f.smil#text_006f"/></caption>
+        <description>
+          <text>Sök ett ord eller en fras i texten.</text>
+          <originalText>Search for a word or phrase in the text.</originalText>
+          
+        <audio src="./audio/111_Sk_ett_ord_eller_en_fras_i_tex.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0070.smil#text_0070"/></description>
+        <accelerator>
+          <text>Ctrl+F</text>
+          <originalText>Ctrl+F</originalText>
+          
+        <audio src="./audio/112_CtrlF.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0071.smil#text_0071"/></accelerator>
+        <mnemonic>
+          <text>F</text>
+          <originalText>F</originalText>
+          
+        <audio src="./audio/113_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0072.smil#text_0072"/></mnemonic>
+      </action>
+      <accelerator>
+        <text>Alt+N</text>
+        <originalText>Alt+N</originalText>
+        
+      <audio src="./audio/114_AltN.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0073.smil#text_0073"/></accelerator>
+      <mnemonic>
+        <text>N</text>
+        <originalText>N</originalText>
+        
+      <audio src="./audio/115_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0074.smil#text_0074"/></mnemonic>
+    </container>
+    <container id="bookmarks">
+      <note>This is the menu header "Bookmarks"</note>
+      <caption>
+        <text>Bokmärken</text>
+        <originalText>Bookmarks</originalText>
+        
+      <audio src="./audio/116_Bokmrken.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0075.smil#text_0075"/></caption>
+      <action mfcid="ID_MENU_BMK_ADD" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/adbookmark.ico" type="smallIcon"/>
+        <caption>
+          <text>Lägg till bokmärke</text>
+          <originalText>Add Bookmark</originalText>
+          
+        <audio src="./audio/117_Lgg_till_bokmrke.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0076.smil#text_0076"/></caption>
+        <description>
+          <text>Sätt in bokmärke här.</text>
+          <originalText>Bookmark your current position.</originalText>
+          
+        <audio src="./audio/118_Stt_in_bokmrke_hr.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0077.smil#text_0077"/></description>
+        <accelerator>
+          <text>Ctrl+D</text>
+          <originalText>Ctrl+D</originalText>
+          
+        <audio src="./audio/119_CtrlD.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0078.smil#text_0078"/></accelerator>
+        <mnemonic>
+          <text>A</text>
+          <originalText>A</originalText>
+          
+        <audio src="./audio/120_A.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0079.smil#text_0079"/></mnemonic>
+      </action>
+      <action mfcid="BOOKMARK_BASE_ID" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOKMARK_TITLE"/>
+          </caption>
+        </list>
+      </action>
+      <accelerator>
+        <text>Alt+B</text>
+        <originalText>Alt+B</originalText>
+        
+      <audio src="./audio/121_AltB.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed007a.smil#text_007a"/></accelerator>
+      <mnemonic>
+        <text>B</text>
+        <originalText>B</originalText>
+        
+      <audio src="./audio/122_B.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed007b.smil#text_007b"/></mnemonic>
+    </container>
+    <container id="info">
+      <note>This is the menu header "Info"</note>
+      <caption>
+        <text>Information</text>
+        <originalText>Info</originalText>
+        
+      <audio src="./audio/123_Information.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed007c.smil#text_007c"/></caption>
+      <action mfcid="ID_MENU_INFO_SKIP" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>Överhoppbara inslag...</text>
+          <originalText>Skippable Items...</originalText>
+          
+        <audio src="./audio/124_verhoppbara_inslag.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed007d.smil#text_007d"/></caption>
+        <description>
+          <text>Visa överhoppbara inslag i denna bok.</text>
+          <originalText>View the skippable items for this publication.</originalText>
+          
+        <audio src="./audio/125_Visa_verhoppbara_inslag_i_denn.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed007e.smil#text_007e"/></description>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/126_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed007f.smil#text_007f"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_SUMMARY" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/info.ico" type="smallIcon"/>
+        <caption>
+          <text>Om publikationen</text>
+          <originalText>Full Summary</originalText>
+          
+        <audio src="./audio/127_Om_publikationen.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0080.smil#text_0080"/></caption>
+        <description>
+          <text>Få information om denna publikation.</text>
+          <originalText>Get all summary info for this publication.</originalText>
+          
+        <audio src="./audio/128_F_information_om_denna_publika.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0081.smil#text_0081"/></description>
+        <mnemonic>
+          <text>F</text>
+          <originalText>F</originalText>
+          
+        <audio src="./audio/129_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0082.smil#text_0082"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_CURRENTPOSITION" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>Aktuell position</text>
+          <originalText>Current Position</originalText>
+          
+        <audio src="./audio/130_Aktuell_position.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0083.smil#text_0083"/></caption>
+        <description>
+          <text>Få information om din aktuella position.</text>
+          <originalText>Get information about your current position.</originalText>
+          
+        <audio src="./audio/131_F_information_om_din_aktuella_.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0084.smil#text_0084"/></description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/132_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0085.smil#text_0085"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_NAVOPTIONS" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>Navigationsmöjligheter</text>
+          <originalText>Navigation Options</originalText>
+          
+        <audio src="./audio/133_Navigationsmjligheter.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0086.smil#text_0086"/></caption>
+        <description>
+          <text>Ta reda på dina navigationsmöjligheter i denna bok.</text>
+          <originalText>Learn about your navigation options for this publication.</originalText>
+          
+        <audio src="./audio/134_Ta_reda_p_dina_navigationsmjli.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0087.smil#text_0087"/></description>
+        <mnemonic>
+          <text>N</text>
+          <originalText>N</originalText>
+          
+        <audio src="./audio/135_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0088.smil#text_0088"/></mnemonic>
+      </action>
+      <accelerator>
+        <text>Alt+I</text>
+        <originalText>Alt+I</originalText>
+        
+      <audio src="./audio/136_AltI.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0089.smil#text_0089"/></accelerator>
+      <mnemonic>
+        <text>I</text>
+        <originalText>I</originalText>
+        
+      <audio src="./audio/137_I.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed008a.smil#text_008a"/></mnemonic>
+    </container>
+    <container id="help">
+      <note>This is the menu header "Help"</note>
+      <caption>
+        <text>Hjälp</text>
+        <originalText>Help</originalText>
+        
+      <audio src="./audio/138_Hjlp.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed008b.smil#text_008b"/></caption>
+      <action mfcid="ID_MENU_HELP_CONTENTS" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/help.ico" type="smallIcon"/>
+        <icon src="./settings/img/help_big.ico" type="largeIcon"/>
+        <caption>
+          <text>Innehåll</text>
+          <originalText>Contents</originalText>
+          
+        <audio src="./audio/139_Innehll.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed008c.smil#text_008c"/></caption>
+        <description>
+          <text>Få hjälp att använda AMIS</text>
+          <originalText>Get help using AMIS</originalText>
+          
+        <audio src="./audio/140_F_hjlp_att_anvnda_AMIS.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed008d.smil#text_008d"/></description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/141_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed008e.smil#text_008e"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_HELP_ABOUT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>Om AMIS</text>
+          <originalText>About AMIS</originalText>
+          
+        <audio src="./audio/142_Om_AMIS.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed008f.smil#text_008f"/></caption>
+        <description>
+          <text>Ta reda på mer om AMIS och DAISY-for-All</text>
+          <originalText>Find out about AMIS and DAISY-for-All.</originalText>
+          
+        <audio src="./audio/143_Ta_reda_p_mer_om_AMIS_och_DAIS.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0090.smil#text_0090"/></description>
+        <mnemonic>
+          <text>A</text>
+          <originalText>A</originalText>
+          
+        <audio src="./audio/144_A.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0091.smil#text_0091"/></mnemonic>
+      </action>
+      <accelerator>
+        <text>Alt+H</text>
+        <originalText>Alt+H</originalText>
+        
+      <audio src="./audio/145_AltH.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0092.smil#text_0092"/></accelerator>
+      <mnemonic>
+        <text>H</text>
+        <originalText>H</originalText>
+        
+      <audio src="./audio/146_H.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0093.smil#text_0093"/></mnemonic>
+    </container>
+  </containers>
+  <dialogs>
+    <dialog mfcid="IDD_FIND">
+      <note>This is the find in text dialog</note>
+      <caption>
+        <text>Hitta i texten</text>
+        <originalText>Find in Text</originalText>
+        
+      <audio src="./audio/147_Hitta_i_texten.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0094.smil#text_0094"/></caption>
+      <description>
+        <text>Här kan du söka framåt och bakåt i texten.</text>
+        <originalText>Here you can search the full text in either direction.</originalText>
+        
+      <audio src="./audio/148_Hr_kan_du_ska_framt_och_bakt_i.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0095.smil#text_0095"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem>
+          <text>Skriv in sökord och tryck sedan Enter.</text>
+          <originalText>After typing in your search, press enter to begin searching.</originalText>
+          
+        <audio src="./audio/149_Skriv_in_skord_och_tryck_sedan.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0096.smil#text_0096"/></promptItem>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <!--removed this as it is probably not very useful, and it was incorrectly recorded-->
+        <!-- <promptItem refid="textBoxRepeatInstr"/>-->
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <text>Tryck för att starta sökning efter text i filen.</text>
+          <originalText>Press to begin searching for text in the file.</originalText>
+          
+        <audio src="./audio/150_Tryck_fr_att_starta_skning_eft.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0097.smil#text_0097"/></description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/151_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0098.smil#text_0098"/></mnemonic>
+      </control>
+      <control mfcid="IDC_SEARCHSTRING" widget="textfield">
+        <description>
+          <text>Skriv in den text som ska sökas.</text>
+          <originalText>Type the text to search for.</originalText>
+          
+        <audio src="./audio/152_Skriv_in_den_text_som_ska_skas.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0099.smil#text_0099"/></description>
+      </control>
+      <control mfcid="IDC_FINDNEXT" widget="radiobutton">
+        <note>This indicates the direction of the search</note>
+        <caption>
+          <text>Sök nästa</text>
+          <originalText>Find Next</originalText>
+          
+        <audio src="./audio/153_Sk_nsta.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed009a.smil#text_009a"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="SELECTED_OR_DESELECTED" param="FIND_NEXT_IN_TEXT"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_FINDPREV" widget="radiobutton">
+        <note>This indicates the direction of the search</note>
+        <caption>
+          <text>Sök föregående</text>
+          <originalText>Find Previous</originalText>
+          
+        <audio src="./audio/154_Sk_fregende.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed009b.smil#text_009b"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptName name="SELECTED_OR_DESELECTED" param="FIND_PREV_IN_TEXT"/>
+          </prompt>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_CDSEARCH">
+      <note>This dialog appears when more than one book is on a CD-ROM</note>
+      <caption>
+        <text>Flera böcker funna</text>
+        <originalText>Multiple books found</originalText>
+        
+      <audio src="./audio/155_Flera_bcker_funna.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed009c.smil#text_009c"/></caption>
+      <description mfcid="IDC_STATIC">
+        <text>Mer än en bok finns på denna CD. Välj en bok från listan och tryck Alt + O för att öppna den.</text>
+        <originalText>More than one book was found on this CD. Please select a book from the list below and press Alt + O to open.</originalText>
+        
+      <audio src="./audio/156_Mer_n_en_bok_finns_p_denna_CD_.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed009d.smil#text_009d"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_CANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/157_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed009e.smil#text_009e"/></mnemonic>
+      </control>
+      <control mfcid="IDC_OPENBOOK" widget="button">
+        <caption>
+          <text>Öppna</text>
+          <originalText>Open</originalText>
+          
+        <audio src="./audio/158_ppna.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed009f.smil#text_009f"/></caption>
+        <description>
+          <text>Tryck för att stänga denna ruta och öppna den valda boken.</text>
+          <originalText>Press to close this dialog and open the selected book.</originalText>
+          
+        <audio src="./audio/159_Tryck_fr_att_stnga_denna_ruta_.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00a0.smil#text_00a0"/></description>
+        <mnemonic>
+          <text>O</text>
+          <originalText>O</originalText>
+          
+        <audio src="./audio/160_O.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00a1.smil#text_00a1"/></mnemonic>
+      </control>
+      <control mfcid="IDC_BOOKLIST" widget="list">
+        <description>
+          <text>Använd piltangenterna för att förflytta dig mellan titlarna i listan.</text>
+          <originalText>Use the arrow keys to move around this list of titles.</originalText>
+          
+        <audio src="./audio/161_Anvnd_piltangenterna_fr_att_fr.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00a2.smil#text_00a2"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOK_TITLE"/>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_ABOUTBOX">
+      <note>This dialog gives some basic information about AMIS.</note>
+      <caption>
+        <text>Om AMIS</text>
+        <originalText>About AMIS</originalText>
+        
+      <audio src="./audio/162_Om_AMIS.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00a3.smil#text_00a3"/></caption>
+      <description>
+        <text>Dialogruta med information om programvaran AMIS.</text>
+        <originalText>Dialog with information about AMIS software.</originalText>
+        
+      <audio src="./audio/163_Dialogruta_med_information_om_.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00a4.smil#text_00a4"/></description>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_AMISNAME" widget="textlabel">
+        <caption>
+          <text>AMIS: \nAdaptive Multimedia Information System</text>
+          <originalText>AMIS: \nAdaptive Multimedia Information System</originalText>
+          
+        <audio src="./audio/164_AMIS_nAdaptive_Multimedia_Info.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00a5.smil#text_00a5"/></caption>
+      </control>
+      <control mfcid="IDC_VERSION" translate="no">
+        <caption>
+          <text>Version 2.0</text>
+          <originalText>Version 2.0</originalText>
+          
+        <audio src="./audio/165_Version_20.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00a6.smil#text_00a6"/></caption>
+      </control>
+      <control mfcid="IDC_VERSIONNOTE" translate="no">
+        <caption>
+          <text>Publiceringsdatum: 23 oktober 2005</text>
+          <originalText>Release Date: 23 Oct 2005</originalText>
+          
+        <audio src="./audio/166_Publiceringsdatum_23_oktober_2.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00a7.smil#text_00a7"/></caption>
+      </control>
+      <control mfcid="IDC_COPYRIGHT" widget="textlabel" translate="no">
+        <caption>
+          <text>Copyright © 2006 DAISY for All</text>
+          <originalText>Copyright © 2006 DAISY for All</originalText>
+          
+        <audio src="./audio/167_Copyright__2006_DAISY_for_All.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00a8.smil#text_00a8"/></caption>
+      </control>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_SEARCHDAISY">
+      <note>This dialog is for searching your hard drive for DAISY books.</note>
+      <caption>
+        <text>Sök efter DAISY-böcker</text>
+        <originalText>Search for DAISY Books</originalText>
+        
+      <audio src="./audio/168_Sk_efter_DAISYbcker.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00a9.smil#text_00a9"/></caption>
+      <description mfcid="IDC_STATIC">
+        <text>Sök i datorn efter DAISY-böcker.  Skriv in en sökväg eller bläddra efter en mapp att söka i.  Tryck sedan Sök för att starta sökningen.</text>
+        <originalText>You can search your computer for DAISY books.  Enter a path or browse for a folder to search, then press Search to begin searching.</originalText>
+        
+      <audio src="./audio/169_Sk_i_datorn_efter_DAISYbcker_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00aa.smil#text_00aa"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <!--removed this as it is probably not very useful, and it was incorrectly recorded-->
+        <!--<promptItem refid="textBoxRepeatInstr"/>-->
+      </prompt>
+      <control mfcid="IDC_SEARCHPATH" widget="textfield">
+        <description>
+          <text>Skriv in sökvägen till mappen i detta fält.</text>
+          <originalText>Type the path to the folder in this field.</originalText>
+          
+        <audio src="./audio/170_Skriv_in_skvgen_till_mappen_i_.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00ab.smil#text_00ab"/></description>
+      </control>
+      <control mfcid="IDC_BROWSE" widget="button">
+        <caption>
+          <promptItem refid="browse_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="browse_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_STARTSEARCH" widget="button">
+        <caption>
+          <text>Sök</text>
+          <originalText>Search</originalText>
+          
+        <audio src="./audio/171_Sk.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00ac.smil#text_00ac"/></caption>
+        <description>
+          <text>Tryck för att starta sökningen.</text>
+          <originalText>Press to start searching.</originalText>
+          
+        <audio src="./audio/172_Tryck_fr_att_starta_skningen.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00ad.smil#text_00ad"/></description>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/173_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00ae.smil#text_00ae"/></mnemonic>
+      </control>
+      <control mfcid="IDC_STOPSEARCH" widget="button">
+        <caption>
+          <text>Stopp</text>
+          <originalText>Stop</originalText>
+          
+        <audio src="./audio/174_Stopp.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00af.smil#text_00af"/></caption>
+        <description>
+          <text>Tryck för att stoppa sökningen.</text>
+          <originalText>Press to stop searching.</originalText>
+          
+        <audio src="./audio/175_Tryck_fr_att_stoppa_skningen.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00b0.smil#text_00b0"/></description>
+        <mnemonic>
+          <text>t</text>
+          <originalText>t</originalText>
+          
+        <audio src="./audio/176_t.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00b1.smil#text_00b1"/></mnemonic>
+      </control>
+      <control mfcid="IDC_SEARCHING" widget="textlabel">
+        <switch element="caption">
+          <caption condition="default">
+            <text>Klar</text>
+            <originalText>Ready</originalText>
+            
+          <audio src="./audio/177_Klar.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00b2.smil#text_00b2"/></caption>
+          <caption condition="WhileSearching">
+            <text>Söker...</text>
+            <originalText>Searching...</originalText>
+            
+          <audio src="./audio/178_Sker.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00b3.smil#text_00b3"/></caption>
+          <caption condition="SearchAborted">
+            <text>Sökningen stoppad.</text>
+            <originalText>Search stopped.</originalText>
+            
+          <audio src="./audio/179_Skningen_stoppad.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00b4.smil#text_00b4"/></caption>
+          <caption condition="SearchCompleteNoFilesFound">
+            <text>Sökningen är klar: Inga filer funna.</text>
+            <originalText>Search complete: No files found.</originalText>
+            
+          <audio src="./audio/180_Skningen_r_klar_Inga_filer_fun.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00b5.smil#text_00b5"/></caption>
+          <caption condition="SearchCompleteOneFileFound">
+            <text>Sökningen är klar: En fil funnen.</text>
+            <originalText>Search complete: One file found.</originalText>
+            
+          <audio src="./audio/181_Skningen_r_klar_En_fil_funnen.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00b6.smil#text_00b6"/></caption>
+          <caption condition="SearchCompleteFilesFound">
+            <prompt>
+              <promptVar name="NUM_FILES_FOUND"/>
+              <promptItem>
+                <note>This is used in the sentence "7 files were found"</note>
+                <text>filer funna.</text>
+                <originalText>files were found.</originalText>
+                
+              <audio src="./audio/182_filer_funna.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00b7.smil#text_00b7"/></promptItem>
+            </prompt>
+          </caption>
+        </switch>
+      </control>
+      <control mfcid="IDC_FILESFOUND" widget="list">
+        <description>
+          <text>Använd piltangenterna för att förflytta dig i listan över titlar.</text>
+          <originalText>Use the arrow keys to move around this list of titles.</originalText>
+          
+        <audio src="./audio/183_Anvnd_piltangenterna_fr_att_fr.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00b8.smil#text_00b8"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOK_TITLE"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_OPENBOOK" widget="button">
+        <caption>
+          <text>Öppna</text>
+          <originalText>Open</originalText>
+          
+        <audio src="./audio/184_ppna.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00b9.smil#text_00b9"/></caption>
+        <description>
+          <text>Tryck för att öppna den valda titeln.</text>
+          <originalText>Press to open the selected title.</originalText>
+          
+        <audio src="./audio/185_Tryck_fr_att_ppna_den_valda_ti.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00ba.smil#text_00ba"/></description>
+        <mnemonic>
+          <text>O</text>
+          <originalText>O</originalText>
+          
+        <audio src="./audio/186_O.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00bb.smil#text_00bb"/></mnemonic>
+      </control>
+      <control mfcid="IDC_CANCELBUTTON">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/187_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00bc.smil#text_00bc"/></mnemonic>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_SKIP">
+      <note>This dialog lets the user control rendering of skippable structures.</note>
+      <caption>
+        <text>Överhoppbara inslag</text>
+        <originalText>Skippable Items</originalText>
+        
+      <audio src="./audio/188_verhoppbara_inslag.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00bd.smil#text_00bd"/></caption>
+      <switch element="description">
+        <description mfcid="IDC_STATIC" condition="hasSkippableStructures">
+          <text>Denna bok innehåller följande specialstrukturer.  Markera dem du vill hoppa över.</text>
+          <originalText>This book contains the following special structures.  Check the ones you want skipped.</originalText>
+          
+        <audio src="./audio/189_Denna_bok_innehller_fljande_sp.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00be.smil#text_00be"/></description>
+        <description mfcid="IDC_STATIC" condition="hasNoSkippableStructures">
+          <text>Denna bok har inga överhoppbara inslag.</text>
+          <originalText>This publication has no skippable elements.</originalText>
+          
+        <audio src="./audio/190_Denna_bok_har_inga_verhoppbara.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00bf.smil#text_00bf"/></description>
+      </switch>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SKIPS" widget="list">
+        <caption>
+          <text>Överhoppbara inslag</text>
+          <originalText>Skippable items</originalText>
+          
+        <audio src="./audio/191_verhoppbara_inslag.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00c0.smil#text_00c0"/></caption>
+        <description>
+          <text>Använd piltangenterna för att förflytta dig i listan på överhoppbara inslag.</text>
+          <originalText>Use the arrow keys to move around this list of skippable items.</originalText>
+          
+        <audio src="./audio/192_Anvnd_piltangenterna_fr_att_fr.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00c1.smil#text_00c1"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="SKIPPABLE_ITEM"/>
+          </caption>
+          <description>
+            <prompt>
+              <promptVar name="SKIPPABLE_ITEM"/>
+              <promptItem refid="thisItem"/>
+              <promptVar name="WILL_SKIP_OR_NOT" param="SKIPPABLE_ITEM_ID"/>
+            </prompt>
+          </description>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE4">
+      <note>This dialog lets the user select a language pack.</note>
+      <caption>
+        <text>Språk</text>
+        <originalText>Language</originalText>
+        
+      <audio src="./audio/193_Sprk.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00c2.smil#text_00c2"/></caption>
+      <description mfcid="IDC_STATIC">
+        <text>Här kan du ändra språk i programmet. Nya språkpaket hittas automatiskt.</text>
+        <originalText>Here you can change the language of the software.  New language packs are detected automatically.</originalText>
+        
+      <audio src="./audio/194_Hr_kan_du_ndra_sprk_i_programm.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00c3.smil#text_00c3"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="ctrl1_for_prefsdialog"/>
+        <promptItem refid="ctrl2_for_colorsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_BTN_SELECTLANG" widget="button">
+        <caption>
+          <text>Välj språk</text>
+          <originalText>Select Language</originalText>
+          
+        <audio src="./audio/195_Vlj_sprk.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00c4.smil#text_00c4"/></caption>
+        <description>
+          <text>Tryck för att bekräfta ditt språkval till AMIS användargränssnitt</text>
+          <originalText>Press to confirm your language selection for the AMIS user interface</originalText>
+          
+        <audio src="./audio/196_Tryck_fr_att_bekrfta_ditt_sprk.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00c5.smil#text_00c5"/></description>
+      </control>
+      <control mfcid="IDC_LANGLIST" widget="list">
+        <caption mfcid="IDC_STATIC">
+          <text>Dina språkval är:</text>
+          <originalText>Your language choices are:</originalText>
+          
+        <audio src="./audio/197_Dina_sprkval_r.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00c6.smil#text_00c6"/></caption>
+        <description>
+          <text>Använd piltangenterna för att förflytta dig i listan över språk.</text>
+          <originalText>Use the arrow keys to move around this list of languages.</originalText>
+          
+        <audio src="./audio/198_Anvnd_piltangenterna_fr_att_fr.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00c7.smil#text_00c7"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="LANGUAGE_NAME"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_CURRLANG">
+        <caption>
+          <prompt>
+            <promptItem>
+              <text>Du använder nu AMIS på </text>
+              <originalText>You are currently using AMIS in</originalText>
+              
+            <audio src="./audio/199_Du_anvnder_nu_AMIS_p.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00c8.smil#text_00c8"/></promptItem>
+            <promptVar name="CURR_LANGUAGE_NAME"/>
+          </prompt>
+        </caption>
+      </control>
+      <accelerator>
+        <text>Ctrl+3</text>
+        <originalText>Ctrl+3</originalText>
+        
+      <audio src="./audio/200_Ctrl3.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00c9.smil#text_00c9"/></accelerator>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE2">
+      <note>This dialog lets the user select which colors AMIS uses</note>
+      <caption>
+        <text>Välj färger</text>
+        <originalText>Set Colors</originalText>
+        
+      <audio src="./audio/201_Vlj_frger.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00ca.smil#text_00ca"/></caption>
+      <description>
+        <text>Här kan du göra färgval för AMIS.</text>
+        <originalText>Here you can set color options for AMIS.</originalText>
+        
+      <audio src="./audio/202_Hr_kan_du_gra_frgval_fr_AMIS.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00cb.smil#text_00cb"/></description>
+      <prompt type="instructions">
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem refid="ctrl1_for_prefsdialog"/>
+        <promptItem refid="ctrl3_for_langsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+      </prompt>
+      <control mfcid="IDC_PHRASES" widget="other">
+        <caption>
+          <text>Frasmarkering</text>
+          <originalText>Phrase Highlighting</originalText>
+          
+        <audio src="./audio/203_Frasmarkering.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00cc.smil#text_00cc"/></caption>
+      </control>
+      <control mfcid="IDC_TEXTFG" widget="textlabel">
+        <caption>
+          <text>Text: </text>
+          <originalText>Text Foreground: </originalText>
+          
+        <audio src="./audio/204_Text.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00cd.smil#text_00cd"/></caption>
+      </control>
+      <control mfcid="IDC_TEXTBG" widget="textlabel">
+        <caption>
+          <text>Bakgrundstext: </text>
+          <originalText>Text Background: </originalText>
+          
+        <audio src="./audio/205_Bakgrundstext.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00ce.smil#text_00ce"/></caption>
+      </control>
+      <control mfcid="IDC_BORDER" widget="textlabel">
+        <caption>
+          <text>Markeringsgräns: </text>
+          <originalText>Selection Border: </originalText>
+          
+        <audio src="./audio/206_Markeringsgrns.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00cf.smil#text_00cf"/></caption>
+      </control>
+      <control mfcid="IDC_CONTRAST" widget="other">
+        <caption>
+          <text>Högkontrastinställningar</text>
+          <originalText>High Contrast Settings</originalText>
+          
+        <audio src="./audio/207_Hgkontrastinstllningar.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00d0.smil#text_00d0"/></caption>
+      </control>
+      <control mfcid="IDC_PAGEFG" widget="textlabel">
+        <caption>
+          <text>Sida: </text>
+          <originalText>Page Foreground: </originalText>
+          
+        <audio src="./audio/208_Sida.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00d1.smil#text_00d1"/></caption>
+      </control>
+      <control mfcid="IDC_PAGEBG" widget="textlabel">
+        <caption>
+          <text>Sidans bakgrund: </text>
+          <originalText>Page Background: </originalText>
+          
+        <audio src="./audio/209_Sidans_bakgrund.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00d2.smil#text_00d2"/></caption>
+      </control>
+      <control mfcid="IDC_BTN_RESETCOLORS" widget="button">
+        <caption>
+          <text>Återställ färger</text>
+          <originalText>Reset Colors</originalText>
+          
+        <audio src="./audio/210_terstll_frger.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00d3.smil#text_00d3"/></caption>
+      </control>
+      <control mfcid="IDC_PHRASEPREVIEW" widget="textfield">
+        <caption>
+          <text>Förhandsvisa frasmarkeringsfärger.</text>
+          <originalText>Preview of phrase highlight colors.</originalText>
+          
+        <audio src="./audio/211_Frhandsvisa_frasmarkeringsfrge.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00d4.smil#text_00d4"/></caption>
+      </control>
+      <control mfcid="IDC_CONTRASTPREVIEW" widget="textfield">
+        <caption>
+          <text>Förhandsvisa kontrastfärger på sida.</text>
+          <originalText>Preview of page contrast colors.</originalText>
+          
+        <audio src="./audio/212_Frhandsvisa_kontrastfrger_p_si.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00d5.smil#text_00d5"/></caption>
+      </control>
+      <accelerator>
+        <text>Ctrl+2</text>
+        <originalText>Ctrl+2</originalText>
+        
+      <audio src="./audio/213_Ctrl2.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00d6.smil#text_00d6"/></accelerator>
+    </dialog>
+    <dialog mfcid="IDD_CURRENTPOSITION">
+      <note>This dialog gives the user information about their current position in the publication.</note>
+      <caption>
+        <text>Aktuell position</text>
+        <originalText>Current Position</originalText>
+        
+      <audio src="./audio/214_Aktuell_position.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00d7.smil#text_00d7"/></caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text>Detta är en lista över uppgifter om din aktuella position.</text>
+          <originalText>This is a list of data about your current position.</originalText>
+          
+        <audio src="./audio/215_Detta_r_en_lista_ver_uppgifter.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00d8.smil#text_00d8"/></caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="no">
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>Namn på aktuell sektion:</text>
+                <originalText>Your current section is titled:</originalText>
+                
+              <audio src="./audio/216_Namn_p_aktuell_sektion.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00d9.smil#text_00d9"/></promptItem>
+              <promptVar name="CURRENT_SECTION_TITLE"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text>Antal sidor i denna sektion:</text>
+                <originalText>Number of pages in this section:</originalText>
+                
+              <audio src="./audio/217_Antal_sidor_i_denna_sektion.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00da.smil#text_00da"/></promptItem>
+              <promptVar name="CURRENT_SECTION_NUM_PAGES"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>Antal underavsnitt i denna sektion:</text>
+                <originalText>Number of subsections in this section:</originalText>
+                
+              <audio src="./audio/218_Antal_underavsnitt_i_denna_sek.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00db.smil#text_00db"/></promptItem>
+              <promptVar name="CURRENT_SECTION_NUM_SUBSECTIONS"/>
+            </prompt>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE1">
+      <note>This dialog lets the user set some basic preferences for AMIS.</note>
+      <caption>
+        <text>Allmänna inställningar</text>
+        <originalText>General Preferences</originalText>
+        
+      <audio src="./audio/219_Allmnna_instllningar.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00dc.smil#text_00dc"/></caption>
+      <description>
+        <text>Här kan du göra allmänna inställningar i AMIS.</text>
+        <originalText>Here you can set general preferences for AMIS.</originalText>
+        
+      <audio src="./audio/220_Hr_kan_du_gra_allmnna_instllni.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00dd.smil#text_00dd"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="ctrl2_for_colorsdialog"/>
+        <promptItem refid="ctrl3_for_langsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <!--removed this as it is probably not very useful, and it was incorrectly recorded-->
+        <!--<promptItem refid="textBoxRepeatInstr"/>-->
+      </prompt>
+      <control mfcid="IDC_BMKDIRBROWSE" widget="button">
+        <caption>
+          <promptItem refid="browse_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="browse_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SELFVOICING" widget="checkbox">
+        <caption>
+          <text>Använd talsyntes</text>
+          <originalText>Use self-voicing</originalText>
+          
+        <audio src="./audio/221_Anvnd_talsyntes.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00de.smil#text_00de"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="SELF_VOICING_FEATURE"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_TTSVOICE" widget="list">
+        <caption mfcid="IDC_SELTTSLABEL">
+          <text>Välj TTS:</text>
+          <originalText>Select TTS voice:</originalText>
+          
+        <audio src="./audio/222_Vlj_TTS.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00df.smil#text_00df"/></caption>
+        <description>
+          <text>Använd piltangenterna för att förflytta dig i listan över röster</text>
+          <originalText>Use the arrow keys to move around this list of voices</originalText>
+          
+        <audio src="./audio/223_Anvnd_piltangenterna_fr_att_fr.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00e0.smil#text_00e0"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="TTS_VOICE_NAME"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_BASIC" widget="checkbox">
+        <caption>
+          <text>Starta AMIS i enkel visning.</text>
+          <originalText>Start AMIS in the basic view mode.</originalText>
+          
+        <audio src="./audio/224_Starta_AMIS_i_enkel_visning.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00e1.smil#text_00e1"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="BASIC_VIEW_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_PROMPTONBASICVIEW" widget="checkbox">
+        <caption>
+          <text>Vid byte till enkel visning, upplys användaren om hur man går tillbaka till normal visning.</text>
+          <originalText>Upon switching to basic view, tell the user how to go back to the default view.</originalText>
+          
+        <audio src="./audio/225_Vid_byte_till_enkel_visning_up.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00e2.smil#text_00e2"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="PROMPT_ON_BASIC_VIEW_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_LOADLASTDTB" widget="checkbox">
+        <caption>
+          <text>Öppna den senast lästa boken när programmet startar.</text>
+          <originalText>Load the most recently read book when the software starts.</originalText>
+          
+        <audio src="./audio/226_ppna_den_senast_lsta_boken_nr_.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00e3.smil#text_00e3"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="LOAD_LAST_READ_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_BMKDIR" widget="textfield">
+        <caption mfcid="IDC_BMKDIRLABEL">
+          <text>Katalog över bokmärken:</text>
+          <originalText>Bookmarks directory:</originalText>
+          
+        <audio src="./audio/227_Katalog_ver_bokmrken.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00e4.smil#text_00e4"/></caption>
+        <description>
+          <text>Skriv sökvägen till bokmärkesmappen i detta fält.</text>
+          <originalText>Type the path to the bookmarks folder in this field.</originalText>
+          
+        <audio src="./audio/228_Skriv_skvgen_till_bokmrkesmapp.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00e5.smil#text_00e5"/></description>
+      </control>
+      <accelerator>
+        <text>Ctrl+1</text>
+        <originalText>Ctrl+1</originalText>
+        
+      <audio src="./audio/229_Ctrl1.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00e6.smil#text_00e6"/></accelerator>
+    </dialog>
+    <dialog mfcid="IDD_NAVIGATIONOPTIONS">
+      <note>This dialog lists navigation options for the current publication.</note>
+      <caption>
+        <text>Navigationsmöjligheter</text>
+        <originalText>Navigation Options</originalText>
+        
+      <audio src="./audio/230_Navigationsmjligheter.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00e7.smil#text_00e7"/></caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text>Detta är en lista över element som du kan navigera direkt till.</text>
+          <originalText>This is a list of items to which you may navigate directly.</originalText>
+          
+        <audio src="./audio/231_Detta_r_en_lista_ver_element_s.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00e8.smil#text_00e8"/></caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="TOC_CATEGORIES"/>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_GOTOPAGE">
+      <note>This dialog lets the user jump to a certain page</note>
+      <caption>
+        <text>Gå till sidan</text>
+        <originalText>Go To Page</originalText>
+        
+      <audio src="./audio/232_G_till_sidan.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00e9.smil#text_00e9"/></caption>
+      <description>
+        <text>Här kan du hoppa till ett visst sidnummer.</text>
+        <originalText>Here you can jump to a page number or page label.</originalText>
+        
+      <audio src="./audio/233_Hr_kan_du_hoppa_till_ett_visst.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00ea.smil#text_00ea"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem>
+          <text>Skriv in ett sidnummer och tryck Enter för att gå dit.</text>
+          <originalText>After typing in your page number, press enter to go there.</originalText>
+          
+        <audio src="./audio/234_Skriv_in_ett_sidnummer_och_try.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00eb.smil#text_00eb"/></promptItem>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <!--removed this as it is probably not very useful, and it was incorrectly recorded-->
+        <!--<promptItem refid="textBoxRepeatInstr"/>-->
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <text>Tryck här för att gå till den önskade sidan.</text>
+          <originalText>Press this button to go to the desired page.</originalText>
+          
+        <audio src="./audio/235_Tryck_hr_fr_att_g_till_den_nsk.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00ec.smil#text_00ec"/></description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/236_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00ed.smil#text_00ed"/></mnemonic>
+      </control>
+      <control mfcid="IDC_PAGENUM" widget="textfield">
+        <caption mfcid="IDC_STATIC">
+          <text>Skriv in ett sidnummer:</text>
+          <originalText>Enter a page number:</originalText>
+          
+        <audio src="./audio/237_Skriv_in_ett_sidnummer.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00ee.smil#text_00ee"/></caption>
+        <description>
+          <text>Skriv numret på den sida du vill gå till.</text>
+          <originalText>Type the number or label of the page you want to go to.</originalText>
+          
+        <audio src="./audio/238_Skriv_numret_p_den_sida_du_vil.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00ef.smil#text_00ef"/></description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_FULLSUMMARY">
+      <note>This dialog lists key publication metadata.</note>
+      <caption>
+        <text>Om publikationen</text>
+        <originalText>Publication Summary</originalText>
+        
+      <audio src="./audio/239_Om_publikationen.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00f0.smil#text_00f0"/></caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text>Detta är en lista över bokens metadata.</text>
+          <originalText>This is a list of publication metadata.</originalText>
+          
+        <audio src="./audio/240_Detta_r_en_lista_ver_bokens_me.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00f1.smil#text_00f1"/></caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="no">
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>Bokens titel:</text>
+                <originalText>This book is titled:</originalText>
+                
+              <audio src="./audio/241_Bokens_titel.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00f2.smil#text_00f2"/></promptItem>
+              <promptVar name="META_TITLE"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>Skriven av:</text>
+                <originalText>Written by:</originalText>
+                
+              <audio src="./audio/242_Skriven_av.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00f3.smil#text_00f3"/></promptItem>
+              <promptVar name="META_CREATOR"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>Utgiven av:</text>
+                <originalText>Published by:</originalText>
+                
+              <audio src="./audio/243_Utgiven_av.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00f4.smil#text_00f4"/></promptItem>
+              <promptVar name="META_PUBLISHER"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_DESCRIPTION">
+            <prompt>
+              <promptItem>
+                <text>Beskrivning:</text>
+                <originalText>Description:</originalText>
+                
+              <audio src="./audio/244_Beskrivning.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00f5.smil#text_00f5"/></promptItem>
+              <promptVar name="META_DESC"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>Antal navigationspunkter i innehållsförteckningen:</text>
+                <originalText>Number of navigation points in the table of contents:</originalText>
+                
+              <audio src="./audio/245_Antal_navigationspunkter_i_inn.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00f6.smil#text_00f6"/></promptItem>
+              <promptVar name="META_TOCITEMS"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>Antal nivåer:</text>
+                <originalText>Maximum section depth:</originalText>
+                
+              <audio src="./audio/246_Antal_niver.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00f7.smil#text_00f7"/></promptItem>
+              <promptVar name="META_DEPTH"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text>Sidor i omslag:</text>
+                <originalText>Front matter pages:</originalText>
+                
+              <audio src="./audio/247_Sidor_i_omslag.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00f8.smil#text_00f8"/></promptItem>
+              <promptVar name="META_PAGEFRONT"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text>Vanliga sidor:</text>
+                <originalText>Regular pages:</originalText>
+                
+              <audio src="./audio/248_Vanliga_sidor.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00f9.smil#text_00f9"/></promptItem>
+              <promptVar name="META_PAGENORMAL"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text>Specialsidor:</text>
+                <originalText>Special pages:</originalText>
+                
+              <audio src="./audio/249_Specialsidor.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00fa.smil#text_00fa"/></promptItem>
+              <promptVar name="META_PAGESPECIAL"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>Total speltid:</text>
+                <originalText>Total duration:</originalText>
+                
+              <audio src="./audio/250_Total_speltid.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00fb.smil#text_00fb"/></promptItem>
+              <promptVar name="META_TOTALTIME"/>
+            </prompt>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+  </dialogs>
+  <prompts>
+    <promptItemRefs>
+      <promptItem id="altC_to_close">
+        <text>Tryck Alt + C för att stänga rutan.</text>
+        <originalText>Press Alt + C to close the dialog.</originalText>
+        
+      <audio src="./audio/251_Tryck_Alt__C_fr_att_stnga_ruta.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00fc.smil#text_00fc"/></promptItem>
+      <promptItem id="altC_to_cancel">
+        <text>Tryck Alt + C för att avsluta rutan.</text>
+        <originalText>Press Alt + C to cancel the dialog.</originalText>
+        
+      <audio src="./audio/252_Tryck_Alt__C_fr_att_avsluta_ru.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00fd.smil#text_00fd"/></promptItem>
+      <promptItem id="thisItem">
+        <text>Detta element</text>
+        <originalText>This item</originalText>
+        
+      <audio src="./audio/253_Detta_element.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00fe.smil#text_00fe"/></promptItem>
+      <promptItem id="spaceToToggle">
+        <text>Tryck mellanslag för att byta värde.</text>
+        <originalText>Press the space bar to toggle the value.</originalText>
+        
+      <audio src="./audio/254_Tryck_mellanslag_fr_att_byta_v.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed00ff.smil#text_00ff"/></promptItem>
+      <promptItem id="tabAround">
+        <text>Tryck Tab för att förflytta dig i dialogrutans meny.</text>
+        <originalText>Hit tab to move around the options on the dialog.</originalText>
+        
+      <audio src="./audio/255_Tryck_Tab_fr_att_frflytta_dig_.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0100.smil#text_0100"/></promptItem>
+      <promptItem id="ctrl2_for_colorsdialog">
+        <text>Tryck Ctrl + 2 för att växla till dialogrutan för färger.</text>
+        <originalText>Press control + 2 to switch to the colors dialog.</originalText>
+        
+      <audio src="./audio/256_Tryck_Ctrl__2_fr_att_vxla_till.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0101.smil#text_0101"/></promptItem>
+      <promptItem id="ctrl3_for_langsdialog">
+        <text>Tryck Ctrl + 3 för att växla till dialogrutan för språkval.</text>
+        <originalText>Press control + 3 to switch to the language options dialog.</originalText>
+        
+      <audio src="./audio/257_Tryck_Ctrl__3_fr_att_vxla_till.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0102.smil#text_0102"/></promptItem>
+      <promptItem id="ctrl1_for_prefsdialog">
+        <text>Tryck Ctrl + 1 för att växla till dialogrutan för allmänna inställningar.</text>
+        <originalText>Press control + 1 to switch to the general preferences dialog.</originalText>
+        
+      <audio src="./audio/258_Tryck_Ctrl__1_fr_att_vxla_till.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0103.smil#text_0103"/></promptItem>
+      <promptItem id="thisItemIsCurrently">
+        <text>Detta element är nu</text>
+        <originalText>This item is currently</originalText>
+        
+      <audio src="./audio/259_Detta_element_r_nu.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0104.smil#text_0104"/></promptItem>
+      <promptItem id="enter_to_close">
+        <text>Tryck Enter för att stänga rutan.</text>
+        <originalText>Press enter to close the dialog.</originalText>
+        
+      <audio src="./audio/260_Tryck_Enter_fr_att_stnga_rutan.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0105.smil#text_0105"/></promptItem>
+      <promptItem id="browse_button_caption">
+        <text>Bläddra...</text>
+        <originalText>Browse...</originalText>
+        
+      <audio src="./audio/261_Blddra.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0106.smil#text_0106"/></promptItem>
+      <promptItem id="browse_button_description">
+        <text>Tryck för att öppna dialogrutan för sökning.</text>
+        <originalText>Press to open the folder browse dialog.</originalText>
+        
+      <audio src="./audio/262_Tryck_fr_att_ppna_dialogrutan_.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0107.smil#text_0107"/></promptItem>
+      <promptItem id="ok_button_caption">
+        <text>OK</text>
+        <originalText>OK</originalText>
+        
+      <audio src="./audio/263_OK.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0108.smil#text_0108"/></promptItem>
+      <promptItem id="ok_button_description">
+        <text>Tryck OK för att stänga denna ruta.</text>
+        <originalText>Press OK to close this dialog.</originalText>
+        
+      <audio src="./audio/264_Tryck_OK_fr_att_stnga_denna_ru.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0109.smil#text_0109"/></promptItem>
+      <promptItem id="cancel_button_caption">
+        <text mnemonic="C">Cancel</text>
+        <originalText>Cancel</originalText>
+        
+      <audio src="./audio/265_Cancel.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed010a.smil#text_010a"/></promptItem>
+      <promptItem id="cancel_button_description">
+        <text>Tryck för att avsluta denna ruta.</text>
+        <originalText>Press to cancel this dialog.</originalText>
+        
+      <audio src="./audio/266_Tryck_fr_att_avsluta_denna_rut.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed010b.smil#text_010b"/></promptItem>
+      <promptItem id="list_reads_automatically">
+        <text>Denna lista kommer att läsas automatiskt.</text>
+        <originalText>This list will be read automatically.</originalText>
+        
+      <audio src="./audio/267_Denna_lista_kommer_att_lsas_au.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed010c.smil#text_010c"/></promptItem>
+      <promptItem id="repeatLastPromptInstr">
+        <text>Tryck Ctrl + R för att upprepa föregående kommando.</text>
+        <originalText>Press Control + R to repeat the last prompt.</originalText>
+        
+      <audio src="./audio/268_Tryck_Ctrl__R_fr_att_upprepa_f.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed010d.smil#text_010d"/></promptItem>
+      <promptItem id="thisDialogNotSelfVoicing">
+        <text>Denna ruta har ännu ingen talsyntes.</text>
+        <originalText>This dialog is not yet self-voicing.</originalText>
+        
+      <audio src="./audio/269_Denna_ruta_har_nnu_ingen_talsy.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed010e.smil#text_010e"/></promptItem>
+      <promptItem id="escapeToCancel">
+        <text>Tryck Escape för att avbryta</text>
+        <originalText>Press escape to cancel</originalText>
+        
+      <audio src="./audio/270_Tryck_Escape_fr_att_avbryta.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed010f.smil#text_010f"/></promptItem>
+      <promptItem id="hearDlgInstructions">
+        <text>Tryck Ctrl + I för att höra instruktionerna i denna ruta.</text>
+        <originalText>Press Control + I to hear instructions for this dialog.</originalText>
+        
+      <audio src="./audio/271_Tryck_Ctrl__I_fr_att_hra_instr.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0110.smil#text_0110"/></promptItem>
+      <promptItem id="textBoxRepeatInstr">
+        <text>Tryck Ctrl + T för att upprepa texten i föregående textruta.</text>
+        <originalText>Press Control + T to repeat the text in the last text box.</originalText>
+        
+      <audio src="./audio/272_Tryck_Ctrl__T_fr_att_upprepa_t.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0111.smil#text_0111"/></promptItem>
+      <promptItem id="nav_window">
+        <text>Navigation</text>
+        <originalText>Navigation</originalText>
+        
+      <audio src="./audio/273_Navigation.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0112.smil#text_0112"/></promptItem>
+      <promptItem id="sections">
+        <text>Sektioner</text>
+        <originalText>Sections</originalText>
+        
+      <audio src="./audio/274_Sektioner.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0113.smil#text_0113"/></promptItem>
+      <promptItem id="pages">
+        <text>Sidor</text>
+        <originalText>Pages</originalText>
+        
+      <audio src="./audio/275_Sidor.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0114.smil#text_0114"/></promptItem>
+      <promptItem id="noterefs">
+        <text>Fotnoter</text>
+        <originalText>Footnotes</originalText>
+        
+      <audio src="./audio/276_Fotnoter.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0115.smil#text_0115"/></promptItem>
+      <promptItem id="prodnotes">
+        <text>Producentnoter</text>
+        <originalText>Producer notes</originalText>
+        
+      <audio src="./audio/277_Producentnoter.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0116.smil#text_0116"/></promptItem>
+      <promptItem id="sidebars">
+        <text>Marginaltexter</text>
+        <originalText>Sidebars</originalText>
+        
+      <audio src="./audio/278_Marginaltexter.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0117.smil#text_0117"/></promptItem>
+      <promptItem id="groups">
+        <text>Grupperade inslag</text>
+        <originalText>Grouped items</originalText>
+        
+      <audio src="./audio/279_Grupperade_inslag.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0118.smil#text_0118"/></promptItem>
+      <promptItem id="navigation_sidebar_caption">
+        <text>Navigation</text>
+        <originalText>Navigation</originalText>
+        
+      <audio src="./audio/280_Navigation.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0119.smil#text_0119"/></promptItem>
+      <promptItem id="ready">
+        <text>Klar</text>
+        <originalText>Ready</originalText>
+        
+      <audio src="./audio/281_Klar.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed011a.smil#text_011a"/></promptItem>
+      <promptItem id="property_sheet_caption">
+        <text>Inställningar</text>
+        <originalText>Preferences</originalText>
+        
+      <audio src="./audio/282_Instllningar.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed011b.smil#text_011b"/></promptItem>
+      <promptItem id="selfolder_title">
+        <text>Välj en mapp</text>
+        <originalText>Select a Folder</originalText>
+        
+      <audio src="./audio/283_Vlj_en_mapp.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed011c.smil#text_011c"/></promptItem>
+      <promptItem id="selfolder_instr">
+        <text>Välj en mapp i katalogen nedan.</text>
+        <originalText>Select a folder from the directory below.</originalText>
+        
+      <audio src="./audio/284_Vlj_en_mapp_i_katalogen_nedan.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed011d.smil#text_011d"/></promptItem>
+      <promptItem id="daisy_books">
+        <text>DAISY-böcker</text>
+        <originalText>DAISY Books</originalText>
+        
+      <audio src="./audio/285_DAISYbcker.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed011e.smil#text_011e"/></promptItem>
+      <promptItem id="folder_does_not_exist">
+        <text>Mappen %s finns inte. Vill du skapa en mapp?</text>
+        <originalText>The folder %s does not exist. Do you want the folder to be created?</originalText>
+        
+      <audio src="./audio/286_Mappen_s_finns_inte_Vill_du_sk.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed011f.smil#text_011f"/></promptItem>
+      <promptItem id="folder_invalid">
+        <text>Detta mappnamn är ogiltigt. Välj ett annat namn.</text>
+        <originalText>This folder name is invalid. Please choose another.</originalText>
+        
+      <audio src="./audio/287_Detta_mappnamn_r_ogiltigt_Vlj_.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0120.smil#text_0120"/></promptItem>
+      <promptItem id="cant_create_folder">
+        <text>Denna mapp kan inte skapas. Kontrollera mappnamnet.</text>
+        <originalText>This folder can not be created. Please double check.</originalText>
+        
+      <audio src="./audio/288_Denna_mapp_kan_inte_skapas_Kon.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0121.smil#text_0121"/></promptItem>
+      <promptItem id="not_available">
+        <text>Ej tillgänglig</text>
+        <originalText>Not available</originalText>
+        
+      <audio src="./audio/289_Ej_tillgnglig.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0122.smil#text_0122"/></promptItem>
+      <promptItem id="numeric_zero">
+        <note>All numerals should be translated into numerals, not words.</note>
+        <text>0</text>
+        <originalText>0</originalText>
+        
+      <audio src="./audio/290_0.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0123.smil#text_0123"/></promptItem>
+      <promptItem id="numeric_one">
+        <text>1</text>
+        <originalText>1</originalText>
+        
+      <audio src="./audio/291_1.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0124.smil#text_0124"/></promptItem>
+      <promptItem id="numeric_two">
+        <text>2</text>
+        <originalText>2</originalText>
+        
+      <audio src="./audio/292_2.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0125.smil#text_0125"/></promptItem>
+      <promptItem id="numeric_three">
+        <text>3</text>
+        <originalText>3</originalText>
+        
+      <audio src="./audio/293_3.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0126.smil#text_0126"/></promptItem>
+      <promptItem id="numeric_four">
+        <text>4</text>
+        <originalText>4</originalText>
+        
+      <audio src="./audio/294_4.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0127.smil#text_0127"/></promptItem>
+      <promptItem id="numeric_five">
+        <text>5</text>
+        <originalText>5</originalText>
+        
+      <audio src="./audio/295_5.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0128.smil#text_0128"/></promptItem>
+      <promptItem id="numeric_six">
+        <text>6</text>
+        <originalText>6</originalText>
+        
+      <audio src="./audio/296_6.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0129.smil#text_0129"/></promptItem>
+      <promptItem id="numeric_seven">
+        <text>7</text>
+        <originalText>7</originalText>
+        
+      <audio src="./audio/297_7.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed012a.smil#text_012a"/></promptItem>
+      <promptItem id="numeric_eight">
+        <text>8</text>
+        <originalText>8</originalText>
+        
+      <audio src="./audio/298_8.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed012b.smil#text_012b"/></promptItem>
+      <promptItem id="numeric_nine">
+        <text>9</text>
+        <originalText>9</originalText>
+        
+      <audio src="./audio/299_9.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed012c.smil#text_012c"/></promptItem>
+      <promptItem id="deleted">
+        <text>raderad</text>
+        <originalText>deleted</originalText>
+        
+      <audio src="./audio/300_raderad.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed012d.smil#text_012d"/></promptItem>
+      <promptItem id="will_be_skipped">
+        <text>kommer att hoppas över</text>
+        <originalText>will be skipped</originalText>
+        
+      <audio src="./audio/301_kommer_att_hoppas_ver.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed012e.smil#text_012e"/></promptItem>
+      <promptItem id="will_be_played">
+        <text>kommer att spelas upp</text>
+        <originalText>will be played</originalText>
+        
+      <audio src="./audio/302_kommer_att_spelas_upp.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed012f.smil#text_012f"/></promptItem>
+      <promptItem id="item_on">
+        <text>på</text>
+        <originalText>on</originalText>
+        
+      <audio src="./audio/303_p.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0130.smil#text_0130"/></promptItem>
+      <promptItem id="item_off">
+        <text>av</text>
+        <originalText>off</originalText>
+        
+      <audio src="./audio/304_av.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0131.smil#text_0131"/></promptItem>
+      <promptItem id="item_selected">
+        <text>vald</text>
+        <originalText>selected</originalText>
+        
+      <audio src="./audio/305_vald.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0132.smil#text_0132"/></promptItem>
+      <promptItem id="item_deselected">
+        <text>ej vald</text>
+        <originalText>deselected</originalText>
+        
+      <audio src="./audio/306_ej_vald.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0133.smil#text_0133"/></promptItem>
+      <promptItem id="keyboardShortcut">
+        <text>Kortkommando</text>
+        <originalText>Keyboard Shortcut</originalText>
+        
+      <audio src="./audio/307_Kortkommando.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0134.smil#text_0134"/></promptItem>
+      <promptItem id="icon">
+        <text>Ikon</text>
+        <originalText>Icon</originalText>
+        
+      <audio src="./audio/308_Ikon.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0135.smil#text_0135"/></promptItem>
+      <promptItem id="menu">
+        <text>Meny</text>
+        <originalText>Menu</originalText>
+        
+      <audio src="./audio/309_Meny.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0136.smil#text_0136"/></promptItem>
+      <promptItem id="followedBy">
+        <note>This is used in the context of a sequence of key presses, as in "Press Alt + V, followed by S"</note>
+        <text>följd av</text>
+        <originalText>followed by</originalText>
+        
+      <audio src="./audio/310_fljd_av.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0137.smil#text_0137"/></promptItem>
+      <promptItem id="submenu">
+        <text>Undermeny</text>
+        <originalText>Sub Menu</originalText>
+        
+      <audio src="./audio/311_Undermeny.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0138.smil#text_0138"/></promptItem>
+    </promptItemRefs>
+    <generalPrompts>
+      <prompt id="dialogClosed">
+        <promptItem>
+          <text>Dialogrutan stängd.</text>
+          <originalText>Dialog closed.</originalText>
+          
+        <audio src="./audio/312_Dialogrutan_stngd.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0139.smil#text_0139"/></promptItem>
+      </prompt>
+      <prompt id="textFieldEntry">
+        <promptItem>
+          <text>Uppgiften i textfältet är:</text>
+          <originalText>Text field entry is:</originalText>
+          
+        <audio src="./audio/313_Uppgiften_i_textfltet_r.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed013a.smil#text_013a"/></promptItem>
+        <promptVar name="TEXT_FIELD"/>
+      </prompt>
+      <prompt id="notSelfVoicing">
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+      </prompt>
+      <prompt id="bookAtPathChanged">
+        <promptItem>
+          <text>Boken du söker har blivit flyttad.  En annan bok hittades istället.  Har innehållet på din CD-ROM-spelare ändrats?</text>
+          <originalText>The location of the book you are looking for has changed.  A different book was found instead.  Did the contents of your CD-ROM drive change?</originalText>
+          
+        <audio src="./audio/314_Boken_du_sker_har_blivit_flytt.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed013b.smil#text_013b"/></promptItem>
+      </prompt>
+      <prompt id="generalBookError">
+        <promptItem>
+          <text>Ett fel inträffade vid öppning av boken.</text>
+          <originalText>An error occurred while trying to open the book.</originalText>
+          
+        <audio src="./audio/315_Ett_fel_intrffade_vid_ppning_a.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed013c.smil#text_013c"/></promptItem>
+        <promptVar name="BOOK_PATH"/>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+      <prompt id="noCdLoaded">
+        <promptItem>
+          <text>Det finns ingen skiva i CD-ROM-spelaren.</text>
+          <originalText>There is not a CD in the CD-ROM drive.</originalText>
+          
+        <audio src="./audio/316_Det_finns_ingen_skiva_i_CDROMs.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed013d.smil#text_013d"/></promptItem>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+      <prompt id="pluginErrorInit">
+        <promptItem>
+          <text>Plug-in-fel: funktionen init() inte hittad i plug-in-DLL.</text>
+          <originalText>Plug-in error: init() function not found in the plug-in DLL.</originalText>
+          
+        <audio src="./audio/317_Pluginfel_funktionen_init_inte.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed013e.smil#text_013e"/></promptItem>
+      </prompt>
+      <prompt id="pluginErrorDll">
+        <promptItem>
+          <text>Plug-in-fel: Följande plug-in-bibliotek kunde inte laddas in: </text>
+          <originalText>Plug-in error: The following plug-in library could not be loaded: </originalText>
+          
+        <audio src="./audio/318_Pluginfel_Fljande_pluginbiblio.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed013f.smil#text_013f"/></promptItem>
+        <promptVar name="PLUGIN_LIB"/>
+      </prompt>
+      <prompt id="basicViewPrompt">
+        <promptItem>
+          <text>Du använder nu enkel visning.  Tryck F11 för att återgå till normal visning.</text>
+          <originalText>You are now using the basic view mode.  Press F11 to switch back to the default view mode.</originalText>
+          
+        <audio src="./audio/319_Du_anvnder_nu_enkel_visning_Tr.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0140.smil#text_0140"/></promptItem>
+      </prompt>
+      <prompt id="OpenFile_notSelfVoicing">
+        <promptItem>
+          <text>Öppna filmenyn</text>
+          <originalText>Open File Dialog</originalText>
+          
+        <audio src="./audio/320_ppna_filmenyn.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0141.smil#text_0141"/></promptItem>
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem>
+          <text>Använd "Sök böcker" i filmenyn för att hitta DAISY-böcker på din hårddisk.</text>
+          <originalText>Use the "search for books" feature, under the file menu, to find DAISY books on your hard drive.</originalText>
+          
+        <audio src="./audio/321_Anvnd_Sk_bcker_i_filmenyn_fr_a.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0142.smil#text_0142"/></promptItem>
+        <promptItem refid="escapeToCancel"/>
+      </prompt>
+      <prompt id="BrowseForFolder_notSelfVoicing">
+        <promptItem>
+          <text>Bläddra för att hitta mappmenyn</text>
+          <originalText>Browse for folder dialog</originalText>
+          
+        <audio src="./audio/322_Blddra_fr_att_hitta_mappmenyn.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0143.smil#text_0143"/></promptItem>
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem refid="escapeToCancel"/>
+        <promptItem>
+          <text>Skriv sedan sökvägen till den mapp du önskar i textrutan.</text>
+          <originalText>Then, type the path of the folder you want in the text box.</originalText>
+          
+        <audio src="./audio/323_Skriv_sedan_skvgen_till_den_ma.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0144.smil#text_0144"/></promptItem>
+      </prompt>
+      <prompt id="canceled">
+        <promptItem>
+          <text>Avbruten</text>
+          <originalText>Canceled</originalText>
+          
+        <audio src="./audio/324_Avbruten.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0145.smil#text_0145"/></promptItem>
+      </prompt>
+      <prompt id="loading">
+        <promptItem>
+          <text>Laddar</text>
+          <originalText>Loading</originalText>
+          
+        <audio src="./audio/325_Laddar.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0146.smil#text_0146"/></promptItem>
+      </prompt>
+      <prompt id="restartForChanges">
+        <promptItem>
+          <text>Starta om för att se dina ändringar.</text>
+          <originalText>Please restart to see your changes.</originalText>
+          
+        <audio src="./audio/326_Starta_om_fr_att_se_dina_ndrin.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0147.smil#text_0147"/></promptItem>
+      </prompt>
+      <prompt id="noBooksFoundOnCd">
+        <promptItem>
+          <text>Ingen DAISY-bok funnen på denna CD-ROM.</text>
+          <originalText>No DAISY books were found on this CD-ROM.</originalText>
+          
+        <audio src="./audio/327_Ingen_DAISYbok_funnen_p_denna_.mp3" from="file://c:/devel/amis/trunk/Langpacks/swedish/audio/swed0148.smil#text_0148"/></promptItem>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+    </generalPrompts>
+  </prompts>
+</ui>

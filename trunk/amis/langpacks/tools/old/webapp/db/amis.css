@@ -1,0 +1,15 @@
+body {
+  font-family: sans-serif;
+}
+
+fieldset {
+  border: solid thin;
+}
+
+legend {
+  font-weight: bold;
+}
+
+input {
+  border: solid thin;
+}

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="ncc:timeInThisSmil" content="00:01:07.864"/>
+		<meta name="ncc:totalElapsedTime" content="00:01:31.956"/>
+		<layout>
+			<region id="txt-view"/>
+		</layout>
+		<meta name="ncc:generator" content="EasePublisher 2.02 Build 025 # 089113"/>
+        <meta name="title" content="Mens du leser boken"/>
+        <meta name="dc:title" content="AMIS hjelp"/>
+        <meta name="dc:identifier" content="AMIS_hjelp"/>
+    </head>
+	<body>
+		<seq dur="67.864s">
+			<par endsync="last" id="nwcb_0002">
+				<text src="amishelp.html#nwcb_0027" id="nwcb_0022"/>
+				<seq>
+					<audio src="05_Mens_du_leser_boken.mp3" clip-begin="npt=0.000s" clip-end="npt=2.399s" id="audio_0001"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0003">
+				<text src="amishelp.html#nwcb_0028" id="nwcb_0023"/>
+				<seq>
+					<audio src="05_Mens_du_leser_boken.mp3" clip-begin="npt=2.399s" clip-end="npt=4.439s" id="audio_0002"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0004">
+				<text src="amishelp.html#nwcb_0029" id="nwcb_0024"/>
+				<seq>
+					<audio src="05_Mens_du_leser_boken.mp3" clip-begin="npt=4.439s" clip-end="npt=9.057s" id="audio_0003"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0005">
+				<text src="amishelp.html#nwcb_0030" id="nwcb_0025"/>
+				<seq>
+					<audio src="05_Mens_du_leser_boken.mp3" clip-begin="npt=9.057s" clip-end="npt=10.314s" id="audio_0004"/>
+					<audio src="05_Mens_du_leser_boken.mp3" clip-begin="npt=10.314s" clip-end="npt=11.759s" id="audio_0005"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0006">
+				<text src="amishelp.html#nwcb_0031" id="nwcb_0026"/>
+				<seq>
+					<audio src="05_Mens_du_leser_boken.mp3" clip-begin="npt=11.759s" clip-end="npt=16.619s" id="audio_0006"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0007">
+				<text src="amishelp.html#nwcb_0032" id="nwcb_0027"/>
+				<seq>
+					<audio src="05_Mens_du_leser_boken.mp3" clip-begin="npt=16.619s" clip-end="npt=17.820s" id="audio_0007"/>
+					<audio src="05_Mens_du_leser_boken.mp3" clip-begin="npt=17.820s" clip-end="npt=19.799s" id="audio_0008"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0008">
+				<text src="amishelp.html#nwcb_0033" id="nwcb_0028"/>
+				<seq>
+					<audio src="05_Mens_du_leser_boken.mp3" clip-begin="npt=19.799s" clip-end="npt=23.399s" id="audio_0009"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0009">
+				<text src="amishelp.html#nwcb_0034" id="nwcb_0029"/>
+				<seq>
+					<audio src="05_Mens_du_leser_boken.mp3" clip-begin="npt=23.399s" clip-end="npt=25.146s" id="audio_0010"/>
+					<audio src="05_Mens_du_leser_boken.mp3" clip-begin="npt=25.146s" clip-end="npt=26.879s" id="audio_0011"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0010">
+				<text src="amishelp.html#nwcb_0035" id="nwcb_002a"/>
+				<seq>
+					<audio src="05_Mens_du_leser_boken.mp3" clip-begin="npt=26.879s" clip-end="npt=29.279s" id="audio_0012"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0011">
+				<text src="amishelp.html#nwcb_0036" id="nwcb_002b"/>
+				<seq>
+					<audio src="05_Mens_du_leser_boken.mp3" clip-begin="npt=29.279s" clip-end="npt=34.679s" id="audio_0013"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0012">
+				<text src="amishelp.html#nwcb_0037" id="nwcb_002c"/>
+				<seq>
+					<audio src="05_Mens_du_leser_boken.mp3" clip-begin="npt=34.679s" clip-end="npt=36.000s" id="audio_0014"/>
+					<audio src="05_Mens_du_leser_boken.mp3" clip-begin="npt=36.000s" clip-end="npt=37.319s" id="audio_0015"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0013">
+				<text src="amishelp.html#nwcb_0038" id="nwcb_002d"/>
+				<seq>
+					<audio src="05_Mens_du_leser_boken.mp3" clip-begin="npt=37.319s" clip-end="npt=38.993s" id="audio_0016"/>
+					<audio src="05_Mens_du_leser_boken.mp3" clip-begin="npt=38.993s" clip-end="npt=41.081s" id="audio_0017"/>
+					<audio src="05_Mens_du_leser_boken.mp3" clip-begin="npt=41.081s" clip-end="npt=43.786s" id="audio_0018"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0014">
+				<text src="amishelp.html#nwcb_0039" id="nwcb_002e"/>
+				<seq>
+					<audio src="05_Mens_du_leser_boken.mp3" clip-begin="npt=43.786s" clip-end="npt=44.859s" id="audio_0019"/>
+					<audio src="05_Mens_du_leser_boken.mp3" clip-begin="npt=44.859s" clip-end="npt=46.305s" id="audio_0020"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0015">
+				<text src="amishelp.html#nwcb_0040" id="nwcb_002f"/>
+				<seq>
+					<audio src="05_Mens_du_leser_boken.mp3" clip-begin="npt=46.305s" clip-end="npt=48.765s" id="audio_0021"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0016">
+				<text src="amishelp.html#nwcb_0041" id="nwcb_0030"/>
+				<seq>
+					<audio src="05_Mens_du_leser_boken.mp3" clip-begin="npt=48.765s" clip-end="npt=50.261s" id="audio_0022"/>
+					<audio src="05_Mens_du_leser_boken.mp3" clip-begin="npt=50.261s" clip-end="npt=51.466s" id="audio_0023"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0017">
+				<text src="amishelp.html#nwcb_0042" id="nwcb_0031"/>
+				<seq>
+					<audio src="05_Mens_du_leser_boken.mp3" clip-begin="npt=51.466s" clip-end="npt=54.164s" id="audio_0024"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0018">
+				<text src="amishelp.html#nwcb_0043" id="nwcb_0032"/>
+				<seq>
+					<audio src="05_Mens_du_leser_boken.mp3" clip-begin="npt=54.164s" clip-end="npt=55.372s" id="audio_0025"/>
+					<audio src="05_Mens_du_leser_boken.mp3" clip-begin="npt=55.372s" clip-end="npt=57.706s" id="audio_0026"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0019">
+				<text src="amishelp.html#nwcb_0044" id="nwcb_0033"/>
+				<seq>
+					<audio src="05_Mens_du_leser_boken.mp3" clip-begin="npt=57.706s" clip-end="npt=60.826s" id="audio_0027"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0020">
+				<text src="amishelp.html#nwcb_0045" id="nwcb_0034"/>
+				<seq>
+					<audio src="05_Mens_du_leser_boken.mp3" clip-begin="npt=60.826s" clip-end="npt=64.245s" id="audio_0028"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0021">
+				<text src="amishelp.html#nwcb_0046" id="nwcb_0035"/>
+				<seq>
+					<audio src="05_Mens_du_leser_boken.mp3" clip-begin="npt=64.245s" clip-end="npt=67.864s" id="audio_0029"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

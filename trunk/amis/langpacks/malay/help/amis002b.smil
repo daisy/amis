@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Frasa Terdahulu" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:24" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="23.654s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_002b" id="amis_002b" />
+<seq>
+<audio src="42_Frasa_Terdahulu.mp3" clip-begin="npt=0.000s" clip-end="npt=0.444s" id="qwrt_0001" />
+<audio src="42_Frasa_Terdahulu.mp3" clip-begin="npt=0.444s" clip-end="npt=2.273s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0075" id="xami_0075" />
+<seq>
+<audio src="42_Frasa_Terdahulu.mp3" clip-begin="npt=2.273s" clip-end="npt=2.939s" id="qwrt_0003" />
+<audio src="42_Frasa_Terdahulu.mp3" clip-begin="npt=2.939s" clip-end="npt=6.923s" id="qwrt_0004" />
+<audio src="42_Frasa_Terdahulu.mp3" clip-begin="npt=6.923s" clip-end="npt=11.272s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0076" id="xami_0076" />
+<seq>
+<audio src="42_Frasa_Terdahulu.mp3" clip-begin="npt=11.272s" clip-end="npt=11.716s" id="qwrt_0006" />
+<audio src="42_Frasa_Terdahulu.mp3" clip-begin="npt=11.716s" clip-end="npt=14.067s" id="qwrt_0007" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0077" id="xami_0077" />
+<seq>
+<audio src="42_Frasa_Terdahulu.mp3" clip-begin="npt=14.067s" clip-end="npt=14.746s" id="qwrt_0008" />
+<audio src="42_Frasa_Terdahulu.mp3" clip-begin="npt=14.746s" clip-end="npt=18.456s" id="qwrt_0009" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0078" id="xami_0078" />
+<seq>
+<audio src="42_Frasa_Terdahulu.mp3" clip-begin="npt=18.456s" clip-end="npt=18.952s" id="qwrt_000A" />
+<audio src="42_Frasa_Terdahulu.mp3" clip-begin="npt=18.952s" clip-end="npt=20.102s" id="qwrt_000B" />
+<audio src="42_Frasa_Terdahulu.mp3" clip-begin="npt=20.102s" clip-end="npt=21.695s" id="qwrt_000C" />
+<audio src="42_Frasa_Terdahulu.mp3" clip-begin="npt=21.695s" clip-end="npt=23.654s" id="qwrt_000D" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

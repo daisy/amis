@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Apa Itu DAISY?" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:46" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="46.288s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_0004" id="amis_0004" />
+<seq>
+<audio src="03_Apa_Itu_DAISY.mp3" clip-begin="npt=0.000s" clip-end="npt=0.470s" id="qwrt_0001" />
+<audio src="03_Apa_Itu_DAISY.mp3" clip-begin="npt=0.470s" clip-end="npt=1.998s" id="qwrt_0002" />
+<audio src="03_Apa_Itu_DAISY.mp3" clip-begin="npt=1.998s" clip-end="npt=2.442s" id="qwrt_0003" />
+<audio src="03_Apa_Itu_DAISY.mp3" clip-begin="npt=2.442s" clip-end="npt=4.388s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_000a" id="xami_000a" />
+<seq>
+<audio src="03_Apa_Itu_DAISY.mp3" clip-begin="npt=4.388s" clip-end="npt=4.754s" id="qwrt_0005" />
+<audio src="03_Apa_Itu_DAISY.mp3" clip-begin="npt=4.754s" clip-end="npt=7.379s" id="qwrt_0006" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_000b" id="xami_000b" />
+<seq>
+<audio src="03_Apa_Itu_DAISY.mp3" clip-begin="npt=7.379s" clip-end="npt=14.706s" id="qwrt_0007" />
+<audio src="03_Apa_Itu_DAISY.mp3" clip-begin="npt=14.706s" clip-end="npt=22.229s" id="qwrt_0008" />
+<audio src="03_Apa_Itu_DAISY.mp3" clip-begin="npt=22.229s" clip-end="npt=31.699s" id="qwrt_0009" />
+<audio src="03_Apa_Itu_DAISY.mp3" clip-begin="npt=31.699s" clip-end="npt=46.288s" id="qwrt_000A" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

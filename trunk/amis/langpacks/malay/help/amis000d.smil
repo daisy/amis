@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Pilih sesuatu dari senarai buku terkini" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:24" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="24.072s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_000d" id="amis_000d" />
+<seq>
+<audio src="12_Pilih_sesuatu_dari_senarai_buk.mp3" clip-begin="npt=0.000s" clip-end="npt=0.888s" id="qwrt_0001" />
+<audio src="12_Pilih_sesuatu_dari_senarai_buk.mp3" clip-begin="npt=0.888s" clip-end="npt=4.336s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0026" id="xami_0026" />
+<seq>
+<audio src="12_Pilih_sesuatu_dari_senarai_buk.mp3" clip-begin="npt=4.336s" clip-end="npt=4.793s" id="qwrt_0003" />
+<audio src="12_Pilih_sesuatu_dari_senarai_buk.mp3" clip-begin="npt=4.793s" clip-end="npt=7.784s" id="qwrt_0004" />
+<audio src="12_Pilih_sesuatu_dari_senarai_buk.mp3" clip-begin="npt=7.784s" clip-end="npt=11.533s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0027" id="xami_0027" />
+<seq>
+<audio src="12_Pilih_sesuatu_dari_senarai_buk.mp3" clip-begin="npt=11.533s" clip-end="npt=12.578s" id="qwrt_0006" />
+<audio src="12_Pilih_sesuatu_dari_senarai_buk.mp3" clip-begin="npt=12.578s" clip-end="npt=15.974s" id="qwrt_0007" />
+<audio src="12_Pilih_sesuatu_dari_senarai_buk.mp3" clip-begin="npt=15.974s" clip-end="npt=17.097s" id="qwrt_0008" />
+<audio src="12_Pilih_sesuatu_dari_senarai_buk.mp3" clip-begin="npt=17.097s" clip-end="npt=19.474s" id="qwrt_0009" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0028" id="xami_0028" />
+<seq>
+<audio src="12_Pilih_sesuatu_dari_senarai_buk.mp3" clip-begin="npt=19.474s" clip-end="npt=19.983s" id="qwrt_000A" />
+<audio src="12_Pilih_sesuatu_dari_senarai_buk.mp3" clip-begin="npt=19.983s" clip-end="npt=21.446s" id="qwrt_000B" />
+<audio src="12_Pilih_sesuatu_dari_senarai_buk.mp3" clip-begin="npt=21.446s" clip-end="npt=22.752s" id="qwrt_000C" />
+<audio src="12_Pilih_sesuatu_dari_senarai_buk.mp3" clip-begin="npt=22.752s" clip-end="npt=24.072s" id="qwrt_000D" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

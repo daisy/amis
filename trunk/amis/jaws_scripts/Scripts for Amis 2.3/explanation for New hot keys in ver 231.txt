@@ -1,0 +1,33 @@
+Following enhancements are introduced in version 2.3.1.
+
+Fine Navigation mode:
+
+On pressing control+shift+i, JAWS  enters fine navigation mode and on control+shift+u exits fine navigation mode.
+The following happens on entering fine navigation mode
+
+the cursor is placed in starting of the highlighted text.
+JAWS speak the firstline of highlighted text.
+Now the Line, word, character navigation keys of jaws start functioning  normally (which are normally overriden by amis keys) i.e Now JAWS reads the whole page as a text file.
+spelling in fine navigation mode can be read by using same num pad insert + 5 twice.
+
+It is recommended to Pause playing of book before entring fine navigation mode.
+
+
+Text Only Book Reading Mode:
+On pressing Control+Shift+t, JAWS enters Text Only Book Reading Mode.
+and on pressing Control+e it exits.
+The procedure is as follows.
+Move the focus to Navigation window and then  move focus to the heading from where reading has to begin.
+Now press control+shift+t.
+JAWS now enters Text only book reading mode and starts reading from heading just selected in Navigation window.
+From now on jaws will read Text Only book as an html page. 
+This mode is only applicable if Current view is Default View and some heading is selected from Navigation window.
+
+
+JAWS mute hot key:
+This hot key i.e. Control+Shift+m. Toggles between Jaws speech and AMIS self voice.
+when pressed it will do either of following.
+1. JAWS speech is turned off.  AMIS self voice is turned on. JAWS will only start speaking if focus is changed to some other application or if JAWS mute mode hotkey is pressed again.
+2. JAWS starts speaking and AMIS self voice is put to off.
+
+Currently this hotkey will only work correctly if Current view is Default View.

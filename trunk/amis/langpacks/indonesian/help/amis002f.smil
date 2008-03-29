@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Mencari Teks" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:11" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="10.773s">
+<par endsync="last">
+<text src="amishelp.html#amis_002f" id="amis_002f" />
+<seq>
+<audio src="46_Mencari_Teks.mp3" clip-begin="npt=0.000s" clip-end="npt=1.186s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_00cc" id="xami_00cc" />
+<seq>
+<audio src="46_Mencari_Teks.mp3" clip-begin="npt=1.186s" clip-end="npt=4.583s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_00cd" id="xami_00cd" />
+<seq>
+<audio src="46_Mencari_Teks.mp3" clip-begin="npt=4.583s" clip-end="npt=7.298s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_00ce" id="xami_00ce" />
+<seq>
+<audio src="46_Mencari_Teks.mp3" clip-begin="npt=7.298s" clip-end="npt=10.773s" id="qwrt_0004" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

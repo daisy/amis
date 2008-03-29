@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="ncc:timeInThisSmil" content="00:00:25.056"/>
+		<meta name="ncc:totalElapsedTime" content="00:03:26.534"/>
+		<layout>
+			<region id="txt-view"/>
+		</layout>
+		<meta name="ncc:generator" content="EasePublisher 2.02 Build 025 # 091650"/>
+        <meta name="title" content="Avaa tiedosto"/>
+        <meta name="dc:title" content="help"/>
+        <meta name="dc:identifier" content="celia"/>
+    </head>
+	<body>
+		<seq dur="25.056s">
+			<par endsync="last" id="ifbo_0002">
+				<text src="amishelp.html#ifbo_0037" id="ztef_0001"/>
+				<seq>
+					<audio src="09_Avaa_tiedosto.mp3" clip-begin="npt=0.000s" clip-end="npt=2.099s" id="audio_0001"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0003">
+				<text src="amishelp.html#ifbo_0038" id="ztef_0002"/>
+				<seq>
+					<audio src="09_Avaa_tiedosto.mp3" clip-begin="npt=2.099s" clip-end="npt=4.859s" id="audio_0002"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0004">
+				<text src="amishelp.html#ifbo_0039" id="ztef_0003"/>
+				<seq>
+					<audio src="09_Avaa_tiedosto.mp3" clip-begin="npt=4.859s" clip-end="npt=11.038s" id="audio_0003"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0005">
+				<text src="amishelp.html#ifbo_0040" id="ztef_0004"/>
+				<seq>
+					<audio src="09_Avaa_tiedosto.mp3" clip-begin="npt=11.038s" clip-end="npt=15.164s" id="audio_0004"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0006">
+				<text src="amishelp.html#ifbo_0041" id="ztef_0005"/>
+				<seq>
+					<audio src="09_Avaa_tiedosto.mp3" clip-begin="npt=15.164s" clip-end="npt=19.484s" id="audio_0005"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0007">
+				<text src="amishelp.html#ifbo_0042" id="ztef_0006"/>
+				<seq>
+					<audio src="09_Avaa_tiedosto.mp3" clip-begin="npt=19.484s" clip-end="npt=25.056s" id="audio_0006"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+    <head>    
+    <meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+    <meta name="dc:format" content="Daisy 2.02" />
+    <meta name="title" content="&#22312;&#30828;&#30424;&#20013;&#25628;&#32034;&#20070;" />
+    <meta name="dc:title" content="AMIS Help" />
+    <meta name="ncc:timeInThisSmil" content="0:00:23" />
+    <layout>
+        <region id="txtView" />
+    </layout>
+    </head>
+    <body>
+<seq dur="23.458s">
+    <par endsync="last">
+        <text src="amishelpfile-entity.html#amis_000c" id="amis_000c" />
+        <seq>
+            <audio src="amis0112.mp3" clip-begin="npt=0.000s" clip-end="npt=2.155s" id="qwrt_0001" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelpfile-entity.html#xami_0022" id="xami_0022" />
+        <seq>
+            <audio src="amis0112.mp3" clip-begin="npt=2.155s" clip-end="npt=7.354s" id="qwrt_0002" />
+            <audio src="amis0112.mp3" clip-begin="npt=7.354s" clip-end="npt=11.337s" id="qwrt_0003" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelpfile-entity.html#xami_0023" id="xami_0023" />
+        <seq>
+            <audio src="amis0112.mp3" clip-begin="npt=11.337s" clip-end="npt=15.399s" id="qwrt_0004" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelpfile-entity.html#xami_0024" id="xami_0024" />
+        <seq>
+            <audio src="amis0112.mp3" clip-begin="npt=15.399s" clip-end="npt=19.748s" id="qwrt_0005" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelpfile-entity.html#xami_0025" id="xami_0025" />
+        <seq>
+            <audio src="amis0112.mp3" clip-begin="npt=19.748s" clip-end="npt=20.767s" id="qwrt_0006" />
+            <audio src="amis0112.mp3" clip-begin="npt=20.767s" clip-end="npt=23.458s" id="qwrt_0007" />
+        </seq>
+    </par>
+</seq>
+</body>
+</smil>

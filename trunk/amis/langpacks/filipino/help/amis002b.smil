@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Nakaraang Parirala" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:19" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="19.073s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_002b" id="amis_002b" />
+<seq>
+<audio src="42_Nakaraang_Parirala.mp3" clip-begin="npt=0.000s" clip-end="npt=1.567s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0075" id="xami_0075" />
+<seq>
+<audio src="42_Nakaraang_Parirala.mp3" clip-begin="npt=1.567s" clip-end="npt=9.340s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0076" id="xami_0076" />
+<seq>
+<audio src="42_Nakaraang_Parirala.mp3" clip-begin="npt=9.340s" clip-end="npt=10.537s" id="qwrt_0003" />
+<audio src="42_Nakaraang_Parirala.mp3" clip-begin="npt=10.537s" clip-end="npt=13.161s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0077" id="xami_0077" />
+<seq>
+<audio src="42_Nakaraang_Parirala.mp3" clip-begin="npt=13.161s" clip-end="npt=15.520s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0078" id="xami_0078" />
+<seq>
+<audio src="42_Nakaraang_Parirala.mp3" clip-begin="npt=15.520s" clip-end="npt=17.690s" id="qwrt_0006" />
+<audio src="42_Nakaraang_Parirala.mp3" clip-begin="npt=17.690s" clip-end="npt=19.073s" id="qwrt_0007" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

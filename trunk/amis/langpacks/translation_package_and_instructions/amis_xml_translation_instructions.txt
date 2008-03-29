@@ -1,0 +1,70 @@
+AMIS Localization
+March 8, 2007
+Instructions for translating the UI XML file
+===
+ONLY DO THIS IF YOU ARE COMFORTABLE EDITING XML; OTHERWISE, PRINT OUT THE PDF AND TRANSLATE IT WITH PEN AND PAPER.  WE WILL HELP YOU INPUT THE DATA LATER ON.
+
+IF YOU ARE COMFORTABLE EDITING XML, PLEASE PROCEED:
+
+1. Open the included "amisAccessibleUi.xml" file in a Unicode-friendly text editor, like Ultra-Edit or PSPad.  (MS Notepad is generally a bad choice for work like this.)
+2. The structure of the file is too complicated to describe completely here.  Very briefly, it consists of organized lists of labels for software interface items, such as menu items and dialog box controls (labels, lists, buttons, etc).  For each interface item, there is a "caption" and a "description".  Some examples follow.
+
+=====
+Begin examples of XML
+
+Example of a caption and a description (simple case):
+<caption>
+	<text>Open...</text>
+  <originalText>Open...</originalText>
+  <audio src="./audio/003_Open.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0004.smil#text_0004" />
+</caption>
+<description>
+	<text>Open a Daisy book from the local file system</text>
+	<originalText>Open a Daisy book from the local file system</originalText>
+	<audio src="./audio/004_Open_a_Daisy_book_from_the_loc.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0005.smil#text_0005" />
+</description>
+
+You will also see cases like this, where multiple captions or descriptions are wrapped in a switch element:
+<switch element="description">
+	<description mfcid="IDC_STATIC" condition="hasSkippableStructures">
+		<text>This book contains the following special structures.  Check the ones you want skipped.</text>
+		<originalText>This book contains the following special structures.  Check the ones you want skipped.</originalText>
+		<audio src="./audio/186_This_book_contains_the_followi.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00bb.smil#text_00bb" />
+	</description>
+	<description mfcid="IDC_STATIC" condition="hasNoSkippableStructures">
+		<text>This publication has no skippable elements.</text>
+		<originalText>This publication has no skippable elements.</originalText>
+		<audio src="./audio/187_This_publication_has_no_skippa.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00bc.smil#text_00bc" />
+	</description>
+</switch>
+      
+Labels are also found in this context:
+<promptItem>
+	<text>After typing in your search, press enter to begin searching.</text>
+	<originalText>After typing in your search, press enter to begin searching.</originalText>
+	<audio src="./audio/149_After_typing_in_your_search_pr.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0096.smil#text_0096" />
+</promptItem>
+
+End examples.
+=====
+
+In all cases given here, you are to translate the text that is wrapped by <text>..</text> tags.   Do not translate the text inside originalText elements, and don't worry about the audio elements yet.
+
+Cases for which you should NOT translate anything:
+1. the text for mnemonic or accelerator elements.
+2. any item which appears in a context where the parent container has an attribute 'translate="no"'
+ <control mfcid="IDC_VERSION" translate="no">
+  <caption>
+    <text>Version 2.0</text>
+    <originalText>Version 2.0</originalText>
+    <audio src="./audio/163_Version_20.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00a4.smil#text_00a4" />
+  </caption>
+</control>
+
+3.3  When you are done, send me the XML file.  You will get a Sigtuna project back for recording all the prompts.
+
+End of all instructions
+===
+AMIS Project Coordinator: Marisa DeMeglio
+email: marisa@dinf.ne.jp
+website: http://amis.sf.net

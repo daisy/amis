@@ -1,0 +1,2344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui xml:lang="en">
+  <containers>
+    <container id="file">
+      <note>This is the menu header "File"</note>
+      <caption>
+        <text>ගොනු තීරය</text>
+        <originalText>File</originalText>
+        
+      <audio src="./audio/002__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0003.smil#text_0003"/></caption>
+      <action mfcid="ID_MENU_FILE_OPEN" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and a toolbar item</note>
+        <icon src="./open.png" type="smallIcon"/>
+        <caption>
+          <text>විවෘත කිරීම...</text>
+          <originalText>Open...</originalText>
+          
+        <audio src="./audio/003__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0004.smil#text_0004"/></caption>
+        <description>
+      <text>අභ්‍යන්තර ගොනු අතරෙන් ඩේසි පොතක් විවෘත කරන්න.</text>
+          <originalText>Open a Daisy book from the local file system</originalText>
+          
+        <audio src="./audio/004_______.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0005.smil#text_0005"/></description>
+        <accelerator>
+          <text>Ctrl+O</text>
+          <originalText>Ctrl+O</originalText>
+          
+        <audio src="./audio/005_CtrlO.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0006.smil#text_0006"/></accelerator>
+        <mnemonic>
+          <text>O</text>
+          <originalText>O</originalText>
+          
+        <audio src="./audio/006_O.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0007.smil#text_0007"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_LOADCD" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and a toolbar item</note>
+        <icon src="./settings/img/cd3.ico" type="smallIcon"/>
+        <icon src="./settings/img/cd_big.ico" type="largeIcon"/>
+        <caption>
+          <text>සංයුක්ත තැටිය</text>
+          <originalText>Load CD</originalText>
+          
+        <audio src="./audio/007__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0008.smil#text_0008"/></caption>
+        <description>
+          <text>සංයුක්ත තැටියෙහි පොත විවෘත කිරීම.</text>
+          <originalText>Load a DAISY book from CD ROM</originalText>
+          
+        <audio src="./audio/008_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0009.smil#text_0009"/></description>
+        <accelerator>
+          <text>Ctrl+L</text>
+          <originalText>Ctrl+L</originalText>
+          
+        <audio src="./audio/009_CtrlL.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis000a.smil#text_000a"/></accelerator>
+        <mnemonic>
+          <text>L</text>
+          <originalText>L</originalText>
+          
+        <audio src="./audio/010_L.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis000b.smil#text_000b"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_SEARCHDRIVE" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>සෙවීම...</text>
+          <originalText>Search...</originalText>
+          
+        <audio src="./audio/011.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis000c.smil#text_000c"/></caption>
+        <description>
+          <text>දෘඩ තැටිය තුළ ඩේසි පොත් ‌සොයන්න.</text>
+          <originalText>Search local drives for DAISY books</originalText>
+          
+        <audio src="./audio/012______.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis000d.smil#text_000d"/></description>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/013_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis000e.smil#text_000e"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_PREFERENCES" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>අභිමතයන්...</text>
+          <originalText>Preferences...</originalText>
+          
+        <audio src="./audio/014.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis000f.smil#text_000f"/></caption>
+        <description>
+        <text>මේ‌ යෙදවුම පිළිබද අභිමත සංවාදයයි.</text>
+          <originalText>This is the application preferences dialog.</originalText>
+          
+        <audio src="./audio/015_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0010.smil#text_0010"/></description>
+        <mnemonic>
+          <text>P</text>
+          <originalText>P</originalText>
+          
+        <audio src="./audio/016_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0011.smil#text_0011"/></mnemonic>
+      </action>
+      <container id="recentBooksList">
+        <note>This is the menu header for the recent books sub-menu.</note>
+        <caption>
+          <text>මෑතදී කියවූ පොත්</text>
+          <originalText>Recent</originalText>
+          
+        <audio src="./audio/017___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0012.smil#text_0012"/></caption>
+        <switch element="action">
+          <action mfcid="ID_FILE_RECENT_EMPTY" widget="menuItem" condition="ID_FILE_RECENT_EMPTY">
+            <note>This is going to be a menu item</note>
+            <caption>
+              <text>කිසිවක් නැත.</text>
+              <originalText>Empty</originalText>
+              
+            <audio src="./audio/018__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0013.smil#text_0013"/></caption>
+            <description>
+          <text>මෑතදී කිය වූ පොත් නැත.There are no recently read books.</text>
+              <originalText>There are no recently read books.</originalText>
+              
+            <audio src="./audio/019_____There_are_no_recently_read.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0014.smil#text_0014"/></description>
+          </action>
+          <action mfcid="BOOK_BASE_ID" widget="menuItem" condition="BOOK_BASE_ID">
+            <note>This is going to be a menu item</note>
+            <list repeat="yes">
+              <caption>
+                <promptVar name="RECENT_BOOK_TITLE"/>
+              </caption>
+            </list>
+          </action>
+        </switch>
+        <mnemonic>
+          <text>R</text>
+          <originalText>R</originalText>
+          
+        <audio src="./audio/020_R.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0015.smil#text_0015"/></mnemonic>
+      </container>
+      <action mfcid="ID_MENU_FILE_EXIT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>ඉවත්වීම.Exit</text>
+          <originalText>Exit</originalText>
+          
+        <audio src="./audio/021_Exit.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0016.smil#text_0016"/></caption>
+        <description>
+          <text>ඇමිස්ගෙන් ඉවත්වීම.</text>
+          <originalText>Exit AMIS</originalText>
+          
+        <audio src="./audio/022__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0017.smil#text_0017"/></description>
+        <accelerator>
+          <text>Alt+F4</text>
+          <originalText>Alt+F4</originalText>
+          
+        <audio src="./audio/023_AltF4.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0018.smil#text_0018"/></accelerator>
+        <mnemonic>
+          <text>x</text>
+          <originalText>x</originalText>
+          
+        <audio src="./audio/024_x.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0019.smil#text_0019"/></mnemonic>
+      </action>
+      <accelerator>
+        <text>Alt+F</text>
+        <originalText>Alt+F</originalText>
+        
+      <audio src="./audio/025_AltF.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis001a.smil#text_001a"/></accelerator>
+      <mnemonic>
+        <text>F</text>
+        <originalText>F</originalText>
+        
+      <audio src="./audio/026_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis001b.smil#text_001b"/></mnemonic>
+    </container>
+    <container id="view">
+      <note>This is the menu header "View"</note>
+      <caption>
+        <text>දසුන් තීරය.</text>
+        <originalText>View</originalText>
+        
+      <audio src="./audio/027__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis001c.smil#text_001c"/></caption>
+      <action mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>අමතර තීරය.</text>
+          <originalText>Sidebar</originalText>
+          
+        <audio src="./audio/028__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis001d.smil#text_001d"/></caption>
+        <description>
+      <text>අමතර තීරය සක්‍රීය හෝ අක්‍රීය කිරීම.</text>
+          <originalText>Turn the sidebar on or off.</originalText>
+          
+        <audio src="./audio/029______.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis001e.smil#text_001e"/></description>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/030_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis001f.smil#text_001f"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_BASIC" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>මූලික දසුන.</text>
+          <originalText>Basic View Mode</originalText>
+          
+        <audio src="./audio/031__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0020.smil#text_0020"/></caption>
+        <description>
+          <text>මූලික දසුනට මාරුවීම.</text>
+          <originalText>Switch the view to basic mode.</originalText>
+          
+        <audio src="./audio/032___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0021.smil#text_0021"/></description>
+        <accelerator>
+          <text>F11</text>
+          <originalText>F11</originalText>
+          
+        <audio src="./audio/033_F11.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0022.smil#text_0022"/></accelerator>
+        <mnemonic>
+          <text>B</text>
+          <originalText>B</originalText>
+          
+        <audio src="./audio/034_B.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0023.smil#text_0023"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_CONTRAST" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item</note>
+        <icon src="./settings/img/contrast.ico" type="smallIcon"/>
+        <caption>
+          <text>උච්ච අසමතාව.</text>
+          <originalText>High Contrast</originalText>
+          
+        <audio src="./audio/035__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0024.smil#text_0024"/></caption>
+        <description>
+         <text>පාඨය ප්‍රදර්ශනය කිරීම සදහා උච්ච අසමතාව භාවිත කරන්න.</text>
+          <originalText>Use high contrast colors for the text display.</originalText>
+          
+        <audio src="./audio/036________.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0025.smil#text_0025"/></description>
+        <accelerator>
+          <text>Ctrl+S</text>
+          <originalText>Ctrl+S</originalText>
+          
+        <audio src="./audio/037_CtrlS.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0026.smil#text_0026"/></accelerator>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/038_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0027.smil#text_0027"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_LARGEFONT" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/font.ico" type="smallIcon"/>
+        <caption>
+       <text>අකුරු ලොකු කිරීම.</text>
+          <originalText>Increase Font Size</originalText>
+          
+        <audio src="./audio/039___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0028.smil#text_0028"/></caption>
+        <description>
+        <text>ක්‍රමයෙන් අකුරු ලොකු කරන්න.</text>
+          <originalText>Gradually increase the font size.</originalText>
+          
+        <audio src="./audio/040____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0029.smil#text_0029"/></description>
+        <mnemonic>
+          <text>I</text>
+          <originalText>I</originalText>
+          
+        <audio src="./audio/041_I.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis002a.smil#text_002a"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_RESETFONT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>අකුරුවල මුල් විශාලත්වය.</text>
+          <originalText>Reset Font Size</originalText>
+          
+        <audio src="./audio/042___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis002b.smil#text_002b"/></caption>
+        <description>
+          <text>අකුරු පියවි තරමට ගෙන එන්න.</text>
+          <originalText>Set the font size to the default setting.</originalText>
+          
+        <audio src="./audio/043_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis002c.smil#text_002c"/></description>
+        <mnemonic>
+          <text>R</text>
+          <originalText>R</originalText>
+          
+        <audio src="./audio/044_R.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis002d.smil#text_002d"/></mnemonic>
+      </action>
+      <action mfcid="NAVLIST_BASE_ID" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <promptVar name="NAV_LIST_NAME"/>
+        </caption>
+        <description>
+          <promptVar name="NAV_LIST_DESCRIPTION"/>
+        </description>
+      </action>
+      <accelerator>
+        <text>Alt+V</text>
+        <originalText>Alt+V</originalText>
+        
+      <audio src="./audio/045_AltV.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis002e.smil#text_002e"/></accelerator>
+      <mnemonic>
+        <text>V</text>
+        <originalText>V</originalText>
+        
+      <audio src="./audio/046_V.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis002f.smil#text_002f"/></mnemonic>
+    </container>
+    <container id="play">
+      <note>This is the menu header "Play"</note>
+      <caption>
+        <text>කියවීම.</text>
+        <originalText>Play</originalText>
+        
+      <audio src="./audio/047.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0030.smil#text_0030"/></caption>
+      <switch element="action">
+        <action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" condition="canPlay">
+          <note>This is going to be a menu item and toolbar item</note>
+          <icon src="./settings/img/play-big.ico" type="smallIcon"/>
+          <icon src="./settings/img/play_big.ico" type="largeIcon"/>
+          <caption>
+            <text>කියවීම.</text>
+            <originalText>Play</originalText>
+            
+          <audio src="./audio/048.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0031.smil#text_0031"/></caption>
+          <description>
+         <text>සමකාලික වාදනය අරඹන්න.</text>
+            <originalText>Start synchronized playback.</originalText>
+            
+          <audio src="./audio/049___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0032.smil#text_0032"/></description>
+          <accelerator>
+         <text>Space</text>
+            <originalText>Space</originalText>
+            
+          <audio src="./audio/050_Space.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0033.smil#text_0033"/></accelerator>
+          <mnemonic>
+            <text>P</text>
+            <originalText>P</originalText>
+            
+          <audio src="./audio/051_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0034.smil#text_0034"/></mnemonic>
+        </action>
+        <action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" condition="canPause">
+          <note>This is going to be a menu item and toolbar item</note>
+          <icon src="./settings/img/pause.ico" type="smallIcon"/>
+          <icon src="./settings/img/pause_big.ico" type="largeIcon"/>
+          <caption>
+        <text>තාවකාලිකව නැවැත්වීම</text>
+            <originalText>Pause</originalText>
+            
+          <audio src="./audio/052__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0035.smil#text_0035"/></caption>
+          <description>
+            <text>මේ ඩේසි ‌පොත කියවීම තාවකාලිකව නැවැත්වීම.</text>
+            <originalText>Pause playback of this DAISY book.</originalText>
+            
+          <audio src="./audio/053______.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0036.smil#text_0036"/></description>
+          <accelerator>
+            <text>Space</text>
+            <originalText>Space</originalText>
+            
+          <audio src="./audio/054_Space.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0037.smil#text_0037"/></accelerator>
+          <mnemonic>
+            <text>a</text>
+            <originalText>a</originalText>
+            
+          <audio src="./audio/055_a.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0038.smil#text_0038"/></mnemonic>
+        </action>
+      </switch>
+      <action mfcid="ID_MENU_PLAY_ESCAPE" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>Escape</text>
+          <originalText>Escape</originalText>
+          
+        <audio src="./audio/056_Escape.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0039.smil#text_0039"/></caption>
+        <description>
+          <text>කියවන අයිතමයෙන් හෝ ව්‍යුහයෙන් ඉවත්වීම.</text>
+          <originalText>Jump out of the currently playing item or structure.</originalText>
+          
+        <audio src="./audio/057_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis003a.smil#text_003a"/></description>
+        <accelerator>
+          <text>Esc</text>
+          <originalText>Esc</originalText>
+          
+        <audio src="./audio/058_Esc.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis003b.smil#text_003b"/></accelerator>
+        <mnemonic>
+          <text>E</text>
+          <originalText>E</originalText>
+          
+        <audio src="./audio/059_E.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis003c.smil#text_003c"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_FASTER" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/fullspeedahead.ico" type="smallIcon"/>
+        <caption>
+          <text>වැඩි වේගය.</text>
+          <originalText>Faster</originalText>
+          
+        <audio src="./audio/060__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis003d.smil#text_003d"/></caption>
+        <description>
+          <text>කියවන වේගය වැඩි කිරීම.</text>
+          <originalText>Increase the playback rate.</originalText>
+          
+        <audio src="./audio/061____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis003e.smil#text_003e"/></description>
+        <accelerator>
+          <text>Ctrl++</text>
+          <originalText>Ctrl++</originalText>
+          
+        <audio src="./audio/062_Ctrl.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis003f.smil#text_003f"/></accelerator>
+        <mnemonic>
+          <text>F</text>
+          <originalText>F</originalText>
+          
+        <audio src="./audio/063_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0040.smil#text_0040"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_SLOWER" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/slowdown.ico" type="smallIcon"/>
+        <caption>
+          <text>අඩු වේගය</text>
+          <originalText>Slower</originalText>
+          
+        <audio src="./audio/064__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0041.smil#text_0041"/></caption>
+        <description>
+          <text>කියවන වේගය අඩු කිරීම.</text>
+          <originalText>Slow down the playback rate.</originalText>
+          
+        <audio src="./audio/065____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0042.smil#text_0042"/></description>
+        <accelerator>
+          <text>Ctrl+-</text>
+          <originalText>Ctrl+-</originalText>
+          
+        <audio src="./audio/066_Ctrl.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0043.smil#text_0043"/></accelerator>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/067_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0044.smil#text_0044"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_NORMALSPEED" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/normalspeed.ico" type="smallIcon"/>
+        <caption>
+          <text>සාමාන්‍ය වේගය.</text>
+          <originalText>Normal Speed</originalText>
+          
+        <audio src="./audio/068__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0045.smil#text_0045"/></caption>
+        <description>
+          <text>කියවීමේ සාමාන්‍ය වේගය.</text>
+          <originalText>Reset the playback rate to normal.</originalText>
+          
+        <audio src="./audio/069___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0046.smil#text_0046"/></description>
+        <accelerator>
+          <text>Ctrl+0</text>
+          <originalText>Ctrl+0</originalText>
+          
+        <audio src="./audio/070_Ctrl0.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0047.smil#text_0047"/></accelerator>
+        <mnemonic>
+          <text>N</text>
+          <originalText>N</originalText>
+          
+        <audio src="./audio/071_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0048.smil#text_0048"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_VOLUP" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>හඩ වැඩි කිරීම.</text>
+          <originalText>Increase Volume</originalText>
+          
+        <audio src="./audio/072___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0049.smil#text_0049"/></caption>
+        <description>
+        <text>ක්‍රමයෙන් හඩ වැඩි කරන්න.</text>
+          <originalText>Gradually raise the volume.</originalText>
+          
+        <audio src="./audio/073____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis004a.smil#text_004a"/></description>
+        <accelerator>
+          <text>Ctrl+Up</text>
+          <originalText>Ctrl+Up</originalText>
+          
+        <audio src="./audio/074_CtrlUp.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis004b.smil#text_004b"/></accelerator>
+        <mnemonic>
+          <text>I</text>
+          <originalText>I</originalText>
+          
+        <audio src="./audio/075_I.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis004c.smil#text_004c"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_VOLDOWN" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>හඩ අඩු කිරීම.</text>
+          <originalText>Decrease Volume</originalText>
+          
+        <audio src="./audio/076___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis004d.smil#text_004d"/></caption>
+        <description>
+        <text>ක්‍රමයෙන් හඩ අඩු කරන්න.</text>
+          <originalText>Gradually lower the volume.</originalText>
+          
+        <audio src="./audio/077____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis004e.smil#text_004e"/></description>
+        <accelerator>
+          <text>Ctrl+Down</text>
+          <originalText>Ctrl+Down</originalText>
+          
+        <audio src="./audio/078_CtrlDown.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis004f.smil#text_004f"/></accelerator>
+        <mnemonic>
+          <text>D</text>
+          <originalText>D</originalText>
+          
+        <audio src="./audio/079_D.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0050.smil#text_0050"/></mnemonic>
+      </action>
+      <accelerator>
+        <text>Alt+P</text>
+        <originalText>Alt+P</originalText>
+        
+      <audio src="./audio/080_AltP.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0051.smil#text_0051"/></accelerator>
+      <mnemonic>
+        <text>P</text>
+        <originalText>P</originalText>
+        
+      <audio src="./audio/081_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0052.smil#text_0052"/></mnemonic>
+    </container>
+    <container id="navigate">
+      <note>This is the menu header "Navigate"</note>
+      <caption>
+        <text>තරණ තීරය.</text>
+        <originalText>Navigate</originalText>
+        
+      <audio src="./audio/082__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0053.smil#text_0053"/></caption>
+      <action mfcid="ID_MENU_NAV_PREVSECTION" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevsection.ico" type="smallIcon"/>
+        <icon src="./settings/img/prevsection_big.ico" type="largeIcon"/>
+        <caption>
+          <text>කලින් කොටස</text>
+          <originalText>Previous Section</originalText>
+          
+        <audio src="./audio/083__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0054.smil#text_0054"/></caption>
+        <description>
+          <text>පූර්ව කොටස.</text>
+          <originalText>Go to the previous section.</originalText>
+          
+        <audio src="./audio/084__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0055.smil#text_0055"/></description>
+        <accelerator>
+          <text>ඉහළ‌ට</text>
+          <originalText>Up</originalText>
+          
+        <audio src="./audio/085.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0056.smil#text_0056"/></accelerator>
+        <mnemonic>
+          <text>P</text>
+          <originalText>P</originalText>
+          
+        <audio src="./audio/086_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0057.smil#text_0057"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTSECTION" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextsection.ico" type="smallIcon"/>
+        <icon src="./settings/img/nextsection_big.ico" type="largeIcon"/>
+        <caption>
+          <text>මීළග කොටස</text>
+          <originalText>Next Section</originalText>
+          
+        <audio src="./audio/087__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0058.smil#text_0058"/></caption>
+        <description>
+          <text>මීළග කොටස.</text>
+          <originalText>Go to the next section.</originalText>
+          
+        <audio src="./audio/088__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0059.smil#text_0059"/></description>
+        <accelerator>
+          <text>පහලට</text>
+          <originalText>Down</originalText>
+          
+        <audio src="./audio/089.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis005a.smil#text_005a"/></accelerator>
+        <mnemonic>
+          <text>N</text>
+          <originalText>N</originalText>
+          
+        <audio src="./audio/090_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis005b.smil#text_005b"/></mnemonic>
+      </action>
+      <container id="sectiondepth">
+        <note>This is the "show section depth" sub-menu pop-up</note>
+        <caption>
+          <text>කොටස්වල මට්ටම පෙන්වීම.</text>
+          <originalText>Show Section Depth</originalText>
+          
+        <audio src="./audio/091___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis005c.smil#text_005c"/></caption>
+        <switch element="action">
+          <action mfcid="ID_EMPTY" widget="menuItem" condition="ID_EMPTY">
+            <note>This is going to be a menu item</note>
+            <caption>
+              <text>කිසිවක් නැත.</text>
+              <originalText>Empty</originalText>
+              
+            <audio src="./audio/092__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis005d.smil#text_005d"/></caption>
+            <description>
+              <text>කොටස්වල මට්ටම් නැත.</text>
+              <originalText>There are no section levels.</originalText>
+              
+            <audio src="./audio/093___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis005e.smil#text_005e"/></description>
+          </action>
+          <action mfcid="SECTION_DEPTH_BASE_ID" widget="menuItem" condition="SECTION_DEPTH_BASE_ID">
+            <note>This is going to be a menu item</note>
+            <list repeat="yes">
+              <caption>
+                <promptVar name="SECTION_DEPTH_OPTION"/>
+              </caption>
+            </list>
+          </action>
+        </switch>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/094_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis005f.smil#text_005f"/></mnemonic>
+      </container>
+      <action mfcid="ID_MENU_NAV_PREVPHRASE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevphasecirc.ico" type="smallIcon"/>
+        <caption>
+         <text>කලින් වාක්‍යංශය</text>
+          <originalText>Previous Phrase</originalText>
+          
+        <audio src="./audio/095__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0060.smil#text_0060"/></caption>
+        <description>
+         <text>පූර්ව වාක්‍යංශය.</text>
+          <originalText>Go to the previous phrase.</originalText>
+          
+        <audio src="./audio/096__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0061.smil#text_0061"/></description>
+        <accelerator>
+          <text>වමට</text>
+          <originalText>Left</originalText>
+          
+        <audio src="./audio/097.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0062.smil#text_0062"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTPHRASE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextphrasecirc.ico" type="smallIcon"/>
+        <caption>
+          <text>මීළග වාක්‍යංශය</text>
+          <originalText>Next Phrase</originalText>
+          
+        <audio src="./audio/098__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0063.smil#text_0063"/></caption>
+        <description>
+          <text>යා යුතු මීළග වාක්‍යංශය.</text>
+          <originalText>Go to the next phrase.</originalText>
+          
+        <audio src="./audio/099____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0064.smil#text_0064"/></description>
+        <accelerator>
+          <text>දකුණට</text>
+          <originalText>Right</originalText>
+          
+        <audio src="./audio/100.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0065.smil#text_0065"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_PREVPAGE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevpage.ico" type="smallIcon"/>
+        <caption>
+          <text>කලින් පිටුව</text>
+          <originalText>Previous Page</originalText>
+          
+        <audio src="./audio/101__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0066.smil#text_0066"/></caption>
+        <description>
+          <text>පෙර පිටුව.</text>
+          <originalText>Go to the previous page.</originalText>
+          
+        <audio src="./audio/102__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0067.smil#text_0067"/></description>
+        <accelerator>
+          <text>Ctrl+Left</text>
+          <originalText>Ctrl+Left</originalText>
+          
+        <audio src="./audio/103_CtrlLeft.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0068.smil#text_0068"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTPAGE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextpage.ico" type="smallIcon"/>
+        <caption>
+          <text>මීළග පිටුව</text>
+          <originalText>Next Page</originalText>
+          
+        <audio src="./audio/104__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0069.smil#text_0069"/></caption>
+        <description>
+          <text>ඊළග පිටුව</text>
+          <originalText>Go to the next page.</originalText>
+          
+        <audio src="./audio/105__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis006a.smil#text_006a"/></description>
+        <accelerator>
+          <text>Ctrl+Right</text>
+          <originalText>Ctrl+Right</originalText>
+          
+        <audio src="./audio/106_CtrlRight.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis006b.smil#text_006b"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_GOTOPAGE" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>යා යුතු පිටුව...</text>
+          <originalText>Go to Page...</originalText>
+          
+        <audio src="./audio/107___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis006c.smil#text_006c"/></caption>
+        <description>
+  	<text>යම්කිසි පිටුවකට යන්න.</text>
+          <originalText>Go to a specific page.</originalText>
+          
+        <audio src="./audio/108___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis006d.smil#text_006d"/></description>
+        <accelerator>
+          <text>Ctrl+G</text>
+          <originalText>Ctrl+G</originalText>
+          
+        <audio src="./audio/109_CtrlG.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis006e.smil#text_006e"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_FINDINTEXT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>පාඨය තුළ සෙවීම.</text>
+          <originalText>Find in Text</originalText>
+          
+        <audio src="./audio/110___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis006f.smil#text_006f"/></caption>
+        <description>
+	<text>‌පාඨය තුළ වචනයක් හෝ වාක්‍යංශයක් සෙවීම.</text>
+          <originalText>Search for a word or phrase in the text.</originalText>
+          
+        <audio src="./audio/111______.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0070.smil#text_0070"/></description>
+        <accelerator>
+          <text>Ctrl+F</text>
+          <originalText>Ctrl+F</originalText>
+          
+        <audio src="./audio/112_CtrlF.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0071.smil#text_0071"/></accelerator>
+        <mnemonic>
+          <text>F</text>
+          <originalText>F</originalText>
+          
+        <audio src="./audio/113_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0072.smil#text_0072"/></mnemonic>
+      </action>
+      <accelerator>
+        <text>Alt+N</text>
+        <originalText>Alt+N</originalText>
+        
+      <audio src="./audio/114_AltN.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0073.smil#text_0073"/></accelerator>
+      <mnemonic>
+        <text>N</text>
+        <originalText>N</originalText>
+        
+      <audio src="./audio/115_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0074.smil#text_0074"/></mnemonic>
+    </container>
+    <container id="bookmarks">
+      <note>This is the menu header "Bookmarks"</note>
+      <caption>
+        <text>පොත් සලකුණු</text>
+        <originalText>Bookmarks</originalText>
+        
+      <audio src="./audio/116__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0075.smil#text_0075"/></caption>
+      <action mfcid="ID_MENU_BMK_ADD" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/adbookmark.ico" type="smallIcon"/>
+        <caption>
+          <text>පොත් සලකුණ යෙදීම.</text>
+          <originalText>Add Bookmark</originalText>
+          
+        <audio src="./audio/117___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0076.smil#text_0076"/></caption>
+        <description>
+          <text>වර්තමාන ස්ථානයෙහි පොත් සලකුණක් තැබීම.</text>
+          <originalText>Bookmark your current position.</originalText>
+          
+        <audio src="./audio/118_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0077.smil#text_0077"/></description>
+        <accelerator>
+          <text>Ctrl+D</text>
+          <originalText>Ctrl+D</originalText>
+          
+        <audio src="./audio/119_CtrlD.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0078.smil#text_0078"/></accelerator>
+        <mnemonic>
+          <text>A</text>
+          <originalText>A</originalText>
+          
+        <audio src="./audio/120_A.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0079.smil#text_0079"/></mnemonic>
+      </action>
+      <action mfcid="BOOKMARK_BASE_ID" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOKMARK_TITLE"/>
+          </caption>
+        </list>
+      </action>
+      <accelerator>
+        <text>Alt+B</text>
+        <originalText>Alt+B</originalText>
+        
+      <audio src="./audio/121_AltB.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis007a.smil#text_007a"/></accelerator>
+      <mnemonic>
+        <text>B</text>
+        <originalText>B</originalText>
+        
+      <audio src="./audio/122_B.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis007b.smil#text_007b"/></mnemonic>
+    </container>
+    <container id="info">
+   <note>This is the menu header "Info"</note>
+      <caption>
+        <text>තොරතුරු තීරය.</text>
+        <originalText>Info</originalText>
+        
+      <audio src="./audio/123__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis007c.smil#text_007c"/></caption>
+      <action mfcid="ID_MENU_INFO_SKIP" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>මගහැරිය හැකි අයිතම...</text>
+          <originalText>Skippable Items...</originalText>
+          
+        <audio src="./audio/124___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis007d.smil#text_007d"/></caption>
+        <description>
+        <text>මේ ග්‍රන්ථයෙහි මග හැරිය හැකි අයිතම පෙන්වන්න.</text>
+          <originalText>View the skippable items for this publication.</originalText>
+          
+        <audio src="./audio/125_______.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis007e.smil#text_007e"/></description>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/126_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis007f.smil#text_007f"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_SUMMARY" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/info.ico" type="smallIcon"/>
+        <caption>
+          <text>පූර්ණ සාරාංශ්‍ය</text>
+          <originalText>Full Summary</originalText>
+          
+        <audio src="./audio/127__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0080.smil#text_0080"/></caption>
+        <description>
+          <text>‌මේ ප්‍රකාශනය පිළිබද පූර්ණ සාරාංශය.</text>
+          <originalText>Get all summary info for this publication.</originalText>
+          
+        <audio src="./audio/128_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0081.smil#text_0081"/></description>
+        <mnemonic>
+          <text>F</text>
+          <originalText>F</originalText>
+          
+        <audio src="./audio/129_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0082.smil#text_0082"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_CURRENTPOSITION" widget="menuItem">
+       <note>This is going to be a menu item</note>
+        <caption>
+          <text>වර්ථමාන ස්ථානය</text>
+          <originalText>Current Position</originalText>
+          
+        <audio src="./audio/130__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0083.smil#text_0083"/></caption>
+        <description>
+          <text>වර්තමාන ස්ථානය ගැන තොරතුරු.</text>
+          <originalText>Get information about your current position.</originalText>
+          
+        <audio src="./audio/131____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0084.smil#text_0084"/></description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/132_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0085.smil#text_0085"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_NAVOPTIONS" widget="menuItem">
+    <note>This is going to be a menu item</note>
+        <caption>
+          <text>තරණ විකල්ප</text>
+          <originalText>Navigation Options</originalText>
+          
+        <audio src="./audio/133__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0086.smil#text_0086"/></caption>
+        <description>
+          <text>තරණ විකල්ප හදුනා ගන්න.</text>
+          <originalText>Learn about your navigation options for this publication.</originalText>
+          
+        <audio src="./audio/134____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0087.smil#text_0087"/></description>
+        <mnemonic>
+          <text>N</text>
+          <originalText>N</originalText>
+          
+        <audio src="./audio/135_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0088.smil#text_0088"/></mnemonic>
+      </action>
+      <accelerator>
+        <text>Alt+I</text>
+        <originalText>Alt+I</originalText>
+        
+      <audio src="./audio/136_AltI.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0089.smil#text_0089"/></accelerator>
+      <mnemonic>
+        <text>I</text>
+        <originalText>I</originalText>
+        
+      <audio src="./audio/137_I.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis008a.smil#text_008a"/></mnemonic>
+    </container>
+    <container id="help">
+      <note>This is the menu header "Help"</note>
+      <caption>
+        <text>උදව් තීරය</text>
+        <originalText>Help</originalText>
+        
+      <audio src="./audio/138__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis008b.smil#text_008b"/></caption>
+      <action mfcid="ID_MENU_HELP_CONTENTS" widget="menuItem toolbarItem">
+    <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/help.ico" type="smallIcon"/>
+        <icon src="./settings/img/help_big.ico" type="largeIcon"/>
+        <caption>
+          <text>පටුන</text>
+          <originalText>Contents</originalText>
+          
+        <audio src="./audio/139.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis008c.smil#text_008c"/></caption>
+        <description>
+          <text>ඇමිස් භාවිතයට උදව්</text>
+          <originalText>Get help using AMIS</originalText>
+          
+        <audio src="./audio/140___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis008d.smil#text_008d"/></description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/141_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis008e.smil#text_008e"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_HELP_ABOUT" widget="menuItem">
+   <note>This is going to be a menu item</note>
+        <caption>
+          <text>ඇමිස් සම්බන්ධ තොරතුරු.</text>
+          <originalText>About AMIS</originalText>
+          
+        <audio src="./audio/142___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis008f.smil#text_008f"/></caption>
+        <description>
+   <text>ඇමිස් සහ ඩේසි ෆොර් ඕල් පිළිබද විමසන්න.</text>
+          <originalText>Find out about AMIS and DAISY-for-All.</originalText>
+          
+        <audio src="./audio/143_______.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0090.smil#text_0090"/></description>
+        <mnemonic>
+          <text>A</text>
+          <originalText>A</originalText>
+          
+        <audio src="./audio/144_A.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0091.smil#text_0091"/></mnemonic>
+      </action>
+      <accelerator>
+        <text>Alt+H</text>
+        <originalText>Alt+H</originalText>
+        
+      <audio src="./audio/145_AltH.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0092.smil#text_0092"/></accelerator>
+      <mnemonic>
+        <text>H</text>
+        <originalText>H</originalText>
+        
+      <audio src="./audio/146_H.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0093.smil#text_0093"/></mnemonic>
+    </container>
+  </containers>
+  <dialogs>
+    <dialog mfcid="IDD_FIND">
+      <note>මේ පාඨය තුළ සෙවීමේ සංවාදය.</note>
+      <caption>
+        <text>පාඨය තුළ සෙවීම</text>
+        <originalText>Find in Text</originalText>
+        
+      <audio src="./audio/147___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0094.smil#text_0094"/></caption>
+      <description>
+        <text>මෙහිදී සම්පූර්ණ පාඨය තුළ ඉදිරියට හෝ පසුපසට සෙවීම කළ හැකිය.</text>
+        <originalText>Here you can search the full text in either direction.</originalText>
+        
+      <audio src="./audio/148__________.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0095.smil#text_0095"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem>
+          <text>සෙවිය යුතු දේ ඇතුලත් කළ පසු ‌සෙවීම අරඹන්නට Enter යතුර ඔබන්න.</text>
+          <originalText>After typing in your search, press enter to begin searching.</originalText>
+          
+        <audio src="./audio/149_________Enter__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0096.smil#text_0096"/></promptItem>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <!--removed this as it is probably not very useful, and it was incorrectly recorded-->
+        <!-- <promptItem refid="textBoxRepeatInstr"/>-->
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <text>ගොනුව තුළ පාඨයක් සෙවීම සදහා අරඹන්නට ඔබන්න.</text>
+          <originalText>Press to begin searching for text in the file.</originalText>
+          
+        <audio src="./audio/150_______.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0097.smil#text_0097"/></description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/151_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0098.smil#text_0098"/></mnemonic>
+      </control>
+      <control mfcid="IDC_SEARCHSTRING" widget="textfield">
+        <description>
+          <text>සෙවිය යුතු පාඨය ලියන්න.</text>
+          <originalText>Type the text to search for.</originalText>
+          
+        <audio src="./audio/152____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0099.smil#text_0099"/></description>
+      </control>
+      <control mfcid="IDC_FINDNEXT" widget="radiobutton">
+        <note> This indicates the direction of the search.</note>
+        <caption>
+          <text>මීළග යෙදුම</text>
+          <originalText>Find Next</originalText>
+          
+        <audio src="./audio/153__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis009a.smil#text_009a"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="SELECTED_OR_DESELECTED" param="FIND_NEXT_IN_TEXT"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_FINDPREV" widget="radiobutton">
+        <note>මෙයින් සෙවිය යුතු දිශාව දැක් වේ.</note>
+        <caption>
+          <text>‌කලින් යෙදුම</text>
+          <originalText>Find Previous</originalText>
+          
+        <audio src="./audio/154__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis009b.smil#text_009b"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptName name="SELECTED_OR_DESELECTED" param="FIND_PREV_IN_TEXT"/>
+          </prompt>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_CDSEARCH">
+      <note>මේ සංවාදය දිස් වන්නේ සංයුක්ත තැටියේ පොත් එකකට වඩා තිබෙන විටය.</note>
+      <caption>
+        <text>පොත් කීපයක් තිබේ.</text>
+        <originalText>Multiple books found</originalText>
+        
+      <audio src="./audio/155___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis009c.smil#text_009c"/></caption>
+      <description mfcid="IDC_STATIC">
+        <text>‌මේ සංයුක්ත තැටි‌යෙහි එක පොතකට වඩා ඇත.  පහත සදහන් ලැයිස්තුවෙන් පොතක් තෝරා ගෙන එය විවෘත කිරීම සදහා  Alt + O ඔබන්න.</text>
+        <originalText>More than one book was found on this CD. Please select a book from the list below and press Alt + O to open.</originalText>
+        
+      <audio src="./audio/156__________________Alt__O_.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis009d.smil#text_009d"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_CANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/157_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis009e.smil#text_009e"/></mnemonic>
+      </control>
+      <control mfcid="IDC_OPENBOOK" widget="button">
+        <caption>
+          <text>විවෘත කිරීම.</text>
+          <originalText>Open</originalText>
+          
+        <audio src="./audio/158__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis009f.smil#text_009f"/></caption>
+        <description>
+          <text>මේ සංවාදය වසා තෝරා ගත් පොත විවෘත කිරීමට ඔබන්න.</text>
+          <originalText>Press to close this dialog and open the selected book.</originalText>
+          
+        <audio src="./audio/159_________.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00a0.smil#text_00a0"/></description>
+        <mnemonic>
+          <text>O</text>
+          <originalText>O</originalText>
+          
+        <audio src="./audio/160_O.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00a1.smil#text_00a1"/></mnemonic>
+      </control>
+      <control mfcid="IDC_BOOKLIST" widget="list">
+        <description>
+          <text>මේ මාතෘකා ලැයිස්තුව තුළ ගමන් කිරීමට හී යතුරු භාවිත කරන්න.</text>
+          <originalText>Use the arrow keys to move around this list of titles.</originalText>
+          
+        <audio src="./audio/161__________.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00a2.smil#text_00a2"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOK_TITLE"/>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_ABOUTBOX">
+      <note>මේ සංවාදය ඇමිස් පිළිබද ඇතුම් තොරතුරු සපයයි.</note>
+      <caption>
+        <text>ඇමිස් ගැන</text>
+        <originalText>About AMIS</originalText>
+        
+      <audio src="./audio/162__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00a3.smil#text_00a3"/></caption>
+      <description>
+        <text>ඇමිස් මෘදුකාංගය පිළිබද තොරතරු ඇතුලත් සංවාදය.</text>
+        <originalText>Dialog with information about AMIS software.</originalText>
+        
+      <audio src="./audio/163______.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00a4.smil#text_00a4"/></description>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_AMISNAME" widget="textlabel">
+        <caption>
+          <text>ඇමිස්: අනුගත බහුමාධ්‍ය තොරතුරු පද්ධතිය.</text>
+          <originalText>AMIS: \nAdaptive Multimedia Information System</originalText>
+          
+        <audio src="./audio/164_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00a5.smil#text_00a5"/></caption>
+      </control>
+      <control mfcid="IDC_VERSION" translate="no">
+        <caption>
+          <text>සංස්කරණය 2.0</text>
+          <originalText>Version 2.0</originalText>
+          
+        <audio src="./audio/165__20.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00a6.smil#text_00a6"/></caption>
+      </control>
+      <control mfcid="IDC_VERSIONNOTE" translate="no">
+        <caption>
+          <text>නිකුත් කළ දිනය: 23 Oct 2005</text>
+          <originalText>Release Date: 23 Oct 2005</originalText>
+          
+        <audio src="./audio/166____23_Oct_2005.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00a7.smil#text_00a7"/></caption>
+      </control>
+      <control mfcid="IDC_COPYRIGHT" widget="textlabel" translate="no">
+        <caption>
+          <text>හිමිකම් © 2006 DAISY for All</text>
+          <originalText>Copyright © 2006 DAISY for All</originalText>
+          
+        <audio src="./audio/167___2006_DAISY_for_All.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00a8.smil#text_00a8"/></caption>
+      </control>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_SEARCHDAISY">
+      <note>මේ සංවාදය ඩේසි ‌පොත් සදහා ඔබගේ දෘඩ තැටිය සෙවීම පිණිසයි.</note>
+      <caption>
+        <text>‌ඩේසි පොත් සොයන්න.</text>
+        <originalText>Search for DAISY Books</originalText>
+        
+      <audio src="./audio/168___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00a9.smil#text_00a9"/></caption>
+      <description mfcid="IDC_STATIC">
+        <text>ඩේසි පොත් සදහා ඔබේ පරිගණකය ‌සෙවිය හැකිය.  මාර්ගය ඇතුලත් කරන්න නැතහොත් ලිපි ‌ගොනුවක් තෝරන්න.</text>
+        <originalText>You can search your computer for DAISY books.  Enter a path or browse for a folder to search, then press Search to begin searching.</originalText>
+        
+      <audio src="./audio/169______________.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00aa.smil#text_00aa"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <!--removed this as it is probably not very useful, and it was incorrectly recorded-->
+        <!--<promptItem refid="textBoxRepeatInstr"/>-->
+      </prompt>
+      <control mfcid="IDC_SEARCHPATH" widget="textfield">
+        <description>
+          <text>ගොනුව වෙත මාර්ගය මේ ක්ෂේත්‍රයේ සදහන් කරන්න.</text>
+          <originalText>Type the path to the folder in this field.</originalText>
+          
+        <audio src="./audio/170_______.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00ab.smil#text_00ab"/></description>
+      </control>
+      <control mfcid="IDC_BROWSE" widget="button">
+        <caption>
+          <promptItem refid="browse_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="browse_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_STARTSEARCH" widget="button">
+        <caption>
+          <text>‌සෙවීම</text>
+          <originalText>Search</originalText>
+          
+        <audio src="./audio/171.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00ac.smil#text_00ac"/></caption>
+        <description>
+          <text>සෙවීම ඇරඹීමට ඔබන්න.</text>
+          <originalText>Press to start searching.</originalText>
+          
+        <audio src="./audio/172___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00ad.smil#text_00ad"/></description>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/173_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00ae.smil#text_00ae"/></mnemonic>
+      </control>
+      <control mfcid="IDC_STOPSEARCH" widget="button">
+        <caption>
+          <text>නවතින්න</text>
+          <originalText>Stop</originalText>
+          
+        <audio src="./audio/174.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00af.smil#text_00af"/></caption>
+        <description>
+          <text>සෙවීම නැවැත්වීමට ඔබන්න.</text>
+          <originalText>Press to stop searching.</originalText>
+          
+        <audio src="./audio/175___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00b0.smil#text_00b0"/></description>
+        <mnemonic>
+          <text>t</text>
+          <originalText>t</originalText>
+          
+        <audio src="./audio/176_t.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00b1.smil#text_00b1"/></mnemonic>
+      </control>
+      <control mfcid="IDC_SEARCHING" widget="textlabel">
+        <switch element="caption">
+          <caption condition="default">
+            <text>සූදානම්</text>
+            <originalText>Ready</originalText>
+            
+          <audio src="./audio/177.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00b2.smil#text_00b2"/></caption>
+          <caption condition="WhileSearching">
+            <text>සොයනු ලබයි...</text>
+            <originalText>Searching...</originalText>
+            
+          <audio src="./audio/178__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00b3.smil#text_00b3"/></caption>
+          <caption condition="SearchAborted">
+            <text>සෙවීම නවතී.</text>
+            <originalText>Search stopped.</originalText>
+            
+          <audio src="./audio/179__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00b4.smil#text_00b4"/></caption>
+          <caption condition="SearchCompleteNoFilesFound">
+            <text>සෙවීම අවසන්.  ලිපි ගොනු හමු නොවීය.</text>
+            <originalText>Search complete: No files found.</originalText>
+            
+          <audio src="./audio/180______.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00b5.smil#text_00b5"/></caption>
+          <caption condition="SearchCompleteOneFileFound">
+            <text>සෙවීම අවසන්.  එක් ලිපි ගොනුවක් හමු විය.</text>
+            <originalText>Search complete: One file found.</originalText>
+            
+          <audio src="./audio/181_______.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00b6.smil#text_00b6"/></caption>
+          <caption condition="SearchCompleteFilesFound">
+            <prompt>
+              <promptVar name="NUM_FILES_FOUND"/>
+              <promptItem>
+                <note>මෙය වාක්‍ය තුල භාවිත වේ.  ලිපි ‌ෙගානු "7 හමු විය."</note>
+                <text>ලිපි ගොනු හමුවිය.</text>
+                <originalText>files were found.</originalText>
+                
+              <audio src="./audio/182___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00b7.smil#text_00b7"/></promptItem>
+            </prompt>
+          </caption>
+        </switch>
+      </control>
+      <control mfcid="IDC_FILESFOUND" widget="list">
+        <description>
+          <text>මාතෘකා ඇතුලත් ලැයිස්තුව තුල ගමන් කිරීමට හී යතුරු භාවිත කරන්න.</text>
+          <originalText>Use the arrow keys to move around this list of titles.</originalText>
+          
+        <audio src="./audio/183__________.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00b8.smil#text_00b8"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOK_TITLE"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_OPENBOOK" widget="button">
+        <caption>
+          <text>විවෘත කිරීම.</text>
+          <originalText>Open</originalText>
+          
+        <audio src="./audio/184__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00b9.smil#text_00b9"/></caption>
+        <description>
+          <text>තෝරාගත් පොත විවෘත කිරීමට ඔබන්න.</text>
+          <originalText>Press to open the selected title.</originalText>
+          
+        <audio src="./audio/185_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00ba.smil#text_00ba"/></description>
+        <mnemonic>
+          <text>O</text>
+          <originalText>O</originalText>
+          
+        <audio src="./audio/186_O.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00bb.smil#text_00bb"/></mnemonic>
+      </control>
+      <control mfcid="IDC_CANCELBUTTON">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/187_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00bc.smil#text_00bc"/></mnemonic>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_SKIP">
+      <note>මග හැරිය හැකි ව්‍යුහයන් දැක්වීම පාලනය කිරීමට මේ සංවාදයෙන් භාවිත කරන්නට ඉඩ හැරේ.</note>
+      <caption>
+        <text>මගහැරිය හැකි අයිතම</text>
+        <originalText>Skippable Items</originalText>
+        
+      <audio src="./audio/188___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00bd.smil#text_00bd"/></caption>
+      <switch element="description">
+        <description mfcid="IDC_STATIC" condition="hasSkippableStructures">
+          <text>මේ ‌පොතෙ පහත සදහන් විශේෂ ව්‍යුහයන් ඇතුළත් වේ.  මග හැරීමට අවශ්‍ය ඒවා ලකුණු කරන්න.</text>
+          <originalText>This book contains the following special structures.  Check the ones you want skipped.</originalText>
+          
+        <audio src="./audio/189______________.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00be.smil#text_00be"/></description>
+        <description mfcid="IDC_STATIC" condition="hasNoSkippableStructures">
+          <text>මේ ප්‍රකාශනයෙහි මග හැරිය හැකි අංග නැත.</text>
+          <originalText>This publication has no skippable elements.</originalText>
+          
+        <audio src="./audio/190_______.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00bf.smil#text_00bf"/></description>
+      </switch>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SKIPS" widget="list">
+        <caption>
+          <text>මගහැරිය හැකි අයිතම</text>
+          <originalText>Skippable items</originalText>
+          
+        <audio src="./audio/191___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00c0.smil#text_00c0"/></caption>
+        <description>
+          <text>මග හැරිය හැකි අයිතම ඇතුලත් මේ ලැයිස්තුව තුළ ගමන් කිරීම සදහා හී යතුරු භාවිතා කරන්න.</text>
+          <originalText>Use the arrow keys to move around this list of skippable items.</originalText>
+          
+        <audio src="./audio/192_______________.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00c1.smil#text_00c1"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="SKIPPABLE_ITEM"/>
+          </caption>
+          <description>
+            <prompt>
+              <promptVar name="SKIPPABLE_ITEM"/>
+              <promptItem refid="thisItem"/>
+              <promptVar name="WILL_SKIP_OR_NOT" param="SKIPPABLE_ITEM_ID"/>
+            </prompt>
+          </description>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE4">
+      <note>භාෂා ඇසුරුමක් තෝරා ගැනීමට මේ සංවාදයෙන් ඉඩ ලැබේ.</note>
+      <caption>
+        <text>භාෂාව</text>
+        <originalText>Language</originalText>
+        
+      <audio src="./audio/193.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00c2.smil#text_00c2"/></caption>
+      <description mfcid="IDC_STATIC">
+        <text>‌මෙහි මෘදුකාංග‌යේ භාෂාව වෙනස් කළ හැකිය.  අලුත් භාෂා ඇසුරුම් ස්වයංක්‍රීයව හදුනාගනු ලැබේ.</text>
+        <originalText>Here you can change the language of the software.  New language packs are detected automatically.</originalText>
+        
+      <audio src="./audio/194____________.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00c3.smil#text_00c3"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="ctrl1_for_prefsdialog"/>
+        <promptItem refid="ctrl2_for_colorsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_BTN_SELECTLANG" widget="button">
+        <caption>
+          <text>භාෂාව තෝරාගන්න.</text>
+          <originalText>Select Language</originalText>
+          
+        <audio src="./audio/195__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00c4.smil#text_00c4"/></caption>
+        <description>
+          <text>ඇමිස් භාවිත කරන්නාගේ අතුරු මුහුණත සදහා භාෂාවක් තෝරා ගන්න.</text>
+          <originalText>Press to confirm your language selection for the AMIS user interface</originalText>
+          
+        <audio src="./audio/196_________.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00c5.smil#text_00c5"/></description>
+      </control>
+      <control mfcid="IDC_LANGLIST" widget="list">
+        <caption mfcid="IDC_STATIC">
+          <text>ඔබට තෝරා ගත හැකි භාෂා:</text>
+          <originalText>Your language choices are:</originalText>
+          
+        <audio src="./audio/197_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00c6.smil#text_00c6"/></caption>
+        <description>
+          <text>මේ භාෂා ලැයිස්තුව තුළ ගමන් කිරීමට හී යතුරු භාවිතා කරන්න.</text>
+          <originalText>Use the arrow keys to move around this list of languages.</originalText>
+          
+        <audio src="./audio/198__________.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00c7.smil#text_00c7"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="LANGUAGE_NAME"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_CURRLANG">
+        <caption>
+          <prompt>
+            <promptItem>
+              <text>ඔබ දැන් ඇමිස් භාවිතා කරන භාෂාව </text>
+              <originalText>You are currently using AMIS in</originalText>
+              
+            <audio src="./audio/199______.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00c8.smil#text_00c8"/></promptItem>
+            <promptVar name="CURR_LANGUAGE_NAME"/>
+          </prompt>
+        </caption>
+      </control>
+      <accelerator>
+        <text>Ctrl+3</text>
+        <originalText>Ctrl+3</originalText>
+        
+      <audio src="./audio/200_Ctrl3.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00c9.smil#text_00c9"/></accelerator>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE2">
+      <note>ඇමිස් භාවිතා කරන වර්ණ තෝරා ගැනීමට මේ සංවාදය තුළින් භාවිත කරන්නාට හැකි වේ.</note>
+      <caption>
+        <text>වර්ණ තෝරා ගන්න.</text>
+        <originalText>Set Colors</originalText>
+        
+      <audio src="./audio/201___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00ca.smil#text_00ca"/></caption>
+      <description>
+        <text>මෙහි ඇමිස් සදහා වර්ණ විකල්ප තෝරා ගත හැකිය.</text>
+        <originalText>Here you can set color options for AMIS.</originalText>
+        
+      <audio src="./audio/202________.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00cb.smil#text_00cb"/></description>
+      <prompt type="instructions">
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem refid="ctrl1_for_prefsdialog"/>
+        <promptItem refid="ctrl3_for_langsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+      </prompt>
+      <control mfcid="IDC_PHRASES" widget="other">
+        <caption>
+          <text>වාක්‍යංශ මතු කර දැක්වීම</text>
+          <originalText>Phrase Highlighting</originalText>
+          
+        <audio src="./audio/203____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00cc.smil#text_00cc"/></caption>
+      </control>
+      <control mfcid="IDC_TEXTFG" widget="textlabel">
+        <caption>
+          <text>පාඨයේ පෙරබිම: </text>
+          <originalText>Text Foreground: </originalText>
+          
+        <audio src="./audio/204__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00cd.smil#text_00cd"/></caption>
+      </control>
+      <control mfcid="IDC_TEXTBG" widget="textlabel">
+        <caption>
+          <text>පාඨය පසුබිම: </text>
+          <originalText>Text Background: </originalText>
+          
+        <audio src="./audio/205__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00ce.smil#text_00ce"/></caption>
+      </control>
+      <control mfcid="IDC_BORDER" widget="textlabel">
+        <caption>
+          <text>තෝරාගැනී‌මේ ඉම </text>
+          <originalText>Selection Border: </originalText>
+          
+        <audio src="./audio/206__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00cf.smil#text_00cf"/></caption>
+      </control>
+      <control mfcid="IDC_CONTRAST" widget="other">
+        <caption>
+          <text>උච්ච අසමතාව</text>
+          <originalText>High Contrast Settings</originalText>
+          
+        <audio src="./audio/207__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00d0.smil#text_00d0"/></caption>
+      </control>
+      <control mfcid="IDC_PAGEFG" widget="textlabel">
+        <caption>
+          <text>පිටුවේ ඉදිරි දසුන: </text>
+          <originalText>Page Foreground:</originalText>
+          
+        <audio src="./audio/208___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00d1.smil#text_00d1"/></caption>
+      </control>
+      <control mfcid="IDC_PAGEBG" widget="textlabel">
+        <caption>
+          <text>පිටුවේ පසුතලය: </text>
+          <originalText>Page Background: </originalText>
+          
+        <audio src="./audio/209__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00d2.smil#text_00d2"/></caption>
+      </control>
+      <control mfcid="IDC_BTN_RESETCOLORS" widget="button">
+        <caption>
+          <text>වර්ණ යලි සකසන්න.</text>
+          <originalText>Reset Colors</originalText>
+          
+        <audio src="./audio/210___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00d3.smil#text_00d3"/></caption>
+      </control>
+      <control mfcid="IDC_PHRASEPREVIEW" widget="textfield">
+        <caption>
+          <text>වාක්‍යංශ අවධාරනය කිරීමේ වර්ණ පෙර දැක්ම.</text>
+          <originalText>Preview of phrase highlight colors.</originalText>
+          
+        <audio src="./audio/211______.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00d4.smil#text_00d4"/></caption>
+      </control>
+      <control mfcid="IDC_CONTRASTPREVIEW" widget="textfield">
+        <caption>
+          <text>පිටුවෙහි වර්ණ අසමතා ‌පෙර දැක්ම.</text>
+          <originalText>Preview of page contrast colors.</originalText>
+          
+        <audio src="./audio/212_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00d5.smil#text_00d5"/></caption>
+      </control>
+      <accelerator>
+        <text>Ctrl+2</text>
+        <originalText>Ctrl+2</originalText>
+        
+      <audio src="./audio/213_Ctrl2.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00d6.smil#text_00d6"/></accelerator>
+    </dialog>
+    <dialog mfcid="IDD_CURRENTPOSITION">
+      <note>ප්‍රකාශනයෙන් තමා සිටින ස්ථානය පිළිබද තොරතුරු මේ සංවාදයෙන් සැපයේ.</note>
+      <caption>
+        <text>වර්තමාන ස්ථානය</text>
+        <originalText>Current Position</originalText>
+        
+      <audio src="./audio/214__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00d7.smil#text_00d7"/></caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text>මේ ඔ‌බේ වර්තමාන ස්ථානය පිළිබද දත්ත ලැයිස්තුවකි.</text>
+          <originalText>This is a list of data about your current position.</originalText>
+          
+        <audio src="./audio/215_______.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00d8.smil#text_00d8"/></caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="no">
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>වර්තමාන කොටසේ මාතෘකාව:</text>
+                <originalText>Your current section is titled:</originalText>
+                
+              <audio src="./audio/216___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00d9.smil#text_00d9"/></promptItem>
+              <promptVar name="CURRENT_SECTION_TITLE"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text>මේ කොටසට ඇතුලත් පිටු ගණන:</text>
+                <originalText>Number of pages in this section:</originalText>
+                
+              <audio src="./audio/217_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00da.smil#text_00da"/></promptItem>
+              <promptVar name="CURRENT_SECTION_NUM_PAGES"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>මේ කොටසට අයත් අනු කොටස් ගණන:</text>
+                <originalText>Number of subsections in this section:</originalText>
+                
+              <audio src="./audio/218______.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00db.smil#text_00db"/></promptItem>
+              <promptVar name="CURRENT_SECTION_NUM_SUBSECTIONS"/>
+            </prompt>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE1">
+      <note>ඇමිස් සදහා ඇතැම් මූලික අභිමතයන් තේරීමට මේ සංවාදයෙන් ඉ‌ඩ ලැබේ.</note>
+      <caption>
+        <text>පොදු අභිමතයන්</text>
+        <originalText>General Preferences</originalText>
+        
+      <audio src="./audio/219__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00dc.smil#text_00dc"/></caption>
+      <description>
+        <text>Here you can set general preferences for AMIS.</text>
+        <originalText>Here you can set general preferences for AMIS.</originalText>
+        
+      <audio src="./audio/220_Here_you_can_set_general_prefe.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00dd.smil#text_00dd"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="ctrl2_for_colorsdialog"/>
+        <promptItem refid="ctrl3_for_langsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <!--removed this as it is probably not very useful, and it was incorrectly recorded-->
+        <!--<promptItem refid="textBoxRepeatInstr"/>-->
+      </prompt>
+      <control mfcid="IDC_BMKDIRBROWSE" widget="button">
+        <caption>
+          <promptItem refid="browse_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="browse_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SELFVOICING" widget="checkbox">
+        <caption>
+          <text>ස්වයංකථනය භාවිත කරන්න.Use self-voicing</text>
+          <originalText>Use self-voicing</originalText>
+          
+        <audio src="./audio/221___Use_selfvoicing.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00de.smil#text_00de"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="SELF_VOICING_FEATURE"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_TTSVOICE" widget="list">
+        <caption mfcid="IDC_SELTTSLABEL">
+          <text>හඩක් තෝරා ගන්න:</text>
+          <originalText>Select TTS voice:</originalText>
+          
+        <audio src="./audio/222___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00df.smil#text_00df"/></caption>
+        <description>
+          <text>මේ හඩ ලැයිස්තුව තුල ගමන් කිරීම සදහා හී යතුරු භාවිතා කරන්න.</text>
+          <originalText>Use the arrow keys to move around this list of voices</originalText>
+          
+        <audio src="./audio/223___________.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00e0.smil#text_00e0"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="TTS_VOICE_NAME"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_BASIC" widget="checkbox">
+        <caption>
+          <text>මූලික දසුනෙන් ඇමිස් අරඹන්න.</text>
+          <originalText>Start AMIS in the basic view mode.</originalText>
+          
+        <audio src="./audio/224____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00e1.smil#text_00e1"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="BASIC_VIEW_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_PROMPTONBASICVIEW" widget="checkbox">
+        <caption>
+          <text>මූලික දසුනට මාරු කරන විට නැවත පියවි දසුනට යන අන්දම පවසන්න. </text>
+          <originalText>Upon switching to basic view, tell the user how to go back to the default view.</originalText>
+          
+        <audio src="./audio/225___________.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00e2.smil#text_00e2"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="PROMPT_ON_BASIC_VIEW_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_LOADLASTDTB" widget="checkbox">
+        <caption>
+          <text>මෘදුකාංගය අරඹන විට මෑතදි කිය වූ පොත විවෘත කරන්න.</text>
+          <originalText>Load the most recently read book when the software starts.</originalText>
+          
+        <audio src="./audio/226_________.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00e3.smil#text_00e3"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="LOAD_LAST_READ_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_BMKDIR" widget="textfield">
+        <caption mfcid="IDC_BMKDIRLABEL">
+          <text>පොත් සලකුණු ලැයිස්තුව:</text>
+          <originalText>Bookmarks directory:</originalText>
+          
+        <audio src="./audio/227___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00e4.smil#text_00e4"/></caption>
+        <description>
+          <text>ඔබේ පොත් සලකුණු ඇතුලත් ගොනුවේ නම ඇතුලත් කරන්න.</text>
+          <originalText>Type the path to the bookmarks folder in this field.</originalText>
+          
+        <audio src="./audio/228________.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00e5.smil#text_00e5"/></description>
+      </control>
+      <accelerator>
+        <text>Ctrl+1</text>
+        <originalText>Ctrl+1</originalText>
+        
+      <audio src="./audio/229_Ctrl1.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00e6.smil#text_00e6"/></accelerator>
+    </dialog>
+    <dialog mfcid="IDD_NAVIGATIONOPTIONS">
+      <note>වර්තමාන ප්‍රකාශනය තරණ විකල්ප මේ සංවාදයෙන් දැක් වේ.</note>
+      <caption>
+        <text>තරණ විකල්ප</text>
+        <originalText>Navigation Options</originalText>
+        
+      <audio src="./audio/230__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00e7.smil#text_00e7"/></caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text>මේ සංවාදය තුළින් කිසියම් පිටුවකට පිවිසිය හැකිය.</text>
+          <originalText>This is a list of items to which you may navigate directly.</originalText>
+          
+        <audio src="./audio/231_______.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00e8.smil#text_00e8"/></caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="TOC_CATEGORIES"/>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_GOTOPAGE">
+      <note>This dialog lets the user jump to a certain page</note>
+      <caption>
+        <text>යා යුතු පිටුව</text>
+        <originalText>Go To Page</originalText>
+        
+      <audio src="./audio/232___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00e9.smil#text_00e9"/></caption>
+      <description>
+        <text>මෙහි ඔබට පිටු අංකයකට ‌‌හෝ පිටු ලංජනයට පිවිසිය හැක.</text>
+        <originalText>Here you can jump to a page number or page label.</originalText>
+        
+      <audio src="./audio/233_________.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00ea.smil#text_00ea"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem>
+          <text>පිටු අංකය ලිවීමෙන් පසු එහි යාම සදහා enter යතුර ඔබන්න.</text>
+          <originalText>After typing in your page number, press enter to go there.</originalText>
+          
+        <audio src="./audio/234________enter__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00eb.smil#text_00eb"/></promptItem>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <!--removed this as it is probably not very useful, and it was incorrectly recorded-->
+        <!--<promptItem refid="textBoxRepeatInstr"/>-->
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <text>අවශ්‍ය පිටුවට යාම සදහා මේ බොත්තම ඔබන්න.</text>
+          <originalText>Press this button to go to the desired page.</originalText>
+          
+        <audio src="./audio/235_______.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00ec.smil#text_00ec"/></description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/236_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00ed.smil#text_00ed"/></mnemonic>
+      </control>
+      <control mfcid="IDC_PAGENUM" widget="textfield">
+        <caption mfcid="IDC_STATIC">
+          <text>පිටු අංකයක් ඇතුල් කරන්න:</text>
+          <originalText>Enter a page number:</originalText>
+          
+        <audio src="./audio/237____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00ee.smil#text_00ee"/></caption>
+        <description>
+          <text>යා යුතු පිටුවේ අංකය ‌හෝ ‌ලේබලය.</text>
+          <originalText>Type the number or label of the page you want to go to.</originalText>
+          
+        <audio src="./audio/238______.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00ef.smil#text_00ef"/></description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_FULLSUMMARY">
+      <note>This dialog lists key publication metadata.</note>
+      <caption>
+        <text>ප්‍රකාශන සාරාංශය</text>
+        <originalText>Publication Summary</originalText>
+        
+      <audio src="./audio/239__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00f0.smil#text_00f0"/></caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text>මේ සංවාදයේ ප්‍රකාශනය පිළබද ප්‍රධාන පාරදත්ත දැක් වේ.</text>
+          <originalText>This is a list of publication metadata.</originalText>
+          
+        <audio src="./audio/240________.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00f1.smil#text_00f1"/></caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="no">
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>‌මේ පොතේ ග්‍රන්ථ නාමය:</text>
+                <originalText>This book is titled:</originalText>
+                
+              <audio src="./audio/241____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00f2.smil#text_00f2"/></promptItem>
+              <promptVar name="META_TITLE"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>රචනය</text>
+                <originalText>Written by:</originalText>
+                
+              <audio src="./audio/242.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00f3.smil#text_00f3"/></promptItem>
+              <promptVar name="META_CREATOR"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>ප්‍රකාශක:</text>
+                <originalText>Published by:</originalText>
+                
+              <audio src="./audio/243.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00f4.smil#text_00f4"/></promptItem>
+              <promptVar name="META_PUBLISHER"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_DESCRIPTION">
+            <prompt>
+              <promptItem>
+                <text>විස්තරය:</text>
+                <originalText>Description:</originalText>
+                
+              <audio src="./audio/244.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00f5.smil#text_00f5"/></promptItem>
+              <promptVar name="META_DESC"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>පටුනෙහි ඇති තරණ ස්ථාන</text>
+                <originalText>Number of navigation points in the table of contents:</originalText>
+                
+              <audio src="./audio/245____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00f6.smil#text_00f6"/></promptItem>
+              <promptVar name="META_TOCITEMS"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>උපරිම කොටස් මට්ටම:</text>
+                <originalText>Maximum section depth:</originalText>
+                
+              <audio src="./audio/246___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00f7.smil#text_00f7"/></promptItem>
+              <promptVar name="META_DEPTH"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text>ඉදිරි පිටු:</text>
+                <originalText>Front matter pages:</originalText>
+                
+              <audio src="./audio/247__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00f8.smil#text_00f8"/></promptItem>
+              <promptVar name="META_PAGEFRONT"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text>Regular pages:</text>
+                <originalText>සාමාන්‍ය පිටු:</originalText>
+                
+              <audio src="./audio/248_Regular_pages.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00f9.smil#text_00f9"/></promptItem>
+              <promptVar name="META_PAGENORMAL"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text>විශේෂ පිටු:</text>
+                <originalText>Special pages:</originalText>
+                
+              <audio src="./audio/249__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00fa.smil#text_00fa"/></promptItem>
+              <promptVar name="META_PAGESPECIAL"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>සම්පූර්ණ ධාවන කාලයTotal duration:</text>
+                <originalText>Total duration:</originalText>
+                
+              <audio src="./audio/250___Total_duration.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00fb.smil#text_00fb"/></promptItem>
+              <promptVar name="META_TOTALTIME"/>
+            </prompt>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+  </dialogs>
+  <prompts>
+    <promptItemRefs>
+      <promptItem id="altC_to_close">
+        <text>‌මේ සංවාදය වැසීමට  Alt + C ඔබන්න.</text>
+        <originalText>Press Alt + C to close the dialog.</originalText>
+        
+      <audio src="./audio/251____Alt__C_.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00fc.smil#text_00fc"/></promptItem>
+      <promptItem id="altC_to_cancel">
+        <text>සංවාදය අවලංගු කිරිමට  Alt + C ඔබන්න.</text>
+        <originalText>Press Alt + C to cancel the dialog.</originalText>
+        
+      <audio src="./audio/252____Alt__C_.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00fd.smil#text_00fd"/></promptItem>
+      <promptItem id="thisItem">
+        <text>මේ අයිතම</text>
+        <originalText>This item</originalText>
+        
+      <audio src="./audio/253__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00fe.smil#text_00fe"/></promptItem>
+      <promptItem id="spaceToToggle">
+        <text>අගය වෙනස් කිරිමට  space යතුර ඔබන්න.</text>
+        <originalText>Press the space bar to toggle the value.</originalText>
+        
+      <audio src="./audio/254____space__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis00ff.smil#text_00ff"/></promptItem>
+      <promptItem id="tabAround">
+        <text>සංවාදයේ විකල්ප අතර ගමන් කීරීමට tab ඔබන්න.</text>
+        <originalText>Hit tab to move around the options on the dialog.</originalText>
+        
+      <audio src="./audio/255______tab_.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0100.smil#text_0100"/></promptItem>
+      <promptItem id="ctrl2_for_colorsdialog">
+        <text>වර්ෂ සංවාදයට මාරු වීමට  control + 2 ඔබන්න.</text>
+        <originalText>Press control + 2 to switch to the colors dialog.</originalText>
+        
+      <audio src="./audio/256_____control__2_.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0101.smil#text_0101"/></promptItem>
+      <promptItem id="ctrl3_for_langsdialog">
+        <text>භාෂා විකල්ප සංවාදයට මාරු වීමට control + 3 ඔබන්න.</text>
+        <originalText>Press control + 3 to switch to the language options dialog.</originalText>
+        
+      <audio src="./audio/257______control__3_.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0102.smil#text_0102"/></promptItem>
+      <promptItem id="ctrl1_for_prefsdialog">
+        <text>පොදු අභිමත සංවාදයට යෑම සදහා  control + 1 ඔබන්න.</text>
+        <originalText>Press control + 1 to switch to the general preferences dialog.</originalText>
+        
+      <audio src="./audio/258______control__1_.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0103.smil#text_0103"/></promptItem>
+      <promptItem id="thisItemIsCurrently">
+        <text>මේ අයිතම දැන්</text>
+        <originalText>This item is currently</originalText>
+        
+      <audio src="./audio/259___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0104.smil#text_0104"/></promptItem>
+      <promptItem id="enter_to_close">
+        <text>සංවාදයෙන් ඉවත්වීමට ඔබන්න.</text>
+        <originalText>Press enter to close the dialog.</originalText>
+        
+      <audio src="./audio/260___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0105.smil#text_0105"/></promptItem>
+      <promptItem id="browse_button_caption">
+        <text>සෙවීම..</text>
+        <originalText>Browse...</originalText>
+        
+      <audio src="./audio/261.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0106.smil#text_0106"/></promptItem>
+      <promptItem id="browse_button_description">
+        <text>ගොනුවක් සොයා ගැනීමේ සංවාදය විවෘත කිරීමට ඔබන්න</text>
+        <originalText>Press to open the folder browse dialog.</originalText>
+        
+      <audio src="./audio/262_______.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0107.smil#text_0107"/></promptItem>
+      <promptItem id="ok_button_caption">
+        <text>හරි</text>
+        <originalText>OK</originalText>
+        
+      <audio src="./audio/263.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0108.smil#text_0108"/></promptItem>
+      <promptItem id="ok_button_description">
+        <text>මේ සංවාදයෙන් ඉවත්වීමට OK ඔබන්න.</text>
+        <originalText>Press OK to close this dialog.</originalText>
+        
+      <audio src="./audio/264____OK_.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0109.smil#text_0109"/></promptItem>
+      <promptItem id="cancel_button_caption">
+        <text mnemonic="C">Cancel</text>
+        <originalText>අවලංගු කිරීම.</originalText>
+        
+      <audio src="./audio/265_Cancel.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis010a.smil#text_010a"/></promptItem>
+      <promptItem id="cancel_button_description">
+        <text>මේ සංවාදය අවලංගු කිරීමට ඔබන්න.</text>
+        <originalText>Press to cancel this dialog.</originalText>
+        
+      <audio src="./audio/266_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis010b.smil#text_010b"/></promptItem>
+      <promptItem id="list_reads_automatically">
+        <text>මේ ලැයිස්තුව ස්වයංක්‍රීයව කියවෙනු ඇත.</text>
+        <originalText>This list will be read automatically.</originalText>
+        
+      <audio src="./audio/267_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis010c.smil#text_010c"/></promptItem>
+      <promptItem id="repeatLastPromptInstr">
+        <text>Press Control + R to repeat the last prompt.</text>
+        <originalText>Press Control + R to repeat the last prompt.</originalText>
+        
+      <audio src="./audio/268_Press_Control__R_to_repeat_the.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis010d.smil#text_010d"/></promptItem>
+      <promptItem id="thisDialogNotSelfVoicing">
+        <text>මේ සංවාදයේ දැනට ස්වයංකථනය නො‌වේ.</text>
+        <originalText>This dialog is not yet self-voicing.</originalText>
+        
+      <audio src="./audio/269_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis010e.smil#text_010e"/></promptItem>
+      <promptItem id="escapeToCancel">
+        <text>අවලංගු කිරීමට  escape ඔබන්න.</text>
+        <originalText>Press escape to cancel</originalText>
+        
+      <audio src="./audio/270___escape_.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis010f.smil#text_010f"/></promptItem>
+      <promptItem id="hearDlgInstructions">
+        <text>‌‌මේ සංවාදයට අදාල උපදෙස් ඇසීම‌ට Control + I ඔබන්න.</text>
+        <originalText>Press Control + I to hear instructions for this dialog.</originalText>
+        
+      <audio src="./audio/271______Control__I_.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0110.smil#text_0110"/></promptItem>
+      <promptItem id="textBoxRepeatInstr">
+        <text>අවසන් කොටුවේ පාඨය නැවත ඇසීම සදහා Control + T ඔබන්න.</text>
+        <originalText>Press Control + T to repeat the text in the last text box.</originalText>
+        
+      <audio src="./audio/272_______Control__T_.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0111.smil#text_0111"/></promptItem>
+      <promptItem id="nav_window">
+        <text>තරණය</text>
+        <originalText>Navigation</originalText>
+        
+      <audio src="./audio/273.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0112.smil#text_0112"/></promptItem>
+      <promptItem id="sections">
+        <text>කොටස්</text>
+        <originalText>Sections</originalText>
+        
+      <audio src="./audio/274.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0113.smil#text_0113"/></promptItem>
+      <promptItem id="pages">
+        <text>පිටු</text>
+        <originalText>ages</originalText>
+        
+      <audio src="./audio/275.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0114.smil#text_0114"/></promptItem>
+      <promptItem id="noterefs">
+        <text>පාදක සටහන්</text>
+        <originalText>Footnotes</originalText>
+        
+      <audio src="./audio/276__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0115.smil#text_0115"/></promptItem>
+      <promptItem id="prodnotes">
+        <text>නිෂ්පාදක සටහන්</text>
+        <originalText>Producer notes</originalText>
+        
+      <audio src="./audio/277__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0116.smil#text_0116"/></promptItem>
+      <promptItem id="sidebars">
+        <text>අමතර තීරය</text>
+        <originalText>Sidebars</originalText>
+        
+      <audio src="./audio/278__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0117.smil#text_0117"/></promptItem>
+      <promptItem id="groups">
+        <text>කැටිකළ අයිතම</text>
+        <originalText>Grouped items</originalText>
+        
+      <audio src="./audio/279__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0118.smil#text_0118"/></promptItem>
+      <promptItem id="navigation_sidebar_caption">
+        <text>තරණය</text>
+        <originalText>Navigation</originalText>
+        
+      <audio src="./audio/280.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0119.smil#text_0119"/></promptItem>
+      <promptItem id="ready">
+        <text>සූදානම්</text>
+        <originalText>Ready</originalText>
+        
+      <audio src="./audio/281.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis011a.smil#text_011a"/></promptItem>
+      <promptItem id="property_sheet_caption">
+        <text>අභිමතයන්</text>
+        <originalText>Preferences</originalText>
+        
+      <audio src="./audio/282.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis011b.smil#text_011b"/></promptItem>
+      <promptItem id="selfolder_title">
+        <text>ලිපි ගොනුවක් තෝරාගන්න.Select a Folder</text>
+        <originalText>Select a Folder</originalText>
+        
+      <audio src="./audio/283___Select_a_Folder.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis011c.smil#text_011c"/></promptItem>
+      <promptItem id="selfolder_instr">
+        <text>පහත සදහන් ලැයිස්තුවෙන් ලිපි ගොනුවක් තෝරන්න.</text>
+        <originalText>Select a folder from the directory below.</originalText>
+        
+      <audio src="./audio/284______.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis011d.smil#text_011d"/></promptItem>
+      <promptItem id="daisy_books">
+        <text>‌ඩේසි පොත්</text>
+        <originalText>DAISY Books</originalText>
+        
+      <audio src="./audio/285__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis011e.smil#text_011e"/></promptItem>
+      <promptItem id="folder_does_not_exist">
+        <text>ලිපි ගොනුව නැත.  ලැපි ගොනුවක් ඇති කළ යුතද?</text>
+        <originalText>The folder %s does not exist. Do you want the folder to be created?</originalText>
+        
+      <audio src="./audio/286________.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis011f.smil#text_011f"/></promptItem>
+      <promptItem id="folder_invalid">
+        <text>‌මේ ගොනු නාමය වලංගු නො‌වේ.  වෙනත් ගොනුවක් තෝරන්න.</text>
+        <originalText>This folder name is invalid. Please choose another.</originalText>
+        
+      <audio src="./audio/287________.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0120.smil#text_0120"/></promptItem>
+      <promptItem id="cant_create_folder">
+        <text>මේ ගොනුව සෑදිය නොහැක.  නැවත පරික්ෂා කරන්න.</text>
+        <originalText>This folder can not be created. Please double check.</originalText>
+        
+      <audio src="./audio/288_______.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0121.smil#text_0121"/></promptItem>
+      <promptItem id="not_available">
+        <text>නැත</text>
+        <originalText>Not available</originalText>
+        
+      <audio src="./audio/289.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0122.smil#text_0122"/></promptItem>
+      <promptItem id="numeric_zero">
+        <note>All numerals should be translated into numerals, not words.</note>
+        <text>0</text>
+        <originalText>0</originalText>
+        
+      <audio src="./audio/290_0.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0123.smil#text_0123"/></promptItem>
+      <promptItem id="numeric_one">
+        <text>1</text>
+        <originalText>1</originalText>
+        
+      <audio src="./audio/291_1.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0124.smil#text_0124"/></promptItem>
+      <promptItem id="numeric_two">
+        <text>2</text>
+        <originalText>2</originalText>
+        
+      <audio src="./audio/292_2.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0125.smil#text_0125"/></promptItem>
+      <promptItem id="numeric_three">
+        <text>3</text>
+        <originalText>3</originalText>
+        
+      <audio src="./audio/293_3.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0126.smil#text_0126"/></promptItem>
+      <promptItem id="numeric_four">
+        <text>4</text>
+        <originalText>4</originalText>
+        
+      <audio src="./audio/294_4.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0127.smil#text_0127"/></promptItem>
+      <promptItem id="numeric_five">
+        <text>5</text>
+        <originalText>5</originalText>
+        
+      <audio src="./audio/295_5.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0128.smil#text_0128"/></promptItem>
+      <promptItem id="numeric_six">
+        <text>6</text>
+        <originalText>6</originalText>
+        
+      <audio src="./audio/296_6.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0129.smil#text_0129"/></promptItem>
+      <promptItem id="numeric_seven">
+        <text>7</text>
+        <originalText>7</originalText>
+        
+      <audio src="./audio/297_7.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis012a.smil#text_012a"/></promptItem>
+      <promptItem id="numeric_eight">
+        <text>8</text>
+        <originalText>8</originalText>
+        
+      <audio src="./audio/298_8.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis012b.smil#text_012b"/></promptItem>
+      <promptItem id="numeric_nine">
+        <text>9</text>
+        <originalText>9</originalText>
+        
+      <audio src="./audio/299_9.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis012c.smil#text_012c"/></promptItem>
+      <promptItem id="deleted">
+        <text>මකාදමන ලදි.</text>
+        <originalText>deleted</originalText>
+        
+      <audio src="./audio/300__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis012d.smil#text_012d"/></promptItem>
+      <promptItem id="will_be_skipped">
+        <text>අත්හරිනු ලැබේ.</text>
+        <originalText>will be skipped</originalText>
+        
+      <audio src="./audio/301__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis012e.smil#text_012e"/></promptItem>
+      <promptItem id="will_be_played">
+        <text>වාදනය කෙරේ.</text>
+        <originalText>will be played</originalText>
+        
+      <audio src="./audio/302__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis012f.smil#text_012f"/></promptItem>
+      <promptItem id="item_on">
+        <text>සක්‍රියයි</text>
+        <originalText>on</originalText>
+        
+      <audio src="./audio/303.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0130.smil#text_0130"/></promptItem>
+      <promptItem id="item_off">
+        <text>අක්‍රීයයි</text>
+        <originalText>off</originalText>
+        
+      <audio src="./audio/304.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0131.smil#text_0131"/></promptItem>
+      <promptItem id="item_selected">
+        <text>තෝරන ලදි.</text>
+        <originalText>selected</originalText>
+        
+      <audio src="./audio/305__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0132.smil#text_0132"/></promptItem>
+      <promptItem id="item_deselected">
+        <text>නොතෝරන ලදි.</text>
+        <originalText>deselected</originalText>
+        
+      <audio src="./audio/306__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0133.smil#text_0133"/></promptItem>
+      <promptItem id="keyboardShortcut">
+        <text>යතුරු පුවරු කෙටි මග.</text>
+        <originalText>Keyboard Shortcut</originalText>
+        
+      <audio src="./audio/307____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0134.smil#text_0134"/></promptItem>
+      <promptItem id="icon">
+        <text>ලාංජනය</text>
+        <originalText>Icon</originalText>
+        
+      <audio src="./audio/308.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0135.smil#text_0135"/></promptItem>
+      <promptItem id="menu">
+        <text>තීරය</text>
+        <originalText>Menu</originalText>
+        
+      <audio src="./audio/309.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0136.smil#text_0136"/></promptItem>
+      <promptItem id="followedBy">
+        <note>This is used in the context of a sequence of key presses, as in "Press Alt + V, followed by S"</note>
+        <text>අනතුරුව</text>
+        <originalText>followed by</originalText>
+        
+      <audio src="./audio/310.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0137.smil#text_0137"/></promptItem>
+      <promptItem id="submenu">
+        <text>උප තීරය</text>
+        <originalText>Sub Menu</originalText>
+        
+      <audio src="./audio/311__.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0138.smil#text_0138"/></promptItem>
+    </promptItemRefs>
+    <generalPrompts>
+      <prompt id="dialogClosed">
+        <promptItem>
+          <text>සංවාදයෙන් ඉවත් වේ.</text>
+          <originalText>Dialog closed.</originalText>
+          
+        <audio src="./audio/312___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0139.smil#text_0139"/></promptItem>
+      </prompt>
+      <prompt id="textFieldEntry">
+        <promptItem>
+          <text>පාඨය සදහන් කළ යුතු ස්ථානය.:</text>
+          <originalText>Text field entry is:</originalText>
+          
+        <audio src="./audio/313_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis013a.smil#text_013a"/></promptItem>
+        <promptVar name="TEXT_FIELD"/>
+      </prompt>
+      <prompt id="notSelfVoicing">
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+      </prompt>
+      <prompt id="bookAtPathChanged">
+        <promptItem>
+          <text>ඔබ සොයන පොතෙහි පිහිටීම වෙනස් වී ඇත.  ඒ වෙනුවට වෙනත් පොතක් හමු විය.  ඔබේ සංයුක්ත තැටියේ අන්තර්ගතය වෙනස් වූයේද?</text>
+          <originalText>The location of the book you are looking for has changed.  A different book was found instead.  Did the contents of your CD-ROM drive change?</originalText>
+          
+        <audio src="./audio/314___________________.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis013b.smil#text_013b"/></promptItem>
+      </prompt>
+      <prompt id="generalBookError">
+        <promptItem>
+          <text>පො‌තේ විවෘත කිරීමේදී වරදක් සිදු වී ඇත.</text>
+          <originalText>An error occurred while trying to open the book.</originalText>
+          
+        <audio src="./audio/315_______.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis013c.smil#text_013c"/></promptItem>
+        <promptVar name="BOOK_PATH"/>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+      <prompt id="noCdLoaded">
+        <promptItem>
+          <text>සංයුක්ත තැටියක් ඇත.</text>
+          <originalText>There is not a CD in the CD-ROM drive.</originalText>
+          
+        <audio src="./audio/316___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis013d.smil#text_013d"/></promptItem>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+      <prompt id="pluginErrorInit">
+        <promptItem>
+          <text>Plug-in error: init() function not found in the plug-in DLL.</text>
+          <originalText>Plug-in error: init() function not found in the plug-in DLL.</originalText>
+          
+        <audio src="./audio/317_Plugin_error_init_function_not.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis013e.smil#text_013e"/></promptItem>
+      </prompt>
+      <prompt id="pluginErrorDll">
+        <promptItem>
+          <text>උපාංග දෝෂයක් හට‌ගෙන ඇත.  පහත දැක්වෙන උපාංග සංචිතය සොයා ගත නොහැකි විය.</text>
+          <originalText>Plug-in error: The following plug-in library could not be loaded: </originalText>
+          
+        <audio src="./audio/318____________.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis013f.smil#text_013f"/></promptItem>
+        <promptVar name="PLUGIN_LIB"/>
+      </prompt>
+      <prompt id="basicViewPrompt">
+        <promptItem>
+          <text>ඔබ දැන් භාවිත කරන්නේ මූලික දසුනයි.  පියවි දසුනට මාරැ වීම සදාහා F11 ඔබන්න.</text>
+          <originalText>You are now using the basic view mode.  Press F11 to switch back to the default view mode.</originalText>
+          
+        <audio src="./audio/319____________F11_.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0140.smil#text_0140"/></promptItem>
+      </prompt>
+      <prompt id="OpenFile_notSelfVoicing">
+        <promptItem>
+          <text>ගොනුව විවෘත කිරීමේ සංවාදය</text>
+          <originalText>Open File Dialog</originalText>
+          
+        <audio src="./audio/320____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0141.smil#text_0141"/></promptItem>
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem>
+          <text>ඔබ දෘඩ තැටියේ ඩේසි පොත් සෙවීම සදහා ‌ගොනු තීරයේ පොත් සෙවීමේ අංගය භාවිත කරන්න.</text>
+          <originalText>Use the "search for books" feature, under the file menu, to find DAISY books on your hard drive.</originalText>
+          
+        <audio src="./audio/321______________.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0142.smil#text_0142"/></promptItem>
+        <promptItem refid="escapeToCancel"/>
+      </prompt>
+      <prompt id="BrowseForFolder_notSelfVoicing">
+        <promptItem>
+          <text>ලිපි ගොනුවක් සොයා ගැනීමේ සංවාදය.</text>
+          <originalText>Browse for folder dialog</originalText>
+          
+        <audio src="./audio/322_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0143.smil#text_0143"/></promptItem>
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem refid="escapeToCancel"/>
+        <promptItem>
+          <text>ඉක්බිති ලිපිගොනු මාර්ගය කොටුව තුළ ලියන්න.</text>
+          <originalText>Then, type the path of the folder you want in the text box.</originalText>
+          
+        <audio src="./audio/323______.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0144.smil#text_0144"/></promptItem>
+      </prompt>
+      <prompt id="canceled">
+        <promptItem>
+          <text>අවලංගු කරන ලදි.</text>
+          <originalText>Canceled</originalText>
+          
+        <audio src="./audio/324___.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0145.smil#text_0145"/></promptItem>
+      </prompt>
+      <prompt id="loading">
+        <promptItem>
+          <text>Loading</text>
+          <originalText>Loading</originalText>
+          
+        <audio src="./audio/325_Loading.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0146.smil#text_0146"/></promptItem>
+      </prompt>
+      <prompt id="restartForChanges">
+        <promptItem>
+          <text>ඔබ කළ වෙනස්කම් දැකීමට නැවත අරඹන්න.</text>
+          <originalText>Please restart to see your changes.</originalText>
+          
+        <audio src="./audio/326______.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0147.smil#text_0147"/></promptItem>
+      </prompt>
+      <prompt id="noBooksFoundOnCd">
+        <promptItem>
+          <text>සංයුක්ත තැටියේ ඩේසි පොත් හමු නොවීය.</text>
+          <originalText>No DAISY books were found on this CD-ROM.</originalText>
+          
+        <audio src="./audio/327______.mp3" from="file://c:/devel/amis/trunk/Langpacks/sinhala/prompts/amis0148.smil#text_0148"/></promptItem>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+    </generalPrompts>
+  </prompts>
+</ui>

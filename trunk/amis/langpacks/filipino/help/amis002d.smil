@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Nakaraang Pahina" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:20" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="20.018s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_002d" id="amis_002d" />
+<seq>
+<audio src="44_Nakaraang_Pahina.mp3" clip-begin="npt=0.000s" clip-end="npt=1.480s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_007d" id="xami_007d" />
+<seq>
+<audio src="44_Nakaraang_Pahina.mp3" clip-begin="npt=1.480s" clip-end="npt=8.875s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_007e" id="xami_007e" />
+<seq>
+<audio src="44_Nakaraang_Pahina.mp3" clip-begin="npt=8.875s" clip-end="npt=13.030s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_007f" id="xami_007f" />
+<seq>
+<audio src="44_Nakaraang_Pahina.mp3" clip-begin="npt=13.030s" clip-end="npt=16.249s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0080" id="xami_0080" />
+<seq>
+<audio src="44_Nakaraang_Pahina.mp3" clip-begin="npt=16.249s" clip-end="npt=18.729s" id="qwrt_0005" />
+<audio src="44_Nakaraang_Pahina.mp3" clip-begin="npt=18.729s" clip-end="npt=20.018s" id="qwrt_0006" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+    <meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+    <meta name="dc:format" content="Daisy 2.02" />
+    <meta name="title" content="Marginaltext" />
+    <meta name="dc:title" content="AMIS Help" />
+    <meta name="ncc:timeInThisSmil" content="0:00:33" />
+    <layout>
+        <region id="txtView" />
+    </layout>
+</head>
+<body>
+<seq dur="33.348s">
+    <par endsync="last">
+        <text src="amishelp.html#amis_0015" id="amis_0015" />
+        <seq>
+            <audio src="20_marginaltext.mp3" clip-begin="npt=0.000s" clip-end="npt=1.599s" id="qwrt_0001" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_0038" id="xami_0038" />
+        <seq>
+            <audio src="20_marginaltext.mp3" clip-begin="npt=1.599s" clip-end="npt=3.399s" id="qwrt_0002" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_0039" id="xami_0039" />
+        <seq>
+            <audio src="20_marginaltext.mp3" clip-begin="npt=3.399s" clip-end="npt=9.668s" id="qwrt_0003" />
+            <audio src="20_marginaltext.mp3" clip-begin="npt=9.668s" clip-end="npt=13.665s" id="qwrt_0004" />
+            <audio src="20_marginaltext.mp3" clip-begin="npt=13.665s" clip-end="npt=16.159s" id="qwrt_0005" />
+            <audio src="20_marginaltext.mp3" clip-begin="npt=16.159s" clip-end="npt=18.398s" id="qwrt_0006" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_003a" id="xami_003a" />
+        <seq>
+            <audio src="20_marginaltext.mp3" clip-begin="npt=18.398s" clip-end="npt=19.595s" id="qwrt_0007" />
+            <audio src="20_marginaltext.mp3" clip-begin="npt=19.595s" clip-end="npt=23.525s" id="qwrt_0008" />
+            <audio src="20_marginaltext.mp3" clip-begin="npt=23.525s" clip-end="npt=29.103s" id="qwrt_0009" />
+            <audio src="20_marginaltext.mp3" clip-begin="npt=29.103s" clip-end="npt=33.348s" id="qwrt_000A" />
+        </seq>
+    </par>
+</seq>
+</body>
+</smil>

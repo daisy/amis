@@ -1,0 +1,2344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui xml:lang="en">
+  <containers>
+    <container id="file">
+      <note>This is the menu header "File"</note>
+      <caption>
+        <text>Tiedosto</text>
+        <originalText>File</originalText>
+        
+      <audio src="./audio/002_Tiedosto.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0002.smil#rgn_txt_0002_0001"/></caption>
+      <action mfcid="ID_MENU_FILE_OPEN" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and a toolbar item</note>
+        <icon src="./open.png" type="smallIcon"/>
+        <caption>
+          <text>Avaa...</text>
+          <originalText>Open...</originalText>
+          
+        <audio src="./audio/003_Avaa___.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0003.smil#rgn_txt_0003_0001"/></caption>
+        <description>
+          <text>Avaa DAISY-kirja paikallisesta tiedostojärjestelmästä</text>
+          <originalText>Open a Daisy book from the local file system</originalText>
+          
+        <audio src="./audio/004_Avaa_DAISY_k.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0004.smil#rgn_txt_0004_0001"/></description>
+        <accelerator>
+          <text>Ctrl+O</text>
+          <originalText>Ctrl+O</originalText>
+          
+        <audio src="./audio/005_Ctrl_O.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0005.smil#rgn_txt_0005_0001"/></accelerator>
+        <mnemonic>
+          <text>O</text>
+          <originalText>O</originalText>
+          
+        <audio src="./audio/006_O.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0006.smil#rgn_txt_0006_0001"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_LOADCD" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and a toolbar item</note>
+        <icon src="./settings/img/cd3.ico" type="smallIcon"/>
+        <icon src="./settings/img/cd_big.ico" type="largeIcon"/>
+        <caption>
+          <text>Lataa CD</text>
+          <originalText>Load CD</originalText>
+          
+        <audio src="./audio/007_Lataa_CD.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0007.smil#rgn_txt_0007_0001"/></caption>
+        <description>
+          <text>Lataa DAISY-kirja CD-ROM-levyltä</text>
+          <originalText>Load a DAISY book from CD ROM</originalText>
+          
+        <audio src="./audio/008_Lataa_DAISY_.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0008.smil#rgn_txt_0008_0001"/></description>
+        <accelerator>
+          <text>Ctrl+L</text>
+          <originalText>Ctrl+L</originalText>
+          
+        <audio src="./audio/009_Ctrl_L.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0009.smil#rgn_txt_0009_0001"/></accelerator>
+        <mnemonic>
+          <text>L</text>
+          <originalText>L</originalText>
+          
+        <audio src="./audio/010_L.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0010.smil#rgn_txt_0010_0001"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_SEARCHDRIVE" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>Etsi...</text>
+          <originalText>Search...</originalText>
+          
+        <audio src="./audio/011_Etsi___.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0011.smil#rgn_txt_0011_0001"/></caption>
+        <description>
+          <text>Etsi DAISY-kirjoja paikallisilta levyasemilta</text>
+          <originalText>Search local drives for DAISY books</originalText>
+          
+        <audio src="./audio/012_Etsi_DAISY_k.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0012.smil#rgn_txt_0012_0001"/></description>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/013_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0013.smil#rgn_txt_0013_0001"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_PREFERENCES" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>Asetukset...</text>
+          <originalText>Preferences...</originalText>
+          
+        <audio src="./audio/014_Asetukset___.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0014.smil#rgn_txt_0014_0001"/></caption>
+        <description>
+          <text>Tämä on sovelluksen asetusten valintaruutu.</text>
+          <originalText>This is the application preferences dialog.</originalText>
+          
+        <audio src="./audio/015_T_m__on_sove.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0015.smil#rgn_txt_0015_0001"/></description>
+        <mnemonic>
+          <text>P</text>
+          <originalText>P</originalText>
+          
+        <audio src="./audio/016_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0016.smil#rgn_txt_0016_0001"/></mnemonic>
+      </action>
+      <container id="recentBooksList">
+        <note>This is the menu header for the recent books sub-menu.</note>
+        <caption>
+          <text>Viimeisimmät</text>
+          <originalText>Recent</originalText>
+          
+        <audio src="./audio/017_Viimeisimm_t.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0017.smil#rgn_txt_0017_0001"/></caption>
+        <switch element="action">
+          <action mfcid="ID_FILE_RECENT_EMPTY" widget="menuItem" condition="ID_FILE_RECENT_EMPTY">
+            <note>This is going to be a menu item</note>
+            <caption>
+              <text>Tyhjä</text>
+              <originalText>Empty</originalText>
+              
+            <audio src="./audio/018_Tyhj_.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0018.smil#rgn_txt_0018_0001"/></caption>
+            <description>
+              <text>Ei ole äskettäin luettuja kirjoja.</text>
+              <originalText>There are no recently read books.</originalText>
+              
+            <audio src="./audio/019_Ei_ole__sket.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0019.smil#rgn_txt_0019_0001"/></description>
+          </action>
+          <action mfcid="BOOK_BASE_ID" widget="menuItem" condition="BOOK_BASE_ID">
+            <note>This is going to be a menu item</note>
+            <list repeat="yes">
+              <caption>
+                <promptVar name="RECENT_BOOK_TITLE"/>
+              </caption>
+            </list>
+          </action>
+        </switch>
+        <mnemonic>
+          <text>R</text>
+          <originalText>R</originalText>
+          
+        <audio src="./audio/020_R.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0020.smil#rgn_txt_0020_0001"/></mnemonic>
+      </container>
+      <action mfcid="ID_MENU_FILE_EXIT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>Poistu</text>
+          <originalText>Exit</originalText>
+          
+        <audio src="./audio/021_Poistu.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0021.smil#rgn_txt_0021_0001"/></caption>
+        <description>
+          <text>Poistu AMIS-ohjelmasta</text>
+          <originalText>Exit AMIS</originalText>
+          
+        <audio src="./audio/022_Poistu_AMIS_.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0022.smil#rgn_txt_0022_0001"/></description>
+        <accelerator>
+          <text>Alt+F4</text>
+          <originalText>Alt+F4</originalText>
+          
+        <audio src="./audio/023_Alt_F4.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0023.smil#rgn_txt_0023_0001"/></accelerator>
+        <mnemonic>
+          <text>x</text>
+          <originalText>x</originalText>
+          
+        <audio src="./audio/024_x.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0024.smil#rgn_txt_0024_0001"/></mnemonic>
+      </action>
+      <accelerator>
+        <text>Alt+F</text>
+        <originalText>Alt+F</originalText>
+        
+      <audio src="./audio/025_Alt_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0025.smil#rgn_txt_0025_0001"/></accelerator>
+      <mnemonic>
+        <text>F</text>
+        <originalText>F</originalText>
+        
+      <audio src="./audio/026_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0026.smil#rgn_txt_0026_0001"/></mnemonic>
+    </container>
+    <container id="view">
+      <note>This is the menu header "View"</note>
+      <caption>
+        <text>Näytä</text>
+        <originalText>View</originalText>
+        
+      <audio src="./audio/027_N_yt_.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0027.smil#rgn_txt_0027_0001"/></caption>
+      <action mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>Sivupalkki</text>
+          <originalText>Sidebar</originalText>
+          
+        <audio src="./audio/028_Sivupalkki.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0028.smil#rgn_txt_0028_0001"/></caption>
+        <description>
+          <text>Sivupalkki päälle tai pois.</text>
+          <originalText>Turn the sidebar on or off.</originalText>
+          
+        <audio src="./audio/029_Sivupalkki_p.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0029.smil#rgn_txt_0029_0001"/></description>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/030_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0030.smil#rgn_txt_0030_0001"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_BASIC" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>Perusnäkymä</text>
+          <originalText>Basic View Mode</originalText>
+          
+        <audio src="./audio/031_Perusn_kym_.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0031.smil#rgn_txt_0031_0001"/></caption>
+        <description>
+          <text>Vaihda perusnäkymään.</text>
+          <originalText>Switch the view to basic mode.</originalText>
+          
+        <audio src="./audio/032_Vaihda_perus.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0032.smil#rgn_txt_0032_0001"/></description>
+        <accelerator>
+          <text>F11</text>
+          <originalText>F11</originalText>
+          
+        <audio src="./audio/033_F11.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0033.smil#rgn_txt_0033_0001"/></accelerator>
+        <mnemonic>
+          <text>B</text>
+          <originalText>B</originalText>
+          
+        <audio src="./audio/034_B.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0034.smil#rgn_txt_0034_0001"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_CONTRAST" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item</note>
+        <icon src="./settings/img/contrast.ico" type="smallIcon"/>
+        <caption>
+          <text>Suuri kontrasti</text>
+          <originalText>High Contrast</originalText>
+          
+        <audio src="./audio/035_Suuri_kontra.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0035.smil#rgn_txt_0035_0001"/></caption>
+        <description>
+          <text>Näytä teksti suurella värikontrastilla.</text>
+          <originalText>Use high contrast colors for the text display.</originalText>
+          
+        <audio src="./audio/036_N_yt__teksti.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0036.smil#rgn_txt_0036_0001"/></description>
+        <accelerator>
+          <text>Ctrl+S</text>
+          <originalText>Ctrl+S</originalText>
+          
+        <audio src="./audio/037_Ctrl_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0037.smil#rgn_txt_0037_0001"/></accelerator>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/038_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0038.smil#rgn_txt_0038_0001"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_LARGEFONT" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/font.ico" type="smallIcon"/>
+        <caption>
+          <text>Suurenna fontin kokoa</text>
+          <originalText>Increase Font Size</originalText>
+          
+        <audio src="./audio/039_Suurenna_fon.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0039.smil#rgn_txt_0039_0001"/></caption>
+        <description>
+          <text>Suurenna fontin kokoa asteittain.</text>
+          <originalText>Gradually increase the font size.</originalText>
+          
+        <audio src="./audio/040_Suurenna_fon.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0040.smil#rgn_txt_0040_0001"/></description>
+        <mnemonic>
+          <text>I</text>
+          <originalText>I</originalText>
+          
+        <audio src="./audio/041_I.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0041.smil#rgn_txt_0041_0001"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_RESETFONT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>Palauta fontin koko</text>
+          <originalText>Reset Font Size</originalText>
+          
+        <audio src="./audio/042_Palauta_font.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0042.smil#rgn_txt_0042_0001"/></caption>
+        <description>
+          <text>Aseta fontin koko oletusarvoksi.</text>
+          <originalText>Set the font size to the default setting.</originalText>
+          
+        <audio src="./audio/043_Aseta_fontin.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0043.smil#rgn_txt_0043_0001"/></description>
+        <mnemonic>
+          <text>R</text>
+          <originalText>R</originalText>
+          
+        <audio src="./audio/044_R.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0044.smil#rgn_txt_0044_0001"/></mnemonic>
+      </action>
+      <action mfcid="NAVLIST_BASE_ID" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <promptVar name="NAV_LIST_NAME"/>
+        </caption>
+        <description>
+          <promptVar name="NAV_LIST_DESCRIPTION"/>
+        </description>
+      </action>
+      <accelerator>
+        <text>Alt+V</text>
+        <originalText>Alt+V</originalText>
+        
+      <audio src="./audio/045_Alt_V.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0045.smil#rgn_txt_0045_0001"/></accelerator>
+      <mnemonic>
+        <text>V</text>
+        <originalText>V</originalText>
+        
+      <audio src="./audio/046_V.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0046.smil#rgn_txt_0046_0001"/></mnemonic>
+    </container>
+    <container id="play">
+      <note>This is the menu header "Play"</note>
+      <caption>
+        <text>Toista</text>
+        <originalText>Play</originalText>
+        
+      <audio src="./audio/047_Toista.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0047.smil#rgn_txt_0047_0001"/></caption>
+      <switch element="action">
+        <action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" condition="canPlay">
+          <note>This is going to be a menu item and toolbar item</note>
+          <icon src="./settings/img/play-big.ico" type="smallIcon"/>
+          <icon src="./settings/img/play_big.ico" type="largeIcon"/>
+          <caption>
+            <text>Toista</text>
+            <originalText>Play</originalText>
+            
+          <audio src="./audio/048_Toista.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0048.smil#rgn_txt_0048_0001"/></caption>
+          <description>
+            <text>Aloita synkronoitu toisto.</text>
+            <originalText>Start synchronized playback.</originalText>
+            
+          <audio src="./audio/049_Aloita_synkr.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0049.smil#rgn_txt_0049_0001"/></description>
+          <accelerator>
+            <text>Välilyönti</text>
+            <originalText>Space</originalText>
+            
+          <audio src="./audio/050_V_lily_nti.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0050.smil#rgn_txt_0050_0001"/></accelerator>
+          <mnemonic>
+            <text>P</text>
+            <originalText>P</originalText>
+            
+          <audio src="./audio/051_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0051.smil#rgn_txt_0051_0001"/></mnemonic>
+        </action>
+        <action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" condition="canPause">
+          <note>This is going to be a menu item and toolbar item</note>
+          <icon src="./settings/img/pause.ico" type="smallIcon"/>
+          <icon src="./settings/img/pause_big.ico" type="largeIcon"/>
+          <caption>
+            <text>Tauko</text>
+            <originalText>Pause</originalText>
+            
+          <audio src="./audio/052_Tauko.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0052.smil#rgn_txt_0052_0001"/></caption>
+          <description>
+            <text>Keskeytä DAISY-kirjan toisto.</text>
+            <originalText>Pause playback of this DAISY book.</originalText>
+            
+          <audio src="./audio/053_Keskeyt__DAI.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0053.smil#rgn_txt_0053_0001"/></description>
+          <accelerator>
+            <text>Välilyönti</text>
+            <originalText>Space</originalText>
+            
+          <audio src="./audio/054_V_lily_nti.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0054.smil#rgn_txt_0054_0001"/></accelerator>
+          <mnemonic>
+            <text>a</text>
+            <originalText>a</originalText>
+            
+          <audio src="./audio/055_a.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0055.smil#rgn_txt_0055_0001"/></mnemonic>
+        </action>
+      </switch>
+      <action mfcid="ID_MENU_PLAY_ESCAPE" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>Poistu</text>
+          <originalText>Escape</originalText>
+          
+        <audio src="./audio/056_Poistu.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0056.smil#rgn_txt_0056_0001"/></caption>
+        <description>
+          <text>Poistu toistettavasta osiosta tai rakenteesta.</text>
+          <originalText>Jump out of the currently playing item or structure.</originalText>
+          
+        <audio src="./audio/057_Poistu_toist.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0057.smil#rgn_txt_0057_0001"/></description>
+        <accelerator>
+          <text>Esc</text>
+          <originalText>Esc</originalText>
+          
+        <audio src="./audio/058_Esc.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0058.smil#rgn_txt_0058_0001"/></accelerator>
+        <mnemonic>
+          <text>E</text>
+          <originalText>E</originalText>
+          
+        <audio src="./audio/059_E.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0059.smil#rgn_txt_0059_0001"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_FASTER" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/fullspeedahead.ico" type="smallIcon"/>
+        <caption>
+          <text>Nopeuta</text>
+          <originalText>Faster</originalText>
+          
+        <audio src="./audio/060_Nopeuta.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0060.smil#rgn_txt_0060_0001"/></caption>
+        <description>
+          <text>Lisää toiston nopeutta.</text>
+          <originalText>Increase the playback rate.</originalText>
+          
+        <audio src="./audio/061_Lis___toisto.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0061.smil#rgn_txt_0061_0001"/></description>
+        <accelerator>
+          <text>Ctrl++</text>
+          <originalText>Ctrl++</originalText>
+          
+        <audio src="./audio/062_Ctrl__.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0062.smil#rgn_txt_0062_0001"/></accelerator>
+        <mnemonic>
+          <text>F</text>
+          <originalText>F</originalText>
+          
+        <audio src="./audio/063_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0063.smil#rgn_txt_0063_0001"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_SLOWER" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/slowdown.ico" type="smallIcon"/>
+        <caption>
+          <text>Hidasta</text>
+          <originalText>Slower</originalText>
+          
+        <audio src="./audio/064_Hidasta.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0064.smil#rgn_txt_0064_0001"/></caption>
+        <description>
+          <text>Vähennä toiston nopeutta.</text>
+          <originalText>Slow down the playback rate.</originalText>
+          
+        <audio src="./audio/065_V_henn__tois.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0065.smil#rgn_txt_0065_0001"/></description>
+        <accelerator>
+          <text>Ctrl+-</text>
+          <originalText>Ctrl+-</originalText>
+          
+        <audio src="./audio/066_Ctrl__.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0066.smil#rgn_txt_0066_0001"/></accelerator>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/067_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0067.smil#rgn_txt_0067_0001"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_NORMALSPEED" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/normalspeed.ico" type="smallIcon"/>
+        <caption>
+          <text>Normaali nopeus</text>
+          <originalText>Normal Speed</originalText>
+          
+        <audio src="./audio/068_Normaali_nop.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0068.smil#rgn_txt_0068_0001"/></caption>
+        <description>
+          <text>Palauta nopeus normaaliksi.</text>
+          <originalText>Reset the playback rate to normal.</originalText>
+          
+        <audio src="./audio/069_Palauta_nope.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0069.smil#rgn_txt_0069_0001"/></description>
+        <accelerator>
+          <text>Ctrl+0</text>
+          <originalText>Ctrl+0</originalText>
+          
+        <audio src="./audio/070_Ctrl_0.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0070.smil#rgn_txt_0070_0001"/></accelerator>
+        <mnemonic>
+          <text>N</text>
+          <originalText>N</originalText>
+          
+        <audio src="./audio/071_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0071.smil#rgn_txt_0071_0001"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_VOLUP" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>Lisää äänenvoimakkuutta</text>
+          <originalText>Increase Volume</originalText>
+          
+        <audio src="./audio/072_Lis_____nenv.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0072.smil#rgn_txt_0072_0001"/></caption>
+        <description>
+          <text>Lisää asteittain äänenvoimakkuutta.</text>
+          <originalText>Gradually raise the volume.</originalText>
+          
+        <audio src="./audio/073_Lis___asteit.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0073.smil#rgn_txt_0073_0001"/></description>
+        <accelerator>
+          <text>Ctrl+nuoli ylös</text>
+          <originalText>Ctrl+Up</originalText>
+          
+        <audio src="./audio/074_Ctrl_nuoli_y.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0074.smil#rgn_txt_0074_0001"/></accelerator>
+        <mnemonic>
+          <text>I</text>
+          <originalText>I</originalText>
+          
+        <audio src="./audio/075_I.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0075.smil#rgn_txt_0075_0001"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_VOLDOWN" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>Vähennä äänenvoimakkuutta</text>
+          <originalText>Decrease Volume</originalText>
+          
+        <audio src="./audio/076_V_henn____ne.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0076.smil#rgn_txt_0076_0001"/></caption>
+        <description>
+          <text>Vähennä asteittain äänenvoimakkuutta.</text>
+          <originalText>Gradually lower the volume.</originalText>
+          
+        <audio src="./audio/077_V_henn__aste.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0077.smil#rgn_txt_0077_0001"/></description>
+        <accelerator>
+          <text>Ctrl+nuoli alas</text>
+          <originalText>Ctrl+Down</originalText>
+          
+        <audio src="./audio/078_Ctrl_nuoli_a.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0078.smil#rgn_txt_0078_0001"/></accelerator>
+        <mnemonic>
+          <text>D</text>
+          <originalText>D</originalText>
+          
+        <audio src="./audio/079_D.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0079.smil#rgn_txt_0079_0001"/></mnemonic>
+      </action>
+      <accelerator>
+        <text>Alt+P</text>
+        <originalText>Alt+P</originalText>
+        
+      <audio src="./audio/080_Alt_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0080.smil#rgn_txt_0080_0001"/></accelerator>
+      <mnemonic>
+        <text>P</text>
+        <originalText>P</originalText>
+        
+      <audio src="./audio/081_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0081.smil#rgn_txt_0081_0001"/></mnemonic>
+    </container>
+    <container id="navigate">
+      <note>This is the menu header "Navigate"</note>
+      <caption>
+        <text>Navigoi</text>
+        <originalText>Navigate</originalText>
+        
+      <audio src="./audio/082_Navigoi.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0082.smil#rgn_txt_0082_0001"/></caption>
+      <action mfcid="ID_MENU_NAV_PREVSECTION" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevsection.ico" type="smallIcon"/>
+        <icon src="./settings/img/prevsection_big.ico" type="largeIcon"/>
+        <caption>
+          <text>Edellinen luku</text>
+          <originalText>Previous Section</originalText>
+          
+        <audio src="./audio/083_Edellinen_lu.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0083.smil#rgn_txt_0083_0001"/></caption>
+        <description>
+          <text>Mene edelliseen lukuun.</text>
+          <originalText>Go to the previous section.</originalText>
+          
+        <audio src="./audio/084_Mene_edellis.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0084.smil#rgn_txt_0084_0001"/></description>
+        <accelerator>
+          <text>nuoli ylös</text>
+          <originalText>Up</originalText>
+          
+        <audio src="./audio/085_nuoli_yl_s.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0085.smil#rgn_txt_0085_0001"/></accelerator>
+        <mnemonic>
+          <text>P</text>
+          <originalText>P</originalText>
+          
+        <audio src="./audio/086_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0086.smil#rgn_txt_0086_0001"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTSECTION" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextsection.ico" type="smallIcon"/>
+        <icon src="./settings/img/nextsection_big.ico" type="largeIcon"/>
+        <caption>
+          <text>Seuraava luku</text>
+          <originalText>Next Section</originalText>
+          
+        <audio src="./audio/087_Seuraava_luk.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0087.smil#rgn_txt_0087_0001"/></caption>
+        <description>
+          <text>Mene seuraavaan lukuun.</text>
+          <originalText>Go to the next section.</originalText>
+          
+        <audio src="./audio/088_Mene_seuraav.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0088.smil#rgn_txt_0088_0001"/></description>
+        <accelerator>
+          <text>nuoli alas</text>
+          <originalText>Down</originalText>
+          
+        <audio src="./audio/089_nuoli_alas.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0089.smil#rgn_txt_0089_0001"/></accelerator>
+        <mnemonic>
+          <text>N</text>
+          <originalText>N</originalText>
+          
+        <audio src="./audio/090_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0090.smil#rgn_txt_0090_0001"/></mnemonic>
+      </action>
+      <container id="sectiondepth">
+        <note>This is the "show section depth" sub-menu pop-up</note>
+        <caption>
+          <text>Näytä luvut tasolla</text>
+          <originalText>Show Section Depth</originalText>
+          
+        <audio src="./audio/091_N_yt__luvut_.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0091.smil#rgn_txt_0091_0001"/></caption>
+        <switch element="action">
+          <action mfcid="ID_EMPTY" widget="menuItem" condition="ID_EMPTY">
+            <note>This is going to be a menu item</note>
+            <caption>
+              <text>Tyhjä</text>
+              <originalText>Empty</originalText>
+              
+            <audio src="./audio/092_Tyhj_.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0092.smil#rgn_txt_0092_0001"/></caption>
+            <description>
+              <text>Ei lukutasoja.</text>
+              <originalText>There are no section levels.</originalText>
+              
+            <audio src="./audio/093_Ei_lukutasoj.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0093.smil#rgn_txt_0093_0001"/></description>
+          </action>
+          <action mfcid="SECTION_DEPTH_BASE_ID" widget="menuItem" condition="SECTION_DEPTH_BASE_ID">
+            <note>This is going to be a menu item</note>
+            <list repeat="yes">
+              <caption>
+                <promptVar name="SECTION_DEPTH_OPTION"/>
+              </caption>
+            </list>
+          </action>
+        </switch>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/094_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0094.smil#rgn_txt_0094_0001"/></mnemonic>
+      </container>
+      <action mfcid="ID_MENU_NAV_PREVPHRASE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevphasecirc.ico" type="smallIcon"/>
+        <caption>
+          <text>Edellinen fraasi</text>
+          <originalText>Previous Phrase</originalText>
+          
+        <audio src="./audio/095_Edellinen_fr.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0095.smil#rgn_txt_0095_0001"/></caption>
+        <description>
+          <text>Mene edelliseen fraasiin.</text>
+          <originalText>Go to the previous phrase.</originalText>
+          
+        <audio src="./audio/096_Mene_edellis.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0096.smil#rgn_txt_0096_0001"/></description>
+        <accelerator>
+          <text>nuoli vasemmalle</text>
+          <originalText>Left</originalText>
+          
+        <audio src="./audio/097_nuoli_vasemm.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0097.smil#rgn_txt_0097_0001"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTPHRASE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextphrasecirc.ico" type="smallIcon"/>
+        <caption>
+          <text>Seuraava fraasi</text>
+          <originalText>Next Phrase</originalText>
+          
+        <audio src="./audio/098_Seuraava_fra.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0098.smil#rgn_txt_0098_0001"/></caption>
+        <description>
+          <text>Mene seuraavaan fraasiin.</text>
+          <originalText>Go to the next phrase.</originalText>
+          
+        <audio src="./audio/099_Mene_seuraav.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0099.smil#rgn_txt_0099_0001"/></description>
+        <accelerator>
+          <text>nuoli oikealle</text>
+          <originalText>Right</originalText>
+          
+        <audio src="./audio/100_nuoli_oikeal.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0100.smil#rgn_txt_0100_0001"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_PREVPAGE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevpage.ico" type="smallIcon"/>
+        <caption>
+          <text>Edellinen sivu</text>
+          <originalText>Previous Page</originalText>
+          
+        <audio src="./audio/101_Edellinen_si.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0101.smil#rgn_txt_0101_0001"/></caption>
+        <description>
+          <text>Mene edelliselle sivulle.</text>
+          <originalText>Go to the previous page.</originalText>
+          
+        <audio src="./audio/102_Mene_edellis.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0102.smil#rgn_txt_0102_0001"/></description>
+        <accelerator>
+          <text>Ctrl+nuoli vasemmalle</text>
+          <originalText>Ctrl+Left</originalText>
+          
+        <audio src="./audio/103_Ctrl_nuoli_v.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0103.smil#rgn_txt_0103_0001"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTPAGE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextpage.ico" type="smallIcon"/>
+        <caption>
+          <text>Seuraava sivu</text>
+          <originalText>Next Page</originalText>
+          
+        <audio src="./audio/104_Seuraava_siv.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0104.smil#rgn_txt_0104_0001"/></caption>
+        <description>
+          <text>Mene seuraavalle sivulle.</text>
+          <originalText>Go to the next page.</originalText>
+          
+        <audio src="./audio/105_Mene_seuraav.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0105.smil#rgn_txt_0105_0001"/></description>
+        <accelerator>
+          <text>Ctrl+nuoli oikealle</text>
+          <originalText>Ctrl+Right</originalText>
+          
+        <audio src="./audio/106_Ctrl_nuoli_o.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0106.smil#rgn_txt_0106_0001"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_GOTOPAGE" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>Mene sivulle...</text>
+          <originalText>Go to Page...</originalText>
+          
+        <audio src="./audio/107_Mene_sivulle.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0107.smil#rgn_txt_0107_0001"/></caption>
+        <description>
+          <text>Mene tietylle sivulle.</text>
+          <originalText>Go to a specific page.</originalText>
+          
+        <audio src="./audio/108_Mene_tietyll.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0108.smil#rgn_txt_0108_0001"/></description>
+        <accelerator>
+          <text>Ctrl+G</text>
+          <originalText>Ctrl+G</originalText>
+          
+        <audio src="./audio/109_Ctrl_G.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0109.smil#rgn_txt_0109_0001"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_FINDINTEXT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>Etsi tekstistä</text>
+          <originalText>Find in Text</originalText>
+          
+        <audio src="./audio/110_Etsi_tekstis.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0110.smil#rgn_txt_0110_0001"/></caption>
+        <description>
+          <text>Etsi sanaa tai fraasia tekstistä.</text>
+          <originalText>Search for a word or phrase in the text.</originalText>
+          
+        <audio src="./audio/111_Etsi_sanaa_t.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0111.smil#rgn_txt_0111_0001"/></description>
+        <accelerator>
+          <text>Ctrl+F</text>
+          <originalText>Ctrl+F</originalText>
+          
+        <audio src="./audio/112_Ctrl_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0112.smil#rgn_txt_0112_0001"/></accelerator>
+        <mnemonic>
+          <text>F</text>
+          <originalText>F</originalText>
+          
+        <audio src="./audio/113_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0113.smil#rgn_txt_0113_0001"/></mnemonic>
+      </action>
+      <accelerator>
+        <text>Alt+N</text>
+        <originalText>Alt+N</originalText>
+        
+      <audio src="./audio/114_Alt_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0114.smil#rgn_txt_0114_0001"/></accelerator>
+      <mnemonic>
+        <text>N</text>
+        <originalText>N</originalText>
+        
+      <audio src="./audio/115_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0115.smil#rgn_txt_0115_0001"/></mnemonic>
+    </container>
+    <container id="bookmarks">
+      <note>This is the menu header "Bookmarks"</note>
+      <caption>
+        <text>Kirjanmerkit</text>
+        <originalText>Bookmarks</originalText>
+        
+      <audio src="./audio/116_Kirjanmerkit.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0116.smil#rgn_txt_0116_0001"/></caption>
+      <action mfcid="ID_MENU_BMK_ADD" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/adbookmark.ico" type="smallIcon"/>
+        <caption>
+          <text>Lisää kirjanmerkki</text>
+          <originalText>Add Bookmark</originalText>
+          
+        <audio src="./audio/117_Lis___kirjan.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0117.smil#rgn_txt_0117_0001"/></caption>
+        <description>
+          <text>Lisää kirjanmerkki nykyiseen sijaintipaikkaan.</text>
+          <originalText>Bookmark your current position.</originalText>
+          
+        <audio src="./audio/118_Lis___kirjan.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0118.smil#rgn_txt_0118_0001"/></description>
+        <accelerator>
+          <text>Ctrl+D</text>
+          <originalText>Ctrl+D</originalText>
+          
+        <audio src="./audio/119_Ctrl_D.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0119.smil#rgn_txt_0119_0001"/></accelerator>
+        <mnemonic>
+          <text>A</text>
+          <originalText>A</originalText>
+          
+        <audio src="./audio/120_A.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0120.smil#rgn_txt_0120_0001"/></mnemonic>
+      </action>
+      <action mfcid="BOOKMARK_BASE_ID" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOKMARK_TITLE"/>
+          </caption>
+        </list>
+      </action>
+      <accelerator>
+        <text>Alt+B</text>
+        <originalText>Alt+B</originalText>
+        
+      <audio src="./audio/121_Alt_B.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0121.smil#rgn_txt_0121_0001"/></accelerator>
+      <mnemonic>
+        <text>B</text>
+        <originalText>B</originalText>
+        
+      <audio src="./audio/122_B.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0122.smil#rgn_txt_0122_0001"/></mnemonic>
+    </container>
+    <container id="info">
+      <note>This is the menu header "Info"</note>
+      <caption>
+        <text>Info</text>
+        <originalText>Info</originalText>
+        
+      <audio src="./audio/123_Info.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0123.smil#rgn_txt_0123_0001"/></caption>
+      <action mfcid="ID_MENU_INFO_SKIP" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>Ohitettavissa olevat osiot...</text>
+          <originalText>Skippable Items...</originalText>
+          
+        <audio src="./audio/124_Ohitettaviss.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0124.smil#rgn_txt_0124_0001"/></caption>
+        <description>
+          <text>Selaa julkaisun ohitettavissa olevat osiot.</text>
+          <originalText>View the skippable items for this publication.</originalText>
+          
+        <audio src="./audio/125_Selaa_julkai.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0125.smil#rgn_txt_0125_0001"/></description>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/126_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0126.smil#rgn_txt_0126_0001"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_SUMMARY" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/info.ico" type="smallIcon"/>
+        <caption>
+          <text>Yhteenveto</text>
+          <originalText>Full Summary</originalText>
+          
+        <audio src="./audio/127_Yhteenveto.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0127.smil#rgn_txt_0127_0001"/></caption>
+        <description>
+          <text>Julkaisun tietojen yhteenveto.</text>
+          <originalText>Get all summary info for this publication.</originalText>
+          
+        <audio src="./audio/128_Julkaisun_ti.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0128.smil#rgn_txt_0128_0001"/></description>
+        <mnemonic>
+          <text>F</text>
+          <originalText>F</originalText>
+          
+        <audio src="./audio/129_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0129.smil#rgn_txt_0129_0001"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_CURRENTPOSITION" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>Nykyinen sijainti</text>
+          <originalText>Current Position</originalText>
+          
+        <audio src="./audio/130_Nykyinen_sij.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0130.smil#rgn_txt_0130_0001"/></caption>
+        <description>
+          <text>Tietoja nykyisestä sijaintipaikasta.</text>
+          <originalText>Get information about your current position.</originalText>
+          
+        <audio src="./audio/131_Tietoja_nyky.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0131.smil#rgn_txt_0131_0001"/></description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/132_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0132.smil#rgn_txt_0132_0001"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_NAVOPTIONS" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>Navigaatiovalinnat</text>
+          <originalText>Navigation Options</originalText>
+          
+        <audio src="./audio/133_Navigaatiova.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0133.smil#rgn_txt_0133_0001"/></caption>
+        <description>
+          <text>Tietoja tämän julkaisun navigaatiovalinnoista.</text>
+          <originalText>Learn about your navigation options for this publication.</originalText>
+          
+        <audio src="./audio/134_Tietoja_t_m_.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0134.smil#rgn_txt_0134_0001"/></description>
+        <mnemonic>
+          <text>N</text>
+          <originalText>N</originalText>
+          
+        <audio src="./audio/135_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0135.smil#rgn_txt_0135_0001"/></mnemonic>
+      </action>
+      <accelerator>
+        <text>Alt+I</text>
+        <originalText>Alt+I</originalText>
+        
+      <audio src="./audio/136_Alt_I.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0136.smil#rgn_txt_0136_0001"/></accelerator>
+      <mnemonic>
+        <text>I</text>
+        <originalText>I</originalText>
+        
+      <audio src="./audio/137_I.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0137.smil#rgn_txt_0137_0001"/></mnemonic>
+    </container>
+    <container id="help">
+      <note>This is the menu header "Help"</note>
+      <caption>
+        <text>Ohje</text>
+        <originalText>Help</originalText>
+        
+      <audio src="./audio/138_Ohje.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0138.smil#rgn_txt_0138_0001"/></caption>
+      <action mfcid="ID_MENU_HELP_CONTENTS" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/help.ico" type="smallIcon"/>
+        <icon src="./settings/img/help_big.ico" type="largeIcon"/>
+        <caption>
+          <text>Sisältö</text>
+          <originalText>Contents</originalText>
+          
+        <audio src="./audio/139_Sis_lt_.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0139.smil#rgn_txt_0139_0001"/></caption>
+        <description>
+          <text>Ohjeita AMIS-ohjeman käyttöön</text>
+          <originalText>Get help using AMIS</originalText>
+          
+        <audio src="./audio/140_Ohjeita_AMIS.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0140.smil#rgn_txt_0140_0001"/></description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/141_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0141.smil#rgn_txt_0141_0001"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_HELP_ABOUT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>AMIS-ohjelmasta</text>
+          <originalText>About AMIS</originalText>
+          
+        <audio src="./audio/142_AMIS_ohjelma.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0142.smil#rgn_txt_0142_0001"/></caption>
+        <description>
+          <text>Tietoja AMIS-ohjelmasta ja DAISY-projektista.</text>
+          <originalText>Find out about AMIS and DAISY-for-All.</originalText>
+          
+        <audio src="./audio/143_Tietoja_AMIS.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0143.smil#rgn_txt_0143_0001"/></description>
+        <mnemonic>
+          <text>A</text>
+          <originalText>A</originalText>
+          
+        <audio src="./audio/144_A.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0144.smil#rgn_txt_0144_0001"/></mnemonic>
+      </action>
+      <accelerator>
+        <text>Alt+H</text>
+        <originalText>Alt+H</originalText>
+        
+      <audio src="./audio/145_Alt_H.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0145.smil#rgn_txt_0145_0001"/></accelerator>
+      <mnemonic>
+        <text>H</text>
+        <originalText>H</originalText>
+        
+      <audio src="./audio/146_H.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0146.smil#rgn_txt_0146_0001"/></mnemonic>
+    </container>
+  </containers>
+  <dialogs>
+    <dialog mfcid="IDD_FIND">
+      <note>This is the find in text dialog</note>
+      <caption>
+        <text>Etsi tekstistä</text>
+        <originalText>Find in Text</originalText>
+        
+      <audio src="./audio/147_Etsi_tekstis.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0147.smil#rgn_txt_0147_0001"/></caption>
+      <description>
+        <text>Voit etsiä koko tekstistä molempiin suuntiin.</text>
+        <originalText>Here you can search the full text in either direction.</originalText>
+        
+      <audio src="./audio/148_Voit_etsi__k.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0148.smil#rgn_txt_0148_0001"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem>
+          <text>Kun olet kirjoittanut haun, paina enter-näppäintä etsinnän aloittamiseksi.</text>
+          <originalText>After typing in your search, press enter to begin searching.</originalText>
+          
+        <audio src="./audio/149_Kun_olet_kir.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0149.smil#rgn_txt_0149_0001"/></promptItem>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <!--removed this as it is probably not very useful, and it was incorrectly recorded-->
+        <!-- <promptItem refid="textBoxRepeatInstr"/>-->
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <text>Paina etsinnän aloittamiseksi.</text>
+          <originalText>Press to begin searching for text in the file.</originalText>
+          
+        <audio src="./audio/150_Paina_etsinn.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0150.smil#rgn_txt_0150_0001"/></description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/151_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0151.smil#rgn_txt_0151_0001"/></mnemonic>
+      </control>
+      <control mfcid="IDC_SEARCHSTRING" widget="textfield">
+        <description>
+          <text>Kirjoita etsittävä teksti.</text>
+          <originalText>Type the text to search for.</originalText>
+          
+        <audio src="./audio/152_Kirjoita_ets.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0152.smil#rgn_txt_0152_0001"/></description>
+      </control>
+      <control mfcid="IDC_FINDNEXT" widget="radiobutton">
+        <note>This indicates the direction of the search</note>
+        <caption>
+          <text>Etsi seuraava</text>
+          <originalText>Find Next</originalText>
+          
+        <audio src="./audio/153_Etsi_seuraav.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0153.smil#rgn_txt_0153_0001"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="SELECTED_OR_DESELECTED" param="FIND_NEXT_IN_TEXT"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_FINDPREV" widget="radiobutton">
+        <note>This indicates the direction of the search</note>
+        <caption>
+          <text>Etsi edellinen</text>
+          <originalText>Find Previous</originalText>
+          
+        <audio src="./audio/154_Etsi_edellin.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0154.smil#rgn_txt_0154_0001"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptName name="SELECTED_OR_DESELECTED" param="FIND_PREV_IN_TEXT"/>
+          </prompt>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_CDSEARCH">
+      <note>This dialog appears when more than one book is on a CD-ROM</note>
+      <caption>
+        <text>Useita kirjoja löytyi</text>
+        <originalText>Multiple books found</originalText>
+        
+      <audio src="./audio/155_Useita_kirjo.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0155.smil#rgn_txt_0155_0001"/></caption>
+      <description mfcid="IDC_STATIC">
+        <text>Tältä levyltä löytyi useampia kirjoja. Valitse listalta yksi ja paina Alt + O sen avaamiseksi.</text>
+        <originalText>More than one book was found on this CD. Please select a book from the list below and press Alt + O to open.</originalText>
+        
+      <audio src="./audio/156_T_lt__levylt.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0156.smil#rgn_txt_0156_0001"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_CANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/157_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0157.smil#rgn_txt_0157_0001"/></mnemonic>
+      </control>
+      <control mfcid="IDC_OPENBOOK" widget="button">
+        <caption>
+          <text>Avaa</text>
+          <originalText>Open</originalText>
+          
+        <audio src="./audio/158_Avaa.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0158.smil#rgn_txt_0158_0001"/></caption>
+        <description>
+          <text>Paina sulkeaksesi tämän ruudun ja avataksesi valitun kirjan.</text>
+          <originalText>Press to close this dialog and open the selected book.</originalText>
+          
+        <audio src="./audio/159_Paina_sulkea.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0159.smil#rgn_txt_0159_0001"/></description>
+        <mnemonic>
+          <text>O</text>
+          <originalText>O</originalText>
+          
+        <audio src="./audio/160_O.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0160.smil#rgn_txt_0160_0001"/></mnemonic>
+      </control>
+      <control mfcid="IDC_BOOKLIST" widget="list">
+        <description>
+          <text>Liiku nuolinäppäimillä tässä listassa.</text>
+          <originalText>Use the arrow keys to move around this list of titles.</originalText>
+          
+        <audio src="./audio/161_Liiku_nuolin.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0161.smil#rgn_txt_0161_0001"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOK_TITLE"/>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_ABOUTBOX">
+      <note>This dialog gives some basic information about AMIS.</note>
+      <caption>
+        <text>AMIS-ohjelmasta</text>
+        <originalText>About AMIS</originalText>
+        
+      <audio src="./audio/162_AMIS_ohjelma.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0162.smil#rgn_txt_0162_0001"/></caption>
+      <description>
+        <text>Tietoja AMIS-ohjelmistosta.</text>
+        <originalText>Dialog with information about AMIS software.</originalText>
+        
+      <audio src="./audio/163_Tietoja_AMIS.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0163.smil#rgn_txt_0163_0001"/></description>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_AMISNAME" widget="textlabel">
+        <caption>
+          <text>AMIS: \nAdaptive Multimedia Information System (joustava multimedia tietojärjestelmä)</text>
+          <originalText>AMIS: \nAdaptive Multimedia Information System</originalText>
+          
+        <audio src="./audio/164_AMIS___nAdap.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0164.smil#rgn_txt_0164_0001"/></caption>
+      </control>
+      <control mfcid="IDC_VERSION" translate="no">
+        <caption>
+          <text>Versio 2.0</text>
+          <originalText>Version 2.0</originalText>
+          
+        <audio src="./audio/165_Versio_2_0.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0165.smil#rgn_txt_0165_0001"/></caption>
+      </control>
+      <control mfcid="IDC_VERSIONNOTE" translate="no">
+        <caption>
+          <text>Julkaisupäivä: 23.10.2005</text>
+          <originalText>Release Date: 23 Oct 2005</originalText>
+          
+        <audio src="./audio/166_Julkaisup_iv.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0166.smil#rgn_txt_0166_0001"/></caption>
+      </control>
+      <control mfcid="IDC_COPYRIGHT" widget="textlabel" translate="no">
+        <caption>
+          <text>Copyright © 2006 DAISY for All</text>
+          <originalText>Copyright © 2006 DAISY for All</originalText>
+          
+        <audio src="./audio/167_Copyright___.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0167.smil#rgn_txt_0167_0001"/></caption>
+      </control>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_SEARCHDAISY">
+      <note>This dialog is for searching your hard drive for DAISY books.</note>
+      <caption>
+        <text>Etsi DAISY-kirjoja</text>
+        <originalText>Search for DAISY Books</originalText>
+        
+      <audio src="./audio/168_Etsi_DAISY_k.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0168.smil#rgn_txt_0168_0001"/></caption>
+      <description mfcid="IDC_STATIC">
+        <text>Voit etsiä tietokoneestasi DAISY-kirjoja. Syötä polku tai selaa kansiota ja paina Etsi haun aloittamiseksi.</text>
+        <originalText>You can search your computer for DAISY books.  Enter a path or browse for a folder to search, then press Search to begin searching.</originalText>
+        
+      <audio src="./audio/169_Voit_etsi__t.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0169.smil#rgn_txt_0169_0001"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <!--removed this as it is probably not very useful, and it was incorrectly recorded-->
+        <!--<promptItem refid="textBoxRepeatInstr"/>-->
+      </prompt>
+      <control mfcid="IDC_SEARCHPATH" widget="textfield">
+        <description>
+          <text>Kirjoita tähän kenttään hakemistopolku.</text>
+          <originalText>Type the path to the folder in this field.</originalText>
+          
+        <audio src="./audio/170_Kirjoita_t_h.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0170.smil#rgn_txt_0170_0001"/></description>
+      </control>
+      <control mfcid="IDC_BROWSE" widget="button">
+        <caption>
+          <promptItem refid="browse_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="browse_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_STARTSEARCH" widget="button">
+        <caption>
+          <text>Etsi</text>
+          <originalText>Search</originalText>
+          
+        <audio src="./audio/171_Etsi.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0171.smil#rgn_txt_0171_0001"/></caption>
+        <description>
+          <text>Paina haun aloittamiseksi.</text>
+          <originalText>Press to start searching.</originalText>
+          
+        <audio src="./audio/172_Paina_haun_a.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0172.smil#rgn_txt_0172_0001"/></description>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/173_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0173.smil#rgn_txt_0173_0001"/></mnemonic>
+      </control>
+      <control mfcid="IDC_STOPSEARCH" widget="button">
+        <caption>
+          <text>Stop</text>
+          <originalText>Stop</originalText>
+          
+        <audio src="./audio/174_Stop.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0174.smil#rgn_txt_0174_0001"/></caption>
+        <description>
+          <text>Paina haun lopettamiseksi.</text>
+          <originalText>Press to stop searching.</originalText>
+          
+        <audio src="./audio/175_Paina_haun_l.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0175.smil#rgn_txt_0175_0001"/></description>
+        <mnemonic>
+          <text>t</text>
+          <originalText>t</originalText>
+          
+        <audio src="./audio/176_t.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0176.smil#rgn_txt_0176_0001"/></mnemonic>
+      </control>
+      <control mfcid="IDC_SEARCHING" widget="textlabel">
+        <switch element="caption">
+          <caption condition="default">
+            <text>Valmis</text>
+            <originalText>Ready</originalText>
+            
+          <audio src="./audio/177_Valmis.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0177.smil#rgn_txt_0177_0001"/></caption>
+          <caption condition="WhileSearching">
+            <text>Hakee...</text>
+            <originalText>Searching...</originalText>
+            
+          <audio src="./audio/178_Hakee___.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0178.smil#rgn_txt_0178_0001"/></caption>
+          <caption condition="SearchAborted">
+            <text>Haku lopetettu.</text>
+            <originalText>Search stopped.</originalText>
+            
+          <audio src="./audio/179_Haku_lopetet.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0179.smil#rgn_txt_0179_0001"/></caption>
+          <caption condition="SearchCompleteNoFilesFound">
+            <text>Haku lopetettu: Ei löydetty tiedostoja.</text>
+            <originalText>Search complete: No files found.</originalText>
+            
+          <audio src="./audio/180_Haku_lopetet.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0180.smil#rgn_txt_0180_0001"/></caption>
+          <caption condition="SearchCompleteOneFileFound">
+            <text>Haku lopetettu: Yksi tiedosto löydetty.</text>
+            <originalText>Search complete: One file found.</originalText>
+            
+          <audio src="./audio/181_Haku_lopetet.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0181.smil#rgn_txt_0181_0001"/></caption>
+          <caption condition="SearchCompleteFilesFound">
+            <prompt>
+              <promptVar name="NUM_FILES_FOUND"/>
+              <promptItem>
+                <note>This is used in the sentence "7 files were found"</note>
+                <text>tiedostoa löydetty.</text>
+                <originalText>files were found.</originalText>
+                
+              <audio src="./audio/182_tiedostoa_l_.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0182.smil#rgn_txt_0182_0001"/></promptItem>
+            </prompt>
+          </caption>
+        </switch>
+      </control>
+      <control mfcid="IDC_FILESFOUND" widget="list">
+        <description>
+          <text>Liiku nuolinäppäimillä tässä listassa.</text>
+          <originalText>Use the arrow keys to move around this list of titles.</originalText>
+          
+        <audio src="./audio/183_Liiku_nuolin.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0183.smil#rgn_txt_0183_0001"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOK_TITLE"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_OPENBOOK" widget="button">
+        <caption>
+          <text>Avaa</text>
+          <originalText>Open</originalText>
+          
+        <audio src="./audio/184_Avaa.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0184.smil#rgn_txt_0184_0001"/></caption>
+        <description>
+          <text>Paina valitun tiedoston avaamiseksi.</text>
+          <originalText>Press to open the selected title.</originalText>
+          
+        <audio src="./audio/185_Paina_valitu.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0185.smil#rgn_txt_0185_0001"/></description>
+        <mnemonic>
+          <text>O</text>
+          <originalText>O</originalText>
+          
+        <audio src="./audio/186_O.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0186.smil#rgn_txt_0186_0001"/></mnemonic>
+      </control>
+      <control mfcid="IDC_CANCELBUTTON">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/187_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0187.smil#rgn_txt_0187_0001"/></mnemonic>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_SKIP">
+      <note>This dialog lets the user control rendering of skippable structures.</note>
+      <caption>
+        <text>Ohitettavissa olevat osiot</text>
+        <originalText>Skippable Items</originalText>
+        
+      <audio src="./audio/188_Ohitettaviss.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0188.smil#rgn_txt_0188_0001"/></caption>
+      <switch element="description">
+        <description mfcid="IDC_STATIC" condition="hasSkippableStructures">
+          <text>Tässä kirjassa on seuraavia erikoisrakenteita. Rastita ne, joita et halua esille.</text>
+          <originalText>This book contains the following special structures.  Check the ones you want skipped.</originalText>
+          
+        <audio src="./audio/189_T_ss__kirjas.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0189.smil#rgn_txt_0189_0001"/></description>
+        <description mfcid="IDC_STATIC" condition="hasNoSkippableStructures">
+          <text>Tässä julkaisussa ei ole ohitettavissa olevia osioita.</text>
+          <originalText>This publication has no skippable elements.</originalText>
+          
+        <audio src="./audio/190_T_ss__julkai.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0190.smil#rgn_txt_0190_0001"/></description>
+      </switch>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SKIPS" widget="list">
+        <caption>
+          <text>Ohitettavissa olevat osiot</text>
+          <originalText>Skippable items</originalText>
+          
+        <audio src="./audio/191_Ohitettaviss.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0191.smil#rgn_txt_0191_0001"/></caption>
+        <description>
+          <text>Liiku nuolinäppäimillä tässä listassa.</text>
+          <originalText>Use the arrow keys to move around this list of skippable items.</originalText>
+          
+        <audio src="./audio/192_Liiku_nuolin.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0192.smil#rgn_txt_0192_0001"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="SKIPPABLE_ITEM"/>
+          </caption>
+          <description>
+            <prompt>
+              <promptVar name="SKIPPABLE_ITEM"/>
+              <promptItem refid="thisItem"/>
+              <promptVar name="WILL_SKIP_OR_NOT" param="SKIPPABLE_ITEM_ID"/>
+            </prompt>
+          </description>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE4">
+      <note>This dialog lets the user select a language pack.</note>
+      <caption>
+        <text>Kieli</text>
+        <originalText>Language</originalText>
+        
+      <audio src="./audio/193_Kieli.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0193.smil#rgn_txt_0193_0001"/></caption>
+      <description mfcid="IDC_STATIC">
+        <text>Täällä voit vaihtaa ohjelmiston kielen. Uudet kielipaketit tunnistetaan automaattisesti.</text>
+        <originalText>Here you can change the language of the software.  New language packs are detected automatically.</originalText>
+        
+      <audio src="./audio/194_T__ll__voit_.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0194.smil#rgn_txt_0194_0001"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="ctrl1_for_prefsdialog"/>
+        <promptItem refid="ctrl2_for_colorsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_BTN_SELECTLANG" widget="button">
+        <caption>
+          <text>Valitse kieli</text>
+          <originalText>Select Language</originalText>
+          
+        <audio src="./audio/195_Valitse_kiel.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0195.smil#rgn_txt_0195_0001"/></caption>
+        <description>
+          <text>Paina AMIS-käyttöliittymän kielivalinnan vahvistamiseksi.</text>
+          <originalText>Press to confirm your language selection for the AMIS user interface</originalText>
+          
+        <audio src="./audio/196_Paina_AMIS_k.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0196.smil#rgn_txt_0196_0001"/></description>
+      </control>
+      <control mfcid="IDC_LANGLIST" widget="list">
+        <caption mfcid="IDC_STATIC">
+          <text>Kielivaihtoehdot ovat:</text>
+          <originalText>Your language choices are:</originalText>
+          
+        <audio src="./audio/197_Kielivaihtoe.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0197.smil#rgn_txt_0197_0001"/></caption>
+        <description>
+          <text>Liiku nuolinäppäimillä tässä listassa.</text>
+          <originalText>Use the arrow keys to move around this list of languages.</originalText>
+          
+        <audio src="./audio/198_Liiku_nuolin.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0198.smil#rgn_txt_0198_0001"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="LANGUAGE_NAME"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_CURRLANG">
+        <caption>
+          <prompt>
+            <promptItem>
+              <text>AMIS-ohjelman kieli on nyt:</text>
+              <originalText>You are currently using AMIS in</originalText>
+              
+            <audio src="./audio/199_AMIS_ohjelma.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0199.smil#rgn_txt_0199_0001"/></promptItem>
+            <promptVar name="CURR_LANGUAGE_NAME"/>
+          </prompt>
+        </caption>
+      </control>
+      <accelerator>
+        <text>Ctrl+3</text>
+        <originalText>Ctrl+3</originalText>
+        
+      <audio src="./audio/200_Ctrl_3.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0200.smil#rgn_txt_0200_0001"/></accelerator>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE2">
+      <note>This dialog lets the user select which colors AMIS uses</note>
+      <caption>
+        <text>Aseta värit</text>
+        <originalText>Set Colors</originalText>
+        
+      <audio src="./audio/201_Aseta_v_rit.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0201.smil#rgn_txt_0201_0001"/></caption>
+      <description>
+        <text>Täällä voit valita AMIS-ohjelman väriasetukset.</text>
+        <originalText>Here you can set color options for AMIS.</originalText>
+        
+      <audio src="./audio/202_T__ll__voit_.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0202.smil#rgn_txt_0202_0001"/></description>
+      <prompt type="instructions">
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem refid="ctrl1_for_prefsdialog"/>
+        <promptItem refid="ctrl3_for_langsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+      </prompt>
+      <control mfcid="IDC_PHRASES" widget="other">
+        <caption>
+          <text>Fraasin korostus</text>
+          <originalText>Phrase Highlighting</originalText>
+          
+        <audio src="./audio/203_Fraasin_koro.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0203.smil#rgn_txt_0203_0001"/></caption>
+      </control>
+      <control mfcid="IDC_TEXTFG" widget="textlabel">
+        <caption>
+          <text>Tekstin väri: </text>
+          <originalText>Text Foreground: </originalText>
+          
+        <audio src="./audio/204_Tekstin_v_ri.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0204.smil#rgn_txt_0204_0001"/></caption>
+      </control>
+      <control mfcid="IDC_TEXTBG" widget="textlabel">
+        <caption>
+          <text>Tekstin tausta: </text>
+          <originalText>Text Background: </originalText>
+          
+        <audio src="./audio/205_Tekstin_taus.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0205.smil#rgn_txt_0205_0001"/></caption>
+      </control>
+      <control mfcid="IDC_BORDER" widget="textlabel">
+        <caption>
+          <text>Valinnan rajaus: </text>
+          <originalText>Selection Border: </originalText>
+          
+        <audio src="./audio/206_Valinnan_raj.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0206.smil#rgn_txt_0206_0001"/></caption>
+      </control>
+      <control mfcid="IDC_CONTRAST" widget="other">
+        <caption>
+          <text>Suuren kontrastin asetukset</text>
+          <originalText>High Contrast Settings</originalText>
+          
+        <audio src="./audio/207_Suuren_kontr.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0207.smil#rgn_txt_0207_0001"/></caption>
+      </control>
+      <control mfcid="IDC_PAGEFG" widget="textlabel">
+        <caption>
+          <text>Tekstin väri: </text>
+          <originalText>Page Foreground: </originalText>
+          
+        <audio src="./audio/208_Tekstin_v_ri.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0208.smil#rgn_txt_0208_0001"/></caption>
+      </control>
+      <control mfcid="IDC_PAGEBG" widget="textlabel">
+        <caption>
+          <text>Taustan väri: </text>
+          <originalText>Page Background: </originalText>
+          
+        <audio src="./audio/209_Taustan_v_ri.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0209.smil#rgn_txt_0209_0001"/></caption>
+      </control>
+      <control mfcid="IDC_BTN_RESETCOLORS" widget="button">
+        <caption>
+          <text>Palauta värit</text>
+          <originalText>Reset Colors</originalText>
+          
+        <audio src="./audio/210_Palauta_v_ri.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0210.smil#rgn_txt_0210_0001"/></caption>
+      </control>
+      <control mfcid="IDC_PHRASEPREVIEW" widget="textfield">
+        <caption>
+          <text>Fraasin korostusvärien esikatselu.</text>
+          <originalText>Preview of phrase highlight colors.</originalText>
+          
+        <audio src="./audio/211_Fraasin_koro.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0211.smil#rgn_txt_0211_0001"/></caption>
+      </control>
+      <control mfcid="IDC_CONTRASTPREVIEW" widget="textfield">
+        <caption>
+          <text>Sivun kontrastivärien esikatselu.</text>
+          <originalText>Preview of page contrast colors.</originalText>
+          
+        <audio src="./audio/212_Sivun_kontra.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0212.smil#rgn_txt_0212_0001"/></caption>
+      </control>
+      <accelerator>
+        <text>Ctrl+2</text>
+        <originalText>Ctrl+2</originalText>
+        
+      <audio src="./audio/213_Ctrl_2.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0213.smil#rgn_txt_0213_0001"/></accelerator>
+    </dialog>
+    <dialog mfcid="IDD_CURRENTPOSITION">
+      <note>This dialog gives the user information about their current position in the publication.</note>
+      <caption>
+        <text>Nykyinen sijainti</text>
+        <originalText>Current Position</originalText>
+        
+      <audio src="./audio/214_Nykyinen_sij.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0214.smil#rgn_txt_0214_0001"/></caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text>Tässä on tietoja nykyisestä sijaintipaikastasi.</text>
+          <originalText>This is a list of data about your current position.</originalText>
+          
+        <audio src="./audio/215_T_ss__on_tie.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0215.smil#rgn_txt_0215_0001"/></caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="no">
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>Nykyisen luvun otsikko on:</text>
+                <originalText>Your current section is titled:</originalText>
+                
+              <audio src="./audio/216_Nykyisen_luv.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0216.smil#rgn_txt_0216_0001"/></promptItem>
+              <promptVar name="CURRENT_SECTION_TITLE"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text>Tämän luvun sivumäärä:</text>
+                <originalText>Number of pages in this section:</originalText>
+                
+              <audio src="./audio/217_T_m_n_luvun_.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0217.smil#rgn_txt_0217_0001"/></promptItem>
+              <promptVar name="CURRENT_SECTION_NUM_PAGES"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>Alilukujen määrä tässä luvussa:</text>
+                <originalText>Number of subsections in this section:</originalText>
+                
+              <audio src="./audio/218_Alilukujen_m.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0218.smil#rgn_txt_0218_0001"/></promptItem>
+              <promptVar name="CURRENT_SECTION_NUM_SUBSECTIONS"/>
+            </prompt>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE1">
+      <note>This dialog lets the user set some basic preferences for AMIS.</note>
+      <caption>
+        <text>Yleiset asetukset</text>
+        <originalText>General Preferences</originalText>
+        
+      <audio src="./audio/219_Yleiset_aset.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0219.smil#rgn_txt_0219_0001"/></caption>
+      <description>
+        <text>Täällä voit valita AMIS-ohjelman yleisiä asetuksia.</text>
+        <originalText>Here you can set general preferences for AMIS.</originalText>
+        
+      <audio src="./audio/220_T__ll__voit_.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0220.smil#rgn_txt_0220_0001"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="ctrl2_for_colorsdialog"/>
+        <promptItem refid="ctrl3_for_langsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <!--removed this as it is probably not very useful, and it was incorrectly recorded-->
+        <!--<promptItem refid="textBoxRepeatInstr"/>-->
+      </prompt>
+      <control mfcid="IDC_BMKDIRBROWSE" widget="button">
+        <caption>
+          <promptItem refid="browse_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="browse_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SELFVOICING" widget="checkbox">
+        <caption>
+          <text>Käytä ohjelman omaa ääntä</text>
+          <originalText>Use self-voicing</originalText>
+          
+        <audio src="./audio/221_K_yt__ohjelm.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0221.smil#rgn_txt_0221_0001"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="SELF_VOICING_FEATURE"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_TTSVOICE" widget="list">
+        <caption mfcid="IDC_SELTTSLABEL">
+          <text>Valitse puheääni:</text>
+          <originalText>Select TTS voice:</originalText>
+          
+        <audio src="./audio/222_Valitse_puhe.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0222.smil#rgn_txt_0222_0001"/></caption>
+        <description>
+          <text>Liiku nuolinäppäimillä tässä listassa</text>
+          <originalText>Use the arrow keys to move around this list of voices</originalText>
+          
+        <audio src="./audio/223_Liiku_nuolin.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0223.smil#rgn_txt_0223_0001"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="TTS_VOICE_NAME"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_BASIC" widget="checkbox">
+        <caption>
+          <text>Käynnistä AMIS perusnäkymässä.</text>
+          <originalText>Start AMIS in the basic view mode.</originalText>
+          
+        <audio src="./audio/224_K_ynnist__AM.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0224.smil#rgn_txt_0224_0001"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="BASIC_VIEW_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_PROMPTONBASICVIEW" widget="checkbox">
+        <caption>
+          <text>Perusnäkymään vaihdettaessa kerro käyttäjälle, miten palata oletusnäkymään.</text>
+          <originalText>Upon switching to basic view, tell the user how to go back to the default view.</originalText>
+          
+        <audio src="./audio/225_Perusn_kym__.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0225.smil#rgn_txt_0225_0001"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="PROMPT_ON_BASIC_VIEW_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_LOADLASTDTB" widget="checkbox">
+        <caption>
+          <text>Lataa viimeisin kirja käynnistettäessä.</text>
+          <originalText>Load the most recently read book when the software starts.</originalText>
+          
+        <audio src="./audio/226_Lataa_viimei.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0226.smil#rgn_txt_0226_0001"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="LOAD_LAST_READ_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_BMKDIR" widget="textfield">
+        <caption mfcid="IDC_BMKDIRLABEL">
+          <text>Kirjanmerkkien hakemisto:</text>
+          <originalText>Bookmarks directory:</originalText>
+          
+        <audio src="./audio/227_Kirjanmerkki.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0227.smil#rgn_txt_0227_0001"/></caption>
+        <description>
+          <text>Kirjoita kenttään kirjanmerkkien hakemistopolku.</text>
+          <originalText>Type the path to the bookmarks folder in this field.</originalText>
+          
+        <audio src="./audio/228_Kirjoita_ken.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0228.smil#rgn_txt_0228_0001"/></description>
+      </control>
+      <accelerator>
+        <text>Ctrl+1</text>
+        <originalText>Ctrl+1</originalText>
+        
+      <audio src="./audio/229_Ctrl_1.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0229.smil#rgn_txt_0229_0001"/></accelerator>
+    </dialog>
+    <dialog mfcid="IDD_NAVIGATIONOPTIONS">
+      <note>This dialog lists navigation options for the current publication.</note>
+      <caption>
+        <text>Navigaatiovalinnat</text>
+        <originalText>Navigation Options</originalText>
+        
+      <audio src="./audio/230_Navigaatiova.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0230.smil#rgn_txt_0230_0001"/></caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text>Tässä listassa on osiot, joihin voit mennä suoraan.</text>
+          <originalText>This is a list of items to which you may navigate directly.</originalText>
+          
+        <audio src="./audio/231_T_ss__listas.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0231.smil#rgn_txt_0231_0001"/></caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="TOC_CATEGORIES"/>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_GOTOPAGE">
+      <note>This dialog lets the user jump to a certain page</note>
+      <caption>
+        <text>Mene sivulle</text>
+        <originalText>Go To Page</originalText>
+        
+      <audio src="./audio/232_Mene_sivulle.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0232.smil#rgn_txt_0232_0001"/></caption>
+      <description>
+        <text>Tästä voit hypätä sivulle numeron tai tunnisteen mukaan.</text>
+        <originalText>Here you can jump to a page number or page label.</originalText>
+        
+      <audio src="./audio/233_T_st__voit_h.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0233.smil#rgn_txt_0233_0001"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem>
+          <text>Kun olet kirjoittanut sivun numeron, paina enter-näppäintä siirtyäksesi sinne.</text>
+          <originalText>After typing in your page number, press enter to go there.</originalText>
+          
+        <audio src="./audio/234_Kun_olet_kir.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0234.smil#rgn_txt_0234_0001"/></promptItem>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <!--removed this as it is probably not very useful, and it was incorrectly recorded-->
+        <!--<promptItem refid="textBoxRepeatInstr"/>-->
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <text>Paina tätä nappulaa siirtyäksesi halutulle sivulle.</text>
+          <originalText>Press this button to go to the desired page.</originalText>
+          
+        <audio src="./audio/235_Paina_t_t__n.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0235.smil#rgn_txt_0235_0001"/></description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/236_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0236.smil#rgn_txt_0236_0001"/></mnemonic>
+      </control>
+      <control mfcid="IDC_PAGENUM" widget="textfield">
+        <caption mfcid="IDC_STATIC">
+          <text>Anna sivun numero:</text>
+          <originalText>Enter a page number:</originalText>
+          
+        <audio src="./audio/237_Anna_sivun_n.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0237.smil#rgn_txt_0237_0001"/></caption>
+        <description>
+          <text>Kirjoita haluamasi sivun numero tai tunniste.</text>
+          <originalText>Type the number or label of the page you want to go to.</originalText>
+          
+        <audio src="./audio/238_Kirjoita_hal.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0238.smil#rgn_txt_0238_0001"/></description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_FULLSUMMARY">
+      <note>This dialog lists key publication metadata.</note>
+      <caption>
+        <text>Julkaisun yhteenveto</text>
+        <originalText>Publication Summary</originalText>
+        
+      <audio src="./audio/239_Julkaisun_yh.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0239.smil#rgn_txt_0239_0001"/></caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text>Tässä on tietoa julkaisusta.</text>
+          <originalText>This is a list of publication metadata.</originalText>
+          
+        <audio src="./audio/240_T_ss__on_tie.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0240.smil#rgn_txt_0240_0001"/></caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="no">
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>Tämän kirjan otsikko on:</text>
+                <originalText>This book is titled:</originalText>
+                
+              <audio src="./audio/241_T_m_n_kirjan.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0241.smil#rgn_txt_0241_0001"/></promptItem>
+              <promptVar name="META_TITLE"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>Kirjoittaja:</text>
+                <originalText>Written by:</originalText>
+                
+              <audio src="./audio/242_Kirjoittaja_.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0242.smil#rgn_txt_0242_0001"/></promptItem>
+              <promptVar name="META_CREATOR"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>Julkaisija:</text>
+                <originalText>Published by:</originalText>
+                
+              <audio src="./audio/243_Julkaisija_.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0243.smil#rgn_txt_0243_0001"/></promptItem>
+              <promptVar name="META_PUBLISHER"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_DESCRIPTION">
+            <prompt>
+              <promptItem>
+                <text>Kuvailu:</text>
+                <originalText>Description:</originalText>
+                
+              <audio src="./audio/244_Kuvailu_.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0244.smil#rgn_txt_0244_0001"/></promptItem>
+              <promptVar name="META_DESC"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>Sisällysluettelon navigaatiopisteiden lukumäärä:</text>
+                <originalText>Number of navigation points in the table of contents:</originalText>
+                
+              <audio src="./audio/245_Sis_llysluet.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0245.smil#rgn_txt_0245_0001"/></promptItem>
+              <promptVar name="META_TOCITEMS"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>Luvun maksimisyvyys:</text>
+                <originalText>Maximum section depth:</originalText>
+                
+              <audio src="./audio/246_Luvun_maksim.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0246.smil#rgn_txt_0246_0001"/></promptItem>
+              <promptVar name="META_DEPTH"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text>Esilehtisivut:</text>
+                <originalText>Front matter pages:</originalText>
+                
+              <audio src="./audio/247_Esilehtisivu.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0247.smil#rgn_txt_0247_0001"/></promptItem>
+              <promptVar name="META_PAGEFRONT"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text>Normaalisivut:</text>
+                <originalText>Regular pages:</originalText>
+                
+              <audio src="./audio/248_Normaalisivu.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0248.smil#rgn_txt_0248_0001"/></promptItem>
+              <promptVar name="META_PAGENORMAL"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text>Erikoissivut:</text>
+                <originalText>Special pages:</originalText>
+                
+              <audio src="./audio/249_Erikoissivut.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0249.smil#rgn_txt_0249_0001"/></promptItem>
+              <promptVar name="META_PAGESPECIAL"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>Kokonaiskesto:</text>
+                <originalText>Total duration:</originalText>
+                
+              <audio src="./audio/250_Kokonaiskest.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0250.smil#rgn_txt_0250_0001"/></promptItem>
+              <promptVar name="META_TOTALTIME"/>
+            </prompt>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+  </dialogs>
+  <prompts>
+    <promptItemRefs>
+      <promptItem id="altC_to_close">
+        <text>Paina Alt + C viestiruudun sulkemiseksi.</text>
+        <originalText>Press Alt + C to close the dialog.</originalText>
+        
+      <audio src="./audio/251_Paina_Alt___.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0251.smil#rgn_txt_0251_0001"/></promptItem>
+      <promptItem id="altC_to_cancel">
+        <text>Paina Alt + C viestiruudun peruuttamiseksi.</text>
+        <originalText>Press Alt + C to cancel the dialog.</originalText>
+        
+      <audio src="./audio/252_Paina_Alt___.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0252.smil#rgn_txt_0252_0001"/></promptItem>
+      <promptItem id="thisItem">
+        <text>Tämä osio</text>
+        <originalText>This item</originalText>
+        
+      <audio src="./audio/253_T_m__osio.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0253.smil#rgn_txt_0253_0001"/></promptItem>
+      <promptItem id="spaceToToggle">
+        <text>Paina välilyöntinäppäintä arvon vaihtamiseksi.</text>
+        <originalText>Press the space bar to toggle the value.</originalText>
+        
+      <audio src="./audio/254_Paina_v_lily.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0254.smil#rgn_txt_0254_0001"/></promptItem>
+      <promptItem id="tabAround">
+        <text>Liiku sarkaimella viestiruudun valinnoissa.</text>
+        <originalText>Hit tab to move around the options on the dialog.</originalText>
+        
+      <audio src="./audio/255_Liiku_sarkai.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0255.smil#rgn_txt_0255_0001"/></promptItem>
+      <promptItem id="ctrl2_for_colorsdialog">
+        <text>Siirry värien valintaan painamalla control + 2.</text>
+        <originalText>Press control + 2 to switch to the colors dialog.</originalText>
+        
+      <audio src="./audio/256_Siirry_v_rie.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0256.smil#rgn_txt_0256_0001"/></promptItem>
+      <promptItem id="ctrl3_for_langsdialog">
+        <text>Siirry kielivalintaan painamalla control + 3.</text>
+        <originalText>Press control + 3 to switch to the language options dialog.</originalText>
+        
+      <audio src="./audio/257_Siirry_kieli.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0257.smil#rgn_txt_0257_0001"/></promptItem>
+      <promptItem id="ctrl1_for_prefsdialog">
+        <text>Siirry yleisiin asetuksiin painamalla control + 1.</text>
+        <originalText>Press control + 1 to switch to the general preferences dialog.</originalText>
+        
+      <audio src="./audio/258_Siirry_yleis.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0258.smil#rgn_txt_0258_0001"/></promptItem>
+      <promptItem id="thisItemIsCurrently">
+        <text>Tämä osio on nyt</text>
+        <originalText>This item is currently</originalText>
+        
+      <audio src="./audio/259_T_m__osio_on.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0259.smil#rgn_txt_0259_0001"/></promptItem>
+      <promptItem id="enter_to_close">
+        <text>Paina enter-näppäintä viestiruudun sulkemiseksi.</text>
+        <originalText>Press enter to close the dialog.</originalText>
+        
+      <audio src="./audio/260_Paina_enter_.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0260.smil#rgn_txt_0260_0001"/></promptItem>
+      <promptItem id="browse_button_caption">
+        <text>Selaa...</text>
+        <originalText>Browse...</originalText>
+        
+      <audio src="./audio/261_Selaa___.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0261.smil#rgn_txt_0261_0001"/></promptItem>
+      <promptItem id="browse_button_description">
+        <text>Paina kansioiden selausruudun avaamiseksi.</text>
+        <originalText>Press to open the folder browse dialog.</originalText>
+        
+      <audio src="./audio/262_Paina_kansio.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0262.smil#rgn_txt_0262_0001"/></promptItem>
+      <promptItem id="ok_button_caption">
+        <text>OK</text>
+        <originalText>OK</originalText>
+        
+      <audio src="./audio/263_OK.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0263.smil#rgn_txt_0263_0001"/></promptItem>
+      <promptItem id="ok_button_description">
+        <text>Paina OK tämän ruudun sulkemiseksi.</text>
+        <originalText>Press OK to close this dialog.</originalText>
+        
+      <audio src="./audio/264_Paina_OK_t_m.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0264.smil#rgn_txt_0264_0001"/></promptItem>
+      <promptItem id="cancel_button_caption">
+        <text mnemonic="C">Cancel</text>
+        <originalText>Cancel</originalText>
+        
+      <audio src="./audio/265_Cancel.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0265.smil#rgn_txt_0265_0001"/></promptItem>
+      <promptItem id="cancel_button_description">
+        <text>Paina tämän ruudun peruuttamiseksi.</text>
+        <originalText>Press to cancel this dialog.</originalText>
+        
+      <audio src="./audio/266_Paina_t_m_n_.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0266.smil#rgn_txt_0266_0001"/></promptItem>
+      <promptItem id="list_reads_automatically">
+        <text>Tämä lista luetaan automaattisesti.</text>
+        <originalText>This list will be read automatically.</originalText>
+        
+      <audio src="./audio/267_T_m__lista_l.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0267.smil#rgn_txt_0267_0001"/></promptItem>
+      <promptItem id="repeatLastPromptInstr">
+        <text>Paina Control + R viimeisen kehotteen toistamiseksi.</text>
+        <originalText>Press Control + R to repeat the last prompt.</originalText>
+        
+      <audio src="./audio/268_Paina_Contro.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0268.smil#rgn_txt_0268_0001"/></promptItem>
+      <promptItem id="thisDialogNotSelfVoicing">
+        <text>Tällä viestiruudulla ei ole vielä omaa ääntä.</text>
+        <originalText>This dialog is not yet self-voicing.</originalText>
+        
+      <audio src="./audio/269_T_ll__viesti.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0269.smil#rgn_txt_0269_0001"/></promptItem>
+      <promptItem id="escapeToCancel">
+        <text>Paina esc-näppäintä peruuttamiseksi</text>
+        <originalText>Press escape to cancel</originalText>
+        
+      <audio src="./audio/270_Paina_esc_n_.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0270.smil#rgn_txt_0270_0001"/></promptItem>
+      <promptItem id="hearDlgInstructions">
+        <text>Paina Control + I kuullaksesi tämän viestiruudun ohjeet.</text>
+        <originalText>Press Control + I to hear instructions for this dialog.</originalText>
+        
+      <audio src="./audio/271_Paina_Contro.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0271.smil#rgn_txt_0271_0001"/></promptItem>
+      <promptItem id="textBoxRepeatInstr">
+        <text>Paina Control + T viimeisen laatikon tekstin toistamiseksi.</text>
+        <originalText>Press Control + T to repeat the text in the last text box.</originalText>
+        
+      <audio src="./audio/272_Paina_Contro.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0272.smil#rgn_txt_0272_0001"/></promptItem>
+      <promptItem id="nav_window">
+        <text>Navigaatio</text>
+        <originalText>Navigation</originalText>
+        
+      <audio src="./audio/273_Navigaatio.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0273.smil#rgn_txt_0273_0001"/></promptItem>
+      <promptItem id="sections">
+        <text>Luvut</text>
+        <originalText>Sections</originalText>
+        
+      <audio src="./audio/274_Luvut.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0274.smil#rgn_txt_0274_0001"/></promptItem>
+      <promptItem id="pages">
+        <text>Sivut</text>
+        <originalText>Pages</originalText>
+        
+      <audio src="./audio/275_Sivut.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0275.smil#rgn_txt_0275_0001"/></promptItem>
+      <promptItem id="noterefs">
+        <text>Alaviitteet</text>
+        <originalText>Footnotes</originalText>
+        
+      <audio src="./audio/276_Alaviitteet.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0276.smil#rgn_txt_0276_0001"/></promptItem>
+      <promptItem id="prodnotes">
+        <text>Tuottajan huomautukset</text>
+        <originalText>Producer notes</originalText>
+        
+      <audio src="./audio/277_Tuottajan_hu.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0277.smil#rgn_txt_0277_0001"/></promptItem>
+      <promptItem id="sidebars">
+        <text>Sivupalkit</text>
+        <originalText>Sidebars</originalText>
+        
+      <audio src="./audio/278_Sivupalkit.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0278.smil#rgn_txt_0278_0001"/></promptItem>
+      <promptItem id="groups">
+        <text>Ryhmitellyt osiot</text>
+        <originalText>Grouped items</originalText>
+        
+      <audio src="./audio/279_Ryhmitellyt_.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0279.smil#rgn_txt_0279_0001"/></promptItem>
+      <promptItem id="navigation_sidebar_caption">
+        <text>Navigaatio</text>
+        <originalText>Navigation</originalText>
+        
+      <audio src="./audio/280_Navigaatio.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0280.smil#rgn_txt_0280_0001"/></promptItem>
+      <promptItem id="ready">
+        <text>Valmis</text>
+        <originalText>Ready</originalText>
+        
+      <audio src="./audio/281_Valmis.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0281.smil#rgn_txt_0281_0001"/></promptItem>
+      <promptItem id="property_sheet_caption">
+        <text>Asetukset</text>
+        <originalText>Preferences</originalText>
+        
+      <audio src="./audio/282_Asetukset.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0282.smil#rgn_txt_0282_0001"/></promptItem>
+      <promptItem id="selfolder_title">
+        <text>Valitse kansio</text>
+        <originalText>Select a Folder</originalText>
+        
+      <audio src="./audio/283_Valitse_kans.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0283.smil#rgn_txt_0283_0001"/></promptItem>
+      <promptItem id="selfolder_instr">
+        <text>Valitse kansio alla olevasta hakemistosta.</text>
+        <originalText>Select a folder from the directory below.</originalText>
+        
+      <audio src="./audio/284_Valitse_kans.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0284.smil#rgn_txt_0284_0001"/></promptItem>
+      <promptItem id="daisy_books">
+        <text>DAISY-kirjat</text>
+        <originalText>DAISY Books</originalText>
+        
+      <audio src="./audio/285_DAISY_kirjat.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0285.smil#rgn_txt_0285_0001"/></promptItem>
+      <promptItem id="folder_does_not_exist">
+        <text>Kansiota %s ei ole olemassa. Haluatko luoda sen?</text>
+        <originalText>The folder %s does not exist. Do you want the folder to be created?</originalText>
+        
+      <audio src="./audio/286_Kansiota__s_.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0286.smil#rgn_txt_0286_0001"/></promptItem>
+      <promptItem id="folder_invalid">
+        <text>Tämä kansion nimi on epäkelpo. Valitse toinen.</text>
+        <originalText>This folder name is invalid. Please choose another.</originalText>
+        
+      <audio src="./audio/287_T_m__kansion.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0287.smil#rgn_txt_0287_0001"/></promptItem>
+      <promptItem id="cant_create_folder">
+        <text>Tätä kansiota ei voi luoda. Tarkista uudelleen.</text>
+        <originalText>This folder can not be created. Please double check.</originalText>
+        
+      <audio src="./audio/288_T_t__kansiot.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0288.smil#rgn_txt_0288_0001"/></promptItem>
+      <promptItem id="not_available">
+        <text>Ei saatavissa</text>
+        <originalText>Not available</originalText>
+        
+      <audio src="./audio/289_Ei_saataviss.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0289.smil#rgn_txt_0289_0001"/></promptItem>
+      <promptItem id="numeric_zero">
+        <note>All numerals should be translated into numerals, not words.</note>
+        <text>0</text>
+        <originalText>0</originalText>
+        
+      <audio src="./audio/290_0.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0290.smil#rgn_txt_0290_0001"/></promptItem>
+      <promptItem id="numeric_one">
+        <text>1</text>
+        <originalText>1</originalText>
+        
+      <audio src="./audio/291_1.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0291.smil#rgn_txt_0291_0001"/></promptItem>
+      <promptItem id="numeric_two">
+        <text>2</text>
+        <originalText>2</originalText>
+        
+      <audio src="./audio/292_2.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0292.smil#rgn_txt_0292_0001"/></promptItem>
+      <promptItem id="numeric_three">
+        <text>3</text>
+        <originalText>3</originalText>
+        
+      <audio src="./audio/293_3.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0293.smil#rgn_txt_0293_0001"/></promptItem>
+      <promptItem id="numeric_four">
+        <text>4</text>
+        <originalText>4</originalText>
+        
+      <audio src="./audio/294_4.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0294.smil#rgn_txt_0294_0001"/></promptItem>
+      <promptItem id="numeric_five">
+        <text>5</text>
+        <originalText>5</originalText>
+        
+      <audio src="./audio/295_5.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0295.smil#rgn_txt_0295_0001"/></promptItem>
+      <promptItem id="numeric_six">
+        <text>6</text>
+        <originalText>6</originalText>
+        
+      <audio src="./audio/296_6.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0296.smil#rgn_txt_0296_0001"/></promptItem>
+      <promptItem id="numeric_seven">
+        <text>7</text>
+        <originalText>7</originalText>
+        
+      <audio src="./audio/297_7.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0297.smil#rgn_txt_0297_0001"/></promptItem>
+      <promptItem id="numeric_eight">
+        <text>8</text>
+        <originalText>8</originalText>
+        
+      <audio src="./audio/298_8.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0298.smil#rgn_txt_0298_0001"/></promptItem>
+      <promptItem id="numeric_nine">
+        <text>9</text>
+        <originalText>9</originalText>
+        
+      <audio src="./audio/299_9.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0299.smil#rgn_txt_0299_0001"/></promptItem>
+      <promptItem id="deleted">
+        <text>poistettu</text>
+        <originalText>deleted</originalText>
+        
+      <audio src="./audio/300_poistettu.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0300.smil#rgn_txt_0300_0001"/></promptItem>
+      <promptItem id="will_be_skipped">
+        <text>ohitetaan</text>
+        <originalText>will be skipped</originalText>
+        
+      <audio src="./audio/301_ohitetaan.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0301.smil#rgn_txt_0301_0001"/></promptItem>
+      <promptItem id="will_be_played">
+        <text>toistetaan</text>
+        <originalText>will be played</originalText>
+        
+      <audio src="./audio/302_toistetaan.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0302.smil#rgn_txt_0302_0001"/></promptItem>
+      <promptItem id="item_on">
+        <text>päällä</text>
+        <originalText>on</originalText>
+        
+      <audio src="./audio/303_p__ll_.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0303.smil#rgn_txt_0303_0001"/></promptItem>
+      <promptItem id="item_off">
+        <text>pois päältä</text>
+        <originalText>off</originalText>
+        
+      <audio src="./audio/304_pois_p__lt_.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0304.smil#rgn_txt_0304_0001"/></promptItem>
+      <promptItem id="item_selected">
+        <text>valittu</text>
+        <originalText>selected</originalText>
+        
+      <audio src="./audio/305_valittu.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0305.smil#rgn_txt_0305_0001"/></promptItem>
+      <promptItem id="item_deselected">
+        <text>ei-valittu</text>
+        <originalText>deselected</originalText>
+        
+      <audio src="./audio/306_ei_valittu.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0306.smil#rgn_txt_0306_0001"/></promptItem>
+      <promptItem id="keyboardShortcut">
+        <text>Pikanäppäin</text>
+        <originalText>Keyboard Shortcut</originalText>
+        
+      <audio src="./audio/307_Pikan_pp_in.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0307.smil#rgn_txt_0307_0001"/></promptItem>
+      <promptItem id="icon">
+        <text>Ikoni </text>
+        <originalText>Icon</originalText>
+        
+      <audio src="./audio/308_Ikoni.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0308.smil#rgn_txt_0308_0001"/></promptItem>
+      <promptItem id="menu">
+        <text>Valikko</text>
+        <originalText>Menu</originalText>
+        
+      <audio src="./audio/309_Valikko.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0309.smil#rgn_txt_0309_0001"/></promptItem>
+      <promptItem id="followedBy">
+        <note>This is used in the context of a sequence of key presses, as in "Press Alt + V, followed by S"</note>
+        <text>sitten</text>
+        <originalText>followed by</originalText>
+        
+      <audio src="./audio/310_sitten.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0310.smil#rgn_txt_0310_0001"/></promptItem>
+      <promptItem id="submenu">
+        <text>Alavalikko</text>
+        <originalText>Sub Menu</originalText>
+        
+      <audio src="./audio/311_Alavalikko.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0311.smil#rgn_txt_0311_0001"/></promptItem>
+    </promptItemRefs>
+    <generalPrompts>
+      <prompt id="dialogClosed">
+        <promptItem>
+          <text>Viestiruutu suljettu.</text>
+          <originalText>Dialog closed.</originalText>
+          
+        <audio src="./audio/312_Viestiruutu_.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0312.smil#rgn_txt_0312_0001"/></promptItem>
+      </prompt>
+      <prompt id="textFieldEntry">
+        <promptItem>
+          <text>Tekstikentän sisältö:</text>
+          <originalText>Text field entry is:</originalText>
+          
+        <audio src="./audio/313_Tekstikent_n.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0313.smil#rgn_txt_0313_0001"/></promptItem>
+        <promptVar name="TEXT_FIELD"/>
+      </prompt>
+      <prompt id="notSelfVoicing">
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+      </prompt>
+      <prompt id="bookAtPathChanged">
+        <promptItem>
+          <text>Etsimäsi kirjan sijainti on vaihtunut. Sen sijaan löytyi toinen kirja. Onko CD-ROM-asemasi sisältö vaihtunut?</text>
+          <originalText>The location of the book you are looking for has changed.  A different book was found instead.  Did the contents of your CD-ROM drive change?</originalText>
+          
+        <audio src="./audio/314_Etsim_si_kir.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0314.smil#rgn_txt_0314_0001"/></promptItem>
+      </prompt>
+      <prompt id="generalBookError">
+        <promptItem>
+          <text>Kirjan avaaminen ei onnistunut.</text>
+          <originalText>An error occurred while trying to open the book.</originalText>
+          
+        <audio src="./audio/315_Kirjan_avaam.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0315.smil#rgn_txt_0315_0001"/></promptItem>
+        <promptVar name="BOOK_PATH"/>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+      <prompt id="noCdLoaded">
+        <promptItem>
+          <text>CD-ROM-asemassa ei ole CD-levyä.</text>
+          <originalText>There is not a CD in the CD-ROM drive.</originalText>
+          
+        <audio src="./audio/316_CD_ROM_asema.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0316.smil#rgn_txt_0316_0001"/></promptItem>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+      <prompt id="pluginErrorInit">
+        <promptItem>
+          <text>Valmisohjelma-virhe: init() toimintoa ei löytynyt valmisohjelma DLL-kirjastosta.</text>
+          <originalText>Plug-in error: init() function not found in the plug-in DLL.</originalText>
+          
+        <audio src="./audio/317_Valmisohjelm.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0317.smil#rgn_txt_0317_0001"/></promptItem>
+      </prompt>
+      <prompt id="pluginErrorDll">
+        <promptItem>
+          <text>Valmisohjelma-virhe: Seuraavaa valmisohjelma-kirjastoa ei voitu ladata: </text>
+          <originalText>Plug-in error: The following plug-in library could not be loaded: </originalText>
+          
+        <audio src="./audio/318_Valmisohjelm.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0318.smil#rgn_txt_0318_0001"/></promptItem>
+        <promptVar name="PLUGIN_LIB"/>
+      </prompt>
+      <prompt id="basicViewPrompt">
+        <promptItem>
+          <text>Käytät nyt perusnäkymää. Siirry oletusnäkymään painamalla F11.</text>
+          <originalText>You are now using the basic view mode.  Press F11 to switch back to the default view mode.</originalText>
+          
+        <audio src="./audio/319_K_yt_t_nyt_p.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0319.smil#rgn_txt_0319_0001"/></promptItem>
+      </prompt>
+      <prompt id="OpenFile_notSelfVoicing">
+        <promptItem>
+          <text>Avaa tiedosto -viestiruutu</text>
+          <originalText>Open File Dialog</originalText>
+          
+        <audio src="./audio/320_Avaa_tiedost.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0320.smil#rgn_txt_0320_0001"/></promptItem>
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem>
+          <text>Käytä tiedostovalikossa olevaa "etsi kirjoja" -toimintoa DAISY-kirjojen etsimiseen.</text>
+          <originalText>Use the "search for books" feature, under the file menu, to find DAISY books on your hard drive.</originalText>
+          
+        <audio src="./audio/321_K_yt__tiedos.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0321.smil#rgn_txt_0321_0001"/></promptItem>
+        <promptItem refid="escapeToCancel"/>
+      </prompt>
+      <prompt id="BrowseForFolder_notSelfVoicing">
+        <promptItem>
+          <text>Selaa kansiota -viestiruutu</text>
+          <originalText>Browse for folder dialog</originalText>
+          
+        <audio src="./audio/322_Selaa_kansio.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0322.smil#rgn_txt_0322_0001"/></promptItem>
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem refid="escapeToCancel"/>
+        <promptItem>
+          <text>Kirjoita sitten haluamasi kansion polku tekstilaatikkoon.</text>
+          <originalText>Then, type the path of the folder you want in the text box.</originalText>
+          
+        <audio src="./audio/323_Kirjoita_sit.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0323.smil#rgn_txt_0323_0001"/></promptItem>
+      </prompt>
+      <prompt id="canceled">
+        <promptItem>
+          <text>Peruutettu</text>
+          <originalText>Canceled</originalText>
+          
+        <audio src="./audio/324_Peruutettu.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0324.smil#rgn_txt_0324_0001"/></promptItem>
+      </prompt>
+      <prompt id="loading">
+        <promptItem>
+          <text>Lataus käynnissä</text>
+          <originalText>Loading</originalText>
+          
+        <audio src="./audio/325_Lataus_k_ynn.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0325.smil#rgn_txt_0325_0001"/></promptItem>
+      </prompt>
+      <prompt id="restartForChanges">
+        <promptItem>
+          <text>Käynnistä uudelleen muutosten näkemiseksi.</text>
+          <originalText>Please restart to see your changes.</originalText>
+          
+        <audio src="./audio/326_K_ynnist__uu.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0326.smil#rgn_txt_0326_0001"/></promptItem>
+      </prompt>
+      <prompt id="noBooksFoundOnCd">
+        <promptItem>
+          <text>Tällä CD-ROM-levyllä ei ole DAISY-kirjoja.</text>
+          <originalText>No DAISY books were found on this CD-ROM.</originalText>
+          
+        <audio src="./audio/327_T_ll__CD_ROM.mp3" from="file://c:/devel/amis/trunk/Langpacks/finnish/prompts/khrq0327.smil#rgn_txt_0327_0001"/></promptItem>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+    </generalPrompts>
+  </prompts>
+</ui>

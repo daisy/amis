@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Tugtog at Hinto" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:23" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="23.242s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_0020" id="amis_0020" />
+<seq>
+<audio src="31_Tugtog_at_Hinto.mp3" clip-begin="npt=0.000s" clip-end="npt=1.624s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0052" id="xami_0052" />
+<seq>
+<audio src="31_Tugtog_at_Hinto.mp3" clip-begin="npt=1.624s" clip-end="npt=3.316s" id="qwrt_0002" />
+<audio src="31_Tugtog_at_Hinto.mp3" clip-begin="npt=3.316s" clip-end="npt=5.805s" id="qwrt_0003" />
+<audio src="31_Tugtog_at_Hinto.mp3" clip-begin="npt=5.805s" clip-end="npt=8.294s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0053" id="xami_0053" />
+<seq>
+<audio src="31_Tugtog_at_Hinto.mp3" clip-begin="npt=8.294s" clip-end="npt=9.626s" id="qwrt_0005" />
+<audio src="31_Tugtog_at_Hinto.mp3" clip-begin="npt=9.626s" clip-end="npt=11.585s" id="qwrt_0006" />
+<audio src="31_Tugtog_at_Hinto.mp3" clip-begin="npt=11.585s" clip-end="npt=13.611s" id="qwrt_0007" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0054" id="xami_0054" />
+<seq>
+<audio src="31_Tugtog_at_Hinto.mp3" clip-begin="npt=13.611s" clip-end="npt=15.501s" id="qwrt_0008" />
+<audio src="31_Tugtog_at_Hinto.mp3" clip-begin="npt=15.501s" clip-end="npt=16.371s" id="qwrt_0009" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0055" id="xami_0055" />
+<seq>
+<audio src="31_Tugtog_at_Hinto.mp3" clip-begin="npt=16.371s" clip-end="npt=17.560s" id="qwrt_000A" />
+<audio src="31_Tugtog_at_Hinto.mp3" clip-begin="npt=17.560s" clip-end="npt=18.504s" id="qwrt_000B" />
+<audio src="31_Tugtog_at_Hinto.mp3" clip-begin="npt=18.504s" clip-end="npt=19.449s" id="qwrt_000C" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0056" id="xami_0056" />
+<seq>
+<audio src="31_Tugtog_at_Hinto.mp3" clip-begin="npt=19.449s" clip-end="npt=21.942s" id="qwrt_000D" />
+<audio src="31_Tugtog_at_Hinto.mp3" clip-begin="npt=21.942s" clip-end="npt=23.242s" id="qwrt_000E" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

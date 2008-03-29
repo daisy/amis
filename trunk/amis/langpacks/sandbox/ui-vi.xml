@@ -1,0 +1,1954 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui xml:lang="vi">
+  <containers>
+    <container id="file">
+      <note xml:lang="en">This is the menu header "File"</note>
+      <caption>
+        <text id="_id52734" status="check">Tệp</text>
+        <originalText xml:lang="en">File</originalText>
+        
+      </caption>
+      <action mfcid="ID_MENU_FILE_OPEN" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and a toolbar item</note>
+        <icon src="./open.png" type="smallIcon"/>
+        <caption>
+          <text id="_id52766" status="check">Mở...</text>
+          <originalText xml:lang="en">Open...</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id52781" status="check">Mở một quyển sách Daisy từ hệ thống tệp cục bộ</text>
+          <originalText xml:lang="en">Open a Daisy book from the local file system</originalText>
+          
+        </description>
+      <accelerator><text id="_id52796" xml:lang="en">Ctrl+O</text><originalText xml:lang="en">Ctrl+O</originalText></accelerator><mnemonic><text id="_id52799" xml:lang="en">O</text><originalText xml:lang="en">O</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_FILE_LOADCD" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and a toolbar item</note>
+        <icon src="./settings/img/cd3.ico" type="smallIcon"/>
+        <icon src="./settings/img/cd_big.ico" type="largeIcon"/>
+        <caption>
+          <text id="_id52829" status="check">Tải CD</text>
+          <originalText xml:lang="en">Load CD</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id52844" status="check">Tải một quyển sách DAISY từ đĩa CD ROM:</text>
+          <originalText xml:lang="en">Load a DAISY book from CD ROM</originalText>
+          
+        </description>
+      <accelerator><text id="_id52858" xml:lang="en">Ctrl+L</text><originalText xml:lang="en">Ctrl+L</originalText></accelerator><mnemonic><text id="_id52861" xml:lang="en">L</text><originalText xml:lang="en">L</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_FILE_SEARCHDRIVE" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id52877" status="check">Tìm kiếm...</text>
+          <originalText xml:lang="en">Search...</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id52892" status="check">Tìm kiếm sách DAISY trong các ổ đĩa cục bộ</text>
+          <originalText xml:lang="en">Search local drives for DAISY books</originalText>
+          
+        </description>
+      <mnemonic><text id="_id52906" xml:lang="en">S</text><originalText xml:lang="en">S</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_FILE_PREFERENCES" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id52922" status="check">Sở thích...</text>
+          <originalText xml:lang="en">Preferences...</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id52936" status="check">Đây là hộp thoại sở thích cho ứng dụng.</text>
+          <originalText xml:lang="en">This is the application preferences dialog.</originalText>
+          
+        </description>
+      <mnemonic><text id="_id52951" xml:lang="en">P</text><originalText xml:lang="en">P</originalText></mnemonic></action>
+      <container id="recentBooksList">
+        <note xml:lang="en">This is the menu header for the recent books sub-menu.</note>
+        <caption>
+          <text id="_id52965" status="todo" xml:lang="en">Recent</text>
+          <originalText xml:lang="en">Recent</originalText>
+          
+        </caption>
+        <switch element="action">
+          <action mfcid="ID_FILE_RECENT_EMPTY" widget="menuItem" condition="ID_FILE_RECENT_EMPTY">
+            <note xml:lang="en">This is going to be a menu item</note>
+            <caption>
+              <text id="_id52997" status="check">Trống</text>
+              <originalText xml:lang="en">Empty</originalText>
+              
+            </caption>
+            <description>
+              <text id="_id53011" status="check">Không có sách nào mới đọc gần đây.</text>
+              <originalText xml:lang="en">There are no recently read books.</originalText>
+              
+            </description>
+          </action>
+          <action mfcid="BOOK_BASE_ID" widget="menuItem" condition="BOOK_BASE_ID">
+            <note xml:lang="en">This is going to be a menu item</note>
+            <list repeat="yes">
+              <caption>
+                <promptVar name="RECENT_BOOK_TITLE"/>
+              </caption>
+            </list>
+          </action>
+        </switch>
+      <mnemonic><text id="_id53052" xml:lang="en">R</text><originalText xml:lang="en">R</originalText></mnemonic></container>
+      <action mfcid="ID_MENU_FILE_EXIT" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53068" status="check">Thoát</text>
+          <originalText xml:lang="en">Exit</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id53082" status="check">Thoát AMIS</text>
+          <originalText xml:lang="en">Exit AMIS</originalText>
+          
+        </description>
+      <accelerator><text id="_id53096" xml:lang="en">Alt+F4</text><originalText xml:lang="en">Alt+F4</originalText></accelerator><mnemonic><text id="_id53099" xml:lang="en">x</text><originalText xml:lang="en">x</originalText></mnemonic></action>
+    <accelerator><text id="_id53103" xml:lang="en">Alt+F</text><originalText xml:lang="en">Alt+F</originalText></accelerator><mnemonic><text id="_id53107" xml:lang="en">F</text><originalText xml:lang="en">F</originalText></mnemonic></container>
+    <container id="view">
+      <note xml:lang="en">This is the menu header "View"</note>
+      <caption>
+        <text id="_id53120" status="check">Khung nhìn</text>
+        <originalText xml:lang="en">View</originalText>
+        
+      </caption>
+      <action mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53145" status="ok">Thanh phụ chú</text>
+          <originalText xml:lang="en">Sidebar</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id53160" status="ok">Tắt hoặc bật thanh phụ chú</text>
+          <originalText xml:lang="en">Turn the sidebar on or off.</originalText>
+          
+        </description>
+      <mnemonic><text id="_id53173" xml:lang="en">S</text><originalText xml:lang="en">S</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_VIEW_BASIC" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53189" status="ok">Chế độ xem cơ bản</text>
+          <originalText xml:lang="en">Basic View Mode</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id53204" status="ok">Chuyển góc nhìn sang chế độ cơ bản</text>
+          <originalText xml:lang="en">Switch the view to basic mode.</originalText>
+          
+        </description>
+      <accelerator><text id="_id53217" xml:lang="en">F11</text><originalText xml:lang="en">F11</originalText></accelerator><mnemonic><text id="_id53221" xml:lang="en">B</text><originalText xml:lang="en">B</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_VIEW_CONTRAST" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <icon src="./settings/img/contrast.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id53243" status="ok">Tương phản cao</text>
+          <originalText xml:lang="en">High Contrast</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id53258" status="check">Dùng các màu tương phản cao để hiển thị văn bản</text>
+          <originalText xml:lang="en">Use high contrast colors for the text display.</originalText>
+          
+        </description>
+      <accelerator><text id="_id53272" xml:lang="en">Ctrl+C</text><originalText xml:lang="en">Ctrl+C</originalText></accelerator><mnemonic><text id="_id53276" xml:lang="en">C</text><originalText xml:lang="en">C</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_VIEW_LARGEFONT" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/font.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id53299" status="ok">Tăng cỡ phông</text>
+          <originalText xml:lang="en">Increase Font Size</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id53314" status="ok">Tăng dần cỡ phông</text>
+          <originalText xml:lang="en">Gradually increase the font size.</originalText>
+          
+        </description>
+      <mnemonic><text id="_id53328" xml:lang="en">I</text><originalText xml:lang="en">I</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_VIEW_RESETFONT" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53344" status="ok">Thiết lập lại cỡ phông</text>
+          <originalText xml:lang="en">Reset Font Size</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id53358" status="check">Đặt cỡ phông về thiết lập mặc định</text>
+          <originalText xml:lang="en">Set the font size to the default setting.</originalText>
+          
+        </description>
+      <mnemonic><text id="_id53373" xml:lang="en">R</text><originalText xml:lang="en">R</originalText></mnemonic></action>
+      <action mfcid="NAVLIST_BASE_ID" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <promptVar name="NAV_LIST_NAME"/>
+        </caption>
+        <description>
+          <promptVar name="NAV_LIST_DESCRIPTION"/>
+        </description>
+      </action>
+    <accelerator><text id="_id53403" xml:lang="en">Alt+V</text><originalText xml:lang="en">Alt+V</originalText></accelerator><mnemonic><text id="_id53407" xml:lang="en">V</text><originalText xml:lang="en">V</originalText></mnemonic></container>
+    <container id="play">
+      <note xml:lang="en">This is the menu header "Play"</note>
+      <caption>
+        <text id="_id53420" status="todo" xml:lang="en">Play</text>
+        <originalText xml:lang="en">Play</originalText>
+        
+      </caption>
+      <switch element="action">
+        <action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" condition="canPlay">
+          <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+          <icon src="./settings/img/play-big.ico" type="smallIcon"/>
+          <icon src="./settings/img/play_big.ico" type="largeIcon"/>
+          <caption>
+            <text id="_id53465" status="check">Bật</text>
+            <originalText xml:lang="en">Play</originalText>
+            
+          </caption>
+          <description>
+            <text id="_id53480" status="check">Bật đĩa thu đã đồng bộ hóa.</text>
+            <originalText xml:lang="en">Start synchronized playback.</originalText>
+            
+          </description>
+        <accelerator><text id="_id53494" xml:lang="en">Space</text><originalText xml:lang="en">Space</originalText></accelerator><mnemonic><text id="_id53497" xml:lang="en">P</text><originalText xml:lang="en">P</originalText></mnemonic></action>
+        <action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" condition="canPause">
+          <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+          <icon src="./settings/img/pause.ico" type="smallIcon"/>
+          <icon src="./settings/img/pause_big.ico" type="largeIcon"/>
+          <caption>
+            <text id="_id53529" status="check">Dừng</text>
+            <originalText xml:lang="en">Pause</originalText>
+            
+          </caption>
+          <description>
+            <text id="_id53544" status="check">Tạm dừng phát lại quyển sách DAISY này.</text>
+            <originalText xml:lang="en">Pause playback of this DAISY book.</originalText>
+            
+          </description>
+        <accelerator><text id="_id53558" xml:lang="en">Space</text><originalText xml:lang="en">Space</originalText></accelerator><mnemonic><text id="_id53561" xml:lang="en">a</text><originalText xml:lang="en">a</originalText></mnemonic></action>
+      </switch>
+      <action mfcid="ID_MENU_PLAY_ESCAPE" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53578" status="check">Thoát</text>
+          <originalText xml:lang="en">Escape</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id53593" status="check">Nhảy ra khỏi mục hoặc cấu trúc đang bật.</text>
+          <originalText xml:lang="en">Jump out of the currently playing item or structure.</originalText>
+          
+        </description>
+      <accelerator><text id="_id53608" xml:lang="en">Esc</text><originalText xml:lang="en">Esc</originalText></accelerator><mnemonic><text id="_id53611" xml:lang="en">E</text><originalText xml:lang="en">E</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_PLAY_FASTER" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/fullspeedahead.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id53634" status="check">Nhanh hơn</text>
+          <originalText xml:lang="en">Faster</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id53649" status="check">Tăng tốc độ phát lại.</text>
+          <originalText xml:lang="en">Increase the playback rate.</originalText>
+          
+        </description>
+      <accelerator><text id="_id53662" xml:lang="en">Ctrl++</text><originalText xml:lang="en">Ctrl++</originalText></accelerator><mnemonic><text id="_id53666" xml:lang="en">F</text><originalText xml:lang="en">F</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_PLAY_SLOWER" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/slowdown.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id53689" status="check">Chậm hơn</text>
+          <originalText xml:lang="en">Slower</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id53704" status="check">Giảm tốc độ phát lại.</text>
+          <originalText xml:lang="en">Slow down the playback rate.</originalText>
+          
+        </description>
+      <accelerator><text id="_id53717" xml:lang="en">Ctrl+-</text><originalText xml:lang="en">Ctrl+-</originalText></accelerator><mnemonic><text id="_id53721" xml:lang="en">S</text><originalText xml:lang="en">S</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_PLAY_NORMALSPEED" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/normalspeed.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id53744" status="check">Tốc độ bình thường</text>
+          <originalText xml:lang="en">Normal Speed</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id53758" status="check">Thiết lập lại tốc độ phát lại về bình thường</text>
+          <originalText xml:lang="en">Reset the playback rate to normal.</originalText>
+          
+        </description>
+      <accelerator><text id="_id53773" xml:lang="en">Ctrl+0</text><originalText xml:lang="en">Ctrl+0</originalText></accelerator><mnemonic><text id="_id53776" xml:lang="en">N</text><originalText xml:lang="en">N</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_PLAY_VOLUP" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53792" status="check">Tăng âm lượng</text>
+          <originalText xml:lang="en">Increase Volume</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id53807" status="check">Tăng dần âm lượng</text>
+          <originalText xml:lang="en">Gradually raise the volume.</originalText>
+          
+        </description>
+      <accelerator><text id="_id53821" xml:lang="en">Ctrl+Up</text><originalText xml:lang="en">Ctrl+Up</originalText></accelerator><mnemonic><text id="_id53824" xml:lang="en">I</text><originalText xml:lang="en">I</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_PLAY_VOLDOWN" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53840" status="check">Giảm âm lượng</text>
+          <originalText xml:lang="en">Decrease Volume</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id53854" status="check">Giảm dần âm lượng</text>
+          <originalText xml:lang="en">Gradually lower the volume.</originalText>
+          
+        </description>
+      <accelerator><text id="_id53868" xml:lang="en">Ctrl+Down</text><originalText xml:lang="en">Ctrl+Down</originalText></accelerator><mnemonic><text id="_id53872" xml:lang="en">D</text><originalText xml:lang="en">D</originalText></mnemonic></action>
+    <accelerator><text id="_id53876" xml:lang="en">Alt+P</text><originalText xml:lang="en">Alt+P</originalText></accelerator><mnemonic><text id="_id53879" xml:lang="en">P</text><originalText xml:lang="en">P</originalText></mnemonic></container>
+    <container id="navigate">
+      <note xml:lang="en">This is the menu header "Navigate"</note>
+      <caption>
+        <text id="_id53893" status="check">Điều hướng</text>
+        <originalText xml:lang="en">Navigate</originalText>
+        
+      </caption>
+      <action mfcid="ID_MENU_NAV_PREVSECTION" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevsection.ico" type="smallIcon"/>
+        <icon src="./settings/img/prevsection_big.ico" type="largeIcon"/>
+        <caption>
+          <text id="_id53932" status="check">Phần Trước</text>
+          <originalText xml:lang="en">Previous Section</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id53947" status="check">Chuyển sang phần trước</text>
+          <originalText xml:lang="en">Go to the previous section.</originalText>
+          
+        </description>
+      <accelerator><text id="_id53961" xml:lang="en">Up</text><originalText xml:lang="en">Up</originalText></accelerator><mnemonic><text id="_id53964" xml:lang="en">P</text><originalText xml:lang="en">P</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_NAV_NEXTSECTION" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextsection.ico" type="smallIcon"/>
+        <icon src="./settings/img/nextsection_big.ico" type="largeIcon"/>
+        <caption>
+          <text id="_id53994" status="check">Phần tiếp</text>
+          <originalText xml:lang="en">Next Section</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id54009" status="check">Chuyển sang phần tiếp.</text>
+          <originalText xml:lang="en">Go to the next section.</originalText>
+          
+        </description>
+      <accelerator><text id="_id54022" xml:lang="en">Down</text><originalText xml:lang="en">Down</originalText></accelerator><mnemonic><text id="_id54026" xml:lang="en">N</text><originalText xml:lang="en">N</originalText></mnemonic></action>
+      <container id="sectiondepth">
+        <note xml:lang="en">This is the "show section depth" sub-menu pop-up</note>
+        <caption>
+          <text id="_id54040" status="check">Hiển thị độ dày của phần</text>
+          <originalText xml:lang="en">Show Section Depth</originalText>
+          
+        </caption>
+        <switch element="action">
+          <action mfcid="ID_EMPTY" widget="menuItem" condition="ID_EMPTY">
+            <note xml:lang="en">This is going to be a menu item</note>
+            <caption>
+              <text id="_id54071" status="check">Trống</text>
+              <originalText xml:lang="en">Empty</originalText>
+              
+            </caption>
+            <description>
+              <text id="_id54086" status="check">Không có mức chia phần nào</text>
+              <originalText xml:lang="en">There are no section levels.</originalText>
+              
+            </description>
+          </action>
+          <action mfcid="SECTION_DEPTH_BASE_ID" widget="menuItem" condition="SECTION_DEPTH_BASE_ID">
+            <note xml:lang="en">This is going to be a menu item</note>
+            <list repeat="yes">
+              <caption>
+                <promptVar name="SECTION_DEPTH_OPTION"/>
+              </caption>
+            </list>
+          </action>
+        </switch>
+      <mnemonic><text id="_id54128" xml:lang="en">S</text><originalText xml:lang="en">S</originalText></mnemonic></container>
+      <action mfcid="ID_MENU_NAV_PREVPHRASE" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevphasecirc.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id54152" status="check">Cụm từ trước</text>
+          <originalText xml:lang="en">Previous Phrase</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id54166" status="check">Chuyển sang cụm từ trước</text>
+          <originalText xml:lang="en">Go to the previous phrase.</originalText>
+          
+        </description>
+      <accelerator><text id="_id54180" xml:lang="en">Left</text><originalText xml:lang="en">Left</originalText></accelerator></action>
+      <action mfcid="ID_MENU_NAV_NEXTPHRASE" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextphrasecirc.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id54204" status="check">Cụm từ tiếp</text>
+          <originalText xml:lang="en">Next Phrase</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id54218" status="check">Chuyển sang cụm từ tiếp</text>
+          <originalText xml:lang="en">Go to the next phrase.</originalText>
+          
+        </description>
+      <accelerator><text id="_id54232" xml:lang="en">Right</text><originalText xml:lang="en">Right</originalText></accelerator></action>
+      <action mfcid="ID_MENU_NAV_PREVPAGE" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevpage.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id54256" status="check">Trang trước</text>
+          <originalText xml:lang="en">Previous Page</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id54270" status="check">Chuyển sang trang trước</text>
+          <originalText xml:lang="en">Go to the previous page.</originalText>
+          
+        </description>
+      <accelerator><text id="_id54284" xml:lang="en">Ctrl+Left</text><originalText xml:lang="en">Ctrl+Left</originalText></accelerator></action>
+      <action mfcid="ID_MENU_NAV_NEXTPAGE" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextpage.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id54307" status="check">Trang tiếp</text>
+          <originalText xml:lang="en">Next Page</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id54322" status="check">Chuyển sang trang tiếp</text>
+          <originalText xml:lang="en">Go to the next page.</originalText>
+          
+        </description>
+      <accelerator><text id="_id54336" xml:lang="en">Ctrl+Right</text><originalText xml:lang="en">Ctrl+Right</originalText></accelerator></action>
+      <action mfcid="ID_MENU_NAV_GOTOPAGE" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id54352" status="check">Chuyển sang trang...</text>
+          <originalText xml:lang="en">Go to Page...</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id54366" status="check">Chuyển sang một trang cụ thể</text>
+          <originalText xml:lang="en">Go to a specific page.</originalText>
+          
+        </description>
+      <accelerator><text id="_id54380" xml:lang="en">Ctrl+G</text><originalText xml:lang="en">Ctrl+G</originalText></accelerator></action>
+      <action mfcid="ID_MENU_NAV_FINDINTEXT" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id54396" status="check">Tìm trong văn bản</text>
+          <originalText xml:lang="en">Find in Text</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id54410" status="check">Tìm kiếm một từ hoặc một cụm từ trong văn bản.</text>
+          <originalText xml:lang="en">Search for a word or phrase in the text.</originalText>
+          
+        </description>
+      <accelerator><text id="_id54425" xml:lang="en">Ctrl+F</text><originalText xml:lang="en">Ctrl+F</originalText></accelerator><mnemonic><text id="_id54428" xml:lang="en">F</text><originalText xml:lang="en">F</originalText></mnemonic></action>
+    <accelerator><text id="_id54432" xml:lang="en">Alt+N</text><originalText xml:lang="en">Alt+N</originalText></accelerator><mnemonic><text id="_id54436" xml:lang="en">N</text><originalText xml:lang="en">N</originalText></mnemonic></container>
+    <container id="bookmarks">
+      <note xml:lang="en">This is the menu header "Bookmarks"</note>
+      <caption>
+        <text id="_id54449" status="check">Dấu sách</text>
+        <originalText xml:lang="en">Bookmarks</originalText>
+        
+      </caption>
+      <action mfcid="ID_MENU_BMK_ADD" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/adbookmark.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id54481" status="check">Thêm dấu sách</text>
+          <originalText xml:lang="en">Add Bookmark</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id54496" status="check">Đánh dấu vị trí hiện tại của bạn</text>
+          <originalText xml:lang="en">Bookmark your current position.</originalText>
+          
+        </description>
+      <accelerator><text id="_id54510" xml:lang="en">Ctrl+D</text><originalText xml:lang="en">Ctrl+D</originalText></accelerator><mnemonic><text id="_id54513" xml:lang="en">A</text><originalText xml:lang="en">A</originalText></mnemonic></action>
+      <action mfcid="BOOKMARK_BASE_ID" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOKMARK_TITLE"/>
+          </caption>
+        </list>
+      </action>
+    <accelerator><text id="_id54542" xml:lang="en">Alt+B</text><originalText xml:lang="en">Alt+B</originalText></accelerator><mnemonic><text id="_id54545" xml:lang="en">B</text><originalText xml:lang="en">B</originalText></mnemonic></container>
+    <container id="info">
+      <note xml:lang="en">This is the menu header "Info"</note>
+      <caption>
+        <text id="_id54558" status="check">Thông tin</text>
+        <originalText xml:lang="en">Info</originalText>
+        
+      </caption>
+      <action mfcid="ID_MENU_INFO_SKIP" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id54583" status="check">Các mục có thể bỏ qua...</text>
+          <originalText xml:lang="en">Skippable Items...</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id54598" status="check">Xem các mục có thể bỏ qua trong xuất bản phẩm này</text>
+          <originalText xml:lang="en">View the skippable items for this publication.</originalText>
+          
+        </description>
+      <mnemonic><text id="_id54613" xml:lang="en">S</text><originalText xml:lang="en">S</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_INFO_SUMMARY" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/info.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id54636" status="check">Tóm tắt đầy đủ</text>
+          <originalText xml:lang="en">Full Summary</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id54650" status="check">Lấy tất cả các thông tin tóm tắt cho sản phẩm này</text>
+          <originalText xml:lang="en">Get all summary info for this publication.</originalText>
+          
+        </description>
+      <mnemonic><text id="_id54665" xml:lang="en">F</text><originalText xml:lang="en">F</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_INFO_CURRENTPOSITION" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id54680" status="check">Vị trí hiện tại</text>
+          <originalText xml:lang="en">Current Position</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id54695" status="check">Lấy thông tin về vị trí hiện tại của bạn</text>
+          <originalText xml:lang="en">Get information about your current position.</originalText>
+          
+        </description>
+      <mnemonic><text id="_id54710" xml:lang="en">C</text><originalText xml:lang="en">C</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_INFO_NAVOPTIONS" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id54725" status="check">Tùy chọn Điều hướng</text>
+          <originalText xml:lang="en">Navigation Options</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id54740" status="check">Tìm hiểu về các tùy chọn điều hướng trong xuất bản phẩm này</text>
+          <originalText xml:lang="en">Learn about your navigation options for this publication.</originalText>
+          
+        </description>
+      <mnemonic><text id="_id54755" xml:lang="en">N</text><originalText xml:lang="en">N</originalText></mnemonic></action>
+    <accelerator><text id="_id54760" xml:lang="en">Alt+I</text><originalText xml:lang="en">Alt+I</originalText></accelerator><mnemonic><text id="_id54763" xml:lang="en">I</text><originalText xml:lang="en">I</originalText></mnemonic></container>
+    <container id="help">
+      <note xml:lang="en">This is the menu header "Help"</note>
+      <caption>
+        <text id="_id54776" status="check">Trợ giúp</text>
+        <originalText xml:lang="en">Help</originalText>
+        
+      </caption>
+      <action mfcid="ID_MENU_HELP_CONTENTS" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/help.ico" type="smallIcon"/>
+        <icon src="./settings/img/help_big.ico" type="largeIcon"/>
+        <caption>
+          <text id="_id54815" status="check">Nội dung</text>
+          <originalText xml:lang="en">Contents</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id54830" status="check">Lấy thông tin trợ giúp sử dụng AMIS</text>
+          <originalText xml:lang="en">Get help using AMIS</originalText>
+          
+        </description>
+      <mnemonic><text id="_id54844" xml:lang="en">C</text><originalText xml:lang="en">C</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_HELP_ABOUT" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id54859" status="check">Về AMIS</text>
+          <originalText xml:lang="en">About AMIS</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id54874" status="check">Tìm hiểu về DAISY và DAISY-for-All</text>
+          <originalText xml:lang="en">Find out about AMIS and DAISY-for-All.</originalText>
+          
+        </description>
+      <mnemonic><text id="_id54888" xml:lang="en">A</text><originalText xml:lang="en">A</originalText></mnemonic></action>
+    <accelerator><text id="_id54892" xml:lang="en">Alt+H</text><originalText xml:lang="en">Alt+H</originalText></accelerator><mnemonic><text id="_id54896" xml:lang="en">H</text><originalText xml:lang="en">H</originalText></mnemonic></container>
+  </containers>
+  <dialogs>
+    <dialog mfcid="IDD_FIND">
+      <note xml:lang="en">This is the find in text dialog</note>
+      <caption>
+        <text id="_id54912" status="check">Tìm trong văn bản</text>
+        <originalText xml:lang="en">Find in Text</originalText>
+        
+      </caption>
+      <description>
+        <text id="_id54927" status="check">Tại đây bạn có thể tìm kiếm toàn văn bản theo cả hai hướng</text>
+        <originalText xml:lang="en">Here you can search the full text in either direction.</originalText>
+        
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem>
+          <text id="_id54951" status="check">Sau khi gõ vào từ khóa, nhấn enter để bắt đầu tìm kiếm</text>
+          <originalText xml:lang="en">After typing in your search, press enter to begin searching.</originalText>
+          
+        </promptItem>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <promptItem refid="textBoxRepeatInstr"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <text id="_id55000" status="check">Nhấn để bắt đầu tìm kiếm văn bản trong tệp</text>
+          <originalText xml:lang="en">Press to begin searching for text in the file.</originalText>
+          
+        </description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SEARCHSTRING" widget="textfield">
+        <description>
+          <text id="_id55046" status="check">Gõ vào văn bản cần tìm kiếm</text>
+          <originalText xml:lang="en">Type the text to search for.</originalText>
+          
+        </description>
+      </control>
+      <control mfcid="IDC_FINDNEXT" widget="radiobutton">
+        <note xml:lang="en">This indicates the direction of the search</note>
+        <caption>
+          <text id="_id55073" status="check">Tìm tiếp</text>
+          <originalText xml:lang="en">Find Next</originalText>
+          
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="SELECTED_OR_DESELECTED" param="FIND_NEXT_IN_TEXT"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_FINDPREV" widget="radiobutton">
+        <note xml:lang="en">This indicates the direction of the search</note>
+        <caption>
+          <text id="_id55117" status="check">Tìm trước</text>
+          <originalText xml:lang="en">Find Previous</originalText>
+          
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptName name="SELECTED_OR_DESELECTED" param="FIND_PREV_IN_TEXT"/>
+          </prompt>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_CDSEARCH">
+      <note xml:lang="en">This dialog appears when more than one book is on a CD-ROM</note>
+      <caption>
+        <text id="_id55160" status="check">Tìm thấy nhiều sách</text>
+        <originalText xml:lang="en">Multiple books found</originalText>
+        
+      </caption>
+      <description mfcid="IDC_STATIC">
+        <text id="_id55177" status="check">Tìm thấy nhiều hơn một quyển sách trên đĩa này. Vui lòng chọn một quyển trong danh sách dưới đây và nhấn Alt + O để mở.</text>
+        <originalText xml:lang="en">More than one book was found on this CD. Please select a book from the list below and press Alt + O to open.</originalText>
+        
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_CANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_OPENBOOK" widget="button">
+        <caption>
+          <text id="_id55246" status="check">Mở</text>
+          <originalText xml:lang="en">Open</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id55261" status="check">Nhấn để đóng hộp thoại này và mở quyển sách đã lựa.</text>
+          <originalText xml:lang="en">Press to close this dialog and open the selected book.</originalText>
+          
+        </description>
+      <mnemonic><text id="_id55276" xml:lang="en">O</text><originalText xml:lang="en">O</originalText></mnemonic></control>
+      <control mfcid="IDC_BOOKLIST" widget="list">
+        <description>
+          <text id="_id55288" status="check">Dùng các phím mũi tên để di chuyển trong danh sách các tiêu đề này.</text>
+          <originalText xml:lang="en">Use the arrow keys to move around this list of titles.</originalText>
+          
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOK_TITLE"/>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_ABOUT">
+      <note xml:lang="en">This dialog gives some basic information about AMIS.</note>
+      <caption>
+        <text id="_id55327" status="check">Về AMIS</text>
+        <originalText xml:lang="en">About AMIS</originalText>
+        
+      </caption>
+      <description>
+        <text id="_id55341" status="check">Hộp thoại cung cấp các thông tin về phần mềm AMIS.</text>
+        <originalText xml:lang="en">Dialog with information about AMIS software.</originalText>
+        
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_AMISNAME" widget="textlabel">
+        <caption>
+          <text id="_id55382" status="check">AMIS: \n Hệ thống Thông tin Đa phương tiện thích ứng</text>
+          <originalText xml:lang="en">AMIS: \nAdaptive Multimedia Information System</originalText>
+          
+        </caption>
+      </control>
+      <control mfcid="IDC_VERSION" translate="no">
+        <caption>
+          <text id="_id55404" xml:lang="en">Version 2.0</text>
+          <originalText xml:lang="en">Version 2.0</originalText>
+          
+        </caption>
+      </control>
+      <control mfcid="IDC_VERSIONNOTE" translate="no">
+        <caption>
+          <text id="_id55426" xml:lang="en">Release Date: 23 Oct 2005</text>
+          <originalText xml:lang="en">Release Date: 23 Oct 2005</originalText>
+          
+        </caption>
+      </control>
+      <control mfcid="IDC_COPYRIGHT" widget="textlabel" translate="no">
+        <caption>
+          <text id="_id55450" xml:lang="en">Copyright © 2006 DAISY for All</text>
+          <originalText xml:lang="en">Copyright © 2006 DAISY for All</originalText>
+          
+        </caption>
+      </control>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_SEARCHDAISY">
+      <note xml:lang="en">This dialog is for searching your hard drive for DAISY books.</note>
+      <caption>
+        <text id="_id55500" status="check">Tìm kiếm sách DAISY</text>
+        <originalText xml:lang="en">Search for DAISY Books</originalText>
+        
+      </caption>
+      <description mfcid="IDC_STATIC">
+        <text id="_id55517" status="check">Bạn có thể tìm sách DAISY trong máy tính của mình. Nhập đường dẫn vào hoặc duyệt một thư mục để tìm, sau đó nhấn "Tìm kiếm" để bắt đầu tìm kiếm.</text>
+        <originalText xml:lang="en">You can search your computer for DAISY books.  Enter a path or browse for a folder to search, then press Search to begin searching.</originalText>
+        
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <promptItem refid="textBoxRepeatInstr"/>
+      </prompt>
+      <control mfcid="IDC_SEARCHPATH" widget="textfield">
+        <description>
+          <text id="_id55569" status="check">Gõ đường dẫn đến thư mục vào trường này.</text>
+          <originalText xml:lang="en">Type the path to the folder in this field.</originalText>
+          
+        </description>
+      </control>
+      <control mfcid="IDC_BROWSE" widget="button">
+        <caption>
+          <promptItem refid="browse_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="browse_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_STARTSEARCH" widget="button">
+        <caption>
+          <text id="_id55615" status="check">Tìm kiếm</text>
+          <originalText xml:lang="en">Search</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id55630" status="check">Nhấn để bắt đầu tìm kiếm.</text>
+          <originalText xml:lang="en">Press to start searching.</originalText>
+          
+        </description>
+      <mnemonic><text id="_id55644" xml:lang="en">S</text><originalText xml:lang="en">S</originalText></mnemonic></control>
+      <control mfcid="IDC_STOPSEARCH" widget="button">
+        <caption>
+          <text id="_id55655" status="check">Dừng</text>
+          <originalText xml:lang="en">Stop</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id55670" status="check">Nhấn để dừng việc tìm kiếm.</text>
+          <originalText xml:lang="en">Press to stop searching.</originalText>
+          
+        </description>
+      <mnemonic><text id="_id55684" xml:lang="en">t</text><originalText xml:lang="en">t</originalText></mnemonic></control>
+      <control mfcid="IDC_SEARCHING" widget="textlabel">
+        <switch element="caption">
+          <caption condition="default">
+            <text id="_id55702" status="check">Sẵn sàng</text>
+            <originalText xml:lang="en">Ready</originalText>
+            
+          </caption>
+          <caption condition="WhileSearching">
+            <text id="_id55718" status="check">Đang tìm...</text>
+            <originalText xml:lang="en">Searching...</originalText>
+            
+          </caption>
+          <caption condition="SearchAborted">
+            <text id="_id55735" status="check">Tìm kiếm dừng.</text>
+            <originalText xml:lang="en">Search stopped.</originalText>
+            
+          </caption>
+          <caption condition="SearchCompleteNoFilesFound">
+            <text id="_id55752" status="check">Tìm kiếm xong: Không tìm thấy tệp nào.</text>
+            <originalText xml:lang="en">Search complete: No files found.</originalText>
+            
+          </caption>
+          <caption condition="SearchCompleteOneFileFound">
+            <text id="_id55770" status="check">Tìm kiếm xong: Tìm thấy một tệp.</text>
+            <originalText xml:lang="en">Search complete: One file found.</originalText>
+            
+          </caption>
+          <caption condition="SearchCompleteFilesFound">
+            <prompt>
+              <promptVar name="NUM_FILES_FOUND"/>
+              <promptItem>
+                <note xml:lang="en">This is used in the sentence "7 files were found"</note>
+                <text id="_id55800" status="check">Các tệp tìm thấy</text>
+                <originalText xml:lang="en">files were found.</originalText>
+                
+              </promptItem>
+            </prompt>
+          </caption>
+        </switch>
+      </control>
+      <control mfcid="IDC_FILESFOUND" widget="list">
+        <description>
+          <text id="_id55826" status="check">Dùng các phím mũi tên để di chuyển trong dang sách các tiêu đề này.</text>
+          <originalText xml:lang="en">Use the arrow keys to move around this list of titles.</originalText>
+          
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOK_TITLE"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_OPENBOOK" widget="button">
+        <caption>
+          <text id="_id55862" status="check">Mở</text>
+          <originalText xml:lang="en">Open</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id55876" status="check">Nhấn để mở tiêu đề được lựa</text>
+          <originalText xml:lang="en">Press to open the selected title.</originalText>
+          
+        </description>
+      <mnemonic><text id="_id55891" xml:lang="en">O</text><originalText xml:lang="en">O</originalText></mnemonic></control>
+      <control mfcid="IDC_CANCELBUTTON">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_SKIP">
+      <note xml:lang="en">This dialog lets the user control rendering of skippable structures.</note>
+      <caption>
+        <text id="_id55927" status="check">Các mục có thể bỏ qua</text>
+        <originalText xml:lang="en">Skippable Items</originalText>
+        
+      </caption>
+      <switch element="description">
+        <description mfcid="IDC_STATIC" condition="hasSkippableStructures">
+          <text id="_id55950" status="check">Quyển sách này có chứa các cấu trúc đặc biệt sau. Đánh dấu vào những cấu trúc bạn muốn bỏ qua.</text>
+          <originalText xml:lang="en">This book contains the following special structures.  Check the ones you want skipped.</originalText>
+          
+        </description>
+        <description mfcid="IDC_STATIC" condition="hasNoSkippableStructures">
+          <text id="_id55972" status="check">Quyển sách này không có các yếu tố có thể bỏ qua.</text>
+          <originalText xml:lang="en">This publication has no skippable elements.</originalText>
+          
+        </description>
+      </switch>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SKIPS" widget="list">
+        <caption>
+          <text id="_id56041" status="check">Các mục có thể bỏ qua</text>
+          <originalText xml:lang="en">Skippable items</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id56055" status="check">Dùng các phím mũi tên để di chuyển trong danh sách các mục có thể bỏ qua này.</text>
+          <originalText xml:lang="en">Use the arrow keys to move around this list of skippable items.</originalText>
+          
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="SKIPPABLE_ITEM"/>
+          </caption>
+          <description>
+            <prompt>
+              <promptVar name="SKIPPABLE_ITEM"/>
+              <promptItem refid="thisItem"/>
+              <promptVar name="WILL_SKIP_OR_NOT" param="SKIPPABLE_ITEM_ID"/>
+            </prompt>
+          </description>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE4">
+      <note xml:lang="en">This dialog lets the user select a language pack.</note>
+      <caption>
+        <text id="_id56116" status="check">Ngôn ngữ</text>
+        <originalText xml:lang="en">Language</originalText>
+        
+      </caption>
+      <description mfcid="IDC_STATIC">
+        <text id="_id56133" status="check">Tại đây bạn có thể thay đổi ngôn ngữ của phần mềm. Các gói ngôn ngữ mới sẽ được tìm kiếm tự động.</text>
+        <originalText xml:lang="en">Here you can change the language of the software.  New language packs are detected automatically.</originalText>
+        
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="ctrl1_for_prefsdialog"/>
+        <promptItem refid="ctrl2_for_colorsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_BTN_SELECTLANG" widget="button">
+        <caption>
+          <text id="_id56189" status="check">Lựa chọn ngôn ngữ</text>
+          <originalText xml:lang="en">Select Language</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id56203" status="check">Nhấn để khẳng định lựa chọn ngôn ngữ của bạn cho giao diện người dùng AMIS.</text>
+          <originalText xml:lang="en">Press to confirm your language selection for the AMIS user interface</originalText>
+          
+        </description>
+      </control>
+      <control mfcid="IDC_LANGLIST" widget="list">
+        <caption mfcid="IDC_STATIC">
+          <text id="_id56229" status="check">Các lựa chọn ngôn ngữ của bạn là:</text>
+          <originalText xml:lang="en">Your language choices are:</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id56244" status="check">Dùng các phím mũi tên để di chuyển trong danh sách các ngôn ngữ.</text>
+          <originalText xml:lang="en">Use the arrow keys to move around this list of languages.</originalText>
+          
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="LANGUAGE_NAME"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_CURRLANG">
+        <caption>
+          <prompt>
+            <promptItem>
+              <text id="_id56282" status="check">Bạn đang dùng AMIS bằng:</text>
+              <originalText xml:lang="en">You are currently using AMIS in</originalText>
+              
+            </promptItem>
+            <promptVar name="CURR_LANGUAGE_NAME"/>
+          </prompt>
+        </caption>
+      </control>
+    <accelerator><text id="_id56304" xml:lang="en">Ctrl+3</text><originalText xml:lang="en">Ctrl+3</originalText></accelerator></dialog>
+    <dialog mfcid="IDD_PROPPAGE2">
+      <note xml:lang="en">This dialog lets the user select which colors AMIS uses</note>
+      <caption>
+        <text id="_id56318" status="check">Thiết lập màu sắc</text>
+        <originalText xml:lang="en">Set Colors</originalText>
+        
+      </caption>
+      <description>
+        <text id="_id56333" status="check">Tại đây bạn có thể thiết lập các tùy chọn về màu sắc cho AMIS.</text>
+        <originalText xml:lang="en">Here you can set color options for AMIS.</originalText>
+        
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem refid="ctrl1_for_prefsdialog"/>
+        <promptItem refid="ctrl3_for_langsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+      </prompt>
+      <control mfcid="IDC_PHRASES" widget="other">
+        <caption>
+          <text id="_id56378" status="check">Tô sáng cụm từ</text>
+          <originalText xml:lang="en">Phrase Highlighting</originalText>
+          
+        </caption>
+      </control>
+      <control mfcid="IDC_TEXTFG" widget="textlabel">
+        <caption>
+          <text id="_id56400" status="check">Tiền cảnh văn bản:</text>
+          <originalText xml:lang="en">Text Foreground: </originalText>
+          
+        </caption>
+      </control>
+      <control mfcid="IDC_TEXTBG" widget="textlabel">
+        <caption>
+          <text id="_id56422" status="check">Nền văn bản:</text>
+          <originalText xml:lang="en">Text Background: </originalText>
+          
+        </caption>
+      </control>
+      <control mfcid="IDC_BORDER" widget="textlabel">
+        <caption>
+          <text id="_id56445" status="check">Viền vùng lựa chọn:</text>
+          <originalText xml:lang="en">Selection Border: </originalText>
+          
+        </caption>
+      </control>
+      <control mfcid="IDC_CONTRAST" widget="other">
+        <caption>
+          <text id="_id56467" status="check">Thiết lập màu tương phản cao</text>
+          <originalText xml:lang="en">High Contrast Settings</originalText>
+          
+        </caption>
+      </control>
+      <control mfcid="IDC_PAGEFG" widget="textlabel">
+        <caption>
+          <text id="_id56490" status="check">Tiền cảnh trang:</text>
+          <originalText xml:lang="en">Page Foreground: </originalText>
+          
+        </caption>
+      </control>
+      <control mfcid="IDC_PAGEBG" widget="textlabel">
+        <caption>
+          <text id="_id56512" status="check">Nền trang:</text>
+          <originalText xml:lang="en">Page Background: </originalText>
+          
+        </caption>
+      </control>
+      <control mfcid="IDC_BTN_RESETCOLORS" widget="button">
+        <caption>
+          <text id="_id56535" status="check">Thiết lập lại màu sắc</text>
+          <originalText xml:lang="en">Reset Colors</originalText>
+          
+        </caption>
+      </control>
+      <control mfcid="IDC_PHRASEPREVIEW" widget="textfield">
+        <caption>
+          <text id="_id56557" status="check">Xem trước màu tô sáng cụm từ.</text>
+          <originalText xml:lang="en">Preview of phrase highlight colors.</originalText>
+          
+        </caption>
+      </control>
+      <control mfcid="IDC_CONTRASTPREVIEW" widget="textfield">
+        <caption>
+          <text id="_id56580" status="check">Xem trước màu tương phản cho trang.</text>
+          <originalText xml:lang="en">Preview of page contrast colors.</originalText>
+          
+        </caption>
+      </control>
+    <accelerator><text id="_id56596" xml:lang="en">Ctrl+2</text><originalText xml:lang="en">Ctrl+2</originalText></accelerator></dialog>
+    <dialog mfcid="IDD_CURRENTPOSITION">
+      <note xml:lang="en">This dialog gives the user information about their current position in the publication.</note>
+      <caption>
+        <text id="_id56610" status="check">Vị trí hiện tại</text>
+        <originalText xml:lang="en">Current Position</originalText>
+        
+      </caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text id="_id56676" status="check">Đây là danh sách các dữ liệu về vị trí hiện tại của bạn.</text>
+          <originalText xml:lang="en">This is a list of data about your current position.</originalText>
+          
+        </caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="no">
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id56708" status="check">Phần hiện tại của bạn có tựa đề:</text>
+                <originalText xml:lang="en">Your current section is titled:</originalText>
+                
+              </promptItem>
+              <promptVar name="CURRENT_SECTION_TITLE"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id56736" status="check">Số trang trong phần này:</text>
+                <originalText xml:lang="en">Number of pages in this section:</originalText>
+                
+              </promptItem>
+              <promptVar name="CURRENT_SECTION_NUM_PAGES"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id56762" status="check">Số tiểu phần trong phần này:</text>
+                <originalText xml:lang="en">Number of subsections in this section:</originalText>
+                
+              </promptItem>
+              <promptVar name="CURRENT_SECTION_NUM_SUBSECTIONS"/>
+            </prompt>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE1">
+      <note xml:lang="en">This dialog lets the user set some basic preferences for AMIS.</note>
+      <caption>
+        <text id="_id56796" status="check">Các sở thích chung</text>
+        <originalText xml:lang="en">General Preferences</originalText>
+        
+      </caption>
+      <description>
+        <text id="_id56811" status="check">Tại đây bạn có thể thiết lập các sở thích chung cho AMIS.</text>
+        <originalText xml:lang="en">Here you can set general preferences for AMIS.</originalText>
+        
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="ctrl2_for_colorsdialog"/>
+        <promptItem refid="ctrl3_for_langsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <promptItem refid="textBoxRepeatInstr"/>
+      </prompt>
+      <control mfcid="IDC_BMKDIRBROWSE" widget="button">
+        <caption>
+          <promptItem refid="browse_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="browse_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SELFVOICING" widget="checkbox">
+        <caption>
+          <text id="_id56892" status="check">Dùng tự phát âm</text>
+          <originalText xml:lang="en">Use self-voicing</originalText>
+          
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="SELF_VOICING_FEATURE"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_TTSVOICE" widget="list">
+        <caption mfcid="IDC_SELTTSLABEL">
+          <text id="_id56934" status="check">Chọn giọng TTS:</text>
+          <originalText xml:lang="en">Select TTS voice:</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id56949" status="check">Dùng các phím mũi tên để di chuyển trong danh sách các giọng này.</text>
+          <originalText xml:lang="en">Use the arrow keys to move around this list of voices</originalText>
+          
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="TTS_VOICE_NAME"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_BASIC" widget="checkbox">
+        <caption>
+          <text id="_id56985" status="check">Bắt đầu AMIS ở chế độ xem cơ bản.</text>
+          <originalText xml:lang="en">Start AMIS in the basic view mode.</originalText>
+          
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="BASIC_VIEW_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_PROMPTONBASICVIEW" widget="checkbox">
+        <caption>
+          <text id="_id57030" status="check">Khi chuyển sang góc nhìn cơ bản, hướng dẫn người dùng trở về góc nhìn mặc định.</text>
+          <originalText xml:lang="en">Upon switching to basic view, tell the user how to go back to the default view.</originalText>
+          
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="PROMPT_ON_BASIC_VIEW_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_LOADLASTDTB" widget="checkbox">
+        <caption>
+          <text id="_id57076" status="check">Tải quyển sách mới đọc gần nhất khi chương trình bắt đầu chạy.</text>
+          <originalText xml:lang="en">Load the most recently read book when the software starts.</originalText>
+          
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="LOAD_LAST_READ_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_BMKDIR" widget="textfield">
+        <caption mfcid="IDC_BMKDIRLABEL">
+          <text id="_id57124" status="check">Thư mục dấu sách:</text>
+          <originalText xml:lang="en">Bookmarks directory:</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id57139" status="check">Gõ đường dẫn đến thư mục dấu sách vào trường này.</text>
+          <originalText xml:lang="en">Type the path to the bookmarks folder in this field.</originalText>
+          
+        </description>
+      </control>
+    <accelerator><text id="_id57155" xml:lang="en">Ctrl+1</text><originalText xml:lang="en">Ctrl+1</originalText></accelerator></dialog>
+    <dialog mfcid="IDD_NAVIGATIONOPTIONS">
+      <note xml:lang="en">This dialog lists navigation options for the current publication.</note>
+      <caption>
+        <text id="_id57169" status="check">Các tùy chọn điều hướng</text>
+        <originalText xml:lang="en">Navigation Options</originalText>
+        
+      </caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text id="_id57234" status="check">Đây là danh sách các mục bạn có thể điều hướng trực tiếp đến.</text>
+          <originalText xml:lang="en">This is a list of items to which you may navigate directly.</originalText>
+          
+        </caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="TOC_CATEGORIES"/>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_GOTOPAGE">
+      <note xml:lang="en">This dialog lets the user jump to a certain page</note>
+      <caption>
+        <text id="_id57281" status="check">Chuyển sang trang</text>
+        <originalText xml:lang="en">Go To Page</originalText>
+        
+      </caption>
+      <description>
+        <text id="_id57296" status="check">Tại đây bạn có thể nhảy sang một số trang hoặc nhãn của trang.</text>
+        <originalText xml:lang="en">Here you can jump to a page number or page label.</originalText>
+        
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem>
+          <text id="_id57320" status="check">Sau khi gõ số trang vào, nhấn Enter để chuyển đến đó.</text>
+          <originalText xml:lang="en">After typing in your page number, press enter to go there.</originalText>
+          
+        </promptItem>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <promptItem refid="textBoxRepeatInstr"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <text id="_id57369" status="check">Nhấn nút này để đi đến trang mong muốn.</text>
+          <originalText xml:lang="en">Press this button to go to the desired page.</originalText>
+          
+        </description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_PAGENUM" widget="textfield">
+        <caption mfcid="IDC_STATIC">
+          <text id="_id57417" status="check">Nhập vào một số trang:</text>
+          <originalText xml:lang="en">Enter a page number:</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id57432" status="check">Gõ số hoặc nhãn của trang mà bạn muốn chuyển tới.</text>
+          <originalText xml:lang="en">Type the number or label of the page you want to go to.</originalText>
+          
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_FULLSUMMARY">
+      <note xml:lang="en">This dialog lists key publication metadata.</note>
+      <caption>
+        <text id="_id57459" status="todo" xml:lang="en">Publication Summary</text>
+        <originalText xml:lang="en">Publication Summary</originalText>
+        
+      </caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text id="_id57524" status="check">Đây là danh sách thông tin về xuất bản phẩm</text>
+          <originalText xml:lang="en">This is a list of publication metadata.</originalText>
+          
+        </caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="no">
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id57555" status="check">Tiêu đề:</text>
+                <originalText xml:lang="en">This book is titled:</originalText>
+                
+              </promptItem>
+              <promptVar name="META_TITLE"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id57581" status="check">Tác giả:</text>
+                <originalText xml:lang="en">Written by:</originalText>
+                
+              </promptItem>
+              <promptVar name="META_CREATOR"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id57606" status="check">Xuất bản:</text>
+                <originalText xml:lang="en">Published by:</originalText>
+                
+              </promptItem>
+              <promptVar name="META_PUBLISHER"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_DESCRIPTION">
+            <prompt>
+              <promptItem>
+                <text id="_id57633" status="check">Miêu tả:</text>
+                <originalText xml:lang="en">Description:</originalText>
+                
+              </promptItem>
+              <promptVar name="META_DESC"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id57658" status="check">Số điểm điều hướng trong mục lục:</text>
+                <originalText xml:lang="en">Number of navigation points in the table of contents:</originalText>
+                
+              </promptItem>
+              <promptVar name="META_TOCITEMS"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id57685" status="check">Độ dày phần tối đa:</text>
+                <originalText xml:lang="en">Maximum section depth:</originalText>
+                
+              </promptItem>
+              <promptVar name="META_DEPTH"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id57713" status="check">Các trang đầu:</text>
+                <originalText xml:lang="en">Front matter pages:</originalText>
+                
+              </promptItem>
+              <promptVar name="META_PAGEFRONT"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id57741" status="check">Các trang thông thường:</text>
+                <originalText xml:lang="en">Regular pages:</originalText>
+                
+              </promptItem>
+              <promptVar name="META_PAGENORMAL"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id57768" status="check">Các trang đặc biệt:</text>
+                <originalText xml:lang="en">Special pages:</originalText>
+                
+              </promptItem>
+              <promptVar name="META_PAGESPECIAL"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id57793" status="check">Tổng thời gian:</text>
+                <originalText xml:lang="en">Total duration:</originalText>
+                
+              </promptItem>
+              <promptVar name="META_TOTALTIME"/>
+            </prompt>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+  </dialogs>
+  <prompts>
+    <promptItemRefs>
+      <promptItem id="altC_to_close">
+        <text id="_id57825" status="check">Nhấn Alt + C để đóng hộp thoại.</text>
+        <originalText xml:lang="en">Press Alt + C to close the dialog.</originalText>
+        
+      </promptItem>
+      <promptItem id="altC_to_cancel">
+        <text id="_id57842" status="check">Nhấn Alt + C để hủy hộp thoại.</text>
+        <originalText xml:lang="en">Press Alt + C to cancel the dialog.</originalText>
+        
+      </promptItem>
+      <promptItem id="thisItem">
+        <text id="_id57860" status="check">Mục này:</text>
+        <originalText xml:lang="en">This item</originalText>
+        
+      </promptItem>
+      <promptItem id="spaceToToggle">
+        <text id="_id57876" status="check">Nhấn thanh dài để chuyển giá trị.</text>
+        <originalText xml:lang="en">Press the space bar to toggle the value.</originalText>
+        
+      </promptItem>
+      <promptItem id="tabAround">
+        <text id="_id57894" status="check">Nhấn tab để di chuyển giữa các tùy chọn trên hộp thoại.</text>
+        <originalText xml:lang="en">Hit tab to move around the options on the dialog.</originalText>
+        
+      </promptItem>
+      <promptItem id="ctrl2_for_colorsdialog">
+        <text id="_id57912" status="check">Nhấn control + 2 để chuyển sang hộp thoại màu sắc.</text>
+        <originalText xml:lang="en">Press control + 2 to switch to the colors dialog.</originalText>
+        
+      </promptItem>
+      <promptItem id="ctrl3_for_langsdialog">
+        <text id="_id57931" status="check">Nhấn control + 3 để chuyển sang hộp thoại ngôn ngữ.</text>
+        <originalText xml:lang="en">Press control + 3 to switch to the language options dialog.</originalText>
+        
+      </promptItem>
+      <promptItem id="ctrl1_for_prefsdialog">
+        <text id="_id57949" status="check">Nhấn control + 1 để chuyển sang hộp thoại sở thích chung.</text>
+        <originalText xml:lang="en">Press control + 1 to switch to the general preferences dialog.</originalText>
+        
+      </promptItem>
+      <promptItem id="thisItemIsCurrently">
+        <text id="_id57968" status="check">Mục này hiện thời</text>
+        <originalText xml:lang="en">This item is currently</originalText>
+        
+      </promptItem>
+      <promptItem id="enter_to_close">
+        <text id="_id57985" status="check">Nhấn enter để đóng hộp thoại.</text>
+        <originalText xml:lang="en">Press enter to close the dialog.</originalText>
+        
+      </promptItem>
+      <promptItem id="browse_button_caption">
+        <text id="_id58002" status="check">Duyệt....</text>
+        <originalText xml:lang="en">Browse...</originalText>
+        
+      </promptItem>
+      <promptItem id="browse_button_description">
+        <text id="_id58019" status="check">Nhấn để mở hộp thoại duyệt thư mục.</text>
+        <originalText xml:lang="en">Press to open the folder browse dialog.</originalText>
+        
+      </promptItem>
+      <promptItem id="ok_button_caption">
+        <text id="_id58037" status="todo" xml:lang="en">OK</text>
+        <originalText xml:lang="en">OK</originalText>
+        
+      </promptItem>
+      <promptItem id="ok_button_description">
+        <text id="_id58053" status="check">Nhấn OK để đóng hộp thoại.</text>
+        <originalText xml:lang="en">Press OK to close this dialog.</originalText>
+        
+      </promptItem>
+      <promptItem id="cancel_button_caption">
+        <text id="_id58071" status="check">Hủy bỏ</text>
+        <originalText xml:lang="en">Cancel</originalText>
+        
+      </promptItem>
+      <promptItem id="cancel_button_description">
+        <text id="_id58088" status="check">Nhấn để hủy bỏ hộp thoại này.</text>
+        <originalText xml:lang="en">Press to cancel this dialog.</originalText>
+        
+      </promptItem>
+      <promptItem id="list_reads_automatically">
+        <text id="_id58105" status="check">Danh sách này sẽ được đọc tự động.</text>
+        <originalText xml:lang="en">This list will be read automatically.</originalText>
+        
+      </promptItem>
+      <promptItem id="repeatLastPromptInstr">
+        <text id="_id58123" status="check">Nhấn Control + R để lặp lại lời nhắc trước.</text>
+        <originalText xml:lang="en">Press Control + R to repeat the last prompt.</originalText>
+        
+      </promptItem>
+      <promptItem id="thisDialogNotSelfVoicing">
+        <text id="_id58141" status="check">Hộp thoại này vẫn chưa tự phát âm.</text>
+        <originalText xml:lang="en">This dialog is not yet self-voicing.</originalText>
+        
+      </promptItem>
+      <promptItem id="escapeToCancel">
+        <text id="_id58158" status="check">Nhấn Escape để hủy bỏ.</text>
+        <originalText xml:lang="en">Press escape to cancel</originalText>
+        
+      </promptItem>
+      <promptItem id="hearDlgInstructions">
+        <text id="_id58176" status="check">Nhấn Control +I để nghe hướng dẫn về hộp thoại này.</text>
+        <originalText xml:lang="en">Press Control + I to hear instructions for this dialog.</originalText>
+        
+      </promptItem>
+      <promptItem id="textBoxRepeatInstr">
+        <text id="_id58194" status="check">Nhấn Control + R để nhắc lại văn bản trong hộp văn bản trước.</text>
+        <originalText xml:lang="en">Press Control + R to repeat the text in the last text box.</originalText>
+        
+      </promptItem>
+      <promptItem id="nav_window">
+        <text id="_id58212" status="check">Điều hướng</text>
+        <originalText xml:lang="en">Navigation</originalText>
+        
+      </promptItem>
+      <promptItem id="sections">
+        <text id="_id58229" status="check">Phần</text>
+        <originalText xml:lang="en">Sections</originalText>
+        
+      </promptItem>
+      <promptItem id="pages">
+        <text id="_id58245" status="check">Trang</text>
+        <originalText xml:lang="en">Pages</originalText>
+        
+      </promptItem>
+      <promptItem id="noterefs">
+        <text id="_id58262" status="check">Chú thích</text>
+        <originalText xml:lang="en">Footnotes</originalText>
+        
+      </promptItem>
+      <promptItem id="prodnotes">
+        <text id="_id58278" status="check">Chú thích của nhà sản xuất.</text>
+        <originalText xml:lang="en">Producer notes</originalText>
+        
+      </promptItem>
+      <promptItem id="sidebars">
+        <text id="_id58295" status="check">Thanh phụ chú</text>
+        <originalText xml:lang="en">Sidebars</originalText>
+        
+      </promptItem>
+      <promptItem id="groups">
+        <text id="_id58311" status="check">Các mục đã nhóm</text>
+        <originalText xml:lang="en">Grouped items</originalText>
+        
+      </promptItem>
+      <promptItem id="navigation_sidebar_caption">
+        <text id="_id58328" status="check">Điều hướng</text>
+        <originalText xml:lang="en">Navigation</originalText>
+        
+      </promptItem>
+      <promptItem id="ready">
+        <text id="_id58345" status="check">Sẵn sàng</text>
+        <originalText xml:lang="en">Ready</originalText>
+        
+      </promptItem>
+      <promptItem id="property_sheet_caption">
+        <text id="_id58361" status="check">Sở thích</text>
+        <originalText xml:lang="en">Preferences</originalText>
+        
+      </promptItem>
+      <promptItem id="selfolder_title">
+        <text id="_id58378" status="check">Lựa chọn một thư mục</text>
+        <originalText xml:lang="en">Select a Folder</originalText>
+        
+      </promptItem>
+      <promptItem id="selfolder_instr">
+        <text id="_id58394" status="check">Lựa chọn một thư mục trong thư mục dưới đây.</text>
+        <originalText xml:lang="en">Select a folder from the directory below.</originalText>
+        
+      </promptItem>
+      <promptItem id="daisy_books">
+        <text id="_id58412" status="check">Sách DAISY</text>
+        <originalText xml:lang="en">DAISY Books</originalText>
+        
+      </promptItem>
+      <promptItem id="folder_does_not_exist">
+        <text id="_id58429" status="check">Thư mục %s không tồn tại. Bạn có muốn tạo thư mục này không?</text>
+        <originalText xml:lang="en">The folder %s does not exist. Do you want the folder to be created?</originalText>
+        
+      </promptItem>
+      <promptItem id="folder_invalid">
+        <text id="_id58448" status="check">Tên thư mục này không hợp lệ. Vui lòng chọn tên khác.</text>
+        <originalText xml:lang="en">This folder name is invalid. Please choose another.</originalText>
+        
+      </promptItem>
+      <promptItem id="cant_create_folder">
+        <text id="_id58466" status="check">Không thể tạo được thư mục này. Vui lòng kiểm tra lại.</text>
+        <originalText xml:lang="en">This folder can not be created. Please double check.</originalText>
+        
+      </promptItem>
+      <promptItem id="not_available">
+        <text id="_id58484" status="check">Không có</text>
+        <originalText xml:lang="en">Not available</originalText>
+        
+      </promptItem>
+      <promptItem id="numeric_zero">
+        <note xml:lang="en">All numerals should be translated into numerals, not words.</note>
+        <text id="_id58505" status="check">0</text>
+        <originalText xml:lang="en">0</originalText>
+        
+      </promptItem>
+      <promptItem id="numeric_one">
+        <text id="_id58521" status="check">1</text>
+        <originalText xml:lang="en">1</originalText>
+        
+      </promptItem>
+      <promptItem id="numeric_two">
+        <text id="_id58537" status="check">2</text>
+        <originalText xml:lang="en">2</originalText>
+        
+      </promptItem>
+      <promptItem id="numeric_three">
+        <text id="_id58553" status="check">3</text>
+        <originalText xml:lang="en">3</originalText>
+        
+      </promptItem>
+      <promptItem id="numeric_four">
+        <text id="_id58570" status="check">4</text>
+        <originalText xml:lang="en">4</originalText>
+        
+      </promptItem>
+      <promptItem id="numeric_five">
+        <text id="_id58586" status="check">5</text>
+        <originalText xml:lang="en">5</originalText>
+        
+      </promptItem>
+      <promptItem id="numeric_six">
+        <text id="_id58602" status="check">6</text>
+        <originalText xml:lang="en">6</originalText>
+        
+      </promptItem>
+      <promptItem id="numeric_seven">
+        <text id="_id58618" status="check">7</text>
+        <originalText xml:lang="en">7</originalText>
+        
+      </promptItem>
+      <promptItem id="numeric_eight">
+        <text id="_id58634" status="check">8</text>
+        <originalText xml:lang="en">8</originalText>
+        
+      </promptItem>
+      <promptItem id="numeric_nine">
+        <text id="_id58650" status="check">9</text>
+        <originalText xml:lang="en">9</originalText>
+        
+      </promptItem>
+      <promptItem id="deleted">
+        <text id="_id58666" status="check">Đã xóa</text>
+        <originalText xml:lang="en">deleted</originalText>
+        
+      </promptItem>
+      <promptItem id="will_be_skipped">
+        <text id="_id58683" status="check">Sẽ bị bỏ qua</text>
+        <originalText xml:lang="en">will be skipped</originalText>
+        
+      </promptItem>
+      <promptItem id="will_be_played">
+        <text id="_id58700" status="check">Sẽ được bật</text>
+        <originalText xml:lang="en">will be played</originalText>
+        
+      </promptItem>
+      <promptItem id="item_on">
+        <text id="_id58716" status="check">Bật</text>
+        <originalText xml:lang="en">on</originalText>
+        
+      </promptItem>
+      <promptItem id="item_off">
+        <text id="_id58732" status="check">Tắt</text>
+        <originalText xml:lang="en">off</originalText>
+        
+      </promptItem>
+      <promptItem id="item_selected">
+        <text id="_id58748" status="check">Được lựa</text>
+        <originalText xml:lang="en">selected</originalText>
+        
+      </promptItem>
+      <promptItem id="item_deselected">
+        <text id="_id58765" status="check">Thôi lựa</text>
+        <originalText xml:lang="en">deselected</originalText>
+        
+      </promptItem>
+      <promptItem id="keyboardShortcut">
+        <text id="_id58781" status="check">Lối tắt bàn phím</text>
+        <originalText xml:lang="en">Keyboard Shortcut</originalText>
+        
+      </promptItem>
+      <promptItem id="icon">
+        <text id="_id58798" status="check">Biểu tượng</text>
+        <originalText xml:lang="en">Icon</originalText>
+        
+      </promptItem>
+      <promptItem id="menu">
+        <text id="_id58815" status="check">Trình đơn</text>
+        <originalText xml:lang="en">Menu</originalText>
+        
+      </promptItem>
+      <promptItem id="followedBy">
+        <note xml:lang="en">This is used in the context of a sequence of key presses, as in "Press Alt + V, followed by S"</note>
+        <text id="_id58836" status="check">Tiếp theo bởi</text>
+        <originalText xml:lang="en">followed by</originalText>
+        
+      </promptItem>
+      <promptItem id="submenu">
+        <text id="_id58853" status="check">Thực đơn con</text>
+        <originalText xml:lang="en">Submenu</originalText>
+      </promptItem>
+    </promptItemRefs>
+    <generalPrompts>
+      <prompt id="dialogClosed">
+        <promptItem>
+          <text id="_id58870" status="check">Đã đóng hộp thoại</text>
+          <originalText xml:lang="en">Dialog closed.</originalText>
+          
+        </promptItem>
+      </prompt>
+      <prompt id="textFieldEntry">
+        <promptItem>
+          <text id="_id58890" status="check">Mục trường văn bản là:</text>
+          <originalText xml:lang="en">Text field entry is:</originalText>
+          
+        </promptItem>
+        <promptVar name="TEXT_FIELD"/>
+      </prompt>
+      <prompt id="notSelfVoicing">
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+      </prompt>
+      <prompt id="bookAtPathChanged">
+        <promptItem>
+          <text id="_id58925" status="check">Vị trí của quyển sách bạn đang tìm đã thay đổi. Thay vào đó một quyển sách khác được tìm thấy. Có phải nội dung của ổ CD đã thay đổi?</text>
+          <originalText xml:lang="en">The location of the book you are looking for has changed.  A different book was found instead.  Did the contents of your CD-ROM drive change?</originalText>
+          
+        </promptItem>
+      </prompt>
+      <prompt id="generalBookError">
+        <promptItem>
+          <text id="_id58949" status="check">Một lỗi đã xảy ra khi mở quyển sách.</text>
+          <originalText xml:lang="en">An error occurred while trying to open the book.</originalText>
+          
+        </promptItem>
+        <promptVar name="BOOK_PATH"/>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+      <prompt id="noCdLoaded">
+        <promptItem>
+          <text id="_id58979" status="check">Không có đĩa trong ổ CD.</text>
+          <originalText xml:lang="en">There is not a CD in the CD-ROM drive.</originalText>
+          
+        </promptItem>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+      <prompt id="pluginErrorInit">
+        <promptItem>
+          <text id="_id59004" status="check">Lỗi: không tìm thấy hàm init() trong DLL.</text>
+          <originalText xml:lang="en">Plug-in error: init() function not found in the plug-in DLL.</originalText>
+          
+        </promptItem>
+      </prompt>
+      <prompt id="pluginErrorDll">
+        <promptItem>
+          <text id="_id59025" status="check">Lỗi: Không thể nạp thư viện plug-in sau:</text>
+          <originalText xml:lang="en">Plug-in error: The following plug-in library could not be loaded: </originalText>
+          
+        </promptItem>
+        <promptVar name="PLUGIN_LIB"/>
+      </prompt>
+      <prompt id="basicViewPrompt">
+        <promptItem>
+          <text id="_id59052" status="check">Bạn đang sử dụng chế độ xem cơ bản. Nhấn F11 để chuyển về chế độ xem mặc định.</text>
+          <originalText xml:lang="en">You are now using the basic view mode.  Press F11 to switch back to the default view mode.</originalText>
+          
+        </promptItem>
+      </prompt>
+      <prompt id="OpenFile_notSelfVoicing">
+        <promptItem>
+          <text id="_id59074" status="check">Mở hộp thoại tệp</text>
+          <originalText xml:lang="en">Open File Dialog</originalText>
+          
+        </promptItem>
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem>
+          <text id="_id59094" status="check">Dùng tính năng "tìm kiếm sách", bên dưới trình đơn tệp, để tìm sách DAISY trên ổ cứng của bạn.</text>
+          <originalText xml:lang="en">Use the "search for books" feature, under the file menu, to find DAISY books on your hard drive.</originalText>
+          
+        </promptItem>
+        <promptItem refid="escapeToCancel"/>
+      </prompt>
+      <prompt id="BrowseForFolder_notSelfVoicing">
+        <promptItem>
+          <text id="_id59121" status="check">Duyệt hộp thoại thư mục.</text>
+          <originalText xml:lang="en">Browse for folder dialog</originalText>
+          
+        </promptItem>
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem refid="escapeToCancel"/>
+        <promptItem>
+          <text id="_id59145" status="check">Sau đó gõ đường dẫn của thư mục bạn muốn vào hộp văn bản.</text>
+          <originalText xml:lang="en">Then, type the path of the folder you want in the text box.</originalText>
+          
+        </promptItem>
+      </prompt>
+      <prompt id="canceled">
+        <promptItem>
+          <text id="_id59166" status="check">Đã hủy</text>
+          <originalText xml:lang="en">Canceled</originalText>
+          
+        </promptItem>
+      </prompt>
+      <prompt id="loading">
+        <promptItem>
+          <text id="_id59186" status="check">Đang nạp.</text>
+          <originalText xml:lang="en">Loading</originalText>
+          
+        </promptItem>
+      </prompt>
+      <prompt id="restartForChanges">
+        <promptItem>
+          <text id="_id59206" status="check">Vui lòng khởi động lại máy để xem những thay đổi của bạn.</text>
+          <originalText xml:lang="en">Please restart to see your changes.</originalText>
+          
+        </promptItem>
+      </prompt>
+      <prompt id="noBooksFoundOnCd">
+        <promptItem>
+          <text id="_id59227" status="check">Không tìm thấy sách DAISY trên đĩa CD-ROM này</text>
+          <originalText xml:lang="en">No DAISY books were found on this CD-ROM.</originalText>
+          
+        </promptItem>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+    </generalPrompts>
+  </prompts>
+</ui>

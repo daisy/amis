@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+    <meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+    <meta name="dc:format" content="Daisy 2.02" />
+    <meta name="title" content="Visa antal nivåer" />
+    <meta name="dc:title" content="AMIS Help" />
+    <meta name="ncc:timeInThisSmil" content="0:00:35" />
+    <layout>
+        <region id="txtView" />
+    </layout>
+</head>
+<body>
+<seq dur="34.597s">
+    <par endsync="last">
+        <text src="amishelp.html#amis_0029" id="amis_0029" />
+        <seq>
+            <audio src="40_visa_antal_niver.mp3" clip-begin="npt=0.000s" clip-end="npt=0.327s" id="qwrt_0001" />
+            <audio src="40_visa_antal_niver.mp3" clip-begin="npt=0.327s" clip-end="npt=2.599s" id="qwrt_0002" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_006d" id="xami_006d" />
+        <seq>
+            <audio src="40_visa_antal_niver.mp3" clip-begin="npt=2.599s" clip-end="npt=3.344s" id="qwrt_0003" />
+            <audio src="40_visa_antal_niver.mp3" clip-begin="npt=3.344s" clip-end="npt=9.260s" id="qwrt_0004" />
+            <audio src="40_visa_antal_niver.mp3" clip-begin="npt=9.260s" clip-end="npt=15.599s" id="qwrt_0005" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_006e" id="xami_006e" />
+        <seq>
+            <audio src="40_visa_antal_niver.mp3" clip-begin="npt=15.599s" clip-end="npt=16.666s" id="qwrt_0006" />
+            <audio src="40_visa_antal_niver.mp3" clip-begin="npt=16.666s" clip-end="npt=24.799s" id="qwrt_0007" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_006f" id="xami_006f" />
+        <seq>
+            <audio src="40_visa_antal_niver.mp3" clip-begin="npt=24.799s" clip-end="npt=25.535s" id="qwrt_0008" />
+            <audio src="40_visa_antal_niver.mp3" clip-begin="npt=25.535s" clip-end="npt=26.776s" id="qwrt_0009" />
+            <audio src="40_visa_antal_niver.mp3" clip-begin="npt=26.776s" clip-end="npt=29.399s" id="qwrt_000A" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_0070" id="xami_0070" />
+        <seq>
+            <audio src="40_visa_antal_niver.mp3" clip-begin="npt=29.399s" clip-end="npt=30.158s" id="qwrt_000B" />
+            <audio src="40_visa_antal_niver.mp3" clip-begin="npt=30.158s" clip-end="npt=34.597s" id="qwrt_000C" />
+        </seq>
+    </par>
+</seq>
+</body>
+</smil>

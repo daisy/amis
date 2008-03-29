@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Kecepatan Normal" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:12" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="11.839s">
+<par endsync="last">
+<text src="amishelp.html#amis_0025" id="amis_0025" />
+<seq>
+<audio src="36_Kecepatan_Normal.mp3" clip-begin="npt=0.000s" clip-end="npt=1.820s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_00a2" id="xami_00a2" />
+<seq>
+<audio src="36_Kecepatan_Normal.mp3" clip-begin="npt=1.820s" clip-end="npt=4.368s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_00a3" id="xami_00a3" />
+<seq>
+<audio src="36_Kecepatan_Normal.mp3" clip-begin="npt=4.368s" clip-end="npt=7.119s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_00a4" id="xami_00a4" />
+<seq>
+<audio src="36_Kecepatan_Normal.mp3" clip-begin="npt=7.119s" clip-end="npt=9.199s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_00a5" id="xami_00a5" />
+<seq>
+<audio src="36_Kecepatan_Normal.mp3" clip-begin="npt=9.199s" clip-end="npt=11.839s" id="qwrt_0005" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

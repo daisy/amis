@@ -1,0 +1,41 @@
+AMIS Language Pack instructions
+4 May 2007
+Marisa
+==
+
+1. Make your changes in amis\trunk\Langpacks\japanese\amisAccessibleUi.xml
+You can change words in <text> elements.
+You can also change audio clip filenames <audio src="./audio/filename.mp3" from="blah blah"/>
+
+When you make changes, be sure to use an editor that supports Unicode.
+
+2. open amisAccessibleUi.xml in UltraEdit
+
+3. Choose "Advanced->Make AMIS RC File".  
+
+4. A script will run and produce an output window called "Command Output 1".  If there are errors, you will see them displayed.
+
+5. Choose "File->Conversions->Unicode/UTF-8 to UTF-8 (Unicode editing)"
+
+6. Save the file as amis\trunk\Langpacks\japanese\AmisLangpack\AmisLangpack.rc
+
+7. Choose "File->Conversions->UTF-8 to Unicode"
+
+8. Save the file (same name as before).
+
+9. Open amis\trunk\Langpacks\japanese\AmisLangpack\AmisLangpack.sln in Visual Studio
+
+10. At the top of the screen, where you have a choice of "Debug" or "Release", choose "Release" from the dropdown box
+
+11. In the righthand column, right-click the boldface project name "AmisLangpack" and choose "Rebuild"
+Watch the bottom of the screen for errors.
+
+12.  If there were no errors, close Visual Studio.
+
+13.  Right-click the file amis\trunk\amis\installers\langpacks\setup-japanese-langpack.nsi and choose "Compile NSIS Script"
+
+14.  If everything goes well, you will have a new executable file called "Setup-AMIS-LanguagePack_Japanese.exe"
+
+15.  Install the file on your computer
+
+16.  Run AMIS and choose the new Japanese language pack.  Then restart AMIS.  

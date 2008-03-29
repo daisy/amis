@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Humanap ng libro mula sa hard drive" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:24" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="24.164s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_000c" id="amis_000c" />
+<seq>
+<audio src="11_Humanap_ng_libro_mula_sa_hard_.mp3" clip-begin="npt=0.000s" clip-end="npt=2.760s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0022" id="xami_0022" />
+<seq>
+<audio src="11_Humanap_ng_libro_mula_sa_hard_.mp3" clip-begin="npt=2.760s" clip-end="npt=8.883s" id="qwrt_0002" />
+<audio src="11_Humanap_ng_libro_mula_sa_hard_.mp3" clip-begin="npt=8.883s" clip-end="npt=12.739s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0023" id="xami_0023" />
+<seq>
+<audio src="11_Humanap_ng_libro_mula_sa_hard_.mp3" clip-begin="npt=12.739s" clip-end="npt=14.071s" id="qwrt_0004" />
+<audio src="11_Humanap_ng_libro_mula_sa_hard_.mp3" clip-begin="npt=14.071s" clip-end="npt=15.568s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0024" id="xami_0024" />
+<seq>
+<audio src="11_Humanap_ng_libro_mula_sa_hard_.mp3" clip-begin="npt=15.568s" clip-end="npt=17.515s" id="qwrt_0006" />
+<audio src="11_Humanap_ng_libro_mula_sa_hard_.mp3" clip-begin="npt=17.515s" clip-end="npt=20.322s" id="qwrt_0007" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0025" id="xami_0025" />
+<seq>
+<audio src="11_Humanap_ng_libro_mula_sa_hard_.mp3" clip-begin="npt=20.322s" clip-end="npt=24.164s" id="qwrt_0008" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

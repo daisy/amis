@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="ncc:timeInThisSmil" content="00:00:18.108"/>
+		<meta name="ncc:totalElapsedTime" content="00:16:33.990"/>
+		<layout>
+			<region id="txt-view"/>
+		</layout>
+		<meta name="ncc:generator" content="EasePublisher 2.02 Build 025 # 089113"/>
+        <meta name="title" content="Finn i teksten"/>
+        <meta name="dc:title" content="AMIS hjelp"/>
+        <meta name="dc:identifier" content="AMIS_hjelp"/>
+    </head>
+	<body>
+		<seq dur="18.108s">
+			<par endsync="last" id="nwcb_0002">
+				<text src="amishelp.html#nwcb_0297" id="nwcb_0008"/>
+				<seq>
+					<audio src="46_Finn_i_teksten.mp3" clip-begin="npt=0.000s" clip-end="npt=1.619s" id="audio_0001"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0003">
+				<text src="amishelp.html#nwcb_0298" id="nwcb_0009"/>
+				<seq>
+					<audio src="46_Finn_i_teksten.mp3" clip-begin="npt=1.619s" clip-end="npt=2.754s" id="audio_0002"/>
+					<audio src="46_Finn_i_teksten.mp3" clip-begin="npt=2.754s" clip-end="npt=7.919s" id="audio_0003"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0004">
+				<text src="amishelp.html#nwcb_0299" id="nwcb_000a"/>
+				<seq>
+					<audio src="46_Finn_i_teksten.mp3" clip-begin="npt=7.919s" clip-end="npt=10.079s" id="audio_0004"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0005">
+				<text src="amishelp.html#nwcb_0300" id="nwcb_000b"/>
+				<seq>
+					<audio src="46_Finn_i_teksten.mp3" clip-begin="npt=10.079s" clip-end="npt=12.779s" id="audio_0005"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0006">
+				<text src="amishelp.html#nwcb_0301" id="nwcb_000c"/>
+				<seq>
+					<audio src="46_Finn_i_teksten.mp3" clip-begin="npt=12.779s" clip-end="npt=14.159s" id="audio_0006"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0007">
+				<text src="amishelp.html#nwcb_0302" id="nwcb_000d"/>
+				<seq>
+					<audio src="46_Finn_i_teksten.mp3" clip-begin="npt=14.159s" clip-end="npt=18.108s" id="audio_0007"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.22" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Elementos evitables" />
+<meta name="dc:title" content="AMIS Libro de Ayuda" />
+<meta name="ncc:timeInThisSmil" content="0:00:42" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="42.186s">
+<par endsync="last">
+<text src="amis-help-spanish.html#amis_0031" id="amis_0031" />
+<seq>
+<audio src="48_Elementos_evitables.mp3" clip-begin="npt=0.000s" clip-end="npt=2.272s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_008a" id="xami_008a" />
+<seq>
+<audio src="48_Elementos_evitables.mp3" clip-begin="npt=2.272s" clip-end="npt=9.064s" id="qwrt_0002" />
+<audio src="48_Elementos_evitables.mp3" clip-begin="npt=9.064s" clip-end="npt=14.706s" id="qwrt_0003" />
+<audio src="48_Elementos_evitables.mp3" clip-begin="npt=14.706s" clip-end="npt=21.668s" id="qwrt_0004" />
+<audio src="48_Elementos_evitables.mp3" clip-begin="npt=21.668s" clip-end="npt=31.804s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_008b" id="xami_008b" />
+<seq>
+<audio src="48_Elementos_evitables.mp3" clip-begin="npt=31.804s" clip-end="npt=36.920s" id="qwrt_0006" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_008c" id="xami_008c" />
+<seq>
+<audio src="48_Elementos_evitables.mp3" clip-begin="npt=36.920s" clip-end="npt=38.146s" id="qwrt_0007" />
+<audio src="48_Elementos_evitables.mp3" clip-begin="npt=38.146s" clip-end="npt=42.187s" id="qwrt_0008" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

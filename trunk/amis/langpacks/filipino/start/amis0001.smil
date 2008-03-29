@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="AMIS" />
+<meta name="dc:title" content="AMIS" />
+<meta name="ncc:timeInThisSmil" content="0:00:40" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="39.967s">
+<par endsync="last">
+<text src="amisstart.html#amis_0001" id="amis_0001" />
+<seq>
+<audio src="1_AMIS.mp3" clip-begin="npt=0.000s" clip-end="npt=0.522s" id="qwrt_0001" />
+<audio src="1_AMIS.mp3" clip-begin="npt=0.522s" clip-end="npt=2.795s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amisstart.html#xami_0001" id="xami_0001" />
+<seq>
+<audio src="1_AMIS.mp3" clip-begin="npt=2.795s" clip-end="npt=3.644s" id="qwrt_0003" />
+<audio src="1_AMIS.mp3" clip-begin="npt=3.644s" clip-end="npt=7.393s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amisstart.html#xami_0002" id="xami_0002" />
+<seq>
+<audio src="1_AMIS.mp3" clip-begin="npt=7.393s" clip-end="npt=7.876s" id="qwrt_0005" />
+<audio src="1_AMIS.mp3" clip-begin="npt=7.876s" clip-end="npt=19.788s" id="qwrt_0006" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amisstart.html#xami_0003" id="xami_0003" />
+<seq>
+<audio src="1_AMIS.mp3" clip-begin="npt=19.788s" clip-end="npt=20.467s" id="qwrt_0007" />
+<audio src="1_AMIS.mp3" clip-begin="npt=20.467s" clip-end="npt=23.693s" id="qwrt_0008" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amisstart.html#xami_0004" id="xami_0004" />
+<seq>
+<audio src="1_AMIS.mp3" clip-begin="npt=23.693s" clip-end="npt=28.147s" id="qwrt_0009" />
+<audio src="1_AMIS.mp3" clip-begin="npt=28.147s" clip-end="npt=32.026s" id="qwrt_000A" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amisstart.html#xami_0005" id="xami_0005" />
+<seq>
+<audio src="1_AMIS.mp3" clip-begin="npt=32.026s" clip-end="npt=32.875s" id="qwrt_000B" />
+<audio src="1_AMIS.mp3" clip-begin="npt=32.875s" clip-end="npt=36.271s" id="qwrt_000C" />
+<audio src="1_AMIS.mp3" clip-begin="npt=36.271s" clip-end="npt=39.967s" id="qwrt_000D" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

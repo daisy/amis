@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Skippable Items" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:30" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="30.333s">
+<par endsync="last">
+<text src="amishelp.html#amis_0031" id="amis_0031" />
+<seq>
+<audio src="48_Skippable_Items.mp3" clip-begin="npt=0.000s" clip-end="npt=1.576s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_008a" id="xami_008a" />
+<seq>
+<audio src="48_Skippable_Items.mp3" clip-begin="npt=1.576s" clip-end="npt=5.656s" id="qwrt_0002" />
+<audio src="48_Skippable_Items.mp3" clip-begin="npt=5.656s" clip-end="npt=9.786s" id="qwrt_0003" />
+<audio src="48_Skippable_Items.mp3" clip-begin="npt=9.786s" clip-end="npt=14.121s" id="qwrt_0004" />
+<audio src="48_Skippable_Items.mp3" clip-begin="npt=14.121s" clip-end="npt=21.576s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_008b" id="xami_008b" />
+<seq>
+<audio src="48_Skippable_Items.mp3" clip-begin="npt=21.576s" clip-end="npt=26.819s" id="qwrt_0006" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_008c" id="xami_008c" />
+<seq>
+<audio src="48_Skippable_Items.mp3" clip-begin="npt=26.819s" clip-end="npt=30.333s" id="qwrt_0007" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

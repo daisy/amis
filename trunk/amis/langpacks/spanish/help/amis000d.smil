@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.22" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Seleccionar algún libro de los leídos recientemente" />
+<meta name="dc:title" content="AMIS Libro de Ayuda" />
+<meta name="ncc:timeInThisSmil" content="0:00:18" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="18.332s">
+<par endsync="last">
+<text src="amis-help-spanish.html#amis_000d" id="amis_000d" />
+<seq>
+<audio src="12_Seleccionar_algn_libro_de_los_.mp3" clip-begin="npt=0.000s" clip-end="npt=3.937s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0026" id="xami_0026" />
+<seq>
+<audio src="12_Seleccionar_algn_libro_de_los_.mp3" clip-begin="npt=3.937s" clip-end="npt=9.588s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0027" id="xami_0027" />
+<seq>
+<audio src="12_Seleccionar_algn_libro_de_los_.mp3" clip-begin="npt=9.588s" clip-end="npt=14.008s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0028" id="xami_0028" />
+<seq>
+<audio src="12_Seleccionar_algn_libro_de_los_.mp3" clip-begin="npt=14.008s" clip-end="npt=18.332s" id="qwrt_0004" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

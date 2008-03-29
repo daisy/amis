@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.7" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="N&#7841;p m&#7897;t d&#7845;u s&#225;ch" />
+<meta name="dc:title" content="AMIS Version 2.0 Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:18" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="18.260s">
+<par endsync="last">
+<text src="amishelp-entity.html#amis_0034" id="amis_0034" />
+<seq>
+<audio src="51_Np_mt_du_sch.mp2" clip-begin="npt=0.000s" clip-end="npt=0.784s" id="qwrt_0001" />
+<audio src="51_Np_mt_du_sch.mp2" clip-begin="npt=0.784s" clip-end="npt=1.999s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0090" id="xami_0090" />
+<seq>
+<audio src="51_Np_mt_du_sch.mp2" clip-begin="npt=1.999s" clip-end="npt=2.743s" id="qwrt_0003" />
+<audio src="51_Np_mt_du_sch.mp2" clip-begin="npt=2.743s" clip-end="npt=6.648s" id="qwrt_0004" />
+<audio src="51_Np_mt_du_sch.mp2" clip-begin="npt=6.648s" clip-end="npt=12.199s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0091" id="xami_0091" />
+<seq>
+<audio src="51_Np_mt_du_sch.mp2" clip-begin="npt=12.199s" clip-end="npt=12.722s" id="qwrt_0006" />
+<audio src="51_Np_mt_du_sch.mp2" clip-begin="npt=12.722s" clip-end="npt=13.923s" id="qwrt_0007" />
+<audio src="51_Np_mt_du_sch.mp2" clip-begin="npt=13.923s" clip-end="npt=15.599s" id="qwrt_0008" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0092" id="xami_0092" />
+<seq>
+<audio src="51_Np_mt_du_sch.mp2" clip-begin="npt=15.599s" clip-end="npt=15.765s" id="qwrt_0009" />
+<audio src="51_Np_mt_du_sch.mp2" clip-begin="npt=15.765s" clip-end="npt=16.601s" id="qwrt_000A" />
+<audio src="51_Np_mt_du_sch.mp2" clip-begin="npt=16.601s" clip-end="npt=18.260s" id="qwrt_000B" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

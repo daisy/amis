@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Paghahanap ng Texto" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:17" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="17.196s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_002f" id="amis_002f" />
+<seq>
+<audio src="46_Paghahanap_ng_Texto.mp3" clip-begin="npt=0.000s" clip-end="npt=2.082s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0084" id="xami_0084" />
+<seq>
+<audio src="46_Paghahanap_ng_Texto.mp3" clip-begin="npt=2.082s" clip-end="npt=10.105s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0085" id="xami_0085" />
+<seq>
+<audio src="46_Paghahanap_ng_Texto.mp3" clip-begin="npt=10.105s" clip-end="npt=13.278s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0086" id="xami_0086" />
+<seq>
+<audio src="46_Paghahanap_ng_Texto.mp3" clip-begin="npt=13.278s" clip-end="npt=15.555s" id="qwrt_0004" />
+<audio src="46_Paghahanap_ng_Texto.mp3" clip-begin="npt=15.555s" clip-end="npt=17.196s" id="qwrt_0005" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

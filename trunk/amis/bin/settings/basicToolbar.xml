@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<toolbar xmlns="http://amisproject.org" view="basic" placement="bottom" buttonHeight="72" buttonWidth="72">
+	<button src="./img/basicToolbar/media_seek_backward.ico" mfcid="ID_AMIS_PREVIOUS_PHRASE"/>
+	<toggle>
+		<button src="./img/basicToolbar/media_playback_start.ico" mfcid="ID_AMIS_PLAYPAUSE"/>
+		<button src="./img/basicToolbar/media_playback_pause.ico" mfcid="ID_AMIS_PLAYPAUSE"/>
+	</toggle>
+	<button src="./img/basicToolbar/media_seek_forward.ico" mfcid="ID_AMIS_NEXT_PHRASE"/>
+	<separator/>
+	<button src="./img/basicToolbar/style.ico" mfcid="ID_AMIS_NEXT_PAGE_STYLE"/>
+	<separator/>
+	<button src="./img/basicToolbar/display.ico" mfcid="ID_AMIS_TOGGLE_VIEW"/>
+</toolbar>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Paglaktaw sa Bagay" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:26" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="25.727s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_0030" id="amis_0030" />
+<seq>
+<audio src="47_Paglaktaw_sa_Bagay.mp3" clip-begin="npt=0.000s" clip-end="npt=1.655s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0087" id="xami_0087" />
+<seq>
+<audio src="47_Paglaktaw_sa_Bagay.mp3" clip-begin="npt=1.655s" clip-end="npt=13.156s" id="qwrt_0002" />
+<audio src="47_Paglaktaw_sa_Bagay.mp3" clip-begin="npt=13.156s" clip-end="npt=20.182s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0088" id="xami_0088" />
+<seq>
+<audio src="47_Paglaktaw_sa_Bagay.mp3" clip-begin="npt=20.182s" clip-end="npt=22.054s" id="qwrt_0004" />
+<audio src="47_Paglaktaw_sa_Bagay.mp3" clip-begin="npt=22.054s" clip-end="npt=22.680s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0089" id="xami_0089" />
+<seq>
+<audio src="47_Paglaktaw_sa_Bagay.mp3" clip-begin="npt=22.680s" clip-end="npt=23.901s" id="qwrt_0006" />
+<audio src="47_Paglaktaw_sa_Bagay.mp3" clip-begin="npt=23.901s" clip-end="npt=24.887s" id="qwrt_0007" />
+<audio src="47_Paglaktaw_sa_Bagay.mp3" clip-begin="npt=24.887s" clip-end="npt=25.727s" id="qwrt_0008" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

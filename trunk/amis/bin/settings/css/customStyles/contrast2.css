@@ -1,0 +1,6 @@
+/*contrast CSS sheet*/
+/*Black background with white text*/
+/*AMIS will pick up the background-color and color values for the body element and use them in the sidebar.*/
+body{ background-color: black !important; color: white !important;}
+a {color: white !important;}
+a:hover {color: white !important; font-weight: bolder !important;}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<preferences xmlns="http://amisproject.org">
+<!--paths are relative to the location of this file-->
+<section name="general">
+<entry id="ui-lang-id" value="eng-US"/>
+<entry id="start-in-basic-view" value="no"/>
+<entry id="load-last-book" value="yes"/>
+<entry id="is-self-voicing" value="yes"/>
+<entry id="tts-voice-index" value="0"/>
+<entry id="pause-on-lost-focus" value="no"/>
+<entry id="use-tts-not-audio" value="no"/>
+<entry id="highlight-text" value="yes"/>
+<entry id="was-exit-clean" value="yes"/>
+<entry id="disable-screensaver" value="yes"/>
+<entry id="user-bmk-dir" value="./bmk/"/>
+<entry id="langpacks-dir" value="./lang/"/>
+<entry id="fontsize-css-dir" value="./css/font/"/>
+<entry id="custom-css-dir" value="./css/customStyles/"/>
+<entry id="amis-css-file" value="./css/amis.css"/>
+<entry id="zed-2005-css-file" value="./css/dtbook.2005.basic.css"/>
+<entry id="highlight-fg-color"value="#FFFFFF"/>
+<entry id="highlight-bg-color" value="#FFFF00"/>
+<entry id="sidebar-font-name" value="Verdana"/>
+</section>
+</preferences>

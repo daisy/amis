@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="&#1588;&#1585;&#1610;&#1591; &#1575;&#1604;&#1575;&#1582;&#1578;&#1589;&#1575;&#1585; &#1575;&#1604;&#1580;&#1575;&#1606;&#1576;&#1610;" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:29" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="29.368s">
+<par endsync="last">
+<text src="amishelp-entity.html#amis_0015" id="amis_0015" />
+<seq>
+<audio src="20___.mp3" clip-begin="npt=0.000s" clip-end="npt=2.014s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0038" id="xami_0038" />
+<seq>
+<audio src="20___.mp3" clip-begin="npt=2.014s" clip-end="npt=4.740s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0039" id="xami_0039" />
+<seq>
+<audio src="20___.mp3" clip-begin="npt=4.740s" clip-end="npt=11.244s" id="qwrt_0003" />
+<audio src="20___.mp3" clip-begin="npt=11.244s" clip-end="npt=14.974s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_003a" id="xami_003a" />
+<seq>
+<audio src="20___.mp3" clip-begin="npt=14.974s" clip-end="npt=16.960s" id="qwrt_0005" />
+<audio src="20___.mp3" clip-begin="npt=16.960s" clip-end="npt=29.368s" id="qwrt_0006" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

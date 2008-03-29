@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+    <meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+    <meta name="dc:format" content="Daisy 2.02" />
+    <meta name="title" content="Färgkontrast" />
+    <meta name="dc:title" content="AMIS Help" />
+    <meta name="ncc:timeInThisSmil" content="0:00:24" />
+    <layout>
+        <region id="txtView" />
+    </layout>
+</head>
+<body>
+<seq dur="23.917s">
+    <par endsync="last">
+        <text src="amishelp.html#amis_001c" id="amis_001c" />
+        <seq>
+            <audio src="27_frgkontrast.mp3" clip-begin="npt=0.000s" clip-end="npt=0.457s" id="qwrt_0001" />
+            <audio src="27_frgkontrast.mp3" clip-begin="npt=0.457s" clip-end="npt=1.999s" id="qwrt_0002" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_0047" id="xami_0047" />
+        <seq>
+            <audio src="27_frgkontrast.mp3" clip-begin="npt=1.999s" clip-end="npt=2.664s" id="qwrt_0003" />
+            <audio src="27_frgkontrast.mp3" clip-begin="npt=2.664s" clip-end="npt=7.329s" id="qwrt_0004" />
+            <audio src="27_frgkontrast.mp3" clip-begin="npt=7.329s" clip-end="npt=7.603s" id="qwrt_0005" />
+            <audio src="27_frgkontrast.mp3" clip-begin="npt=7.603s" clip-end="npt=14.128s" id="qwrt_0006" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_0048" id="xami_0048" />
+        <seq>
+            <audio src="27_frgkontrast.mp3" clip-begin="npt=14.128s" clip-end="npt=14.839s" id="qwrt_0007" />
+            <audio src="27_frgkontrast.mp3" clip-begin="npt=14.839s" clip-end="npt=16.128s" id="qwrt_0008" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_0049" id="xami_0049" />
+        <seq>
+            <audio src="27_frgkontrast.mp3" clip-begin="npt=16.128s" clip-end="npt=16.602s" id="qwrt_0009" />
+            <audio src="27_frgkontrast.mp3" clip-begin="npt=16.602s" clip-end="npt=19.328s" id="qwrt_000A" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_004a" id="xami_004a" />
+        <seq>
+            <audio src="27_frgkontrast.mp3" clip-begin="npt=19.328s" clip-end="npt=20.194s" id="qwrt_000B" />
+            <audio src="27_frgkontrast.mp3" clip-begin="npt=20.194s" clip-end="npt=23.917s" id="qwrt_000C" />
+        </seq>
+    </par>
+</seq>
+</body>
+</smil>

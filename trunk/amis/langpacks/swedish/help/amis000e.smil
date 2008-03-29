@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+    <meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+    <meta name="dc:format" content="Daisy 2.02" />
+    <meta name="title" content="Inställningar" />
+    <meta name="dc:title" content="AMIS Help" />
+    <meta name="ncc:timeInThisSmil" content="0:00:17" />
+    <layout>
+        <region id="txtView" />
+    </layout>
+</head>
+<body>
+<seq dur="16.588s">
+    <par endsync="last">
+        <text src="amishelp.html#amis_000e" id="amis_000e" />
+        <seq>
+            <audio src="13_instllningar.mp3" clip-begin="npt=0.000s" clip-end="npt=0.353s" id="qwrt_0001" />
+            <audio src="13_instllningar.mp3" clip-begin="npt=0.353s" clip-end="npt=1.799s" id="qwrt_0002" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_0029" id="xami_0029" />
+        <seq>
+            <audio src="13_instllningar.mp3" clip-begin="npt=1.799s" clip-end="npt=2.560s" id="qwrt_0003" />
+            <audio src="13_instllningar.mp3" clip-begin="npt=2.560s" clip-end="npt=5.943s" id="qwrt_0004" />
+            <audio src="13_instllningar.mp3" clip-begin="npt=5.943s" clip-end="npt=16.588s" id="qwrt_0005" />
+        </seq>
+    </par>
+</seq>
+</body>
+</smil>

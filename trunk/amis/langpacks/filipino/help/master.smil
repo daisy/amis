@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+    <meta name="ncc:generator" content="LpStudioGen 1.6" />
+    <meta name="dc:format" content="Daisy 2.02" />
+    <meta name="dc:title" content="AMIS Help" />
+    <meta name="ncc:timeInThisSmil" content="00:00:00" />
+    <layout>
+        <region id="txtView" />
+    </layout>
+</head>
+<body>
+    <ref title="" src="amis0001.smil" id="amis_0001" />
+    <ref title="AMIS" src="amis0002.smil" id="amis_0002" />
+    <ref title="Ano ang AMIS?" src="amis0003.smil" id="amis_0003" />
+    <ref title="Ano ang DAISY?" src="amis0004.smil" id="amis_0004" />
+    <ref title="Mabilis na Panimula" src="amis0005.smil" id="amis_0005" />
+    <ref title="Habang Nagbabasa ng Libro" src="amis0006.smil" id="amis_0006" />
+    <ref title="Sa mga Tabing ng Dialog" src="amis0007.smil" id="amis_0007" />
+    <ref title="Kumpletong listahan ng katangian ng AMIS" src="amis0008.smil" id="amis_0008" />
+    <ref title="Pagbubukas ng librong DAISY" src="amis0009.smil" id="amis_0009" />
+    <ref title="Magbukas ng Talaksan" src="amis000a.smil" id="amis_000a" />
+    <ref title="Isalang ang CD-ROM" src="amis000b.smil" id="amis_000b" />
+    <ref title="Humanap ng libro mula sa hard drive" src="amis000c.smil" id="amis_000c" />
+    <ref title="Mamili mula sa listahan ng mga pinakabagong libro" src="amis000d.smil" id="amis_000d" />
+    <ref title="Mga Kagustuhan" src="amis000e.smil" id="amis_000e" />
+    <ref title="Mga Pangkalahatang Kagustuhan" src="amis000f.smil" id="amis_000f" />
+    <ref title="Kumpigurasyon ng mga Kulay" src="amis0010.smil" id="amis_0010" />
+    <ref title="Mga kumpigurasyon ng Wika" src="amis0011.smil" id="amis_0011" />
+    <ref title="Iba&#39;t-ibang Pagtanaw" src="amis0012.smil" id="amis_0012" />
+    <ref title="Default na Tanaw" src="amis0013.smil" id="amis_0013" />
+    <ref title="Payak na Tanaw" src="amis0014.smil" id="amis_0014" />
+    <ref title="Ang Sidebar" src="amis0015.smil" id="amis_0015" />
+    <ref title="Ang pag on at off" src="amis0016.smil" id="amis_0016" />
+    <ref title="Dock and float" src="amis0017.smil" id="amis_0017" />
+    <ref title="Mga Bahagi" src="amis0018.smil" id="amis_0018" />
+    <ref title="Mga Pahina" src="amis0019.smil" id="amis_0019" />
+    <ref title="Espesyal na mga Bagay" src="amis001a.smil" id="amis_001a" />
+    <ref title="Mga Effects" src="amis001b.smil" id="amis_001b" />
+    <ref title="Mga kaibahan sa Kulay" src="amis001c.smil" id="amis_001c" />
+    <ref title="Paglaki ng Font" src="amis001d.smil" id="amis_001d" />
+    <ref title="Pag-reset ng Laki ng Font" src="amis001e.smil" id="amis_001e" />
+    <ref title="Pagpapatugtog" src="amis001f.smil" id="amis_001f" />
+    <ref title="Tugtog at Hinto" src="amis0020.smil" id="amis_0020" />
+    <ref title="Lakasan ang Tunog" src="amis0021.smil" id="amis_0021" />
+    <ref title="Hinaan ang tunog" src="amis0022.smil" id="amis_0022" />
+    <ref title="Bilisan" src="amis0023.smil" id="amis_0023" />
+    <ref title="Bagalan" src="amis0024.smil" id="amis_0024" />
+    <ref title="Normal na Bilis" src="amis0025.smil" id="amis_0025" />
+    <ref title="Paglilibot" src="amis0026.smil" id="amis_0026" />
+    <ref title="Susunod na Bahagi" src="amis0027.smil" id="amis_0027" />
+    <ref title="Nakaraang Bahagi" src="amis0028.smil" id="amis_0028" />
+    <ref title="Ipakita ang Lalim ng Bahagi" src="amis0029.smil" id="amis_0029" />
+    <ref title="Susunod na Parirala" src="amis002a.smil" id="amis_002a" />
+    <ref title="Nakaraang Parirala" src="amis002b.smil" id="amis_002b" />
+    <ref title="Susunod na Pahina" src="amis002c.smil" id="amis_002c" />
+    <ref title="Nakaraang Pahina" src="amis002d.smil" id="amis_002d" />
+    <ref title="Pumunta sa Pahina" src="amis002e.smil" id="amis_002e" />
+    <ref title="Paghahanap ng Texto" src="amis002f.smil" id="amis_002f" />
+    <ref title="Paglaktaw sa Bagay" src="amis0030.smil" id="amis_0030" />
+    <ref title="Mga Bagay na Maaaring Laktawan" src="amis0031.smil" id="amis_0031" />
+    <ref title="Mga Panandaan" src="amis0032.smil" id="amis_0032" />
+    <ref title="Magdagdag ng Panandaan" src="amis0033.smil" id="amis_0033" />
+    <ref title="Isalang ang Panandaan" src="amis0034.smil" id="amis_0034" />
+    <ref title="Kabuuang Impormasyon" src="amis0035.smil" id="amis_0035" />
+    <ref title="Paglabas ng AMIS" src="amis0036.smil" id="amis_0036" />
+    <ref title="Add-Ons" src="amis0037.smil" id="amis_0037" />
+    <ref title="Plug-ins" src="amis0038.smil" id="amis_0038" />
+    <ref title="Mga Wikang Salin" src="amis0039.smil" id="amis_0039" />
+</body>
+</smil>

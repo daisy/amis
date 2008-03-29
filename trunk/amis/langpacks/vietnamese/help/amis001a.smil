@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.7" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="C&#225;c m&#7909;c &#273;&#7863;c bi&#7879;t" />
+<meta name="dc:title" content="AMIS Version 2.0 Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:31" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="30.589s">
+<par endsync="last">
+<text src="amishelp-entity.html#amis_001a" id="amis_001a" />
+<seq>
+<audio src="25_Cc_mc_dc_bit.mp2" clip-begin="npt=0.000s" clip-end="npt=0.327s" id="qwrt_0001" />
+<audio src="25_Cc_mc_dc_bit.mp2" clip-begin="npt=0.327s" clip-end="npt=1.399s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0044" id="xami_0044" />
+<seq>
+<audio src="25_Cc_mc_dc_bit.mp2" clip-begin="npt=1.399s" clip-end="npt=1.946s" id="qwrt_0003" />
+<audio src="25_Cc_mc_dc_bit.mp2" clip-begin="npt=1.946s" clip-end="npt=4.584s" id="qwrt_0004" />
+<audio src="25_Cc_mc_dc_bit.mp2" clip-begin="npt=4.584s" clip-end="npt=7.928s" id="qwrt_0005" />
+<audio src="25_Cc_mc_dc_bit.mp2" clip-begin="npt=7.928s" clip-end="npt=12.121s" id="qwrt_0006" />
+<audio src="25_Cc_mc_dc_bit.mp2" clip-begin="npt=12.121s" clip-end="npt=13.949s" id="qwrt_0007" />
+<audio src="25_Cc_mc_dc_bit.mp2" clip-begin="npt=13.949s" clip-end="npt=17.136s" id="qwrt_0008" />
+<audio src="25_Cc_mc_dc_bit.mp2" clip-begin="npt=17.136s" clip-end="npt=20.624s" id="qwrt_0009" />
+<audio src="25_Cc_mc_dc_bit.mp2" clip-begin="npt=20.624s" clip-end="npt=20.799s" id="qwrt_000A" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0045" id="xami_0045" />
+<seq>
+<audio src="25_Cc_mc_dc_bit.mp2" clip-begin="npt=20.799s" clip-end="npt=22.335s" id="qwrt_000B" />
+<audio src="25_Cc_mc_dc_bit.mp2" clip-begin="npt=22.335s" clip-end="npt=24.725s" id="qwrt_000C" />
+<audio src="25_Cc_mc_dc_bit.mp2" clip-begin="npt=24.725s" clip-end="npt=27.799s" id="qwrt_000D" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0046" id="xami_0046" />
+<seq>
+<audio src="25_Cc_mc_dc_bit.mp2" clip-begin="npt=27.799s" clip-end="npt=28.173s" id="qwrt_000E" />
+<audio src="25_Cc_mc_dc_bit.mp2" clip-begin="npt=28.173s" clip-end="npt=30.589s" id="qwrt_000F" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

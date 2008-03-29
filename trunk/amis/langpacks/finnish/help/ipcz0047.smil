@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="ncc:timeInThisSmil" content="00:00:26.565"/>
+		<meta name="ncc:totalElapsedTime" content="00:14:38.181"/>
+		<layout>
+			<region id="txt-view"/>
+		</layout>
+		<meta name="ncc:generator" content="EasePublisher 2.02 Build 025 # 091650"/>
+        <meta name="title" content="Poistuminen osiosta"/>
+        <meta name="dc:title" content="help"/>
+        <meta name="dc:identifier" content="celia"/>
+    </head>
+	<body>
+		<seq dur="26.565s">
+			<par endsync="last" id="ifbo_0002">
+				<text src="amishelp.html#ifbo_0196" id="vnln_0001"/>
+				<seq>
+					<audio src="47_Poistuminen_o.mp3" clip-begin="npt=0.000s" clip-end="npt=2.279s" id="audio_0001"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0003">
+				<text src="amishelp.html#ifbo_0197" id="vnln_0002"/>
+				<seq>
+					<audio src="47_Poistuminen_o.mp3" clip-begin="npt=2.279s" clip-end="npt=12.718s" id="audio_0002"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0004">
+				<text src="amishelp.html#ifbo_0198" id="vnln_0003"/>
+				<seq>
+					<audio src="47_Poistuminen_o.mp3" clip-begin="npt=12.718s" clip-end="npt=18.599s" id="audio_0003"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0005">
+				<text src="amishelp.html#ifbo_0199" id="vnln_0004"/>
+				<seq>
+					<audio src="47_Poistuminen_o.mp3" clip-begin="npt=18.599s" clip-end="npt=22.556s" id="audio_0004"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0006">
+				<text src="amishelp.html#ifbo_0200" id="vnln_0005"/>
+				<seq>
+					<audio src="47_Poistuminen_o.mp3" clip-begin="npt=22.556s" clip-end="npt=26.565s" id="audio_0005"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

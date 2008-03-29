@@ -1,0 +1,44 @@
+The Project
+===
+
+What's it good for?
+	* Use as the localization interface for AMIS, Obi, Tobi, Pipeline
+	* Use Obi to record prompts
+	* Use XUK format to maintain a template for the help file
+	* Put MP3 upload on the website
+	* Import/Export routines communicate between the database and the app's XML file (e.g. amisAccessibleUi.xml)
+
+Options:
+	* host with us
+	* host yourself and install a module on your server (similar to wordpress)
+
+Administrative tasks:
+	* add a new user
+	* import a new master (English) and review the potential changes
+	* get files from export for distribution
+	* review user activity
+	* merge translated/recorded UI items into a DAISY book template so that the whole book doesn't have to be re-recorded
+	
+User tasks:
+	* enter a text translation
+ 	* change text
+ 	* upload small audio files
+ 	* download an Obi project to do your recording all at once
+ 	* Upload your Obi project to import the new recordings into the system
+
+Picky to-do's
+===
+Make optional:
+	audio support
+	accelerator
+	error-checking
+
+Rename "xmlid" to "xmlhandle"; make "TEXT"Add "new/changed/deleted" support
+Modularize import/export routines
+
+All project types use the same DB fields except for the following:
+
+audiodata, audiouri, audioflag: ONLY IF AUDIO IS REQUIRED
+mnemonicgroup: NOT USED BY OBI
+
+Redo "DB" module without actual passwords; template per installation

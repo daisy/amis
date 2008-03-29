@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Memuat Tanda Buku" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:14" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="14.313s">
+<par endsync="last">
+<text src="amishelp.html#amis_0034" id="amis_0034" />
+<seq>
+<audio src="51_Memuat_Tanda_Buku.mp3" clip-begin="npt=0.000s" clip-end="npt=1.338s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_00df" id="xami_00df" />
+<seq>
+<audio src="51_Memuat_Tanda_Buku.mp3" clip-begin="npt=1.338s" clip-end="npt=5.831s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_00e0" id="xami_00e0" />
+<seq>
+<audio src="51_Memuat_Tanda_Buku.mp3" clip-begin="npt=5.831s" clip-end="npt=9.447s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_00e1" id="xami_00e1" />
+<seq>
+<audio src="51_Memuat_Tanda_Buku.mp3" clip-begin="npt=9.447s" clip-end="npt=12.446s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_00e2" id="xami_00e2" />
+<seq>
+<audio src="51_Memuat_Tanda_Buku.mp3" clip-begin="npt=12.446s" clip-end="npt=14.313s" id="qwrt_0005" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

@@ -1,0 +1,2338 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ui xml:lang="vi">
+  <containers>
+    <container id="file">
+      <note xml:lang="en">This is the menu header "File"</note>
+      <caption>
+        <text id="_id52734" xml:lang="vi" status="check">Tệp</text>
+        <originalText xml:lang="en">File</originalText>
+        <audio src="./audio/002_Tp.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0003.smil#text_0003" />
+      </caption>
+      <action mfcid="ID_MENU_FILE_OPEN" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and a toolbar item</note>
+        <icon src="./open.png" type="smallIcon" />
+        <caption>
+          <text id="_id52766" xml:lang="vi" status="check">Mở...</text>
+          <originalText xml:lang="en">Open...</originalText>
+          <audio src="./audio/003_M.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0004.smil#text_0004" />
+        </caption>
+        <description>
+          <text id="_id52781" xml:lang="vi" status="check">Mở một quyển sách Daisy từ hệ thống tệp cục bộ</text>
+          <originalText xml:lang="en">Open a Daisy book from the local file system</originalText>
+          <audio src="./audio/004_M_mt_quyn_sch_Daisy_t_h_thng_t.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0005.smil#text_0005" />
+        </description>
+        <accelerator>
+          <text id="_id52796" xml:lang="en">Ctrl+O</text>
+          <originalText xml:lang="en">Ctrl+O</originalText>
+          <audio src="./audio/005_CtrlO.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0006.smil#text_0006" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id52799" xml:lang="en">O</text>
+          <originalText xml:lang="en">O</originalText>
+          <audio src="./audio/006_O.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0007.smil#text_0007" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_LOADCD" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and a toolbar item</note>
+        <icon src="./settings/img/cd3.ico" type="smallIcon" />
+        <icon src="./settings/img/cd_big.ico" type="largeIcon" />
+        <caption>
+          <text id="_id52829" xml:lang="vi" status="check">Tải CD</text>
+          <originalText xml:lang="en">Load CD</originalText>
+          <audio src="./audio/007_Ti_CD.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0008.smil#text_0008" />
+        </caption>
+        <description>
+          <text id="_id52844" xml:lang="vi" status="check">Tải một quyển sách DAISY từ đĩa CD ROM:</text>
+          <originalText xml:lang="en">Load a DAISY book from CD ROM</originalText>
+          <audio src="./audio/008_Ti_mt_quyn_sch_DAISY_t_dia_CD_.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0009.smil#text_0009" />
+        </description>
+        <accelerator>
+          <text id="_id52858" xml:lang="en">Ctrl+L</text>
+          <originalText xml:lang="en">Ctrl+L</originalText>
+          <audio src="./audio/009_CtrlL.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis000a.smil#text_000a" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id52861" xml:lang="en">L</text>
+          <originalText xml:lang="en">L</originalText>
+          <audio src="./audio/010_L.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis000b.smil#text_000b" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_SEARCHDRIVE" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id52877" xml:lang="vi" status="check">Tìm kiếm...</text>
+          <originalText xml:lang="en">Search...</originalText>
+          <audio src="./audio/011_Tm_kim.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis000c.smil#text_000c" />
+        </caption>
+        <description>
+          <text id="_id52892" xml:lang="vi" status="check">Tìm kiếm sách DAISY trong các ổ đĩa cục bộ</text>
+          <originalText xml:lang="en">Search local drives for DAISY books</originalText>
+          <audio src="./audio/012_Tm_kim_sch_DAISY_trong_cc__dia.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis000d.smil#text_000d" />
+        </description>
+        <mnemonic>
+          <text id="_id52906" xml:lang="en">S</text>
+          <originalText xml:lang="en">S</originalText>
+          <audio src="./audio/013_S.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis000e.smil#text_000e" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_PREFERENCES" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id52922" xml:lang="vi" status="check">Sở thích...</text>
+          <originalText xml:lang="en">Preferences...</originalText>
+          <audio src="./audio/014_S_thch.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis000f.smil#text_000f" />
+        </caption>
+        <description>
+          <text id="_id52936" xml:lang="vi" status="check">Đây là hộp thoại sở thích cho ứng dụng.</text>
+          <originalText xml:lang="en">This is the application preferences dialog.</originalText>
+          <audio src="./audio/015_y_l_hp_thoi_s_thch_cho_ng_dng.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0010.smil#text_0010" />
+        </description>
+        <mnemonic>
+          <text id="_id52951" xml:lang="en">P</text>
+          <originalText xml:lang="en">P</originalText>
+          <audio src="./audio/016_P.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0011.smil#text_0011" />
+        </mnemonic>
+      </action>
+      <container id="recentBooksList">
+        <note xml:lang="en">This is the menu header for the recent books sub-menu.</note>
+        <caption>
+          <text id="_id52965" xml:lang="en" status="check">gần đây</text>
+          <originalText xml:lang="en">Recent</originalText>
+          <audio src="./audio/017_Recent.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0012.smil#text_0012" />
+        </caption>
+        <switch element="action">
+          <action mfcid="ID_FILE_RECENT_EMPTY" widget="menuItem" condition="ID_FILE_RECENT_EMPTY">
+            <note xml:lang="en">This is going to be a menu item</note>
+            <caption>
+              <text id="_id52997" xml:lang="vi" status="check">Trống</text>
+              <originalText xml:lang="en">Empty</originalText>
+              <audio src="./audio/018_Trng.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0013.smil#text_0013" />
+            </caption>
+            <description>
+              <text id="_id53011" xml:lang="vi" status="check">Không có sách nào mới đọc gần đây.</text>
+              <originalText xml:lang="en">There are no recently read books.</originalText>
+              <audio src="./audio/019_Khng_c_sch_no_mi_dc_gn_dy.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0014.smil#text_0014" />
+            </description>
+          </action>
+          <action mfcid="BOOK_BASE_ID" widget="menuItem" condition="BOOK_BASE_ID">
+            <note xml:lang="en">This is going to be a menu item</note>
+            <list repeat="yes">
+              <caption>
+                <promptVar name="RECENT_BOOK_TITLE" />
+              </caption>
+            </list>
+          </action>
+        </switch>
+        <mnemonic>
+          <text id="_id53052" xml:lang="en">R</text>
+          <originalText xml:lang="en">R</originalText>
+          <audio src="./audio/020_R.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0015.smil#text_0015" />
+        </mnemonic>
+      </container>
+      <action mfcid="ID_MENU_FILE_EXIT" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53068" xml:lang="vi" status="check">Thoát</text>
+          <originalText xml:lang="en">Exit</originalText>
+          <audio src="./audio/021_Thot.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0016.smil#text_0016" />
+        </caption>
+        <description>
+          <text id="_id53082" xml:lang="vi" status="check">Thoát AMIS</text>
+          <originalText xml:lang="en">Exit AMIS</originalText>
+          <audio src="./audio/022_Thot_AMIS.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0017.smil#text_0017" />
+        </description>
+        <accelerator>
+          <text id="_id53096" xml:lang="en">Alt+F4</text>
+          <originalText xml:lang="en">Alt+F4</originalText>
+          <audio src="./audio/023_AltF4.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0018.smil#text_0018" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id53099" xml:lang="en">x</text>
+          <originalText xml:lang="en">x</originalText>
+        </mnemonic>
+      </action>
+      <accelerator>
+        <text id="_id53103" xml:lang="en">Alt+F</text>
+        <originalText xml:lang="en">Alt+F</originalText>
+      </accelerator>
+      <mnemonic>
+        <text id="_id53107" xml:lang="en">F</text>
+        <originalText xml:lang="en">F</originalText>
+        <audio src="./audio/024_F.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis001b.smil#text_001b" />
+      </mnemonic>
+    </container>
+    <container id="view">
+      <note xml:lang="en">This is the menu header "View"</note>
+      <caption>
+        <text id="_id53120" xml:lang="vi" status="check">Khung nhìn</text>
+        <originalText xml:lang="en">View</originalText>
+        <audio src="./audio/025_Khung_nhn.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis001c.smil#text_001c" />
+      </caption>
+      <action mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53145" xml:lang="vi" status="ok">Thanh phụ chú</text>
+          <originalText xml:lang="en">Sidebar</originalText>
+          <audio src="./audio/026_Thanh_ph_ch.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis001d.smil#text_001d" />
+        </caption>
+        <description>
+          <text id="_id53160" xml:lang="vi" status="ok">Tắt hoặc bật thanh phụ chú</text>
+          <originalText xml:lang="en">Turn the sidebar on or off.</originalText>
+          <audio src="./audio/027_Tt_hoc_bt_thanh_ph_ch.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis001e.smil#text_001e" />
+        </description>
+        <mnemonic>
+          <text id="_id53173" xml:lang="en">S</text>
+          <originalText xml:lang="en">S</originalText>
+          <audio src="./audio/028_S.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis001f.smil#text_001f" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_BASIC" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53189" xml:lang="vi" status="ok">Chế độ xem cơ bản</text>
+          <originalText xml:lang="en">Basic View Mode</originalText>
+          <audio src="./audio/029_Ch_d_xem_co_bn.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0020.smil#text_0020" />
+        </caption>
+        <description>
+          <text id="_id53204" xml:lang="vi" status="ok">Chuyển góc nhìn sang chế độ cơ bản</text>
+          <originalText xml:lang="en">Switch the view to basic mode.</originalText>
+          <audio src="./audio/030_Chuyn_gc_nhn_sang_ch_d_co_bn.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0021.smil#text_0021" />
+        </description>
+        <accelerator>
+          <text id="_id53217" xml:lang="en">F11</text>
+          <originalText xml:lang="en">F11</originalText>
+          <audio src="./audio/031_F11.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0022.smil#text_0022" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id53221" xml:lang="en">B</text>
+          <originalText xml:lang="en">B</originalText>
+          <audio src="./audio/032_B.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0023.smil#text_0023" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_CONTRAST" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <icon src="./settings/img/contrast.ico" type="smallIcon" />
+        <caption>
+          <text id="_id53243" xml:lang="vi" status="ok">Tương phản cao</text>
+          <originalText xml:lang="en">High Contrast</originalText>
+          <audio src="./audio/033_Tuong_phn_cao.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0024.smil#text_0024" />
+        </caption>
+        <description>
+          <text id="_id53258" xml:lang="vi" status="check">Dùng các màu tương phản cao để hiển thị văn bản</text>
+          <originalText xml:lang="en">Use high contrast colors for the text display.</originalText>
+          <audio src="./audio/034_Dng_cc_mu_tuong_phn_cao_d_hin_.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0025.smil#text_0025" />
+        </description>
+        <accelerator>
+          <text id="_id53272" xml:lang="en">Ctrl+S</text>
+          <originalText xml:lang="en">Ctrl+S</originalText>
+          <audio src="./audio/035_CtrlS.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0026.smil#text_0026" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id53276" xml:lang="en">C</text>
+          <originalText xml:lang="en">C</originalText>
+          <audio src="./audio/036_C.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0027.smil#text_0027" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_LARGEFONT" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/font.ico" type="smallIcon" />
+        <caption>
+          <text id="_id53299" xml:lang="vi" status="ok">Tăng cỡ phông</text>
+          <originalText xml:lang="en">Increase Font Size</originalText>
+          <audio src="./audio/037_Tang_c_phng.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0028.smil#text_0028" />
+        </caption>
+        <description>
+          <text id="_id53314" xml:lang="vi" status="ok">Tăng dần cỡ phông</text>
+          <originalText xml:lang="en">Gradually increase the font size.</originalText>
+          <audio src="./audio/038_Tang_dn_c_phng.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0029.smil#text_0029" />
+        </description>
+        <mnemonic>
+          <text id="_id53328" xml:lang="en">I</text>
+          <originalText xml:lang="en">I</originalText>
+          <audio src="./audio/039_I.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis002a.smil#text_002a" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_RESETFONT" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53344" xml:lang="vi" status="ok">Thiết lập lại cỡ phông</text>
+          <originalText xml:lang="en">Reset Font Size</originalText>
+          <audio src="./audio/040_Thit_lp_li_c_phng.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis002b.smil#text_002b" />
+        </caption>
+        <description>
+          <text id="_id53358" xml:lang="vi" status="check">Đặt cỡ phông về thiết lập mặc định</text>
+          <originalText xml:lang="en">Set the font size to the default setting.</originalText>
+          <audio src="./audio/041_t_c_phng_v_thit_lp_mc_dnh.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis002c.smil#text_002c" />
+        </description>
+        <mnemonic>
+          <text id="_id53373" xml:lang="en">R</text>
+          <originalText xml:lang="en">R</originalText>
+          <audio src="./audio/042_R.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis002d.smil#text_002d" />
+        </mnemonic>
+      </action>
+      <action mfcid="NAVLIST_BASE_ID" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <promptVar name="NAV_LIST_NAME" />
+        </caption>
+        <description>
+          <promptVar name="NAV_LIST_DESCRIPTION" />
+        </description>
+      </action>
+      <accelerator>
+        <text id="_id53403" xml:lang="en">Alt+V</text>
+        <originalText xml:lang="en">Alt+V</originalText>
+        <audio src="./audio/043_AltV.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis002e.smil#text_002e" />
+      </accelerator>
+      <mnemonic>
+        <text id="_id53407" xml:lang="en">V</text>
+        <originalText xml:lang="en">V</originalText>
+        <audio src="./audio/044_V.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis002f.smil#text_002f" />
+      </mnemonic>
+    </container>
+    <container id="play">
+      <note xml:lang="en">This is the menu header "Play"</note>
+      <caption>
+        <text id="_id53420" xml:lang="vi" status="check">đọc sách</text>
+        <originalText xml:lang="en">Play</originalText>
+        <audio src="./audio/045_Play.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0030.smil#text_0030" />
+      </caption>
+      <switch element="action">
+        <action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" condition="canPlay">
+          <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+          <icon src="./settings/img/play-big.ico" type="smallIcon" />
+          <icon src="./settings/img/play_big.ico" type="largeIcon" />
+          <caption>
+            <text id="_id53465" xml:lang="vi" status="check">Bật</text>
+            <originalText xml:lang="en">Play</originalText>
+            <audio src="./audio/046_Bt.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0031.smil#text_0031" />
+          </caption>
+          <description>
+            <text id="_id53480" xml:lang="vi" status="check">Bật đĩa thu đã đồng bộ hóa.</text>
+            <originalText xml:lang="en">Start synchronized playback.</originalText>
+            <audio src="./audio/047_Bt_dia_thu_d_dng_b_ha.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0032.smil#text_0032" />
+          </description>
+          <accelerator>
+            <text id="_id53494" xml:lang="en">Space</text>
+            <originalText xml:lang="en">Space</originalText>
+            <audio src="./audio/048_Space.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0033.smil#text_0033" />
+          </accelerator>
+          <mnemonic>
+            <text id="_id53497" xml:lang="en">P</text>
+            <originalText xml:lang="en">P</originalText>
+            <audio src="./audio/049_P.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0034.smil#text_0034" />
+          </mnemonic>
+        </action>
+        <action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" condition="canPause">
+          <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+          <icon src="./settings/img/pause.ico" type="smallIcon" />
+          <icon src="./settings/img/pause_big.ico" type="largeIcon" />
+          <caption>
+            <text id="_id53529" xml:lang="vi" status="check">Dừng</text>
+            <originalText xml:lang="en">Pause</originalText>
+            <audio src="./audio/050_Dng.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0035.smil#text_0035" />
+          </caption>
+          <description>
+            <text id="_id53544" xml:lang="vi" status="check">Tạm dừng phát lại quyển sách DAISY này.</text>
+            <originalText xml:lang="en">Pause playback of this DAISY book.</originalText>
+            <audio src="./audio/051_Tm_dng_pht_li_quyn_sch_DAISY_n.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0036.smil#text_0036" />
+          </description>
+          <accelerator>
+            <text id="_id53558" xml:lang="en">Space</text>
+            <originalText xml:lang="en">Space</originalText>
+            <audio src="./audio/052_Space.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0037.smil#text_0037" />
+          </accelerator>
+          <mnemonic>
+            <text id="_id53561" xml:lang="en">a</text>
+            <originalText xml:lang="en">a</originalText>
+            <audio src="./audio/053_a.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0038.smil#text_0038" />
+          </mnemonic>
+        </action>
+      </switch>
+      <action mfcid="ID_MENU_PLAY_ESCAPE" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53578" xml:lang="vi" status="check">Thoát</text>
+          <originalText xml:lang="en">Escape</originalText>
+          <audio src="./audio/054_Thot.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0039.smil#text_0039" />
+        </caption>
+        <description>
+          <text id="_id53593" xml:lang="vi" status="check">Nhảy ra khỏi mục hoặc cấu trúc đang bật.</text>
+          <originalText xml:lang="en">Jump out of the currently playing item or structure.</originalText>
+          <audio src="./audio/055_Nhy_ra_khi_mc_hoc_cu_trc_dang_.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis003a.smil#text_003a" />
+        </description>
+        <accelerator>
+          <text id="_id53608" xml:lang="en">Esc</text>
+          <originalText xml:lang="en">Esc</originalText>
+          <audio src="./audio/056_Esc.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis003b.smil#text_003b" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id53611" xml:lang="en">E</text>
+          <originalText xml:lang="en">E</originalText>
+          <audio src="./audio/057_E.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis003c.smil#text_003c" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_FASTER" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/fullspeedahead.ico" type="smallIcon" />
+        <caption>
+          <text id="_id53634" xml:lang="vi" status="check">Nhanh hơn</text>
+          <originalText xml:lang="en">Faster</originalText>
+          <audio src="./audio/058_Nhanh_hon.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis003d.smil#text_003d" />
+        </caption>
+        <description>
+          <text id="_id53649" xml:lang="vi" status="check">Tăng tốc độ phát lại.</text>
+          <originalText xml:lang="en">Increase the playback rate.</originalText>
+          <audio src="./audio/059_Tang_tc_d_pht_li.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis003e.smil#text_003e" />
+        </description>
+        <accelerator>
+          <text id="_id53662" xml:lang="en">Ctrl++</text>
+          <originalText xml:lang="en">Ctrl++</originalText>
+          <audio src="./audio/060_Ctrl.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis003f.smil#text_003f" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id53666" xml:lang="en">F</text>
+          <originalText xml:lang="en">F</originalText>
+          <audio src="./audio/061_F.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0040.smil#text_0040" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_SLOWER" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/slowdown.ico" type="smallIcon" />
+        <caption>
+          <text id="_id53689" xml:lang="vi" status="check">Chậm hơn</text>
+          <originalText xml:lang="en">Slower</originalText>
+          <audio src="./audio/062_Chm_hon.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0041.smil#text_0041" />
+        </caption>
+        <description>
+          <text id="_id53704" xml:lang="vi" status="check">Giảm tốc độ phát lại.</text>
+          <originalText xml:lang="en">Slow down the playback rate.</originalText>
+          <audio src="./audio/063_Gim_tc_d_pht_li.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0042.smil#text_0042" />
+        </description>
+        <accelerator>
+          <text id="_id53717" xml:lang="en">Ctrl+-</text>
+          <originalText xml:lang="en">Ctrl+-</originalText>
+          <audio src="./audio/064_Ctrl.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0043.smil#text_0043" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id53721" xml:lang="en">S</text>
+          <originalText xml:lang="en">S</originalText>
+          <audio src="./audio/065_S.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0044.smil#text_0044" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_NORMALSPEED" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/normalspeed.ico" type="smallIcon" />
+        <caption>
+          <text id="_id53744" xml:lang="vi" status="check">Tốc độ bình thường</text>
+          <originalText xml:lang="en">Normal Speed</originalText>
+          <audio src="./audio/066_Tc_d_bnh_thung.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0045.smil#text_0045" />
+        </caption>
+        <description>
+          <text id="_id53758" xml:lang="vi" status="check">Thiết lập lại tốc độ phát lại về bình thường</text>
+          <originalText xml:lang="en">Reset the playback rate to normal.</originalText>
+          <audio src="./audio/067_Thit_lp_li_tc_d_pht_li_v_bnh_t.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0046.smil#text_0046" />
+        </description>
+        <accelerator>
+          <text id="_id53773" xml:lang="en">Ctrl+0</text>
+          <originalText xml:lang="en">Ctrl+0</originalText>
+          <audio src="./audio/068_Ctrl0.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0047.smil#text_0047" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id53776" xml:lang="en">N</text>
+          <originalText xml:lang="en">N</originalText>
+          <audio src="./audio/069_N.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0048.smil#text_0048" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_VOLUP" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53792" xml:lang="vi" status="check">Tăng âm lượng</text>
+          <originalText xml:lang="en">Increase Volume</originalText>
+          <audio src="./audio/070_Tang_m_lung.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0049.smil#text_0049" />
+        </caption>
+        <description>
+          <text id="_id53807" xml:lang="vi" status="check">Tăng dần âm lượng</text>
+          <originalText xml:lang="en">Gradually raise the volume.</originalText>
+          <audio src="./audio/071_Tang_dn_m_lung.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis004a.smil#text_004a" />
+        </description>
+        <accelerator>
+          <text id="_id53821" xml:lang="en">Ctrl+Up</text>
+          <originalText xml:lang="en">Ctrl+Up</originalText>
+          <audio src="./audio/072_CtrlUp.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis004b.smil#text_004b" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id53824" xml:lang="en">I</text>
+          <originalText xml:lang="en">I</originalText>
+          <audio src="./audio/073_I.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis004c.smil#text_004c" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_VOLDOWN" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53840" xml:lang="vi" status="check">Giảm âm lượng</text>
+          <originalText xml:lang="en">Decrease Volume</originalText>
+          <audio src="./audio/074_Gim_m_lung.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis004d.smil#text_004d" />
+        </caption>
+        <description>
+          <text id="_id53854" xml:lang="vi" status="check">Giảm dần âm lượng</text>
+          <originalText xml:lang="en">Gradually lower the volume.</originalText>
+          <audio src="./audio/075_Gim_dn_m_lung.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis004e.smil#text_004e" />
+        </description>
+        <accelerator>
+          <text id="_id53868" xml:lang="en">Ctrl+Down</text>
+          <originalText xml:lang="en">Ctrl+Down</originalText>
+          <audio src="./audio/076_CtrlDown.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis004f.smil#text_004f" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id53872" xml:lang="en">D</text>
+          <originalText xml:lang="en">D</originalText>
+          <audio src="./audio/077_D.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0050.smil#text_0050" />
+        </mnemonic>
+      </action>
+      <accelerator>
+        <text id="_id53876" xml:lang="en">Alt+P</text>
+        <originalText xml:lang="en">Alt+P</originalText>
+        <audio src="./audio/078_AltP.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0051.smil#text_0051" />
+      </accelerator>
+      <mnemonic>
+        <text id="_id53879" xml:lang="en">P</text>
+        <originalText xml:lang="en">P</originalText>
+        <audio src="./audio/079_P.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0052.smil#text_0052" />
+      </mnemonic>
+    </container>
+    <container id="navigate">
+      <note xml:lang="en">This is the menu header "Navigate"</note>
+      <caption>
+        <text id="_id53893" xml:lang="vi" status="check">Điều hướng</text>
+        <originalText xml:lang="en">Navigate</originalText>
+        <audio src="./audio/080_iu_hung.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0053.smil#text_0053" />
+      </caption>
+      <action mfcid="ID_MENU_NAV_PREVSECTION" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevsection.ico" type="smallIcon" />
+        <icon src="./settings/img/prevsection_big.ico" type="largeIcon" />
+        <caption>
+          <text id="_id53932" xml:lang="vi" status="check">Phần Trước</text>
+          <originalText xml:lang="en">Previous Section</originalText>
+          <audio src="./audio/081_Phn_Truc.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0054.smil#text_0054" />
+        </caption>
+        <description>
+          <text id="_id53947" xml:lang="vi" status="check">Chuyển sang phần trước</text>
+          <originalText xml:lang="en">Go to the previous section.</originalText>
+          <audio src="./audio/082_Chuyn_sang_phn_truc.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0055.smil#text_0055" />
+        </description>
+        <accelerator>
+          <text id="_id53961" xml:lang="en">Up</text>
+          <originalText xml:lang="en">Up</originalText>
+          <audio src="./audio/083_Up.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0056.smil#text_0056" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id53964" xml:lang="en">P</text>
+          <originalText xml:lang="en">P</originalText>
+          <audio src="./audio/084_P.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0057.smil#text_0057" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTSECTION" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextsection.ico" type="smallIcon" />
+        <icon src="./settings/img/nextsection_big.ico" type="largeIcon" />
+        <caption>
+          <text id="_id53994" xml:lang="vi" status="check">Phần tiếp</text>
+          <originalText xml:lang="en">Next Section</originalText>
+          <audio src="./audio/085_Phn_tip.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0058.smil#text_0058" />
+        </caption>
+        <description>
+          <text id="_id54009" xml:lang="vi" status="check">Chuyển sang phần tiếp.</text>
+          <originalText xml:lang="en">Go to the next section.</originalText>
+          <audio src="./audio/086_Chuyn_sang_phn_tip.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0059.smil#text_0059" />
+        </description>
+        <accelerator>
+          <text id="_id54022" xml:lang="en">Down</text>
+          <originalText xml:lang="en">Down</originalText>
+          <audio src="./audio/087_Down.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis005a.smil#text_005a" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id54026" xml:lang="en">N</text>
+          <originalText xml:lang="en">N</originalText>
+          <audio src="./audio/088_N.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis005b.smil#text_005b" />
+        </mnemonic>
+      </action>
+      <container id="sectiondepth">
+        <note xml:lang="en">This is the "show section depth" sub-menu pop-up</note>
+        <caption>
+          <text id="_id54040" xml:lang="vi" status="check">Hiển thị độ dày của phần</text>
+          <originalText xml:lang="en">Show Section Depth</originalText>
+          <audio src="./audio/089_Hin_th_d_dy_ca_phn.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis005c.smil#text_005c" />
+        </caption>
+        <switch element="action">
+          <action mfcid="ID_EMPTY" widget="menuItem" condition="ID_EMPTY">
+            <note xml:lang="en">This is going to be a menu item</note>
+            <caption>
+              <text id="_id54071" xml:lang="vi" status="check">Trống</text>
+              <originalText xml:lang="en">Empty</originalText>
+              <audio src="./audio/090_Trng.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis005d.smil#text_005d" />
+            </caption>
+            <description>
+              <text id="_id54086" xml:lang="vi" status="check">Không có mức chia phần nào</text>
+              <originalText xml:lang="en">There are no section levels.</originalText>
+              <audio src="./audio/091_Khng_c_mc_chia_phn_no.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis005e.smil#text_005e" />
+            </description>
+          </action>
+          <action mfcid="SECTION_DEPTH_BASE_ID" widget="menuItem" condition="SECTION_DEPTH_BASE_ID">
+            <note xml:lang="en">This is going to be a menu item</note>
+            <list repeat="yes">
+              <caption>
+                <promptVar name="SECTION_DEPTH_OPTION" />
+              </caption>
+            </list>
+          </action>
+        </switch>
+        <mnemonic>
+          <text id="_id54128" xml:lang="en">S</text>
+          <originalText xml:lang="en">S</originalText>
+          <audio src="./audio/092_S.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis005f.smil#text_005f" />
+        </mnemonic>
+      </container>
+      <action mfcid="ID_MENU_NAV_PREVPHRASE" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevphasecirc.ico" type="smallIcon" />
+        <caption>
+          <text id="_id54152" xml:lang="vi" status="check">Cụm từ trước</text>
+          <originalText xml:lang="en">Previous Phrase</originalText>
+          <audio src="./audio/093_Cm_t_truc.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0060.smil#text_0060" />
+        </caption>
+        <description>
+          <text id="_id54166" xml:lang="vi" status="check">Chuyển sang cụm từ trước</text>
+          <originalText xml:lang="en">Go to the previous phrase.</originalText>
+          <audio src="./audio/094_Chuyn_sang_cm_t_truc.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0061.smil#text_0061" />
+        </description>
+        <accelerator>
+          <text id="_id54180" xml:lang="en">Left</text>
+          <originalText xml:lang="en">Left</originalText>
+          <audio src="./audio/095_Left.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0062.smil#text_0062" />
+        </accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTPHRASE" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextphrasecirc.ico" type="smallIcon" />
+        <caption>
+          <text id="_id54204" xml:lang="vi" status="check">Cụm từ tiếp</text>
+          <originalText xml:lang="en">Next Phrase</originalText>
+          <audio src="./audio/096_Cm_t_tip.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0063.smil#text_0063" />
+        </caption>
+        <description>
+          <text id="_id54218" xml:lang="vi" status="check">Chuyển sang cụm từ tiếp</text>
+          <originalText xml:lang="en">Go to the next phrase.</originalText>
+          <audio src="./audio/097_Chuyn_sang_cm_t_tip.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0064.smil#text_0064" />
+        </description>
+        <accelerator>
+          <text id="_id54232" xml:lang="en">Right</text>
+          <originalText xml:lang="en">Right</originalText>
+          <audio src="./audio/098_Right.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0065.smil#text_0065" />
+        </accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_PREVPAGE" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevpage.ico" type="smallIcon" />
+        <caption>
+          <text id="_id54256" xml:lang="vi" status="check">Trang trước</text>
+          <originalText xml:lang="en">Previous Page</originalText>
+          <audio src="./audio/099_Trang_truc.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0066.smil#text_0066" />
+        </caption>
+        <description>
+          <text id="_id54270" xml:lang="vi" status="check">Chuyển sang trang trước</text>
+          <originalText xml:lang="en">Go to the previous page.</originalText>
+          <audio src="./audio/100_Chuyn_sang_trang_truc.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0067.smil#text_0067" />
+        </description>
+        <accelerator>
+          <text id="_id54284" xml:lang="en">Ctrl+Left</text>
+          <originalText xml:lang="en">Ctrl+Left</originalText>
+          <audio src="./audio/101_CtrlLeft.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0068.smil#text_0068" />
+        </accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTPAGE" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextpage.ico" type="smallIcon" />
+        <caption>
+          <text id="_id54307" xml:lang="vi" status="check">Trang tiếp</text>
+          <originalText xml:lang="en">Next Page</originalText>
+          <audio src="./audio/102_Trang_tip.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0069.smil#text_0069" />
+        </caption>
+        <description>
+          <text id="_id54322" xml:lang="vi" status="check">Chuyển sang trang tiếp</text>
+          <originalText xml:lang="en">Go to the next page.</originalText>
+          <audio src="./audio/103_Chuyn_sang_trang_tip.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis006a.smil#text_006a" />
+        </description>
+        <accelerator>
+          <text id="_id54336" xml:lang="en">Ctrl+Right</text>
+          <originalText xml:lang="en">Ctrl+Right</originalText>
+          <audio src="./audio/104_CtrlRight.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis006b.smil#text_006b" />
+        </accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_GOTOPAGE" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id54352" xml:lang="vi" status="check">Chuyển sang trang...</text>
+          <originalText xml:lang="en">Go to Page...</originalText>
+          <audio src="./audio/105_Chuyn_sang_trang.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis006c.smil#text_006c" />
+        </caption>
+        <description>
+          <text id="_id54366" xml:lang="vi" status="check">Chuyển sang một trang cụ thể</text>
+          <originalText xml:lang="en">Go to a specific page.</originalText>
+          <audio src="./audio/106_Chuyn_sang_mt_trang_c_th.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis006d.smil#text_006d" />
+        </description>
+        <accelerator>
+          <text id="_id54380" xml:lang="en">Ctrl+G</text>
+          <originalText xml:lang="en">Ctrl+G</originalText>
+          <audio src="./audio/107_CtrlG.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis006e.smil#text_006e" />
+        </accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_FINDINTEXT" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id54396" xml:lang="vi" status="check">Tìm trong văn bản</text>
+          <originalText xml:lang="en">Find in Text</originalText>
+          <audio src="./audio/108_Tm_trong_van_bn.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis006f.smil#text_006f" />
+        </caption>
+        <description>
+          <text id="_id54410" xml:lang="vi" status="check">Tìm kiếm một từ hoặc một cụm từ trong văn bản.</text>
+          <originalText xml:lang="en">Search for a word or phrase in the text.</originalText>
+          <audio src="./audio/109_Tm_kim_mt_t_hoc_mt_cm_t_trong_.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0070.smil#text_0070" />
+        </description>
+        <accelerator>
+          <text id="_id54425" xml:lang="en">Ctrl+F</text>
+          <originalText xml:lang="en">Ctrl+F</originalText>
+          <audio src="./audio/110_CtrlF.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0071.smil#text_0071" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id54428" xml:lang="en">F</text>
+          <originalText xml:lang="en">F</originalText>
+          <audio src="./audio/111_F.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0072.smil#text_0072" />
+        </mnemonic>
+      </action>
+      <accelerator>
+        <text id="_id54432" xml:lang="en">Alt+N</text>
+        <originalText xml:lang="en">Alt+N</originalText>
+        <audio src="./audio/112_AltN.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0073.smil#text_0073" />
+      </accelerator>
+      <mnemonic>
+        <text id="_id54436" xml:lang="en">N</text>
+        <originalText xml:lang="en">N</originalText>
+        <audio src="./audio/113_N.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0074.smil#text_0074" />
+      </mnemonic>
+    </container>
+    <container id="bookmarks">
+      <note xml:lang="en">This is the menu header "Bookmarks"</note>
+      <caption>
+        <text id="_id54449" xml:lang="vi" status="check">Dấu sách</text>
+        <originalText xml:lang="en">Bookmarks</originalText>
+        <audio src="./audio/114_Du_sch.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0075.smil#text_0075" />
+      </caption>
+      <action mfcid="ID_MENU_BMK_ADD" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/adbookmark.ico" type="smallIcon" />
+        <caption>
+          <text id="_id54481" xml:lang="vi" status="check">Thêm dấu sách</text>
+          <originalText xml:lang="en">Add Bookmark</originalText>
+          <audio src="./audio/115_Thm_du_sch.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0076.smil#text_0076" />
+        </caption>
+        <description>
+          <text id="_id54496" xml:lang="vi" status="check">Đánh dấu vị trí hiện tại của bạn</text>
+          <originalText xml:lang="en">Bookmark your current position.</originalText>
+          <audio src="./audio/116_nh_du_v_tr_hin_ti_ca_bn.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0077.smil#text_0077" />
+        </description>
+        <accelerator>
+          <text id="_id54510" xml:lang="en">Ctrl+D</text>
+          <originalText xml:lang="en">Ctrl+D</originalText>
+          <audio src="./audio/117_CtrlD.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0078.smil#text_0078" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id54513" xml:lang="en">A</text>
+          <originalText xml:lang="en">A</originalText>
+          <audio src="./audio/118_A.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0079.smil#text_0079" />
+        </mnemonic>
+      </action>
+      <action mfcid="BOOKMARK_BASE_ID" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOKMARK_TITLE" />
+          </caption>
+        </list>
+      </action>
+      <accelerator>
+        <text id="_id54542" xml:lang="en">Alt+B</text>
+        <originalText xml:lang="en">Alt+B</originalText>
+        <audio src="./audio/119_AltB.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis007a.smil#text_007a" />
+      </accelerator>
+      <mnemonic>
+        <text id="_id54545" xml:lang="en">B</text>
+        <originalText xml:lang="en">B</originalText>
+        <audio src="./audio/120_B.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis007b.smil#text_007b" />
+      </mnemonic>
+    </container>
+    <container id="info">
+      <note xml:lang="en">This is the menu header "Info"</note>
+      <caption>
+        <text id="_id54558" xml:lang="vi" status="check">Thông tin</text>
+        <originalText xml:lang="en">Info</originalText>
+        <audio src="./audio/121_Thng_tin.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis007c.smil#text_007c" />
+      </caption>
+      <action mfcid="ID_MENU_INFO_SKIP" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id54583" xml:lang="vi" status="check">Các mục có thể bỏ qua...</text>
+          <originalText xml:lang="en">Skippable Items...</originalText>
+          <audio src="./audio/122_Cc_mc_c_th_b_qua.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis007d.smil#text_007d" />
+        </caption>
+        <description>
+          <text id="_id54598" xml:lang="vi" status="check">Xem các mục có thể bỏ qua trong xuất bản phẩm này</text>
+          <originalText xml:lang="en">View the skippable items for this publication.</originalText>
+          <audio src="./audio/123_Xem_cc_mc_c_th_b_qua_trong_xut.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis007e.smil#text_007e" />
+        </description>
+        <mnemonic>
+          <text id="_id54613" xml:lang="en">S</text>
+          <originalText xml:lang="en">S</originalText>
+          <audio src="./audio/124_S.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis007f.smil#text_007f" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_SUMMARY" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/info.ico" type="smallIcon" />
+        <caption>
+          <text id="_id54636" xml:lang="vi" status="check">Tóm tắt đầy đủ</text>
+          <originalText xml:lang="en">Full Summary</originalText>
+          <audio src="./audio/125_Tm_tt_dy_d.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0080.smil#text_0080" />
+        </caption>
+        <description>
+          <text id="_id54650" xml:lang="vi" status="check">Lấy tất cả các thông tin tóm tắt cho sản phẩm này</text>
+          <originalText xml:lang="en">Get all summary info for this publication.</originalText>
+          <audio src="./audio/126_Ly_tt_c_cc_thng_tin_tm_tt_cho_.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0081.smil#text_0081" />
+        </description>
+        <mnemonic>
+          <text id="_id54665" xml:lang="en">F</text>
+          <originalText xml:lang="en">F</originalText>
+          <audio src="./audio/127_F.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0082.smil#text_0082" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_CURRENTPOSITION" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id54680" xml:lang="vi" status="check">Vị trí hiện tại</text>
+          <originalText xml:lang="en">Current Position</originalText>
+          <audio src="./audio/128_V_tr_hin_ti.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0083.smil#text_0083" />
+        </caption>
+        <description>
+          <text id="_id54695" xml:lang="vi" status="check">Lấy thông tin về vị trí hiện tại của bạn</text>
+          <originalText xml:lang="en">Get information about your current position.</originalText>
+          <audio src="./audio/129_Ly_thng_tin_v_v_tr_hin_ti_ca_b.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0084.smil#text_0084" />
+        </description>
+        <mnemonic>
+          <text id="_id54710" xml:lang="en">C</text>
+          <originalText xml:lang="en">C</originalText>
+          <audio src="./audio/130_C.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0085.smil#text_0085" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_NAVOPTIONS" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id54725" xml:lang="vi" status="check">Tùy chọn Điều hướng</text>
+          <originalText xml:lang="en">Navigation Options</originalText>
+          <audio src="./audio/131_Ty_chn_iu_hung.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0086.smil#text_0086" />
+        </caption>
+        <description>
+          <text id="_id54740" xml:lang="vi" status="check">Tìm hiểu về các tùy chọn điều hướng trong xuất bản phẩm này</text>
+          <originalText xml:lang="en">Learn about your navigation options for this publication.</originalText>
+          <audio src="./audio/132_Tm_hiu_v_cc_ty_chn_diu_hung_tr.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0087.smil#text_0087" />
+        </description>
+        <mnemonic>
+          <text id="_id54755" xml:lang="en">N</text>
+          <originalText xml:lang="en">N</originalText>
+          <audio src="./audio/133_N.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0088.smil#text_0088" />
+        </mnemonic>
+      </action>
+      <accelerator>
+        <text id="_id54760" xml:lang="en">Alt+I</text>
+        <originalText xml:lang="en">Alt+I</originalText>
+        <audio src="./audio/134_AltI.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0089.smil#text_0089" />
+      </accelerator>
+      <mnemonic>
+        <text id="_id54763" xml:lang="en">I</text>
+        <originalText xml:lang="en">I</originalText>
+        <audio src="./audio/135_I.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis008a.smil#text_008a" />
+      </mnemonic>
+    </container>
+    <container id="help">
+      <note xml:lang="en">This is the menu header "Help"</note>
+      <caption>
+        <text id="_id54776" xml:lang="vi" status="check">Trợ giúp</text>
+        <originalText xml:lang="en">Help</originalText>
+        <audio src="./audio/136_Tr_gip.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis008b.smil#text_008b" />
+      </caption>
+      <action mfcid="ID_MENU_HELP_CONTENTS" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/help.ico" type="smallIcon" />
+        <icon src="./settings/img/help_big.ico" type="largeIcon" />
+        <caption>
+          <text id="_id54815" xml:lang="vi" status="check">Nội dung</text>
+          <originalText xml:lang="en">Contents</originalText>
+          <audio src="./audio/137_Ni_dung.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis008c.smil#text_008c" />
+        </caption>
+        <description>
+          <text id="_id54830" xml:lang="vi" status="check">Lấy thông tin trợ giúp sử dụng AMIS</text>
+          <originalText xml:lang="en">Get help using AMIS</originalText>
+          <audio src="./audio/138_Ly_thng_tin_tr_gip_s_dng_AMIS.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis008d.smil#text_008d" />
+        </description>
+        <mnemonic>
+          <text id="_id54844" xml:lang="en">C</text>
+          <originalText xml:lang="en">C</originalText>
+          <audio src="./audio/139_C.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis008e.smil#text_008e" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_HELP_ABOUT" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id54859" xml:lang="vi" status="check">Về AMIS</text>
+          <originalText xml:lang="en">About AMIS</originalText>
+          <audio src="./audio/140_V_AMIS.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis008f.smil#text_008f" />
+        </caption>
+        <description>
+          <text id="_id54874" xml:lang="vi" status="check">Tìm hiểu về DAISY và DAISY-for-All</text>
+          <originalText xml:lang="en">Find out about AMIS and DAISY-for-All.</originalText>
+          <audio src="./audio/141_Tm_hiu_v_DAISY_v_DAISYforAll.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0090.smil#text_0090" />
+        </description>
+        <mnemonic>
+          <text id="_id54888" xml:lang="en">A</text>
+          <originalText xml:lang="en">A</originalText>
+          <audio src="./audio/142_A.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0091.smil#text_0091" />
+        </mnemonic>
+      </action>
+      <accelerator>
+        <text id="_id54892" xml:lang="en">Alt+H</text>
+        <originalText xml:lang="en">Alt+H</originalText>
+        <audio src="./audio/143_AltH.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0092.smil#text_0092" />
+      </accelerator>
+      <mnemonic>
+        <text id="_id54896" xml:lang="en">H</text>
+        <originalText xml:lang="en">H</originalText>
+        <audio src="./audio/144_H.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0093.smil#text_0093" />
+      </mnemonic>
+    </container>
+  </containers>
+  <dialogs>
+    <dialog mfcid="IDD_FIND">
+      <note xml:lang="en">This is the find in text dialog</note>
+      <caption>
+        <text id="_id54912" xml:lang="vi" status="check">Tìm trong văn bản</text>
+        <originalText xml:lang="en">Find in Text</originalText>
+        <audio src="./audio/145_Tm_trong_van_bn.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0094.smil#text_0094" />
+      </caption>
+      <description>
+        <text id="_id54927" xml:lang="vi" status="check">Tại đây bạn có thể tìm kiếm toàn văn bản theo cả hai hướng</text>
+        <originalText xml:lang="en">Here you can search the full text in either direction.</originalText>
+        <audio src="./audio/146_Ti_dy_bn_c_th_tm_kim_ton_van_b.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0095.smil#text_0095" />
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround" />
+        <promptItem>
+          <text id="_id54951" xml:lang="vi" status="check">Sau khi gõ vào từ khóa, nhấn enter để bắt đầu tìm kiếm</text>
+          <originalText xml:lang="en">After typing in your search, press enter to begin searching.</originalText>
+          <audio src="./audio/147_Sau_khi_g_vo_t_kha_nhn_enter_d.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0096.smil#text_0096" />
+        </promptItem>
+        <promptItem refid="altC_to_cancel" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+        <promptItem refid="textBoxRepeatInstr" />
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption" />
+        </caption>
+        <description>
+          <text id="_id55000" xml:lang="vi" status="check">Nhấn để bắt đầu tìm kiếm văn bản trong tệp</text>
+          <originalText xml:lang="en">Press to begin searching for text in the file.</originalText>
+          <audio src="./audio/148_Nhn_d_bt_du_tm_kim_van_bn_tron.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0097.smil#text_0097" />
+        </description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description" />
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          <audio src="./audio/036_C.mp3" />
+        </mnemonic>
+      </control>
+      <control mfcid="IDC_SEARCHSTRING" widget="textfield">
+        <description>
+          <text id="_id55046" xml:lang="vi" status="check">Gõ vào văn bản cần tìm kiếm</text>
+          <originalText xml:lang="en">Type the text to search for.</originalText>
+          <audio src="./audio/149_G_vo_van_bn_cn_tm_kim.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0098.smil#text_0098" />
+        </description>
+      </control>
+      <control mfcid="IDC_FINDNEXT" widget="radiobutton">
+        <note xml:lang="en">This indicates the direction of the search</note>
+        <caption>
+          <text id="_id55073" xml:lang="vi" status="check">Tìm tiếp</text>
+          <originalText xml:lang="en">Find Next</originalText>
+          <audio src="./audio/150_Tm_tip.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0099.smil#text_0099" />
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently" />
+            <promptVar name="SELECTED_OR_DESELECTED" param="FIND_NEXT_IN_TEXT" />
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_FINDPREV" widget="radiobutton">
+        <note xml:lang="en">This indicates the direction of the search</note>
+        <caption>
+          <text id="_id55117" xml:lang="vi" status="check">Tìm trước</text>
+          <originalText xml:lang="en">Find Previous</originalText>
+          <audio src="./audio/151_Tm_truc.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis009a.smil#text_009a" />
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently" />
+            <promptName name="SELECTED_OR_DESELECTED" param="FIND_PREV_IN_TEXT" />
+          </prompt>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_CDSEARCH">
+      <note xml:lang="en">This dialog appears when more than one book is on a CD-ROM</note>
+      <caption>
+        <text id="_id55160" xml:lang="vi" status="check">Tìm thấy nhiều sách</text>
+        <originalText xml:lang="en">Multiple books found</originalText>
+        <audio src="./audio/152_Tm_thy_nhiu_sch.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis009b.smil#text_009b" />
+      </caption>
+      <description mfcid="IDC_STATIC">
+        <text id="_id55177" xml:lang="vi" status="check">Tìm thấy nhiều hơn một quyển sách trên đĩa này. Vui lòng chọn một quyển trong danh sách dưới đây và nhấn Alt + O để mở.</text>
+        <originalText xml:lang="en">More than one book was found on this CD. Please select a book from the list below and press Alt + O to open.</originalText>
+        <audio src="./audio/153_Tm_thy_nhiu_hon_mt_quyn_sch_tr.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis009c.smil#text_009c" />
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround" />
+        <promptItem refid="altC_to_cancel" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+      </prompt>
+      <control mfcid="IDC_CANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description" />
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          <audio src="./audio/036_C.mp3" />
+        </mnemonic>
+      </control>
+      <control mfcid="IDC_OPENBOOK" widget="button">
+        <caption>
+          <text id="_id55246" xml:lang="vi" status="check">Mở</text>
+          <originalText xml:lang="en">Open</originalText>
+          <audio src="./audio/154_M.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis009d.smil#text_009d" />
+        </caption>
+        <description>
+          <text id="_id55261" xml:lang="vi" status="check">Nhấn để đóng hộp thoại này và mở quyển sách đã lựa.</text>
+          <originalText xml:lang="en">Press to close this dialog and open the selected book.</originalText>
+          <audio src="./audio/155_Nhn_d_dng_hp_thoi_ny_v_m_quyn_.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis009e.smil#text_009e" />
+        </description>
+        <mnemonic>
+          <text id="_id55276" xml:lang="en">O</text>
+          <originalText xml:lang="en">O</originalText>
+          <audio src="./audio/156_O.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis009f.smil#text_009f" />
+        </mnemonic>
+      </control>
+      <control mfcid="IDC_BOOKLIST" widget="list">
+        <description>
+          <text id="_id55288" xml:lang="vi" status="check">Dùng các phím mũi tên để di chuyển trong danh sách các tiêu đề này.</text>
+          <originalText xml:lang="en">Use the arrow keys to move around this list of titles.</originalText>
+          <audio src="./audio/157_Dng_cc_phm_mui_tn_d_di_chuyn_t.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00a0.smil#text_00a0" />
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOK_TITLE" />
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_ABOUTBOX">
+      <note xml:lang="en">This dialog gives some basic information about AMIS.</note>
+      <caption>
+        <text id="_id55327" xml:lang="vi" status="check">Về AMIS</text>
+        <originalText xml:lang="en">About AMIS</originalText>
+        <audio src="./audio/158_V_AMIS.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00a1.smil#text_00a1" />
+      </caption>
+      <description>
+        <text id="_id55341" xml:lang="vi" status="check">Hộp thoại cung cấp các thông tin về phần mềm AMIS.</text>
+        <originalText xml:lang="en">Dialog with information about AMIS software.</originalText>
+        <audio src="./audio/159_Hp_thoi_cung_cp_cc_thng_tin_v_.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00a2.smil#text_00a2" />
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+      </prompt>
+      <control mfcid="IDC_AMISNAME" widget="textlabel">
+        <caption>
+          <text id="_id55382" xml:lang="vi" status="check">AMIS: \n Hệ thống Thông tin Đa phương tiện thích ứng</text>
+          <originalText xml:lang="en">AMIS: \nAdaptive Multimedia Information System</originalText>
+          <audio src="./audio/160_AMIS_n_H_thng_Thng_tin_a_phuon.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00a3.smil#text_00a3" />
+        </caption>
+      </control>
+      <control mfcid="IDC_VERSION" translate="no">
+        <caption>
+          <text id="_id55404" xml:lang="en">Version 2.0</text>
+          <originalText xml:lang="en">Version 2.0</originalText>
+          <audio src="../version.mp3"/>
+        </caption>
+      </control>
+      <control mfcid="IDC_VERSIONNOTE" translate="no">
+        <caption>
+          <text id="_id55426" xml:lang="en">Release Date: 23 Oct 2005</text>
+          <originalText xml:lang="en">Release Date: 23 Oct 2005</originalText>
+          <audio src="../releasedate.mp3"/>
+        </caption>
+      </control>
+      <control mfcid="IDC_COPYRIGHT" widget="textlabel" translate="no">
+        <caption>
+          <text id="_id55450" xml:lang="en">Copyright © 2006 DAISY for All</text>
+          <originalText xml:lang="en">Copyright © 2006 DAISY for All</originalText>
+          <audio src="./audio/163_Copyright__2006_DAISY_for_All.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00a6.smil#text_00a6" />
+        </caption>
+      </control>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description" />
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_SEARCHDAISY">
+      <note xml:lang="en">This dialog is for searching your hard drive for DAISY books.</note>
+      <caption>
+        <text id="_id55500" xml:lang="vi" status="check">Tìm kiếm sách DAISY</text>
+        <originalText xml:lang="en">Search for DAISY Books</originalText>
+        <audio src="./audio/164_Tm_kim_sch_DAISY.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00a7.smil#text_00a7" />
+      </caption>
+      <description mfcid="IDC_STATIC">
+        <text id="_id55517" xml:lang="vi" status="check">Bạn có thể tìm sách DAISY trong máy tính của mình. Nhập đường dẫn vào hoặc duyệt một thư mục để tìm, sau đó nhấn Tìm kiếm để bắt đầu tìm kiếm.</text>
+        <originalText xml:lang="en">You can search your computer for DAISY books.  Enter a path or browse for a folder to search, then press Search to begin searching.</originalText>
+        <audio src="./audio/165_Bn_c_th_tm_sch_DAISY_trong_my_.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00a8.smil#text_00a8" />
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround" />
+        <promptItem refid="altC_to_close" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+        <promptItem refid="textBoxRepeatInstr" />
+      </prompt>
+      <control mfcid="IDC_SEARCHPATH" widget="textfield">
+        <description>
+          <text id="_id55569" xml:lang="vi" status="check">Gõ đường dẫn đến thư mục vào trường này.</text>
+          <originalText xml:lang="en">Type the path to the folder in this field.</originalText>
+          <audio src="./audio/166_G_dung_dn_dn_thu_mc_vo_trung_n.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00a9.smil#text_00a9" />
+        </description>
+      </control>
+      <control mfcid="IDC_BROWSE" widget="button">
+        <caption>
+          <promptItem refid="browse_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="browse_button_description" />
+        </description>
+      </control>
+      <control mfcid="IDC_STARTSEARCH" widget="button">
+        <caption>
+          <text id="_id55615" xml:lang="vi" status="check">Tìm kiếm</text>
+          <originalText xml:lang="en">Search</originalText>
+          <audio src="./audio/167_Tm_kim.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00aa.smil#text_00aa" />
+        </caption>
+        <description>
+          <text id="_id55630" xml:lang="vi" status="check">Nhấn để bắt đầu tìm kiếm.</text>
+          <originalText xml:lang="en">Press to start searching.</originalText>
+          <audio src="./audio/168_Nhn_d_bt_du_tm_kim.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00ab.smil#text_00ab" />
+        </description>
+        <mnemonic>
+          <text id="_id55644" xml:lang="en">S</text>
+          <originalText xml:lang="en">S</originalText>
+          <audio src="./audio/169_S.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00ac.smil#text_00ac" />
+        </mnemonic>
+      </control>
+      <control mfcid="IDC_STOPSEARCH" widget="button">
+        <caption>
+          <text id="_id55655" xml:lang="vi" status="check">Dừng</text>
+          <originalText xml:lang="en">Stop</originalText>
+          <audio src="./audio/170_Dng.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00ad.smil#text_00ad" />
+        </caption>
+        <description>
+          <text id="_id55670" xml:lang="vi" status="check">Nhấn để dừng việc tìm kiếm.</text>
+          <originalText xml:lang="en">Press to stop searching.</originalText>
+          <audio src="./audio/171_Nhn_d_dng_vic_tm_kim.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00ae.smil#text_00ae" />
+        </description>
+        <mnemonic>
+          <text id="_id55684" xml:lang="en">t</text>
+          <originalText xml:lang="en">t</originalText>
+          <audio src="./audio/172_t.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00af.smil#text_00af" />
+        </mnemonic>
+      </control>
+      <control mfcid="IDC_SEARCHING" widget="textlabel">
+        <switch element="caption">
+          <caption condition="default">
+            <text id="_id55702" xml:lang="vi" status="check">Sẵn sàng</text>
+            <originalText xml:lang="en">Ready</originalText>
+            <audio src="./audio/173_Sn_sng.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00b0.smil#text_00b0" />
+          </caption>
+          <caption condition="WhileSearching">
+            <text id="_id55718" xml:lang="vi" status="check">Đang tìm...</text>
+            <originalText xml:lang="en">Searching...</originalText>
+            <audio src="./audio/174_ang_tm.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00b1.smil#text_00b1" />
+          </caption>
+          <caption condition="SearchAborted">
+            <text id="_id55735" xml:lang="vi" status="check">Tìm kiếm dừng.</text>
+            <originalText xml:lang="en">Search stopped.</originalText>
+            <audio src="./audio/175_Tm_kim_dng.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00b2.smil#text_00b2" />
+          </caption>
+          <caption condition="SearchCompleteNoFilesFound">
+            <text id="_id55752" xml:lang="vi" status="check">Tìm kiếm xong: Không tìm thấy tệp nào.</text>
+            <originalText xml:lang="en">Search complete: No files found.</originalText>
+            <audio src="./audio/176_Tm_kim_xong_Khng_tm_thy_tp_no.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00b3.smil#text_00b3" />
+          </caption>
+          <caption condition="SearchCompleteOneFileFound">
+            <text id="_id55770" xml:lang="vi" status="check">Tìm kiếm xong: Tìm thấy một tệp.</text>
+            <originalText xml:lang="en">Search complete: One file found.</originalText>
+            <audio src="./audio/177_Tm_kim_xong_Tm_thy_mt_tp.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00b4.smil#text_00b4" />
+          </caption>
+          <caption condition="SearchCompleteFilesFound">
+            <prompt>
+              <promptVar name="NUM_FILES_FOUND" />
+              <promptItem>
+                <note xml:lang="en">This is used in the sentence "7 files were found"</note>
+                <text id="_id55800" xml:lang="vi" status="check">Các tệp tìm thấy</text>
+                <originalText xml:lang="en">files were found.</originalText>
+                <audio src="./audio/178_Cc_tp_tm_thy.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00b5.smil#text_00b5" />
+              </promptItem>
+            </prompt>
+          </caption>
+        </switch>
+      </control>
+      <control mfcid="IDC_FILESFOUND" widget="list">
+        <description>
+          <text id="_id55826" xml:lang="vi" status="check">Dùng các phím mũi tên để di chuyển trong dang sách các tiêu đề này.</text>
+          <originalText xml:lang="en">Use the arrow keys to move around this list of titles.</originalText>
+          <audio src="./audio/179_Dng_cc_phm_mui_tn_d_di_chuyn_t.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00b6.smil#text_00b6" />
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOK_TITLE" />
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_OPENBOOK" widget="button">
+        <caption>
+          <text id="_id55862" xml:lang="vi" status="check">Mở</text>
+          <originalText xml:lang="en">Open</originalText>
+          <audio src="./audio/180_M.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00b7.smil#text_00b7" />
+        </caption>
+        <description>
+          <text id="_id55876" xml:lang="vi" status="check">Nhấn để mở tiêu đề được lựa</text>
+          <originalText xml:lang="en">Press to open the selected title.</originalText>
+          <audio src="./audio/181_Nhn_d_m_tiu_d_duc_la.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00b8.smil#text_00b8" />
+        </description>
+        <mnemonic>
+          <text id="_id55891" xml:lang="en">O</text>
+          <originalText xml:lang="en">O</originalText>
+          <audio src="./audio/182_O.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00b9.smil#text_00b9" />
+        </mnemonic>
+      </control>
+      <control mfcid="IDC_CANCELBUTTON">
+        <caption>
+          <promptItem refid="cancel_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description" />
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          <audio src="./audio/036_C.mp3" />
+        </mnemonic>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_SKIP">
+      <note xml:lang="en">This dialog lets the user control rendering of skippable structures.</note>
+      <caption>
+        <text id="_id55927" xml:lang="vi" status="check">Các mục có thể bỏ qua</text>
+        <originalText xml:lang="en">Skippable Items</originalText>
+        <audio src="./audio/183_Cc_mc_c_th_b_qua.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00ba.smil#text_00ba" />
+      </caption>
+      <switch element="description">
+        <description mfcid="IDC_STATIC" condition="hasSkippableStructures">
+          <text id="_id55950" xml:lang="vi" status="check">Quyển sách này có chứa các cấu trúc đặc biệt sau. Đánh dấu vào những cấu trúc bạn muốn bỏ qua.</text>
+          <originalText xml:lang="en">This book contains the following special structures.  Check the ones you want skipped.</originalText>
+          <audio src="./audio/184_Quyn_sch_ny_c_cha_cc_cu_trc_dc.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00bb.smil#text_00bb" />
+        </description>
+        <description mfcid="IDC_STATIC" condition="hasNoSkippableStructures">
+          <text id="_id55972" xml:lang="vi" status="check">Quyển sách này không có các yếu tố có thể bỏ qua.</text>
+          <originalText xml:lang="en">This publication has no skippable elements.</originalText>
+          <audio src="./audio/185_Quyn_sch_ny_khng_c_cc_yu_t_c_t.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00bc.smil#text_00bc" />
+        </description>
+      </switch>
+      <prompt type="instructions">
+        <promptItem refid="tabAround" />
+        <promptItem refid="altC_to_close" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description" />
+        </description>
+      </control>
+      <control mfcid="IDC_SKIPS" widget="list">
+        <caption>
+          <text id="_id56041" xml:lang="vi" status="check">Các mục có thể bỏ qua</text>
+          <originalText xml:lang="en">Skippable items</originalText>
+          <audio src="./audio/186_Cc_mc_c_th_b_qua.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00bd.smil#text_00bd" />
+        </caption>
+        <description>
+          <text id="_id56055" xml:lang="vi" status="check">Dùng các phím mũi tên để di chuyển trong danh sách các mục có thể bỏ qua này.</text>
+          <originalText xml:lang="en">Use the arrow keys to move around this list of skippable items.</originalText>
+          <audio src="./audio/187_Dng_cc_phm_mui_tn_d_di_chuyn_t.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00be.smil#text_00be" />
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="SKIPPABLE_ITEM" />
+          </caption>
+          <description>
+            <prompt>
+              <promptVar name="SKIPPABLE_ITEM" />
+              <promptItem refid="thisItem" />
+              <promptVar name="WILL_SKIP_OR_NOT" param="SKIPPABLE_ITEM_ID" />
+            </prompt>
+          </description>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE4">
+      <note xml:lang="en">This dialog lets the user select a language pack.</note>
+      <caption>
+        <text id="_id56116" xml:lang="vi" status="check">Ngôn ngữ</text>
+        <originalText xml:lang="en">Language</originalText>
+        <audio src="./audio/188_Ngn_ng.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00bf.smil#text_00bf" />
+      </caption>
+      <description mfcid="IDC_STATIC">
+        <text id="_id56133" xml:lang="vi" status="check">Tại đây bạn có thể thay đổi ngôn ngữ của phần mềm. Các gói ngôn ngữ mới sẽ được tìm kiếm tự động.</text>
+        <originalText xml:lang="en">Here you can change the language of the software.  New language packs are detected automatically.</originalText>
+        <audio src="./audio/189_Ti_dy_bn_c_th_thay_di_ngn_ng_c.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00c0.smil#text_00c0" />
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround" />
+        <promptItem refid="ctrl1_for_prefsdialog" />
+        <promptItem refid="ctrl2_for_colorsdialog" />
+        <promptItem refid="altC_to_cancel" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+      </prompt>
+      <control mfcid="IDC_BTN_SELECTLANG" widget="button">
+        <caption>
+          <text id="_id56189" xml:lang="vi" status="check">Lựa chọn ngôn ngữ</text>
+          <originalText xml:lang="en">Select Language</originalText>
+          <audio src="./audio/190_La_chn_ngn_ng.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00c1.smil#text_00c1" />
+        </caption>
+        <description>
+          <text id="_id56203" xml:lang="vi" status="check">Nhấn để khẳng định lựa chọn ngôn ngữ của bạn cho giao diện người dùng AMIS.</text>
+          <originalText xml:lang="en">Press to confirm your language selection for the AMIS user interface</originalText>
+          <audio src="./audio/191_Nhn_d_khng_dnh_la_chn_ngn_ng_c.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00c2.smil#text_00c2" />
+        </description>
+      </control>
+      <control mfcid="IDC_LANGLIST" widget="list">
+        <caption mfcid="IDC_STATIC">
+          <text id="_id56229" xml:lang="vi" status="check">Các lựa chọn ngôn ngữ của bạn là:</text>
+          <originalText xml:lang="en">Your language choices are:</originalText>
+          <audio src="./audio/192_Cc_la_chn_ngn_ng_ca_bn_l.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00c3.smil#text_00c3" />
+        </caption>
+        <description>
+          <text id="_id56244" xml:lang="vi" status="check">Dùng các phím mũi tên để di chuyển trong danh sách các ngôn ngữ.</text>
+          <originalText xml:lang="en">Use the arrow keys to move around this list of languages.</originalText>
+          <audio src="./audio/193_Dng_cc_phm_mui_tn_d_di_chuyn_t.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00c4.smil#text_00c4" />
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="LANGUAGE_NAME" />
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_CURRLANG">
+        <caption>
+          <prompt>
+            <promptItem>
+              <text id="_id56282" xml:lang="vi" status="check">Bạn đang dùng AMIS bằng: </text>
+              <originalText xml:lang="en">You are currently using AMIS in</originalText>
+              <audio src="./audio/194_Bn_dang_dng_AMIS_bng.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00c5.smil#text_00c5" />
+            </promptItem>
+            <promptVar name="CURR_LANGUAGE_NAME" />
+          </prompt>
+        </caption>
+      </control>
+      <accelerator>
+        <text id="_id56304" xml:lang="en">Ctrl+3</text>
+        <originalText xml:lang="en">Ctrl+3</originalText>
+        <audio src="./audio/195_Ctrl3.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00c6.smil#text_00c6" />
+      </accelerator>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE2">
+      <note xml:lang="en">This dialog lets the user select which colors AMIS uses</note>
+      <caption>
+        <text id="_id56318" xml:lang="vi" status="check">Thiết lập màu sắc</text>
+        <originalText xml:lang="en">Set Colors</originalText>
+        <audio src="./audio/196_Thit_lp_mu_sc.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00c7.smil#text_00c7" />
+      </caption>
+      <description>
+        <text id="_id56333" xml:lang="vi" status="check">Tại đây bạn có thể thiết lập các tùy chọn về màu sắc cho AMIS.</text>
+        <originalText xml:lang="en">Here you can set color options for AMIS.</originalText>
+        <audio src="./audio/197_Ti_dy_bn_c_th_thit_lp_cc_ty_ch.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00c8.smil#text_00c8" />
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="thisDialogNotSelfVoicing" />
+        <promptItem refid="ctrl1_for_prefsdialog" />
+        <promptItem refid="ctrl3_for_langsdialog" />
+        <promptItem refid="altC_to_cancel" />
+      </prompt>
+      <control mfcid="IDC_PHRASES" widget="other">
+        <caption>
+          <text id="_id56378" xml:lang="vi" status="check">Tô sáng cụm từ</text>
+          <originalText xml:lang="en">Phrase Highlighting</originalText>
+          <audio src="./audio/198_T_sng_cm_t.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00c9.smil#text_00c9" />
+        </caption>
+      </control>
+      <control mfcid="IDC_TEXTFG" widget="textlabel">
+        <caption>
+          <text id="_id56400" xml:lang="vi" status="check">Tiền cảnh văn bản:</text>
+          <originalText xml:lang="en">Text Foreground: </originalText>
+          <audio src="./audio/199_Tin_cnh_van_bn.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00ca.smil#text_00ca" />
+        </caption>
+      </control>
+      <control mfcid="IDC_TEXTBG" widget="textlabel">
+        <caption>
+          <text id="_id56422" xml:lang="vi" status="check">Nền văn bản:</text>
+          <originalText xml:lang="en">Text Background: </originalText>
+          <audio src="./audio/200_Nn_van_bn.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00cb.smil#text_00cb" />
+        </caption>
+      </control>
+      <control mfcid="IDC_BORDER" widget="textlabel">
+        <caption>
+          <text id="_id56445" xml:lang="vi" status="check">Viền vùng lựa chọn:</text>
+          <originalText xml:lang="en">Selection Border: </originalText>
+          <audio src="./audio/201_Vin_vng_la_chn.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00cc.smil#text_00cc" />
+        </caption>
+      </control>
+      <control mfcid="IDC_CONTRAST" widget="other">
+        <caption>
+          <text id="_id56467" xml:lang="vi" status="check">Thiết lập màu tương phản cao</text>
+          <originalText xml:lang="en">High Contrast Settings</originalText>
+          <audio src="./audio/202_Thit_lp_mu_tuong_phn_cao.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00cd.smil#text_00cd" />
+        </caption>
+      </control>
+      <control mfcid="IDC_PAGEFG" widget="textlabel">
+        <caption>
+          <text id="_id56490" xml:lang="vi" status="check">Tiền cảnh trang:</text>
+          <originalText xml:lang="en">Page Foreground: </originalText>
+          <audio src="./audio/203_Tin_cnh_trang.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00ce.smil#text_00ce" />
+        </caption>
+      </control>
+      <control mfcid="IDC_PAGEBG" widget="textlabel">
+        <caption>
+          <text id="_id56512" xml:lang="vi" status="check">Nền trang:</text>
+          <originalText xml:lang="en">Page Background: </originalText>
+          <audio src="./audio/204_Nn_trang.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00cf.smil#text_00cf" />
+        </caption>
+      </control>
+      <control mfcid="IDC_BTN_RESETCOLORS" widget="button">
+        <caption>
+          <text id="_id56535" xml:lang="vi" status="check">Thiết lập lại màu sắc</text>
+          <originalText xml:lang="en">Reset Colors</originalText>
+          <audio src="./audio/205_Thit_lp_li_mu_sc.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00d0.smil#text_00d0" />
+        </caption>
+      </control>
+      <control mfcid="IDC_PHRASEPREVIEW" widget="textfield">
+        <caption>
+          <text id="_id56557" xml:lang="vi" status="check">Xem trước màu tô sáng cụm từ.</text>
+          <originalText xml:lang="en">Preview of phrase highlight colors.</originalText>
+          <audio src="./audio/206_Xem_truc_mu_t_sng_cm_t.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00d1.smil#text_00d1" />
+        </caption>
+      </control>
+      <control mfcid="IDC_CONTRASTPREVIEW" widget="textfield">
+        <caption>
+          <text id="_id56580" xml:lang="vi" status="check">Xem trước màu tương phản cho trang.</text>
+          <originalText xml:lang="en">Preview of page contrast colors.</originalText>
+          <audio src="./audio/207_Xem_truc_mu_tuong_phn_cho_tran.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00d2.smil#text_00d2" />
+        </caption>
+      </control>
+      <accelerator>
+        <text id="_id56596" xml:lang="en">Ctrl+2</text>
+        <originalText xml:lang="en">Ctrl+2</originalText>
+        <audio src="./audio/208_Ctrl2.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00d3.smil#text_00d3" />
+      </accelerator>
+    </dialog>
+    <dialog mfcid="IDD_CURRENTPOSITION">
+      <note xml:lang="en">This dialog gives the user information about their current position in the publication.</note>
+      <caption>
+        <text id="_id56610" xml:lang="vi" status="check">Vị trí hiện tại</text>
+        <originalText xml:lang="en">Current Position</originalText>
+        <audio src="./audio/209_V_tr_hin_ti.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00d4.smil#text_00d4" />
+      </caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description" />
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text id="_id56676" xml:lang="vi" status="check">Đây là danh sách các dữ liệu về vị trí hiện tại của bạn.</text>
+          <originalText xml:lang="en">This is a list of data about your current position.</originalText>
+          <audio src="./audio/210_y_l_danh_sch_cc_d_liu_v_v_tr_h.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00d5.smil#text_00d5" />
+        </caption>
+        <description>
+          <promptItem refid="list_reads_automatically" />
+        </description>
+        <list repeat="no">
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id56708" xml:lang="vi" status="check">Phần hiện tại của bạn có tựa đề:</text>
+                <originalText xml:lang="en">Your current section is titled:</originalText>
+                <audio src="./audio/211_Phn_hin_ti_ca_bn_c_ta_d.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00d6.smil#text_00d6" />
+              </promptItem>
+              <promptVar name="CURRENT_SECTION_TITLE" />
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id56736" xml:lang="vi" status="check">Số trang trong phần này:</text>
+                <originalText xml:lang="en">Number of pages in this section:</originalText>
+                <audio src="./audio/212_S_trang_trong_phn_ny.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00d7.smil#text_00d7" />
+              </promptItem>
+              <promptVar name="CURRENT_SECTION_NUM_PAGES" />
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id56762" xml:lang="vi" status="check">Số tiểu phần trong phần này:</text>
+                <originalText xml:lang="en">Number of subsections in this section:</originalText>
+                <audio src="./audio/213_S_tiu_phn_trong_phn_ny.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00d8.smil#text_00d8" />
+              </promptItem>
+              <promptVar name="CURRENT_SECTION_NUM_SUBSECTIONS" />
+            </prompt>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE1">
+      <note xml:lang="en">This dialog lets the user set some basic preferences for AMIS.</note>
+      <caption>
+        <text id="_id56796" xml:lang="vi" status="check">Các sở thích chung</text>
+        <originalText xml:lang="en">General Preferences</originalText>
+        <audio src="./audio/214_Cc_s_thch_chung.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00d9.smil#text_00d9" />
+      </caption>
+      <description>
+        <text id="_id56811" xml:lang="vi" status="check">Tại đây bạn có thể thiết lập các sở thích chung cho AMIS.</text>
+        <originalText xml:lang="en">Here you can set general preferences for AMIS.</originalText>
+        <audio src="./audio/215_Ti_dy_bn_c_th_thit_lp_cc_s_thc.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00da.smil#text_00da" />
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround" />
+        <promptItem refid="ctrl2_for_colorsdialog" />
+        <promptItem refid="ctrl3_for_langsdialog" />
+        <promptItem refid="altC_to_cancel" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+        <promptItem refid="textBoxRepeatInstr" />
+      </prompt>
+      <control mfcid="IDC_BMKDIRBROWSE" widget="button">
+        <caption>
+          <promptItem refid="browse_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="browse_button_description" />
+        </description>
+      </control>
+      <control mfcid="IDC_SELFVOICING" widget="checkbox">
+        <caption>
+          <text id="_id56892" xml:lang="vi" status="check">Dùng tự phát âm</text>
+          <originalText xml:lang="en">Use self-voicing</originalText>
+          <audio src="./audio/216_Dng_t_pht_m.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00db.smil#text_00db" />
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently" />
+            <promptVar name="ON_OR_OFF" param="SELF_VOICING_FEATURE" />
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_TTSVOICE" widget="list">
+        <caption mfcid="IDC_SELTTSLABEL">
+          <text id="_id56934" xml:lang="vi" status="check">Chọn giọng TTS:</text>
+          <originalText xml:lang="en">Select TTS voice:</originalText>
+          <audio src="./audio/217_Chn_ging_TTS.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00dc.smil#text_00dc" />
+        </caption>
+        <description>
+          <text id="_id56949" xml:lang="vi" status="check">Dùng các phím mũi tên để di chuyển trong danh sách các giọng này.</text>
+          <originalText xml:lang="en">Use the arrow keys to move around this list of voices</originalText>
+          <audio src="./audio/218_Dng_cc_phm_mui_tn_d_di_chuyn_t.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00dd.smil#text_00dd" />
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="TTS_VOICE_NAME" />
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_BASIC" widget="checkbox">
+        <caption>
+          <text id="_id56985" xml:lang="vi" status="check">Bắt đầu AMIS ở chế độ xem cơ bản.</text>
+          <originalText xml:lang="en">Start AMIS in the basic view mode.</originalText>
+          <audio src="./audio/219_Bt_du_AMIS__ch_d_xem_co_bn.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00de.smil#text_00de" />
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently" />
+            <promptVar name="ON_OR_OFF" param="BASIC_VIEW_FEATURE" />
+            <promptItem refid="spaceToToggle" />
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_PROMPTONBASICVIEW" widget="checkbox">
+        <caption>
+          <text id="_id57030" xml:lang="vi" status="check">Khi chuyển sang góc nhìn cơ bản, hướng dẫn người dùng trở về góc nhìn mặc định.</text>
+          <originalText xml:lang="en">Upon switching to basic view, tell the user how to go back to the default view.</originalText>
+          <audio src="./audio/220_Khi_chuyn_sang_gc_nhn_co_bn_hu.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00df.smil#text_00df" />
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently" />
+            <promptVar name="ON_OR_OFF" param="PROMPT_ON_BASIC_VIEW_FEATURE" />
+            <promptItem refid="spaceToToggle" />
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_LOADLASTDTB" widget="checkbox">
+        <caption>
+          <text id="_id57076" xml:lang="vi" status="check">Tải quyển sách mới đọc gần nhất khi chương trình bắt đầu chạy.</text>
+          <originalText xml:lang="en">Load the most recently read book when the software starts.</originalText>
+          <audio src="./audio/221_Ti_quyn_sch_mi_dc_gn_nht_khi_c.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00e0.smil#text_00e0" />
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently" />
+            <promptVar name="ON_OR_OFF" param="LOAD_LAST_READ_FEATURE" />
+            <promptItem refid="spaceToToggle" />
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_BMKDIR" widget="textfield">
+        <caption mfcid="IDC_BMKDIRLABEL">
+          <text id="_id57124" xml:lang="vi" status="check">Thư mục dấu sách:</text>
+          <originalText xml:lang="en">Bookmarks directory:</originalText>
+          <audio src="./audio/222_Thu_mc_du_sch.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00e1.smil#text_00e1" />
+        </caption>
+        <description>
+          <text id="_id57139" xml:lang="vi" status="check">Gõ đường dẫn đến thư mục dấu sách vào trường này.</text>
+          <originalText xml:lang="en">Type the path to the bookmarks folder in this field.</originalText>
+          <audio src="./audio/223_G_dung_dn_dn_thu_mc_du_sch_vo_.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00e2.smil#text_00e2" />
+        </description>
+      </control>
+      <accelerator>
+        <text id="_id57155" xml:lang="en">Ctrl+1</text>
+        <originalText xml:lang="en">Ctrl+1</originalText>
+        <audio src="./audio/224_Ctrl1.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00e3.smil#text_00e3" />
+      </accelerator>
+    </dialog>
+    <dialog mfcid="IDD_NAVIGATIONOPTIONS">
+      <note xml:lang="en">This dialog lists navigation options for the current publication.</note>
+      <caption>
+        <text id="_id57169" xml:lang="vi" status="check">Các tùy chọn điều hướng</text>
+        <originalText xml:lang="en">Navigation Options</originalText>
+        <audio src="./audio/225_Cc_ty_chn_diu_hung.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00e4.smil#text_00e4" />
+      </caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description" />
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text id="_id57234" xml:lang="vi" status="check">Đây là danh sách các mục bạn có thể điều hướng trực tiếp đến.</text>
+          <originalText xml:lang="en">This is a list of items to which you may navigate directly.</originalText>
+          <audio src="./audio/226_y_l_danh_sch_cc_mc_bn_c_th_diu.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00e5.smil#text_00e5" />
+        </caption>
+        <description>
+          <promptItem refid="list_reads_automatically" />
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="TOC_CATEGORIES" />
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_GOTOPAGE">
+      <note xml:lang="en">This dialog lets the user jump to a certain page</note>
+      <caption>
+        <text id="_id57281" xml:lang="vi" status="check">Chuyển sang trang</text>
+        <originalText xml:lang="en">Go To Page</originalText>
+        <audio src="./audio/227_Chuyn_sang_trang.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00e6.smil#text_00e6" />
+      </caption>
+      <description>
+        <text id="_id57296" xml:lang="vi" status="check">Tại đây bạn có thể nhảy sang một số trang hoặc nhãn của trang.</text>
+        <originalText xml:lang="en">Here you can jump to a page number or page label.</originalText>
+        <audio src="./audio/228_Ti_dy_bn_c_th_nhy_sang_mt_s_tr.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00e7.smil#text_00e7" />
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround" />
+        <promptItem>
+          <text id="_id57320" xml:lang="vi" status="check">Sau khi gõ số trang vào, nhấn Enter để chuyển đến đó.</text>
+          <originalText xml:lang="en">After typing in your page number, press enter to go there.</originalText>
+          <audio src="./audio/229_Sau_khi_g_s_trang_vo_nhn_Enter.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00e8.smil#text_00e8" />
+        </promptItem>
+        <promptItem refid="altC_to_cancel" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+        <promptItem refid="textBoxRepeatInstr" />
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption" />
+        </caption>
+        <description>
+          <text id="_id57369" xml:lang="vi" status="check">Nhấn nút này để đi đến trang mong muốn.</text>
+          <originalText xml:lang="en">Press this button to go to the desired page.</originalText>
+          <audio src="./audio/230_Nhn_nt_ny_d_di_dn_trang_mong_m.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00e9.smil#text_00e9" />
+        </description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description" />
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          <audio src="./audio/036_C.mp3" />
+        </mnemonic>
+      </control>
+      <control mfcid="IDC_PAGENUM" widget="textfield">
+        <caption mfcid="IDC_STATIC">
+          <text id="_id57417" xml:lang="vi" status="check">Nhập vào một số trang:</text>
+          <originalText xml:lang="en">Enter a page number:</originalText>
+          <audio src="./audio/231_Nhp_vo_mt_s_trang.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00ea.smil#text_00ea" />
+        </caption>
+        <description>
+          <text id="_id57432" xml:lang="vi" status="check">Gõ số hoặc nhãn của trang mà bạn muốn chuyển tới.</text>
+          <originalText xml:lang="en">Type the number or label of the page you want to go to.</originalText>
+          <audio src="./audio/232_G_s_hoc_nhn_ca_trang_m_bn_mun_.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00eb.smil#text_00eb" />
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_FULLSUMMARY">
+      <note xml:lang="en">This dialog lists key publication metadata.</note>
+      <caption>
+        <text id="_id57459" xml:lang="en" status="todo">Publication Summary</text>
+        <originalText xml:lang="en">Publication Summary</originalText>
+        <audio src="./audio/233_Publication_Summary.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00ec.smil#text_00ec" />
+      </caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description" />
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text id="_id57524" xml:lang="vi" status="check">Đây là danh sách thông tin về xuất bản phẩm</text>
+          <originalText xml:lang="en">This is a list of publication metadata.</originalText>
+          <audio src="./audio/234_y_l_danh_sch_thng_tin_v_xut_bn.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00ed.smil#text_00ed" />
+        </caption>
+        <description>
+          <promptItem refid="list_reads_automatically" />
+        </description>
+        <list repeat="no">
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id57555" xml:lang="vi" status="check">Tiêu đề:</text>
+                <originalText xml:lang="en">This book is titled:</originalText>
+                <audio src="./audio/235_Tiu_d.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00ee.smil#text_00ee" />
+              </promptItem>
+              <promptVar name="META_TITLE" />
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id57581" xml:lang="vi" status="check">Tác giả:</text>
+                <originalText xml:lang="en">Written by:</originalText>
+                <audio src="./audio/236_Tc_gi.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00ef.smil#text_00ef" />
+              </promptItem>
+              <promptVar name="META_CREATOR" />
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id57606" xml:lang="vi" status="check">Xuất bản:</text>
+                <originalText xml:lang="en">Published by:</originalText>
+                <audio src="./audio/237_Xut_bn.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00f0.smil#text_00f0" />
+              </promptItem>
+              <promptVar name="META_PUBLISHER" />
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_DESCRIPTION">
+            <prompt>
+              <promptItem>
+                <text id="_id57633" xml:lang="vi" status="check">Miêu tả:</text>
+                <originalText xml:lang="en">Description:</originalText>
+                <audio src="./audio/238_Miu_t.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00f1.smil#text_00f1" />
+              </promptItem>
+              <promptVar name="META_DESC" />
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id57658" xml:lang="vi" status="check">Số điểm điều hướng trong mục lục:</text>
+                <originalText xml:lang="en">Number of navigation points in the table of contents:</originalText>
+                <audio src="./audio/239_S_dim_diu_hung_trong_mc_lc.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00f2.smil#text_00f2" />
+              </promptItem>
+              <promptVar name="META_TOCITEMS" />
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id57685" xml:lang="vi" status="check">Độ dày phần tối đa:</text>
+                <originalText xml:lang="en">Maximum section depth:</originalText>
+                <audio src="./audio/240__dy_phn_ti_da.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00f3.smil#text_00f3" />
+              </promptItem>
+              <promptVar name="META_DEPTH" />
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id57713" xml:lang="vi" status="check">Các trang đầu:</text>
+                <originalText xml:lang="en">Front matter pages:</originalText>
+                <audio src="./audio/241_Cc_trang_du.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00f4.smil#text_00f4" />
+              </promptItem>
+              <promptVar name="META_PAGEFRONT" />
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id57741" xml:lang="vi" status="check">Các trang thông thường:</text>
+                <originalText xml:lang="en">Regular pages:</originalText>
+                <audio src="./audio/242_Cc_trang_thng_thung.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00f5.smil#text_00f5" />
+              </promptItem>
+              <promptVar name="META_PAGENORMAL" />
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id57768" xml:lang="vi" status="check">Các trang đặc biệt:</text>
+                <originalText xml:lang="en">Special pages:</originalText>
+                <audio src="./audio/243_Cc_trang_dc_bit.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00f6.smil#text_00f6" />
+              </promptItem>
+              <promptVar name="META_PAGESPECIAL" />
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id57793" xml:lang="vi" status="check">Tổng thời gian:</text>
+                <originalText xml:lang="en">Total duration:</originalText>
+                <audio src="./audio/244_Tng_thi_gian.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00f7.smil#text_00f7" />
+              </promptItem>
+              <promptVar name="META_TOTALTIME" />
+            </prompt>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+  </dialogs>
+  <prompts>
+    <promptItemRefs>
+      <promptItem id="altC_to_close">
+        <text id="_id57825" xml:lang="vi" status="check">Nhấn Alt + C để đóng hộp thoại.</text>
+        <originalText xml:lang="en">Press Alt + C to close the dialog.</originalText>
+        <audio src="./audio/245_Nhn_Alt__C_d_dng_hp_thoi.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00f8.smil#text_00f8" />
+      </promptItem>
+      <promptItem id="altC_to_cancel">
+        <text id="_id57842" xml:lang="vi" status="check">Nhấn Alt + C để hủy hộp thoại.</text>
+        <originalText xml:lang="en">Press Alt + C to cancel the dialog.</originalText>
+        <audio src="./audio/246_Nhn_Alt__C_d_hy_hp_thoi.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00f9.smil#text_00f9" />
+      </promptItem>
+      <promptItem id="thisItem">
+        <text id="_id57860" xml:lang="vi" status="check">Mục này:</text>
+        <originalText xml:lang="en">This item</originalText>
+        <audio src="./audio/247_Mc_ny.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00fa.smil#text_00fa" />
+      </promptItem>
+      <promptItem id="spaceToToggle">
+        <text id="_id57876" xml:lang="vi" status="check">Nhấn thanh dài để chuyển giá trị.</text>
+        <originalText xml:lang="en">Press the space bar to toggle the value.</originalText>
+        <audio src="./audio/248_Nhn_thanh_di_d_chuyn_gi_tr.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00fb.smil#text_00fb" />
+      </promptItem>
+      <promptItem id="tabAround">
+        <text id="_id57894" xml:lang="vi" status="check">Nhấn tab để di chuyển giữa các tùy chọn trên hộp thoại.</text>
+        <originalText xml:lang="en">Hit tab to move around the options on the dialog.</originalText>
+        <audio src="./audio/249_Nhn_tab_d_di_chuyn_gia_cc_ty_c.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00fc.smil#text_00fc" />
+      </promptItem>
+      <promptItem id="ctrl2_for_colorsdialog">
+        <text id="_id57912" xml:lang="vi" status="check">Nhấn control + 2 để chuyển sang hộp thoại màu sắc.</text>
+        <originalText xml:lang="en">Press control + 2 to switch to the colors dialog.</originalText>
+        <audio src="./audio/250_Nhn_control__2_d_chuyn_sang_hp.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00fd.smil#text_00fd" />
+      </promptItem>
+      <promptItem id="ctrl3_for_langsdialog">
+        <text id="_id57931" xml:lang="vi" status="check">Nhấn control + 3 để chuyển sang hộp thoại ngôn ngữ.</text>
+        <originalText xml:lang="en">Press control + 3 to switch to the language options dialog.</originalText>
+        <audio src="./audio/251_Nhn_control__3_d_chuyn_sang_hp.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00fe.smil#text_00fe" />
+      </promptItem>
+      <promptItem id="ctrl1_for_prefsdialog">
+        <text id="_id57949" xml:lang="vi" status="check">Nhấn control + 1 để chuyển sang hộp thoại sở thích chung.</text>
+        <originalText xml:lang="en">Press control + 1 to switch to the general preferences dialog.</originalText>
+        <audio src="./audio/252_Nhn_control__1_d_chuyn_sang_hp.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis00ff.smil#text_00ff" />
+      </promptItem>
+      <promptItem id="thisItemIsCurrently">
+        <text id="_id57968" xml:lang="vi" status="check">Mục này hiện thời</text>
+        <originalText xml:lang="en">This item is currently</originalText>
+        <audio src="./audio/253_Mc_ny_hin_thi.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0100.smil#text_0100" />
+      </promptItem>
+      <promptItem id="enter_to_close">
+        <text id="_id57985" xml:lang="vi" status="check">Nhấn enter để đóng hộp thoại.</text>
+        <originalText xml:lang="en">Press enter to close the dialog.</originalText>
+        <audio src="./audio/254_Nhn_enter_d_dng_hp_thoi.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0101.smil#text_0101" />
+      </promptItem>
+      <promptItem id="browse_button_caption">
+        <text id="_id58002" xml:lang="vi" status="check">Duyệt....</text>
+        <originalText xml:lang="en">Browse...</originalText>
+        <audio src="./audio/255_Duyt.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0102.smil#text_0102" />
+      </promptItem>
+      <promptItem id="browse_button_description">
+        <text id="_id58019" xml:lang="vi" status="check">Nhấn để mở hộp thoại duyệt thư mục.</text>
+        <originalText xml:lang="en">Press to open the folder browse dialog.</originalText>
+        <audio src="./audio/256_Nhn_d_m_hp_thoi_duyt_thu_mc.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0103.smil#text_0103" />
+      </promptItem>
+      <promptItem id="ok_button_caption">
+        <text id="_id58037" xml:lang="en" status="todo">OK</text>
+        <originalText xml:lang="en">OK</originalText>
+        <audio src="./audio/257_OK.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0104.smil#text_0104" />
+      </promptItem>
+      <promptItem id="ok_button_description">
+        <text id="_id58053" xml:lang="vi" status="check">Nhấn OK để đóng hộp thoại.</text>
+        <originalText xml:lang="en">Press OK to close this dialog.</originalText>
+        <audio src="./audio/258_Nhn_OK_d_dng_hp_thoi.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0105.smil#text_0105" />
+      </promptItem>
+      <promptItem id="cancel_button_caption">
+        <text id="_id58071" xml:lang="vi" status="check">Hủy bỏ</text>
+        <originalText xml:lang="en">Cancel</originalText>
+        <audio src="./audio/259_Hy_b.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0106.smil#text_0106" />
+      </promptItem>
+      <promptItem id="cancel_button_description">
+        <text id="_id58088" xml:lang="vi" status="check">Nhấn để hủy bỏ hộp thoại này.</text>
+        <originalText xml:lang="en">Press to cancel this dialog.</originalText>
+        <audio src="./audio/260_Nhn_d_hy_b_hp_thoi_ny.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0107.smil#text_0107" />
+      </promptItem>
+      <promptItem id="list_reads_automatically">
+        <text id="_id58105" xml:lang="vi" status="check">Danh sách này sẽ được đọc tự động.</text>
+        <originalText xml:lang="en">This list will be read automatically.</originalText>
+        <audio src="./audio/261_Danh_sch_ny_s_duc_dc_t_dng.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0108.smil#text_0108" />
+      </promptItem>
+      <promptItem id="repeatLastPromptInstr">
+        <text id="_id58123" xml:lang="vi" status="check">Nhấn Control + R để lặp lại lời nhắc trước.</text>
+        <originalText xml:lang="en">Press Control + R to repeat the last prompt.</originalText>
+        <audio src="./audio/262_Nhn_Control__R_d_lp_li_li_nhc_.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0109.smil#text_0109" />
+      </promptItem>
+      <promptItem id="thisDialogNotSelfVoicing">
+        <text id="_id58141" xml:lang="vi" status="check">Hộp thoại này vẫn chưa tự phát âm.</text>
+        <originalText xml:lang="en">This dialog is not yet self-voicing.</originalText>
+        <audio src="./audio/263_Hp_thoi_ny_vn_chua_t_pht_m.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis010a.smil#text_010a" />
+      </promptItem>
+      <promptItem id="escapeToCancel">
+        <text id="_id58158" xml:lang="vi" status="check">Nhấn Escape để hủy bỏ.</text>
+        <originalText xml:lang="en">Press escape to cancel</originalText>
+        <audio src="./audio/264_Nhn_Escape_d_hy_b.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis010b.smil#text_010b" />
+      </promptItem>
+      <promptItem id="hearDlgInstructions">
+        <text id="_id58176" xml:lang="vi" status="check">Nhấn Control +I để nghe hướng dẫn về hộp thoại này.</text>
+        <originalText xml:lang="en">Press Control + I to hear instructions for this dialog.</originalText>
+        <audio src="./audio/265_Nhn_Control_I_d_nghe_hung_dn_v.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis010c.smil#text_010c" />
+      </promptItem>
+      <promptItem id="textBoxRepeatInstr">
+        <text id="_id58194" xml:lang="vi" status="check">Nhấn Control + R để nhắc lại văn bản trong hộp văn bản trước.</text>
+        <originalText xml:lang="en">Press Control + R to repeat the text in the last text box.</originalText>
+        <audio src="./audio/266_Nhn_Control__R_d_nhc_li_van_bn.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis010d.smil#text_010d" />
+      </promptItem>
+      <promptItem id="nav_window">
+        <text id="_id58212" xml:lang="vi" status="check">Điều hướng</text>
+        <originalText xml:lang="en">Navigation</originalText>
+        <audio src="./audio/267_iu_hung.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis010e.smil#text_010e" />
+      </promptItem>
+      <promptItem id="sections">
+        <text id="_id58229" xml:lang="vi" status="check">Phần</text>
+        <originalText xml:lang="en">Sections</originalText>
+        <audio src="./audio/268_Phn.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis010f.smil#text_010f" />
+      </promptItem>
+      <promptItem id="pages">
+        <text id="_id58245" xml:lang="vi" status="check">Trang</text>
+        <originalText xml:lang="en">Pages</originalText>
+        <audio src="./audio/269_Trang.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0110.smil#text_0110" />
+      </promptItem>
+      <promptItem id="noterefs">
+        <text id="_id58262" xml:lang="vi" status="check">Chú thích</text>
+        <originalText xml:lang="en">Footnotes</originalText>
+        <audio src="./audio/270_Ch_thch.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0111.smil#text_0111" />
+      </promptItem>
+      <promptItem id="prodnotes">
+        <text id="_id58278" xml:lang="vi" status="check">Chú thích của nhà sản xuất.</text>
+        <originalText xml:lang="en">Producer notes</originalText>
+        <audio src="./audio/271_Ch_thch_ca_nh_sn_xut.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0112.smil#text_0112" />
+      </promptItem>
+      <promptItem id="sidebars">
+        <text id="_id58295" xml:lang="vi" status="check">Thanh phụ chú</text>
+        <originalText xml:lang="en">Sidebars</originalText>
+        <audio src="./audio/272_Thanh_ph_ch.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0113.smil#text_0113" />
+      </promptItem>
+      <promptItem id="groups">
+        <text id="_id58311" xml:lang="vi" status="check">Các mục đã nhóm</text>
+        <originalText xml:lang="en">Grouped items</originalText>
+        <audio src="./audio/273_Cc_mc_d_nhm.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0114.smil#text_0114" />
+      </promptItem>
+      <promptItem id="navigation_sidebar_caption">
+        <text id="_id58328" xml:lang="vi" status="check">Điều hướng</text>
+        <originalText xml:lang="en">Navigation</originalText>
+        <audio src="./audio/274_iu_hung.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0115.smil#text_0115" />
+      </promptItem>
+      <promptItem id="ready">
+        <text id="_id58345" xml:lang="vi" status="check">Sẵn sàng</text>
+        <originalText xml:lang="en">Ready</originalText>
+        <audio src="./audio/275_Sn_sng.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0116.smil#text_0116" />
+      </promptItem>
+      <promptItem id="property_sheet_caption">
+        <text id="_id58361" xml:lang="vi" status="check">Sở thích</text>
+        <originalText xml:lang="en">Preferences</originalText>
+        <audio src="./audio/276_S_thch.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0117.smil#text_0117" />
+      </promptItem>
+      <promptItem id="selfolder_title">
+        <text id="_id58378" xml:lang="vi" status="check">Lựa chọn một thư mục</text>
+        <originalText xml:lang="en">Select a Folder</originalText>
+        <audio src="./audio/277_La_chn_mt_thu_mc.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0118.smil#text_0118" />
+      </promptItem>
+      <promptItem id="selfolder_instr">
+        <text id="_id58394" xml:lang="vi" status="check">Lựa chọn một thư mục trong thư mục dưới đây.</text>
+        <originalText xml:lang="en">Select a folder from the directory below.</originalText>
+        <audio src="./audio/278_La_chn_mt_thu_mc_trong_thu_mc_.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0119.smil#text_0119" />
+      </promptItem>
+      <promptItem id="daisy_books">
+        <text id="_id58412" xml:lang="vi" status="check">Sách DAISY</text>
+        <originalText xml:lang="en">DAISY Books</originalText>
+        <audio src="./audio/279_Sch_DAISY.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis011a.smil#text_011a" />
+      </promptItem>
+      <promptItem id="folder_does_not_exist">
+        <text id="_id58429" xml:lang="vi" status="check">Thư mục %s không tồn tại. Bạn có muốn tạo thư mục này không?</text>
+        <originalText xml:lang="en">The folder %s does not exist. Do you want the folder to be created?</originalText>
+        <audio src="./audio/280_Thu_mc_s_khng_tn_ti_Bn_c_mun_t.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis011b.smil#text_011b" />
+      </promptItem>
+      <promptItem id="folder_invalid">
+        <text id="_id58448" xml:lang="vi" status="check">Tên thư mục này không hợp lệ. Vui lòng chọn tên khác.</text>
+        <originalText xml:lang="en">This folder name is invalid. Please choose another.</originalText>
+        <audio src="./audio/281_Tn_thu_mc_ny_khng_hp_l_Vui_lng.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis011c.smil#text_011c" />
+      </promptItem>
+      <promptItem id="cant_create_folder">
+        <text id="_id58466" xml:lang="vi" status="check">Không thể tạo được thư mục này. Vui lòng kiểm tra lại.</text>
+        <originalText xml:lang="en">This folder can not be created. Please double check.</originalText>
+        <audio src="./audio/282_Khng_th_to_duc_thu_mc_ny_Vui_l.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis011d.smil#text_011d" />
+      </promptItem>
+      <promptItem id="not_available">
+        <text id="_id58484" xml:lang="vi" status="check">Không có</text>
+        <originalText xml:lang="en">Not available</originalText>
+        <audio src="./audio/283_Khng_c.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis011e.smil#text_011e" />
+      </promptItem>
+      <promptItem id="numeric_zero">
+        <note xml:lang="en">All numerals should be translated into numerals, not words.</note>
+        <text id="_id58505" xml:lang="vi" status="check">0</text>
+        <originalText xml:lang="en">0</originalText>
+        <audio src="./audio/284_0.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis011f.smil#text_011f" />
+      </promptItem>
+      <promptItem id="numeric_one">
+        <text id="_id58521" xml:lang="vi" status="check">1</text>
+        <originalText xml:lang="en">1</originalText>
+        <audio src="./audio/285_1.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0120.smil#text_0120" />
+      </promptItem>
+      <promptItem id="numeric_two">
+        <text id="_id58537" xml:lang="vi" status="check">2</text>
+        <originalText xml:lang="en">2</originalText>
+        <audio src="./audio/286_2.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0121.smil#text_0121" />
+      </promptItem>
+      <promptItem id="numeric_three">
+        <text id="_id58553" xml:lang="vi" status="check">3</text>
+        <originalText xml:lang="en">3</originalText>
+        <audio src="./audio/287_3.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0122.smil#text_0122" />
+      </promptItem>
+      <promptItem id="numeric_four">
+        <text id="_id58570" xml:lang="vi" status="check">4</text>
+        <originalText xml:lang="en">4</originalText>
+        <audio src="./audio/288_4.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0123.smil#text_0123" />
+      </promptItem>
+      <promptItem id="numeric_five">
+        <text id="_id58586" xml:lang="vi" status="check">5</text>
+        <originalText xml:lang="en">5</originalText>
+        <audio src="./audio/289_5.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0124.smil#text_0124" />
+      </promptItem>
+      <promptItem id="numeric_six">
+        <text id="_id58602" xml:lang="vi" status="check">6</text>
+        <originalText xml:lang="en">6</originalText>
+        <audio src="./audio/290_6.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0125.smil#text_0125" />
+      </promptItem>
+      <promptItem id="numeric_seven">
+        <text id="_id58618" xml:lang="vi" status="check">7</text>
+        <originalText xml:lang="en">7</originalText>
+        <audio src="./audio/291_7.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0126.smil#text_0126" />
+      </promptItem>
+      <promptItem id="numeric_eight">
+        <text id="_id58634" xml:lang="vi" status="check">8</text>
+        <originalText xml:lang="en">8</originalText>
+        <audio src="./audio/292_8.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0127.smil#text_0127" />
+      </promptItem>
+      <promptItem id="numeric_nine">
+        <text id="_id58650" xml:lang="vi" status="check">9</text>
+        <originalText xml:lang="en">9</originalText>
+        <audio src="./audio/293_9.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0128.smil#text_0128" />
+      </promptItem>
+      <promptItem id="deleted">
+        <text id="_id58666" xml:lang="vi" status="check">Đã xóa</text>
+        <originalText xml:lang="en">deleted</originalText>
+        <audio src="./audio/294__xa.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0129.smil#text_0129" />
+      </promptItem>
+      <promptItem id="will_be_skipped">
+        <text id="_id58683" xml:lang="vi" status="check">Sẽ bị bỏ qua</text>
+        <originalText xml:lang="en">will be skipped</originalText>
+        <audio src="./audio/295_S_b_b_qua.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis012a.smil#text_012a" />
+      </promptItem>
+      <promptItem id="will_be_played">
+        <text id="_id58700" xml:lang="vi" status="check">Sẽ được bật</text>
+        <originalText xml:lang="en">will be played</originalText>
+        <audio src="./audio/296_S_duc_bt.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis012b.smil#text_012b" />
+      </promptItem>
+      <promptItem id="item_on">
+        <text id="_id58716" xml:lang="vi" status="check">Bật</text>
+        <originalText xml:lang="en">on</originalText>
+        <audio src="./audio/297_Bt.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis012c.smil#text_012c" />
+      </promptItem>
+      <promptItem id="item_off">
+        <text id="_id58732" xml:lang="vi" status="check">Tắt</text>
+        <originalText xml:lang="en">off</originalText>
+        <audio src="./audio/298_Tt.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis012d.smil#text_012d" />
+      </promptItem>
+      <promptItem id="item_selected">
+        <text id="_id58748" xml:lang="vi" status="check">Được lựa</text>
+        <originalText xml:lang="en">selected</originalText>
+        <audio src="./audio/299_uc_la.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis012e.smil#text_012e" />
+      </promptItem>
+      <promptItem id="item_deselected">
+        <text id="_id58765" xml:lang="vi" status="check">Thôi lựa</text>
+        <originalText xml:lang="en">deselected</originalText>
+        <audio src="./audio/300_Thi_la.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis012f.smil#text_012f" />
+      </promptItem>
+      <promptItem id="keyboardShortcut">
+        <text id="_id58781" xml:lang="vi" status="check">Lối tắt bàn phím</text>
+        <originalText xml:lang="en">Keyboard Shortcut</originalText>
+        <audio src="./audio/301_Li_tt_bn_phm.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0130.smil#text_0130" />
+      </promptItem>
+      <promptItem id="icon">
+        <text id="_id58798" xml:lang="vi" status="check">Biểu tượng</text>
+        <originalText xml:lang="en">Icon</originalText>
+        <audio src="./audio/302_Biu_tung.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0131.smil#text_0131" />
+      </promptItem>
+      <promptItem id="menu">
+        <text id="_id58815" xml:lang="vi" status="check">Trình đơn</text>
+        <originalText xml:lang="en">Menu</originalText>
+        <audio src="./audio/303_Trnh_don.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0132.smil#text_0132" />
+      </promptItem>
+      <promptItem id="followedBy">
+        <note xml:lang="en">This is used in the context of a sequence of key presses, as in "Press Alt + V, followed by S"</note>
+        <text id="_id58836" xml:lang="vi" status="check">Tiếp theo bởi</text>
+        <originalText xml:lang="en">followed by</originalText>
+        <audio src="./audio/304_Tip_theo_bi.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0133.smil#text_0133" />
+      </promptItem>
+      <promptItem id="submenu">
+        <text id="_id58853" xml:lang="vi" status="check">Thực đơn con</text>
+        <originalText xml:lang="en">Submenu</originalText>
+        <audio src="./audio/305_Thc_don_con.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0134.smil#text_0134" />
+      </promptItem>
+    </promptItemRefs>
+    <generalPrompts>
+      <prompt id="dialogClosed">
+        <promptItem>
+          <text id="_id58870" xml:lang="vi" status="check">Đã đóng hộp thoại</text>
+          <originalText xml:lang="en">Dialog closed.</originalText>
+          <audio src="./audio/306__dng_hp_thoi.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0135.smil#text_0135" />
+        </promptItem>
+      </prompt>
+      <prompt id="textFieldEntry">
+        <promptItem>
+          <text id="_id58890" xml:lang="vi" status="check">Mục trường văn bản là:</text>
+          <originalText xml:lang="en">Text field entry is:</originalText>
+          <audio src="./audio/307_Mc_trung_van_bn_l.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0136.smil#text_0136" />
+        </promptItem>
+        <promptVar name="TEXT_FIELD" />
+      </prompt>
+      <prompt id="notSelfVoicing">
+        <promptItem refid="thisDialogNotSelfVoicing" />
+      </prompt>
+      <prompt id="bookAtPathChanged">
+        <promptItem>
+          <text id="_id58925" xml:lang="vi" status="check">Vị trí của quyển sách bạn đang tìm đã thay đổi. Thay vào đó một quyển sách khác được tìm thấy. Có phải nội dung của ổ CD đã thay đổi?</text>
+          <originalText xml:lang="en">The location of the book you are looking for has changed.  A different book was found instead.  Did the contents of your CD-ROM drive change?</originalText>
+          <audio src="./audio/308_V_tr_ca_quyn_sch_bn_dang_tm_d_.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0137.smil#text_0137" />
+        </promptItem>
+      </prompt>
+      <prompt id="generalBookError">
+        <promptItem>
+          <text id="_id58949" xml:lang="vi" status="check">Một lỗi đã xảy ra khi mở quyển sách.</text>
+          <originalText xml:lang="en">An error occurred while trying to open the book.</originalText>
+          <audio src="./audio/309_Mt_li_d_xy_ra_khi_m_quyn_sch.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0138.smil#text_0138" />
+        </promptItem>
+        <promptVar name="BOOK_PATH" />
+        <promptItem refid="enter_to_close" />
+      </prompt>
+      <prompt id="noCdLoaded">
+        <promptItem>
+          <text id="_id58979" xml:lang="vi" status="check">Không có đĩa trong ổ CD.</text>
+          <originalText xml:lang="en">There is not a CD in the CD-ROM drive.</originalText>
+          <audio src="./audio/310_Khng_c_dia_trong__CD.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0139.smil#text_0139" />
+        </promptItem>
+        <promptItem refid="enter_to_close" />
+      </prompt>
+      <prompt id="pluginErrorInit">
+        <promptItem>
+          <text id="_id59004" xml:lang="vi" status="check">Lỗi: không tìm thấy hàm init() trong DLL.</text>
+          <originalText xml:lang="en">Plug-in error: init() function not found in the plug-in DLL.</originalText>
+          <audio src="./audio/311_Li_khng_tm_thy_hm_init_trong_D.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis013a.smil#text_013a" />
+        </promptItem>
+      </prompt>
+      <prompt id="pluginErrorDll">
+        <promptItem>
+          <text id="_id59025" xml:lang="vi" status="check">Lỗi: Không thể nạp thư viện plug-in sau:</text>
+          <originalText xml:lang="en">Plug-in error: The following plug-in library could not be loaded: </originalText>
+          <audio src="./audio/312_Li_Khng_th_np_thu_vin_plugin_s.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis013b.smil#text_013b" />
+        </promptItem>
+        <promptVar name="PLUGIN_LIB" />
+      </prompt>
+      <prompt id="basicViewPrompt">
+        <promptItem>
+          <text id="_id59052" xml:lang="vi" status="check">Bạn đang sử dụng chế độ xem cơ bản. Nhấn F11 để chuyển về chế độ xem mặc định.</text>
+          <originalText xml:lang="en">You are now using the basic view mode.  Press F11 to switch back to the default view mode.</originalText>
+          <audio src="./audio/313_Bn_dang_s_dng_ch_d_xem_co_bn_N.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis013c.smil#text_013c" />
+        </promptItem>
+      </prompt>
+      <prompt id="OpenFile_notSelfVoicing">
+        <promptItem>
+          <text id="_id59074" xml:lang="vi" status="check">Mở hộp thoại tệp</text>
+          <originalText xml:lang="en">Open File Dialog</originalText>
+          <audio src="./audio/314_M_hp_thoi_tp.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis013d.smil#text_013d" />
+        </promptItem>
+        <promptItem refid="thisDialogNotSelfVoicing" />
+        <promptItem>
+          <text id="_id59094" xml:lang="vi" status="check">Dùng tính năng "tìm kiếm sách", bên dưới trình đơn tệp, để tìm sách DAISY trên ổ cứng của bạn.</text>
+          <originalText xml:lang="en">Use the "search for books" feature, under the file menu, to find DAISY books on your hard drive.</originalText>
+          <audio src="./audio/315_Dng_tnh_nang_tm_kim_sch_bn_dui.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis013e.smil#text_013e" />
+        </promptItem>
+        <promptItem refid="escapeToCancel" />
+      </prompt>
+      <prompt id="BrowseForFolder_notSelfVoicing">
+        <promptItem>
+          <text id="_id59121" xml:lang="vi" status="check">Duyệt hộp thoại thư mục.</text>
+          <originalText xml:lang="en">Browse for folder dialog</originalText>
+          <audio src="./audio/316_Duyt_hp_thoi_thu_mc.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis013f.smil#text_013f" />
+        </promptItem>
+        <promptItem refid="thisDialogNotSelfVoicing" />
+        <promptItem refid="escapeToCancel" />
+        <promptItem>
+          <text id="_id59145" xml:lang="vi" status="check">Sau đó gõ đường dẫn của thư mục bạn muốn vào hộp văn bản.</text>
+          <originalText xml:lang="en">Then, type the path of the folder you want in the text box.</originalText>
+          <audio src="./audio/317_Sau_d_g_dung_dn_ca_thu_mc_bn_m.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0140.smil#text_0140" />
+        </promptItem>
+      </prompt>
+      <prompt id="canceled">
+        <promptItem>
+          <text id="_id59166" xml:lang="vi" status="check">Đã hủy</text>
+          <originalText xml:lang="en">Canceled</originalText>
+          <audio src="./audio/318__hy.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0141.smil#text_0141" />
+        </promptItem>
+      </prompt>
+      <prompt id="loading">
+        <promptItem>
+          <text id="_id59186" xml:lang="vi" status="check">Đang nạp.</text>
+          <originalText xml:lang="en">Loading</originalText>
+          <audio src="./audio/319_ang_np.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0142.smil#text_0142" />
+        </promptItem>
+      </prompt>
+      <prompt id="restartForChanges">
+        <promptItem>
+          <text id="_id59206" xml:lang="vi" status="check">Vui lòng khởi động lại máy để xem những thay đổi của bạn.</text>
+          <originalText xml:lang="en">Please restart to see your changes.</originalText>
+          <audio src="./audio/320_Vui_lng_khi_dng_li_my_d_xem_nh.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0143.smil#text_0143" />
+        </promptItem>
+      </prompt>
+      <prompt id="noBooksFoundOnCd">
+        <promptItem>
+          <text id="_id59227" xml:lang="vi" status="check">Không tìm thấy sách DAISY trên đĩa CD-ROM này</text>
+          <originalText xml:lang="en">No DAISY books were found on this CD-ROM.</originalText>
+          <audio src="./audio/321_Khng_tm_thy_sch_DAISY_trn_dia_.mp3" from="file:///C:/devel/amis/Langpacks/vietnamese/prompts/amis0144.smil#text_0144" />
+        </promptItem>
+        <promptItem refid="enter_to_close" />
+      </prompt>
+    </generalPrompts>
+  </prompts>
+</ui>

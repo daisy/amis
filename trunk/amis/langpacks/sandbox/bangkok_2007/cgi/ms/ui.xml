@@ -1,0 +1,2344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui xml:lang="en">
+  <containers>
+    <container id="file">
+      <note>This is the menu header "File"</note>
+      <caption>
+        <text id="_id52736" xml:lang="ms" status="ok">Fail</text>
+        <originalText>File</originalText>
+        <audio src="./audio/002_File.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0003.smil#text_0003"/>
+      </caption>
+      <action mfcid="ID_MENU_FILE_OPEN" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and a toolbar item</note>
+        <icon src="./open.png" type="smallIcon"/>
+        <caption>
+          <text id="_id52773" xml:lang="ms" status="ok">Buka</text>
+          <originalText>Open...</originalText>
+          <audio src="./audio/003_Open.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0004.smil#text_0004"/>
+        </caption>
+        <description>
+          <text id="_id52791" xml:lang="ms" status="ok">Buka Buku DAISY Dari Sistem Fail Lokal</text>
+          <originalText>Open a Daisy book from the local file system</originalText>
+          <audio src="./audio/004_Open_a_Daisy_book_from_the_loc.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0005.smil#text_0005"/>
+        </description>
+        <accelerator>
+          <text id="_id52810">Ctrl+O</text>
+          <originalText>Ctrl+O</originalText>
+          <audio src="./audio/005_CtrlO.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0006.smil#text_0006"/>
+        </accelerator>
+        <mnemonic>
+          <text id="_id52828">O</text>
+          <originalText>O</originalText>
+          <audio src="./audio/006_O.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0007.smil#text_0007"/>
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_LOADCD" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and a toolbar item</note>
+        <icon src="./settings/img/cd3.ico" type="smallIcon"/>
+        <icon src="./settings/img/cd_big.ico" type="largeIcon"/>
+        <caption>
+          <text id="_id52872" xml:lang="en" status="todo">Load CD</text>
+          <originalText>Load CD</originalText>
+          <audio src="./audio/007_Load_CD.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0008.smil#text_0008"/>
+        </caption>
+        <description>
+          <text id="_id52889" xml:lang="en" status="todo">Load a DAISY book from CD ROM</text>
+          <originalText>Load a DAISY book from CD ROM</originalText>
+          <audio src="./audio/008_Load_a_DAISY_book_from_CD_ROM.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0009.smil#text_0009"/>
+        </description>
+        <accelerator>
+          <text id="_id52908">Ctrl+L</text>
+          <originalText>Ctrl+L</originalText>
+          <audio src="./audio/009_CtrlL.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom000a.smil#text_000a"/>
+        </accelerator>
+        <mnemonic>
+          <text id="_id52926">L</text>
+          <originalText>L</originalText>
+          <audio src="./audio/010_L.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom000b.smil#text_000b"/>
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_SEARCHDRIVE" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id52955" xml:lang="en" status="todo">Search...</text>
+          <originalText>Search...</originalText>
+          <audio src="./audio/011_Search.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom000c.smil#text_000c"/>
+        </caption>
+        <description>
+          <text id="_id52973" xml:lang="en" status="todo">Search local drives for DAISY books</text>
+          <originalText>Search local drives for DAISY books</originalText>
+          <audio src="./audio/012_Search_local_drives_for_DAISY_.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom000d.smil#text_000d"/>
+        </description>
+        <mnemonic>
+          <text id="_id52992">S</text>
+          <originalText>S</originalText>
+          <audio src="./audio/013_S.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom000e.smil#text_000e"/>
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_PREFERENCES" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id53021" xml:lang="en" status="todo">Preferences...</text>
+          <originalText>Preferences...</originalText>
+          <audio src="./audio/014_Preferences.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom000f.smil#text_000f"/>
+        </caption>
+        <description>
+          <text id="_id53039" xml:lang="en" status="todo">This is the application preferences dialog.</text>
+          <originalText>This is the application preferences dialog.</originalText>
+          <audio src="./audio/015_This_is_the_application_prefer.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0010.smil#text_0010"/>
+        </description>
+        <mnemonic>
+          <text id="_id53058">P</text>
+          <originalText>P</originalText>
+          <audio src="./audio/016_P.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0011.smil#text_0011"/>
+        </mnemonic>
+      </action>
+      <container id="recentBooksList">
+        <note>This is the menu header for the recent books sub-menu.</note>
+        <caption>
+          <text id="_id53085" xml:lang="en" status="todo">Recent</text>
+          <originalText>Recent</originalText>
+          <audio src="./audio/017_Recent.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0012.smil#text_0012"/>
+        </caption>
+        <switch element="action">
+          <action mfcid="ID_FILE_RECENT_EMPTY" widget="menuItem" condition="ID_FILE_RECENT_EMPTY">
+            <note>This is going to be a menu item</note>
+            <caption>
+              <text id="_id53121" xml:lang="en" status="todo">Empty</text>
+              <originalText>Empty</originalText>
+              <audio src="./audio/018_Empty.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0013.smil#text_0013"/>
+            </caption>
+            <description>
+              <text id="_id53138" xml:lang="en" status="todo">There are no recently read books.</text>
+              <originalText>There are no recently read books.</originalText>
+              <audio src="./audio/019_There_are_no_recently_read_boo.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0014.smil#text_0014"/>
+            </description>
+          </action>
+          <action mfcid="BOOK_BASE_ID" widget="menuItem" condition="BOOK_BASE_ID">
+            <note>This is going to be a menu item</note>
+            <list repeat="yes">
+              <caption>
+                <promptVar name="RECENT_BOOK_TITLE"/>
+              </caption>
+            </list>
+          </action>
+        </switch>
+        <mnemonic>
+          <text id="_id53185">R</text>
+          <originalText>R</originalText>
+          <audio src="./audio/020_R.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0015.smil#text_0015"/>
+        </mnemonic>
+      </container>
+      <action mfcid="ID_MENU_FILE_EXIT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id53213" xml:lang="en" status="todo">Exit</text>
+          <originalText>Exit</originalText>
+          <audio src="./audio/021_Exit.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0016.smil#text_0016"/>
+        </caption>
+        <description>
+          <text id="_id53231" xml:lang="en" status="todo">Exit AMIS</text>
+          <originalText>Exit AMIS</originalText>
+          <audio src="./audio/022_Exit_AMIS.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0017.smil#text_0017"/>
+        </description>
+        <accelerator>
+          <text id="_id53249">Alt+F4</text>
+          <originalText>Alt+F4</originalText>
+          <audio src="./audio/023_AltF4.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0018.smil#text_0018"/>
+        </accelerator>
+        <mnemonic>
+          <text id="_id53266">x</text>
+          <originalText>x</originalText>
+          <audio src="./audio/024_x.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0019.smil#text_0019"/>
+        </mnemonic>
+      </action>
+      <accelerator>
+        <text id="_id53285">Alt+F</text>
+        <originalText>Alt+F</originalText>
+        <audio src="./audio/025_AltF.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom001a.smil#text_001a"/>
+      </accelerator>
+      <mnemonic>
+        <text id="_id53303">F</text>
+        <originalText>F</originalText>
+        <audio src="./audio/026_F.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom001b.smil#text_001b"/>
+      </mnemonic>
+    </container>
+    <container id="view">
+      <note>This is the menu header "View"</note>
+      <caption>
+        <text id="_id53329">View</text>
+        <originalText>View</originalText>
+        <audio src="./audio/027_View.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom001c.smil#text_001c"/>
+      </caption>
+      <action mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id53358">Sidebar</text>
+          <originalText>Sidebar</originalText>
+          <audio src="./audio/028_Sidebar.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom001d.smil#text_001d"/>
+        </caption>
+        <description>
+          <text id="_id53376">Turn the sidebar on or off.</text>
+          <originalText>Turn the sidebar on or off.</originalText>
+          <audio src="./audio/029_Turn_the_sidebar_on_or_off.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom001e.smil#text_001e"/>
+        </description>
+        <mnemonic>
+          <text id="_id53394">S</text>
+          <originalText>S</originalText>
+          <audio src="./audio/030_S.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom001f.smil#text_001f"/>
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_BASIC" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id53423">Basic View Mode</text>
+          <originalText>Basic View Mode</originalText>
+          <audio src="./audio/031_Basic_View_Mode.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0020.smil#text_0020"/>
+        </caption>
+        <description>
+          <text id="_id53441">Switch the view to basic mode.</text>
+          <originalText>Switch the view to basic mode.</originalText>
+          <audio src="./audio/032_Switch_the_view_to_basic_mode.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0021.smil#text_0021"/>
+        </description>
+        <accelerator>
+          <text id="_id53460">F11</text>
+          <originalText>F11</originalText>
+          <audio src="./audio/033_F11.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0022.smil#text_0022"/>
+        </accelerator>
+        <mnemonic>
+          <text id="_id53477">B</text>
+          <originalText>B</originalText>
+          <audio src="./audio/034_B.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0023.smil#text_0023"/>
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_CONTRAST" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item</note>
+        <icon src="./settings/img/contrast.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id53513">High Contrast</text>
+          <originalText>High Contrast</originalText>
+          <audio src="./audio/035_High_Contrast.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0024.smil#text_0024"/>
+        </caption>
+        <description>
+          <text id="_id53530">Use high contrast colors for the text display.</text>
+          <originalText>Use high contrast colors for the text display.</originalText>
+          <audio src="./audio/036_Use_high_contrast_colors_for_t.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0025.smil#text_0025"/>
+        </description>
+        <accelerator>
+          <text id="_id53550">Ctrl+S</text>
+          <originalText>Ctrl+S</originalText>
+          <audio src="./audio/037_CtrlC.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0026.smil#text_0026"/>
+        </accelerator>
+        <mnemonic>
+          <text id="_id53568">C</text>
+          <originalText>C</originalText>
+          <audio src="./audio/038_C.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0027.smil#text_0027"/>
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_LARGEFONT" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/font.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id53604">Increase Font Size</text>
+          <originalText>Increase Font Size</originalText>
+          <audio src="./audio/039_Increase_Font_Size.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0028.smil#text_0028"/>
+        </caption>
+        <description>
+          <text id="_id53622">Gradually increase the font size.</text>
+          <originalText>Gradually increase the font size.</originalText>
+          <audio src="./audio/040_Gradually_increase_the_font_si.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0029.smil#text_0029"/>
+        </description>
+        <mnemonic>
+          <text id="_id53642">I</text>
+          <originalText>I</originalText>
+          <audio src="./audio/041_I.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom002a.smil#text_002a"/>
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_RESETFONT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id53670">Reset Font Size</text>
+          <originalText>Reset Font Size</originalText>
+          <audio src="./audio/042_Reset_Font_Size.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom002b.smil#text_002b"/>
+        </caption>
+        <description>
+          <text id="_id53688">Set the font size to the default setting.</text>
+          <originalText>Set the font size to the default setting.</originalText>
+          <audio src="./audio/043_Set_the_font_size_to_the_defau.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom002c.smil#text_002c"/>
+        </description>
+        <mnemonic>
+          <text id="_id53708">R</text>
+          <originalText>R</originalText>
+          <audio src="./audio/044_R.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom002d.smil#text_002d"/>
+        </mnemonic>
+      </action>
+      <action mfcid="NAVLIST_BASE_ID" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <promptVar name="NAV_LIST_NAME"/>
+        </caption>
+        <description>
+          <promptVar name="NAV_LIST_DESCRIPTION"/>
+        </description>
+      </action>
+      <accelerator>
+        <text id="_id53752">Alt+V</text>
+        <originalText>Alt+V</originalText>
+        <audio src="./audio/045_AltV.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom002e.smil#text_002e"/>
+      </accelerator>
+      <mnemonic>
+        <text id="_id53770">V</text>
+        <originalText>V</originalText>
+        <audio src="./audio/046_V.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom002f.smil#text_002f"/>
+      </mnemonic>
+    </container>
+    <container id="play">
+      <note>This is the menu header "Play"</note>
+      <caption>
+        <text id="_id53797">Play</text>
+        <originalText>Play</originalText>
+        <audio src="./audio/047_Play.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0030.smil#text_0030"/>
+      </caption>
+      <switch element="action">
+        <action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" condition="canPlay">
+          <note>This is going to be a menu item and toolbar item</note>
+          <icon src="./settings/img/play-big.ico" type="smallIcon"/>
+          <icon src="./settings/img/play_big.ico" type="largeIcon"/>
+          <caption>
+            <text id="_id53845">Play</text>
+            <originalText>Play</originalText>
+            <audio src="./audio/048_Play.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0031.smil#text_0031"/>
+          </caption>
+          <description>
+            <text id="_id53863">Start synchronized playback.</text>
+            <originalText>Start synchronized playback.</originalText>
+            <audio src="./audio/049_Start_synchronized_playback.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0032.smil#text_0032"/>
+          </description>
+          <accelerator>
+            <text id="_id53882">Space</text>
+            <originalText>Space</originalText>
+            <audio src="./audio/050_Space.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0033.smil#text_0033"/>
+          </accelerator>
+          <mnemonic>
+            <text id="_id53900">P</text>
+            <originalText>P</originalText>
+            <audio src="./audio/051_P.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0034.smil#text_0034"/>
+          </mnemonic>
+        </action>
+        <action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" condition="canPause">
+          <note>This is going to be a menu item and toolbar item</note>
+          <icon src="./settings/img/pause.ico" type="smallIcon"/>
+          <icon src="./settings/img/pause_big.ico" type="largeIcon"/>
+          <caption>
+            <text id="_id53945">Pause</text>
+            <originalText>Pause</originalText>
+            <audio src="./audio/052_Pause.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0035.smil#text_0035"/>
+          </caption>
+          <description>
+            <text id="_id53963">Pause playback of this DAISY book.</text>
+            <originalText>Pause playback of this DAISY book.</originalText>
+            <audio src="./audio/053_Pause_playback_of_this_DAISY_b.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0036.smil#text_0036"/>
+          </description>
+          <accelerator>
+            <text id="_id53982">Space</text>
+            <originalText>Space</originalText>
+            <audio src="./audio/054_Space.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0037.smil#text_0037"/>
+          </accelerator>
+          <mnemonic>
+            <text id="_id54000">a</text>
+            <originalText>a</originalText>
+            <audio src="./audio/055_a.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0038.smil#text_0038"/>
+          </mnemonic>
+        </action>
+      </switch>
+      <action mfcid="ID_MENU_PLAY_ESCAPE" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id54030">Escape</text>
+          <originalText>Escape</originalText>
+          <audio src="./audio/056_Escape.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0039.smil#text_0039"/>
+        </caption>
+        <description>
+          <text id="_id54048">Jump out of the currently playing item or structure.</text>
+          <originalText>Jump out of the currently playing item or structure.</originalText>
+          <audio src="./audio/057_Jump_out_of_the_currently_play.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom003a.smil#text_003a"/>
+        </description>
+        <accelerator>
+          <text id="_id54067">Esc</text>
+          <originalText>Esc</originalText>
+          <audio src="./audio/058_Esc.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom003b.smil#text_003b"/>
+        </accelerator>
+        <mnemonic>
+          <text id="_id54085">E</text>
+          <originalText>E</originalText>
+          <audio src="./audio/059_E.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom003c.smil#text_003c"/>
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_FASTER" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/fullspeedahead.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id54121">Faster</text>
+          <originalText>Faster</originalText>
+          <audio src="./audio/060_Faster.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom003d.smil#text_003d"/>
+        </caption>
+        <description>
+          <text id="_id54139">Increase the playback rate.</text>
+          <originalText>Increase the playback rate.</originalText>
+          <audio src="./audio/061_Increase_the_playback_rate.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom003e.smil#text_003e"/>
+        </description>
+        <accelerator>
+          <text id="_id54158">Ctrl++</text>
+          <originalText>Ctrl++</originalText>
+          <audio src="./audio/062_Ctrl.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom003f.smil#text_003f"/>
+        </accelerator>
+        <mnemonic>
+          <text id="_id54176">F</text>
+          <originalText>F</originalText>
+          <audio src="./audio/063_F.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0040.smil#text_0040"/>
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_SLOWER" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/slowdown.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id54212">Slower</text>
+          <originalText>Slower</originalText>
+          <audio src="./audio/064_Slower.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0041.smil#text_0041"/>
+        </caption>
+        <description>
+          <text id="_id54230">Slow down the playback rate.</text>
+          <originalText>Slow down the playback rate.</originalText>
+          <audio src="./audio/065_Slow_down_the_playback_rate.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0042.smil#text_0042"/>
+        </description>
+        <accelerator>
+          <text id="_id54248">Ctrl+-</text>
+          <originalText>Ctrl+-</originalText>
+          <audio src="./audio/066_Ctrl.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0043.smil#text_0043"/>
+        </accelerator>
+        <mnemonic>
+          <text id="_id54266">S</text>
+          <originalText>S</originalText>
+          <audio src="./audio/067_S.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0044.smil#text_0044"/>
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_NORMALSPEED" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/normalspeed.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id54302">Normal Speed</text>
+          <originalText>Normal Speed</originalText>
+          <audio src="./audio/068_Normal_Speed.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0045.smil#text_0045"/>
+        </caption>
+        <description>
+          <text id="_id54320">Reset the playback rate to normal.</text>
+          <originalText>Reset the playback rate to normal.</originalText>
+          <audio src="./audio/069_Reset_the_playback_rate_to_nor.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0046.smil#text_0046"/>
+        </description>
+        <accelerator>
+          <text id="_id54340">Ctrl+0</text>
+          <originalText>Ctrl+0</originalText>
+          <audio src="./audio/070_Ctrl0.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0047.smil#text_0047"/>
+        </accelerator>
+        <mnemonic>
+          <text id="_id54357">N</text>
+          <originalText>N</originalText>
+          <audio src="./audio/071_N.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0048.smil#text_0048"/>
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_VOLUP" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id54386">Increase Volume</text>
+          <originalText>Increase Volume</originalText>
+          <audio src="./audio/072_Increase_Volume.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0049.smil#text_0049"/>
+        </caption>
+        <description>
+          <text id="_id54404">Gradually raise the volume.</text>
+          <originalText>Gradually raise the volume.</originalText>
+          <audio src="./audio/073_Gradually_raise_the_volume.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom004a.smil#text_004a"/>
+        </description>
+        <accelerator>
+          <text id="_id54423">Ctrl+Up</text>
+          <originalText>Ctrl+Up</originalText>
+          <audio src="./audio/074_CtrlUp.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom004b.smil#text_004b"/>
+        </accelerator>
+        <mnemonic>
+          <text id="_id54441">I</text>
+          <originalText>I</originalText>
+          <audio src="./audio/075_I.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom004c.smil#text_004c"/>
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_VOLDOWN" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id54470">Decrease Volume</text>
+          <originalText>Decrease Volume</originalText>
+          <audio src="./audio/076_Decrease_Volume.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom004d.smil#text_004d"/>
+        </caption>
+        <description>
+          <text id="_id54488">Gradually lower the volume.</text>
+          <originalText>Gradually lower the volume.</originalText>
+          <audio src="./audio/077_Gradually_lower_the_volume.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom004e.smil#text_004e"/>
+        </description>
+        <accelerator>
+          <text id="_id54506">Ctrl+Down</text>
+          <originalText>Ctrl+Down</originalText>
+          <audio src="./audio/078_CtrlDown.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom004f.smil#text_004f"/>
+        </accelerator>
+        <mnemonic>
+          <text id="_id54524">D</text>
+          <originalText>D</originalText>
+          <audio src="./audio/079_D.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0050.smil#text_0050"/>
+        </mnemonic>
+      </action>
+      <accelerator>
+        <text id="_id54542">Alt+P</text>
+        <originalText>Alt+P</originalText>
+        <audio src="./audio/080_AltP.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0051.smil#text_0051"/>
+      </accelerator>
+      <mnemonic>
+        <text id="_id54560">P</text>
+        <originalText>P</originalText>
+        <audio src="./audio/081_P.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0052.smil#text_0052"/>
+      </mnemonic>
+    </container>
+    <container id="navigate">
+      <note>This is the menu header "Navigate"</note>
+      <caption>
+        <text id="_id54587">Navigate</text>
+        <originalText>Navigate</originalText>
+        <audio src="./audio/082_Navigate.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0053.smil#text_0053"/>
+      </caption>
+      <action mfcid="ID_MENU_NAV_PREVSECTION" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevsection.ico" type="smallIcon"/>
+        <icon src="./settings/img/prevsection_big.ico" type="largeIcon"/>
+        <caption>
+          <text id="_id54630">Previous Section</text>
+          <originalText>Previous Section</originalText>
+          <audio src="./audio/083_Previous_Section.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0054.smil#text_0054"/>
+        </caption>
+        <description>
+          <text id="_id54648">Go to the previous section.</text>
+          <originalText>Go to the previous section.</originalText>
+          <audio src="./audio/084_Go_to_the_previous_section.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0055.smil#text_0055"/>
+        </description>
+        <accelerator>
+          <text id="_id54667">Up</text>
+          <originalText>Up</originalText>
+          <audio src="./audio/085_Up.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0056.smil#text_0056"/>
+        </accelerator>
+        <mnemonic>
+          <text id="_id54684">P</text>
+          <originalText>P</originalText>
+          <audio src="./audio/086_P.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0057.smil#text_0057"/>
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTSECTION" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextsection.ico" type="smallIcon"/>
+        <icon src="./settings/img/nextsection_big.ico" type="largeIcon"/>
+        <caption>
+          <text id="_id54728">Next Section</text>
+          <originalText>Next Section</originalText>
+          <audio src="./audio/087_Next_Section.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0058.smil#text_0058"/>
+        </caption>
+        <description>
+          <text id="_id54745">Go to the next section.</text>
+          <originalText>Go to the next section.</originalText>
+          <audio src="./audio/088_Go_to_the_next_section.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0059.smil#text_0059"/>
+        </description>
+        <accelerator>
+          <text id="_id54764">Down</text>
+          <originalText>Down</originalText>
+          <audio src="./audio/089_Down.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom005a.smil#text_005a"/>
+        </accelerator>
+        <mnemonic>
+          <text id="_id54782">N</text>
+          <originalText>N</originalText>
+          <audio src="./audio/090_N.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom005b.smil#text_005b"/>
+        </mnemonic>
+      </action>
+      <container id="sectiondepth">
+        <note>This is the "show section depth" sub-menu pop-up</note>
+        <caption>
+          <text id="_id54809">Show Section Depth</text>
+          <originalText>Show Section Depth</originalText>
+          <audio src="./audio/091_Show_Section_Depth.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom005c.smil#text_005c"/>
+        </caption>
+        <switch element="action">
+          <action mfcid="ID_EMPTY" widget="menuItem" condition="ID_EMPTY">
+            <note>This is going to be a menu item</note>
+            <caption>
+              <text id="_id54844">Empty</text>
+              <originalText>Empty</originalText>
+              <audio src="./audio/092_Empty.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom005d.smil#text_005d"/>
+            </caption>
+            <description>
+              <text id="_id54862">There are no section levels.</text>
+              <originalText>There are no section levels.</originalText>
+              <audio src="./audio/093_There_are_no_section_levels.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom005e.smil#text_005e"/>
+            </description>
+          </action>
+          <action mfcid="SECTION_DEPTH_BASE_ID" widget="menuItem" condition="SECTION_DEPTH_BASE_ID">
+            <note>This is going to be a menu item</note>
+            <list repeat="yes">
+              <caption>
+                <promptVar name="SECTION_DEPTH_OPTION"/>
+              </caption>
+            </list>
+          </action>
+        </switch>
+        <mnemonic>
+          <text id="_id54909">S</text>
+          <originalText>S</originalText>
+          <audio src="./audio/094_S.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom005f.smil#text_005f"/>
+        </mnemonic>
+      </container>
+      <action mfcid="ID_MENU_NAV_PREVPHRASE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevphasecirc.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id54946">Previous Phrase</text>
+          <originalText>Previous Phrase</originalText>
+          <audio src="./audio/095_Previous_Phrase.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0060.smil#text_0060"/>
+        </caption>
+        <description>
+          <text id="_id54964">Go to the previous phrase.</text>
+          <originalText>Go to the previous phrase.</originalText>
+          <audio src="./audio/096_Go_to_the_previous_phrase.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0061.smil#text_0061"/>
+        </description>
+        <accelerator>
+          <text id="_id54982">Left</text>
+          <originalText>Left</originalText>
+          <audio src="./audio/097_Left.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0062.smil#text_0062"/>
+        </accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTPHRASE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextphrasecirc.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id55020">Next Phrase</text>
+          <originalText>Next Phrase</originalText>
+          <audio src="./audio/098_Next_Phrase.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0063.smil#text_0063"/>
+        </caption>
+        <description>
+          <text id="_id55037">Go to the next phrase.</text>
+          <originalText>Go to the next phrase.</originalText>
+          <audio src="./audio/099_Go_to_the_next_phrase.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0064.smil#text_0064"/>
+        </description>
+        <accelerator>
+          <text id="_id55056">Right</text>
+          <originalText>Right</originalText>
+          <audio src="./audio/100_Right.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0065.smil#text_0065"/>
+        </accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_PREVPAGE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevpage.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id55093">Previous Page</text>
+          <originalText>Previous Page</originalText>
+          <audio src="./audio/101_Previous_Page.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0066.smil#text_0066"/>
+        </caption>
+        <description>
+          <text id="_id55111">Go to the previous page.</text>
+          <originalText>Go to the previous page.</originalText>
+          <audio src="./audio/102_Go_to_the_previous_page.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0067.smil#text_0067"/>
+        </description>
+        <accelerator>
+          <text id="_id55129">Ctrl+Left</text>
+          <originalText>Ctrl+Left</originalText>
+          <audio src="./audio/103_CtrlLeft.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0068.smil#text_0068"/>
+        </accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTPAGE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextpage.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id55166">Next Page</text>
+          <originalText>Next Page</originalText>
+          <audio src="./audio/104_Next_Page.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0069.smil#text_0069"/>
+        </caption>
+        <description>
+          <text id="_id55184">Go to the next page.</text>
+          <originalText>Go to the next page.</originalText>
+          <audio src="./audio/105_Go_to_the_next_page.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom006a.smil#text_006a"/>
+        </description>
+        <accelerator>
+          <text id="_id55203">Ctrl+Right</text>
+          <originalText>Ctrl+Right</originalText>
+          <audio src="./audio/106_CtrlRight.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom006b.smil#text_006b"/>
+        </accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_GOTOPAGE" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id55232">Go to Page...</text>
+          <originalText>Go to Page...</originalText>
+          <audio src="./audio/107_Go_to_Page.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom006c.smil#text_006c"/>
+        </caption>
+        <description>
+          <text id="_id55250">Go to a specific page.</text>
+          <originalText>Go to a specific page.</originalText>
+          <audio src="./audio/108_Go_to_a_specific_page.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom006d.smil#text_006d"/>
+        </description>
+        <accelerator>
+          <text id="_id55269">Ctrl+G</text>
+          <originalText>Ctrl+G</originalText>
+          <audio src="./audio/109_CtrlG.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom006e.smil#text_006e"/>
+        </accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_FINDINTEXT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id55298">Find in Text</text>
+          <originalText>Find in Text</originalText>
+          <audio src="./audio/110_Find_in_Text.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom006f.smil#text_006f"/>
+        </caption>
+        <description>
+          <text id="_id55316">Search for a word or phrase in the text.</text>
+          <originalText>Search for a word or phrase in the text.</originalText>
+          <audio src="./audio/111_Search_for_a_word_or_phrase_in.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0070.smil#text_0070"/>
+        </description>
+        <accelerator>
+          <text id="_id55335">Ctrl+F</text>
+          <originalText>Ctrl+F</originalText>
+          <audio src="./audio/112_CtrlF.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0071.smil#text_0071"/>
+        </accelerator>
+        <mnemonic>
+          <text id="_id55353">F</text>
+          <originalText>F</originalText>
+          <audio src="./audio/113_F.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0072.smil#text_0072"/>
+        </mnemonic>
+      </action>
+      <accelerator>
+        <text id="_id55371">Alt+N</text>
+        <originalText>Alt+N</originalText>
+        <audio src="./audio/114_AltN.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0073.smil#text_0073"/>
+      </accelerator>
+      <mnemonic>
+        <text id="_id55389">N</text>
+        <originalText>N</originalText>
+        <audio src="./audio/115_N.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0074.smil#text_0074"/>
+      </mnemonic>
+    </container>
+    <container id="bookmarks">
+      <note>This is the menu header "Bookmarks"</note>
+      <caption>
+        <text id="_id55416">Bookmarks</text>
+        <originalText>Bookmarks</originalText>
+        <audio src="./audio/116_Bookmarks.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0075.smil#text_0075"/>
+      </caption>
+      <action mfcid="ID_MENU_BMK_ADD" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/adbookmark.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id55451">Add Bookmark</text>
+          <originalText>Add Bookmark</originalText>
+          <audio src="./audio/117_Add_Bookmark.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0076.smil#text_0076"/>
+        </caption>
+        <description>
+          <text id="_id55469">Bookmark your current position.</text>
+          <originalText>Bookmark your current position.</originalText>
+          <audio src="./audio/118_Bookmark_your_current_position.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0077.smil#text_0077"/>
+        </description>
+        <accelerator>
+          <text id="_id55488">Ctrl+D</text>
+          <originalText>Ctrl+D</originalText>
+          <audio src="./audio/119_CtrlD.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0078.smil#text_0078"/>
+        </accelerator>
+        <mnemonic>
+          <text id="_id55506">A</text>
+          <originalText>A</originalText>
+          <audio src="./audio/120_A.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0079.smil#text_0079"/>
+        </mnemonic>
+      </action>
+      <action mfcid="BOOKMARK_BASE_ID" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOKMARK_TITLE"/>
+          </caption>
+        </list>
+      </action>
+      <accelerator>
+        <text id="_id55548">Alt+B</text>
+        <originalText>Alt+B</originalText>
+        <audio src="./audio/121_AltB.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom007a.smil#text_007a"/>
+      </accelerator>
+      <mnemonic>
+        <text id="_id55566">B</text>
+        <originalText>B</originalText>
+        <audio src="./audio/122_B.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom007b.smil#text_007b"/>
+      </mnemonic>
+    </container>
+    <container id="info">
+      <note>This is the menu header "Info"</note>
+      <caption>
+        <text id="_id55593">Info</text>
+        <originalText>Info</originalText>
+        <audio src="./audio/123_Info.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom007c.smil#text_007c"/>
+      </caption>
+      <action mfcid="ID_MENU_INFO_SKIP" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id55621">Skippable Items...</text>
+          <originalText>Skippable Items...</originalText>
+          <audio src="./audio/124_Skippable_Items.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom007d.smil#text_007d"/>
+        </caption>
+        <description>
+          <text id="_id55639">View the skippable items for this publication.</text>
+          <originalText>View the skippable items for this publication.</originalText>
+          <audio src="./audio/125_View_the_skippable_items_for_t.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom007e.smil#text_007e"/>
+        </description>
+        <mnemonic>
+          <text id="_id55658">S</text>
+          <originalText>S</originalText>
+          <audio src="./audio/126_S.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom007f.smil#text_007f"/>
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_SUMMARY" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/info.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id55695">Full Summary</text>
+          <originalText>Full Summary</originalText>
+          <audio src="./audio/127_Full_Summary.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0080.smil#text_0080"/>
+        </caption>
+        <description>
+          <text id="_id55713">Get all summary info for this publication.</text>
+          <originalText>Get all summary info for this publication.</originalText>
+          <audio src="./audio/128_Get_all_summary_info_for_this_.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0081.smil#text_0081"/>
+        </description>
+        <mnemonic>
+          <text id="_id55732">F</text>
+          <originalText>F</originalText>
+          <audio src="./audio/129_F.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0082.smil#text_0082"/>
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_CURRENTPOSITION" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id55761">Current Position</text>
+          <originalText>Current Position</originalText>
+          <audio src="./audio/130_Current_Position.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0083.smil#text_0083"/>
+        </caption>
+        <description>
+          <text id="_id55779">Get information about your current position.</text>
+          <originalText>Get information about your current position.</originalText>
+          <audio src="./audio/131_Get_information_about_your_cur.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0084.smil#text_0084"/>
+        </description>
+        <mnemonic>
+          <text id="_id55798">C</text>
+          <originalText>C</originalText>
+          <audio src="./audio/132_C.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0085.smil#text_0085"/>
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_NAVOPTIONS" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id55827">Navigation Options</text>
+          <originalText>Navigation Options</originalText>
+          <audio src="./audio/133_Navigation_Options.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0086.smil#text_0086"/>
+        </caption>
+        <description>
+          <text id="_id55846">Learn about your navigation options for this publication.</text>
+          <originalText>Learn about your navigation options for this publication.</originalText>
+          <audio src="./audio/134_Learn_about_your_navigation_op.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0087.smil#text_0087"/>
+        </description>
+        <mnemonic>
+          <text id="_id55866">N</text>
+          <originalText>N</originalText>
+          <audio src="./audio/135_N.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0088.smil#text_0088"/>
+        </mnemonic>
+      </action>
+      <accelerator>
+        <text id="_id55884">Alt+I</text>
+        <originalText>Alt+I</originalText>
+        <audio src="./audio/136_AltI.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0089.smil#text_0089"/>
+      </accelerator>
+      <mnemonic>
+        <text id="_id55902">I</text>
+        <originalText>I</originalText>
+        <audio src="./audio/137_I.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom008a.smil#text_008a"/>
+      </mnemonic>
+    </container>
+    <container id="help">
+      <note>This is the menu header "Help"</note>
+      <caption>
+        <text id="_id55928">Help</text>
+        <originalText>Help</originalText>
+        <audio src="./audio/138_Help.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom008b.smil#text_008b"/>
+      </caption>
+      <action mfcid="ID_MENU_HELP_CONTENTS" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/help.ico" type="smallIcon"/>
+        <icon src="./settings/img/help_big.ico" type="largeIcon"/>
+        <caption>
+          <text id="_id55971">Contents</text>
+          <originalText>Contents</originalText>
+          <audio src="./audio/139_Contents.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom008c.smil#text_008c"/>
+        </caption>
+        <description>
+          <text id="_id55989">Get help using AMIS</text>
+          <originalText>Get help using AMIS</originalText>
+          <audio src="./audio/140_Get_help_using_AMIS.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom008d.smil#text_008d"/>
+        </description>
+        <mnemonic>
+          <text id="_id56007">C</text>
+          <originalText>C</originalText>
+          <audio src="./audio/141_C.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom008e.smil#text_008e"/>
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_HELP_ABOUT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id56036">About AMIS</text>
+          <originalText>About AMIS</originalText>
+          <audio src="./audio/142_About_AMIS.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom008f.smil#text_008f"/>
+        </caption>
+        <description>
+          <text id="_id56054">Find out about AMIS and DAISY-for-All.</text>
+          <originalText>Find out about AMIS and DAISY-for-All.</originalText>
+          <audio src="./audio/143_Find_out_about_AMIS_and_DAISYf.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0090.smil#text_0090"/>
+        </description>
+        <mnemonic>
+          <text id="_id56073">A</text>
+          <originalText>A</originalText>
+          <audio src="./audio/144_A.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0091.smil#text_0091"/>
+        </mnemonic>
+      </action>
+      <accelerator>
+        <text id="_id56092">Alt+H</text>
+        <originalText>Alt+H</originalText>
+        <audio src="./audio/145_AltH.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0092.smil#text_0092"/>
+      </accelerator>
+      <mnemonic>
+        <text id="_id56109">H</text>
+        <originalText>H</originalText>
+        <audio src="./audio/146_H.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0093.smil#text_0093"/>
+      </mnemonic>
+    </container>
+  </containers>
+  <dialogs>
+    <dialog mfcid="IDD_FIND">
+      <note>This is the find in text dialog</note>
+      <caption>
+        <text id="_id56139">Find in Text</text>
+        <originalText>Find in Text</originalText>
+        <audio src="./audio/147_Find_in_Text.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0094.smil#text_0094"/>
+      </caption>
+      <description>
+        <text id="_id56157">Here you can search the full text in either direction.</text>
+        <originalText>Here you can search the full text in either direction.</originalText>
+        <audio src="./audio/148_Here_you_can_search_the_full_t.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0095.smil#text_0095"/>
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem>
+          <text id="_id56185">After typing in your search, press enter to begin searching.</text>
+          <originalText>After typing in your search, press enter to begin searching.</originalText>
+          <audio src="./audio/149_After_typing_in_your_search_pr.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0096.smil#text_0096"/>
+        </promptItem>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        
+        
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <text id="_id56242">Press to begin searching for text in the file.</text>
+          <originalText>Press to begin searching for text in the file.</originalText>
+          <audio src="./audio/150_Press_to_begin_searching_for_t.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0097.smil#text_0097"/>
+        </description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text id="_id56284">C</text>
+          <originalText>C</originalText>
+          <audio src="./audio/038_C.mp3"/>
+        </mnemonic>
+      </control>
+      <control mfcid="IDC_SEARCHSTRING" widget="textfield">
+        <description>
+          <text id="_id56306">Type the text to search for.</text>
+          <originalText>Type the text to search for.</originalText>
+          <audio src="./audio/151_Type_the_text_to_search_for.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0098.smil#text_0098"/>
+        </description>
+      </control>
+      <control mfcid="IDC_FINDNEXT" widget="radiobutton">
+        <note>This indicates the direction of the search</note>
+        <caption>
+          <text id="_id56336">Find Next</text>
+          <originalText>Find Next</originalText>
+          <audio src="./audio/152_Find_Next.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0099.smil#text_0099"/>
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="SELECTED_OR_DESELECTED" param="FIND_NEXT_IN_TEXT"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_FINDPREV" widget="radiobutton">
+        <note>This indicates the direction of the search</note>
+        <caption>
+          <text id="_id56384">Find Previous</text>
+          <originalText>Find Previous</originalText>
+          <audio src="./audio/153_Find_Previous.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom009a.smil#text_009a"/>
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptName name="SELECTED_OR_DESELECTED" param="FIND_PREV_IN_TEXT"/>
+          </prompt>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_CDSEARCH">
+      <note>This dialog appears when more than one book is on a CD-ROM</note>
+      <caption>
+        <text id="_id56430">Multiple books found</text>
+        <originalText>Multiple books found</originalText>
+        <audio src="./audio/154_Multiple_books_found.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom009b.smil#text_009b"/>
+      </caption>
+      <description mfcid="IDC_STATIC">
+        <text id="_id56451">More than one book was found on this CD. Please select a book from the list below and press Alt + O to open.</text>
+        <originalText>More than one book was found on this CD. Please select a book from the list below and press Alt + O to open.</originalText>
+        <audio src="./audio/155_More_than_one_book_was_found_o.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom009c.smil#text_009c"/>
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_CANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text id="_id56515">C</text>
+          <originalText>C</originalText>
+          <audio src="./audio/038_C.mp3"/>
+        </mnemonic>
+      </control>
+      <control mfcid="IDC_OPENBOOK" widget="button">
+        <caption>
+          <text id="_id56537">Open</text>
+          <originalText>Open</originalText>
+          <audio src="./audio/156_Open.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom009d.smil#text_009d"/>
+        </caption>
+        <description>
+          <text id="_id56554">Press to close this dialog and open the selected book.</text>
+          <originalText>Press to close this dialog and open the selected book.</originalText>
+          <audio src="./audio/157_Press_to_close_this_dialog_and.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom009e.smil#text_009e"/>
+        </description>
+        <mnemonic>
+          <text id="_id56574">O</text>
+          <originalText>O</originalText>
+          <audio src="./audio/158_O.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom009f.smil#text_009f"/>
+        </mnemonic>
+      </control>
+      <control mfcid="IDC_BOOKLIST" widget="list">
+        <description>
+          <text id="_id56599">Use the arrow keys to move around this list of titles.</text>
+          <originalText>Use the arrow keys to move around this list of titles.</originalText>
+          <audio src="./audio/159_Use_the_arrow_keys_to_move_aro.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00a0.smil#text_00a0"/>
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOK_TITLE"/>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_ABOUTBOX">
+      <note>This dialog gives some basic information about AMIS.</note>
+      <caption>
+        <text id="_id56642">About AMIS</text>
+        <originalText>About AMIS</originalText>
+        <audio src="./audio/160_About_AMIS.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00a1.smil#text_00a1"/>
+      </caption>
+      <description>
+        <text id="_id56660">Dialog with information about AMIS software.</text>
+        <originalText>Dialog with information about AMIS software.</originalText>
+        <audio src="./audio/161_Dialog_with_information_about_.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00a2.smil#text_00a2"/>
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_AMISNAME" widget="textlabel">
+        <caption>
+          <text id="_id56704">AMIS: \nAdaptive Multimedia Information System</text>
+          <originalText>AMIS: \nAdaptive Multimedia Information System</originalText>
+          <audio src="./audio/162_AMIS_nAdaptive_Multimedia_Info.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00a3.smil#text_00a3"/>
+        </caption>
+      </control>
+      <control mfcid="IDC_VERSION" translate="no">
+        <caption>
+          <text id="_id56730">Version 2.0</text>
+          <originalText>Version 2.0</originalText>
+          <audio src="./audio/version23.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00a4.smil#text_00a4"/>
+        </caption>
+      </control>
+      <control mfcid="IDC_VERSIONNOTE" translate="no">
+        <caption>
+          <text id="_id56756">Release Date: 23 Oct 2005</text>
+          <originalText>Release Date: 23 Oct 2005</originalText>
+          <audio src="./audio/june212006.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00a5.smil#text_00a5"/>
+        </caption>
+      </control>
+      <control mfcid="IDC_COPYRIGHT" widget="textlabel" translate="no">
+        <caption>
+          <text id="_id56783">Copyright © 2006 DAISY for All</text>
+          <originalText>Copyright © 2006 DAISY for All</originalText>
+          <audio src="./audio/165_Copyright__2006_DAISY_for_All.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00a6.smil#text_00a6"/>
+        </caption>
+      </control>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_SEARCHDAISY">
+      <note>This dialog is for searching your hard drive for DAISY books.</note>
+      <caption>
+        <text id="_id56837">Search for DAISY Books</text>
+        <originalText>Search for DAISY Books</originalText>
+        <audio src="./audio/166_Search_for_DAISY_Books.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00a7.smil#text_00a7"/>
+      </caption>
+      <description mfcid="IDC_STATIC">
+        <text id="_id56857">You can search your computer for DAISY books.  Enter a path or browse for a folder to search, then press Search to begin searching.</text>
+        <originalText>You can search your computer for DAISY books.  Enter a path or browse for a folder to search, then press Search to begin searching.</originalText>
+        <audio src="./audio/167_You_can_search_your_computer_f.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00a8.smil#text_00a8"/>
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        
+        
+      </prompt>
+      <control mfcid="IDC_SEARCHPATH" widget="textfield">
+        <description>
+          <text id="_id56918">Type the path to the folder in this field.</text>
+          <originalText>Type the path to the folder in this field.</originalText>
+          <audio src="./audio/168_Type_the_path_to_the_folder_in.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00a9.smil#text_00a9"/>
+        </description>
+      </control>
+      <control mfcid="IDC_BROWSE" widget="button">
+        <caption>
+          <promptItem refid="browse_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="browse_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_STARTSEARCH" widget="button">
+        <caption>
+          <text id="_id56968">Search</text>
+          <originalText>Search</originalText>
+          <audio src="./audio/169_Search.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00aa.smil#text_00aa"/>
+        </caption>
+        <description>
+          <text id="_id56985">Press to start searching.</text>
+          <originalText>Press to start searching.</originalText>
+          <audio src="./audio/170_Press_to_start_searching.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00ab.smil#text_00ab"/>
+        </description>
+        <mnemonic>
+          <text id="_id57004">S</text>
+          <originalText>S</originalText>
+          <audio src="./audio/171_S.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00ac.smil#text_00ac"/>
+        </mnemonic>
+      </control>
+      <control mfcid="IDC_STOPSEARCH" widget="button">
+        <caption>
+          <text id="_id57029">Stop</text>
+          <originalText>Stop</originalText>
+          <audio src="./audio/172_Stop.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00ad.smil#text_00ad"/>
+        </caption>
+        <description>
+          <text id="_id57047">Press to stop searching.</text>
+          <originalText>Press to stop searching.</originalText>
+          <audio src="./audio/173_Press_to_stop_searching.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00ae.smil#text_00ae"/>
+        </description>
+        <mnemonic>
+          <text id="_id57065">t</text>
+          <originalText>t</originalText>
+          <audio src="./audio/174_t.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00af.smil#text_00af"/>
+        </mnemonic>
+      </control>
+      <control mfcid="IDC_SEARCHING" widget="textlabel">
+        <switch element="caption">
+          <caption condition="default">
+            <text id="_id57097">Ready</text>
+            <originalText>Ready</originalText>
+            <audio src="./audio/175_Ready.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00b0.smil#text_00b0"/>
+          </caption>
+          <caption condition="WhileSearching">
+            <text id="_id57117">Searching...</text>
+            <originalText>Searching...</originalText>
+            <audio src="./audio/176_Searching.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00b1.smil#text_00b1"/>
+          </caption>
+          <caption condition="SearchAborted">
+            <text id="_id57137">Search stopped.</text>
+            <originalText>Search stopped.</originalText>
+            <audio src="./audio/177_Search_stopped.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00b2.smil#text_00b2"/>
+          </caption>
+          <caption condition="SearchCompleteNoFilesFound">
+            <text id="_id57157">Search complete: No files found.</text>
+            <originalText>Search complete: No files found.</originalText>
+            <audio src="./audio/178_Search_complete_No_files_found.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00b3.smil#text_00b3"/>
+          </caption>
+          <caption condition="SearchCompleteOneFileFound">
+            <text id="_id57179">Search complete: One file found.</text>
+            <originalText>Search complete: One file found.</originalText>
+            <audio src="./audio/179_Search_complete_One_file_found.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00b4.smil#text_00b4"/>
+          </caption>
+          <caption condition="SearchCompleteFilesFound">
+            <prompt>
+              <promptVar name="NUM_FILES_FOUND"/>
+              <promptItem>
+                <note>This is used in the sentence "7 files were found"</note>
+                <text id="_id57213">files were found.</text>
+                <originalText>files were found.</originalText>
+                <audio src="./audio/180_files_were_found.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00b5.smil#text_00b5"/>
+              </promptItem>
+            </prompt>
+          </caption>
+        </switch>
+      </control>
+      <control mfcid="IDC_FILESFOUND" widget="list">
+        <description>
+          <text id="_id57242">Use the arrow keys to move around this list of titles.</text>
+          <originalText>Use the arrow keys to move around this list of titles.</originalText>
+          <audio src="./audio/181_Use_the_arrow_keys_to_move_aro.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00b6.smil#text_00b6"/>
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOK_TITLE"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_OPENBOOK" widget="button">
+        <caption>
+          <text id="_id57282">Open</text>
+          <originalText>Open</originalText>
+          <audio src="./audio/182_Open.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00b7.smil#text_00b7"/>
+        </caption>
+        <description>
+          <text id="_id57300">Press to open the selected title.</text>
+          <originalText>Press to open the selected title.</originalText>
+          <audio src="./audio/183_Press_to_open_the_selected_tit.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00b8.smil#text_00b8"/>
+        </description>
+        <mnemonic>
+          <text id="_id57319">O</text>
+          <originalText>O</originalText>
+          <audio src="./audio/184_O.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00b9.smil#text_00b9"/>
+        </mnemonic>
+      </control>
+      <control mfcid="IDC_CANCELBUTTON">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text id="_id57358">C</text>
+          <originalText>C</originalText>
+          <audio src="./audio/038_C.mp3"/>
+        </mnemonic>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_SKIP">
+      <note>This dialog lets the user control rendering of skippable structures.</note>
+      <caption>
+        <text id="_id57383">Skippable Items</text>
+        <originalText>Skippable Items</originalText>
+        <audio src="./audio/185_Skippable_Items.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00ba.smil#text_00ba"/>
+      </caption>
+      <switch element="description">
+        <description mfcid="IDC_STATIC" condition="hasSkippableStructures">
+          <text id="_id57409">This book contains the following special structures.  Check the ones you want skipped.</text>
+          <originalText>This book contains the following special structures.  Check the ones you want skipped.</originalText>
+          <audio src="./audio/186_This_book_contains_the_followi.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00bb.smil#text_00bb"/>
+        </description>
+        <description mfcid="IDC_STATIC" condition="hasNoSkippableStructures">
+          <text id="_id57435">This publication has no skippable elements.</text>
+          <originalText>This publication has no skippable elements.</originalText>
+          <audio src="./audio/187_This_publication_has_no_skippa.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00bc.smil#text_00bc"/>
+        </description>
+      </switch>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SKIPS" widget="list">
+        <caption>
+          <text id="_id57507">Skippable items</text>
+          <originalText>Skippable items</originalText>
+          <audio src="./audio/188_Skippable_items.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00bd.smil#text_00bd"/>
+        </caption>
+        <description>
+          <text id="_id57525">Use the arrow keys to move around this list of skippable items.</text>
+          <originalText>Use the arrow keys to move around this list of skippable items.</originalText>
+          <audio src="./audio/189_Use_the_arrow_keys_to_move_aro.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00be.smil#text_00be"/>
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="SKIPPABLE_ITEM"/>
+          </caption>
+          <description>
+            <prompt>
+              <promptVar name="SKIPPABLE_ITEM"/>
+              <promptItem refid="thisItem"/>
+              <promptVar name="WILL_SKIP_OR_NOT" param="SKIPPABLE_ITEM_ID"/>
+            </prompt>
+          </description>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE4">
+      <note>This dialog lets the user select a language pack.</note>
+      <caption>
+        <text id="_id57590">Language</text>
+        <originalText>Language</originalText>
+        <audio src="./audio/190_Language.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00bf.smil#text_00bf"/>
+      </caption>
+      <description mfcid="IDC_STATIC">
+        <text id="_id57610">Here you can change the language of the software.  New language packs are detected automatically.</text>
+        <originalText>Here you can change the language of the software.  New language packs are detected automatically.</originalText>
+        <audio src="./audio/191_Here_you_can_change_the_langua.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00c0.smil#text_00c0"/>
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="ctrl1_for_prefsdialog"/>
+        <promptItem refid="ctrl2_for_colorsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_BTN_SELECTLANG" widget="button">
+        <caption>
+          <text id="_id57668">Select Language</text>
+          <originalText>Select Language</originalText>
+          <audio src="./audio/192_Select_Language.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00c1.smil#text_00c1"/>
+        </caption>
+        <description>
+          <text id="_id57686">Press to confirm your language selection for the AMIS user interface</text>
+          <originalText>Press to confirm your language selection for the AMIS user interface</originalText>
+          <audio src="./audio/193_Press_to_confirm_your_language.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00c2.smil#text_00c2"/>
+        </description>
+      </control>
+      <control mfcid="IDC_LANGLIST" widget="list">
+        <caption mfcid="IDC_STATIC">
+          <text id="_id57716">Your language choices are:</text>
+          <originalText>Your language choices are:</originalText>
+          <audio src="./audio/194_Your_language_choices_are.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00c3.smil#text_00c3"/>
+        </caption>
+        <description>
+          <text id="_id57734">Use the arrow keys to move around this list of languages.</text>
+          <originalText>Use the arrow keys to move around this list of languages.</originalText>
+          <audio src="./audio/195_Use_the_arrow_keys_to_move_aro.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00c4.smil#text_00c4"/>
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="LANGUAGE_NAME"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_CURRLANG">
+        <caption>
+          <prompt>
+            <promptItem>
+              <text id="_id57776">You are currently using AMIS in </text>
+              <originalText>You are currently using AMIS in</originalText>
+              <audio src="./audio/196_You_are_currently_using_AMIS_i.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00c5.smil#text_00c5"/>
+            </promptItem>
+            <promptVar name="CURR_LANGUAGE_NAME"/>
+          </prompt>
+        </caption>
+      </control>
+      <accelerator>
+        <text id="_id57803">Ctrl+3</text>
+        <originalText>Ctrl+3</originalText>
+        <audio src="./audio/197_Ctrl3.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00c6.smil#text_00c6"/>
+      </accelerator>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE2">
+      <note>This dialog lets the user select which colors AMIS uses</note>
+      <caption>
+        <text id="_id57830">Set Colors</text>
+        <originalText>Set Colors</originalText>
+        <audio src="./audio/198_Set_Colors.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00c7.smil#text_00c7"/>
+      </caption>
+      <description>
+        <text id="_id57848">Here you can set color options for AMIS.</text>
+        <originalText>Here you can set color options for AMIS.</originalText>
+        <audio src="./audio/199_Here_you_can_set_color_options.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00c8.smil#text_00c8"/>
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem refid="ctrl1_for_prefsdialog"/>
+        <promptItem refid="ctrl3_for_langsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+      </prompt>
+      <control mfcid="IDC_PHRASES" widget="other">
+        <caption>
+          <text id="_id57897">Phrase Highlighting</text>
+          <originalText>Phrase Highlighting</originalText>
+          <audio src="./audio/200_Phrase_Highlighting.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00c9.smil#text_00c9"/>
+        </caption>
+      </control>
+      <control mfcid="IDC_TEXTFG" widget="textlabel">
+        <caption>
+          <text id="_id57923">Text Foreground: </text>
+          <originalText>Text Foreground: </originalText>
+          <audio src="./audio/201_Text_Foreground.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00ca.smil#text_00ca"/>
+        </caption>
+      </control>
+      <control mfcid="IDC_TEXTBG" widget="textlabel">
+        <caption>
+          <text id="_id57949">Text Background: </text>
+          <originalText>Text Background: </originalText>
+          <audio src="./audio/202_Text_Background.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00cb.smil#text_00cb"/>
+        </caption>
+      </control>
+      <control mfcid="IDC_BORDER" widget="textlabel">
+        <caption>
+          <text id="_id57975">Selection Border: </text>
+          <originalText>Selection Border: </originalText>
+          <audio src="./audio/203_Selection_Border.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00cc.smil#text_00cc"/>
+        </caption>
+      </control>
+      <control mfcid="IDC_CONTRAST" widget="other">
+        <caption>
+          <text id="_id58001">High Contrast Settings</text>
+          <originalText>High Contrast Settings</originalText>
+          <audio src="./audio/204_High_Contrast_Settings.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00cd.smil#text_00cd"/>
+        </caption>
+      </control>
+      <control mfcid="IDC_PAGEFG" widget="textlabel">
+        <caption>
+          <text id="_id58027">Page Foreground: </text>
+          <originalText>Page Foreground: </originalText>
+          <audio src="./audio/205_Page_Foreground.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00ce.smil#text_00ce"/>
+        </caption>
+      </control>
+      <control mfcid="IDC_PAGEBG" widget="textlabel">
+        <caption>
+          <text id="_id58053">Page Background: </text>
+          <originalText>Page Background: </originalText>
+          <audio src="./audio/206_Page_Background.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00cf.smil#text_00cf"/>
+        </caption>
+      </control>
+      <control mfcid="IDC_BTN_RESETCOLORS" widget="button">
+        <caption>
+          <text id="_id58079">Reset Colors</text>
+          <originalText>Reset Colors</originalText>
+          <audio src="./audio/207_Reset_Colors.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00d0.smil#text_00d0"/>
+        </caption>
+      </control>
+      <control mfcid="IDC_PHRASEPREVIEW" widget="textfield">
+        <caption>
+          <text id="_id58105">Preview of phrase highlight colors.</text>
+          <originalText>Preview of phrase highlight colors.</originalText>
+          <audio src="./audio/208_Preview_of_phrase_highlight_co.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00d1.smil#text_00d1"/>
+        </caption>
+      </control>
+      <control mfcid="IDC_CONTRASTPREVIEW" widget="textfield">
+        <caption>
+          <text id="_id58132">Preview of page contrast colors.</text>
+          <originalText>Preview of page contrast colors.</originalText>
+          <audio src="./audio/209_Preview_of_page_contrast_color.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00d2.smil#text_00d2"/>
+        </caption>
+      </control>
+      <accelerator>
+        <text id="_id58152">Ctrl+2</text>
+        <originalText>Ctrl+2</originalText>
+        <audio src="./audio/210_Ctrl2.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00d3.smil#text_00d3"/>
+      </accelerator>
+    </dialog>
+    <dialog mfcid="IDD_CURRENTPOSITION">
+      <note>This dialog gives the user information about their current position in the publication.</note>
+      <caption>
+        <text id="_id58180">Current Position</text>
+        <originalText>Current Position</originalText>
+        <audio src="./audio/211_Current_Position.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00d4.smil#text_00d4"/>
+      </caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text id="_id58249">This is a list of data about your current position.</text>
+          <originalText>This is a list of data about your current position.</originalText>
+          <audio src="./audio/212_This_is_a_list_of_data_about_y.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00d5.smil#text_00d5"/>
+        </caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="no">
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id58285">Your current section is titled:</text>
+                <originalText>Your current section is titled:</originalText>
+                <audio src="./audio/213_Your_current_section_is_titled.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00d6.smil#text_00d6"/>
+              </promptItem>
+              <promptVar name="CURRENT_SECTION_TITLE"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id58317">Number of pages in this section:</text>
+                <originalText>Number of pages in this section:</originalText>
+                <audio src="./audio/214_Number_of_pages_in_this_sectio.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00d7.smil#text_00d7"/>
+              </promptItem>
+              <promptVar name="CURRENT_SECTION_NUM_PAGES"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id58347">Number of subsections in this section:</text>
+                <originalText>Number of subsections in this section:</originalText>
+                <audio src="./audio/215_Number_of_subsections_in_this_.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00d8.smil#text_00d8"/>
+              </promptItem>
+              <promptVar name="CURRENT_SECTION_NUM_SUBSECTIONS"/>
+            </prompt>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE1">
+      <note>This dialog lets the user set some basic preferences for AMIS.</note>
+      <caption>
+        <text id="_id58384">General Preferences</text>
+        <originalText>General Preferences</originalText>
+        <audio src="./audio/216_General_Preferences.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00d9.smil#text_00d9"/>
+      </caption>
+      <description>
+        <text id="_id58403">Here you can set general preferences for AMIS.</text>
+        <originalText>Here you can set general preferences for AMIS.</originalText>
+        <audio src="./audio/217_Here_you_can_set_general_prefe.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00da.smil#text_00da"/>
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="ctrl2_for_colorsdialog"/>
+        <promptItem refid="ctrl3_for_langsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        
+        
+      </prompt>
+      <control mfcid="IDC_BMKDIRBROWSE" widget="button">
+        <caption>
+          <promptItem refid="browse_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="browse_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SELFVOICING" widget="checkbox">
+        <caption>
+          <text id="_id58493">Use self-voicing</text>
+          <originalText>Use self-voicing</originalText>
+          <audio src="./audio/218_Use_selfvoicing.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00db.smil#text_00db"/>
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="SELF_VOICING_FEATURE"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_TTSVOICE" widget="list">
+        <caption mfcid="IDC_SELTTSLABEL">
+          <text id="_id58538">Select TTS voice:</text>
+          <originalText>Select TTS voice:</originalText>
+          <audio src="./audio/219_Select_TTS_voice.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00dc.smil#text_00dc"/>
+        </caption>
+        <description>
+          <text id="_id58557">Use the arrow keys to move around this list of voices</text>
+          <originalText>Use the arrow keys to move around this list of voices</originalText>
+          <audio src="./audio/220_Use_the_arrow_keys_to_move_aro.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00dd.smil#text_00dd"/>
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="TTS_VOICE_NAME"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_BASIC" widget="checkbox">
+        <caption>
+          <text id="_id58597">Start AMIS in the basic view mode.</text>
+          <originalText>Start AMIS in the basic view mode.</originalText>
+          <audio src="./audio/221_Start_AMIS_in_the_basic_view_m.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00de.smil#text_00de"/>
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="BASIC_VIEW_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_PROMPTONBASICVIEW" widget="checkbox">
+        <caption>
+          <text id="_id58645">Upon switching to basic view, tell the user how to go back to the default view.</text>
+          <originalText>Upon switching to basic view, tell the user how to go back to the default view.</originalText>
+          <audio src="./audio/222_Upon_switching_to_basic_view_t.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00df.smil#text_00df"/>
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="PROMPT_ON_BASIC_VIEW_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_LOADLASTDTB" widget="checkbox">
+        <caption>
+          <text id="_id58695">Load the most recently read book when the software starts.</text>
+          <originalText>Load the most recently read book when the software starts.</originalText>
+          <audio src="./audio/223_Load_the_most_recently_read_bo.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00e0.smil#text_00e0"/>
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="LOAD_LAST_READ_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_BMKDIR" widget="textfield">
+        <caption mfcid="IDC_BMKDIRLABEL">
+          <text id="_id58746">Bookmarks directory:</text>
+          <originalText>Bookmarks directory:</originalText>
+          <audio src="./audio/224_Bookmarks_directory.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00e1.smil#text_00e1"/>
+        </caption>
+        <description>
+          <text id="_id58765">Type the path to the bookmarks folder in this field.</text>
+          <originalText>Type the path to the bookmarks folder in this field.</originalText>
+          <audio src="./audio/225_Type_the_path_to_the_bookmarks.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00e2.smil#text_00e2"/>
+        </description>
+      </control>
+      <accelerator>
+        <text id="_id58786">Ctrl+1</text>
+        <originalText>Ctrl+1</originalText>
+        <audio src="./audio/226_Ctrl1.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00e3.smil#text_00e3"/>
+      </accelerator>
+    </dialog>
+    <dialog mfcid="IDD_NAVIGATIONOPTIONS">
+      <note>This dialog lists navigation options for the current publication.</note>
+      <caption>
+        <text id="_id58814">Navigation Options</text>
+        <originalText>Navigation Options</originalText>
+        <audio src="./audio/227_Navigation_Options.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00e4.smil#text_00e4"/>
+      </caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text id="_id58882">This is a list of items to which you may navigate directly.</text>
+          <originalText>This is a list of items to which you may navigate directly.</originalText>
+          <audio src="./audio/228_This_is_a_list_of_items_to_whi.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00e5.smil#text_00e5"/>
+        </caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="TOC_CATEGORIES"/>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_GOTOPAGE">
+      <note>This dialog lets the user jump to a certain page</note>
+      <caption>
+        <text id="_id58933">Go To Page</text>
+        <originalText>Go To Page</originalText>
+        <audio src="./audio/229_Go_To_Page.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00e6.smil#text_00e6"/>
+      </caption>
+      <description>
+        <text id="_id58951">Here you can jump to a page number or page label.</text>
+        <originalText>Here you can jump to a page number or page label.</originalText>
+        <audio src="./audio/230_Here_you_can_jump_to_a_page_nu.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00e7.smil#text_00e7"/>
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem>
+          <text id="_id58979">After typing in your page number, press enter to go there.</text>
+          <originalText>After typing in your page number, press enter to go there.</originalText>
+          <audio src="./audio/231_After_typing_in_your_page_numb.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00e8.smil#text_00e8"/>
+        </promptItem>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        
+        
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <text id="_id59034">Press this button to go to the desired page.</text>
+          <originalText>Press this button to go to the desired page.</originalText>
+          <audio src="./audio/232_Press_this_button_to_go_to_the.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00e9.smil#text_00e9"/>
+        </description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text id="_id59077">C</text>
+          <originalText>C</originalText>
+          <audio src="./audio/038_C.mp3"/>
+        </mnemonic>
+      </control>
+      <control mfcid="IDC_PAGENUM" widget="textfield">
+        <caption mfcid="IDC_STATIC">
+          <text id="_id59100">Enter a page number:</text>
+          <originalText>Enter a page number:</originalText>
+          <audio src="./audio/233_Enter_a_page_number.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00ea.smil#text_00ea"/>
+        </caption>
+        <description>
+          <text id="_id59119">Type the number or label of the page you want to go to.</text>
+          <originalText>Type the number or label of the page you want to go to.</originalText>
+          <audio src="./audio/234_Type_the_number_or_label_of_th.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00eb.smil#text_00eb"/>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_FULLSUMMARY">
+      <note>This dialog lists key publication metadata.</note>
+      <caption>
+        <text id="_id59149">Publication Summary</text>
+        <originalText>Publication Summary</originalText>
+        <audio src="./audio/235_Publication_Summary.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00ec.smil#text_00ec"/>
+      </caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text id="_id59218">This is a list of publication metadata.</text>
+          <originalText>This is a list of publication metadata.</originalText>
+          <audio src="./audio/236_This_is_a_list_of_publication_.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00ed.smil#text_00ed"/>
+        </caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="no">
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id59253">This book is titled:</text>
+                <originalText>This book is titled:</originalText>
+                <audio src="./audio/237_This_book_is_titled.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00ee.smil#text_00ee"/>
+              </promptItem>
+              <promptVar name="META_TITLE"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id59282">Written by:</text>
+                <originalText>Written by:</originalText>
+                <audio src="./audio/238_Written_by.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00ef.smil#text_00ef"/>
+              </promptItem>
+              <promptVar name="META_CREATOR"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id59311">Published by:</text>
+                <originalText>Published by:</originalText>
+                <audio src="./audio/239_Published_by.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00f0.smil#text_00f0"/>
+              </promptItem>
+              <promptVar name="META_PUBLISHER"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_DESCRIPTION">
+            <prompt>
+              <promptItem>
+                <text id="_id59342">Description:</text>
+                <originalText>Description:</originalText>
+                <audio src="./audio/240_Description.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00f1.smil#text_00f1"/>
+              </promptItem>
+              <promptVar name="META_DESC"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id59370">Number of navigation points in the table of contents:</text>
+                <originalText>Number of navigation points in the table of contents:</originalText>
+                <audio src="./audio/241_Number_of_navigation_points_in.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00f2.smil#text_00f2"/>
+              </promptItem>
+              <promptVar name="META_TOCITEMS"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id59401">Maximum section depth:</text>
+                <originalText>Maximum section depth:</originalText>
+                <audio src="./audio/242_Maximum_section_depth.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00f3.smil#text_00f3"/>
+              </promptItem>
+              <promptVar name="META_DEPTH"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id59432">Front matter pages:</text>
+                <originalText>Front matter pages:</originalText>
+                <audio src="./audio/243_Front_matter_pages.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00f4.smil#text_00f4"/>
+              </promptItem>
+              <promptVar name="META_PAGEFRONT"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id59464">Regular pages:</text>
+                <originalText>Regular pages:</originalText>
+                <audio src="./audio/244_Regular_pages.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00f5.smil#text_00f5"/>
+              </promptItem>
+              <promptVar name="META_PAGENORMAL"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id59494">Special pages:</text>
+                <originalText>Special pages:</originalText>
+                <audio src="./audio/245_Special_pages.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00f6.smil#text_00f6"/>
+              </promptItem>
+              <promptVar name="META_PAGESPECIAL"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id59523">Total duration:</text>
+                <originalText>Total duration:</originalText>
+                <audio src="./audio/246_Total_duration.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00f7.smil#text_00f7"/>
+              </promptItem>
+              <promptVar name="META_TOTALTIME"/>
+            </prompt>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+  </dialogs>
+  <prompts>
+    <promptItemRefs>
+      <promptItem id="altC_to_close">
+        <text id="_id59558">Press Alt + C to close the dialog.</text>
+        <originalText>Press Alt + C to close the dialog.</originalText>
+        <audio src="./audio/247_Press_Alt__C_to_close_the_dial.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00f8.smil#text_00f8"/>
+      </promptItem>
+      <promptItem id="altC_to_cancel">
+        <text id="_id59580">Press Alt + C to cancel the dialog.</text>
+        <originalText>Press Alt + C to cancel the dialog.</originalText>
+        <audio src="./audio/248_Press_Alt__C_to_cancel_the_dia.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00f9.smil#text_00f9"/>
+      </promptItem>
+      <promptItem id="thisItem">
+        <text id="_id59601">This item</text>
+        <originalText>This item</originalText>
+        <audio src="./audio/249_This_item.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00fa.smil#text_00fa"/>
+      </promptItem>
+      <promptItem id="spaceToToggle">
+        <text id="_id59621">Press the space bar to toggle the value.</text>
+        <originalText>Press the space bar to toggle the value.</originalText>
+        <audio src="./audio/250_Press_the_space_bar_to_toggle_.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00fb.smil#text_00fb"/>
+      </promptItem>
+      <promptItem id="tabAround">
+        <text id="_id59642">Hit tab to move around the options on the dialog.</text>
+        <originalText>Hit tab to move around the options on the dialog.</originalText>
+        <audio src="./audio/251_Hit_tab_to_move_around_the_opt.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00fc.smil#text_00fc"/>
+      </promptItem>
+      <promptItem id="ctrl2_for_colorsdialog">
+        <text id="_id59664">Press control + 2 to switch to the colors dialog.</text>
+        <originalText>Press control + 2 to switch to the colors dialog.</originalText>
+        <audio src="./audio/252_Press_control__2_to_switch_to_.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00fd.smil#text_00fd"/>
+      </promptItem>
+      <promptItem id="ctrl3_for_langsdialog">
+        <text id="_id59686">Press control + 3 to switch to the language options dialog.</text>
+        <originalText>Press control + 3 to switch to the language options dialog.</originalText>
+        <audio src="./audio/253_Press_control__3_to_switch_to_.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00fe.smil#text_00fe"/>
+      </promptItem>
+      <promptItem id="ctrl1_for_prefsdialog">
+        <text id="_id59709">Press control + 1 to switch to the general preferences dialog.</text>
+        <originalText>Press control + 1 to switch to the general preferences dialog.</originalText>
+        <audio src="./audio/254_Press_control__1_to_switch_to_.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom00ff.smil#text_00ff"/>
+      </promptItem>
+      <promptItem id="thisItemIsCurrently">
+        <text id="_id59731">This item is currently</text>
+        <originalText>This item is currently</originalText>
+        <audio src="./audio/255_This_item_is_currently.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0100.smil#text_0100"/>
+      </promptItem>
+      <promptItem id="enter_to_close">
+        <text id="_id59752">Press enter to close the dialog.</text>
+        <originalText>Press enter to close the dialog.</originalText>
+        <audio src="./audio/256_Press_enter_to_close_the_dialo.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0101.smil#text_0101"/>
+      </promptItem>
+      <promptItem id="browse_button_caption">
+        <text id="_id59773">Browse...</text>
+        <originalText>Browse...</originalText>
+        <audio src="./audio/257_Browse.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0102.smil#text_0102"/>
+      </promptItem>
+      <promptItem id="browse_button_description">
+        <text id="_id59793">Press to open the folder browse dialog.</text>
+        <originalText>Press to open the folder browse dialog.</originalText>
+        <audio src="./audio/258_Press_to_open_the_folder_brows.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0103.smil#text_0103"/>
+      </promptItem>
+      <promptItem id="ok_button_caption">
+        <text id="_id59815">OK</text>
+        <originalText>OK</originalText>
+        <audio src="./audio/259_OK.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0104.smil#text_0104"/>
+      </promptItem>
+      <promptItem id="ok_button_description">
+        <text id="_id59835">Press OK to close this dialog.</text>
+        <originalText>Press OK to close this dialog.</originalText>
+        <audio src="./audio/260_Press_OK_to_close_this_dialog.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0105.smil#text_0105"/>
+      </promptItem>
+      <promptItem id="cancel_button_caption">
+        <text id="_id59856" mnemonic="C">Cancel</text>
+        <originalText>Cancel</originalText>
+        <audio src="./audio/261_Cancel.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0106.smil#text_0106"/>
+      </promptItem>
+      <promptItem id="cancel_button_description">
+        <text id="_id59878">Press to cancel this dialog.</text>
+        <originalText>Press to cancel this dialog.</originalText>
+        <audio src="./audio/262_Press_to_cancel_this_dialog.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0107.smil#text_0107"/>
+      </promptItem>
+      <promptItem id="list_reads_automatically">
+        <text id="_id59899">This list will be read automatically.</text>
+        <originalText>This list will be read automatically.</originalText>
+        <audio src="./audio/263_This_list_will_be_read_automat.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0108.smil#text_0108"/>
+      </promptItem>
+      <promptItem id="repeatLastPromptInstr">
+        <text id="_id59921">Press Control + R to repeat the last prompt.</text>
+        <originalText>Press Control + R to repeat the last prompt.</originalText>
+        <audio src="./audio/264_Press_Control__R_to_repeat_the.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0109.smil#text_0109"/>
+      </promptItem>
+      <promptItem id="thisDialogNotSelfVoicing">
+        <text id="_id59942">This dialog is not yet self-voicing.</text>
+        <originalText>This dialog is not yet self-voicing.</originalText>
+        <audio src="./audio/265_This_dialog_is_not_yet_selfvoi.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom010a.smil#text_010a"/>
+      </promptItem>
+      <promptItem id="escapeToCancel">
+        <text id="_id59964">Press escape to cancel</text>
+        <originalText>Press escape to cancel</originalText>
+        <audio src="./audio/266_Press_escape_to_cancel.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom010b.smil#text_010b"/>
+      </promptItem>
+      <promptItem id="hearDlgInstructions">
+        <text id="_id59985">Press Control + I to hear instructions for this dialog.</text>
+        <originalText>Press Control + I to hear instructions for this dialog.</originalText>
+        <audio src="./audio/267_Press_Control__I_to_hear_instr.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom010c.smil#text_010c"/>
+      </promptItem>
+      <promptItem id="textBoxRepeatInstr">
+        <text id="_id60007">Press Control + T to repeat the text in the last text box.</text>
+        <originalText>Press Control + T to repeat the text in the last text box.</originalText>
+        <audio src="./audio/268_Press_Control__R_to_repeat_the.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom010d.smil#text_010d"/>
+      </promptItem>
+      <promptItem id="nav_window">
+        <text id="_id60029">Navigation</text>
+        <originalText>Navigation</originalText>
+        <audio src="./audio/269_Navigation.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom010e.smil#text_010e"/>
+      </promptItem>
+      <promptItem id="sections">
+        <text id="_id60049">Sections</text>
+        <originalText>Sections</originalText>
+        <audio src="./audio/270_Sections.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom010f.smil#text_010f"/>
+      </promptItem>
+      <promptItem id="pages">
+        <text id="_id60069">Pages</text>
+        <originalText>Pages</originalText>
+        <audio src="./audio/271_Pages.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0110.smil#text_0110"/>
+      </promptItem>
+      <promptItem id="noterefs">
+        <text id="_id60089">Footnotes</text>
+        <originalText>Footnotes</originalText>
+        <audio src="./audio/272_Footnotes.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0111.smil#text_0111"/>
+      </promptItem>
+      <promptItem id="prodnotes">
+        <text id="_id60109">Producer notes</text>
+        <originalText>Producer notes</originalText>
+        <audio src="./audio/273_Producer_notes.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0112.smil#text_0112"/>
+      </promptItem>
+      <promptItem id="sidebars">
+        <text id="_id60129">Sidebars</text>
+        <originalText>Sidebars</originalText>
+        <audio src="./audio/274_Sidebars.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0113.smil#text_0113"/>
+      </promptItem>
+      <promptItem id="groups">
+        <text id="_id60149">Grouped items</text>
+        <originalText>Grouped items</originalText>
+        <audio src="./audio/275_Grouped_items.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0114.smil#text_0114"/>
+      </promptItem>
+      <promptItem id="navigation_sidebar_caption">
+        <text id="_id60169">Navigation</text>
+        <originalText>Navigation</originalText>
+        <audio src="./audio/276_Navigation.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0115.smil#text_0115"/>
+      </promptItem>
+      <promptItem id="ready">
+        <text id="_id60189">Ready</text>
+        <originalText>Ready</originalText>
+        <audio src="./audio/277_Ready.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0116.smil#text_0116"/>
+      </promptItem>
+      <promptItem id="property_sheet_caption">
+        <text id="_id60209">Preferences</text>
+        <originalText>Preferences</originalText>
+        <audio src="./audio/278_Preferences.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0117.smil#text_0117"/>
+      </promptItem>
+      <promptItem id="selfolder_title">
+        <text id="_id60229">Select a Folder</text>
+        <originalText>Select a Folder</originalText>
+        <audio src="./audio/279_Select_a_Folder.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0118.smil#text_0118"/>
+      </promptItem>
+      <promptItem id="selfolder_instr">
+        <text id="_id60249">Select a folder from the directory below.</text>
+        <originalText>Select a folder from the directory below.</originalText>
+        <audio src="./audio/280_Select_a_folder_from_the_direc.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0119.smil#text_0119"/>
+      </promptItem>
+      <promptItem id="daisy_books">
+        <text id="_id60270">DAISY Books</text>
+        <originalText>DAISY Books</originalText>
+        <audio src="./audio/281_DAISY_Books.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom011a.smil#text_011a"/>
+      </promptItem>
+      <promptItem id="folder_does_not_exist">
+        <text id="_id60291">The folder %s does not exist. Do you want the folder to be created?</text>
+        <originalText>The folder %s does not exist. Do you want the folder to be created?</originalText>
+        <audio src="./audio/282_The_folder_s_does_not_exist_Do.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom011b.smil#text_011b"/>
+      </promptItem>
+      <promptItem id="folder_invalid">
+        <text id="_id60313">This folder name is invalid. Please choose another.</text>
+        <originalText>This folder name is invalid. Please choose another.</originalText>
+        <audio src="./audio/283_This_folder_name_is_invalid_Pl.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom011c.smil#text_011c"/>
+      </promptItem>
+      <promptItem id="cant_create_folder">
+        <text id="_id60335">This folder can not be created. Please double check.</text>
+        <originalText>This folder can not be created. Please double check.</originalText>
+        <audio src="./audio/284_This_folder_can_not_be_created.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom011d.smil#text_011d"/>
+      </promptItem>
+      <promptItem id="not_available">
+        <text id="_id60357">Not available</text>
+        <originalText>Not available</originalText>
+        <audio src="./audio/285_Not_available.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom011e.smil#text_011e"/>
+      </promptItem>
+      <promptItem id="numeric_zero">
+        <note>All numerals should be translated into numerals, not words.</note>
+        <text id="_id60381">0</text>
+        <originalText>0</originalText>
+        <audio src="./audio/286_0.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom011f.smil#text_011f"/>
+      </promptItem>
+      <promptItem id="numeric_one">
+        <text id="_id60401">1</text>
+        <originalText>1</originalText>
+        <audio src="./audio/287_1.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0120.smil#text_0120"/>
+      </promptItem>
+      <promptItem id="numeric_two">
+        <text id="_id60421">2</text>
+        <originalText>2</originalText>
+        <audio src="./audio/288_2.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0121.smil#text_0121"/>
+      </promptItem>
+      <promptItem id="numeric_three">
+        <text id="_id60440">3</text>
+        <originalText>3</originalText>
+        <audio src="./audio/289_3.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0122.smil#text_0122"/>
+      </promptItem>
+      <promptItem id="numeric_four">
+        <text id="_id60460">4</text>
+        <originalText>4</originalText>
+        <audio src="./audio/290_4.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0123.smil#text_0123"/>
+      </promptItem>
+      <promptItem id="numeric_five">
+        <text id="_id60480">5</text>
+        <originalText>5</originalText>
+        <audio src="./audio/291_5.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0124.smil#text_0124"/>
+      </promptItem>
+      <promptItem id="numeric_six">
+        <text id="_id60499">6</text>
+        <originalText>6</originalText>
+        <audio src="./audio/292_6.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0125.smil#text_0125"/>
+      </promptItem>
+      <promptItem id="numeric_seven">
+        <text id="_id60519">7</text>
+        <originalText>7</originalText>
+        <audio src="./audio/293_7.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0126.smil#text_0126"/>
+      </promptItem>
+      <promptItem id="numeric_eight">
+        <text id="_id60538">8</text>
+        <originalText>8</originalText>
+        <audio src="./audio/294_8.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0127.smil#text_0127"/>
+      </promptItem>
+      <promptItem id="numeric_nine">
+        <text id="_id60558">9</text>
+        <originalText>9</originalText>
+        <audio src="./audio/295_9.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0128.smil#text_0128"/>
+      </promptItem>
+      <promptItem id="deleted">
+        <text id="_id60578">deleted</text>
+        <originalText>deleted</originalText>
+        <audio src="./audio/296_deleted.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0129.smil#text_0129"/>
+      </promptItem>
+      <promptItem id="will_be_skipped">
+        <text id="_id60598">will be skipped</text>
+        <originalText>will be skipped</originalText>
+        <audio src="./audio/297_will_be_skipped.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom012a.smil#text_012a"/>
+      </promptItem>
+      <promptItem id="will_be_played">
+        <text id="_id60618">will be played</text>
+        <originalText>will be played</originalText>
+        <audio src="./audio/298_will_be_played.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom012b.smil#text_012b"/>
+      </promptItem>
+      <promptItem id="item_on">
+        <text id="_id60638">on</text>
+        <originalText>on</originalText>
+        <audio src="./audio/299_on.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom012c.smil#text_012c"/>
+      </promptItem>
+      <promptItem id="item_off">
+        <text id="_id60657">off</text>
+        <originalText>off</originalText>
+        <audio src="./audio/300_off.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom012d.smil#text_012d"/>
+      </promptItem>
+      <promptItem id="item_selected">
+        <text id="_id60677">selected</text>
+        <originalText>selected</originalText>
+        <audio src="./audio/301_selected.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom012e.smil#text_012e"/>
+      </promptItem>
+      <promptItem id="item_deselected">
+        <text id="_id60697">deselected</text>
+        <originalText>deselected</originalText>
+        <audio src="./audio/302_deselected.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom012f.smil#text_012f"/>
+      </promptItem>
+      <promptItem id="keyboardShortcut">
+        <text id="_id60717">Keyboard Shortcut</text>
+        <originalText>Keyboard Shortcut</originalText>
+        <audio src="./audio/303_Keyboard_Shortcut.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0130.smil#text_0130"/>
+      </promptItem>
+      <promptItem id="icon">
+        <text id="_id60738">Icon</text>
+        <originalText>Icon</originalText>
+        <audio src="./audio/304_Icon.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0131.smil#text_0131"/>
+      </promptItem>
+      <promptItem id="menu">
+        <text id="_id60758">Menu</text>
+        <originalText>Menu</originalText>
+        <audio src="./audio/305_Menu.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0132.smil#text_0132"/>
+      </promptItem>
+      <promptItem id="followedBy">
+        <note>This is used in the context of a sequence of key presses, as in "Press Alt + V, followed by S"</note>
+        <text id="_id60782">followed by</text>
+        <originalText>followed by</originalText>
+        <audio src="./audio/306_followed_by.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0133.smil#text_0133"/>
+      </promptItem>
+      <promptItem id="submenu">
+        <text id="_id60802">Sub Menu</text>
+        <originalText>Sub Menu</originalText>
+        <audio src="./audio/307_Sub_Menu.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0144.smil#text_0144"/>
+      </promptItem>
+    </promptItemRefs>
+    <generalPrompts>
+      <prompt id="dialogClosed">
+        <promptItem>
+          <text id="_id60828">Dialog closed.</text>
+          <originalText>Dialog closed.</originalText>
+          <audio src="./audio/308_Dialog_closed.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0134.smil#text_0134"/>
+        </promptItem>
+      </prompt>
+      <prompt id="textFieldEntry">
+        <promptItem>
+          <text id="_id60851">Text field entry is:</text>
+          <originalText>Text field entry is:</originalText>
+          <audio src="./audio/309_Text_field_entry_is.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0135.smil#text_0135"/>
+        </promptItem>
+        <promptVar name="TEXT_FIELD"/>
+      </prompt>
+      <prompt id="notSelfVoicing">
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+      </prompt>
+      <prompt id="bookAtPathChanged">
+        <promptItem>
+          <text id="_id60889">The location of the book you are looking for has changed.  A different book was found instead.  Did the contents of your CD-ROM drive change?</text>
+          <originalText>The location of the book you are looking for has changed.  A different book was found instead.  Did the contents of your CD-ROM drive change?</originalText>
+          <audio src="./audio/310_The_location_of_the_book_you_a.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0136.smil#text_0136"/>
+        </promptItem>
+      </prompt>
+      <prompt id="generalBookError">
+        <promptItem>
+          <text id="_id60917">An error occurred while trying to open the book.</text>
+          <originalText>An error occurred while trying to open the book.</originalText>
+          <audio src="./audio/311_An_error_occurred_while_trying.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0137.smil#text_0137"/>
+        </promptItem>
+        <promptVar name="BOOK_PATH"/>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+      <prompt id="noCdLoaded">
+        <promptItem>
+          <text id="_id60951">There is not a CD in the CD-ROM drive.</text>
+          <originalText>There is not a CD in the CD-ROM drive.</originalText>
+          <audio src="./audio/312_There_is_not_a_CD_in_the_CDROM.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0138.smil#text_0138"/>
+        </promptItem>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+      <prompt id="pluginErrorInit">
+        <promptItem>
+          <text id="_id60980">Plug-in error: init() function not found in the plug-in DLL.</text>
+          <originalText>Plug-in error: init() function not found in the plug-in DLL.</originalText>
+          <audio src="./audio/313_Plugin_error_init_function_not.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0139.smil#text_0139"/>
+        </promptItem>
+      </prompt>
+      <prompt id="pluginErrorDll">
+        <promptItem>
+          <text id="_id61005">Plug-in error: The following plug-in library could not be loaded: </text>
+          <originalText>Plug-in error: The following plug-in library could not be loaded: </originalText>
+          <audio src="./audio/314_Plugin_error_The_following_plu.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom013a.smil#text_013a"/>
+        </promptItem>
+        <promptVar name="PLUGIN_LIB"/>
+      </prompt>
+      <prompt id="basicViewPrompt">
+        <promptItem>
+          <text id="_id61035">You are now using the basic view mode.  Press F11 to switch back to the default view mode.</text>
+          <originalText>You are now using the basic view mode.  Press F11 to switch back to the default view mode.</originalText>
+          <audio src="./audio/315_You_are_now_using_the_basic_vi.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom013b.smil#text_013b"/>
+        </promptItem>
+      </prompt>
+      <prompt id="OpenFile_notSelfVoicing">
+        <promptItem>
+          <text id="_id61061">Open File Dialog</text>
+          <originalText>Open File Dialog</originalText>
+          <audio src="./audio/316_Open_File_Dialog.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom013c.smil#text_013c"/>
+        </promptItem>
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem>
+          <text id="_id61084">Use the "search for books" feature, under the file menu, to find DAISY books on your hard drive.</text>
+          <originalText>Use the "search for books" feature, under the file menu, to find DAISY books on your hard drive.</originalText>
+          <audio src="./audio/317_Use_the_search_for_books_featu.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom013d.smil#text_013d"/>
+        </promptItem>
+        <promptItem refid="escapeToCancel"/>
+      </prompt>
+      <prompt id="BrowseForFolder_notSelfVoicing">
+        <promptItem>
+          <text id="_id61114">Browse for folder dialog</text>
+          <originalText>Browse for folder dialog</originalText>
+          <audio src="./audio/318_Browse_for_folder_dialog.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom013e.smil#text_013e"/>
+        </promptItem>
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem refid="escapeToCancel"/>
+        <promptItem>
+          <text id="_id61141">Then, type the path of the folder you want in the text box.</text>
+          <originalText>Then, type the path of the folder you want in the text box.</originalText>
+          <audio src="./audio/319_Then_type_the_path_of_the_fold.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom013f.smil#text_013f"/>
+        </promptItem>
+      </prompt>
+      <prompt id="canceled">
+        <promptItem>
+          <text id="_id61166">Canceled</text>
+          <originalText>Canceled</originalText>
+          <audio src="./audio/320_Canceled.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0140.smil#text_0140"/>
+        </promptItem>
+      </prompt>
+      <prompt id="loading">
+        <promptItem>
+          <text id="_id61189">Loading</text>
+          <originalText>Loading</originalText>
+          <audio src="./audio/321_Loading.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0141.smil#text_0141"/>
+        </promptItem>
+      </prompt>
+      <prompt id="restartForChanges">
+        <promptItem>
+          <text id="_id61213">Please restart to see your changes.</text>
+          <originalText>Please restart to see your changes.</originalText>
+          <audio src="./audio/322_Please_restart_to_see_your_cha.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0142.smil#text_0142"/>
+        </promptItem>
+      </prompt>
+      <prompt id="noBooksFoundOnCd">
+        <promptItem>
+          <text id="_id61238">No DAISY books were found on this CD-ROM.</text>
+          <originalText>No DAISY books were found on this CD-ROM.</originalText>
+          <audio src="./audio/323_No_DAISY_books_were_found_on_t.mp3" from="file:///c:/devel/amis/Defaultlangpack/prompts/prom0143.smil#text_0143"/>
+        </promptItem>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+    </generalPrompts>
+  </prompts>
+</ui>

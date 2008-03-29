@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Memasang Atau Menutup" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:25" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="24.777s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_0016" id="amis_0016" />
+<seq>
+<audio src="21_Memasang_Atau_Menutup.mp3" clip-begin="npt=0.000s" clip-end="npt=0.444s" id="qwrt_0001" />
+<audio src="21_Memasang_Atau_Menutup.mp3" clip-begin="npt=0.444s" clip-end="npt=2.795s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_003b" id="xami_003b" />
+<seq>
+<audio src="21_Memasang_Atau_Menutup.mp3" clip-begin="npt=2.795s" clip-end="npt=3.148s" id="qwrt_0003" />
+<audio src="21_Memasang_Atau_Menutup.mp3" clip-begin="npt=3.148s" clip-end="npt=5.943s" id="qwrt_0004" />
+<audio src="21_Memasang_Atau_Menutup.mp3" clip-begin="npt=5.943s" clip-end="npt=7.837s" id="qwrt_0005" />
+<audio src="21_Memasang_Atau_Menutup.mp3" clip-begin="npt=7.837s" clip-end="npt=10.645s" id="qwrt_0006" />
+<audio src="21_Memasang_Atau_Menutup.mp3" clip-begin="npt=10.645s" clip-end="npt=11.546s" id="qwrt_0007" />
+<audio src="21_Memasang_Atau_Menutup.mp3" clip-begin="npt=11.546s" clip-end="npt=13.270s" id="qwrt_0008" />
+<audio src="21_Memasang_Atau_Menutup.mp3" clip-begin="npt=13.270s" clip-end="npt=15.843s" id="qwrt_0009" />
+<audio src="21_Memasang_Atau_Menutup.mp3" clip-begin="npt=15.843s" clip-end="npt=17.528s" id="qwrt_000A" />
+<audio src="21_Memasang_Atau_Menutup.mp3" clip-begin="npt=17.528s" clip-end="npt=18.899s" id="qwrt_000B" />
+<audio src="21_Memasang_Atau_Menutup.mp3" clip-begin="npt=18.899s" clip-end="npt=19.788s" id="qwrt_000C" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_003c" id="xami_003c" />
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_003d" id="xami_003d" />
+<seq>
+<audio src="21_Memasang_Atau_Menutup.mp3" clip-begin="npt=19.788s" clip-end="npt=20.232s" id="qwrt_000D" />
+<audio src="21_Memasang_Atau_Menutup.mp3" clip-begin="npt=20.232s" clip-end="npt=21.826s" id="qwrt_000E" />
+<audio src="21_Memasang_Atau_Menutup.mp3" clip-begin="npt=21.826s" clip-end="npt=23.158s" id="qwrt_000F" />
+<audio src="21_Memasang_Atau_Menutup.mp3" clip-begin="npt=23.158s" clip-end="npt=24.777s" id="qwrt_0010" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

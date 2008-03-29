@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "testAmisCoreWithGui", "testAmisCoreWithGui.vcproj", "{79F06747-689F-41C6-B666-85DB7AE735F3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E0F81CE5-9C15-4E36-BC71-42BE1C0F2406} = {E0F81CE5-9C15-4E36-BC71-42BE1C0F2406}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AmisCore", "..\AmisCore.vcproj", "{E0F81CE5-9C15-4E36-BC71-42BE1C0F2406}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{79F06747-689F-41C6-B666-85DB7AE735F3}.Debug.ActiveCfg = Debug|Win32
+		{79F06747-689F-41C6-B666-85DB7AE735F3}.Debug.Build.0 = Debug|Win32
+		{79F06747-689F-41C6-B666-85DB7AE735F3}.Release.ActiveCfg = Release|Win32
+		{79F06747-689F-41C6-B666-85DB7AE735F3}.Release.Build.0 = Release|Win32
+		{E0F81CE5-9C15-4E36-BC71-42BE1C0F2406}.Debug.ActiveCfg = Debug|Win32
+		{E0F81CE5-9C15-4E36-BC71-42BE1C0F2406}.Debug.Build.0 = Debug|Win32
+		{E0F81CE5-9C15-4E36-BC71-42BE1C0F2406}.Release.ActiveCfg = Release|Win32
+		{E0F81CE5-9C15-4E36-BC71-42BE1C0F2406}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

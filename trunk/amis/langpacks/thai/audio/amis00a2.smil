@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="&#3651;&#3594;&#3657;&#3611;&#3640;&#3656;&#3617;&#3621;&#3641;&#3585;&#3624;&#3619;&#3648;&#3614;&#3639;&#3656;&#3629;&#3648;&#3621;&#3639;&#3629;&#3585;&#3627;&#3609;&#3633;&#3591;&#3626;&#3639;&#3629;&#3607;&#3637;&#3656;&#3605;&#3657;&#3629;&#3591;&#3585;&#3634;&#3619;&#3629;&#3656;&#3634;&#3609;" />
+<meta name="dc:title" content="AMIS Prompts in Thai" />
+<meta name="ncc:timeInThisSmil" content="0:00:04" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="3.947s">
+<par endsync="last">
+<text src="ncc.html#text_00a2" id="text_00a2" />
+<seq>
+<audio src="161.mp3" clip-begin="npt=0.000s" clip-end="npt=3.947s" id="qwrt_0001" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

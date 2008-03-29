@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="&#3627;&#3609;&#3657;&#3634;&#3605;&#3656;&#3634;&#3591;&#3609;&#3637;&#3657;&#3652;&#3617;&#3656;&#3617;&#3637;&#3648;&#3626;&#3637;&#3618;&#3591;&#3610;&#3619;&#3619;&#3618;&#3634;&#3618;&#3650;&#3611;&#3619;&#3649;&#3585;&#3619;&#3617; &#3585;&#3619;&#3640;&#3603;&#3634;&#3651;&#3594;&#3657;&#3650;&#3611;&#3619;&#3649;&#3585;&#3619;&#3617;&#3629;&#3656;&#3634;&#3609;&#3627;&#3609;&#3657;&#3656;&#3634;&#3592;&#3629;&#3586;&#3629;&#3591;&#3588;&#3640;&#3603;&#3617;&#3634;&#3594;&#3656;&#3623;&#3618;" />
+<meta name="dc:title" content="AMIS Prompts in Thai" />
+<meta name="ncc:timeInThisSmil" content="0:00:07" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="7.338s">
+<par endsync="last">
+<text src="ncc.html#text_010e" id="text_010e" />
+<seq>
+<audio src="269__.mp3" clip-begin="npt=0.000s" clip-end="npt=7.338s" id="qwrt_0001" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

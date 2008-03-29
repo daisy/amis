@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="ncc:timeInThisSmil" content="00:00:18.332"/>
+		<meta name="ncc:totalElapsedTime" content="00:11:08.404"/>
+		<layout>
+			<region id="txt-view"/>
+		</layout>
+		<meta name="ncc:generator" content="EasePublisher 2.02 Build 025 # 091650"/>
+        <meta name="title" content="Hidasta"/>
+        <meta name="dc:title" content="help"/>
+        <meta name="dc:identifier" content="celia"/>
+    </head>
+	<body>
+		<seq dur="18.332s">
+			<par endsync="last" id="ifbo_0002">
+				<text src="amishelp.html#ifbo_0143" id="ifbo_0007"/>
+				<seq>
+					<audio src="35_Hidasta.mp3" clip-begin="npt=0.000s" clip-end="npt=1.439s" id="audio_0001"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0003">
+				<text src="amishelp.html#ifbo_0144" id="ifbo_0008"/>
+				<seq>
+					<audio src="35_Hidasta.mp3" clip-begin="npt=1.439s" clip-end="npt=6.539s" id="audio_0002"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0004">
+				<text src="amishelp.html#ifbo_0145" id="ifbo_0009"/>
+				<seq>
+					<audio src="35_Hidasta.mp3" clip-begin="npt=6.539s" clip-end="npt=11.022s" id="audio_0003"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0005">
+				<text src="amishelp.html#ifbo_0146" id="ifbo_000a"/>
+				<seq>
+					<audio src="35_Hidasta.mp3" clip-begin="npt=11.022s" clip-end="npt=14.907s" id="audio_0004"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0006">
+				<text src="amishelp.html#ifbo_0147" id="ifbo_000b"/>
+				<seq>
+					<audio src="35_Hidasta.mp3" clip-begin="npt=14.907s" clip-end="npt=18.332s" id="audio_0005"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

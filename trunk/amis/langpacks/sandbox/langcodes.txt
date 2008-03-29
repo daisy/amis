@@ -1,0 +1,15 @@
+﻿Hindi, hin-IN
+Arabic, arb
+Bengali, ben-BD
+U.S. English, eng-US
+French, fre-FR
+Indonesian, ind-ID
+Japanese, jpn-JP
+Malaysian, may-MY
+Nepali, nep-NP
+Sinhala, sin-LK
+Tamil, tam-IN
+Thai, tha-TH
+Urdu, urd
+Norwegian Nynorsk, nno-NO
+Norwegian Bokmål, nob-NO

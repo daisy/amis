@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+    <meta name="ncc:generator" content="LpStudioPlusEdit 3.0.17" />
+    <meta name="dc:format" content="Daisy 2.02" />
+    <meta name="title" content="&#2975;&#3014;&#2991;&#3021;&#2970;&#3007; &#2958;&#2985;&#3021;&#2993;&#3006;&#2994;&#3021; &#2958;&#2985;&#3021;&#2985;?" />
+    <meta name="dc:title" content="AMIS Help" />
+    <meta name="ncc:timeInThisSmil" content="0:00:30:521" />
+    <layout>
+        <region id="txtView" />
+    </layout>
+</head>
+<body>
+<seq dur="30.521s">
+    <par endsync="last">
+        <text src="amishelp-entity.html#amis_0004" id="amis_0004" />
+        <seq>
+            <audio src="03___.mp3" clip-begin="npt=0.000s" clip-end="npt=0.566s" id="qwrt_0001" />
+            <audio src="03___.mp3" clip-begin="npt=0.566s" clip-end="npt=1.770s" id="qwrt_0002" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp-entity.html#xami_000a" id="xami_000a" />
+        <seq>
+            <audio src="1_saisy_logo.mp3" clip-begin="npt=0.000s" clip-end="npt=2.000s" id="qwrt_0003" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp-entity.html#xami_000b" id="xami_000b" />
+        <seq>
+            <audio src="03___.mp3" clip-begin="npt=1.770s" clip-end="npt=28.521s" id="qwrt_0004" />
+        </seq>
+    </par>
+  
+</seq>
+</body>
+</smil>

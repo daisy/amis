@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Frasa Berikut" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:24" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="23.771s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_002a" id="amis_002a" />
+<seq>
+<audio src="41_Frasa_Berikut.mp3" clip-begin="npt=0.000s" clip-end="npt=0.562s" id="qwrt_0001" />
+<audio src="41_Frasa_Berikut.mp3" clip-begin="npt=0.562s" clip-end="npt=2.390s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0071" id="xami_0071" />
+<seq>
+<audio src="41_Frasa_Berikut.mp3" clip-begin="npt=2.390s" clip-end="npt=2.952s" id="qwrt_0003" />
+<audio src="41_Frasa_Berikut.mp3" clip-begin="npt=2.952s" clip-end="npt=6.857s" id="qwrt_0004" />
+<audio src="41_Frasa_Berikut.mp3" clip-begin="npt=6.857s" clip-end="npt=7.928s" id="qwrt_0005" />
+<audio src="41_Frasa_Berikut.mp3" clip-begin="npt=7.928s" clip-end="npt=11.585s" id="qwrt_0006" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0072" id="xami_0072" />
+<seq>
+<audio src="41_Frasa_Berikut.mp3" clip-begin="npt=11.585s" clip-end="npt=12.238s" id="qwrt_0007" />
+<audio src="41_Frasa_Berikut.mp3" clip-begin="npt=12.238s" clip-end="npt=14.380s" id="qwrt_0008" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0073" id="xami_0073" />
+<seq>
+<audio src="41_Frasa_Berikut.mp3" clip-begin="npt=14.380s" clip-end="npt=15.151s" id="qwrt_0009" />
+<audio src="41_Frasa_Berikut.mp3" clip-begin="npt=15.151s" clip-end="npt=17.619s" id="qwrt_000A" />
+<audio src="41_Frasa_Berikut.mp3" clip-begin="npt=17.619s" clip-end="npt=19.173s" id="qwrt_000B" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0074" id="xami_0074" />
+<seq>
+<audio src="41_Frasa_Berikut.mp3" clip-begin="npt=19.173s" clip-end="npt=19.617s" id="qwrt_000C" />
+<audio src="41_Frasa_Berikut.mp3" clip-begin="npt=19.617s" clip-end="npt=20.819s" id="qwrt_000D" />
+<audio src="41_Frasa_Berikut.mp3" clip-begin="npt=20.819s" clip-end="npt=22.517s" id="qwrt_000E" />
+<audio src="41_Frasa_Berikut.mp3" clip-begin="npt=22.517s" clip-end="npt=23.771s" id="qwrt_000F" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

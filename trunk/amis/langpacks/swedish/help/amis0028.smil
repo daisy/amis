@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+    <meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+    <meta name="dc:format" content="Daisy 2.02" />
+    <meta name="title" content="Föregående sektion" />
+    <meta name="dc:title" content="AMIS Help" />
+    <meta name="ncc:timeInThisSmil" content="0:00:13" />
+    <layout>
+        <region id="txtView" />
+    </layout>
+</head>
+<body>
+<seq dur="12.800s">
+    <par endsync="last">
+        <text src="amishelp.html#amis_0028" id="amis_0028" />
+        <seq>
+            <audio src="39_fregende_sektion.mp3" clip-begin="npt=0.000s" clip-end="npt=0.392s" id="qwrt_0001" />
+            <audio src="39_fregende_sektion.mp3" clip-begin="npt=0.392s" clip-end="npt=2.399s" id="qwrt_0002" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_006a" id="xami_006a" />
+        <seq>
+            <audio src="39_fregende_sektion.mp3" clip-begin="npt=2.399s" clip-end="npt=2.965s" id="qwrt_0003" />
+            <audio src="39_fregende_sektion.mp3" clip-begin="npt=2.965s" clip-end="npt=4.599s" id="qwrt_0004" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_006b" id="xami_006b" />
+        <seq>
+            <audio src="39_fregende_sektion.mp3" clip-begin="npt=4.599s" clip-end="npt=5.185s" id="qwrt_0005" />
+            <audio src="39_fregende_sektion.mp3" clip-begin="npt=5.185s" clip-end="npt=7.599s" id="qwrt_0006" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_006c" id="xami_006c" />
+        <seq>
+            <audio src="39_fregende_sektion.mp3" clip-begin="npt=7.599s" clip-end="npt=8.307s" id="qwrt_0007" />
+            <audio src="39_fregende_sektion.mp3" clip-begin="npt=8.307s" clip-end="npt=12.800s" id="qwrt_0008" />
+        </seq>
+    </par>
+</seq>
+</body>
+</smil>

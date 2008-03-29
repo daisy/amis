@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Lakasan ang Tunog" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:08" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="8.233s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_0021" id="amis_0021" />
+<seq>
+<audio src="32_Lakasan_ang_Tunog.mp3" clip-begin="npt=0.000s" clip-end="npt=1.608s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0057" id="xami_0057" />
+<seq>
+<audio src="32_Lakasan_ang_Tunog.mp3" clip-begin="npt=1.608s" clip-end="npt=3.378s" id="qwrt_0002" />
+<audio src="32_Lakasan_ang_Tunog.mp3" clip-begin="npt=3.378s" clip-end="npt=4.679s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0058" id="xami_0058" />
+<seq>
+<audio src="32_Lakasan_ang_Tunog.mp3" clip-begin="npt=4.679s" clip-end="npt=5.911s" id="qwrt_0004" />
+<audio src="32_Lakasan_ang_Tunog.mp3" clip-begin="npt=5.911s" clip-end="npt=6.825s" id="qwrt_0005" />
+<audio src="32_Lakasan_ang_Tunog.mp3" clip-begin="npt=6.825s" clip-end="npt=8.233s" id="qwrt_0006" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

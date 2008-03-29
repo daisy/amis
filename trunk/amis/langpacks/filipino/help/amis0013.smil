@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Default na Tanaw" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:23" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="22.919s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_0013" id="amis_0013" />
+<seq>
+<audio src="18_Default_na_Tanaw.mp3" clip-begin="npt=0.000s" clip-end="npt=1.678s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0033" id="xami_0033" />
+<seq>
+<audio src="18_Default_na_Tanaw.mp3" clip-begin="npt=1.678s" clip-end="npt=5.857s" id="qwrt_0002" />
+<audio src="18_Default_na_Tanaw.mp3" clip-begin="npt=5.857s" clip-end="npt=9.227s" id="qwrt_0003" />
+<audio src="18_Default_na_Tanaw.mp3" clip-begin="npt=9.227s" clip-end="npt=11.505s" id="qwrt_0004" />
+<audio src="18_Default_na_Tanaw.mp3" clip-begin="npt=11.505s" clip-end="npt=15.075s" id="qwrt_0005" />
+<audio src="18_Default_na_Tanaw.mp3" clip-begin="npt=15.075s" clip-end="npt=19.100s" id="qwrt_0006" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0034" id="xami_0034" />
+<seq>
+<audio src="18_Default_na_Tanaw.mp3" clip-begin="npt=19.100s" clip-end="npt=20.923s" id="qwrt_0007" />
+<audio src="18_Default_na_Tanaw.mp3" clip-begin="npt=20.923s" clip-end="npt=22.919s" id="qwrt_0008" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="ncc:timeInThisSmil" content="00:00:19.908"/>
+		<meta name="ncc:totalElapsedTime" content="00:10:47.608"/>
+		<layout>
+			<region id="txt-view"/>
+		</layout>
+		<meta name="ncc:generator" content="EasePublisher 2.02 Build 025 # 089113"/>
+        <meta name="title" content="Tilbakestille font-størrelse"/>
+        <meta name="dc:title" content="AMIS hjelp"/>
+        <meta name="dc:identifier" content="AMIS_hjelp"/>
+    </head>
+	<body>
+		<seq dur="19.908s">
+			<par endsync="last" id="nwcb_0002">
+				<text src="amishelp.html#nwcb_0182" id="nwcb_0008"/>
+				<seq>
+					<audio src="29_Tilbakestille_font_st_rrelse.mp3" clip-begin="npt=0.000s" clip-end="npt=3.179s" id="audio_0001"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0003">
+				<text src="amishelp.html#nwcb_0183" id="nwcb_0009"/>
+				<seq>
+					<audio src="29_Tilbakestille_font_st_rrelse.mp3" clip-begin="npt=3.179s" clip-end="npt=7.259s" id="audio_0002"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0004">
+				<text src="amishelp.html#nwcb_0184" id="nwcb_000a"/>
+				<seq>
+					<audio src="29_Tilbakestille_font_st_rrelse.mp3" clip-begin="npt=7.259s" clip-end="npt=8.513s" id="audio_0003"/>
+					<audio src="29_Tilbakestille_font_st_rrelse.mp3" clip-begin="npt=8.513s" clip-end="npt=9.718s" id="audio_0004"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0005">
+				<text src="amishelp.html#nwcb_0185" id="nwcb_000b"/>
+				<seq>
+					<audio src="29_Tilbakestille_font_st_rrelse.mp3" clip-begin="npt=9.718s" clip-end="npt=12.898s" id="audio_0005"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0006">
+				<text src="amishelp.html#nwcb_0186" id="nwcb_000c"/>
+				<seq>
+					<audio src="29_Tilbakestille_font_st_rrelse.mp3" clip-begin="npt=12.898s" clip-end="npt=14.279s" id="audio_0006"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0007">
+				<text src="amishelp.html#nwcb_0187" id="nwcb_000d"/>
+				<seq>
+					<audio src="29_Tilbakestille_font_st_rrelse.mp3" clip-begin="npt=14.279s" clip-end="npt=15.426s" id="audio_0007"/>
+					<audio src="29_Tilbakestille_font_st_rrelse.mp3" clip-begin="npt=15.426s" clip-end="npt=19.908s" id="audio_0008"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

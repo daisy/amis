@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="ncc:timeInThisSmil" content="00:00:26.576"/>
+		<meta name="ncc:totalElapsedTime" content="00:14:35.112"/>
+		<layout>
+			<region id="txt-view"/>
+		</layout>
+		<meta name="ncc:generator" content="EasePublisher 2.02 Build 025 # 089113"/>
+        <meta name="title" content="Neste frase"/>
+        <meta name="dc:title" content="AMIS hjelp"/>
+        <meta name="dc:identifier" content="AMIS_hjelp"/>
+    </head>
+	<body>
+		<seq dur="26.576s">
+			<par endsync="last" id="nwcb_0002">
+				<text src="amishelp.html#nwcb_0261" id="wisw_0001"/>
+				<seq>
+					<audio src="41_Neste_frase.mp3" clip-begin="npt=0.000s" clip-end="npt=1.499s" id="audio_0001"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0003">
+				<text src="amishelp.html#nwcb_0262" id="wisw_0002"/>
+				<seq>
+					<audio src="41_Neste_frase.mp3" clip-begin="npt=1.499s" clip-end="npt=3.060s" id="audio_0002"/>
+					<audio src="41_Neste_frase.mp3" clip-begin="npt=3.060s" clip-end="npt=5.759s" id="audio_0003"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0004">
+				<text src="amishelp.html#nwcb_0263" id="wisw_0003"/>
+				<seq>
+					<audio src="41_Neste_frase.mp3" clip-begin="npt=5.759s" clip-end="npt=8.819s" id="audio_0004"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0005">
+				<text src="amishelp.html#nwcb_0264" id="wisw_0004"/>
+				<seq>
+					<audio src="41_Neste_frase.mp3" clip-begin="npt=8.819s" clip-end="npt=10.025s" id="audio_0005"/>
+					<audio src="41_Neste_frase.mp3" clip-begin="npt=10.025s" clip-end="npt=12.195s" id="audio_0006"/>
+					<audio src="41_Neste_frase.mp3" clip-begin="npt=12.195s" clip-end="npt=16.448s" id="audio_0007"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0006">
+				<text src="amishelp.html#nwcb_0265" id="wisw_0005"/>
+				<seq>
+					<audio src="41_Neste_frase.mp3" clip-begin="npt=16.448s" clip-end="npt=17.649s" id="audio_0008"/>
+					<audio src="41_Neste_frase.mp3" clip-begin="npt=17.649s" clip-end="npt=19.387s" id="audio_0009"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0007">
+				<text src="amishelp.html#nwcb_0266" id="wisw_0006"/>
+				<seq>
+					<audio src="41_Neste_frase.mp3" clip-begin="npt=19.387s" clip-end="npt=21.187s" id="audio_0010"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0008">
+				<text src="amishelp.html#nwcb_0267" id="wisw_0007"/>
+				<seq>
+					<audio src="41_Neste_frase.mp3" clip-begin="npt=21.187s" clip-end="npt=22.507s" id="audio_0011"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0009">
+				<text src="amishelp.html#nwcb_0268" id="wisw_0008"/>
+				<seq>
+					<audio src="41_Neste_frase.mp3" clip-begin="npt=22.507s" clip-end="npt=26.576s" id="audio_0012"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

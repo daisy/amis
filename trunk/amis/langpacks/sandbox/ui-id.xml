@@ -1,0 +1,1954 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui xml:lang="id">
+  <containers>
+    <container id="file">
+      <note xml:lang="en">This is the menu header "File"</note>
+      <caption>
+        <text id="_id52734" status="ok">Berkas</text>
+        <originalText xml:lang="en">File</originalText>
+        
+      </caption>
+      <action mfcid="ID_MENU_FILE_OPEN" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and a toolbar item</note>
+        <icon src="./open.png" type="smallIcon"/>
+        <caption>
+          <text id="_id52766" status="ok">Buka...</text>
+          <originalText xml:lang="en">Open...</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id52781" status="ok">Buka buku DAISY dari sistem berkas lokal</text>
+          <originalText xml:lang="en">Open a Daisy book from the local file system</originalText>
+          
+        </description>
+      <accelerator><text id="_id52796" xml:lang="en">Ctrl+O</text><originalText xml:lang="en">Ctrl+O</originalText></accelerator><mnemonic><text id="_id52799" xml:lang="en">O</text><originalText xml:lang="en">O</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_FILE_LOADCD" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and a toolbar item</note>
+        <icon src="./settings/img/cd3.ico" type="smallIcon"/>
+        <icon src="./settings/img/cd_big.ico" type="largeIcon"/>
+        <caption>
+          <text id="_id52829" status="ok">Memuat CD</text>
+          <originalText xml:lang="en">Load CD</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id52844" status="ok">Memuat buku DAISY dari CD ROM</text>
+          <originalText xml:lang="en">Load a DAISY book from CD ROM</originalText>
+          
+        </description>
+      <accelerator><text id="_id52858" xml:lang="en">Ctrl+L</text><originalText xml:lang="en">Ctrl+L</originalText></accelerator><mnemonic><text id="_id52861" xml:lang="en">L</text><originalText xml:lang="en">L</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_FILE_SEARCHDRIVE" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id52877" status="ok">Cari...</text>
+          <originalText xml:lang="en">Search...</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id52892" status="ok">Cari buku DAISY di cakram lokal</text>
+          <originalText xml:lang="en">Search local drives for DAISY books</originalText>
+          
+        </description>
+      <mnemonic><text id="_id52906" xml:lang="en">S</text><originalText xml:lang="en">S</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_FILE_PREFERENCES" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id52922" status="ok">Preferensi...</text>
+          <originalText xml:lang="en">Preferences...</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id52936" status="ok">Ini adalah dialog preferensi</text>
+          <originalText xml:lang="en">This is the application preferences dialog.</originalText>
+          
+        </description>
+      <mnemonic><text id="_id52951" xml:lang="en">P</text><originalText xml:lang="en">P</originalText></mnemonic></action>
+      <container id="recentBooksList">
+        <note xml:lang="en">This is the menu header for the recent books sub-menu.</note>
+        <caption>
+          <text id="_id52965" status="ok">Terbaru</text>
+          <originalText xml:lang="en">Recent</originalText>
+          
+        </caption>
+        <switch element="action">
+          <action mfcid="ID_FILE_RECENT_EMPTY" widget="menuItem" condition="ID_FILE_RECENT_EMPTY">
+            <note xml:lang="en">This is going to be a menu item</note>
+            <caption>
+              <text id="_id52997" status="ok">Kosong</text>
+              <originalText xml:lang="en">Empty</originalText>
+              
+            </caption>
+            <description>
+              <text id="_id53011" status="ok">Tidak ada buku terbaru yang dibaca</text>
+              <originalText xml:lang="en">There are no recently read books.</originalText>
+              
+            </description>
+          </action>
+          <action mfcid="BOOK_BASE_ID" widget="menuItem" condition="BOOK_BASE_ID">
+            <note xml:lang="en">This is going to be a menu item</note>
+            <list repeat="yes">
+              <caption>
+                <promptVar name="RECENT_BOOK_TITLE"/>
+              </caption>
+            </list>
+          </action>
+        </switch>
+      <mnemonic><text id="_id53052" xml:lang="en">R</text><originalText xml:lang="en">R</originalText></mnemonic></container>
+      <action mfcid="ID_MENU_FILE_EXIT" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53068" status="ok">Keluar</text>
+          <originalText xml:lang="en">Exit</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id53082" status="ok">Keluar dari AMIS</text>
+          <originalText xml:lang="en">Exit AMIS</originalText>
+          
+        </description>
+      <accelerator><text id="_id53096" xml:lang="en">Alt+F4</text><originalText xml:lang="en">Alt+F4</originalText></accelerator><mnemonic><text id="_id53099" xml:lang="en">x</text><originalText xml:lang="en">x</originalText></mnemonic></action>
+    <accelerator><text id="_id53103" xml:lang="en">Alt+F</text><originalText xml:lang="en">Alt+F</originalText></accelerator><mnemonic><text id="_id53107" xml:lang="en">F</text><originalText xml:lang="en">F</originalText></mnemonic></container>
+    <container id="view">
+      <note xml:lang="en">This is the menu header "View"</note>
+      <caption>
+        <text id="_id53120" status="ok">Tilik</text>
+        <originalText xml:lang="en">View</originalText>
+        
+      </caption>
+      <action mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53145" status="ok">Batang sisi</text>
+          <originalText xml:lang="en">Sidebar</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id53160" status="ok">Memunculkan atau menghilangkan batang sisi</text>
+          <originalText xml:lang="en">Turn the sidebar on or off.</originalText>
+          
+        </description>
+      <mnemonic><text id="_id53173" xml:lang="en">S</text><originalText xml:lang="en">S</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_VIEW_BASIC" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53189" status="ok">Mode tilik dasar</text>
+          <originalText xml:lang="en">Basic View Mode</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id53204" status="ok">Mengganti tilik ke mode dasar</text>
+          <originalText xml:lang="en">Switch the view to basic mode.</originalText>
+          
+        </description>
+      <accelerator><text id="_id53217" xml:lang="en">F11</text><originalText xml:lang="en">F11</originalText></accelerator><mnemonic><text id="_id53221" xml:lang="en">B</text><originalText xml:lang="en">B</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_VIEW_CONTRAST" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <icon src="./settings/img/contrast.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id53243" status="ok">Sangat kontras</text>
+          <originalText xml:lang="en">High Contrast</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id53258" status="ok">Menggunakan warna yang sangat kontras untuk tampilan teks</text>
+          <originalText xml:lang="en">Use high contrast colors for the text display.</originalText>
+          
+        </description>
+      <accelerator><text id="_id53272" xml:lang="en">Ctrl+C</text><originalText xml:lang="en">Ctrl+C</originalText></accelerator><mnemonic><text id="_id53276" xml:lang="en">C</text><originalText xml:lang="en">C</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_VIEW_LARGEFONT" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/font.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id53299" status="ok">Membesarkan ukuran huruf</text>
+          <originalText xml:lang="en">Increase Font Size</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id53314" status="ok">Membesarkan ukuran huruf secara bertahap</text>
+          <originalText xml:lang="en">Gradually increase the font size.</originalText>
+          
+        </description>
+      <mnemonic><text id="_id53328" xml:lang="en">I</text><originalText xml:lang="en">I</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_VIEW_RESETFONT" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53344" status="ok">Mengembalikan ukuran huruf</text>
+          <originalText xml:lang="en">Reset Font Size</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id53358" status="ok">Membuat ukuran huruf menjadi ukuran asli</text>
+          <originalText xml:lang="en">Set the font size to the default setting.</originalText>
+          
+        </description>
+      <mnemonic><text id="_id53373" xml:lang="en">R</text><originalText xml:lang="en">R</originalText></mnemonic></action>
+      <action mfcid="NAVLIST_BASE_ID" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <promptVar name="NAV_LIST_NAME"/>
+        </caption>
+        <description>
+          <promptVar name="NAV_LIST_DESCRIPTION"/>
+        </description>
+      </action>
+    <accelerator><text id="_id53403" xml:lang="en">Alt+V</text><originalText xml:lang="en">Alt+V</originalText></accelerator><mnemonic><text id="_id53407" xml:lang="en">V</text><originalText xml:lang="en">V</originalText></mnemonic></container>
+    <container id="play">
+      <note xml:lang="en">This is the menu header "Play"</note>
+      <caption>
+        <text id="_id53420" status="ok">Menjalankan</text>
+        <originalText xml:lang="en">Play</originalText>
+        
+      </caption>
+      <switch element="action">
+        <action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" condition="canPlay">
+          <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+          <icon src="./settings/img/play-big.ico" type="smallIcon"/>
+          <icon src="./settings/img/play_big.ico" type="largeIcon"/>
+          <caption>
+            <text id="_id53465" status="ok">Menjalankan</text>
+            <originalText xml:lang="en">Play</originalText>
+            
+          </caption>
+          <description>
+            <text id="_id53480" status="ok">Memulai pembacaan</text>
+            <originalText xml:lang="en">Start synchronized playback.</originalText>
+            
+          </description>
+        <accelerator><text id="_id53494" xml:lang="en">Space</text><originalText xml:lang="en">Space</originalText></accelerator><mnemonic><text id="_id53497" xml:lang="en">P</text><originalText xml:lang="en">P</originalText></mnemonic></action>
+        <action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" condition="canPause">
+          <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+          <icon src="./settings/img/pause.ico" type="smallIcon"/>
+          <icon src="./settings/img/pause_big.ico" type="largeIcon"/>
+          <caption>
+            <text id="_id53529" status="ok">Jeda</text>
+            <originalText xml:lang="en">Pause</originalText>
+            
+          </caption>
+          <description>
+            <text id="_id53544" status="ok">Menjedakan pembacaan</text>
+            <originalText xml:lang="en">Pause playback of this DAISY book.</originalText>
+            
+          </description>
+        <accelerator><text id="_id53558" xml:lang="en">Space</text><originalText xml:lang="en">Space</originalText></accelerator><mnemonic><text id="_id53561" xml:lang="en">a</text><originalText xml:lang="en">a</originalText></mnemonic></action>
+      </switch>
+      <action mfcid="ID_MENU_PLAY_ESCAPE" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53578" status="ok">Melewati</text>
+          <originalText xml:lang="en">Escape</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id53593" status="ok">Melewati item atau struktur yang sedang dibaca</text>
+          <originalText xml:lang="en">Jump out of the currently playing item or structure.</originalText>
+          
+        </description>
+      <accelerator><text id="_id53608" xml:lang="en">Esc</text><originalText xml:lang="en">Esc</originalText></accelerator><mnemonic><text id="_id53611" xml:lang="en">E</text><originalText xml:lang="en">E</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_PLAY_FASTER" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/fullspeedahead.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id53634" status="ok">Mempercepat</text>
+          <originalText xml:lang="en">Faster</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id53649" status="ok">Meningkatkan kecepatan pembacaan</text>
+          <originalText xml:lang="en">Increase the playback rate.</originalText>
+          
+        </description>
+      <accelerator><text id="_id53662" xml:lang="en">Ctrl++</text><originalText xml:lang="en">Ctrl++</originalText></accelerator><mnemonic><text id="_id53666" xml:lang="en">F</text><originalText xml:lang="en">F</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_PLAY_SLOWER" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/slowdown.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id53689" status="ok">Memperlambat</text>
+          <originalText xml:lang="en">Slower</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id53704" status="ok">Menurunkan kecepatan pembacaan</text>
+          <originalText xml:lang="en">Slow down the playback rate.</originalText>
+          
+        </description>
+      <accelerator><text id="_id53717" xml:lang="en">Ctrl+-</text><originalText xml:lang="en">Ctrl+-</originalText></accelerator><mnemonic><text id="_id53721" xml:lang="en">S</text><originalText xml:lang="en">S</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_PLAY_NORMALSPEED" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/normalspeed.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id53744" status="ok">Kecepatan normal</text>
+          <originalText xml:lang="en">Normal Speed</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id53758" status="ok">Mengembalikan kecepatan pembacaan ke kecepatan normal</text>
+          <originalText xml:lang="en">Reset the playback rate to normal.</originalText>
+          
+        </description>
+      <accelerator><text id="_id53773" xml:lang="en">Ctrl+0</text><originalText xml:lang="en">Ctrl+0</originalText></accelerator><mnemonic><text id="_id53776" xml:lang="en">N</text><originalText xml:lang="en">N</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_PLAY_VOLUP" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53792" status="ok">Membesarkan suara</text>
+          <originalText xml:lang="en">Increase Volume</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id53807" status="ok">Memperbesarkan suara secara bertahap</text>
+          <originalText xml:lang="en">Gradually raise the volume.</originalText>
+          
+        </description>
+      <accelerator><text id="_id53821" xml:lang="en">Ctrl+Up</text><originalText xml:lang="en">Ctrl+Up</originalText></accelerator><mnemonic><text id="_id53824" xml:lang="en">I</text><originalText xml:lang="en">I</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_PLAY_VOLDOWN" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53840" status="ok">Mengecilkan suara</text>
+          <originalText xml:lang="en">Decrease Volume</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id53854" status="ok">Mengecilkan suara secara bertahap</text>
+          <originalText xml:lang="en">Gradually lower the volume.</originalText>
+          
+        </description>
+      <accelerator><text id="_id53868" xml:lang="en">Ctrl+Down</text><originalText xml:lang="en">Ctrl+Down</originalText></accelerator><mnemonic><text id="_id53872" xml:lang="en">D</text><originalText xml:lang="en">D</originalText></mnemonic></action>
+    <accelerator><text id="_id53876" xml:lang="en">Alt+P</text><originalText xml:lang="en">Alt+P</originalText></accelerator><mnemonic><text id="_id53879" xml:lang="en">P</text><originalText xml:lang="en">P</originalText></mnemonic></container>
+    <container id="navigate">
+      <note xml:lang="en">This is the menu header "Navigate"</note>
+      <caption>
+        <text id="_id53893" status="ok">Navigasi</text>
+        <originalText xml:lang="en">Navigate</originalText>
+        
+      </caption>
+      <action mfcid="ID_MENU_NAV_PREVSECTION" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevsection.ico" type="smallIcon"/>
+        <icon src="./settings/img/prevsection_big.ico" type="largeIcon"/>
+        <caption>
+          <text id="_id53932" status="ok">Bagian sebelumnya</text>
+          <originalText xml:lang="en">Previous Section</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id53947" status="ok">Menuju ke bagian sebelumnya</text>
+          <originalText xml:lang="en">Go to the previous section.</originalText>
+          
+        </description>
+      <accelerator><text id="_id53961" xml:lang="en">Up</text><originalText xml:lang="en">Up</originalText></accelerator><mnemonic><text id="_id53964" xml:lang="en">P</text><originalText xml:lang="en">P</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_NAV_NEXTSECTION" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextsection.ico" type="smallIcon"/>
+        <icon src="./settings/img/nextsection_big.ico" type="largeIcon"/>
+        <caption>
+          <text id="_id53994" status="ok">Bagian selanjutnya</text>
+          <originalText xml:lang="en">Next Section</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id54009" status="ok">Menuju ke bagian selanjutnya</text>
+          <originalText xml:lang="en">Go to the next section.</originalText>
+          
+        </description>
+      <accelerator><text id="_id54022" xml:lang="en">Down</text><originalText xml:lang="en">Down</originalText></accelerator><mnemonic><text id="_id54026" xml:lang="en">N</text><originalText xml:lang="en">N</originalText></mnemonic></action>
+      <container id="sectiondepth">
+        <note xml:lang="en">This is the "show section depth" sub-menu pop-up</note>
+        <caption>
+          <text id="_id54040" status="ok">Memunculkan detail tingkatan bagian</text>
+          <originalText xml:lang="en">Show Section Depth</originalText>
+          
+        </caption>
+        <switch element="action">
+          <action mfcid="ID_EMPTY" widget="menuItem" condition="ID_EMPTY">
+            <note xml:lang="en">This is going to be a menu item</note>
+            <caption>
+              <text id="_id54071" status="ok">Kosong</text>
+              <originalText xml:lang="en">Empty</originalText>
+              
+            </caption>
+            <description>
+              <text id="_id54086" status="ok">Tidak ada tingkatan bagian</text>
+              <originalText xml:lang="en">There are no section levels.</originalText>
+              
+            </description>
+          </action>
+          <action mfcid="SECTION_DEPTH_BASE_ID" widget="menuItem" condition="SECTION_DEPTH_BASE_ID">
+            <note xml:lang="en">This is going to be a menu item</note>
+            <list repeat="yes">
+              <caption>
+                <promptVar name="SECTION_DEPTH_OPTION"/>
+              </caption>
+            </list>
+          </action>
+        </switch>
+      <mnemonic><text id="_id54128" xml:lang="en">S</text><originalText xml:lang="en">S</originalText></mnemonic></container>
+      <action mfcid="ID_MENU_NAV_PREVPHRASE" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevphasecirc.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id54152" status="ok">Frase sebelumnya</text>
+          <originalText xml:lang="en">Previous Phrase</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id54166" status="ok">Menuju frase sebelumnya</text>
+          <originalText xml:lang="en">Go to the previous phrase.</originalText>
+          
+        </description>
+      <accelerator><text id="_id54180" xml:lang="en">Left</text><originalText xml:lang="en">Left</originalText></accelerator></action>
+      <action mfcid="ID_MENU_NAV_NEXTPHRASE" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextphrasecirc.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id54204" status="ok">Frase selanjutnya</text>
+          <originalText xml:lang="en">Next Phrase</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id54218" status="ok">Menuju frase selanjutnya</text>
+          <originalText xml:lang="en">Go to the next phrase.</originalText>
+          
+        </description>
+      <accelerator><text id="_id54232" xml:lang="en">Right</text><originalText xml:lang="en">Right</originalText></accelerator></action>
+      <action mfcid="ID_MENU_NAV_PREVPAGE" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevpage.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id54256" status="ok">Halaman sebelumnya</text>
+          <originalText xml:lang="en">Previous Page</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id54270" status="ok">Menuju halaman sebelumnya</text>
+          <originalText xml:lang="en">Go to the previous page.</originalText>
+          
+        </description>
+      <accelerator><text id="_id54284" xml:lang="en">Ctrl+Left</text><originalText xml:lang="en">Ctrl+Left</originalText></accelerator></action>
+      <action mfcid="ID_MENU_NAV_NEXTPAGE" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextpage.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id54307" status="ok">Halaman selanjutnya</text>
+          <originalText xml:lang="en">Next Page</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id54322" status="ok">Menuju halaman selanjutnya</text>
+          <originalText xml:lang="en">Go to the next page.</originalText>
+          
+        </description>
+      <accelerator><text id="_id54336" xml:lang="en">Ctrl+Right</text><originalText xml:lang="en">Ctrl+Right</originalText></accelerator></action>
+      <action mfcid="ID_MENU_NAV_GOTOPAGE" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id54352" status="ok">Menuju ke halaman...</text>
+          <originalText xml:lang="en">Go to Page...</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id54366" status="ok">Menuju ke halaman tertentu</text>
+          <originalText xml:lang="en">Go to a specific page.</originalText>
+          
+        </description>
+      <accelerator><text id="_id54380" xml:lang="en">Ctrl+G</text><originalText xml:lang="en">Ctrl+G</originalText></accelerator></action>
+      <action mfcid="ID_MENU_NAV_FINDINTEXT" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id54396" status="ok">Mencari di dalam teks</text>
+          <originalText xml:lang="en">Find in Text</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id54410" status="ok">Mencari kata atau frase di dalam teks</text>
+          <originalText xml:lang="en">Search for a word or phrase in the text.</originalText>
+          
+        </description>
+      <accelerator><text id="_id54425" xml:lang="en">Ctrl+F</text><originalText xml:lang="en">Ctrl+F</originalText></accelerator><mnemonic><text id="_id54428" xml:lang="en">F</text><originalText xml:lang="en">F</originalText></mnemonic></action>
+    <accelerator><text id="_id54432" xml:lang="en">Alt+N</text><originalText xml:lang="en">Alt+N</originalText></accelerator><mnemonic><text id="_id54436" xml:lang="en">N</text><originalText xml:lang="en">N</originalText></mnemonic></container>
+    <container id="bookmarks">
+      <note xml:lang="en">This is the menu header "Bookmarks"</note>
+      <caption>
+        <text id="_id54449" status="ok">Tanda buku</text>
+        <originalText xml:lang="en">Bookmarks</originalText>
+        
+      </caption>
+      <action mfcid="ID_MENU_BMK_ADD" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/adbookmark.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id54481" status="ok">Menambahkan tanda buku</text>
+          <originalText xml:lang="en">Add Bookmark</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id54496" status="ok">Membuat tanda buku pada posisi sekarang</text>
+          <originalText xml:lang="en">Bookmark your current position.</originalText>
+          
+        </description>
+      <accelerator><text id="_id54510" xml:lang="en">Ctrl+D</text><originalText xml:lang="en">Ctrl+D</originalText></accelerator><mnemonic><text id="_id54513" xml:lang="en">A</text><originalText xml:lang="en">A</originalText></mnemonic></action>
+      <action mfcid="BOOKMARK_BASE_ID" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOKMARK_TITLE"/>
+          </caption>
+        </list>
+      </action>
+    <accelerator><text id="_id54542" xml:lang="en">Alt+B</text><originalText xml:lang="en">Alt+B</originalText></accelerator><mnemonic><text id="_id54545" xml:lang="en">B</text><originalText xml:lang="en">B</originalText></mnemonic></container>
+    <container id="info">
+      <note xml:lang="en">This is the menu header "Info"</note>
+      <caption>
+        <text id="_id54558" status="ok">Informasi</text>
+        <originalText xml:lang="en">Info</originalText>
+        
+      </caption>
+      <action mfcid="ID_MENU_INFO_SKIP" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id54583" status="ok">Bagian yang dapat dilewati...</text>
+          <originalText xml:lang="en">Skippable Items...</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id54598" status="ok">Mentilik bagian yang dapat dilewati pada publikasi ini</text>
+          <originalText xml:lang="en">View the skippable items for this publication.</originalText>
+          
+        </description>
+      <mnemonic><text id="_id54613" xml:lang="en">S</text><originalText xml:lang="en">S</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_INFO_SUMMARY" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/info.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id54636" status="ok">Rangkuman penuh</text>
+          <originalText xml:lang="en">Full Summary</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id54650" status="ok">Mendapatkan seluruh rangkuman informasi pada publikasi ini</text>
+          <originalText xml:lang="en">Get all summary info for this publication.</originalText>
+          
+        </description>
+      <mnemonic><text id="_id54665" xml:lang="en">F</text><originalText xml:lang="en">F</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_INFO_CURRENTPOSITION" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id54680" status="ok">Posisi sekarang</text>
+          <originalText xml:lang="en">Current Position</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id54695" status="ok">Mendapatkan informasi mengenai posisi sekarang</text>
+          <originalText xml:lang="en">Get information about your current position.</originalText>
+          
+        </description>
+      <mnemonic><text id="_id54710" xml:lang="en">C</text><originalText xml:lang="en">C</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_INFO_NAVOPTIONS" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id54725" status="ok">Pilihan navigasi</text>
+          <originalText xml:lang="en">Navigation Options</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id54740" status="ok">Mempelajari pilihan navigasi dari publikasi ini</text>
+          <originalText xml:lang="en">Learn about your navigation options for this publication.</originalText>
+          
+        </description>
+      <mnemonic><text id="_id54755" xml:lang="en">N</text><originalText xml:lang="en">N</originalText></mnemonic></action>
+    <accelerator><text id="_id54760" xml:lang="en">Alt+I</text><originalText xml:lang="en">Alt+I</originalText></accelerator><mnemonic><text id="_id54763" xml:lang="en">I</text><originalText xml:lang="en">I</originalText></mnemonic></container>
+    <container id="help">
+      <note xml:lang="en">This is the menu header "Help"</note>
+      <caption>
+        <text id="_id54776" status="ok">Pertolongan</text>
+        <originalText xml:lang="en">Help</originalText>
+        
+      </caption>
+      <action mfcid="ID_MENU_HELP_CONTENTS" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/help.ico" type="smallIcon"/>
+        <icon src="./settings/img/help_big.ico" type="largeIcon"/>
+        <caption>
+          <text id="_id54815" status="ok">Isi</text>
+          <originalText xml:lang="en">Contents</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id54830" status="ok">Mendapatkan pertolongan untuk menggunakan AMIS</text>
+          <originalText xml:lang="en">Get help using AMIS</originalText>
+          
+        </description>
+      <mnemonic><text id="_id54844" xml:lang="en">C</text><originalText xml:lang="en">C</originalText></mnemonic></action>
+      <action mfcid="ID_MENU_HELP_ABOUT" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id54859" status="ok">Tentang AMIS</text>
+          <originalText xml:lang="en">About AMIS</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id54874" status="ok">Mencari mengenai AMIS dan Daisy for All</text>
+          <originalText xml:lang="en">Find out about AMIS and DAISY-for-All.</originalText>
+          
+        </description>
+      <mnemonic><text id="_id54888" xml:lang="en">A</text><originalText xml:lang="en">A</originalText></mnemonic></action>
+    <accelerator><text id="_id54892" xml:lang="en">Alt+H</text><originalText xml:lang="en">Alt+H</originalText></accelerator><mnemonic><text id="_id54896" xml:lang="en">H</text><originalText xml:lang="en">H</originalText></mnemonic></container>
+  </containers>
+  <dialogs>
+    <dialog mfcid="IDD_FIND">
+      <note xml:lang="en">This is the find in text dialog</note>
+      <caption>
+        <text id="_id54912" status="ok">Mencari di dalam teks</text>
+        <originalText xml:lang="en">Find in Text</originalText>
+        
+      </caption>
+      <description>
+        <text id="_id54927" status="ok">Di bagian ini anda dapat mencari teks penuh dalam satu perintah</text>
+        <originalText xml:lang="en">Here you can search the full text in either direction.</originalText>
+        
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem>
+          <text id="_id54951" status="ok">Selesai mengetik yang dicari, tekan enter untuk memulai pencarian</text>
+          <originalText xml:lang="en">After typing in your search, press enter to begin searching.</originalText>
+          
+        </promptItem>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <promptItem refid="textBoxRepeatInstr"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <text id="_id55000" status="ok">Tekan untuk memulai pencarian teks di dalam berkas</text>
+          <originalText xml:lang="en">Press to begin searching for text in the file.</originalText>
+          
+        </description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SEARCHSTRING" widget="textfield">
+        <description>
+          <text id="_id55046" status="ok">Ketik teks yang ingin dicari</text>
+          <originalText xml:lang="en">Type the text to search for.</originalText>
+          
+        </description>
+      </control>
+      <control mfcid="IDC_FINDNEXT" widget="radiobutton">
+        <note xml:lang="en">This indicates the direction of the search</note>
+        <caption>
+          <text id="_id55073" status="ok">Mencari selanjutnya</text>
+          <originalText xml:lang="en">Find Next</originalText>
+          
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="SELECTED_OR_DESELECTED" param="FIND_NEXT_IN_TEXT"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_FINDPREV" widget="radiobutton">
+        <note xml:lang="en">This indicates the direction of the search</note>
+        <caption>
+          <text id="_id55117" status="ok">Mencari sebelumnya</text>
+          <originalText xml:lang="en">Find Previous</originalText>
+          
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptName name="SELECTED_OR_DESELECTED" param="FIND_PREV_IN_TEXT"/>
+          </prompt>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_CDSEARCH">
+      <note xml:lang="en">This dialog appears when more than one book is on a CD-ROM</note>
+      <caption>
+        <text id="_id55160" status="ok">Beberapa buku ditemukan</text>
+        <originalText xml:lang="en">Multiple books found</originalText>
+        
+      </caption>
+      <description mfcid="IDC_STATIC">
+        <text id="_id55177" status="ok">Lebih dari satu buku ditemukan. Silakan pilih buku dari daftar dibawah ini dan tekan Alt + O untuk membuka</text>
+        <originalText xml:lang="en">More than one book was found on this CD. Please select a book from the list below and press Alt + O to open.</originalText>
+        
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_CANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_OPENBOOK" widget="button">
+        <caption>
+          <text id="_id55246" status="ok">Buka</text>
+          <originalText xml:lang="en">Open</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id55261" status="ok">Tekan untuk menutup dialog ini dan membuka buku yang telah dipilih</text>
+          <originalText xml:lang="en">Press to close this dialog and open the selected book.</originalText>
+          
+        </description>
+      <mnemonic><text id="_id55276" xml:lang="en">O</text><originalText xml:lang="en">O</originalText></mnemonic></control>
+      <control mfcid="IDC_BOOKLIST" widget="list">
+        <description>
+          <text id="_id55288" status="ok">Gunakan tanda panah untuk memilih judul buku dari daftar ini</text>
+          <originalText xml:lang="en">Use the arrow keys to move around this list of titles.</originalText>
+          
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOK_TITLE"/>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_ABOUT">
+      <note xml:lang="en">This dialog gives some basic information about AMIS.</note>
+      <caption>
+        <text id="_id55327" status="ok">Tentang AMIS</text>
+        <originalText xml:lang="en">About AMIS</originalText>
+        
+      </caption>
+      <description>
+        <text id="_id55341" status="ok">Dialog mengenai informasi tentang AMIS</text>
+        <originalText xml:lang="en">Dialog with information about AMIS software.</originalText>
+        
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_AMISNAME" widget="textlabel">
+        <caption>
+          <text id="_id55382" status="ok">AMIS: \nSistem Informasi Multimedia Adaptasi</text>
+          <originalText xml:lang="en">AMIS: \nAdaptive Multimedia Information System</originalText>
+          
+        </caption>
+      </control>
+      <control mfcid="IDC_VERSION" translate="no">
+        <caption>
+          <text id="_id55404" xml:lang="en">Version 2.0</text>
+          <originalText xml:lang="en">Version 2.0</originalText>
+          
+        </caption>
+      </control>
+      <control mfcid="IDC_VERSIONNOTE" translate="no">
+        <caption>
+          <text id="_id55426" xml:lang="en">Release Date: 23 Oct 2005</text>
+          <originalText xml:lang="en">Release Date: 23 Oct 2005</originalText>
+          
+        </caption>
+      </control>
+      <control mfcid="IDC_COPYRIGHT" widget="textlabel" translate="no">
+        <caption>
+          <text id="_id55450" xml:lang="en">Copyright © 2006 DAISY for All</text>
+          <originalText xml:lang="en">Copyright © 2006 DAISY for All</originalText>
+          
+        </caption>
+      </control>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_SEARCHDAISY">
+      <note xml:lang="en">This dialog is for searching your hard drive for DAISY books.</note>
+      <caption>
+        <text id="_id55500" status="ok">Mencari buku DAISY</text>
+        <originalText xml:lang="en">Search for DAISY Books</originalText>
+        
+      </caption>
+      <description mfcid="IDC_STATIC">
+        <text id="_id55517" status="ok">Anda dapat menggunakan komputer anda untuk mencari buku DAISY. Masukkan atau cari alamat folder dimana buku DAISY disimpan dan tekan Cari untuk memulai pencarian</text>
+        <originalText xml:lang="en">You can search your computer for DAISY books.  Enter a path or browse for a folder to search, then press Search to begin searching.</originalText>
+        
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <promptItem refid="textBoxRepeatInstr"/>
+      </prompt>
+      <control mfcid="IDC_SEARCHPATH" widget="textfield">
+        <description>
+          <text id="_id55569" status="ok">Ketik alamat folder pada ruang ini</text>
+          <originalText xml:lang="en">Type the path to the folder in this field.</originalText>
+          
+        </description>
+      </control>
+      <control mfcid="IDC_BROWSE" widget="button">
+        <caption>
+          <promptItem refid="browse_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="browse_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_STARTSEARCH" widget="button">
+        <caption>
+          <text id="_id55615" status="ok">Cari</text>
+          <originalText xml:lang="en">Search</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id55630" status="ok">Tekan untuk memulai pencarian</text>
+          <originalText xml:lang="en">Press to start searching.</originalText>
+          
+        </description>
+      <mnemonic><text id="_id55644" xml:lang="en">S</text><originalText xml:lang="en">S</originalText></mnemonic></control>
+      <control mfcid="IDC_STOPSEARCH" widget="button">
+        <caption>
+          <text id="_id55655" status="ok">Berhenti</text>
+          <originalText xml:lang="en">Stop</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id55670" status="ok">Tekan untuk menghentikan pencarian</text>
+          <originalText xml:lang="en">Press to stop searching.</originalText>
+          
+        </description>
+      <mnemonic><text id="_id55684" xml:lang="en">t</text><originalText xml:lang="en">t</originalText></mnemonic></control>
+      <control mfcid="IDC_SEARCHING" widget="textlabel">
+        <switch element="caption">
+          <caption condition="default">
+            <text id="_id55702" status="ok">Siap</text>
+            <originalText xml:lang="en">Ready</originalText>
+            
+          </caption>
+          <caption condition="WhileSearching">
+            <text id="_id55718" status="ok">Mencari...</text>
+            <originalText xml:lang="en">Searching...</originalText>
+            
+          </caption>
+          <caption condition="SearchAborted">
+            <text id="_id55735" status="ok">Pencarian berhenti</text>
+            <originalText xml:lang="en">Search stopped.</originalText>
+            
+          </caption>
+          <caption condition="SearchCompleteNoFilesFound">
+            <text id="_id55752" status="ok">Pencarian selesai: Tidak ada berkas yang ditemukan</text>
+            <originalText xml:lang="en">Search complete: No files found.</originalText>
+            
+          </caption>
+          <caption condition="SearchCompleteOneFileFound">
+            <text id="_id55770" status="ok">Pencarian selesai: Satu berkas ditemukan</text>
+            <originalText xml:lang="en">Search complete: One file found.</originalText>
+            
+          </caption>
+          <caption condition="SearchCompleteFilesFound">
+            <prompt>
+              <promptVar name="NUM_FILES_FOUND"/>
+              <promptItem>
+                <note xml:lang="en">This is used in the sentence "7 files were found"</note>
+                <text id="_id55800" status="ok">Beberapa berkas ditemukan</text>
+                <originalText xml:lang="en">files were found.</originalText>
+                
+              </promptItem>
+            </prompt>
+          </caption>
+        </switch>
+      </control>
+      <control mfcid="IDC_FILESFOUND" widget="list">
+        <description>
+          <text id="_id55826" status="ok">Gunakan tanda panah untuk memilih judul dari daftar ini</text>
+          <originalText xml:lang="en">Use the arrow keys to move around this list of titles.</originalText>
+          
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOK_TITLE"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_OPENBOOK" widget="button">
+        <caption>
+          <text id="_id55862" status="ok">Buka</text>
+          <originalText xml:lang="en">Open</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id55876" status="ok">Tekan untuk membuka berkas yang telah dipilih</text>
+          <originalText xml:lang="en">Press to open the selected title.</originalText>
+          
+        </description>
+      <mnemonic><text id="_id55891" xml:lang="en">O</text><originalText xml:lang="en">O</originalText></mnemonic></control>
+      <control mfcid="IDC_CANCELBUTTON">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_SKIP">
+      <note xml:lang="en">This dialog lets the user control rendering of skippable structures.</note>
+      <caption>
+        <text id="_id55927" status="ok">Bagian yang dapat dilewati</text>
+        <originalText xml:lang="en">Skippable Items</originalText>
+        
+      </caption>
+      <switch element="description">
+        <description mfcid="IDC_STATIC" condition="hasSkippableStructures">
+          <text id="_id55950" status="ok">Di buku ini terdapat struktur khusus. Tandai bagian mana yang anda ingin lewatkan</text>
+          <originalText xml:lang="en">This book contains the following special structures.  Check the ones you want skipped.</originalText>
+          
+        </description>
+        <description mfcid="IDC_STATIC" condition="hasNoSkippableStructures">
+          <text id="_id55972" status="ok">Publikasi ini tidak terdapat bagian yang dapat dilewati</text>
+          <originalText xml:lang="en">This publication has no skippable elements.</originalText>
+          
+        </description>
+      </switch>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SKIPS" widget="list">
+        <caption>
+          <text id="_id56041" status="ok">Bagian yang dapat dilewati</text>
+          <originalText xml:lang="en">Skippable items</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id56055" status="ok">Gunakan tanda panah untuk memilih bagian yang ingin dilewati dari daftar ini</text>
+          <originalText xml:lang="en">Use the arrow keys to move around this list of skippable items.</originalText>
+          
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="SKIPPABLE_ITEM"/>
+          </caption>
+          <description>
+            <prompt>
+              <promptVar name="SKIPPABLE_ITEM"/>
+              <promptItem refid="thisItem"/>
+              <promptVar name="WILL_SKIP_OR_NOT" param="SKIPPABLE_ITEM_ID"/>
+            </prompt>
+          </description>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE4">
+      <note xml:lang="en">This dialog lets the user select a language pack.</note>
+      <caption>
+        <text id="_id56116" status="ok">Bahasa</text>
+        <originalText xml:lang="en">Language</originalText>
+        
+      </caption>
+      <description mfcid="IDC_STATIC">
+        <text id="_id56133" status="ok">Disini anda dapat mengubah bahasa yang digunakan. Paket bahasa baru akan terdeteksi secara otomatis</text>
+        <originalText xml:lang="en">Here you can change the language of the software.  New language packs are detected automatically.</originalText>
+        
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="ctrl1_for_prefsdialog"/>
+        <promptItem refid="ctrl2_for_colorsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_BTN_SELECTLANG" widget="button">
+        <caption>
+          <text id="_id56189" status="ok">Pilih bahasa</text>
+          <originalText xml:lang="en">Select Language</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id56203" status="ok">Tekan untuk mengkonfirmasi bahasa yang dipilih untuk media antar muka pengguna AMIS</text>
+          <originalText xml:lang="en">Press to confirm your language selection for the AMIS user interface</originalText>
+          
+        </description>
+      </control>
+      <control mfcid="IDC_LANGLIST" widget="list">
+        <caption mfcid="IDC_STATIC">
+          <text id="_id56229" status="ok">Pilihan bahasa yang anda pilih:</text>
+          <originalText xml:lang="en">Your language choices are:</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id56244" status="ok">Gunakan tanda panah untuk memilih bahasa dari daftar ini</text>
+          <originalText xml:lang="en">Use the arrow keys to move around this list of languages.</originalText>
+          
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="LANGUAGE_NAME"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_CURRLANG">
+        <caption>
+          <prompt>
+            <promptItem>
+              <text id="_id56282" status="ok">Sekarang anda sedang menggunakan AMIS dalam bahasa</text>
+              <originalText xml:lang="en">You are currently using AMIS in</originalText>
+              
+            </promptItem>
+            <promptVar name="CURR_LANGUAGE_NAME"/>
+          </prompt>
+        </caption>
+      </control>
+    <accelerator><text id="_id56304" xml:lang="en">Ctrl+3</text><originalText xml:lang="en">Ctrl+3</originalText></accelerator></dialog>
+    <dialog mfcid="IDD_PROPPAGE2">
+      <note xml:lang="en">This dialog lets the user select which colors AMIS uses</note>
+      <caption>
+        <text id="_id56318" status="ok">Memilih warna</text>
+        <originalText xml:lang="en">Set Colors</originalText>
+        
+      </caption>
+      <description>
+        <text id="_id56333" status="ok">Disini anda dapat memilih warna untuk AMIS</text>
+        <originalText xml:lang="en">Here you can set color options for AMIS.</originalText>
+        
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem refid="ctrl1_for_prefsdialog"/>
+        <promptItem refid="ctrl3_for_langsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+      </prompt>
+      <control mfcid="IDC_PHRASES" widget="other">
+        <caption>
+          <text id="_id56378" status="ok">Penanda frase</text>
+          <originalText xml:lang="en">Phrase Highlighting</originalText>
+          
+        </caption>
+      </control>
+      <control mfcid="IDC_TEXTFG" widget="textlabel">
+        <caption>
+          <text id="_id56400" status="ok">Latar depan teks</text>
+          <originalText xml:lang="en">Text Foreground: </originalText>
+          
+        </caption>
+      </control>
+      <control mfcid="IDC_TEXTBG" widget="textlabel">
+        <caption>
+          <text id="_id56422" status="ok">Latar belakang teks</text>
+          <originalText xml:lang="en">Text Background: </originalText>
+          
+        </caption>
+      </control>
+      <control mfcid="IDC_BORDER" widget="textlabel">
+        <caption>
+          <text id="_id56445" status="ok">Batas penanda</text>
+          <originalText xml:lang="en">Selection Border: </originalText>
+          
+        </caption>
+      </control>
+      <control mfcid="IDC_CONTRAST" widget="other">
+        <caption>
+          <text id="_id56467" status="ok">Memilih tingkatan kekontrasan</text>
+          <originalText xml:lang="en">High Contrast Settings</originalText>
+          
+        </caption>
+      </control>
+      <control mfcid="IDC_PAGEFG" widget="textlabel">
+        <caption>
+          <text id="_id56490" status="ok">Latar depan halaman</text>
+          <originalText xml:lang="en">Page Foreground: </originalText>
+          
+        </caption>
+      </control>
+      <control mfcid="IDC_PAGEBG" widget="textlabel">
+        <caption>
+          <text id="_id56512" status="ok">Latar belakang halaman</text>
+          <originalText xml:lang="en">Page Background: </originalText>
+          
+        </caption>
+      </control>
+      <control mfcid="IDC_BTN_RESETCOLORS" widget="button">
+        <caption>
+          <text id="_id56535" status="ok">Mengembalikan pilihan warna</text>
+          <originalText xml:lang="en">Reset Colors</originalText>
+          
+        </caption>
+      </control>
+      <control mfcid="IDC_PHRASEPREVIEW" widget="textfield">
+        <caption>
+          <text id="_id56557" status="ok">Pratilik warna penanda frase</text>
+          <originalText xml:lang="en">Preview of phrase highlight colors.</originalText>
+          
+        </caption>
+      </control>
+      <control mfcid="IDC_CONTRASTPREVIEW" widget="textfield">
+        <caption>
+          <text id="_id56580" status="ok">Pratilik kekontrasan halaman</text>
+          <originalText xml:lang="en">Preview of page contrast colors.</originalText>
+          
+        </caption>
+      </control>
+    <accelerator><text id="_id56596" xml:lang="en">Ctrl+2</text><originalText xml:lang="en">Ctrl+2</originalText></accelerator></dialog>
+    <dialog mfcid="IDD_CURRENTPOSITION">
+      <note xml:lang="en">This dialog gives the user information about their current position in the publication.</note>
+      <caption>
+        <text id="_id56610" status="ok">Posisi sekarang</text>
+        <originalText xml:lang="en">Current Position</originalText>
+        
+      </caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text id="_id56676" status="ok">Ini adalah daftar data tentang posisi anda sekarang</text>
+          <originalText xml:lang="en">This is a list of data about your current position.</originalText>
+          
+        </caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="no">
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id56708" status="ok">Posisi anda sekarang berjudul:</text>
+                <originalText xml:lang="en">Your current section is titled:</originalText>
+                
+              </promptItem>
+              <promptVar name="CURRENT_SECTION_TITLE"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id56736" status="ok">Jumlah halaman dalam bagian ini:</text>
+                <originalText xml:lang="en">Number of pages in this section:</originalText>
+                
+              </promptItem>
+              <promptVar name="CURRENT_SECTION_NUM_PAGES"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id56762" status="ok">Jumlah sub bagian dalam bagian ini:</text>
+                <originalText xml:lang="en">Number of subsections in this section:</originalText>
+                
+              </promptItem>
+              <promptVar name="CURRENT_SECTION_NUM_SUBSECTIONS"/>
+            </prompt>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE1">
+      <note xml:lang="en">This dialog lets the user set some basic preferences for AMIS.</note>
+      <caption>
+        <text id="_id56796" status="ok">Preferensi Umum</text>
+        <originalText xml:lang="en">General Preferences</originalText>
+        
+      </caption>
+      <description>
+        <text id="_id56811" status="ok">Disini anda dapat menata preferensi untuk AMIS</text>
+        <originalText xml:lang="en">Here you can set general preferences for AMIS.</originalText>
+        
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="ctrl2_for_colorsdialog"/>
+        <promptItem refid="ctrl3_for_langsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <promptItem refid="textBoxRepeatInstr"/>
+      </prompt>
+      <control mfcid="IDC_BMKDIRBROWSE" widget="button">
+        <caption>
+          <promptItem refid="browse_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="browse_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SELFVOICING" widget="checkbox">
+        <caption>
+          <text id="_id56892" status="ok">Menggunakan suara sendiri</text>
+          <originalText xml:lang="en">Use self-voicing</originalText>
+          
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="SELF_VOICING_FEATURE"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_TTSVOICE" widget="list">
+        <caption mfcid="IDC_SELTTSLABEL">
+          <text id="_id56934" status="ok">Pilih suara TTS:</text>
+          <originalText xml:lang="en">Select TTS voice:</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id56949" status="ok">Gunakan tanda panah untuk memilih suara dari daftar dibawah ini</text>
+          <originalText xml:lang="en">Use the arrow keys to move around this list of voices</originalText>
+          
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="TTS_VOICE_NAME"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_BASIC" widget="checkbox">
+        <caption>
+          <text id="_id56985" status="ok">Memulai AMIS dengan mode tilik dasar</text>
+          <originalText xml:lang="en">Start AMIS in the basic view mode.</originalText>
+          
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="BASIC_VIEW_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_PROMPTONBASICVIEW" widget="checkbox">
+        <caption>
+          <text id="_id57030" status="ok">Jika menggunakan mode tilik dasar, jelaskan kepada pengguna bagaimana cara kembali ke tilik asli</text>
+          <originalText xml:lang="en">Upon switching to basic view, tell the user how to go back to the default view.</originalText>
+          
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="PROMPT_ON_BASIC_VIEW_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_LOADLASTDTB" widget="checkbox">
+        <caption>
+          <text id="_id57076" status="ok">Memuat buku terbaru yang dibaca ketika AMIS mulai dijalankan</text>
+          <originalText xml:lang="en">Load the most recently read book when the software starts.</originalText>
+          
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="LOAD_LAST_READ_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_BMKDIR" widget="textfield">
+        <caption mfcid="IDC_BMKDIRLABEL">
+          <text id="_id57124" status="ok">Direktori tanda buku:</text>
+          <originalText xml:lang="en">Bookmarks directory:</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id57139" status="ok">Ketik alamat folder untuk tanda buku di ruang ini</text>
+          <originalText xml:lang="en">Type the path to the bookmarks folder in this field.</originalText>
+          
+        </description>
+      </control>
+    <accelerator><text id="_id57155" xml:lang="en">Ctrl+1</text><originalText xml:lang="en">Ctrl+1</originalText></accelerator></dialog>
+    <dialog mfcid="IDD_NAVIGATIONOPTIONS">
+      <note xml:lang="en">This dialog lists navigation options for the current publication.</note>
+      <caption>
+        <text id="_id57169" status="ok">Pilihan Navigasi</text>
+        <originalText xml:lang="en">Navigation Options</originalText>
+        
+      </caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text id="_id57234" status="ok">Ini adalah daftar bagian yang dapat dinavigasikan secara langsung</text>
+          <originalText xml:lang="en">This is a list of items to which you may navigate directly.</originalText>
+          
+        </caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="TOC_CATEGORIES"/>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_GOTOPAGE">
+      <note xml:lang="en">This dialog lets the user jump to a certain page</note>
+      <caption>
+        <text id="_id57281" status="ok">Menuju Halaman</text>
+        <originalText xml:lang="en">Go To Page</originalText>
+        
+      </caption>
+      <description>
+        <text id="_id57296" status="ok">Disini anda dapat melompat ke nomor atau label halaman</text>
+        <originalText xml:lang="en">Here you can jump to a page number or page label.</originalText>
+        
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem>
+          <text id="_id57320" status="ok">Setelah anda mengetik nomor halaman, tekan enter untuk menuju ke halaman tersebut</text>
+          <originalText xml:lang="en">After typing in your page number, press enter to go there.</originalText>
+          
+        </promptItem>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <promptItem refid="textBoxRepeatInstr"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <text id="_id57369" status="ok">Tekat tombol ini untuk menuju halaman yang diinginkan</text>
+          <originalText xml:lang="en">Press this button to go to the desired page.</originalText>
+          
+        </description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_PAGENUM" widget="textfield">
+        <caption mfcid="IDC_STATIC">
+          <text id="_id57417" status="ok">Masukkan nomor halaman:</text>
+          <originalText xml:lang="en">Enter a page number:</originalText>
+          
+        </caption>
+        <description>
+          <text id="_id57432" status="ok">Ketik nomor atau label halaman yang anda ingin tuju</text>
+          <originalText xml:lang="en">Type the number or label of the page you want to go to.</originalText>
+          
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_FULLSUMMARY">
+      <note xml:lang="en">This dialog lists key publication metadata.</note>
+      <caption>
+        <text id="_id57459" status="ok">Ringkasan Publikasi</text>
+        <originalText xml:lang="en">Publication Summary</originalText>
+        
+      </caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text id="_id57524" status="ok">Ini adalah daftar publikasi metadata</text>
+          <originalText xml:lang="en">This is a list of publication metadata.</originalText>
+          
+        </caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="no">
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id57555" status="ok">Buku ini berjudul:</text>
+                <originalText xml:lang="en">This book is titled:</originalText>
+                
+              </promptItem>
+              <promptVar name="META_TITLE"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id57581" status="ok">Ditulis oleh:</text>
+                <originalText xml:lang="en">Written by:</originalText>
+                
+              </promptItem>
+              <promptVar name="META_CREATOR"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id57606" status="ok">Dipublikasikan oleh:</text>
+                <originalText xml:lang="en">Published by:</originalText>
+                
+              </promptItem>
+              <promptVar name="META_PUBLISHER"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_DESCRIPTION">
+            <prompt>
+              <promptItem>
+                <text id="_id57633" status="ok">Deskripsi:</text>
+                <originalText xml:lang="en">Description:</originalText>
+                
+              </promptItem>
+              <promptVar name="META_DESC"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id57658" status="ok">Jumlah titik navigasi pada ini tabel:</text>
+                <originalText xml:lang="en">Number of navigation points in the table of contents:</originalText>
+                
+              </promptItem>
+              <promptVar name="META_TOCITEMS"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id57685" status="ok">Maksimum detail bagian:</text>
+                <originalText xml:lang="en">Maximum section depth:</originalText>
+                
+              </promptItem>
+              <promptVar name="META_DEPTH"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id57713" status="ok">Halaman depan:</text>
+                <originalText xml:lang="en">Front matter pages:</originalText>
+                
+              </promptItem>
+              <promptVar name="META_PAGEFRONT"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id57741" status="ok">Halaman biasa:</text>
+                <originalText xml:lang="en">Regular pages:</originalText>
+                
+              </promptItem>
+              <promptVar name="META_PAGENORMAL"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id57768" status="ok">Halaman khusus:</text>
+                <originalText xml:lang="en">Special pages:</originalText>
+                
+              </promptItem>
+              <promptVar name="META_PAGESPECIAL"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id57793" status="ok">Lama Durasi:</text>
+                <originalText xml:lang="en">Total duration:</originalText>
+                
+              </promptItem>
+              <promptVar name="META_TOTALTIME"/>
+            </prompt>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+  </dialogs>
+  <prompts>
+    <promptItemRefs>
+      <promptItem id="altC_to_close">
+        <text id="_id57825" status="ok">Tekan Alt + C untuk menutup dialog.</text>
+        <originalText xml:lang="en">Press Alt + C to close the dialog.</originalText>
+        
+      </promptItem>
+      <promptItem id="altC_to_cancel">
+        <text id="_id57842" status="ok">Tekan Alt + C untuk membatalkan dialog.</text>
+        <originalText xml:lang="en">Press Alt + C to cancel the dialog.</originalText>
+        
+      </promptItem>
+      <promptItem id="thisItem">
+        <text id="_id57860" status="ok">Bagian ini</text>
+        <originalText xml:lang="en">This item</originalText>
+        
+      </promptItem>
+      <promptItem id="spaceToToggle">
+        <text id="_id57876" status="ok">Tekan Spasi untuk menjaga nilai</text>
+        <originalText xml:lang="en">Press the space bar to toggle the value.</originalText>
+        
+      </promptItem>
+      <promptItem id="tabAround">
+        <text id="_id57894" status="ok">Tekan Tab untuk memilih pilihan pada dialog.</text>
+        <originalText xml:lang="en">Hit tab to move around the options on the dialog.</originalText>
+        
+      </promptItem>
+      <promptItem id="ctrl2_for_colorsdialog">
+        <text id="_id57912" status="ok">Tekan Kontrol + 2 untuk menuju dialog warna</text>
+        <originalText xml:lang="en">Press control + 2 to switch to the colors dialog.</originalText>
+        
+      </promptItem>
+      <promptItem id="ctrl3_for_langsdialog">
+        <text id="_id57931" status="ok">Tekan Kontrol + 3 untuk menuju dialog bahasa</text>
+        <originalText xml:lang="en">Press control + 3 to switch to the language options dialog.</originalText>
+        
+      </promptItem>
+      <promptItem id="ctrl1_for_prefsdialog">
+        <text id="_id57949" status="ok">Tekan kontrol + 1 untuk menuju dialog preferensi umum</text>
+        <originalText xml:lang="en">Press control + 1 to switch to the general preferences dialog.</originalText>
+        
+      </promptItem>
+      <promptItem id="thisItemIsCurrently">
+        <text id="_id57968" status="ok">Bagian ini sekarang sedang</text>
+        <originalText xml:lang="en">This item is currently</originalText>
+        
+      </promptItem>
+      <promptItem id="enter_to_close">
+        <text id="_id57985" status="ok">Tekan enter untuk menutup dialog</text>
+        <originalText xml:lang="en">Press enter to close the dialog.</originalText>
+        
+      </promptItem>
+      <promptItem id="browse_button_caption">
+        <text id="_id58002" status="ok">Jelajah...</text>
+        <originalText xml:lang="en">Browse...</originalText>
+        
+      </promptItem>
+      <promptItem id="browse_button_description">
+        <text id="_id58019" status="ok">Tekan untuk membuka dialog penjelajahan folder</text>
+        <originalText xml:lang="en">Press to open the folder browse dialog.</originalText>
+        
+      </promptItem>
+      <promptItem id="ok_button_caption">
+        <text id="_id58037" status="ok">OK</text>
+        <originalText xml:lang="en">OK</originalText>
+        
+      </promptItem>
+      <promptItem id="ok_button_description">
+        <text id="_id58053" status="ok">Tekan OK untuk menutup dialog ini</text>
+        <originalText xml:lang="en">Press OK to close this dialog.</originalText>
+        
+      </promptItem>
+      <promptItem id="cancel_button_caption">
+        <text id="_id58071" status="ok">Batalkan</text>
+        <originalText xml:lang="en">Cancel</originalText>
+        
+      </promptItem>
+      <promptItem id="cancel_button_description">
+        <text id="_id58088" status="ok">Tekan untuk membatalkan dialog ini</text>
+        <originalText xml:lang="en">Press to cancel this dialog.</originalText>
+        
+      </promptItem>
+      <promptItem id="list_reads_automatically">
+        <text id="_id58105" status="ok">Daftar ini akan dibacakan secara otomatis</text>
+        <originalText xml:lang="en">This list will be read automatically.</originalText>
+        
+      </promptItem>
+      <promptItem id="repeatLastPromptInstr">
+        <text id="_id58123" status="ok">Tekan Kontrol + R untuk mengulang bagian yang baru saja terlewat</text>
+        <originalText xml:lang="en">Press Control + R to repeat the last prompt.</originalText>
+        
+      </promptItem>
+      <promptItem id="thisDialogNotSelfVoicing">
+        <text id="_id58141" status="ok">Dialog ini bukan dialog yang dapat berbicara sendiri</text>
+        <originalText xml:lang="en">This dialog is not yet self-voicing.</originalText>
+        
+      </promptItem>
+      <promptItem id="escapeToCancel">
+        <text id="_id58158" status="ok">Tekan Escape untuk membatalkan</text>
+        <originalText xml:lang="en">Press escape to cancel</originalText>
+        
+      </promptItem>
+      <promptItem id="hearDlgInstructions">
+        <text id="_id58176" status="ok">Tekan Kontrol + I untuk mendengar intruksi dialog ini</text>
+        <originalText xml:lang="en">Press Control + I to hear instructions for this dialog.</originalText>
+        
+      </promptItem>
+      <promptItem id="textBoxRepeatInstr">
+        <text id="_id58194" status="ok">Tekan Kontrol + R untuk mengulang teks dari kotak teks yang terakhir dibuka</text>
+        <originalText xml:lang="en">Press Control + R to repeat the text in the last text box.</originalText>
+        
+      </promptItem>
+      <promptItem id="nav_window">
+        <text id="_id58212" status="ok">Navigasi</text>
+        <originalText xml:lang="en">Navigation</originalText>
+        
+      </promptItem>
+      <promptItem id="sections">
+        <text id="_id58229" status="ok">Bagian</text>
+        <originalText xml:lang="en">Sections</originalText>
+        
+      </promptItem>
+      <promptItem id="pages">
+        <text id="_id58245" status="ok">Halaman</text>
+        <originalText xml:lang="en">Pages</originalText>
+        
+      </promptItem>
+      <promptItem id="noterefs">
+        <text id="_id58262" status="ok">Catatan kaki</text>
+        <originalText xml:lang="en">Footnotes</originalText>
+        
+      </promptItem>
+      <promptItem id="prodnotes">
+        <text id="_id58278" status="ok">Catatan prosedur</text>
+        <originalText xml:lang="en">Producer notes</originalText>
+        
+      </promptItem>
+      <promptItem id="sidebars">
+        <text id="_id58295" status="ok">Batang sisi</text>
+        <originalText xml:lang="en">Sidebars</originalText>
+        
+      </promptItem>
+      <promptItem id="groups">
+        <text id="_id58311" status="ok">Bagian yang dikelompokkan</text>
+        <originalText xml:lang="en">Grouped items</originalText>
+        
+      </promptItem>
+      <promptItem id="navigation_sidebar_caption">
+        <text id="_id58328" status="ok">Navigasi</text>
+        <originalText xml:lang="en">Navigation</originalText>
+        
+      </promptItem>
+      <promptItem id="ready">
+        <text id="_id58345" status="ok">Siap</text>
+        <originalText xml:lang="en">Ready</originalText>
+        
+      </promptItem>
+      <promptItem id="property_sheet_caption">
+        <text id="_id58361" status="ok">Preferensi</text>
+        <originalText xml:lang="en">Preferences</originalText>
+        
+      </promptItem>
+      <promptItem id="selfolder_title">
+        <text id="_id58378" status="ok">Pilih folder</text>
+        <originalText xml:lang="en">Select a Folder</originalText>
+        
+      </promptItem>
+      <promptItem id="selfolder_instr">
+        <text id="_id58394" status="ok">Pilih folder dari direktori dibawah ini</text>
+        <originalText xml:lang="en">Select a folder from the directory below.</originalText>
+        
+      </promptItem>
+      <promptItem id="daisy_books">
+        <text id="_id58412" status="ok">Buku DAISY</text>
+        <originalText xml:lang="en">DAISY Books</originalText>
+        
+      </promptItem>
+      <promptItem id="folder_does_not_exist">
+        <text id="_id58429" status="ok">Folder %s tidak ditemukan. Apakah anda ingin membuat folder baru?</text>
+        <originalText xml:lang="en">The folder %s does not exist. Do you want the folder to be created?</originalText>
+        
+      </promptItem>
+      <promptItem id="folder_invalid">
+        <text id="_id58448" status="ok">Nama folder ini tidak berlaku. Silakan pilih nama lain</text>
+        <originalText xml:lang="en">This folder name is invalid. Please choose another.</originalText>
+        
+      </promptItem>
+      <promptItem id="cant_create_folder">
+        <text id="_id58466" status="ok">Folder ini tidak dapat dibuat. Silakan cek sekali lagi</text>
+        <originalText xml:lang="en">This folder can not be created. Please double check.</originalText>
+        
+      </promptItem>
+      <promptItem id="not_available">
+        <text id="_id58484" status="ok">Tidak tersedia</text>
+        <originalText xml:lang="en">Not available</originalText>
+        
+      </promptItem>
+      <promptItem id="numeric_zero">
+        <note xml:lang="en">All numerals should be translated into numerals, not words.</note>
+        <text id="_id58505" status="ok">0</text>
+        <originalText xml:lang="en">0</originalText>
+        
+      </promptItem>
+      <promptItem id="numeric_one">
+        <text id="_id58521" status="ok">1</text>
+        <originalText xml:lang="en">1</originalText>
+        
+      </promptItem>
+      <promptItem id="numeric_two">
+        <text id="_id58537" status="ok">2</text>
+        <originalText xml:lang="en">2</originalText>
+        
+      </promptItem>
+      <promptItem id="numeric_three">
+        <text id="_id58553" status="ok">3</text>
+        <originalText xml:lang="en">3</originalText>
+        
+      </promptItem>
+      <promptItem id="numeric_four">
+        <text id="_id58570" status="ok">4</text>
+        <originalText xml:lang="en">4</originalText>
+        
+      </promptItem>
+      <promptItem id="numeric_five">
+        <text id="_id58586" status="ok">5</text>
+        <originalText xml:lang="en">5</originalText>
+        
+      </promptItem>
+      <promptItem id="numeric_six">
+        <text id="_id58602" status="ok">6</text>
+        <originalText xml:lang="en">6</originalText>
+        
+      </promptItem>
+      <promptItem id="numeric_seven">
+        <text id="_id58618" status="ok">7</text>
+        <originalText xml:lang="en">7</originalText>
+        
+      </promptItem>
+      <promptItem id="numeric_eight">
+        <text id="_id58634" status="ok">8</text>
+        <originalText xml:lang="en">8</originalText>
+        
+      </promptItem>
+      <promptItem id="numeric_nine">
+        <text id="_id58650" status="ok">9</text>
+        <originalText xml:lang="en">9</originalText>
+        
+      </promptItem>
+      <promptItem id="deleted">
+        <text id="_id58666" status="ok">dihapus</text>
+        <originalText xml:lang="en">deleted</originalText>
+        
+      </promptItem>
+      <promptItem id="will_be_skipped">
+        <text id="_id58683" status="ok">akan dilewati</text>
+        <originalText xml:lang="en">will be skipped</originalText>
+        
+      </promptItem>
+      <promptItem id="will_be_played">
+        <text id="_id58700" status="ok">akan dimainkan</text>
+        <originalText xml:lang="en">will be played</originalText>
+        
+      </promptItem>
+      <promptItem id="item_on">
+        <text id="_id58716" status="ok">hidup</text>
+        <originalText xml:lang="en">on</originalText>
+        
+      </promptItem>
+      <promptItem id="item_off">
+        <text id="_id58732" status="ok">mati</text>
+        <originalText xml:lang="en">off</originalText>
+        
+      </promptItem>
+      <promptItem id="item_selected">
+        <text id="_id58748" status="ok">dipilih</text>
+        <originalText xml:lang="en">selected</originalText>
+        
+      </promptItem>
+      <promptItem id="item_deselected">
+        <text id="_id58765" status="ok">pilihan dibatalkan</text>
+        <originalText xml:lang="en">deselected</originalText>
+        
+      </promptItem>
+      <promptItem id="keyboardShortcut">
+        <text id="_id58781" status="ok">Cara Singkat Papan Tombol</text>
+        <originalText xml:lang="en">Keyboard Shortcut</originalText>
+        
+      </promptItem>
+      <promptItem id="icon">
+        <text id="_id58798" status="ok">Ikon</text>
+        <originalText xml:lang="en">Icon</originalText>
+        
+      </promptItem>
+      <promptItem id="menu">
+        <text id="_id58815" status="ok">Menu</text>
+        <originalText xml:lang="en">Menu</originalText>
+        
+      </promptItem>
+      <promptItem id="followedBy">
+        <note xml:lang="en">This is used in the context of a sequence of key presses, as in "Press Alt + V, followed by S"</note>
+        <text id="_id58836" status="ok">diikuti oleh</text>
+        <originalText xml:lang="en">followed by</originalText>
+        
+      </promptItem>
+      <promptItem id="submenu">
+        <text id="_id58853" status="ok">Sub Menu</text>
+        <originalText xml:lang="en">Submenu</originalText>
+      </promptItem>
+    </promptItemRefs>
+    <generalPrompts>
+      <prompt id="dialogClosed">
+        <promptItem>
+          <text id="_id58870" status="ok">Dialog ditutup</text>
+          <originalText xml:lang="en">Dialog closed.</originalText>
+          
+        </promptItem>
+      </prompt>
+      <prompt id="textFieldEntry">
+        <promptItem>
+          <text id="_id58890" status="ok">Wilayah teks yang dimasukkan adalah:</text>
+          <originalText xml:lang="en">Text field entry is:</originalText>
+          
+        </promptItem>
+        <promptVar name="TEXT_FIELD"/>
+      </prompt>
+      <prompt id="notSelfVoicing">
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+      </prompt>
+      <prompt id="bookAtPathChanged">
+        <promptItem>
+          <text id="_id58925" status="ok">Lokasi buku yang anda cari telah berubah. Buku yang berbeda telah menggantikannya. Apakah ini CD ROM anda telah berubah?</text>
+          <originalText xml:lang="en">The location of the book you are looking for has changed.  A different book was found instead.  Did the contents of your CD-ROM drive change?</originalText>
+          
+        </promptItem>
+      </prompt>
+      <prompt id="generalBookError">
+        <promptItem>
+          <text id="_id58949" status="ok">Sebuah kesalahan terjadi ketika ingin membuka buku</text>
+          <originalText xml:lang="en">An error occurred while trying to open the book.</originalText>
+          
+        </promptItem>
+        <promptVar name="BOOK_PATH"/>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+      <prompt id="noCdLoaded">
+        <promptItem>
+          <text id="_id58979" status="ok">Tidak ada CD di dalam CD ROM anda</text>
+          <originalText xml:lang="en">There is not a CD in the CD-ROM drive.</originalText>
+          
+        </promptItem>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+      <prompt id="pluginErrorInit">
+        <promptItem>
+          <text id="_id59004" status="ok">Kesalahan Perangkat Tambahan: Fungsi init() tidak ditemukan di berkas DLL perangkat tambahan</text>
+          <originalText xml:lang="en">Plug-in error: init() function not found in the plug-in DLL.</originalText>
+          
+        </promptItem>
+      </prompt>
+      <prompt id="pluginErrorDll">
+        <promptItem>
+          <text id="_id59025" status="ok">Kesalahan Perangkat Tambahan: Perangkat Tambahan berikut ini tidak dapat dimuat:</text>
+          <originalText xml:lang="en">Plug-in error: The following plug-in library could not be loaded: </originalText>
+          
+        </promptItem>
+        <promptVar name="PLUGIN_LIB"/>
+      </prompt>
+      <prompt id="basicViewPrompt">
+        <promptItem>
+          <text id="_id59052" status="ok">Anda sekarang menggunakan mode tilik dasar. tekan F11 untuk kembali ke mode tilik asli</text>
+          <originalText xml:lang="en">You are now using the basic view mode.  Press F11 to switch back to the default view mode.</originalText>
+          
+        </promptItem>
+      </prompt>
+      <prompt id="OpenFile_notSelfVoicing">
+        <promptItem>
+          <text id="_id59074" status="ok">Buka Dialog Berkas</text>
+          <originalText xml:lang="en">Open File Dialog</originalText>
+          
+        </promptItem>
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem>
+          <text id="_id59094" status="ok">Gunakan fitur "Pencarian Buku" dibawah menu berkas untuk mencari buku DAISY di cakram padat anda</text>
+          <originalText xml:lang="en">Use the "search for books" feature, under the file menu, to find DAISY books on your hard drive.</originalText>
+          
+        </promptItem>
+        <promptItem refid="escapeToCancel"/>
+      </prompt>
+      <prompt id="BrowseForFolder_notSelfVoicing">
+        <promptItem>
+          <text id="_id59121" status="ok">Jelajah untuk dialog folder</text>
+          <originalText xml:lang="en">Browse for folder dialog</originalText>
+          
+        </promptItem>
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem refid="escapeToCancel"/>
+        <promptItem>
+          <text id="_id59145" status="ok">Lalu ketik alamat folder yang anda inginkan di kotak teks</text>
+          <originalText xml:lang="en">Then, type the path of the folder you want in the text box.</originalText>
+          
+        </promptItem>
+      </prompt>
+      <prompt id="canceled">
+        <promptItem>
+          <text id="_id59166" status="ok">Dibatalkan</text>
+          <originalText xml:lang="en">Canceled</originalText>
+          
+        </promptItem>
+      </prompt>
+      <prompt id="loading">
+        <promptItem>
+          <text id="_id59186" status="ok">Memuat</text>
+          <originalText xml:lang="en">Loading</originalText>
+          
+        </promptItem>
+      </prompt>
+      <prompt id="restartForChanges">
+        <promptItem>
+          <text id="_id59206" status="ok">Silakan jalankan kembali untuk melihat bagian yang diubah</text>
+          <originalText xml:lang="en">Please restart to see your changes.</originalText>
+          
+        </promptItem>
+      </prompt>
+      <prompt id="noBooksFoundOnCd">
+        <promptItem>
+          <text id="_id59227" status="ok">Tidak ada buku DAISY di CD ROM ini</text>
+          <originalText xml:lang="en">No DAISY books were found on this CD-ROM.</originalText>
+          
+        </promptItem>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+    </generalPrompts>
+  </prompts>
+</ui>

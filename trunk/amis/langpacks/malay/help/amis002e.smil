@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Pergi Ke Halaman" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:20" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="19.774s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_002e" id="amis_002e" />
+<seq>
+<audio src="45_Pergi_Ke_Halaman.mp3" clip-begin="npt=0.000s" clip-end="npt=0.444s" id="qwrt_0001" />
+<audio src="45_Pergi_Ke_Halaman.mp3" clip-begin="npt=0.444s" clip-end="npt=1.985s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0081" id="xami_0081" />
+<seq>
+<audio src="45_Pergi_Ke_Halaman.mp3" clip-begin="npt=1.985s" clip-end="npt=2.664s" id="qwrt_0003" />
+<audio src="45_Pergi_Ke_Halaman.mp3" clip-begin="npt=2.664s" clip-end="npt=5.120s" id="qwrt_0004" />
+<audio src="45_Pergi_Ke_Halaman.mp3" clip-begin="npt=5.120s" clip-end="npt=9.978s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0082" id="xami_0082" />
+<seq>
+<audio src="45_Pergi_Ke_Halaman.mp3" clip-begin="npt=9.978s" clip-end="npt=10.618s" id="qwrt_0006" />
+<audio src="45_Pergi_Ke_Halaman.mp3" clip-begin="npt=10.618s" clip-end="npt=12.943s" id="qwrt_0007" />
+<audio src="45_Pergi_Ke_Halaman.mp3" clip-begin="npt=12.943s" clip-end="npt=14.576s" id="qwrt_0008" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0083" id="xami_0083" />
+<seq>
+<audio src="45_Pergi_Ke_Halaman.mp3" clip-begin="npt=14.576s" clip-end="npt=15.216s" id="qwrt_0009" />
+<audio src="45_Pergi_Ke_Halaman.mp3" clip-begin="npt=15.216s" clip-end="npt=16.470s" id="qwrt_000A" />
+<audio src="45_Pergi_Ke_Halaman.mp3" clip-begin="npt=16.470s" clip-end="npt=17.920s" id="qwrt_000B" />
+<audio src="45_Pergi_Ke_Halaman.mp3" clip-begin="npt=17.920s" clip-end="npt=19.774s" id="qwrt_000C" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

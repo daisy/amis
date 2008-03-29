@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+    <head>    
+    <meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+    <meta name="dc:format" content="Daisy 2.02" />
+    <meta name="title" content="&#25773;&#25918;&#21644;&#26242;&#20572;" />
+    <meta name="dc:title" content="AMIS Help" />
+    <meta name="ncc:timeInThisSmil" content="0:00:22" />
+    <layout>
+        <region id="txtView" />
+    </layout>
+    </head>
+    <body>
+<seq dur="22.361s">
+    <par endsync="last">
+        <text src="amishelpfile-entity.html#amis_0020" id="amis_0020" />
+        <seq>
+            <audio src="amis0126.mp3" clip-begin="npt=0.000s" clip-end="npt=1.750s" id="qwrt_0001" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelpfile-entity.html#xami_0052" id="xami_0052" />
+        <seq>
+            <audio src="amis0126.mp3" clip-begin="npt=1.750s" clip-end="npt=7.301s" id="qwrt_0002" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelpfile-entity.html#xami_0053" id="xami_0053" />
+        <seq>
+            <audio src="amis0126.mp3" clip-begin="npt=7.301s" clip-end="npt=11.194s" id="qwrt_0003" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelpfile-entity.html#xami_0054" id="xami_0054" />
+        <seq>
+            <audio src="amis0126.mp3" clip-begin="npt=11.194s" clip-end="npt=12.383s" id="qwrt_0004" />
+            <audio src="amis0126.mp3" clip-begin="npt=12.383s" clip-end="npt=14.890s" id="qwrt_0005" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelpfile-entity.html#xami_0055" id="xami_0055" />
+        <seq>
+            <audio src="amis0126.mp3" clip-begin="npt=14.890s" clip-end="npt=15.922s" id="qwrt_0006" />
+            <audio src="amis0126.mp3" clip-begin="npt=15.922s" clip-end="npt=19.004s" id="qwrt_0007" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelpfile-entity.html#xami_0056" id="xami_0056" />
+        <seq>
+            <audio src="amis0126.mp3" clip-begin="npt=19.004s" clip-end="npt=22.361s" id="qwrt_0008" />
+        </seq>
+    </par>
+</seq>
+</body>
+</smil>

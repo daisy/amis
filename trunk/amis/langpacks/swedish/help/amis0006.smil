@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+    <meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+    <meta name="dc:format" content="Daisy 2.02" />
+    <meta name="title" content="När du läser en bok" />
+    <meta name="dc:title" content="AMIS Help" />
+    <meta name="ncc:timeInThisSmil" content="0:01:09" />
+    <layout>
+        <region id="txtView" />
+    </layout>
+</head>
+<body>
+<seq dur="69.361s">
+    <par endsync="last">
+        <text src="amishelp.html#amis_0006" id="amis_0006" />
+        <seq>
+            <audio src="05_nr_du_lser_en_bok.mp3" clip-begin="npt=0.000s" clip-end="npt=0.457s" id="qwrt_0001" />
+            <audio src="05_nr_du_lser_en_bok.mp3" clip-begin="npt=0.457s" clip-end="npt=2.199s" id="qwrt_0002" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_000e" id="xami_000e" />
+        <seq>
+            <audio src="05_nr_du_lser_en_bok.mp3" clip-begin="npt=2.199s" clip-end="npt=3.096s" id="qwrt_0003" />
+            <audio src="05_nr_du_lser_en_bok.mp3" clip-begin="npt=3.096s" clip-end="npt=8.199s" id="qwrt_0004" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_000f" id="xami_000f" />
+        <seq>
+            <audio src="05_nr_du_lser_en_bok.mp3" clip-begin="npt=8.199s" clip-end="npt=9.468s" id="qwrt_0005" />
+            <audio src="05_nr_du_lser_en_bok.mp3" clip-begin="npt=9.468s" clip-end="npt=16.199s" id="qwrt_0006" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_0010" id="xami_0010" />
+        <seq>
+            <audio src="05_nr_du_lser_en_bok.mp3" clip-begin="npt=16.199s" clip-end="npt=22.502s" id="qwrt_0007" />
+            <audio src="05_nr_du_lser_en_bok.mp3" clip-begin="npt=22.502s" clip-end="npt=23.771s" id="qwrt_0008" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_0011" id="xami_0011" />
+        <seq>
+            <audio src="05_nr_du_lser_en_bok.mp3" clip-begin="npt=23.771s" clip-end="npt=24.900s" id="qwrt_0009" />
+            <audio src="05_nr_du_lser_en_bok.mp3" clip-begin="npt=24.900s" clip-end="npt=37.371s" id="qwrt_000A" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_0012" id="xami_0012" />
+        <seq>
+            <audio src="05_nr_du_lser_en_bok.mp3" clip-begin="npt=37.371s" clip-end="npt=38.641s" id="qwrt_000B" />
+            <audio src="05_nr_du_lser_en_bok.mp3" clip-begin="npt=38.641s" clip-end="npt=43.970s" id="qwrt_000C" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_0013" id="xami_0013" />
+        <seq>
+            <audio src="05_nr_du_lser_en_bok.mp3" clip-begin="npt=43.970s" clip-end="npt=45.066s" id="qwrt_000D" />
+            <audio src="05_nr_du_lser_en_bok.mp3" clip-begin="npt=45.066s" clip-end="npt=48.771s" id="qwrt_000E" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_0014" id="xami_0014" />
+        <seq>
+            <audio src="05_nr_du_lser_en_bok.mp3" clip-begin="npt=48.771s" clip-end="npt=50.042s" id="qwrt_000F" />
+            <audio src="05_nr_du_lser_en_bok.mp3" clip-begin="npt=50.042s" clip-end="npt=54.371s" id="qwrt_0010" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_0015" id="xami_0015" />
+        <seq>
+            <audio src="05_nr_du_lser_en_bok.mp3" clip-begin="npt=54.371s" clip-end="npt=55.737s" id="qwrt_0011" />
+            <audio src="05_nr_du_lser_en_bok.mp3" clip-begin="npt=55.737s" clip-end="npt=61.569s" id="qwrt_0012" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_0016" id="xami_0016" />
+        <seq>
+            <audio src="05_nr_du_lser_en_bok.mp3" clip-begin="npt=61.569s" clip-end="npt=62.880s" id="qwrt_0013" />
+            <audio src="05_nr_du_lser_en_bok.mp3" clip-begin="npt=62.880s" clip-end="npt=69.361s" id="qwrt_0014" />
+        </seq>
+    </par>
+</seq>
+</body>
+</smil>

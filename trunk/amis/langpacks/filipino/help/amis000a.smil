@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Magbukas ng Talaksan" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:24" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="24.428s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_000a" id="amis_000a" />
+<seq>
+<audio src="09_Magbukas_ng_Talaksan.mp3" clip-begin="npt=0.000s" clip-end="npt=1.748s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_001b" id="xami_001b" />
+<seq>
+<audio src="09_Magbukas_ng_Talaksan.mp3" clip-begin="npt=1.748s" clip-end="npt=13.363s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_001c" id="xami_001c" />
+<seq>
+<audio src="09_Magbukas_ng_Talaksan.mp3" clip-begin="npt=13.363s" clip-end="npt=14.759s" id="qwrt_0003" />
+<audio src="09_Magbukas_ng_Talaksan.mp3" clip-begin="npt=14.759s" clip-end="npt=17.137s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_001d" id="xami_001d" />
+<seq>
+<audio src="09_Magbukas_ng_Talaksan.mp3" clip-begin="npt=17.137s" clip-end="npt=20.669s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_001e" id="xami_001e" />
+<seq>
+<audio src="09_Magbukas_ng_Talaksan.mp3" clip-begin="npt=20.669s" clip-end="npt=24.428s" id="qwrt_0006" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

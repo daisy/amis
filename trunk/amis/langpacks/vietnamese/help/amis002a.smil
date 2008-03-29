@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.7" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="C&#7909;m t&#7915; ti&#7871;p" />
+<meta name="dc:title" content="AMIS Version 2.0 Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:21" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="20.989s">
+<par endsync="last">
+<text src="amishelp-entity.html#amis_002a" id="amis_002a" />
+<seq>
+<audio src="41_Cm_t_tip.mp2" clip-begin="npt=0.000s" clip-end="npt=0.999s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0071" id="xami_0071" />
+<seq>
+<audio src="41_Cm_t_tip.mp2" clip-begin="npt=0.999s" clip-end="npt=1.528s" id="qwrt_0002" />
+<audio src="41_Cm_t_tip.mp2" clip-begin="npt=1.528s" clip-end="npt=7.223s" id="qwrt_0003" />
+<audio src="41_Cm_t_tip.mp2" clip-begin="npt=7.223s" clip-end="npt=9.199s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0072" id="xami_0072" />
+<seq>
+<audio src="41_Cm_t_tip.mp2" clip-begin="npt=9.199s" clip-end="npt=13.799s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0073" id="xami_0073" />
+<seq>
+<audio src="41_Cm_t_tip.mp2" clip-begin="npt=13.799s" clip-end="npt=14.119s" id="qwrt_0006" />
+<audio src="41_Cm_t_tip.mp2" clip-begin="npt=14.119s" clip-end="npt=15.621s" id="qwrt_0007" />
+<audio src="41_Cm_t_tip.mp2" clip-begin="npt=15.621s" clip-end="npt=16.849s" id="qwrt_0008" />
+<audio src="41_Cm_t_tip.mp2" clip-begin="npt=16.849s" clip-end="npt=17.799s" id="qwrt_0009" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0074" id="xami_0074" />
+<seq>
+<audio src="41_Cm_t_tip.mp2" clip-begin="npt=17.799s" clip-end="npt=17.985s" id="qwrt_000A" />
+<audio src="41_Cm_t_tip.mp2" clip-begin="npt=17.985s" clip-end="npt=20.989s" id="qwrt_000B" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

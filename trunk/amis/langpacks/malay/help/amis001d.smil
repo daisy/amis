@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Besarkan Saiz Fon" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:23" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="22.974s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_001d" id="amis_001d" />
+<seq>
+<audio src="28_Besarkan_Saiz_Fon.mp3" clip-begin="npt=0.000s" clip-end="npt=0.875s" id="qwrt_0001" />
+<audio src="28_Besarkan_Saiz_Fon.mp3" clip-begin="npt=0.875s" clip-end="npt=2.795s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_004b" id="xami_004b" />
+<seq>
+<audio src="28_Besarkan_Saiz_Fon.mp3" clip-begin="npt=2.795s" clip-end="npt=3.513s" id="qwrt_0003" />
+<audio src="28_Besarkan_Saiz_Fon.mp3" clip-begin="npt=3.513s" clip-end="npt=8.790s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_004c" id="xami_004c" />
+<seq>
+<audio src="28_Besarkan_Saiz_Fon.mp3" clip-begin="npt=8.790s" clip-end="npt=11.389s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_004d" id="xami_004d" />
+<seq>
+<audio src="28_Besarkan_Saiz_Fon.mp3" clip-begin="npt=11.389s" clip-end="npt=11.911s" id="qwrt_0006" />
+<audio src="28_Besarkan_Saiz_Fon.mp3" clip-begin="npt=11.911s" clip-end="npt=14.432s" id="qwrt_0007" />
+<audio src="28_Besarkan_Saiz_Fon.mp3" clip-begin="npt=14.432s" clip-end="npt=16.039s" id="qwrt_0008" />
+<audio src="28_Besarkan_Saiz_Fon.mp3" clip-begin="npt=16.039s" clip-end="npt=17.985s" id="qwrt_0009" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_004e" id="xami_004e" />
+<seq>
+<audio src="28_Besarkan_Saiz_Fon.mp3" clip-begin="npt=17.985s" clip-end="npt=18.338s" id="qwrt_000A" />
+<audio src="28_Besarkan_Saiz_Fon.mp3" clip-begin="npt=18.338s" clip-end="npt=19.827s" id="qwrt_000B" />
+<audio src="28_Besarkan_Saiz_Fon.mp3" clip-begin="npt=19.827s" clip-end="npt=21.472s" id="qwrt_000C" />
+<audio src="28_Besarkan_Saiz_Fon.mp3" clip-begin="npt=21.472s" clip-end="npt=22.974s" id="qwrt_000D" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Tilik Dasar" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:15" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="15.358s">
+<par endsync="last">
+<text src="amishelp.html#amis_0014" id="amis_0014" />
+<seq>
+<audio src="19_Tilik_Dasar.mp3" clip-begin="npt=0.000s" clip-end="npt=1.448s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_005f" id="xami_005f" />
+<seq>
+<audio src="19_Tilik_Dasar.mp3" clip-begin="npt=1.448s" clip-end="npt=4.014s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0060" id="xami_0060" />
+<seq>
+<audio src="19_Tilik_Dasar.mp3" clip-begin="npt=4.014s" clip-end="npt=8.459s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0061" id="xami_0061" />
+<seq>
+<audio src="19_Tilik_Dasar.mp3" clip-begin="npt=8.459s" clip-end="npt=11.249s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0062" id="xami_0062" />
+<seq>
+<audio src="19_Tilik_Dasar.mp3" clip-begin="npt=11.249s" clip-end="npt=15.358s" id="qwrt_0005" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

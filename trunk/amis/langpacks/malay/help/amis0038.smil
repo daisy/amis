@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Pemalam" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:41" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="40.829s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_0038" id="amis_0038" />
+<seq>
+<audio src="55_Pemalam.mp3" clip-begin="npt=0.000s" clip-end="npt=1.724s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0097" id="xami_0097" />
+<seq>
+<audio src="55_Pemalam.mp3" clip-begin="npt=1.724s" clip-end="npt=2.168s" id="qwrt_0002" />
+<audio src="55_Pemalam.mp3" clip-begin="npt=2.168s" clip-end="npt=4.036s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0098" id="xami_0098" />
+<seq>
+<audio src="55_Pemalam.mp3" clip-begin="npt=4.036s" clip-end="npt=4.702s" id="qwrt_0004" />
+<audio src="55_Pemalam.mp3" clip-begin="npt=4.702s" clip-end="npt=7.484s" id="qwrt_0005" />
+<audio src="55_Pemalam.mp3" clip-begin="npt=7.484s" clip-end="npt=10.083s" id="qwrt_0006" />
+<audio src="55_Pemalam.mp3" clip-begin="npt=10.083s" clip-end="npt=14.498s" id="qwrt_0007" />
+<audio src="55_Pemalam.mp3" clip-begin="npt=14.498s" clip-end="npt=18.077s" id="qwrt_0008" />
+<audio src="55_Pemalam.mp3" clip-begin="npt=18.077s" clip-end="npt=22.283s" id="qwrt_0009" />
+<audio src="55_Pemalam.mp3" clip-begin="npt=22.283s" clip-end="npt=26.684s" id="qwrt_000A" />
+<audio src="55_Pemalam.mp3" clip-begin="npt=26.684s" clip-end="npt=27.938s" id="qwrt_000B" />
+<audio src="55_Pemalam.mp3" clip-begin="npt=27.938s" clip-end="npt=29.479s" id="qwrt_000C" />
+<audio src="55_Pemalam.mp3" clip-begin="npt=29.479s" clip-end="npt=32.523s" id="qwrt_000D" />
+<audio src="55_Pemalam.mp3" clip-begin="npt=32.523s" clip-end="npt=36.389s" id="qwrt_000E" />
+<audio src="55_Pemalam.mp3" clip-begin="npt=36.389s" clip-end="npt=38.074s" id="qwrt_000F" />
+<audio src="55_Pemalam.mp3" clip-begin="npt=38.074s" clip-end="npt=40.829s" id="qwrt_0010" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="&#3585;&#3634;&#3619;&#3648;&#3611;&#3636;&#3604;&#3627;&#3609;&#3633;&#3591;&#3626;&#3639;&#3629; DAISY (DAISY Book)" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:04" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="4.334s">
+<par endsync="last">
+<text src="amishelpfile-entity.html#amis_0009" id="amis_0009" />
+<seq>
+<audio src="08__DAISY_DAISY_Book.mp3" clip-begin="npt=0.000s" clip-end="npt=4.334s" id="qwrt_0001" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

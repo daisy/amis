@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Memilih sesuatu dari list buku yang baru saja dibuka" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:15" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="14.825s">
+<par endsync="last">
+<text src="amishelp.html#amis_000d" id="amis_000d" />
+<seq>
+<audio src="12_Memilih_sesuatu_dari_list_buku.mp3" clip-begin="npt=0.000s" clip-end="npt=3.536s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0047" id="xami_0047" />
+<seq>
+<audio src="12_Memilih_sesuatu_dari_list_buku.mp3" clip-begin="npt=3.536s" clip-end="npt=9.118s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0048" id="xami_0048" />
+<seq>
+<audio src="12_Memilih_sesuatu_dari_list_buku.mp3" clip-begin="npt=9.118s" clip-end="npt=12.264s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0049" id="xami_0049" />
+<seq>
+<audio src="12_Memilih_sesuatu_dari_list_buku.mp3" clip-begin="npt=12.264s" clip-end="npt=14.825s" id="qwrt_0004" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

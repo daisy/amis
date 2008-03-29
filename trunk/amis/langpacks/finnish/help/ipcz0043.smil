@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="ncc:timeInThisSmil" content="00:00:21.289"/>
+		<meta name="ncc:totalElapsedTime" content="00:13:28.722"/>
+		<layout>
+			<region id="txt-view"/>
+		</layout>
+		<meta name="ncc:generator" content="EasePublisher 2.02 Build 025 # 091650"/>
+        <meta name="title" content="Seuraava sivu"/>
+        <meta name="dc:title" content="help"/>
+        <meta name="dc:identifier" content="celia"/>
+    </head>
+	<body>
+		<seq dur="21.289s">
+			<par endsync="last" id="ifbo_0002">
+				<text src="amishelp.html#ifbo_0178" id="whll_0001"/>
+				<seq>
+					<audio src="43_Seuraava_sivu.mp3" clip-begin="npt=0.000s" clip-end="npt=2.219s" id="audio_0001"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0003">
+				<text src="amishelp.html#ifbo_0179" id="whll_0002"/>
+				<seq>
+					<audio src="43_Seuraava_sivu.mp3" clip-begin="npt=2.219s" clip-end="npt=7.499s" id="audio_0002"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0004">
+				<text src="amishelp.html#ifbo_0180" id="whll_0003"/>
+				<seq>
+					<audio src="43_Seuraava_sivu.mp3" clip-begin="npt=7.499s" clip-end="npt=13.019s" id="audio_0003"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0005">
+				<text src="amishelp.html#ifbo_0181" id="whll_0004"/>
+				<seq>
+					<audio src="43_Seuraava_sivu.mp3" clip-begin="npt=13.019s" clip-end="npt=17.219s" id="audio_0004"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0006">
+				<text src="amishelp.html#ifbo_0182" id="whll_0005"/>
+				<seq>
+					<audio src="43_Seuraava_sivu.mp3" clip-begin="npt=17.219s" clip-end="npt=21.289s" id="audio_0005"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

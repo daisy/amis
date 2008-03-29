@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="ncc:timeInThisSmil" content="00:00:21.347"/>
+		<meta name="ncc:totalElapsedTime" content="00:06:17.934"/>
+		<layout>
+			<region id="txt-view"/>
+		</layout>
+		<meta name="ncc:generator" content="EasePublisher 2.02 Build 025 # 089113"/>
+        <meta name="title" content="Standard"/>
+        <meta name="dc:title" content="AMIS hjelp"/>
+        <meta name="dc:identifier" content="AMIS_hjelp"/>
+    </head>
+	<body>
+		<seq dur="21.347s">
+			<par endsync="last" id="nwcb_0002">
+				<text src="amishelp.html#nwcb_0110" id="nwcb_0009"/>
+				<seq>
+					<audio src="18_Standard.mp3" clip-begin="npt=0.000s" clip-end="npt=1.619s" id="audio_0001"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0003">
+				<text src="amishelp.html#nwcb_0111" id="nwcb_000a"/>
+				<seq>
+					<audio src="18_Standard.mp3" clip-begin="npt=1.619s" clip-end="npt=2.646s" id="audio_0002"/>
+					<audio src="18_Standard.mp3" clip-begin="npt=2.646s" clip-end="npt=4.500s" id="audio_0003"/>
+					<audio src="18_Standard.mp3" clip-begin="npt=4.500s" clip-end="npt=5.879s" id="audio_0004"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0004">
+				<text src="amishelp.html#nwcb_0112" id="nwcb_000b"/>
+				<seq>
+					<audio src="18_Standard.mp3" clip-begin="npt=5.879s" clip-end="npt=7.019s" id="audio_0005"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0005">
+				<text src="amishelp.html#nwcb_0113" id="nwcb_000c"/>
+				<seq>
+					<audio src="18_Standard.mp3" clip-begin="npt=7.019s" clip-end="npt=12.119s" id="audio_0006"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0006">
+				<text src="amishelp.html#nwcb_0114" id="nwcb_000d"/>
+				<seq>
+					<audio src="18_Standard.mp3" clip-begin="npt=12.119s" clip-end="npt=16.739s" id="audio_0007"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0007">
+				<text src="amishelp.html#nwcb_0115" id="nwcb_000e"/>
+				<seq>
+					<audio src="18_Standard.mp3" clip-begin="npt=16.739s" clip-end="npt=18.000s" id="audio_0008"/>
+					<audio src="18_Standard.mp3" clip-begin="npt=18.000s" clip-end="npt=19.318s" id="audio_0009"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0008">
+				<text src="amishelp.html#nwcb_0116" id="nwcb_000f"/>
+				<seq>
+					<audio src="18_Standard.mp3" clip-begin="npt=19.318s" clip-end="npt=21.347s" id="audio_0010"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

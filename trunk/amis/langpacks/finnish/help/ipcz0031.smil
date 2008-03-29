@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="ncc:timeInThisSmil" content="00:00:26.672"/>
+		<meta name="ncc:totalElapsedTime" content="00:09:59.901"/>
+		<layout>
+			<region id="txt-view"/>
+		</layout>
+		<meta name="ncc:generator" content="EasePublisher 2.02 Build 025 # 091650"/>
+        <meta name="title" content="Toisto ja keskeytys"/>
+        <meta name="dc:title" content="help"/>
+        <meta name="dc:identifier" content="celia"/>
+    </head>
+	<body>
+		<seq dur="26.672s">
+			<par endsync="last" id="ifbo_0002">
+				<text src="amishelp.html#ifbo_0126" id="paqu_0001"/>
+				<seq>
+					<audio src="31_Toisto_ja_kes.mp3" clip-begin="npt=0.000s" clip-end="npt=2.819s" id="audio_0001"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0003">
+				<text src="amishelp.html#ifbo_0127" id="paqu_0002"/>
+				<seq>
+					<audio src="31_Toisto_ja_kes.mp3" clip-begin="npt=2.819s" clip-end="npt=9.599s" id="audio_0002"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0004">
+				<text src="amishelp.html#ifbo_0128" id="paqu_0003"/>
+				<seq>
+					<audio src="31_Toisto_ja_kes.mp3" clip-begin="npt=9.599s" clip-end="npt=15.041s" id="audio_0003"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0005">
+				<text src="amishelp.html#ifbo_0129" id="paqu_0004"/>
+				<seq>
+					<audio src="31_Toisto_ja_kes.mp3" clip-begin="npt=15.041s" clip-end="npt=19.774s" id="audio_0004"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0006">
+				<text src="amishelp.html#ifbo_0130" id="paqu_0005"/>
+				<seq>
+					<audio src="31_Toisto_ja_kes.mp3" clip-begin="npt=19.774s" clip-end="npt=23.254s" id="audio_0005"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0007">
+				<text src="amishelp.html#ifbo_0131" id="paqu_0006"/>
+				<seq>
+					<audio src="31_Toisto_ja_kes.mp3" clip-begin="npt=23.254s" clip-end="npt=26.672s" id="audio_0006"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

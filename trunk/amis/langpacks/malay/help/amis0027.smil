@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Seksyen Berikut" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:15" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="14.772s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_0027" id="amis_0027" />
+<seq>
+<audio src="38_Seksyen_Berikut.mp3" clip-begin="npt=0.000s" clip-end="npt=0.353s" id="qwrt_0001" />
+<audio src="38_Seksyen_Berikut.mp3" clip-begin="npt=0.353s" clip-end="npt=2.795s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0067" id="xami_0067" />
+<seq>
+<audio src="38_Seksyen_Berikut.mp3" clip-begin="npt=2.795s" clip-end="npt=3.239s" id="qwrt_0003" />
+<audio src="38_Seksyen_Berikut.mp3" clip-begin="npt=3.239s" clip-end="npt=5.185s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0068" id="xami_0068" />
+<seq>
+<audio src="38_Seksyen_Berikut.mp3" clip-begin="npt=5.185s" clip-end="npt=5.760s" id="qwrt_0005" />
+<audio src="38_Seksyen_Berikut.mp3" clip-begin="npt=5.760s" clip-end="npt=8.150s" id="qwrt_0006" />
+<audio src="38_Seksyen_Berikut.mp3" clip-begin="npt=8.150s" clip-end="npt=9.783s" id="qwrt_0007" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0069" id="xami_0069" />
+<seq>
+<audio src="38_Seksyen_Berikut.mp3" clip-begin="npt=9.783s" clip-end="npt=11.141s" id="qwrt_0008" />
+<audio src="38_Seksyen_Berikut.mp3" clip-begin="npt=11.141s" clip-end="npt=12.630s" id="qwrt_0009" />
+<audio src="38_Seksyen_Berikut.mp3" clip-begin="npt=12.630s" clip-end="npt=14.772s" id="qwrt_000A" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

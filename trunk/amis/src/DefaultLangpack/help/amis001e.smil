@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Reset Font Size" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:12" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="12.428s">
+<par endsync="last">
+<text src="amishelp.html#amis_001e" id="amis_001e" />
+<seq>
+<audio src="29_Reset_Font_Size.mp3" clip-begin="npt=0.000s" clip-end="npt=1.792s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_004f" id="xami_004f" />
+<seq>
+<audio src="29_Reset_Font_Size.mp3" clip-begin="npt=1.792s" clip-end="npt=5.208s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0050" id="xami_0050" />
+<seq>
+<audio src="29_Reset_Font_Size.mp3" clip-begin="npt=5.208s" clip-end="npt=9.090s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0051" id="xami_0051" />
+<seq>
+<audio src="29_Reset_Font_Size.mp3" clip-begin="npt=9.090s" clip-end="npt=12.428s" id="qwrt_0004" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

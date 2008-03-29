@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="ncc:timeInThisSmil" content="00:00:13.976"/>
+		<meta name="ncc:totalElapsedTime" content="00:03:51.590"/>
+		<layout>
+			<region id="txt-view"/>
+		</layout>
+		<meta name="ncc:generator" content="EasePublisher 2.02 Build 025 # 091650"/>
+        <meta name="title" content="Lataa CD-ROM"/>
+        <meta name="dc:title" content="help"/>
+        <meta name="dc:identifier" content="celia"/>
+    </head>
+	<body>
+		<seq dur="13.976s">
+			<par endsync="last" id="ifbo_0002">
+				<text src="amishelp.html#ifbo_0043" id="wsti_0001"/>
+				<seq>
+					<audio src="10_Lataa_CD_ROM.mp3" clip-begin="npt=0.000s" clip-end="npt=2.459s" id="audio_0001"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0003">
+				<text src="amishelp.html#ifbo_0044" id="wsti_0002"/>
+				<seq>
+					<audio src="10_Lataa_CD_ROM.mp3" clip-begin="npt=2.459s" clip-end="npt=5.459s" id="audio_0002"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0004">
+				<text src="amishelp.html#ifbo_0045" id="wsti_0003"/>
+				<seq>
+					<audio src="10_Lataa_CD_ROM.mp3" clip-begin="npt=5.459s" clip-end="npt=8.999s" id="audio_0003"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0005">
+				<text src="amishelp.html#ifbo_0046" id="wsti_0004"/>
+				<seq>
+					<audio src="10_Lataa_CD_ROM.mp3" clip-begin="npt=8.999s" clip-end="npt=13.976s" id="audio_0004"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

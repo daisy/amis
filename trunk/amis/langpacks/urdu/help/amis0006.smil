@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="&#1705;&#1578;&#1575;&#1576; &#1587;&#1606;&#1606;&#1746; &#1705;&#1746; &#1583;&#1608;&#1585;&#1575;&#1606; &#1605;&#1583;&#1583; &#1581;&#1575;&#1589;&#1604; &#1705;&#1585;&#1606;&#1575;" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:01:31" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="90.717s">
+<par endsync="last">
+<text src="amishelp-entity.html#amis_0006" id="amis_0006" />
+<seq>
+<audio src="05_______.mp3" clip-begin="npt=0.000s" clip-end="npt=2.504s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_000e" id="xami_000e" />
+<seq>
+<audio src="05_______.mp3" clip-begin="npt=2.504s" clip-end="npt=3.987s" id="qwrt_0002" />
+<audio src="05_______.mp3" clip-begin="npt=3.987s" clip-end="npt=5.189s" id="qwrt_0003" />
+<audio src="05_______.mp3" clip-begin="npt=5.189s" clip-end="npt=7.138s" id="qwrt_0004" />
+<audio src="05_______.mp3" clip-begin="npt=7.138s" clip-end="npt=8.313s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_000f" id="xami_000f" />
+<seq>
+<audio src="05_______.mp3" clip-begin="npt=8.313s" clip-end="npt=11.395s" id="qwrt_0006" />
+<audio src="05_______.mp3" clip-begin="npt=11.395s" clip-end="npt=17.913s" id="qwrt_0007" />
+<audio src="05_______.mp3" clip-begin="npt=17.913s" clip-end="npt=18.096s" id="qwrt_0008" />
+<audio src="05_______.mp3" clip-begin="npt=18.096s" clip-end="npt=23.307s" id="qwrt_0009" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0010" id="xami_0010" />
+<seq>
+<audio src="05_______.mp3" clip-begin="npt=23.307s" clip-end="npt=28.571s" id="qwrt_000A" />
+<audio src="05_______.mp3" clip-begin="npt=28.571s" clip-end="npt=31.392s" id="qwrt_000B" />
+<audio src="05_______.mp3" clip-begin="npt=31.392s" clip-end="npt=34.422s" id="qwrt_000C" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0011" id="xami_0011" />
+<seq>
+<audio src="05_______.mp3" clip-begin="npt=34.422s" clip-end="npt=36.146s" id="qwrt_000D" />
+<audio src="05_______.mp3" clip-begin="npt=36.146s" clip-end="npt=37.165s" id="qwrt_000E" />
+<audio src="05_______.mp3" clip-begin="npt=37.165s" clip-end="npt=39.046s" id="qwrt_000F" />
+<audio src="05_______.mp3" clip-begin="npt=39.046s" clip-end="npt=43.186s" id="qwrt_0010" />
+<audio src="05_______.mp3" clip-begin="npt=43.186s" clip-end="npt=50.370s" id="qwrt_0011" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0012" id="xami_0012" />
+<seq>
+<audio src="05_______.mp3" clip-begin="npt=50.370s" clip-end="npt=51.297s" id="qwrt_0012" />
+<audio src="05_______.mp3" clip-begin="npt=51.297s" clip-end="npt=52.303s" id="qwrt_0013" />
+<audio src="05_______.mp3" clip-begin="npt=52.303s" clip-end="npt=56.744s" id="qwrt_0014" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0013" id="xami_0013" />
+<seq>
+<audio src="05_______.mp3" clip-begin="npt=56.744s" clip-end="npt=58.755s" id="qwrt_0015" />
+<audio src="05_______.mp3" clip-begin="npt=58.755s" clip-end="npt=61.524s" id="qwrt_0016" />
+<audio src="05_______.mp3" clip-begin="npt=61.524s" clip-end="npt=63.732s" id="qwrt_0017" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0014" id="xami_0014" />
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0015" id="xami_0015" />
+<seq>
+<audio src="05_______.mp3" clip-begin="npt=63.732s" clip-end="npt=65.704s" id="qwrt_0018" />
+<audio src="05_______.mp3" clip-begin="npt=65.704s" clip-end="npt=68.251s" id="qwrt_0019" />
+<audio src="05_______.mp3" clip-begin="npt=68.251s" clip-end="npt=69.936s" id="qwrt_001A" />
+<audio src="05_______.mp3" clip-begin="npt=69.936s" clip-end="npt=72.287s" id="qwrt_001B" />
+<audio src="05_______.mp3" clip-begin="npt=72.287s" clip-end="npt=76.375s" id="qwrt_001C" />
+<audio src="05_______.mp3" clip-begin="npt=76.375s" clip-end="npt=77.355s" id="qwrt_001D" />
+<audio src="05_______.mp3" clip-begin="npt=77.355s" clip-end="npt=78.060s" id="qwrt_001E" />
+<audio src="05_______.mp3" clip-begin="npt=78.060s" clip-end="npt=79.850s" id="qwrt_001F" />
+<audio src="05_______.mp3" clip-begin="npt=79.850s" clip-end="npt=81.260s" id="qwrt_0020" />
+<audio src="05_______.mp3" clip-begin="npt=81.260s" clip-end="npt=83.925s" id="qwrt_0021" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0016" id="xami_0016" />
+<seq>
+<audio src="05_______.mp3" clip-begin="npt=83.925s" clip-end="npt=85.453s" id="qwrt_0022" />
+<audio src="05_______.mp3" clip-begin="npt=85.453s" clip-end="npt=90.717s" id="qwrt_0023" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

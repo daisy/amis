@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.22" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Reducir velocidad" />
+<meta name="dc:title" content="AMIS Libro de Ayuda" />
+<meta name="ncc:timeInThisSmil" content="0:00:16" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="15.942s">
+<par endsync="last">
+<text src="amis-help-spanish.html#amis_0024" id="amis_0024" />
+<seq>
+<audio src="35_Reducir_velocidad.mp3" clip-begin="npt=0.000s" clip-end="npt=2.098s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_005f" id="xami_005f" />
+<seq>
+<audio src="35_Reducir_velocidad.mp3" clip-begin="npt=2.098s" clip-end="npt=6.116s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0060" id="xami_0060" />
+<seq>
+<audio src="35_Reducir_velocidad.mp3" clip-begin="npt=6.116s" clip-end="npt=7.487s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0061" id="xami_0061" />
+<seq>
+<audio src="35_Reducir_velocidad.mp3" clip-begin="npt=7.487s" clip-end="npt=11.546s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0062" id="xami_0062" />
+<seq>
+<audio src="35_Reducir_velocidad.mp3" clip-begin="npt=11.546s" clip-end="npt=13.067s" id="qwrt_0005" />
+<audio src="35_Reducir_velocidad.mp3" clip-begin="npt=13.067s" clip-end="npt=15.942s" id="qwrt_0006" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

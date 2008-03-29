@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.22" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Reproducir y Pausar" />
+<meta name="dc:title" content="AMIS Libro de Ayuda" />
+<meta name="ncc:timeInThisSmil" content="0:00:20" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="19.606s">
+<par endsync="last">
+<text src="amis-help-spanish.html#amis_0020" id="amis_0020" />
+<seq>
+<audio src="31_Reproducir_y_Pausar.mp3" clip-begin="npt=0.000s" clip-end="npt=2.737s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0052" id="xami_0052" />
+<seq>
+<audio src="31_Reproducir_y_Pausar.mp3" clip-begin="npt=2.737s" clip-end="npt=8.677s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0053" id="xami_0053" />
+<seq>
+<audio src="31_Reproducir_y_Pausar.mp3" clip-begin="npt=8.677s" clip-end="npt=10.155s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0054" id="xami_0054" />
+<seq>
+<audio src="31_Reproducir_y_Pausar.mp3" clip-begin="npt=10.155s" clip-end="npt=12.473s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0055" id="xami_0055" />
+<seq>
+<audio src="31_Reproducir_y_Pausar.mp3" clip-begin="npt=12.473s" clip-end="npt=16.080s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0056" id="xami_0056" />
+<seq>
+<audio src="31_Reproducir_y_Pausar.mp3" clip-begin="npt=16.080s" clip-end="npt=18.523s" id="qwrt_0006" />
+<audio src="31_Reproducir_y_Pausar.mp3" clip-begin="npt=18.523s" clip-end="npt=19.607s" id="qwrt_0007" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

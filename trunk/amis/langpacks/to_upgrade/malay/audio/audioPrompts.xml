@@ -1,0 +1,598 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- edited with XMLSPY v5 rel. 2 U (http://www.xmlspy.com) by Hiroshi Kawamura (Information Center) -->
+<!--the UI knows to voice variables with the correct runtime value-->
+<audioPrompts xmlns="http://amis.sf.net">
+	<!-- 
+PROMPT-PROMPT MENU DAN BAR ALATAN
+-->
+	<!--menu fail-->
+	<prompt name="fileMenu">
+		<audio src="fileMenu.mp3"/>
+	</prompt>
+	<!--menu paparan-->
+	<prompt name="viewMenu">
+		<audio src="viewMenu.mp3"/>
+	</prompt>
+	<!--menu main-->
+	<prompt name="playMenu">
+		<audio src="playMenu.mp3"/>
+	</prompt>
+	<!--menu gerak-->
+	<prompt name="navigateMenu">
+		<audio src="navigateMenu.mp3"/>
+	</prompt>
+	<!--menu tandabuku-->
+	<prompt name="bookmarksMenu">
+		<audio src="bookmarksMenu.mp3"/>
+	</prompt>
+	<!--menu info-->
+	<prompt name="infoMenu">
+		<audio src="infoMenu.mp3"/>
+	</prompt>
+	<!--menu bantuan-->
+	<prompt name="helpMenu">
+		<audio src="helpMenu.mp3"/>
+	</prompt>
+	<!--buka-->
+	<prompt name="open">
+		<audio src="open.mp3"/>
+	</prompt>
+	<!--muat CD-->
+	<prompt name="loadCd">
+		<audio src="loadcd.mp3"/>
+	</prompt>
+	<!--cari-->
+	<prompt name="search">
+		<audio src="search.mp3"/>
+	</prompt>
+	<!--kecenderungan-->
+	<prompt name="preferences">
+		<audio src="preferences.mp3"/>
+	</prompt>
+	<!--ulang-alik bar tepi-->
+	<prompt name="toggleSidebar">
+		<audio src="toggleSidebar.mp3"/>
+	</prompt>
+	<!--Paparan asas-->
+	<prompt name="basicView">
+		<audio src="basicView.mp3"/>
+	</prompt>
+	<!--paparan asal-->
+	<!--*-->
+	<prompt name="defaultView">
+		<audio src="defaultView.mp3"/>
+	</prompt>
+	<!--besarkan saiz font-->
+	<prompt name="largerFont">
+		<audio src="largerFont.mp3"/>
+	</prompt>
+	<!--Tentukan semula saiz font-->
+	<prompt name="resetFont">
+		<audio src="resetFont.mp3"/>
+	</prompt>
+	<!--ulang-alik perbandingan-->
+	<!--*-->
+	<prompt name="toggleContrast">
+		<audio src="toggleContrast.mp3"/>
+	</prompt>
+	<!--main-->
+	<prompt name="play">
+		<audio src="play.mp3"/>
+	</prompt>
+	<!--berhenti sebentar-->
+	<prompt name="pause">
+		<audio src="pause.mp3"/>
+	</prompt>
+	<!--escape-->
+	<prompt name="escape">
+		<audio src="escape.mp3"/>
+	</prompt>
+	<!--lebih laju-->
+	<prompt name="faster">
+		<audio src="faster.mp3"/>
+	</prompt>
+	<!--lebih perlahan-->
+	<prompt name="slower">
+		<audio src="slower.mp3"/>
+	</prompt>
+	<!--kelajuan normal-->
+	<prompt name="normalSpeed">
+		<audio src="normalSpeed.mp3"/>
+	</prompt>
+	<!--bahagian seterusnya-->
+	<prompt name="nextSection">
+		<audio src="nextSection.mp3"/>
+	</prompt>
+	<!--bahagian terdahulu-->
+	<prompt name="prevSection">
+		<audio src="prevSection.mp3"/>
+	</prompt>
+	<!--frasa seterusnya-->
+	<prompt name="nextPhrase">
+		<audio src="nextPhrase.mp3"/>
+	</prompt>
+	<!--frasa terdahulu-->
+	<prompt name="prevPhrase">
+		<audio src="prevPhrase.mp3"/>
+	</prompt>
+	<!--tunjukkan hierarki bahagian-->
+	<prompt name="sectionDepth">
+		<audio src="sectionDepth.mp3"/>
+	</prompt>
+	<!--tambah tandabuku-->
+	<prompt name="addBmk">
+		<audio src="addBmk.mp3"/>
+	</prompt>
+	<!--butiran-butiran yang boleh dilangkah-->
+	<prompt name="skipInfo">
+		<audio src="skipInfo.mp3"/>
+	</prompt>
+	<!--ringkasan penuh-->
+	<prompt name="fullSummary">
+		<audio src="fullSummary.mp3"/>
+	</prompt>
+	<!--kedudukan kini-->
+	<prompt name="currentPosition">
+		<audio src="currentPosition.mp3"/>
+	</prompt>
+	<!--pilihan-pilihan pergerakan-->
+	<prompt name="navOptions">
+		<audio src="navOptions.mp3"/>
+	</prompt>
+	<!--Isi kandungan-->
+	<prompt name="helpContents">
+		<audio src="contents.mp3"/>
+	</prompt>
+	<!--mengenai-->
+	<prompt name="helpAbout">
+		<audio src="aboutAmis.mp3"/>
+	</prompt>
+	<!--keluar-->
+	<prompt name="exit">
+		<audio src="exit.mp3"/>
+	</prompt>
+	<!--besarkan kuat perlahan suara-->
+	<prompt name="volup">
+		<audio src="volup.mp3"/>
+	</prompt>
+	<!--perlahankan kuat perlahan suara-->
+	<prompt name="voldown">
+		<audio src="voldown.mp3"/>
+	</prompt>
+	<!--mukasurat terdahulu-->
+	<prompt name="prevPage">
+		<audio src="prevpage.mp3"/>
+	</prompt>
+	<!--mukasurat seterusnya-->
+	<prompt name="nextPage">
+		<audio src="nextpage.mp3"/>
+	</prompt>
+	<!--pergi ke mukasurat-->
+	<prompt name="goToPage">
+		<audio src="gotopage.mp3"/>
+	</prompt>
+	<!--cari dari teks-->
+	<prompt name="findInText">
+		<audio src="findInText.mp3"/>
+	</prompt>
+	<!--bahagian-bahagian-->
+	<prompt name="sections">
+		<audio src="sections.mp3"/>
+	</prompt>
+	<!--mukasurat-mukasurat-->
+	<prompt name="pages">
+		<audio src="pages.mp3"/>
+	</prompt>
+	<!--nota-nota penerbit-->
+	<prompt name="prodnotes">
+		<audio src="prodnotes.mp3"/>
+	</prompt>
+	<!--bar tepi-bar tepi-->
+	<prompt name="sidebars">
+		<audio src="sidebars.mp3"/>
+	</prompt>
+	<!--notakaki-notakaki-->
+	<prompt name="footnotes">
+		<audio src="footnotes.mp3"/>
+	</prompt>
+	<!--butiran-butiran terkumpul-->
+	<prompt name="groups">
+		<audio src="groups.mp3"/>
+	</prompt>
+	<!--buku-buku terkini-->
+	<prompt name="recentBooks">
+		<audio src="recentBooks.mp3"/>
+	</prompt>
+	<!-- 
+DIALOG: CariDaisy
+-->
+	<prompt name="searchDaisyDlg_Startup">
+		<sequence>
+			<!--Cari buku DAISY.-->
+			<audio src="searchDaisyTitle.mp3"/>
+			<!--Masukkan laluan atau cari folder untuk dicari-->
+			<audio src="enterPath.mp3"/>
+			<!--Tekan Alt + B untuk mengaktifkan dialog. -->
+			<audio src="instr_AltB.mp3"/>
+			<!--Tekan Alt + S untuk memulakan carian.-->
+			<audio src="instr_AltS.mp3"/>
+			<audio src="instr_AltC.mp3"/>
+		</sequence>
+	</prompt>
+	<prompt name="searchDaisyDlg_BooksFound">
+		<sequence>
+			<var name="NUM_BOOKS"/>
+			<!--Buku DAISY telah dijumpai.-->
+			<audio src="booksWereFound.mp3"/>
+			<audio src="instr_arrowKeys.mp3"/>
+			<audio src="instr_AltO.mp3"/>
+		</sequence>
+	</prompt>
+	<prompt name="searchDaisyDlg_OneBookFound">
+		<sequence>
+			<!--Sebuah buku DAISY telah dijumpai-->
+			<audio src="oneBookFound.mp3"/>
+			<audio src="instr_arrowKeys.mp3"/>
+			<audio src="instr_AltO.mp3"/>
+		</sequence>
+	</prompt>
+	<prompt name="searchDaisyDlg_NoBooksFound">
+		<sequence>
+			<audio src="noBooksFound.mp3"/>
+			<!--Anda boleh memasukkan laluan lain.-->
+			<audio src="enterAnotherPath.mp3"/>
+			<audio src="instr_AltS.mp3"/>
+		</sequence>
+	</prompt>
+	<prompt name="searchDaisyDlg_Instr">
+		<sequence>
+			<audio src="instr_AltB.mp3"/>
+			<audio src="instr_AltS.mp3"/>
+			<audio src="instr_arrowKeys.mp3"/>
+			<audio src="instr_AltO.mp3"/>
+			<audio src="instr_AltC.mp3"/>
+		</sequence>
+	</prompt>
+	<!--
+	DIALOG: Mengenai AMIS
+	-->
+	<prompt name="aboutDlg_Startup">
+		<sequence>
+			<!--Mengenai AMIS-->
+			<audio src="aboutAmis.mp3"/>
+			<!--AMIS, The Adaptive Multimedia Information System, telah diwujudkan oleh DAISY for All project.-->
+			<audio src="aboutContents.mp3"/>
+			<audio src="enterToCloseDlg.mp3"/>
+		</sequence>
+	</prompt>
+	<prompt name="aboutDlg_Instr">
+		<audio src="enterToCloseDlg.mp3"/>
+	</prompt>
+	<!--
+	DIALOG SENARAI CD
+	-->
+	<!--pelbagai buku telah dijumpai dalam CD ini-->
+	<prompt name="cdListDlg_Startup">
+		<audio src="multipleBooksFound.mp3"/>
+	</prompt>
+	<prompt name="cdListDlg_Instr">
+		<sequence>
+			<audio src="instr_arrowKeys.mp3"/>
+			<audio src="instr_AltO.mp3"/>
+			<audio src="instr_AltC.mp3"/>
+		</sequence>
+	</prompt>
+	<!--
+	DIALOG: pergi ke mukasurat
+	-->
+	<!--Masukkan nombor mukasurat atau nama-->
+	<prompt name="goToPageDlg_Startup">
+		<audio src="goToPageDlg_Desc.mp3"/>
+	</prompt>
+	<prompt name="goToPageDlg_Instr">
+		<sequence>
+			<!--tekan kekunci masuk untuk mengesahkan-->
+			<audio src="enterToConfirm.mp3"/>
+			<!--tekan kekunci escape untuk membatalkan-->
+			<audio src="escapeToCancel.mp3"/>
+		</sequence>
+	</prompt>
+	<!--
+	DIALOG: butiran-butiran yang boleh dilangkah
+	-->
+	<prompt name="skipDlg_CanSkip">
+		<sequence>
+			<!--Butiran-butiran yang boleh Dilangkah-->
+			<audio src="skipDlg_Title.mp3"/>
+			<audio src="instr_arrowKeys.mp3"/>
+			<!--"gunakan bar penjarak untuk memilih atau tidak memilih"-->
+			<audio src="instr_spaceBar.mp3"/>
+			<audio src="enterToCloseDlg.mp3"/>
+		</sequence>
+	</prompt>
+	<prompt name="skipDlg_Empty">
+		<sequence>
+			<!--buku ini tidak mengandungi butiran-butiran yang boleh dilangkah-->
+			<audio src="skipDlgNoItems.mp3"/>
+			<audio src="enterToCloseDlg.mp3"/>
+		</sequence>
+	</prompt>
+	<!--
+	DIALOG KEDUDUKAN KINI
+	-->
+	<!--Kedudukan kini-->
+	<prompt name="currentPosDlg_Startup">
+		<audio src="currentPos.mp3"/>
+	</prompt>
+	<prompt name="currentPosDlg_Instr">
+		<audio src="enterToCloseDlg.mp3"/>
+	</prompt>
+	<prompt name="currentPosDlg_Info_Title">
+		<sequence>
+			<!--Bahagian kini anda bertajuk:-->
+			<audio src="currentPosSectionTitle.mp3"/>
+			<var name="CURR_SECTION_TITLE"/>
+		</sequence>
+	</prompt>
+	<prompt name="currentPosDlg_Info_Pages">
+		<sequence>
+			<!--Bahagian ini mempunyai:-->
+			<audio src="thisSectionHas.mp3"/>
+			<var name="CURR_SECTION_PAGES"/>
+			<audio src="pages.mp3"/>
+		</sequence>
+	</prompt>
+	<prompt name="currentPosDlg_Info_Subsections">
+		<sequence>
+			<audio src="thisSectionHas.mp3"/>
+			<var name="CURR_SECTION_SUBSECTIONS"/>
+			<!--bahagian-bahagian kecil-->
+			<audio src="subsections.mp3"/>
+		</sequence>
+	</prompt>
+	<!--
+	DIALOG PILIHAN-PILIHAN GERAK
+	-->
+	<prompt name="navOptionsDlg_Startup">
+		<sequence>
+			<audio src="navOptions.mp3"/>
+			<audio src="enterToCloseDlg.mp3"/>
+			<!--Pilihan-pilihan pergerakan anda ialah-->
+			<audio src="navOptionsAre.mp3"/>
+		</sequence>
+	</prompt>
+	<prompt name="navOptionsDlg_Instr">
+		<audio src="enterToCloseDlg.mp3"/>
+	</prompt>
+	<!--
+	DIALOG RINGKASAN PENUH
+	-->
+	<!--Ringkasan Penuh-->
+	<prompt name="fullSummaryDlg_Startup">
+		<audio src="fullSummaryTitle.mp3"/>
+	</prompt>
+	<prompt name="fullSummaryDlg_Instr">
+		<audio src="enterToCloseDlg.mp3"/>
+	</prompt>
+	<prompt name="fullSummaryDlg_Info_Title">
+		<sequence>
+			<!--tajuk: -->
+			<audio src="metaTitle.mp3"/>
+			<var name="META_TITLE"/>
+		</sequence>
+	</prompt>
+	<prompt name="fullSummaryDlg_Info_Creator">
+		<sequence>
+			<!--diwujudkan oleh: -->
+			<audio src="metaCreator.mp3"/>
+			<var name="META_CREATOR"/>
+		</sequence>
+	</prompt>
+	<prompt name="fullSummaryDlg_Info_Publisher">
+		<sequence>
+			<!--diterbitkan oleh: -->
+			<audio src="metaPublisher.mp3"/>
+			<var name="META_PUBLISHER"/>
+		</sequence>
+	</prompt>
+	<prompt name="fullSummaryDlg_Info_Desc">
+		<sequence>
+			<!--huraian: -->
+			<audio src="metaDesc.mp3"/>
+			<var name="META_DESC"/>
+		</sequence>
+	</prompt>
+	<prompt name="fullSummaryDlg_Info_TocItems">
+		<sequence>
+			<var name="META_TOCITEMS"/>
+			<!--butiran-butiran jadual kandungan-->
+			<audio src="metaTocItems.mp3"/>
+		</sequence>
+	</prompt>
+	<prompt name="fullSummaryDlg_Info_Depth">
+		<sequence>
+			<!--depth of-->
+			<audio src="metaDepth.mp3"/>
+			<var name="META_DEPTH"/>
+		</sequence>
+	</prompt>
+	<prompt name="fullSummaryDlg_Info_PageFront">
+		<sequence>
+			<var name="META_PAGEFRONT"/>
+			<!--mukasurat-mukasurat berkenaan perkara depann-->
+			<audio src="metaPageFront.mp3"/>
+		</sequence>
+	</prompt>
+	<prompt name="fullSummaryDlg_Info_PageNormal">
+		<sequence>
+			<var name="META_PAGENORMAL"/>
+			<!--mukasurat-mukasurat normal-->
+			<audio src="metaPageNormal.mp3"/>
+		</sequence>
+	</prompt>
+	<prompt name="fullSummaryDlg_Info_PageSpecial">
+		<sequence>
+			<var name="META_PAGESPECIAL"/>
+			<!--mukasurat-mukasurat khas-->
+			<audio src="metaPageSpecial.mp3"/>
+		</sequence>
+	</prompt>
+	<prompt name="fullSummaryDlg_Info_TotalTime">
+		<sequence>
+			<!--jumlah waktu: -->
+			<audio src="metaTotalTime.mp3"/>
+			<var name="META_TOTALTIME"/>
+		</sequence>
+	</prompt>
+	<!--
+	DIALOG PILIHAN-PILIHAN BAHASA
+	-->
+	<prompt name="langDlg_Startup">
+		<sequence>
+			<!--Pakej-pakej bahasa-->
+			<audio src="langDlgTitle.mp3"/>
+			<!--Di sini anda boleh menukar bahasa perisian. Pakej bahasa yang baru boleh dikesan secara automatik.-->
+			<audio src="langDlgDesc.mp3"/>
+			<!--Anda kini sedang menggunakan AMIS dalam:-->
+			<audio src="langDlgCurrent.mp3"/>
+			<var name="CURR_LANG"/>
+			<!--*-->
+			<!--ADD HERE: INSTRUCTIONS FOR MOVING TO OTHER PROPERTY PAGES-->
+		</sequence>
+	</prompt>
+	<prompt name="langDlg_Instr">
+		<sequence>
+			<audio src="instr_arrowKeys.mp3"/>
+			<!--tekan kekunci masuk untuk pilih-->
+			<audio src="enterToSelect.mp3"/>
+			<audio src="escapeToCancel.mp3"/>
+		</sequence>
+	</prompt>
+	<!--
+	CARI DARI TEKS
+	-->
+	<!--Cari dari teks-->
+	<prompt name="findInText">
+		<audio src="findInText.mp3"/>
+	</prompt>
+	<!--Cari seterusnya-->
+	<prompt name="findNext">
+		<audio src="findNext.mp3"/>
+	</prompt>
+	<!--cari terdahulu-->
+	<prompt name="findPrevious">
+		<audio src="findPrevious.mp3"/>
+	</prompt>
+	<!--rangkaian carian tidak dijumpai-->
+	<prompt name="searchStringNotFound">
+		<audio src="searchStringNotFound.mp3"/>
+	</prompt>
+	<!--rangkaian carian dijumpai-->
+	<prompt name="searchStringFound">
+		<audio src="searchStringFound.mp3"/>
+	</prompt>
+	<!--
+	PROMPT-PROMPT KOTAK PESANAN
+	-->
+	<!--Lokasi buku anda cari telah berubah. Sebaliknya sebuah buku lain telah dijumpai. Adakah kandungan cakera padat anda telah berubah?-->
+	<prompt name="bookAtPathChanged">
+		<audio src="bookAtPathChanged.mp3"/>
+	</prompt>
+	<!--Kesilapan berlaku semasa cuba membuka buku.-->
+	<prompt name="generalBookError">
+		<audio src="generalBookError.mp3"/>
+	</prompt>
+	<!--tiada CD dimasukkan-->
+	<prompt name="noCdLoaded">
+		<audio src="noCdInserted.mp3"/>
+	</prompt>
+	<!--	kesilapan plugin: fungsi permulaan tidak dijumpai dalam DLL.-->
+	<prompt name="pluginErrorInit">
+		<audio src="pluginErrorInit.mp3"/>
+	</prompt>
+	<!--Perpustakaan plugin berikut tidak dapat dimuatkan.-->
+	<prompt name="pluginErrorDll">
+		<sequence>
+			<audio src="pluginErrorDll.mp3"/>
+			<var name="PLUGIN_LIB"/>
+		</sequence>
+	</prompt>
+	<!--Anda kini sedang menggunakan mod paparan asas. Tekan F11 untuk beralih kembali ke mod paparan asal.-->
+	<!--*-->
+	<prompt name="basicViewPrompt">
+		<audio src="basicViewPrompt.mp3"/>
+	</prompt>
+	<!--
+	PROMPT-PROMPT GENERIC
+	-->
+	<!--dibatalkan-->
+	<prompt name="cancelled">
+		<audio src="cancelled.mp3"/>
+	</prompt>
+	<!--memuatkan-->
+	<prompt name="loading">
+		<audio src="loading.mp3"/>
+	</prompt>
+	<!--mencari-->
+	<prompt name="searching">
+		<audio src="searching.mp3"/>
+	</prompt>
+	<!--Tekan kekunci masuk untuk menutup dialog-->
+	<prompt name="enterToCloseDlg">
+		<audio src="enterToCloseDlg.mp3"/>
+	</prompt>
+	<!--diberhentikan-->
+	<prompt name="stopped">
+		<audio src="stopped.mp3"/>
+	</prompt>
+	<!--Tekan ... untuk mendengar arahan-arahan bagi dialog ini -->
+	<!--@dibuat-->
+	<prompt name="hearDlgInstructions">
+		<audio src="hearDlgInstructions"/>
+	</prompt>
+	<!--gunakan arah kekunci anak panah atas dan bawah untuk bergerak di prompt senarai-->
+	<prompt name="arrowKeys">
+		<audio src="instr_arrowKeys.mp3"/>
+	</prompt>
+	<!--Sila hidupkan semula untuk melihat perubahan-->
+	<prompt name="restartForChanges">
+		<audio src="restartForChanges.mp3"/>
+	</prompt>
+	<!--Tiada buku DAISY dijumpai.-->
+	<prompt name="noBooksFound">
+		<audio src="noBooksFound.mp3"/>
+	</prompt>
+	<!--Tekan Alt + O untuk membuka buku.  -->
+	<prompt name="instr_AltO">
+		<audio src="instr_AltO.mp3"/>
+	</prompt>
+	<!--Tekan Alt + C untuk membatalkan dialog ini.  -->
+	<prompt name="instr_AltC">
+		<audio src="instr_AltC.mp3"/>
+	</prompt>
+	<!--terpilih-->
+	<prompt name="selected">
+		<audio src="selected.mp3"/>
+	</prompt>
+	<!--hidup-->
+	<prompt name="on">
+		<audio src="on.mp3"/>
+	</prompt>
+	<!--mati-->
+	<prompt name="off">
+		<audio src="off.mp3"/>
+	</prompt>
+	<!-- !! Jangan terjemahkan kesan-kesan bunyi-->
+	<!--pilihan ding!-->
+	<prompt name="fx_selected">
+		<audio src="fx_selected.mp3"/>
+	</prompt>
+	<!--pengenalan AMIS-->
+	<prompt name="fx_startmusic">
+		<audio src="fx_startmusic.mp3"/>
+	</prompt>
+	<!--bunyi menunggu-->
+	<prompt name="fx_waiting">
+		<audio src="fx_waiting.mp3"/>
+	</prompt>
+</audioPrompts>

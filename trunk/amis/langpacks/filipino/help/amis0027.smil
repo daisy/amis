@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Susunod na Bahagi" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:13" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="12.839s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_0027" id="amis_0027" />
+<seq>
+<audio src="38_Susunod_na_Bahagi.mp3" clip-begin="npt=0.000s" clip-end="npt=1.891s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0067" id="xami_0067" />
+<seq>
+<audio src="38_Susunod_na_Bahagi.mp3" clip-begin="npt=1.891s" clip-end="npt=3.248s" id="qwrt_0002" />
+<audio src="38_Susunod_na_Bahagi.mp3" clip-begin="npt=3.248s" clip-end="npt=6.162s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0068" id="xami_0068" />
+<seq>
+<audio src="38_Susunod_na_Bahagi.mp3" clip-begin="npt=6.162s" clip-end="npt=8.491s" id="qwrt_0004" />
+<audio src="38_Susunod_na_Bahagi.mp3" clip-begin="npt=8.491s" clip-end="npt=9.173s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0069" id="xami_0069" />
+<seq>
+<audio src="38_Susunod_na_Bahagi.mp3" clip-begin="npt=9.173s" clip-end="npt=10.438s" id="qwrt_0006" />
+<audio src="38_Susunod_na_Bahagi.mp3" clip-begin="npt=10.438s" clip-end="npt=11.289s" id="qwrt_0007" />
+<audio src="38_Susunod_na_Bahagi.mp3" clip-begin="npt=11.289s" clip-end="npt=12.839s" id="qwrt_0008" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Ketika Membaca Buku" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:01:08" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="67.918s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_0006" id="amis_0006" />
+<seq>
+<audio src="05_Ketika_Membaca_Buku.mp3" clip-begin="npt=0.000s" clip-end="npt=2.795s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_000e" id="xami_000e" />
+<seq>
+<audio src="05_Ketika_Membaca_Buku.mp3" clip-begin="npt=2.795s" clip-end="npt=3.265s" id="qwrt_0002" />
+<audio src="05_Ketika_Membaca_Buku.mp3" clip-begin="npt=3.265s" clip-end="npt=5.342s" id="qwrt_0003" />
+<audio src="05_Ketika_Membaca_Buku.mp3" clip-begin="npt=5.342s" clip-end="npt=10.788s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_000f" id="xami_000f" />
+<seq>
+<audio src="05_Ketika_Membaca_Buku.mp3" clip-begin="npt=10.788s" clip-end="npt=11.637s" id="qwrt_0005" />
+<audio src="05_Ketika_Membaca_Buku.mp3" clip-begin="npt=11.637s" clip-end="npt=13.870s" id="qwrt_0006" />
+<audio src="05_Ketika_Membaca_Buku.mp3" clip-begin="npt=13.870s" clip-end="npt=15.634s" id="qwrt_0007" />
+<audio src="05_Ketika_Membaca_Buku.mp3" clip-begin="npt=15.634s" clip-end="npt=18.781s" id="qwrt_0008" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0010" id="xami_0010" />
+<seq>
+<audio src="05_Ketika_Membaca_Buku.mp3" clip-begin="npt=18.781s" clip-end="npt=19.630s" id="qwrt_0009" />
+<audio src="05_Ketika_Membaca_Buku.mp3" clip-begin="npt=19.630s" clip-end="npt=22.712s" id="qwrt_000A" />
+<audio src="05_Ketika_Membaca_Buku.mp3" clip-begin="npt=22.712s" clip-end="npt=25.978s" id="qwrt_000B" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0011" id="xami_0011" />
+<seq>
+<audio src="05_Ketika_Membaca_Buku.mp3" clip-begin="npt=25.978s" clip-end="npt=26.514s" id="qwrt_000C" />
+<audio src="05_Ketika_Membaca_Buku.mp3" clip-begin="npt=26.514s" clip-end="npt=29.975s" id="qwrt_000D" />
+<audio src="05_Ketika_Membaca_Buku.mp3" clip-begin="npt=29.975s" clip-end="npt=30.419s" id="qwrt_000E" />
+<audio src="05_Ketika_Membaca_Buku.mp3" clip-begin="npt=30.419s" clip-end="npt=37.368s" id="qwrt_000F" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0012" id="xami_0012" />
+<seq>
+<audio src="05_Ketika_Membaca_Buku.mp3" clip-begin="npt=37.368s" clip-end="npt=40.411s" id="qwrt_0010" />
+<audio src="05_Ketika_Membaca_Buku.mp3" clip-begin="npt=40.411s" clip-end="npt=42.161s" id="qwrt_0011" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0013" id="xami_0013" />
+<seq>
+<audio src="05_Ketika_Membaca_Buku.mp3" clip-begin="npt=42.161s" clip-end="npt=42.697s" id="qwrt_0012" />
+<audio src="05_Ketika_Membaca_Buku.mp3" clip-begin="npt=42.697s" clip-end="npt=44.512s" id="qwrt_0013" />
+<audio src="05_Ketika_Membaca_Buku.mp3" clip-begin="npt=44.512s" clip-end="npt=48.012s" id="qwrt_0014" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0014" id="xami_0014" />
+<seq>
+<audio src="05_Ketika_Membaca_Buku.mp3" clip-begin="npt=48.012s" clip-end="npt=48.743s" id="qwrt_0015" />
+<audio src="05_Ketika_Membaca_Buku.mp3" clip-begin="npt=48.743s" clip-end="npt=52.858s" id="qwrt_0016" />
+<audio src="05_Ketika_Membaca_Buku.mp3" clip-begin="npt=52.858s" clip-end="npt=55.000s" id="qwrt_0017" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0015" id="xami_0015" />
+<seq>
+<audio src="05_Ketika_Membaca_Buku.mp3" clip-begin="npt=55.000s" clip-end="npt=55.366s" id="qwrt_0018" />
+<audio src="05_Ketika_Membaca_Buku.mp3" clip-begin="npt=55.366s" clip-end="npt=59.846s" id="qwrt_0019" />
+<audio src="05_Ketika_Membaca_Buku.mp3" clip-begin="npt=59.846s" clip-end="npt=61.596s" id="qwrt_001A" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0016" id="xami_0016" />
+<seq>
+<audio src="05_Ketika_Membaca_Buku.mp3" clip-begin="npt=61.596s" clip-end="npt=62.079s" id="qwrt_001B" />
+<audio src="05_Ketika_Membaca_Buku.mp3" clip-begin="npt=62.079s" clip-end="npt=65.893s" id="qwrt_001C" />
+<audio src="05_Ketika_Membaca_Buku.mp3" clip-begin="npt=65.893s" clip-end="npt=67.918s" id="qwrt_001D" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

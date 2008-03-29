@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="ncc:timeInThisSmil" content="00:00:23.808"/>
+		<meta name="ncc:totalElapsedTime" content="00:12:59.109"/>
+		<layout>
+			<region id="txt-view"/>
+		</layout>
+		<meta name="ncc:generator" content="EasePublisher 2.02 Build 025 # 089113"/>
+        <meta name="title" content="Normal hastighet"/>
+        <meta name="dc:title" content="AMIS hjelp"/>
+        <meta name="dc:identifier" content="AMIS_hjelp"/>
+    </head>
+	<body>
+		<seq dur="23.808s">
+			<par endsync="last" id="nwcb_0002">
+				<text src="amishelp.html#nwcb_0227" id="szvw_0001"/>
+				<seq>
+					<audio src="36_Normal_hastighet.mp3" clip-begin="npt=0.000s" clip-end="npt=2.279s" id="audio_0001"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0003">
+				<text src="amishelp.html#nwcb_0228" id="szvw_0002"/>
+				<seq>
+					<audio src="36_Normal_hastighet.mp3" clip-begin="npt=2.279s" clip-end="npt=6.899s" id="audio_0002"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0004">
+				<text src="amishelp.html#nwcb_0229" id="szvw_0003"/>
+				<seq>
+					<audio src="36_Normal_hastighet.mp3" clip-begin="npt=6.899s" clip-end="npt=7.920s" id="audio_0003"/>
+					<audio src="36_Normal_hastighet.mp3" clip-begin="npt=7.920s" clip-end="npt=9.666s" id="audio_0004"/>
+					<audio src="36_Normal_hastighet.mp3" clip-begin="npt=9.666s" clip-end="npt=11.999s" id="audio_0005"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0005">
+				<text src="amishelp.html#nwcb_0230" id="szvw_0004"/>
+				<seq>
+					<audio src="36_Normal_hastighet.mp3" clip-begin="npt=11.999s" clip-end="npt=14.038s" id="audio_0006"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0006">
+				<text src="amishelp.html#nwcb_0231" id="szvw_0005"/>
+				<seq>
+					<audio src="36_Normal_hastighet.mp3" clip-begin="npt=14.038s" clip-end="npt=16.379s" id="audio_0007"/>
+					<audio src="36_Normal_hastighet.mp3" clip-begin="npt=16.379s" clip-end="npt=17.651s" id="audio_0008"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0007">
+				<text src="amishelp.html#nwcb_0232" id="szvw_0006"/>
+				<seq>
+					<audio src="36_Normal_hastighet.mp3" clip-begin="npt=17.651s" clip-end="npt=19.451s" id="audio_0009"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0008">
+				<text src="amishelp.html#nwcb_0233" id="szvw_0007"/>
+				<seq>
+					<audio src="36_Normal_hastighet.mp3" clip-begin="npt=19.451s" clip-end="npt=23.808s" id="audio_0010"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

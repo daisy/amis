@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.7" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="T&#259;ng &#226;m l&#432;&#7907;ng" />
+<meta name="dc:title" content="AMIS Version 2.0 Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:09" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="8.790s">
+<par endsync="last">
+<text src="amishelp-entity.html#amis_0021" id="amis_0021" />
+<seq>
+<audio src="32_Tang_m_lung.mp2" clip-begin="npt=0.000s" clip-end="npt=0.927s" id="qwrt_0001" />
+<audio src="32_Tang_m_lung.mp2" clip-begin="npt=0.927s" clip-end="npt=1.599s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0057" id="xami_0057" />
+<seq>
+<audio src="32_Tang_m_lung.mp2" clip-begin="npt=1.599s" clip-end="npt=2.194s" id="qwrt_0003" />
+<audio src="32_Tang_m_lung.mp2" clip-begin="npt=2.194s" clip-end="npt=4.519s" id="qwrt_0004" />
+<audio src="32_Tang_m_lung.mp2" clip-begin="npt=4.519s" clip-end="npt=4.999s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0058" id="xami_0058" />
+<seq>
+<audio src="32_Tang_m_lung.mp2" clip-begin="npt=4.999s" clip-end="npt=5.538s" id="qwrt_0006" />
+<audio src="32_Tang_m_lung.mp2" clip-begin="npt=5.538s" clip-end="npt=7.419s" id="qwrt_0007" />
+<audio src="32_Tang_m_lung.mp2" clip-begin="npt=7.419s" clip-end="npt=8.790s" id="qwrt_0008" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

@@ -1,0 +1,1957 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui xml:lang="th">
+  <containers>
+    <container id="file" accelerator="Alt+F">
+      <note xml:lang="en">This is the menu header "File"</note>
+      <caption>
+        <text mnemonic="F">แฟ้ม</text>
+        <originalText xml:lang="en">File</originalText>
+        <audio src=""/>
+      </caption>
+      <action mfcid="ID_MENU_FILE_OPEN" widget="menuItem toolbarItem" accelerator="Ctrl+O">
+        <note xml:lang="en">This is going to be a menu item and a toolbar item</note>
+        <icon src="./open.png" type="smallIcon"/>
+        <caption>
+          <text mnemonic="O">เปิด...</text>
+          <originalText xml:lang="en">Open...</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text>หนังสือเดซี</text>
+          <originalText xml:lang="en">Open a Daisy book from the local file system</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+      <action mfcid="ID_MENU_FILE_LOADCD" widget="menuItem toolbarItem" accelerator="Ctrl+L">
+        <note xml:lang="en">This is going to be a menu item and a toolbar item</note>
+        <icon src="./settings/img/cd3.ico" type="smallIcon"/>
+        <icon src="./settings/img/cd_big.ico" type="largeIcon"/>
+        <caption>
+          <text mnemonic="L">โหลดข้อมูลจากซีดี</text>
+          <originalText xml:lang="en">Load CD</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text>โหลดหนังสือเดซีจากซีดีรอม</text>
+          <originalText xml:lang="en">Load a DAISY book from CD ROM</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+      <action mfcid="ID_MENU_FILE_SEARCHDRIVE" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text mnemonic="S">ค้นหา...</text>
+          <originalText xml:lang="en">Search...</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text>ค้นหาหนังสือเดซีในฮาร์ดดิสก์</text>
+          <originalText xml:lang="en">Search local drives for DAISY books</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+      <action mfcid="ID_MENU_FILE_PREFERENCES" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text mnemonic="P">ปรับแต่ง...</text>
+          <originalText xml:lang="en">Preferences...</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text>ปรับแต่งการใช้งาน.</text>
+          <originalText xml:lang="en">This is the application preferences dialog.</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+      <container id="recentBooksList">
+        <note xml:lang="en">This is the menu header for the recent books sub-menu.</note>
+        <caption>
+          <text mnemonic="R">ก่อนหน้านี้</text>
+          <originalText xml:lang="en">Recent</originalText>
+          <audio src=""/>
+        </caption>
+        <switch element="action">
+          <action mfcid="ID_FILE_RECENT_EMPTY" widget="menuItem" condition="ID_FILE_RECENT_EMPTY">
+            <note xml:lang="en">This is going to be a menu item</note>
+            <caption>
+              <text>ว่าง</text>
+              <originalText xml:lang="en">Empty</originalText>
+              
+              <audio src=""/>
+            </caption>
+            <description>
+              <text xml:lang="en">There are no recently read books.</text>
+              <originalText xml:lang="en">There are no recently read books.</originalText>
+              <audio src=""/>
+            </description>
+          </action>
+          <action mfcid="BOOK_BASE_ID" widget="menuItem" condition="BOOK_BASE_ID">
+            <note xml:lang="en">This is going to be a menu item</note>
+            <list repeat="yes">
+              <caption>
+                <promptVar name="RECENT_BOOK_TITLE"/>
+              </caption>
+            </list>
+          </action>
+        </switch>
+      </container>
+      <action mfcid="ID_MENU_FILE_EXIT" widget="menuItem" accelerator="Alt+F4">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text mnemonic="x">ออกจากโปรแกรม</text>
+          <originalText xml:lang="en">Exit</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text>ออกจากโปรแกรม อามีส์</text>
+          <originalText xml:lang="en">Exit AMIS</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+    </container>
+    <container id="view" accelerator="Alt+V">
+      <note xml:lang="en">This is the menu header "View"</note>
+      <caption>
+        <text mnemonic="V">มุมมอง</text>
+        <originalText xml:lang="en">View</originalText>
+        <audio src=""/>
+      </caption>
+      <action mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text mnemonic="S">แผงควบคุม</text>
+          <originalText xml:lang="en">Sidebar</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text>เปิดหรือปิดแผงควบคุม</text>
+          <originalText xml:lang="en">Turn the sidebar on or off.</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+      <action mfcid="ID_MENU_VIEW_BASIC" widget="menuItem" accelerator="F11">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text mnemonic="B">โหมดมุมมองพื้นฐาน</text>
+          <originalText xml:lang="en">Basic View Mode</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text>กลับมุมมองไปยังโหมดพื้นฐาน</text>
+          <originalText xml:lang="en">Switch the view to basic mode.</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+      <action mfcid="ID_MENU_VIEW_CONTRAST" widget="menuItem toolbarItem" accelerator="Ctrl+C">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <icon src="./settings/img/contrast.ico" type="smallIcon"/>
+        <caption>
+          <text mnemonic="C">สีที่ตัดกัน</text>
+          <originalText xml:lang="en">High Contrast</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text>ใช้เฉดสีที่ตัดกัน</text>
+          <originalText xml:lang="en">Use high contrast colors for the text display.</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+      <action mfcid="ID_MENU_VIEW_LARGEFONT" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/font.ico" type="smallIcon"/>
+        <caption>
+          <text mnemonic="I">เพิ่มขนาดตัวอักษร</text>
+          <originalText xml:lang="en">Increase Font Size</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text>เพิ่มขนาดตัวอักษร</text>
+          <originalText xml:lang="en">Gradually increase the font size.</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+      <action mfcid="ID_MENU_VIEW_RESETFONT" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text mnemonic="R">เริ่มต้นขนาดตัวอักษรใหม่</text>
+          <originalText xml:lang="en">Reset Font Size</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text>เริ่มตั้งขนาดตัวอักษรใหม่</text>
+          <originalText xml:lang="en">Set the font size to the default setting.</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+      <action mfcid="NAVLIST_BASE_ID" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <promptVar name="NAV_LIST_NAME"/>
+        </caption>
+        <description>
+          <promptVar name="NAV_LIST_DESCRIPTION"/>
+        </description>
+      </action>
+    </container>
+    <container id="play" accelerator="Alt+P">
+      <note xml:lang="en">This is the menu header "Play"</note>
+      <caption>
+        <text mnemonic="P">อ่าน</text>
+        <originalText xml:lang="en">Play</originalText>
+        <audio src=""/>
+      </caption>
+      <switch element="action">
+        <action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" accelerator="Space" condition="canPlay">
+          <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+          <icon src="./settings/img/play-big.ico" type="smallIcon"/>
+          <icon src="./settings/img/play_big.ico" type="largeIcon"/>
+          <caption>
+            <text mnemonic="P">อ่าน</text>
+            <originalText xml:lang="en">Play</originalText>
+            <audio src=""/>
+          </caption>
+          <description>
+            <text xml:lang="en">Start synchronized playback.</text>
+            <originalText xml:lang="en">Start synchronized playback.</originalText>
+            <audio src=""/>
+          </description>
+        </action>
+        <action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" accelerator="Space" condition="canPause">
+          <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+          <icon src="./settings/img/pause.ico" type="smallIcon"/>
+          <icon src="./settings/img/pause_big.ico" type="largeIcon"/>
+          <caption>
+            <text mnemonic="a">หยุดชั่วคราว</text>
+            <originalText xml:lang="en">Pause</originalText>
+            
+            <audio src=""/>
+          </caption>
+          <description>
+            <text xml:lang="en">Pause playback of this DAISY book.</text>
+            <originalText xml:lang="en">Pause playback of this DAISY book.</originalText>
+            <audio src=""/>
+          </description>
+        </action>
+      </switch>
+      <action mfcid="ID_MENU_PLAY_ESCAPE" widget="menuItem" accelerator="Esc">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text mnemonic="E">ออกจากตำแหน่ง</text>
+          <originalText xml:lang="en">Escape</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text>ออกจากตัวเลือกหรือโครงสร้างที่กำลังอ่านอยู่</text>
+          <originalText xml:lang="en">Jump out of the currently playing item or structure.</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+      <action mfcid="ID_MENU_PLAY_FASTER" widget="menuItem toolbarItem" accelerator="Ctrl++">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/fullspeedahead.ico" type="smallIcon"/>
+        <caption>
+          <text mnemonic="F">อ่านเร็วขึ้น</text>
+          <originalText xml:lang="en">Faster</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text> เพิ่มความเร็วในการอ่าน</text>
+          <originalText xml:lang="en">Increase the playback rate.</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+      <action mfcid="ID_MENU_PLAY_SLOWER" widget="menuItem toolbarItem" accelerator="Ctrl+-">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/slowdown.ico" type="smallIcon"/>
+        <caption>
+          <text mnemonic="S">ลดความเร็ว</text>
+          <originalText xml:lang="en">Slower</originalText>   
+          <audio src=""/>
+        </caption>
+        <description>
+          <text>ลดระดับความเร็วในการอ่าน</text>
+          <originalText xml:lang="en">Slow down the playback rate.</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+      <action mfcid="ID_MENU_PLAY_NORMALSPEED" widget="menuItem toolbarItem" accelerator="Ctrl+0">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/normalspeed.ico" type="smallIcon"/>
+        <caption>
+          <text mnemonic="N">ความเร็วปกติ</text>
+          <originalText xml:lang="en">Normal Speed</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text>เริ่มตั้งค่าระดับความเร็วในการอ่านใหม่</text>
+          <originalText xml:lang="en">Reset the playback rate to normal.</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+      <action mfcid="ID_MENU_PLAY_VOLUP" widget="menuItem" accelerator="Ctrl+Up">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text mnemonic="I">เพิ่มระดับเสียง</text>
+          <originalText xml:lang="en">Increase Volume</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text>เพิ่มระดับเสียง</text>
+          <originalText xml:lang="en">Gradually raise the volume.</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+      <action mfcid="ID_MENU_PLAY_VOLDOWN" widget="menuItem" accelerator="Ctrl+Down">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text mnemonic="D">ลดระดับเสีง</text>
+          <originalText xml:lang="en">Decrease Volume</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text xml:lang="en">Gradually lower the volume.</text>
+          <originalText xml:lang="en">Gradually lower the volume.</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+    </container>
+    <container id="navigate" accelerator="Alt+N">
+      <note xml:lang="en">This is the menu header "Navigate"</note>
+      <caption>
+        <text mnemonic="N">นำร่อง</text>
+        <originalText xml:lang="en">Navigate</originalText>
+        <audio src=""/>
+      </caption>
+      <action mfcid="ID_MENU_NAV_PREVSECTION" widget="menuItem toolbarItem" accelerator="Up">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevsection.ico" type="smallIcon"/>
+        <icon src="./settings/img/prevsection_big.ico" type="largeIcon"/>
+        <caption>
+          <text mnemonic="P">หัวข้อที่แล้ว</text>
+          <originalText xml:lang="en">Previous Section</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text>ไปยังหัวข้อที่แล้ว</text>
+          <originalText xml:lang="en">Go to the previous section.</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTSECTION" widget="menuItem toolbarItem" accelerator="Down">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextsection.ico" type="smallIcon"/>
+        <icon src="./settings/img/nextsection_big.ico" type="largeIcon"/>
+        <caption>
+          <text mnemonic="N">หัวข้อถัดไป</text>
+          <originalText xml:lang="en">Next Section</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text>ไปยังหัวข้อต่อไป</text>
+          <originalText xml:lang="en">Go to the next section.</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+      <container id="sectiondepth">
+        <note xml:lang="en">This is the "show section depth" sub-menu pop-up</note>
+        <caption>
+          <text mnemonic="S" >แสดงลำดับหัวข้อ</text>
+          <originalText xml:lang="en">Show Section Depth</originalText>
+          <audio src=""/>
+        </caption>
+        <switch element="action">
+          <action mfcid="ID_EMPTY" widget="menuItem" condition="ID_EMPTY">
+            <note xml:lang="en">This is going to be a menu item</note>
+            <caption>
+              <text>ว่าง</text>
+              <originalText xml:lang="en">Empty</originalText>
+              <audio src=""/>
+            </caption>
+            <description>
+              <text xml:lang="en">There are no section levels.</text>
+              <originalText xml:lang="en">There are no section levels.</originalText>
+              <audio src=""/>
+            </description>
+          </action>
+          <action mfcid="SECTION_DEPTH_BASE_ID" widget="menuItem" condition="SECTION_DEPTH_BASE_ID">
+            <note xml:lang="en">This is going to be a menu item</note>
+            <list repeat="yes">
+              <caption>
+                <promptVar name="SECTION_DEPTH_OPTION"/>
+              </caption>
+            </list>
+          </action>
+        </switch>
+      </container>
+      <action mfcid="ID_MENU_NAV_PREVPHRASE" widget="menuItem toolbarItem" accelerator="Left">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevphasecirc.ico" type="smallIcon"/>
+        <caption>
+          <text>ข้อความที่แล้ว</text>
+          <originalText xml:lang="en">Previous Phrase</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text>ไปยังข้อความที่แล้ว</text>
+          <originalText xml:lang="en">Go to the previous phrase.</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTPHRASE" widget="menuItem toolbarItem" accelerator="Right">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextphrasecirc.ico" type="smallIcon"/>
+        <caption>
+          <text>ข้อความต่อไป</text>
+          <originalText xml:lang="en">Next Phrase</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text>ไปยังข้อความต่อไป</text>
+          <originalText xml:lang="en">Go to the next phrase.</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+      <action mfcid="ID_MENU_NAV_PREVPAGE" widget="menuItem toolbarItem" accelerator="Ctrl+Left">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevpage.ico" type="smallIcon"/>
+        <caption>
+          <text>หน้าที่แล้ว</text>
+          <originalText xml:lang="en">Previous Page</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text xml:lang="en">Go to the previous page.</text>
+          <originalText xml:lang="en">Go to the previous page.</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTPAGE" widget="menuItem toolbarItem" accelerator="Ctrl+Right">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextpage.ico" type="smallIcon"/>
+        <caption>
+          <text>หน้าต่อไป</text>
+          <originalText xml:lang="en">Next Page</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text>หน้าที่แล้ว</text>
+          <originalText xml:lang="en">Go to the next page.</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+      <action mfcid="ID_MENU_NAV_GOTOPAGE" widget="menuItem" accelerator="Ctrl+G">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text>ไปยังหน้า...</text>
+          <originalText xml:lang="en">Go to Page...</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text xml:lang="en">Go to a specific page.</text>
+          <originalText xml:lang="en">Go to a specific page.</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+      <action mfcid="ID_MENU_NAV_FINDINTEXT" widget="menuItem" accelerator="Ctrl+F">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text mnemonic="F">ค้นข้อความ</text>
+          <originalText xml:lang="en">Find in Text</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text xml:lang="en">Search for a word or phrase in the text.</text>
+          <originalText xml:lang="en">Search for a word or phrase in the text.</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+    </container>
+    <container id="bookmarks" accelerator="Alt+B">
+      <note xml:lang="en">This is the menu header "Bookmarks"</note>
+      <caption>
+        <text mnemonic="B">ที่ขั้นหนังสือ</text>
+        <originalText xml:lang="en">Bookmarks</originalText>
+        <audio src=""/>
+      </caption>
+      <action mfcid="ID_MENU_BMK_ADD" widget="menuItem toolbarItem" accelerator="Ctrl+D">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/adbookmark.ico" type="smallIcon"/>
+        <caption>
+          <text mnemonic="A">เพิ่มที่ขั้นหนังสือ</text>
+          <originalText xml:lang="en">Add Bookmark</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text>เพิ่มที่คั่นหนังสือในตำแหน่งนี้</text>
+          <originalText xml:lang="en">Bookmark your current position.</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+      <action mfcid="BOOKMARK_BASE_ID" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOKMARK_TITLE"/>
+          </caption>
+        </list>
+      </action>
+    </container>
+    <container id="info" accelerator="Alt+I">
+      <note xml:lang="en">This is the menu header "Info"</note>
+      <caption>
+        <text mnemonic="I">ข้อมูล</text>
+        <originalText xml:lang="en">Info</originalText> 
+        <audio src=""/>
+      </caption>
+      <action mfcid="ID_MENU_INFO_SKIP" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text mnemonic="S">องค์ประกอบที่ละได้...</text>
+          <originalText xml:lang="en">Skippable Items...</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text>พิจารณาองค์ประกอบที่สามารถละได้ของสิ่งพิมพ์นี้</text>
+          <originalText xml:lang="en">View the skippable items for this publication.</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+      <action mfcid="ID_MENU_INFO_SUMMARY" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/info.ico" type="smallIcon"/>
+        <caption>
+          <text mnemonic="F">รายละเอียดของหนังสือโดยรวม</text>
+          <originalText xml:lang="en">Full Summary</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text>อ่านรายละเอียดของหนังสือพอสังเขป</text>
+          <originalText xml:lang="en">Get all summary info for this publication.</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+      <action mfcid="ID_MENU_INFO_CURRENTPOSITION" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text mnemonic="C">ตำแหน่งปัจจุบัน</text>
+          <originalText xml:lang="en">Current Position</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text>ขอรายละเอียดเกี่ยวกับตำแหน่งปัจจุบัน</text>
+          <originalText xml:lang="en">Get information about your current position.</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+      <action mfcid="ID_MENU_INFO_NAVOPTIONS" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text mnemonic="N">ตัวเลือกในการนำร่อง</text>
+          <originalText xml:lang="en">Navigation Options</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text>เรียนรู้ตัวเลือกในการนำร่อง</text>
+          <originalText xml:lang="en">Learn about your navigation options for this publication.</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+    </container>
+    <container id="help" accelerator="Alt+H">
+      <note xml:lang="en">This is the menu header "Help"</note>
+      <caption>
+        <text mnemonic="H">ช่วยเหลือ</text>
+        <originalText xml:lang="en">Help</originalText>
+        
+        <audio src=""/>
+      </caption>
+      <action mfcid="ID_MENU_HELP_CONTENTS" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/help.ico" type="smallIcon"/>
+        <icon src="./settings/img/help_big.ico" type="largeIcon"/>
+        <caption>
+          <text mnemonic="C">เนื้อหา</text>
+          <originalText xml:lang="en">Contents</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text>อ่านข้อมูลจากเอกสารช่วยเหลือ</text>
+          <originalText xml:lang="en">Get help using AMIS</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+      <action mfcid="ID_MENU_HELP_ABOUT" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text mnemonic="A">เกี่ยวกับโปรแกรมอามีส์</text>
+          <originalText xml:lang="en">About AMIS</originalText>
+          
+          <audio src=""/>
+        </caption>
+        <description>
+          <text xml:lang="en">Find out about AMIS and DAISY-for-All.</text>
+          <originalText xml:lang="en">Find out about AMIS and DAISY-for-All.</originalText>
+          <audio src=""/>
+        </description>
+      </action>
+    </container>
+  </containers>
+  <dialogs>
+    <dialog mfcid="IDD_FIND">
+      <note xml:lang="en">This is the find in text dialog</note>
+      <caption>
+        <text>ค้นข้อความ</text>
+        <originalText xml:lang="en">Find in Text</originalText>
+        <audio src=""/>
+      </caption>
+      <description>
+        <text xml:lang="en">Here you can search the full text in either direction.</text>
+        <originalText xml:lang="en">Here you can search the full text in either direction.</originalText>
+        <audio src=""/>
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem>
+          <text xml:lang="en">After typing in your search, press enter to begin searching.</text>
+          <originalText xml:lang="en">After typing in your search, press enter to begin searching.</originalText>
+          <audio src=""/>
+        </promptItem>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <promptItem refid="textBoxRepeatInstr"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <text xml:lang="en">Press to begin searching for text in the file.</text>
+          <originalText xml:lang="en">Press to begin searching for text in the file.</originalText>
+          <audio src=""/>
+        </description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SEARCHSTRING" widget="textfield">
+        <description>
+          <text xml:lang="en">Type the text to search for.</text>
+          <originalText xml:lang="en">Type the text to search for.</originalText>
+          <audio src=""/>
+        </description>
+      </control>
+      <control mfcid="IDC_FINDNEXT" widget="radiobutton">
+        <note xml:lang="en">This indicates the direction of the search</note>
+        <caption>
+          <text>ค้นต่อไป</text>
+          <originalText xml:lang="en">Find Next</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="SELECTED_OR_DESELECTED" param="FIND_NEXT_IN_TEXT"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_FINDPREV" widget="radiobutton">
+        <note xml:lang="en">This indicates the direction of the search</note>
+        <caption>
+          <text>ค้นย้อนกลับ</text>
+          <originalText xml:lang="en">Find Previous</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptName name="SELECTED_OR_DESELECTED" param="FIND_PREV_IN_TEXT"/>
+          </prompt>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_CDSEARCH">
+      <note xml:lang="en">This dialog appears when more than one book is on a CD-ROM</note>
+      <caption>
+        <text>พบหนังสือหลายเล่ม</text>
+        <originalText xml:lang="en">Multiple books found</originalText>
+        <audio src=""/>
+      </caption>
+      <description mfcid="IDC_STATIC">
+        <text>พบหนังสือมากกว่า 1 เล่มบนแผ่นซีดี โปรดเลือกหนังสือจากรายการข้างล่าง.</text>
+        <originalText xml:lang="en">More than one book was found on this CD. Please select a book from the list below and press Alt + O to open.</originalText>
+        <audio src=""/>
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_CANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_OPENBOOK" widget="button">
+        <caption>
+          <text mnemonic="O">เปิด</text>
+          <originalText xml:lang="en">Open</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text xml:lang="en">Press to close this dialog and open the selected book.</text>
+          <originalText xml:lang="en">Press to close this dialog and open the selected book.</originalText>
+          <audio src=""/>
+        </description>
+      </control>
+      <control mfcid="IDC_BOOKLIST" widget="list">
+        <description>
+          <text xml:lang="en">Use the arrow keys to move around this list of titles.</text>
+          <originalText xml:lang="en">Use the arrow keys to move around this list of titles.</originalText>
+          <audio src=""/>
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOK_TITLE"/>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_ABOUTBOX">
+      <note xml:lang="en">This dialog gives some basic information about AMIS.</note>
+      <caption>
+        <text>เกี่ยวกับโปรแกรม อามีส์</text>
+        <originalText xml:lang="en">About AMIS</originalText>
+        <audio src=""/>
+      </caption>
+      <description>
+        <text xml:lang="en">Dialog with information about AMIS software.</text>
+        <originalText xml:lang="en">Dialog with information about AMIS software.</originalText>
+        <audio src=""/>
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_AMISNAME" widget="textlabel">
+        <caption>
+          <text xml:lang="en">AMIS: \nAdaptive Multimedia Information System</text>
+          <originalText xml:lang="en">AMIS: \nAdaptive Multimedia Information System</originalText>
+          <audio src=""/>
+        </caption>
+      </control>
+      <control mfcid="IDC_VERSION" translate="no">
+        <caption>
+          <text xml:lang="en">Version 2.0</text>
+          <originalText xml:lang="en">Version 2.0</originalText>
+          <audio src=""/>
+        </caption>
+      </control>
+      <control mfcid="IDC_VERSIONNOTE" translate="no">
+        <caption>
+          <text xml:lang="en">Release Date: 23 Oct 2005</text>
+          <originalText xml:lang="en">Release Date: 23 Oct 2005</originalText>
+          <audio src=""/>
+        </caption>
+      </control>
+      <control mfcid="IDC_COPYRIGHT" widget="textlabel" translate="no">
+        <caption>
+          <text xml:lang="en">Copyright © 2006 DAISY for All</text>
+          <originalText xml:lang="en">Copyright © 2006 DAISY for All</originalText>
+          <audio src=""/>
+        </caption>
+      </control>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_SEARCHDAISY">
+      <note xml:lang="en">This dialog is for searching your hard drive for DAISY books.</note>
+      <caption>
+        <text>ค้นหาสำหรับหนังสือเดซี</text>
+        <originalText xml:lang="en">Search for DAISY Books</originalText>
+        <audio src=""/>
+      </caption>
+      <description mfcid="IDC_STATIC">
+        <text>กรุณาใส่ที่อยู่ หรือ สืบค้นจากช่องเก็บแฟ้มเอกสาร.</text>
+        <originalText xml:lang="en">You can search your computer for DAISY books.  Enter a path or browse for a folder to search, then press Search to begin searching.</originalText>
+        
+        <audio src=""/>
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <promptItem refid="textBoxRepeatInstr"/>
+      </prompt>
+      <control mfcid="IDC_SEARCHPATH" widget="textfield">
+        <description>
+          <text xml:lang="en">Type the path to the folder in this field.</text>
+          <originalText xml:lang="en">Type the path to the folder in this field.</originalText>
+          <audio src=""/>
+        </description>
+      </control>
+      <control mfcid="IDC_BROWSE" widget="button">
+        <caption>
+          <promptItem refid="browse_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="browse_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_STARTSEARCH" widget="button">
+        <caption>
+          <text mnemonic="S">ค้นหา</text>
+          <originalText xml:lang="en">Search</originalText>
+          
+          <audio src=""/>
+        </caption>
+        <description>
+          <text xml:lang="en">Press to start searching.</text>
+          <originalText xml:lang="en">Press to start searching.</originalText>
+          <audio src=""/>
+        </description>
+      </control>
+      <control mfcid="IDC_STOPSEARCH" widget="button">
+        <caption>
+          <text mnemonic="t">หยุด</text>
+          <originalText xml:lang="en">Stop</originalText>
+          
+          <audio src=""/>
+        </caption>
+        <description>
+          <text xml:lang="en">Press to stop searching.</text>
+          <originalText xml:lang="en">Press to stop searching.</originalText>
+          <audio src=""/>
+        </description>
+      </control>
+      <control mfcid="IDC_SEARCHING" widget="textlabel">
+        <switch element="caption">
+          <caption condition="default">
+            <text xml:lang="en">Ready</text>
+            <originalText xml:lang="en">Ready</originalText>
+            <audio src=""/>
+          </caption>
+          <caption condition="WhileSearching">
+            <text>กำลังค้นหา...</text>
+            <originalText xml:lang="en">Searching...</originalText>
+            <audio src=""/>
+          </caption>
+          <caption condition="SearchAborted">
+            <text xml:lang="en">Search stopped.</text>
+            <originalText xml:lang="en">Search stopped.</originalText>
+            <audio src=""/>
+          </caption>
+          <caption condition="SearchCompleteNoFilesFound">
+            <text>ไม่พบหนังสือ</text>
+            <originalText xml:lang="en">Search complete: No files found.</originalText>
+            <audio src=""/>
+          </caption>
+          <caption condition="SearchCompleteOneFileFound">
+            <text>พบหนังสือ 1เล่ม.</text>
+            <originalText xml:lang="en">Search complete: One file found.</originalText>
+            <audio src=""/>
+          </caption>
+          <caption condition="SearchCompleteFilesFound">
+            <prompt>
+              <promptVar name="NUM_FILES_FOUND"/>
+              <promptItem>
+                <note xml:lang="en">This is used in the sentence &quot;7 files were found&quot;</note>
+                <text xml:lang="en">files were found.</text>
+                <originalText xml:lang="en">files were found.</originalText>
+                <audio src=""/>
+              </promptItem>
+            </prompt>
+          </caption>
+        </switch>
+      </control>
+      <control mfcid="IDC_FILESFOUND" widget="list">
+        <description>
+          <text xml:lang="en">Use the arrow keys to move around this list of titles.</text>
+          <originalText xml:lang="en">Use the arrow keys to move around this list of titles.</originalText>
+          <audio src=""/>
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOK_TITLE"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_OPENBOOK" widget="button">
+        <caption>
+          <text mnemonic="O">เปิด</text>
+          <originalText xml:lang="en">Open</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text xml:lang="en">Press to open the selected title.</text>
+          <originalText xml:lang="en">Press to open the selected title.</originalText>
+          <audio src=""/>
+        </description>
+      </control>
+      <control mfcid="IDC_CANCELBUTTON">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_SKIP">
+      <note xml:lang="en">This dialog lets the user control rendering of skippable structures.</note>
+      <caption>
+        <text>องค์ประกอบที่สามารถละได้</text>
+        <originalText xml:lang="en">Skippable Items</originalText>
+        <audio src=""/>
+      </caption>
+      <switch element="description">
+        <description mfcid="IDC_STATIC" condition="hasSkippableStructures">
+          <text>หนังสือเล่มนี้ประกอบด้วยโครงสร้างพิเศษ เลือกโครงสร้างที่คุณต้องการละ.</text>
+          <originalText xml:lang="en">This book contains the following special structures.  Check the ones you want skipped.</originalText>
+          <audio src=""/>
+        </description>
+        <description mfcid="IDC_STATIC" condition="hasNoSkippableStructures">
+          <text>เอกสารฉบับนี้ไม่ได้กำหนดโครงสร้างที่ละได้</text>
+          <originalText xml:lang="en">This publication has no skippable elements.</originalText>
+          <audio src=""/>
+        </description>
+      </switch>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SKIPS" widget="list">
+        <caption>
+          <text xml:lang="en">Skippable items</text>
+          <originalText xml:lang="en">Skippable items</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text xml:lang="en">Use the arrow keys to move around this list of skippable items.</text>
+          <originalText xml:lang="en">Use the arrow keys to move around this list of skippable items.</originalText>
+          <audio src=""/>
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="SKIPPABLE_ITEM"/>
+          </caption>
+          <description>
+            <prompt>
+              <promptVar name="SKIPPABLE_ITEM"/>
+              <promptItem refid="thisItem"/>
+              <promptVar name="WILL_SKIP_OR_NOT" param="SKIPPABLE_ITEM_ID"/>
+            </prompt>
+          </description>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE4" accelerator="Ctrl+3">
+      <note xml:lang="en">This dialog lets the user select a language pack.</note>
+      <caption>
+        <text>ภาษา</text>
+        <originalText xml:lang="en">Language</originalText>
+        <audio src=""/>
+      </caption>
+      <description mfcid="IDC_STATIC">
+        <text>คุณสามารถเปลี่ยนภาษาได้ที่นี่. โดยชุดภาษาใหม่จะค้นพบโดยอัตโนมัติ.</text>
+        <originalText xml:lang="en">Here you can change the language of the software.  New language packs are detected automatically.</originalText>
+        <audio src=""/>
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="ctrl1_for_prefsdialog"/>
+        <promptItem refid="ctrl2_for_colorsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_BTN_SELECTLANG" widget="button">
+        <caption>
+          <text>เลือกภาษา</text>
+          <originalText xml:lang="en">Select Language</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text xml:lang="en">Press to confirm your language selection for the AMIS user interface</text>
+          <originalText xml:lang="en">Press to confirm your language selection for the AMIS user interface</originalText>
+          <audio src=""/>
+        </description>
+      </control>
+      <control mfcid="IDC_LANGLIST" widget="list">
+        <caption mfcid="IDC_STATIC">
+          <text>ตัวเลือกภาษาของคุณคือ:</text>
+          <originalText xml:lang="en">Your language choices are:</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text xml:lang="en">Use the arrow keys to move around this list of languages.</text>
+          <originalText xml:lang="en">Use the arrow keys to move around this list of languages.</originalText>
+          <audio src=""/>
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="LANGUAGE_NAME"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_CURRLANG">
+        <caption>
+          <prompt>
+            <promptItem>
+              <text>คุณกำลังใช้งานโปรแกรมอามีส์ใน </text>
+              <originalText xml:lang="en">You are currently using AMIS in</originalText>
+              <audio src=""/>
+            </promptItem>
+            <promptVar name="CURR_LANGUAGE_NAME"/>
+          </prompt>
+        </caption>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE2" accelerator="Ctrl+2">
+      <note xml:lang="en">This dialog lets the user select which colors AMIS uses</note>
+      <caption>
+        <text>ตั้งค่าสี</text>
+        <originalText xml:lang="en">Set Colors</originalText>
+        <audio src=""/>
+      </caption>
+      <description>
+        <text xml:lang="en">Here you can set color options for AMIS.</text>
+        <originalText xml:lang="en">Here you can set color options for AMIS.</originalText>
+        <audio src=""/>
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem refid="ctrl1_for_prefsdialog"/>
+        <promptItem refid="ctrl3_for_langsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+      </prompt>
+      <control mfcid="IDC_PHRASES" widget="other">
+        <caption>
+          <text>ข้อความที่ถูกเลือก</text>
+          <originalText xml:lang="en">Phrase Highlighting</originalText>
+          <audio src=""/>
+        </caption>
+      </control>
+      <control mfcid="IDC_TEXTFG" widget="textlabel">
+        <caption>
+          <text>พื้นข้อความ:</text>
+          <originalText xml:lang="en">Text Foreground: </originalText>
+          <audio src=""/>
+        </caption>
+      </control>
+      <control mfcid="IDC_TEXTBG" widget="textlabel">
+        <caption>
+          <text>พื้นหลังข้อความ:</text>
+          <originalText xml:lang="en">Text Background: </originalText>
+          <audio src=""/>
+        </caption>
+      </control>
+      <control mfcid="IDC_BORDER" widget="textlabel">
+        <caption>
+          <text>กรอบการเลือก:</text>
+          <originalText xml:lang="en">Selection Border: </originalText>
+          <audio src=""/>
+        </caption>
+      </control>
+      <control mfcid="IDC_CONTRAST" widget="other">
+        <caption>
+          <text>การตั้งค่าสีที่ตัดกัน</text>
+          <originalText xml:lang="en">High Contrast Settings</originalText>
+          <audio src=""/>
+        </caption>
+      </control>
+      <control mfcid="IDC_PAGEFG" widget="textlabel">
+        <caption>
+          <text>พื้นข้อความ:</text>
+          <originalText xml:lang="en">Page Foreground: </originalText>
+          <audio src=""/>
+        </caption>
+      </control>
+      <control mfcid="IDC_PAGEBG" widget="textlabel">
+        <caption>
+          <text>พื้นหน้า:</text>
+          <originalText xml:lang="en">Page Background: </originalText>
+          <audio src=""/>
+        </caption>
+      </control>
+      <control mfcid="IDC_BTN_RESETCOLORS" widget="button">
+        <caption>
+          <text>เริ่มการตั้งค่าสีใหม่</text>
+          <originalText xml:lang="en">Reset Colors</originalText>
+          <audio src=""/>
+        </caption>
+      </control>
+      <control mfcid="IDC_PHRASEPREVIEW" widget="textfield">
+        <caption>
+          <text>ตัวอย่างของสีที่ใช้เลือกข้อความ</text>
+          <originalText xml:lang="en">Preview of phrase highlight colors.</originalText>
+          <audio src=""/>
+        </caption>
+      </control>
+      <control mfcid="IDC_CONTRASTPREVIEW" widget="textfield">
+        <caption>
+          <text>ตัวอย่างเฉดสีที่ตัดกัน</text>
+          <originalText xml:lang="en">Preview of page contrast colors.</originalText>
+          <audio src=""/>
+        </caption>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_CURRENTPOSITION">
+      <note xml:lang="en">This dialog gives the user information about their current position in the publication.</note>
+      <caption>
+        <text>ตำแหน่งปัจจุบัน</text>
+        <originalText xml:lang="en">Current Position</originalText>
+        <audio src=""/>
+      </caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text xml:lang="en">This is a list of data about your current position.</text>
+          <originalText xml:lang="en">This is a list of data about your current position.</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="no">
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>หัวข้อปัจจุบันคือ </text>
+                <originalText xml:lang="en">Your current section is titled:</originalText>
+                <audio src=""/>
+              </promptItem>
+              <promptVar name="CURRENT_SECTION_TITLE"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text xml:lang="en">Number of pages in this section:</text>
+                <originalText xml:lang="en">Number of pages in this section:</originalText>
+                <audio src=""/>
+              </promptItem>
+              <promptVar name="CURRENT_SECTION_NUM_PAGES"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text xml:lang="en">Number of subsections in this section:</text>
+                <originalText xml:lang="en">Number of subsections in this section:</originalText>
+                <audio src=""/>
+              </promptItem>
+              <promptVar name="CURRENT_SECTION_NUM_SUBSECTIONS"/>
+            </prompt>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE1" accelerator="Ctrl+1">
+      <note xml:lang="en">This dialog lets the user set some basic preferences for AMIS.</note>
+      <caption>
+        <text>ปรับแต่งทั่วไป</text>
+        <originalText xml:lang="en">General Preferences</originalText>
+        <audio src=""/>
+      </caption>
+      <description>
+        <text xml:lang="en">Here you can set general preferences for AMIS.</text>
+        <originalText xml:lang="en">Here you can set general preferences for AMIS.</originalText>
+        <audio src=""/>
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="ctrl2_for_colorsdialog"/>
+        <promptItem refid="ctrl3_for_langsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <promptItem refid="textBoxRepeatInstr"/>
+      </prompt>
+      <control mfcid="IDC_BMKDIRBROWSE" widget="button">
+        <caption>
+          <promptItem refid="browse_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="browse_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SELFVOICING" widget="checkbox">
+        <caption>
+          <text>ใช้เสียงของโปรแกรม</text>
+          <originalText xml:lang="en">Use self-voicing</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="SELF_VOICING_FEATURE"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_TTSVOICE" widget="list">
+        <caption mfcid="IDC_SELTTSLABEL">
+          <text>เลือกเสียง:</text>
+          <originalText xml:lang="en">Select TTS voice:</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text xml:lang="en">Use the arrow keys to move around this list of voices</text>
+          <originalText xml:lang="en">Use the arrow keys to move around this list of voices</originalText>
+          <audio src=""/>
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="TTS_VOICE_NAME"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_BASIC" widget="checkbox">
+        <caption>
+          <text>เริ่มต้นโปรแกรมอามีส์ในโหมดมุมมองพื้นฐาน</text>
+          <originalText xml:lang="en">Start AMIS in the basic view mode.</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="BASIC_VIEW_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_PROMPTONBASICVIEW" widget="checkbox">
+        <caption>
+          <text>ในการกลับไปยังมุมมองพื้นฐาน, บอกให้ผู้ใช้งานให้ทราบวิธีการกลับไปยังมุมมองที่เป็นค่าเริ่มต้น</text>
+          <originalText xml:lang="en">Upon switching to basic view, tell the user how to go back to the default view.</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="PROMPT_ON_BASIC_VIEW_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_LOADLASTDTB" widget="checkbox">
+        <caption>
+          <text>โหลดหนังสือที่ได้อ่านล่าสุดทันทีที่โปรแกรมเริ่มทำงาน</text>
+          <originalText xml:lang="en">Load the most recently read book when the software starts.</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="LOAD_LAST_READ_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_BMKDIR" widget="textfield">
+        <caption mfcid="IDC_BMKDIRLABEL">
+          <text>คลังที่ขั้นหนังสือ:</text>
+          <originalText xml:lang="en">Bookmarks directory:</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text xml:lang="en">Type the path to the bookmarks folder in this field.</text>
+          <originalText xml:lang="en">Type the path to the bookmarks folder in this field.</originalText>
+          <audio src=""/>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_NAVIGATIONOPTIONS">
+      <note xml:lang="en">This dialog lists navigation options for the current publication.</note>
+      <caption>
+        <text>ตัวเลือกในการนำร่อง</text>
+        <originalText xml:lang="en">Navigation Options</originalText>
+        <audio src=""/>
+      </caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text>เอกสารฉบับนี้ได้กำหนดรายการดังต่อไปนี้: </text>
+          <originalText xml:lang="en">This is a list of items to which you may navigate directly.</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="TOC_CATEGORIES"/>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_GOTOPAGE">
+      <note xml:lang="en">This dialog lets the user jump to a certain page</note>
+      <caption>
+        <text>ไปยังหน้า</text>
+        <originalText xml:lang="en">Go To Page</originalText>
+        <audio src=""/>
+      </caption>
+      <description>
+        <text xml:lang="en">Here you can jump to a page number or page label.</text>
+        <originalText xml:lang="en">Here you can jump to a page number or page label.</originalText>
+        <audio src=""/>
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem>
+          <text xml:lang="en">After typing in your page number, press enter to go there.</text>
+          <originalText xml:lang="en">After typing in your page number, press enter to go there.</originalText>
+          <audio src=""/>
+        </promptItem>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <promptItem refid="textBoxRepeatInstr"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <text xml:lang="en">Press this button to go to the desired page.</text>
+          <originalText xml:lang="en">Press this button to go to the desired page.</originalText>
+          <audio src=""/>
+        </description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_PAGENUM" widget="textfield">
+        <caption mfcid="IDC_STATIC">
+          <text>กรุณาใส่เลขหน้า:</text>
+          <originalText xml:lang="en">Enter a page number:</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <text xml:lang="en">Type the number or label of the page you want to go to.</text>
+          <originalText xml:lang="en">Type the number or label of the page you want to go to.</originalText>
+          <audio src=""/>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_FULLSUMMARY">
+      <note xml:lang="en">This dialog lists key publication metadata.</note>
+      <caption>
+        <text>รายละเอียดการจัดพิมพ์โดยสังเขป</text>
+        <originalText xml:lang="en">Publication Summary</originalText>
+        <audio src=""/>
+      </caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text xml:lang="en">This is a list of publication metadata.</text>
+          <originalText xml:lang="en">This is a list of publication metadata.</originalText>
+          <audio src=""/>
+        </caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="no">
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>หนังสือเล่มนี้เรื่อง </text>
+                <originalText xml:lang="en">This book is titled:</originalText>
+                <audio src=""/>
+              </promptItem>
+              <promptVar name="META_TITLE"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>เขียนโดย </text>
+                <originalText xml:lang="en">Written by:</originalText>
+                <audio src=""/>
+              </promptItem>
+              <promptVar name="META_CREATOR"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>ผลิตโดย </text>
+                <originalText xml:lang="en">Published by:</originalText>
+                <audio src=""/>
+              </promptItem>
+              <promptVar name="META_PUBLISHER"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_DESCRIPTION">
+            <prompt>
+              <promptItem>
+                <text>รายละเอียด: </text>
+                <originalText xml:lang="en">Description:</originalText>
+                <audio src=""/>
+              </promptItem>
+              <promptVar name="META_DESC"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>มีตำแหน่งนำร่องในสารบัญทั้งสิ้น </text>
+                <originalText xml:lang="en">Number of navigation points in the table of contents:</originalText>
+                <audio src=""/>
+              </promptItem>
+              <promptVar name="META_TOCITEMS"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>ระดับหัวข้อของหนังสือคือ </text>
+                <originalText xml:lang="en">Maximum section depth:</originalText>
+                <audio src=""/>
+              </promptItem>
+              <promptVar name="META_DEPTH"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text>มีปกหน้าทั้งสิ้น </text>
+                <originalText xml:lang="en">Front matter pages:</originalText>
+                <audio src=""/>
+              </promptItem>
+              <promptVar name="META_PAGEFRONT"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text>มีหน้าปกติทั้งสิ้น </text>
+                <originalText xml:lang="en">Regular pages:</originalText>
+                <audio src=""/>
+              </promptItem>
+              <promptVar name="META_PAGENORMAL"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text>มีหน้าพิเศษทั้งสิ้น </text>
+                <originalText xml:lang="en">Special pages:</originalText>
+                <audio src=""/>
+              </promptItem>
+              <promptVar name="META_PAGESPECIAL"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>ความยาวของหนังสือเล่มนี้คือ </text>
+                <originalText xml:lang="en">Total duration:</originalText>
+                <audio src=""/>
+              </promptItem>
+              <promptVar name="META_TOTALTIME"/>
+            </prompt>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+  </dialogs>
+  <prompts>
+    <promptItemRefs>
+      <promptItem id="altC_to_close">
+        <text xml:lang="en">Press Alt + C to close the dialog.</text>
+        <originalText xml:lang="en">Press Alt + C to close the dialog.</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="altC_to_cancel">
+        <text xml:lang="en">Press Alt + C to cancel the dialog.</text>
+        <originalText xml:lang="en">Press Alt + C to cancel the dialog.</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="thisItem">
+        <text xml:lang="en">This item</text>
+        <originalText xml:lang="en">This item</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="spaceToToggle">
+        <text xml:lang="en">Press the space bar to toggle the value.</text>
+        <originalText xml:lang="en">Press the space bar to toggle the value.</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="tabAround">
+        <text xml:lang="en">Hit tab to move around the options on the dialog.</text>
+        <originalText xml:lang="en">Hit tab to move around the options on the dialog.</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="ctrl2_for_colorsdialog">
+        <text xml:lang="en">Press control + 2 to switch to the colors dialog.</text>
+        <originalText xml:lang="en">Press control + 2 to switch to the colors dialog.</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="ctrl3_for_langsdialog">
+        <text xml:lang="en">Press control + 3 to switch to the language options dialog.</text>
+        <originalText xml:lang="en">Press control + 3 to switch to the language options dialog.</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="ctrl1_for_prefsdialog">
+        <text xml:lang="en">Press control + 1 to switch to the general preferences dialog.</text>
+        <originalText xml:lang="en">Press control + 1 to switch to the general preferences dialog.</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="thisItemIsCurrently">
+        <text xml:lang="en">This item is currently</text>
+        <originalText xml:lang="en">This item is currently</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="enter_to_close">
+        <text xml:lang="en">Press enter to close the dialog.</text>
+        <originalText xml:lang="en">Press enter to close the dialog.</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="browse_button_caption">
+        <text mnemonic="B">สืบค้น...</text>
+        <originalText xml:lang="en">Browse...</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="browse_button_description">
+        <text xml:lang="en">Press to open the folder browse dialog.</text>
+        <originalText xml:lang="en">Press to open the folder browse dialog.</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="ok_button_caption">
+        <text>ตกลง</text>
+        <originalText xml:lang="en">OK</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="ok_button_description">
+        <text xml:lang="en">Press OK to close this dialog.</text>
+        <originalText xml:lang="en">Press OK to close this dialog.</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="cancel_button_caption">
+        <text mnemonic="C">ยกเลิก</text>
+        <originalText xml:lang="en">Cancel</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="cancel_button_description">
+        <text xml:lang="en">Press to cancel this dialog.</text>
+        <originalText xml:lang="en">Press to cancel this dialog.</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="list_reads_automatically">
+        <text xml:lang="en">This list will be read automatically.</text>
+        <originalText xml:lang="en">This list will be read automatically.</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="repeatLastPromptInstr">
+        <text xml:lang="en">Press Control + R to repeat the last prompt.</text>
+        <originalText xml:lang="en">Press Control + R to repeat the last prompt.</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="thisDialogNotSelfVoicing">
+        <text xml:lang="en">This dialog is not yet self-voicing.</text>
+        <originalText xml:lang="en">This dialog is not yet self-voicing.</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="escapeToCancel">
+        <text xml:lang="en">Press escape to cancel</text>
+        <originalText xml:lang="en">Press escape to cancel</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="hearDlgInstructions">
+        <text xml:lang="en">Press Control + I to hear instructions for this dialog.</text>
+        <originalText xml:lang="en">Press Control + I to hear instructions for this dialog.</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="textBoxRepeatInstr">
+        <text xml:lang="en">Press Control + R to repeat the text in the last text box.</text>
+        <originalText xml:lang="en">Press Control + R to repeat the text in the last text box.</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="nav_window">
+        <text xml:lang="en">Navigation</text>
+        <originalText xml:lang="en">Navigation</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="sections">
+        <text xml:lang="en">Sections</text>
+        <originalText xml:lang="en">Sections</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="pages">
+        <text>หน้า</text>
+        <originalText xml:lang="en">Pages</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="noterefs">
+        <text>เชิงอรรถ</text>
+        <originalText xml:lang="en">Footnotes</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="prodnotes">
+        <text>ข้อความจากสำนักพิมพ์</text>
+        <originalText xml:lang="en">Producer notes</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="sidebars">
+        <text>แผงควบคุม</text>
+        <originalText xml:lang="en">Sidebars</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="groups">
+        <text>องค์ประกอบที่ได้รวมไว้</text>
+        <originalText xml:lang="en">Grouped items</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="navigation_sidebar_caption">
+        <text>นำร่อง</text>
+        <originalText xml:lang="en">Navigation</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="ready">
+        <text>พร้อมแล้ว</text>
+        <originalText xml:lang="en">Ready</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="property_sheet_caption">
+        <text>ปรับแต่ง</text>
+        <originalText xml:lang="en">Preferences</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="selfolder_title">
+        <text>เลือกช่องเก็บแฟ้มเอกสาร</text>
+        <originalText xml:lang="en">Select a Folder</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="selfolder_instr">
+        <text>เลือกช่องเก็บแฟ้มหนังสือจากสารระบบข้างล่าง</text>
+        <originalText xml:lang="en">Select a folder from the directory below.</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="daisy_books">
+        <text xml:lang="en">DAISY Books</text>
+        <originalText xml:lang="en">DAISY Books</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="folder_does_not_exist">
+        <text> ไม่พบช่องเอกสารชื่อ %s คุณต้องการสร้างช่องเก็บแฟ้มเอกสารใหม่หรือไม่</text>
+        <originalText xml:lang="en">The folder %s does not exist. Do you want the folder to be created?</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="folder_invalid">
+        <text>ชื่อของช่องเก็บแฟ้มเอกสารไม่ถูกต้อง กรุณาใส่ชื่ออีกครั้ง</text>
+        <originalText xml:lang="en">This folder name is invalid. Please choose another.</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="cant_create_folder">
+        <text>ไม่สามารถสร้างช่องเก็บแฟ้มเอกสารนี้ได้ โปรดตรวจสอบอีกครั้ง</text>
+        <originalText xml:lang="en">This folder can not be created. Please double check.</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="not_available">
+        <text xml:lang="en">Not available</text>
+        <originalText xml:lang="en">Not available</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="numeric_zero">
+        <note xml:lang="en">All numerals should be translated into numerals, not words.</note>
+        <text xml:lang="en">0</text>
+        <originalText xml:lang="en">0</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="numeric_one">
+        <text xml:lang="en">1</text>
+        <originalText xml:lang="en">1</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="numeric_two">
+        <text xml:lang="en">2</text>
+        <originalText xml:lang="en">2</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="numeric_three">
+        <text xml:lang="en">3</text>
+        <originalText xml:lang="en">3</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="numeric_four">
+        <text xml:lang="en">4</text>
+        <originalText xml:lang="en">4</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="numeric_five">
+        <text xml:lang="en">5</text>
+        <originalText xml:lang="en">5</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="numeric_six">
+        <text xml:lang="en">6</text>
+        <originalText xml:lang="en">6</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="numeric_seven">
+        <text xml:lang="en">7</text>
+        <originalText xml:lang="en">7</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="numeric_eight">
+        <text xml:lang="en">8</text>
+        <originalText xml:lang="en">8</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="numeric_nine">
+        <text xml:lang="en">9</text>
+        <originalText xml:lang="en">9</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="deleted">
+        <text xml:lang="en">deleted</text>
+        <originalText xml:lang="en">deleted</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="will_be_skipped">
+        <text xml:lang="en">will be skipped</text>
+        <originalText xml:lang="en">will be skipped</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="will_be_played">
+        <text xml:lang="en">will be played</text>
+        <originalText xml:lang="en">will be played</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="item_on">
+        <text xml:lang="en">on</text>
+        <originalText xml:lang="en">on</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="item_off">
+        <text xml:lang="en">off</text>
+        <originalText xml:lang="en">off</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="item_selected">
+        <text xml:lang="en">selected</text>
+        <originalText xml:lang="en">selected</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="item_deselected">
+        <text xml:lang="en">deselected</text>
+        <originalText xml:lang="en">deselected</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="keyboardShortcut">
+        <text xml:lang="en">Keyboard Shortcut</text>
+        <originalText xml:lang="en">Keyboard Shortcut</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="icon">
+        <text xml:lang="en">Icon</text>
+        <originalText xml:lang="en">Icon</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="menu">
+        <text xml:lang="en">Menu</text>
+        <originalText xml:lang="en">Menu</originalText>
+        <audio src=""/>
+      </promptItem>
+      <promptItem id="followedBy">
+        <note xml:lang="en">This is used in the context of a sequence of key presses, as in "Press Alt + V, followed by S"</note>
+        <text xml:lang="en">followed by</text>
+        <originalText xml:lang="en">followed by</originalText>
+        <audio src=""/>
+      </promptItem>
+    </promptItemRefs>
+    <generalPrompts>
+      <prompt id="dialogClosed">
+        <promptItem>
+          <text xml:lang="en">Dialog closed.</text>
+          <originalText xml:lang="en">Dialog closed.</originalText>
+          <audio src=""/>
+        </promptItem>
+      </prompt>
+      <prompt id="textFieldEntry">
+        <promptItem>
+          <text xml:lang="en">Text field entry is:</text>
+          <originalText xml:lang="en">Text field entry is:</originalText>
+          <audio src=""/>
+        </promptItem>
+        <promptVar name="TEXT_FIELD"/>
+      </prompt>
+      <prompt id="notSelfVoicing">
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+      </prompt>
+      <prompt id="bookAtPathChanged">
+        <promptItem>
+          <text>ตำแหน่งหนังสือที่คุณค้นหาได้ถูกเปลี่ยนไปแล้ว  แต่พบหนังสืออื่นแทน คุณต้องการเปลี่ยนข้อมูลใหม่ในซีดีรอมหรือไม่?</text>
+          <originalText xml:lang="en">The location of the book you are looking for has changed.  A different book was found instead.  Did the contents of your CD-ROM drive change?</originalText>
+          <audio src=""/>
+        </promptItem>
+      </prompt>
+      <prompt id="generalBookError">
+        <promptItem>
+          <text>พบปัญหาในระหว่างเปิดหนังสือ.</text>
+          <originalText xml:lang="en">An error occurred while trying to open the book.</originalText>
+          <audio src=""/>
+        </promptItem>
+        <promptVar name="BOOK_PATH"/>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+      <prompt id="noCdLoaded">
+        <promptItem>
+          <text>ไม่พบแผ่นซีดี</text>
+          <originalText xml:lang="en">There is not a CD in the CD-ROM drive.</originalText>
+          <audio src=""/>
+        </promptItem>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+      <prompt id="pluginErrorInit">
+        <promptItem>
+          <text>โปรแกรมพ่วงต่อมีปัญหา</text>
+          <originalText xml:lang="en">Plug-in error: init() function not found in the plug-in DLL.</originalText>
+          <audio src=""/>
+        </promptItem>
+      </prompt>
+      <prompt id="pluginErrorDll">
+        <promptItem>
+          <text xml:lang="en">Plug-in error: The following plug-in library could not be loaded: </text>
+          <originalText xml:lang="en">Plug-in error: The following plug-in library could not be loaded: </originalText>
+          <audio src=""/>
+        </promptItem>
+        <promptVar name="PLUGIN_LIB"/>
+      </prompt>
+      <prompt id="basicViewPrompt">
+        <promptItem>
+          <text>คุณกำลังใช้โหมดมุมมองพื้นฐาน  กดF 11 เพื่อกลับไปยังโหมดมุมมองที่เป็นค่าเริ่มต้น.</text>
+          <originalText xml:lang="en">You are now using the basic view mode.  Press F11 to switch back to the default view mode.</originalText>
+          <audio src=""/>
+        </promptItem>
+      </prompt>
+      <prompt id="OpenFile_notSelfVoicing">
+        <promptItem>
+          <text xml:lang="en">Open File Dialog</text>
+          <originalText xml:lang="en">Open File Dialog</originalText>
+          <audio src=""/>
+        </promptItem>
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem>
+          <text xml:lang="en">Use the "search for books" feature, under the file menu, to find DAISY books on your hard drive.</text>
+          <originalText xml:lang="en">Use the "search for books" feature, under the file menu, to find DAISY books on your hard drive.</originalText>
+          <audio src=""/>
+        </promptItem>
+        <promptItem refid="escapeToCancel"/>
+      </prompt>
+      <prompt id="BrowseForFolder_notSelfVoicing">
+        <promptItem>
+          <text xml:lang="en">Browse for folder dialog</text>
+          <originalText xml:lang="en">Browse for folder dialog</originalText>
+          <audio src=""/>
+        </promptItem>
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem refid="escapeToCancel"/>
+        <promptItem>
+          <text xml:lang="en">Then, type the path of the folder you want in the text box.</text>
+          <originalText xml:lang="en">Then, type the path of the folder you want in the text box.</originalText>
+          <audio src=""/>
+        </promptItem>
+      </prompt>
+      <prompt id="canceled">
+        <promptItem>
+          <text xml:lang="en">Canceled</text>
+          <originalText xml:lang="en">Canceled</originalText>
+          <audio src=""/>
+        </promptItem>
+      </prompt>
+      <prompt id="loading">
+        <promptItem>
+          <text xml:lang="en">Loading</text>
+          <originalText xml:lang="en">Loading</originalText>
+          <audio src=""/>
+        </promptItem>
+      </prompt>
+      <prompt id="restartForChanges">
+        <promptItem>
+          <text>หากพบเห็นการเปลี่ยนแปลง, กรุณาเริ่มต้นโปรแกรมอามีส์อีกครั้ง</text>
+          <originalText xml:lang="en">Please restart to see your changes.</originalText>
+          <audio src=""/>
+        </promptItem>
+      </prompt>
+      <prompt id="noBooksFoundOnCd">
+        <promptItem>
+          <text>ซีดีแผ่นนี้ไม่ปรากฎหนังสือเดซี</text>
+          <originalText xml:lang="en">No DAISY books were found on this CD-ROM.</originalText>
+          <audio src=""/>
+        </promptItem>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+    </generalPrompts>
+  </prompts>
+</ui>

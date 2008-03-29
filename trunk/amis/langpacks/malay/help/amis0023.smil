@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Lajukan" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:22" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="21.668s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_0023" id="amis_0023" />
+<seq>
+<audio src="34_Lajukan.mp3" clip-begin="npt=0.000s" clip-end="npt=0.353s" id="qwrt_0001" />
+<audio src="34_Lajukan.mp3" clip-begin="npt=0.353s" clip-end="npt=1.959s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_005b" id="xami_005b" />
+<seq>
+<audio src="34_Lajukan.mp3" clip-begin="npt=1.959s" clip-end="npt=5.316s" id="qwrt_0003" />
+<audio src="34_Lajukan.mp3" clip-begin="npt=5.316s" clip-end="npt=9.156s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_005c" id="xami_005c" />
+<seq>
+<audio src="34_Lajukan.mp3" clip-begin="npt=9.156s" clip-end="npt=9.600s" id="qwrt_0005" />
+<audio src="34_Lajukan.mp3" clip-begin="npt=9.600s" clip-end="npt=11.154s" id="qwrt_0006" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_005d" id="xami_005d" />
+<seq>
+<audio src="34_Lajukan.mp3" clip-begin="npt=11.154s" clip-end="npt=11.703s" id="qwrt_0007" />
+<audio src="34_Lajukan.mp3" clip-begin="npt=11.703s" clip-end="npt=14.080s" id="qwrt_0008" />
+<audio src="34_Lajukan.mp3" clip-begin="npt=14.080s" clip-end="npt=15.399s" id="qwrt_0009" />
+<audio src="34_Lajukan.mp3" clip-begin="npt=15.399s" clip-end="npt=17.371s" id="qwrt_000A" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_005e" id="xami_005e" />
+<seq>
+<audio src="34_Lajukan.mp3" clip-begin="npt=17.371s" clip-end="npt=17.724s" id="qwrt_000B" />
+<audio src="34_Lajukan.mp3" clip-begin="npt=17.724s" clip-end="npt=19.108s" id="qwrt_000C" />
+<audio src="34_Lajukan.mp3" clip-begin="npt=19.108s" clip-end="npt=20.414s" id="qwrt_000D" />
+<audio src="34_Lajukan.mp3" clip-begin="npt=20.414s" clip-end="npt=21.668s" id="qwrt_000E" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

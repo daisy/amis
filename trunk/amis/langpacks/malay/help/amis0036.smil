@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Keluar Dari AMIS" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:12" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="11.781s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_0036" id="amis_0036" />
+<seq>
+<audio src="53_Keluar_Dari_AMIS.mp3" clip-begin="npt=0.000s" clip-end="npt=0.862s" id="qwrt_0001" />
+<audio src="53_Keluar_Dari_AMIS.mp3" clip-begin="npt=0.862s" clip-end="npt=2.795s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0094" id="xami_0094" />
+<seq>
+<audio src="53_Keluar_Dari_AMIS.mp3" clip-begin="npt=2.795s" clip-end="npt=3.435s" id="qwrt_0003" />
+<audio src="53_Keluar_Dari_AMIS.mp3" clip-begin="npt=3.435s" clip-end="npt=5.838s" id="qwrt_0004" />
+<audio src="53_Keluar_Dari_AMIS.mp3" clip-begin="npt=5.838s" clip-end="npt=7.784s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0095" id="xami_0095" />
+<seq>
+<audio src="53_Keluar_Dari_AMIS.mp3" clip-begin="npt=7.784s" clip-end="npt=8.359s" id="qwrt_0006" />
+<audio src="53_Keluar_Dari_AMIS.mp3" clip-begin="npt=8.359s" clip-end="npt=9.704s" id="qwrt_0007" />
+<audio src="53_Keluar_Dari_AMIS.mp3" clip-begin="npt=9.704s" clip-end="npt=10.880s" id="qwrt_0008" />
+<audio src="53_Keluar_Dari_AMIS.mp3" clip-begin="npt=10.880s" clip-end="npt=11.781s" id="qwrt_0009" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

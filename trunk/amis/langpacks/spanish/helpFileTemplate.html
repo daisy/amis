@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
+	<head>
+		<title>AMIS</title>
+		<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1" />
+</head>
+<body>
+	<div>
+		<h1>AMIS</h1>
+		<p>Sistema de Información Multimedia Accesible</p>
+		<p>Página web: http://amis.sf.net</p>
+		<div class="image">
+			<!--translate the alt-text of the image-->
+			<img src="./img/amis.gif" height="256" width="256" alt="Logo de AMIS"/>
+		</div>
+		<div class="image">
+			<!--translate the alt-text of the image-->
+			<img src="./img/Nipponfoundation.gif" height="73" width="300" alt="Logo de la Nippon Foundation" />
+			<!--translate the alt-text of the image-->
+			<img src="./img/dfa-log.jpg" alt="Logo del proyecto DAISY-for-All" />
+		</div>
+	</div>
+	<div>
+		<br />
+		<br />
+	</div>
+	<h1>¿Qué es AMIS?</h1>
+	<div class="image">
+		<!--translate the alt-text of the image-->
+		<img src="./img/amis.gif" height="100" width="100" alt="Logo de AMIS" />
+	</div>
+	<p>AMIS es un programa para leer Libros Hablados Digitales en formato DAISY. Dispone de su propia ayuda sonora, lo que significa que no se necesita un lector de pantalla especializado para su uso por personas deficientes visuales. AMIS es un software de código abierto y se distribuye gratuitamente. Ha sido creado y mantenido por el proyecto DAISY for All, financiado por la Nippon Foundation. AMIS está disponible en muchos idiomas. Visite nuestra web para obtener el paquete de idiomas. Siga leyendo, por favor, para aprender más acerca de AMIS.</p>
+	<div>
+		<br/>
+		<br/>
+	</div>
+	<h1>¿Qué es DAISY?</h1>
+	<div class="image">
+		<!--translate the alt-text of the image-->
+		<img src="./img/daisy.jpg" width="100" height="100" alt="Logo del Consorcio DAISY"/>
+	</div>
+	<p>DAISY es el acrónimo de Digital Accessible Information SYstem (Sistema de Información Accesible Digital). Los libros DAISY son libros hablados digitales totalmente accesibles. Las características habituales de los libros, como secciones, páginas, notas a pie, recuadros y marcas, se representan de manera que el usuario puede recorrerlas rápidamente. Si desea mas información acerca de DAISY, visite la página del consorcio en http://www.daisy.org.</p>
+	<div>
+		<br/>
+		<br />
+	</div>
+	<h1>Inicio rápido</h1>
+	<p>Esta parte es un compendio sencillo de los comandos de AMIS para ayudarle a utilizar el programa.</p>
+	
+	<h2>Mientras lee un libro</h2>
+	<p>Obtener ayuda: Pulse la tecla F1 en cualquier momento para ver este libro de Ayuda.</p>
+	<p>Leer un CD-ROM: Pulse las teclas Control + L para cargar el contenido de un CD-ROM.</p>
+	<p>Abrir un archivo de su disco duro: Pulse Control + O para abrir un archivo.</p>
+	<p>Activar la ventana de navegación: Pulse Control + N para acceder a la ventana de navegación. Utilice luego las teclas de flechas para moverse por las listas de entradas navegables.</p>
+	<p>Reproducir y pausar el libro: Pulse la Barra Espaciadora.</p>
+	<p>Salir de AMIS: Pulse Alt + F4.</p>
+	<p>Activar la ventana de texto principal: Pulse Control + A</p>
+	<p>Ampliar el número de niveles en la ventana de navegación: Pulse Control + P</p>
+	<p>Reducir el número de niveles en la ventana de navegación: Pulse Control + Q</p>
+	
+	<h2>En pantallas de diálogo</h2>
+	<p>Escuchar las instrucciones de un diálogo: Pulse Control + I.</p>
+	<p>Escuchar el texto que ha introducido: Pulse Control + T. Únicamente es aplicable si el diálogo contiene texto editable.</p>
+	<p>Repetir el último mensaje: Pulse Control + R.</p>
+	<div>
+		<br />
+		<br />
+	</div>
+	 
+	<h1>Lista completa de las características de AMIS</h1>
+	 
+	<h2>Abriendo un libro DAISY</h2>
+	 
+	<h3>Abrir un archivo</h3>
+	<p>Cargue un archivo desde su disco duro. Este comando muestra una ventana estándar de navegación con la que puede seleccionar un libro DAISY</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+    <li>$<//promptItem[@id="icon"]/text>$:
+    <img src="./img/folder.jpg" height="50" width="50" alt="Icono Abrir Archivo" /></li>
+    <li>$<//promptItem[@id="keyboardShortcut"]/text>$:
+    $<//action[@mfcid="ID_MENU_FILE_OPEN"]/accelerator/text>$</li>
+    <li>$<//promptItem[@id="menu"]/text>$:
+    $<//action[@mfcid="ID_MENU_FILE_OPEN"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_FILE_OPEN"]/caption/text>$
+    </li>
+	</ul>
+	
+	<h3>Cargar un CD-ROM</h3>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/cd.jpg" height="50" width="50" alt="Icono Leer CD"/></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_LOADCD"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_LOADCD"]/parent::container/caption/text>$
+		-&gt;
+		$<//action[@mfcid="ID_MENU_FILE_LOADCD"]/caption/text>$</li>
+	</ul>
+	
+	<h3>Buscar libros en su disco duro</h3>
+	<p>Muestra un diálogo en el que puede introducir la ruta de búsqueda. Los resultados aparecen en la ventana de diálogo.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/searchForBooks.jpg" height="50" width="50" alt="Icono Buscar en disco"/></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="file"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_FILE_SEARCHDRIVE"]/mnemonic/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_SEARCHDRIVE"]/parent::container/caption/text>$
+		-&gt;
+		$<//action[@mfcid="ID_MENU_FILE_SEARCHDRIVE"]/caption/text>$
+		</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Seleccionar algún libro de los leídos recientemente</h3>
+	<p>Es un submenú con la lista de los títulos de los libros que ha leído más recientemente.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$:
+		$<//container[@id="file"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+    $<//container[@id="recentBooksList"]/mnemonic/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$:
+		$<//container[@id="file"]/caption/text>$
+    -&gt;
+    $<//container[@id="recentBooksList"]/caption/text>$
+		</li>
+	</ul>
+	<!--end block-->
+	
+	
+	<h2>Preferencias</h2>
+	<p>En este punto puede ajustar la configuración de los parámetros de AMIS, incluyendo el comportamiento al inicio, dónde poner sus marcadores, qué colores utiliza AMIS y qué paquete de idioma se usará (si tiene alguno instalado).</p>
+	
+	<h3>Preferencias Generales</h3>
+	<p>Esta es la pantalla por defecto del diálogo de Preferencias.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="file"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/mnemonic/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/caption/text>$
+		</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Color</h3>
+	<p>Otra de las pestañas del diálogo de Preferencias.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="file"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/mnemonic/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//dialog[@mfcid="IDD_PROPPAGE2"]/accelerator/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/caption/text>$
+		</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Idioma</h3>
+	<p>Otra de las pestañas del diálogo de Preferencias.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="file"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/mnemonic/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//dialog[@mfcid="IDD_PROPPAGE4"]/accelerator/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/caption/text>$
+		</li>
+	</ul>
+	<!--end block-->
+	
+	
+	<h2>Tipos de vistas</h2>
+	
+	<h3>Vista por defecto</h3>
+	<p>Esta vista tiene un menú, una barra de herramientas y un recuadro. Su apariencia es muy similar a la de muchas otras aplicaciones. Es la vista por defecto establecida para el AMIS. Puede pasar de ella a la vista básica con la siguiente tecla de acceso:</p>
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$:
+		$<//action[@mfcid="ID_MENU_VIEW_BASIC"]/accelerator/text>$</li>
+	</ul>
+	
+	<h3>Vista básica</h3>
+	<p>Esta vista no dispone de menú ni de recuadro. La barra de herramientas tiene seis botones grandes colocados en la parte inferior de la pantalla.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_BASIC"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_BASIC"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_VIEW_BASIC"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h2>El recuadro</h2>
+	<div>
+		<!--translate the alt-text of the image-->
+		<img src="./img/sidebar.jpg" alt="El recuadro" />
+	</div>
+	<p>El recuadro, como se ve en la imagen anterior, contiene puntos de navegación, como secciones y listas de entradas, tales como páginas, notas a pie y otros. Estas entradas están organizadas en listas. Cada lista tiene su propia pestaña.</p>
+	<p>Una combinación especial de teclas de acceso rápido a recordar es Control + N, que activa el recuadro y nos permite navegar por la lista activa. Puede cambiar de lista utilizando el menú ver.</p>
+	
+	<h3>Ver y ocultar</h3>
+	<p>El recuadro puede verse u ocultarse. Utilice para ello el menú o haga clic en la &#34;x&#34; de la esquina superior derecha de la ventana del recuadro.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="view"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF"]/mnemonic/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Fijar y mover</h3>
+	<p>Es posible mover el recuadro a cualquier punto de la pantalla haciendo clic con el ratón y, sin soltar el botón, arrastrar su barra de título. Arrástrelo hacia un extremo para fijarlo a la izquierda, a la derecha, en la parte superior o la inferior. Para ajustar el tamaño, pulse cerca de cualquier esquina y arrastre hasta conseguir el tamaño deseado.</p>
+	
+	<h3>Secciones</h3>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/sections.jpg" height="50" width="50" alt="Icono para Secciones" /></li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//container[@id="view"]/caption/text>$
+    -&gt;
+    $<//promptItem[@id="sections"]/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Páginas</h3>
+	<p>Nota: Esta característica estará deshabilitada si el libro no está paginado.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/pages.jpg" height="50" width="50" alt="Icono para Páginas"/></li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//container[@id="view"]/caption/text>$
+    -&gt;
+    $<//promptItem[@id="pages"]/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Características especiales</h3>
+	<p>Las características especiales son, por ejemplo, las notas a pie de página, los recuadros (no el recuadro de AMIS, pero sí los recuadros de texto de los libros), notas de producción y otros elementos agrupados. Aparecen en el recuadro de AMIS y en el menú Ver solo si están presentes en la publicación.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/figures.jpg" height="50" width="50" alt="Icono de las Características especiales"/></li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//container[@id="view"]/caption/text>$
+ 		</li>
+	</ul>
+	<!--end block-->
+	
+	<h2>Efectos</h2>
+	
+	<h3>Contraste de colores</h3>
+	<p>Esta entrada se activa o desactiva cada vez que se pulsa el botón o la combinación de teclas correspondientes. Se pueden elegir colores concretos en la pestaña Configurar Colores del diálogo Preferencias .</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/contrast.jpg" height="50" width="50" alt="Icono de Contraste" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_CONTRAST"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_CONTRAST"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_VIEW_CONTRAST"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Aumentar el tamaño del tipo de letra</h3>
+	<p>El tamaño de la fuente se incrementa, hasta un cierto límite, cada vez que se pulsa el botón o la combinación de teclas correspondientes. </p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/font.jpg" height="50" width="50" alt="Tamaño de fuente" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$:
+		$<//container[@id="view"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_VIEW_LARGEFONT"]/mnemonic/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_LARGEFONT"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_VIEW_LARGEFONT"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Cancelar cambio en el tamaño del tipo de letra</h3>
+	<p>Vuelve al tamaño original de la fuente.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="view"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_VIEW_RESETFONT"]/mnemonic/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_RESETFONT"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_VIEW_RESETFONT"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h2>Reproducción</h2>
+	
+	<h3>Reproducir y Pausar</h3>
+	<p>Durante la reproducción, &quot;Play&quot; cambia a &quot;Pause&quot; y viceversa.</p>
+	<!--Don't translate this block except for the word "or" between images and except for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$: 
+			<img src="./img/play.jpg" height="50" width="50" alt="Icono de Play" />
+			o
+			<img src="./img/pause.jpg" height="50" width="50" alt="Icono de Pause"/>
+		</li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAYPAUSE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAYPAUSE"][1]/parent::switch/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAYPAUSE"][1]/caption/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAYPAUSE"][2]/parent::switch/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAYPAUSE"][2]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Aumentar el volumen</h3>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_VOLUP"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_VOLUP"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAY_VOLUP"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Disminuir el volumen</h3>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_VOLDOWN"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_VOLDOWN"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAY_VOLDOWN"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Aumentar velocidad</h3>
+	<p>Aumenta la velocidad de lectura sin distorsionar el tono.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:<img src="./img/faster.jpg" height="50" width="50" alt="Icono Aumentar velocidad" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_FASTER"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_FASTER"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAY_FASTER"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Reducir velocidad</h3>
+	<p>Disminuye la velocidad de lectura sin distorsionar el tono.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/slower.jpg" height="50" width="50" alt="Icono Reducir velocidad" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_SLOWER"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_SLOWER"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAY_SLOWER"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Velocidad normal</h3>
+	<p>Este botón devuelve la reproducción a su velocidad normal.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/normalSpeed.jpg" height="50" width="50" alt="Icono Velocidad normal" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_NORMALSPEED"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_NORMALSPEED"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAY_NORMALSPEED"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	
+	<h2>Navegación</h2>
+	
+	<h3>Siguiente Sección</h3>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/nextSection.jpg" height="50" width="50" alt="Siguiente Sección" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_NEXTSECTION"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_NEXTSECTION"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_NEXTSECTION"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Sección anterior</h3>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/prevSection.jpg" height="50" width="50" alt="Sección anterior" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_PREVSECTION"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_PREVSECTION"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_PREVSECTION"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Mostrar el árbol de la sección</h3>
+	<p>Este comando le permite restringir o mostrar completamente el árbol con la estructura jerárquica de la sección. Por defecto, cuando abra un libro por primera vez, se muestran todas las secciónes dentro del recuadro.</p>
+	<p>La lista de valores de los niveles de una sección (1, 2, 3, etc.) se encuentra en un submenú del menú Navegar.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="navigate"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//container[@id="sectiondepth"]/mnemonic/text>$
+	</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//container[@id="navigate"]/caption/text>$
+    -&gt;
+    $<//container[@id="sectiondepth"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Siguiente frase</h3>
+	<p>Una frase puede ser una oración o un párrafo, dependiendo del estilo empleado en la producción de la publicación.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/nextPhrase.jpg" height="50" width="50" alt="Frase siguiente" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_NEXTPHRASE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_NEXTPHRASE"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_NEXTPHRASE"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Frase anterior</h3>
+	<p>Una frase puede ser una oración o un párrafo, dependiendo del estilo empleado en la producción de la publicación.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/prevPhrase.jpg" height="50" width="50" alt="Ir a la Frase anterior" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_PREVPHRASE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_PREVPHRASE"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_PREVPHRASE"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Página siguiente</h3>
+	<p>El comando Página solo está disponible si la publicación está paginada.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/nextPage.jpg" height="50" width="50" alt="Icono Página siguiente" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_NEXTPAGE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_NEXTPAGE"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_NEXTPAGE"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Página anterior</h3>
+	<p>El comando Página solo está disponible si la publicación está paginada.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/prevPage.jpg" height="50" width="50" alt="Icono Página anterior" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_PREVPAGE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_PREVPAGE"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_PREVPAGE"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Ir a página</h3>
+	<p>El comando Página solo está disponible si la publicación está paginada.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_GOTOPAGE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_GOTOPAGE"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_GOTOPAGE"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Encontrar en el texto</h3>
+	<p>EL comando Encontrar en el texto solo está disponible si la publicación contiene texto.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_FINDINTEXT"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_FINDINTEXT"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_FINDINTEXT"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Saltando elementos especiales</h3>
+	<p>Se pueden evitar determinados elementos (estructuras anidadas como las tablas, o información complementaria como los recuadros). Esto significa que podrá seguir leyendo la entrada que precedía a la estructura ignorada.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_ESCAPE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_ESCAPE"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAY_ESCAPE"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	
+	<h2>Elementos evitables</h2>
+	<p>Una característica de los libros DAISY es que pueden contener elementos evitables u opcionales. Un elemento evitable es aquel que puede ser activado o desactivado en el libro. Ejemplos de posibles elementos evitables son los números de página y las notas a pie. Si no quiere escuchar estos elementos mientras lee, deberá asegurarse de que estén marcadas en el diálogo  &#34;Elementos Saltables&#34;.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$:
+		$<//container[@id="info"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_INFO_SKIP"]/mnemonic/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_INFO_SKIP"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_INFO_SKIP"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	
+	<h2>Marcas del libro</h2>
+	
+	<h3>Añadir una marca</h3>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/addBookmark.jpg" height="50" width="50" alt="Icono Añadir una marca" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_BMK_ADD"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_BMK_ADD"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_BMK_ADD"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Cargar una marca</h3>
+	<p>Cuando abre un libro, todas sus marcas se cargan automáticamente. Cualquier nueva marca será añadida a la lista en el menú Marcas del libro.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="bookmarks"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//container[@id="bookmarks"]/caption/text>$
+    </li>
+	</ul>
+	<!--end block-->
+
+	<h2>Resumen informativo</h2>
+	<p>AMIS proporciona tres tipos de resúmenes informativos: Sumario completo, Posición actual y Opciones de navegación. Todos ellos están disponibles como diálogos, accesibles a través del menú Info (&#34;Alt + I&#34;)</p>
+
+	<h2>Salir de AMIS</h2>
+		<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_EXIT"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_EXIT"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_FILE_EXIT"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+
+<h1>Añadidos</h1>
+<p>AMIS se puede personalizar mediante el añadido de paquetes, tales como paquetes de idiomas o plug-ins.</p>
+<h2>Plug-ins</h2>
+<div class="image">
+	<img src="./img/joystick.jpg" height="100" width="100" alt="Icono de Plug-in"/>
+</div>
+<p>AMIS soporta plug-ins, que son interfaces alternativas de solo software o de software y hardware. Por ejemplo, joysticks, líneas braille o menús de escaneado. Todos los plug-ins se encuentran disponibles en nuestra web (http://amis.sf.net).</p>
+<h2>Paquetes de Idiomas</h2>
+<div class="image">
+	<!--translate the alt-text of these images-->
+	<!--Feel free to add your flag to this list.-->
+	<img src="./img/us-flag.ico" alt="Bandera de EE UU" width="25" height="25"/>
+	<img src="./img/jp-flag.ico" alt="Bandera de Japón" width="25" height="25"/>
+	<img src="./img/malay-flag.ico" alt="Bandera de Malasia"  width="25" height="25"/>
+	<img src="./img/india-flag.ico" alt="Bandera de la India"  width="25" height="25"/>
+	<img src="./img/nepal-flag.ico" alt="Bandera de Nepal"  width="25" height="25"/>
+	<img src="./img/fr-flag.ico" alt="Bandera de Francia"  width="25" height="25"/>
+	<img src="./img/srilanka-flag.ico" alt="Bandera de Sri Lanka"  width="25" height="25"/>
+	<img src="./img/thai-flag.ico" alt="Bandera de Thailandia"  width="25" height="25"/>
+	<img src="./img/arab-league-flag.ico" alt="Bandera de la Liga de Naciones Árabes" width="25" height="25"/>
+	<img src="./img/vietnam-flag.ico" alt="Bandera de Vietnam" width="25" height="25"/>
+	<img src="./img/indonesia-flag.ico" alt="Bandera de Indonesia" width="25" height="25"/>
+	<img src="./img/pakistan-flag.ico" alt="Bandera de Pakistán" width="25" height="25"/>
+	<img src="./img/bangladesh-flag.ico" alt="Bandera de Bangladesh" width="25" height="25"/>
+	<img src="./img/spain-flag.ico" alt="Bandera de España" width="25" height="25"/>
+</div>
+<p>AMIS soporta UNICODE y es posible configurarlo para utilizar distintos paquetes de idiomas. Todos los paquetes de idiomas están disponibles en nuestra página web (http://amis.sf.net).</p>
+</body>
+</html>

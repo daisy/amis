@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.7" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="C&#225;c plug-in" />
+<meta name="dc:title" content="AMIS Version 2.0 Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:36" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="35.670s">
+<par endsync="last">
+<text src="amishelp-entity.html#amis_0038" id="amis_0038" />
+<seq>
+<audio src="55_Cc_plugin.mp2" clip-begin="npt=0.000s" clip-end="npt=0.235s" id="qwrt_0001" />
+<audio src="55_Cc_plugin.mp2" clip-begin="npt=0.235s" clip-end="npt=1.199s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0097" id="xami_0097" />
+<seq>
+<audio src="55_Cc_plugin.mp2" clip-begin="npt=1.199s" clip-end="npt=2.952s" id="qwrt_0003" />
+<audio src="55_Cc_plugin.mp2" clip-begin="npt=2.952s" clip-end="npt=5.394s" id="qwrt_0004" />
+<audio src="55_Cc_plugin.mp2" clip-begin="npt=5.394s" clip-end="npt=7.599s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0098" id="xami_0098" />
+<seq>
+<audio src="55_Cc_plugin.mp2" clip-begin="npt=7.599s" clip-end="npt=8.438s" id="qwrt_0006" />
+<audio src="55_Cc_plugin.mp2" clip-begin="npt=8.438s" clip-end="npt=12.121s" id="qwrt_0007" />
+<audio src="55_Cc_plugin.mp2" clip-begin="npt=12.121s" clip-end="npt=14.824s" id="qwrt_0008" />
+<audio src="55_Cc_plugin.mp2" clip-begin="npt=14.824s" clip-end="npt=16.000s" id="qwrt_0009" />
+<audio src="55_Cc_plugin.mp2" clip-begin="npt=16.000s" clip-end="npt=18.926s" id="qwrt_000A" />
+<audio src="55_Cc_plugin.mp2" clip-begin="npt=18.926s" clip-end="npt=20.349s" id="qwrt_000B" />
+<audio src="55_Cc_plugin.mp2" clip-begin="npt=20.349s" clip-end="npt=24.189s" id="qwrt_000C" />
+<audio src="55_Cc_plugin.mp2" clip-begin="npt=24.189s" clip-end="npt=25.247s" id="qwrt_000D" />
+<audio src="55_Cc_plugin.mp2" clip-begin="npt=25.247s" clip-end="npt=29.127s" id="qwrt_000E" />
+<audio src="55_Cc_plugin.mp2" clip-begin="npt=29.127s" clip-end="npt=31.765s" id="qwrt_000F" />
+<audio src="55_Cc_plugin.mp2" clip-begin="npt=31.765s" clip-end="npt=33.254s" id="qwrt_0010" />
+<audio src="55_Cc_plugin.mp2" clip-begin="npt=33.254s" clip-end="npt=35.670s" id="qwrt_0011" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="ncc:timeInThisSmil" content="00:00:23.802"/>
+		<meta name="ncc:totalElapsedTime" content="00:04:05.566"/>
+		<layout>
+			<region id="txt-view"/>
+		</layout>
+		<meta name="ncc:generator" content="EasePublisher 2.02 Build 025 # 091650"/>
+        <meta name="title" content="Etsi kirjoja kovalevyltä"/>
+        <meta name="dc:title" content="help"/>
+        <meta name="dc:identifier" content="celia"/>
+    </head>
+	<body>
+		<seq dur="23.802s">
+			<par endsync="last" id="ifbo_0002">
+				<text src="amishelp.html#ifbo_0047" id="ifbo_0008"/>
+				<seq>
+					<audio src="11_Etsi_kirjoja_.mp3" clip-begin="npt=0.000s" clip-end="npt=2.699s" id="audio_0001"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0003">
+				<text src="amishelp.html#ifbo_0048" id="ifbo_0009"/>
+				<seq>
+					<audio src="11_Etsi_kirjoja_.mp3" clip-begin="npt=2.699s" clip-end="npt=7.559s" id="audio_0002"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0004">
+				<text src="amishelp.html#ifbo_0049" id="ifbo_000a"/>
+				<seq>
+					<audio src="11_Etsi_kirjoja_.mp3" clip-begin="npt=7.559s" clip-end="npt=10.978s" id="audio_0003"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0005">
+				<text src="amishelp.html#ifbo_0050" id="ifbo_000b"/>
+				<seq>
+					<audio src="11_Etsi_kirjoja_.mp3" clip-begin="npt=10.978s" clip-end="npt=15.298s" id="audio_0004"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0006">
+				<text src="amishelp.html#ifbo_0051" id="ifbo_000c"/>
+				<seq>
+					<audio src="11_Etsi_kirjoja_.mp3" clip-begin="npt=15.298s" clip-end="npt=19.722s" id="audio_0005"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0007">
+				<text src="amishelp.html#ifbo_0052" id="ifbo_000d"/>
+				<seq>
+					<audio src="11_Etsi_kirjoja_.mp3" clip-begin="npt=19.722s" clip-end="npt=23.802s" id="audio_0006"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

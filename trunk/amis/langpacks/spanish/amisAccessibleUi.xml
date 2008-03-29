@@ -1,0 +1,2020 @@
+<?xml version="1.0"?>
+<ui xmlns="http://amisproject.org" next-id="t327" xml:lang="en">
+	<containers>
+		<container id="file">
+			<note>This is the menu header "File"</note>
+			<caption>
+				<text id="t1">Archivo</text>
+				
+			<audio src="./audio/002_Archivo.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0003.smil#text_0003"/></caption>
+			<action mfcid="ID_MENU_FILE_OPEN" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and a toolbar item</note>
+				<icon src="./open.png" type="smallIcon"/>
+				<caption>
+					<text id="t2">Abrir...</text>
+					
+				<audio src="./audio/003_Abrir.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0004.smil#text_0004"/></caption>
+				<description>
+					<text id="t3">Abrir un libro DAISY desde el sistema de archivos local</text>
+					
+				<audio src="./audio/004_Abrir_un_libro_DAISY_desde_el_.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0005.smil#text_0005"/></description>
+				<!--keys = the actual keys; text = the name of the keys-->
+				<accelerator keys="Ctrl+O">
+					<text id="t4">Ctrl+O</text>
+					
+				<audio src="./audio/005_CtrlO.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0006.smil#text_0006"/></accelerator>
+				<mnemonic>
+					<text id="t5">A</text>
+					
+				<audio src="./audio/006_A.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0007.smil#text_0007"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_FILE_LOADCD" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and a toolbar item</note>
+				<icon src="./settings/img/cd3.ico" type="smallIcon"/>
+				<icon src="./settings/img/cd_big.ico" type="largeIcon"/>
+				<caption>
+					<text id="t6">Cargar CD</text>
+					
+				<audio src="./audio/007_Cargar_CD.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0008.smil#text_0008"/></caption>
+				<description>
+					<text id="t7">Abrir libro DAISY desde CD ROM</text>
+					
+				<audio src="./audio/008_Abrir_libro_DAISY_desde_CD_ROM.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0009.smil#text_0009"/></description>
+				<accelerator keys="Ctrl+L">
+					<text id="t8">Ctrl+L</text>
+					
+				<audio src="./audio/009_CtrlL.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis000a.smil#text_000a"/></accelerator>
+				<mnemonic>
+					<text id="t9">C</text>
+					
+				<audio src="./audio/010_C.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis000b.smil#text_000b"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_FILE_SEARCHDRIVE" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text id="t10">Buscar...</text>
+					
+				<audio src="./audio/011_Buscar.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis000c.smil#text_000c"/></caption>
+				<description>
+					<text id="t11">Buscar libros DAISY en los discos locales</text>
+					
+				<audio src="./audio/012_Buscar_libros_DAISY_en_los_dis.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis000d.smil#text_000d"/></description>
+				<mnemonic>
+					<text id="t12">B</text>
+					
+				<audio src="./audio/013_B.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis000e.smil#text_000e"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_FILE_PREFERENCES" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text id="t13">Preferencias...</text>
+					
+				<audio src="./audio/014_Preferencias.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis000f.smil#text_000f"/></caption>
+				<description>
+					<text id="t14">Este es el diálogo de preferencias de la aplicación.</text>
+					
+				<audio src="./audio/015_Este_es_el_dilogo_de_preferenc.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0010.smil#text_0010"/></description>
+				<mnemonic>
+					<text id="t15">P</text>
+					
+				<audio src="./audio/016_P.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0011.smil#text_0011"/></mnemonic>
+			</action>
+			<container id="recentBooksList">
+				<note>This is the menu header for the recent books sub-menu.</note>
+				<caption>
+					<text id="t16">Documentos Recientes</text>
+					
+				<audio src="./audio/017_Documentos_Recientes.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0012.smil#text_0012"/></caption>
+				<switch element="action">
+					<action condition="ID_FILE_RECENT_EMPTY" mfcid="ID_FILE_RECENT_EMPTY" widget="menuItem">
+						<note>This is going to be a menu item</note>
+						<caption>
+							<text id="t17">Vacío</text>
+							
+						<audio src="./audio/018_Vaco.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0013.smil#text_0013"/></caption>
+						<description>
+							<text id="t18">No hay libros abiertos recientemente.</text>
+							
+						<audio src="./audio/019_No_hay_libros_abiertos_recient.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0014.smil#text_0014"/></description>
+					</action>
+					<action condition="BOOK_BASE_ID" mfcid="BOOK_BASE_ID" widget="menuItem">
+						<note>This is going to be a menu item</note>
+						<list repeat="yes">
+							<caption>
+								<promptVar name="RECENT_BOOK_TITLE"/>
+							</caption>
+						</list>
+					</action>
+				</switch>
+				<mnemonic>
+					<text id="t19">R</text>
+					
+				<audio src="./audio/020_R.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0015.smil#text_0015"/></mnemonic>
+			</container>
+			<action mfcid="ID_MENU_FILE_EXIT" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text id="t20">Salir</text>
+					
+				<audio src="./audio/021_Salir.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0016.smil#text_0016"/></caption>
+				<description>
+					<text id="t21">Salir de AMIS</text>
+					
+				<audio src="./audio/022_Salir_de_AMIS.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0017.smil#text_0017"/></description>
+				<accelerator keys="Alt+F4">
+					<text id="t22">Alt+F4</text>
+					
+				<audio src="./audio/023_AltF4.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0018.smil#text_0018"/></accelerator>
+				<mnemonic>
+					<text id="t23">S</text>
+					
+				<audio src="./audio/024_S.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0019.smil#text_0019"/></mnemonic>
+			</action>
+			<accelerator keys="Alt+F">
+				<text id="t24">Alt+A</text>
+				
+			<audio src="./audio/025_AltA.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis001a.smil#text_001a"/></accelerator>
+			<mnemonic>
+				<text id="t25">A</text>
+				
+			<audio src="./audio/026_A.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis001b.smil#text_001b"/></mnemonic>
+		</container>
+		<container id="view">
+			<note>This is the menu header "View"</note>
+			<caption>
+				<text id="t26">Vista</text>
+				
+			<audio src="./audio/027_Vista.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis001c.smil#text_001c"/></caption>
+			<action mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text id="t27">Panel Lateral</text>
+					
+				<audio src="./audio/028_Panel_Lateral.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis001d.smil#text_001d"/></caption>
+				<description>
+					<text id="t28">Activar o desactivar el panel lateral.</text>
+					
+				<audio src="./audio/029_Activar_o_desactivar_el_panel_.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis001e.smil#text_001e"/></description>
+				<mnemonic>
+					<text id="t29">P</text>
+					
+				<audio src="./audio/030_P.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis001f.smil#text_001f"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_VIEW_BASIC" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text id="t30">Vista Sencilla</text>
+					
+				<audio src="./audio/031_Vista_Sencilla.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0020.smil#text_0020"/></caption>
+				<description>
+					<text id="t31">Cambiar a Vista sencilla.</text>
+					
+				<audio src="./audio/032_Cambiar_a_Vista_sencilla.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0021.smil#text_0021"/></description>
+				<accelerator keys="F11">
+					<text id="t32">F11</text>
+					
+				<audio src="./audio/033_F11.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0022.smil#text_0022"/></accelerator>
+				<mnemonic>
+					<text id="t33">V</text>
+					
+				<audio src="./audio/034_V.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0023.smil#text_0023"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_VIEW_CONTRAST" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item</note>
+				<icon src="./settings/img/contrast.ico" type="smallIcon"/>
+				<caption>
+					<text id="t34">Alto Contraste</text>
+					
+				<audio src="./audio/035_Alto_Contraste.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0024.smil#text_0024"/></caption>
+				<description>
+					<text id="t35">Usar colores de alto contraste para el área de texto.</text>
+					
+				<audio src="./audio/036_Usar_colores_de_alto_contraste.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0025.smil#text_0025"/></description>
+				<accelerator keys="Ctrl+S">
+					<text id="t36">Ctrl+S</text>
+					
+				<audio src="./audio/037_CtrlS.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0026.smil#text_0026"/></accelerator>
+				<mnemonic>
+					<text id="t37">A</text>
+					
+				<audio src="./audio/038_A.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0027.smil#text_0027"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_VIEW_LARGEFONT" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/font.ico" type="smallIcon"/>
+				<caption>
+					<text id="t38">Aumentar Tamaño de Letra</text>
+					
+				<audio src="./audio/039_Aumentar_Tamao_de_Letra.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0028.smil#text_0028"/></caption>
+				<description>
+					<text id="t39">Aumenta el tamaño de letra gradualmente.</text>
+					
+				<audio src="./audio/040_Aumenta_el_tamao_de_letra_grad.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0029.smil#text_0029"/></description>
+				<mnemonic>
+					<text id="t40">T</text>
+					
+				<audio src="./audio/041_T.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis002a.smil#text_002a"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_VIEW_RESETFONT" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text id="t41">Reinicializar Tamaño de Letra</text>
+					
+				<audio src="./audio/042_Reinicializar_Tamao_de_Letra.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis002b.smil#text_002b"/></caption>
+				<description>
+					<text id="t42">Ajustar el tamaño de letra al valor por defecto.</text>
+					
+				<audio src="./audio/043_Ajustar_el_tamao_de_letra_al_v.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis002c.smil#text_002c"/></description>
+				<mnemonic>
+					<text id="t43">R</text>
+					
+				<audio src="./audio/044_R.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis002d.smil#text_002d"/></mnemonic>
+			</action>
+			<action mfcid="NAVLIST_BASE_ID" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<promptVar name="NAV_LIST_NAME"/>
+				</caption>
+				<description>
+					<promptVar name="NAV_LIST_DESCRIPTION"/>
+				</description>
+			</action>
+			<accelerator keys="Alt+V">
+				<text id="t44">Alt+V</text>
+				
+			<audio src="./audio/045_AltV.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis002e.smil#text_002e"/></accelerator>
+			<mnemonic>
+				<text id="t45">V</text>
+				
+			<audio src="./audio/046_V.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis002f.smil#text_002f"/></mnemonic>
+		</container>
+		<container id="play">
+			<note>This is the menu header "Play"</note>
+			<caption>
+				<text id="t46">Reproducir</text>
+				
+			<audio src="./audio/047_Reproducir.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0030.smil#text_0030"/></caption>
+			<switch element="action">
+				<action condition="canPlay" mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem">
+					<note>This is going to be a menu item and toolbar item</note>
+					<icon src="./settings/img/play-big.ico" type="smallIcon"/>
+					<icon src="./settings/img/play_big.ico" type="largeIcon"/>
+					<caption>
+						<text id="t47">Reproducir</text>
+						
+					<audio src="./audio/048_Reproducir.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0031.smil#text_0031"/></caption>
+					<description>
+						<text id="t48">Comenzar la lectura sincronizada.</text>
+						
+					<audio src="./audio/049_Comenzar_la_lectura_sincroniza.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0032.smil#text_0032"/></description>
+					<accelerator keys="Space">
+						<text id="t49">Espacio</text>
+						
+					<audio src="./audio/050_Espacio.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0033.smil#text_0033"/></accelerator>
+					<mnemonic>
+						<text id="t50">p</text>
+						
+					<audio src="./audio/051_p.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0034.smil#text_0034"/></mnemonic>
+				</action>
+				<action condition="canPause" mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem">
+					<note>This is going to be a menu item and toolbar item</note>
+					<icon src="./settings/img/pause.ico" type="smallIcon"/>
+					<icon src="./settings/img/pause_big.ico" type="largeIcon"/>
+					<caption>
+						<text id="t51">Pausa</text>
+						
+					<audio src="./audio/052_Pausa.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0035.smil#text_0035"/></caption>
+					<description>
+						<text id="t52">Pausa la lectura del libro DAISY.</text>
+						
+					<audio src="./audio/053_Pausa_la_lectura_del_libro_DAI.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0036.smil#text_0036"/></description>
+					<accelerator keys="Space">
+						<text id="t53">Espacio</text>
+						
+					<audio src="./audio/054_Espacio.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0037.smil#text_0037"/></accelerator>
+					<mnemonic>
+						<text id="t54">A</text>
+						
+					<audio src="./audio/055_a.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0038.smil#text_0038"/></mnemonic>
+				</action>
+			</switch>
+			<action mfcid="ID_MENU_PLAY_ESCAPE" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text id="t55">Escape</text>
+					
+				<audio src="./audio/056_Escape.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0039.smil#text_0039"/></caption>
+				<description>
+					<text id="t56">Salir de la estructura o del elemento de lectura actual.</text>
+					
+				<audio src="./audio/057_Salir_de_la_estructura_o_del_e.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis003a.smil#text_003a"/></description>
+				<accelerator keys="Esc">
+					<text id="t57">Escape</text>
+					
+				<audio src="./audio/058_Escape.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis003b.smil#text_003b"/></accelerator>
+				<mnemonic>
+					<text id="t58">E</text>
+					
+				<audio src="./audio/059_E.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis003c.smil#text_003c"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_PLAY_FASTER" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/fullspeedahead.ico" type="smallIcon"/>
+				<caption>
+					<text id="t59">Más Rápido</text>
+					
+				<audio src="./audio/060_Ms_Rpido.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis003d.smil#text_003d"/></caption>
+				<description>
+					<text id="t60">Incrementa la velocidad de lectura.</text>
+					
+				<audio src="./audio/061_Incrementa_la_velocidad_de_lec.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis003e.smil#text_003e"/></description>
+				<accelerator keys="Ctrl++">
+					<text id="t61">Ctrl++</text>
+					
+				<audio src="./audio/062_Ctrl.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis003f.smil#text_003f"/></accelerator>
+				<mnemonic>
+					<text id="t62">R</text>
+					
+				<audio src="./audio/063_R.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0040.smil#text_0040"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_PLAY_SLOWER" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/slowdown.ico" type="smallIcon"/>
+				<caption>
+					<text id="t63">Más Lento</text>
+					
+				<audio src="./audio/064_Ms_Lento.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0041.smil#text_0041"/></caption>
+				<description>
+					<text id="t64">Decrementa la velocidad de lectura.</text>
+					
+				<audio src="./audio/065_Decrementa_la_velocidad_de_lec.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0042.smil#text_0042"/></description>
+				<accelerator keys="Ctrl+-">
+					<text id="t65">Ctrl+-</text>
+					
+				<audio src="./audio/066_Ctrl.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0043.smil#text_0043"/></accelerator>
+				<mnemonic>
+					<text id="t66">L</text>
+					
+				<audio src="./audio/067_L.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0044.smil#text_0044"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_PLAY_NORMALSPEED" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/normalspeed.ico" type="smallIcon"/>
+				<caption>
+					<text id="t67">Velocidad Normal</text>
+					
+				<audio src="./audio/068_Velocidad_Normal.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0045.smil#text_0045"/></caption>
+				<description>
+					<text id="t68">Ajustar la velocidad de lectura al valor normal.</text>
+					
+				<audio src="./audio/069_Ajustar_la_velocidad_de_lectur.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0046.smil#text_0046"/></description>
+				<accelerator keys="Ctrl+0">
+					<text id="t69">Ctrl+0</text>
+					
+				<audio src="./audio/070_Ctrl0.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0047.smil#text_0047"/></accelerator>
+				<mnemonic>
+					<text id="t70">N</text>
+					
+				<audio src="./audio/071_N.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0048.smil#text_0048"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_PLAY_VOLUP" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text id="t71">Más Alto</text>
+					
+				<audio src="./audio/072_Ms_Alto.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0049.smil#text_0049"/></caption>
+				<description>
+					<text id="t72">Aumentar el volumen gradualmente.</text>
+					
+				<audio src="./audio/073_Aumentar_el_volumen_gradualmen.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis004a.smil#text_004a"/></description>
+				<accelerator keys="Ctrl+Up">
+					<text id="t73">Ctrl+Arriba</text>
+					
+				<audio src="./audio/074_CtrlArriba.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis004b.smil#text_004b"/></accelerator>
+				<mnemonic>
+					<text id="t74">M</text>
+					
+				<audio src="./audio/075_M.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis004c.smil#text_004c"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_PLAY_VOLDOWN" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text id="t75">Mas Bajo</text>
+					
+				<audio src="./audio/076_Mas_Bajo.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis004d.smil#text_004d"/></caption>
+				<description>
+					<text id="t76">Disminuir el volumen gradualmente.</text>
+					
+				<audio src="./audio/077_Disminuir_el_volumen_gradualme.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis004e.smil#text_004e"/></description>
+				<accelerator keys="Ctrl+Down">
+					<text id="t77">Ctrl+Abajo</text>
+					
+				<audio src="./audio/078_CtrlAbajo.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis004f.smil#text_004f"/></accelerator>
+				<mnemonic>
+					<text id="t78">B</text>
+					
+				<audio src="./audio/079_B.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0050.smil#text_0050"/></mnemonic>
+			</action>
+			<accelerator keys="Alt+P">
+				<text id="t79">Alt+P</text>
+				
+			<audio src="./audio/080_AltP.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0051.smil#text_0051"/></accelerator>
+			<mnemonic>
+				<text id="t80">P</text>
+				
+			<audio src="./audio/081_P.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0052.smil#text_0052"/></mnemonic>
+		</container>
+		<container id="navigate">
+			<note>This is the menu header "Navigate"</note>
+			<caption>
+				<text id="t81">Navegación</text>
+				
+			<audio src="./audio/082_Navegacin.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0053.smil#text_0053"/></caption>
+			<action mfcid="ID_MENU_NAV_PREVSECTION" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/prevsection.ico" type="smallIcon"/>
+				<icon src="./settings/img/prevsection_big.ico" type="largeIcon"/>
+				<caption>
+					<text id="t82">Sección Anterior</text>
+					
+				<audio src="./audio/083_Seccin_Anterior.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0054.smil#text_0054"/></caption>
+				<description>
+					<text id="t83">Ir a la sección anterior.</text>
+					
+				<audio src="./audio/084_Ir_a_la_seccin_anterior.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0055.smil#text_0055"/></description>
+				<accelerator keys="Up">
+					<text id="t84">Arriba</text>
+					
+				<audio src="./audio/085_Arriba.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0056.smil#text_0056"/></accelerator>
+				<mnemonic>
+					<text id="t85">A</text>
+					
+				<audio src="./audio/086_A.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0057.smil#text_0057"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_NAV_NEXTSECTION" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/nextsection.ico" type="smallIcon"/>
+				<icon src="./settings/img/nextsection_big.ico" type="largeIcon"/>
+				<caption>
+					<text id="t86">Sección Siguiente</text>
+					
+				<audio src="./audio/087_Seccin_Siguiente.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0058.smil#text_0058"/></caption>
+				<description>
+					<text id="t87">Ir a la sección siguiente.</text>
+					
+				<audio src="./audio/088_Ir_a_la_seccin_siguiente.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0059.smil#text_0059"/></description>
+				<accelerator keys="Down">
+					<text id="t88">Abajo</text>
+					
+				<audio src="./audio/089_Abajo.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis005a.smil#text_005a"/></accelerator>
+				<mnemonic>
+					<text id="t89">S</text>
+					
+				<audio src="./audio/090_S.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis005b.smil#text_005b"/></mnemonic>
+			</action>
+			<container id="sectiondepth">
+				<note>This is the "show section depth" sub-menu pop-up</note>
+				<caption>
+					<text id="t90">Mostrar Niveles</text>
+					
+				<audio src="./audio/091_Mostrar_Niveles.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis005c.smil#text_005c"/></caption>
+				<switch element="action">
+					<action condition="ID_EMPTY" mfcid="ID_EMPTY" widget="menuItem">
+						<note>This is going to be a menu item</note>
+						<caption>
+							<text id="t91">Vacío</text>
+							
+						<audio src="./audio/092_Vaco.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis005d.smil#text_005d"/></caption>
+						<description>
+							<text id="t92">No hay niveles de sección.</text>
+							
+						<audio src="./audio/093_No_hay_niveles_de_seccin.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis005e.smil#text_005e"/></description>
+					</action>
+					<action condition="SECTION_DEPTH_BASE_ID" mfcid="SECTION_DEPTH_BASE_ID" widget="menuItem">
+						<note>This is going to be a menu item</note>
+						<list repeat="yes">
+							<caption>
+								<promptVar name="SECTION_DEPTH_OPTION"/>
+							</caption>
+						</list>
+					</action>
+				</switch>
+				<mnemonic>
+					<text id="t93">N</text>
+					
+				<audio src="./audio/094_N.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis005f.smil#text_005f"/></mnemonic>
+			</container>
+			<action mfcid="ID_MENU_NAV_PREVPHRASE" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/prevphasecirc.ico" type="smallIcon"/>
+				<caption>
+					<text id="t94">Frase anterior</text>
+					
+				<audio src="./audio/095_Frase_anterior.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0060.smil#text_0060"/></caption>
+				<description>
+					<text id="t95">Ir a la frase anterior.</text>
+					
+				<audio src="./audio/096_Ir_a_la_frase_anterior.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0061.smil#text_0061"/></description>
+				<accelerator keys="Left">
+					<text id="t96">Izquierda</text>
+					
+				<audio src="./audio/097_Izquierda.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0062.smil#text_0062"/></accelerator>
+			</action>
+			<action mfcid="ID_MENU_NAV_NEXTPHRASE" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/nextphrasecirc.ico" type="smallIcon"/>
+				<caption>
+					<text id="t97">Frase siguiente</text>
+					
+				<audio src="./audio/098_Frase_siguiente.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0063.smil#text_0063"/></caption>
+				<description>
+					<text id="t98">Ir a la frase siguiente.</text>
+					
+				<audio src="./audio/099_Ir_a_la_frase_siguiente.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0064.smil#text_0064"/></description>
+				<accelerator keys="Right">
+					<text id="t99">Derecha</text>
+					
+				<audio src="./audio/100_Derecha.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0065.smil#text_0065"/></accelerator>
+			</action>
+			<action mfcid="ID_MENU_NAV_PREVPAGE" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/prevpage.ico" type="smallIcon"/>
+				<caption>
+					<text id="t100">Página anterior</text>
+					
+				<audio src="./audio/101_Pgina_anterior.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0066.smil#text_0066"/></caption>
+				<description>
+					<text id="t101">Ir a la página anterior.</text>
+					
+				<audio src="./audio/102_Ir_a_la_pgina_anterior.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0067.smil#text_0067"/></description>
+				<accelerator keys="Ctrl+Left">
+					<text id="t102">Ctrl+Izquierda</text>
+					
+				<audio src="./audio/103_CtrlIzquierda.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0068.smil#text_0068"/></accelerator>
+			</action>
+			<action mfcid="ID_MENU_NAV_NEXTPAGE" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/nextpage.ico" type="smallIcon"/>
+				<caption>
+					<text id="t103">Página siguiente</text>
+					
+				<audio src="./audio/104_Pgina_siguiente.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0069.smil#text_0069"/></caption>
+				<description>
+					<text id="t104">Ir a la página siguiente.</text>
+					
+				<audio src="./audio/105_Ir_a_la_pgina_siguiente.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis006a.smil#text_006a"/></description>
+				<accelerator keys="Ctrl+Right">
+					<text id="t105">Ctrl+Derecha</text>
+					
+				<audio src="./audio/106_CtrlDerecha.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis006b.smil#text_006b"/></accelerator>
+			</action>
+			<action mfcid="ID_MENU_NAV_GOTOPAGE" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text id="t106">Ir a Página...</text>
+					
+				<audio src="./audio/107_Ir_a_Pgina.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis006c.smil#text_006c"/></caption>
+				<description>
+					<text id="t107">Ir a una página específica.</text>
+					
+				<audio src="./audio/108_Ir_a_una_pgina_especfica.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis006d.smil#text_006d"/></description>
+				<accelerator keys="Ctrl+G">
+					<text id="t108">Ctrl+G</text>
+					
+				<audio src="./audio/109_CtrlG.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis006e.smil#text_006e"/></accelerator>
+			</action>
+			<action mfcid="ID_MENU_NAV_FINDINTEXT" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text id="t109">Buscar Texto</text>
+					
+				<audio src="./audio/110_Buscar_Texto.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis006f.smil#text_006f"/></caption>
+				<description>
+					<text id="t110">Buscar una frase o palabra en el texto.</text>
+					
+				<audio src="./audio/111_Buscar_una_frase_o_palabra_en_.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0070.smil#text_0070"/></description>
+				<accelerator keys="Ctrl+F">
+					<text id="t111">Ctrl+F</text>
+					
+				<audio src="./audio/112_CtrlF.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0071.smil#text_0071"/></accelerator>
+				<mnemonic>
+					<text id="t112">B</text>
+					
+				<audio src="./audio/113_B.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0072.smil#text_0072"/></mnemonic>
+			</action>
+			<accelerator keys="Alt+N">
+				<text id="t113">Alt+N</text>
+				
+			<audio src="./audio/114_AltN.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0073.smil#text_0073"/></accelerator>
+			<mnemonic>
+				<text id="t114">N</text>
+				
+			<audio src="./audio/115_N.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0074.smil#text_0074"/></mnemonic>
+		</container>
+		<container id="bookmarks">
+			<note>This is the menu header "Bookmarks"</note>
+			<caption>
+				<text id="t115">Marcas</text>
+				
+			<audio src="./audio/116_Marcas.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0075.smil#text_0075"/></caption>
+			<action mfcid="ID_MENU_BMK_ADD" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/adbookmark.ico" type="smallIcon"/>
+				<caption>
+					<text id="t116">Añadir Marca</text>
+					
+				<audio src="./audio/117_Aadir_Marca.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0076.smil#text_0076"/></caption>
+				<description>
+					<text id="t117">Añade marca en la posición actual.</text>
+					
+				<audio src="./audio/118_Aade_marca_en_la_posicin_actua.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0077.smil#text_0077"/></description>
+				<accelerator keys="Ctrl+D">
+					<text id="t118">Ctrl+D</text>
+					
+				<audio src="./audio/119_CtrlD.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0078.smil#text_0078"/></accelerator>
+				<mnemonic>
+					<text id="t119">A</text>
+					
+				<audio src="./audio/120_A.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0079.smil#text_0079"/></mnemonic>
+			</action>
+			<action mfcid="BOOKMARK_BASE_ID" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<list repeat="yes">
+					<caption>
+						<promptVar name="BOOKMARK_TITLE"/>
+					</caption>
+				</list>
+			</action>
+			<accelerator keys="Alt+B">
+				<text id="t120">Alt+M</text>
+				
+			<audio src="./audio/121_AltM.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis007a.smil#text_007a"/></accelerator>
+			<mnemonic>
+				<text id="t121">M</text>
+				
+			<audio src="./audio/122_M.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis007b.smil#text_007b"/></mnemonic>
+		</container>
+		<container id="info">
+			<note>This is the menu header "Info"</note>
+			<caption>
+				<text id="t122">Información</text>
+				
+			<audio src="./audio/123_Informacin.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis007c.smil#text_007c"/></caption>
+			<action mfcid="ID_MENU_INFO_SKIP" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text id="t123">Elementos Opcionales...</text>
+					
+				<audio src="./audio/124_Elementos_Opcionales.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis007d.smil#text_007d"/></caption>
+				<description>
+					<text id="t124">Ver los elementos opcionales de esta publicación.</text>
+					
+				<audio src="./audio/125_Ver_los_elementos_opcionales_d.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis007e.smil#text_007e"/></description>
+				<mnemonic>
+					<text id="t125">E</text>
+					
+				<audio src="./audio/126_E.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis007f.smil#text_007f"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_INFO_SUMMARY" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/info.ico" type="smallIcon"/>
+				<caption>
+					<text id="t126">Sumario Completo</text>
+					
+				<audio src="./audio/127_Sumario_Completo.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0080.smil#text_0080"/></caption>
+				<description>
+					<text id="t127">Muestra el sumario completo de esta publicación.</text>
+					
+				<audio src="./audio/128_Muestra_el_sumario_completo_de.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0081.smil#text_0081"/></description>
+				<mnemonic>
+					<text id="t128">S</text>
+					
+				<audio src="./audio/129_S.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0082.smil#text_0082"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_INFO_CURRENTPOSITION" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text id="t129">Posición Actual</text>
+					
+				<audio src="./audio/130_Posicin_Actual.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0083.smil#text_0083"/></caption>
+				<description>
+					<text id="t130">Muestra información acerca de la posición actual.</text>
+					
+				<audio src="./audio/131_Muestra_informacin_acerca_de_l.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0084.smil#text_0084"/></description>
+				<mnemonic>
+					<text id="t131">P</text>
+					
+				<audio src="./audio/132_P.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0085.smil#text_0085"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_INFO_NAVOPTIONS" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text id="t132">Opciones de Navegación</text>
+					
+				<audio src="./audio/133_Opciones_de_Navegacin.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0086.smil#text_0086"/></caption>
+				<description>
+					<text id="t133">Conocer las opciones de navegación de esta publicación.</text>
+					
+				<audio src="./audio/134_Conocer_las_opciones_de_navega.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0087.smil#text_0087"/></description>
+				<mnemonic>
+					<text id="t134">O</text>
+					
+				<audio src="./audio/135_O.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0088.smil#text_0088"/></mnemonic>
+			</action>
+			<accelerator keys="Alt+I">
+				<text id="t135">Alt+I</text>
+				
+			<audio src="./audio/136_AltI.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0089.smil#text_0089"/></accelerator>
+			<mnemonic>
+				<text id="t136">I</text>
+				
+			<audio src="./audio/137_I.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis008a.smil#text_008a"/></mnemonic>
+		</container>
+		<container id="help">
+			<note>This is the menu header "Help"</note>
+			<caption>
+				<text id="t137">Ayuda</text>
+				
+			<audio src="./audio/138_Ayuda.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis008b.smil#text_008b"/></caption>
+			<action mfcid="ID_MENU_HELP_CONTENTS" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/help.ico" type="smallIcon"/>
+				<icon src="./settings/img/help_big.ico" type="largeIcon"/>
+				<caption>
+					<text id="t138">Contenido</text>
+					
+				<audio src="./audio/139_Contenido.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis008c.smil#text_008c"/></caption>
+				<description>
+					<text id="t139">Obtener ayuda acerca del uso de AMIS</text>
+					
+				<audio src="./audio/140_Obtener_ayuda_acerca_del_uso_d.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis008d.smil#text_008d"/></description>
+				<mnemonic>
+					<text id="t140">C</text>
+					
+				<audio src="./audio/141_C.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis008e.smil#text_008e"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_HELP_ABOUT" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text id="t141">Acerca de AMIS</text>
+					
+				<audio src="./audio/142_Acerca_de_AMIS.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis008f.smil#text_008f"/></caption>
+				<description>
+					<text id="t142">Saber más acerca de AMIS y DAISY for All.</text>
+					
+				<audio src="./audio/143_Saber_ms_acerca_de_AMIS_y_DAIS.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0090.smil#text_0090"/></description>
+				<mnemonic>
+					<text id="t143">A</text>
+					
+				<audio src="./audio/144_A.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0091.smil#text_0091"/></mnemonic>
+			</action>
+			<accelerator keys="Alt+H">
+				<text id="t144">Alt+U</text>
+				
+			<audio src="./audio/145_AltU.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0092.smil#text_0092"/></accelerator>
+			<mnemonic>
+				<text id="t145">U</text>
+				
+			<audio src="./audio/146_U.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0093.smil#text_0093"/></mnemonic>
+		</container>
+	</containers>
+	<dialogs>
+		<dialog mfcid="IDD_FIND">
+			<note>This is the find in text dialog</note>
+			<caption>
+				<text id="t146">Buscar en el texto</text>
+				
+			<audio src="./audio/147_Buscar_en_el_texto.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0094.smil#text_0094"/></caption>
+			<description>
+				<text id="t147">Aquí puede buscar en el texto en ambas direcciones.</text>
+				
+			<audio src="./audio/148_Aqu_puede_buscar_en_el_texto_e.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0095.smil#text_0095"/></description>
+			<prompt type="instructions">
+				<promptItem refid="tabAround"/>
+				<promptItem>
+					<text id="t148">Pulse Enter para iniciar la búsqueda después de introducir el texto a buscar.</text>
+					
+				<audio src="./audio/149_Pulse_Enter_para_iniciar_la_bs.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0096.smil#text_0096"/></promptItem>
+				<promptItem refid="altC_to_cancel"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+			</prompt>
+			<control mfcid="IDOK" widget="button">
+				<caption>
+					<promptItem refid="ok_button_caption"/>
+				</caption>
+				<description>
+					<text id="t149">Pulsar para iniciar la búsqueda de texto en el fichero.</text>
+					
+				<audio src="./audio/150_Pulsar_para_iniciar_la_bsqueda.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0097.smil#text_0097"/></description>
+			</control>
+			<control mfcid="IDCANCEL" widget="button">
+				<caption>
+					<promptItem refid="cancel_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="cancel_button_description"/>
+				</description>
+				<mnemonic>
+					<text id="t150">C</text>
+					
+				<audio src="./audio/151_C.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0098.smil#text_0098"/></mnemonic>
+			</control>
+			<control mfcid="IDC_SEARCHSTRING" widget="textfield">
+				<description>
+					<text id="t151">Introduzca el texto a buscar.</text>
+					
+				<audio src="./audio/152_Introduzca_el_texto_a_buscar.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0099.smil#text_0099"/></description>
+			</control>
+			<control mfcid="IDC_FINDNEXT" widget="radiobutton">
+				<note>This indicates the direction of the search</note>
+				<caption>
+					<text id="t152">Buscar siguiente</text>
+					
+				<audio src="./audio/153_Buscar_siguiente.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis009a.smil#text_009a"/></caption>
+				<description>
+					<prompt>
+						<promptItem refid="thisItemIsCurrently"/>
+						<promptVar name="SELECTED_OR_DESELECTED" param="FIND_NEXT_IN_TEXT"/>
+					</prompt>
+				</description>
+			</control>
+			<control mfcid="IDC_FINDPREV" widget="radiobutton">
+				<note>This indicates the direction of the search</note>
+				<caption>
+					<text id="t153">Buscar anterior</text>
+					
+				<audio src="./audio/154_Buscar_anterior.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis009b.smil#text_009b"/></caption>
+				<description>
+					<prompt>
+						<promptItem refid="thisItemIsCurrently"/>
+						<promptName name="SELECTED_OR_DESELECTED" param="FIND_PREV_IN_TEXT"/>
+					</prompt>
+				</description>
+			</control>
+		</dialog>
+		<dialog mfcid="IDD_CDSEARCH">
+			<note>This dialog appears when more than one book is on a CD-ROM</note>
+			<caption>
+				<text id="t154">Encontrados múltiples libros</text>
+				
+			<audio src="./audio/155_Encontrados_mltiples_libros.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis009c.smil#text_009c"/></caption>
+			<description mfcid="IDC_STATIC">
+				<text id="t155">Se encontró más de un libro en este CD. Por favor, seleccione uno de la lista siguiente y pulse Alt+A para abrirlo.</text>
+				
+			<audio src="./audio/156_Se_encontr_ms_de_un_libro_en_e.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis009d.smil#text_009d"/></description>
+			<prompt type="instructions">
+				<promptItem refid="tabAround"/>
+				<promptItem refid="altC_to_cancel"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+			</prompt>
+			<control mfcid="IDC_CANCEL" widget="button">
+				<caption>
+					<promptItem refid="cancel_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="cancel_button_description"/>
+				</description>
+				<mnemonic>
+					<text id="t156">C</text>
+					
+				<audio src="./audio/157_C.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis009e.smil#text_009e"/></mnemonic>
+			</control>
+			<control mfcid="IDC_OPENBOOK" widget="button">
+				<caption>
+					<text id="t157">Abrir</text>
+					
+				<audio src="./audio/158_Abrir.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis009f.smil#text_009f"/></caption>
+				<description>
+					<text id="t158">Pulsar para cerrar este diálogo y abrir el libro seleccionado.</text>
+					
+				<audio src="./audio/159_Pulsar_para_cerrar_este_dilogo.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00a0.smil#text_00a0"/></description>
+				<mnemonic>
+					<text id="t159">A</text>
+					
+				<audio src="./audio/160_A.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00a1.smil#text_00a1"/></mnemonic>
+			</control>
+			<control mfcid="IDC_BOOKLIST" widget="list">
+				<description>
+					<text id="t160">Usar las flechas para moverse por esta lista de títulos.</text>
+					
+				<audio src="./audio/161_Usar_las_flechas_para_moverse_.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00a2.smil#text_00a2"/></description>
+				<list repeat="yes">
+					<caption>
+						<promptVar name="BOOK_TITLE"/>
+					</caption>
+				</list>
+			</control>
+		</dialog>
+		<dialog mfcid="IDD_ABOUTBOX">
+			<note>This dialog gives some basic information about AMIS.</note>
+			<caption>
+				<text id="t161">Acerca de AMIS</text>
+				
+			<audio src="./audio/162_Acerca_de_AMIS.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00a3.smil#text_00a3"/></caption>
+			<description>
+				<text id="t162">Diálogo con información acerca del software AMIS.</text>
+				
+			<audio src="./audio/163_Dilogo_con_informacin_acerca_d.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00a4.smil#text_00a4"/></description>
+			<prompt type="instructions">
+				<promptItem refid="enter_to_close"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+			</prompt>
+			<control mfcid="IDC_AMISNAME" widget="textlabel">
+				<caption>
+					<text id="t163">AMIS: Sistema de Información Multimedia Accesible</text>
+					
+				<audio src="./audio/164_AMIS_Sistema_de_Informacin_Mul.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00a5.smil#text_00a5"/></caption>
+			</control>
+			<control mfcid="IDC_VERSION" translate="no">
+				<caption>
+					<text id="t164">Versión 2.6</text>
+					
+				<audio src="./audio/165_Versin_26.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00a6.smil#text_00a6"/></caption>
+			</control>
+			<control mfcid="IDC_VERSIONNOTE" translate="no">
+				<caption>
+					<text id="t165">Fecha de edición: 8 de junio de 2007</text>
+					
+				<audio src="./audio/166_Fecha_de_edicin_8_de_junio_de_.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00a7.smil#text_00a7"/></caption>
+			</control>
+			<control mfcid="IDC_COPYRIGHT" translate="no" widget="textlabel">
+				<caption>
+					<text id="t166">Copyright (c) 2008 DAISY-for-All</text>
+					
+				<audio src="./audio/167_Copyright_c_2008_DAISYforAll.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00a8.smil#text_00a8"/></caption>
+			</control>
+			<control mfcid="IDOK" widget="button">
+				<caption>
+					<promptItem refid="ok_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="ok_button_description"/>
+				</description>
+			</control>
+		</dialog>
+		<dialog mfcid="IDD_SEARCHDAISY">
+			<note>This dialog is for searching your hard drive for DAISY books.</note>
+			<caption>
+				<text id="t167">Buscar libros DAISY </text>
+				
+			<audio src="./audio/168_Buscar_libros_DAISY.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00a9.smil#text_00a9"/></caption>
+			<description mfcid="IDC_STATIC">
+				<text id="t168">Puede buscar libros DAISY en el ordenador.  Introduzca una ruta o localice una carpeta desde la que comenzar la búsqueda y pulse entonces Buscar para iniciarla.</text>
+				
+			<audio src="./audio/169_Puede_buscar_libros_DAISY_en_e.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00aa.smil#text_00aa"/></description>
+			<prompt type="instructions">
+				<promptItem refid="tabAround"/>
+				<promptItem refid="altC_to_close"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+			</prompt>
+			<control mfcid="IDC_SEARCHPATH" widget="textfield">
+				<description>
+					<text id="t169">Teclee en este campo la ruta a la carpeta.</text>
+					
+				<audio src="./audio/170_Teclee_en_este_campo_la_ruta_a.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00ab.smil#text_00ab"/></description>
+			</control>
+			<control mfcid="IDC_BROWSE" widget="button">
+				<caption>
+					<promptItem refid="browse_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="browse_button_description"/>
+				</description>
+			</control>
+			<control mfcid="IDC_STARTSEARCH" widget="button">
+				<caption>
+					<text id="t170">Buscar</text>
+					
+				<audio src="./audio/171_Buscar.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00ac.smil#text_00ac"/></caption>
+				<description>
+					<text id="t171">Pulsar para iniciar la búsqueda.</text>
+					
+				<audio src="./audio/172_Pulsar_para_iniciar_la_bsqueda.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00ad.smil#text_00ad"/></description>
+				<mnemonic>
+					<text id="t172">B</text>
+					
+				<audio src="./audio/173_B.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00ae.smil#text_00ae"/></mnemonic>
+			</control>
+			<control mfcid="IDC_STOPSEARCH" widget="button">
+				<caption>
+					<text id="t173">Detener</text>
+					
+				<audio src="./audio/174_Detener.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00af.smil#text_00af"/></caption>
+				<description>
+					<text id="t174">Pulsar para detener la búsqueda.</text>
+					
+				<audio src="./audio/175_Pulsar_para_detener_la_bsqueda.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00b0.smil#text_00b0"/></description>
+				<mnemonic>
+					<text id="t175">D</text>
+					
+				<audio src="./audio/176_D.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00b1.smil#text_00b1"/></mnemonic>
+			</control>
+			<control mfcid="IDC_SEARCHING" widget="textlabel">
+				<switch element="caption">
+					<caption condition="default">
+						<text id="t176">Preparado</text>
+						
+					<audio src="./audio/177_Preparado.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00b2.smil#text_00b2"/></caption>
+					<caption condition="WhileSearching">
+						<text id="t177">Buscando...</text>
+						
+					<audio src="./audio/178_Buscando.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00b3.smil#text_00b3"/></caption>
+					<caption condition="SearchAborted">
+						<text id="t178">Búsqueda detenida.</text>
+						
+					<audio src="./audio/179_Bsqueda_detenida.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00b4.smil#text_00b4"/></caption>
+					<caption condition="SearchCompleteNoFilesFound">
+						<text id="t179">Búsqueda completa: No se encontraron archivos.</text>
+						
+					<audio src="./audio/180_Bsqueda_completa_No_se_encontr.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00b5.smil#text_00b5"/></caption>
+					<caption condition="SearchCompleteOneFileFound">
+						<text id="t180">Búsqueda completa: Se encontró un archivo.</text>
+						
+					<audio src="./audio/181_Bsqueda_completa_Se_encontr_un.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00b6.smil#text_00b6"/></caption>
+					<caption condition="SearchCompleteFilesFound">
+						<prompt>
+							<promptVar name="NUM_FILES_FOUND"/>
+							<promptItem>
+								<note>This is used in the sentence "7 files were found"</note>
+								<text id="t181">archivos encontrados.</text>
+								
+							<audio src="./audio/182_archivos_encontrados.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00b7.smil#text_00b7"/></promptItem>
+						</prompt>
+					</caption>
+				</switch>
+			</control>
+			<control mfcid="IDC_FILESFOUND" widget="list">
+				<description>
+					<text id="t182">Usar las flechas para moverse por la lista de títulos.</text>
+					
+				<audio src="./audio/183_Usar_las_flechas_para_moverse_.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00b8.smil#text_00b8"/></description>
+				<list repeat="yes">
+					<caption>
+						<promptVar name="BOOK_TITLE"/>
+					</caption>
+				</list>
+			</control>
+			<control mfcid="IDC_OPENBOOK" widget="button">
+				<caption>
+					<text id="t183">Abrir
+</text>
+					
+				<audio src="./audio/184_Abrir.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00b9.smil#text_00b9"/></caption>
+				<description>
+					<text id="t184">Pulsar para abrir el título seleccionado.</text>
+					
+				<audio src="./audio/185_Pulsar_para_abrir_el_ttulo_sel.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00ba.smil#text_00ba"/></description>
+				<mnemonic>
+					<text id="t185">A</text>
+					
+				<audio src="./audio/186_A.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00bb.smil#text_00bb"/></mnemonic>
+			</control>
+			<control mfcid="IDC_CANCELBUTTON">
+				<caption>
+					<promptItem refid="cancel_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="cancel_button_description"/>
+				</description>
+				<mnemonic>
+					<text id="t186">C</text>
+					
+				<audio src="./audio/187_C.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00bc.smil#text_00bc"/></mnemonic>
+			</control>
+		</dialog>
+		<dialog mfcid="IDD_SKIP">
+			<note>This dialog lets the user control rendering of skippable structures.</note>
+			<caption>
+				<text id="t187">Elementos opcionales</text>
+				
+			<audio src="./audio/188_Elementos_opcionales.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00bd.smil#text_00bd"/></caption>
+			<switch element="description">
+				<description condition="hasSkippableStructures" mfcid="IDC_STATIC">
+					<text id="t188">Este libro contiene las siguientes estructuras especiales.  Marque las que desee saltar.</text>
+					
+				<audio src="./audio/189_Este_libro_contiene_las_siguie.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00be.smil#text_00be"/></description>
+				<description condition="hasNoSkippableStructures" mfcid="IDC_STATIC">
+					<text id="t189">Esta publicación no tiene elementos opcionales.</text>
+					
+				<audio src="./audio/190_Esta_publicacin_no_tiene_eleme.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00bf.smil#text_00bf"/></description>
+			</switch>
+			<prompt type="instructions">
+				<promptItem refid="tabAround"/>
+				<promptItem refid="altC_to_close"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+			</prompt>
+			<control mfcid="IDOK" widget="button">
+				<caption>
+					<promptItem refid="ok_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="ok_button_description"/>
+				</description>
+			</control>
+			<control mfcid="IDC_SKIPS" widget="list">
+				<caption>
+					<text id="t190">Elementos opcionales</text>
+					
+				<audio src="./audio/191_Elementos_opcionales.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00c0.smil#text_00c0"/></caption>
+				<description>
+					<text id="t191">Use las flechas para moverse por esta lista de elementos opcionales.</text>
+					
+				<audio src="./audio/192_Use_las_flechas_para_moverse_p.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00c1.smil#text_00c1"/></description>
+				<list repeat="yes">
+					<caption>
+						<promptVar name="SKIPPABLE_ITEM"/>
+					</caption>
+					<description>
+						<prompt>
+							<promptVar name="SKIPPABLE_ITEM"/>
+							<promptItem refid="thisItem"/>
+							<promptVar name="WILL_SKIP_OR_NOT" param="SKIPPABLE_ITEM_ID"/>
+						</prompt>
+					</description>
+				</list>
+			</control>
+		</dialog>
+		<dialog mfcid="IDD_PROPPAGE4">
+			<note>This dialog lets the user select a language pack.</note>
+			<caption>
+				<text id="t192">Idioma
+</text>
+				
+			<audio src="./audio/193_Idioma.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00c2.smil#text_00c2"/></caption>
+			<description mfcid="IDC_STATIC">
+				<text id="t193">Aquí puede cambiar el idioma del software.  Los idiomas nuevos se detectan automáticamente.</text>
+				
+			<audio src="./audio/194_Aqu_puede_cambiar_el_idioma_de.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00c3.smil#text_00c3"/></description>
+			<prompt type="instructions">
+				<promptItem refid="tabAround"/>
+				<promptItem refid="ctrl1_for_prefsdialog"/>
+				<promptItem refid="ctrl2_for_colorsdialog"/>
+				<promptItem refid="altC_to_cancel"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+			</prompt>
+			<control mfcid="IDC_BTN_SELECTLANG" widget="button">
+				<caption>
+					<text id="t194">Seleccionar Idioma</text>
+					
+				<audio src="./audio/195_Seleccionar_Idioma.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00c4.smil#text_00c4"/></caption>
+				<description>
+					<text id="t195">Pulse para comfirmar su selección de idioma para la interfaz de usuario de AMIS </text>
+					
+				<audio src="./audio/196_Pulse_para_comfirmar_su_selecc.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00c5.smil#text_00c5"/></description>
+			</control>
+			<control mfcid="IDC_LANGLIST" widget="list">
+				<caption mfcid="IDC_STATIC">
+					<text id="t196">Sus selecciones de idioma son:</text>
+					
+				<audio src="./audio/197_Sus_selecciones_de_idioma_son.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00c6.smil#text_00c6"/></caption>
+				<description>
+					<text id="t197">Use las flechas para moverse por la lista de idiomas.
+</text>
+					
+				<audio src="./audio/198_Use_las_flechas_para_moverse_p.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00c7.smil#text_00c7"/></description>
+				<list repeat="yes">
+					<caption>
+						<promptVar name="LANGUAGE_NAME"/>
+					</caption>
+				</list>
+			</control>
+			<control mfcid="IDC_CURRLANG">
+				<caption>
+					<prompt>
+						<promptItem>
+							<text id="t198">Actualmente está usando AMIS en </text>
+							
+						<audio src="./audio/199_Actualmente_est_usando_AMIS_en.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00c8.smil#text_00c8"/></promptItem>
+						<promptVar name="CURR_LANGUAGE_NAME"/>
+					</prompt>
+				</caption>
+			</control>
+			<accelerator keys="Ctrl+3">
+				<text id="t199">Ctrl+3</text>
+				
+			<audio src="./audio/200_Ctrl3.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00c9.smil#text_00c9"/></accelerator>
+		</dialog>
+		<dialog mfcid="IDD_PROPPAGE2">
+			<note>This dialog lets the user select which colors AMIS uses</note>
+			<caption>
+				<text id="t200">
+Definir Colores</text>
+				
+			<audio src="./audio/201_Definir_Colores.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00ca.smil#text_00ca"/></caption>
+			<description>
+				<text id="t201">Aquí puede definir las opciones de colores para AMIS.</text>
+				
+			<audio src="./audio/202_Aqu_puede_definir_las_opciones.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00cb.smil#text_00cb"/></description>
+			<prompt type="instructions">
+				<promptItem refid="thisDialogNotSelfVoicing"/>
+				<promptItem refid="ctrl1_for_prefsdialog"/>
+				<promptItem refid="ctrl3_for_langsdialog"/>
+				<promptItem refid="altC_to_cancel"/>
+			</prompt>
+			<control mfcid="IDC_PHRASES" widget="other">
+				<caption>
+					<text id="t202">Resaltado de frase</text>
+					
+				<audio src="./audio/203_Resaltado_de_frase.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00cc.smil#text_00cc"/></caption>
+			</control>
+			<control mfcid="IDC_TEXTFG" widget="textlabel">
+				<caption>
+					<text id="t203">Color del texto: </text>
+					
+				<audio src="./audio/204_Color_del_texto.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00cd.smil#text_00cd"/></caption>
+			</control>
+			<control mfcid="IDC_TEXTBG" widget="textlabel">
+				<caption>
+					<text id="t204">Fondo del texto: </text>
+					
+				<audio src="./audio/205_Fondo_del_texto.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00ce.smil#text_00ce"/></caption>
+			</control>
+			<control mfcid="IDC_BORDER" widget="textlabel">
+				<caption>
+					<text id="t205">Selección de borde: </text>
+					
+				<audio src="./audio/206_Seleccin_de_borde.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00cf.smil#text_00cf"/></caption>
+			</control>
+			<control mfcid="IDC_CONTRAST" widget="other">
+				<caption>
+					<text id="t206">Ajustes de alto contraste</text>
+					
+				<audio src="./audio/207_Ajustes_de_alto_contraste.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00d0.smil#text_00d0"/></caption>
+			</control>
+			<control mfcid="IDC_PAGEFG" widget="textlabel">
+				<caption>
+					<text id="t207">Color de página: </text>
+					
+				<audio src="./audio/208_Color_de_pgina.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00d1.smil#text_00d1"/></caption>
+			</control>
+			<control mfcid="IDC_PAGEBG" widget="textlabel">
+				<caption>
+					<text id="t208">Fondo de Página: </text>
+					
+				<audio src="./audio/209_Fondo_de_Pgina.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00d2.smil#text_00d2"/></caption>
+			</control>
+			<control mfcid="IDC_BTN_RESETCOLORS" widget="button">
+				<caption>
+					<text id="t209">Reajustar Colores</text>
+					
+				<audio src="./audio/210_Reajustar_Colores.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00d3.smil#text_00d3"/></caption>
+			</control>
+			<control mfcid="IDC_PHRASEPREVIEW" widget="textfield">
+				<caption>
+					<text id="t210">Vista previa de colores de resaltado de frase.</text>
+					
+				<audio src="./audio/211_Vista_previa_de_colores_de_res.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00d4.smil#text_00d4"/></caption>
+			</control>
+			<control mfcid="IDC_CONTRASTPREVIEW" widget="textfield">
+				<caption>
+					<text id="t211">Vista previa de colores de contraste de página.</text>
+					
+				<audio src="./audio/212_Vista_previa_de_colores_de_con.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00d5.smil#text_00d5"/></caption>
+			</control>
+			<accelerator keys="Ctrl+2">
+				<text id="t212">Ctrl+2</text>
+				
+			<audio src="./audio/213_Ctrl2.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00d6.smil#text_00d6"/></accelerator>
+		</dialog>
+		<dialog mfcid="IDD_CURRENTPOSITION">
+			<note>This dialog gives the user information about their current position in the publication.</note>
+			<caption>
+				<text id="t213">Posición Actual
+</text>
+				
+			<audio src="./audio/214_Posicin_Actual.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00d7.smil#text_00d7"/></caption>
+			<prompt type="instructions">
+				<promptItem refid="enter_to_close"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+			</prompt>
+			<control mfcid="IDOK" widget="button">
+				<caption>
+					<promptItem refid="ok_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="ok_button_description"/>
+				</description>
+			</control>
+			<control mfcid="IDC_SUMMARY" widget="list">
+				<caption mfcid="IDC_LISTCAPTION">
+					<text id="t214">Ésta es una lista de datos acerca de su posición actual.</text>
+					
+				<audio src="./audio/215_sta_es_una_lista_de_datos_acer.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00d8.smil#text_00d8"/></caption>
+				<description>
+					<promptItem refid="list_reads_automatically"/>
+				</description>
+				<list repeat="no">
+					<caption>
+						<prompt>
+							<promptItem>
+								<text id="t215">La sección actual se titula:</text>
+								
+							<audio src="./audio/216_La_seccin_actual_se_titula.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00d9.smil#text_00d9"/></promptItem>
+							<promptVar name="CURRENT_SECTION_TITLE"/>
+						</prompt>
+					</caption>
+					<caption condition="BOOK_HAS_PAGES">
+						<prompt>
+							<promptItem>
+								<text id="t216">Número de páginas en esta sección:</text>
+								
+							<audio src="./audio/217_Nmero_de_pginas_en_esta_seccin.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00da.smil#text_00da"/></promptItem>
+							<promptVar name="CURRENT_SECTION_NUM_PAGES"/>
+						</prompt>
+					</caption>
+					<caption>
+						<prompt>
+							<promptItem>
+								<text id="t217">Número de subsecciones en esta sección:</text>
+								
+							<audio src="./audio/218_Nmero_de_subsecciones_en_esta_.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00db.smil#text_00db"/></promptItem>
+							<promptVar name="CURRENT_SECTION_NUM_SUBSECTIONS"/>
+						</prompt>
+					</caption>
+				</list>
+			</control>
+		</dialog>
+		<dialog mfcid="IDD_PROPPAGE1">
+			<note>This dialog lets the user set some basic preferences for AMIS.</note>
+			<caption>
+				<text id="t218">Preferencias Generales</text>
+				
+			<audio src="./audio/219_Preferencias_Generales.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00dc.smil#text_00dc"/></caption>
+			<description>
+				<text id="t219">Aquí puede definir sus preferencias generales para AMIS.</text>
+				
+			<audio src="./audio/220_Aqu_puede_definir_sus_preferen.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00dd.smil#text_00dd"/></description>
+			<prompt type="instructions">
+				<promptItem refid="tabAround"/>
+				<promptItem refid="ctrl2_for_colorsdialog"/>
+				<promptItem refid="ctrl3_for_langsdialog"/>
+				<promptItem refid="altC_to_cancel"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+			</prompt>
+			<control mfcid="IDC_BMKDIRBROWSE" widget="button">
+				<caption>
+					<promptItem refid="browse_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="browse_button_description"/>
+				</description>
+			</control>
+			<control mfcid="IDC_SELFVOICING" widget="checkbox">
+				<caption>
+					<text id="t220">Usar la voz del programa</text>
+					
+				<audio src="./audio/221_Usar_la_voz_del_programa.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00de.smil#text_00de"/></caption>
+				<description>
+					<prompt>
+						<promptItem refid="thisItemIsCurrently"/>
+						<promptVar name="ON_OR_OFF" param="SELF_VOICING_FEATURE"/>
+					</prompt>
+				</description>
+			</control>
+			<control mfcid="IDC_TTSVOICE" widget="list">
+				<caption mfcid="IDC_SELTTSLABEL">
+					<text id="t221">Seleccionar síntesis de voz:</text>
+					
+				<audio src="./audio/222_Seleccionar_sntesis_de_voz.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00df.smil#text_00df"/></caption>
+				<description>
+					<text id="t222">Usar las flechas para moverse por la lista de voces
+</text>
+					
+				<audio src="./audio/223_Usar_las_flechas_para_moverse_.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00e0.smil#text_00e0"/></description>
+				<list repeat="yes">
+					<caption>
+						<promptVar name="TTS_VOICE_NAME"/>
+					</caption>
+				</list>
+			</control>
+			<control mfcid="IDC_BASIC" widget="checkbox">
+				<caption>
+					<text id="t223">Iniciar AMIS en el modo de vista básica.</text>
+					
+				<audio src="./audio/224_Iniciar_AMIS_en_el_modo_de_vis.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00e1.smil#text_00e1"/></caption>
+				<description>
+					<prompt>
+						<promptItem refid="thisItemIsCurrently"/>
+						<promptVar name="ON_OR_OFF" param="BASIC_VIEW_FEATURE"/>
+						<promptItem refid="spaceToToggle"/>
+					</prompt>
+				</description>
+			</control>
+			<control mfcid="IDC_PROMPTONBASICVIEW" widget="checkbox">
+				<caption>
+					<text id="t224">Cuando haya cambiado a la vista básica, indica al usuario cómo regresar a la vista por defecto.</text>
+					
+				<audio src="./audio/225_Cuando_haya_cambiado_a_la_vist.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00e2.smil#text_00e2"/></caption>
+				<description>
+					<prompt>
+						<promptItem refid="thisItemIsCurrently"/>
+						<promptVar name="ON_OR_OFF" param="PROMPT_ON_BASIC_VIEW_FEATURE"/>
+						<promptItem refid="spaceToToggle"/>
+					</prompt>
+				</description>
+			</control>
+			<control mfcid="IDC_LOADLASTDTB" widget="checkbox">
+				<caption>
+					<text id="t225">Cargar el último libro leído cuando comienza la aplicación.</text>
+					
+				<audio src="./audio/226_Cargar_el_ltimo_libro_ledo_cua.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00e3.smil#text_00e3"/></caption>
+				<description>
+					<prompt>
+						<promptItem refid="thisItemIsCurrently"/>
+						<promptVar name="ON_OR_OFF" param="LOAD_LAST_READ_FEATURE"/>
+						<promptItem refid="spaceToToggle"/>
+					</prompt>
+				</description>
+			</control>
+			<control mfcid="IDC_BMKDIR" widget="textfield">
+				<caption mfcid="IDC_BMKDIRLABEL">
+					<text id="t226">Directorio de marcas:</text>
+					
+				<audio src="./audio/227_Directorio_de_marcas.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00e4.smil#text_00e4"/></caption>
+				<description>
+					<text id="t227">Teclee en este campo la ruta al directorio de marcas.</text>
+					
+				<audio src="./audio/228_Teclee_en_este_campo_la_ruta_a.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00e5.smil#text_00e5"/></description>
+			</control>
+			<accelerator keys="Ctrl+1">
+				<text id="t228">Ctrl+1</text>
+				
+			<audio src="./audio/229_Ctrl1.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00e6.smil#text_00e6"/></accelerator>
+		</dialog>
+		<dialog mfcid="IDD_NAVIGATIONOPTIONS">
+			<note>This dialog lists navigation options for the current publication.</note>
+			<caption>
+				<text id="t229">Opciones de Navegación</text>
+				
+			<audio src="./audio/230_Opciones_de_Navegacin.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00e7.smil#text_00e7"/></caption>
+			<prompt type="instructions">
+				<promptItem refid="enter_to_close"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+			</prompt>
+			<control mfcid="IDOK" widget="button">
+				<caption>
+					<promptItem refid="ok_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="ok_button_description"/>
+				</description>
+			</control>
+			<control mfcid="IDC_SUMMARY" widget="list">
+				<caption mfcid="IDC_LISTCAPTION">
+					<text id="t230">Esta es una lista de elementos a los que puede navegar directamente.</text>
+					
+				<audio src="./audio/231_Esta_es_una_lista_de_elementos.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00e8.smil#text_00e8"/></caption>
+				<description>
+					<promptItem refid="list_reads_automatically"/>
+				</description>
+				<list repeat="yes">
+					<caption>
+						<promptVar name="TOC_CATEGORIES"/>
+					</caption>
+				</list>
+			</control>
+		</dialog>
+		<dialog mfcid="IDD_GOTOPAGE">
+			<note>This dialog lets the user jump to a certain page</note>
+			<caption>
+				<text id="t231">Ir a Página</text>
+				
+			<audio src="./audio/232_Ir_a_Pgina.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00e9.smil#text_00e9"/></caption>
+			<description>
+				<text id="t232">Desde aquí puede saltar a un número o etiqueta de página.</text>
+				
+			<audio src="./audio/233_Desde_aqu_puede_saltar_a_un_nm.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00ea.smil#text_00ea"/></description>
+			<prompt type="instructions">
+				<promptItem refid="tabAround"/>
+				<promptItem>
+					<text id="t233">Después de teclear su número de página, pulse Enter para ir a ella.</text>
+					
+				<audio src="./audio/234_Despus_de_teclear_su_nmero_de_.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00eb.smil#text_00eb"/></promptItem>
+				<promptItem refid="altC_to_cancel"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+			</prompt>
+			<control mfcid="IDOK" widget="button">
+				<caption>
+					<promptItem refid="ok_button_caption"/>
+				</caption>
+				<description>
+					<text id="t234">Pulsar este botón para ir a la página deseada.</text>
+					
+				<audio src="./audio/235_Pulsar_este_botn_para_ir_a_la_.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00ec.smil#text_00ec"/></description>
+			</control>
+			<control mfcid="IDCANCEL" widget="button">
+				<caption>
+					<promptItem refid="cancel_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="cancel_button_description"/>
+				</description>
+				<mnemonic>
+					<text id="t235">C</text>
+					
+				<audio src="./audio/236_C.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00ed.smil#text_00ed"/></mnemonic>
+			</control>
+			<control mfcid="IDC_PAGENUM" widget="textfield">
+				<caption mfcid="IDC_STATIC">
+					<text id="t236">Introducir un número de página:</text>
+					
+				<audio src="./audio/237_Introducir_un_nmero_de_pgina.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00ee.smil#text_00ee"/></caption>
+				<description>
+					<text id="t237">Teclee el número o la etiqueta de la página a la que quiere ir.</text>
+					
+				<audio src="./audio/238_Teclee_el_nmero_o_la_etiqueta_.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00ef.smil#text_00ef"/></description>
+			</control>
+		</dialog>
+		<dialog mfcid="IDD_FULLSUMMARY">
+			<note>This dialog lists key publication metadata.</note>
+			<caption>
+				<text id="t238">Sumario de la Publicación</text>
+				
+			<audio src="./audio/239_Sumario_de_la_Publicacin.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00f0.smil#text_00f0"/></caption>
+			<prompt type="instructions">
+				<promptItem refid="enter_to_close"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+			</prompt>
+			<control mfcid="IDOK" widget="button">
+				<caption>
+					<promptItem refid="ok_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="ok_button_description"/>
+				</description>
+			</control>
+			<control mfcid="IDC_SUMMARY" widget="list">
+				<caption mfcid="IDC_LISTCAPTION">
+					<text id="t239">Esta es una lista de los datos de la publicación.</text>
+					
+				<audio src="./audio/240_Esta_es_una_lista_de_los_datos.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00f1.smil#text_00f1"/></caption>
+				<description>
+					<promptItem refid="list_reads_automatically"/>
+				</description>
+				<list repeat="no">
+					<caption>
+						<prompt>
+							<promptItem>
+								<text id="t240">Título del libro:</text>
+								
+							<audio src="./audio/241_Ttulo_del_libro.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00f2.smil#text_00f2"/></promptItem>
+							<promptVar name="META_TITLE"/>
+						</prompt>
+					</caption>
+					<caption>
+						<prompt>
+							<promptItem>
+								<text id="t241">Escrito por:</text>
+								
+							<audio src="./audio/242_Escrito_por.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00f3.smil#text_00f3"/></promptItem>
+							<promptVar name="META_CREATOR"/>
+						</prompt>
+					</caption>
+					<caption>
+						<prompt>
+							<promptItem>
+								<text id="t242">Publicado por:</text>
+								
+							<audio src="./audio/243_Publicado_por.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00f4.smil#text_00f4"/></promptItem>
+							<promptVar name="META_PUBLISHER"/>
+						</prompt>
+					</caption>
+					<caption condition="BOOK_HAS_DESCRIPTION">
+						<prompt>
+							<promptItem>
+								<text id="t243">Descripción:</text>
+								
+							<audio src="./audio/244_Descripcin.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00f5.smil#text_00f5"/></promptItem>
+							<promptVar name="META_DESC"/>
+						</prompt>
+					</caption>
+					<caption>
+						<prompt>
+							<promptItem>
+								<text id="t244">Número de puntos de navegación en el índice:</text>
+								
+							<audio src="./audio/245_Nmero_de_puntos_de_navegacin_e.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00f6.smil#text_00f6"/></promptItem>
+							<promptVar name="META_TOCITEMS"/>
+						</prompt>
+					</caption>
+					<caption>
+						<prompt>
+							<promptItem>
+								<text id="t245">Máximo nivel de indexación:</text>
+								
+							<audio src="./audio/246_Mximo_nivel_de_indexacin.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00f7.smil#text_00f7"/></promptItem>
+							<promptVar name="META_DEPTH"/>
+						</prompt>
+					</caption>
+					<caption condition="BOOK_HAS_PAGES">
+						<prompt>
+							<promptItem>
+								<text id="t246">Páginas de créditos:</text>
+								
+							<audio src="./audio/247_Pginas_de_crditos.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00f8.smil#text_00f8"/></promptItem>
+							<promptVar name="META_PAGEFRONT"/>
+						</prompt>
+					</caption>
+					<caption condition="BOOK_HAS_PAGES">
+						<prompt>
+							<promptItem>
+								<text id="t247">Páginas normales:</text>
+								
+							<audio src="./audio/248_Pginas_normales.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00f9.smil#text_00f9"/></promptItem>
+							<promptVar name="META_PAGENORMAL"/>
+						</prompt>
+					</caption>
+					<caption condition="BOOK_HAS_PAGES">
+						<prompt>
+							<promptItem>
+								<text id="t248">Páginas especiales:</text>
+								
+							<audio src="./audio/249_Pginas_especiales.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00fa.smil#text_00fa"/></promptItem>
+							<promptVar name="META_PAGESPECIAL"/>
+						</prompt>
+					</caption>
+					<caption>
+						<prompt>
+							<promptItem>
+								<text id="t249">Duración total:</text>
+								
+							<audio src="./audio/250_Duracin_total.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00fb.smil#text_00fb"/></promptItem>
+							<promptVar name="META_TOTALTIME"/>
+						</prompt>
+					</caption>
+				</list>
+			</control>
+		</dialog>
+	</dialogs>
+	<prompts>
+		<promptItemRefs>
+			<promptItem id="altC_to_close">
+				<text id="t250">Pulsar Alt + C para cerrar el diálogo.</text>
+				
+			<audio src="./audio/251_Pulsar_Alt__C_para_cerrar_el_d.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00fc.smil#text_00fc"/></promptItem>
+			<promptItem id="altC_to_cancel">
+				<text id="t251">Pulsar Alt + C para cancelar el diálogo.</text>
+				
+			<audio src="./audio/252_Pulsar_Alt__C_para_cancelar_el.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00fd.smil#text_00fd"/></promptItem>
+			<promptItem id="thisItem">
+				<text id="t252">Este elemento</text>
+				
+			<audio src="./audio/253_Este_elemento.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00fe.smil#text_00fe"/></promptItem>
+			<promptItem id="spaceToToggle">
+				<text id="t253">Pulsar la barra espaciadora para cambiar el valor.</text>
+				
+			<audio src="./audio/254_Pulsar_la_barra_espaciadora_pa.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis00ff.smil#text_00ff"/></promptItem>
+			<promptItem id="tabAround">
+				<text id="t254">Pulsar el tabulador para moverse por los elementos del diálogo.</text>
+				
+			<audio src="./audio/255_Pulsar_el_tabulador_para_mover.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0100.smil#text_0100"/></promptItem>
+			<promptItem id="ctrl2_for_colorsdialog">
+				<text id="t255">Pulsar Ctrl + 2 para cambiar al diálogo de colores.</text>
+				
+			<audio src="./audio/256_Pulsar_Ctrl__2_para_cambiar_al.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0101.smil#text_0101"/></promptItem>
+			<promptItem id="ctrl3_for_langsdialog">
+				<text id="t256">Pulsar Ctrl + 3 para cambiar al diálogo de opciones de idioma.</text>
+				
+			<audio src="./audio/257_Pulsar_Ctrl__3_para_cambiar_al.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0102.smil#text_0102"/></promptItem>
+			<promptItem id="ctrl1_for_prefsdialog">
+				<text id="t257">Pulsar Ctrl + 1 para cambiar al diálogo de preferencias generales.</text>
+				
+			<audio src="./audio/258_Pulsar_Ctrl__1_para_cambiar_al.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0103.smil#text_0103"/></promptItem>
+			<promptItem id="thisItemIsCurrently">
+				<text id="t258">Actualmente este elemento es</text>
+				
+			<audio src="./audio/259_Actualmente_este_elemento_es.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0104.smil#text_0104"/></promptItem>
+			<promptItem id="enter_to_close">
+				<text id="t259">Pulsar Enter para cerrar el diálogo.</text>
+				
+			<audio src="./audio/260_Pulsar_Enter_para_cerrar_el_di.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0105.smil#text_0105"/></promptItem>
+			<promptItem id="browse_button_caption">
+				<text id="t260">Explorar...</text>
+				
+			<audio src="./audio/261_Explorar.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0106.smil#text_0106"/></promptItem>
+			<promptItem id="browse_button_description">
+				<text id="t261">Pulsar para abrir el diálogo de exploración de carpetas.</text>
+				
+			<audio src="./audio/262_Pulsar_para_abrir_el_dilogo_de.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0107.smil#text_0107"/></promptItem>
+			<promptItem id="ok_button_caption">
+				<text id="t262">Aceptar</text>
+				
+			<audio src="./audio/263_Aceptar.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0108.smil#text_0108"/></promptItem>
+			<promptItem id="ok_button_description">
+				<text id="t263">Pulsar Aceptar para cerrar este diálogo.</text>
+				
+			<audio src="./audio/264_Pulsar_Aceptar_para_cerrar_est.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0109.smil#text_0109"/></promptItem>
+			<promptItem id="cancel_button_caption">
+				<!--med 6jan08: took this out because i think it's deprecated to put the mnemonic as an attribute-->
+				<!--<text id="t264" mnemonic="C">Cancel</text>-->
+				<text id="t264">Cancelar</text>
+				
+			<audio src="./audio/265_Cancelar.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis010a.smil#text_010a"/></promptItem>
+			<promptItem id="cancel_button_description">
+				<text id="t265">Pulsar para cancelar este diálogo.</text>
+				
+			<audio src="./audio/266_Pulsar_para_cancelar_este_dilo.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis010b.smil#text_010b"/></promptItem>
+			<promptItem id="list_reads_automatically">
+				<text id="t266">Esta lista se leerá automáticamente.</text>
+				
+			<audio src="./audio/267_Esta_lista_se_leer_automticame.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis010c.smil#text_010c"/></promptItem>
+			<promptItem id="repeatLastPromptInstr">
+				<text id="t267">Pulsar Ctrl + R para repetir la última pregunta.</text>
+				
+			<audio src="./audio/268_Pulsar_Ctrl__R_para_repetir_la.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis010d.smil#text_010d"/></promptItem>
+			<promptItem id="thisDialogNotSelfVoicing">
+				<text id="t268">Este diálogo aún no tiene voz propia.</text>
+				
+			<audio src="./audio/269_Este_dilogo_an_no_tiene_voz_pr.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis010e.smil#text_010e"/></promptItem>
+			<promptItem id="escapeToCancel">
+				<text id="t269">Pulsar escape para cancelar</text>
+				
+			<audio src="./audio/270_Pulsar_escape_para_cancelar.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis010f.smil#text_010f"/></promptItem>
+			<promptItem id="hearDlgInstructions">
+				<text id="t270">Pulsar Ctrl + I para escuchar instrucciones acerca de este diálogo.</text>
+				
+			<audio src="./audio/271_Pulsar_Ctrl__I_para_escuchar_i.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0110.smil#text_0110"/></promptItem>
+			<!--textBoxRepeatInstr is not used anywhere-->
+			<promptItem id="textBoxRepeatInstr">
+				<text id="t271">Pulsar Ctrl + T para repetir el texto del último cuadro de texto.</text>
+				
+			<audio src="./audio/272_Pulsar_Ctrl__T_para_repetir_el.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0111.smil#text_0111"/></promptItem>
+			<promptItem id="nav_window">
+				<text id="t272">Navegación</text>
+				
+			<audio src="./audio/273_Navegacin.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0112.smil#text_0112"/></promptItem>
+			<promptItem id="sections">
+				<text id="t273">Secciones</text>
+				
+			<audio src="./audio/274_Secciones.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0113.smil#text_0113"/></promptItem>
+			<promptItem id="pages">
+				<text id="t274">Páginas</text>
+				
+			<audio src="./audio/275_Pginas.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0114.smil#text_0114"/></promptItem>
+			<promptItem id="noterefs">
+				<text id="t275">Notas a pie de página</text>
+				
+			<audio src="./audio/276_Notas_a_pie_de_pgina.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0115.smil#text_0115"/></promptItem>
+			<promptItem id="prodnotes">
+				<text id="t276">Notas del productor</text>
+				
+			<audio src="./audio/277_Notas_del_productor.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0116.smil#text_0116"/></promptItem>
+			<promptItem id="sidebars">
+				<text id="t277">Paneles laterales</text>
+				
+			<audio src="./audio/278_Paneles_laterales.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0117.smil#text_0117"/></promptItem>
+			<promptItem id="groups">
+				<text id="t278">Elementos arrastrables</text>
+				
+			<audio src="./audio/279_Elementos_arrastrables.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0118.smil#text_0118"/></promptItem>
+			<promptItem id="navigation_sidebar_caption">
+				<text id="t279">Navegación</text>
+				
+			<audio src="./audio/280_Navegacin.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0119.smil#text_0119"/></promptItem>
+			<promptItem id="ready">
+				<text id="t280">Preparado</text>
+				
+			<audio src="./audio/281_Preparado.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis011a.smil#text_011a"/></promptItem>
+			<promptItem id="property_sheet_caption">
+				<text id="t281">Preferencias</text>
+				
+			<audio src="./audio/282_Preferencias.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis011b.smil#text_011b"/></promptItem>
+			<promptItem id="selfolder_title">
+				<text id="t282">Seleccionar una carpeta</text>
+				
+			<audio src="./audio/283_Seleccionar_una_carpeta.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis011c.smil#text_011c"/></promptItem>
+			<promptItem id="selfolder_instr">
+				<text id="t283">Seleccionar una carpeta del directorio siguiente.</text>
+				
+			<audio src="./audio/284_Seleccionar_una_carpeta_del_di.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis011d.smil#text_011d"/></promptItem>
+			<promptItem id="daisy_books">
+				<text id="t284">Libros DAISY</text>
+				
+			<audio src="./audio/285_Libros_DAISY.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis011e.smil#text_011e"/></promptItem>
+			<promptItem id="folder_does_not_exist">
+				<text id="t285">La carpeta %s no existe. ¿Quiere crearla?</text>
+				
+			<audio src="./audio/286_La_carpeta_s_no_existe_Quiere_.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis011f.smil#text_011f"/></promptItem>
+			<promptItem id="folder_invalid">
+				<text id="t286">Este nombre de carpeta no es válido. Por favor, elija otro.</text>
+				
+			<audio src="./audio/287_Este_nombre_de_carpeta_no_es_v.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0120.smil#text_0120"/></promptItem>
+			<promptItem id="cant_create_folder">
+				<text id="t287">No se puede crear esta carpeta. Por favor, compruebe que no hay otra.</text>
+				
+			<audio src="./audio/288_No_se_puede_crear_esta_carpeta.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0121.smil#text_0121"/></promptItem>
+			<promptItem id="not_available">
+				<text id="t288">No disponible</text>
+				
+			<audio src="./audio/289_No_disponible.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0122.smil#text_0122"/></promptItem>
+			<promptItem id="numeric_zero">
+				<note>All numerals should be translated into numerals, not words.</note>
+				<text id="t289">0</text>
+				
+			<audio src="./audio/290_0.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0123.smil#text_0123"/></promptItem>
+			<promptItem id="numeric_one">
+				<text id="t290">1</text>
+				
+			<audio src="./audio/291_1.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0124.smil#text_0124"/></promptItem>
+			<promptItem id="numeric_two">
+				<text id="t291">2</text>
+				
+			<audio src="./audio/292_2.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0125.smil#text_0125"/></promptItem>
+			<promptItem id="numeric_three">
+				<text id="t292">3</text>
+				
+			<audio src="./audio/293_3.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0126.smil#text_0126"/></promptItem>
+			<promptItem id="numeric_four">
+				<text id="t293">4</text>
+				
+			<audio src="./audio/294_4.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0127.smil#text_0127"/></promptItem>
+			<promptItem id="numeric_five">
+				<text id="t294">5</text>
+				
+			<audio src="./audio/295_5.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0128.smil#text_0128"/></promptItem>
+			<promptItem id="numeric_six">
+				<text id="t295">6</text>
+				
+			<audio src="./audio/296_6.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0129.smil#text_0129"/></promptItem>
+			<promptItem id="numeric_seven">
+				<text id="t296">7</text>
+				
+			<audio src="./audio/297_7.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis012a.smil#text_012a"/></promptItem>
+			<promptItem id="numeric_eight">
+				<text id="t297">8</text>
+				
+			<audio src="./audio/298_8.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis012b.smil#text_012b"/></promptItem>
+			<promptItem id="numeric_nine">
+				<text id="t298">9</text>
+				
+			<audio src="./audio/299_9.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis012c.smil#text_012c"/></promptItem>
+			<promptItem id="deleted">
+				<text id="t299">borrado</text>
+				
+			<audio src="./audio/300_borrado.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis012d.smil#text_012d"/></promptItem>
+			<promptItem id="will_be_skipped">
+				<text id="t300">se saltará</text>
+				
+			<audio src="./audio/301_se_saltar.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis012e.smil#text_012e"/></promptItem>
+			<promptItem id="will_be_played">
+				<text id="t301">se reproducirá</text>
+				
+			<audio src="./audio/302_se_reproducir.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis012f.smil#text_012f"/></promptItem>
+			<promptItem id="item_on">
+				<text id="t302">activado</text>
+				
+			<audio src="./audio/303_activado.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0130.smil#text_0130"/></promptItem>
+			<promptItem id="item_off">
+				<text id="t303">desactivado</text>
+				
+			<audio src="./audio/304_desactivado.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0131.smil#text_0131"/></promptItem>
+			<promptItem id="item_selected">
+				<text id="t304">seleccionado</text>
+				
+			<audio src="./audio/305_seleccionado.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0132.smil#text_0132"/></promptItem>
+			<promptItem id="item_deselected">
+				<text id="t305">no seleccionado</text>
+				
+			<audio src="./audio/306_no_seleccionado.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0133.smil#text_0133"/></promptItem>
+			<promptItem id="keyboardShortcut">
+				<text id="t306">Tecla rápida</text>
+				
+			<audio src="./audio/307_Tecla_rpida.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0134.smil#text_0134"/></promptItem>
+			<promptItem id="icon">
+				<text id="t307">Icono</text>
+				
+			<audio src="./audio/308_Icono.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0135.smil#text_0135"/></promptItem>
+			<promptItem id="menu">
+				<text id="t308">Menú</text>
+				
+			<audio src="./audio/309_Men.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0136.smil#text_0136"/></promptItem>
+			<promptItem id="followedBy">
+				<note>This is used in the context of a sequence of key presses, as in "Press Alt + V, followed by S"</note>
+				<text id="t309">seguido de</text>
+				
+			<audio src="./audio/310_seguido_de.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0137.smil#text_0137"/></promptItem>
+			<promptItem id="submenu">
+				<text id="t310">Submenú</text>
+				
+			<audio src="./audio/311_Submen.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0138.smil#text_0138"/></promptItem>
+		</promptItemRefs>
+		<generalPrompts>
+			<prompt id="dialogClosed">
+				<promptItem>
+					<text id="t311">Diálogo cerrado.</text>
+					
+				<audio src="./audio/312_Dilogo_cerrado.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0139.smil#text_0139"/></promptItem>
+			</prompt>
+			<prompt id="textFieldEntry">
+				<promptItem>
+					<text id="t312">Campo de entrada de texto:</text>
+					
+				<audio src="./audio/313_Campo_de_entrada_de_texto.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis013a.smil#text_013a"/></promptItem>
+				<promptVar name="TEXT_FIELD"/>
+			</prompt>
+			<prompt id="notSelfVoicing">
+				<promptItem refid="thisDialogNotSelfVoicing"/>
+			</prompt>
+			<prompt id="bookAtPathChanged">
+				<promptItem>
+					<text id="t313">La ubicación del libro que busca ha cambiado. Se ha encontrado otro diferente. ¿Cambió el contenido de su unidad de CD-ROM?</text>
+					
+				<audio src="./audio/314_La_ubicacin_del_libro_que_busc.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis013b.smil#text_013b"/></promptItem>
+			</prompt>
+			<prompt id="generalBookError">
+				<promptItem>
+					<text id="t314">Ocurrió un error al intentar abrir el libro.</text>
+					
+				<audio src="./audio/315_Ocurri_un_error_al_intentar_ab.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis013c.smil#text_013c"/></promptItem>
+				<promptVar name="BOOK_PATH"/>
+				<promptItem refid="enter_to_close"/>
+			</prompt>
+			<prompt id="noCdLoaded">
+				<promptItem>
+					<text id="t315">No hay CD en la unidad de CD-ROM.</text>
+					
+				<audio src="./audio/316_No_hay_CD_en_la_unidad_de_CDRO.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis013d.smil#text_013d"/></promptItem>
+				<promptItem refid="enter_to_close"/>
+			</prompt>
+			<prompt id="pluginErrorInit">
+				<promptItem>
+					<text id="t316">Error de plug-in: no se encuentra la función init() en la DLL del plug-in.</text>
+					
+				<audio src="./audio/317_Error_de_plugin_no_se_encuentr.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis013e.smil#text_013e"/></promptItem>
+			</prompt>
+			<prompt id="pluginErrorDll">
+				<promptItem>
+					<text id="t317">Error de plug-in: No se ha podido cargar la siguiente biblioteca de plug-in: </text>
+					
+				<audio src="./audio/318_Error_de_plugin_No_se_ha_podid.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis013f.smil#text_013f"/></promptItem>
+				<promptVar name="PLUGIN_LIB"/>
+			</prompt>
+			<prompt id="basicViewPrompt">
+				<promptItem>
+					<text id="t318">Está usando la vista sencilla.  Pulse F11 para cambiar al modo de visualización por defecto.</text>
+					
+				<audio src="./audio/319_Est_usando_la_vista_sencilla_P.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0140.smil#text_0140"/></promptItem>
+			</prompt>
+			<prompt id="OpenFile_notSelfVoicing">
+				<promptItem>
+					<text id="t319">Diálogo de apertura de fichero</text>
+					
+				<audio src="./audio/320_Dilogo_de_apertura_de_fichero.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0141.smil#text_0141"/></promptItem>
+				<promptItem refid="thisDialogNotSelfVoicing"/>
+				<promptItem>
+					<text id="t320">Use la función Buscar libros, en el menú Archivo, para buscar libros DAISY en el disco duro.</text>
+					
+				<audio src="./audio/321_Use_la_funcin_Buscar_libros_en.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0142.smil#text_0142"/></promptItem>
+				<promptItem refid="escapeToCancel"/>
+			</prompt>
+			<prompt id="BrowseForFolder_notSelfVoicing">
+				<promptItem>
+					<text id="t321">Explore la estructura de carpetas</text>
+					
+				<audio src="./audio/322_Explore_la_estructura_de_carpe.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0143.smil#text_0143"/></promptItem>
+				<promptItem refid="thisDialogNotSelfVoicing"/>
+				<promptItem refid="escapeToCancel"/>
+				<promptItem>
+					<text id="t322">Después, teclee la ruta de la carpeta deseada en el cuadro de texto.</text>
+					
+				<audio src="./audio/323_Despus_teclee_la_ruta_de_la_ca.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0144.smil#text_0144"/></promptItem>
+			</prompt>
+			<prompt id="canceled">
+				<promptItem>
+					<text id="t323">Cancelado</text>
+					
+				<audio src="./audio/324_Cancelado.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0145.smil#text_0145"/></promptItem>
+			</prompt>
+			<prompt id="loading">
+				<promptItem>
+					<text id="t324">Cargando</text>
+					
+				<audio src="./audio/325_Cargando.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0146.smil#text_0146"/></promptItem>
+			</prompt>
+			<prompt id="restartForChanges">
+				<promptItem>
+					<text id="t325">Por favor, reinicie para ver sus cambios.</text>
+					
+				<audio src="./audio/326_Por_favor_reinicie_para_ver_su.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0147.smil#text_0147"/></promptItem>
+			</prompt>
+			<prompt id="noBooksFoundOnCd">
+				<promptItem>
+					<text id="t326">No se encontraron libros DAISY en este CD-ROM.</text>
+					
+				<audio src="./audio/327_No_se_encontraron_libros_DAISY.mp3" from="file:///Users/marisa/Projects/amis/trunk/tools/spanish-temp/prompts/amis0148.smil#text_0148"/></promptItem>
+				<promptItem refid="enter_to_close"/>
+			</prompt>
+		</generalPrompts>
+	</prompts>
+</ui>

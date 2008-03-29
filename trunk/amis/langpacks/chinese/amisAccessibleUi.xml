@@ -1,0 +1,2344 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ui xml:lang="en">
+  <containers>
+    <container id="file">
+      <note>This is the menu header "File"</note>
+      <caption>
+        <text>文件</text>
+        <originalText>File</originalText>
+        
+      <audio src="./audio/002.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0003.smil#text_0003"/></caption>
+      <action mfcid="ID_MENU_FILE_OPEN" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and a toolbar item</note>
+        <icon src="./open.png" type="smallIcon"/>
+        <caption>
+          <text>打开...</text>
+          <originalText>Open...</originalText>
+          
+        <audio src="./audio/003.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0004.smil#text_0004"/></caption>
+        <description>
+          <text>从本地文件系统中打开一个DAISY书</text>
+          <originalText>Open a Daisy book from the local file system</originalText>
+          
+        <audio src="./audio/004_DAISY.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0005.smil#text_0005"/></description>
+        <accelerator>
+          <text>Ctrl+O</text>
+          <originalText>Ctrl+O</originalText>
+          
+        <audio src="./audio/005_CtrlO.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0006.smil#text_0006"/></accelerator>
+        <mnemonic>
+          <text>O</text>
+          <originalText>O</originalText>
+          
+        <audio src="./audio/006_O.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0007.smil#text_0007"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_LOADCD" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and a toolbar item</note>
+        <icon src="./settings/img/cd3.ico" type="smallIcon"/>
+        <icon src="./settings/img/cd_big.ico" type="largeIcon"/>
+        <caption>
+          <text>从光驱加载</text>
+          <originalText>Load CD</originalText>
+          
+        <audio src="./audio/007.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0008.smil#text_0008"/></caption>
+        <description>
+          <text>从光驱加载DAISY书</text>
+          <originalText>Load a DAISY book from CD ROM</originalText>
+          
+        <audio src="./audio/008_DAISY.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0009.smil#text_0009"/></description>
+        <accelerator>
+          <text>Ctrl+L</text>
+          <originalText>Ctrl+L</originalText>
+          
+        <audio src="./audio/009_CtrlL.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis000a.smil#text_000a"/></accelerator>
+        <mnemonic>
+          <text>L</text>
+          <originalText>L</originalText>
+          
+        <audio src="./audio/010_L.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis000b.smil#text_000b"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_SEARCHDRIVE" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>查找...</text>
+          <originalText>Search...</originalText>
+          
+        <audio src="./audio/011.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis000c.smil#text_000c"/></caption>
+        <description>
+          <text>从本地磁盘查找DAISY书</text>
+          <originalText>Search local drives for DAISY books</originalText>
+          
+        <audio src="./audio/012_DAISY.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis000d.smil#text_000d"/></description>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/013_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis000e.smil#text_000e"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_PREFERENCES" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>选项...</text>
+          <originalText>Preferences...</originalText>
+          
+        <audio src="./audio/014.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis000f.smil#text_000f"/></caption>
+        <description>
+          <text>应用选项对话框.</text>
+          <originalText>This is the application preferences dialog.</originalText>
+          
+        <audio src="./audio/015.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0010.smil#text_0010"/></description>
+        <mnemonic>
+          <text>P</text>
+          <originalText>P</originalText>
+          
+        <audio src="./audio/016_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0011.smil#text_0011"/></mnemonic>
+      </action>
+      <container id="recentBooksList">
+        <note>This is the menu header for the recent books sub-menu.</note>
+        <caption>
+          <text>最近书目</text>
+          <originalText>Recent</originalText>
+          
+        <audio src="./audio/017.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0012.smil#text_0012"/></caption>
+        <switch element="action">
+          <action mfcid="ID_FILE_RECENT_EMPTY" widget="menuItem" condition="ID_FILE_RECENT_EMPTY">
+            <note>This is going to be a menu item</note>
+            <caption>
+              <text>空</text>
+              <originalText>Empty</originalText>
+              
+            <audio src="./audio/018.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0013.smil#text_0013"/></caption>
+            <description>
+              <text>没有最近书目.</text>
+              <originalText>There are no recently read books.</originalText>
+              
+            <audio src="./audio/019.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0014.smil#text_0014"/></description>
+          </action>
+          <action mfcid="BOOK_BASE_ID" widget="menuItem" condition="BOOK_BASE_ID">
+            <note>This is going to be a menu item</note>
+            <list repeat="yes">
+              <caption>
+                <promptVar name="RECENT_BOOK_TITLE"/>
+              </caption>
+            </list>
+          </action>
+        </switch>
+        <mnemonic>
+          <text>R</text>
+          <originalText>R</originalText>
+          
+        <audio src="./audio/020_R.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0015.smil#text_0015"/></mnemonic>
+      </container>
+      <action mfcid="ID_MENU_FILE_EXIT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>退出</text>
+          <originalText>Exit</originalText>
+          
+        <audio src="./audio/021.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0016.smil#text_0016"/></caption>
+        <description>
+          <text>退出 AMIS</text>
+          <originalText>Exit AMIS</originalText>
+          
+        <audio src="./audio/022__AMIS.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0017.smil#text_0017"/></description>
+        <accelerator>
+          <text>Alt+F4</text>
+          <originalText>Alt+F4</originalText>
+          
+        <audio src="./audio/023_AltF4.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0018.smil#text_0018"/></accelerator>
+        <mnemonic>
+          <text>x</text>
+          <originalText>x</originalText>
+          
+        <audio src="./audio/024_x.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0019.smil#text_0019"/></mnemonic>
+      </action>
+      <accelerator>
+        <text>Alt+F</text>
+        <originalText>Alt+F</originalText>
+        
+      <audio src="./audio/025_AltF.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis001a.smil#text_001a"/></accelerator>
+      <mnemonic>
+        <text>F</text>
+        <originalText>F</originalText>
+        
+      <audio src="./audio/026_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis001b.smil#text_001b"/></mnemonic>
+    </container>
+    <container id="view">
+      <note>This is the menu header "View"</note>
+      <caption>
+        <text>视图</text>
+        <originalText>View</originalText>
+        
+      <audio src="./audio/027.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis001c.smil#text_001c"/></caption>
+      <action mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>侧边栏</text>
+          <originalText>Sidebar</originalText>
+          
+        <audio src="./audio/028.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis001d.smil#text_001d"/></caption>
+        <description>
+          <text>开/关侧边栏.</text>
+          <originalText>Turn the sidebar on or off.</originalText>
+          
+        <audio src="./audio/029.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis001e.smil#text_001e"/></description>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/030_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis001f.smil#text_001f"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_BASIC" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>基本视图模式</text>
+          <originalText>Basic View Mode</originalText>
+          
+        <audio src="./audio/031.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0020.smil#text_0020"/></caption>
+        <description>
+          <text>切换到基本视图模式.</text>
+          <originalText>Switch the view to basic mode.</originalText>
+          
+        <audio src="./audio/032.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0021.smil#text_0021"/></description>
+        <accelerator>
+          <text>F11</text>
+          <originalText>F11</originalText>
+          
+        <audio src="./audio/033_F11.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0022.smil#text_0022"/></accelerator>
+        <mnemonic>
+          <text>B</text>
+          <originalText>B</originalText>
+          
+        <audio src="./audio/034_B.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0023.smil#text_0023"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_CONTRAST" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item</note>
+        <icon src="./settings/img/contrast.ico" type="smallIcon"/>
+        <caption>
+          <text>高亮显示</text>
+          <originalText>High Contrast</originalText>
+          
+        <audio src="./audio/035.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0024.smil#text_0024"/></caption>
+        <description>
+          <text>使用高度反差颜色显示文本.</text>
+          <originalText>Use high contrast colors for the text display.</originalText>
+          
+        <audio src="./audio/036.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0025.smil#text_0025"/></description>
+        <accelerator>
+          <text>Ctrl+S</text>
+          <originalText>Ctrl+S</originalText>
+          
+        <audio src="./audio/037_CtrlS.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0026.smil#text_0026"/></accelerator>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/038_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0027.smil#text_0027"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_LARGEFONT" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/font.ico" type="smallIcon"/>
+        <caption>
+          <text>增加字体大小</text>
+          <originalText>Increase Font Size</originalText>
+          
+        <audio src="./audio/039.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0028.smil#text_0028"/></caption>
+        <description>
+          <text>逐渐地增加字体大小.</text>
+          <originalText>Gradually increase the font size.</originalText>
+          
+        <audio src="./audio/040.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0029.smil#text_0029"/></description>
+        <mnemonic>
+          <text>I</text>
+          <originalText>I</originalText>
+          
+        <audio src="./audio/041_I.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis002a.smil#text_002a"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_RESETFONT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>恢复字体大小</text>
+          <originalText>Reset Font Size</originalText>
+          
+        <audio src="./audio/042.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis002b.smil#text_002b"/></caption>
+        <description>
+          <text>将字体大小恢复到初始值.</text>
+          <originalText>Set the font size to the default setting.</originalText>
+          
+        <audio src="./audio/043.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis002c.smil#text_002c"/></description>
+        <mnemonic>
+          <text>R</text>
+          <originalText>R</originalText>
+          
+        <audio src="./audio/044_R.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis002d.smil#text_002d"/></mnemonic>
+      </action>
+      <action mfcid="NAVLIST_BASE_ID" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <promptVar name="NAV_LIST_NAME"/>
+        </caption>
+        <description>
+          <promptVar name="NAV_LIST_DESCRIPTION"/>
+        </description>
+      </action>
+      <accelerator>
+        <text>Alt+V</text>
+        <originalText>Alt+V</originalText>
+        
+      <audio src="./audio/045_AltV.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis002e.smil#text_002e"/></accelerator>
+      <mnemonic>
+        <text>V</text>
+        <originalText>V</originalText>
+        
+      <audio src="./audio/046_V.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis002f.smil#text_002f"/></mnemonic>
+    </container>
+    <container id="play">
+      <note>This is the menu header "Play"</note>
+      <caption>
+        <text>播放</text>
+        <originalText>Play</originalText>
+        
+      <audio src="./audio/047.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0030.smil#text_0030"/></caption>
+      <switch element="action">
+        <action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" condition="canPlay">
+          <note>This is going to be a menu item and toolbar item</note>
+          <icon src="./settings/img/play-big.ico" type="smallIcon"/>
+          <icon src="./settings/img/play_big.ico" type="largeIcon"/>
+          <caption>
+            <text>播放</text>
+            <originalText>Play</originalText>
+            
+          <audio src="./audio/048.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0031.smil#text_0031"/></caption>
+          <description>
+            <text>开始同步播放.</text>
+            <originalText>Start synchronized playback.</originalText>
+            
+          <audio src="./audio/049.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0032.smil#text_0032"/></description>
+          <accelerator>
+            <text>空格</text>
+            <originalText>Space</originalText>
+            
+          <audio src="./audio/050.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0033.smil#text_0033"/></accelerator>
+          <mnemonic>
+            <text>P</text>
+            <originalText>P</originalText>
+            
+          <audio src="./audio/051_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0034.smil#text_0034"/></mnemonic>
+        </action>
+        <action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" condition="canPause">
+          <note>This is going to be a menu item and toolbar item</note>
+          <icon src="./settings/img/pause.ico" type="smallIcon"/>
+          <icon src="./settings/img/pause_big.ico" type="largeIcon"/>
+          <caption>
+            <text>暂停</text>
+            <originalText>Pause</originalText>
+            
+          <audio src="./audio/052.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0035.smil#text_0035"/></caption>
+          <description>
+            <text>暂停DAISY书的播放.</text>
+            <originalText>Pause playback of this DAISY book.</originalText>
+            
+          <audio src="./audio/053_DAISY.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0036.smil#text_0036"/></description>
+          <accelerator>
+            <text>空格</text>
+            <originalText>Space</originalText>
+            
+          <audio src="./audio/054.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0037.smil#text_0037"/></accelerator>
+          <mnemonic>
+            <text>a</text>
+            <originalText>a</originalText>
+            
+          <audio src="./audio/055_a.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0038.smil#text_0038"/></mnemonic>
+        </action>
+      </switch>
+      <action mfcid="ID_MENU_PLAY_ESCAPE" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>跳出</text>
+          <originalText>Escape</originalText>
+          
+        <audio src="./audio/056.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0039.smil#text_0039"/></caption>
+        <description>
+          <text>从当前播放项或结构中跳出.</text>
+          <originalText>Jump out of the currently playing item or structure.</originalText>
+          
+        <audio src="./audio/057.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis003a.smil#text_003a"/></description>
+        <accelerator>
+          <text>Esc</text>
+          <originalText>Esc</originalText>
+          
+        <audio src="./audio/058_Esc.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis003b.smil#text_003b"/></accelerator>
+        <mnemonic>
+          <text>E</text>
+          <originalText>E</originalText>
+          
+        <audio src="./audio/059_E.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis003c.smil#text_003c"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_FASTER" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/fullspeedahead.ico" type="smallIcon"/>
+        <caption>
+          <text>快进</text>
+          <originalText>Faster</originalText>
+          
+        <audio src="./audio/060.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis003d.smil#text_003d"/></caption>
+        <description>
+          <text>加快播放速度.</text>
+          <originalText>Increase the playback rate.</originalText>
+          
+        <audio src="./audio/061.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis003e.smil#text_003e"/></description>
+        <accelerator>
+          <text>Ctrl++</text>
+          <originalText>Ctrl++</originalText>
+          
+        <audio src="./audio/062_Ctrl.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis003f.smil#text_003f"/></accelerator>
+        <mnemonic>
+          <text>F</text>
+          <originalText>F</originalText>
+          
+        <audio src="./audio/063_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0040.smil#text_0040"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_SLOWER" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/slowdown.ico" type="smallIcon"/>
+        <caption>
+          <text>慢进</text>
+          <originalText>Slower</originalText>
+          
+        <audio src="./audio/064.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0041.smil#text_0041"/></caption>
+        <description>
+          <text>减慢播放速度.</text>
+          <originalText>Slow down the playback rate.</originalText>
+          
+        <audio src="./audio/065.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0042.smil#text_0042"/></description>
+        <accelerator>
+          <text>Ctrl+-</text>
+          <originalText>Ctrl+-</originalText>
+          
+        <audio src="./audio/066_Ctrl.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0043.smil#text_0043"/></accelerator>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/067_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0044.smil#text_0044"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_NORMALSPEED" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/normalspeed.ico" type="smallIcon"/>
+        <caption>
+          <text>常速</text>
+          <originalText>Normal Speed</originalText>
+          
+        <audio src="./audio/068.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0045.smil#text_0045"/></caption>
+        <description>
+          <text>恢复正常播放速度.</text>
+          <originalText>Reset the playback rate to normal.</originalText>
+          
+        <audio src="./audio/069.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0046.smil#text_0046"/></description>
+        <accelerator>
+          <text>Ctrl+0</text>
+          <originalText>Ctrl+0</originalText>
+          
+        <audio src="./audio/070_Ctrl0.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0047.smil#text_0047"/></accelerator>
+        <mnemonic>
+          <text>N</text>
+          <originalText>N</originalText>
+          
+        <audio src="./audio/071_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0048.smil#text_0048"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_VOLUP" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>增加音量</text>
+          <originalText>Increase Volume</originalText>
+          
+        <audio src="./audio/072.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0049.smil#text_0049"/></caption>
+        <description>
+          <text>逐渐提高音量.</text>
+          <originalText>Gradually raise the volume.</originalText>
+          
+        <audio src="./audio/073.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis004a.smil#text_004a"/></description>
+        <accelerator>
+          <text>Ctrl+↑</text>
+          <originalText>Ctrl+Up</originalText>
+          
+        <audio src="./audio/074_Ctrl.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis004b.smil#text_004b"/></accelerator>
+        <mnemonic>
+          <text>I</text>
+          <originalText>I</originalText>
+          
+        <audio src="./audio/075_I.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis004c.smil#text_004c"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_VOLDOWN" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>减小音量</text>
+          <originalText>Decrease Volume</originalText>
+          
+        <audio src="./audio/076.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis004d.smil#text_004d"/></caption>
+        <description>
+          <text>逐渐降低音量.</text>
+          <originalText>Gradually lower the volume.</originalText>
+          
+        <audio src="./audio/077.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis004e.smil#text_004e"/></description>
+        <accelerator>
+          <text>Ctrl+↓</text>
+          <originalText>Ctrl+Down</originalText>
+          
+        <audio src="./audio/078_Ctrl.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis004f.smil#text_004f"/></accelerator>
+        <mnemonic>
+          <text>D</text>
+          <originalText>D</originalText>
+          
+        <audio src="./audio/079_D.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0050.smil#text_0050"/></mnemonic>
+      </action>
+      <accelerator>
+        <text>Alt+P</text>
+        <originalText>Alt+P</originalText>
+        
+      <audio src="./audio/080_AltP.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0051.smil#text_0051"/></accelerator>
+      <mnemonic>
+        <text>P</text>
+        <originalText>P</originalText>
+        
+      <audio src="./audio/081_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0052.smil#text_0052"/></mnemonic>
+    </container>
+    <container id="navigate">
+      <note>This is the menu header "Navigate"</note>
+      <caption>
+        <text>导航</text>
+        <originalText>Navigate</originalText>
+        
+      <audio src="./audio/082.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0053.smil#text_0053"/></caption>
+      <action mfcid="ID_MENU_NAV_PREVSECTION" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevsection.ico" type="smallIcon"/>
+        <icon src="./settings/img/prevsection_big.ico" type="largeIcon"/>
+        <caption>
+          <text>前一章节</text>
+          <originalText>Previous Section</originalText>
+          
+        <audio src="./audio/083.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0054.smil#text_0054"/></caption>
+        <description>
+          <text>返回前一章节.</text>
+          <originalText>Go to the previous section.</originalText>
+          
+        <audio src="./audio/084.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0055.smil#text_0055"/></description>
+        <accelerator>
+          <text>↑</text>
+          <originalText>Up</originalText>
+          
+        <audio src="./audio/085.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0056.smil#text_0056"/></accelerator>
+        <mnemonic>
+          <text>P</text>
+          <originalText>P</originalText>
+          
+        <audio src="./audio/086_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0057.smil#text_0057"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTSECTION" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextsection.ico" type="smallIcon"/>
+        <icon src="./settings/img/nextsection_big.ico" type="largeIcon"/>
+        <caption>
+          <text>后一章节</text>
+          <originalText>Next Section</originalText>
+          
+        <audio src="./audio/087.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0058.smil#text_0058"/></caption>
+        <description>
+          <text>跳到后一章节.</text>
+          <originalText>Go to the next section.</originalText>
+          
+        <audio src="./audio/088.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0059.smil#text_0059"/></description>
+        <accelerator>
+          <text>↓</text>
+          <originalText>Down</originalText>
+          
+        <audio src="./audio/089.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis005a.smil#text_005a"/></accelerator>
+        <mnemonic>
+          <text>N</text>
+          <originalText>N</originalText>
+          
+        <audio src="./audio/090_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis005b.smil#text_005b"/></mnemonic>
+      </action>
+      <container id="sectiondepth">
+        <note>This is the "show section depth" sub-menu pop-up</note>
+        <caption>
+          <text>显示章节深度</text>
+          <originalText>Show Section Depth</originalText>
+          
+        <audio src="./audio/091.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis005c.smil#text_005c"/></caption>
+        <switch element="action">
+          <action mfcid="ID_EMPTY" widget="menuItem" condition="ID_EMPTY">
+            <note>This is going to be a menu item</note>
+            <caption>
+              <text>空</text>
+              <originalText>Empty</originalText>
+              
+            <audio src="./audio/092.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis005d.smil#text_005d"/></caption>
+            <description>
+              <text>没有章节层次.</text>
+              <originalText>There are no section levels.</originalText>
+              
+            <audio src="./audio/093.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis005e.smil#text_005e"/></description>
+          </action>
+          <action mfcid="SECTION_DEPTH_BASE_ID" widget="menuItem" condition="SECTION_DEPTH_BASE_ID">
+            <note>This is going to be a menu item</note>
+            <list repeat="yes">
+              <caption>
+                <promptVar name="SECTION_DEPTH_OPTION"/>
+              </caption>
+            </list>
+          </action>
+        </switch>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/094_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis005f.smil#text_005f"/></mnemonic>
+      </container>
+      <action mfcid="ID_MENU_NAV_PREVPHRASE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevphasecirc.ico" type="smallIcon"/>
+        <caption>
+          <text>前一个短语</text>
+          <originalText>Previous Phrase</originalText>
+          
+        <audio src="./audio/095.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0060.smil#text_0060"/></caption>
+        <description>
+          <text>定位到前一个短语.</text>
+          <originalText>Go to the previous phrase.</originalText>
+          
+        <audio src="./audio/096.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0061.smil#text_0061"/></description>
+        <accelerator>
+          <text>←</text>
+          <originalText>Left</originalText>
+          
+        <audio src="./audio/097.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0062.smil#text_0062"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTPHRASE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextphrasecirc.ico" type="smallIcon"/>
+        <caption>
+          <text>后一个短语</text>
+          <originalText>Next Phrase</originalText>
+          
+        <audio src="./audio/098.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0063.smil#text_0063"/></caption>
+        <description>
+          <text>跳到后一个短语.</text>
+          <originalText>Go to the next phrase.</originalText>
+          
+        <audio src="./audio/099.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0064.smil#text_0064"/></description>
+        <accelerator>
+          <text>→</text>
+          <originalText>Right</originalText>
+          
+        <audio src="./audio/100.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0065.smil#text_0065"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_PREVPAGE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevpage.ico" type="smallIcon"/>
+        <caption>
+          <text>前一页</text>
+          <originalText>Previous Page</originalText>
+          
+        <audio src="./audio/101.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0066.smil#text_0066"/></caption>
+        <description>
+          <text>返回前一页.</text>
+          <originalText>Go to the previous page.</originalText>
+          
+        <audio src="./audio/102.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0067.smil#text_0067"/></description>
+        <accelerator>
+          <text>Ctrl+←</text>
+          <originalText>Ctrl+Left</originalText>
+          
+        <audio src="./audio/103_Ctrl.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0068.smil#text_0068"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTPAGE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextpage.ico" type="smallIcon"/>
+        <caption>
+          <text>后一页</text>
+          <originalText>Next Page</originalText>
+          
+        <audio src="./audio/104.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0069.smil#text_0069"/></caption>
+        <description>
+          <text>跳到后一页.</text>
+          <originalText>Go to the next page.</originalText>
+          
+        <audio src="./audio/105.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis006a.smil#text_006a"/></description>
+        <accelerator>
+          <text>Ctrl+→</text>
+          <originalText>Ctrl+Right</originalText>
+          
+        <audio src="./audio/106_Ctrl.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis006b.smil#text_006b"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_GOTOPAGE" widget="menuItem">
+        <note>This is going to be a menu item</note>
+     <caption>
+          <text>进入页...</text>
+          <originalText>Go to Page...</originalText>
+          
+        <audio src="./audio/107.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis006c.smil#text_006c"/></caption>
+        <description>
+          <text>进入特定页.</text>
+          <originalText>Go to a specific page.</originalText>
+          
+        <audio src="./audio/108.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis006d.smil#text_006d"/></description>
+        <accelerator>
+          <text>Ctrl+G</text>
+          <originalText>Ctrl+G</originalText>
+          
+        <audio src="./audio/109_CtrlG.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis006e.smil#text_006e"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_FINDINTEXT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>文本搜索</text>
+          <originalText>Find in Text</originalText>
+          
+        <audio src="./audio/110.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis006f.smil#text_006f"/></caption>
+        <description>
+          <text>在文本中搜索一个字或一个短语.</text>
+          <originalText>Search for a word or phrase in the text.</originalText>
+          
+        <audio src="./audio/111.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0070.smil#text_0070"/></description>
+        <accelerator>
+          <text>Ctrl+F</text>
+          <originalText>Ctrl+F</originalText>
+          
+        <audio src="./audio/112_CtrlF.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0071.smil#text_0071"/></accelerator>
+        <mnemonic>
+          <text>F</text>
+          <originalText>F</originalText>
+          
+        <audio src="./audio/113_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0072.smil#text_0072"/></mnemonic>
+      </action>
+      <accelerator>
+        <text>Alt+N</text>
+        <originalText>Alt+N</originalText>
+        
+      <audio src="./audio/114_AltN.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0073.smil#text_0073"/></accelerator>
+      <mnemonic>
+        <text>N</text>
+        <originalText>N</originalText>
+        
+      <audio src="./audio/115_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0074.smil#text_0074"/></mnemonic>
+    </container>
+    <container id="bookmarks">
+      <note>This is the menu header "Bookmarks"</note>
+      <caption>
+        <text>书签</text>
+        <originalText>Bookmarks</originalText>
+        
+      <audio src="./audio/116.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0075.smil#text_0075"/></caption>
+      <action mfcid="ID_MENU_BMK_ADD" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/adbookmark.ico" type="smallIcon"/>
+        <caption>
+          <text>添加书签</text>
+          <originalText>Add Bookmark</originalText>
+          
+        <audio src="./audio/117.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0076.smil#text_0076"/></caption>
+        <description>
+          <text>为当前位置设置书签.</text>
+          <originalText>Bookmark your current position.</originalText>
+          
+        <audio src="./audio/118.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0077.smil#text_0077"/></description>
+        <accelerator>
+          <text>Ctrl+D</text>
+          <originalText>Ctrl+D</originalText>
+          
+        <audio src="./audio/119_CtrlD.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0078.smil#text_0078"/></accelerator>
+        <mnemonic>
+          <text>A</text>
+          <originalText>A</originalText>
+          
+        <audio src="./audio/120_A.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0079.smil#text_0079"/></mnemonic>
+      </action>
+      <action mfcid="BOOKMARK_BASE_ID" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOKMARK_TITLE"/>
+          </caption>
+        </list>
+      </action>
+      <accelerator>
+        <text>Alt+B</text>
+        <originalText>Alt+B</originalText>
+        
+      <audio src="./audio/121_AltB.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis007a.smil#text_007a"/></accelerator>
+      <mnemonic>
+        <text>B</text>
+        <originalText>B</originalText>
+        
+      <audio src="./audio/122_B.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis007b.smil#text_007b"/></mnemonic>
+    </container>
+    <container id="info">
+      <note>This is the menu header "Info"</note>
+      <caption>
+        <text>信息</text>
+        <originalText>Info</originalText>
+        
+      <audio src="./audio/123.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis007c.smil#text_007c"/></caption>
+      <action mfcid="ID_MENU_INFO_SKIP" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>可忽略项...</text>
+          <originalText>Skippable Items...</originalText>
+          
+        <audio src="./audio/124.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis007d.smil#text_007d"/></caption>
+        <description>
+          <text>查看当前出版物的可忽略项.</text>
+          <originalText>View the skippable items for this publication.</originalText>
+          
+        <audio src="./audio/125.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis007e.smil#text_007e"/></description>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/126_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis007f.smil#text_007f"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_SUMMARY" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/info.ico" type="smallIcon"/>
+        <caption>
+          <text>全文摘要</text>
+          <originalText>Full Summary</originalText>
+          
+        <audio src="./audio/127.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0080.smil#text_0080"/></caption>
+        <description>
+          <text>获得当前出版物的全文摘要.</text>
+          <originalText>Get all summary info for this publication.</originalText>
+          
+        <audio src="./audio/128.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0081.smil#text_0081"/></description>
+        <mnemonic>
+          <text>F</text>
+          <originalText>F</originalText>
+          
+        <audio src="./audio/129_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0082.smil#text_0082"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_CURRENTPOSITION" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>当前位置</text>
+          <originalText>Current Position</originalText>
+          
+        <audio src="./audio/130.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0083.smil#text_0083"/></caption>
+        <description>
+          <text>获取当前位置信息.</text>
+          <originalText>Get information about your current position.</originalText>
+          
+        <audio src="./audio/131.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0084.smil#text_0084"/></description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/132_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0085.smil#text_0085"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_NAVOPTIONS" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>导航选项</text>
+          <originalText>Navigation Options</originalText>
+          
+        <audio src="./audio/133.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0086.smil#text_0086"/></caption>
+        <description>
+          <text>了解出版物的导航选项.</text>
+          <originalText>Learn about your navigation options for this publication.</originalText>
+          
+        <audio src="./audio/134.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0087.smil#text_0087"/></description>
+        <mnemonic>
+          <text>N</text>
+          <originalText>N</originalText>
+          
+        <audio src="./audio/135_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0088.smil#text_0088"/></mnemonic>
+      </action>
+      <accelerator>
+        <text>Alt+I</text>
+        <originalText>Alt+I</originalText>
+        
+      <audio src="./audio/136_AltI.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0089.smil#text_0089"/></accelerator>
+      <mnemonic>
+        <text>I</text>
+        <originalText>I</originalText>
+        
+      <audio src="./audio/137_I.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis008a.smil#text_008a"/></mnemonic>
+    </container>
+    <container id="help">
+      <note>This is the menu header "Help"</note>
+      <caption>
+        <text>帮助</text>
+        <originalText>Help</originalText>
+        
+      <audio src="./audio/138.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis008b.smil#text_008b"/></caption>
+      <action mfcid="ID_MENU_HELP_CONTENTS" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/help.ico" type="smallIcon"/>
+        <icon src="./settings/img/help_big.ico" type="largeIcon"/>
+        <caption>
+          <text>内容</text>
+          <originalText>Contents</originalText>
+          
+        <audio src="./audio/139.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis008c.smil#text_008c"/></caption>
+        <description>
+          <text>获取使用AMIS的帮助</text>
+          <originalText>Get help using AMIS</originalText>
+          
+        <audio src="./audio/140_AMIS.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis008d.smil#text_008d"/></description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/141_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis008e.smil#text_008e"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_HELP_ABOUT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>关于 AMIS</text>
+          <originalText>About AMIS</originalText>
+          
+        <audio src="./audio/142__AMIS.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis008f.smil#text_008f"/></caption>
+        <description>
+          <text>找出关于AMIS和DAISY-for-All.</text>
+          <originalText>Find out about AMIS and DAISY-for-All.</originalText>
+          
+        <audio src="./audio/143_AMISDAISYforAll.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0090.smil#text_0090"/></description>
+        <mnemonic>
+          <text>A</text>
+          <originalText>A</originalText>
+          
+        <audio src="./audio/144_A.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0091.smil#text_0091"/></mnemonic>
+      </action>
+      <accelerator>
+        <text>Alt+H</text>
+        <originalText>Alt+H</originalText>
+        
+      <audio src="./audio/145_AltH.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0092.smil#text_0092"/></accelerator>
+      <mnemonic>
+        <text>H</text>
+        <originalText>H</originalText>
+        
+      <audio src="./audio/146_H.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0093.smil#text_0093"/></mnemonic>
+    </container>
+  </containers>
+  <dialogs>
+    <dialog mfcid="IDD_FIND">
+      <note>This is the find in text dialog</note>
+      <caption>
+        <text>文本搜索</text>
+        <originalText>Find in Text</originalText>
+        
+      <audio src="./audio/147.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0094.smil#text_0094"/></caption>
+      <description>
+        <text>全文本中双向搜索.</text>
+        <originalText>Here you can search the full text in either direction.</originalText>
+        
+      <audio src="./audio/148.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0095.smil#text_0095"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem>
+          <text>输入内容后，按回车键开始搜索.</text>
+          <originalText>After typing in your search, press enter to begin searching.</originalText>
+          
+        <audio src="./audio/149.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0096.smil#text_0096"/></promptItem>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <!--removed this as it is probably not very useful, and it was incorrectly recorded-->
+        <!-- <promptItem refid="textBoxRepeatInstr"/>-->
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <text>按该键开始在文件中搜索文本.</text>
+          <originalText>Press to begin searching for text in the file.</originalText>
+          
+        <audio src="./audio/150.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0097.smil#text_0097"/></description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/151_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0098.smil#text_0098"/></mnemonic>
+      </control>
+      <control mfcid="IDC_SEARCHSTRING" widget="textfield">
+        <description>
+          <text>输入搜索文本.</text>
+          <originalText>Type the text to search for.</originalText>
+          
+        <audio src="./audio/152.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0099.smil#text_0099"/></description>
+      </control>
+      <control mfcid="IDC_FINDNEXT" widget="radiobutton">
+        <note>This indicates the direction of the search</note>
+        <caption>
+          <text>搜索上一个</text>
+          <originalText>Find Next</originalText>
+          
+        <audio src="./audio/153.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis009a.smil#text_009a"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="SELECTED_OR_DESELECTED" param="FIND_NEXT_IN_TEXT"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_FINDPREV" widget="radiobutton">
+        <note>This indicates the direction of the search</note>
+        <caption>
+          <text>搜索下一个</text>
+          <originalText>Find Previous</originalText>
+          
+        <audio src="./audio/154.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis009b.smil#text_009b"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptName name="SELECTED_OR_DESELECTED" param="FIND_PREV_IN_TEXT"/>
+          </prompt>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_CDSEARCH">
+      <note>This dialog appears when more than one book is on a CD-ROM</note>
+      <caption>
+        <text>多本书被找到</text>
+        <originalText>Multiple books found</originalText>
+        
+      <audio src="./audio/155.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis009c.smil#text_009c"/></caption>
+      <description mfcid="IDC_STATIC">
+        <text>从CD上找到一本以上的书，请从下面的列表中选择一本书并按 Alt + O 打开.</text>
+        <originalText>More than one book was found on this CD. Please select a book from the list below and press Alt + O to open.</originalText>
+        
+      <audio src="./audio/156_CD_Alt__O_.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis009d.smil#text_009d"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_CANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/157_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis009e.smil#text_009e"/></mnemonic>
+      </control>
+      <control mfcid="IDC_OPENBOOK" widget="button">
+        <caption>
+          <text>打开</text>
+          <originalText>Open</originalText>
+          
+        <audio src="./audio/158.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis009f.smil#text_009f"/></caption>
+        <description>
+          <text>按该键关闭对话框，并打开选择的书.</text>
+          <originalText>Press to close this dialog and open the selected book.</originalText>
+          
+        <audio src="./audio/159.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00a0.smil#text_00a0"/></description>
+        <mnemonic>
+          <text>O</text>
+          <originalText>O</originalText>
+          
+        <audio src="./audio/160_O.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00a1.smil#text_00a1"/></mnemonic>
+      </control>
+      <control mfcid="IDC_BOOKLIST" widget="list">
+        <description>
+          <text>使用光标键标题列表中移动.</text>
+          <originalText>Use the arrow keys to move around this list of titles.</originalText>
+          
+        <audio src="./audio/161.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00a2.smil#text_00a2"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOK_TITLE"/>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_ABOUTBOX">
+      <note>This dialog gives some basic information about AMIS.</note>
+      <caption>
+        <text>关于 AMIS</text>
+        <originalText>About AMIS</originalText>
+        
+      <audio src="./audio/162__AMIS.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00a3.smil#text_00a3"/></caption>
+      <description>
+        <text>AMIS 软件信息对话框.</text>
+        <originalText>Dialog with information about AMIS software.</originalText>
+        
+      <audio src="./audio/163_AMIS_.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00a4.smil#text_00a4"/></description>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_AMISNAME" widget="textlabel">
+        <caption>
+          <text>AMIS: \n自适应多媒体信息系统</text>
+          <originalText>AMIS: \nAdaptive Multimedia Information System</originalText>
+          
+        <audio src="./audio/164_AMIS_n.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00a5.smil#text_00a5"/></caption>
+      </control>
+      <control mfcid="IDC_VERSION" translate="no">
+        <caption>
+          <text>版本 2.0</text>
+          <originalText>Version 2.0</originalText>
+          
+        <audio src="./audio/165__20.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00a6.smil#text_00a6"/></caption>
+      </control>
+      <control mfcid="IDC_VERSIONNOTE" translate="no">
+        <caption>
+          <text>发布时间: 2005年10月23日</text>
+          <originalText>Release Date: 23 Oct 2005</originalText>
+          
+        <audio src="./audio/166__20051023.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00a7.smil#text_00a7"/></caption>
+      </control>
+      <control mfcid="IDC_COPYRIGHT" widget="textlabel" translate="no">
+        <caption>
+          <text>版权 ? 2006 DAISY for All</text>
+          <originalText>Copyright ? 2006 DAISY for All</originalText>
+          
+        <audio src="./audio/167___2006_DAISY_for_All.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00a8.smil#text_00a8"/></caption>
+      </control>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_SEARCHDAISY">
+      <note>This dialog is for searching your hard drive for DAISY books.</note>
+      <caption>
+        <text>搜索 DAISY 书</text>
+        <originalText>Search for DAISY Books</originalText>
+        
+      <audio src="./audio/168__DAISY_.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00a9.smil#text_00a9"/></caption>
+      <description mfcid="IDC_STATIC">
+        <text>可以在计算机上搜索DAISY书。在文件搜索对话框中输入路径后点击搜索按钮开始搜索.</text>
+        <originalText>You can search your computer for DAISY books.  Enter a path or browse for a folder to search, then press Search to begin searching.</originalText>
+        
+      <audio src="./audio/169_DAISY.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00aa.smil#text_00aa"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <!--removed this as it is probably not very useful, and it was incorrectly recorded-->
+        <!--<promptItem refid="textBoxRepeatInstr"/>-->
+      </prompt>
+      <control mfcid="IDC_SEARCHPATH" widget="textfield">
+        <description>
+          <text>输入文件夹路径.</text>
+          <originalText>Type the path to the folder in this field.</originalText>
+          
+        <audio src="./audio/170.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00ab.smil#text_00ab"/></description>
+      </control>
+      <control mfcid="IDC_BROWSE" widget="button">
+        <caption>
+          <promptItem refid="browse_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="browse_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_STARTSEARCH" widget="button">
+        <caption>
+          <text>搜索</text>
+          <originalText>Search</originalText>
+          
+        <audio src="./audio/171.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00ac.smil#text_00ac"/></caption>
+        <description>
+          <text>按该键开始搜索.</text>
+          <originalText>Press to start searching.</originalText>
+          
+        <audio src="./audio/172.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00ad.smil#text_00ad"/></description>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/173_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00ae.smil#text_00ae"/></mnemonic>
+      </control>
+      <control mfcid="IDC_STOPSEARCH" widget="button">
+        <caption>
+          <text>停止</text>
+          <originalText>Stop</originalText>
+          
+        <audio src="./audio/174.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00af.smil#text_00af"/></caption>
+        <description>
+          <text>按该键停止搜索</text>
+          <originalText>Press to stop searching.</originalText>
+          
+        <audio src="./audio/175.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00b0.smil#text_00b0"/></description>
+        <mnemonic>
+          <text>t</text>
+          <originalText>t</originalText>
+          
+        <audio src="./audio/176_t.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00b1.smil#text_00b1"/></mnemonic>
+      </control>
+      <control mfcid="IDC_SEARCHING" widget="textlabel">
+        <switch element="caption">
+         <caption condition="default">
+            <text>就绪</text>
+            <originalText>Ready</originalText>
+            
+          <audio src="./audio/177.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00b2.smil#text_00b2"/></caption>
+          <caption condition="WhileSearching">
+            <text>搜索...</text>
+            <originalText>Searching...</originalText>
+            
+          <audio src="./audio/178.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00b3.smil#text_00b3"/></caption>
+          <caption condition="SearchAborted">
+            <text>停止搜索</text>
+            <originalText>Search stopped.</originalText>
+            
+          <audio src="./audio/179.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00b4.smil#text_00b4"/></caption>
+          <caption condition="SearchCompleteNoFilesFound">
+            <text>完全搜索：没有找到文件.</text>
+            <originalText>Search complete: No files found.</originalText>
+            
+          <audio src="./audio/180.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00b5.smil#text_00b5"/></caption>
+          <caption condition="SearchCompleteOneFileFound">
+            <text>完全搜索：找到一个文件.</text>
+            <originalText>Search complete: One file found.</originalText>
+            
+          <audio src="./audio/181.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00b6.smil#text_00b6"/></caption>
+          <caption condition="SearchCompleteFilesFound">
+            <prompt>
+              <promptVar name="NUM_FILES_FOUND"/>
+              <promptItem>
+                <note>This is used in the sentence "7 files were found"</note>
+                <text>文件被找到.</text>
+                <originalText>files were found.</originalText>
+                
+              <audio src="./audio/182.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00b7.smil#text_00b7"/></promptItem>
+            </prompt>
+          </caption>
+        </switch>
+      </control>
+      <control mfcid="IDC_FILESFOUND" widget="list">
+        <description>
+          <text>使用光标键在标题列表中移动.</text>
+          <originalText>Use the arrow keys to move around this list of titles.</originalText>
+          
+        <audio src="./audio/183.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00b8.smil#text_00b8"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOK_TITLE"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_OPENBOOK" widget="button">
+        <caption>
+          <text>打开</text>
+          <originalText>Open</originalText>
+          
+        <audio src="./audio/184.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00b9.smil#text_00b9"/></caption>
+        <description>
+          <text>按该键打开所选标题.</text>
+          <originalText>Press to open the selected title.</originalText>
+          
+        <audio src="./audio/185.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00ba.smil#text_00ba"/></description>
+        <mnemonic>
+          <text>O</text>
+          <originalText>O</originalText>
+          
+        <audio src="./audio/186_O.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00bb.smil#text_00bb"/></mnemonic>
+      </control>
+      <control mfcid="IDC_CANCELBUTTON">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/187_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00bc.smil#text_00bc"/></mnemonic>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_SKIP">
+      <note>This dialog lets the user control rendering of skippable structures.</note>
+      <caption>
+        <text>可忽略项目</text>
+        <originalText>Skippable Items</originalText>
+        
+      <audio src="./audio/188.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00bd.smil#text_00bd"/></caption>
+      <switch element="description">
+        <description mfcid="IDC_STATIC" condition="hasSkippableStructures">
+          <text>该书包含下面特定结构。检查想忽略的项目.</text>
+          <originalText>This book contains the following special structures.  Check the ones you want skipped.</originalText>
+          
+        <audio src="./audio/189.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00be.smil#text_00be"/></description>
+        <description mfcid="IDC_STATIC" condition="hasNoSkippableStructures">
+          <text>该出版物没有可忽略元素.</text>
+          <originalText>This publication has no skippable elements.</originalText>
+          
+        <audio src="./audio/190.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00bf.smil#text_00bf"/></description>
+      </switch>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SKIPS" widget="list">
+        <caption>
+          <text>可忽略项目</text>
+          <originalText>Skippable items</originalText>
+          
+        <audio src="./audio/191.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00c0.smil#text_00c0"/></caption>
+        <description>
+          <text>使用光标键在可忽略项目列表中移动.</text>
+          <originalText>Use the arrow keys to move around this list of skippable items.</originalText>
+          
+        <audio src="./audio/192.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00c1.smil#text_00c1"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="SKIPPABLE_ITEM"/>
+          </caption>
+          <description>
+            <prompt>
+              <promptVar name="SKIPPABLE_ITEM"/>
+              <promptItem refid="thisItem"/>
+              <promptVar name="WILL_SKIP_OR_NOT" param="SKIPPABLE_ITEM_ID"/>
+            </prompt>
+          </description>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE4">
+      <note>This dialog lets the user select a language pack.</note>
+      <caption>
+        <text>语言</text>
+        <originalText>Language</originalText>
+        
+      <audio src="./audio/193.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00c2.smil#text_00c2"/></caption>
+      <description mfcid="IDC_STATIC">
+        <text>这里可以改变软件的语言。新的语言包被自动检测.</text>
+        <originalText>Here you can change the language of the software.  New language packs are detected automatically.</originalText>
+        
+      <audio src="./audio/194.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00c3.smil#text_00c3"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="ctrl1_for_prefsdialog"/>
+        <promptItem refid="ctrl2_for_colorsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_BTN_SELECTLANG" widget="button">
+        <caption>
+          <text>选择语言</text>
+          <originalText>Select Language</originalText>
+          
+        <audio src="./audio/195.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00c4.smil#text_00c4"/></caption>
+        <description>
+          <text>按该按钮为AMIS用户接口确认语言选项</text>
+          <originalText>Press to confirm your language selection for the AMIS user interface</originalText>
+          
+        <audio src="./audio/196_AMIS.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00c5.smil#text_00c5"/></description>
+      </control>
+      <control mfcid="IDC_LANGLIST" widget="list">
+        <caption mfcid="IDC_STATIC">
+          <text>你的语言选项是:</text>
+          <originalText>Your language choices are:</originalText>
+          
+        <audio src="./audio/197.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00c6.smil#text_00c6"/></caption>
+        <description>
+          <text>使用光标键在语言列表中移动.</text>
+          <originalText>Use the arrow keys to move around this list of languages.</originalText>
+          
+        <audio src="./audio/198.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00c7.smil#text_00c7"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="LANGUAGE_NAME"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_CURRLANG">
+        <caption>
+          <prompt>
+            <promptItem>
+              <text>当前AMIS使用在： </text>
+              <originalText>You are currently using AMIS in</originalText>
+              
+            <audio src="./audio/199_AMIS.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00c8.smil#text_00c8"/></promptItem>
+            <promptVar name="CURR_LANGUAGE_NAME"/>
+          </prompt>
+        </caption>
+      </control>
+      <accelerator>
+        <text>Ctrl+3</text>
+        <originalText>Ctrl+3</originalText>
+        
+      <audio src="./audio/200_Ctrl3.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00c9.smil#text_00c9"/></accelerator>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE2">
+      <note>This dialog lets the user select which colors AMIS uses</note>
+      <caption>
+        <text>设置颜色</text>
+        <originalText>Set Colors</originalText>
+        
+      <audio src="./audio/201.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00ca.smil#text_00ca"/></caption>
+      <description>
+        <text>这里可以设置AMIS颜色选项.</text>
+        <originalText>Here you can set color options for AMIS.</originalText>
+        
+      <audio src="./audio/202_AMIS.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00cb.smil#text_00cb"/></description>
+      <prompt type="instructions">
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem refid="ctrl1_for_prefsdialog"/>
+        <promptItem refid="ctrl3_for_langsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+      </prompt>
+      <control mfcid="IDC_PHRASES" widget="other">
+        <caption>
+          <text>短语高亮显示</text>
+          <originalText>Phrase Highlighting</originalText>
+          
+        <audio src="./audio/203.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00cc.smil#text_00cc"/></caption>
+      </control>
+      <control mfcid="IDC_TEXTFG" widget="textlabel">
+        <caption>
+          <text>文本前景: </text>
+          <originalText>Text Foreground: </originalText>
+          
+        <audio src="./audio/204.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00cd.smil#text_00cd"/></caption>
+      </control>
+      <control mfcid="IDC_TEXTBG" widget="textlabel">
+        <caption>
+          <text>文本背景: </text>
+          <originalText>Text Background: </originalText>
+          
+        <audio src="./audio/205.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00ce.smil#text_00ce"/></caption>
+      </control>
+      <control mfcid="IDC_BORDER" widget="textlabel">
+        <caption>
+          <text>选择边框: </text>
+          <originalText>Selection Border: </originalText>
+          
+        <audio src="./audio/206.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00cf.smil#text_00cf"/></caption>
+      </control>
+      <control mfcid="IDC_CONTRAST" widget="other">
+        <caption>
+          <text>高对比设置</text>
+          <originalText>High Contrast Settings</originalText>
+          
+        <audio src="./audio/207.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00d0.smil#text_00d0"/></caption>
+      </control>
+      <control mfcid="IDC_PAGEFG" widget="textlabel">
+        <caption>
+          <text>页前景: </text>
+          <originalText>Page Foreground: </originalText>
+          
+        <audio src="./audio/208.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00d1.smil#text_00d1"/></caption>
+      </control>
+      <control mfcid="IDC_PAGEBG" widget="textlabel">
+        <caption>
+          <text>页背景: </text>
+          <originalText>Page Background: </originalText>
+          
+        <audio src="./audio/209.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00d2.smil#text_00d2"/></caption>
+      </control>
+      <control mfcid="IDC_BTN_RESETCOLORS" widget="button">
+        <caption>
+          <text>恢复颜色</text>
+          <originalText>Reset Colors</originalText>
+          
+        <audio src="./audio/210.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00d3.smil#text_00d3"/></caption>
+      </control>
+      <control mfcid="IDC_PHRASEPREVIEW" widget="textfield">
+        <caption>
+          <text>短语高亮显示预览.</text>
+          <originalText>Preview of phrase highlight colors.</originalText>
+          
+        <audio src="./audio/211.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00d4.smil#text_00d4"/></caption>
+      </control>
+      <control mfcid="IDC_CONTRASTPREVIEW" widget="textfield">
+        <caption>
+          <text>页颜色对照预览.</text>
+          <originalText>Preview of page contrast colors.</originalText>
+          
+        <audio src="./audio/212.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00d5.smil#text_00d5"/></caption>
+      </control>
+      <accelerator>
+        <text>Ctrl+2</text>
+        <originalText>Ctrl+2</originalText>
+        
+      <audio src="./audio/213_Ctrl2.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00d6.smil#text_00d6"/></accelerator>
+    </dialog>
+    <dialog mfcid="IDD_CURRENTPOSITION">
+      <note>This dialog gives the user information about their current position in the publication.</note>
+      <caption>
+        <text>当前位置</text>
+        <originalText>Current Position</originalText>
+        
+      <audio src="./audio/214.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00d7.smil#text_00d7"/></caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+     </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text>当前位置的数据列表.</text>
+          <originalText>This is a list of data about your current position.</originalText>
+          
+        <audio src="./audio/215.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00d8.smil#text_00d8"/></caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="no">
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>当前章节标题:</text>
+                <originalText>Your current section is titled:</originalText>
+                
+              <audio src="./audio/216.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00d9.smil#text_00d9"/></promptItem>
+              <promptVar name="CURRENT_SECTION_TITLE"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text>当前章节页数:</text>
+                <originalText>Number of pages in this section:</originalText>
+                
+              <audio src="./audio/217.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00da.smil#text_00da"/></promptItem>
+              <promptVar name="CURRENT_SECTION_NUM_PAGES"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>当前章节的子章节数:</text>
+                <originalText>Number of subsections in this section:</originalText>
+                
+              <audio src="./audio/218.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00db.smil#text_00db"/></promptItem>
+              <promptVar name="CURRENT_SECTION_NUM_SUBSECTIONS"/>
+            </prompt>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE1">
+      <note>This dialog lets the user set some basic preferences for AMIS.</note>
+      <caption>
+        <text>通用选项</text>
+        <originalText>General Preferences</originalText>
+        
+      <audio src="./audio/219.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00dc.smil#text_00dc"/></caption>
+      <description>
+        <text>这里可以设置AMIS的通用选项.</text>
+        <originalText>Here you can set general preferences for AMIS.</originalText>
+        
+      <audio src="./audio/220_AMIS.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00dd.smil#text_00dd"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="ctrl2_for_colorsdialog"/>
+        <promptItem refid="ctrl3_for_langsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <!--removed this as it is probably not very useful, and it was incorrectly recorded-->
+        <!--<promptItem refid="textBoxRepeatInstr"/>-->
+      </prompt>
+      <control mfcid="IDC_BMKDIRBROWSE" widget="button">
+        <caption>
+          <promptItem refid="browse_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="browse_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SELFVOICING" widget="checkbox">
+        <caption>
+          <text>使用自发声</text>
+          <originalText>Use self-voicing</originalText>
+          
+        <audio src="./audio/221.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00de.smil#text_00de"/></caption>
+        <description>
+          <prompt>
+          <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="SELF_VOICING_FEATURE"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_TTSVOICE" widget="list">
+        <caption mfcid="IDC_SELTTSLABEL">
+          <text>选择 TTS 声音:</text>
+          <originalText>Select TTS voice:</originalText>
+          
+        <audio src="./audio/222__TTS_.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00df.smil#text_00df"/></caption>
+        <description>
+          <text>使用光标键在声音列表中移动</text>
+          <originalText>Use the arrow keys to move around this list of voices</originalText>
+          
+        <audio src="./audio/223.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00e0.smil#text_00e0"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="TTS_VOICE_NAME"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_BASIC" widget="checkbox">
+        <caption>
+          <text>以基本视图模式启动AMIS .</text>
+          <originalText>Start AMIS in the basic view mode.</originalText>
+          
+        <audio src="./audio/224_AMIS_.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00e1.smil#text_00e1"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="BASIC_VIEW_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_PROMPTONBASICVIEW" widget="checkbox">
+        <caption>
+          <text>切换到基本视图，并提示用户回到默认视图的方式.</text>
+          <originalText>Upon switching to basic view, tell the user how to go back to the default view.</originalText>
+          
+        <audio src="./audio/225.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00e2.smil#text_00e2"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="PROMPT_ON_BASIC_VIEW_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_LOADLASTDTB" widget="checkbox">
+        <caption>
+          <text>软件启动时加载最近阅读过的书.</text>
+          <originalText>Load the most recently read book when the software starts.</originalText>
+          
+        <audio src="./audio/226.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00e3.smil#text_00e3"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="LOAD_LAST_READ_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_BMKDIR" widget="textfield">
+        <caption mfcid="IDC_BMKDIRLABEL">
+          <text>书签路径:</text>
+          <originalText>Bookmarks directory:</originalText>
+          
+        <audio src="./audio/227.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00e4.smil#text_00e4"/></caption>
+        <description>
+          <text>输入书签文件夹的路径.</text>
+          <originalText>Type the path to the bookmarks folder in this field.</originalText>
+          
+        <audio src="./audio/228.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00e5.smil#text_00e5"/></description>
+      </control>
+      <accelerator>
+        <text>Ctrl+1</text>
+        <originalText>Ctrl+1</originalText>
+        
+      <audio src="./audio/229_Ctrl1.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00e6.smil#text_00e6"/></accelerator>
+    </dialog>
+    <dialog mfcid="IDD_NAVIGATIONOPTIONS">
+      <note>This dialog lists navigation options for the current publication.</note>
+      <caption>
+        <text>导航选项</text>
+        <originalText>Navigation Options</originalText>
+        
+      <audio src="./audio/230.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00e7.smil#text_00e7"/></caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text>可以直接导航的项目列表.</text>
+          <originalText>This is a list of items to which you may navigate directly.</originalText>
+          
+        <audio src="./audio/231.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00e8.smil#text_00e8"/></caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="TOC_CATEGORIES"/>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_GOTOPAGE">
+      <note>This dialog lets the user jump to a certain page</note>
+      <caption>
+        <text>进入页</text>
+        <originalText>Go To Page</originalText>
+        
+      <audio src="./audio/232.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00e9.smil#text_00e9"/></caption>
+      <description>
+        <text>在这里输入页码或页标签.</text>
+        <originalText>Here you can jump to a page number or page label.</originalText>
+        
+      <audio src="./audio/233.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00ea.smil#text_00ea"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem>
+          <text>输入页码后，按回车键.</text>
+          <originalText>After typing in your page number, press enter to go there.</originalText>
+          
+        <audio src="./audio/234.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00eb.smil#text_00eb"/></promptItem>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <!--removed this as it is probably not very useful, and it was incorrectly recorded-->
+        <!--<promptItem refid="textBoxRepeatInstr"/>-->
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <text>按当前按钮进入期望的页.</text>
+          <originalText>Press this button to go to the desired page.</originalText>
+          
+        <audio src="./audio/235.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00ec.smil#text_00ec"/></description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+       <audio src="./audio/236_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00ed.smil#text_00ed"/></mnemonic>
+      </control>
+      <control mfcid="IDC_PAGENUM" widget="textfield">
+        <caption mfcid="IDC_STATIC">
+          <text>输入页码:</text>
+          <originalText>Enter a page number:</originalText>
+          
+        <audio src="./audio/237.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00ee.smil#text_00ee"/></caption>
+        <description>
+          <text>输入想进入页的页码或标签.</text>
+          <originalText>Type the number or label of the page you want to go to.</originalText>
+          
+        <audio src="./audio/238.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00ef.smil#text_00ef"/></description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_FULLSUMMARY">
+      <note>This dialog lists key publication metadata.</note>
+      <caption>
+        <text>出版概要</text>
+        <originalText>Publication Summary</originalText>
+        
+      <audio src="./audio/239.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00f0.smil#text_00f0"/></caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text>出版物元数据列表.</text>
+          <originalText>This is a list of publication metadata.</originalText>
+          
+        <audio src="./audio/240.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00f1.smil#text_00f1"/></caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="no">
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>该书标题：</text>
+                <originalText>This book is titled:</originalText>
+                
+              <audio src="./audio/241.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00f2.smil#text_00f2"/></promptItem>
+              <promptVar name="META_TITLE"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>作者：</text>
+                <originalText>Written by:</originalText>
+                
+              <audio src="./audio/242.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00f3.smil#text_00f3"/></promptItem>
+              <promptVar name="META_CREATOR"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>出版者:</text>
+                <originalText>Published by:</originalText>
+                
+              <audio src="./audio/243.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00f4.smil#text_00f4"/></promptItem>
+              <promptVar name="META_PUBLISHER"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_DESCRIPTION">
+            <prompt>
+              <promptItem>
+                <text>描述:</text>
+                <originalText>Description:</originalText>
+                
+              <audio src="./audio/244.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00f5.smil#text_00f5"/></promptItem>
+              <promptVar name="META_DESC"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>内容表中导航点数:</text>
+                <originalText>Number of navigation points in the table of contents:</originalText>
+                
+              <audio src="./audio/245.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00f6.smil#text_00f6"/></promptItem>
+              <promptVar name="META_TOCITEMS"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>最大章节深度:</text>
+                <originalText>Maximum section depth:</originalText>
+                
+              <audio src="./audio/246.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00f7.smil#text_00f7"/></promptItem>
+              <promptVar name="META_DEPTH"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text>文前页:</text>
+                <originalText>Front matter pages:</originalText>
+                
+              <audio src="./audio/247.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00f8.smil#text_00f8"/></promptItem>
+              <promptVar name="META_PAGEFRONT"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text>正文页:</text>
+                <originalText>Regular pages:</originalText>
+                
+              <audio src="./audio/248.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00f9.smil#text_00f9"/></promptItem>
+              <promptVar name="META_PAGENORMAL"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text>特定页:</text>
+                <originalText>Special pages:</originalText>
+                
+              <audio src="./audio/249.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00fa.smil#text_00fa"/></promptItem>
+              <promptVar name="META_PAGESPECIAL"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>总持续时间：</text>
+                <originalText>Total duration:</originalText>
+                
+              <audio src="./audio/250.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00fb.smil#text_00fb"/></promptItem>
+              <promptVar name="META_TOTALTIME"/>
+            </prompt>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+  </dialogs>
+  <prompts>
+    <promptItemRefs>
+      <promptItem id="altC_to_close">
+        <text>按 Alt + C 关闭对话框.</text>
+        <originalText>Press Alt + C to close the dialog.</originalText>
+        
+      <audio src="./audio/251__Alt__C_.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00fc.smil#text_00fc"/></promptItem>
+      <promptItem id="altC_to_cancel">
+        <text>按 Alt + C 取消对话框.</text>
+        <originalText>Press Alt + C to cancel the dialog.</originalText>
+        
+      <audio src="./audio/252__Alt__C_.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00fd.smil#text_00fd"/></promptItem>
+      <promptItem id="thisItem">
+        <text>当前项目</text>
+        <originalText>This item</originalText>
+        
+      <audio src="./audio/253.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00fe.smil#text_00fe"/></promptItem>
+      <promptItem id="spaceToToggle">
+        <text>按空格键选择该值.</text>
+        <originalText>Press the space bar to toggle the value.</originalText>
+        
+      <audio src="./audio/254.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis00ff.smil#text_00ff"/></promptItem>
+      <promptItem id="tabAround">
+        <text>按 tab 键在对话框选项间中移动.</text>
+        <originalText>Hit tab to move around the options on the dialog.</originalText>
+        
+      <audio src="./audio/255__tab_.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0100.smil#text_0100"/></promptItem>
+      <promptItem id="ctrl2_for_colorsdialog">
+        <text>按 control + 2 切换到颜色对话框.</text>
+        <originalText>Press control + 2 to switch to the colors dialog.</originalText>
+        
+      <audio src="./audio/256__control__2_.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0101.smil#text_0101"/></promptItem>
+      <promptItem id="ctrl3_for_langsdialog">
+        <text>按 control + 3 切换到语言选项对话框.</text>
+        <originalText>Press control + 3 to switch to the language options dialog.</originalText>
+        
+      <audio src="./audio/257__control__3_.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0102.smil#text_0102"/></promptItem>
+      <promptItem id="ctrl1_for_prefsdialog">
+        <text>按 control + 1 切换到通用选项对话框.</text>
+        <originalText>Press control + 1 to switch to the general preferences dialog.</originalText>
+        
+      <audio src="./audio/258__control__1_.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0103.smil#text_0103"/></promptItem>
+      <promptItem id="thisItemIsCurrently">
+        <text>当前项</text>
+        <originalText>This item is currently</originalText>
+        
+      <audio src="./audio/259.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0104.smil#text_0104"/></promptItem>
+      <promptItem id="enter_to_close">
+        <text>按回车关闭对话框.</text>
+        <originalText>Press enter to close the dialog.</originalText>
+        
+      <audio src="./audio/260.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0105.smil#text_0105"/></promptItem>
+      <promptItem id="browse_button_caption">
+        <text>浏览...</text>
+        <originalText>Browse...</originalText>
+        
+      <audio src="./audio/261.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0106.smil#text_0106"/></promptItem>
+      <promptItem id="browse_button_description">
+        <text>按该按钮打开文件夹浏览对话框.</text>
+        <originalText>Press to open the folder browse dialog.</originalText>
+        
+      <audio src="./audio/262.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0107.smil#text_0107"/></promptItem>
+      <promptItem id="ok_button_caption">
+        <text>确定</text>
+        <originalText>OK</originalText>
+        
+      <audio src="./audio/263.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0108.smil#text_0108"/></promptItem>
+      <promptItem id="ok_button_description">
+        <text>按“确定”按钮关闭当前对话框.</text>
+        <originalText>Press OK to close this dialog.</originalText>
+        
+      <audio src="./audio/264.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0109.smil#text_0109"/></promptItem>
+      <promptItem id="cancel_button_caption">
+        <text mnemonic="C">取消</text>
+        <originalText>Cancel</originalText>
+        
+      <audio src="./audio/265.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis010a.smil#text_010a"/></promptItem>
+      <promptItem id="cancel_button_description">
+        <text>按下该按钮取消对话框.</text>
+        <originalText>Press to cancel this dialog.</originalText>
+        
+      <audio src="./audio/266.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis010b.smil#text_010b"/></promptItem>
+      <promptItem id="list_reads_automatically">
+        <text>该列表将被自动阅读.</text>
+        <originalText>This list will be read automatically.</originalText>
+        
+      <audio src="./audio/267.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis010c.smil#text_010c"/></promptItem>
+      <promptItem id="repeatLastPromptInstr">
+        <text>按 Control + R 重复最后的提示.</text>
+        <originalText>Press Control + R to repeat the last prompt.</originalText>
+        
+      <audio src="./audio/268__Control__R_.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis010d.smil#text_010d"/></promptItem>
+      <promptItem id="thisDialogNotSelfVoicing">
+        <text>该对话框不能自己发声.</text>
+        <originalText>This dialog is not yet self-voicing.</originalText>
+        
+      <audio src="./audio/269.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis010e.smil#text_010e"/></promptItem>
+      <promptItem id="escapeToCancel">
+        <text>按 escape 取消</text>
+        <originalText>Press escape to cancel</originalText>
+        
+      <audio src="./audio/270__escape_.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis010f.smil#text_010f"/></promptItem>
+      <promptItem id="hearDlgInstructions">
+        <text>按 Control + I 获取该对话框的提示.</text>
+        <originalText>Press Control + I to hear instructions for this dialog.</originalText>
+        
+      <audio src="./audio/271__Control__I_.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0110.smil#text_0110"/></promptItem>
+      <promptItem id="textBoxRepeatInstr">
+        <text>按 Control + T 重复最后文本框中的文本.</text>
+        <originalText>Press Control + T to repeat the text in the last text box.</originalText>
+        
+      <audio src="./audio/272__Control__T_.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0111.smil#text_0111"/></promptItem>
+      <promptItem id="nav_window">
+        <text>导航</text>
+        <originalText>Navigation</originalText>
+        
+      <audio src="./audio/273.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0112.smil#text_0112"/></promptItem>
+      <promptItem id="sections">
+        <text>章节</text>
+        <originalText>Sections</originalText>
+        
+      <audio src="./audio/274.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0113.smil#text_0113"/></promptItem>
+      <promptItem id="pages">
+        <text>页</text>
+        <originalText>Pages</originalText>
+        
+      <audio src="./audio/275.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0114.smil#text_0114"/></promptItem>
+      <promptItem id="noterefs">
+        <text>脚注</text>
+        <originalText>Footnotes</originalText>
+        
+      <audio src="./audio/276.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0115.smil#text_0115"/></promptItem>
+      <promptItem id="prodnotes">
+        <text>制作者注释</text>
+        <originalText>Producer notes</originalText>
+        
+      <audio src="./audio/277.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0116.smil#text_0116"/></promptItem>
+      <promptItem id="sidebars">
+        <text>侧边栏</text>
+        <originalText>Sidebars</originalText>
+        
+      <audio src="./audio/278.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0117.smil#text_0117"/></promptItem>
+      <promptItem id="groups">
+        <text>一组项目</text>
+        <originalText>Grouped items</originalText>
+        
+      <audio src="./audio/279.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0118.smil#text_0118"/></promptItem>
+      <promptItem id="navigation_sidebar_caption">
+        <text>导航</text>
+       <originalText>Navigation</originalText>
+        
+      <audio src="./audio/280.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0119.smil#text_0119"/></promptItem>
+      <promptItem id="ready">
+        <text>就绪</text>
+        <originalText>Ready</originalText>
+        
+      <audio src="./audio/281.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis011a.smil#text_011a"/></promptItem>
+      <promptItem id="property_sheet_caption">
+        <text>选项</text>
+        <originalText>Preferences</originalText>
+        
+      <audio src="./audio/282.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis011b.smil#text_011b"/></promptItem>
+      <promptItem id="selfolder_title">
+        <text>选择一个文件夹</text>
+        <originalText>Select a Folder</originalText>
+        
+      <audio src="./audio/283.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis011c.smil#text_011c"/></promptItem>
+      <promptItem id="selfolder_instr">
+        <text>从下面的目录中选择一个文件夹.</text>
+        <originalText>Select a folder from the directory below.</originalText>
+        
+      <audio src="./audio/284.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis011d.smil#text_011d"/></promptItem>
+      <promptItem id="daisy_books">
+        <text>DAISY书</text>
+        <originalText>DAISY Books</originalText>
+        
+      <audio src="./audio/285_DAISY.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis011e.smil#text_011e"/></promptItem>
+      <promptItem id="folder_does_not_exist">
+        <text>文件夹不存在，确定要新建该文件夹？</text>
+        <originalText>The folder %s does not exist. Do you want the folder to be created?</originalText>
+        
+      <audio src="./audio/286.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis011f.smil#text_011f"/></promptItem>
+      <promptItem id="folder_invalid">
+        <text>文件夹的名字非法，请选择另一个.</text>
+        <originalText>This folder name is invalid. Please choose another.</originalText>
+        
+      <audio src="./audio/287.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0120.smil#text_0120"/></promptItem>
+      <promptItem id="cant_create_folder">
+        <text>不能创建该文件夹，请检查.</text>
+        <originalText>This folder can not be created. Please double check.</originalText>
+        
+      <audio src="./audio/288.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0121.smil#text_0121"/></promptItem>
+      <promptItem id="not_available">
+        <text>不可得</text>
+        <originalText>Not available</originalText>
+        
+      <audio src="./audio/289.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0122.smil#text_0122"/></promptItem>
+      <promptItem id="numeric_zero">
+        <note>All numerals should be translated into numerals, not words.</note>
+        <text>0</text>
+        <originalText>0</originalText>
+        
+      <audio src="./audio/290_0.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0123.smil#text_0123"/></promptItem>
+      <promptItem id="numeric_one">
+        <text>1</text>
+        <originalText>1</originalText>
+        
+      <audio src="./audio/291_1.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0124.smil#text_0124"/></promptItem>
+      <promptItem id="numeric_two">
+        <text>2</text>
+        <originalText>2</originalText>
+        
+      <audio src="./audio/292_2.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0125.smil#text_0125"/></promptItem>
+      <promptItem id="numeric_three">
+        <text>3</text>
+        <originalText>3</originalText>
+        
+      <audio src="./audio/293_3.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0126.smil#text_0126"/></promptItem>
+      <promptItem id="numeric_four">
+        <text>4</text>
+        <originalText>4</originalText>
+        
+      <audio src="./audio/294_4.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0127.smil#text_0127"/></promptItem>
+      <promptItem id="numeric_five">
+        <text>5</text>
+        <originalText>5</originalText>
+        
+      <audio src="./audio/295_5.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0128.smil#text_0128"/></promptItem>
+      <promptItem id="numeric_six">
+        <text>6</text>
+        <originalText>6</originalText>
+        
+      <audio src="./audio/296_6.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0129.smil#text_0129"/></promptItem>
+      <promptItem id="numeric_seven">
+        <text>7</text>
+        <originalText>7</originalText>
+        
+      <audio src="./audio/297_7.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis012a.smil#text_012a"/></promptItem>
+      <promptItem id="numeric_eight">
+        <text>8</text>
+        <originalText>8</originalText>
+        
+      <audio src="./audio/298_8.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis012b.smil#text_012b"/></promptItem>
+      <promptItem id="numeric_nine">
+        <text>9</text>
+        <originalText>9</originalText>
+        
+      <audio src="./audio/299_9.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis012c.smil#text_012c"/></promptItem>
+      <promptItem id="deleted">
+        <text>删除</text>
+        <originalText>deleted</originalText>
+        
+      <audio src="./audio/300.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis012d.smil#text_012d"/></promptItem>
+      <promptItem id="will_be_skipped">
+        <text>将被忽略</text>
+        <originalText>will be skipped</originalText>
+        
+      <audio src="./audio/301.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis012e.smil#text_012e"/></promptItem>
+      <promptItem id="will_be_played">
+        <text>将被播放</text>
+        <originalText>will be played</originalText>
+        
+      <audio src="./audio/302.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis012f.smil#text_012f"/></promptItem>
+      <promptItem id="item_on">
+        <text>启动</text>
+        <originalText>on</originalText>
+        
+      <audio src="./audio/303.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0130.smil#text_0130"/></promptItem>
+      <promptItem id="item_off">
+        <text>关闭</text>
+        <originalText>off</originalText>
+        
+      <audio src="./audio/304.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0131.smil#text_0131"/></promptItem>
+      <promptItem id="item_selected">
+        <text>选择</text>
+        <originalText>selected</originalText>
+        
+      <audio src="./audio/305.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0132.smil#text_0132"/></promptItem>
+      <promptItem id="item_deselected">
+        <text>取消选择</text>
+        <originalText>deselected</originalText>
+        
+      <audio src="./audio/306.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0133.smil#text_0133"/></promptItem>
+      <promptItem id="keyboardShortcut">
+        <text>快捷键</text>
+        <originalText>Keyboard Shortcut</originalText>
+        
+      <audio src="./audio/307.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0134.smil#text_0134"/></promptItem>
+      <promptItem id="icon">
+        <text>图标</text>
+        <originalText>Icon</originalText>
+        
+      <audio src="./audio/308.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0135.smil#text_0135"/></promptItem>
+      <promptItem id="menu">
+        <text>菜单</text>
+        <originalText>Menu</originalText>
+        
+      <audio src="./audio/309.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0136.smil#text_0136"/></promptItem>
+      <promptItem id="followedBy">
+        <note>This is used in the context of a sequence of key presses, as in "Press Alt + V, followed by S"</note>
+        <text>接着按</text>
+        <originalText>followed by</originalText>
+        
+      <audio src="./audio/310.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0137.smil#text_0137"/></promptItem>
+      <promptItem id="submenu">
+        <text>子菜单</text>
+        <originalText>Sub Menu</originalText>
+        
+      <audio src="./audio/311.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0138.smil#text_0138"/></promptItem>
+    </promptItemRefs>
+    <generalPrompts>
+      <prompt id="dialogClosed">
+        <promptItem>
+          <text>对话框已关闭.</text>
+          <originalText>Dialog closed.</originalText>
+          
+        <audio src="./audio/312.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0139.smil#text_0139"/></promptItem>
+      </prompt>
+      <prompt id="textFieldEntry">
+        <promptItem>
+          <text>文本字段的入口是：</text>
+          <originalText>Text field entry is:</originalText>
+          
+        <audio src="./audio/313.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis013a.smil#text_013a"/></promptItem>
+        <promptVar name="TEXT_FIELD"/>
+      </prompt>
+      <prompt id="notSelfVoicing">
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+      </prompt>
+      <prompt id="bookAtPathChanged">
+        <promptItem>
+          <text>要查找的书的位置发生了变化，此处有另外一本书，光驱中的内容变化吗?</text>
+          <originalText>The location of the book you are looking for has changed.  A different book was found instead.  Did the contents of your CD-ROM drive change?</originalText>
+          
+        <audio src="./audio/314.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis013b.smil#text_013b"/></promptItem>
+      </prompt>
+      <prompt id="generalBookError">
+        <promptItem>
+          <text>在试图打开书时发生了一个错误.</text>
+          <originalText>An error occurred while trying to open the book.</originalText>
+          
+        <audio src="./audio/315.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis013c.smil#text_013c"/></promptItem>
+        <promptVar name="BOOK_PATH"/>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+      <prompt id="noCdLoaded">
+        <promptItem>
+          <text>光驱中没有CD.</text>
+          <originalText>There is not a CD in the CD-ROM drive.</originalText>
+          
+        <audio src="./audio/316_CD.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis013d.smil#text_013d"/></promptItem>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+      <prompt id="pluginErrorInit">
+        <promptItem>
+          <text>插件错误：在插件DLL中没有发现 init() 函数.</text>
+          <originalText>Plug-in error: init() function not found in the plug-in DLL.</originalText>
+          
+        <audio src="./audio/317_DLL_init_.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis013e.smil#text_013e"/></promptItem>
+      </prompt>
+      <prompt id="pluginErrorDll">
+        <promptItem>
+          <text>插件错误：后面的插件库不能被加载：</text>
+          <originalText>Plug-in error: The following plug-in library could not be loaded: </originalText>
+          
+        <audio src="./audio/318.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis013f.smil#text_013f"/></promptItem>
+        <promptVar name="PLUGIN_LIB"/>
+      </prompt>
+      <prompt id="basicViewPrompt">
+        <promptItem>
+          <text>当前正在使用基本视图模式，按F11切换回默认视图模式.</text>
+          <originalText>You are now using the basic view mode.  Press F11 to switch back to the default view mode.</originalText>
+          
+        <audio src="./audio/319_F11.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0140.smil#text_0140"/></promptItem>
+      </prompt>
+      <prompt id="OpenFile_notSelfVoicing">
+        <promptItem>
+          <text>打开文件对话框</text>
+          <originalText>Open File Dialog</originalText>
+          
+        <audio src="./audio/320.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0141.smil#text_0141"/></promptItem>
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem>
+          <text>使用文件菜单下的“搜索书”特性，查找硬盘上的DAISY书.</text>
+          <originalText>Use the "search for books" feature, under the file menu, to find DAISY books on your hard drive.</originalText>
+          
+        <audio src="./audio/321_DAISY.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0142.smil#text_0142"/></promptItem>
+        <promptItem refid="escapeToCancel"/>
+      </prompt>
+      <prompt id="BrowseForFolder_notSelfVoicing">
+        <promptItem>
+          <text>浏览文件夹对话框</text>
+          <originalText>Browse for folder dialog</originalText>
+          
+        <audio src="./audio/322.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0143.smil#text_0143"/></promptItem>
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem refid="escapeToCancel"/>
+        <promptItem>
+          <text>然后，在文本框中输入期望的文件夹路径.</text>
+          <originalText>Then, type the path of the folder you want in the text box.</originalText>
+          
+        <audio src="./audio/323.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0144.smil#text_0144"/></promptItem>
+      </prompt>
+      <prompt id="canceled">
+        <promptItem>
+          <text>取消</text>
+          <originalText>Canceled</originalText>
+          
+        <audio src="./audio/324.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0145.smil#text_0145"/></promptItem>
+      </prompt>
+      <prompt id="loading">
+        <promptItem>
+          <text>加载</text>
+          <originalText>Loading</originalText>
+          
+        <audio src="./audio/325.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0146.smil#text_0146"/></promptItem>
+      </prompt>
+      <prompt id="restartForChanges">
+        <promptItem>
+          <text>请重启以观察变化.</text>
+          <originalText>Please restart to see your changes.</originalText>
+        <audio src="./audio/326.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0147.smil#text_0147"/>
+				</promptItem>
+      </prompt>
+      <prompt id="noBooksFoundOnCd">
+        <promptItem>
+          <text>从CD-ROM没有发现DAISY书.</text>
+          <originalText>No DAISY books were found on this CD-ROM.</originalText>
+          
+        <audio src="./audio/327_CDROMDAISY.mp3" from="file://c:/devel/amis/trunk/Langpacks/chinese/prompts/amis0148.smil#text_0148"/></promptItem>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+    </generalPrompts>
+  </prompts>
+</ui>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.7" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Hi&#7875;n th&#7883; &#273;&#7897; d&#224;y c&#7911;a ph&#7847;n" />
+<meta name="dc:title" content="AMIS Version 2.0 Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:34" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="34.390s">
+<par endsync="last">
+<text src="amishelp-entity.html#amis_0029" id="amis_0029" />
+<seq>
+<audio src="40_Hin_th_d_dy_ca_phn.mp2" clip-begin="npt=0.000s" clip-end="npt=0.653s" id="qwrt_0001" />
+<audio src="40_Hin_th_d_dy_ca_phn.mp2" clip-begin="npt=0.653s" clip-end="npt=2.199s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_006d" id="xami_006d" />
+<seq>
+<audio src="40_Hin_th_d_dy_ca_phn.mp2" clip-begin="npt=2.199s" clip-end="npt=2.730s" id="qwrt_0003" />
+<audio src="40_Hin_th_d_dy_ca_phn.mp2" clip-begin="npt=2.730s" clip-end="npt=6.922s" id="qwrt_0004" />
+<audio src="40_Hin_th_d_dy_ca_phn.mp2" clip-begin="npt=6.922s" clip-end="npt=7.928s" id="qwrt_0005" />
+<audio src="40_Hin_th_d_dy_ca_phn.mp2" clip-begin="npt=7.928s" clip-end="npt=15.799s" id="qwrt_0006" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_006e" id="xami_006e" />
+<seq>
+<audio src="40_Hin_th_d_dy_ca_phn.mp2" clip-begin="npt=15.799s" clip-end="npt=16.431s" id="qwrt_0007" />
+<audio src="40_Hin_th_d_dy_ca_phn.mp2" clip-begin="npt=16.431s" clip-end="npt=19.618s" id="qwrt_0008" />
+<audio src="40_Hin_th_d_dy_ca_phn.mp2" clip-begin="npt=19.618s" clip-end="npt=20.232s" id="qwrt_0009" />
+<audio src="40_Hin_th_d_dy_ca_phn.mp2" clip-begin="npt=20.232s" clip-end="npt=22.178s" id="qwrt_000A" />
+<audio src="40_Hin_th_d_dy_ca_phn.mp2" clip-begin="npt=22.178s" clip-end="npt=23.771s" id="qwrt_000B" />
+<audio src="40_Hin_th_d_dy_ca_phn.mp2" clip-begin="npt=23.771s" clip-end="npt=26.199s" id="qwrt_000C" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_006f" id="xami_006f" />
+<seq>
+<audio src="40_Hin_th_d_dy_ca_phn.mp2" clip-begin="npt=26.199s" clip-end="npt=26.723s" id="qwrt_000D" />
+<audio src="40_Hin_th_d_dy_ca_phn.mp2" clip-begin="npt=26.723s" clip-end="npt=29.231s" id="qwrt_000E" />
+<audio src="40_Hin_th_d_dy_ca_phn.mp2" clip-begin="npt=29.231s" clip-end="npt=31.199s" id="qwrt_000F" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0070" id="xami_0070" />
+<seq>
+<audio src="40_Hin_th_d_dy_ca_phn.mp2" clip-begin="npt=31.199s" clip-end="npt=31.321s" id="qwrt_0010" />
+<audio src="40_Hin_th_d_dy_ca_phn.mp2" clip-begin="npt=31.321s" clip-end="npt=34.390s" id="qwrt_0011" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

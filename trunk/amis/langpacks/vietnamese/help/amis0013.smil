@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.7" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="G&#243;c nh&#236;n m&#7863;c &#273;&#7883;nh" />
+<meta name="dc:title" content="AMIS Version 2.0 Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:22" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="21.969s">
+<par endsync="last">
+<text src="amishelp-entity.html#amis_0013" id="amis_0013" />
+<seq>
+<audio src="18_Gc_nhn_mc_dnh.mp2" clip-begin="npt=0.000s" clip-end="npt=1.399s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0033" id="xami_0033" />
+<seq>
+<audio src="18_Gc_nhn_mc_dnh.mp2" clip-begin="npt=1.399s" clip-end="npt=2.155s" id="qwrt_0002" />
+<audio src="18_Gc_nhn_mc_dnh.mp2" clip-begin="npt=2.155s" clip-end="npt=6.126s" id="qwrt_0003" />
+<audio src="18_Gc_nhn_mc_dnh.mp2" clip-begin="npt=6.126s" clip-end="npt=10.318s" id="qwrt_0004" />
+<audio src="18_Gc_nhn_mc_dnh.mp2" clip-begin="npt=10.318s" clip-end="npt=18.199s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0034" id="xami_0034" />
+<seq>
+<audio src="18_Gc_nhn_mc_dnh.mp2" clip-begin="npt=18.199s" clip-end="npt=19.056s" id="qwrt_0006" />
+<audio src="18_Gc_nhn_mc_dnh.mp2" clip-begin="npt=19.056s" clip-end="npt=21.969s" id="qwrt_0007" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

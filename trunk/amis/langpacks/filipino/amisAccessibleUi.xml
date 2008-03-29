@@ -1,0 +1,2344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui xml:lang="en">
+  <containers>
+    <container id="file">
+      <note>This is the menu header "File"</note>
+      <caption>
+        <text id="_id52736" xml:lang="tl" status="ok">Talaksan</text>
+        <originalText>File</originalText>
+        
+      <audio src="./audio/002_Talaksan.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0003.smil#text_0003"/></caption>
+      <action mfcid="ID_MENU_FILE_OPEN" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and a toolbar item</note>
+        <icon src="./open.png" type="smallIcon"/>
+        <caption>
+          <text id="_id52773" xml:lang="tl" status="ok">Buksan...</text>
+          <originalText>Open...</originalText>
+          
+        <audio src="./audio/003_Buksan.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0004.smil#text_0004"/></caption>
+        <description>
+          <text id="_id52791" xml:lang="tl" status="ok">Buksan ang librong DAISY mula sa lokal na talaksan</text>
+          <originalText>Open a Daisy book from the local file system</originalText>
+          
+        <audio src="./audio/004_Buksan_ang_librong_DAISY_mula_.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0005.smil#text_0005"/></description>
+        <accelerator>
+          <text id="_id52810">Ctrl+O</text>
+          <originalText>Ctrl+O</originalText>
+          
+        <audio src="./audio/005_CtrlO.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0006.smil#text_0006"/></accelerator>
+        <mnemonic>
+          <text id="_id52828">O</text>
+          <originalText>O</originalText>
+          
+        <audio src="./audio/006_O.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0007.smil#text_0007"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_LOADCD" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and a toolbar item</note>
+        <icon src="./settings/img/cd3.ico" type="smallIcon"/>
+        <icon src="./settings/img/cd_big.ico" type="largeIcon"/>
+        <caption>
+          <text id="_id52872" xml:lang="tl" status="ok">Isalang ang CD</text>
+          <originalText>Load CD</originalText>
+          
+        <audio src="./audio/007_Isalang_ang_CD.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0008.smil#text_0008"/></caption>
+        <description>
+          <text id="_id52889" xml:lang="tl" status="ok">Isalang ang librong DAISY mula sa CD ROM</text>
+          <originalText>Load a DAISY book from CD ROM</originalText>
+          
+        <audio src="./audio/008_Isalang_ang_librong_DAISY_mula.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0009.smil#text_0009"/></description>
+        <accelerator>
+          <text id="_id52908">Ctrl+L</text>
+          <originalText>Ctrl+L</originalText>
+          
+        <audio src="./audio/009_CtrlL.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis000a.smil#text_000a"/></accelerator>
+        <mnemonic>
+          <text id="_id52926">L</text>
+          <originalText>L</originalText>
+          
+        <audio src="./audio/010_L.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis000b.smil#text_000b"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_SEARCHDRIVE" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id52955" xml:lang="tl" status="ok">Hanapin...</text>
+          <originalText>Search...</originalText>
+          
+        <audio src="./audio/011_Hanapin.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis000c.smil#text_000c"/></caption>
+        <description>
+          <text id="_id52973" xml:lang="tl" status="ok">Hanapin ang librong DAISY sa lokal na drives</text>
+          <originalText>Search local drives for DAISY books</originalText>
+          
+        <audio src="./audio/012_Hanapin_ang_librong_DAISY_sa_l.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis000d.smil#text_000d"/></description>
+        <mnemonic>
+          <text id="_id52992">S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/013_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis000e.smil#text_000e"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_PREFERENCES" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id53021" xml:lang="tl" status="ok">Mga Kagustuhan...</text>
+          <originalText>Preferences...</originalText>
+          
+        <audio src="./audio/014_Mga_Kagustuhan.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis000f.smil#text_000f"/></caption>
+        <description>
+          <text id="_id53039" xml:lang="tl" status="ok">Ito ang dialog para sa mga kagustuhan.</text>
+          <originalText>This is the application preferences dialog.</originalText>
+          
+        <audio src="./audio/015_Ito_ang_dialog_para_sa_mga_kag.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0010.smil#text_0010"/></description>
+        <mnemonic>
+          <text id="_id53058">P</text>
+          <originalText>P</originalText>
+          
+        <audio src="./audio/016_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0011.smil#text_0011"/></mnemonic>
+      </action>
+      <container id="recentBooksList">
+        <note>This is the menu header for the recent books sub-menu.</note>
+        <caption>
+          <text id="_id53085" xml:lang="tl" status="ok">Pinakabago</text>
+          <originalText>Recent</originalText>
+          
+        <audio src="./audio/017_Pinakabago.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0012.smil#text_0012"/></caption>
+        <switch element="action">
+          <action mfcid="ID_FILE_RECENT_EMPTY" widget="menuItem" condition="ID_FILE_RECENT_EMPTY">
+            <note>This is going to be a menu item</note>
+            <caption>
+              <text id="_id53121" xml:lang="tl" status="ok">Walang Laman</text>
+              <originalText>Empty</originalText>
+              
+            <audio src="./audio/018_Walang_Laman.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0013.smil#text_0013"/></caption>
+            <description>
+              <text id="_id53138" xml:lang="tl" status="ok">Walang pinakabagong nabasang libro.</text>
+              <originalText>There are no recently read books.</originalText>
+              
+            <audio src="./audio/019_Walang_pinakabagong_nabasang_l.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0014.smil#text_0014"/></description>
+          </action>
+          <action mfcid="BOOK_BASE_ID" widget="menuItem" condition="BOOK_BASE_ID">
+            <note>This is going to be a menu item</note>
+            <list repeat="yes">
+              <caption>
+                <promptVar name="RECENT_BOOK_TITLE"/>
+              </caption>
+            </list>
+          </action>
+        </switch>
+        <mnemonic>
+          <text id="_id53185">R</text>
+          <originalText>R</originalText>
+          
+        <audio src="./audio/020_R.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0015.smil#text_0015"/></mnemonic>
+      </container>
+      <action mfcid="ID_MENU_FILE_EXIT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id53213" xml:lang="tl" status="ok">Labasan</text>
+          <originalText>Exit</originalText>
+          
+        <audio src="./audio/021_Labasan.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0016.smil#text_0016"/></caption>
+        <description>
+          <text id="_id53231" xml:lang="tl" status="ok">Lalabas ng AMIS</text>
+          <originalText>Exit AMIS</originalText>
+          
+        <audio src="./audio/022_Lalabas_ng_AMIS.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0017.smil#text_0017"/></description>
+        <accelerator>
+          <text id="_id53249">Alt+F4</text>
+          <originalText>Alt+F4</originalText>
+          
+        <audio src="./audio/023_AltF4.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0018.smil#text_0018"/></accelerator>
+        <mnemonic>
+          <text id="_id53266">x</text>
+          <originalText>x</originalText>
+          
+        <audio src="./audio/024_x.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0019.smil#text_0019"/></mnemonic>
+      </action>
+      <accelerator>
+        <text id="_id53285">Alt+F</text>
+        <originalText>Alt+F</originalText>
+        
+      <audio src="./audio/025_AltF.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis001a.smil#text_001a"/></accelerator>
+      <mnemonic>
+        <text id="_id53303">F</text>
+        <originalText>F</originalText>
+        
+      <audio src="./audio/026_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis001b.smil#text_001b"/></mnemonic>
+    </container>
+    <container id="view">
+      <note>This is the menu header "View"</note>
+      <caption>
+        <text id="_id53329" xml:lang="tl" status="ok">Tanaw</text>
+        <originalText>View</originalText>
+        
+      <audio src="./audio/027_Tanaw.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis001c.smil#text_001c"/></caption>
+      <action mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id53358" xml:lang="tl" status="ok">Sidebar</text>
+          <originalText>Sidebar</originalText>
+          
+        <audio src="./audio/028_Sidebar.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis001d.smil#text_001d"/></caption>
+        <description>
+          <text id="_id53376" xml:lang="tl" status="ok">Gamitin o tanggalin and sidebar.</text>
+          <originalText>Turn the sidebar on or off.</originalText>
+          
+        <audio src="./audio/029_Gamitin_o_tanggalin_and_sideba.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis001e.smil#text_001e"/></description>
+        <mnemonic>
+          <text id="_id53394">S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/030_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis001f.smil#text_001f"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_BASIC" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id53423" xml:lang="tl" status="ok">Payak na Paraan ng Pagtanaw</text>
+          <originalText>Basic View Mode</originalText>
+          
+        <audio src="./audio/031_Payak_na_Paraan_ng_Pagtanaw.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0020.smil#text_0020"/></caption>
+        <description>
+          <text id="_id53441" xml:lang="tl" status="ok">Palitan ang pagtanaw sa payak na paraan.</text>
+          <originalText>Switch the view to basic mode.</originalText>
+          
+        <audio src="./audio/032_Palitan_ang_pagtanaw_sa_payak_.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0021.smil#text_0021"/></description>
+        <accelerator>
+          <text id="_id53460">F11</text>
+          <originalText>F11</originalText>
+          
+        <audio src="./audio/033_F11.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0022.smil#text_0022"/></accelerator>
+        <mnemonic>
+          <text id="_id53477">B</text>
+          <originalText>B</originalText>
+          
+        <audio src="./audio/034_B.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0023.smil#text_0023"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_CONTRAST" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item</note>
+        <icon src="./settings/img/contrast.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id53513" xml:lang="tl" status="ok">Mataas na Pagkakaiba</text>
+          <originalText>High Contrast</originalText>
+          
+        <audio src="./audio/035_Mataas_na_Pagkakaiba.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0024.smil#text_0024"/></caption>
+        <description>
+          <text id="_id53530" xml:lang="tl" status="ok">Gamitin ang mataas na pagkakaiba sa kulay ng textong display.</text>
+          <originalText>Use high contrast colors for the text display.</originalText>
+          
+        <audio src="./audio/036_Gamitin_ang_mataas_na_pagkakai.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0025.smil#text_0025"/></description>
+        <accelerator>
+          <text id="_id53550">Ctrl+S</text>
+          <originalText>Ctrl+S</originalText>
+          
+        <audio src="./audio/037_CtrlS.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0026.smil#text_0026"/></accelerator>
+        <mnemonic>
+          <text id="_id53568">C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/038_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0027.smil#text_0027"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_LARGEFONT" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/font.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id53604" xml:lang="tl" status="ok">Lakihan ang sukat ng Font</text>
+          <originalText>Increase Font Size</originalText>
+          
+        <audio src="./audio/039_Lakihan_ang_sukat_ng_Font.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0028.smil#text_0028"/></caption>
+        <description>
+          <text id="_id53622" xml:lang="tl" status="ok">Unti unting lakihan ang sukat ng Font.</text>
+          <originalText>Gradually increase the font size.</originalText>
+          
+        <audio src="./audio/040_Unti_unting_lakihan_ang_sukat_.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0029.smil#text_0029"/></description>
+        <mnemonic>
+          <text id="_id53642">I</text>
+          <originalText>I</originalText>
+          
+        <audio src="./audio/041_I.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis002a.smil#text_002a"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_RESETFONT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id53670" xml:lang="tl" status="ok">I-reset ang sukat ng Font</text>
+          <originalText>Reset Font Size</originalText>
+          
+        <audio src="./audio/042_Ireset_ang_sukat_ng_Font.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis002b.smil#text_002b"/></caption>
+        <description>
+          <text id="_id53688" xml:lang="tl" status="ok">Ibalik sa orihinal na sukat ng Font.</text>
+          <originalText>Set the font size to the default setting.</originalText>
+          
+        <audio src="./audio/043_Ibalik_sa_orihinal_na_sukat_ng.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis002c.smil#text_002c"/></description>
+        <mnemonic>
+          <text id="_id53708">R</text>
+          <originalText>R</originalText>
+          
+        <audio src="./audio/044_R.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis002d.smil#text_002d"/></mnemonic>
+      </action>
+      <action mfcid="NAVLIST_BASE_ID" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <promptVar name="NAV_LIST_NAME"/>
+        </caption>
+        <description>
+          <promptVar name="NAV_LIST_DESCRIPTION"/>
+        </description>
+      </action>
+      <accelerator>
+        <text id="_id53752">Alt+V</text>
+        <originalText>Alt+V</originalText>
+        
+      <audio src="./audio/045_AltV.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis002e.smil#text_002e"/></accelerator>
+      <mnemonic>
+        <text id="_id53770">V</text>
+        <originalText>V</originalText>
+        
+      <audio src="./audio/046_V.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis002f.smil#text_002f"/></mnemonic>
+    </container>
+    <container id="play">
+      <note>This is the menu header "Play"</note>
+      <caption>
+        <text id="_id53797" xml:lang="tl" status="ok">Patugtugin</text>
+        <originalText>Play</originalText>
+        
+      <audio src="./audio/047_Patugtugin.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0030.smil#text_0030"/></caption>
+      <switch element="action">
+        <action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" condition="canPlay">
+          <note>This is going to be a menu item and toolbar item</note>
+          <icon src="./settings/img/play-big.ico" type="smallIcon"/>
+          <icon src="./settings/img/play_big.ico" type="largeIcon"/>
+          <caption>
+            <text id="_id53845" xml:lang="tl" status="ok">Patugtugin</text>
+            <originalText>Play</originalText>
+            
+          <audio src="./audio/048_Patugtugin.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0031.smil#text_0031"/></caption>
+          <description>
+            <text id="_id53863" xml:lang="tl" status="ok">Simulan ang singkronisadong pagtugtog.</text>
+            <originalText>Start synchronized playback.</originalText>
+            
+          <audio src="./audio/049_Simulan_ang_singkronisadong_pa.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0032.smil#text_0032"/></description>
+          <accelerator>
+            <text id="_id53882">Space</text>
+            <originalText>Space</originalText>
+            
+          <audio src="./audio/050_Space.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0033.smil#text_0033"/></accelerator>
+          <mnemonic>
+            <text id="_id53900">P</text>
+            <originalText>P</originalText>
+            
+          <audio src="./audio/051_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0034.smil#text_0034"/></mnemonic>
+        </action>
+        <action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" condition="canPause">
+          <note>This is going to be a menu item and toolbar item</note>
+          <icon src="./settings/img/pause.ico" type="smallIcon"/>
+          <icon src="./settings/img/pause_big.ico" type="largeIcon"/>
+          <caption>
+            <text id="_id53945" xml:lang="tl" status="ok">Itigil Sandali</text>
+            <originalText>Pause</originalText>
+            
+          <audio src="./audio/052_Itigil_Sandali.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0035.smil#text_0035"/></caption>
+          <description>
+            <text id="_id53963" xml:lang="tl" status="ok">Itigil sandali ang pagpapatugtog nitong librong DAISY</text>
+            <originalText>Pause playback of this DAISY book.</originalText>
+            
+          <audio src="./audio/053_Itigil_sandali_ang_pagpapatugt.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0036.smil#text_0036"/></description>
+          <accelerator>
+            <text id="_id53982">Space</text>
+            <originalText>Space</originalText>
+            
+          <audio src="./audio/054_Space.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0037.smil#text_0037"/></accelerator>
+          <mnemonic>
+            <text id="_id54000">a</text>
+            <originalText>a</originalText>
+            
+          <audio src="./audio/055_a.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0038.smil#text_0038"/></mnemonic>
+        </action>
+      </switch>
+      <action mfcid="ID_MENU_PLAY_ESCAPE" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id54030" xml:lang="tl" status="ok">Umalis</text>
+          <originalText>Escape</originalText>
+          
+        <audio src="./audio/056_Umalis.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0039.smil#text_0039"/></caption>
+        <description>
+          <text id="_id54048" xml:lang="tl" status="ok">Umalis sa kasalukuyang pinapatugtog.</text>
+          <originalText>Jump out of the currently playing item or structure.</originalText>
+          
+        <audio src="./audio/057_Umalis_sa_kasalukuyang_pinapat.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis003a.smil#text_003a"/></description>
+        <accelerator>
+          <text id="_id54067">Esc</text>
+          <originalText>Esc</originalText>
+          
+        <audio src="./audio/058_Esc.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis003b.smil#text_003b"/></accelerator>
+        <mnemonic>
+          <text id="_id54085">E</text>
+          <originalText>E</originalText>
+          
+        <audio src="./audio/059_E.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis003c.smil#text_003c"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_FASTER" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/fullspeedahead.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id54121" xml:lang="tl" status="ok">Mas mabilis</text>
+          <originalText>Faster</originalText>
+          
+        <audio src="./audio/060_Mas_mabilis.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis003d.smil#text_003d"/></caption>
+        <description>
+          <text id="_id54139" xml:lang="tl" status="ok">Bilisan ang pagpapatugtog.</text>
+          <originalText>Increase the playback rate.</originalText>
+          
+        <audio src="./audio/061_Bilisan_ang_pagpapatugtog.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis003e.smil#text_003e"/></description>
+        <accelerator>
+          <text id="_id54158">Ctrl++</text>
+          <originalText>Ctrl++</originalText>
+          
+        <audio src="./audio/062_Ctrl.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis003f.smil#text_003f"/></accelerator>
+        <mnemonic>
+          <text id="_id54176">F</text>
+          <originalText>F</originalText>
+          
+        <audio src="./audio/063_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0040.smil#text_0040"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_SLOWER" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/slowdown.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id54212" xml:lang="tl" status="ok">Mas mabagal</text>
+          <originalText>Slower</originalText>
+          
+        <audio src="./audio/064_Mas_mabagal.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0041.smil#text_0041"/></caption>
+        <description>
+          <text id="_id54230" xml:lang="tl" status="ok">Bagalan ang pagpapatugtog.</text>
+          <originalText>Slow down the playback rate.</originalText>
+          
+        <audio src="./audio/065_Bagalan_ang_pagpapatugtog.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0042.smil#text_0042"/></description>
+        <accelerator>
+          <text id="_id54248">Ctrl+-</text>
+          <originalText>Ctrl+-</originalText>
+          
+        <audio src="./audio/066_Ctrl.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0043.smil#text_0043"/></accelerator>
+        <mnemonic>
+          <text id="_id54266">S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/067_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0044.smil#text_0044"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_NORMALSPEED" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/normalspeed.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id54302" xml:lang="tl" status="ok">Normal na bilis</text>
+          <originalText>Normal Speed</originalText>
+          
+        <audio src="./audio/068_Normal_na_bilis.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0045.smil#text_0045"/></caption>
+        <description>
+          <text id="_id54320" xml:lang="tl" status="ok">I-reset sa normal na bilis.</text>
+          <originalText>Reset the playback rate to normal.</originalText>
+          
+        <audio src="./audio/069_Ireset_sa_normal_na_bilis.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0046.smil#text_0046"/></description>
+        <accelerator>
+          <text id="_id54340">Ctrl+0</text>
+          <originalText>Ctrl+0</originalText>
+          
+        <audio src="./audio/070_Ctrl0.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0047.smil#text_0047"/></accelerator>
+        <mnemonic>
+          <text id="_id54357">N</text>
+          <originalText>N</originalText>
+          
+        <audio src="./audio/071_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0048.smil#text_0048"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_VOLUP" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id54386" xml:lang="tl" status="ok">Lakasan ang tunog</text>
+          <originalText>Increase Volume</originalText>
+          
+        <audio src="./audio/072_Lakasan_ang_tunog.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0049.smil#text_0049"/></caption>
+        <description>
+          <text id="_id54404" xml:lang="tl" status="ok">Unti unting lakasan ang tunog.</text>
+          <originalText>Gradually raise the volume.</originalText>
+          
+        <audio src="./audio/073_Unti_unting_lakasan_ang_tunog.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis004a.smil#text_004a"/></description>
+        <accelerator>
+          <text id="_id54423">Ctrl+Up</text>
+          <originalText>Ctrl+Up</originalText>
+          
+        <audio src="./audio/074_CtrlUp.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis004b.smil#text_004b"/></accelerator>
+        <mnemonic>
+          <text id="_id54441">I</text>
+          <originalText>I</originalText>
+          
+        <audio src="./audio/075_I.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis004c.smil#text_004c"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_VOLDOWN" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id54470" xml:lang="tl" status="ok">Hinaan ang tunog</text>
+          <originalText>Decrease Volume</originalText>
+          
+        <audio src="./audio/076_Hinaan_ang_tunog.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis004d.smil#text_004d"/></caption>
+        <description>
+          <text id="_id54488" xml:lang="tl" status="ok">Dahan dahang hinaan ang tunog.</text>
+          <originalText>Gradually lower the volume.</originalText>
+          
+        <audio src="./audio/077_Dahan_dahang_hinaan_ang_tunog.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis004e.smil#text_004e"/></description>
+        <accelerator>
+          <text id="_id54506">Ctrl+Down</text>
+          <originalText>Ctrl+Down</originalText>
+          
+        <audio src="./audio/078_CtrlDown.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis004f.smil#text_004f"/></accelerator>
+        <mnemonic>
+          <text id="_id54524">D</text>
+          <originalText>D</originalText>
+          
+        <audio src="./audio/079_D.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0050.smil#text_0050"/></mnemonic>
+      </action>
+      <accelerator>
+        <text id="_id54542">Alt+P</text>
+        <originalText>Alt+P</originalText>
+        
+      <audio src="./audio/080_AltP.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0051.smil#text_0051"/></accelerator>
+      <mnemonic>
+        <text id="_id54560">P</text>
+        <originalText>P</originalText>
+        
+      <audio src="./audio/081_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0052.smil#text_0052"/></mnemonic>
+    </container>
+    <container id="navigate">
+      <note>This is the menu header "Navigate"</note>
+      <caption>
+        <text id="_id54587" xml:lang="tl" status="ok">Maglibot</text>
+        <originalText>Navigate</originalText>
+        
+      <audio src="./audio/082_Maglibot.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0053.smil#text_0053"/></caption>
+      <action mfcid="ID_MENU_NAV_PREVSECTION" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevsection.ico" type="smallIcon"/>
+        <icon src="./settings/img/prevsection_big.ico" type="largeIcon"/>
+        <caption>
+          <text id="_id54630" xml:lang="tl" status="ok">Nakaraang Bahagi</text>
+          <originalText>Previous Section</originalText>
+          
+        <audio src="./audio/083_Nakaraang_Bahagi.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0054.smil#text_0054"/></caption>
+        <description>
+          <text id="_id54648" xml:lang="tl" status="ok">Pumunta sa nakaraang bahagi.</text>
+          <originalText>Go to the previous section.</originalText>
+          
+        <audio src="./audio/084_Pumunta_sa_nakaraang_bahagi.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0055.smil#text_0055"/></description>
+        <accelerator>
+          <text id="_id54667">Up</text>
+          <originalText>Up</originalText>
+          
+        <audio src="./audio/085_Up.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0056.smil#text_0056"/></accelerator>
+        <mnemonic>
+          <text id="_id54684">P</text>
+          <originalText>P</originalText>
+          
+        <audio src="./audio/086_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0057.smil#text_0057"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTSECTION" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextsection.ico" type="smallIcon"/>
+        <icon src="./settings/img/nextsection_big.ico" type="largeIcon"/>
+        <caption>
+          <text id="_id54728" xml:lang="tl" status="ok">Susunod na bahagi</text>
+          <originalText>Next Section</originalText>
+          
+        <audio src="./audio/087_Susunod_na_bahagi.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0058.smil#text_0058"/></caption>
+        <description>
+          <text id="_id54745" xml:lang="tl" status="ok">Pumunta sa susunod na bahagi.</text>
+          <originalText>Go to the next section.</originalText>
+          
+        <audio src="./audio/088_Pumunta_sa_susunod_na_bahagi.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0059.smil#text_0059"/></description>
+        <accelerator>
+          <text id="_id54764">Down</text>
+          <originalText>Down</originalText>
+          
+        <audio src="./audio/089_Down.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis005a.smil#text_005a"/></accelerator>
+        <mnemonic>
+          <text id="_id54782">N</text>
+          <originalText>N</originalText>
+          
+        <audio src="./audio/090_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis005b.smil#text_005b"/></mnemonic>
+      </action>
+      <container id="sectiondepth">
+        <note>This is the "show section depth" sub-menu pop-up</note>
+        <caption>
+          <text id="_id54809" xml:lang="tl" status="ok">Ipakita ang lalim ng bahagi</text>
+          <originalText>Show Section Depth</originalText>
+          
+        <audio src="./audio/091_Ipakita_ang_lalim_ng_bahagi.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis005c.smil#text_005c"/></caption>
+        <switch element="action">
+          <action mfcid="ID_EMPTY" widget="menuItem" condition="ID_EMPTY">
+            <note>This is going to be a menu item</note>
+            <caption>
+              <text id="_id54844" xml:lang="tl" status="ok">Walang laman</text>
+              <originalText>Empty</originalText>
+              
+            <audio src="./audio/092_Walang_laman.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis005d.smil#text_005d"/></caption>
+            <description>
+              <text id="_id54862" xml:lang="tl" status="ok">Walang lebel sa mga bahagi.</text>
+              <originalText>There are no section levels.</originalText>
+              
+            <audio src="./audio/093_Walang_lebel_sa_mga_bahagi.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis005e.smil#text_005e"/></description>
+          </action>
+          <action mfcid="SECTION_DEPTH_BASE_ID" widget="menuItem" condition="SECTION_DEPTH_BASE_ID">
+            <note>This is going to be a menu item</note>
+            <list repeat="yes">
+              <caption>
+                <promptVar name="SECTION_DEPTH_OPTION"/>
+              </caption>
+            </list>
+          </action>
+        </switch>
+        <mnemonic>
+          <text id="_id54909">S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/094_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis005f.smil#text_005f"/></mnemonic>
+      </container>
+      <action mfcid="ID_MENU_NAV_PREVPHRASE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevphasecirc.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id54946" xml:lang="tl" status="ok">Nakaraang Parirala</text>
+          <originalText>Previous Phrase</originalText>
+          
+        <audio src="./audio/095_Nakaraang_Parirala.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0060.smil#text_0060"/></caption>
+        <description>
+          <text id="_id54964" xml:lang="tl" status="ok">Pumunta sa nakaraang parirala.</text>
+          <originalText>Go to the previous phrase.</originalText>
+          
+        <audio src="./audio/096_Pumunta_sa_nakaraang_parirala.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0061.smil#text_0061"/></description>
+        <accelerator>
+          <text id="_id54982">Left</text>
+          <originalText>Left</originalText>
+          
+        <audio src="./audio/097_Left.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0062.smil#text_0062"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTPHRASE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextphrasecirc.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id55020" xml:lang="tl" status="ok">Susunod na Parirala</text>
+          <originalText>Next Phrase</originalText>
+          
+        <audio src="./audio/098_Susunod_na_Parirala.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0063.smil#text_0063"/></caption>
+        <description>
+          <text id="_id55037" xml:lang="tl" status="ok">Pumunta sa susunod na parirala.</text>
+          <originalText>Go to the next phrase.</originalText>
+          
+        <audio src="./audio/099_Pumunta_sa_susunod_na_parirala.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0064.smil#text_0064"/></description>
+        <accelerator>
+          <text id="_id55056">Right</text>
+          <originalText>Right</originalText>
+          
+        <audio src="./audio/100_Right.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0065.smil#text_0065"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_PREVPAGE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevpage.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id55093" xml:lang="tl" status="ok">Nakaraang Pahina</text>
+          <originalText>Previous Page</originalText>
+          
+        <audio src="./audio/101_Nakaraang_Pahina.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0066.smil#text_0066"/></caption>
+        <description>
+          <text id="_id55111" xml:lang="tl" status="ok">Pumunta sa nakaraang pahina.</text>
+          <originalText>Go to the previous page.</originalText>
+          
+        <audio src="./audio/102_Pumunta_sa_nakaraang_pahina.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0067.smil#text_0067"/></description>
+        <accelerator>
+          <text id="_id55129">Ctrl+Left</text>
+          <originalText>Ctrl+Left</originalText>
+          
+        <audio src="./audio/103_CtrlLeft.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0068.smil#text_0068"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTPAGE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextpage.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id55166" xml:lang="tl" status="ok">Susunod na Pahina</text>
+          <originalText>Next Page</originalText>
+          
+        <audio src="./audio/104_Susunod_na_Pahina.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0069.smil#text_0069"/></caption>
+        <description>
+          <text id="_id55184" xml:lang="tl" status="ok">Pumunta sa susunod na pahina.</text>
+          <originalText>Go to the next page.</originalText>
+          
+        <audio src="./audio/105_Pumunta_sa_susunod_na_pahina.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis006a.smil#text_006a"/></description>
+        <accelerator>
+          <text id="_id55203">Ctrl+Right</text>
+          <originalText>Ctrl+Right</originalText>
+          
+        <audio src="./audio/106_CtrlRight.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis006b.smil#text_006b"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_GOTOPAGE" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id55232" xml:lang="tl" status="ok">Pumunta sa Pahina...</text>
+          <originalText>Go to Page...</originalText>
+          
+        <audio src="./audio/107_Pumunta_sa_Pahina.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis006c.smil#text_006c"/></caption>
+        <description>
+          <text id="_id55250" xml:lang="tl" status="ok">Pumunta sa partikular na pahina.</text>
+          <originalText>Go to a specific page.</originalText>
+          
+        <audio src="./audio/108_Pumunta_sa_partikular_na_pahin.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis006d.smil#text_006d"/></description>
+        <accelerator>
+          <text id="_id55269">Ctrl+G</text>
+          <originalText>Ctrl+G</originalText>
+          
+        <audio src="./audio/109_CtrlG.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis006e.smil#text_006e"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_FINDINTEXT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id55298" xml:lang="tl" status="ok">Hanapin ang texto</text>
+          <originalText>Find in Text</originalText>
+          
+        <audio src="./audio/110_Hanapin_ang_texto.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis006f.smil#text_006f"/></caption>
+        <description>
+          <text id="_id55316" xml:lang="tl" status="ok">Hanapin ang salita o parirala sa texto.</text>
+          <originalText>Search for a word or phrase in the text.</originalText>
+          
+        <audio src="./audio/111_Hanapin_ang_salita_o_parirala_.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0070.smil#text_0070"/></description>
+        <accelerator>
+          <text id="_id55335">Ctrl+F</text>
+          <originalText>Ctrl+F</originalText>
+          
+        <audio src="./audio/112_CtrlF.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0071.smil#text_0071"/></accelerator>
+        <mnemonic>
+          <text id="_id55353">F</text>
+          <originalText>F</originalText>
+          
+        <audio src="./audio/113_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0072.smil#text_0072"/></mnemonic>
+      </action>
+      <accelerator>
+        <text id="_id55371">Alt+N</text>
+        <originalText>Alt+N</originalText>
+        
+      <audio src="./audio/114_AltN.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0073.smil#text_0073"/></accelerator>
+      <mnemonic>
+        <text id="_id55389">N</text>
+        <originalText>N</originalText>
+        
+      <audio src="./audio/115_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0074.smil#text_0074"/></mnemonic>
+    </container>
+    <container id="bookmarks">
+      <note>This is the menu header "Bookmarks"</note>
+      <caption>
+        <text id="_id55416" xml:lang="tl" status="ok">Pananda</text>
+        <originalText>Bookmarks</originalText>
+        
+      <audio src="./audio/116_Pananda.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0075.smil#text_0075"/></caption>
+      <action mfcid="ID_MENU_BMK_ADD" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/adbookmark.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id55451" xml:lang="tl" status="ok">Magdagdag ng Pananda</text>
+          <originalText>Add Bookmark</originalText>
+          
+        <audio src="./audio/117_Magdagdag_ng_Pananda.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0076.smil#text_0076"/></caption>
+        <description>
+          <text id="_id55469" xml:lang="tl" status="ok">Panandaan ang kasalukuyang posisyon.</text>
+          <originalText>Bookmark your current position.</originalText>
+          
+        <audio src="./audio/118_Panandaan_ang_kasalukuyang_pos.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0077.smil#text_0077"/></description>
+        <accelerator>
+          <text id="_id55488">Ctrl+D</text>
+          <originalText>Ctrl+D</originalText>
+          
+        <audio src="./audio/119_CtrlD.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0078.smil#text_0078"/></accelerator>
+        <mnemonic>
+          <text id="_id55506">A</text>
+          <originalText>A</originalText>
+          
+        <audio src="./audio/120_A.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0079.smil#text_0079"/></mnemonic>
+      </action>
+      <action mfcid="BOOKMARK_BASE_ID" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOKMARK_TITLE"/>
+          </caption>
+        </list>
+      </action>
+      <accelerator>
+        <text id="_id55548">Alt+B</text>
+        <originalText>Alt+B</originalText>
+        
+      <audio src="./audio/121_AltB.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis007a.smil#text_007a"/></accelerator>
+      <mnemonic>
+        <text id="_id55566">B</text>
+        <originalText>B</originalText>
+        
+      <audio src="./audio/122_B.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis007b.smil#text_007b"/></mnemonic>
+    </container>
+    <container id="info">
+      <note>This is the menu header "Info"</note>
+      <caption>
+        <text id="_id55593" xml:lang="tl" status="ok">Impormasyon</text>
+        <originalText>Info</originalText>
+        
+      <audio src="./audio/123_Impormasyon.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis007c.smil#text_007c"/></caption>
+      <action mfcid="ID_MENU_INFO_SKIP" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id55621" xml:lang="tl" status="ok">Mga Bagay na maaring Laktawan...</text>
+          <originalText>Skippable Items...</originalText>
+          
+        <audio src="./audio/124_Mga_Bagay_na_maaring_Laktawan.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis007d.smil#text_007d"/></caption>
+        <description>
+          <text id="_id55639" xml:lang="tl" status="ok">Tingnan sa publikasyong ito ang mga bagay na maaring laktawan.</text>
+          <originalText>View the skippable items for this publication.</originalText>
+          
+        <audio src="./audio/125_Tingnan_sa_publikasyong_ito_an.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis007e.smil#text_007e"/></description>
+        <mnemonic>
+          <text id="_id55658">S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/126_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis007f.smil#text_007f"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_SUMMARY" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/info.ico" type="smallIcon"/>
+        <caption>
+          <text id="_id55695" xml:lang="tl" status="ok">Kabuuan</text>
+          <originalText>Full Summary</originalText>
+          
+        <audio src="./audio/127_Kabuuan.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0080.smil#text_0080"/></caption>
+        <description>
+          <text id="_id55713" xml:lang="tl" status="ok">Kunin ang kabuuang impormasyon para sa publikasyong ito.</text>
+          <originalText>Get all summary info for this publication.</originalText>
+          
+        <audio src="./audio/128_Kunin_ang_kabuuang_impormasyon.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0081.smil#text_0081"/></description>
+        <mnemonic>
+          <text id="_id55732">F</text>
+          <originalText>F</originalText>
+          
+        <audio src="./audio/129_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0082.smil#text_0082"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_CURRENTPOSITION" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id55761" xml:lang="tl" status="ok">Kasalukuyang Posisyon</text>
+          <originalText>Current Position</originalText>
+          
+        <audio src="./audio/130_Kasalukuyang_Posisyon.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0083.smil#text_0083"/></caption>
+        <description>
+          <text id="_id55779" xml:lang="tl" status="ok">Kumuha ng impormasyon ukol sa kasalukuyang posisyon.</text>
+          <originalText>Get information about your current position.</originalText>
+          
+        <audio src="./audio/131_Kumuha_ng_impormasyon_ukol_sa_.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0084.smil#text_0084"/></description>
+        <mnemonic>
+          <text id="_id55798">C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/132_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0085.smil#text_0085"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_NAVOPTIONS" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id55827" xml:lang="tl" status="ok">Mga Pagpipilaan ukol sa Paglilibot</text>
+          <originalText>Navigation Options</originalText>
+          
+        <audio src="./audio/133_Mga_Pagpipilaan_ukol_sa_Paglil.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0086.smil#text_0086"/></caption>
+        <description>
+          <text id="_id55846" xml:lang="tl" status="ok">Alamin ang iyong mga pagpipilian ukol sa paglilibot ng publikasyong ito.</text>
+          <originalText>Learn about your navigation options for this publication.</originalText>
+          
+        <audio src="./audio/134_Alamin_ang_iyong_mga_pagpipili.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0087.smil#text_0087"/></description>
+        <mnemonic>
+          <text id="_id55866">N</text>
+          <originalText>N</originalText>
+          
+        <audio src="./audio/135_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0088.smil#text_0088"/></mnemonic>
+      </action>
+      <accelerator>
+        <text id="_id55884">Alt+I</text>
+        <originalText>Alt+I</originalText>
+        
+      <audio src="./audio/136_AltI.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0089.smil#text_0089"/></accelerator>
+      <mnemonic>
+        <text id="_id55902">I</text>
+        <originalText>I</originalText>
+        
+      <audio src="./audio/137_I.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis008a.smil#text_008a"/></mnemonic>
+    </container>
+    <container id="help">
+      <note>This is the menu header "Help"</note>
+      <caption>
+        <text id="_id55928" xml:lang="tl" status="ok">Tulong</text>
+        <originalText>Help</originalText>
+        
+      <audio src="./audio/138_Tulong.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis008b.smil#text_008b"/></caption>
+      <action mfcid="ID_MENU_HELP_CONTENTS" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/help.ico" type="smallIcon"/>
+        <icon src="./settings/img/help_big.ico" type="largeIcon"/>
+        <caption>
+          <text id="_id55971" xml:lang="tl" status="ok">Mga Nilalaman</text>
+          <originalText>Contents</originalText>
+          
+        <audio src="./audio/139_Mga_Nilalaman.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis008c.smil#text_008c"/></caption>
+        <description>
+          <text id="_id55989" xml:lang="tl" status="ok">Kumuha ng tulong sa paggamit ng AMIS</text>
+          <originalText>Get help using AMIS</originalText>
+          
+        <audio src="./audio/140_Kumuha_ng_tulong_sa_paggamit_n.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis008d.smil#text_008d"/></description>
+        <mnemonic>
+          <text id="_id56007">C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/141_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis008e.smil#text_008e"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_HELP_ABOUT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text id="_id56036" xml:lang="tl" status="ok">Tungkol sa AMIS</text>
+          <originalText>About AMIS</originalText>
+          
+        <audio src="./audio/142_Tungkol_sa_AMIS.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis008f.smil#text_008f"/></caption>
+        <description>
+          <text id="_id56054" xml:lang="tl" status="ok">Alamin ang tungkol sa AMIS at DAISY-for-All</text>
+          <originalText>Find out about AMIS and DAISY-for-All.</originalText>
+          
+        <audio src="./audio/143_Alamin_ang_tungkol_sa_AMIS_at_.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0090.smil#text_0090"/></description>
+        <mnemonic>
+          <text id="_id56073">A</text>
+          <originalText>A</originalText>
+          
+        <audio src="./audio/144_A.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0091.smil#text_0091"/></mnemonic>
+      </action>
+      <accelerator>
+        <text id="_id56092">Alt+H</text>
+        <originalText>Alt+H</originalText>
+        
+      <audio src="./audio/145_AltH.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0092.smil#text_0092"/></accelerator>
+      <mnemonic>
+        <text id="_id56109">H</text>
+        <originalText>H</originalText>
+        
+      <audio src="./audio/146_H.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0093.smil#text_0093"/></mnemonic>
+    </container>
+  </containers>
+  <dialogs>
+    <dialog mfcid="IDD_FIND">
+      <note>This is the find in text dialog</note>
+      <caption>
+        <text id="_id56139" xml:lang="tl" status="ok">Hanapin sa Texto</text>
+        <originalText>Find in Text</originalText>
+        
+      <audio src="./audio/147_Hanapin_sa_Texto.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0094.smil#text_0094"/></caption>
+      <description>
+        <text id="_id56157" xml:lang="tl" status="ok">Dito maaring hanapin ang buong texto sa anumang direksyon</text>
+        <originalText>Here you can search the full text in either direction.</originalText>
+        
+      <audio src="./audio/148_Dito_maaring_hanapin_ang_buong.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0095.smil#text_0095"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem>
+          <text id="_id56185" xml:lang="tl" status="ok">Pagkatapos isulat ang iyong hinahanap, pindutin ang agad enter.</text>
+          <originalText>After typing in your search, press enter to begin searching.</originalText>
+          
+        <audio src="./audio/149_Pagkatapos_isulat_ang_iyong_hi.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0096.smil#text_0096"/></promptItem>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        
+        
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <text id="_id56242" xml:lang="tl" status="ok">Pindutin upang simulan ang paghahanap sa texto mula sa talaksan.</text>
+          <originalText>Press to begin searching for text in the file.</originalText>
+          
+        <audio src="./audio/150_Pindutin_upang_simulan_ang_pag.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0097.smil#text_0097"/></description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text id="_id56284">C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/151_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0098.smil#text_0098"/></mnemonic>
+      </control>
+      <control mfcid="IDC_SEARCHSTRING" widget="textfield">
+        <description>
+          <text id="_id56306" xml:lang="tl" status="ok">Isulat ang hahanapin na texto.</text>
+          <originalText>Type the text to search for.</originalText>
+          
+        <audio src="./audio/152_Isulat_ang_hahanapin_na_texto.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0099.smil#text_0099"/></description>
+      </control>
+      <control mfcid="IDC_FINDNEXT" widget="radiobutton">
+        <note>This indicates the direction of the search</note>
+        <caption>
+          <text id="_id56336" xml:lang="tl" status="ok">Hanapin sa Susunod</text>
+          <originalText>Find Next</originalText>
+          
+        <audio src="./audio/153_Hanapin_sa_Susunod.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis009a.smil#text_009a"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="SELECTED_OR_DESELECTED" param="FIND_NEXT_IN_TEXT"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_FINDPREV" widget="radiobutton">
+        <note>This indicates the direction of the search</note>
+        <caption>
+          <text id="_id56384" xml:lang="tl" status="ok">Hanapin sa Nakaraan</text>
+          <originalText>Find Previous</originalText>
+          
+        <audio src="./audio/154_Hanapin_sa_Nakaraan.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis009b.smil#text_009b"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptName name="SELECTED_OR_DESELECTED" param="FIND_PREV_IN_TEXT"/>
+          </prompt>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_CDSEARCH">
+      <note>This dialog appears when more than one book is on a CD-ROM</note>
+      <caption>
+        <text id="_id56430" xml:lang="tl" status="ok">Maraming libro ang nahanap</text>
+        <originalText>Multiple books found</originalText>
+        
+      <audio src="./audio/155_Maraming_libro_ang_nahanap.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis009c.smil#text_009c"/></caption>
+      <description mfcid="IDC_STATIC">
+        <text id="_id56451" xml:lang="tl" status="ok">Maraming libro ang nahanap mula sa CD na ito. Pumili ng isa mula sa listahan at pindutin ang Alt + O upang buksan.</text>
+        <originalText>More than one book was found on this CD. Please select a book from the list below and press Alt + O to open.</originalText>
+        
+      <audio src="./audio/156_Maraming_libro_ang_nahanap_mul.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis009d.smil#text_009d"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_CANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text id="_id56515">C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/157_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis009e.smil#text_009e"/></mnemonic>
+      </control>
+      <control mfcid="IDC_OPENBOOK" widget="button">
+        <caption>
+          <text id="_id56537" xml:lang="tl" status="ok">Buksan</text>
+          <originalText>Open</originalText>
+          
+        <audio src="./audio/158_Buksan.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis009f.smil#text_009f"/></caption>
+        <description>
+          <text id="_id56554" xml:lang="tl" status="ok">Pindutin upang masara ang dialog na ito at mabuksan ang napiling libro.</text>
+          <originalText>Press to close this dialog and open the selected book.</originalText>
+          
+        <audio src="./audio/159_Pindutin_upang_masara_ang_dial.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00a0.smil#text_00a0"/></description>
+        <mnemonic>
+          <text id="_id56574">O</text>
+          <originalText>O</originalText>
+          
+        <audio src="./audio/160_O.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00a1.smil#text_00a1"/></mnemonic>
+      </control>
+      <control mfcid="IDC_BOOKLIST" widget="list">
+        <description>
+          <text id="_id56599" xml:lang="tl" status="ok">Gamitin ang arrow keys upang pumili sa listahan ng mga titulo.</text>
+          <originalText>Use the arrow keys to move around this list of titles.</originalText>
+          
+        <audio src="./audio/161_Gamitin_ang_arrow_keys_upang_p.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00a2.smil#text_00a2"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOK_TITLE"/>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_ABOUTBOX">
+      <note>This dialog gives some basic information about AMIS.</note>
+      <caption>
+        <text id="_id56642" xml:lang="tl" status="ok">Tungkol sa AMIS</text>
+        <originalText>About AMIS</originalText>
+        
+      <audio src="./audio/162_Tungkol_sa_AMIS.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00a3.smil#text_00a3"/></caption>
+      <description>
+        <text id="_id56660" xml:lang="tl" status="ok">Dialog ukol sa impormasyon sa AMIS software.</text>
+        <originalText>Dialog with information about AMIS software.</originalText>
+        
+      <audio src="./audio/163_Dialog_ukol_sa_impormasyon_sa_.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00a4.smil#text_00a4"/></description>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_AMISNAME" widget="textlabel">
+        <caption>
+          <text id="_id56704" xml:lang="tl" status="ok">AMIS: \nAdaptive Multimedia Information System</text>
+          <originalText>AMIS: \nAdaptive Multimedia Information System</originalText>
+          
+        <audio src="./audio/164_AMIS_nAdaptive_Multimedia_Info.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00a5.smil#text_00a5"/></caption>
+      </control>
+      <control mfcid="IDC_VERSION" translate="no">
+        <caption>
+          <text id="_id56730">Version 2.0</text>
+          <originalText>Version 2.0</originalText>
+          
+        <audio src="./audio/165_Version_20.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00a6.smil#text_00a6"/></caption>
+      </control>
+      <control mfcid="IDC_VERSIONNOTE" translate="no">
+        <caption>
+          <text id="_id56756">Release Date: 23 Oct 2005</text>
+          <originalText>Release Date: 23 Oct 2005</originalText>
+          
+        <audio src="./audio/166_Release_Date_23_Oct_2005.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00a7.smil#text_00a7"/></caption>
+      </control>
+      <control mfcid="IDC_COPYRIGHT" widget="textlabel" translate="no">
+        <caption>
+          <text id="_id56783">Copyright © 2006 DAISY for All</text>
+          <originalText>Copyright © 2006 DAISY for All</originalText>
+          
+        <audio src="./audio/167_Copyright__2006_DAISY_for_All.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00a8.smil#text_00a8"/></caption>
+      </control>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_SEARCHDAISY">
+      <note>This dialog is for searching your hard drive for DAISY books.</note>
+      <caption>
+        <text id="_id56837" xml:lang="tl" status="ok">Humanap ng Librong DAISY</text>
+        <originalText>Search for DAISY Books</originalText>
+        
+      <audio src="./audio/168_Humanap_ng_Librong_DAISY.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00a9.smil#text_00a9"/></caption>
+      <description mfcid="IDC_STATIC">
+        <text id="_id56857" xml:lang="tl" status="ok">Maaari kang maghanap ng librong DAISY sa iyong kompyuter. Isulat ang lokasyon o i-browse ang folder upang maghanap, at pinduting ang Hanap para simulan ang paghahanap.</text>
+        <originalText>You can search your computer for DAISY books.  Enter a path or browse for a folder to search, then press Search to begin searching.</originalText>
+        
+      <audio src="./audio/169_Maaari_kang_maghanap_ng_libron.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00aa.smil#text_00aa"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        
+        
+      </prompt>
+      <control mfcid="IDC_SEARCHPATH" widget="textfield">
+        <description>
+          <text id="_id56918" xml:lang="tl" status="ok">Isulat ang lokasyon ng folder sa kaukulang espasyo.</text>
+          <originalText>Type the path to the folder in this field.</originalText>
+          
+        <audio src="./audio/170_Isulat_ang_lokasyon_ng_folder_.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00ab.smil#text_00ab"/></description>
+      </control>
+      <control mfcid="IDC_BROWSE" widget="button">
+        <caption>
+          <promptItem refid="browse_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="browse_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_STARTSEARCH" widget="button">
+        <caption>
+          <text id="_id56968" xml:lang="tl" status="ok">Hanapin</text>
+          <originalText>Search</originalText>
+          
+        <audio src="./audio/171_Hanapin.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00ac.smil#text_00ac"/></caption>
+        <description>
+          <text id="_id56985" xml:lang="tl" status="ok">Pindutin upang simulan ang paghahanap.</text>
+          <originalText>Press to start searching.</originalText>
+          
+        <audio src="./audio/172_Pindutin_upang_simulan_ang_pag.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00ad.smil#text_00ad"/></description>
+        <mnemonic>
+          <text id="_id57004">S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/173_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00ae.smil#text_00ae"/></mnemonic>
+      </control>
+      <control mfcid="IDC_STOPSEARCH" widget="button">
+        <caption>
+          <text id="_id57029" xml:lang="tl" status="ok">Hinto</text>
+          <originalText>Stop</originalText>
+          
+        <audio src="./audio/174_Hinto.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00af.smil#text_00af"/></caption>
+        <description>
+          <text id="_id57047" xml:lang="tl" status="ok">Pindutin upang ihinto ang paghahanap.</text>
+          <originalText>Press to stop searching.</originalText>
+          
+        <audio src="./audio/175_Pindutin_upang_ihinto_ang_pagh.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00b0.smil#text_00b0"/></description>
+        <mnemonic>
+          <text id="_id57065">t</text>
+          <originalText>t</originalText>
+          
+        <audio src="./audio/176_t.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00b1.smil#text_00b1"/></mnemonic>
+      </control>
+      <control mfcid="IDC_SEARCHING" widget="textlabel">
+        <switch element="caption">
+          <caption condition="default">
+            <text id="_id57097" xml:lang="tl" status="ok">Handa</text>
+            <originalText>Ready</originalText>
+            
+          <audio src="./audio/177_Handa.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00b2.smil#text_00b2"/></caption>
+          <caption condition="WhileSearching">
+            <text id="_id57117" xml:lang="tl" status="ok">Naghahanap...</text>
+            <originalText>Searching...</originalText>
+            
+          <audio src="./audio/178_Naghahanap.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00b3.smil#text_00b3"/></caption>
+          <caption condition="SearchAborted">
+            <text id="_id57137" xml:lang="tl" status="ok">Huminto sa paghahanap.</text>
+            <originalText>Search stopped.</originalText>
+            
+          <audio src="./audio/179_Huminto_sa_paghahanap.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00b4.smil#text_00b4"/></caption>
+          <caption condition="SearchCompleteNoFilesFound">
+            <text id="_id57157" xml:lang="tl" status="ok">Tapos na ang paghahanap: Walang nakitang talaksan.</text>
+            <originalText>Search complete: No files found.</originalText>
+            
+          <audio src="./audio/180_Tapos_na_ang_paghahanap_Walang.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00b5.smil#text_00b5"/></caption>
+          <caption condition="SearchCompleteOneFileFound">
+            <text id="_id57179" xml:lang="tl" status="ok">Tapos na ang paghahanap: Isang talaksan ang nahanap.</text>
+            <originalText>Search complete: One file found.</originalText>
+            
+          <audio src="./audio/181_Tapos_na_ang_paghahanap_Isang_.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00b6.smil#text_00b6"/></caption>
+          <caption condition="SearchCompleteFilesFound">
+            <prompt>
+              <promptVar name="NUM_FILES_FOUND"/>
+              <promptItem>
+                <note>This is used in the sentence "7 files were found"</note>
+                <text id="_id57213" xml:lang="tl" status="ok">May mga nahanap na talaksan.</text>
+                <originalText>files were found.</originalText>
+                
+              <audio src="./audio/182_May_mga_nahanap_na_talaksan.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00b7.smil#text_00b7"/></promptItem>
+            </prompt>
+          </caption>
+        </switch>
+      </control>
+      <control mfcid="IDC_FILESFOUND" widget="list">
+        <description>
+          <text id="_id57242" xml:lang="tl" status="ok">Gamitin ang mga arrow keys upang pumili sa mga nakalistang titulo.</text>
+          <originalText>Use the arrow keys to move around this list of titles.</originalText>
+          
+        <audio src="./audio/183_Gamitin_ang_mga_arrow_keys_upa.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00b8.smil#text_00b8"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOK_TITLE"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_OPENBOOK" widget="button">
+        <caption>
+          <text id="_id57282" xml:lang="tl" status="ok">Buksan</text>
+          <originalText>Open</originalText>
+          
+        <audio src="./audio/184_Buksan.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00b9.smil#text_00b9"/></caption>
+        <description>
+          <text id="_id57300" xml:lang="tl" status="ok">Pindutin upang mabuksan ang napiling titulo.</text>
+          <originalText>Press to open the selected title.</originalText>
+          
+        <audio src="./audio/185_Pindutin_upang_mabuksan_ang_na.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00ba.smil#text_00ba"/></description>
+        <mnemonic>
+          <text id="_id57319">O</text>
+          <originalText>O</originalText>
+          
+        <audio src="./audio/186_O.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00bb.smil#text_00bb"/></mnemonic>
+      </control>
+      <control mfcid="IDC_CANCELBUTTON">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text id="_id57358">C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/187_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00bc.smil#text_00bc"/></mnemonic>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_SKIP">
+      <note>This dialog lets the user control rendering of skippable structures.</note>
+      <caption>
+        <text id="_id57383" xml:lang="tl" status="ok">Mga Bagay na maaaring laktawan</text>
+        <originalText>Skippable Items</originalText>
+        
+      <audio src="./audio/188_Mga_Bagay_na_maaaring_laktawan.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00bd.smil#text_00bd"/></caption>
+      <switch element="description">
+        <description mfcid="IDC_STATIC" condition="hasSkippableStructures">
+          <text id="_id57409" xml:lang="tl" status="ok">Ang librong ito ay may mga espesyal na bahagi. Piliin ang mga gustong laktawan.</text>
+          <originalText>This book contains the following special structures.  Check the ones you want skipped.</originalText>
+          
+        <audio src="./audio/189_Ang_librong_ito_ay_may_mga_esp.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00be.smil#text_00be"/></description>
+        <description mfcid="IDC_STATIC" condition="hasNoSkippableStructures">
+          <text id="_id57435" xml:lang="tl" status="ok">Walang mga bahaging maaaring laktawan sa publikasyong ito.</text>
+          <originalText>This publication has no skippable elements.</originalText>
+          
+        <audio src="./audio/190_Walang_mga_bahaging_maaaring_l.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00bf.smil#text_00bf"/></description>
+      </switch>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SKIPS" widget="list">
+        <caption>
+          <text id="_id57507" xml:lang="tl" status="ok">Mga maaaring laktawan</text>
+          <originalText>Skippable items</originalText>
+          
+        <audio src="./audio/191_Mga_maaaring_laktawan.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00c0.smil#text_00c0"/></caption>
+        <description>
+          <text id="_id57525" xml:lang="tl" status="ok">Gamitin ang mga arrow keys upang pumili sa mga listahan ng mga maaaring laktawan.</text>
+          <originalText>Use the arrow keys to move around this list of skippable items.</originalText>
+          
+        <audio src="./audio/192_Gamitin_ang_mga_arrow_keys_upa.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00c1.smil#text_00c1"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="SKIPPABLE_ITEM"/>
+          </caption>
+          <description>
+            <prompt>
+              <promptVar name="SKIPPABLE_ITEM"/>
+              <promptItem refid="thisItem"/>
+              <promptVar name="WILL_SKIP_OR_NOT" param="SKIPPABLE_ITEM_ID"/>
+            </prompt>
+          </description>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE4">
+      <note>This dialog lets the user select a language pack.</note>
+      <caption>
+        <text id="_id57590" xml:lang="tl" status="ok">Wika</text>
+        <originalText>Language</originalText>
+        
+      <audio src="./audio/193_Wika.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00c2.smil#text_00c2"/></caption>
+      <description mfcid="IDC_STATIC">
+        <text id="_id57610" xml:lang="tl" status="ok">Dito ay maaari mong baguhin ang wika ng software. Ang mga bagong wikang salin ay awtomatikong nalalaman</text>
+        <originalText>Here you can change the language of the software.  New language packs are detected automatically.</originalText>
+        
+      <audio src="./audio/194_Dito_ay_maaari_mong_baguhin_an.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00c3.smil#text_00c3"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="ctrl1_for_prefsdialog"/>
+        <promptItem refid="ctrl2_for_colorsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_BTN_SELECTLANG" widget="button">
+        <caption>
+          <text id="_id57668" xml:lang="tl" status="ok">Pumili ng Wika</text>
+          <originalText>Select Language</originalText>
+          
+        <audio src="./audio/195_Pumili_ng_Wika.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00c4.smil#text_00c4"/></caption>
+        <description>
+          <text id="_id57686" xml:lang="tl" status="ok">Pindutin upang kumpirmahin ang wikang napili para sa AMIS display</text>
+          <originalText>Press to confirm your language selection for the AMIS user interface</originalText>
+          
+        <audio src="./audio/196_Pindutin_upang_kumpirmahin_ang.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00c5.smil#text_00c5"/></description>
+      </control>
+      <control mfcid="IDC_LANGLIST" widget="list">
+        <caption mfcid="IDC_STATIC">
+          <text id="_id57716" xml:lang="tl" status="ok">Ang mga pagpipiliang wika ay:</text>
+          <originalText>Your language choices are:</originalText>
+          
+        <audio src="./audio/197_Ang_mga_pagpipiliang_wika_ay.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00c6.smil#text_00c6"/></caption>
+        <description>
+          <text id="_id57734" xml:lang="tl" status="ok">Gamitin ang arrow keys upang mamili sa listahan ng mga wika.</text>
+          <originalText>Use the arrow keys to move around this list of languages.</originalText>
+          
+        <audio src="./audio/198_Gamitin_ang_arrow_keys_upang_m.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00c7.smil#text_00c7"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="LANGUAGE_NAME"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_CURRLANG">
+        <caption>
+          <prompt>
+            <promptItem>
+              <text id="_id57776" xml:lang="tl" status="ok">Kasalukuyan mong ginagamit ang AMIS sa</text>
+              <originalText>You are currently using AMIS in</originalText>
+              
+            <audio src="./audio/199_Kasalukuyan_mong_ginagamit_ang.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00c8.smil#text_00c8"/></promptItem>
+            <promptVar name="CURR_LANGUAGE_NAME"/>
+          </prompt>
+        </caption>
+      </control>
+      <accelerator>
+        <text id="_id57803">Ctrl+3</text>
+        <originalText>Ctrl+3</originalText>
+        
+      <audio src="./audio/200_Ctrl3.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00c9.smil#text_00c9"/></accelerator>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE2">
+      <note>This dialog lets the user select which colors AMIS uses</note>
+      <caption>
+        <text id="_id57830" xml:lang="tl" status="ok">Pagtakda ng mga Kulay</text>
+        <originalText>Set Colors</originalText>
+        
+      <audio src="./audio/201_Pagtakda_ng_mga_Kulay.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00ca.smil#text_00ca"/></caption>
+      <description>
+        <text id="_id57848" xml:lang="tl" status="ok">Dito ay maari mong itakda ang nais na kulay para sa AMIS.</text>
+        <originalText>Here you can set color options for AMIS.</originalText>
+        
+      <audio src="./audio/202_Dito_ay_maari_mong_itakda_ang_.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00cb.smil#text_00cb"/></description>
+      <prompt type="instructions">
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem refid="ctrl1_for_prefsdialog"/>
+        <promptItem refid="ctrl3_for_langsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+      </prompt>
+      <control mfcid="IDC_PHRASES" widget="other">
+        <caption>
+          <text id="_id57897" xml:lang="tl" status="ok">Pagdiin sa mga Parirala</text>
+          <originalText>Phrase Highlighting</originalText>
+          
+        <audio src="./audio/203_Pagdiin_sa_mga_Parirala.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00cc.smil#text_00cc"/></caption>
+      </control>
+      <control mfcid="IDC_TEXTFG" widget="textlabel">
+        <caption>
+          <text id="_id57923" xml:lang="tl" status="ok">Kulay ng texto:</text>
+          <originalText>Text Foreground: </originalText>
+          
+        <audio src="./audio/204_Kulay_ng_texto.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00cd.smil#text_00cd"/></caption>
+      </control>
+      <control mfcid="IDC_TEXTBG" widget="textlabel">
+        <caption>
+          <text id="_id57949" xml:lang="tl" status="ok">Likurang kulay ng texto:</text>
+          <originalText>Text Background: </originalText>
+          
+        <audio src="./audio/205_Likurang_kulay_ng_texto.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00ce.smil#text_00ce"/></caption>
+      </control>
+      <control mfcid="IDC_BORDER" widget="textlabel">
+        <caption>
+          <text id="_id57975" xml:lang="tl" status="ok">Hangganan ng Napili:</text>
+          <originalText>Selection Border: </originalText>
+          
+        <audio src="./audio/206_Hangganan_ng_Napili.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00cf.smil#text_00cf"/></caption>
+      </control>
+      <control mfcid="IDC_CONTRAST" widget="other">
+        <caption>
+          <text id="_id58001" xml:lang="tl" status="ok">Kumpigurasyon ng Mataas na Pagkakaiba</text>
+          <originalText>High Contrast Settings</originalText>
+          
+        <audio src="./audio/207_Kumpigurasyon_ng_Mataas_na_Pag.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00d0.smil#text_00d0"/></caption>
+      </control>
+      <control mfcid="IDC_PAGEFG" widget="textlabel">
+        <caption>
+          <text id="_id58027" xml:lang="tl" status="ok">Kulay ng Pahina:</text>
+          <originalText>Page Foreground: </originalText>
+          
+        <audio src="./audio/208_Kulay_ng_Pahina.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00d1.smil#text_00d1"/></caption>
+      </control>
+      <control mfcid="IDC_PAGEBG" widget="textlabel">
+        <caption>
+          <text id="_id58053" xml:lang="tl" status="ok">Likurang Kulay ng Pahina:</text>
+          <originalText>Page Background: </originalText>
+          
+        <audio src="./audio/209_Likurang_Kulay_ng_Pahina.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00d2.smil#text_00d2"/></caption>
+      </control>
+      <control mfcid="IDC_BTN_RESETCOLORS" widget="button">
+        <caption>
+          <text id="_id58079" xml:lang="tl" status="ok">I-reset ang mga Kulay</text>
+          <originalText>Reset Colors</originalText>
+          
+        <audio src="./audio/210_Ireset_ang_mga_Kulay.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00d3.smil#text_00d3"/></caption>
+      </control>
+      <control mfcid="IDC_PHRASEPREVIEW" widget="textfield">
+        <caption>
+          <text id="_id58105" xml:lang="tl" status="ok">Pagsilip sa mga kulay pandiin para sa parirala.</text>
+          <originalText>Preview of phrase highlight colors.</originalText>
+          
+        <audio src="./audio/211_Pagsilip_sa_mga_kulay_pandiin_.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00d4.smil#text_00d4"/></caption>
+      </control>
+      <control mfcid="IDC_CONTRASTPREVIEW" widget="textfield">
+        <caption>
+          <text id="_id58132" xml:lang="tl" status="ok">Pagsilip sa pagkakaiba sa mga kulay ng pahina.</text>
+          <originalText>Preview of page contrast colors.</originalText>
+          
+        <audio src="./audio/212_Pagsilip_sa_pagkakaiba_sa_mga_.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00d5.smil#text_00d5"/></caption>
+      </control>
+      <accelerator>
+        <text id="_id58152">Ctrl+2</text>
+        <originalText>Ctrl+2</originalText>
+        
+      <audio src="./audio/213_Ctrl2.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00d6.smil#text_00d6"/></accelerator>
+    </dialog>
+    <dialog mfcid="IDD_CURRENTPOSITION">
+      <note>This dialog gives the user information about their current position in the publication.</note>
+      <caption>
+        <text id="_id58180" xml:lang="tl" status="ok">Kasalukuyang Posisyon</text>
+        <originalText>Current Position</originalText>
+        
+      <audio src="./audio/214_Kasalukuyang_Posisyon.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00d7.smil#text_00d7"/></caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text id="_id58249" xml:lang="tl" status="ok">Ito ang listahan ng mga bagay ukol sa kasalukuyang posisyon.</text>
+          <originalText>This is a list of data about your current position.</originalText>
+          
+        <audio src="./audio/215_Ito_ang_listahan_ng_mga_bagay_.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00d8.smil#text_00d8"/></caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="no">
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id58285" xml:lang="tl" status="ok">Ang titulo ng kasalukuyang bahagi ay:</text>
+                <originalText>Your current section is titled:</originalText>
+                
+              <audio src="./audio/216_Ang_titulo_ng_kasalukuyang_bah.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00d9.smil#text_00d9"/></promptItem>
+              <promptVar name="CURRENT_SECTION_TITLE"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id58317" xml:lang="tl" status="ok">Ang bilang ng pahina sa bahaging ito ay:</text>
+                <originalText>Number of pages in this section:</originalText>
+                
+              <audio src="./audio/217_Ang_bilang_ng_pahina_sa_bahagi.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00da.smil#text_00da"/></promptItem>
+              <promptVar name="CURRENT_SECTION_NUM_PAGES"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id58347" xml:lang="tl" status="ok">Ang bilang ng pangkat sa bahaging ito ay:</text>
+                <originalText>Number of subsections in this section:</originalText>
+                
+              <audio src="./audio/218_Ang_bilang_ng_pangkat_sa_bahag.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00db.smil#text_00db"/></promptItem>
+              <promptVar name="CURRENT_SECTION_NUM_SUBSECTIONS"/>
+            </prompt>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE1">
+      <note>This dialog lets the user set some basic preferences for AMIS.</note>
+      <caption>
+        <text id="_id58384" xml:lang="tl" status="ok">Pangkalahatang Kagustuhan</text>
+        <originalText>General Preferences</originalText>
+        
+      <audio src="./audio/219_Pangkalahatang_Kagustuhan.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00dc.smil#text_00dc"/></caption>
+      <description>
+        <text id="_id58403" xml:lang="tl" status="ok">Dito ay maaari mong itakda ang pangkalahatang kagustuhan para sa AMIS.</text>
+        <originalText>Here you can set general preferences for AMIS.</originalText>
+        
+      <audio src="./audio/220_Dito_ay_maaari_mong_itakda_ang.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00dd.smil#text_00dd"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="ctrl2_for_colorsdialog"/>
+        <promptItem refid="ctrl3_for_langsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        
+        
+      </prompt>
+      <control mfcid="IDC_BMKDIRBROWSE" widget="button">
+        <caption>
+          <promptItem refid="browse_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="browse_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SELFVOICING" widget="checkbox">
+        <caption>
+          <text id="_id58493" xml:lang="tl" status="ok">Gamitin ang self-voicing</text>
+          <originalText>Use self-voicing</originalText>
+          
+        <audio src="./audio/221_Gamitin_ang_selfvoicing.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00de.smil#text_00de"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="SELF_VOICING_FEATURE"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_TTSVOICE" widget="list">
+        <caption mfcid="IDC_SELTTSLABEL">
+          <text id="_id58538" xml:lang="tl" status="ok">Piliin ang TTS na boses:</text>
+          <originalText>Select TTS voice:</originalText>
+          
+        <audio src="./audio/222_Piliin_ang_TTS_na_boses.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00df.smil#text_00df"/></caption>
+        <description>
+          <text id="_id58557" xml:lang="tl" status="ok">Gamitin ang arrow keys upang mamili sa listahan ng mga boses</text>
+          <originalText>Use the arrow keys to move around this list of voices</originalText>
+          
+        <audio src="./audio/223_Gamitin_ang_arrow_keys_upang_m.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00e0.smil#text_00e0"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="TTS_VOICE_NAME"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_BASIC" widget="checkbox">
+        <caption>
+          <text id="_id58597" xml:lang="tl" status="ok">Simulan ang AMIS sa payak na paraan ng pagtanaw.</text>
+          <originalText>Start AMIS in the basic view mode.</originalText>
+          
+        <audio src="./audio/224_Simulan_ang_AMIS_sa_payak_na_p.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00e1.smil#text_00e1"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="BASIC_VIEW_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_PROMPTONBASICVIEW" widget="checkbox">
+        <caption>
+          <text id="_id58645" xml:lang="tl" status="ok">Pagkatapos lumipat sa payak na pagtanaw, sabihan ang gumagamit kung paano bumalik sa default na pagtanaw.</text>
+          <originalText>Upon switching to basic view, tell the user how to go back to the default view.</originalText>
+          
+        <audio src="./audio/225_Pagkatapos_lumipat_sa_payak_na.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00e2.smil#text_00e2"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="PROMPT_ON_BASIC_VIEW_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_LOADLASTDTB" widget="checkbox">
+        <caption>
+          <text id="_id58695" xml:lang="tl" status="ok">Kapag nagsimula ang software isalang ang pinakabagong nabasang libro .</text>
+          <originalText>Load the most recently read book when the software starts.</originalText>
+          
+        <audio src="./audio/226_Kapag_nagsimula_ang_software_i.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00e3.smil#text_00e3"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="LOAD_LAST_READ_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_BMKDIR" widget="textfield">
+        <caption mfcid="IDC_BMKDIRLABEL">
+          <text id="_id58746" xml:lang="tl" status="ok">Talaan ng mga Pananda:</text>
+          <originalText>Bookmarks directory:</originalText>
+          
+        <audio src="./audio/227_Talaan_ng_mga_Pananda.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00e4.smil#text_00e4"/></caption>
+        <description>
+          <text id="_id58765" xml:lang="tl" status="ok">Isulat ang lokasyon ng pananda sa kaukulang espasyo.</text>
+          <originalText>Type the path to the bookmarks folder in this field.</originalText>
+          
+        <audio src="./audio/228_Isulat_ang_lokasyon_ng_pananda.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00e5.smil#text_00e5"/></description>
+      </control>
+      <accelerator>
+        <text id="_id58786">Ctrl+1</text>
+        <originalText>Ctrl+1</originalText>
+        
+      <audio src="./audio/229_Ctrl1.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00e6.smil#text_00e6"/></accelerator>
+    </dialog>
+    <dialog mfcid="IDD_NAVIGATIONOPTIONS">
+      <note>This dialog lists navigation options for the current publication.</note>
+      <caption>
+        <text id="_id58814" xml:lang="tl" status="ok">Mga Pagpipilian sa Paglilibot</text>
+        <originalText>Navigation Options</originalText>
+        
+      <audio src="./audio/230_Mga_Pagpipilian_sa_Paglilibot.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00e7.smil#text_00e7"/></caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text id="_id58882" xml:lang="tl" status="ok">Ito ang listahan ng mga bagay na maaari nyong puntahan agad.</text>
+          <originalText>This is a list of items to which you may navigate directly.</originalText>
+          
+        <audio src="./audio/231_Ito_ang_listahan_ng_mga_bagay_.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00e8.smil#text_00e8"/></caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="TOC_CATEGORIES"/>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_GOTOPAGE">
+      <note>This dialog lets the user jump to a certain page</note>
+      <caption>
+        <text id="_id58933" xml:lang="tl" status="ok">Pumunta sa Pahina...</text>
+        <originalText>Go To Page</originalText>
+        
+      <audio src="./audio/232_Pumunta_sa_Pahina.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00e9.smil#text_00e9"/></caption>
+      <description>
+        <text id="_id58951" xml:lang="tl" status="ok">Dito ay maari kang lumipat sa partikular na pahina o pangalan ng pahina.</text>
+        <originalText>Here you can jump to a page number or page label.</originalText>
+        
+      <audio src="./audio/233_Dito_ay_maari_kang_lumipat_sa_.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00ea.smil#text_00ea"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem>
+          <text id="_id58979" xml:lang="tl" status="ok">Pindutin ang enter pagkatapos isulat ang pahina.</text>
+          <originalText>After typing in your page number, press enter to go there.</originalText>
+          
+        <audio src="./audio/234_Pindutin_ang_enter_pagkatapos_.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00eb.smil#text_00eb"/></promptItem>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        
+        
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <text id="_id59034" xml:lang="tl" status="ok">Pindutin ang button na ito upang puntahan ang pahinang nais.</text>
+          <originalText>Press this button to go to the desired page.</originalText>
+          
+        <audio src="./audio/235_Pindutin_ang_button_na_ito_upa.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00ec.smil#text_00ec"/></description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text id="_id59077">C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/236_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00ed.smil#text_00ed"/></mnemonic>
+      </control>
+      <control mfcid="IDC_PAGENUM" widget="textfield">
+        <caption mfcid="IDC_STATIC">
+          <text id="_id59100" xml:lang="tl" status="ok">Isulat ang pahina:</text>
+          <originalText>Enter a page number:</originalText>
+          
+        <audio src="./audio/237_Isulat_ang_pahina.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00ee.smil#text_00ee"/></caption>
+        <description>
+          <text id="_id59119" xml:lang="tl" status="ok">Isulat ang bilang o pangalan ng pahinang nais puntahan.</text>
+          <originalText>Type the number or label of the page you want to go to.</originalText>
+          
+        <audio src="./audio/238_Isulat_ang_bilang_o_pangalan_n.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00ef.smil#text_00ef"/></description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_FULLSUMMARY">
+      <note>This dialog lists key publication metadata.</note>
+      <caption>
+        <text id="_id59149" xml:lang="tl" status="ok">Kabuuan ng Publikasyon</text>
+        <originalText>Publication Summary</originalText>
+        
+      <audio src="./audio/239_Kabuuan_ng_Publikasyon.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00f0.smil#text_00f0"/></caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text id="_id59218" xml:lang="tl" status="ok">Ito ang listahan ng metadata ng publikasyon.</text>
+          <originalText>This is a list of publication metadata.</originalText>
+          
+        <audio src="./audio/240_Ito_ang_listahan_ng_metadata_n.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00f1.smil#text_00f1"/></caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="no">
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id59253" xml:lang="tl" status="ok">Ang pamagat ng librong ito ay:</text>
+                <originalText>This book is titled:</originalText>
+                
+              <audio src="./audio/241_Ang_pamagat_ng_librong_ito_ay.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00f2.smil#text_00f2"/></promptItem>
+              <promptVar name="META_TITLE"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id59282" xml:lang="tl" status="ok">Isinulat ni:</text>
+                <originalText>Written by:</originalText>
+                
+              <audio src="./audio/242_Isinulat_ni.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00f3.smil#text_00f3"/></promptItem>
+              <promptVar name="META_CREATOR"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id59311" xml:lang="tl" status="ok">Nilimbag ng:</text>
+                <originalText>Published by:</originalText>
+                
+              <audio src="./audio/243_Nilimbag_ng.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00f4.smil#text_00f4"/></promptItem>
+              <promptVar name="META_PUBLISHER"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_DESCRIPTION">
+            <prompt>
+              <promptItem>
+                <text id="_id59342" xml:lang="tl" status="ok">Paglalarawan:</text>
+                <originalText>Description:</originalText>
+                
+              <audio src="./audio/244_Paglalarawan.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00f5.smil#text_00f5"/></promptItem>
+              <promptVar name="META_DESC"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id59370" xml:lang="tl" status="ok">Bilang ng mga bahaging maaaring libutin sa hanay ng mga nilalaman:</text>
+                <originalText>Number of navigation points in the table of contents:</originalText>
+                
+              <audio src="./audio/245_Bilang_ng_mga_bahaging_maaarin.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00f6.smil#text_00f6"/></promptItem>
+              <promptVar name="META_TOCITEMS"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id59401" xml:lang="tl" status="ok">Pinakamataas na lalim ng bahagi:</text>
+                <originalText>Maximum section depth:</originalText>
+                
+              <audio src="./audio/246_Pinakamataas_na_lalim_ng_bahag.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00f7.smil#text_00f7"/></promptItem>
+              <promptVar name="META_DEPTH"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id59432" xml:lang="tl" status="ok">Pangharap na mga pahina:</text>
+                <originalText>Front matter pages:</originalText>
+                
+              <audio src="./audio/247_Pangharap_na_mga_pahina.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00f8.smil#text_00f8"/></promptItem>
+              <promptVar name="META_PAGEFRONT"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id59464" xml:lang="tl" status="ok">Regular na mga pahina:</text>
+                <originalText>Regular pages:</originalText>
+                
+              <audio src="./audio/248_Regular_na_mga_pahina.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00f9.smil#text_00f9"/></promptItem>
+              <promptVar name="META_PAGENORMAL"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id59494" xml:lang="tl" status="ok">Espesyal na mga pahina:</text>
+                <originalText>Special pages:</originalText>
+                
+              <audio src="./audio/249_Espesyal_na_mga_pahina.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00fa.smil#text_00fa"/></promptItem>
+              <promptVar name="META_PAGESPECIAL"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id59523" xml:lang="tl" status="ok">Kabuuang Tagal:</text>
+                <originalText>Total duration:</originalText>
+                
+              <audio src="./audio/250_Kabuuang_Tagal.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00fb.smil#text_00fb"/></promptItem>
+              <promptVar name="META_TOTALTIME"/>
+            </prompt>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+  </dialogs>
+  <prompts>
+    <promptItemRefs>
+      <promptItem id="altC_to_close">
+        <text id="_id59558" xml:lang="tl" status="ok">Pindutin ang Alt + C upang isara ang dialog.</text>
+        <originalText>Press Alt + C to close the dialog.</originalText>
+        
+      <audio src="./audio/251_Pindutin_ang_Alt__C_upang_isar.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00fc.smil#text_00fc"/></promptItem>
+      <promptItem id="altC_to_cancel">
+        <text id="_id59580" xml:lang="tl" status="ok">Pindutin ang Alt + C upang i-cancel ang dialog.</text>
+        <originalText>Press Alt + C to cancel the dialog.</originalText>
+        
+      <audio src="./audio/252_Pindutin_ang_Alt__C_upang_ican.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00fd.smil#text_00fd"/></promptItem>
+      <promptItem id="thisItem">
+        <text id="_id59601" xml:lang="tl" status="ok">Ang bagay na ito</text>
+        <originalText>This item</originalText>
+        
+      <audio src="./audio/253_Ang_bagay_na_ito.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00fe.smil#text_00fe"/></promptItem>
+      <promptItem id="spaceToToggle">
+        <text id="_id59621" xml:lang="tl" status="ok">Pindutin ang space bar upang baguhin ang halaga.</text>
+        <originalText>Press the space bar to toggle the value.</originalText>
+        
+      <audio src="./audio/254_Pindutin_ang_space_bar_upang_b.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis00ff.smil#text_00ff"/></promptItem>
+      <promptItem id="tabAround">
+        <text id="_id59642" xml:lang="tl" status="ok">Pindutin ang tab upang gumalaw sa mga pagpipilian sa dialog.</text>
+        <originalText>Hit tab to move around the options on the dialog.</originalText>
+        
+      <audio src="./audio/255_Pindutin_ang_tab_upang_gumalaw.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0100.smil#text_0100"/></promptItem>
+      <promptItem id="ctrl2_for_colorsdialog">
+        <text id="_id59664" xml:lang="tl" status="ok">Pindutin ang control + 2 upang lumipat sa dialog ng mga kulay.</text>
+        <originalText>Press control + 2 to switch to the colors dialog.</originalText>
+        
+      <audio src="./audio/256_Pindutin_ang_control__2_upang_.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0101.smil#text_0101"/></promptItem>
+      <promptItem id="ctrl3_for_langsdialog">
+        <text id="_id59686" xml:lang="tl" status="ok">Pindutin ang control + 3 upang lumipat sa dialog ng mga wikang pagpipilian.</text>
+        <originalText>Press control + 3 to switch to the language options dialog.</originalText>
+        
+      <audio src="./audio/257_Pindutin_ang_control__3_upang_.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0102.smil#text_0102"/></promptItem>
+      <promptItem id="ctrl1_for_prefsdialog">
+        <text id="_id59709" xml:lang="tl" status="ok">Pindutin ang control + 1 upang lumipat sa dialog ng pangkalahatang kagustuhan.</text>
+        <originalText>Press control + 1 to switch to the general preferences dialog.</originalText>
+        
+      <audio src="./audio/258_Pindutin_ang_control__1_upang_.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0103.smil#text_0103"/></promptItem>
+      <promptItem id="thisItemIsCurrently">
+        <text id="_id59731" xml:lang="tl" status="ok">Ang bagay na ito ay kasalukuyang</text>
+        <originalText>This item is currently</originalText>
+        
+      <audio src="./audio/259_Ang_bagay_na_ito_ay_kasalukuya.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0104.smil#text_0104"/></promptItem>
+      <promptItem id="enter_to_close">
+        <text id="_id59752" xml:lang="tl" status="ok">Pindutin ang enter upang isara ang dialog.</text>
+        <originalText>Press enter to close the dialog.</originalText>
+        
+      <audio src="./audio/260_Pindutin_ang_enter_upang_isara.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0105.smil#text_0105"/></promptItem>
+      <promptItem id="browse_button_caption">
+        <text id="_id59773" xml:lang="tl" status="ok">Browse...</text>
+        <originalText>Browse...</originalText>
+        
+      <audio src="./audio/261_Browse.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0106.smil#text_0106"/></promptItem>
+      <promptItem id="browse_button_description">
+        <text id="_id59793" xml:lang="tl" status="ok">Pindutin upang buksan ang folder browse dialog.</text>
+        <originalText>Press to open the folder browse dialog.</originalText>
+        
+      <audio src="./audio/262_Pindutin_upang_buksan_ang_fold.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0107.smil#text_0107"/></promptItem>
+      <promptItem id="ok_button_caption">
+        <text id="_id59815" xml:lang="tl" status="ok">OK</text>
+        <originalText>OK</originalText>
+        
+      <audio src="./audio/263_OK.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0108.smil#text_0108"/></promptItem>
+      <promptItem id="ok_button_description">
+        <text id="_id59835" xml:lang="tl" status="ok">Pindutin ang OK upang isara ang dialog.</text>
+        <originalText>Press OK to close this dialog.</originalText>
+        
+      <audio src="./audio/264_Pindutin_ang_OK_upang_isara_an.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0109.smil#text_0109"/></promptItem>
+      <promptItem id="cancel_button_caption">
+        <text id="_id59856" mnemonic="C" xml:lang="tl" status="ok">Cancel</text>
+        <originalText>Cancel</originalText>
+        
+      <audio src="./audio/265_Cancel.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis010a.smil#text_010a"/></promptItem>
+      <promptItem id="cancel_button_description">
+        <text id="_id59878" xml:lang="tl" status="ok">Pindutin upang i-cancel itong dialog.</text>
+        <originalText>Press to cancel this dialog.</originalText>
+        
+      <audio src="./audio/266_Pindutin_upang_icancel_itong_d.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis010b.smil#text_010b"/></promptItem>
+      <promptItem id="list_reads_automatically">
+        <text id="_id59899" xml:lang="tl" status="ok">Ang listahang ito ay awtomatikong babasahin.</text>
+        <originalText>This list will be read automatically.</originalText>
+        
+      <audio src="./audio/267_Ang_listahang_ito_ay_awtomatik.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis010c.smil#text_010c"/></promptItem>
+      <promptItem id="repeatLastPromptInstr">
+        <text id="_id59921" xml:lang="tl" status="ok">Pindutin ang Control + R upang ulitin ang huling pagdikta.</text>
+        <originalText>Press Control + R to repeat the last prompt.</originalText>
+        
+      <audio src="./audio/268_Pindutin_ang_Control__R_upang_.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis010d.smil#text_010d"/></promptItem>
+      <promptItem id="thisDialogNotSelfVoicing">
+        <text id="_id59942" xml:lang="tl" status="ok">Ang dialog na ito ay hindi pa self-voicing.</text>
+        <originalText>This dialog is not yet self-voicing.</originalText>
+        
+      <audio src="./audio/269_Ang_dialog_na_ito_ay_hindi_pa_.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis010e.smil#text_010e"/></promptItem>
+      <promptItem id="escapeToCancel">
+        <text id="_id59964" xml:lang="tl" status="ok">Pindutin ang escape upang i-cancel</text>
+        <originalText>Press escape to cancel</originalText>
+        
+      <audio src="./audio/270_Pindutin_ang_escape_upang_ican.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis010f.smil#text_010f"/></promptItem>
+      <promptItem id="hearDlgInstructions">
+        <text id="_id59985" xml:lang="tl" status="ok">Pindutin ang Control + I upang mapakinggan ang panuto para sa dialog na ito.</text>
+        <originalText>Press Control + I to hear instructions for this dialog.</originalText>
+        
+      <audio src="./audio/271_Pindutin_ang_Control__I_upang_.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0110.smil#text_0110"/></promptItem>
+      <promptItem id="textBoxRepeatInstr">
+        <text id="_id60007" xml:lang="tl" status="ok">Pindutin ang Control + T upang ulitin ang texto sa huling text box.</text>
+        <originalText>Press Control + T to repeat the text in the last text box.</originalText>
+        
+      <audio src="./audio/272_Pindutin_ang_Control__T_upang_.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0111.smil#text_0111"/></promptItem>
+      <promptItem id="nav_window">
+        <text id="_id60029" xml:lang="tl" status="ok">Paglilibot</text>
+        <originalText>Navigation</originalText>
+        
+      <audio src="./audio/273_Paglilibot.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0112.smil#text_0112"/></promptItem>
+      <promptItem id="sections">
+        <text id="_id60049" xml:lang="tl" status="ok">Mga Bahagi</text>
+        <originalText>Sections</originalText>
+        
+      <audio src="./audio/274_Mga_Bahagi.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0113.smil#text_0113"/></promptItem>
+      <promptItem id="pages">
+        <text id="_id60069" xml:lang="tl" status="ok">Mga Pahina</text>
+        <originalText>Pages</originalText>
+        
+      <audio src="./audio/275_Mga_Pahina.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0114.smil#text_0114"/></promptItem>
+      <promptItem id="noterefs">
+        <text id="_id60089" xml:lang="tl" status="ok">Mga Talababa</text>
+        <originalText>Footnotes</originalText>
+        
+      <audio src="./audio/276_Mga_Talababa.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0115.smil#text_0115"/></promptItem>
+      <promptItem id="prodnotes">
+        <text id="_id60109" xml:lang="tl" status="ok">Mga tala ng gumawa</text>
+        <originalText>Producer notes</originalText>
+        
+      <audio src="./audio/277_Mga_tala_ng_gumawa.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0116.smil#text_0116"/></promptItem>
+      <promptItem id="sidebars">
+        <text id="_id60129" xml:lang="tl" status="ok">Sidebars</text>
+        <originalText>Sidebars</originalText>
+        
+      <audio src="./audio/278_Sidebars.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0117.smil#text_0117"/></promptItem>
+      <promptItem id="groups">
+        <text id="_id60149" xml:lang="tl" status="ok">Mga bagay na nakagrupo</text>
+        <originalText>Grouped items</originalText>
+        
+      <audio src="./audio/279_Mga_bagay_na_nakagrupo.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0118.smil#text_0118"/></promptItem>
+      <promptItem id="navigation_sidebar_caption">
+        <text id="_id60169" xml:lang="tl" status="ok">Paglilibot</text>
+        <originalText>Navigation</originalText>
+        
+      <audio src="./audio/280_Paglilibot.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0119.smil#text_0119"/></promptItem>
+      <promptItem id="ready">
+        <text id="_id60189" xml:lang="tl" status="ok">Handa</text>
+        <originalText>Ready</originalText>
+        
+      <audio src="./audio/281_Handa.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis011a.smil#text_011a"/></promptItem>
+      <promptItem id="property_sheet_caption">
+        <text id="_id60209" xml:lang="tl" status="ok">Mga Kagustuhan</text>
+        <originalText>Preferences</originalText>
+        
+      <audio src="./audio/282_Mga_Kagustuhan.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis011b.smil#text_011b"/></promptItem>
+      <promptItem id="selfolder_title">
+        <text id="_id60229" xml:lang="tl" status="ok">Pumili ng Folder</text>
+        <originalText>Select a Folder</originalText>
+        
+      <audio src="./audio/283_Pumili_ng_Folder.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis011c.smil#text_011c"/></promptItem>
+      <promptItem id="selfolder_instr">
+        <text id="_id60249" xml:lang="tl" status="ok">Pumili ng folder mula sa talaan sa ibaba.</text>
+        <originalText>Select a folder from the directory below.</originalText>
+        
+      <audio src="./audio/284_Pumili_ng_folder_mula_sa_talaa.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis011d.smil#text_011d"/></promptItem>
+      <promptItem id="daisy_books">
+        <text id="_id60270" xml:lang="tl" status="ok">Mga librong DAISY</text>
+        <originalText>DAISY Books</originalText>
+        
+      <audio src="./audio/285_Mga_librong_DAISY.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis011e.smil#text_011e"/></promptItem>
+      <promptItem id="folder_does_not_exist">
+        <text id="_id60291" xml:lang="tl" status="ok">Hindi matagpuan ang folder na %s. Gusto mo bang likhain ang nasabing folder?</text>
+        <originalText>The folder %s does not exist. Do you want the folder to be created?</originalText>
+        
+      <audio src="./audio/286_Hindi_matagpuan_ang_folder_na_.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis011f.smil#text_011f"/></promptItem>
+      <promptItem id="folder_invalid">
+        <text id="_id60313" xml:lang="tl" status="ok">Ang pangalan ng folder ay hindi maaring gamitin. Pumili ng ibang pangalan.</text>
+        <originalText>This folder name is invalid. Please choose another.</originalText>
+        
+      <audio src="./audio/287_Ang_pangalan_ng_folder_ay_hind.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0120.smil#text_0120"/></promptItem>
+      <promptItem id="cant_create_folder">
+        <text id="_id60335" xml:lang="tl" status="ok">Ang folder na ito ay hindi maaring likhain. Suriin kung bakit</text>
+        <originalText>This folder can not be created. Please double check.</originalText>
+        
+      <audio src="./audio/288_Ang_folder_na_ito_ay_hindi_maa.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0121.smil#text_0121"/></promptItem>
+      <promptItem id="not_available">
+        <text id="_id60357" xml:lang="tl" status="ok">Wala pa o hindi maaari</text>
+        <originalText>Not available</originalText>
+        
+      <audio src="./audio/289_Wala_pa_o_hindi_maaari.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0122.smil#text_0122"/></promptItem>
+      <promptItem id="numeric_zero">
+        <note>All numerals should be translated into numerals, not words.</note>
+        <text id="_id60381" xml:lang="tl" status="ok">0</text>
+        <originalText>0</originalText>
+        
+      <audio src="./audio/290_0.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0123.smil#text_0123"/></promptItem>
+      <promptItem id="numeric_one">
+        <text id="_id60401" xml:lang="tl" status="ok">1</text>
+        <originalText>1</originalText>
+        
+      <audio src="./audio/291_1.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0124.smil#text_0124"/></promptItem>
+      <promptItem id="numeric_two">
+        <text id="_id60421" xml:lang="tl" status="ok">2</text>
+        <originalText>2</originalText>
+        
+      <audio src="./audio/292_2.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0125.smil#text_0125"/></promptItem>
+      <promptItem id="numeric_three">
+        <text id="_id60440" xml:lang="tl" status="ok">3</text>
+        <originalText>3</originalText>
+        
+      <audio src="./audio/293_3.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0126.smil#text_0126"/></promptItem>
+      <promptItem id="numeric_four">
+        <text id="_id60460" xml:lang="tl" status="ok">4</text>
+        <originalText>4</originalText>
+        
+      <audio src="./audio/294_4.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0127.smil#text_0127"/></promptItem>
+      <promptItem id="numeric_five">
+        <text id="_id60480" xml:lang="tl" status="ok">5</text>
+        <originalText>5</originalText>
+        
+      <audio src="./audio/295_5.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0128.smil#text_0128"/></promptItem>
+      <promptItem id="numeric_six">
+        <text id="_id60499" xml:lang="tl" status="ok">6</text>
+        <originalText>6</originalText>
+        
+      <audio src="./audio/296_6.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0129.smil#text_0129"/></promptItem>
+      <promptItem id="numeric_seven">
+        <text id="_id60519" xml:lang="tl" status="ok">7</text>
+        <originalText>7</originalText>
+        
+      <audio src="./audio/297_7.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis012a.smil#text_012a"/></promptItem>
+      <promptItem id="numeric_eight">
+        <text id="_id60538" xml:lang="tl" status="ok">8</text>
+        <originalText>8</originalText>
+        
+      <audio src="./audio/298_8.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis012b.smil#text_012b"/></promptItem>
+      <promptItem id="numeric_nine">
+        <text id="_id60558" xml:lang="tl" status="ok">9</text>
+        <originalText>9</originalText>
+        
+      <audio src="./audio/299_9.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis012c.smil#text_012c"/></promptItem>
+      <promptItem id="deleted">
+        <text id="_id60578" xml:lang="tl" status="ok">Binura</text>
+        <originalText>deleted</originalText>
+        
+      <audio src="./audio/300_Binura.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis012d.smil#text_012d"/></promptItem>
+      <promptItem id="will_be_skipped">
+        <text id="_id60598" xml:lang="tl" status="ok">lalaktawan</text>
+        <originalText>will be skipped</originalText>
+        
+      <audio src="./audio/301_lalaktawan.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis012e.smil#text_012e"/></promptItem>
+      <promptItem id="will_be_played">
+        <text id="_id60618" xml:lang="tl" status="ok">patutugtugin</text>
+        <originalText>will be played</originalText>
+        
+      <audio src="./audio/302_patutugtugin.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis012f.smil#text_012f"/></promptItem>
+      <promptItem id="item_on">
+        <text id="_id60638" xml:lang="tl" status="ok">on</text>
+        <originalText>on</originalText>
+        
+      <audio src="./audio/303_on.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0130.smil#text_0130"/></promptItem>
+      <promptItem id="item_off">
+        <text id="_id60657" xml:lang="tl" status="ok">off</text>
+        <originalText>off</originalText>
+        
+      <audio src="./audio/304_off.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0131.smil#text_0131"/></promptItem>
+      <promptItem id="item_selected">
+        <text id="_id60677" xml:lang="tl" status="ok">pinili</text>
+        <originalText>selected</originalText>
+        
+      <audio src="./audio/305_pinili.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0132.smil#text_0132"/></promptItem>
+      <promptItem id="item_deselected">
+        <text id="_id60697" xml:lang="tl" status="ok">hindi pinili</text>
+        <originalText>deselected</originalText>
+        
+      <audio src="./audio/306_hindi_pinili.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0133.smil#text_0133"/></promptItem>
+      <promptItem id="keyboardShortcut">
+        <text id="_id60717" xml:lang="tl" status="ok">Keyboard Shortcut</text>
+        <originalText>Keyboard Shortcut</originalText>
+        
+      <audio src="./audio/307_Keyboard_Shortcut.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0134.smil#text_0134"/></promptItem>
+      <promptItem id="icon">
+        <text id="_id60738" xml:lang="tl" status="ok">Icon</text>
+        <originalText>Icon</originalText>
+        
+      <audio src="./audio/308_Icon.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0135.smil#text_0135"/></promptItem>
+      <promptItem id="menu">
+        <text id="_id60758" xml:lang="tl" status="ok">Menyu</text>
+        <originalText>Menu</originalText>
+        
+      <audio src="./audio/309_Menyu.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0136.smil#text_0136"/></promptItem>
+      <promptItem id="followedBy">
+        <note>This is used in the context of a sequence of key presses, as in "Press Alt + V, followed by S"</note>
+        <text id="_id60782" xml:lang="tl" status="ok">sinundan ng</text>
+        <originalText>followed by</originalText>
+        
+      <audio src="./audio/310_sinundan_ng.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0137.smil#text_0137"/></promptItem>
+      <promptItem id="submenu">
+        <text id="_id60802" xml:lang="tl" status="ok">Sub Menu</text>
+        <originalText>Sub Menu</originalText>
+        
+      <audio src="./audio/311_Sub_Menu.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0138.smil#text_0138"/></promptItem>
+    </promptItemRefs>
+    <generalPrompts>
+      <prompt id="dialogClosed">
+        <promptItem>
+          <text id="_id60828" xml:lang="tl" status="ok">Sinarang dialog.</text>
+          <originalText>Dialog closed.</originalText>
+          
+        <audio src="./audio/312_Sinarang_dialog.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0139.smil#text_0139"/></promptItem>
+      </prompt>
+      <prompt id="textFieldEntry">
+        <promptItem>
+          <text id="_id60851" xml:lang="tl" status="ok">Ang laman ng kaukulang espasyo ay:</text>
+          <originalText>Text field entry is:</originalText>
+          
+        <audio src="./audio/313_Ang_laman_ng_kaukulang_espasyo.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis013a.smil#text_013a"/></promptItem>
+        <promptVar name="TEXT_FIELD"/>
+      </prompt>
+      <prompt id="notSelfVoicing">
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+      </prompt>
+      <prompt id="bookAtPathChanged">
+        <promptItem>
+          <text id="_id60889" xml:lang="tl" status="ok">Ang lokasyon ng librong iyong hinahanap ay nagbago na. Bagkus, ibang libro ang nahanap. Nagbago ba ang nilalaman ng iyong CD-ROM drive?</text>
+          <originalText>The location of the book you are looking for has changed.  A different book was found instead.  Did the contents of your CD-ROM drive change?</originalText>
+          
+        <audio src="./audio/314_Ang_lokasyon_ng_librong_iyong_.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis013b.smil#text_013b"/></promptItem>
+      </prompt>
+      <prompt id="generalBookError">
+        <promptItem>
+          <text id="_id60917" xml:lang="tl" status="ok">May problemang nangyari habang sinusubukang buksan ang libro.</text>
+          <originalText>An error occurred while trying to open the book.</originalText>
+          
+        <audio src="./audio/315_May_problemang_nangyari_habang.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis013c.smil#text_013c"/></promptItem>
+        <promptVar name="BOOK_PATH"/>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+      <prompt id="noCdLoaded">
+        <promptItem>
+          <text id="_id60951" xml:lang="tl" status="ok">Walang lamang CD ang CD-ROM drive.</text>
+          <originalText>There is not a CD in the CD-ROM drive.</originalText>
+          
+        <audio src="./audio/316_Walang_lamang_CD_ang_CDROM_dri.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis013d.smil#text_013d"/></promptItem>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+      <prompt id="pluginErrorInit">
+        <promptItem>
+          <text id="_id60980" xml:lang="tl" status="ok">Mali sa Plug-in: hindi matagpuan ang init() function sa plug-in DLL.</text>
+          <originalText>Plug-in error: init() function not found in the plug-in DLL.</originalText>
+          
+        <audio src="./audio/317_Mali_sa_Plugin_hindi_matagpuan.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis013e.smil#text_013e"/></promptItem>
+      </prompt>
+      <prompt id="pluginErrorDll">
+        <promptItem>
+          <text id="_id61005" xml:lang="tl" status="ok">Mali sa Plug-in: Ang plug-in library ay hindi maisalang:</text>
+          <originalText>Plug-in error: The following plug-in library could not be loaded: </originalText>
+          
+        <audio src="./audio/318_Mali_sa_Plugin_Ang_plugin_libr.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis013f.smil#text_013f"/></promptItem>
+        <promptVar name="PLUGIN_LIB"/>
+      </prompt>
+      <prompt id="basicViewPrompt">
+        <promptItem>
+          <text id="_id61035" xml:lang="tl" status="ok">Kasalukuyan mong ginagamit ang payak na paraan ng pagtanaw. Pindutin ang F11 upang bumalik sa default na paraan ng pagtanaw.</text>
+          <originalText>You are now using the basic view mode.  Press F11 to switch back to the default view mode.</originalText>
+          
+        <audio src="./audio/319_Kasalukuyan_mong_ginagamit_ang.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0140.smil#text_0140"/></promptItem>
+      </prompt>
+      <prompt id="OpenFile_notSelfVoicing">
+        <promptItem>
+          <text id="_id61061" xml:lang="tl" status="ok">Buksan ang File Dialog</text>
+          <originalText>Open File Dialog</originalText>
+          
+        <audio src="./audio/320_Buksan_ang_File_Dialog.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0141.smil#text_0141"/></promptItem>
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem>
+          <text id="_id61084" xml:lang="tl" status="ok">Gamitin ang "humanap ng mga libro", na nasa Talaksan menyu upang humanap ng mga librong DAISY sa iyong hard drive.</text>
+          <originalText>Use the "search for books" feature, under the file menu, to find DAISY books on your hard drive.</originalText>
+          
+        <audio src="./audio/321_Gamitin_ang_humanap_ng_mga_lib.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0142.smil#text_0142"/></promptItem>
+        <promptItem refid="escapeToCancel"/>
+      </prompt>
+      <prompt id="BrowseForFolder_notSelfVoicing">
+        <promptItem>
+          <text id="_id61114" xml:lang="tl" status="ok">Mag-browse para sa folder dialog</text>
+          <originalText>Browse for folder dialog</originalText>
+          
+        <audio src="./audio/322_Magbrowse_para_sa_folder_dialo.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0143.smil#text_0143"/></promptItem>
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem refid="escapeToCancel"/>
+        <promptItem>
+          <text id="_id61141" xml:lang="tl" status="ok">Pagkatapos, isulat ang lokasyon ng nais na folder sa kaukulang espasyo.</text>
+          <originalText>Then, type the path of the folder you want in the text box.</originalText>
+          
+        <audio src="./audio/323_Pagkatapos_isulat_ang_lokasyon.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0144.smil#text_0144"/></promptItem>
+      </prompt>
+      <prompt id="canceled">
+        <promptItem>
+          <text id="_id61166" xml:lang="tl" status="ok">Canceled</text>
+          <originalText>Canceled</originalText>
+          
+        <audio src="./audio/324_Canceled.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0145.smil#text_0145"/></promptItem>
+      </prompt>
+      <prompt id="loading">
+        <promptItem>
+          <text id="_id61189" xml:lang="tl" status="ok">Isinasalang</text>
+          <originalText>Loading</originalText>
+          
+        <audio src="./audio/325_Isinasalang.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0146.smil#text_0146"/></promptItem>
+      </prompt>
+      <prompt id="restartForChanges">
+        <promptItem>
+          <text id="_id61213" xml:lang="tl" status="ok">Paki-restart upang makita ang pagbabago.</text>
+          <originalText>Please restart to see your changes.</originalText>
+          
+        <audio src="./audio/326_Pakirestart_upang_makita_ang_p.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0147.smil#text_0147"/></promptItem>
+      </prompt>
+      <prompt id="noBooksFoundOnCd">
+        <promptItem>
+          <text id="_id61238" xml:lang="tl" status="ok">Walang makitang librong DAISY dito sa CD-ROM.</text>
+          <originalText>No DAISY books were found on this CD-ROM.</originalText>
+          
+        <audio src="./audio/327_Walang_makitang_librong_DAISY_.mp3" from="file://c:/devel/amis/trunk/Langpacks/filipino/prompts/amis0148.smil#text_0148"/></promptItem>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+    </generalPrompts>
+  </prompts>
+</ui>

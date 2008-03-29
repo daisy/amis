@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="dc:title" content="AMIS" />
+<meta name="ncc:timeInThisSmil" content="00:12:10" />
+<meta name="dc:identifier" content="amis-00000" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<ref title="AMIS" src="amis0001.smil" id="amis_0001" />
+<ref title="&#192; propos d&#39;AMIS" src="amis0002.smil" id="amis_0003" />
+<ref title="&#192; propos de DAISY" src="amis0003.smil" id="amis_0004" />
+<ref title="D&#233;marrer avec AMIS" src="amis0004.smil" id="amis_0005" />
+<ref title="Lire un livre" src="amis0005.smil" id="amis_0006" />
+<ref title="&#201;crans de dialogue" src="amis0006.smil" id="amis_0007" />
+<ref title="Liste compl&#232;te des fonctionnalit&#233;s d&#39;AMIS" src="amis0007.smil" id="amis_0008" />
+<ref title="Ouvrir un livre DAISY" src="amis0008.smil" id="amis_0009" />
+<ref title="Ouvrir un fichier" src="amis0009.smil" id="amis_000a" />
+<ref title="Charger un CD ROM" src="amis000a.smil" id="amis_000b" />
+<ref title="Chercher des livres sur votre disque dur" src="amis000b.smil" id="amis_000c" />
+<ref title="Faire une s&#233;lection dans votre liste de livres lus r&#233;cemment" src="amis000c.smil" id="amis_000d" />
+<ref title="Pr&#233;f&#233;rences" src="amis000d.smil" id="amis_000e" />
+<ref title="Pr&#233;f&#233;rences g&#233;n&#233;rales" src="amis000e.smil" id="amis_000f" />
+<ref title="Choix des couleurs" src="amis000f.smil" id="amis_0010" />
+<ref title="Choix de la langue" src="amis0010.smil" id="amis_0011" />
+<ref title="Vues diff&#233;rentes" src="amis0011.smil" id="amis_0012" />
+<ref title="Vue par d&#233;faut" src="amis0012.smil" id="amis_0013" />
+<ref title="Vue simple" src="amis0013.smil" id="amis_0014" />
+<ref title="La barre lat&#233;rale" src="amis0014.smil" id="amis_0015" />
+<ref title="Afficher ou masquer la barre lat&#233;rale" src="amis0015.smil" id="amis_0016" />
+<ref title="Barre lat&#233;rale ancr&#233;e ou flottante" src="amis0016.smil" id="amis_0017" />
+<ref title="Sections" src="amis0017.smil" id="amis_0018" />
+<ref title="Pages" src="amis0018.smil" id="amis_0019" />
+<ref title="&#201;l&#233;ments sp&#233;ciaux" src="amis0019.smil" id="amis_001a" />
+<ref title="Effets" src="amis001a.smil" id="amis_001b" />
+<ref title="Contraste des couleurs" src="amis001b.smil" id="amis_001c" />
+<ref title="Taille du texte" src="amis001c.smil" id="amis_001d" />
+<ref title="Lecture" src="amis001d.smil" id="amis_001e" />
+<ref title="Lire" src="amis001e.smil" id="amis_001f" />
+<ref title="Pause" src="amis001f.smil" id="amis_0020" />
+<ref title="Volume" src="amis0020.smil" id="amis_0021" />
+<ref title="Acc&#233;l&#233;rer" src="amis0021.smil" id="amis_0022" />
+<ref title="Ralentir" src="amis0022.smil" id="amis_0023" />
+<ref title="Vitesse normale" src="amis0023.smil" id="amis_0024" />
+<ref title="Navigation" src="amis0024.smil" id="amis_0025" />
+<ref title="Section suivante" src="amis0025.smil" id="amis_0026" />
+<ref title="Section pr&#233;c&#233;dente" src="amis0026.smil" id="amis_0027" />
+<ref title="Montrer la profondeur des sections" src="amis0027.smil" id="amis_0028" />
+<ref title="Phrase suivante" src="amis0028.smil" id="amis_0029" />
+<ref title="Phrase pr&#233;c&#233;dente" src="amis0029.smil" id="amis_002a" />
+<ref title="Page suivante" src="amis002a.smil" id="amis_002b" />
+<ref title="Page pr&#233;c&#233;dente" src="amis002b.smil" id="amis_002c" />
+<ref title="Se rendre &#224; une page" src="amis002c.smil" id="amis_002d" />
+<ref title="Chercher dans le texte" src="amis002d.smil" id="amis_002e" />
+<ref title="Sortir d&#39;un &#233;l&#233;ment &#233;chappable" src="amis002e.smil" id="amis_002f" />
+<ref title="&#201;l&#233;ments facultatifs" src="amis002f.smil" id="amis_0030" />
+<ref title="Marque-pages" src="amis0030.smil" id="amis_0031" />
+<ref title="Ajouter un marque-page" src="amis0031.smil" id="amis_0032" />
+<ref title="Charger un marque-page" src="amis0032.smil" id="amis_0033" />
+<ref title="Information r&#233;capitulative" src="amis0033.smil" id="amis_0034" />
+<ref title="Quitter AMIS" src="amis0034.smil" id="amis_0035" />
+<ref title="Ajouts" src="amis0035.smil" id="amis_0036" />
+<ref title="Plugins" src="amis0036.smil" id="amis_0037" />
+<ref title="Paquets de langue" src="amis0037.smil" id="amis_0038" />
+</body>
+</smil>

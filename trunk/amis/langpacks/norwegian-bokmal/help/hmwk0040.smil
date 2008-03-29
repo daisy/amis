@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="ncc:timeInThisSmil" content="00:00:37.978"/>
+		<meta name="ncc:totalElapsedTime" content="00:13:57.134"/>
+		<layout>
+			<region id="txt-view"/>
+		</layout>
+		<meta name="ncc:generator" content="EasePublisher 2.02 Build 025 # 089113"/>
+        <meta name="title" content="Vis masppestruktur"/>
+        <meta name="dc:title" content="AMIS hjelp"/>
+        <meta name="dc:identifier" content="AMIS_hjelp"/>
+    </head>
+	<body>
+		<seq dur="37.978s">
+			<par endsync="last" id="nwcb_0002">
+				<text src="amishelp.html#nwcb_0247" id="nwcb_0016"/>
+				<seq>
+					<audio src="40_Vis_masppestruktur.mp3" clip-begin="npt=0.000s" clip-end="npt=3.960s" id="audio_0001"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0003">
+				<text src="amishelp.html#nwcb_0248" id="nwcb_0017"/>
+				<seq>
+					<audio src="40_Vis_masppestruktur.mp3" clip-begin="npt=3.960s" clip-end="npt=8.038s" id="audio_0002"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0004">
+				<text src="amishelp.html#nwcb_0249" id="nwcb_0018"/>
+				<seq>
+					<audio src="40_Vis_masppestruktur.mp3" clip-begin="npt=8.038s" clip-end="npt=10.859s" id="audio_0003"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0005">
+				<text src="amishelp.html#nwcb_0250" id="nwcb_0019"/>
+				<seq>
+					<audio src="40_Vis_masppestruktur.mp3" clip-begin="npt=10.859s" clip-end="npt=14.939s" id="audio_0004"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0006">
+				<text src="amishelp.html#nwcb_0251" id="nwcb_001a"/>
+				<seq>
+					<audio src="40_Vis_masppestruktur.mp3" clip-begin="npt=14.939s" clip-end="npt=15.959s" id="audio_0005"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0007">
+				<text src="amishelp.html#nwcb_0252" id="nwcb_001b"/>
+				<seq>
+					<audio src="40_Vis_masppestruktur.mp3" clip-begin="npt=15.959s" clip-end="npt=17.334s" id="audio_0006"/>
+					<audio src="40_Vis_masppestruktur.mp3" clip-begin="npt=17.334s" clip-end="npt=20.939s" id="audio_0007"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0008">
+				<text src="amishelp.html#nwcb_0253" id="nwcb_001c"/>
+				<seq>
+					<audio src="40_Vis_masppestruktur.mp3" clip-begin="npt=20.939s" clip-end="npt=21.599s" id="audio_0008"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0009">
+				<text src="amishelp.html#nwcb_0254" id="nwcb_001d"/>
+				<seq>
+					<audio src="40_Vis_masppestruktur.mp3" clip-begin="npt=21.599s" clip-end="npt=22.379s" id="audio_0009"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0010">
+				<text src="amishelp.html#nwcb_0255" id="nwcb_001e"/>
+				<seq>
+					<audio src="40_Vis_masppestruktur.mp3" clip-begin="npt=22.379s" clip-end="npt=23.158s" id="audio_0010"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0011">
+				<text src="amishelp.html#nwcb_0256" id="nwcb_001f"/>
+				<seq>
+					<audio src="40_Vis_masppestruktur.mp3" clip-begin="npt=23.158s" clip-end="npt=26.879s" id="audio_0011"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0012">
+				<text src="amishelp.html#nwcb_0257" id="nwcb_0020"/>
+				<seq>
+					<audio src="40_Vis_masppestruktur.mp3" clip-begin="npt=26.879s" clip-end="npt=27.899s" id="audio_0012"/>
+					<audio src="40_Vis_masppestruktur.mp3" clip-begin="npt=27.899s" clip-end="npt=29.039s" id="audio_0013"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0013">
+				<text src="amishelp.html#nwcb_0258" id="nwcb_0021"/>
+				<seq>
+					<audio src="40_Vis_masppestruktur.mp3" clip-begin="npt=29.039s" clip-end="npt=32.097s" id="audio_0014"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0014">
+				<text src="amishelp.html#nwcb_0259" id="nwcb_0022"/>
+				<seq>
+					<audio src="40_Vis_masppestruktur.mp3" clip-begin="npt=32.097s" clip-end="npt=33.658s" id="audio_0015"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0015">
+				<text src="amishelp.html#nwcb_0260" id="nwcb_0023"/>
+				<seq>
+					<audio src="40_Vis_masppestruktur.mp3" clip-begin="npt=33.658s" clip-end="npt=37.978s" id="audio_0016"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

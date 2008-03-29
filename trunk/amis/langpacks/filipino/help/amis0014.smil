@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Payak na Tanaw" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:18" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="18.299s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_0014" id="amis_0014" />
+<seq>
+<audio src="19_Payak_na_Tanaw.mp3" clip-begin="npt=0.000s" clip-end="npt=1.305s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0035" id="xami_0035" />
+<seq>
+<audio src="19_Payak_na_Tanaw.mp3" clip-begin="npt=1.305s" clip-end="npt=4.944s" id="qwrt_0002" />
+<audio src="19_Payak_na_Tanaw.mp3" clip-begin="npt=4.944s" clip-end="npt=10.051s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0036" id="xami_0036" />
+<seq>
+<audio src="19_Payak_na_Tanaw.mp3" clip-begin="npt=10.051s" clip-end="npt=12.031s" id="qwrt_0004" />
+<audio src="19_Payak_na_Tanaw.mp3" clip-begin="npt=12.031s" clip-end="npt=14.021s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0037" id="xami_0037" />
+<seq>
+<audio src="19_Payak_na_Tanaw.mp3" clip-begin="npt=14.021s" clip-end="npt=15.398s" id="qwrt_0006" />
+<audio src="19_Payak_na_Tanaw.mp3" clip-begin="npt=15.398s" clip-end="npt=15.999s" id="qwrt_0007" />
+<audio src="19_Payak_na_Tanaw.mp3" clip-begin="npt=15.999s" clip-end="npt=18.299s" id="qwrt_0008" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

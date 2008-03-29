@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+    <meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+    <meta name="dc:format" content="Daisy 2.02" />
+    <meta name="title" content="Nästa sida" />
+    <meta name="dc:title" content="AMIS Help" />
+    <meta name="ncc:timeInThisSmil" content="0:00:18" />
+    <layout>
+        <region id="txtView" />
+    </layout>
+</head>
+<body>
+<seq dur="17.867s">
+    <par endsync="last">
+        <text src="amishelp.html#amis_002c" id="amis_002c" />
+        <seq>
+            <audio src="43_nsta_sida.mp3" clip-begin="npt=0.000s" clip-end="npt=0.261s" id="qwrt_0001" />
+            <audio src="43_nsta_sida.mp3" clip-begin="npt=0.261s" clip-end="npt=1.799s" id="qwrt_0002" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_0079" id="xami_0079" />
+        <seq>
+            <audio src="43_nsta_sida.mp3" clip-begin="npt=1.799s" clip-end="npt=2.469s" id="qwrt_0003" />
+            <audio src="43_nsta_sida.mp3" clip-begin="npt=2.469s" clip-end="npt=6.799s" id="qwrt_0004" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_007a" id="xami_007a" />
+        <seq>
+            <audio src="43_nsta_sida.mp3" clip-begin="npt=6.799s" clip-end="npt=7.367s" id="qwrt_0005" />
+            <audio src="43_nsta_sida.mp3" clip-begin="npt=7.367s" clip-end="npt=8.999s" id="qwrt_0006" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_007b" id="xami_007b" />
+        <seq>
+            <audio src="43_nsta_sida.mp3" clip-begin="npt=8.999s" clip-end="npt=9.352s" id="qwrt_0007" />
+            <audio src="43_nsta_sida.mp3" clip-begin="npt=9.352s" clip-end="npt=12.599s" id="qwrt_0008" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_007c" id="xami_007c" />
+        <seq>
+            <audio src="43_nsta_sida.mp3" clip-begin="npt=12.599s" clip-end="npt=13.336s" id="qwrt_0009" />
+            <audio src="43_nsta_sida.mp3" clip-begin="npt=13.336s" clip-end="npt=17.867s" id="qwrt_000A" />
+        </seq>
+    </par>
+</seq>
+</body>
+</smil>

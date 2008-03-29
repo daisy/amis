@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.22" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Características especiales" />
+<meta name="dc:title" content="AMIS Libro de Ayuda" />
+<meta name="ncc:timeInThisSmil" content="0:00:28" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="27.658s">
+<par endsync="last">
+<text src="amis-help-spanish.html#amis_001a" id="amis_001a" />
+<seq>
+<audio src="25_Caractersticas_especiales.mp3" clip-begin="npt=0.000s" clip-end="npt=2.751s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0044" id="xami_0044" />
+<seq>
+<audio src="25_Caractersticas_especiales.mp3" clip-begin="npt=2.751s" clip-end="npt=12.951s" id="qwrt_0002" />
+<audio src="25_Caractersticas_especiales.mp3" clip-begin="npt=12.951s" clip-end="npt=23.883s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0045" id="xami_0045" />
+<seq>
+<audio src="25_Caractersticas_especiales.mp3" clip-begin="npt=23.883s" clip-end="npt=24.928s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0046" id="xami_0046" />
+<seq>
+<audio src="25_Caractersticas_especiales.mp3" clip-begin="npt=24.928s" clip-end="npt=26.234s" id="qwrt_0005" />
+<audio src="25_Caractersticas_especiales.mp3" clip-begin="npt=26.234s" clip-end="npt=27.658s" id="qwrt_0006" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

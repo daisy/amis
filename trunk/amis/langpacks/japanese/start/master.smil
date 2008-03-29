@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="iso-2022-jp"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="dc:title" content="AMIS" />
+<meta name="ncc:timeInThisSmil" content="00:00:20" />
+<meta name="dc:identifier" content="jp_NRCD_AMIS2.5start" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<ref title="AMIS" src="amis0001.smil" id="amis_0001" />
+</body>
+</smil>

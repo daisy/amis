@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="ncc:timeInThisSmil" content="00:00:05.760"/>
+		<meta name="ncc:totalElapsedTime" content="00:03:05.128"/>
+		<layout>
+			<region id="txt-view"/>
+		</layout>
+		<meta name="ncc:generator" content="EasePublisher 2.02 Build 025 # 089113"/>
+        <meta name="title" content="Komplett innholdsliste for AMIS"/>
+        <meta name="dc:title" content="AMIS hjelp"/>
+        <meta name="dc:identifier" content="AMIS_hjelp"/>
+    </head>
+	<body>
+		<seq dur="5.760s">
+			<par endsync="last" id="nwcb_0002">
+				<text src="amishelp.html#nwcb_0055" id="oqdd_0001"/>
+				<seq>
+					<audio src="07_Komplett_innholdsliste_for_AMIS.mp3" clip-begin="npt=0.000s" clip-end="npt=5.760s" id="audio_0001"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

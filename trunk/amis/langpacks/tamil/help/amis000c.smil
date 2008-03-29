@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="&#2986;&#3009;&#2980;&#3021;&#2980;&#2965;&#2980;&#3021;&#2980;&#3007;&#2993;&#3021;&#2965;&#3006;&#2965; &#2953;&#2969;&#3021;&#2965;&#2995;&#3021; &#2997;&#2985;&#3021; &#2951;&#2991;&#2965;&#3021;&#2965;&#3007;&#2991;&#3016; &#2980;&#3015;&#2975;&#2997;&#3009;&#2990;&#3021;" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:19" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="19.486s">
+<par endsync="last">
+<text src="amishelp-entity.html#amis_000c" id="amis_000c" />
+<seq>
+<audio src="11_____.mp3" clip-begin="npt=0.000s" clip-end="npt=2.973s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0022" id="xami_0022" />
+<seq>
+<audio src="11_____.mp3" clip-begin="npt=2.973s" clip-end="npt=8.492s" id="qwrt_0002" />
+<audio src="11_____.mp3" clip-begin="npt=8.492s" clip-end="npt=11.761s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0023" id="xami_0023" />
+<seq>
+<audio src="11_____.mp3" clip-begin="npt=11.761s" clip-end="npt=12.638s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0024" id="xami_0024" />
+<seq>
+<audio src="11_____.mp3" clip-begin="npt=12.638s" clip-end="npt=14.411s" id="qwrt_0005" />
+<audio src="11_____.mp3" clip-begin="npt=14.411s" clip-end="npt=15.698s" id="qwrt_0006" />
+<audio src="11_____.mp3" clip-begin="npt=15.698s" clip-end="npt=17.199s" id="qwrt_0007" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0025" id="xami_0025" />
+<seq>
+<audio src="11_____.mp3" clip-begin="npt=17.199s" clip-end="npt=19.486s" id="qwrt_0008" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

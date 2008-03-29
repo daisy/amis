@@ -1,0 +1,667 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<title>AMIS</title>
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<div>
+		<h1>AMIS</h1>
+		<p>自适应多媒体信息系统 </p>
+		<p>网址: http://amis.sf.net</p>
+		<div class="image">
+			<!--translate the alt-text of the image-->
+			<img src="./img/amis.gif" height="256" width="256" alt="AMIS 标识"/>
+		</div>
+		<div class="image">
+			<!--translate the alt-text of the image-->
+			<img src="./img/Nipponfoundation.gif" height="73" width="300" alt="日本财团标识" />
+			<!--translate the alt-text of the image-->
+			<img src="./img/dfa-log.jpg" alt="人人共享DAISY项目标识" />
+		</div>
+	</div>
+	<div>
+		<br />
+		<br />
+	</div>
+	<h1>AMIS简介</h1>
+	<div class="image">
+		<!--translate the alt-text of the image-->
+		<img src="./img/amis.gif" height="100" width="100" alt="AMIS标识" />
+	</div>
+	<p>AMIS是一款用来阅读DAISY数字有声书的软件。它不需要专门的读屏软件支持，自己可以单独发声，是为视障人士设计的软件。AMIS是开源软件，并可以免费提供。AMIS是由日本财团资助的“人人共享DAISY”项目设计并支持的。AMIS有多种语言版本，可以通过我们的网站下载语言包。请继续学习AMIS的特点。</p>
+	<div>
+		<br/>
+		<br/>
+	</div>
+	<h1>DAISY简介</h1>
+	<div class="image">
+		<!--translate the alt-text of the image-->
+		<img src="./img/daisy.jpg" width="100" height="100" alt="DAISY联盟标识"/>
+	</div>
+	<p>DAISY是Digital Accessible Information System（无障碍数字信息系统）的缩写。DAISY书是完全无障碍的数字有声书。DAISY书的共同特征是书中的章节、页、脚注、侧边栏和书签都以一种用户能够快速查阅的方式组织。你可以通过http://www.daisy.org网址了解更多关于DAISY的信息。</p>
+	<div>
+		<br/>
+		<br />
+	</div>
+	<h1>快速入门</h1>
+	<p>这个章节介绍AMIS的快捷命令列表。</p>
+	
+	<h2>在读书过程中</h2>
+	<p>获得帮助：在任何时候都可以按F1来打开本帮助文档。</p>
+	<p>从光驱加载：按Control+L，可以从CD光驱加载内容。。</p>
+	<p>从硬盘打开文件：按Control+O打开一个文件。</p>
+	<p>切换到导航窗口：按Control+N，焦点切换到导航窗口，然后移动光标键选择导航项目。</p>
+	<p>开始或暂停：按空格键。</p>
+	<p>退出AMIS：按Alt + F4。</p>
+	<p>切换到主文本窗口：按Control + A。</p>
+	<p>展开章节目录：按Control + P。</p>
+	<p>收缩章节目录：按Control + Q。</p>
+	
+	<h2>在对话框界面中</h2>
+	<p>获取对话框说明：按Control + I。</p>
+	<p>获取输入的文本：按Control + T，只有在对话框中包含可编辑文本时才能使用。</p>
+	<p>重复最后一次命令：按Control + R。</p>
+	<div>
+		<br />
+		<br />
+	</div>
+	 
+	<h1>AMIS全部特征列表</h1>
+	 
+	<h2>打开一个DAISY书</h2>
+	 
+	<h3>打开文件</h3>
+	<p>从硬盘加载一个文件。这个命令打开一个标准的文件选择对话框，通过这个对话框可以选择DAISY书。</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+    <li>$<//promptItem[@id="icon"]/text>$:
+    <img src="./img/folder.jpg" height="50" width="50" alt="打开文件图标" /></li>
+    <li>$<//promptItem[@id="keyboardShortcut"]/text>$:
+    $<//action[@mfcid="ID_MENU_FILE_OPEN"]/accelerator/text>$</li>
+    <li>$<//promptItem[@id="menu"]/text>$:
+    $<//action[@mfcid="ID_MENU_FILE_OPEN"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_FILE_OPEN"]/caption/text>$
+    </li>
+	</ul>
+	<!--end block-->
+	
+	<h3>从光驱加载</h3>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/cd.jpg" height="50" width="50" alt="加载CD图标"/></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_LOADCD"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_LOADCD"]/parent::container/caption/text>$
+		-&gt;
+		$<//action[@mfcid="ID_MENU_FILE_LOADCD"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>在硬盘中搜索书</h3>
+	<p>这个操作将打开一个对话框，在里面输入查找目录。查找结果将在对话框窗口中列出。</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/searchForBooks.jpg" height="50" width="50" alt="搜索硬盘图标"/></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="file"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_FILE_SEARCHDRIVE"]/mnemonic/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_SEARCHDRIVE"]/parent::container/caption/text>$
+		-&gt;
+		$<//action[@mfcid="ID_MENU_FILE_SEARCHDRIVE"]/caption/text>$
+		</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>从最近书目列表中选择</h3>
+	<p>最近书目列表是以最近所读书的标题为内容的子菜单。</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$:
+		$<//container[@id="file"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+    $<//container[@id="recentBooksList"]/mnemonic/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$:
+		$<//container[@id="file"]/caption/text>$
+    -&gt;
+    $<//container[@id="recentBooksList"]/caption/text>$
+		</li>
+	</ul>
+	<!--end block-->
+	
+	
+	<h2>选项</h2>
+	<p>在这里可以调整AMIS应用设置，包括启动方式、书签位置、AMIS颜色和语言包（当安装了语言包时）。</p>
+	
+	<h3>通用选项</h3>
+	<p>通用选项是选项对话框的默认页签。</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="file"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/mnemonic/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/caption/text>$
+		</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>颜色设置</h3>
+	<p>颜色设置是选项对话框的第二个页签。</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="file"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/mnemonic/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//dialog[@mfcid="IDD_PROPPAGE2"]/accelerator/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/caption/text>$
+		</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>语言设置</h3>
+	<p>颜色设置是选项对话框的第三个页签。</p>
+<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="file"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/mnemonic/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//dialog[@mfcid="IDD_PROPPAGE4"]/accelerator/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/caption/text>$
+		</li>
+	</ul>
+	<!--end block-->
+	
+	
+	<h2>视图类别</h2>
+	
+	<h3>默认视图</h3>
+	<p>默认视图里有菜单、工具栏和侧边栏。它的外观和别的计算机应用程序非常相似。这是AMIS的默认视图，可以利用下面的快捷键在默认视图和基本视图之间切换。</p>
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$:
+		$<//action[@mfcid="ID_MENU_VIEW_BASIC"]/accelerator/text>$</li>
+	</ul>
+	
+	<h3>基本视图</h3>
+	<p>基本视图里没有菜单和侧边栏，工具栏有六个大的按钮，放置在屏幕的最下方。</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_BASIC"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_BASIC"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_VIEW_BASIC"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h2>侧边栏</h2>
+	<div>
+		<!--translate the alt-text of the image-->
+		<img src="./img/sidebar.jpg" alt="侧边栏" />
+	</div>
+	<p>如上图，侧边栏包括章节导航项和页、脚注等列表。这些项组织在列表中。每个列表都有自己的标签。</p>
+	<p>按Control + N快捷键可以把焦点切换到侧边栏，从而可以选择当前列表中的任何内容。你可以使用视图菜单改变列表。</p>
+	
+	<h3>打开或关闭侧边栏</h3>
+	<p>可以使用菜单、快捷键或者点击侧边栏右上角的“X”打开或关闭侧边栏。</p>
+		<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="view"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF"]/mnemonic/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>位置固定和移动</h3>
+	<p>点击并拖拽侧边栏的标题栏，侧边框可以在整个屏幕上移动。如果把它拖放到屏幕的左、右、上、下边界附近，其可以固定在相应的边界处。</p>
+	
+	<h3>章节</h3>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/sections.jpg" height="50" width="50" alt="章节图标" /></li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//container[@id="view"]/caption/text>$
+    -&gt;
+    $<//promptItem[@id="sections"]/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>页</h3>
+	<p>如果当前书没有页时此项将被隐藏。</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/pages.jpg" height="50" width="50" alt="页图标"/></li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//container[@id="view"]/caption/text>$
+    -&gt;
+    $<//promptItem[@id="pages"]/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>特殊项</h3>
+	<p>特殊项是指脚注、侧边栏（指文本的侧边栏而不是AMIS的侧边栏）、制作者注释和其他一些成组的项。当前出版物中有这些时才会在视图菜单和AMIS的侧边栏中出现。</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/figures.jpg" height="50" width="50" alt="特殊项图标"/></li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//container[@id="view"]/caption/text>$
+ 		</li>
+	</ul>
+	<!--end block-->
+	
+	<h2>效果</h2>
+	
+	<h3>颜色对照</h3>
+	<p>在每次按钮或者快捷键被按下时，颜色对照就可以被打开或关闭。特定的颜色设置可以在选项对话框中的设置颜色页签中完成。</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/contrast.jpg" height="50" width="50" alt="颜色对照图标" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_CONTRAST"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_CONTRAST"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_VIEW_CONTRAST"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>增加字体大小</h3>
+	<p>在每次按钮或者快捷键被按下时，字体大小就增加一个特定的尺寸。 </p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/font.jpg" height="50" width="50" alt="字体大小图标" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$:
+		$<//container[@id="view"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_VIEW_LARGEFONT"]/mnemonic/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_LARGEFONT"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_VIEW_LARGEFONT"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>恢复字体大小</h3>
+	<p>将字体大小恢复到初始值。</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="view"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_VIEW_RESETFONT"]/mnemonic/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_RESETFONT"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_VIEW_RESETFONT"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h2>播放</h2>
+	
+	<h3>播放和暂停</h3>
+	<p>在播放期间，“播放”按钮变成“暂停”，反之亦然。</p>
+	<!--Don't translate this block except for the word "or" between images and except for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$: 
+			<img src="./img/play.jpg" height="50" width="50" alt="播放图标" />
+			or
+			<img src="./img/pause.jpg" height="50" width="50" alt="暂停图标"/>
+		</li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAYPAUSE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAYPAUSE"][1]/parent::switch/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAYPAUSE"][1]/caption/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAYPAUSE"][2]/parent::switch/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAYPAUSE"][2]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>增加音量</h3>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_VOLUP"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_VOLUP"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAY_VOLUP"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>减少音量</h3>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_VOLDOWN"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_VOLDOWN"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAY_VOLDOWN"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>快进</h3>
+	<p>加快阅读速度但并不破坏语调。</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:<img src="./img/faster.jpg" height="50" width="50" alt="快进图标" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_FASTER"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_FASTER"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAY_FASTER"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>慢进</h3>
+	<p>减慢阅读速度但并不破坏语调。</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/slower.jpg" height="50" width="50" alt="慢进图标" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_SLOWER"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_SLOWER"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAY_SLOWER"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>常速阅读</h3>
+	<p>把阅读速度恢复到普通速度。</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/normalSpeed.jpg" height="50" width="50" alt="常速阅读图标" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_NORMALSPEED"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_NORMALSPEED"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAY_NORMALSPEED"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	
+	<h2>导航</h2>
+	
+	<h3>下一章节</h3>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/nextSection.jpg" height="50" width="50" alt="下一章节图标" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_NEXTSECTION"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_NEXTSECTION"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_NEXTSECTION"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>上一章节</h3>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/prevSection.jpg" height="50" width="50" alt="上一章节图标" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_PREVSECTION"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_PREVSECTION"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_PREVSECTION"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>显示章节深度</h3>
+	<p>使用这个命令可以控制导航栏中的章节展开深度。默认情况下第一次打开书时，会完全展开书的章节。</p>
+	<p>章节深度值（1，2，3等）列表显示在导航菜单的子菜单中。</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="navigate"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//container[@id="sectiondepth"]/mnemonic/text>$
+	</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//container[@id="navigate"]/caption/text>$
+    -&gt;
+    $<//container[@id="sectiondepth"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>下一个短语</h3>
+	<p>短语可以是一个句子或者段落，这取决于出版物的制作风格。</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/nextPhrase.jpg" height="50" width="50" alt="下一个短语图标" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_NEXTPHRASE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_NEXTPHRASE"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_NEXTPHRASE"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>前一个短语</h3>
+	<p>短语可以是一个句子或者段落，这取决于出版物的制作风格。</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/prevPhrase.jpg" height="50" width="50" alt="前一个短语图标" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_PREVPHRASE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_PREVPHRASE"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_PREVPHRASE"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>下一页</h3>
+	<p>当出版物包含页信息时页命令才可获得。</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/nextPage.jpg" height="50" width="50" alt="下一页图标" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_NEXTPAGE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_NEXTPAGE"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_NEXTPAGE"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>上一页</h3>
+	<p>当出版物包含页信息时页命令才可获得。</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/prevPage.jpg" height="50" width="50" alt="上一页图标" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_PREVPAGE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_PREVPAGE"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_PREVPAGE"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>定位某页</h3>
+	<p>当出版物包含页信息时页命令才可获得。</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_GOTOPAGE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_GOTOPAGE"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_GOTOPAGE"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>在文本中查找</h3>
+	<p>当出版物包含文本信息时文本查找命令才可获得。</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_FINDINTEXT"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_FINDINTEXT"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_FINDINTEXT"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>跳出某项</h3>
+	<p>可以跳出特定项的当前层操作，如表格类的嵌套结构或者边框栏类的补充信息等，即可以阅读可跳出结构的后续项。</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_ESCAPE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_ESCAPE"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAY_ESCAPE"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	
+	<h2>可忽略项</h2>
+	<p>DAISY书的一个特征是包含可忽略项。一个可忽略项在书中可被设置为忽略或不忽略。如页码和脚注可能是可忽略项。如果在阅读时不想听到这些项目，就在可忽略项对话框中把它们选中。</p>
+		<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$:
+		$<//container[@id="info"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_INFO_SKIP"]/mnemonic/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_INFO_SKIP"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_INFO_SKIP"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	
+	<h2>书签</h2>
+	
+	<h3>增加书签</h3>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/addBookmark.jpg" height="50" width="50" alt="增加书签图标" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_BMK_ADD"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_BMK_ADD"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_BMK_ADD"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>加载书签</h3>
+	<p>打开书籍时，所有的书签都自动加载。任意新书签可以通过书签菜单添加到列表中。</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="bookmarks"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//container[@id="bookmarks"]/caption/text>$
+    </li>
+	</ul>
+	<!--end block-->
+
+	<h2>概要信息</h2>
+	<p>AMIS提供了三种类型的概要信息：全文概要、当前位置和导航选项。通过信息菜单（"Alt + I"）以对话框的形式获得。</p>
+
+	<h2>退出AMIS</h2>
+			<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_EXIT"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_EXIT"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_FILE_EXIT"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+
+
+<h1>附加</h1>
+<p>通过添加程序包，比如插件和语言包等，AMIS支持用户个性化定制。</p>
+<h2>插件</h2>
+<div class="image">
+	<img src="./img/joystick.jpg" height="100" width="100" alt="插件图标"/>
+</div>
+<p>AMIS支持纯软件或软件加硬件接口的插件，如操纵杆、盲文显示器、扫描仪等。所有插件都可从我们的网站（http://amis.sf.net）获得。</p>
+<h2>语言包</h2>
+<div class="image">
+	<!--translate the alt-text of these images-->
+	<!--Feel free to add your flag to this list.-->
+	<img src="./img/china-flag.ico" alt="中国国旗" width="25" height="25"/>
+	<img src="./img/us-flag.ico" alt="美国国旗" width="25" height="25"/>
+	<img src="./img/jp-flag.ico" alt="日本国旗" width="25" height="25"/>
+	<img src="./img/malay-flag.ico" alt="马来西亚国旗"  width="25" height="25"/>
+	<img src="./img/india-flag.ico" alt="印度国旗"  width="25" height="25"/>
+	<img src="./img/nepal-flag.ico" alt="尼泊尔国旗"  width="25" height="25"/>
+	<img src="./img/fr-flag.ico" alt="法国国旗"  width="25" height="25"/>
+	<img src="./img/srilanka-flag.ico" alt="斯里兰卡国旗"  width="25" height="25"/>
+	<img src="./img/thai-flag.ico" alt="泰国国旗"  width="25" height="25"/>
+	<img src="./img/arab-league-flag.ico" alt="阿拉伯国家联盟国旗League of Arab Nations flag" width="25" height="25"/>
+	<img src="./img/vietnam-flag.ico" alt="越南国旗" width="25" height="25"/>
+	<img src="./img/indonesia-flag.ico" alt="印度尼西亚国旗" width="25" height="25"/>
+	<img src="./img/pakistan-flag.ico" alt="巴基斯坦国旗" width="25" height="25"/>
+	
+</div>
+<p>AMIS支持UNICODE编码并可以配置不同的语言包。所有的语言包可以从我们的网站下载(http://amis.sf.net)。</p>
+</body>
+</html>

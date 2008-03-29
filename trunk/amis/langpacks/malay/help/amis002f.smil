@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Mencari Dalam Teks" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:21" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="20.911s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_002f" id="amis_002f" />
+<seq>
+<audio src="46_Mencari_Dalam_Teks.mp3" clip-begin="npt=0.000s" clip-end="npt=0.849s" id="qwrt_0001" />
+<audio src="46_Mencari_Dalam_Teks.mp3" clip-begin="npt=0.849s" clip-end="npt=2.795s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0084" id="xami_0084" />
+<seq>
+<audio src="46_Mencari_Dalam_Teks.mp3" clip-begin="npt=2.795s" clip-end="npt=3.331s" id="qwrt_0003" />
+<audio src="46_Mencari_Dalam_Teks.mp3" clip-begin="npt=3.331s" clip-end="npt=3.671s" id="qwrt_0004" />
+<audio src="46_Mencari_Dalam_Teks.mp3" clip-begin="npt=3.671s" clip-end="npt=6.061s" id="qwrt_0005" />
+<audio src="46_Mencari_Dalam_Teks.mp3" clip-begin="npt=6.061s" clip-end="npt=10.724s" id="qwrt_0006" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0085" id="xami_0085" />
+<seq>
+<audio src="46_Mencari_Dalam_Teks.mp3" clip-begin="npt=10.724s" clip-end="npt=11.573s" id="qwrt_0007" />
+<audio src="46_Mencari_Dalam_Teks.mp3" clip-begin="npt=11.573s" clip-end="npt=13.859s" id="qwrt_0008" />
+<audio src="46_Mencari_Dalam_Teks.mp3" clip-begin="npt=13.859s" clip-end="npt=15.713s" id="qwrt_0009" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0086" id="xami_0086" />
+<seq>
+<audio src="46_Mencari_Dalam_Teks.mp3" clip-begin="npt=15.713s" clip-end="npt=16.353s" id="qwrt_000A" />
+<audio src="46_Mencari_Dalam_Teks.mp3" clip-begin="npt=16.353s" clip-end="npt=17.568s" id="qwrt_000B" />
+<audio src="46_Mencari_Dalam_Teks.mp3" clip-begin="npt=17.568s" clip-end="npt=19.161s" id="qwrt_000C" />
+<audio src="46_Mencari_Dalam_Teks.mp3" clip-begin="npt=19.161s" clip-end="npt=20.911s" id="qwrt_000D" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.22" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Encontrar en el texto" />
+<meta name="dc:title" content="AMIS Libro de Ayuda" />
+<meta name="ncc:timeInThisSmil" content="0:00:17" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="16.533s">
+<par endsync="last">
+<text src="amis-help-spanish.html#amis_002f" id="amis_002f" />
+<seq>
+<audio src="46_Encontrar_en_el_texto.mp3" clip-begin="npt=0.000s" clip-end="npt=2.655s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0084" id="xami_0084" />
+<seq>
+<audio src="46_Encontrar_en_el_texto.mp3" clip-begin="npt=2.655s" clip-end="npt=8.948s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0085" id="xami_0085" />
+<seq>
+<audio src="46_Encontrar_en_el_texto.mp3" clip-begin="npt=8.948s" clip-end="npt=12.277s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0086" id="xami_0086" />
+<seq>
+<audio src="46_Encontrar_en_el_texto.mp3" clip-begin="npt=12.277s" clip-end="npt=13.374s" id="qwrt_0004" />
+<audio src="46_Encontrar_en_el_texto.mp3" clip-begin="npt=13.374s" clip-end="npt=16.534s" id="qwrt_0005" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

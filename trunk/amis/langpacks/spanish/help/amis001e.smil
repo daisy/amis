@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.22" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Cancelar cambio en el tamaño del tipo de letra" />
+<meta name="dc:title" content="AMIS Libro de Ayuda" />
+<meta name="ncc:timeInThisSmil" content="0:00:16" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="16.329s">
+<par endsync="last">
+<text src="amis-help-spanish.html#amis_001e" id="amis_001e" />
+<seq>
+<audio src="29_Cancelar_cambio_en_el_tamao_de.mp3" clip-begin="npt=0.000s" clip-end="npt=3.697s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_004f" id="xami_004f" />
+<seq>
+<audio src="29_Cancelar_cambio_en_el_tamao_de.mp3" clip-begin="npt=3.697s" clip-end="npt=6.974s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0050" id="xami_0050" />
+<seq>
+<audio src="29_Cancelar_cambio_en_el_tamao_de.mp3" clip-begin="npt=6.974s" clip-end="npt=10.877s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0051" id="xami_0051" />
+<seq>
+<audio src="29_Cancelar_cambio_en_el_tamao_de.mp3" clip-begin="npt=10.877s" clip-end="npt=12.476s" id="qwrt_0004" />
+<audio src="29_Cancelar_cambio_en_el_tamao_de.mp3" clip-begin="npt=12.476s" clip-end="npt=16.329s" id="qwrt_0005" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

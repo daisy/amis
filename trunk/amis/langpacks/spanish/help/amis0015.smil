@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.22" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="El recuadro" />
+<meta name="dc:title" content="AMIS Libro de Ayuda" />
+<meta name="ncc:timeInThisSmil" content="0:00:37" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="36.600s">
+<par endsync="last">
+<text src="amis-help-spanish.html#amis_0015" id="amis_0015" />
+<seq>
+<audio src="20_El_recuadro.mp3" clip-begin="npt=0.000s" clip-end="npt=1.480s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0038" id="xami_0038" />
+<seq>
+<audio src="20_El_recuadro.mp3" clip-begin="npt=1.480s" clip-end="npt=3.615s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0039" id="xami_0039" />
+<seq>
+<audio src="20_El_recuadro.mp3" clip-begin="npt=3.615s" clip-end="npt=17.891s" id="qwrt_0003" />
+<audio src="20_El_recuadro.mp3" clip-begin="npt=17.891s" clip-end="npt=20.949s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_003a" id="xami_003a" />
+<seq>
+<audio src="20_El_recuadro.mp3" clip-begin="npt=20.949s" clip-end="npt=31.676s" id="qwrt_0005" />
+<audio src="20_El_recuadro.mp3" clip-begin="npt=31.676s" clip-end="npt=36.600s" id="qwrt_0006" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

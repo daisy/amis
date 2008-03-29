@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Beza Jelas Warna" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:33" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="33.031s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_001c" id="amis_001c" />
+<seq>
+<audio src="27_Beza_Jelas_Warna.mp3" clip-begin="npt=0.000s" clip-end="npt=0.483s" id="qwrt_0001" />
+<audio src="27_Beza_Jelas_Warna.mp3" clip-begin="npt=0.483s" clip-end="npt=2.390s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0047" id="xami_0047" />
+<seq>
+<audio src="27_Beza_Jelas_Warna.mp3" clip-begin="npt=2.390s" clip-end="npt=2.926s" id="qwrt_0003" />
+<audio src="27_Beza_Jelas_Warna.mp3" clip-begin="npt=2.926s" clip-end="npt=6.922s" id="qwrt_0004" />
+<audio src="27_Beza_Jelas_Warna.mp3" clip-begin="npt=6.922s" clip-end="npt=10.240s" id="qwrt_0005" />
+<audio src="27_Beza_Jelas_Warna.mp3" clip-begin="npt=10.240s" clip-end="npt=11.232s" id="qwrt_0006" />
+<audio src="27_Beza_Jelas_Warna.mp3" clip-begin="npt=11.232s" clip-end="npt=14.028s" id="qwrt_0007" />
+<audio src="27_Beza_Jelas_Warna.mp3" clip-begin="npt=14.028s" clip-end="npt=17.632s" id="qwrt_0008" />
+<audio src="27_Beza_Jelas_Warna.mp3" clip-begin="npt=17.632s" clip-end="npt=20.049s" id="qwrt_0009" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0048" id="xami_0048" />
+<seq>
+<audio src="27_Beza_Jelas_Warna.mp3" clip-begin="npt=20.049s" clip-end="npt=20.506s" id="qwrt_000A" />
+<audio src="27_Beza_Jelas_Warna.mp3" clip-begin="npt=20.506s" clip-end="npt=23.249s" id="qwrt_000B" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0049" id="xami_0049" />
+<seq>
+<audio src="27_Beza_Jelas_Warna.mp3" clip-begin="npt=23.249s" clip-end="npt=23.993s" id="qwrt_000C" />
+<audio src="27_Beza_Jelas_Warna.mp3" clip-begin="npt=23.993s" clip-end="npt=28.238s" id="qwrt_000D" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_004a" id="xami_004a" />
+<seq>
+<audio src="27_Beza_Jelas_Warna.mp3" clip-begin="npt=28.238s" clip-end="npt=29.962s" id="qwrt_000E" />
+<audio src="27_Beza_Jelas_Warna.mp3" clip-begin="npt=29.962s" clip-end="npt=31.281s" id="qwrt_000F" />
+<audio src="27_Beza_Jelas_Warna.mp3" clip-begin="npt=31.281s" clip-end="npt=33.031s" id="qwrt_0010" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

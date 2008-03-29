@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Batang Sisi" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:29" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="28.877s">
+<par endsync="last">
+<text src="amishelp.html#amis_0015" id="amis_0015" />
+<seq>
+<audio src="20_Batang_Sisi.mp3" clip-begin="npt=0.000s" clip-end="npt=1.366s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0063" id="xami_0063" />
+<seq>
+<audio src="20_Batang_Sisi.mp3" clip-begin="npt=1.366s" clip-end="npt=3.337s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0065" id="xami_0065" />
+<seq>
+<audio src="20_Batang_Sisi.mp3" clip-begin="npt=3.337s" clip-end="npt=11.668s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0066" id="xami_0066" />
+<seq>
+<audio src="20_Batang_Sisi.mp3" clip-begin="npt=11.668s" clip-end="npt=13.529s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0067" id="xami_0067" />
+<seq>
+<audio src="20_Batang_Sisi.mp3" clip-begin="npt=13.529s" clip-end="npt=16.034s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0069" id="xami_0069" />
+<seq>
+<audio src="20_Batang_Sisi.mp3" clip-begin="npt=16.034s" clip-end="npt=26.200s" id="qwrt_0006" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_006a" id="xami_006a" />
+<seq>
+<audio src="20_Batang_Sisi.mp3" clip-begin="npt=26.200s" clip-end="npt=28.877s" id="qwrt_0007" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

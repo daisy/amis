@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Pag-reset ng Laki ng Font" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:14" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="14.303s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_001e" id="amis_001e" />
+<seq>
+<audio src="29_Pagreset_ng_Laki_ng_Font.mp3" clip-begin="npt=0.000s" clip-end="npt=2.141s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_004f" id="xami_004f" />
+<seq>
+<audio src="29_Pagreset_ng_Laki_ng_Font.mp3" clip-begin="npt=2.141s" clip-end="npt=5.081s" id="qwrt_0002" />
+<audio src="29_Pagreset_ng_Laki_ng_Font.mp3" clip-begin="npt=5.081s" clip-end="npt=5.711s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0050" id="xami_0050" />
+<seq>
+<audio src="29_Pagreset_ng_Laki_ng_Font.mp3" clip-begin="npt=5.711s" clip-end="npt=7.513s" id="qwrt_0004" />
+<audio src="29_Pagreset_ng_Laki_ng_Font.mp3" clip-begin="npt=7.513s" clip-end="npt=10.044s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0051" id="xami_0051" />
+<seq>
+<audio src="29_Pagreset_ng_Laki_ng_Font.mp3" clip-begin="npt=10.044s" clip-end="npt=12.179s" id="qwrt_0006" />
+<audio src="29_Pagreset_ng_Laki_ng_Font.mp3" clip-begin="npt=12.179s" clip-end="npt=14.303s" id="qwrt_0007" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

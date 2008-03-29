@@ -1,0 +1,2340 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ui xml:lang="id">
+  <containers>
+    <container id="file">
+      <note xml:lang="en">This is the menu header "File"</note>
+      <caption>
+        <text id="_id52734" xml:lang="id" status="ok">Berkas</text>
+        <originalText xml:lang="en">File</originalText>
+        <audio src="./audio/002_Berkas.mp3" />
+      </caption>
+      <action mfcid="ID_MENU_FILE_OPEN" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and a toolbar item</note>
+        <icon src="./open.png" type="smallIcon" />
+        <caption>
+          <text id="_id52766" xml:lang="id" status="ok">Buka...</text>
+          <originalText xml:lang="en">Open...</originalText>
+          <audio src="./audio/003_Buka.mp3" />
+        </caption>
+        <description>
+          <text id="_id52781" xml:lang="id" status="ok">Buka buku DAISY dari sistem berkas lokal</text>
+          <originalText xml:lang="en">Open a Daisy book from the local file system</originalText>
+          <audio src="./audio/004_Buka_buku_DAISY_dari_sistem_be.mp3" />
+        </description>
+        <accelerator>
+          <text id="_id52796" xml:lang="en">Ctrl+O</text>
+          <originalText xml:lang="en">Ctrl+O</originalText>
+          <audio src="./audio/005_CtrlO.mp3" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id52799" xml:lang="en">O</text>
+          <originalText xml:lang="en">O</originalText>
+          <audio src="./audio/006_O.mp3" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_LOADCD" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and a toolbar item</note>
+        <icon src="./settings/img/cd3.ico" type="smallIcon" />
+        <icon src="./settings/img/cd_big.ico" type="largeIcon" />
+        <caption>
+          <text id="_id52829" xml:lang="id" status="ok">Memuat CD</text>
+          <originalText xml:lang="en">Load CD</originalText>
+          <audio src="./audio/007_Memuat_CD.mp3" />
+        </caption>
+        <description>
+          <text id="_id52844" xml:lang="id" status="ok">Memuat buku DAISY dari CD ROM</text>
+          <originalText xml:lang="en">Load a DAISY book from CD ROM</originalText>
+          <audio src="./audio/008_Memuat_buku_DAISY_dari_CD_ROM.mp3" />
+        </description>
+        <accelerator>
+          <text id="_id52858" xml:lang="en">Ctrl+L</text>
+          <originalText xml:lang="en">Ctrl+L</originalText>
+          <audio src="./audio/009_CtrlL.mp3" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id52861" xml:lang="en">L</text>
+          <originalText xml:lang="en">L</originalText>
+          <audio src="./audio/010_L.mp3" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_SEARCHDRIVE" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id52877" xml:lang="id" status="ok">Cari...</text>
+          <originalText xml:lang="en">Search...</originalText>
+          <audio src="./audio/011_Cari.mp3" />
+        </caption>
+        <description>
+          <text id="_id52892" xml:lang="id" status="ok">Cari buku DAISY di cakram lokal</text>
+          <originalText xml:lang="en">Search local drives for DAISY books</originalText>
+          <audio src="./audio/012_Cari_buku_DAISY_di_cakram_loka.mp3" />
+        </description>
+        <mnemonic>
+          <text id="_id52906" xml:lang="en">S</text>
+          <originalText xml:lang="en">S</originalText>
+          <audio src="./audio/013_S.mp3" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_PREFERENCES" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id52922" xml:lang="id" status="ok">Preferensi...</text>
+          <originalText xml:lang="en">Preferences...</originalText>
+          <audio src="./audio/014_Preferensi.mp3" />
+        </caption>
+        <description>
+          <text id="_id52936" xml:lang="id" status="ok">Ini adalah dialog preferensi</text>
+          <originalText xml:lang="en">This is the application preferences dialog.</originalText>
+          <audio src="./audio/015_Ini_adalah_dialog_preferensi.mp3" />
+        </description>
+        <mnemonic>
+          <text id="_id52951" xml:lang="en">P</text>
+          <originalText xml:lang="en">P</originalText>
+          <audio src="./audio/016_P.mp3" />
+        </mnemonic>
+      </action>
+      <container id="recentBooksList">
+        <note xml:lang="en">This is the menu header for the recent books sub-menu.</note>
+        <caption>
+          <text id="_id52965" xml:lang="id" status="ok">Terbaru</text>
+          <originalText xml:lang="en">Recent</originalText>
+          <audio src="./audio/017_Terbaru.mp3" />
+        </caption>
+        <switch element="action">
+          <action mfcid="ID_FILE_RECENT_EMPTY" widget="menuItem" condition="ID_FILE_RECENT_EMPTY">
+            <note xml:lang="en">This is going to be a menu item</note>
+            <caption>
+              <text id="_id52997" xml:lang="id" status="ok">Kosong</text>
+              <originalText xml:lang="en">Empty</originalText>
+              <audio src="./audio/018_Kosong.mp3" />
+            </caption>
+            <description>
+              <text id="_id53011" xml:lang="id" status="ok">Tidak ada buku terbaru yang dibaca</text>
+              <originalText xml:lang="en">There are no recently read books.</originalText>
+              <audio src="./audio/019_Tidak_ada_buku_terbaru_yang_di.mp3" />
+            </description>
+          </action>
+          <action mfcid="BOOK_BASE_ID" widget="menuItem" condition="BOOK_BASE_ID">
+            <note xml:lang="en">This is going to be a menu item</note>
+            <list repeat="yes">
+              <caption>
+                <promptVar name="RECENT_BOOK_TITLE" />
+              </caption>
+            </list>
+          </action>
+        </switch>
+        <mnemonic>
+          <text id="_id53052" xml:lang="en">R</text>
+          <originalText xml:lang="en">R</originalText>
+          <audio src="./audio/020_R.mp3" />
+        </mnemonic>
+      </container>
+      <action mfcid="ID_MENU_FILE_EXIT" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53068" xml:lang="id" status="ok">Keluar</text>
+          <originalText xml:lang="en">Exit</originalText>
+          <audio src="./audio/021_Keluar.mp3" />
+        </caption>
+        <description>
+          <text id="_id53082" xml:lang="id" status="ok">Keluar dari AMIS</text>
+          <originalText xml:lang="en">Exit AMIS</originalText>
+          <audio src="./audio/022_Keluar_dari_AMIS.mp3" />
+        </description>
+        <accelerator>
+          <text id="_id53096" xml:lang="en">Alt+F4</text>
+          <originalText xml:lang="en">Alt+F4</originalText>
+          <audio src="./audio/023_AltF4.mp3" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id53099" xml:lang="en">x</text>
+          <originalText xml:lang="en">x</originalText>
+          <audio src="./audio/024_x.mp3" />
+        </mnemonic>
+      </action>
+      <accelerator>
+        <text id="_id53103" xml:lang="en">Alt+F</text>
+        <originalText xml:lang="en">Alt+F</originalText>
+        <audio src="./audio/025_AltF.mp3" />
+      </accelerator>
+      <mnemonic>
+        <text id="_id53107" xml:lang="en">F</text>
+        <originalText xml:lang="en">F</originalText>
+        <audio src="./audio/026_F.mp3" />
+      </mnemonic>
+    </container>
+    <container id="view">
+      <note xml:lang="en">This is the menu header "View"</note>
+      <caption>
+        <text id="_id53120" xml:lang="id" status="ok">Tilik</text>
+        <originalText xml:lang="en">View</originalText>
+        <audio src="./audio/027_Tilik.mp3" />
+      </caption>
+      <action mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53145" xml:lang="id" status="ok">Batang sisi</text>
+          <originalText xml:lang="en">Sidebar</originalText>
+          <audio src="./audio/028_Batang_sisi.mp3" />
+        </caption>
+        <description>
+          <text id="_id53160" xml:lang="id" status="ok">Memunculkan atau menghilangkan batang sisi</text>
+          <originalText xml:lang="en">Turn the sidebar on or off.</originalText>
+          <audio src="./audio/029_Memunculkan_atau_menghilangkan.mp3" />
+        </description>
+        <mnemonic>
+          <text id="_id53173" xml:lang="en">S</text>
+          <originalText xml:lang="en">S</originalText>
+          <audio src="./audio/030_S.mp3" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_BASIC" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53189" xml:lang="id" status="ok">Mode tilik dasar</text>
+          <originalText xml:lang="en">Basic View Mode</originalText>
+          <audio src="./audio/031_Mode_tilik_dasar.mp3" />
+        </caption>
+        <description>
+          <text id="_id53204" xml:lang="id" status="ok">Mengganti tilik ke mode dasar</text>
+          <originalText xml:lang="en">Switch the view to basic mode.</originalText>
+          <audio src="./audio/032_Mengganti_tilik_ke_mode_dasar.mp3" />
+        </description>
+        <accelerator>
+          <text id="_id53217" xml:lang="en">F11</text>
+          <originalText xml:lang="en">F11</originalText>
+          <audio src="./audio/033_F11.mp3" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id53221" xml:lang="en">B</text>
+          <originalText xml:lang="en">B</originalText>
+          <audio src="./audio/034_B.mp3" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_CONTRAST" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <icon src="./settings/img/contrast.ico" type="smallIcon" />
+        <caption>
+          <text id="_id53243" xml:lang="id" status="ok">Sangat kontras</text>
+          <originalText xml:lang="en">High Contrast</originalText>
+          <audio src="./audio/035_Sangat_kontras.mp3" />
+        </caption>
+        <description>
+          <text id="_id53258" xml:lang="id" status="ok">Menggunakan warna yang sangat kontras untuk tampilan teks</text>
+          <originalText xml:lang="en">Use high contrast colors for the text display.</originalText>
+          <audio src="./audio/036_Menggunakan_warna_yang_sangat_.mp3" />
+        </description>
+        <accelerator>
+          <text id="_id53272" xml:lang="en">Ctrl+S</text>
+          <originalText xml:lang="en">Ctrl+S</originalText>
+          <audio src="./audio/037_CtrlS.mp3" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id53276" xml:lang="en">C</text>
+          <originalText xml:lang="en">C</originalText>
+          <audio src="./audio/038_C.mp3" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_LARGEFONT" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/font.ico" type="smallIcon" />
+        <caption>
+          <text id="_id53299" xml:lang="id" status="ok">Membesarkan ukuran huruf</text>
+          <originalText xml:lang="en">Increase Font Size</originalText>
+          <audio src="./audio/039_Membesarkan_ukuran_huruf.mp3" />
+        </caption>
+        <description>
+          <text id="_id53314" xml:lang="id" status="ok">Membesarkan ukuran huruf secara bertahap</text>
+          <originalText xml:lang="en">Gradually increase the font size.</originalText>
+          <audio src="./audio/040_Membesarkan_ukuran_huruf_secar.mp3" />
+        </description>
+        <mnemonic>
+          <text id="_id53328" xml:lang="en">I</text>
+          <originalText xml:lang="en">I</originalText>
+          <audio src="./audio/041_I.mp3" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_RESETFONT" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53344" xml:lang="id" status="ok">Mengembalikan ukuran huruf</text>
+          <originalText xml:lang="en">Reset Font Size</originalText>
+          <audio src="./audio/042_Mengembalikan_ukuran_huruf.mp3" />
+        </caption>
+        <description>
+          <text id="_id53358" xml:lang="id" status="ok">Membuat ukuran huruf menjadi ukuran asli</text>
+          <originalText xml:lang="en">Set the font size to the default setting.</originalText>
+          <audio src="./audio/043_Membuat_ukuran_huruf_menjadi_u.mp3" />
+        </description>
+        <mnemonic>
+          <text id="_id53373" xml:lang="en">R</text>
+          <originalText xml:lang="en">R</originalText>
+          <audio src="./audio/044_R.mp3" />
+        </mnemonic>
+      </action>
+      <action mfcid="NAVLIST_BASE_ID" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <promptVar name="NAV_LIST_NAME" />
+        </caption>
+        <description>
+          <promptVar name="NAV_LIST_DESCRIPTION" />
+        </description>
+      </action>
+      <accelerator>
+        <text id="_id53403" xml:lang="en">Alt+V</text>
+        <originalText xml:lang="en">Alt+V</originalText>
+        <audio src="./audio/045_AltV.mp3" />
+      </accelerator>
+      <mnemonic>
+        <text id="_id53407" xml:lang="en">V</text>
+        <originalText xml:lang="en">V</originalText>
+        <audio src="./audio/046_V.mp3" />
+      </mnemonic>
+    </container>
+    <container id="play">
+      <note xml:lang="en">This is the menu header "Play"</note>
+      <caption>
+        <text id="_id53420" xml:lang="id" status="ok">Menjalankan</text>
+        <originalText xml:lang="en">Play</originalText>
+        <audio src="./audio/047_Menjalankan.mp3" />
+      </caption>
+      <switch element="action">
+        <action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" condition="canPlay">
+          <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+          <icon src="./settings/img/play-big.ico" type="smallIcon" />
+          <icon src="./settings/img/play_big.ico" type="largeIcon" />
+          <caption>
+            <text id="_id53465" xml:lang="id" status="ok">Menjalankan</text>
+            <originalText xml:lang="en">Play</originalText>
+            <audio src="./audio/048_Menjalankan.mp3" />
+          </caption>
+          <description>
+            <text id="_id53480" xml:lang="id" status="ok">Memulai pembacaan</text>
+            <originalText xml:lang="en">Start synchronized playback.</originalText>
+            <audio src="./audio/049_Memulai_pembacaan.mp3" />
+          </description>
+          <accelerator>
+            <text id="_id53494" xml:lang="en">Space</text>
+            <originalText xml:lang="en">Space</originalText>
+            <audio src="./audio/050_Space.mp3" />
+          </accelerator>
+          <mnemonic>
+            <text id="_id53497" xml:lang="en">P</text>
+            <originalText xml:lang="en">P</originalText>
+            <audio src="./audio/051_P.mp3" />
+          </mnemonic>
+        </action>
+        <action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" condition="canPause">
+          <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+          <icon src="./settings/img/pause.ico" type="smallIcon" />
+          <icon src="./settings/img/pause_big.ico" type="largeIcon" />
+          <caption>
+            <text id="_id53529" xml:lang="id" status="ok">Jeda</text>
+            <originalText xml:lang="en">Pause</originalText>
+            <audio src="./audio/052_Jeda.mp3" />
+          </caption>
+          <description>
+            <text id="_id53544" xml:lang="id" status="ok">Menjedakan pembacaan</text>
+            <originalText xml:lang="en">Pause playback of this DAISY book.</originalText>
+            <audio src="./audio/053_Menjedakan_pembacaan.mp3" />
+          </description>
+          <accelerator>
+            <text id="_id53558" xml:lang="en">Space</text>
+            <originalText xml:lang="en">Space</originalText>
+            <audio src="./audio/054_Space.mp3" />
+          </accelerator>
+          <mnemonic>
+            <text id="_id53561" xml:lang="en">a</text>
+            <originalText xml:lang="en">a</originalText>
+            <audio src="./audio/055_a.mp3" />
+          </mnemonic>
+        </action>
+      </switch>
+      <action mfcid="ID_MENU_PLAY_ESCAPE" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53578" xml:lang="id" status="ok">Melewati</text>
+          <originalText xml:lang="en">Escape</originalText>
+          <audio src="./audio/056_Melewati.mp3" />
+        </caption>
+        <description>
+          <text id="_id53593" xml:lang="id" status="ok">Melewati item atau struktur yang sedang dibaca</text>
+          <originalText xml:lang="en">Jump out of the currently playing item or structure.</originalText>
+          <audio src="./audio/057_Melewati_item_atau_struktur_ya.mp3" />
+        </description>
+        <accelerator>
+          <text id="_id53608" xml:lang="en">Esc</text>
+          <originalText xml:lang="en">Esc</originalText>
+          <audio src="./audio/058_Esc.mp3" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id53611" xml:lang="en">E</text>
+          <originalText xml:lang="en">E</originalText>
+          <audio src="./audio/059_E.mp3" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_FASTER" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/fullspeedahead.ico" type="smallIcon" />
+        <caption>
+          <text id="_id53634" xml:lang="id" status="ok">Mempercepat</text>
+          <originalText xml:lang="en">Faster</originalText>
+          <audio src="./audio/060_Mempercepat.mp3" />
+        </caption>
+        <description>
+          <text id="_id53649" xml:lang="id" status="ok">Meningkatkan kecepatan pembacaan</text>
+          <originalText xml:lang="en">Increase the playback rate.</originalText>
+          <audio src="./audio/061_Meningkatkan_kecepatan_pembaca.mp3" />
+        </description>
+        <accelerator>
+          <text id="_id53662" xml:lang="en">Ctrl++</text>
+          <originalText xml:lang="en">Ctrl++</originalText>
+          <audio src="./audio/062_Ctrl.mp3" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id53666" xml:lang="en">F</text>
+          <originalText xml:lang="en">F</originalText>
+          <audio src="./audio/063_F.mp3" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_SLOWER" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/slowdown.ico" type="smallIcon" />
+        <caption>
+          <text id="_id53689" xml:lang="id" status="ok">Memperlambat</text>
+          <originalText xml:lang="en">Slower</originalText>
+          <audio src="./audio/064_Memperlambat.mp3" />
+        </caption>
+        <description>
+          <text id="_id53704" xml:lang="id" status="ok">Menurunkan kecepatan pembacaan</text>
+          <originalText xml:lang="en">Slow down the playback rate.</originalText>
+          <audio src="./audio/065_Menurunkan_kecepatan_pembacaan.mp3" />
+        </description>
+        <accelerator>
+          <text id="_id53717" xml:lang="en">Ctrl+-</text>
+          <originalText xml:lang="en">Ctrl+-</originalText>
+          <audio src="./audio/066_Ctrl.mp3" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id53721" xml:lang="en">S</text>
+          <originalText xml:lang="en">S</originalText>
+          <audio src="./audio/067_S.mp3" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_NORMALSPEED" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/normalspeed.ico" type="smallIcon" />
+        <caption>
+          <text id="_id53744" xml:lang="id" status="ok">Kecepatan normal</text>
+          <originalText xml:lang="en">Normal Speed</originalText>
+          <audio src="./audio/068_Kecepatan_normal.mp3" />
+        </caption>
+        <description>
+          <text id="_id53758" xml:lang="id" status="ok">Mengembalikan kecepatan pembacaan ke kecepatan normal</text>
+          <originalText xml:lang="en">Reset the playback rate to normal.</originalText>
+          <audio src="./audio/069_Mengembalikan_kecepatan_pembac.mp3" />
+        </description>
+        <accelerator>
+          <text id="_id53773" xml:lang="en">Ctrl+0</text>
+          <originalText xml:lang="en">Ctrl+0</originalText>
+          <audio src="./audio/070_Ctrl0.mp3" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id53776" xml:lang="en">N</text>
+          <originalText xml:lang="en">N</originalText>
+          <audio src="./audio/071_N.mp3" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_VOLUP" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53792" xml:lang="id" status="ok">Membesarkan suara</text>
+          <originalText xml:lang="en">Increase Volume</originalText>
+          <audio src="./audio/072_Membesarkan_suara.mp3" />
+        </caption>
+        <description>
+          <text id="_id53807" xml:lang="id" status="ok">Memperbesarkan suara secara bertahap</text>
+          <originalText xml:lang="en">Gradually raise the volume.</originalText>
+          <audio src="./audio/073_Memperbesarkan_suara_secara_be.mp3" />
+        </description>
+        <accelerator>
+          <text id="_id53821" xml:lang="en">Ctrl+Up</text>
+          <originalText xml:lang="en">Ctrl+Up</originalText>
+          <audio src="./audio/074_CtrlUp.mp3" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id53824" xml:lang="en">I</text>
+          <originalText xml:lang="en">I</originalText>
+          <audio src="./audio/075_I.mp3" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_VOLDOWN" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53840" xml:lang="id" status="ok">Mengecilkan suara</text>
+          <originalText xml:lang="en">Decrease Volume</originalText>
+          <audio src="./audio/076_Mengecilkan_suara.mp3" />
+        </caption>
+        <description>
+          <text id="_id53854" xml:lang="id" status="ok">Mengecilkan suara secara bertahap</text>
+          <originalText xml:lang="en">Gradually lower the volume.</originalText>
+          <audio src="./audio/077_Mengecilkan_suara_secara_berta.mp3" />
+        </description>
+        <accelerator>
+          <text id="_id53868" xml:lang="en">Ctrl+Down</text>
+          <originalText xml:lang="en">Ctrl+Down</originalText>
+          <audio src="./audio/078_CtrlDown.mp3" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id53872" xml:lang="en">D</text>
+          <originalText xml:lang="en">D</originalText>
+          <audio src="./audio/079_D.mp3" />
+        </mnemonic>
+      </action>
+      <accelerator>
+        <text id="_id53876" xml:lang="en">Alt+P</text>
+        <originalText xml:lang="en">Alt+P</originalText>
+        <audio src="./audio/080_AltP.mp3" />
+      </accelerator>
+      <mnemonic>
+        <text id="_id53879" xml:lang="en">P</text>
+        <originalText xml:lang="en">P</originalText>
+        <audio src="./audio/081_P.mp3" />
+      </mnemonic>
+    </container>
+    <container id="navigate">
+      <note xml:lang="en">This is the menu header "Navigate"</note>
+      <caption>
+        <text id="_id53893" xml:lang="id" status="ok">Navigasi</text>
+        <originalText xml:lang="en">Navigate</originalText>
+        <audio src="./audio/082_Navigasi.mp3" />
+      </caption>
+      <action mfcid="ID_MENU_NAV_PREVSECTION" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevsection.ico" type="smallIcon" />
+        <icon src="./settings/img/prevsection_big.ico" type="largeIcon" />
+        <caption>
+          <text id="_id53932" xml:lang="id" status="ok">Bagian sebelumnya</text>
+          <originalText xml:lang="en">Previous Section</originalText>
+          <audio src="./audio/083_Bagian_sebelumnya.mp3" />
+        </caption>
+        <description>
+          <text id="_id53947" xml:lang="id" status="ok">Menuju ke bagian sebelumnya</text>
+          <originalText xml:lang="en">Go to the previous section.</originalText>
+          <audio src="./audio/084_Menuju_ke_bagian_sebelumnya.mp3" />
+        </description>
+        <accelerator>
+          <text id="_id53961" xml:lang="en">Up</text>
+          <originalText xml:lang="en">Up</originalText>
+          <audio src="./audio/085_Up.mp3" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id53964" xml:lang="en">P</text>
+          <originalText xml:lang="en">P</originalText>
+          <audio src="./audio/086_P.mp3" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTSECTION" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextsection.ico" type="smallIcon" />
+        <icon src="./settings/img/nextsection_big.ico" type="largeIcon" />
+        <caption>
+          <text id="_id53994" xml:lang="id" status="ok">Bagian selanjutnya</text>
+          <originalText xml:lang="en">Next Section</originalText>
+          <audio src="./audio/087_Bagian_selanjutnya.mp3" />
+        </caption>
+        <description>
+          <text id="_id54009" xml:lang="id" status="ok">Menuju ke bagian selanjutnya</text>
+          <originalText xml:lang="en">Go to the next section.</originalText>
+          <audio src="./audio/088_Menuju_ke_bagian_selanjutnya.mp3" />
+        </description>
+        <accelerator>
+          <text id="_id54022" xml:lang="en">Down</text>
+          <originalText xml:lang="en">Down</originalText>
+          <audio src="./audio/089_Down.mp3" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id54026" xml:lang="en">N</text>
+          <originalText xml:lang="en">N</originalText>
+          <audio src="./audio/090_N.mp3" />
+        </mnemonic>
+      </action>
+      <container id="sectiondepth">
+        <note xml:lang="en">This is the "show section depth" sub-menu pop-up</note>
+        <caption>
+          <text id="_id54040" xml:lang="id" status="ok">Memunculkan detail tingkatan bagian</text>
+          <originalText xml:lang="en">Show Section Depth</originalText>
+          <audio src="./audio/091_Memunculkan_detail_tingkatan_b.mp3" />
+        </caption>
+        <switch element="action">
+          <action mfcid="ID_EMPTY" widget="menuItem" condition="ID_EMPTY">
+            <note xml:lang="en">This is going to be a menu item</note>
+            <caption>
+              <text id="_id54071" xml:lang="id" status="ok">Kosong</text>
+              <originalText xml:lang="en">Empty</originalText>
+              <audio src="./audio/092_Kosong.mp3" />
+            </caption>
+            <description>
+              <text id="_id54086" xml:lang="id" status="ok">Tidak ada tingkatan bagian</text>
+              <originalText xml:lang="en">There are no section levels.</originalText>
+              <audio src="./audio/093_Tidak_ada_tingkatan_bagian.mp3" />
+            </description>
+          </action>
+          <action mfcid="SECTION_DEPTH_BASE_ID" widget="menuItem" condition="SECTION_DEPTH_BASE_ID">
+            <note xml:lang="en">This is going to be a menu item</note>
+            <list repeat="yes">
+              <caption>
+                <promptVar name="SECTION_DEPTH_OPTION" />
+              </caption>
+            </list>
+          </action>
+        </switch>
+        <mnemonic>
+          <text id="_id54128" xml:lang="en">S</text>
+          <originalText xml:lang="en">S</originalText>
+          <audio src="./audio/094_S.mp3" />
+        </mnemonic>
+      </container>
+      <action mfcid="ID_MENU_NAV_PREVPHRASE" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevphasecirc.ico" type="smallIcon" />
+        <caption>
+          <text id="_id54152" xml:lang="id" status="ok">Frase sebelumnya</text>
+          <originalText xml:lang="en">Previous Phrase</originalText>
+          <audio src="./audio/095_Frase_sebelumnya.mp3" />
+        </caption>
+        <description>
+          <text id="_id54166" xml:lang="id" status="ok">Menuju frase sebelumnya</text>
+          <originalText xml:lang="en">Go to the previous phrase.</originalText>
+          <audio src="./audio/096_Menuju_frase_sebelumnya.mp3" />
+        </description>
+        <accelerator>
+          <text id="_id54180" xml:lang="en">Left</text>
+          <originalText xml:lang="en">Left</originalText>
+          <audio src="./audio/097_Left.mp3" />
+        </accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTPHRASE" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextphrasecirc.ico" type="smallIcon" />
+        <caption>
+          <text id="_id54204" xml:lang="id" status="ok">Frase selanjutnya</text>
+          <originalText xml:lang="en">Next Phrase</originalText>
+          <audio src="./audio/098_Frase_selanjutnya.mp3" />
+        </caption>
+        <description>
+          <text id="_id54218" xml:lang="id" status="ok">Menuju frase selanjutnya</text>
+          <originalText xml:lang="en">Go to the next phrase.</originalText>
+          <audio src="./audio/099_Menuju_frase_selanjutnya.mp3" />
+        </description>
+        <accelerator>
+          <text id="_id54232" xml:lang="en">Right</text>
+          <originalText xml:lang="en">Right</originalText>
+          <audio src="./audio/100_Right.mp3" />
+        </accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_PREVPAGE" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevpage.ico" type="smallIcon" />
+        <caption>
+          <text id="_id54256" xml:lang="id" status="ok">Halaman sebelumnya</text>
+          <originalText xml:lang="en">Previous Page</originalText>
+          <audio src="./audio/101_Halaman_sebelumnya.mp3" />
+        </caption>
+        <description>
+          <text id="_id54270" xml:lang="id" status="ok">Menuju halaman sebelumnya</text>
+          <originalText xml:lang="en">Go to the previous page.</originalText>
+          <audio src="./audio/102_Menuju_halaman_sebelumnya.mp3" />
+        </description>
+        <accelerator>
+          <text id="_id54284" xml:lang="en">Ctrl+Left</text>
+          <originalText xml:lang="en">Ctrl+Left</originalText>
+          <audio src="./audio/103_CtrlLeft.mp3" />
+        </accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTPAGE" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextpage.ico" type="smallIcon" />
+        <caption>
+          <text id="_id54307" xml:lang="id" status="ok">Halaman selanjutnya</text>
+          <originalText xml:lang="en">Next Page</originalText>
+          <audio src="./audio/104_Halaman_selanjutnya.mp3" />
+        </caption>
+        <description>
+          <text id="_id54322" xml:lang="id" status="ok">Menuju halaman selanjutnya</text>
+          <originalText xml:lang="en">Go to the next page.</originalText>
+          <audio src="./audio/105_Menuju_halaman_selanjutnya.mp3" />
+        </description>
+        <accelerator>
+          <text id="_id54336" xml:lang="en">Ctrl+Right</text>
+          <originalText xml:lang="en">Ctrl+Right</originalText>
+          <audio src="./audio/106_CtrlRight.mp3" />
+        </accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_GOTOPAGE" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id54352" xml:lang="id" status="ok">Menuju ke halaman...</text>
+          <originalText xml:lang="en">Go to Page...</originalText>
+          <audio src="./audio/107_Menuju_ke_halaman.mp3" />
+        </caption>
+        <description>
+          <text id="_id54366" xml:lang="id" status="ok">Menuju ke halaman tertentu</text>
+          <originalText xml:lang="en">Go to a specific page.</originalText>
+          <audio src="./audio/108_Menuju_ke_halaman_tertentu.mp3" />
+        </description>
+        <accelerator>
+          <text id="_id54380" xml:lang="en">Ctrl+G</text>
+          <originalText xml:lang="en">Ctrl+G</originalText>
+          <audio src="./audio/109_CtrlG.mp3" />
+        </accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_FINDINTEXT" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id54396" xml:lang="id" status="ok">Mencari di dalam teks</text>
+          <originalText xml:lang="en">Find in Text</originalText>
+          <audio src="./audio/110_Mencari_di_dalam_teks.mp3" />
+        </caption>
+        <description>
+          <text id="_id54410" xml:lang="id" status="ok">Mencari kata atau frase di dalam teks</text>
+          <originalText xml:lang="en">Search for a word or phrase in the text.</originalText>
+          <audio src="./audio/111_Mencari_kata_atau_frase_di_dal.mp3" />
+        </description>
+        <accelerator>
+          <text id="_id54425" xml:lang="en">Ctrl+F</text>
+          <originalText xml:lang="en">Ctrl+F</originalText>
+          <audio src="./audio/112_CtrlF.mp3" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id54428" xml:lang="en">F</text>
+          <originalText xml:lang="en">F</originalText>
+          <audio src="./audio/113_F.mp3" />
+        </mnemonic>
+      </action>
+      <accelerator>
+        <text id="_id54432" xml:lang="en">Alt+N</text>
+        <originalText xml:lang="en">Alt+N</originalText>
+        <audio src="./audio/114_AltN.mp3" />
+      </accelerator>
+      <mnemonic>
+        <text id="_id54436" xml:lang="en">N</text>
+        <originalText xml:lang="en">N</originalText>
+        <audio src="./audio/115_N.mp3" />
+      </mnemonic>
+    </container>
+    <container id="bookmarks">
+      <note xml:lang="en">This is the menu header "Bookmarks"</note>
+      <caption>
+        <text id="_id54449" xml:lang="id" status="ok">Tanda buku</text>
+        <originalText xml:lang="en">Bookmarks</originalText>
+        <audio src="./audio/116_Tanda_buku.mp3" />
+      </caption>
+      <action mfcid="ID_MENU_BMK_ADD" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/adbookmark.ico" type="smallIcon" />
+        <caption>
+          <text id="_id54481" xml:lang="id" status="ok">Menambahkan tanda buku</text>
+          <originalText xml:lang="en">Add Bookmark</originalText>
+          <audio src="./audio/117_Menambahkan_tanda_buku.mp3" />
+        </caption>
+        <description>
+          <text id="_id54496" xml:lang="id" status="ok">Membuat tanda buku pada posisi sekarang</text>
+          <originalText xml:lang="en">Bookmark your current position.</originalText>
+          <audio src="./audio/118_Membuat_tanda_buku_pada_posisi.mp3" />
+        </description>
+        <accelerator>
+          <text id="_id54510" xml:lang="en">Ctrl+D</text>
+          <originalText xml:lang="en">Ctrl+D</originalText>
+          <audio src="./audio/119_CtrlD.mp3" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id54513" xml:lang="en">A</text>
+          <originalText xml:lang="en">A</originalText>
+          <audio src="./audio/120_A.mp3" />
+        </mnemonic>
+      </action>
+      <action mfcid="BOOKMARK_BASE_ID" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOKMARK_TITLE" />
+          </caption>
+        </list>
+      </action>
+      <accelerator>
+        <text id="_id54542" xml:lang="en">Alt+B</text>
+        <originalText xml:lang="en">Alt+B</originalText>
+        <audio src="./audio/121_AltB.mp3" />
+      </accelerator>
+      <mnemonic>
+        <text id="_id54545" xml:lang="en">B</text>
+        <originalText xml:lang="en">B</originalText>
+        <audio src="./audio/122_B.mp3" />
+      </mnemonic>
+    </container>
+    <container id="info">
+      <note xml:lang="en">This is the menu header "Info"</note>
+      <caption>
+        <text id="_id54558" xml:lang="id" status="ok">Informasi</text>
+        <originalText xml:lang="en">Info</originalText>
+        <audio src="./audio/123_Informasi.mp3" />
+      </caption>
+      <action mfcid="ID_MENU_INFO_SKIP" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id54583" xml:lang="id" status="ok">Bagian yang dapat dilewati...</text>
+          <originalText xml:lang="en">Skippable Items...</originalText>
+          <audio src="./audio/124_Bagian_yang_dapat_dilewati.mp3" />
+        </caption>
+        <description>
+          <text id="_id54598" xml:lang="id" status="ok">Mentilik bagian yang dapat dilewati pada publikasi ini</text>
+          <originalText xml:lang="en">View the skippable items for this publication.</originalText>
+          <audio src="./audio/125_Mentilik_bagian_yang_dapat_dil.mp3" />
+        </description>
+        <mnemonic>
+          <text id="_id54613" xml:lang="en">S</text>
+          <originalText xml:lang="en">S</originalText>
+          <audio src="./audio/126_S.mp3" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_SUMMARY" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/info.ico" type="smallIcon" />
+        <caption>
+          <text id="_id54636" xml:lang="id" status="ok">Rangkuman penuh</text>
+          <originalText xml:lang="en">Full Summary</originalText>
+          <audio src="./audio/127_Rangkuman_penuh.mp3" />
+        </caption>
+        <description>
+          <text id="_id54650" xml:lang="id" status="ok">Mendapatkan seluruh rangkuman informasi pada publikasi ini</text>
+          <originalText xml:lang="en">Get all summary info for this publication.</originalText>
+          <audio src="./audio/128_Mendapatkan_seluruh_rangkuman_.mp3" />
+        </description>
+        <mnemonic>
+          <text id="_id54665" xml:lang="en">F</text>
+          <originalText xml:lang="en">F</originalText>
+          <audio src="./audio/129_F.mp3" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_CURRENTPOSITION" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id54680" xml:lang="id" status="ok">Posisi sekarang</text>
+          <originalText xml:lang="en">Current Position</originalText>
+          <audio src="./audio/130_Posisi_sekarang.mp3" />
+        </caption>
+        <description>
+          <text id="_id54695" xml:lang="id" status="ok">Mendapatkan informasi mengenai posisi sekarang</text>
+          <originalText xml:lang="en">Get information about your current position.</originalText>
+          <audio src="./audio/131_Mendapatkan_informasi_mengenai.mp3" />
+        </description>
+        <mnemonic>
+          <text id="_id54710" xml:lang="en">C</text>
+          <originalText xml:lang="en">C</originalText>
+          <audio src="./audio/132_C.mp3" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_NAVOPTIONS" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id54725" xml:lang="id" status="ok">Pilihan navigasi</text>
+          <originalText xml:lang="en">Navigation Options</originalText>
+          <audio src="./audio/133_Pilihan_navigasi.mp3" />
+        </caption>
+        <description>
+          <text id="_id54740" xml:lang="id" status="ok">Mempelajari pilihan navigasi dari publikasi ini</text>
+          <originalText xml:lang="en">Learn about your navigation options for this publication.</originalText>
+          <audio src="./audio/134_Mempelajari_pilihan_navigasi_d.mp3" />
+        </description>
+        <mnemonic>
+          <text id="_id54755" xml:lang="en">N</text>
+          <originalText xml:lang="en">N</originalText>
+          <audio src="./audio/135_N.mp3" />
+        </mnemonic>
+      </action>
+      <accelerator>
+        <text id="_id54760" xml:lang="en">Alt+I</text>
+        <originalText xml:lang="en">Alt+I</originalText>
+        <audio src="./audio/136_AltI.mp3" />
+      </accelerator>
+      <mnemonic>
+        <text id="_id54763" xml:lang="en">I</text>
+        <originalText xml:lang="en">I</originalText>
+        <audio src="./audio/137_I.mp3" />
+      </mnemonic>
+    </container>
+    <container id="help">
+      <note xml:lang="en">This is the menu header "Help"</note>
+      <caption>
+        <text id="_id54776" xml:lang="id" status="ok">Pertolongan</text>
+        <originalText xml:lang="en">Help</originalText>
+        <audio src="./audio/138_Pertolongan.mp3" />
+      </caption>
+      <action mfcid="ID_MENU_HELP_CONTENTS" widget="menuItem toolbarItem">
+        <note xml:lang="en">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/help.ico" type="smallIcon" />
+        <icon src="./settings/img/help_big.ico" type="largeIcon" />
+        <caption>
+          <text id="_id54815" xml:lang="id" status="ok">Isi</text>
+          <originalText xml:lang="en">Contents</originalText>
+          <audio src="./audio/139_Isi.mp3" />
+        </caption>
+        <description>
+          <text id="_id54830" xml:lang="id" status="ok">Mendapatkan pertolongan untuk menggunakan AMIS</text>
+          <originalText xml:lang="en">Get help using AMIS</originalText>
+          <audio src="./audio/140_Mendapatkan_pertolongan_untuk_.mp3" />
+        </description>
+        <mnemonic>
+          <text id="_id54844" xml:lang="en">C</text>
+          <originalText xml:lang="en">C</originalText>
+          <audio src="./audio/141_C.mp3" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_HELP_ABOUT" widget="menuItem">
+        <note xml:lang="en">This is going to be a menu item</note>
+        <caption>
+          <text id="_id54859" xml:lang="id" status="ok">Tentang AMIS</text>
+          <originalText xml:lang="en">About AMIS</originalText>
+          <audio src="./audio/142_Tentang_AMIS.mp3" />
+        </caption>
+        <description>
+          <text id="_id54874" xml:lang="id" status="ok">Mencari mengenai AMIS dan Daisy for All</text>
+          <originalText xml:lang="en">Find out about AMIS and DAISY-for-All.</originalText>
+          <audio src="./audio/143_Mencari_mengenai_AMIS_dan_Dais.mp3" />
+        </description>
+        <mnemonic>
+          <text id="_id54888" xml:lang="en">A</text>
+          <originalText xml:lang="en">A</originalText>
+          <audio src="./audio/144_A.mp3" />
+        </mnemonic>
+      </action>
+      <accelerator>
+        <text id="_id54892" xml:lang="en">Alt+H</text>
+        <originalText xml:lang="en">Alt+H</originalText>
+        <audio src="./audio/145_AltH.mp3" />
+      </accelerator>
+      <mnemonic>
+        <text id="_id54896" xml:lang="en">H</text>
+        <originalText xml:lang="en">H</originalText>
+        <audio src="./audio/146_H.mp3" />
+      </mnemonic>
+    </container>
+  </containers>
+  <dialogs>
+    <dialog mfcid="IDD_FIND">
+      <note xml:lang="en">This is the find in text dialog</note>
+      <caption>
+        <text id="_id54912" xml:lang="id" status="ok">Mencari di dalam teks</text>
+        <originalText xml:lang="en">Find in Text</originalText>
+        <audio src="./audio/147_Mencari_di_dalam_teks.mp3" />
+      </caption>
+      <description>
+        <text id="_id54927" xml:lang="id" status="ok">Di bagian ini anda dapat mencari teks penuh dalam satu perintah</text>
+        <originalText xml:lang="en">Here you can search the full text in either direction.</originalText>
+        <audio src="./audio/148_Di_bagian_ini_anda_dapat_menca.mp3" />
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround" />
+        <promptItem>
+          <text id="_id54951" xml:lang="id" status="ok">Selesai mengetik yang dicari, tekan enter untuk memulai pencarian</text>
+          <originalText xml:lang="en">After typing in your search, press enter to begin searching.</originalText>
+          <audio src="./audio/149_Selesai_mengetik_yang_dicari_t.mp3" />
+        </promptItem>
+        <promptItem refid="altC_to_cancel" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+        <promptItem refid="textBoxRepeatInstr" />
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption" />
+        </caption>
+        <description>
+          <text id="_id55000" xml:lang="id" status="ok">Tekan untuk memulai pencarian teks di dalam berkas</text>
+          <originalText xml:lang="en">Press to begin searching for text in the file.</originalText>
+          <audio src="./audio/150_Tekan_untuk_memulai_pencarian_.mp3" />
+        </description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description" />
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          <audio src="./audio/038_C.mp3" />
+        </mnemonic>
+      </control>
+      <control mfcid="IDC_SEARCHSTRING" widget="textfield">
+        <description>
+          <text id="_id55046" xml:lang="id" status="ok">Ketik teks yang ingin dicari</text>
+          <originalText xml:lang="en">Type the text to search for.</originalText>
+          <audio src="./audio/151_Ketik_teks_yang_ingin_dicari.mp3" />
+        </description>
+      </control>
+      <control mfcid="IDC_FINDNEXT" widget="radiobutton">
+        <note xml:lang="en">This indicates the direction of the search</note>
+        <caption>
+          <text id="_id55073" xml:lang="id" status="ok">Mencari selanjutnya</text>
+          <originalText xml:lang="en">Find Next</originalText>
+          <audio src="./audio/152_Mencari_selanjutnya.mp3" />
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently" />
+            <promptVar name="SELECTED_OR_DESELECTED" param="FIND_NEXT_IN_TEXT" />
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_FINDPREV" widget="radiobutton">
+        <note xml:lang="en">This indicates the direction of the search</note>
+        <caption>
+          <text id="_id55117" xml:lang="id" status="ok">Mencari sebelumnya</text>
+          <originalText xml:lang="en">Find Previous</originalText>
+          <audio src="./audio/153_Mencari_sebelumnya.mp3" />
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently" />
+            <promptName name="SELECTED_OR_DESELECTED" param="FIND_PREV_IN_TEXT" />
+          </prompt>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_CDSEARCH">
+      <note xml:lang="en">This dialog appears when more than one book is on a CD-ROM</note>
+      <caption>
+        <text id="_id55160" xml:lang="id" status="ok">Beberapa buku ditemukan</text>
+        <originalText xml:lang="en">Multiple books found</originalText>
+        <audio src="./audio/154_Beberapa_buku_ditemukan.mp3" />
+      </caption>
+      <description mfcid="IDC_STATIC">
+        <text id="_id55177" xml:lang="id" status="ok">Lebih dari satu buku ditemukan. Silakan pilih buku dari daftar dibawah ini dan tekan Alt + O untuk membuka</text>
+        <originalText xml:lang="en">More than one book was found on this CD. Please select a book from the list below and press Alt + O to open.</originalText>
+        <audio src="./audio/155_Lebih_dari_satu_buku_ditemukan.mp3" />
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround" />
+        <promptItem refid="altC_to_cancel" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+      </prompt>
+      <control mfcid="IDC_CANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description" />
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          <audio src="./audio/038_C.mp3" />
+        </mnemonic>
+      </control>
+      <control mfcid="IDC_OPENBOOK" widget="button">
+        <caption>
+          <text id="_id55246" xml:lang="id" status="ok">Buka</text>
+          <originalText xml:lang="en">Open</originalText>
+          <audio src="./audio/156_Buka.mp3" />
+        </caption>
+        <description>
+          <text id="_id55261" xml:lang="id" status="ok">Tekan untuk menutup dialog ini dan membuka buku yang telah dipilih</text>
+          <originalText xml:lang="en">Press to close this dialog and open the selected book.</originalText>
+          <audio src="./audio/157_Tekan_untuk_menutup_dialog_ini.mp3" />
+        </description>
+        <mnemonic>
+          <text id="_id55276" xml:lang="en">O</text>
+          <originalText xml:lang="en">O</originalText>
+          <audio src="./audio/158_O.mp3" />
+        </mnemonic>
+      </control>
+      <control mfcid="IDC_BOOKLIST" widget="list">
+        <description>
+          <text id="_id55288" xml:lang="id" status="ok">Gunakan tanda panah untuk memilih judul buku dari daftar ini</text>
+          <originalText xml:lang="en">Use the arrow keys to move around this list of titles.</originalText>
+          <audio src="./audio/159_Gunakan_tanda_panah_untuk_memi.mp3" />
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOK_TITLE" />
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_ABOUTBOX">
+      <note xml:lang="en">This dialog gives some basic information about AMIS.</note>
+      <caption>
+        <text id="_id55327" xml:lang="id" status="ok">Tentang AMIS</text>
+        <originalText xml:lang="en">About AMIS</originalText>
+        <audio src="./audio/160_Tentang_AMIS.mp3" />
+      </caption>
+      <description>
+        <text id="_id55341" xml:lang="id" status="ok">Dialog mengenai informasi tentang AMIS</text>
+        <originalText xml:lang="en">Dialog with information about AMIS software.</originalText>
+        <audio src="./audio/161_Dialog_mengenai_informasi_tent.mp3" />
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+      </prompt>
+      <control mfcid="IDC_AMISNAME" widget="textlabel">
+        <caption>
+          <text id="_id55382" xml:lang="id" status="ok">AMIS: \nSistem Informasi Multimedia Adaptasi</text>
+          <originalText xml:lang="en">AMIS: \nAdaptive Multimedia Information System</originalText>
+          <audio src="./audio/162_AMIS_nSistem_Informasi_Multime.mp3" />
+        </caption>
+      </control>
+      <control mfcid="IDC_VERSION" translate="no">
+        <caption>
+          <text id="_id55404" xml:lang="en">Version 2.0</text>
+          <originalText xml:lang="en">Version 2.0</originalText>
+          <audio src="../version.mp3" />
+        </caption>
+      </control>
+      <control mfcid="IDC_VERSIONNOTE" translate="no">
+        <caption>
+          <text id="_id55426" xml:lang="en">Release Date: 23 Oct 2005</text>
+          <originalText xml:lang="en">Release Date: 23 Oct 2005</originalText>
+          <audio src="../releasedate" />
+        </caption>
+      </control>
+      <control mfcid="IDC_COPYRIGHT" widget="textlabel" translate="no">
+        <caption>
+          <text id="_id55450" xml:lang="en">Copyright © 2006 DAISY for All</text>
+          <originalText xml:lang="en">Copyright © 2006 DAISY for All</originalText>
+          <audio src="./audio/165_Copyright_AAc_2006_DAISY_for_A.mp3" />
+        </caption>
+      </control>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description" />
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_SEARCHDAISY">
+      <note xml:lang="en">This dialog is for searching your hard drive for DAISY books.</note>
+      <caption>
+        <text id="_id55500" xml:lang="id" status="ok">Mencari buku DAISY</text>
+        <originalText xml:lang="en">Search for DAISY Books</originalText>
+        <audio src="./audio/166_Mencari_buku_DAISY.mp3" />
+      </caption>
+      <description mfcid="IDC_STATIC">
+        <text id="_id55517" xml:lang="id" status="ok">Anda dapat menggunakan komputer anda untuk mencari buku DAISY. Masukkan atau cari alamat folder dimana buku DAISY disimpan dan tekan Cari untuk memulai pencarian</text>
+        <originalText xml:lang="en">You can search your computer for DAISY books.  Enter a path or browse for a folder to search, then press Search to begin searching.</originalText>
+        <audio src="./audio/167_Anda_dapat_menggunakan_kompute.mp3" />
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround" />
+        <promptItem refid="altC_to_close" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+        <promptItem refid="textBoxRepeatInstr" />
+      </prompt>
+      <control mfcid="IDC_SEARCHPATH" widget="textfield">
+        <description>
+          <text id="_id55569" xml:lang="id" status="ok">Ketik alamat folder pada ruang ini</text>
+          <originalText xml:lang="en">Type the path to the folder in this field.</originalText>
+          <audio src="./audio/168_Ketik_alamat_folder_pada_ruang.mp3" />
+        </description>
+      </control>
+      <control mfcid="IDC_BROWSE" widget="button">
+        <caption>
+          <promptItem refid="browse_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="browse_button_description" />
+        </description>
+      </control>
+      <control mfcid="IDC_STARTSEARCH" widget="button">
+        <caption>
+          <text id="_id55615" xml:lang="id" status="ok">Cari</text>
+          <originalText xml:lang="en">Search</originalText>
+          <audio src="./audio/169_Cari.mp3" />
+        </caption>
+        <description>
+          <text id="_id55630" xml:lang="id" status="ok">Tekan untuk memulai pencarian</text>
+          <originalText xml:lang="en">Press to start searching.</originalText>
+          <audio src="./audio/170_Tekan_untuk_memulai_pencarian.mp3" />
+        </description>
+        <mnemonic>
+          <text id="_id55644" xml:lang="en">S</text>
+          <originalText xml:lang="en">S</originalText>
+          <audio src="./audio/171_S.mp3" />
+        </mnemonic>
+      </control>
+      <control mfcid="IDC_STOPSEARCH" widget="button">
+        <caption>
+          <text id="_id55655" xml:lang="id" status="ok">Berhenti</text>
+          <originalText xml:lang="en">Stop</originalText>
+          <audio src="./audio/172_Berhenti.mp3" />
+        </caption>
+        <description>
+          <text id="_id55670" xml:lang="id" status="ok">Tekan untuk menghentikan pencarian</text>
+          <originalText xml:lang="en">Press to stop searching.</originalText>
+          <audio src="./audio/173_Tekan_untuk_menghentikan_penca.mp3" />
+        </description>
+        <mnemonic>
+          <text id="_id55684" xml:lang="en">t</text>
+          <originalText xml:lang="en">t</originalText>
+          <audio src="./audio/174_t.mp3" />
+        </mnemonic>
+      </control>
+      <control mfcid="IDC_SEARCHING" widget="textlabel">
+        <switch element="caption">
+          <caption condition="default">
+            <text id="_id55702" xml:lang="id" status="ok">Siap</text>
+            <originalText xml:lang="en">Ready</originalText>
+            <audio src="./audio/175_Siap.mp3" />
+          </caption>
+          <caption condition="WhileSearching">
+            <text id="_id55718" xml:lang="id" status="ok">Mencari...</text>
+            <originalText xml:lang="en">Searching...</originalText>
+            <audio src="./audio/176_Mencari.mp3" />
+          </caption>
+          <caption condition="SearchAborted">
+            <text id="_id55735" xml:lang="id" status="ok">Pencarian berhenti</text>
+            <originalText xml:lang="en">Search stopped.</originalText>
+            <audio src="./audio/177_Pencarian_berhenti.mp3" />
+          </caption>
+          <caption condition="SearchCompleteNoFilesFound">
+            <text id="_id55752" xml:lang="id" status="ok">Pencarian selesai: Tidak ada berkas yang ditemukan</text>
+            <originalText xml:lang="en">Search complete: No files found.</originalText>
+            <audio src="./audio/178_Pencarian_selesai_Tidak_ada_be.mp3" />
+          </caption>
+          <caption condition="SearchCompleteOneFileFound">
+            <text id="_id55770" xml:lang="id" status="ok">Pencarian selesai: Satu berkas ditemukan</text>
+            <originalText xml:lang="en">Search complete: One file found.</originalText>
+            <audio src="./audio/179_Pencarian_selesai_Satu_berkas_.mp3" />
+          </caption>
+          <caption condition="SearchCompleteFilesFound">
+            <prompt>
+              <promptVar name="NUM_FILES_FOUND" />
+              <promptItem>
+                <note xml:lang="en">This is used in the sentence "7 files were found"</note>
+                <text id="_id55800" xml:lang="id" status="ok">Beberapa berkas ditemukan</text>
+                <originalText xml:lang="en">files were found.</originalText>
+                <audio src="./audio/180_Beberapa_berkas_ditemukan.mp3" />
+              </promptItem>
+            </prompt>
+          </caption>
+        </switch>
+      </control>
+      <control mfcid="IDC_FILESFOUND" widget="list">
+        <description>
+          <text id="_id55826" xml:lang="id" status="ok">Gunakan tanda panah untuk memilih judul dari daftar ini</text>
+          <originalText xml:lang="en">Use the arrow keys to move around this list of titles.</originalText>
+          <audio src="./audio/181_Gunakan_tanda_panah_untuk_memi.mp3" />
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOK_TITLE" />
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_OPENBOOK" widget="button">
+        <caption>
+          <text id="_id55862" xml:lang="id" status="ok">Buka</text>
+          <originalText xml:lang="en">Open</originalText>
+          <audio src="./audio/182_Buka.mp3" />
+        </caption>
+        <description>
+          <text id="_id55876" xml:lang="id" status="ok">Tekan untuk membuka berkas yang telah dipilih</text>
+          <originalText xml:lang="en">Press to open the selected title.</originalText>
+          <audio src="./audio/183_Tekan_untuk_membuka_berkas_yan.mp3" />
+        </description>
+        <mnemonic>
+          <text id="_id55891" xml:lang="en">O</text>
+          <originalText xml:lang="en">O</originalText>
+          <audio src="./audio/184_O.mp3" />
+        </mnemonic>
+      </control>
+      <control mfcid="IDC_CANCELBUTTON">
+        <caption>
+          <promptItem refid="cancel_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description" />
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          <audio src="./audio/038_C.mp3" />
+        </mnemonic>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_SKIP">
+      <note xml:lang="en">This dialog lets the user control rendering of skippable structures.</note>
+      <caption>
+        <text id="_id55927" xml:lang="id" status="ok">Bagian yang dapat dilewati</text>
+        <originalText xml:lang="en">Skippable Items</originalText>
+        <audio src="./audio/185_Bagian_yang_dapat_dilewati.mp3" />
+      </caption>
+      <switch element="description">
+        <description mfcid="IDC_STATIC" condition="hasSkippableStructures">
+          <text id="_id55950" xml:lang="id" status="ok">Di buku ini terdapat struktur khusus. Tandai bagian mana yang anda ingin lewatkan</text>
+          <originalText xml:lang="en">This book contains the following special structures.  Check the ones you want skipped.</originalText>
+          <audio src="./audio/186_Di_buku_ini_terdapat_struktur_.mp3" />
+        </description>
+        <description mfcid="IDC_STATIC" condition="hasNoSkippableStructures">
+          <text id="_id55972" xml:lang="id" status="ok">Publikasi ini tidak terdapat bagian yang dapat dilewati</text>
+          <originalText xml:lang="en">This publication has no skippable elements.</originalText>
+          <audio src="./audio/187_Publikasi_ini_tidak_terdapat_b.mp3" />
+        </description>
+      </switch>
+      <prompt type="instructions">
+        <promptItem refid="tabAround" />
+        <promptItem refid="altC_to_close" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description" />
+        </description>
+      </control>
+      <control mfcid="IDC_SKIPS" widget="list">
+        <caption>
+          <text id="_id56041" xml:lang="id" status="ok">Bagian yang dapat dilewati</text>
+          <originalText xml:lang="en">Skippable items</originalText>
+          <audio src="./audio/188_Bagian_yang_dapat_dilewati.mp3" />
+        </caption>
+        <description>
+          <text id="_id56055" xml:lang="id" status="ok">Gunakan tanda panah untuk memilih bagian yang ingin dilewati dari daftar ini</text>
+          <originalText xml:lang="en">Use the arrow keys to move around this list of skippable items.</originalText>
+          <audio src="./audio/189_Gunakan_tanda_panah_untuk_memi.mp3" />
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="SKIPPABLE_ITEM" />
+          </caption>
+          <description>
+            <prompt>
+              <promptVar name="SKIPPABLE_ITEM" />
+              <promptItem refid="thisItem" />
+              <promptVar name="WILL_SKIP_OR_NOT" param="SKIPPABLE_ITEM_ID" />
+            </prompt>
+          </description>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE4">
+      <note xml:lang="en">This dialog lets the user select a language pack.</note>
+      <caption>
+        <text id="_id56116" xml:lang="id" status="ok">Bahasa</text>
+        <originalText xml:lang="en">Language</originalText>
+        <audio src="./audio/190_Bahasa.mp3" />
+      </caption>
+      <description mfcid="IDC_STATIC">
+        <text id="_id56133" xml:lang="id" status="ok">Disini anda dapat mengubah bahasa yang digunakan. Paket bahasa baru akan terdeteksi secara otomatis</text>
+        <originalText xml:lang="en">Here you can change the language of the software.  New language packs are detected automatically.</originalText>
+        <audio src="./audio/191_Disini_anda_dapat_mengubah_bah.mp3" />
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround" />
+        <promptItem refid="ctrl1_for_prefsdialog" />
+        <promptItem refid="ctrl2_for_colorsdialog" />
+        <promptItem refid="altC_to_cancel" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+      </prompt>
+      <control mfcid="IDC_BTN_SELECTLANG" widget="button">
+        <caption>
+          <text id="_id56189" xml:lang="id" status="ok">Pilih bahasa</text>
+          <originalText xml:lang="en">Select Language</originalText>
+          <audio src="./audio/192_Pilih_bahasa.mp3" />
+        </caption>
+        <description>
+          <text id="_id56203" xml:lang="id" status="ok">Tekan untuk mengkonfirmasi bahasa yang dipilih untuk media antar muka pengguna AMIS</text>
+          <originalText xml:lang="en">Press to confirm your language selection for the AMIS user interface</originalText>
+          <audio src="./audio/193_Tekan_untuk_mengkonfirmasi_bah.mp3" />
+        </description>
+      </control>
+      <control mfcid="IDC_LANGLIST" widget="list">
+        <caption mfcid="IDC_STATIC">
+          <text id="_id56229" xml:lang="id" status="ok">Pilihan bahasa yang anda pilih:</text>
+          <originalText xml:lang="en">Your language choices are:</originalText>
+          <audio src="./audio/194_Pilihan_bahasa_yang_anda_pilih.mp3" />
+        </caption>
+        <description>
+          <text id="_id56244" xml:lang="id" status="ok">Gunakan tanda panah untuk memilih bahasa dari daftar ini</text>
+          <originalText xml:lang="en">Use the arrow keys to move around this list of languages.</originalText>
+          <audio src="./audio/195_Gunakan_tanda_panah_untuk_memi.mp3" />
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="LANGUAGE_NAME" />
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_CURRLANG">
+        <caption>
+          <prompt>
+            <promptItem>
+              <text id="_id56282" xml:lang="id" status="ok">Sekarang anda sedang menggunakan AMIS dalam bahasa </text>
+              <originalText xml:lang="en">You are currently using AMIS in</originalText>
+              <audio src="./audio/196_Sekarang_anda_sedang_menggunak.mp3" />
+            </promptItem>
+            <promptVar name="CURR_LANGUAGE_NAME" />
+          </prompt>
+        </caption>
+      </control>
+      <accelerator>
+        <text id="_id56304" xml:lang="en">Ctrl+3</text>
+        <originalText xml:lang="en">Ctrl+3</originalText>
+        <audio src="./audio/197_Ctrl3.mp3" />
+      </accelerator>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE2">
+      <note xml:lang="en">This dialog lets the user select which colors AMIS uses</note>
+      <caption>
+        <text id="_id56318" xml:lang="id" status="ok">Memilih warna</text>
+        <originalText xml:lang="en">Set Colors</originalText>
+        <audio src="./audio/198_Memilih_warna.mp3" />
+      </caption>
+      <description>
+        <text id="_id56333" xml:lang="id" status="ok">Disini anda dapat memilih warna untuk AMIS</text>
+        <originalText xml:lang="en">Here you can set color options for AMIS.</originalText>
+        <audio src="./audio/199_Disini_anda_dapat_memilih_warn.mp3" />
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="thisDialogNotSelfVoicing" />
+        <promptItem refid="ctrl1_for_prefsdialog" />
+        <promptItem refid="ctrl3_for_langsdialog" />
+        <promptItem refid="altC_to_cancel" />
+      </prompt>
+      <control mfcid="IDC_PHRASES" widget="other">
+        <caption>
+          <text id="_id56378" xml:lang="id" status="ok">Penanda frase</text>
+          <originalText xml:lang="en">Phrase Highlighting</originalText>
+          <audio src="./audio/200_Penanda_frase.mp3" />
+        </caption>
+      </control>
+      <control mfcid="IDC_TEXTFG" widget="textlabel">
+        <caption>
+          <text id="_id56400" xml:lang="id" status="ok">Latar depan teks</text>
+          <originalText xml:lang="en">Text Foreground: </originalText>
+          <audio src="./audio/201_Latar_depan_teks.mp3" />
+        </caption>
+      </control>
+      <control mfcid="IDC_TEXTBG" widget="textlabel">
+        <caption>
+          <text id="_id56422" xml:lang="id" status="ok">Latar belakang teks</text>
+          <originalText xml:lang="en">Text Background: </originalText>
+          <audio src="./audio/202_Latar_belakang_teks.mp3" />
+        </caption>
+      </control>
+      <control mfcid="IDC_BORDER" widget="textlabel">
+        <caption>
+          <text id="_id56445" xml:lang="id" status="ok">Batas penanda</text>
+          <originalText xml:lang="en">Selection Border: </originalText>
+          <audio src="./audio/203_Batas_penanda.mp3" />
+        </caption>
+      </control>
+      <control mfcid="IDC_CONTRAST" widget="other">
+        <caption>
+          <text id="_id56467" xml:lang="id" status="ok">Memilih tingkatan kekontrasan</text>
+          <originalText xml:lang="en">High Contrast Settings</originalText>
+          <audio src="./audio/204_Memilih_tingkatan_kekontrasan.mp3" />
+        </caption>
+      </control>
+      <control mfcid="IDC_PAGEFG" widget="textlabel">
+        <caption>
+          <text id="_id56490" xml:lang="id" status="ok">Latar depan halaman</text>
+          <originalText xml:lang="en">Page Foreground: </originalText>
+          <audio src="./audio/205_Latar_depan_halaman.mp3" />
+        </caption>
+      </control>
+      <control mfcid="IDC_PAGEBG" widget="textlabel">
+        <caption>
+          <text id="_id56512" xml:lang="id" status="ok">Latar belakang halaman</text>
+          <originalText xml:lang="en">Page Background: </originalText>
+          <audio src="./audio/206_Latar_belakang_halaman.mp3" />
+        </caption>
+      </control>
+      <control mfcid="IDC_BTN_RESETCOLORS" widget="button">
+        <caption>
+          <text id="_id56535" xml:lang="id" status="ok">Mengembalikan pilihan warna</text>
+          <originalText xml:lang="en">Reset Colors</originalText>
+          <audio src="./audio/207_Mengembalikan_pilihan_warna.mp3" />
+        </caption>
+      </control>
+      <control mfcid="IDC_PHRASEPREVIEW" widget="textfield">
+        <caption>
+          <text id="_id56557" xml:lang="id" status="ok">Pratilik warna penanda frase</text>
+          <originalText xml:lang="en">Preview of phrase highlight colors.</originalText>
+          <audio src="./audio/208_Pratilik_warna_penanda_frase.mp3" />
+        </caption>
+      </control>
+      <control mfcid="IDC_CONTRASTPREVIEW" widget="textfield">
+        <caption>
+          <text id="_id56580" xml:lang="id" status="ok">Pratilik kekontrasan halaman</text>
+          <originalText xml:lang="en">Preview of page contrast colors.</originalText>
+          <audio src="./audio/209_Pratilik_kekontrasan_halaman.mp3" />
+        </caption>
+      </control>
+      <accelerator>
+        <text id="_id56596" xml:lang="en">Ctrl+2</text>
+        <originalText xml:lang="en">Ctrl+2</originalText>
+        <audio src="./audio/210_Ctrl2.mp3" />
+      </accelerator>
+    </dialog>
+    <dialog mfcid="IDD_CURRENTPOSITION">
+      <note xml:lang="en">This dialog gives the user information about their current position in the publication.</note>
+      <caption>
+        <text id="_id56610" xml:lang="id" status="ok">Posisi sekarang</text>
+        <originalText xml:lang="en">Current Position</originalText>
+        <audio src="./audio/211_Posisi_sekarang.mp3" />
+      </caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description" />
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text id="_id56676" xml:lang="id" status="ok">Ini adalah daftar data tentang posisi anda sekarang</text>
+          <originalText xml:lang="en">This is a list of data about your current position.</originalText>
+          <audio src="./audio/212_Ini_adalah_daftar_data_tentang.mp3" />
+        </caption>
+        <description>
+          <promptItem refid="list_reads_automatically" />
+        </description>
+        <list repeat="no">
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id56708" xml:lang="id" status="ok">Posisi anda sekarang berjudul:</text>
+                <originalText xml:lang="en">Your current section is titled:</originalText>
+                <audio src="./audio/213_Posisi_anda_sekarang_berjudul.mp3" />
+              </promptItem>
+              <promptVar name="CURRENT_SECTION_TITLE" />
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id56736" xml:lang="id" status="ok">Jumlah halaman dalam bagian ini:</text>
+                <originalText xml:lang="en">Number of pages in this section:</originalText>
+                <audio src="./audio/214_Jumlah_halaman_dalam_bagian_in.mp3" />
+              </promptItem>
+              <promptVar name="CURRENT_SECTION_NUM_PAGES" />
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id56762" xml:lang="id" status="ok">Jumlah sub bagian dalam bagian ini:</text>
+                <originalText xml:lang="en">Number of subsections in this section:</originalText>
+                <audio src="./audio/215_Jumlah_sub_bagian_dalam_bagian.mp3" />
+              </promptItem>
+              <promptVar name="CURRENT_SECTION_NUM_SUBSECTIONS" />
+            </prompt>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE1">
+      <note xml:lang="en">This dialog lets the user set some basic preferences for AMIS.</note>
+      <caption>
+        <text id="_id56796" xml:lang="id" status="ok">Preferensi Umum</text>
+        <originalText xml:lang="en">General Preferences</originalText>
+        <audio src="./audio/216_Preferensi_Umum.mp3" />
+      </caption>
+      <description>
+        <text id="_id56811" xml:lang="id" status="ok">Disini anda dapat menata preferensi untuk AMIS</text>
+        <originalText xml:lang="en">Here you can set general preferences for AMIS.</originalText>
+        <audio src="./audio/217_Disini_anda_dapat_menata_prefe.mp3" />
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround" />
+        <promptItem refid="ctrl2_for_colorsdialog" />
+        <promptItem refid="ctrl3_for_langsdialog" />
+        <promptItem refid="altC_to_cancel" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+        <promptItem refid="textBoxRepeatInstr" />
+      </prompt>
+      <control mfcid="IDC_BMKDIRBROWSE" widget="button">
+        <caption>
+          <promptItem refid="browse_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="browse_button_description" />
+        </description>
+      </control>
+      <control mfcid="IDC_SELFVOICING" widget="checkbox">
+        <caption>
+          <text id="_id56892" xml:lang="id" status="ok">Menggunakan suara sendiri</text>
+          <originalText xml:lang="en">Use self-voicing</originalText>
+          <audio src="./audio/218_Menggunakan_suara_sendiri.mp3" />
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently" />
+            <promptVar name="ON_OR_OFF" param="SELF_VOICING_FEATURE" />
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_TTSVOICE" widget="list">
+        <caption mfcid="IDC_SELTTSLABEL">
+          <text id="_id56934" xml:lang="id" status="ok">Pilih suara TTS:</text>
+          <originalText xml:lang="en">Select TTS voice:</originalText>
+          <audio src="./audio/219_Pilih_suara_TTS.mp3" />
+        </caption>
+        <description>
+          <text id="_id56949" xml:lang="id" status="ok">Gunakan tanda panah untuk memilih suara dari daftar dibawah ini</text>
+          <originalText xml:lang="en">Use the arrow keys to move around this list of voices</originalText>
+          <audio src="./audio/220_Gunakan_tanda_panah_untuk_memi.mp3" />
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="TTS_VOICE_NAME" />
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_BASIC" widget="checkbox">
+        <caption>
+          <text id="_id56985" xml:lang="id" status="ok">Memulai AMIS dengan mode tilik dasar</text>
+          <originalText xml:lang="en">Start AMIS in the basic view mode.</originalText>
+          <audio src="./audio/221_Memulai_AMIS_dengan_mode_tilik.mp3" />
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently" />
+            <promptVar name="ON_OR_OFF" param="BASIC_VIEW_FEATURE" />
+            <promptItem refid="spaceToToggle" />
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_PROMPTONBASICVIEW" widget="checkbox">
+        <caption>
+          <text id="_id57030" xml:lang="id" status="ok">Jika menggunakan mode tilik dasar, jelaskan kepada pengguna bagaimana cara kembali ke tilik asli</text>
+          <originalText xml:lang="en">Upon switching to basic view, tell the user how to go back to the default view.</originalText>
+          <audio src="./audio/222_Jika_menggunakan_mode_tilik_da.mp3" />
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently" />
+            <promptVar name="ON_OR_OFF" param="PROMPT_ON_BASIC_VIEW_FEATURE" />
+            <promptItem refid="spaceToToggle" />
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_LOADLASTDTB" widget="checkbox">
+        <caption>
+          <text id="_id57076" xml:lang="id" status="ok">Memuat buku terbaru yang dibaca ketika AMIS mulai dijalankan</text>
+          <originalText xml:lang="en">Load the most recently read book when the software starts.</originalText>
+          <audio src="./audio/223_Memuat_buku_terbaru_yang_dibac.mp3" />
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently" />
+            <promptVar name="ON_OR_OFF" param="LOAD_LAST_READ_FEATURE" />
+            <promptItem refid="spaceToToggle" />
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_BMKDIR" widget="textfield">
+        <caption mfcid="IDC_BMKDIRLABEL">
+          <text id="_id57124" xml:lang="id" status="ok">Direktori tanda buku:</text>
+          <originalText xml:lang="en">Bookmarks directory:</originalText>
+          <audio src="./audio/224_Direktori_tanda_buku.mp3" />
+        </caption>
+        <description>
+          <text id="_id57139" xml:lang="id" status="ok">Ketik alamat folder untuk tanda buku di ruang ini</text>
+          <originalText xml:lang="en">Type the path to the bookmarks folder in this field.</originalText>
+          <audio src="./audio/225_Ketik_alamat_folder_untuk_tand.mp3" />
+        </description>
+      </control>
+      <accelerator>
+        <text id="_id57155" xml:lang="en">Ctrl+1</text>
+        <originalText xml:lang="en">Ctrl+1</originalText>
+        <audio src="./audio/226_Ctrl1.mp3" />
+      </accelerator>
+    </dialog>
+    <dialog mfcid="IDD_NAVIGATIONOPTIONS">
+      <note xml:lang="en">This dialog lists navigation options for the current publication.</note>
+      <caption>
+        <text id="_id57169" xml:lang="id" status="ok">Pilihan Navigasi</text>
+        <originalText xml:lang="en">Navigation Options</originalText>
+        <audio src="./audio/227_Pilihan_Navigasi.mp3" />
+      </caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description" />
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text id="_id57234" xml:lang="id" status="ok">Ini adalah daftar bagian yang dapat dinavigasikan secara langsung</text>
+          <originalText xml:lang="en">This is a list of items to which you may navigate directly.</originalText>
+          <audio src="./audio/228_Ini_adalah_daftar_bagian_yang_.mp3" />
+        </caption>
+        <description>
+          <promptItem refid="list_reads_automatically" />
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="TOC_CATEGORIES" />
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_GOTOPAGE">
+      <note xml:lang="en">This dialog lets the user jump to a certain page</note>
+      <caption>
+        <text id="_id57281" xml:lang="id" status="ok">Menuju Halaman</text>
+        <originalText xml:lang="en">Go To Page</originalText>
+        <audio src="./audio/229_Menuju_Halaman.mp3" />
+      </caption>
+      <description>
+        <text id="_id57296" xml:lang="id" status="ok">Disini anda dapat melompat ke nomor atau label halaman</text>
+        <originalText xml:lang="en">Here you can jump to a page number or page label.</originalText>
+        <audio src="./audio/230_Disini_anda_dapat_melompat_ke_.mp3" />
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround" />
+        <promptItem>
+          <text id="_id57320" xml:lang="id" status="ok">Setelah anda mengetik nomor halaman, tekan enter untuk menuju ke halaman tersebut</text>
+          <originalText xml:lang="en">After typing in your page number, press enter to go there.</originalText>
+          <audio src="./audio/231_Setelah_anda_mengetik_nomor_ha.mp3" />
+        </promptItem>
+        <promptItem refid="altC_to_cancel" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+        <promptItem refid="textBoxRepeatInstr" />
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption" />
+        </caption>
+        <description>
+          <text id="_id57369" xml:lang="id" status="ok">Tekat tombol ini untuk menuju halaman yang diinginkan</text>
+          <originalText xml:lang="en">Press this button to go to the desired page.</originalText>
+          <audio src="./audio/232_Tekan_tombol_ini_untuk_menuju_.mp3" />
+        </description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description" />
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          <audio src="./audio/038_C.mp3" />
+        </mnemonic>
+      </control>
+      <control mfcid="IDC_PAGENUM" widget="textfield">
+        <caption mfcid="IDC_STATIC">
+          <text id="_id57417" xml:lang="id" status="ok">Masukkan nomor halaman:</text>
+          <originalText xml:lang="en">Enter a page number:</originalText>
+          <audio src="./audio/233_Masukkan_nomor_halaman.mp3" />
+        </caption>
+        <description>
+          <text id="_id57432" xml:lang="id" status="ok">Ketik nomor atau label halaman yang anda ingin tuju</text>
+          <originalText xml:lang="en">Type the number or label of the page you want to go to.</originalText>
+          <audio src="./audio/234_Ketik_nomor_atau_label_halaman.mp3" />
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_FULLSUMMARY">
+      <note xml:lang="en">This dialog lists key publication metadata.</note>
+      <caption>
+        <text id="_id57459" xml:lang="id" status="ok">Ringkasan Publikasi</text>
+        <originalText xml:lang="en">Publication Summary</originalText>
+        <audio src="./audio/235_Ringkasan_Publikasi.mp3" />
+      </caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description" />
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text id="_id57524" xml:lang="id" status="ok">Ini adalah daftar publikasi metadata</text>
+          <originalText xml:lang="en">This is a list of publication metadata.</originalText>
+          <audio src="./audio/236_Ini_adalah_daftar_publikasi_me.mp3" />
+        </caption>
+        <description>
+          <promptItem refid="list_reads_automatically" />
+        </description>
+        <list repeat="no">
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id57555" xml:lang="id" status="ok">Buku ini berjudul:</text>
+                <originalText xml:lang="en">This book is titled:</originalText>
+                <audio src="./audio/237_Buku_ini_berjudul.mp3" />
+              </promptItem>
+              <promptVar name="META_TITLE" />
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id57581" xml:lang="id" status="ok">Ditulis oleh:</text>
+                <originalText xml:lang="en">Written by:</originalText>
+                <audio src="./audio/238_Ditulis_oleh.mp3" />
+              </promptItem>
+              <promptVar name="META_CREATOR" />
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id57606" xml:lang="id" status="ok">Dipublikasikan oleh:</text>
+                <originalText xml:lang="en">Published by:</originalText>
+                <audio src="./audio/239_Dipublikasikan_oleh.mp3" />
+              </promptItem>
+              <promptVar name="META_PUBLISHER" />
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_DESCRIPTION">
+            <prompt>
+              <promptItem>
+                <text id="_id57633" xml:lang="id" status="ok">Deskripsi:</text>
+                <originalText xml:lang="en">Description:</originalText>
+                <audio src="./audio/240_Deskripsi.mp3" />
+              </promptItem>
+              <promptVar name="META_DESC" />
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id57658" xml:lang="id" status="ok">Jumlah titik navigasi pada ini tabel:</text>
+                <originalText xml:lang="en">Number of navigation points in the table of contents:</originalText>
+                <audio src="./audio/241_Jumlah_titik_navigasi_pada_tab.mp3" />
+              </promptItem>
+              <promptVar name="META_TOCITEMS" />
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id57685" xml:lang="id" status="ok">Maksimum detail bagian:</text>
+                <originalText xml:lang="en">Maximum section depth:</originalText>
+                <audio src="./audio/242_Maksimum_detail_bagian.mp3" />
+              </promptItem>
+              <promptVar name="META_DEPTH" />
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id57713" xml:lang="id" status="ok">Halaman depan:</text>
+                <originalText xml:lang="en">Front matter pages:</originalText>
+                <audio src="./audio/243_Halaman_depan.mp3" />
+              </promptItem>
+              <promptVar name="META_PAGEFRONT" />
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id57741" xml:lang="id" status="ok">Halaman biasa:</text>
+                <originalText xml:lang="en">Regular pages:</originalText>
+                <audio src="./audio/244_Halaman_biasa.mp3" />
+              </promptItem>
+              <promptVar name="META_PAGENORMAL" />
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id57768" xml:lang="id" status="ok">Halaman khusus:</text>
+                <originalText xml:lang="en">Special pages:</originalText>
+                <audio src="./audio/245_Halaman_khusus.mp3" />
+              </promptItem>
+              <promptVar name="META_PAGESPECIAL" />
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id57793" xml:lang="id" status="ok">Lama Durasi:</text>
+                <originalText xml:lang="en">Total duration:</originalText>
+                <audio src="./audio/246_Lama_Durasi.mp3" />
+              </promptItem>
+              <promptVar name="META_TOTALTIME" />
+            </prompt>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+  </dialogs>
+  <prompts>
+    <promptItemRefs>
+      <promptItem id="altC_to_close">
+        <text id="_id57825" xml:lang="id" status="ok">Tekan Alt + C untuk menutup dialog.</text>
+        <originalText xml:lang="en">Press Alt + C to close the dialog.</originalText>
+        <audio src="./audio/247_Tekan_Alt__C_untuk_menutup_dia.mp3" />
+      </promptItem>
+      <promptItem id="altC_to_cancel">
+        <text id="_id57842" xml:lang="id" status="ok">Tekan Alt + C untuk membatalkan dialog.</text>
+        <originalText xml:lang="en">Press Alt + C to cancel the dialog.</originalText>
+        <audio src="./audio/248_Tekan_Alt__C_untuk_membatalkan.mp3" />
+      </promptItem>
+      <promptItem id="thisItem">
+        <text id="_id57860" xml:lang="id" status="ok">Bagian ini</text>
+        <originalText xml:lang="en">This item</originalText>
+        <audio src="./audio/249_Bagian_ini.mp3" />
+      </promptItem>
+      <promptItem id="spaceToToggle">
+        <text id="_id57876" xml:lang="id" status="ok">Tekan Spasi untuk menjaga nilai</text>
+        <originalText xml:lang="en">Press the space bar to toggle the value.</originalText>
+        <audio src="./audio/250_Tekan_Spasi_untuk_menjaga_nila.mp3" />
+      </promptItem>
+      <promptItem id="tabAround">
+        <text id="_id57894" xml:lang="id" status="ok">Tekan Tab untuk memilih pilihan pada dialog.</text>
+        <originalText xml:lang="en">Hit tab to move around the options on the dialog.</originalText>
+        <audio src="./audio/251_Tekan_Tab_untuk_memilih_piliha.mp3" />
+      </promptItem>
+      <promptItem id="ctrl2_for_colorsdialog">
+        <text id="_id57912" xml:lang="id" status="ok">Tekan Kontrol + 2 untuk menuju dialog warna</text>
+        <originalText xml:lang="en">Press control + 2 to switch to the colors dialog.</originalText>
+        <audio src="./audio/252_Tekan_Kontrol__2_untuk_menuju_.mp3" />
+      </promptItem>
+      <promptItem id="ctrl3_for_langsdialog">
+        <text id="_id57931" xml:lang="id" status="ok">Tekan Kontrol + 3 untuk menuju dialog bahasa</text>
+        <originalText xml:lang="en">Press control + 3 to switch to the language options dialog.</originalText>
+        <audio src="./audio/253_Tekan_Kontrol__3_untuk_menuju_.mp3" />
+      </promptItem>
+      <promptItem id="ctrl1_for_prefsdialog">
+        <text id="_id57949" xml:lang="id" status="ok">Tekan kontrol + 1 untuk menuju dialog preferensi umum</text>
+        <originalText xml:lang="en">Press control + 1 to switch to the general preferences dialog.</originalText>
+        <audio src="./audio/254_Tekan_Kontrol__1_untuk_menuju_.mp3" />
+      </promptItem>
+      <promptItem id="thisItemIsCurrently">
+        <text id="_id57968" xml:lang="id" status="ok">Bagian ini sekarang sedang</text>
+        <originalText xml:lang="en">This item is currently</originalText>
+        <audio src="./audio/255_Bagian_ini_sekarang_sedang.mp3" />
+      </promptItem>
+      <promptItem id="enter_to_close">
+        <text id="_id57985" xml:lang="id" status="ok">Tekan enter untuk menutup dialog</text>
+        <originalText xml:lang="en">Press enter to close the dialog.</originalText>
+        <audio src="./audio/256_Tekan_enter_untuk_menutup_dial.mp3" />
+      </promptItem>
+      <promptItem id="browse_button_caption">
+        <text id="_id58002" xml:lang="id" status="ok">Jelajah...</text>
+        <originalText xml:lang="en">Browse...</originalText>
+        <audio src="./audio/257_Jelajah.mp3" />
+      </promptItem>
+      <promptItem id="browse_button_description">
+        <text id="_id58019" xml:lang="id" status="ok">Tekan untuk membuka dialog penjelajahan folder</text>
+        <originalText xml:lang="en">Press to open the folder browse dialog.</originalText>
+        <audio src="./audio/258_Tekan_untuk_membuka_dialog_pen.mp3" />
+      </promptItem>
+      <promptItem id="ok_button_caption">
+        <text id="_id58037" xml:lang="id" status="ok">OK</text>
+        <originalText xml:lang="en">OK</originalText>
+        <audio src="./audio/259_OK.mp3" />
+      </promptItem>
+      <promptItem id="ok_button_description">
+        <text id="_id58053" xml:lang="id" status="ok">Tekan OK untuk menutup dialog ini</text>
+        <originalText xml:lang="en">Press OK to close this dialog.</originalText>
+        <audio src="./audio/260_Tekan_OK_untuk_menutup_dialog_.mp3" />
+      </promptItem>
+      <promptItem id="cancel_button_caption">
+        <text id="_id58071" xml:lang="id" status="ok">Batalkan</text>
+        <originalText xml:lang="en">Cancel</originalText>
+        <audio src="./audio/261_Batalkan.mp3" />
+      </promptItem>
+      <promptItem id="cancel_button_description">
+        <text id="_id58088" xml:lang="id" status="ok">Tekan untuk membatalkan dialog ini</text>
+        <originalText xml:lang="en">Press to cancel this dialog.</originalText>
+        <audio src="./audio/262_Tekan_untuk_membatalkan_dialog.mp3" />
+      </promptItem>
+      <promptItem id="list_reads_automatically">
+        <text id="_id58105" xml:lang="id" status="ok">Daftar ini akan dibacakan secara otomatis</text>
+        <originalText xml:lang="en">This list will be read automatically.</originalText>
+        <audio src="./audio/263_Daftar_ini_akan_dibacakan_seca.mp3" />
+      </promptItem>
+      <promptItem id="repeatLastPromptInstr">
+        <text id="_id58123" xml:lang="id" status="ok">Tekan Kontrol + R untuk mengulang bagian yang baru saja terlewat</text>
+        <originalText xml:lang="en">Press Control + R to repeat the last prompt.</originalText>
+        <audio src="./audio/264_Tekan_Kontrol__R_untuk_mengula.mp3" />
+      </promptItem>
+      <promptItem id="thisDialogNotSelfVoicing">
+        <text id="_id58141" xml:lang="id" status="ok">Dialog ini bukan dialog yang dapat berbicara sendiri</text>
+        <originalText xml:lang="en">This dialog is not yet self-voicing.</originalText>
+        <audio src="./audio/265_Dialog_ini_bukan_dialog_yang_d.mp3" />
+      </promptItem>
+      <promptItem id="escapeToCancel">
+        <text id="_id58158" xml:lang="id" status="ok">Tekan Escape untuk membatalkan</text>
+        <originalText xml:lang="en">Press escape to cancel</originalText>
+        <audio src="./audio/266_Tekan_Escape_untuk_membatalkan.mp3" />
+      </promptItem>
+      <promptItem id="hearDlgInstructions">
+        <text id="_id58176" xml:lang="id" status="ok">Tekan Kontrol + I untuk mendengar intruksi dialog ini</text>
+        <originalText xml:lang="en">Press Control + I to hear instructions for this dialog.</originalText>
+        <audio src="./audio/267_Tekan_Kontrol__I_untuk_mendeng.mp3" />
+      </promptItem>
+      <promptItem id="textBoxRepeatInstr">
+        <text id="_id58194" xml:lang="id" status="ok">Tekan Kontrol + R untuk mengulang teks dari kotak teks yang terakhir dibuka</text>
+        <originalText xml:lang="en">Press Control + R to repeat the text in the last text box.</originalText>
+        <audio src="./audio/268_Tekan_Kontrol__R_untuk_mengula.mp3" />
+      </promptItem>
+      <promptItem id="nav_window">
+        <text id="_id58212" xml:lang="id" status="ok">Navigasi</text>
+        <originalText xml:lang="en">Navigation</originalText>
+        <audio src="./audio/269_Navigasi.mp3" />
+      </promptItem>
+      <promptItem id="sections">
+        <text id="_id58229" xml:lang="id" status="ok">Bagian</text>
+        <originalText xml:lang="en">Sections</originalText>
+        <audio src="./audio/270_Bagian.mp3" />
+      </promptItem>
+      <promptItem id="pages">
+        <text id="_id58245" xml:lang="id" status="ok">Halaman</text>
+        <originalText xml:lang="en">Pages</originalText>
+        <audio src="./audio/271_Halaman.mp3" />
+      </promptItem>
+      <promptItem id="noterefs">
+        <text id="_id58262" xml:lang="id" status="ok">Catatan kaki</text>
+        <originalText xml:lang="en">Footnotes</originalText>
+        <audio src="./audio/272_Catatan_kaki.mp3" />
+      </promptItem>
+      <promptItem id="prodnotes">
+        <text id="_id58278" xml:lang="id" status="ok">Catatan prosedur</text>
+        <originalText xml:lang="en">Producer notes</originalText>
+        <audio src="./audio/273_Catatan_prosedur.mp3" />
+      </promptItem>
+      <promptItem id="sidebars">
+        <text id="_id58295" xml:lang="id" status="ok">Batang sisi</text>
+        <originalText xml:lang="en">Sidebars</originalText>
+        <audio src="./audio/274_Batang_sisi.mp3" />
+      </promptItem>
+      <promptItem id="groups">
+        <text id="_id58311" xml:lang="id" status="ok">Bagian yang dikelompokkan</text>
+        <originalText xml:lang="en">Grouped items</originalText>
+        <audio src="./audio/275_Bagian_yang_dikelompokkan.mp3" />
+      </promptItem>
+      <promptItem id="navigation_sidebar_caption">
+        <text id="_id58328" xml:lang="id" status="ok">Navigasi</text>
+        <originalText xml:lang="en">Navigation</originalText>
+        <audio src="./audio/276_Navigasi.mp3" />
+      </promptItem>
+      <promptItem id="ready">
+        <text id="_id58345" xml:lang="id" status="ok">Siap</text>
+        <originalText xml:lang="en">Ready</originalText>
+        <audio src="./audio/277_Siap.mp3" />
+      </promptItem>
+      <promptItem id="property_sheet_caption">
+        <text id="_id58361" xml:lang="id" status="ok">Preferensi</text>
+        <originalText xml:lang="en">Preferences</originalText>
+        <audio src="./audio/278_Preferensi.mp3" />
+      </promptItem>
+      <promptItem id="selfolder_title">
+        <text id="_id58378" xml:lang="id" status="ok">Pilih folder</text>
+        <originalText xml:lang="en">Select a Folder</originalText>
+        <audio src="./audio/279_Pilih_folder.mp3" />
+      </promptItem>
+      <promptItem id="selfolder_instr">
+        <text id="_id58394" xml:lang="id" status="ok">Pilih folder dari direktori dibawah ini</text>
+        <originalText xml:lang="en">Select a folder from the directory below.</originalText>
+        <audio src="./audio/280_Pilih_folder_dari_direktori_di.mp3" />
+      </promptItem>
+      <promptItem id="daisy_books">
+        <text id="_id58412" xml:lang="id" status="ok">Buku DAISY</text>
+        <originalText xml:lang="en">DAISY Books</originalText>
+        <audio src="./audio/281_Buku_DAISY.mp3" />
+      </promptItem>
+      <promptItem id="folder_does_not_exist">
+        <text id="_id58429" xml:lang="id" status="ok">Folder %s tidak ditemukan. Apakah anda ingin membuat folder baru?</text>
+        <originalText xml:lang="en">The folder %s does not exist. Do you want the folder to be created?</originalText>
+        <audio src="./audio/282_Folder_s_tidak_ditemukan_Apaka.mp3" />
+      </promptItem>
+      <promptItem id="folder_invalid">
+        <text id="_id58448" xml:lang="id" status="ok">Nama folder ini tidak berlaku. Silakan pilih nama lain</text>
+        <originalText xml:lang="en">This folder name is invalid. Please choose another.</originalText>
+        <audio src="./audio/283_Nama_folder_ini_tidak_berlaku_.mp3" />
+      </promptItem>
+      <promptItem id="cant_create_folder">
+        <text id="_id58466" xml:lang="id" status="ok">Folder ini tidak dapat dibuat. Silakan cek sekali lagi</text>
+        <originalText xml:lang="en">This folder can not be created. Please double check.</originalText>
+        <audio src="./audio/284_Folder_ini_tidak_dapat_dibuat_.mp3" />
+      </promptItem>
+      <promptItem id="not_available">
+        <text id="_id58484" xml:lang="id" status="ok">Tidak tersedia</text>
+        <originalText xml:lang="en">Not available</originalText>
+        <audio src="./audio/285_Tidak_tersedia.mp3" />
+      </promptItem>
+      <promptItem id="numeric_zero">
+        <note xml:lang="en">All numerals should be translated into numerals, not words.</note>
+        <text id="_id58505" xml:lang="id" status="ok">0</text>
+        <originalText xml:lang="en">0</originalText>
+        <audio src="./audio/286_0.mp3" />
+      </promptItem>
+      <promptItem id="numeric_one">
+        <text id="_id58521" xml:lang="id" status="ok">1</text>
+        <originalText xml:lang="en">1</originalText>
+        <audio src="./audio/287_1.mp3" />
+      </promptItem>
+      <promptItem id="numeric_two">
+        <text id="_id58537" xml:lang="id" status="ok">2</text>
+        <originalText xml:lang="en">2</originalText>
+        <audio src="./audio/288_2.mp3" />
+      </promptItem>
+      <promptItem id="numeric_three">
+        <text id="_id58553" xml:lang="id" status="ok">3</text>
+        <originalText xml:lang="en">3</originalText>
+        <audio src="./audio/289_3.mp3" />
+      </promptItem>
+      <promptItem id="numeric_four">
+        <text id="_id58570" xml:lang="id" status="ok">4</text>
+        <originalText xml:lang="en">4</originalText>
+        <audio src="./audio/290_4.mp3" />
+      </promptItem>
+      <promptItem id="numeric_five">
+        <text id="_id58586" xml:lang="id" status="ok">5</text>
+        <originalText xml:lang="en">5</originalText>
+        <audio src="./audio/291_5.mp3" />
+      </promptItem>
+      <promptItem id="numeric_six">
+        <text id="_id58602" xml:lang="id" status="ok">6</text>
+        <originalText xml:lang="en">6</originalText>
+        <audio src="./audio/292_6.mp3" />
+      </promptItem>
+      <promptItem id="numeric_seven">
+        <text id="_id58618" xml:lang="id" status="ok">7</text>
+        <originalText xml:lang="en">7</originalText>
+        <audio src="./audio/293_7.mp3" />
+      </promptItem>
+      <promptItem id="numeric_eight">
+        <text id="_id58634" xml:lang="id" status="ok">8</text>
+        <originalText xml:lang="en">8</originalText>
+        <audio src="./audio/294_8.mp3" />
+      </promptItem>
+      <promptItem id="numeric_nine">
+        <text id="_id58650" xml:lang="id" status="ok">9</text>
+        <originalText xml:lang="en">9</originalText>
+        <audio src="./audio/295_9.mp3" />
+      </promptItem>
+      <promptItem id="deleted">
+        <text id="_id58666" xml:lang="id" status="ok">dihapus</text>
+        <originalText xml:lang="en">deleted</originalText>
+        <audio src="./audio/296_dihapus.mp3" />
+      </promptItem>
+      <promptItem id="will_be_skipped">
+        <text id="_id58683" xml:lang="id" status="ok">akan dilewati</text>
+        <originalText xml:lang="en">will be skipped</originalText>
+        <audio src="./audio/297_akan_dilewati.mp3" />
+      </promptItem>
+      <promptItem id="will_be_played">
+        <text id="_id58700" xml:lang="id" status="ok">akan dimainkan</text>
+        <originalText xml:lang="en">will be played</originalText>
+        <audio src="./audio/298_akan_dimainkan.mp3" />
+      </promptItem>
+      <promptItem id="item_on">
+        <text id="_id58716" xml:lang="id" status="ok">hidup</text>
+        <originalText xml:lang="en">on</originalText>
+        <audio src="./audio/299_hidup.mp3" />
+      </promptItem>
+      <promptItem id="item_off">
+        <text id="_id58732" xml:lang="id" status="ok">mati</text>
+        <originalText xml:lang="en">off</originalText>
+        <audio src="./audio/300_mati.mp3" />
+      </promptItem>
+      <promptItem id="item_selected">
+        <text id="_id58748" xml:lang="id" status="ok">dipilih</text>
+        <originalText xml:lang="en">selected</originalText>
+        <audio src="./audio/301_dipilih.mp3" />
+      </promptItem>
+      <promptItem id="item_deselected">
+        <text id="_id58765" xml:lang="id" status="ok">pilihan dibatalkan</text>
+        <originalText xml:lang="en">deselected</originalText>
+        <audio src="./audio/302_pilihan_dibatalkan.mp3" />
+      </promptItem>
+      <promptItem id="keyboardShortcut">
+        <text id="_id58781" xml:lang="id" status="ok">Cara Singkat Papan Tombol</text>
+        <originalText xml:lang="en">Keyboard Shortcut</originalText>
+        <audio src="./audio/303_Cara_Singkat_Papan_Tombol.mp3" />
+      </promptItem>
+      <promptItem id="icon">
+        <text id="_id58798" xml:lang="id" status="ok">Ikon</text>
+        <originalText xml:lang="en">Icon</originalText>
+        <audio src="./audio/304_Ikon.mp3" />
+      </promptItem>
+      <promptItem id="menu">
+        <text id="_id58815" xml:lang="id" status="ok">Menu</text>
+        <originalText xml:lang="en">Menu</originalText>
+        <audio src="./audio/305_Menu.mp3" />
+      </promptItem>
+      <promptItem id="followedBy">
+        <note xml:lang="en">This is used in the context of a sequence of key presses, as in "Press Alt + V, followed by S"</note>
+        <text id="_id58836" xml:lang="id" status="ok">diikuti oleh</text>
+        <originalText xml:lang="en">followed by</originalText>
+        <audio src="./audio/306_diikuti_oleh.mp3" />
+      </promptItem>
+      <promptItem id="submenu">
+        <text id="_id58853" xml:lang="id" status="ok">Sub Menu</text>
+        <originalText xml:lang="en">Submenu</originalText>
+        <audio src="./audio/307_Sub_Menu.mp3" />
+      </promptItem>
+    </promptItemRefs>
+    <generalPrompts>
+      <prompt id="dialogClosed">
+        <promptItem>
+          <text id="_id58870" xml:lang="id" status="ok">Dialog ditutup</text>
+          <originalText xml:lang="en">Dialog closed.</originalText>
+          <audio src="./audio/308_Dialog_ditutup.mp3" />
+        </promptItem>
+      </prompt>
+      <prompt id="textFieldEntry">
+        <promptItem>
+          <text id="_id58890" xml:lang="id" status="ok">Wilayah teks yang dimasukkan adalah:</text>
+          <originalText xml:lang="en">Text field entry is:</originalText>
+          <audio src="./audio/309_Wilayah_teks_yang_dimasukkan_a.mp3" />
+        </promptItem>
+        <promptVar name="TEXT_FIELD" />
+      </prompt>
+      <prompt id="notSelfVoicing">
+        <promptItem refid="thisDialogNotSelfVoicing" />
+      </prompt>
+      <prompt id="bookAtPathChanged">
+        <promptItem>
+          <text id="_id58925" xml:lang="id" status="ok">Lokasi buku yang anda cari telah berubah. Buku yang berbeda telah menggantikannya. Apakah ini CD ROM anda telah berubah?</text>
+          <originalText xml:lang="en">The location of the book you are looking for has changed.  A different book was found instead.  Did the contents of your CD-ROM drive change?</originalText>
+          <audio src="./audio/310_Lokasi_buku_yang_anda_cari_tel.mp3" />
+        </promptItem>
+      </prompt>
+      <prompt id="generalBookError">
+        <promptItem>
+          <text id="_id58949" xml:lang="id" status="ok">Sebuah kesalahan terjadi ketika ingin membuka buku</text>
+          <originalText xml:lang="en">An error occurred while trying to open the book.</originalText>
+          <audio src="./audio/311_Sebuah_kesalahan_terjadi_ketik.mp3" />
+        </promptItem>
+        <promptVar name="BOOK_PATH" />
+        <promptItem refid="enter_to_close" />
+      </prompt>
+      <prompt id="noCdLoaded">
+        <promptItem>
+          <text id="_id58979" xml:lang="id" status="ok">Tidak ada CD di dalam CD ROM anda</text>
+          <originalText xml:lang="en">There is not a CD in the CD-ROM drive.</originalText>
+          <audio src="./audio/312_Tidak_ada_CD_di_dalam_CD_ROM_a.mp3" />
+        </promptItem>
+        <promptItem refid="enter_to_close" />
+      </prompt>
+      <prompt id="pluginErrorInit">
+        <promptItem>
+          <text id="_id59004" xml:lang="id" status="ok">Kesalahan Perangkat Tambahan: Fungsi init() tidak ditemukan di berkas DLL perangkat tambahan</text>
+          <originalText xml:lang="en">Plug-in error: init() function not found in the plug-in DLL.</originalText>
+          <audio src="./audio/313_Kesalahan_Perangkat_Tambahan_F.mp3" />
+        </promptItem>
+      </prompt>
+      <prompt id="pluginErrorDll">
+        <promptItem>
+          <text id="_id59025" xml:lang="id" status="ok">Kesalahan Perangkat Tambahan: Perangkat Tambahan berikut ini tidak dapat dimuat:</text>
+          <originalText xml:lang="en">Plug-in error: The following plug-in library could not be loaded: </originalText>
+          <audio src="./audio/314_Kesalahan_Perangkat_Tambahan_P.mp3" />
+        </promptItem>
+        <promptVar name="PLUGIN_LIB" />
+      </prompt>
+      <prompt id="basicViewPrompt">
+        <promptItem>
+          <text id="_id59052" xml:lang="id" status="ok">Anda sekarang menggunakan mode tilik dasar. tekan F11 untuk kembali ke mode tilik asli</text>
+          <originalText xml:lang="en">You are now using the basic view mode.  Press F11 to switch back to the default view mode.</originalText>
+          <audio src="./audio/315_Anda_sekarang_menggunakan_mode.mp3" />
+        </promptItem>
+      </prompt>
+      <prompt id="OpenFile_notSelfVoicing">
+        <promptItem>
+          <text id="_id59074" xml:lang="id" status="ok">Buka Dialog Berkas</text>
+          <originalText xml:lang="en">Open File Dialog</originalText>
+          <audio src="./audio/316_Buka_Dialog_Berkas.mp3" />
+        </promptItem>
+        <promptItem refid="thisDialogNotSelfVoicing" />
+        <promptItem>
+          <text id="_id59094" xml:lang="id" status="ok">Gunakan fitur "Pencarian Buku" dibawah menu berkas untuk mencari buku DAISY di cakram padat anda</text>
+          <originalText xml:lang="en">Use the "search for books" feature, under the file menu, to find DAISY books on your hard drive.</originalText>
+          <audio src="./audio/317_Gunakan_fitur_Pencarian_Buku_d.mp3" />
+        </promptItem>
+        <promptItem refid="escapeToCancel" />
+      </prompt>
+      <prompt id="BrowseForFolder_notSelfVoicing">
+        <promptItem>
+          <text id="_id59121" xml:lang="id" status="ok">Jelajah untuk dialog folder</text>
+          <originalText xml:lang="en">Browse for folder dialog</originalText>
+          <audio src="./audio/318_Jelajah_untuk_dialog_folder.mp3" />
+        </promptItem>
+        <promptItem refid="thisDialogNotSelfVoicing" />
+        <promptItem refid="escapeToCancel" />
+        <promptItem>
+          <text id="_id59145" xml:lang="id" status="ok">Lalu ketik alamat folder yang anda inginkan di kotak teks</text>
+          <originalText xml:lang="en">Then, type the path of the folder you want in the text box.</originalText>
+          <audio src="./audio/319_Lalu_ketik_alamat_folder_yang_.mp3" />
+        </promptItem>
+      </prompt>
+      <prompt id="canceled">
+        <promptItem>
+          <text id="_id59166" xml:lang="id" status="ok">Dibatalkan</text>
+          <originalText xml:lang="en">Canceled</originalText>
+          <audio src="./audio/320_Dibatalkan.mp3" />
+        </promptItem>
+      </prompt>
+      <prompt id="loading">
+        <promptItem>
+          <text id="_id59186" xml:lang="id" status="ok">Memuat</text>
+          <originalText xml:lang="en">Loading</originalText>
+          <audio src="./audio/321_Memuat.mp3" />
+        </promptItem>
+      </prompt>
+      <prompt id="restartForChanges">
+        <promptItem>
+          <text id="_id59206" xml:lang="id" status="ok">Silakan jalankan kembali untuk melihat bagian yang diubah</text>
+          <originalText xml:lang="en">Please restart to see your changes.</originalText>
+          <audio src="./audio/322_Silakan_jalankan_kembali_untuk.mp3" />
+        </promptItem>
+      </prompt>
+      <prompt id="noBooksFoundOnCd">
+        <promptItem>
+          <text id="_id59227" xml:lang="id" status="ok">Tidak ada buku DAISY di CD ROM ini</text>
+          <originalText xml:lang="en">No DAISY books were found on this CD-ROM.</originalText>
+          <audio src="./audio/323_Tidak_ada_buku_DAISY_di_CD_ROM.mp3" />
+        </promptItem>
+        <promptItem refid="enter_to_close" />
+      </prompt>
+    </generalPrompts>
+  </prompts>
+</ui>

@@ -1,0 +1,2014 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ui next-id="t327" xml:lang="en" xmlns="http://amisproject.org">
+	<containers>
+		<container id="file">
+			<note>This is the menu header "File"</note>
+			<caption>
+				<text id="t1">File</text>
+				<audio src="./audio/002_File.mp3"/>
+			</caption>
+			<action mfcid="ID_MENU_FILE_OPEN" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and a toolbar item</note>
+				<icon src="./open.png" type="smallIcon"/>
+				<caption>
+					<text id="t2">Open...</text>
+					<audio src="./audio/003_Open.mp3"/>
+				</caption>
+				<description>
+					<text id="t3">Open a Daisy book from the local file system</text>
+					<audio src="./audio/004_Open_a_Daisy_book_from_the_loc.mp3"/>
+				</description>
+				<!--keys = the actual keys; text = the name of the keys-->
+				<accelerator keys="Ctrl+O">
+					<text id="t4">Ctrl+O</text>
+					<audio src="./audio/005_CtrlO.mp3"/>
+				</accelerator>
+				<mnemonic>
+					<text id="t5">O</text>
+					<audio src="./audio/006_O.mp3"/>
+				</mnemonic>
+			</action>
+			<action mfcid="ID_MENU_FILE_LOADCD" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and a toolbar item</note>
+				<icon src="./settings/img/cd3.ico" type="smallIcon"/>
+				<icon src="./settings/img/cd_big.ico" type="largeIcon"/>
+				<caption>
+					<text id="t6">Load CD</text>
+					<audio src="./audio/007_Load_CD.mp3"/>
+				</caption>
+				<description>
+					<text id="t7">Load a DAISY book from CD ROM</text>
+					<audio src="./audio/008_Load_a_DAISY_book_from_CD_ROM.mp3"/>
+				</description>
+				<accelerator keys="Ctrl+L">
+					<text id="t8">Ctrl+L</text>
+					<audio src="./audio/009_CtrlL.mp3"/>
+				</accelerator>
+				<mnemonic>
+					<text id="t9">L</text>
+					<audio src="./audio/010_L.mp3"/>
+				</mnemonic>
+			</action>
+			<action mfcid="ID_MENU_FILE_SEARCHDRIVE" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text id="t10">Search...</text>
+					<audio src="./audio/011_Search.mp3"/>
+				</caption>
+				<description>
+					<text id="t11">Search local drives for DAISY books</text>
+					<audio src="./audio/012_Search_local_drives_for_DAISY_.mp3"/>
+				</description>
+				<mnemonic>
+					<text id="t12">S</text>
+					<audio src="./audio/013_S.mp3"/>
+				</mnemonic>
+			</action>
+			<action mfcid="ID_MENU_FILE_PREFERENCES" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text id="t13">Preferences...</text>
+					<audio src="./audio/014_Preferences.mp3"/>
+				</caption>
+				<description>
+					<text id="t14">This is the application preferences dialog.</text>
+					<audio src="./audio/015_This_is_the_application_prefer.mp3"/>
+				</description>
+				<mnemonic>
+					<text id="t15">P</text>
+					<audio src="./audio/016_P.mp3"/>
+				</mnemonic>
+			</action>
+			<container id="recentBooksList">
+				<note>This is the menu header for the recent books sub-menu.</note>
+				<caption>
+					<text id="t16">Recent</text>
+					<audio src="./audio/017_Recent.mp3"/>
+				</caption>
+				<switch element="action">
+					<action condition="ID_FILE_RECENT_EMPTY" mfcid="ID_FILE_RECENT_EMPTY" widget="menuItem">
+						<note>This is going to be a menu item</note>
+						<caption>
+							<text id="t17">Empty</text>
+							<audio src="./audio/018_Empty.mp3"/>
+						</caption>
+						<description>
+							<text id="t18">There are no recently read books.</text>
+							<audio src="./audio/019_There_are_no_recently_read_boo.mp3"/>
+						</description>
+					</action>
+					<action condition="BOOK_BASE_ID" mfcid="BOOK_BASE_ID" widget="menuItem">
+						<note>This is going to be a menu item</note>
+						<list repeat="yes">
+							<caption>
+								<promptVar name="RECENT_BOOK_TITLE"/>
+							</caption>
+						</list>
+					</action>
+				</switch>
+				<mnemonic>
+					<text id="t19">R</text>
+					<audio src="./audio/020_R.mp3"/>
+				</mnemonic>
+			</container>
+			<action mfcid="ID_MENU_FILE_EXIT" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text id="t20">Exit</text>
+					<audio src="./audio/021_Exit.mp3"/>
+				</caption>
+				<description>
+					<text id="t21">Exit AMIS</text>
+					<audio src="./audio/022_Exit_AMIS.mp3"/>
+				</description>
+				<accelerator keys="Alt+F4">
+					<text id="t22">Alt+F4</text>
+					<audio src="./audio/023_AltF4.mp3"/>
+				</accelerator>
+				<mnemonic>
+					<text id="t23">x</text>
+					<audio src="./audio/024_x.mp3"/>
+				</mnemonic>
+			</action>
+			<accelerator keys="Alt+F">
+				<text id="t24">Alt+F</text>
+				<audio src="./audio/025_AltF.mp3"/>
+			</accelerator>
+			<mnemonic>
+				<text id="t25">F</text>
+				<audio src="./audio/026_F.mp3"/>
+			</mnemonic>
+		</container>
+		<container id="view">
+			<note>This is the menu header "View"</note>
+			<caption>
+				<text id="t26">View</text>
+				<audio src="./audio/027_View.mp3"/>
+			</caption>
+			<action mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text id="t27">Sidebar</text>
+					<audio src="./audio/028_Sidebar.mp3"/>
+				</caption>
+				<description>
+					<text id="t28">Turn the sidebar on or off.</text>
+					<audio src="./audio/029_Turn_the_sidebar_on_or_off.mp3"/>
+				</description>
+				<mnemonic>
+					<text id="t29">S</text>
+					<audio src="./audio/030_S.mp3"/>
+				</mnemonic>
+			</action>
+			<action mfcid="ID_MENU_VIEW_BASIC" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text id="t30">Basic View Mode</text>
+					<audio src="./audio/031_Basic_View_Mode.mp3"/>
+				</caption>
+				<description>
+					<text id="t31">Switch the view to basic mode.</text>
+					<audio src="./audio/032_Switch_the_view_to_basic_mode.mp3"/>
+				</description>
+				<accelerator keys="F11">
+					<text id="t32">F11</text>
+					<audio src="./audio/033_F11.mp3"/>
+				</accelerator>
+				<mnemonic>
+					<text id="t33">B</text>
+					<audio src="./audio/034_B.mp3"/>
+				</mnemonic>
+			</action>
+			<action mfcid="ID_MENU_VIEW_CONTRAST" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item</note>
+				<icon src="./settings/img/contrast.ico" type="smallIcon"/>
+				<caption>
+					<text id="t34">High Contrast</text>
+					<audio src="./audio/035_High_Contrast.mp3"/>
+				</caption>
+				<description>
+					<text id="t35">Use high contrast colors for the text display.</text>
+					<audio src="./audio/036_Use_high_contrast_colors_for_t.mp3"/>
+				</description>
+				<accelerator keys="Ctrl+S">
+					<text id="t36">Ctrl+S</text>
+					<audio src="./audio/037_CtrlC.mp3"/>
+				</accelerator>
+				<mnemonic>
+					<text id="t37">C</text>
+					<audio src="./audio/038_C.mp3"/>
+				</mnemonic>
+			</action>
+			<action mfcid="ID_MENU_VIEW_LARGEFONT" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/font.ico" type="smallIcon"/>
+				<caption>
+					<text id="t38">Increase Font Size</text>
+					<audio src="./audio/039_Increase_Font_Size.mp3"/>
+				</caption>
+				<description>
+					<text id="t39">Gradually increase the font size.</text>
+					<audio src="./audio/040_Gradually_increase_the_font_si.mp3"/>
+				</description>
+				<mnemonic>
+					<text id="t40">I</text>
+					<audio src="./audio/041_I.mp3"/>
+				</mnemonic>
+			</action>
+			<action mfcid="ID_MENU_VIEW_RESETFONT" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text id="t41">Reset Font Size</text>
+					<audio src="./audio/042_Reset_Font_Size.mp3"/>
+				</caption>
+				<description>
+					<text id="t42">Set the font size to the default setting.</text>
+					<audio src="./audio/043_Set_the_font_size_to_the_defau.mp3"/>
+				</description>
+				<mnemonic>
+					<text id="t43">R</text>
+					<audio src="./audio/044_R.mp3"/>
+				</mnemonic>
+			</action>
+			<action mfcid="NAVLIST_BASE_ID" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<promptVar name="NAV_LIST_NAME"/>
+				</caption>
+				<description>
+					<promptVar name="NAV_LIST_DESCRIPTION"/>
+				</description>
+			</action>
+			<accelerator keys="Alt+V">
+				<text id="t44">Alt+V</text>
+				<audio src="./audio/045_AltV.mp3"/>
+			</accelerator>
+			<mnemonic>
+				<text id="t45">V</text>
+				<audio src="./audio/046_V.mp3"/>
+			</mnemonic>
+		</container>
+		<container id="play">
+			<note>This is the menu header "Play"</note>
+			<caption>
+				<text id="t46">Play</text>
+				<audio src="./audio/047_Play.mp3"/>
+			</caption>
+			<switch element="action">
+				<action condition="canPlay" mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem">
+					<note>This is going to be a menu item and toolbar item</note>
+					<icon src="./settings/img/play-big.ico" type="smallIcon"/>
+					<icon src="./settings/img/play_big.ico" type="largeIcon"/>
+					<caption>
+						<text id="t47">Play</text>
+						<audio src="./audio/048_Play.mp3"/>
+					</caption>
+					<description>
+						<text id="t48">Start synchronized playback.</text>
+						<audio src="./audio/049_Start_synchronized_playback.mp3"/>
+					</description>
+					<accelerator keys="Space">
+						<text id="t49">Space</text>
+						<audio src="./audio/050_Space.mp3"/>
+					</accelerator>
+					<mnemonic>
+						<text id="t50">P</text>
+						<audio src="./audio/051_P.mp3"/>
+					</mnemonic>
+				</action>
+				<action condition="canPause" mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem">
+					<note>This is going to be a menu item and toolbar item</note>
+					<icon src="./settings/img/pause.ico" type="smallIcon"/>
+					<icon src="./settings/img/pause_big.ico" type="largeIcon"/>
+					<caption>
+						<text id="t51">Pause</text>
+						<audio src="./audio/052_Pause.mp3"/>
+					</caption>
+					<description>
+						<text id="t52">Pause playback of this DAISY book.</text>
+						<audio src="./audio/053_Pause_playback_of_this_DAISY_b.mp3"/>
+					</description>
+					<accelerator keys="Space">
+						<text id="t53">Space</text>
+						<audio src="./audio/054_Space.mp3"/>
+					</accelerator>
+					<mnemonic>
+						<text id="t54">a</text>
+						<audio src="./audio/055_a.mp3"/>
+					</mnemonic>
+				</action>
+			</switch>
+			<action mfcid="ID_MENU_PLAY_ESCAPE" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text id="t55">Escape</text>
+					<audio src="./audio/056_Escape.mp3"/>
+				</caption>
+				<description>
+					<text id="t56">Jump out of the currently playing item or structure.</text>
+					<audio src="./audio/057_Jump_out_of_the_currently_play.mp3"/>
+				</description>
+				<accelerator keys="Esc">
+					<text id="t57">Esc</text>
+					<audio src="./audio/058_Esc.mp3"/>
+				</accelerator>
+				<mnemonic>
+					<text id="t58">E</text>
+					<audio src="./audio/059_E.mp3"/>
+				</mnemonic>
+			</action>
+			<action mfcid="ID_MENU_PLAY_FASTER" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/fullspeedahead.ico" type="smallIcon"/>
+				<caption>
+					<text id="t59">Faster</text>
+					<audio src="./audio/060_Faster.mp3"/>
+				</caption>
+				<description>
+					<text id="t60">Increase the playback rate.</text>
+					<audio src="./audio/061_Increase_the_playback_rate.mp3"/>
+				</description>
+				<accelerator keys="Ctrl++">
+					<text id="t61">Ctrl++</text>
+					<audio src="./audio/062_Ctrl.mp3"/>
+				</accelerator>
+				<mnemonic>
+					<text id="t62">F</text>
+					<audio src="./audio/063_F.mp3"/>
+				</mnemonic>
+			</action>
+			<action mfcid="ID_MENU_PLAY_SLOWER" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/slowdown.ico" type="smallIcon"/>
+				<caption>
+					<text id="t63">Slower</text>
+					<audio src="./audio/064_Slower.mp3"/>
+				</caption>
+				<description>
+					<text id="t64">Slow down the playback rate.</text>
+					<audio src="./audio/065_Slow_down_the_playback_rate.mp3"/>
+				</description>
+				<accelerator keys="Ctrl+-">
+					<text id="t65">Ctrl+-</text>
+					<audio src="./audio/066_Ctrl.mp3"/>
+				</accelerator>
+				<mnemonic>
+					<text id="t66">S</text>
+					<audio src="./audio/067_S.mp3"/>
+				</mnemonic>
+			</action>
+			<action mfcid="ID_MENU_PLAY_NORMALSPEED" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/normalspeed.ico" type="smallIcon"/>
+				<caption>
+					<text id="t67">Normal Speed</text>
+					<audio src="./audio/068_Normal_Speed.mp3"/>
+				</caption>
+				<description>
+					<text id="t68">Reset the playback rate to normal.</text>
+					<audio src="./audio/069_Reset_the_playback_rate_to_nor.mp3"/>
+				</description>
+				<accelerator keys="Ctrl+0">
+					<text id="t69">Ctrl+0</text>
+					<audio src="./audio/070_Ctrl0.mp3"/>
+				</accelerator>
+				<mnemonic>
+					<text id="t70">N</text>
+					<audio src="./audio/071_N.mp3"/>
+				</mnemonic>
+			</action>
+			<action mfcid="ID_MENU_PLAY_VOLUP" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text id="t71">Increase Volume</text>
+					<audio src="./audio/072_Increase_Volume.mp3"/>
+				</caption>
+				<description>
+					<text id="t72">Gradually raise the volume.</text>
+					<audio src="./audio/073_Gradually_raise_the_volume.mp3"/>
+				</description>
+				<accelerator keys="Ctrl+Up">
+					<text id="t73">Ctrl+Up</text>
+					<audio src="./audio/074_CtrlUp.mp3"/>
+				</accelerator>
+				<mnemonic>
+					<text id="t74">I</text>
+					<audio src="./audio/075_I.mp3"/>
+				</mnemonic>
+			</action>
+			<action mfcid="ID_MENU_PLAY_VOLDOWN" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text id="t75">Decrease Volume</text>
+					<audio src="./audio/076_Decrease_Volume.mp3"/>
+				</caption>
+				<description>
+					<text id="t76">Gradually lower the volume.</text>
+					<audio src="./audio/077_Gradually_lower_the_volume.mp3"/>
+				</description>
+				<accelerator keys="Ctrl+Down">
+					<text id="t77">Ctrl+Down</text>
+					<audio src="./audio/078_CtrlDown.mp3"/>
+				</accelerator>
+				<mnemonic>
+					<text id="t78">D</text>
+					<audio src="./audio/079_D.mp3"/>
+				</mnemonic>
+			</action>
+			<accelerator keys="Alt+P">
+				<text id="t79">Alt+P</text>
+				<audio src="./audio/080_AltP.mp3"/>
+			</accelerator>
+			<mnemonic>
+				<text id="t80">P</text>
+				<audio src="./audio/081_P.mp3"/>
+			</mnemonic>
+		</container>
+		<container id="navigate">
+			<note>This is the menu header "Navigate"</note>
+			<caption>
+				<text id="t81">Navigate</text>
+				<audio src="./audio/082_Navigate.mp3"/>
+			</caption>
+			<action mfcid="ID_MENU_NAV_PREVSECTION" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/prevsection.ico" type="smallIcon"/>
+				<icon src="./settings/img/prevsection_big.ico" type="largeIcon"/>
+				<caption>
+					<text id="t82">Previous Section</text>
+					<audio src="./audio/083_Previous_Section.mp3"/>
+				</caption>
+				<description>
+					<text id="t83">Go to the previous section.</text>
+					<audio src="./audio/084_Go_to_the_previous_section.mp3"/>
+				</description>
+				<accelerator keys="Up">
+					<text id="t84">Up</text>
+					<audio src="./audio/085_Up.mp3"/>
+				</accelerator>
+				<mnemonic>
+					<text id="t85">P</text>
+					<audio src="./audio/086_P.mp3"/>
+				</mnemonic>
+			</action>
+			<action mfcid="ID_MENU_NAV_NEXTSECTION" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/nextsection.ico" type="smallIcon"/>
+				<icon src="./settings/img/nextsection_big.ico" type="largeIcon"/>
+				<caption>
+					<text id="t86">Next Section</text>
+					<audio src="./audio/087_Next_Section.mp3"/>
+				</caption>
+				<description>
+					<text id="t87">Go to the next section.</text>
+					<audio src="./audio/088_Go_to_the_next_section.mp3"/>
+				</description>
+				<accelerator keys="Down">
+					<text id="t88">Down</text>
+					<audio src="./audio/089_Down.mp3"/>
+				</accelerator>
+				<mnemonic>
+					<text id="t89">N</text>
+					<audio src="./audio/090_N.mp3"/>
+				</mnemonic>
+			</action>
+			<container id="sectiondepth">
+				<note>This is the "show section depth" sub-menu pop-up</note>
+				<caption>
+					<text id="t90">Show Section Depth</text>
+					<audio src="./audio/091_Show_Section_Depth.mp3"/>
+				</caption>
+				<switch element="action">
+					<action condition="ID_EMPTY" mfcid="ID_EMPTY" widget="menuItem">
+						<note>This is going to be a menu item</note>
+						<caption>
+							<text id="t91">Empty</text>
+							<audio src="./audio/092_Empty.mp3"/>
+						</caption>
+						<description>
+							<text id="t92">There are no section levels.</text>
+							<audio src="./audio/093_There_are_no_section_levels.mp3"/>
+						</description>
+					</action>
+					<action condition="SECTION_DEPTH_BASE_ID" mfcid="SECTION_DEPTH_BASE_ID" widget="menuItem">
+						<note>This is going to be a menu item</note>
+						<list repeat="yes">
+							<caption>
+								<promptVar name="SECTION_DEPTH_OPTION"/>
+							</caption>
+						</list>
+					</action>
+				</switch>
+				<mnemonic>
+					<text id="t93">S</text>
+					<audio src="./audio/094_S.mp3"/>
+				</mnemonic>
+			</container>
+			<action mfcid="ID_MENU_NAV_PREVPHRASE" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/prevphasecirc.ico" type="smallIcon"/>
+				<caption>
+					<text id="t94">Previous Phrase</text>
+					<audio src="./audio/095_Previous_Phrase.mp3"/>
+				</caption>
+				<description>
+					<text id="t95">Go to the previous phrase.</text>
+					<audio src="./audio/096_Go_to_the_previous_phrase.mp3"/>
+				</description>
+				<accelerator keys="Left">
+					<text id="t96">Left</text>
+					<audio src="./audio/097_Left.mp3"/>
+				</accelerator>
+			</action>
+			<action mfcid="ID_MENU_NAV_NEXTPHRASE" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/nextphrasecirc.ico" type="smallIcon"/>
+				<caption>
+					<text id="t97">Next Phrase</text>
+					<audio src="./audio/098_Next_Phrase.mp3"/>
+				</caption>
+				<description>
+					<text id="t98">Go to the next phrase.</text>
+					<audio src="./audio/099_Go_to_the_next_phrase.mp3"/>
+				</description>
+				<accelerator keys="Right">
+					<text id="t99">Right</text>
+					<audio src="./audio/100_Right.mp3"/>
+				</accelerator>
+			</action>
+			<action mfcid="ID_MENU_NAV_PREVPAGE" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/prevpage.ico" type="smallIcon"/>
+				<caption>
+					<text id="t100">Previous Page</text>
+					<audio src="./audio/101_Previous_Page.mp3"/>
+				</caption>
+				<description>
+					<text id="t101">Go to the previous page.</text>
+					<audio src="./audio/102_Go_to_the_previous_page.mp3"/>
+				</description>
+				<accelerator keys="Ctrl+Left">
+					<text id="t102">Ctrl+Left</text>
+					<audio src="./audio/103_CtrlLeft.mp3"/>
+				</accelerator>
+			</action>
+			<action mfcid="ID_MENU_NAV_NEXTPAGE" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/nextpage.ico" type="smallIcon"/>
+				<caption>
+					<text id="t103">Next Page</text>
+					<audio src="./audio/104_Next_Page.mp3"/>
+				</caption>
+				<description>
+					<text id="t104">Go to the next page.</text>
+					<audio src="./audio/105_Go_to_the_next_page.mp3"/>
+				</description>
+				<accelerator keys="Ctrl+Right">
+					<text id="t105">Ctrl+Right</text>
+					<audio src="./audio/106_CtrlRight.mp3"/>
+				</accelerator>
+			</action>
+			<action mfcid="ID_MENU_NAV_GOTOPAGE" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text id="t106">Go to Page...</text>
+					<audio src="./audio/107_Go_to_Page.mp3"/>
+				</caption>
+				<description>
+					<text id="t107">Go to a specific page.</text>
+					<audio src="./audio/108_Go_to_a_specific_page.mp3"/>
+				</description>
+				<accelerator keys="Ctrl+G">
+					<text id="t108">Ctrl+G</text>
+					<audio src="./audio/109_CtrlG.mp3"/>
+				</accelerator>
+			</action>
+			<action mfcid="ID_MENU_NAV_FINDINTEXT" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text id="t109">Find in Text</text>
+					<audio src="./audio/110_Find_in_Text.mp3"/>
+				</caption>
+				<description>
+					<text id="t110">Search for a word or phrase in the text.</text>
+					<audio src="./audio/111_Search_for_a_word_or_phrase_in.mp3"/>
+				</description>
+				<accelerator keys="Ctrl+F">
+					<text id="t111">Ctrl+F</text>
+					<audio src="./audio/112_CtrlF.mp3"/>
+				</accelerator>
+				<mnemonic>
+					<text id="t112">F</text>
+					<audio src="./audio/113_F.mp3"/>
+				</mnemonic>
+			</action>
+			<accelerator keys="Alt+N">
+				<text id="t113">Alt+N</text>
+				<audio src="./audio/114_AltN.mp3"/>
+			</accelerator>
+			<mnemonic>
+				<text id="t114">N</text>
+				<audio src="./audio/115_N.mp3"/>
+			</mnemonic>
+		</container>
+		<container id="bookmarks">
+			<note>This is the menu header "Bookmarks"</note>
+			<caption>
+				<text id="t115">Bookmarks</text>
+				<audio src="./audio/116_Bookmarks.mp3"/>
+			</caption>
+			<action mfcid="ID_MENU_BMK_ADD" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/adbookmark.ico" type="smallIcon"/>
+				<caption>
+					<text id="t116">Add Bookmark</text>
+					<audio src="./audio/117_Add_Bookmark.mp3"/>
+				</caption>
+				<description>
+					<text id="t117">Bookmark your current position.</text>
+					<audio src="./audio/118_Bookmark_your_current_position.mp3"/>
+				</description>
+				<accelerator keys="Ctrl+D">
+					<text id="t118">Ctrl+D</text>
+					<audio src="./audio/119_CtrlD.mp3"/>
+				</accelerator>
+				<mnemonic>
+					<text id="t119">A</text>
+					<audio src="./audio/120_A.mp3"/>
+				</mnemonic>
+			</action>
+			<action mfcid="BOOKMARK_BASE_ID" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<list repeat="yes">
+					<caption>
+						<promptVar name="BOOKMARK_TITLE"/>
+					</caption>
+				</list>
+			</action>
+			<accelerator keys="Alt+B">
+				<text id="t120">Alt+B</text>
+				<audio src="./audio/121_AltB.mp3"/>
+			</accelerator>
+			<mnemonic>
+				<text id="t121">B</text>
+				<audio src="./audio/122_B.mp3"/>
+			</mnemonic>
+		</container>
+		<container id="info">
+			<note>This is the menu header "Info"</note>
+			<caption>
+				<text id="t122">Info</text>
+				<audio src="./audio/123_Info.mp3"/>
+			</caption>
+			<action mfcid="ID_MENU_INFO_SKIP" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text id="t123">Skippable Items...</text>
+					<audio src="./audio/124_Skippable_Items.mp3"/>
+				</caption>
+				<description>
+					<text id="t124">View the skippable items for this publication.</text>
+					<audio src="./audio/125_View_the_skippable_items_for_t.mp3"/>
+				</description>
+				<mnemonic>
+					<text id="t125">S</text>
+					<audio src="./audio/126_S.mp3"/>
+				</mnemonic>
+			</action>
+			<action mfcid="ID_MENU_INFO_SUMMARY" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/info.ico" type="smallIcon"/>
+				<caption>
+					<text id="t126">Full Summary</text>
+					<audio src="./audio/127_Full_Summary.mp3"/>
+				</caption>
+				<description>
+					<text id="t127">Get all summary info for this publication.</text>
+					<audio src="./audio/128_Get_all_summary_info_for_this_.mp3"/>
+				</description>
+				<mnemonic>
+					<text id="t128">F</text>
+					<audio src="./audio/129_F.mp3"/>
+				</mnemonic>
+			</action>
+			<action mfcid="ID_MENU_INFO_CURRENTPOSITION" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text id="t129">Current Position</text>
+					<audio src="./audio/130_Current_Position.mp3"/>
+				</caption>
+				<description>
+					<text id="t130">Get information about your current position.</text>
+					<audio src="./audio/131_Get_information_about_your_cur.mp3"/>
+				</description>
+				<mnemonic>
+					<text id="t131">C</text>
+					<audio src="./audio/132_C.mp3"/>
+				</mnemonic>
+			</action>
+			<action mfcid="ID_MENU_INFO_NAVOPTIONS" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text id="t132">Navigation Options</text>
+					<audio src="./audio/133_Navigation_Options.mp3"/>
+				</caption>
+				<description>
+					<text id="t133">Learn about your navigation options for this publication.</text>
+					<audio src="./audio/134_Learn_about_your_navigation_op.mp3"/>
+				</description>
+				<mnemonic>
+					<text id="t134">N</text>
+					<audio src="./audio/135_N.mp3"/>
+				</mnemonic>
+			</action>
+			<accelerator keys="Alt+I">
+				<text id="t135">Alt+I</text>
+				<audio src="./audio/136_AltI.mp3"/>
+			</accelerator>
+			<mnemonic>
+				<text id="t136">I</text>
+				<audio src="./audio/137_I.mp3"/>
+			</mnemonic>
+		</container>
+		<container id="help">
+			<note>This is the menu header "Help"</note>
+			<caption>
+				<text id="t137">Help</text>
+				<audio src="./audio/138_Help.mp3"/>
+			</caption>
+			<action mfcid="ID_MENU_HELP_CONTENTS" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/help.ico" type="smallIcon"/>
+				<icon src="./settings/img/help_big.ico" type="largeIcon"/>
+				<caption>
+					<text id="t138">Contents</text>
+					<audio src="./audio/139_Contents.mp3"/>
+				</caption>
+				<description>
+					<text id="t139">Get help using AMIS</text>
+					<audio src="./audio/140_Get_help_using_AMIS.mp3"/>
+				</description>
+				<mnemonic>
+					<text id="t140">C</text>
+					<audio src="./audio/141_C.mp3"/>
+				</mnemonic>
+			</action>
+			<action mfcid="ID_MENU_HELP_ABOUT" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text id="t141">About AMIS</text>
+					<audio src="./audio/142_About_AMIS.mp3"/>
+				</caption>
+				<description>
+					<text id="t142">Find out about AMIS and DAISY-for-All.</text>
+					<audio src="./audio/143_Find_out_about_AMIS_and_DAISYf.mp3"/>
+				</description>
+				<mnemonic>
+					<text id="t143">A</text>
+					<audio src="./audio/144_A.mp3"/>
+				</mnemonic>
+			</action>
+			<accelerator keys="Alt+H">
+				<text id="t144">Alt+H</text>
+				<audio src="./audio/145_AltH.mp3"/>
+			</accelerator>
+			<mnemonic>
+				<text id="t145">H</text>
+				<audio src="./audio/146_H.mp3"/>
+			</mnemonic>
+		</container>
+	</containers>
+	<dialogs>
+		<dialog mfcid="IDD_FIND">
+			<note>This is the find in text dialog</note>
+			<caption>
+				<text id="t146">Find in Text</text>
+				<audio src="./audio/147_Find_in_Text.mp3"/>
+			</caption>
+			<description>
+				<text id="t147">Here you can search the full text in either direction.</text>
+				<audio src="./audio/148_Here_you_can_search_the_full_t.mp3"/>
+			</description>
+			<prompt type="instructions">
+				<promptItem refid="tabAround"/>
+				<promptItem>
+					<text id="t148">After typing in your search, press enter to begin searching.</text>
+					<audio src="./audio/149_After_typing_in_your_search_pr.mp3"/>
+				</promptItem>
+				<promptItem refid="altC_to_cancel"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+			</prompt>
+			<control mfcid="IDOK" widget="button">
+				<caption>
+					<promptItem refid="ok_button_caption"/>
+				</caption>
+				<description>
+					<text id="t149">Press to begin searching for text in the file.</text>
+					<audio src="./audio/150_Press_to_begin_searching_for_t.mp3"/>
+				</description>
+			</control>
+			<control mfcid="IDCANCEL" widget="button">
+				<caption>
+					<promptItem refid="cancel_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="cancel_button_description"/>
+				</description>
+				<mnemonic>
+					<text id="t150">C</text>
+					<audio src="./audio/038_C.mp3"/>
+				</mnemonic>
+			</control>
+			<control mfcid="IDC_SEARCHSTRING" widget="textfield">
+				<description>
+					<text id="t151">Type the text to search for.</text>
+					<audio src="./audio/151_Type_the_text_to_search_for.mp3"/>
+				</description>
+			</control>
+			<control mfcid="IDC_FINDNEXT" widget="radiobutton">
+				<note>This indicates the direction of the search</note>
+				<caption>
+					<text id="t152">Find Next</text>
+					<audio src="./audio/152_Find_Next.mp3"/>
+				</caption>
+				<description>
+					<prompt>
+						<promptItem refid="thisItemIsCurrently"/>
+						<promptVar name="SELECTED_OR_DESELECTED" param="FIND_NEXT_IN_TEXT"/>
+					</prompt>
+				</description>
+			</control>
+			<control mfcid="IDC_FINDPREV" widget="radiobutton">
+				<note>This indicates the direction of the search</note>
+				<caption>
+					<text id="t153">Find Previous</text>
+					<audio src="./audio/153_Find_Previous.mp3"/>
+				</caption>
+				<description>
+					<prompt>
+						<promptItem refid="thisItemIsCurrently"/>
+						<promptName name="SELECTED_OR_DESELECTED" param="FIND_PREV_IN_TEXT"/>
+					</prompt>
+				</description>
+			</control>
+		</dialog>
+		<dialog mfcid="IDD_CDSEARCH">
+			<note>This dialog appears when more than one book is on a CD-ROM</note>
+			<caption>
+				<text id="t154">Multiple books found</text>
+				<audio src="./audio/154_Multiple_books_found.mp3"/>
+			</caption>
+			<description mfcid="IDC_STATIC">
+				<text id="t155">More than one book was found on this CD. Please select a book from the list below and press Alt + O to open.</text>
+				<audio src="./audio/155_More_than_one_book_was_found_o.mp3"/>
+			</description>
+			<prompt type="instructions">
+				<promptItem refid="tabAround"/>
+				<promptItem refid="altC_to_cancel"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+			</prompt>
+			<control mfcid="IDC_CANCEL" widget="button">
+				<caption>
+					<promptItem refid="cancel_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="cancel_button_description"/>
+				</description>
+				<mnemonic>
+					<text id="t156">C</text>
+					<audio src="./audio/038_C.mp3"/>
+				</mnemonic>
+			</control>
+			<control mfcid="IDC_OPENBOOK" widget="button">
+				<caption>
+					<text id="t157">Open</text>
+					<audio src="./audio/156_Open.mp3"/>
+				</caption>
+				<description>
+					<text id="t158">Press to close this dialog and open the selected book.</text>
+					<audio src="./audio/157_Press_to_close_this_dialog_and.mp3"/>
+				</description>
+				<mnemonic>
+					<text id="t159">O</text>
+					<audio src="./audio/158_O.mp3"/>
+				</mnemonic>
+			</control>
+			<control mfcid="IDC_BOOKLIST" widget="list">
+				<description>
+					<text id="t160">Use the arrow keys to move around this list of titles.</text>
+					<audio src="./audio/159_Use_the_arrow_keys_to_move_aro.mp3"/>
+				</description>
+				<list repeat="yes">
+					<caption>
+						<promptVar name="BOOK_TITLE"/>
+					</caption>
+				</list>
+			</control>
+		</dialog>
+		<dialog mfcid="IDD_ABOUTBOX">
+			<note>This dialog gives some basic information about AMIS.</note>
+			<caption>
+				<text id="t161">About AMIS</text>
+				<audio src="./audio/160_About_AMIS.mp3"/>
+			</caption>
+			<description>
+				<text id="t162">Dialog with information about AMIS software.</text>
+				<audio src="./audio/161_Dialog_with_information_about_.mp3"/>
+			</description>
+			<prompt type="instructions">
+				<promptItem refid="enter_to_close"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+			</prompt>
+			<control mfcid="IDC_AMISNAME" widget="textlabel">
+				<caption>
+					<text id="t163">AMIS: \nAdaptive Multimedia Information System</text>
+					<audio src="./audio/162_AMIS_nAdaptive_Multimedia_Info.mp3"/>
+				</caption>
+			</control>
+			<control mfcid="IDC_VERSION" translate="no">
+				<caption>
+					<text id="t164">Version 2.6</text>
+					<audio src="../version.mp3"/>
+				</caption>
+			</control>
+			<control mfcid="IDC_VERSIONNOTE" translate="no">
+				<caption>
+					<text id="t165">Release Date: 08 June 2007</text>
+					<audio src="../releasedate.mp3"/>
+				</caption>
+			</control>
+			<control mfcid="IDC_COPYRIGHT" translate="no" widget="textlabel">
+				<caption>
+					<text id="t166">Copyright (c) 2006 DAISY for All</text>
+					<audio src="./audio/165_Copyright__2006_DAISY_for_All.mp3"/>
+				</caption>
+			</control>
+			<control mfcid="IDOK" widget="button">
+				<caption>
+					<promptItem refid="ok_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="ok_button_description"/>
+				</description>
+			</control>
+		</dialog>
+		<dialog mfcid="IDD_SEARCHDAISY">
+			<note>This dialog is for searching your hard drive for DAISY books.</note>
+			<caption>
+				<text id="t167">Search for DAISY Books</text>
+				<audio src="./audio/166_Search_for_DAISY_Books.mp3"/>
+			</caption>
+			<description mfcid="IDC_STATIC">
+				<text id="t168">You can search your computer for DAISY books.  Enter a path or browse for a folder to search, then press Search to begin searching.</text>
+				<audio src="./audio/167_You_can_search_your_computer_f.mp3"/>
+			</description>
+			<prompt type="instructions">
+				<promptItem refid="tabAround"/>
+				<promptItem refid="altC_to_close"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+			</prompt>
+			<control mfcid="IDC_SEARCHPATH" widget="textfield">
+				<description>
+					<text id="t169">Type the path to the folder in this field.</text>
+					<audio src="./audio/168_Type_the_path_to_the_folder_in.mp3"/>
+				</description>
+			</control>
+			<control mfcid="IDC_BROWSE" widget="button">
+				<caption>
+					<promptItem refid="browse_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="browse_button_description"/>
+				</description>
+			</control>
+			<control mfcid="IDC_STARTSEARCH" widget="button">
+				<caption>
+					<text id="t170">Search</text>
+					<audio src="./audio/169_Search.mp3"/>
+				</caption>
+				<description>
+					<text id="t171">Press to start searching.</text>
+					<audio src="./audio/170_Press_to_start_searching.mp3"/>
+				</description>
+				<mnemonic>
+					<text id="t172">S</text>
+					<audio src="./audio/171_S.mp3"/>
+				</mnemonic>
+			</control>
+			<control mfcid="IDC_STOPSEARCH" widget="button">
+				<caption>
+					<text id="t173">Stop</text>
+					<audio src="./audio/172_Stop.mp3"/>
+				</caption>
+				<description>
+					<text id="t174">Press to stop searching.</text>
+					<audio src="./audio/173_Press_to_stop_searching.mp3"/>
+				</description>
+				<mnemonic>
+					<text id="t175">t</text>
+					<audio src="./audio/174_t.mp3"/>
+				</mnemonic>
+			</control>
+			<control mfcid="IDC_SEARCHING" widget="textlabel">
+				<switch element="caption">
+					<caption condition="default">
+						<text id="t176">Ready</text>
+						<audio src="./audio/175_Ready.mp3"/>
+					</caption>
+					<caption condition="WhileSearching">
+						<text id="t177">Searching...</text>
+						<audio src="./audio/176_Searching.mp3"/>
+					</caption>
+					<caption condition="SearchAborted">
+						<text id="t178">Search stopped.</text>
+						<audio src="./audio/177_Search_stopped.mp3"/>
+					</caption>
+					<caption condition="SearchCompleteNoFilesFound">
+						<text id="t179">Search complete: No files found.</text>
+						<audio src="./audio/178_Search_complete_No_files_found.mp3"/>
+					</caption>
+					<caption condition="SearchCompleteOneFileFound">
+						<text id="t180">Search complete: One file found.</text>
+						<audio src="./audio/179_Search_complete_One_file_found.mp3"/>
+					</caption>
+					<caption condition="SearchCompleteFilesFound">
+						<prompt>
+							<promptVar name="NUM_FILES_FOUND"/>
+							<promptItem>
+								<note>This is used in the sentence "7 files were found"</note>
+								<text id="t181">files were found.</text>
+								<audio src="./audio/180_files_were_found.mp3"/>
+							</promptItem>
+						</prompt>
+					</caption>
+				</switch>
+			</control>
+			<control mfcid="IDC_FILESFOUND" widget="list">
+				<description>
+					<text id="t182">Use the arrow keys to move around this list of titles.</text>
+					<audio src="./audio/181_Use_the_arrow_keys_to_move_aro.mp3"/>
+				</description>
+				<list repeat="yes">
+					<caption>
+						<promptVar name="BOOK_TITLE"/>
+					</caption>
+				</list>
+			</control>
+			<control mfcid="IDC_OPENBOOK" widget="button">
+				<caption>
+					<text id="t183">Open</text>
+					<audio src="./audio/182_Open.mp3"/>
+				</caption>
+				<description>
+					<text id="t184">Press to open the selected title.</text>
+					<audio src="./audio/183_Press_to_open_the_selected_tit.mp3"/>
+				</description>
+				<mnemonic>
+					<text id="t185">O</text>
+					<audio src="./audio/184_O.mp3"/>
+				</mnemonic>
+			</control>
+			<control mfcid="IDC_CANCELBUTTON">
+				<caption>
+					<promptItem refid="cancel_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="cancel_button_description"/>
+				</description>
+				<mnemonic>
+					<text id="t186">C</text>
+					<audio src="./audio/038_C.mp3"/>
+				</mnemonic>
+			</control>
+		</dialog>
+		<dialog mfcid="IDD_SKIP">
+			<note>This dialog lets the user control rendering of skippable structures.</note>
+			<caption>
+				<text id="t187">Skippable Items</text>
+				<audio src="./audio/185_Skippable_Items.mp3"/>
+			</caption>
+			<switch element="description">
+				<description condition="hasSkippableStructures" mfcid="IDC_STATIC">
+					<text id="t188">This book contains the following special structures.  Check the ones you want skipped.</text>
+					<audio src="./audio/186_This_book_contains_the_followi.mp3"/>
+				</description>
+				<description condition="hasNoSkippableStructures" mfcid="IDC_STATIC">
+					<text id="t189">This publication has no skippable elements.</text>
+					<audio src="./audio/187_This_publication_has_no_skippa.mp3"/>
+				</description>
+			</switch>
+			<prompt type="instructions">
+				<promptItem refid="tabAround"/>
+				<promptItem refid="altC_to_close"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+			</prompt>
+			<control mfcid="IDOK" widget="button">
+				<caption>
+					<promptItem refid="ok_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="ok_button_description"/>
+				</description>
+			</control>
+			<control mfcid="IDC_SKIPS" widget="list">
+				<caption>
+					<text id="t190">Skippable items</text>
+					<audio src="./audio/188_Skippable_items.mp3"/>
+				</caption>
+				<description>
+					<text id="t191">Use the arrow keys to move around this list of skippable items.</text>
+					<audio src="./audio/189_Use_the_arrow_keys_to_move_aro.mp3"/>
+				</description>
+				<list repeat="yes">
+					<caption>
+						<promptVar name="SKIPPABLE_ITEM"/>
+					</caption>
+					<description>
+						<prompt>
+							<promptVar name="SKIPPABLE_ITEM"/>
+							<promptItem refid="thisItem"/>
+							<promptVar name="WILL_SKIP_OR_NOT" param="SKIPPABLE_ITEM_ID"/>
+						</prompt>
+					</description>
+				</list>
+			</control>
+		</dialog>
+		<dialog mfcid="IDD_PROPPAGE4">
+			<note>This dialog lets the user select a language pack.</note>
+			<caption>
+				<text id="t192">Language</text>
+				<audio src="./audio/190_Language.mp3"/>
+			</caption>
+			<description mfcid="IDC_STATIC">
+				<text id="t193">Here you can change the language of the software.  New language packs are detected automatically.</text>
+				<audio src="./audio/191_Here_you_can_change_the_langua.mp3"/>
+			</description>
+			<prompt type="instructions">
+				<promptItem refid="tabAround"/>
+				<promptItem refid="ctrl1_for_prefsdialog"/>
+				<promptItem refid="ctrl2_for_colorsdialog"/>
+				<promptItem refid="altC_to_cancel"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+			</prompt>
+			<control mfcid="IDC_BTN_SELECTLANG" widget="button">
+				<caption>
+					<text id="t194">Select Language</text>
+					<audio src="./audio/192_Select_Language.mp3"/>
+				</caption>
+				<description>
+					<text id="t195">Press to confirm your language selection for the AMIS user interface</text>
+					<audio src="./audio/193_Press_to_confirm_your_language.mp3"/>
+				</description>
+			</control>
+			<control mfcid="IDC_LANGLIST" widget="list">
+				<caption mfcid="IDC_STATIC">
+					<text id="t196">Your language choices are:</text>
+					<audio src="./audio/194_Your_language_choices_are.mp3"/>
+				</caption>
+				<description>
+					<text id="t197">Use the arrow keys to move around this list of languages.</text>
+					<audio src="./audio/195_Use_the_arrow_keys_to_move_aro.mp3"/>
+				</description>
+				<list repeat="yes">
+					<caption>
+						<promptVar name="LANGUAGE_NAME"/>
+					</caption>
+				</list>
+			</control>
+			<control mfcid="IDC_CURRLANG">
+				<caption>
+					<prompt>
+						<promptItem>
+							<text id="t198">You are currently using AMIS in </text>
+							<audio src="./audio/196_You_are_currently_using_AMIS_i.mp3"/>
+						</promptItem>
+						<promptVar name="CURR_LANGUAGE_NAME"/>
+					</prompt>
+				</caption>
+			</control>
+			<accelerator keys="Ctrl+3">
+				<text id="t199">Ctrl+3</text>
+				<audio src="./audio/197_Ctrl3.mp3"/>
+			</accelerator>
+		</dialog>
+		<dialog mfcid="IDD_PROPPAGE2">
+			<note>This dialog lets the user select which colors AMIS uses</note>
+			<caption>
+				<text id="t200">Set Colors</text>
+				<audio src="./audio/198_Set_Colors.mp3"/>
+			</caption>
+			<description>
+				<text id="t201">Here you can set color options for AMIS.</text>
+				<audio src="./audio/199_Here_you_can_set_color_options.mp3"/>
+			</description>
+			<prompt type="instructions">
+				<promptItem refid="thisDialogNotSelfVoicing"/>
+				<promptItem refid="ctrl1_for_prefsdialog"/>
+				<promptItem refid="ctrl3_for_langsdialog"/>
+				<promptItem refid="altC_to_cancel"/>
+			</prompt>
+			<control mfcid="IDC_PHRASES" widget="other">
+				<caption>
+					<text id="t202">Phrase Highlighting</text>
+					<audio src="./audio/200_Phrase_Highlighting.mp3"/>
+				</caption>
+			</control>
+			<control mfcid="IDC_TEXTFG" widget="textlabel">
+				<caption>
+					<text id="t203">Text Foreground: </text>
+					<audio src="./audio/201_Text_Foreground.mp3"/>
+				</caption>
+			</control>
+			<control mfcid="IDC_TEXTBG" widget="textlabel">
+				<caption>
+					<text id="t204">Text Background: </text>
+					<audio src="./audio/202_Text_Background.mp3"/>
+				</caption>
+			</control>
+			<control mfcid="IDC_BORDER" widget="textlabel">
+				<caption>
+					<text id="t205">Selection Border: </text>
+					<audio src="./audio/203_Selection_Border.mp3"/>
+				</caption>
+			</control>
+			<control mfcid="IDC_CONTRAST" widget="other">
+				<caption>
+					<text id="t206">High Contrast Settings</text>
+					<audio src="./audio/204_High_Contrast_Settings.mp3"/>
+				</caption>
+			</control>
+			<control mfcid="IDC_PAGEFG" widget="textlabel">
+				<caption>
+					<text id="t207">Page Foreground: </text>
+					<audio src="./audio/205_Page_Foreground.mp3"/>
+				</caption>
+			</control>
+			<control mfcid="IDC_PAGEBG" widget="textlabel">
+				<caption>
+					<text id="t208">Page Background: </text>
+					<audio src="./audio/206_Page_Background.mp3"/>
+				</caption>
+			</control>
+			<control mfcid="IDC_BTN_RESETCOLORS" widget="button">
+				<caption>
+					<text id="t209">Reset Colors</text>
+					<audio src="./audio/207_Reset_Colors.mp3"/>
+				</caption>
+			</control>
+			<control mfcid="IDC_PHRASEPREVIEW" widget="textfield">
+				<caption>
+					<text id="t210">Preview of phrase highlight colors.</text>
+					<audio src="./audio/208_Preview_of_phrase_highlight_co.mp3"/>
+				</caption>
+			</control>
+			<control mfcid="IDC_CONTRASTPREVIEW" widget="textfield">
+				<caption>
+					<text id="t211">Preview of page contrast colors.</text>
+					<audio src="./audio/209_Preview_of_page_contrast_color.mp3"/>
+				</caption>
+			</control>
+			<accelerator keys="Ctrl+2">
+				<text id="t212">Ctrl+2</text>
+				<audio src="./audio/210_Ctrl2.mp3"/>
+			</accelerator>
+		</dialog>
+		<dialog mfcid="IDD_CURRENTPOSITION">
+			<note>This dialog gives the user information about their current position in the publication.</note>
+			<caption>
+				<text id="t213">Current Position</text>
+				<audio src="./audio/211_Current_Position.mp3"/>
+			</caption>
+			<prompt type="instructions">
+				<promptItem refid="enter_to_close"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+			</prompt>
+			<control mfcid="IDOK" widget="button">
+				<caption>
+					<promptItem refid="ok_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="ok_button_description"/>
+				</description>
+			</control>
+			<control mfcid="IDC_SUMMARY" widget="list">
+				<caption mfcid="IDC_LISTCAPTION">
+					<text id="t214">This is a list of data about your current position.</text>
+					<audio src="./audio/212_This_is_a_list_of_data_about_y.mp3"/>
+				</caption>
+				<description>
+					<promptItem refid="list_reads_automatically"/>
+				</description>
+				<list repeat="no">
+					<caption>
+						<prompt>
+							<promptItem>
+								<text id="t215">Your current section is titled:</text>
+								<audio src="./audio/213_Your_current_section_is_titled.mp3"/>
+							</promptItem>
+							<promptVar name="CURRENT_SECTION_TITLE"/>
+						</prompt>
+					</caption>
+					<caption condition="BOOK_HAS_PAGES">
+						<prompt>
+							<promptItem>
+								<text id="t216">Number of pages in this section:</text>
+								<audio src="./audio/214_Number_of_pages_in_this_sectio.mp3"/>
+							</promptItem>
+							<promptVar name="CURRENT_SECTION_NUM_PAGES"/>
+						</prompt>
+					</caption>
+					<caption>
+						<prompt>
+							<promptItem>
+								<text id="t217">Number of subsections in this section:</text>
+								<audio src="./audio/215_Number_of_subsections_in_this_.mp3"/>
+							</promptItem>
+							<promptVar name="CURRENT_SECTION_NUM_SUBSECTIONS"/>
+						</prompt>
+					</caption>
+				</list>
+			</control>
+		</dialog>
+		<dialog mfcid="IDD_PROPPAGE1">
+			<note>This dialog lets the user set some basic preferences for AMIS.</note>
+			<caption>
+				<text id="t218">General Preferences</text>
+				<audio src="./audio/216_General_Preferences.mp3"/>
+			</caption>
+			<description>
+				<text id="t219">Here you can set general preferences for AMIS.</text>
+				<audio src="./audio/217_Here_you_can_set_general_prefe.mp3"/>
+			</description>
+			<prompt type="instructions">
+				<promptItem refid="tabAround"/>
+				<promptItem refid="ctrl2_for_colorsdialog"/>
+				<promptItem refid="ctrl3_for_langsdialog"/>
+				<promptItem refid="altC_to_cancel"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+			</prompt>
+			<control mfcid="IDC_BMKDIRBROWSE" widget="button">
+				<caption>
+					<promptItem refid="browse_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="browse_button_description"/>
+				</description>
+			</control>
+			<control mfcid="IDC_SELFVOICING" widget="checkbox">
+				<caption>
+					<text id="t220">Use self-voicing</text>
+					<audio src="./audio/218_Use_selfvoicing.mp3"/>
+				</caption>
+				<description>
+					<prompt>
+						<promptItem refid="thisItemIsCurrently"/>
+						<promptVar name="ON_OR_OFF" param="SELF_VOICING_FEATURE"/>
+					</prompt>
+				</description>
+			</control>
+			<control mfcid="IDC_TTSVOICE" widget="list">
+				<caption mfcid="IDC_SELTTSLABEL">
+					<text id="t221">Select TTS voice:</text>
+					<audio src="./audio/219_Select_TTS_voice.mp3"/>
+				</caption>
+				<description>
+					<text id="t222">Use the arrow keys to move around this list of voices</text>
+					<audio src="./audio/220_Use_the_arrow_keys_to_move_aro.mp3"/>
+				</description>
+				<list repeat="yes">
+					<caption>
+						<promptVar name="TTS_VOICE_NAME"/>
+					</caption>
+				</list>
+			</control>
+			<control mfcid="IDC_BASIC" widget="checkbox">
+				<caption>
+					<text id="t223">Start AMIS in the basic view mode.</text>
+					<audio src="./audio/221_Start_AMIS_in_the_basic_view_m.mp3"/>
+				</caption>
+				<description>
+					<prompt>
+						<promptItem refid="thisItemIsCurrently"/>
+						<promptVar name="ON_OR_OFF" param="BASIC_VIEW_FEATURE"/>
+						<promptItem refid="spaceToToggle"/>
+					</prompt>
+				</description>
+			</control>
+			<control mfcid="IDC_PROMPTONBASICVIEW" widget="checkbox">
+				<caption>
+					<text id="t224">Upon switching to basic view, tell the user how to go back to the default view.</text>
+					<audio src="./audio/222_Upon_switching_to_basic_view_t.mp3"/>
+				</caption>
+				<description>
+					<prompt>
+						<promptItem refid="thisItemIsCurrently"/>
+						<promptVar name="ON_OR_OFF" param="PROMPT_ON_BASIC_VIEW_FEATURE"/>
+						<promptItem refid="spaceToToggle"/>
+					</prompt>
+				</description>
+			</control>
+			<control mfcid="IDC_LOADLASTDTB" widget="checkbox">
+				<caption>
+					<text id="t225">Load the most recently read book when the software starts.</text>
+					<audio src="./audio/223_Load_the_most_recently_read_bo.mp3"/>
+				</caption>
+				<description>
+					<prompt>
+						<promptItem refid="thisItemIsCurrently"/>
+						<promptVar name="ON_OR_OFF" param="LOAD_LAST_READ_FEATURE"/>
+						<promptItem refid="spaceToToggle"/>
+					</prompt>
+				</description>
+			</control>
+			<control mfcid="IDC_BMKDIR" widget="textfield">
+				<caption mfcid="IDC_BMKDIRLABEL">
+					<text id="t226">Bookmarks directory:</text>
+					<audio src="./audio/224_Bookmarks_directory.mp3"/>
+				</caption>
+				<description>
+					<text id="t227">Type the path to the bookmarks folder in this field.</text>
+					<audio src="./audio/225_Type_the_path_to_the_bookmarks.mp3"/>
+				</description>
+			</control>
+			<accelerator keys="Ctrl+1">
+				<text id="t228">Ctrl+1</text>
+				<audio src="./audio/226_Ctrl1.mp3"/>
+			</accelerator>
+		</dialog>
+		<dialog mfcid="IDD_NAVIGATIONOPTIONS">
+			<note>This dialog lists navigation options for the current publication.</note>
+			<caption>
+				<text id="t229">Navigation Options</text>
+				<audio src="./audio/227_Navigation_Options.mp3"/>
+			</caption>
+			<prompt type="instructions">
+				<promptItem refid="enter_to_close"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+			</prompt>
+			<control mfcid="IDOK" widget="button">
+				<caption>
+					<promptItem refid="ok_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="ok_button_description"/>
+				</description>
+			</control>
+			<control mfcid="IDC_SUMMARY" widget="list">
+				<caption mfcid="IDC_LISTCAPTION">
+					<text id="t230">This is a list of items to which you may navigate directly.</text>
+					<audio src="./audio/228_This_is_a_list_of_items_to_whi.mp3"/>
+				</caption>
+				<description>
+					<promptItem refid="list_reads_automatically"/>
+				</description>
+				<list repeat="yes">
+					<caption>
+						<promptVar name="TOC_CATEGORIES"/>
+					</caption>
+				</list>
+			</control>
+		</dialog>
+		<dialog mfcid="IDD_GOTOPAGE">
+			<note>This dialog lets the user jump to a certain page</note>
+			<caption>
+				<text id="t231">Go To Page</text>
+				<audio src="./audio/229_Go_To_Page.mp3"/>
+			</caption>
+			<description>
+				<text id="t232">Here you can jump to a page number or page label.</text>
+				<audio src="./audio/230_Here_you_can_jump_to_a_page_nu.mp3"/>
+			</description>
+			<prompt type="instructions">
+				<promptItem refid="tabAround"/>
+				<promptItem>
+					<text id="t233">After typing in your page number, press enter to go there.</text>
+					<audio src="./audio/231_After_typing_in_your_page_numb.mp3"/>
+				</promptItem>
+				<promptItem refid="altC_to_cancel"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+			</prompt>
+			<control mfcid="IDOK" widget="button">
+				<caption>
+					<promptItem refid="ok_button_caption"/>
+				</caption>
+				<description>
+					<text id="t234">Press this button to go to the desired page.</text>
+					<audio src="./audio/232_Press_this_button_to_go_to_the.mp3"/>
+				</description>
+			</control>
+			<control mfcid="IDCANCEL" widget="button">
+				<caption>
+					<promptItem refid="cancel_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="cancel_button_description"/>
+				</description>
+				<mnemonic>
+					<text id="t235">C</text>
+					<audio src="./audio/038_C.mp3"/>
+				</mnemonic>
+			</control>
+			<control mfcid="IDC_PAGENUM" widget="textfield">
+				<caption mfcid="IDC_STATIC">
+					<text id="t236">Enter a page number:</text>
+					<audio src="./audio/233_Enter_a_page_number.mp3"/>
+				</caption>
+				<description>
+					<text id="t237">Type the number or label of the page you want to go to.</text>
+					<audio src="./audio/234_Type_the_number_or_label_of_th.mp3"/>
+				</description>
+			</control>
+		</dialog>
+		<dialog mfcid="IDD_FULLSUMMARY">
+			<note>This dialog lists key publication metadata.</note>
+			<caption>
+				<text id="t238">Publication Summary</text>
+				<audio src="./audio/235_Publication_Summary.mp3"/>
+			</caption>
+			<prompt type="instructions">
+				<promptItem refid="enter_to_close"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+			</prompt>
+			<control mfcid="IDOK" widget="button">
+				<caption>
+					<promptItem refid="ok_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="ok_button_description"/>
+				</description>
+			</control>
+			<control mfcid="IDC_SUMMARY" widget="list">
+				<caption mfcid="IDC_LISTCAPTION">
+					<text id="t239">This is a list of publication metadata.</text>
+					<audio src="./audio/236_This_is_a_list_of_publication_.mp3"/>
+				</caption>
+				<description>
+					<promptItem refid="list_reads_automatically"/>
+				</description>
+				<list repeat="no">
+					<caption>
+						<prompt>
+							<promptItem>
+								<text id="t240">This book is titled:</text>
+								<audio src="./audio/237_This_book_is_titled.mp3"/>
+							</promptItem>
+							<promptVar name="META_TITLE"/>
+						</prompt>
+					</caption>
+					<caption>
+						<prompt>
+							<promptItem>
+								<text id="t241">Written by:</text>
+								<audio src="./audio/238_Written_by.mp3"/>
+							</promptItem>
+							<promptVar name="META_CREATOR"/>
+						</prompt>
+					</caption>
+					<caption>
+						<prompt>
+							<promptItem>
+								<text id="t242">Published by:</text>
+								<audio src="./audio/239_Published_by.mp3"/>
+							</promptItem>
+							<promptVar name="META_PUBLISHER"/>
+						</prompt>
+					</caption>
+					<caption condition="BOOK_HAS_DESCRIPTION">
+						<prompt>
+							<promptItem>
+								<text id="t243">Description:</text>
+								<audio src="./audio/240_Description.mp3"/>
+							</promptItem>
+							<promptVar name="META_DESC"/>
+						</prompt>
+					</caption>
+					<caption>
+						<prompt>
+							<promptItem>
+								<text id="t244">Number of navigation points in the table of contents:</text>
+								<audio src="./audio/241_Number_of_navigation_points_in.mp3"/>
+							</promptItem>
+							<promptVar name="META_TOCITEMS"/>
+						</prompt>
+					</caption>
+					<caption>
+						<prompt>
+							<promptItem>
+								<text id="t245">Maximum section depth:</text>
+								<audio src="./audio/242_Maximum_section_depth.mp3"/>
+							</promptItem>
+							<promptVar name="META_DEPTH"/>
+						</prompt>
+					</caption>
+					<caption condition="BOOK_HAS_PAGES">
+						<prompt>
+							<promptItem>
+								<text id="t246">Front matter pages:</text>
+								<audio src="./audio/243_Front_matter_pages.mp3"/>
+							</promptItem>
+							<promptVar name="META_PAGEFRONT"/>
+						</prompt>
+					</caption>
+					<caption condition="BOOK_HAS_PAGES">
+						<prompt>
+							<promptItem>
+								<text id="t247">Regular pages:</text>
+								<audio src="./audio/244_Regular_pages.mp3"/>
+							</promptItem>
+							<promptVar name="META_PAGENORMAL"/>
+						</prompt>
+					</caption>
+					<caption condition="BOOK_HAS_PAGES">
+						<prompt>
+							<promptItem>
+								<text id="t248">Special pages:</text>
+								<audio src="./audio/245_Special_pages.mp3"/>
+							</promptItem>
+							<promptVar name="META_PAGESPECIAL"/>
+						</prompt>
+					</caption>
+					<caption>
+						<prompt>
+							<promptItem>
+								<text id="t249">Total duration:</text>
+								<audio src="./audio/246_Total_duration.mp3"/>
+							</promptItem>
+							<promptVar name="META_TOTALTIME"/>
+						</prompt>
+					</caption>
+				</list>
+			</control>
+		</dialog>
+	</dialogs>
+	<prompts>
+		<promptItemRefs>
+			<promptItem id="altC_to_close">
+				<text id="t250">Press Alt + C to close the dialog.</text>
+				<audio src="./audio/247_Press_Alt__C_to_close_the_dial.mp3"/>
+			</promptItem>
+			<promptItem id="altC_to_cancel">
+				<text id="t251">Press Alt + C to cancel the dialog.</text>
+				<audio src="./audio/248_Press_Alt__C_to_cancel_the_dia.mp3"/>
+			</promptItem>
+			<promptItem id="thisItem">
+				<text id="t252">This item</text>
+				<audio src="./audio/249_This_item.mp3"/>
+			</promptItem>
+			<promptItem id="spaceToToggle">
+				<text id="t253">Press the space bar to toggle the value.</text>
+				<audio src="./audio/250_Press_the_space_bar_to_toggle_.mp3"/>
+			</promptItem>
+			<promptItem id="tabAround">
+				<text id="t254">Hit tab to move around the options on the dialog.</text>
+				<audio src="./audio/251_Hit_tab_to_move_around_the_opt.mp3"/>
+			</promptItem>
+			<promptItem id="ctrl2_for_colorsdialog">
+				<text id="t255">Press control + 2 to switch to the colors dialog.</text>
+				<audio src="./audio/252_Press_control__2_to_switch_to_.mp3"/>
+			</promptItem>
+			<promptItem id="ctrl3_for_langsdialog">
+				<text id="t256">Press control + 3 to switch to the language options dialog.</text>
+				<audio src="./audio/253_Press_control__3_to_switch_to_.mp3"/>
+			</promptItem>
+			<promptItem id="ctrl1_for_prefsdialog">
+				<text id="t257">Press control + 1 to switch to the general preferences dialog.</text>
+				<audio src="./audio/254_Press_control__1_to_switch_to_.mp3"/>
+			</promptItem>
+			<promptItem id="thisItemIsCurrently">
+				<text id="t258">This item is currently</text>
+				<audio src="./audio/255_This_item_is_currently.mp3"/>
+			</promptItem>
+			<promptItem id="enter_to_close">
+				<text id="t259">Press enter to close the dialog.</text>
+				<audio src="./audio/256_Press_enter_to_close_the_dialo.mp3"/>
+			</promptItem>
+			<promptItem id="browse_button_caption">
+				<text id="t260">Browse...</text>
+				<audio src="./audio/257_Browse.mp3"/>
+			</promptItem>
+			<promptItem id="browse_button_description">
+				<text id="t261">Press to open the folder browse dialog.</text>
+				<audio src="./audio/258_Press_to_open_the_folder_brows.mp3"/>
+			</promptItem>
+			<promptItem id="ok_button_caption">
+				<text id="t262">OK</text>
+				<audio src="./audio/259_OK.mp3"/>
+			</promptItem>
+			<promptItem id="ok_button_description">
+				<text id="t263">Press OK to close this dialog.</text>
+				<audio src="./audio/260_Press_OK_to_close_this_dialog.mp3"/>
+			</promptItem>
+			<promptItem id="cancel_button_caption">
+				<!--med 6jan08: took this out because i think it's deprecated to put the mnemonic as an attribute-->
+				<!--<text id="t264" mnemonic="C">Cancel</text>-->
+				<text id="t264">Cancel</text>
+				<audio src="./audio/261_Cancel.mp3"/>
+			</promptItem>
+			<promptItem id="cancel_button_description">
+				<text id="t265">Press to cancel this dialog.</text>
+				<audio src="./audio/262_Press_to_cancel_this_dialog.mp3"/>
+			</promptItem>
+			<promptItem id="list_reads_automatically">
+				<text id="t266">This list will be read automatically.</text>
+				<audio src="./audio/263_This_list_will_be_read_automat.mp3"/>
+			</promptItem>
+			<promptItem id="repeatLastPromptInstr">
+				<text id="t267">Press Control + R to repeat the last prompt.</text>
+				<audio src="./audio/264_Press_Control__R_to_repeat_the.mp3"/>
+			</promptItem>
+			<promptItem id="thisDialogNotSelfVoicing">
+				<text id="t268">This dialog is not yet self-voicing.</text>
+				<audio src="./audio/265_This_dialog_is_not_yet_selfvoi.mp3"/>
+			</promptItem>
+			<promptItem id="escapeToCancel">
+				<text id="t269">Press escape to cancel</text>
+				<audio src="./audio/266_Press_escape_to_cancel.mp3"/>
+			</promptItem>
+			<promptItem id="hearDlgInstructions">
+				<text id="t270">Press Control + I to hear instructions for this dialog.</text>
+				<audio src="./audio/267_Press_Control__I_to_hear_instr.mp3"/>
+			</promptItem>
+			<!--textBoxRepeatInstr is not used anywhere-->
+			<promptItem id="textBoxRepeatInstr">
+				<text id="t271">Press Control + T to repeat the text in the last text box.</text>
+				<audio src="./audio/268_Press_Control__R_to_repeat_the.mp3"/>
+			</promptItem>
+			<promptItem id="nav_window">
+				<text id="t272">Navigation</text>
+				<audio src="./audio/269_Navigation.mp3"/>
+			</promptItem>
+			<promptItem id="sections">
+				<text id="t273">Sections</text>
+				<audio src="./audio/270_Sections.mp3"/>
+			</promptItem>
+			<promptItem id="pages">
+				<text id="t274">Pages</text>
+				<audio src="./audio/271_Pages.mp3"/>
+			</promptItem>
+			<promptItem id="noterefs">
+				<text id="t275">Footnotes</text>
+				<audio src="./audio/272_Footnotes.mp3"/>
+			</promptItem>
+			<promptItem id="prodnotes">
+				<text id="t276">Producer notes</text>
+				<audio src="./audio/273_Producer_notes.mp3"/>
+			</promptItem>
+			<promptItem id="sidebars">
+				<text id="t277">Sidebars</text>
+				<audio src="./audio/274_Sidebars.mp3"/>
+			</promptItem>
+			<promptItem id="groups">
+				<text id="t278">Grouped items</text>
+				<audio src="./audio/275_Grouped_items.mp3"/>
+			</promptItem>
+			<promptItem id="navigation_sidebar_caption">
+				<text id="t279">Navigation</text>
+				<audio src="./audio/276_Navigation.mp3"/>
+			</promptItem>
+			<promptItem id="ready">
+				<text id="t280">Ready</text>
+				<audio src="./audio/277_Ready.mp3"/>
+			</promptItem>
+			<promptItem id="property_sheet_caption">
+				<text id="t281">Preferences</text>
+				<audio src="./audio/278_Preferences.mp3"/>
+			</promptItem>
+			<promptItem id="selfolder_title">
+				<text id="t282">Select a Folder</text>
+				<audio src="./audio/279_Select_a_Folder.mp3"/>
+			</promptItem>
+			<promptItem id="selfolder_instr">
+				<text id="t283">Select a folder from the directory below.</text>
+				<audio src="./audio/280_Select_a_folder_from_the_direc.mp3"/>
+			</promptItem>
+			<promptItem id="daisy_books">
+				<text id="t284">DAISY Books</text>
+				<audio src="./audio/281_DAISY_Books.mp3"/>
+			</promptItem>
+			<promptItem id="folder_does_not_exist">
+				<text id="t285">The folder %s does not exist. Do you want the folder to be created?</text>
+				<audio src="./audio/282_The_folder_s_does_not_exist_Do.mp3"/>
+			</promptItem>
+			<promptItem id="folder_invalid">
+				<text id="t286">This folder name is invalid. Please choose another.</text>
+				<audio src="./audio/283_This_folder_name_is_invalid_Pl.mp3"/>
+			</promptItem>
+			<promptItem id="cant_create_folder">
+				<text id="t287">This folder can not be created. Please double check.</text>
+				<audio src="./audio/284_This_folder_can_not_be_created.mp3"/>
+			</promptItem>
+			<promptItem id="not_available">
+				<text id="t288">Not available</text>
+				<audio src="./audio/285_Not_available.mp3"/>
+			</promptItem>
+			<promptItem id="numeric_zero">
+				<note>All numerals should be translated into numerals, not words.</note>
+				<text id="t289">0</text>
+				<audio src="./audio/286_0.mp3"/>
+			</promptItem>
+			<promptItem id="numeric_one">
+				<text id="t290">1</text>
+				<audio src="./audio/287_1.mp3"/>
+			</promptItem>
+			<promptItem id="numeric_two">
+				<text id="t291">2</text>
+				<audio src="./audio/288_2.mp3"/>
+			</promptItem>
+			<promptItem id="numeric_three">
+				<text id="t292">3</text>
+				<audio src="./audio/289_3.mp3"/>
+			</promptItem>
+			<promptItem id="numeric_four">
+				<text id="t293">4</text>
+				<audio src="./audio/290_4.mp3"/>
+			</promptItem>
+			<promptItem id="numeric_five">
+				<text id="t294">5</text>
+				<audio src="./audio/291_5.mp3"/>
+			</promptItem>
+			<promptItem id="numeric_six">
+				<text id="t295">6</text>
+				<audio src="./audio/292_6.mp3"/>
+			</promptItem>
+			<promptItem id="numeric_seven">
+				<text id="t296">7</text>
+				<audio src="./audio/293_7.mp3"/>
+			</promptItem>
+			<promptItem id="numeric_eight">
+				<text id="t297">8</text>
+				<audio src="./audio/294_8.mp3"/>
+			</promptItem>
+			<promptItem id="numeric_nine">
+				<text id="t298">9</text>
+				<audio src="./audio/295_9.mp3"/>
+			</promptItem>
+			<promptItem id="deleted">
+				<text id="t299">deleted</text>
+				<audio src="./audio/296_deleted.mp3"/>
+			</promptItem>
+			<promptItem id="will_be_skipped">
+				<text id="t300">will be skipped</text>
+				<audio src="./audio/297_will_be_skipped.mp3"/>
+			</promptItem>
+			<promptItem id="will_be_played">
+				<text id="t301">will be played</text>
+				<audio src="./audio/298_will_be_played.mp3"/>
+			</promptItem>
+			<promptItem id="item_on">
+				<text id="t302">on</text>
+				<audio src="./audio/299_on.mp3"/>
+			</promptItem>
+			<promptItem id="item_off">
+				<text id="t303">off</text>
+				<audio src="./audio/300_off.mp3"/>
+			</promptItem>
+			<promptItem id="item_selected">
+				<text id="t304">selected</text>
+				<audio src="./audio/301_selected.mp3"/>
+			</promptItem>
+			<promptItem id="item_deselected">
+				<text id="t305">deselected</text>
+				<audio src="./audio/302_deselected.mp3"/>
+			</promptItem>
+			<promptItem id="keyboardShortcut">
+				<text id="t306">Keyboard Shortcut</text>
+				<audio src="./audio/303_Keyboard_Shortcut.mp3"/>
+			</promptItem>
+			<promptItem id="icon">
+				<text id="t307">Icon</text>
+				<audio src="./audio/304_Icon.mp3"/>
+			</promptItem>
+			<promptItem id="menu">
+				<text id="t308">Menu</text>
+				<audio src="./audio/305_Menu.mp3"/>
+			</promptItem>
+			<promptItem id="followedBy">
+				<note>This is used in the context of a sequence of key presses, as in "Press Alt + V, followed by S"</note>
+				<text id="t309">followed by</text>
+				<audio src="./audio/306_followed_by.mp3"/>
+			</promptItem>
+			<promptItem id="submenu">
+				<text id="t310">Sub Menu</text>
+				<audio src="./audio/307_Sub_Menu.mp3"/>
+			</promptItem>
+		</promptItemRefs>
+		<generalPrompts>
+			<prompt id="dialogClosed">
+				<promptItem>
+					<text id="t311">Dialog closed.</text>
+					<audio src="./audio/308_Dialog_closed.mp3"/>
+				</promptItem>
+			</prompt>
+			<prompt id="textFieldEntry">
+				<promptItem>
+					<text id="t312">Text field entry is:</text>
+					<audio src="./audio/309_Text_field_entry_is.mp3"/>
+				</promptItem>
+				<promptVar name="TEXT_FIELD"/>
+			</prompt>
+			<prompt id="notSelfVoicing">
+				<promptItem refid="thisDialogNotSelfVoicing"/>
+			</prompt>
+			<prompt id="bookAtPathChanged">
+				<promptItem>
+					<text id="t313">The location of the book you are looking for has changed.  A different book was found instead.  Did the contents of your CD-ROM drive change?</text>
+					<audio src="./audio/310_The_location_of_the_book_you_a.mp3"/>
+				</promptItem>
+			</prompt>
+			<prompt id="generalBookError">
+				<promptItem>
+					<text id="t314">An error occurred while trying to open the book.</text>
+					<audio src="./audio/311_An_error_occurred_while_trying.mp3"/>
+				</promptItem>
+				<promptVar name="BOOK_PATH"/>
+				<promptItem refid="enter_to_close"/>
+			</prompt>
+			<prompt id="noCdLoaded">
+				<promptItem>
+					<text id="t315">There is not a CD in the CD-ROM drive.</text>
+					<audio src="./audio/312_There_is_not_a_CD_in_the_CDROM.mp3"/>
+				</promptItem>
+				<promptItem refid="enter_to_close"/>
+			</prompt>
+			<prompt id="pluginErrorInit">
+				<promptItem>
+					<text id="t316">Plug-in error: init() function not found in the plug-in DLL.</text>
+					<audio src="./audio/313_Plugin_error_init_function_not.mp3"/>
+				</promptItem>
+			</prompt>
+			<prompt id="pluginErrorDll">
+				<promptItem>
+					<text id="t317">Plug-in error: The following plug-in library could not be loaded: </text>
+					<audio src="./audio/314_Plugin_error_The_following_plu.mp3"/>
+				</promptItem>
+				<promptVar name="PLUGIN_LIB"/>
+			</prompt>
+			<prompt id="basicViewPrompt">
+				<promptItem>
+					<text id="t318">You are now using the basic view mode.  Press F11 to switch back to the default view mode.</text>
+					<audio src="./audio/315_You_are_now_using_the_basic_vi.mp3"/>
+				</promptItem>
+			</prompt>
+			<prompt id="OpenFile_notSelfVoicing">
+				<promptItem>
+					<text id="t319">Open File Dialog</text>
+					<audio src="./audio/316_Open_File_Dialog.mp3"/>
+				</promptItem>
+				<promptItem refid="thisDialogNotSelfVoicing"/>
+				<promptItem>
+					<text id="t320">Use the "search for books" feature, under the file menu, to find DAISY books on your hard drive.</text>
+					<audio src="./audio/317_Use_the_search_for_books_featu.mp3"/>
+				</promptItem>
+				<promptItem refid="escapeToCancel"/>
+			</prompt>
+			<prompt id="BrowseForFolder_notSelfVoicing">
+				<promptItem>
+					<text id="t321">Browse for folder dialog</text>
+					<audio src="./audio/318_Browse_for_folder_dialog.mp3"/>
+				</promptItem>
+				<promptItem refid="thisDialogNotSelfVoicing"/>
+				<promptItem refid="escapeToCancel"/>
+				<promptItem>
+					<text id="t322">Then, type the path of the folder you want in the text box.</text>
+					<audio src="./audio/319_Then_type_the_path_of_the_fold.mp3"/>
+				</promptItem>
+			</prompt>
+			<prompt id="canceled">
+				<promptItem>
+					<text id="t323">Canceled</text>
+					<audio src="./audio/320_Canceled.mp3"/>
+				</promptItem>
+			</prompt>
+			<prompt id="loading">
+				<promptItem>
+					<text id="t324">Loading</text>
+					<audio src="./audio/321_Loading.mp3"/>
+				</promptItem>
+			</prompt>
+			<prompt id="restartForChanges">
+				<promptItem>
+					<text id="t325">Please restart to see your changes.</text>
+					<audio src="./audio/322_Please_restart_to_see_your_cha.mp3"/>
+				</promptItem>
+			</prompt>
+			<prompt id="noBooksFoundOnCd">
+				<promptItem>
+					<text id="t326">No DAISY books were found on this CD-ROM.</text>
+					<audio src="./audio/323_No_DAISY_books_were_found_on_t.mp3"/>
+				</promptItem>
+				<promptItem refid="enter_to_close"/>
+			</prompt>
+		</generalPrompts>
+	</prompts>
+</ui>

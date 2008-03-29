@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Tilik Asli" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:18" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="18.271s">
+<par endsync="last">
+<text src="amishelp.html#amis_0013" id="amis_0013" />
+<seq>
+<audio src="18_Tilik_Asli.mp3" clip-begin="npt=0.000s" clip-end="npt=1.619s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0059" id="xami_0059" />
+<seq>
+<audio src="18_Tilik_Asli.mp3" clip-begin="npt=1.619s" clip-end="npt=5.420s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_005a" id="xami_005a" />
+<seq>
+<audio src="18_Tilik_Asli.mp3" clip-begin="npt=5.420s" clip-end="npt=9.220s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_005b" id="xami_005b" />
+<seq>
+<audio src="18_Tilik_Asli.mp3" clip-begin="npt=9.220s" clip-end="npt=11.188s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_005c" id="xami_005c" />
+<seq>
+<audio src="18_Tilik_Asli.mp3" clip-begin="npt=11.188s" clip-end="npt=15.646s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_005d" id="xami_005d" />
+<seq>
+<audio src="18_Tilik_Asli.mp3" clip-begin="npt=15.646s" clip-end="npt=18.271s" id="qwrt_0006" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

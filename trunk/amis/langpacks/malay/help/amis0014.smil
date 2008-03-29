@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Paparan Asas" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:26" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="26.423s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_0014" id="amis_0014" />
+<seq>
+<audio src="19_Paparan_Asas.mp3" clip-begin="npt=0.000s" clip-end="npt=0.496s" id="qwrt_0001" />
+<audio src="19_Paparan_Asas.mp3" clip-begin="npt=0.496s" clip-end="npt=2.599s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0035" id="xami_0035" />
+<seq>
+<audio src="19_Paparan_Asas.mp3" clip-begin="npt=2.599s" clip-end="npt=3.291s" id="qwrt_0003" />
+<audio src="19_Paparan_Asas.mp3" clip-begin="npt=3.291s" clip-end="npt=8.895s" id="qwrt_0004" />
+<audio src="19_Paparan_Asas.mp3" clip-begin="npt=8.895s" clip-end="npt=9.339s" id="qwrt_0005" />
+<audio src="19_Paparan_Asas.mp3" clip-begin="npt=9.339s" clip-end="npt=10.750s" id="qwrt_0006" />
+<audio src="19_Paparan_Asas.mp3" clip-begin="npt=10.750s" clip-end="npt=13.741s" id="qwrt_0007" />
+<audio src="19_Paparan_Asas.mp3" clip-begin="npt=13.741s" clip-end="npt=15.883s" id="qwrt_0008" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0036" id="xami_0036" />
+<seq>
+<audio src="19_Paparan_Asas.mp3" clip-begin="npt=15.883s" clip-end="npt=16.523s" id="qwrt_0009" />
+<audio src="19_Paparan_Asas.mp3" clip-begin="npt=16.523s" clip-end="npt=20.676s" id="qwrt_000A" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0037" id="xami_0037" />
+<seq>
+<audio src="19_Paparan_Asas.mp3" clip-begin="npt=20.676s" clip-end="npt=22.557s" id="qwrt_000B" />
+<audio src="19_Paparan_Asas.mp3" clip-begin="npt=22.557s" clip-end="npt=23.915s" id="qwrt_000C" />
+<audio src="19_Paparan_Asas.mp3" clip-begin="npt=23.915s" clip-end="npt=26.423s" id="qwrt_000D" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

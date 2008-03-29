@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="ncc:timeInThisSmil" content="00:00:34.228"/>
+		<meta name="ncc:totalElapsedTime" content="00:19:32.752"/>
+		<layout>
+			<region id="txt-view"/>
+		</layout>
+		<meta name="ncc:generator" content="EasePublisher 2.02 Build 025 # 089113"/>
+        <meta name="title" content="Plug-ins"/>
+        <meta name="dc:title" content="AMIS hjelp"/>
+        <meta name="dc:identifier" content="AMIS_hjelp"/>
+    </head>
+	<body>
+		<seq dur="34.228s">
+			<par endsync="last" id="nwcb_0002">
+				<text src="amishelp.html#nwcb_0354" id="wymz_0001"/>
+				<seq>
+					<audio src="55_Plug_ins.mp3" clip-begin="npt=0.000s" clip-end="npt=2.759s" id="audio_0001"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0003">
+				<text src="amishelp.html#nwcb_0355" id="wymz_0002"/>
+				<seq>
+					<audio src="55_Plug_ins.mp3" clip-begin="npt=2.759s" clip-end="npt=5.219s" id="audio_0002"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0004">
+				<text src="amishelp.html#nwcb_0356" id="wymz_0003"/>
+				<seq>
+					<audio src="55_Plug_ins.mp3" clip-begin="npt=5.219s" clip-end="npt=10.199s" id="audio_0003"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0005">
+				<text src="amishelp.html#nwcb_0357" id="wymz_0004"/>
+				<seq>
+					<audio src="55_Plug_ins.mp3" clip-begin="npt=10.199s" clip-end="npt=12.625s" id="audio_0004"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0006">
+				<text src="amishelp.html#nwcb_0358" id="wymz_0005"/>
+				<seq>
+					<audio src="55_Plug_ins.mp3" clip-begin="npt=12.625s" clip-end="npt=16.466s" id="audio_0005"/>
+					<audio src="55_Plug_ins.mp3" clip-begin="npt=16.466s" clip-end="npt=18.625s" id="audio_0006"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0007">
+				<text src="amishelp.html#nwcb_0359" id="wymz_0006"/>
+				<seq>
+					<audio src="55_Plug_ins.mp3" clip-begin="npt=18.625s" clip-end="npt=21.033s" id="audio_0007"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0008">
+				<text src="amishelp.html#nwcb_0360" id="wymz_0007"/>
+				<seq>
+					<audio src="55_Plug_ins.mp3" clip-begin="npt=21.033s" clip-end="npt=24.869s" id="audio_0008"/>
+					<audio src="55_Plug_ins.mp3" clip-begin="npt=24.869s" clip-end="npt=34.228s" id="audio_0009"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

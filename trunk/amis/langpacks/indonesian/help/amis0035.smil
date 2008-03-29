@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Ringkasan Informasi" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:17" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="16.619s">
+<par endsync="last">
+<text src="amishelp.html#amis_0035" id="amis_0035" />
+<seq>
+<audio src="52_Ringkasan_Informasi.mp3" clip-begin="npt=0.000s" clip-end="npt=1.698s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_00e4" id="xami_00e4" />
+<seq>
+<audio src="52_Ringkasan_Informasi.mp3" clip-begin="npt=1.698s" clip-end="npt=8.606s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_00e5" id="xami_00e5" />
+<seq>
+<audio src="52_Ringkasan_Informasi.mp3" clip-begin="npt=8.606s" clip-end="npt=16.619s" id="qwrt_0003" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

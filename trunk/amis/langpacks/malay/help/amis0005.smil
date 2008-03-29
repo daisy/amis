@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Bermula Dengan Pantas" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:10" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="9.796s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_0005" id="amis_0005" />
+<seq>
+<audio src="04_Bermula_Dengan_Pantas.mp3" clip-begin="npt=0.000s" clip-end="npt=0.470s" id="qwrt_0001" />
+<audio src="04_Bermula_Dengan_Pantas.mp3" clip-begin="npt=0.470s" clip-end="npt=2.599s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_000d" id="xami_000d" />
+<seq>
+<audio src="04_Bermula_Dengan_Pantas.mp3" clip-begin="npt=2.599s" clip-end="npt=3.278s" id="qwrt_0003" />
+<audio src="04_Bermula_Dengan_Pantas.mp3" clip-begin="npt=3.278s" clip-end="npt=6.752s" id="qwrt_0004" />
+<audio src="04_Bermula_Dengan_Pantas.mp3" clip-begin="npt=6.752s" clip-end="npt=9.796s" id="qwrt_0005" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

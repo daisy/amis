@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Ang Sidebar" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:40" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="40.187s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_0015" id="amis_0015" />
+<seq>
+<audio src="20_Ang_Sidebar.mp3" clip-begin="npt=0.000s" clip-end="npt=1.368s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0038" id="xami_0038" />
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0039" id="xami_0039" />
+<seq>
+<audio src="20_Ang_Sidebar.mp3" clip-begin="npt=1.368s" clip-end="npt=14.155s" id="qwrt_0002" />
+<audio src="20_Ang_Sidebar.mp3" clip-begin="npt=14.155s" clip-end="npt=15.525s" id="qwrt_0003" />
+<audio src="20_Ang_Sidebar.mp3" clip-begin="npt=15.525s" clip-end="npt=17.787s" id="qwrt_0004" />
+<audio src="20_Ang_Sidebar.mp3" clip-begin="npt=17.787s" clip-end="npt=22.018s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_003a" id="xami_003a" />
+<seq>
+<audio src="20_Ang_Sidebar.mp3" clip-begin="npt=22.018s" clip-end="npt=23.734s" id="qwrt_0006" />
+<audio src="20_Ang_Sidebar.mp3" clip-begin="npt=23.734s" clip-end="npt=34.727s" id="qwrt_0007" />
+<audio src="20_Ang_Sidebar.mp3" clip-begin="npt=34.727s" clip-end="npt=40.187s" id="qwrt_0008" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

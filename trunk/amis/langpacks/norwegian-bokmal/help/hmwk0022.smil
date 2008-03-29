@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="ncc:timeInThisSmil" content="00:00:15.948"/>
+		<meta name="ncc:totalElapsedTime" content="00:08:03.070"/>
+		<layout>
+			<region id="txt-view"/>
+		</layout>
+		<meta name="ncc:generator" content="EasePublisher 2.02 Build 025 # 089113"/>
+        <meta name="title" content="Dokke eller flyte"/>
+        <meta name="dc:title" content="AMIS hjelp"/>
+        <meta name="dc:identifier" content="AMIS_hjelp"/>
+    </head>
+	<body>
+		<seq dur="15.948s">
+			<par endsync="last" id="nwcb_0002">
+				<text src="amishelp.html#nwcb_0140" id="nwcb_0007"/>
+				<seq>
+					<audio src="22_Dokke_eller_flyte.mp3" clip-begin="npt=0.000s" clip-end="npt=4.266s" id="audio_0001"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0003">
+				<text src="amishelp.html#nwcb_0141" id="nwcb_0008"/>
+				<seq>
+					<audio src="22_Dokke_eller_flyte.mp3" clip-begin="npt=4.266s" clip-end="npt=9.599s" id="audio_0002"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0004">
+				<text src="amishelp.html#nwcb_0142" id="nwcb_0009"/>
+				<seq>
+					<audio src="22_Dokke_eller_flyte.mp3" clip-begin="npt=9.599s" clip-end="npt=13.138s" id="audio_0003"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0005">
+				<text src="amishelp.html#nwcb_0143" id="nwcb_000a"/>
+				<seq>
+					<audio src="22_Dokke_eller_flyte.mp3" clip-begin="npt=13.138s" clip-end="npt=13.799s" id="audio_0004"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0006">
+				<text src="amishelp.html#nwcb_0144" id="nwcb_000b"/>
+				<seq>
+					<audio src="22_Dokke_eller_flyte.mp3" clip-begin="npt=13.799s" clip-end="npt=15.948s" id="audio_0005"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

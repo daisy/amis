@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="&#2349;&#2366;&#2359;&#2366; &#2360;&#2350;&#2370;&#2361;" />
+<meta name="dc:title" content="AMIS Help File" />
+<meta name="ncc:timeInThisSmil" content="0:00:16" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="16.196s">
+<par endsync="last">
+<text src="amis-help-nep.html#bacw_0038" id="bacw_0038" />
+<seq>
+<audio src="54__.mp3" clip-begin="npt=0.000s" clip-end="npt=1.526s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-nep.html#xbac_00c9" id="xbac_00c9" />
+</par>
+<par endsync="last">
+<text src="amis-help-nep.html#xbac_00cb" id="xbac_00cb" />
+<seq>
+<audio src="54__.mp3" clip-begin="npt=1.526s" clip-end="npt=16.196s" id="qwrt_0002" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

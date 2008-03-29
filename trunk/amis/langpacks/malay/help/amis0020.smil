@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Mainkan dan Hentikan" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:30" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="29.910s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_0020" id="amis_0020" />
+<seq>
+<audio src="31_Mainkan_dan_Hentikan.mp3" clip-begin="npt=0.000s" clip-end="npt=2.338s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0052" id="xami_0052" />
+<seq>
+<audio src="31_Mainkan_dan_Hentikan.mp3" clip-begin="npt=2.338s" clip-end="npt=3.383s" id="qwrt_0002" />
+<audio src="31_Mainkan_dan_Hentikan.mp3" clip-begin="npt=3.383s" clip-end="npt=6.100s" id="qwrt_0003" />
+<audio src="31_Mainkan_dan_Hentikan.mp3" clip-begin="npt=6.100s" clip-end="npt=8.777s" id="qwrt_0004" />
+<audio src="31_Mainkan_dan_Hentikan.mp3" clip-begin="npt=8.777s" clip-end="npt=10.985s" id="qwrt_0005" />
+<audio src="31_Mainkan_dan_Hentikan.mp3" clip-begin="npt=10.985s" clip-end="npt=12.839s" id="qwrt_0006" />
+<audio src="31_Mainkan_dan_Hentikan.mp3" clip-begin="npt=12.839s" clip-end="npt=14.328s" id="qwrt_0007" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0053" id="xami_0053" />
+<seq>
+<audio src="31_Mainkan_dan_Hentikan.mp3" clip-begin="npt=14.328s" clip-end="npt=14.968s" id="qwrt_0008" />
+<audio src="31_Mainkan_dan_Hentikan.mp3" clip-begin="npt=14.968s" clip-end="npt=17.175s" id="qwrt_0009" />
+<audio src="31_Mainkan_dan_Hentikan.mp3" clip-begin="npt=17.175s" clip-end="npt=19.526s" id="qwrt_000A" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0054" id="xami_0054" />
+<seq>
+<audio src="31_Mainkan_dan_Hentikan.mp3" clip-begin="npt=19.526s" clip-end="npt=20.231s" id="qwrt_000B" />
+<audio src="31_Mainkan_dan_Hentikan.mp3" clip-begin="npt=20.231s" clip-end="npt=22.974s" id="qwrt_000C" />
+<audio src="31_Mainkan_dan_Hentikan.mp3" clip-begin="npt=22.974s" clip-end="npt=24.176s" id="qwrt_000D" />
+<audio src="31_Mainkan_dan_Hentikan.mp3" clip-begin="npt=24.176s" clip-end="npt=25.521s" id="qwrt_000E" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0055" id="xami_0055" />
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0056" id="xami_0056" />
+<seq>
+<audio src="31_Mainkan_dan_Hentikan.mp3" clip-begin="npt=25.521s" clip-end="npt=25.965s" id="qwrt_000F" />
+<audio src="31_Mainkan_dan_Hentikan.mp3" clip-begin="npt=25.965s" clip-end="npt=27.036s" id="qwrt_0010" />
+<audio src="31_Mainkan_dan_Hentikan.mp3" clip-begin="npt=27.036s" clip-end="npt=28.447s" id="qwrt_0011" />
+<audio src="31_Mainkan_dan_Hentikan.mp3" clip-begin="npt=28.447s" clip-end="npt=29.831s" id="qwrt_0012" />
+<audio src="31_Mainkan_dan_Hentikan.mp3" clip-begin="npt=29.831s" clip-end="npt=29.910s" id="qwrt_0013" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

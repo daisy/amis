@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+    <meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+    <meta name="dc:format" content="Daisy 2.02" />
+    <meta name="title" content="Överhoppbara inslag" />
+    <meta name="dc:title" content="AMIS Help" />
+    <meta name="ncc:timeInThisSmil" content="0:00:37" />
+    <layout>
+        <region id="txtView" />
+    </layout>
+</head>
+<body>
+<seq dur="37.087s">
+    <par endsync="last">
+        <text src="amishelp.html#amis_0031" id="amis_0031" />
+        <seq>
+            <audio src="48_verhoppbara_inslag.mp3" clip-begin="npt=0.000s" clip-end="npt=0.509s" id="qwrt_0001" />
+            <audio src="48_verhoppbara_inslag.mp3" clip-begin="npt=0.509s" clip-end="npt=2.799s" id="qwrt_0002" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_008a" id="xami_008a" />
+        <seq>
+            <audio src="48_verhoppbara_inslag.mp3" clip-begin="npt=2.799s" clip-end="npt=3.696s" id="qwrt_0003" />
+            <audio src="48_verhoppbara_inslag.mp3" clip-begin="npt=3.696s" clip-end="npt=7.510s" id="qwrt_0004" />
+            <audio src="48_verhoppbara_inslag.mp3" clip-begin="npt=7.510s" clip-end="npt=12.930s" id="qwrt_0005" />
+            <audio src="48_verhoppbara_inslag.mp3" clip-begin="npt=12.930s" clip-end="npt=18.433s" id="qwrt_0006" />
+            <audio src="48_verhoppbara_inslag.mp3" clip-begin="npt=18.433s" clip-end="npt=26.432s" id="qwrt_0007" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_008b" id="xami_008b" />
+        <seq>
+            <audio src="48_verhoppbara_inslag.mp3" clip-begin="npt=26.432s" clip-end="npt=26.860s" id="qwrt_0008" />
+            <audio src="48_verhoppbara_inslag.mp3" clip-begin="npt=26.860s" clip-end="npt=27.435s" id="qwrt_0009" />
+            <audio src="48_verhoppbara_inslag.mp3" clip-begin="npt=27.435s" clip-end="npt=28.623s" id="qwrt_000A" />
+            <audio src="48_verhoppbara_inslag.mp3" clip-begin="npt=28.623s" clip-end="npt=31.459s" id="qwrt_000B" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_008c" id="xami_008c" />
+        <seq>
+            <audio src="48_verhoppbara_inslag.mp3" clip-begin="npt=31.459s" clip-end="npt=32.320s" id="qwrt_000C" />
+            <audio src="48_verhoppbara_inslag.mp3" clip-begin="npt=32.320s" clip-end="npt=37.087s" id="qwrt_000D" />
+        </seq>
+    </par>
+</seq>
+</body>
+</smil>

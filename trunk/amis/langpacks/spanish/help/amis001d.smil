@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.22" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Aumentar el tamaño del tipo de letra" />
+<meta name="dc:title" content="AMIS Libro de Ayuda" />
+<meta name="ncc:timeInThisSmil" content="0:00:23" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="23.094s">
+<par endsync="last">
+<text src="amis-help-spanish.html#amis_001d" id="amis_001d" />
+<seq>
+<audio src="28_Aumentar_el_tamao_del_tipo_de_.mp3" clip-begin="npt=0.000s" clip-end="npt=3.472s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_004b" id="xami_004b" />
+<seq>
+<audio src="28_Aumentar_el_tamao_del_tipo_de_.mp3" clip-begin="npt=3.472s" clip-end="npt=11.811s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_004c" id="xami_004c" />
+<seq>
+<audio src="28_Aumentar_el_tamao_del_tipo_de_.mp3" clip-begin="npt=11.811s" clip-end="npt=13.632s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_004d" id="xami_004d" />
+<seq>
+<audio src="28_Aumentar_el_tamao_del_tipo_de_.mp3" clip-begin="npt=13.632s" clip-end="npt=18.367s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_004e" id="xami_004e" />
+<seq>
+<audio src="28_Aumentar_el_tamao_del_tipo_de_.mp3" clip-begin="npt=18.367s" clip-end="npt=19.438s" id="qwrt_0005" />
+<audio src="28_Aumentar_el_tamao_del_tipo_de_.mp3" clip-begin="npt=19.438s" clip-end="npt=23.095s" id="qwrt_0006" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

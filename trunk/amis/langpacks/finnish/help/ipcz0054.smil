@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="ncc:timeInThisSmil" content="00:00:09.952"/>
+		<meta name="ncc:totalElapsedTime" content="00:16:48.611"/>
+		<layout>
+			<region id="txt-view"/>
+		</layout>
+		<meta name="ncc:generator" content="EasePublisher 2.02 Build 025 # 091650"/>
+        <meta name="title" content="Lisäosat"/>
+        <meta name="dc:title" content="help"/>
+        <meta name="dc:identifier" content="celia"/>
+    </head>
+	<body>
+		<seq dur="9.952s">
+			<par endsync="last" id="ifbo_0002">
+				<text src="amishelp.html#ifbo_0224" id="ifbo_0004"/>
+				<seq>
+					<audio src="54_Lis_osat.mp3" clip-begin="npt=0.000s" clip-end="npt=1.859s" id="audio_0001"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0003">
+				<text src="amishelp.html#ifbo_0225" id="ifbo_0005"/>
+				<seq>
+					<audio src="54_Lis_osat.mp3" clip-begin="npt=1.859s" clip-end="npt=9.952s" id="audio_0002"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

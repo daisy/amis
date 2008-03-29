@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Mga Wikang Salin" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:42" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="42.403s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_0039" id="amis_0039" />
+<seq>
+<audio src="56_Mga_Wikang_Salin.mp3" clip-begin="npt=0.000s" clip-end="npt=1.523s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0099" id="xami_0099" />
+<seq>
+<audio src="56_Mga_Wikang_Salin.mp3" clip-begin="npt=1.523s" clip-end="npt=3.730s" id="qwrt_0002" />
+<audio src="56_Mga_Wikang_Salin.mp3" clip-begin="npt=3.730s" clip-end="npt=4.906s" id="qwrt_0003" />
+<audio src="56_Mga_Wikang_Salin.mp3" clip-begin="npt=4.906s" clip-end="npt=6.173s" id="qwrt_0004" />
+<audio src="56_Mga_Wikang_Salin.mp3" clip-begin="npt=6.173s" clip-end="npt=8.524s" id="qwrt_0005" />
+<audio src="56_Mga_Wikang_Salin.mp3" clip-begin="npt=8.524s" clip-end="npt=10.979s" id="qwrt_0006" />
+<audio src="56_Mga_Wikang_Salin.mp3" clip-begin="npt=10.979s" clip-end="npt=12.168s" id="qwrt_0007" />
+<audio src="56_Mga_Wikang_Salin.mp3" clip-begin="npt=12.168s" clip-end="npt=14.584s" id="qwrt_0008" />
+<audio src="56_Mga_Wikang_Salin.mp3" clip-begin="npt=14.584s" clip-end="npt=17.105s" id="qwrt_0009" />
+<audio src="56_Mga_Wikang_Salin.mp3" clip-begin="npt=17.105s" clip-end="npt=21.259s" id="qwrt_000A" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_009a" id="xami_009a" />
+<seq>
+<audio src="56_Mga_Wikang_Salin.mp3" clip-begin="npt=21.259s" clip-end="npt=33.961s" id="qwrt_000B" />
+<audio src="56_Mga_Wikang_Salin.mp3" clip-begin="npt=33.961s" clip-end="npt=37.842s" id="qwrt_000C" />
+<audio src="56_Mga_Wikang_Salin.mp3" clip-begin="npt=37.842s" clip-end="npt=42.403s" id="qwrt_000D" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

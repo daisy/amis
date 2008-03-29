@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.7" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Ch&#7853;m h&#417;n" />
+<meta name="dc:title" content="AMIS Version 2.0 Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:16" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="16.392s">
+<par endsync="last">
+<text src="amishelp-entity.html#amis_0024" id="amis_0024" />
+<seq>
+<audio src="35_Chm_hon.mp2" clip-begin="npt=0.000s" clip-end="npt=0.575s" id="qwrt_0001" />
+<audio src="35_Chm_hon.mp2" clip-begin="npt=0.575s" clip-end="npt=1.399s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_005f" id="xami_005f" />
+<seq>
+<audio src="35_Chm_hon.mp2" clip-begin="npt=1.399s" clip-end="npt=1.920s" id="qwrt_0003" />
+<audio src="35_Chm_hon.mp2" clip-begin="npt=1.920s" clip-end="npt=5.399s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0060" id="xami_0060" />
+<seq>
+<audio src="35_Chm_hon.mp2" clip-begin="npt=5.399s" clip-end="npt=8.199s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0061" id="xami_0061" />
+<seq>
+<audio src="35_Chm_hon.mp2" clip-begin="npt=8.199s" clip-end="npt=9.326s" id="qwrt_0006" />
+<audio src="35_Chm_hon.mp2" clip-begin="npt=9.326s" clip-end="npt=10.799s" id="qwrt_0007" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0062" id="xami_0062" />
+<seq>
+<audio src="35_Chm_hon.mp2" clip-begin="npt=10.799s" clip-end="npt=11.324s" id="qwrt_0008" />
+<audio src="35_Chm_hon.mp2" clip-begin="npt=11.324s" clip-end="npt=13.205s" id="qwrt_0009" />
+<audio src="35_Chm_hon.mp2" clip-begin="npt=13.205s" clip-end="npt=14.367s" id="qwrt_000A" />
+<audio src="35_Chm_hon.mp2" clip-begin="npt=14.367s" clip-end="npt=16.392s" id="qwrt_000B" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

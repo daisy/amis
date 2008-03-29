@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.22" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Añadir una marca" />
+<meta name="dc:title" content="AMIS Libro de Ayuda" />
+<meta name="ncc:timeInThisSmil" content="0:00:11" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="10.587s">
+<par endsync="last">
+<text src="amis-help-spanish.html#amis_0033" id="amis_0033" />
+<seq>
+<audio src="50_Aadir_una_marca.mp3" clip-begin="npt=0.000s" clip-end="npt=1.933s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_008d" id="xami_008d" />
+<seq>
+<audio src="50_Aadir_una_marca.mp3" clip-begin="npt=1.933s" clip-end="npt=3.236s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_008e" id="xami_008e" />
+<seq>
+<audio src="50_Aadir_una_marca.mp3" clip-begin="npt=3.236s" clip-end="npt=6.484s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_008f" id="xami_008f" />
+<seq>
+<audio src="50_Aadir_una_marca.mp3" clip-begin="npt=6.484s" clip-end="npt=10.588s" id="qwrt_0004" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

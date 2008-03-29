@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Pilihan" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:27" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="26.788s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_000e" id="amis_000e" />
+<seq>
+<audio src="13_Pilihan.mp3" clip-begin="npt=0.000s" clip-end="npt=0.379s" id="qwrt_0001" />
+<audio src="13_Pilihan.mp3" clip-begin="npt=0.379s" clip-end="npt=1.789s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0029" id="xami_0029" />
+<seq>
+<audio src="13_Pilihan.mp3" clip-begin="npt=1.789s" clip-end="npt=2.664s" id="qwrt_0003" />
+<audio src="13_Pilihan.mp3" clip-begin="npt=2.664s" clip-end="npt=5.146s" id="qwrt_0004" />
+<audio src="13_Pilihan.mp3" clip-begin="npt=5.146s" clip-end="npt=7.053s" id="qwrt_0005" />
+<audio src="13_Pilihan.mp3" clip-begin="npt=7.053s" clip-end="npt=8.032s" id="qwrt_0006" />
+<audio src="13_Pilihan.mp3" clip-begin="npt=8.032s" clip-end="npt=9.665s" id="qwrt_0007" />
+<audio src="13_Pilihan.mp3" clip-begin="npt=9.665s" clip-end="npt=11.925s" id="qwrt_0008" />
+<audio src="13_Pilihan.mp3" clip-begin="npt=11.925s" clip-end="npt=15.451s" id="qwrt_0009" />
+<audio src="13_Pilihan.mp3" clip-begin="npt=15.451s" clip-end="npt=16.483s" id="qwrt_000A" />
+<audio src="13_Pilihan.mp3" clip-begin="npt=16.483s" clip-end="npt=17.880s" id="qwrt_000B" />
+<audio src="13_Pilihan.mp3" clip-begin="npt=17.880s" clip-end="npt=19.304s" id="qwrt_000C" />
+<audio src="13_Pilihan.mp3" clip-begin="npt=19.304s" clip-end="npt=21.838s" id="qwrt_000D" />
+<audio src="13_Pilihan.mp3" clip-begin="npt=21.838s" clip-end="npt=25.430s" id="qwrt_000E" />
+<audio src="13_Pilihan.mp3" clip-begin="npt=25.430s" clip-end="npt=26.788s" id="qwrt_000F" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

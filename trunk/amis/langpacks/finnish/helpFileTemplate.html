@@ -1,0 +1,664 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<title>AMIS</title>
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<div>
+		<h1>AMIS</h1>
+		<p>Adaptive Multimedia Information System</p>
+		<p>Verkkosivu: http://amis.sf.net</p>
+		<div class="image">
+			<!--translate the alt-text of the image-->
+			<img src="./img/amis.gif" height="256" width="256" alt="AMIS logo"/>
+		</div>
+		<div class="image">
+			<!--translate the alt-text of the image-->
+			<img src="./img/Nipponfoundation.gif" height="73" width="300" alt="Nippon Foundation logo" />
+			<!--translate the alt-text of the image-->
+			<img src="./img/dfa-log.jpg" alt="DAISY-for-All projektin logo" />
+		</div>
+	</div>
+	<div>
+		<br />
+		<br />
+	</div>
+	<h1>Mikä on AMIS?</h1>
+	<div class="image">
+		<!--translate the alt-text of the image-->
+		<img src="./img/amis.gif" height="100" width="100" alt="AMIS logo" />
+	</div>
+	<p>AMIS on ohjelmisto, jota voidaan käyttää digitaalisten DAISY-äänikirjojen lukemiseen. Siinä on oma ääni, mikä tarkoittaa, että erillistä ruudunlukuohjelmaa ei tarvita näkövammaisten käytössä. AMIS on avoimen lähdekoodin ohjelmisto ja se on saatavana ilmaiseksi. AMIS-ohjelmiston on perustanut ja sitä tukee DAISY for All Project, jota rahoittaa Nippon Foundation. AMIS on saatavissa monilla kielillä. Käy www-sivuillamme lataamassa kielipaketti. Lue lisää Amis-ohjelmiston ominaisuuksista.</p>
+	<div>
+		<br/>
+		<br/>
+	</div>
+	<h1>Mikä on DAISY?</h1>
+	<div class="image">
+		<!--translate the alt-text of the image-->
+		<img src="./img/daisy.jpg" width="100" height="100" alt="DAISY Konsortio logo"/>
+	</div>
+	<p>DAISY on lyhenne sanoista Digital Accessible Information SYstem (digitaalinen saavutettava tietojärjestelmä). DAISY-kirjat ovat täysin saavutettavia digitaalisia äänikirjoja. Kirjojen yleiset ominaisuudet, kuten luvut, sivut, alaviitteet, sivupalkit ja kirjanmerkit on esitetty tavalla, joka mahdollistaa nopean suunnistamisen niiden avulla. Daisy-järjestelmästä voit lukea lisää Daisy-konsortion verkkosivuilta http://www.daisy.org.</p>
+	<div>
+		<br/>
+		<br />
+	</div>
+	<h1>Nopea alku</h1>
+	<p>Tässä jaksossa saat pikaohjeet AMIS-ohjelman käyttöön.</p>
+	
+	<h2>Kirjaa lukiessa</h2>
+	<p>Opastus: F1 lataa milloin vain tämän ohjekirjan</p>
+	<p>CD-ROM-levyn lataaminen: Control + L lataa CD-ROM-levyn sisällön.</p>
+	<p>Tiedoston avaaminen kovalevyltä: Control + O avaa tiedoston</p>
+	<p>Siirtyminen navigointi-ikkunaan: Control + N siirtää navigointi-ikkunaan. Käytä sitten nuolinäppäimiä listalla liikkumiseen.</p>
+	<p>Kirjan kuuntelu ja keskeytys: Välilyönti.</p>
+	<p>Poistuminen AMIS-ohjelmasta: Alt + F4.</p>
+	<p>Siirtyminen teksti-ikkunaan: Control + A</p>
+	<p>Lukujen syvyystasojen lisääminen: Control + P</p>
+	<p>Lukujen syvyystasojen vähentäminen: Control + Q</p>
+	
+	<h2>Viestiruuduissa</h2>
+	<p>Viestiruudun ohjeiden kuuntelu: Control + I.</p>
+	<p>Syöttämäsi tekstin kuuntelu: Control + T. Toimii vain, jos viestiruudussa on muokattavaa tekstiä.</p>
+	<p>Edellisen kehotteen toistaminen: Control + R.</p>
+	<div>
+		<br />
+		<br />
+	</div>
+	 
+	<h1>Täydellinen lista AMIS-ohjelman ominaisuuksista</h1>
+	 
+	<h2>DAISY-kirjan avaaminen</h2>
+	 
+	<h3>Avaa tiedosto</h3>
+	<p>Lataa tiedosto kovalevyltäsi. Tämä komento avaa normaalin tiedostoselaimen, jolla voit valita DAISY-kirjan.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+    <li>$<//promptItem[@id="icon"]/text>$:
+    <img src="./img/folder.jpg" height="50" width="50" alt="Avaa tiedosto -kuvake" /></li>
+    <li>$<//promptItem[@id="keyboardShortcut"]/text>$:
+    $<//action[@mfcid="ID_MENU_FILE_OPEN"]/accelerator/text>$</li>
+    <li>$<//promptItem[@id="menu"]/text>$:
+    $<//action[@mfcid="ID_MENU_FILE_OPEN"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_FILE_OPEN"]/caption/text>$
+    </li>
+	</ul>
+	
+	<h3>Lataa CD-ROM</h3>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/cd.jpg" height="50" width="50" alt="Lataa CD -kuvake"/></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_LOADCD"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_LOADCD"]/parent::container/caption/text>$
+		-&gt;
+		$<//action[@mfcid="ID_MENU_FILE_LOADCD"]/caption/text>$</li>
+	</ul>
+	
+	<h3>Etsi kirjoja kovalevyltä</h3>
+	<p>Tämä avaa viestiruudun, johon voit syöttää etsintäpolun. Tulokset listautuvat viestiruutuun.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/searchForBooks.jpg" height="50" width="50" alt="Etsi levyltä -kuvake"/></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="file"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_FILE_SEARCHDRIVE"]/mnemonic/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_SEARCHDRIVE"]/parent::container/caption/text>$
+		-&gt;
+		$<//action[@mfcid="ID_MENU_FILE_SEARCHDRIVE"]/caption/text>$
+		</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Valitse viimeisimpien kirjojen listalta</h3>
+	<p>Viimeisimpien kirjojen lista on alavalikko, jossa ovat ne kirjat, joita viimeksi olet lukenut.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$:
+		$<//container[@id="file"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+    $<//container[@id="recentBooksList"]/mnemonic/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$:
+		$<//container[@id="file"]/caption/text>$
+    -&gt;
+    $<//container[@id="recentBooksList"]/caption/text>$
+		</li>
+	</ul>
+	<!--end block-->
+	
+	
+	<h2>Asetukset</h2>
+	<p>Täällä voit säätää AMIS-ohjelman asetuksia, myös käynnistystoimenpiteitä, mihin panna kirjanmerkkejä, mitä värejä AMIS-ohjelma käyttää ja mitä asennetuista kielipaketeista käytetään.</p>
+	
+	<h3>Yleiset asetukset</h3>
+	<p>Tämä on Asetukset –viestiruudun oletusikkuna.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="file"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/mnemonic/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/caption/text>$
+		</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Väriasetukset</h3>
+	<p>Tämä on yksi sarkain Asetukset -viestiruudussa.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="file"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/mnemonic/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//dialog[@mfcid="IDD_PROPPAGE2"]/accelerator/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/caption/text>$
+		</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Kieliasetukset</h3>
+	<p>Tämä on yksi sarkain Asetukset -viestiruudussa.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="file"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/mnemonic/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//dialog[@mfcid="IDD_PROPPAGE4"]/accelerator/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/caption/text>$
+		</li>
+	</ul>
+	<!--end block-->
+	
+	
+	<h2>Erilaisia näkymiä</h2>
+	
+	<h3>Oletusnäkymä</h3>
+	<p>Tässä näkymässä on valikko, välinepalkki ja sivupalkki. Se on ulkonäöltään samanlainen kuin monet muut tietokonesovellukset. Se on AMIS-ohjelman oletusnäkymä. Voit vaihdella sen ja perusnäkymän välillä alla olevan pikanäppäimen avulla.</p>
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$:
+		$<//action[@mfcid="ID_MENU_VIEW_BASIC"]/accelerator/text>$</li>
+	</ul>
+	
+	<h3>Perusnäkymä</h3>
+	<p>Tässä näkymässä ei ole valikkoa eikä sivupalkkia. Välinepalkissa on kuusi suurta nappia kuvaruudun alareunassa.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_BASIC"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_BASIC"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_VIEW_BASIC"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h2>Sivupalkki</h2>
+	<div>
+		<!--translate the alt-text of the image-->
+		<img src="./img/sidebar.jpg" alt="Sivupalkki" />
+	</div>
+	<p>Ylläkuvattu sivupalkki sisältää navigaatio-osioita, kuten lukuja ja sivujen, alaviitteiden ja muiden listoja. Nämä osiot on järjestetty listoiksi. Joka listalla on oma sarkain.</p>
+	<p>Pikanäppäin Control + N siirtää sivupalkille, ja voit navigoida senhetkisellä listalla. Voit vaihtaa listaa näkymävalikosta.</p>
+	
+	<h3>Pois ja päälle</h3>
+	<p>Sivupalkin voi panna päälle ja pois. Käytä joko valikkoa tai napsauta &#34;x&#34; sivupalkin oikeassa yläkulmassa.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="view"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF"]/mnemonic/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Kiinnitä ja siirrä</h3>
+	<p>Sivupalkkia voi siirtää ympäri ruutua napsauttamalla ja vetämällä otsikkopalkista. Vetämällä sen lähelle reunaa se kiinnittyy joko oikealle, vasemmalle, ylös tai alas.</p>
+	
+	<h3>Luvut</h3>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/sections.jpg" height="50" width="50" alt="Luvut -kuvake" /></li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//container[@id="view"]/caption/text>$
+    -&gt;
+    $<//promptItem[@id="sections"]/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Sivut</h3>
+	<p>Huom: Tämä osio ei toimi, jos kirjassa ei ole sivuja.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/pages.jpg" height="50" width="50" alt="Sivut -kuvake"/></li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//container[@id="view"]/caption/text>$
+    -&gt;
+    $<//promptItem[@id="pages"]/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Erikoisosiot</h3>
+	<p>Erikoisosiot ovat alaviitteitä, sivupalkkeja (ei AMIS-ohjelman vaan kirjan sivupalkkeja), tuottajan huomautuksia ja muita ryhmiteltyjä osioita. Nämä näkyvät AMIS-sivupalkissa ja näkymävalikossa vain, jos niitä on julkaisussa.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/figures.jpg" height="50" width="50" alt="Erikoisosiot -kuvake"/></li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//container[@id="view"]/caption/text>$
+ 		</li>
+	</ul>
+	<!--end block-->
+	
+	<h2>Tehosteet</h2>
+	
+	<h3>Värikontrasti</h3>
+	<p>Tämä osio menee päälle ja pois nappia tai pikanäppäintä painettaessa. Erityiset väriasetukset voidaan valita Asetukset –viestiruudun Aseta värit –sarkaimessa.<p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/contrast.jpg" height="50" width="50" alt="Kontrasti -kuvake" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_CONTRAST"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_CONTRAST"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_VIEW_CONTRAST"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Kasvata kirjasimen kokoa</h3>
+	<p>Kirjasimen koko kasvaa, tiettyyn rajaan saakka, joka kerran kun nappia tai pikanäppäintä painetaan.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/font.jpg" height="50" width="50" alt="Kirjasimen koko -kuvake" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$:
+		$<//container[@id="view"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_VIEW_LARGEFONT"]/mnemonic/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_LARGEFONT"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_VIEW_LARGEFONT"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Palauta kirjasimen koko</h3>
+	<p>Palauta kirjasimen koko alkuperäiseen arvoonsa.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="view"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_VIEW_RESETFONT"]/mnemonic/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_RESETFONT"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_VIEW_RESETFONT"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h2>Toista</h2>
+	
+	<h3>Toista ja keskeytä</h3>
+	<p>Toiston aikana, &quot;Toista&quot;:n tilalle vaihtuu &quot;Keskeytä&quot; ja päinvastoin.</p>
+	<!--Don't translate this block except for the word "or" between images and except for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$: 
+			<img src="./img/play.jpg" height="50" width="50" alt="Toista -kuvake" />
+			tai
+			<img src="./img/pause.jpg" height="50" width="50" alt="Keskeytä -kuvake"/>
+		</li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAYPAUSE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAYPAUSE"][1]/parent::switch/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAYPAUSE"][1]/caption/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAYPAUSE"][2]/parent::switch/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAYPAUSE"][2]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Lisää äänenvoimakkuutta</h3>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_VOLUP"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_VOLUP"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAY_VOLUP"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Vähennä äänenvoimakkuutta</h3>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_VOLDOWN"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_VOLDOWN"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAY_VOLDOWN"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Nopeuta</h3>
+	<p>Tämä nopeuttaa lukemista mutta ei vääristä äänenkorkeutta.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:<img src="./img/faster.jpg" height="50" width="50" alt="Nopeuta -kuvake" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_FASTER"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_FASTER"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAY_FASTER"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Hidasta</h3>
+	<p>Tämä hidastaa lukemista mutta ei vääristä äänenkorkeutta</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/slower.jpg" height="50" width="50" alt="Hidasta -kuvake" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_SLOWER"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_SLOWER"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAY_SLOWER"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Normaalinopeus</h3>
+	<p>Tämä palauttaa lukunopeuden normaaliksi.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/normalSpeed.jpg" height="50" width="50" alt="Normaalinopeus -kuvake" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_NORMALSPEED"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_NORMALSPEED"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAY_NORMALSPEED"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	
+	<h2>Navigaatio</h2>
+	
+	<h3>Seuraava luku</h3>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/nextSection.jpg" height="50" width="50" alt="Seuraava luku -kuvake" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_NEXTSECTION"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_NEXTSECTION"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_NEXTSECTION"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Edellinen luku</h3>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/prevSection.jpg" height="50" width="50" alt="Edellinen luku -kuvake" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_PREVSECTION"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_PREVSECTION"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_PREVSECTION"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Näytä luvut tasolla</h3>
+	<p>Tällä komennolla voit rajoittaa näkymistä tai näyttää kokonaan luvun hierarkian. Kun avaat kirjan, oletusarvoisesti kaikki sen luvut näkyvät sivupalkissa.</p>
+	<p>Lukujen syvyystasojen lista (1, 2, 3 jne) on näkyvissä Navigaatiovalikon alavalikossa.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="navigate"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//container[@id="sectiondepth"]/mnemonic/text>$
+	</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//container[@id="navigate"]/caption/text>$
+    -&gt;
+    $<//container[@id="sectiondepth"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Seuraava fraasi</h3>
+	<p>Fraasi voi olla lause tai kappale riippuen julkaisun tuotantotavasta.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/nextPhrase.jpg" height="50" width="50" alt="Seuraava fraasi -kuvake" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_NEXTPHRASE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_NEXTPHRASE"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_NEXTPHRASE"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Edellinen fraasi</h3>
+	<p>Fraasi voi olla lause tai kappale riippuen julkaisun tuotantotavasta.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/prevPhrase.jpg" height="50" width="50" alt="Edellinen fraasi -kuvake" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_PREVPHRASE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_PREVPHRASE"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_PREVPHRASE"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Seuraava sivu</h3>
+	<p>Sivu -komennot toimivat vain, jos julkaisussa on sivuja.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/nextPage.jpg" height="50" width="50" alt="Seuraava sivu -kuvake" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_NEXTPAGE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_NEXTPAGE"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_NEXTPAGE"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Edellinen sivu</h3>
+	<p> Sivu -komennot toimivat vain, jos julkaisussa on sivuja.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/prevPage.jpg" height="50" width="50" alt="Edellinen sivu -kuvake" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_PREVPAGE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_PREVPAGE"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_PREVPAGE"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Siirry sivulle</h3>
+	<p> Sivu -komennot toimivat vain, jos julkaisussa on sivuja </p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_GOTOPAGE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_GOTOPAGE"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_GOTOPAGE"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Etsi tekstistä</h3>
+	<p>Etsi tekstistä –komento toimii vain, jos julkaisussa on tekstiä.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_FINDINTEXT"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_FINDINTEXT"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_FINDINTEXT"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Poistuminen osiosta</h3>
+	<p>Tietyistä osioista, kuten taulukoiden kaltaisista sisäkkäisistä rakenteista tai täydentävästä tiedosta kuten sivupalkit, voidaan poistua. Tämä tarkoittaa, että jatkat lukemista poistumista edeltävästä osiosta.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_ESCAPE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_ESCAPE"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAY_ESCAPE"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	
+	<h2>Ohitettavat osiot</h2>
+	<p>DAISY-kirjojen yksi ominaisuus on, että ne voivat sisältää ohitettavia osioita. Ohitettavan osion kirjasta voit joko ottaa mukaan tai jättää pois. Esimerkkejä mahdollisista ohitettavista osioista ovat sivunumerot ja alaviitteet. Jos et halua kuulla näitä osioita, varmista, että ne on merkitty &#34;Ohitettavat osiot&#34; viestiruudussa.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$:
+		$<//container[@id="info"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_INFO_SKIP"]/mnemonic/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_INFO_SKIP"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_INFO_SKIP"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	
+	<h2>Kirjanmerkit</h2>
+	
+	<h3>Lisää kirjanmerkki</h3>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/addBookmark.jpg" height="50" width="50" alt="Lisää kirjanmerkki -kuvake" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_BMK_ADD"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_BMK_ADD"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_BMK_ADD"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Lataa kirjanmerkki</h3>
+	<p>Kun avaat kirjan, kaikki sen kirjanmerkit latautuvat automaattisesti. Jokainen uusi kirjanmerkki lisätään listaan Kirjanmerkki -valikossa.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="bookmarks"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//container[@id="bookmarks"]/caption/text>$
+    </li>
+	</ul>
+	<!--end block-->
+
+	<h2>Yhteenveto</h2>
+	<p>AMIS-ohjelma tarjoaa kolme yhteenvetoa: Koko yhteenveto, Nykyinen tilanne ja Navigaatiovalinnat. Jokainen on saatavana viestiruutuna Info-valikosta (&#34;Alt + I&#34;)</p>
+
+	<h2>Poistuminen AMIS-ohjelmasta</h2>
+		<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_EXIT"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_EXIT"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_FILE_EXIT"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+
+
+<h1>Lisäosat</h1>
+<p>AMIS tukee ohjelman sopeuttamista tarpeisiinne lisäosilla, kuten valmisohjelmilla ja kielipaketeilla.</p>
+<h2>Valmisohjelmat</h2>
+<div class="image">
+	<img src="./img/joystick.jpg" height="100" width="100" alt="Lisäosa -kuvake"/>
+</div>
+<p>AMIS tukee valmisohjelmia, jotka ovat joko pelkästään ohjelmia tai ohjelmia ja laiteliittymiä. Ohjaussauva, pistenäyttö ja skannausvalikko ovat esimerkkejä valmisohjelmista. Kaikki valmisohjelmat ovat ladattavissa verkkosivuiltamme (http://amis.sf.net).</p>
+<h2>Kielipaketit</h2>
+<div class="image">
+	<!--translate the alt-text of these images-->
+	<!--Feel free to add your flag to this list.-->
+	<img src="./img/us-flag.ico" alt="USA:n lippu" width="25" height="25"/>
+	<img src="./img/jp-flag.ico" alt="Japanin lippu" width="25" height="25"/>
+	<img src="./img/malay-flag.ico" alt="Malesian lippu"  width="25" height="25"/>
+	<img src="./img/india-flag.ico" alt="Intian lippu"  width="25" height="25"/>
+	<img src="./img/nepal-flag.ico" alt="Nepalin lippu"  width="25" height="25"/>
+	<img src="./img/fr-flag.ico" alt="Ranskan lippu"  width="25" height="25"/>
+	<img src="./img/srilanka-flag.ico" alt="Sri Lankan lippu"  width="25" height="25"/>
+	<img src="./img/thai-flag.ico" alt="Thaimaan lippu"  width="25" height="25"/>
+	<img src="./img/arab-league-flag.ico" alt="Arabiemiirikuntien lippu" width="25" height="25"/>
+	<img src="./img/vietnam-flag.ico" alt="Vietnamin lippu" width="25" height="25"/>
+	<img src="./img/indonesia-flag.ico" alt="Indonesian lippu" width="25" height="25"/>
+	<img src="./img/pakistan-flag.ico" alt="Pakistanin lippu" width="25" height="25"/>
+	<img src="./img/bangladesh-flag.ico" alt="Bangladeshin lippu" width="25" height="25"/>
+</div>
+<p>AMIS tukee UNICODE:ia ja voidaan asettaa käyttämään eri kielipaketteja. Kaikki kielipaketit ovat ladattavissa verkkosivultamme (http://amis.sf.net).</p>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Membaca Buku" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:49" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="49.246s">
+<par endsync="last">
+<text src="amishelp.html#amis_0006" id="amis_0006" />
+<seq>
+<audio src="05_Membaca_Buku.mp3" clip-begin="npt=0.000s" clip-end="npt=2.138s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_001d" id="xami_001d" />
+<seq>
+<audio src="05_Membaca_Buku.mp3" clip-begin="npt=2.138s" clip-end="npt=8.881s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_001f" id="xami_001f" />
+<seq>
+<audio src="05_Membaca_Buku.mp3" clip-begin="npt=8.881s" clip-end="npt=13.501s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0021" id="xami_0021" />
+<seq>
+<audio src="05_Membaca_Buku.mp3" clip-begin="npt=13.501s" clip-end="npt=18.713s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0023" id="xami_0023" />
+<seq>
+<audio src="05_Membaca_Buku.mp3" clip-begin="npt=18.713s" clip-end="npt=24.272s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0024" id="xami_0024" />
+<seq>
+<audio src="05_Membaca_Buku.mp3" clip-begin="npt=24.272s" clip-end="npt=30.087s" id="qwrt_0006" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0026" id="xami_0026" />
+<seq>
+<audio src="05_Membaca_Buku.mp3" clip-begin="npt=30.087s" clip-end="npt=33.258s" id="qwrt_0007" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0028" id="xami_0028" />
+<seq>
+<audio src="05_Membaca_Buku.mp3" clip-begin="npt=33.258s" clip-end="npt=36.754s" id="qwrt_0008" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_002a" id="xami_002a" />
+<seq>
+<audio src="05_Membaca_Buku.mp3" clip-begin="npt=36.754s" clip-end="npt=40.861s" id="qwrt_0009" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_002c" id="xami_002c" />
+<seq>
+<audio src="05_Membaca_Buku.mp3" clip-begin="npt=40.861s" clip-end="npt=44.570s" id="qwrt_000A" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_002e" id="xami_002e" />
+<seq>
+<audio src="05_Membaca_Buku.mp3" clip-begin="npt=44.570s" clip-end="npt=49.246s" id="qwrt_000B" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

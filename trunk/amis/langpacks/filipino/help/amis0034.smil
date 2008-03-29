@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Isalang ang Panandaan" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:20" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="20.179s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_0034" id="amis_0034" />
+<seq>
+<audio src="51_Isalang_ang_Panandaan.mp3" clip-begin="npt=0.000s" clip-end="npt=1.978s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0090" id="xami_0090" />
+<seq>
+<audio src="51_Isalang_ang_Panandaan.mp3" clip-begin="npt=1.978s" clip-end="npt=8.787s" id="qwrt_0002" />
+<audio src="51_Isalang_ang_Panandaan.mp3" clip-begin="npt=8.787s" clip-end="npt=15.099s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0091" id="xami_0091" />
+<seq>
+<audio src="51_Isalang_ang_Panandaan.mp3" clip-begin="npt=15.099s" clip-end="npt=18.242s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0092" id="xami_0092" />
+<seq>
+<audio src="51_Isalang_ang_Panandaan.mp3" clip-begin="npt=18.242s" clip-end="npt=20.179s" id="qwrt_0005" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

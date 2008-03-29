@@ -1,0 +1,2387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui xml:lang="en">
+  <containers>
+    <container id="file">
+      <note>This is the menu header "File"</note>
+      <caption>
+        <text>फाइल </text>
+        <originalText>File</originalText>
+        
+      <audio src="./audio/002.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0003.smil#text_0003"/></caption>
+      <action mfcid="ID_MENU_FILE_OPEN" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and a toolbar item</note>
+        <icon src="./open.png" type="smallIcon"/>
+        <caption>
+          <text>खोल्नुहोस...</text>
+          <originalText>Open...</originalText>
+          
+        <audio src="./audio/003.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0004.smil#text_0004"/></caption>
+        <description>
+          <text>स्थानीय फाइल पद्बतिबाट डेजी पुस्तक खोल्नुहोस 
+
+</text>
+          <originalText>Open a Daisy book from the local file system</originalText>
+          
+        <audio src="./audio/004______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0005.smil#text_0005"/></description>
+        <accelerator>
+          <text>कंट्रोल र O 
+</text>
+          <originalText>Ctrl+O</originalText>
+          
+        <audio src="./audio/005___O.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0006.smil#text_0006"/></accelerator>
+        <mnemonic>
+          <text>O</text>
+          <originalText>O</originalText>
+          
+        <audio src="./audio/006_O.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0007.smil#text_0007"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_LOADCD" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and a toolbar item</note>
+        <icon src="./settings/img/cd3.ico" type="smallIcon"/>
+        <icon src="./settings/img/cd_big.ico" type="largeIcon"/>
+        <caption>
+          <text>सिडी भर्नुहोस </text>
+          <originalText>Load CD</originalText>
+          
+        <audio src="./audio/007__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0008.smil#text_0008"/></caption>
+        <description>
+          <text>सिडीरोमबाट  डेजी पुस्तक भर्नुहोस </text>
+          <originalText>Load a DAISY book from CD ROM</originalText>
+          
+        <audio src="./audio/008____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0009.smil#text_0009"/></description>
+        <accelerator>
+          <text>कंट्रोल र L</text>
+          <originalText>Ctrl+L</originalText>
+          
+        <audio src="./audio/009___L.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis000a.smil#text_000a"/></accelerator>
+        <mnemonic>
+          <text>L</text>
+          <originalText>L</originalText>
+          
+        <audio src="./audio/010_L.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis000b.smil#text_000b"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_SEARCHDRIVE" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>खोजी गर्नुहोस् ...</text>
+          <originalText>Search...</originalText>
+          
+        <audio src="./audio/011___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis000c.smil#text_000c"/></caption>
+        <description>
+          <text>स्थानीय  ड्राईभमा डेजी पुस्तकको खोजी </text>
+          <originalText>Search local drives for DAISY books</originalText>
+          
+        <audio src="./audio/012_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis000d.smil#text_000d"/></description>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/013_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis000e.smil#text_000e"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_PREFERENCES" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>प्राथमिकताहरु ...</text>
+          <originalText>Preferences...</originalText>
+          
+        <audio src="./audio/014__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis000f.smil#text_000f"/></caption>
+        <description>
+          <text>यो कार्य प्राथमिकता संवाद हो </text>
+          <originalText>This is the application preferences dialog.</originalText>
+          
+        <audio src="./audio/015_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0010.smil#text_0010"/></description>
+        <mnemonic>
+          <text>P</text>
+          <originalText>P</originalText>
+          
+        <audio src="./audio/016_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0011.smil#text_0011"/></mnemonic>
+      </action>
+      <container id="recentBooksList">
+        <note>This is the menu header for the recent books sub-menu.</note>
+        <caption>
+          <text>तातकालिक</text>
+          <originalText>Recent</originalText>
+          
+        <audio src="./audio/017.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0012.smil#text_0012"/></caption>
+        <switch element="action">
+          <action mfcid="ID_FILE_RECENT_EMPTY" widget="menuItem" condition="ID_FILE_RECENT_EMPTY">
+            <note>This is going to be a menu item</note>
+            <caption>
+              <text>रित्तो </text>
+              <originalText>Empty</originalText>
+              
+            <audio src="./audio/018.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0013.smil#text_0013"/></caption>
+            <description>
+              <text>तात्काल पाठन ग‌रिएका पुस्तकहरु यहाँ छैनन॒ </text>
+              <originalText>There are no recently read books.</originalText>
+              
+            <audio src="./audio/019______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0014.smil#text_0014"/></description>
+          </action>
+          <action mfcid="BOOK_BASE_ID" widget="menuItem" condition="BOOK_BASE_ID">
+            <note>This is going to be a menu item</note>
+            <list repeat="yes">
+              <caption>
+                <promptVar name="RECENT_BOOK_TITLE"/>
+              </caption>
+            </list>
+          </action>
+        </switch>
+        <mnemonic>
+          <text>R</text>
+          <originalText>R</originalText>
+          
+        <audio src="./audio/020_R.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0015.smil#text_0015"/></mnemonic>
+      </container>
+      <action mfcid="ID_MENU_FILE_EXIT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>पलायन</text>
+          <originalText>Exit</originalText>
+          
+        <audio src="./audio/021.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0016.smil#text_0016"/></caption>
+        <description>
+          <text>अमीबाट पलायन</text>
+          <originalText>Exit AMIS</originalText>
+          
+        <audio src="./audio/022__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0017.smil#text_0017"/></description>
+        <accelerator>
+          <text>ऑल्ट र F4</text>
+          <originalText>Alt+F4</originalText>
+          
+        <audio src="./audio/023___F4.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0018.smil#text_0018"/></accelerator>
+        <mnemonic>
+          <text>x</text>
+          <originalText>x</originalText>
+          
+        <audio src="./audio/024_x.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0019.smil#text_0019"/></mnemonic>
+      </action>
+      <accelerator>
+        <text>ऑल्ट र F</text>
+        <originalText>Alt+F</originalText>
+        
+      <audio src="./audio/025___F.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis001a.smil#text_001a"/></accelerator>
+      <mnemonic>
+        <text>F</text>
+        <originalText>F</originalText>
+        
+      <audio src="./audio/026_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis001b.smil#text_001b"/></mnemonic>
+    </container>
+    <container id="view">
+      <note>This is the menu header "View"</note>
+      <caption>
+        <text>दृष्य</text>
+        <originalText>View</originalText>
+        
+      <audio src="./audio/027.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis001c.smil#text_001c"/></caption>
+      <action mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>छेउको बार </text>
+          <originalText>Sidebar</originalText>
+          
+        <audio src="./audio/028__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis001d.smil#text_001d"/></caption>
+        <description>
+          <text>छेउको बार खोल्ने र बन्द गर्न</text>
+          <originalText>Turn the sidebar on or off. </originalText>
+          
+        <audio src="./audio/029______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis001e.smil#text_001e"/></description>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/030_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis001f.smil#text_001f"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_BASIC" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>आधारभूत दृष्य विधि </text>
+          <originalText>Basic View Mode</originalText>
+          
+        <audio src="./audio/031___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0020.smil#text_0020"/></caption>
+        <description>
+          <text>आधारभूत दृष्य विधिमा उन्मूख </text>
+          <originalText>Switch the view to basic mode.</originalText>
+          
+        <audio src="./audio/032____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0021.smil#text_0021"/></description>
+        <accelerator>
+          <text>F11</text>
+          <originalText>F11</originalText>
+          
+        <audio src="./audio/033_F11.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0022.smil#text_0022"/></accelerator>
+        <mnemonic>
+          <text>B</text>
+          <originalText>B</originalText>
+          
+        <audio src="./audio/034_B.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0023.smil#text_0023"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_CONTRAST" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item</note>
+        <icon src="./settings/img/contrast.ico" type="smallIcon"/>
+        <caption>
+          <text>उच्च चहकिलोपन </text>
+          <originalText>High Contrast</originalText>
+          
+        <audio src="./audio/035__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0024.smil#text_0024"/></caption>
+        <description>
+          <text>पाठको प्रर्दशनका लागि उच्च चहकिलो रंगको प्रयोग </text>
+          <originalText>Use high contrast colors for the text display.</originalText>
+          
+        <audio src="./audio/036_______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0025.smil#text_0025"/></description>
+        <accelerator>
+          <text>कंट्रोल र S</text>
+          <originalText>Ctrl+S</originalText>
+          
+        <audio src="./audio/037___S.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0026.smil#text_0026"/></accelerator>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/038_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0027.smil#text_0027"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_LARGEFONT" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/font.ico" type="smallIcon"/>
+        <caption>
+          <text>वर्णाकार बृद्बि </text>
+          <originalText>Increase Font Size</originalText>
+          
+        <audio src="./audio/039__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0028.smil#text_0028"/></caption>
+        <description>
+          <text>वर्णाकारमा विस्तारै बृद्बि 
+</text>
+          <originalText>Gradually increase the font size.</originalText>
+          
+        <audio src="./audio/040___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0029.smil#text_0029"/></description>
+        <mnemonic>
+          <text>I</text>
+          <originalText>I</originalText>
+          
+        <audio src="./audio/041_I.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis002a.smil#text_002a"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_RESETFONT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>वर्णाकारको पुनःर्निधारण </text>
+          <originalText>Reset Font Size</originalText>
+          
+        <audio src="./audio/042__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis002b.smil#text_002b"/></caption>
+        <description>
+          <text>वर्णाकारको स्थायी रुपको र्निधारण</text>
+          <originalText>Set the font size to the default setting.</originalText>
+          
+        <audio src="./audio/043____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis002c.smil#text_002c"/></description>
+        <mnemonic>
+          <text>R</text>
+          <originalText>R</originalText>
+          
+        <audio src="./audio/044_R.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis002d.smil#text_002d"/></mnemonic>
+      </action>
+      <action mfcid="NAVLIST_BASE_ID" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <promptVar name="NAV_LIST_NAME"/>
+        </caption>
+        <description>
+          <promptVar name="NAV_LIST_DESCRIPTION"/>
+        </description>
+      </action>
+      <accelerator>
+        <text>ऑल्ट र V</text>
+        <originalText>Alt+V</originalText>
+        
+      <audio src="./audio/045___V.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis002e.smil#text_002e"/></accelerator>
+      <mnemonic>
+        <text>V</text>
+        <originalText>V</originalText>
+        
+      <audio src="./audio/046_V.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis002f.smil#text_002f"/></mnemonic>
+    </container>
+    <container id="play">
+      <note>This is the menu header "Play"</note>
+      <caption>
+        <text>वाचन </text>
+        <originalText>Play</originalText>
+        
+      <audio src="./audio/047.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0030.smil#text_0030"/></caption>
+      <switch element="action">
+        <action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" condition="canPlay">
+          <note>This is going to be a menu item and toolbar item</note>
+          <icon src="./settings/img/play-big.ico" type="smallIcon"/>
+          <icon src="./settings/img/play_big.ico" type="largeIcon"/>
+          <caption>
+            <text>वाचन</text>
+            <originalText>Play</originalText>
+            
+          <audio src="./audio/048.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0031.smil#text_0031"/></caption>
+          <description>
+            <text>संयोजित वाचन प्रकिया प्रारम्भ </text>
+            <originalText>Start synchronized playback.</originalText>
+            
+          <audio src="./audio/049____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0032.smil#text_0032"/></description>
+          <accelerator>
+            <text>स्पेस </text>
+            <originalText>Space</originalText>
+            
+          <audio src="./audio/050.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0033.smil#text_0033"/></accelerator>
+          <mnemonic>
+            <text>P</text>
+            <originalText>P</originalText>
+            
+          <audio src="./audio/051_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0034.smil#text_0034"/></mnemonic>
+        </action>
+        <action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" condition="canPause">
+          <note>This is going to be a menu item and toolbar item</note>
+          <icon src="./settings/img/pause.ico" type="smallIcon"/>
+          <icon src="./settings/img/pause_big.ico" type="largeIcon"/>
+          <caption>
+            <text>स्थिर </text>
+            <originalText>Pause</originalText>
+            
+          <audio src="./audio/052.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0035.smil#text_0035"/></caption>
+          <description>
+            <text>यस डेजी पुस्तकको वाचन प्रकिया स्थिर गर्ने </text>
+            <originalText>Pause playback of this DAISY book.</originalText>
+            
+          <audio src="./audio/053_______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0036.smil#text_0036"/></description>
+          <accelerator>
+            <text>स्पेस </text>
+            <originalText>Space</originalText>
+            
+          <audio src="./audio/054.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0037.smil#text_0037"/></accelerator>
+          <mnemonic>
+            <text>a</text>
+            <originalText>a</originalText>
+            
+          <audio src="./audio/055_a.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0038.smil#text_0038"/></mnemonic>
+        </action>
+      </switch>
+      <action mfcid="ID_MENU_PLAY_ESCAPE" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>छोड्ने</text>
+          <originalText>Escape</originalText>
+          
+        <audio src="./audio/056.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0039.smil#text_0039"/></caption>
+        <description>
+          <text>तात्काल वाचन भइरहेको बिषयवस्तु वा संरचनाबाट बाहिरिनु </text>
+          <originalText>Jump out of the currently playing item or structure.</originalText>
+          
+        <audio src="./audio/057_______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis003a.smil#text_003a"/></description>
+        <accelerator>
+          <text>इस्केप</text>
+          <originalText>Esc</originalText>
+          
+        <audio src="./audio/058.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis003b.smil#text_003b"/></accelerator>
+        <mnemonic>
+          <text>E</text>
+          <originalText>E</originalText>
+          
+        <audio src="./audio/059_E.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis003c.smil#text_003c"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_FASTER" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/fullspeedahead.ico" type="smallIcon"/>
+        <caption>
+          <text>तीब्रता  </text>
+          <originalText>Faster</originalText>
+          
+        <audio src="./audio/060.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis003d.smil#text_003d"/></caption>
+        <description>
+          <text>वाचन शैलीको दर बढाउने</text>
+          <originalText>Increase the playback rate.</originalText>
+          
+        <audio src="./audio/061____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis003e.smil#text_003e"/></description>
+        <accelerator>
+          <text>कंट्रोल++</text>
+          <originalText>Ctrl++</originalText>
+          
+        <audio src="./audio/062.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis003f.smil#text_003f"/></accelerator>
+        <mnemonic>
+          <text>F</text>
+          <originalText>F</originalText>
+          
+        <audio src="./audio/063_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0040.smil#text_0040"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_SLOWER" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/slowdown.ico" type="smallIcon"/>
+        <caption>
+          <text>सुस्तता</text>
+          <originalText>Slower</originalText>
+          
+        <audio src="./audio/064.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0041.smil#text_0041"/></caption>
+        <description>
+          <text>वाचन शैलीको दर घटाउने</text>
+          <originalText>Slow down the playback rate.</originalText>
+          
+        <audio src="./audio/065____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0042.smil#text_0042"/></description>
+        <accelerator>
+          <text>कंट्रोल+-</text>
+          <originalText>Ctrl+-</originalText>
+          
+        <audio src="./audio/066.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0043.smil#text_0043"/></accelerator>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/067_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0044.smil#text_0044"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_NORMALSPEED" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/normalspeed.ico" type="smallIcon"/>
+        <caption>
+          <text>सामान्य गति </text>
+          <originalText>Normal Speed</originalText>
+          
+        <audio src="./audio/068__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0045.smil#text_0045"/></caption>
+        <description>
+          <text>वाचन शैलीको दर सामान्य अवस्थामा पुनःर्निधारण</text>
+          <originalText>Reset the playback rate to normal.</originalText>
+          
+        <audio src="./audio/069______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0046.smil#text_0046"/></description>
+        <accelerator>
+          <text>कंट्रोल र 0</text>
+          <originalText>Ctrl+0</originalText>
+          
+        <audio src="./audio/070___0.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0047.smil#text_0047"/></accelerator>
+        <mnemonic>
+          <text>N</text>
+          <originalText>N</originalText>
+          
+        <audio src="./audio/071_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0048.smil#text_0048"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_VOLUP" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>अवाज बढाउने</text>
+          <originalText>Increase Volume</originalText>
+          
+        <audio src="./audio/072__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0049.smil#text_0049"/></caption>
+        <description>
+          <text>क्रमिक रुपमा अवाजमा बढाउने </text>
+          <originalText>Gradually raise the volume.</originalText>
+          
+        <audio src="./audio/073____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis004a.smil#text_004a"/></description>
+        <accelerator>
+          <text>कंट्रोल  र माथि</text>
+          <originalText>Ctrl+Up</originalText>
+          
+        <audio src="./audio/074___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis004b.smil#text_004b"/></accelerator>
+        <mnemonic>
+          <text>I</text>
+          <originalText>I</originalText>
+          
+        <audio src="./audio/075_I.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis004c.smil#text_004c"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_VOLDOWN" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>अवाज घटाउने </text>
+          <originalText>Decrease Volume</originalText>
+          
+        <audio src="./audio/076__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis004d.smil#text_004d"/></caption>
+        <description>
+          <text>क्रमिक रुपमा अवाज कम गर्ने</text>
+          <originalText>Gradually lower the volume.</originalText>
+          
+        <audio src="./audio/077_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis004e.smil#text_004e"/></description>
+        <accelerator>
+          <text>कंट्रोल  र तल</text>
+          <originalText>Ctrl+Down</originalText>
+          
+        <audio src="./audio/078___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis004f.smil#text_004f"/></accelerator>
+        <mnemonic>
+          <text>D</text>
+          <originalText>D</originalText>
+          
+        <audio src="./audio/079_D.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0050.smil#text_0050"/></mnemonic>
+      </action>
+      <accelerator>
+        <text>ऑल्ट र P</text>
+        <originalText>Alt+P</originalText>
+        
+      <audio src="./audio/080___P.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0051.smil#text_0051"/></accelerator>
+      <mnemonic>
+        <text>P</text>
+        <originalText>P</originalText>
+        
+      <audio src="./audio/081_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0052.smil#text_0052"/></mnemonic>
+    </container>
+    <container id="navigate">
+      <note>This is the menu header "Navigate"</note>
+      <caption>
+        <text>विचरण </text>
+        <originalText>Navigate</originalText>
+        
+      <audio src="./audio/082.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0053.smil#text_0053"/></caption>
+      <action mfcid="ID_MENU_NAV_PREVSECTION" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevsection.ico" type="smallIcon"/>
+        <icon src="./settings/img/prevsection_big.ico" type="largeIcon"/>
+        <caption>
+          <text>अघिल्लो खण्ड 
+</text>
+          <originalText>Previous Section</originalText>
+          
+        <audio src="./audio/083__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0054.smil#text_0054"/></caption>
+        <description>
+          <text>अघिल्लो खण्डमा जाने </text>
+          <originalText>Go to the previous section.</originalText>
+          
+        <audio src="./audio/084___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0055.smil#text_0055"/></description>
+        <accelerator>
+          <text>माथि</text>
+          <originalText>Up</originalText>
+          
+        <audio src="./audio/085.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0056.smil#text_0056"/></accelerator>
+        <mnemonic>
+          <text>P</text>
+          <originalText>P</originalText>
+          
+        <audio src="./audio/086_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0057.smil#text_0057"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTSECTION" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextsection.ico" type="smallIcon"/>
+        <icon src="./settings/img/nextsection_big.ico" type="largeIcon"/>
+        <caption>
+          <text>आगामी खण्ड </text>
+          <originalText>Next Section</originalText>
+          
+        <audio src="./audio/087__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0058.smil#text_0058"/></caption>
+        <description>
+          <text>आगामी खण्डमा जाने </text>
+          <originalText>Go to the next section.</originalText>
+          
+        <audio src="./audio/088___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0059.smil#text_0059"/></description>
+        <accelerator>
+          <text>तल </text>
+          <originalText>Down</originalText>
+          
+        <audio src="./audio/089.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis005a.smil#text_005a"/></accelerator>
+        <mnemonic>
+          <text>N</text>
+          <originalText>N</originalText>
+          
+        <audio src="./audio/090_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis005b.smil#text_005b"/></mnemonic>
+      </action>
+      <container id="sectiondepth">
+        <note>This is the "show section depth" sub-menu pop-up</note>
+        <caption>
+          <text>खण्ड गहिराई देखाउन</text>
+          <originalText>Show Section Depth</originalText>
+          
+        <audio src="./audio/091___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis005c.smil#text_005c"/></caption>
+        <switch element="action">
+          <action mfcid="ID_EMPTY" widget="menuItem" condition="ID_EMPTY">
+            <note>This is going to be a menu item</note>
+            <caption>
+              <text>रित्तो</text>
+              <originalText>Empty</originalText>
+              
+            <audio src="./audio/092.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis005d.smil#text_005d"/></caption>
+            <description>
+              <text>यहाँ खण्डको तह छैन </text>
+              <originalText>There are no section levels.</originalText>
+              
+            <audio src="./audio/093____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis005e.smil#text_005e"/></description>
+          </action>
+          <action mfcid="SECTION_DEPTH_BASE_ID" widget="menuItem" condition="SECTION_DEPTH_BASE_ID">
+            <note>This is going to be a menu item</note>
+            <list repeat="yes">
+              <caption>
+                <promptVar name="SECTION_DEPTH_OPTION"/>
+              </caption>
+            </list>
+          </action>
+        </switch>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/094_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis005f.smil#text_005f"/></mnemonic>
+      </container>
+      <action mfcid="ID_MENU_NAV_PREVPHRASE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevphasecirc.ico" type="smallIcon"/>
+        <caption>
+          <text>अघिल्लो वाक्यांश</text>
+          <originalText>Previous Phrase</originalText>
+          
+        <audio src="./audio/095__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0060.smil#text_0060"/></caption>
+        <description>
+          <text>अघिल्लो वाक्यांशमा जाने </text>
+          <originalText>Go to the previous phrase.</originalText>
+          
+        <audio src="./audio/096___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0061.smil#text_0061"/></description>
+        <accelerator>
+          <text>बायाँ </text>
+          <originalText>Left</originalText>
+          
+        <audio src="./audio/097.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0062.smil#text_0062"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTPHRASE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextphrasecirc.ico" type="smallIcon"/>
+        <caption>
+          <text>आगामी वाक्यांश</text>
+          <originalText>Next Phrase</originalText>
+          
+        <audio src="./audio/098__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0063.smil#text_0063"/></caption>
+        <description>
+          <text>आगामी वाक्यांशमा जाने </text>
+          <originalText>Go to the next phrase.</originalText>
+          
+        <audio src="./audio/099___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0064.smil#text_0064"/></description>
+        <accelerator>
+          <text>दायाँ </text>
+          <originalText>Right</originalText>
+          
+        <audio src="./audio/100.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0065.smil#text_0065"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_PREVPAGE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevpage.ico" type="smallIcon"/>
+        <caption>
+          <text>अघिल्लो  पृष्ठ </text>
+          <originalText>Previous Page</originalText>
+          
+        <audio src="./audio/101__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0066.smil#text_0066"/></caption>
+        <description>
+          <text>अघिल्लो  पृष्ठमा जाने </text>
+          <originalText>Go to the previous page.</originalText>
+          
+        <audio src="./audio/102___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0067.smil#text_0067"/></description>
+        <accelerator>
+          <text>कंट्रोल र  बायाँ  </text>
+          <originalText>Ctrl+Left</originalText>
+          
+        <audio src="./audio/103___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0068.smil#text_0068"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTPAGE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextpage.ico" type="smallIcon"/>
+        <caption>
+          <text>आगामी पृष्ठ </text>
+          <originalText>Next Page</originalText>
+          
+        <audio src="./audio/104__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0069.smil#text_0069"/></caption>
+        <description>
+          <text>आगामी पृष्ठमा जाने</text>
+          <originalText>Go to the next page.</originalText>
+          
+        <audio src="./audio/105___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis006a.smil#text_006a"/></description>
+        <accelerator>
+          <text>कंट्रोल र दायाँ</text>
+          <originalText>Ctrl+Right</originalText>
+          
+        <audio src="./audio/106___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis006b.smil#text_006b"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_GOTOPAGE" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>पृष्ठमा जान...</text>
+          <originalText>Go to Page...</originalText>
+          
+        <audio src="./audio/107__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis006c.smil#text_006c"/></caption>
+        <description>
+          <text>र्निदिष्त पृष्ठमा जान</text>
+          <originalText>Go to a specific page.</originalText>
+          
+        <audio src="./audio/108___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis006d.smil#text_006d"/></description>
+        <accelerator>
+          <text>कंट्रोल र  G</text>
+          <originalText>Ctrl+G</originalText>
+          
+        <audio src="./audio/109___G.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis006e.smil#text_006e"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_FINDINTEXT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>पाठभित्र प्राप्त गर्ने </text>
+          <originalText>Find in Text</originalText>
+          
+        <audio src="./audio/110___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis006f.smil#text_006f"/></caption>
+        <description>
+          <text>पाठभित्र शब्द वा वाक्यांशको खोजी </text>
+          <originalText>Search for a word or phrase in the text.</originalText>
+          
+        <audio src="./audio/111_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0070.smil#text_0070"/></description>
+        <accelerator>
+          <text>कंट्रोल र   F</text>
+          <originalText>Ctrl+F</originalText>
+          
+        <audio src="./audio/112___F.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0071.smil#text_0071"/></accelerator>
+        <mnemonic>
+          <text>F</text>
+          <originalText>F</originalText>
+          
+        <audio src="./audio/113_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0072.smil#text_0072"/></mnemonic>
+      </action>
+      <accelerator>
+        <text>ऑल्ट र N</text>
+        <originalText>Alt+N</originalText>
+        
+      <audio src="./audio/114___N.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0073.smil#text_0073"/></accelerator>
+      <mnemonic>
+        <text>N</text>
+        <originalText>N</originalText>
+        
+      <audio src="./audio/115_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0074.smil#text_0074"/></mnemonic>
+    </container>
+    <container id="bookmarks">
+      <note>This is the menu header "Bookmarks"</note>
+      <caption>
+        <text>पुस्तक संकेतहरु</text>
+        <originalText>Bookmarks</originalText>
+        
+      <audio src="./audio/116__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0075.smil#text_0075"/></caption>
+      <action mfcid="ID_MENU_BMK_ADD" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/adbookmark.ico" type="smallIcon"/>
+        <caption>
+          <text>पुस्तक संकेत थप्ने</text>
+          <originalText>Add Bookmark</originalText>
+          
+        <audio src="./audio/117___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0076.smil#text_0076"/></caption>
+        <description>
+          <text>पुस्तक संकेत   तपाईको    वर्तमान अवस्थितमा</text>
+          <originalText>Bookmark your current position.</originalText>
+          
+        <audio src="./audio/118_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0077.smil#text_0077"/></description>
+        <accelerator>
+          <text>कंट्रोल र D</text>
+          <originalText>Ctrl+D</originalText>
+          
+        <audio src="./audio/119___D.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0078.smil#text_0078"/></accelerator>
+        <mnemonic>
+          <text>A</text>
+          <originalText>A</originalText>
+          
+        <audio src="./audio/120_A.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0079.smil#text_0079"/></mnemonic>
+      </action>
+      <action mfcid="BOOKMARK_BASE_ID" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOKMARK_TITLE"/>
+          </caption>
+        </list>
+      </action>
+      <accelerator>
+        <text>ऑल्ट  र B</text>
+        <originalText>Alt+B</originalText>
+        
+      <audio src="./audio/121___B.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis007a.smil#text_007a"/></accelerator>
+      <mnemonic>
+        <text>B</text>
+        <originalText>B</originalText>
+        
+      <audio src="./audio/122_B.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis007b.smil#text_007b"/></mnemonic>
+    </container>
+    <container id="info">
+      <note>This is the menu header "Info"</note>
+      <caption>
+        <text>जानकारी</text>
+        <originalText>Info</originalText>
+        
+      <audio src="./audio/123.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis007c.smil#text_007c"/></caption>
+      <action mfcid="ID_MENU_INFO_SKIP" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>छोड्न मिल्ने विषयवस्तुहरु 
+
+</text>
+          <originalText>Skippable Items...</originalText>
+          
+        <audio src="./audio/124___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis007d.smil#text_007d"/></caption>
+        <description>
+          <text>यस प्रकाशनमा रहेका छोड्न मिल्ने विषयवस्तुहरुको दृष्य </text>
+          <originalText>View the skippable items for this publication.</originalText>
+          
+        <audio src="./audio/125_______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis007e.smil#text_007e"/></description>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/126_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis007f.smil#text_007f"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_SUMMARY" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/info.ico" type="smallIcon"/>
+        <caption>
+          <text>पूर्ण साराँश</text>
+          <originalText>Full Summary</originalText>
+          
+        <audio src="./audio/127__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0080.smil#text_0080"/></caption>
+        <description>
+          <text>यस प्रकाशनमा रहेका सम्पूर्ण   साराँश जानकारी प्राप्त गर्ने</text>
+          <originalText>Get all summary info for this publication.</originalText>
+          
+        <audio src="./audio/128________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0081.smil#text_0081"/></description>
+        <mnemonic>
+          <text>F</text>
+          <originalText>F</originalText>
+          
+        <audio src="./audio/129_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0082.smil#text_0082"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_CURRENTPOSITION" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>वर्तमान अवस्थिति 
+
+</text>
+          <originalText>Current Position</originalText>
+          
+        <audio src="./audio/130__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0083.smil#text_0083"/></caption>
+        <description>
+          <text>तपाईको  वर्तमान अवस्थितिको बारे  जानकारी प्राप्त गर्नुहोस् </text>
+          <originalText>Get information about your current position.</originalText>
+          
+        <audio src="./audio/131_______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0084.smil#text_0084"/></description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/132_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0085.smil#text_0085"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_NAVOPTIONS" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>विचरण विकल्प </text>
+          <originalText>Navigation Options</originalText>
+          
+        <audio src="./audio/133__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0086.smil#text_0086"/></caption>
+        <description>
+          <text>यस प्रकाशनका विचरण विकल्पहरुको बारे जान्नुहोस् </text>
+          <originalText>Learn about your navigation options for this publication.</originalText>
+          
+        <audio src="./audio/134______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0087.smil#text_0087"/></description>
+        <mnemonic>
+          <text>N</text>
+          <originalText>N</originalText>
+          
+        <audio src="./audio/135_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0088.smil#text_0088"/></mnemonic>
+      </action>
+      <accelerator>
+        <text>ऑल्ट र I</text>
+        <originalText>Alt+I</originalText>
+        
+      <audio src="./audio/136___I.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0089.smil#text_0089"/></accelerator>
+      <mnemonic>
+        <text>I</text>
+        <originalText>I</originalText>
+        
+      <audio src="./audio/137_I.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis008a.smil#text_008a"/></mnemonic>
+    </container>
+    <container id="help">
+      <note>This is the menu header "Help"</note>
+      <caption>
+        <text>मद्दत</text>
+        <originalText>Help</originalText>
+        
+      <audio src="./audio/138.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis008b.smil#text_008b"/></caption>
+      <action mfcid="ID_MENU_HELP_CONTENTS" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/help.ico" type="smallIcon"/>
+        <icon src="./settings/img/help_big.ico" type="largeIcon"/>
+        <caption>
+          <text>विषयसूची 
+
+</text>
+          <originalText>Contents</originalText>
+          
+        <audio src="./audio/139.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis008c.smil#text_008c"/></caption>
+        <description>
+          <text>अमीको प्रयोग गर्दा मद्दत लिनुहोस्</text>
+          <originalText>Get help using AMIS</originalText>
+          
+        <audio src="./audio/140_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis008d.smil#text_008d"/></description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/141_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis008e.smil#text_008e"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_HELP_ABOUT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>अमीको बारेमा 
+
+</text>
+          <originalText>About AMIS</originalText>
+          
+        <audio src="./audio/142__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis008f.smil#text_008f"/></caption>
+        <description>
+          <text>अमी र   "सवैको लागि डेजीको" बारेमा जान्नुहोस् </text>
+          <originalText>Find out about AMIS and DAISY-for-All.</originalText>
+          
+        <audio src="./audio/143_______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0090.smil#text_0090"/></description>
+        <mnemonic>
+          <text>A</text>
+          <originalText>A</originalText>
+          
+        <audio src="./audio/144_A.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0091.smil#text_0091"/></mnemonic>
+      </action>
+      <accelerator>
+        <text>ऑल्ट   र H</text>
+        <originalText>Alt+H</originalText>
+        
+      <audio src="./audio/145___H.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0092.smil#text_0092"/></accelerator>
+      <mnemonic>
+        <text>H</text>
+        <originalText>H</originalText>
+        
+      <audio src="./audio/146_H.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0093.smil#text_0093"/></mnemonic>
+    </container>
+  </containers>
+  <dialogs>
+    <dialog mfcid="IDD_FIND">
+      <note>This is the find in text dialog</note>
+      <caption>
+        <text>पाठमा प्राप्त गर्ने </text>
+        <originalText>Find in Text</originalText>
+        
+      <audio src="./audio/147___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0094.smil#text_0094"/></caption>
+      <description>
+        <text>तपाई यहाँ कुनैपनि दिशातर्फ पूर्ण पाठमा खोजी गर्न सक्नुहुन्छ </text>
+        <originalText>Here you can search the full text in either direction.</originalText>
+        
+      <audio src="./audio/148_________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0095.smil#text_0095"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem>
+          <text>खोजी गर्न चाहेको कुरा टाइप गरेपछि खोजी आरम्भको लागि एन्टर थिच्नुहोस </text>
+          <originalText>After typing in your search, press enter to begin searching.</originalText>
+          
+        <audio src="./audio/149___________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0096.smil#text_0096"/></promptItem>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <!--removed this as it is probably not very useful, and it was incorrectly recorded-->
+        <!-- <promptItem refid="textBoxRepeatInstr"/>-->
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <text>फाइलमा पाठको खोजी गर्न थिच्नुहोस </text>
+          <originalText>Press to begin searching for text in the file.</originalText>
+          
+        <audio src="./audio/150_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0097.smil#text_0097"/></description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/151_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0098.smil#text_0098"/></mnemonic>
+      </control>
+      <control mfcid="IDC_SEARCHSTRING" widget="textfield">
+        <description>
+          <text>खोजी गर्नुपर्न पाठको टाइप गर्नुहोस 
+
+</text>
+          <originalText>Type the text to search for.</originalText>
+          
+        <audio src="./audio/152_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0099.smil#text_0099"/></description>
+      </control>
+      <control mfcid="IDC_FINDNEXT" widget="radiobutton">
+        <note>This indicates the direction of the search</note>
+        <caption>
+          <text>आगामी खोजी </text>
+          <originalText>Find Next</originalText>
+          
+        <audio src="./audio/153__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis009a.smil#text_009a"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="SELECTED_OR_DESELECTED" param="FIND_NEXT_IN_TEXT"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_FINDPREV" widget="radiobutton">
+        <note>This indicates the direction of the search</note>
+        <caption>
+          <text>अघिल्लो खोजी </text>
+          <originalText>Find Previous</originalText>
+          
+        <audio src="./audio/154__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis009b.smil#text_009b"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptName name="SELECTED_OR_DESELECTED" param="FIND_PREV_IN_TEXT"/>
+          </prompt>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_CDSEARCH">
+      <note>This dialog appears when more than one book is on a CD-ROM</note>
+      <caption>
+        <text>बहुसंख्यक पुस्तकहरु प्राप्त भए </text>
+        <originalText>Multiple books found</originalText>
+        
+      <audio src="./audio/155____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis009c.smil#text_009c"/></caption>
+      <description mfcid="IDC_STATIC">
+        <text>यस सिडिमा एकभन्दाबढी पुस्तकहरु प्राप्त   भए। खोल्नको लागि ऑल्ट र O थिच्नुहोस 
+
+</text>
+        <originalText>More than one book was found on this CD. Please select a book from the list below and press Alt + O to open.</originalText>
+        
+      <audio src="./audio/156___________O_.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis009d.smil#text_009d"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_CANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/157_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis009e.smil#text_009e"/></mnemonic>
+      </control>
+      <control mfcid="IDC_OPENBOOK" widget="button">
+        <caption>
+          <text>खोल्नुहोस 
+
+</text>
+          <originalText>Open</originalText>
+          
+        <audio src="./audio/158.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis009f.smil#text_009f"/></caption>
+        <description>
+          <text>यस    संवाद बन्द गर्न  थिच्नुहोस र छानिएको पुस्तक खोल्नुहोस</text>
+          <originalText>Press to close this dialog and open the selected book.</originalText>
+          
+        <audio src="./audio/159_________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00a0.smil#text_00a0"/></description>
+        <mnemonic>
+          <text>O</text>
+          <originalText>O</originalText>
+          
+        <audio src="./audio/160_O.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00a1.smil#text_00a1"/></mnemonic>
+      </control>
+      <control mfcid="IDC_BOOKLIST" widget="list">
+        <description>
+          <text>विषयवस्तुका यस सूचीमा घुमफेर गर्न  एरोकीको प्रयोग गर्नुहोस 
+
+</text>
+          <originalText>Use the arrow keys to move around this list of titles.</originalText>
+          
+        <audio src="./audio/161________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00a2.smil#text_00a2"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOK_TITLE"/>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_ABOUTBOX">
+      <note>This dialog gives some basic information about AMIS.</note>
+      <caption>
+        <text>अमीको बारेमा 
+
+</text>
+        <originalText>About AMIS</originalText>
+        
+      <audio src="./audio/162__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00a3.smil#text_00a3"/></caption>
+      <description>
+        <text>अमी सफ्टवेयरको बारेमा जानकारी सहितको  संवाद </text>
+        <originalText>Dialog with information about AMIS software.</originalText>
+        
+      <audio src="./audio/163______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00a4.smil#text_00a4"/></description>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_AMISNAME" widget="textlabel">
+        <caption>
+          <text>अमी: \nसमायोजित बहुमाध्यम सूचना प्रणाली </text>
+          <originalText>AMIS: \nAdaptive Multimedia Information System</originalText>
+          
+        <audio src="./audio/164__n___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00a5.smil#text_00a5"/></caption>
+      </control>
+      <control mfcid="IDC_VERSION" translate="no">
+        <caption>
+          <text>भरसन २.०</text>
+          <originalText>Version 2.0</originalText>
+          
+        <audio src="./audio/165__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00a6.smil#text_00a6"/></caption>
+      </control>
+      <control mfcid="IDC_VERSIONNOTE" translate="no">
+        <caption>
+          <text>विमोचन मितिः२३। १०। २००५</text>
+          <originalText>Release Date: 23 Oct 2005</originalText>
+          
+        <audio src="./audio/166____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00a7.smil#text_00a7"/></caption>
+      </control>
+      <control mfcid="IDC_COPYRIGHT" widget="textlabel" translate="no">
+        <caption>
+          <text>सर्वाधिकार २००६ " सवैको लागि डेजी "मा निहीत </text>
+          <originalText>Copyright © 2006 DAISY for All</originalText>
+          
+        <audio src="./audio/167________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00a8.smil#text_00a8"/></caption>
+      </control>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_SEARCHDAISY">
+      <note>This dialog is for searching your hard drive for DAISY books.</note>
+      <caption>
+        <text>डेजी पुस्तकको खोजी </text>
+        <originalText>Search for DAISY Books</originalText>
+        
+      <audio src="./audio/168___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00a9.smil#text_00a9"/></caption>
+      <description mfcid="IDC_STATIC">
+        <text>डेजी पुस्तकको लागि आफ्नो कम्प्युटरमा तपाई खोजी गर्न सक्नुहुन्छ। खोजी गर्न ‌मार्ग दिनुहोस वा फोल्डरमै पुगी खोजी प्रारम्भ गर्न खोजी थिच्नुहोस। 
+
+</text>
+        <originalText>You can search your computer for DAISY books.  Enter a path or browse for a folder to search, then press Search to begin searching.</originalText>
+        
+      <audio src="./audio/169_____________________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00aa.smil#text_00aa"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <!--removed this as it is probably not very useful, and it was incorrectly recorded-->
+        <!--<promptItem refid="textBoxRepeatInstr"/>-->
+      </prompt>
+      <control mfcid="IDC_SEARCHPATH" widget="textfield">
+        <description>
+          <text>यस श्रेत्रभित्र फोल्डरमा मार्ग टाइप गर्नुहोस </text>
+          <originalText>Type the path to the folder in this field.</originalText>
+          
+        <audio src="./audio/170______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00ab.smil#text_00ab"/></description>
+      </control>
+      <control mfcid="IDC_BROWSE" widget="button">
+        <caption>
+          <promptItem refid="browse_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="browse_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_STARTSEARCH" widget="button">
+        <caption>
+          <text>खोजीगर्नुहोस्
+
+</text>
+          <originalText>Search</originalText>
+          
+        <audio src="./audio/171.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00ac.smil#text_00ac"/></caption>
+        <description>
+          <text>खोजी प्रारम्भ गर्न थिच्नुहोस्</text>
+          <originalText>Press to start searching.</originalText>
+          
+        <audio src="./audio/172____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00ad.smil#text_00ad"/></description>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/173_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00ae.smil#text_00ae"/></mnemonic>
+      </control>
+      <control mfcid="IDC_STOPSEARCH" widget="button">
+        <caption>
+          <text>रोक्नुहोस </text>
+          <originalText>Stop</originalText>
+          
+        <audio src="./audio/174.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00af.smil#text_00af"/></caption>
+        <description>
+          <text>खोजी कार्य रोक्न थिच्नुहोस्</text>
+          <originalText>Press to stop searching.</originalText>
+          
+        <audio src="./audio/175____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00b0.smil#text_00b0"/></description>
+        <mnemonic>
+          <text>t</text>
+          <originalText>t</originalText>
+          
+        <audio src="./audio/176_t.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00b1.smil#text_00b1"/></mnemonic>
+      </control>
+      <control mfcid="IDC_SEARCHING" widget="textlabel">
+        <switch element="caption">
+          <caption condition="default">
+            <text>तयारी 
+
+</text>
+            <originalText>Ready</originalText>
+            
+          <audio src="./audio/177.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00b2.smil#text_00b2"/></caption>
+          <caption condition="WhileSearching">
+            <text>खोजी भईरहेको छ...</text>
+            <originalText>Searching...</originalText>
+            
+          <audio src="./audio/178___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00b3.smil#text_00b3"/></caption>
+          <caption condition="SearchAborted">
+            <text>खोजी कार्य रोकियो </text>
+            <originalText>Search stopped.</originalText>
+            
+          <audio src="./audio/179___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00b4.smil#text_00b4"/></caption>
+          <caption condition="SearchCompleteNoFilesFound">
+            <text>खोजी पूर्ण भयोः फाइलहरु प्राप्त भएनन्। 
+
+</text>
+            <originalText>Search complete: No files found.</originalText>
+            
+          <audio src="./audio/180______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00b5.smil#text_00b5"/></caption>
+          <caption condition="SearchCompleteOneFileFound">
+            <text>खोजी पूर्ण भयोः एउटा फाईल   पाइयो। </text>
+            <originalText>Search complete: One file found.</originalText>
+            
+          <audio src="./audio/181______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00b6.smil#text_00b6"/></caption>
+          <caption condition="SearchCompleteFilesFound">
+            <prompt>
+              <promptVar name="NUM_FILES_FOUND"/>
+              <promptItem>
+                <note>This is used in the sentence "7 files were found"</note>
+                <text>फाइलहरु प्राप्त भए
+
+</text>
+                <originalText>files were found.</originalText>
+                
+              <audio src="./audio/182___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00b7.smil#text_00b7"/></promptItem>
+            </prompt>
+          </caption>
+        </switch>
+      </control>
+      <control mfcid="IDC_FILESFOUND" widget="list">
+        <description>
+          <text>र्शिषकको यस तालिकामा घुमफेर गर्न  एरोकीको प्रयोग गर्नुहोस </text>
+          <originalText>Use the arrow keys to move around this list of titles.</originalText>
+          
+        <audio src="./audio/183________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00b8.smil#text_00b8"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOK_TITLE"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_OPENBOOK" widget="button">
+        <caption>
+          <text>खोल्नुहोस </text>
+          <originalText>Open</originalText>
+          
+        <audio src="./audio/184.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00b9.smil#text_00b9"/></caption>
+        <description>
+          <text>छानिएको विषयवस्तु खोल्न थिच्नुहोस।</text>
+          <originalText>Press to open the selected title.</originalText>
+          
+        <audio src="./audio/185____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00ba.smil#text_00ba"/></description>
+        <mnemonic>
+          <text>O</text>
+          <originalText>O</originalText>
+          
+        <audio src="./audio/186_O.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00bb.smil#text_00bb"/></mnemonic>
+      </control>
+      <control mfcid="IDC_CANCELBUTTON">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/187_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00bc.smil#text_00bc"/></mnemonic>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_SKIP">
+      <note>This dialog lets the user control rendering of skippable structures.</note>
+      <caption>
+        <text>छोड्न मिलने विषयवस्तुहरु </text>
+        <originalText>Skippable Items</originalText>
+        
+      <audio src="./audio/188___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00bd.smil#text_00bd"/></caption>
+      <switch element="description">
+        <description mfcid="IDC_STATIC" condition="hasSkippableStructures">
+          <text>यस पुस्तकमा निम्न लिखित विशेष संरचनाहरु रहेका छन्। आफूले छोड्न चाहेकोमा संकेत चिन्ह  लगाउनुहोस। </text>
+          <originalText>This book contains the following special structures.  Check the ones you want skipped.</originalText>
+          
+        <audio src="./audio/189______________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00be.smil#text_00be"/></description>
+        <description mfcid="IDC_STATIC" condition="hasNoSkippableStructures">
+          <text>यस प्रकाशनमा छाड्न मिलने तत्वहरु छैनन्। 
+
+</text>
+          <originalText>This publication has no skippable elements.</originalText>
+          
+        <audio src="./audio/190______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00bf.smil#text_00bf"/></description>
+      </switch>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SKIPS" widget="list">
+        <caption>
+          <text>छोड्न मिल्न  विषयवस्तुहरु </text>
+          <originalText>Skippable items</originalText>
+          
+        <audio src="./audio/191___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00c0.smil#text_00c0"/></caption>
+        <description>
+          <text>र्शिषकको यस तालिकामा घुमफेर गर्न  एरोकीको प्रयोग गर्नुहोस् 
+</text>
+          <originalText>Use the arrow keys to move around this list of skippable items.</originalText>
+          
+        <audio src="./audio/192________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00c1.smil#text_00c1"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="SKIPPABLE_ITEM"/>
+          </caption>
+          <description>
+            <prompt>
+              <promptVar name="SKIPPABLE_ITEM"/>
+              <promptItem refid="thisItem"/>
+              <promptVar name="WILL_SKIP_OR_NOT" param="SKIPPABLE_ITEM_ID"/>
+            </prompt>
+          </description>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE4">
+      <note>This dialog lets the user select a language pack.</note>
+      <caption>
+        <text>भाषा </text>
+        <originalText>Language</originalText>
+        
+      <audio src="./audio/193.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00c2.smil#text_00c2"/></caption>
+      <description mfcid="IDC_STATIC">
+        <text>यहाँ तपाई  सफ्टवेयरको भाषा परिवर्तन गर्नसक्नुहुनछ। नयाँ भाषा समूह स्वचालित रुपमा फेला परे। 
+
+</text>
+        <originalText>Here you can change the language of the software.  New language packs are detected automatically.</originalText>
+        
+      <audio src="./audio/194_____________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00c3.smil#text_00c3"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="ctrl1_for_prefsdialog"/>
+        <promptItem refid="ctrl2_for_colorsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_BTN_SELECTLANG" widget="button">
+        <caption>
+          <text>भाषा चयन गर्नुहोस। </text>
+          <originalText>Select Language</originalText>
+          
+        <audio src="./audio/195___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00c4.smil#text_00c4"/></caption>
+        <description>
+          <text>प्रयोगकर्ता इन्टरफेसुको रुपमा तपाईको भाषा चयन   निश्चित गर्न थिच्नुहोस्
+           </text>
+          <originalText>Press to confirm your language selection for the AMIS user interface</originalText>
+          
+        <audio src="./audio/196_________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00c5.smil#text_00c5"/></description>
+      </control>
+      <control mfcid="IDC_LANGLIST" widget="list">
+        <caption mfcid="IDC_STATIC">
+          <text>तपाईको भाषा छनोटहरुः </text>
+          <originalText>Your language choices are:</originalText>
+          
+        <audio src="./audio/197___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00c6.smil#text_00c6"/></caption>
+        <description>
+          <text>भाषाको सुचीमा घुमफेर गर्न  एरोकीको प्रयोग गर्नुहोस </text>
+          <originalText>Use the arrow keys to move around this list of languages.</originalText>
+          
+        <audio src="./audio/198_______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00c7.smil#text_00c7"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="LANGUAGE_NAME"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_CURRLANG">
+        <caption>
+          <prompt>
+            <promptItem>
+              <text>तपाई वर्तमान अवस्थामा अमीको प्रयोग गरिरहनुभएको छ। 
+
+ </text>
+              <originalText>You are currently using AMIS in</originalText>
+              
+            <audio src="./audio/199_______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00c8.smil#text_00c8"/></promptItem>
+            <promptVar name="CURR_LANGUAGE_NAME"/>
+          </prompt>
+        </caption>
+      </control>
+      <accelerator>
+        <text>कंट्रोल र 3</text>
+        <originalText>Ctrl+3</originalText>
+        
+      <audio src="./audio/200___3.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00c9.smil#text_00c9"/></accelerator>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE2">
+      <note>This dialog lets the user select which colors AMIS uses</note>
+      <caption>
+        <text>रंगहरुको र्निधारण </text>
+        <originalText>Set Colors</originalText>
+        
+      <audio src="./audio/201__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00ca.smil#text_00ca"/></caption>
+      <description>
+        <text>अमिको लागि तपाई यहाँ रंगको विकल्प र्निधारण गर्न सक्नुहुन्छ। </text>
+        <originalText>Here you can set color options for AMIS.</originalText>
+        
+      <audio src="./audio/202_________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00cb.smil#text_00cb"/></description>
+      <prompt type="instructions">
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem refid="ctrl1_for_prefsdialog"/>
+        <promptItem refid="ctrl3_for_langsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+      </prompt>
+      <control mfcid="IDC_PHRASES" widget="other">
+        <caption>
+          <text>वाक्यांशको प्रकाश पारिएको</text>
+          <originalText>Phrase Highlighting</originalText>
+          
+        <audio src="./audio/203___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00cc.smil#text_00cc"/></caption>
+      </control>
+      <control mfcid="IDC_TEXTFG" widget="textlabel">
+        <caption>
+          <text>पाठको अगभुमि : </text>
+          <originalText>Text Foreground: </originalText>
+          
+        <audio src="./audio/204___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00cd.smil#text_00cd"/></caption>
+      </control>
+      <control mfcid="IDC_TEXTBG" widget="textlabel">
+        <caption>
+          <text>पाठको पृष्ठभुमि : </text>
+          <originalText>Text Background: </originalText>
+          
+        <audio src="./audio/205___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00ce.smil#text_00ce"/></caption>
+      </control>
+      <control mfcid="IDC_BORDER" widget="textlabel">
+        <caption>
+          <text>छनोटको परिधि </text>
+          <originalText>Selection Border: </originalText>
+          
+        <audio src="./audio/206__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00cf.smil#text_00cf"/></caption>
+      </control>
+      <control mfcid="IDC_CONTRAST" widget="other">
+        <caption>
+          <text>उच्च चहकिलोपनको र्निधारण</text>
+          <originalText>High Contrast Settings</originalText>
+          
+        <audio src="./audio/207___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00d0.smil#text_00d0"/></caption>
+      </control>
+      <control mfcid="IDC_PAGEFG" widget="textlabel">
+        <caption>
+          <text>पाठको अगभुमि : </text>
+          <originalText>Page Foreground: </originalText>
+          
+        <audio src="./audio/208___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00d1.smil#text_00d1"/></caption>
+      </control>
+      <control mfcid="IDC_PAGEBG" widget="textlabel">
+        <caption>
+          <text>पाठको पृष्ठभुमि : </text>
+          <originalText>Page Background: </originalText>
+          
+        <audio src="./audio/209___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00d2.smil#text_00d2"/></caption>
+      </control>
+      <control mfcid="IDC_BTN_RESETCOLORS" widget="button">
+        <caption>
+          <text>रंगको पुनःर्निधारण </text>
+          <originalText>Reset Colors</originalText>
+          
+        <audio src="./audio/210__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00d3.smil#text_00d3"/></caption>
+      </control>
+      <control mfcid="IDC_PHRASEPREVIEW" widget="textfield">
+        <caption>
+          <text>वाक्यांशको रंग प्रकाश पारेको पूर्वदृष्य 
+
+</text>
+          <originalText>Preview of phrase highlight colors.</originalText>
+          
+        <audio src="./audio/211_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00d4.smil#text_00d4"/></caption>
+      </control>
+      <control mfcid="IDC_CONTRASTPREVIEW" widget="textfield">
+        <caption>
+          <text>पृष्ठको चहकिलो रंगको पूर्वदृष्य </text>
+          <originalText>Preview of page contrast colors.</originalText>
+          
+        <audio src="./audio/212____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00d5.smil#text_00d5"/></caption>
+      </control>
+      <accelerator>
+        <text>कंट्रोल र 2</text>
+        <originalText>Ctrl+2</originalText>
+        
+      <audio src="./audio/213___2.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00d6.smil#text_00d6"/></accelerator>
+    </dialog>
+    <dialog mfcid="IDD_CURRENTPOSITION">
+      <note>This dialog gives the user information about their current position in the publication.</note>
+      <caption>
+        <text>वर्तमान अवस्थिति </text>
+        <originalText>Current Position</originalText>
+        
+      <audio src="./audio/214__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00d7.smil#text_00d7"/></caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text>यो तपाईको वर्तमान अवस्थितिको तत्थयाङ्कको सूची हो। </text>
+          <originalText>This is a list of data about your current position.</originalText>
+          
+        <audio src="./audio/215_______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00d8.smil#text_00d8"/></caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="no">
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>तपाईको वर्तमान खण्डको र्शिषक</text>
+                <originalText>Your current section is titled:</originalText>
+                
+              <audio src="./audio/216____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00d9.smil#text_00d9"/></promptItem>
+              <promptVar name="CURRENT_SECTION_TITLE"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text>यस खण्डमा रहेका पृष्ठहरुको संख्या:</text>
+                <originalText>Number of pages in this section:</originalText>
+                
+              <audio src="./audio/217_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00da.smil#text_00da"/></promptItem>
+              <promptVar name="CURRENT_SECTION_NUM_PAGES"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>यस खण्डमा रहेका उपखण्डहरुको संख्या:</text>
+                <originalText>Number of subsections in this section:</originalText>
+                
+              <audio src="./audio/218_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00db.smil#text_00db"/></promptItem>
+              <promptVar name="CURRENT_SECTION_NUM_SUBSECTIONS"/>
+            </prompt>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE1">
+      <note>This dialog lets the user set some basic preferences for AMIS.</note>
+      <caption>
+        <text>सामान्य प्राथमिकताहरु</text>
+        <originalText>General Preferences</originalText>
+        
+      <audio src="./audio/219__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00dc.smil#text_00dc"/></caption>
+      <description>
+        <text>यहाँ तपाई  अमीको बारेमा सामान्य प्राथमिकताहरु र्निधारण गर्नसक्नुहुन्छ। </text>
+        <originalText>Here you can set general preferences for AMIS.</originalText>
+        
+      <audio src="./audio/220________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00dd.smil#text_00dd"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="ctrl2_for_colorsdialog"/>
+        <promptItem refid="ctrl3_for_langsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <!--removed this as it is probably not very useful, and it was incorrectly recorded-->
+        <!--<promptItem refid="textBoxRepeatInstr"/>-->
+      </prompt>
+      <control mfcid="IDC_BMKDIRBROWSE" widget="button">
+        <caption>
+          <promptItem refid="browse_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="browse_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SELFVOICING" widget="checkbox">
+        <caption>
+          <text>आफ्नै स्वरको प्रयोग गर्नुहोस</text>
+          <originalText>Use self-voicing</originalText>
+          
+        <audio src="./audio/221____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00de.smil#text_00de"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="SELF_VOICING_FEATURE"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_TTSVOICE" widget="list">
+        <caption mfcid="IDC_SELTTSLABEL">
+          <text>टेक्स्ट टु स्पीच स्वरको चयन गर्नुहोस:</text>
+          <originalText>Select TTS voice:</originalText>
+          
+        <audio src="./audio/222______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00df.smil#text_00df"/></caption>
+        <description>
+          <text>स्वरको यस तालिकामा घुमफेर गर्न  एरोकीको प्रयोग गर्नुहोस्</text>
+          <originalText>Use the arrow keys to move around this list of voices</originalText>
+          
+        <audio src="./audio/223________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00e0.smil#text_00e0"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="TTS_VOICE_NAME"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_BASIC" widget="checkbox">
+        <caption>
+          <text>आधारभूत दृष्य विधिमा अमी प्रारम्भ गर्नुहोस। </text>
+          <originalText>Start AMIS in the basic view mode.</originalText>
+          
+        <audio src="./audio/224______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00e1.smil#text_00e1"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="BASIC_VIEW_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_PROMPTONBASICVIEW" widget="checkbox">
+        <caption>
+          <text>आधारभूत दृष्यमा उन्मुख भएपछि स्थाई दृष्यमा फर्कन के गर्ने प्रयोगकर्तालाई बताउनुहोस्</text>
+          <originalText>Upon switching to basic view, tell the user how to go back to the default view.</originalText>
+          
+        <audio src="./audio/225___________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00e2.smil#text_00e2"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="PROMPT_ON_BASIC_VIEW_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_LOADLASTDTB" widget="checkbox">
+        <caption>
+          <text>सफ्टवेयर प्रारम्भ हुँदा तत्काल पाठन गरिएको पुस्तक भर्नुहोस</text>
+          <originalText>Load the most recently read book when the software starts.</originalText>
+          
+        <audio src="./audio/226________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00e3.smil#text_00e3"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="LOAD_LAST_READ_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_BMKDIR" widget="textfield">
+        <caption mfcid="IDC_BMKDIRLABEL">
+          <text>पुस्तक संकेतको डाइरेकटरी :</text>
+          <originalText>Bookmarks directory:</originalText>
+          
+        <audio src="./audio/227____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00e4.smil#text_00e4"/></caption>
+        <description>
+          <text>यस श्रेत्रभित्र पुस्तक संकेत मार्ग टाईप गर्नुहोस</text>
+          <originalText>Type the path to the bookmarks folder in this field.</originalText>
+          
+        <audio src="./audio/228_______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00e5.smil#text_00e5"/></description>
+      </control>
+      <accelerator>
+        <text>कंट्रोल र 1</text>
+        <originalText>Ctrl+1</originalText>
+        
+      <audio src="./audio/229___1.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00e6.smil#text_00e6"/></accelerator>
+    </dialog>
+    <dialog mfcid="IDD_NAVIGATIONOPTIONS">
+      <note>This dialog lists navigation options for the current publication.</note>
+      <caption>
+        <text>विचरण विकल्प </text>
+        <originalText>Navigation Options</originalText>
+        
+      <audio src="./audio/230__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00e7.smil#text_00e7"/></caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text>यो विषयवस्तुको सूची हो। जून तपाई प्रत्यक्ष रुपमा विचरण गर्नसक्नुहुन्छ</text>
+          <originalText>This is a list of items to which you may navigate directly.</originalText>
+          
+        <audio src="./audio/231__________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00e8.smil#text_00e8"/></caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="TOC_CATEGORIES"/>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_GOTOPAGE">
+      <note>This dialog lets the user jump to a certain page</note>
+      <caption>
+        <text>पृष्ठमा जानुहोस्</text>
+        <originalText>Go To Page</originalText>
+        
+      <audio src="./audio/232__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00e9.smil#text_00e9"/></caption>
+      <description>
+        <text>तपाई यहाँ पृष्ठ संख्या र तहमा पुग्नसक्नुहुन्छ</text>
+        <originalText>Here you can jump to a page number or page label.</originalText>
+        
+      <audio src="./audio/233_______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00ea.smil#text_00ea"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem>
+          <text>पृष्ठ संख्या टाइप गरेपछि त्यहाँ पुग्न एनटर थिच्नुहोस</text>
+          <originalText>After typing in your page number, press enter to go there.</originalText>
+          
+        <audio src="./audio/234________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00eb.smil#text_00eb"/></promptItem>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <!--removed this as it is probably not very useful, and it was incorrectly recorded-->
+        <!--<promptItem refid="textBoxRepeatInstr"/>-->
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <text>चाहेको पृष्ठमा पुग्न यस बटन थिच्नुहोस</text>
+          <originalText>Press this button to go to the desired page.</originalText>
+          
+        <audio src="./audio/235______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00ec.smil#text_00ec"/></description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/236_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00ed.smil#text_00ed"/></mnemonic>
+      </control>
+      <control mfcid="IDC_PAGENUM" widget="textfield">
+        <caption mfcid="IDC_STATIC">
+          <text>पृष्ठ संख्या भर्नुहोस:</text>
+          <originalText>Enter a page number:</originalText>
+          
+        <audio src="./audio/237___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00ee.smil#text_00ee"/></caption>
+        <description>
+          <text>तपाई जान चाहेको पृष्ठ संख्या वा तहमाा    पुग्न टाइप गर्नुहोस </text>
+          <originalText>Type the number or label of the page you want to go to.</originalText>
+          
+        <audio src="./audio/238__________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00ef.smil#text_00ef"/></description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_FULLSUMMARY">
+      <note>This dialog lists key publication metadata.</note>
+      <caption>
+        <text>प्रकाशन सारंश</text>
+        <originalText>Publication Summary</originalText>
+        
+      <audio src="./audio/239__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00f0.smil#text_00f0"/></caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text>यो    मेटाडाटाको  विषयसची हो</text>
+          <originalText>This is a list of publication metadata.</originalText>
+          
+        <audio src="./audio/240____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00f1.smil#text_00f1"/></caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="no">
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>यस पुस्तकको शिर्षक :</text>
+                <originalText>This book is titled:</originalText>
+                
+              <audio src="./audio/241____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00f2.smil#text_00f2"/></promptItem>
+              <promptVar name="META_TITLE"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>लेखक:</text>
+                <originalText>Written by:</originalText>
+                
+              <audio src="./audio/242.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00f3.smil#text_00f3"/></promptItem>
+              <promptVar name="META_CREATOR"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>प्रकाशक:</text>
+                <originalText>Published by:</originalText>
+                
+              <audio src="./audio/243.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00f4.smil#text_00f4"/></promptItem>
+              <promptVar name="META_PUBLISHER"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_DESCRIPTION">
+            <prompt>
+              <promptItem>
+                <text>विवरण:</text>
+                <originalText>Description:</originalText>
+                
+              <audio src="./audio/244.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00f5.smil#text_00f5"/></promptItem>
+              <promptVar name="META_DESC"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>विषयसूचीमा रहेका विचरण विन्दुका संख्याहरु:</text>
+                <originalText>Number of navigation points in the table of contents:</originalText>
+                
+              <audio src="./audio/245_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00f6.smil#text_00f6"/></promptItem>
+              <promptVar name="META_TOCITEMS"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>अधिकतम खण्ड गहिराई:</text>
+                <originalText>Maximum section depth:</originalText>
+                
+              <audio src="./audio/246___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00f7.smil#text_00f7"/></promptItem>
+              <promptVar name="META_DEPTH"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text>अग विषयवस्तुका पृष्ठहरु:</text>
+                <originalText>Front matter pages:</originalText>
+                
+              <audio src="./audio/247___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00f8.smil#text_00f8"/></promptItem>
+              <promptVar name="META_PAGEFRONT"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text>नियमित पृष्ठहरु:</text>
+                <originalText>Regular pages:</originalText>
+                
+              <audio src="./audio/248__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00f9.smil#text_00f9"/></promptItem>
+              <promptVar name="META_PAGENORMAL"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text>विशिष्ट पृष्ठहरु:</text>
+                <originalText>Special pages:</originalText>
+                
+              <audio src="./audio/249__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00fa.smil#text_00fa"/></promptItem>
+              <promptVar name="META_PAGESPECIAL"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>कूल अवधि:</text>
+                <originalText>Total duration:</originalText>
+                
+              <audio src="./audio/250__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00fb.smil#text_00fb"/></promptItem>
+              <promptVar name="META_TOTALTIME"/>
+            </prompt>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+  </dialogs>
+  <prompts>
+    <promptItemRefs>
+      <promptItem id="altC_to_close">
+        <text>यस   संवाद बन्द गर्न ऑल्ट र सी थिच्नुहोस। </text>
+        <originalText>Press Alt + C to close the dialog.</originalText>
+        
+      <audio src="./audio/251________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00fc.smil#text_00fc"/></promptItem>
+      <promptItem id="altC_to_cancel">
+        <text>यस  संवाद रद्द गर्न ऑल्ट र सी  थिच्नुहोस। </text>
+        <originalText>Press Alt + C to cancel the dialog.</originalText>
+        
+      <audio src="./audio/252________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00fd.smil#text_00fd"/></promptItem>
+      <promptItem id="thisItem">
+        <text>यस विषयवस्तु </text>
+        <originalText>This item</originalText>
+        
+      <audio src="./audio/253__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00fe.smil#text_00fe"/></promptItem>
+      <promptItem id="spaceToToggle">
+        <text>मानमा आवत-जावत गर्न स्पेशबार थिच्नुहोस</text>
+        <originalText>Press the space bar to toggle the value.</originalText>
+        
+      <audio src="./audio/254_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis00ff.smil#text_00ff"/></promptItem>
+      <promptItem id="tabAround">
+        <text>संवादको विकल्पहरुमा घुमफेर गर्न टैब थिच्नुहोस</text>
+        <originalText>Hit tab to move around the options on the dialog.</originalText>
+        
+      <audio src="./audio/255______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0100.smil#text_0100"/></promptItem>
+      <promptItem id="ctrl2_for_colorsdialog">
+        <text>रंगको संवादमा पुग्न कंट्रोल र २ थिच्नुहोस। </text>
+        <originalText>Press control + 2 to switch to the colors dialog.</originalText>
+        
+      <audio src="./audio/256_______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0101.smil#text_0101"/></promptItem>
+      <promptItem id="ctrl3_for_langsdialog">
+        <text>भाषाको विकल्प संवादमा पुग्न कंट्रोल र ३ थिच्नुहोस। </text>
+        <originalText>Press control + 3 to switch to the language options dialog.</originalText>
+        
+      <audio src="./audio/257________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0102.smil#text_0102"/></promptItem>
+      <promptItem id="ctrl1_for_prefsdialog">
+        <text>सामान्य प्राथमिकता संवादमा पुग्न कंट्रोल र १ थिच्नुहोस। </text>
+        <originalText>Press control + 1 to switch to the general preferences dialog.</originalText>
+        
+      <audio src="./audio/258________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0103.smil#text_0103"/></promptItem>
+      <promptItem id="thisItemIsCurrently">
+        <text>वर्तमान अवस्थामा यो विषयवस्तु </text>
+        <originalText>This item is currently</originalText>
+        
+      <audio src="./audio/259____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0104.smil#text_0104"/></promptItem>
+      <promptItem id="enter_to_close">
+        <text>संवाद बन्द गर्न एन्टर थिच्नुहोस</text>
+        <originalText>Press enter to close the dialog.</originalText>
+        
+      <audio src="./audio/260_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0105.smil#text_0105"/></promptItem>
+      <promptItem id="browse_button_caption">
+        <text>ब्राउज..</text>
+        <originalText>Browse...</originalText>
+        
+      <audio src="./audio/261.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0106.smil#text_0106"/></promptItem>
+      <promptItem id="browse_button_description">
+        <text>फोल्डर ब्राउज संवादमा  पुग्न थिच्नुहोस</text>
+        <originalText>Press to open the folder browse dialog.</originalText>
+        
+      <audio src="./audio/262_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0107.smil#text_0107"/></promptItem>
+      <promptItem id="ok_button_caption">
+        <text>हुन्छ</text>
+        <originalText>OK</originalText>
+        
+      <audio src="./audio/263.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0108.smil#text_0108"/></promptItem>
+      <promptItem id="ok_button_description">
+        <text>संवाद बन्द गर्न हुन्छ थिच्नुहोस</text>
+        <originalText>Press OK to close this dialog.</originalText>
+        
+      <audio src="./audio/264_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0109.smil#text_0109"/></promptItem>
+      <promptItem id="cancel_button_caption">
+        <text mnemonic="C">रद्द</text>
+        <originalText>Cancel</originalText>
+        
+      <audio src="./audio/265_Cancel.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis010a.smil#text_010a"/></promptItem>
+      <promptItem id="cancel_button_description">
+        <text>यस संवाद रद्द गर्न थिच्नुहोस्</text>
+        <originalText>Press to cancel this dialog.</originalText>
+        
+      <audio src="./audio/266_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis010b.smil#text_010b"/></promptItem>
+      <promptItem id="list_reads_automatically">
+        <text>यो तालिका स्वचालित रुपमा पाठन हुन्छ</text>
+        <originalText>This list will be read automatically.</originalText>
+        
+      <audio src="./audio/267______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis010c.smil#text_010c"/></promptItem>
+      <promptItem id="repeatLastPromptInstr">
+        <text>अन्तिम प्रोमट दोह्राराउन कंट्रोल र आर थिच्नुहोस</text>
+        <originalText>Press Control + R to repeat the last prompt.</originalText>
+        
+      <audio src="./audio/268_______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis010d.smil#text_010d"/></promptItem>
+      <promptItem id="thisDialogNotSelfVoicing">
+        <text>यस संवादको अझै आफ्नो आवाज छैन। </text>
+        <originalText>This dialog is not yet self-voicing.</originalText>
+        
+      <audio src="./audio/269______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis010e.smil#text_010e"/></promptItem>
+      <promptItem id="escapeToCancel">
+        <text>रद्द गर्न इस्केप थिच्नुहोस</text>
+        <originalText>Press escape to cancel</originalText>
+        
+      <audio src="./audio/270____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis010f.smil#text_010f"/></promptItem>
+      <promptItem id="hearDlgInstructions">
+        <text>संवादबाट  जानकारी सुन्न कंट्रोल र आई थिच्नुहोस।</text>
+        <originalText>Press Control + I to hear instructions for this dialog.</originalText>
+        
+      <audio src="./audio/271_______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0110.smil#text_0110"/></promptItem>
+      <promptItem id="textBoxRepeatInstr">
+        <text>अन्तिम पाठ कक्षको पाठ दोह्राराउन  कंट्रोल र टि थिच्नुहोस। </text>
+        <originalText>Press Control + T to repeat the text in the last text box.</originalText>
+        
+      <audio src="./audio/272_________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0111.smil#text_0111"/></promptItem>
+      <promptItem id="nav_window">
+        <text>विचरण </text>
+        <originalText>Navigation</originalText>
+        
+      <audio src="./audio/273.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0112.smil#text_0112"/></promptItem>
+      <promptItem id="sections">
+        <text>खण्डहरु</text>
+        <originalText>Sections</originalText>
+        
+      <audio src="./audio/274.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0113.smil#text_0113"/></promptItem>
+      <promptItem id="pages">
+        <text>पृष्ठहरु</text>
+        <originalText>Pages</originalText>
+        
+      <audio src="./audio/275.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0114.smil#text_0114"/></promptItem>
+      <promptItem id="noterefs">
+        <text>पद्बसन्देशहरु </text>
+        <originalText>Footnotes</originalText>
+        
+      <audio src="./audio/276.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0115.smil#text_0115"/></promptItem>
+      <promptItem id="prodnotes">
+        <text>उद्बपादको सन्देशहरु </text>
+        <originalText>Producer notes</originalText>
+        
+      <audio src="./audio/277__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0116.smil#text_0116"/></promptItem>
+      <promptItem id="sidebars">
+        <text>छेउको बारहरु </text>
+        <originalText>Sidebars</originalText>
+        
+      <audio src="./audio/278__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0117.smil#text_0117"/></promptItem>
+      <promptItem id="groups">
+        <text>सामुहिक विषयवस्तुहरु </text>
+        <originalText>Grouped items</originalText>
+        
+      <audio src="./audio/279__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0118.smil#text_0118"/></promptItem>
+      <promptItem id="navigation_sidebar_caption">
+        <text>विचरण</text>
+        <originalText>Navigation</originalText>
+        
+      <audio src="./audio/280.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0119.smil#text_0119"/></promptItem>
+      <promptItem id="ready">
+        <text>तयारी</text>
+        <originalText>Ready</originalText>
+        
+      <audio src="./audio/281.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis011a.smil#text_011a"/></promptItem>
+      <promptItem id="property_sheet_caption">
+        <text>प्राथमिकताहरु </text>
+        <originalText>Preferences</originalText>
+        
+      <audio src="./audio/282.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis011b.smil#text_011b"/></promptItem>
+      <promptItem id="selfolder_title">
+        <text>फोल्डरको चयन गर्नहोस। </text>
+        <originalText>Select a Folder</originalText>
+        
+      <audio src="./audio/283___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis011c.smil#text_011c"/></promptItem>
+      <promptItem id="selfolder_instr">
+        <text>तलको डाइरेकटरीबाट फोल्डरको चयन गर्नहोस। </text>
+        <originalText>Select a folder from the directory below.</originalText>
+        
+      <audio src="./audio/284_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis011d.smil#text_011d"/></promptItem>
+      <promptItem id="daisy_books">
+        <text>डेजी पुस्तकहरु</text>
+        <originalText>DAISY Books</originalText>
+        
+      <audio src="./audio/285__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis011e.smil#text_011e"/></promptItem>
+      <promptItem id="folder_does_not_exist">
+        <text>यस %s फोल्डर विधमान छैन। के तपाई फोल्डर सृजना गर्नचाहनहुन्छ ?</text>
+        <originalText>The folder %s does not exist. Do you want the folder to be created?</originalText>
+        
+      <audio src="./audio/286__s_________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis011f.smil#text_011f"/></promptItem>
+      <promptItem id="folder_invalid">
+        <text>यस  फोल्डरको नाम अमान्य भयो। कृपया अर्को चयन गर्नहोस। </text>
+        <originalText>This folder name is invalid. Please choose another.</originalText>
+        
+      <audio src="./audio/287_________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0120.smil#text_0120"/></promptItem>
+      <promptItem id="cant_create_folder">
+        <text>यस फोल्डर सृजना गर्न   सकिदैन दोह्राएर जाँच गर्नुहोस</text>
+        <originalText>This folder can not be created. Please double check.</originalText>
+        
+      <audio src="./audio/288________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0121.smil#text_0121"/></promptItem>
+      <promptItem id="not_available">
+        <text>उपल्बध छैन। </text>
+        <originalText>Not available</originalText>
+        
+      <audio src="./audio/289__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0122.smil#text_0122"/></promptItem>
+      <promptItem id="numeric_zero">
+        <note>All numerals should be translated into numerals, not words.</note>
+        <text>0</text>
+        <originalText>0</originalText>
+        
+      <audio src="./audio/290_0.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0123.smil#text_0123"/></promptItem>
+      <promptItem id="numeric_one">
+        <text>१</text>
+        <originalText>1</originalText>
+        
+      <audio src="./audio/291.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0124.smil#text_0124"/></promptItem>
+      <promptItem id="numeric_two">
+        <text>२</text>
+        <originalText>2</originalText>
+        
+      <audio src="./audio/292.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0125.smil#text_0125"/></promptItem>
+      <promptItem id="numeric_three">
+        <text>३</text>
+        <originalText>3</originalText>
+        
+      <audio src="./audio/293.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0126.smil#text_0126"/></promptItem>
+      <promptItem id="numeric_four">
+        <text>४</text>
+        <originalText>4</originalText>
+        
+      <audio src="./audio/294.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0127.smil#text_0127"/></promptItem>
+      <promptItem id="numeric_five">
+        <text>५</text>
+        <originalText>5</originalText>
+        
+      <audio src="./audio/295.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0128.smil#text_0128"/></promptItem>
+      <promptItem id="numeric_six">
+        <text>६</text>
+        <originalText>6</originalText>
+        
+      <audio src="./audio/296.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0129.smil#text_0129"/></promptItem>
+      <promptItem id="numeric_seven">
+        <text>७</text>
+        <originalText>7</originalText>
+        
+      <audio src="./audio/297.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis012a.smil#text_012a"/></promptItem>
+      <promptItem id="numeric_eight">
+        <text>८</text>
+        <originalText>8</originalText>
+        
+      <audio src="./audio/298.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis012b.smil#text_012b"/></promptItem>
+      <promptItem id="numeric_nine">
+        <text>९</text>
+        <originalText>9</originalText>
+        
+      <audio src="./audio/299.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis012c.smil#text_012c"/></promptItem>
+      <promptItem id="deleted">
+        <text>मेटियो</text>
+        <originalText>deleted</originalText>
+        
+      <audio src="./audio/300.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis012d.smil#text_012d"/></promptItem>
+      <promptItem id="will_be_skipped">
+        <text>छोडिने छ</text>
+        <originalText>will be skipped</originalText>
+        
+      <audio src="./audio/301__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis012e.smil#text_012e"/></promptItem>
+      <promptItem id="will_be_played">
+        <text>वाचन हुनेछ</text>
+        <originalText>will be played</originalText>
+        
+      <audio src="./audio/302__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis012f.smil#text_012f"/></promptItem>
+      <promptItem id="item_on">
+        <text>खुल्ला </text>
+        <originalText>on</originalText>
+        
+      <audio src="./audio/303.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0130.smil#text_0130"/></promptItem>
+      <promptItem id="item_off">
+        <text>बन्द</text>
+        <originalText>off</originalText>
+        
+      <audio src="./audio/304.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0131.smil#text_0131"/></promptItem>
+      <promptItem id="item_selected">
+        <text>चयन</text>
+        <originalText>selected</originalText>
+        
+      <audio src="./audio/305.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0132.smil#text_0132"/></promptItem>
+      <promptItem id="item_deselected">
+        <text>चयन मुत्त </text>
+        <originalText>deselected</originalText>
+        
+      <audio src="./audio/306__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0133.smil#text_0133"/></promptItem>
+      <promptItem id="keyboardShortcut">
+        <text>किबोर्ड छोटकरी </text>
+        <originalText>Keyboard Shortcut</originalText>
+        
+      <audio src="./audio/307__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0134.smil#text_0134"/></promptItem>
+      <promptItem id="icon">
+        <text>सूचीकृत</text>
+        <originalText>Icon</originalText>
+        
+      <audio src="./audio/308.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0135.smil#text_0135"/></promptItem>
+      <promptItem id="menu">
+        <text>सूची </text>
+        <originalText>Menu</originalText>
+        
+      <audio src="./audio/309.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0136.smil#text_0136"/></promptItem>
+      <promptItem id="followedBy">
+        <note>This is used in the context of a sequence of key presses, as in "Press Alt + V, followed by S"</note>
+        <text>पछ्याइएको</text>
+        <originalText>followed by</originalText>
+        
+      <audio src="./audio/310.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0137.smil#text_0137"/></promptItem>
+      <promptItem id="submenu">
+        <text>उप सूची </text>
+        <originalText>Sub Menu</originalText>
+        
+      <audio src="./audio/311__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0138.smil#text_0138"/></promptItem>
+    </promptItemRefs>
+    <generalPrompts>
+      <prompt id="dialogClosed">
+        <promptItem>
+          <text>संवाद बन्द </text>
+          <originalText>Dialog closed.</originalText>
+          
+        <audio src="./audio/312__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0139.smil#text_0139"/></promptItem>
+      </prompt>
+      <prompt id="textFieldEntry">
+        <promptItem>
+          <text>पाठ क्षेत्रको दर्ता :</text>
+          <originalText>Text field entry is:</originalText>
+          
+        <audio src="./audio/313____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis013a.smil#text_013a"/></promptItem>
+        <promptVar name="TEXT_FIELD"/>
+      </prompt>
+      <prompt id="notSelfVoicing">
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+      </prompt>
+      <prompt id="bookAtPathChanged">
+        <promptItem>
+          <text>तपाईले हेर्नुभएको पुस्तकको ठेगाना परिवर्तन भएको छ। त्यसको सट्टामा अर्को पुस्तक पाइयो। के तपाइको सिडीरोम ड्राईभको विषयसूचीहरु परिवर्तन भएको छ?</text>
+          <originalText>The location of the book you are looking for has changed.  A different book was found instead.  Did the contents of your CD-ROM drive change?</originalText>
+          
+        <audio src="./audio/314____________________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis013b.smil#text_013b"/></promptItem>
+      </prompt>
+      <prompt id="generalBookError">
+        <promptItem>
+          <text>पुस्तक खोल्ने प्रयासगर्दा दोष भेटियो</text>
+          <originalText>An error occurred while trying to open the book.</originalText>
+          
+        <audio src="./audio/315_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis013c.smil#text_013c"/></promptItem>
+        <promptVar name="BOOK_PATH"/>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+      <prompt id="noCdLoaded">
+        <promptItem>
+          <text>सिडी-रोम ड्राईभमा सिडी भेटिएन</text>
+          <originalText>There is not a CD in the CD-ROM drive.</originalText>
+          
+        <audio src="./audio/316____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis013d.smil#text_013d"/></promptItem>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+      <prompt id="pluginErrorInit">
+        <promptItem>
+          <text>थप जडानमा दोषः आइएनआटि    ()   प्रणालीमा  पल्गइन . डिएलएल प्राप्त हुन  सकिएन</text>
+          <originalText>Plug-in error: init() function not found in the plug-in DLL.</originalText>
+          
+        <audio src="./audio/317____________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis013e.smil#text_013e"/></promptItem>
+      </prompt>
+      <prompt id="pluginErrorDll">
+        <promptItem>
+          <text>थप जडानमा दोषः निम्न्   थप जडान पुस्तकालयमा भर्न सकिएन </text>
+          <originalText>Plug-in error: The following plug-in library could not be loaded: </originalText>
+          
+        <audio src="./audio/318_________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis013f.smil#text_013f"/></promptItem>
+        <promptVar name="PLUGIN_LIB"/>
+      </prompt>
+      <prompt id="basicViewPrompt">
+        <promptItem>
+          <text>तपाई अहिले आधारभूत दृष्य विधि प्रयोग गरिरहनुभएको छ। स्थाई दृष्य विधिमा जान एफ ११  थिच्नुहोस</text>
+          <originalText>You are now using the basic view mode.  Press F11 to switch back to the default view mode.</originalText>
+          
+        <audio src="./audio/319_______________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0140.smil#text_0140"/></promptItem>
+      </prompt>
+      <prompt id="OpenFile_notSelfVoicing">
+        <promptItem>
+          <text>फाइल संवाद खोल्नुहोस</text>
+          <originalText>Open File Dialog</originalText>
+          
+        <audio src="./audio/320___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0141.smil#text_0141"/></promptItem>
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem>
+          <text>हाडृ ड्राईभमा  डेजी पुस्तक पाउन  पुस्तकका लागि फाइल सूची आकृति प्रयोग गर्नहोस। </text>
+          <originalText>Use the "search for books" feature, under the file menu, to find DAISY books on your hard drive.</originalText>
+          
+        <audio src="./audio/321____________.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0142.smil#text_0142"/></promptItem>
+        <promptItem refid="escapeToCancel"/>
+      </prompt>
+      <prompt id="BrowseForFolder_notSelfVoicing">
+        <promptItem>
+          <text>फोल्डरमा पुग्ने संवाद</text>
+          <originalText>Browse for folder dialog</originalText>
+          
+        <audio src="./audio/322___.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0143.smil#text_0143"/></promptItem>
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem refid="escapeToCancel"/>
+        <promptItem>
+          <text>अनि पाठको कोष्ठमा पुग्न मार्ग टाईप गर्नहोस््</text>
+          <originalText>Then, type the path of the folder you want in the text box.</originalText>
+          
+        <audio src="./audio/323_______.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0144.smil#text_0144"/></promptItem>
+      </prompt>
+      <prompt id="canceled">
+        <promptItem>
+          <text>रद्द भयो</text>
+          <originalText>Canceled</originalText>
+          
+        <audio src="./audio/324__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0145.smil#text_0145"/></promptItem>
+      </prompt>
+      <prompt id="loading">
+        <promptItem>
+          <text>भरिरहेको छ</text>
+          <originalText>Loading</originalText>
+          
+        <audio src="./audio/325__.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0146.smil#text_0146"/></promptItem>
+      </prompt>
+      <prompt id="restartForChanges">
+        <promptItem>
+          <text>परिवर्तन पाउन कृपया पुनःप्रारम्भ गर्नहोस</text>
+          <originalText>Please restart to see your changes.</originalText>
+          
+        <audio src="./audio/326_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0147.smil#text_0147"/></promptItem>
+      </prompt>
+      <prompt id="noBooksFoundOnCd">
+        <promptItem>
+          <text>यस सिडि-रोमामा डेजी पुस्तकहरु पाइएनन्</text>
+          <originalText>No DAISY books were found on this CD-ROM.</originalText>
+          
+        <audio src="./audio/327_____.mp3" from="file://c:/devel/amis/trunk/Langpacks/nepali/prompts/amis0148.smil#text_0148"/></promptItem>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+    </generalPrompts>
+  </prompts>
+</ui>

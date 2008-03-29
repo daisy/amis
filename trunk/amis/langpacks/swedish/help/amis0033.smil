@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+    <meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+    <meta name="dc:format" content="Daisy 2.02" />
+    <meta name="title" content="Lägg till ett bokmärke" />
+    <meta name="dc:title" content="AMIS Help" />
+    <meta name="ncc:timeInThisSmil" content="0:00:14" />
+    <layout>
+        <region id="txtView" />
+    </layout>
+</head>
+<body>
+<seq dur="13.936s">
+    <par endsync="last">
+        <text src="amishelp.html#amis_0033" id="amis_0033" />
+        <seq>
+            <audio src="50_lgg_till_ett_bokmrke.mp3" clip-begin="npt=0.000s" clip-end="npt=0.327s" id="qwrt_0001" />
+            <audio src="50_lgg_till_ett_bokmrke.mp3" clip-begin="npt=0.327s" clip-end="npt=2.599s" id="qwrt_0002" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_008d" id="xami_008d" />
+        <seq>
+            <audio src="50_lgg_till_ett_bokmrke.mp3" clip-begin="npt=2.599s" clip-end="npt=3.135s" id="qwrt_0003" />
+            <audio src="50_lgg_till_ett_bokmrke.mp3" clip-begin="npt=3.135s" clip-end="npt=4.799s" id="qwrt_0004" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_008e" id="xami_008e" />
+        <seq>
+            <audio src="50_lgg_till_ett_bokmrke.mp3" clip-begin="npt=4.799s" clip-end="npt=5.290s" id="qwrt_0005" />
+            <audio src="50_lgg_till_ett_bokmrke.mp3" clip-begin="npt=5.290s" clip-end="npt=8.599s" id="qwrt_0006" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_008f" id="xami_008f" />
+        <seq>
+            <audio src="50_lgg_till_ett_bokmrke.mp3" clip-begin="npt=8.599s" clip-end="npt=9.117s" id="qwrt_0007" />
+            <audio src="50_lgg_till_ett_bokmrke.mp3" clip-begin="npt=9.117s" clip-end="npt=13.936s" id="qwrt_0008" />
+        </seq>
+    </par>
+</seq>
+</body>
+</smil>

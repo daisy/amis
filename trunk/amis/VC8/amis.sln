@@ -1,0 +1,46 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AmisCore", "..\AmisCore\AmisCore.vcproj", "{E0F81CE5-9C15-4E36-BC71-42BE1C0F2406}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AmisGuiMFC2", "..\AmisGuiMFC2\AmisGuiMFC2.vcproj", "{A7A37247-BAAC-4376-8354-96A8C09F926A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E0F81CE5-9C15-4E36-BC71-42BE1C0F2406} = {E0F81CE5-9C15-4E36-BC71-42BE1C0F2406}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pdtbplugin", "..\..\..\..\ambulant-private\pdtbplugin\pdtbplugin.vcproj", "{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PdtbIePlugin", "..\..\..\..\ambulant-private\pdtbplugin\PdtbIePlugin\PdtbIePlugin.vcproj", "{8B8E82A3-277F-4486-8D6A-4BCFB2DE3464}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AmisLangpack", "..\DefaultLangpack\AmisLangpack\AmisLangpack.vcproj", "{92F93B73-6D27-47ED-89F3-B82590338216}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0F81CE5-9C15-4E36-BC71-42BE1C0F2406}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E0F81CE5-9C15-4E36-BC71-42BE1C0F2406}.Debug|Win32.Build.0 = Debug|Win32
+		{E0F81CE5-9C15-4E36-BC71-42BE1C0F2406}.Release|Win32.ActiveCfg = Release|Win32
+		{E0F81CE5-9C15-4E36-BC71-42BE1C0F2406}.Release|Win32.Build.0 = Release|Win32
+		{A7A37247-BAAC-4376-8354-96A8C09F926A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A7A37247-BAAC-4376-8354-96A8C09F926A}.Debug|Win32.Build.0 = Debug|Win32
+		{A7A37247-BAAC-4376-8354-96A8C09F926A}.Release|Win32.ActiveCfg = Release|Win32
+		{A7A37247-BAAC-4376-8354-96A8C09F926A}.Release|Win32.Build.0 = Release|Win32
+		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.Debug|Win32.Build.0 = Debug|Win32
+		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.Release|Win32.ActiveCfg = Release|Win32
+		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.Release|Win32.Build.0 = Release|Win32
+		{8B8E82A3-277F-4486-8D6A-4BCFB2DE3464}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8B8E82A3-277F-4486-8D6A-4BCFB2DE3464}.Debug|Win32.Build.0 = Debug|Win32
+		{8B8E82A3-277F-4486-8D6A-4BCFB2DE3464}.Release|Win32.ActiveCfg = Release|Win32
+		{8B8E82A3-277F-4486-8D6A-4BCFB2DE3464}.Release|Win32.Build.0 = Release|Win32
+		{92F93B73-6D27-47ED-89F3-B82590338216}.Debug|Win32.ActiveCfg = Debug|Win32
+		{92F93B73-6D27-47ED-89F3-B82590338216}.Debug|Win32.Build.0 = Debug|Win32
+		{92F93B73-6D27-47ED-89F3-B82590338216}.Release|Win32.ActiveCfg = Release|Win32
+		{92F93B73-6D27-47ED-89F3-B82590338216}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

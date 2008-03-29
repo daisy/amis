@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+    <meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+    <meta name="dc:format" content="Daisy 2.02" />
+    <meta name="title" content="Färgval" />
+    <meta name="dc:title" content="AMIS Help" />
+    <meta name="ncc:timeInThisSmil" content="0:00:17" />
+    <layout>
+        <region id="txtView" />
+    </layout>
+</head>
+<body>
+<seq dur="17.366s">
+    <par endsync="last">
+        <text src="amishelp.html#amis_0010" id="amis_0010" />
+        <seq>
+            <audio src="15_frgval.mp3" clip-begin="npt=0.000s" clip-end="npt=0.379s" id="qwrt_0001" />
+            <audio src="15_frgval.mp3" clip-begin="npt=0.379s" clip-end="npt=1.799s" id="qwrt_0002" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_002d" id="xami_002d" />
+        <seq>
+            <audio src="15_frgval.mp3" clip-begin="npt=1.799s" clip-end="npt=2.717s" id="qwrt_0003" />
+            <audio src="15_frgval.mp3" clip-begin="npt=2.717s" clip-end="npt=6.199s" id="qwrt_0004" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_002e" id="xami_002e" />
+        <seq>
+            <audio src="15_frgval.mp3" clip-begin="npt=6.199s" clip-end="npt=6.922s" id="qwrt_0005" />
+            <audio src="15_frgval.mp3" clip-begin="npt=6.922s" clip-end="npt=11.737s" id="qwrt_0006" />
+            <audio src="15_frgval.mp3" clip-begin="npt=11.737s" clip-end="npt=12.336s" id="qwrt_0007" />
+        </seq>
+    </par>
+    <par endsync="last">
+        <text src="amishelp.html#xami_002f" id="xami_002f" />
+        <seq>
+            <audio src="15_frgval.mp3" clip-begin="npt=12.336s" clip-end="npt=13.422s" id="qwrt_0008" />
+            <audio src="15_frgval.mp3" clip-begin="npt=13.422s" clip-end="npt=17.366s" id="qwrt_0009" />
+        </seq>
+    </par>
+</seq>
+</body>
+</smil>

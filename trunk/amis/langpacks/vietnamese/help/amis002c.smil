@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.7" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Trang ti&#7871;p" />
+<meta name="dc:title" content="AMIS Version 2.0 Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:21" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="20.989s">
+<par endsync="last">
+<text src="amishelp-entity.html#amis_002c" id="amis_002c" />
+<seq>
+<audio src="43_Trang_tip.mp2" clip-begin="npt=0.000s" clip-end="npt=0.653s" id="qwrt_0001" />
+<audio src="43_Trang_tip.mp2" clip-begin="npt=0.653s" clip-end="npt=1.399s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0079" id="xami_0079" />
+<seq>
+<audio src="43_Trang_tip.mp2" clip-begin="npt=1.399s" clip-end="npt=1.724s" id="qwrt_0003" />
+<audio src="43_Trang_tip.mp2" clip-begin="npt=1.724s" clip-end="npt=4.127s" id="qwrt_0004" />
+<audio src="43_Trang_tip.mp2" clip-begin="npt=4.127s" clip-end="npt=5.603s" id="qwrt_0005" />
+<audio src="43_Trang_tip.mp2" clip-begin="npt=5.603s" clip-end="npt=7.399s" id="qwrt_0006" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_007a" id="xami_007a" />
+<seq>
+<audio src="43_Trang_tip.mp2" clip-begin="npt=7.399s" clip-end="npt=9.326s" id="qwrt_0007" />
+<audio src="43_Trang_tip.mp2" clip-begin="npt=9.326s" clip-end="npt=11.599s" id="qwrt_0008" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_007b" id="xami_007b" />
+<seq>
+<audio src="43_Trang_tip.mp2" clip-begin="npt=11.599s" clip-end="npt=12.330s" id="qwrt_0009" />
+<audio src="43_Trang_tip.mp2" clip-begin="npt=12.330s" clip-end="npt=15.216s" id="qwrt_000A" />
+<audio src="43_Trang_tip.mp2" clip-begin="npt=15.216s" clip-end="npt=16.199s" id="qwrt_000B" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_007c" id="xami_007c" />
+<seq>
+<audio src="43_Trang_tip.mp2" clip-begin="npt=16.199s" clip-end="npt=16.718s" id="qwrt_000C" />
+<audio src="43_Trang_tip.mp2" clip-begin="npt=16.718s" clip-end="npt=19.226s" id="qwrt_000D" />
+<audio src="43_Trang_tip.mp2" clip-begin="npt=19.226s" clip-end="npt=20.989s" id="qwrt_000E" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

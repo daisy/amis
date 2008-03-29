@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Bar Sisi" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:45" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="44.605s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_0015" id="amis_0015" />
+<seq>
+<audio src="20_Bar_Sisi.mp3" clip-begin="npt=0.000s" clip-end="npt=1.398s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0038" id="xami_0038" />
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0039" id="xami_0039" />
+<seq>
+<audio src="20_Bar_Sisi.mp3" clip-begin="npt=1.398s" clip-end="npt=1.947s" id="qwrt_0002" />
+<audio src="20_Bar_Sisi.mp3" clip-begin="npt=1.947s" clip-end="npt=6.296s" id="qwrt_0003" />
+<audio src="20_Bar_Sisi.mp3" clip-begin="npt=6.296s" clip-end="npt=9.078s" id="qwrt_0004" />
+<audio src="20_Bar_Sisi.mp3" clip-begin="npt=9.078s" clip-end="npt=12.187s" id="qwrt_0005" />
+<audio src="20_Bar_Sisi.mp3" clip-begin="npt=12.187s" clip-end="npt=12.723s" id="qwrt_0006" />
+<audio src="20_Bar_Sisi.mp3" clip-begin="npt=12.723s" clip-end="npt=18.038s" id="qwrt_0007" />
+<audio src="20_Bar_Sisi.mp3" clip-begin="npt=18.038s" clip-end="npt=18.482s" id="qwrt_0008" />
+<audio src="20_Bar_Sisi.mp3" clip-begin="npt=18.482s" clip-end="npt=23.027s" id="qwrt_0009" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_003a" id="xami_003a" />
+<seq>
+<audio src="20_Bar_Sisi.mp3" clip-begin="npt=23.027s" clip-end="npt=23.719s" id="qwrt_000A" />
+<audio src="20_Bar_Sisi.mp3" clip-begin="npt=23.719s" clip-end="npt=29.140s" id="qwrt_000B" />
+<audio src="20_Bar_Sisi.mp3" clip-begin="npt=29.140s" clip-end="npt=31.869s" id="qwrt_000C" />
+<audio src="20_Bar_Sisi.mp3" clip-begin="npt=31.869s" clip-end="npt=33.541s" id="qwrt_000D" />
+<audio src="20_Bar_Sisi.mp3" clip-begin="npt=33.541s" clip-end="npt=38.465s" id="qwrt_000E" />
+<audio src="20_Bar_Sisi.mp3" clip-begin="npt=38.465s" clip-end="npt=40.216s" id="qwrt_000F" />
+<audio src="20_Bar_Sisi.mp3" clip-begin="npt=40.216s" clip-end="npt=44.605s" id="qwrt_0010" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

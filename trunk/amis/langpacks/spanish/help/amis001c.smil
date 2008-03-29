@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.22" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Contraste de colores" />
+<meta name="dc:title" content="AMIS Libro de Ayuda" />
+<meta name="ncc:timeInThisSmil" content="0:00:31" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="31.268s">
+<par endsync="last">
+<text src="amis-help-spanish.html#amis_001c" id="amis_001c" />
+<seq>
+<audio src="27_Contraste_de_colores.mp3" clip-begin="npt=0.000s" clip-end="npt=2.267s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0047" id="xami_0047" />
+<seq>
+<audio src="27_Contraste_de_colores.mp3" clip-begin="npt=2.267s" clip-end="npt=9.621s" id="qwrt_0002" />
+<audio src="27_Contraste_de_colores.mp3" clip-begin="npt=9.621s" clip-end="npt=16.190s" id="qwrt_0003" />
+<audio src="27_Contraste_de_colores.mp3" clip-begin="npt=16.190s" clip-end="npt=22.125s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0048" id="xami_0048" />
+<seq>
+<audio src="27_Contraste_de_colores.mp3" clip-begin="npt=22.125s" clip-end="npt=23.354s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0049" id="xami_0049" />
+<seq>
+<audio src="27_Contraste_de_colores.mp3" clip-begin="npt=23.354s" clip-end="npt=27.087s" id="qwrt_0006" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_004a" id="xami_004a" />
+<seq>
+<audio src="27_Contraste_de_colores.mp3" clip-begin="npt=27.087s" clip-end="npt=28.197s" id="qwrt_0007" />
+<audio src="27_Contraste_de_colores.mp3" clip-begin="npt=28.197s" clip-end="npt=31.267s" id="qwrt_0008" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

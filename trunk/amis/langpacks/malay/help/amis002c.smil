@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Halaman Berikut" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:24" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="24.476s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_002c" id="amis_002c" />
+<seq>
+<audio src="43_Halaman_Berikut.mp3" clip-begin="npt=0.000s" clip-end="npt=1.398s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0079" id="xami_0079" />
+<seq>
+<audio src="43_Halaman_Berikut.mp3" clip-begin="npt=1.398s" clip-end="npt=2.247s" id="qwrt_0002" />
+<audio src="43_Halaman_Berikut.mp3" clip-begin="npt=2.247s" clip-end="npt=5.643s" id="qwrt_0003" />
+<audio src="43_Halaman_Berikut.mp3" clip-begin="npt=5.643s" clip-end="npt=9.796s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_007a" id="xami_007a" />
+<seq>
+<audio src="43_Halaman_Berikut.mp3" clip-begin="npt=9.796s" clip-end="npt=10.305s" id="qwrt_0005" />
+<audio src="43_Halaman_Berikut.mp3" clip-begin="npt=10.305s" clip-end="npt=13.453s" id="qwrt_0006" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_007b" id="xami_007b" />
+<seq>
+<audio src="43_Halaman_Berikut.mp3" clip-begin="npt=13.453s" clip-end="npt=16.091s" id="qwrt_0007" />
+<audio src="43_Halaman_Berikut.mp3" clip-begin="npt=16.091s" clip-end="npt=18.442s" id="qwrt_0008" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_007c" id="xami_007c" />
+<seq>
+<audio src="43_Halaman_Berikut.mp3" clip-begin="npt=18.442s" clip-end="npt=18.886s" id="qwrt_0009" />
+<audio src="43_Halaman_Berikut.mp3" clip-begin="npt=18.886s" clip-end="npt=20.088s" id="qwrt_000A" />
+<audio src="43_Halaman_Berikut.mp3" clip-begin="npt=20.088s" clip-end="npt=21.485s" id="qwrt_000B" />
+<audio src="43_Halaman_Berikut.mp3" clip-begin="npt=21.485s" clip-end="npt=23.235s" id="qwrt_000C" />
+<audio src="43_Halaman_Berikut.mp3" clip-begin="npt=23.235s" clip-end="npt=23.836s" id="qwrt_000D" />
+<audio src="43_Halaman_Berikut.mp3" clip-begin="npt=23.836s" clip-end="npt=24.476s" id="qwrt_000E" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

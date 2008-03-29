@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Item Yang Boleh Dilangkau" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:50" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="49.541s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_0031" id="amis_0031" />
+<seq>
+<audio src="48_Item_Yang_Boleh_Dilangkau.mp3" clip-begin="npt=0.000s" clip-end="npt=0.640s" id="qwrt_0001" />
+<audio src="48_Item_Yang_Boleh_Dilangkau.mp3" clip-begin="npt=0.640s" clip-end="npt=2.991s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_008a" id="xami_008a" />
+<seq>
+<audio src="48_Item_Yang_Boleh_Dilangkau.mp3" clip-begin="npt=2.991s" clip-end="npt=3.435s" id="qwrt_0003" />
+<audio src="48_Item_Yang_Boleh_Dilangkau.mp3" clip-begin="npt=3.435s" clip-end="npt=6.348s" id="qwrt_0004" />
+<audio src="48_Item_Yang_Boleh_Dilangkau.mp3" clip-begin="npt=6.348s" clip-end="npt=7.236s" id="qwrt_0005" />
+<audio src="48_Item_Yang_Boleh_Dilangkau.mp3" clip-begin="npt=7.236s" clip-end="npt=9.639s" id="qwrt_0006" />
+<audio src="48_Item_Yang_Boleh_Dilangkau.mp3" clip-begin="npt=9.639s" clip-end="npt=11.128s" id="qwrt_0007" />
+<audio src="48_Item_Yang_Boleh_Dilangkau.mp3" clip-begin="npt=11.128s" clip-end="npt=12.748s" id="qwrt_0008" />
+<audio src="48_Item_Yang_Boleh_Dilangkau.mp3" clip-begin="npt=12.748s" clip-end="npt=15.700s" id="qwrt_0009" />
+<audio src="48_Item_Yang_Boleh_Dilangkau.mp3" clip-begin="npt=15.700s" clip-end="npt=17.737s" id="qwrt_000A" />
+<audio src="48_Item_Yang_Boleh_Dilangkau.mp3" clip-begin="npt=17.737s" clip-end="npt=19.357s" id="qwrt_000B" />
+<audio src="48_Item_Yang_Boleh_Dilangkau.mp3" clip-begin="npt=19.357s" clip-end="npt=23.040s" id="qwrt_000C" />
+<audio src="48_Item_Yang_Boleh_Dilangkau.mp3" clip-begin="npt=23.040s" clip-end="npt=25.861s" id="qwrt_000D" />
+<audio src="48_Item_Yang_Boleh_Dilangkau.mp3" clip-begin="npt=25.861s" clip-end="npt=27.442s" id="qwrt_000E" />
+<audio src="48_Item_Yang_Boleh_Dilangkau.mp3" clip-begin="npt=27.442s" clip-end="npt=30.890s" id="qwrt_000F" />
+<audio src="48_Item_Yang_Boleh_Dilangkau.mp3" clip-begin="npt=30.890s" clip-end="npt=35.291s" id="qwrt_0010" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_008b" id="xami_008b" />
+<seq>
+<audio src="48_Item_Yang_Boleh_Dilangkau.mp3" clip-begin="npt=35.291s" clip-end="npt=36.140s" id="qwrt_0011" />
+<audio src="48_Item_Yang_Boleh_Dilangkau.mp3" clip-begin="npt=36.140s" clip-end="npt=38.765s" id="qwrt_0012" />
+<audio src="48_Item_Yang_Boleh_Dilangkau.mp3" clip-begin="npt=38.765s" clip-end="npt=39.862s" id="qwrt_0013" />
+<audio src="48_Item_Yang_Boleh_Dilangkau.mp3" clip-begin="npt=39.862s" clip-end="npt=41.182s" id="qwrt_0014" />
+<audio src="48_Item_Yang_Boleh_Dilangkau.mp3" clip-begin="npt=41.182s" clip-end="npt=43.167s" id="qwrt_0015" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_008c" id="xami_008c" />
+<seq>
+<audio src="48_Item_Yang_Boleh_Dilangkau.mp3" clip-begin="npt=43.167s" clip-end="npt=44.617s" id="qwrt_0016" />
+<audio src="48_Item_Yang_Boleh_Dilangkau.mp3" clip-begin="npt=44.617s" clip-end="npt=46.014s" id="qwrt_0017" />
+<audio src="48_Item_Yang_Boleh_Dilangkau.mp3" clip-begin="npt=46.014s" clip-end="npt=47.242s" id="qwrt_0018" />
+<audio src="48_Item_Yang_Boleh_Dilangkau.mp3" clip-begin="npt=47.242s" clip-end="npt=49.541s" id="qwrt_0019" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

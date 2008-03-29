@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.22" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Ver y ocultar" />
+<meta name="dc:title" content="AMIS Libro de Ayuda" />
+<meta name="ncc:timeInThisSmil" content="0:00:24" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="24.057s">
+<par endsync="last">
+<text src="amis-help-spanish.html#amis_0016" id="amis_0016" />
+<seq>
+<audio src="21_Ver_y_ocultar.mp3" clip-begin="npt=0.000s" clip-end="npt=2.481s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_003b" id="xami_003b" />
+<seq>
+<audio src="21_Ver_y_ocultar.mp3" clip-begin="npt=2.481s" clip-end="npt=5.537s" id="qwrt_0002" />
+<audio src="21_Ver_y_ocultar.mp3" clip-begin="npt=5.537s" clip-end="npt=14.613s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_003c" id="xami_003c" />
+<seq>
+<audio src="21_Ver_y_ocultar.mp3" clip-begin="npt=14.613s" clip-end="npt=16.180s" id="qwrt_0004" />
+<audio src="21_Ver_y_ocultar.mp3" clip-begin="npt=16.180s" clip-end="npt=19.696s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_003d" id="xami_003d" />
+<seq>
+<audio src="21_Ver_y_ocultar.mp3" clip-begin="npt=19.696s" clip-end="npt=21.095s" id="qwrt_0006" />
+<audio src="21_Ver_y_ocultar.mp3" clip-begin="npt=21.095s" clip-end="npt=24.058s" id="qwrt_0007" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

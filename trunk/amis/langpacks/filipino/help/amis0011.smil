@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Mga kumpigurasyon ng Wika" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:19" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="18.558s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_0011" id="amis_0011" />
+<seq>
+<audio src="16_Mga_kumpigurasyon_ng_Wika.mp3" clip-begin="npt=0.000s" clip-end="npt=2.188s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0030" id="xami_0030" />
+<seq>
+<audio src="16_Mga_kumpigurasyon_ng_Wika.mp3" clip-begin="npt=2.188s" clip-end="npt=6.145s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0031" id="xami_0031" />
+<seq>
+<audio src="16_Mga_kumpigurasyon_ng_Wika.mp3" clip-begin="npt=6.145s" clip-end="npt=14.264s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0032" id="xami_0032" />
+<seq>
+<audio src="16_Mga_kumpigurasyon_ng_Wika.mp3" clip-begin="npt=14.264s" clip-end="npt=18.558s" id="qwrt_0004" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

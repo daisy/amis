@@ -1,0 +1,63 @@
+Guidelines
+note: attributes aren't really in this doc
+----------
+Menus are...
+container elements
+which contain
+	captions
+	descriptions
+	actions
+	container elements
+	switches which contain actions
+	
+actions contain
+	captions
+	descriptions
+	lists of captions for populating a list of similar actions
+	
+Dialogs have...
+	controls
+	an instructional prompt (<prompt type="instructions">)
+	a caption
+	a description
+	
+Controls have...
+	a caption (probably)
+	a description (usually)
+	lists of captions for populating an inner list
+	switches which wrap captions or descriptions
+	
+the list element wraps
+	caption and/or description
+	it can be repeatable or not, meaning that the list's contents (max 1 caption + 1 description) will apply for each list item, or they will be inserted into the list one at a time (in this case, no max)
+	
+A caption / description has..
+	text
+	audio
+		or
+	a promptItem reference (points to text and audio)
+		or 
+	a prompt (has promptItems and promptVar's in it)
+		or
+	a single promptVar
+	
+Text
+	is raw text
+Audio
+	has an src
+	
+A prompt item has..
+	text
+	audio
+		or
+	a refid pointing to a promptitem (which is assumed to have content and not another pointer)
+
+A prompt variable is...
+	a context-specific variable which will resolve to
+		a text/audio par
+			or
+		text only
+			which can then be resolved into:
+				text + TTS at runtime
+					or
+				text + pre-recorded audio (matched at runtime .. like a text value of "1" = "one.mp3")

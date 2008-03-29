@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Espesyal na mga Bagay" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:28" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="28.414s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_001a" id="amis_001a" />
+<seq>
+<audio src="25_Espesyal_na_mga_Bagay.mp3" clip-begin="npt=0.000s" clip-end="npt=1.943s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0044" id="xami_0044" />
+<seq>
+<audio src="25_Espesyal_na_mga_Bagay.mp3" clip-begin="npt=1.943s" clip-end="npt=5.609s" id="qwrt_0002" />
+<audio src="25_Espesyal_na_mga_Bagay.mp3" clip-begin="npt=5.609s" clip-end="npt=10.931s" id="qwrt_0003" />
+<audio src="25_Espesyal_na_mga_Bagay.mp3" clip-begin="npt=10.931s" clip-end="npt=12.607s" id="qwrt_0004" />
+<audio src="25_Espesyal_na_mga_Bagay.mp3" clip-begin="npt=12.607s" clip-end="npt=15.414s" id="qwrt_0005" />
+<audio src="25_Espesyal_na_mga_Bagay.mp3" clip-begin="npt=15.414s" clip-end="npt=18.057s" id="qwrt_0006" />
+<audio src="25_Espesyal_na_mga_Bagay.mp3" clip-begin="npt=18.057s" clip-end="npt=22.206s" id="qwrt_0007" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0045" id="xami_0045" />
+<seq>
+<audio src="25_Espesyal_na_mga_Bagay.mp3" clip-begin="npt=22.206s" clip-end="npt=23.437s" id="qwrt_0008" />
+<audio src="25_Espesyal_na_mga_Bagay.mp3" clip-begin="npt=23.437s" clip-end="npt=26.389s" id="qwrt_0009" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0046" id="xami_0046" />
+<seq>
+<audio src="25_Espesyal_na_mga_Bagay.mp3" clip-begin="npt=26.389s" clip-end="npt=27.659s" id="qwrt_000A" />
+<audio src="25_Espesyal_na_mga_Bagay.mp3" clip-begin="npt=27.659s" clip-end="npt=28.414s" id="qwrt_000B" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="&#2346;&#2369;&#2360;&#2381;&#2340;&#2325;      &#2346;&#2338;&#2381;&#2344;&#2375;" />
+<meta name="dc:title" content="AMIS Help File" />
+<meta name="ncc:timeInThisSmil" content="0:00:57" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="56.790s">
+<par endsync="last">
+<text src="amis-help-nep.html#bacw_0006" id="bacw_0006" />
+<seq>
+<audio src="05__.mp3" clip-begin="npt=0.000s" clip-end="npt=1.698s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-nep.html#xbac_0019" id="xbac_0019" />
+<seq>
+<audio src="05__.mp3" clip-begin="npt=1.698s" clip-end="npt=8.463s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-nep.html#xbac_001a" id="xbac_001a" />
+<seq>
+<audio src="05__.mp3" clip-begin="npt=8.463s" clip-end="npt=16.263s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-nep.html#xbac_001b" id="xbac_001b" />
+<seq>
+<audio src="05__.mp3" clip-begin="npt=16.263s" clip-end="npt=23.159s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-nep.html#xbac_001c" id="xbac_001c" />
+<seq>
+<audio src="05__.mp3" clip-begin="npt=23.159s" clip-end="npt=35.667s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-nep.html#xbac_001d" id="xbac_001d" />
+<seq>
+<audio src="05__.mp3" clip-begin="npt=35.667s" clip-end="npt=43.004s" id="qwrt_0006" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-nep.html#xbac_001e" id="xbac_001e" />
+<seq>
+<audio src="05__.mp3" clip-begin="npt=43.004s" clip-end="npt=50.404s" id="qwrt_0007" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-nep.html#xbac_001f" id="xbac_001f" />
+<seq>
+<audio src="05__.mp3" clip-begin="npt=50.404s" clip-end="npt=56.790s" id="qwrt_0008" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

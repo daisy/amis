@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="ncc:timeInThisSmil" content="00:00:15.044"/>
+		<meta name="ncc:totalElapsedTime" content="00:00:00.000"/>
+		<layout>
+			<region id="txt-view"/>
+		</layout>
+		<meta name="ncc:generator" content="EasePublisher 2.02 Build 025 # 089113"/>
+        <meta name="title" content="AMIS, norsk versjon"/>
+        <meta name="dc:title" content="AMIS hjelp"/>
+        <meta name="dc:identifier" content="AMIS_hjelp"/>
+    </head>
+	<body>
+		<seq dur="15.044s">
+			<par endsync="last" id="nwcb_0002">
+				<text src="amishelp.html#nwcb_0001" id="nwcb_0006"/>
+				<seq>
+					<audio src="01_AMIS__norsk_versjon.mp3" clip-begin="npt=0.000s" clip-end="npt=2.044s" id="audio_0001"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0003">
+				<text src="amishelp.html#nwcb_0002" id="nwcb_0007"/>
+				<seq>
+					<audio src="01_AMIS__norsk_versjon.mp3" clip-begin="npt=2.044s" clip-end="npt=3.624s" id="audio_0002"/>
+					<audio src="01_AMIS__norsk_versjon.mp3" clip-begin="npt=3.624s" clip-end="npt=6.981s" id="audio_0003"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0004">
+				<text src="amishelp.html#nwcb_0003" id="nwcb_0008"/>
+				<seq>
+					<audio src="01_AMIS__norsk_versjon.mp3" clip-begin="npt=6.981s" clip-end="npt=9.297s" id="audio_0004"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0005">
+				<text src="amishelp.html#nwcb_0004" id="nwcb_0009"/>
+				<seq>
+					<audio src="01_AMIS__norsk_versjon.mp3" clip-begin="npt=9.297s" clip-end="npt=12.413s" id="audio_0005"/>
+					<audio src="01_AMIS__norsk_versjon.mp3" clip-begin="npt=12.413s" clip-end="npt=15.044s" id="audio_0006"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

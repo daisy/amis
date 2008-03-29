@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.22" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Saltando elementos especiales" />
+<meta name="dc:title" content="AMIS Libro de Ayuda" />
+<meta name="ncc:timeInThisSmil" content="0:00:25" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="24.997s">
+<par endsync="last">
+<text src="amis-help-spanish.html#amis_0030" id="amis_0030" />
+<seq>
+<audio src="47_Saltando_elementos_especiales.mp3" clip-begin="npt=0.000s" clip-end="npt=3.333s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0087" id="xami_0087" />
+<seq>
+<audio src="47_Saltando_elementos_especiales.mp3" clip-begin="npt=3.333s" clip-end="npt=12.399s" id="qwrt_0002" />
+<audio src="47_Saltando_elementos_especiales.mp3" clip-begin="npt=12.399s" clip-end="npt=18.484s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0088" id="xami_0088" />
+<seq>
+<audio src="47_Saltando_elementos_especiales.mp3" clip-begin="npt=18.484s" clip-end="npt=20.699s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0089" id="xami_0089" />
+<seq>
+<audio src="47_Saltando_elementos_especiales.mp3" clip-begin="npt=20.699s" clip-end="npt=24.998s" id="qwrt_0005" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

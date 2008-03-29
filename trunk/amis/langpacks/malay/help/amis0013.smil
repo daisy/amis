@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Paparan Asal" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:36" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="35.683s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_0013" id="amis_0013" />
+<seq>
+<audio src="18_Paparan_Asal.mp3" clip-begin="npt=0.000s" clip-end="npt=1.894s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0033" id="xami_0033" />
+<seq>
+<audio src="18_Paparan_Asal.mp3" clip-begin="npt=1.894s" clip-end="npt=2.377s" id="qwrt_0002" />
+<audio src="18_Paparan_Asal.mp3" clip-begin="npt=2.377s" clip-end="npt=4.036s" id="qwrt_0003" />
+<audio src="18_Paparan_Asal.mp3" clip-begin="npt=4.036s" clip-end="npt=6.596s" id="qwrt_0004" />
+<audio src="18_Paparan_Asal.mp3" clip-begin="npt=6.596s" clip-end="npt=8.007s" id="qwrt_0005" />
+<audio src="18_Paparan_Asal.mp3" clip-begin="npt=8.007s" clip-end="npt=9.731s" id="qwrt_0006" />
+<audio src="18_Paparan_Asal.mp3" clip-begin="npt=9.731s" clip-end="npt=14.563s" id="qwrt_0007" />
+<audio src="18_Paparan_Asal.mp3" clip-begin="npt=14.563s" clip-end="npt=15.569s" id="qwrt_0008" />
+<audio src="18_Paparan_Asal.mp3" clip-begin="npt=15.569s" clip-end="npt=17.254s" id="qwrt_0009" />
+<audio src="18_Paparan_Asal.mp3" clip-begin="npt=17.254s" clip-end="npt=18.756s" id="qwrt_000A" />
+<audio src="18_Paparan_Asal.mp3" clip-begin="npt=18.756s" clip-end="npt=20.532s" id="qwrt_000B" />
+<audio src="18_Paparan_Asal.mp3" clip-begin="npt=20.532s" clip-end="npt=22.139s" id="qwrt_000C" />
+<audio src="18_Paparan_Asal.mp3" clip-begin="npt=22.139s" clip-end="npt=25.744s" id="qwrt_000D" />
+<audio src="18_Paparan_Asal.mp3" clip-begin="npt=25.744s" clip-end="npt=30.485s" id="qwrt_000E" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0034" id="xami_0034" />
+<seq>
+<audio src="18_Paparan_Asal.mp3" clip-begin="npt=30.485s" clip-end="npt=31.021s" id="qwrt_000F" />
+<audio src="18_Paparan_Asal.mp3" clip-begin="npt=31.021s" clip-end="npt=33.724s" id="qwrt_0010" />
+<audio src="18_Paparan_Asal.mp3" clip-begin="npt=33.724s" clip-end="npt=35.683s" id="qwrt_0011" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

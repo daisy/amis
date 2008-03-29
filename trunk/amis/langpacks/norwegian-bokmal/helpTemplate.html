@@ -1,0 +1,668 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<title>AMIS</title>
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<div>
+		<h1>AMIS, norsk versjon</h1>
+		<p>Adaptive Multimedia Information System</p>
+		<p>Website: http://amis.sf.net</p>
+		<div class="image">
+			<!--translate the alt-text of the image-->
+			<img src="./img/amis.gif" height="256" width="256" alt="AMIS logo"/>
+		</div>
+		<div class="image">
+			<!--translate the alt-text of the image-->
+			<img src="./img/Nipponfoundation.gif" height="73" width="300" alt="Nippon Foundation logo" />
+			<!--translate the alt-text of the image-->
+			<img src="./img/dfa-log.jpg" alt="DAISY-for-All project logo" />
+		</div>
+	</div>
+	<div>
+		<br />
+		<br />
+	</div>
+	<h1>Hva er AMIS?</h1>
+	<div class="image">
+		<!--translate the alt-text of the image-->
+		<img src="./img/amis.gif" height="100" width="100" alt="AMIS logo" />
+	</div>
+	
+	<p>AMIS er et software program som du kan benytte for å lese DAISY digitale lydbøker.  AMIS er en programvare med åpen kildekode, til fri benyttelse. AMIS er utviklet og støttes av "DAISY for All Project" som er finansiert av Nippon Foundation. AMIS er tilgjengelig i flere språk. Besøk nettsiden vår for språkpakkenedlastinger. Fortsett lesingen her for å lære mer om mulighetene i AMIS </p>
+<div>
+		<br/>
+		<br/>
+	</div>
+	<h1>Hva er DAISY?</h1>
+	<div class="image">
+		<!--translate the alt-text of the image-->
+		<img src="./img/daisy.jpg" width="100" height="100" alt="DAISY Consortium logo"/>
+	</div>
+	
+	<p>DAISY står for Digital Accessible Information SYstem. DAISY-bøker er digitale lydbøker, tilgjengelig for alle. Vanlige bokfunksjoner, slik som overskrifter, sidenummerering, fotnoter, sidenummerering, navigasjonsmenyer og bokmerker er representert slik at bruker raskt kan navigere ved hjelp av dem. Du kan lære mer om DAISY på http://www.daisy.org</p>
+<div>
+		<br/>
+		<br />
+	</div>
+	<h1>Rask start</h1>
+
+	<p>Denne delen har til hensikt å gi deg en rask oversikt over kommandoer som hjelper deg å benytte AMIS</p>
+
+	<h2>Mens du leser boken</h2>
+	<p>Få hjelp: Trykk F1 for å når som helst åpne denne hjelpeboken.</p>
+	<p>Åpne en CD-ROM. Trykk Control + L for å åpne innholdet på en CD-ROM-plate.</p>
+	<p>Åpne en fil fra din harddisk: Trykk Control + O for å åpne en fil.</p>
+	<p>For å gå til navigasjonsvindu: Trykk Control + N. Bruk deretter piltaster for å navigere rundt i listen over navigasjonselementer.</p>
+	<p>Spill og stoppi boken: Trykk mellomroms-tasten.</p>
+	<p>Avslutte AMIS: Trykk Alt + F4.</p>
+	<p>Gåtil hovedvindu: Trykk Control + A</p>
+	<p>Øke oppløsningen i en del av bildet: Trykk Control + P</p>
+	<p>Redusere oppløsningen i en del av bildet: Trykk Control + Q</p>
+	
+	<h2>I dialogvinduer</h2>
+	<p>Høre instruksjonene for en dialog: Trykk Control + I.</p>
+	<p>Høre teksten du har skrevet inn: Trykk Control + T. Fungerer kun hvis dialog inneholder redigerbar tekst.</p>
+	<p>Repeter siste handling: Trykk Control + R.</p>
+	<div>
+		<br />
+		<br />
+	</div>
+	 
+	<h1>Komplett innholdsliste for AMIS</h1>
+	 
+	<h2>Åpne en DAISY bok</h2>
+	 
+	<h3>Åpne en fil</h3>
+	<p>Åpne en fil fra harddisken. Denne kommandoen åpner opp en standard fil-leser hvor du kan bruke til å velge en DAISY bok.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+    <li>$<//promptItem[@id="icon"]/text>$:
+    <img src="./img/folder.jpg" height="50" width="50" alt="Åpne fil ikon" /></li>
+    <li>$<//promptItem[@id="keyboardShortcut"]/text>$:
+    $<//action[@mfcid="ID_MENU_FILE_OPEN"]/accelerator/text>$</li>
+    <li>$<//promptItem[@id="menu"]/text>$:
+    $<//action[@mfcid="ID_MENU_FILE_OPEN"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_FILE_OPEN"]/caption/text>$
+    </li>
+	</ul>
+	
+	<h3>Åpne en CD-ROM</h3>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/cd.jpg" height="50" width="50" alt="Åpne CD ikon"/></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_LOADCD"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_LOADCD"]/parent::container/caption/text>$
+		-&gt;
+		$<//action[@mfcid="ID_MENU_FILE_LOADCD"]/caption/text>$</li>
+	</ul>
+	
+	<h3>Søk gjennom harddisken etter bøker</h3>
+	<p>Dette åpner en dialogboks hvor du kan skrive inn en søkebane. Resultat listes opp i dialogvinduet.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/searchForBooks.jpg" height="50" width="50" alt="Søk harddisk ikon"/></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="file"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_FILE_SEARCHDRIVE"]/mnemonic/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_SEARCHDRIVE"]/parent::container/caption/text>$
+		-&gt;
+		$<//action[@mfcid="ID_MENU_FILE_SEARCHDRIVE"]/caption/text>$
+		</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Velg noe fra liste over nylig åpnede bøker list</h3>
+	<p>Dette er en undermeny med oversikt over nylig leste bøker.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$:
+		$<//container[@id="file"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+    $<//container[@id="recentBooksList"]/mnemonic/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$:
+		$<//container[@id="file"]/caption/text>$
+    -&gt;
+    $<//container[@id="recentBooksList"]/caption/text>$
+		</li>
+	</ul>
+	<!--end block-->
+	
+	
+	<h2>Preferanser</h2>
+	<p>Her kan du justere programoppsettet for AMIS, inkludert oppstartsprosedyrer, hvordan du setter bokmerke, AMIS' fargevalg og språkvalg (om du har installert språkpakker).</p>
+	
+	<h3>Generelle preferanser</h3>
+	<p>Dette er skjermbildet for det generelle preferanse-dialogvinduet.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="file"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/mnemonic/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/caption/text>$
+		</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Fargeinnstillinger</h3>
+	<p>Dette er en annen kategori innen preferanseinnstillinger.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="file"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/mnemonic/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//dialog[@mfcid="IDD_PROPPAGE2"]/accelerator/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/caption/text>$
+		</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Språkinnstillinger</h3>
+	<p>Dette er en annen kategori innen preferanseinnstillinger.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="file"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/mnemonic/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//dialog[@mfcid="IDD_PROPPAGE4"]/accelerator/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/caption/text>$
+		</li>
+	</ul>
+	<!--end block-->
+	
+	
+	<h2>Forskjellige typer skjermbilder</h2>
+	
+	<h3>Standard</h3>
+	<p>Dette vindu har meny, verktøylinjer og navigasjonsmeny. Dette likner mange andre dataprogrammer og er standard-vindu i AMIS. Du kan veksle mellom dette og Basis-vinduet med hurtigtaster.</p>
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$:
+		$<//action[@mfcid="ID_MENU_VIEW_BASIC"]/accelerator/text>$</li>
+	</ul>
+	
+	<h3>Basis-vinduet</h3>
+	<p>Dette har ingen navigasjonsmeny. Verktøylinjen har seks store knapper nederst på skjermen.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_BASIC"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_BASIC"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_VIEW_BASIC"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h2>Navigasjonsmenyen</h2>
+	<div>
+		<!--translate the alt-text of the image-->
+		<img src="./img/sidebar.jpg" alt="Navigasjonsmeny" />
+	</div>
+	<p>Navigasjonsmenyen inneholder navigasjonselementer som mappetitler og liste over elementer som side, fotnoter mv. Disse elementene er organisert i lister. Hver liste har sin egen arkfane.</p>
+	<p>Control + N er en nyttig hurtigtast. Den flytter markør til navigasjonsmenyen og lar deg navigere uavhengig av hvor du befinner deg i øyeblikket. Du kan forandre listen ved å bruke vindusmenyen.</p>
+	
+	<h3>Skru navigasjonsmenyen på og av</h3>
+	<p>Navigasjonsmenyen kan skrus av og på. Bruk enten meny eller trykk &#34;x&#34; i det øvre høyre hjørnet av menyvinduet.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="view"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF"]/mnemonic/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Dokke eller flyte</h3>
+	<p>Navigasjonsmenyen kan flyttes rundt i skjermvinduet ved å klikke og dra tittelfelt. Dra den til en kant for å dokke den til venstre, høyre, topp eller bunn.</p>
+	
+	<h3>Seksjoners</h3>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/sections.jpg" height="50" width="50" alt="Seksjoner ikon" /></li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//container[@id="view"]/caption/text>$
+    -&gt;
+    $<//promptItem[@id="sections"]/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Sider</h3>
+	<p>NB: Dette elementet vil bli utkoplet hvis boken ikke har sideinndeling.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/pages.jpg" height="50" width="50" alt="Side ikon"/></li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//container[@id="view"]/caption/text>$
+    -&gt;
+    $<//promptItem[@id="pages"]/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Spesielle elementer</h3>
+	<p>Spesielle elementer omfatter fotnoter,  spalter (Ikke AMIS navigasjonsmeny, men andre tekstmenyer), produsentkommentarer, og andre grupperte elementer. Disse fremkommer i AMIS-menyen og i View-meny bare hvis de er tilgjengelig i publikasjonen.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/figures.jpg" height="50" width="50" alt="Spesielle elementer ikon"/></li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//container[@id="view"]/caption/text>$
+ 		</li>
+	</ul>
+	<!--end block-->
+	
+	<h2>Effekter</h2>
+	
+	<h3>Fargekontraster</h3>
+	<p>Dette elementet skrur seg av og på hver gang knappen eller hurtigtasten blir trykket på. Spesifikke farge-innstillinger kan velges i arkfane Fargevalg i "Menyvalg" Innstillinger.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/contrast.jpg" height="50" width="50" alt="Kontrast ikon" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_CONTRAST"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_CONTRAST"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_VIEW_CONTRAST"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Øke størrelse på fonten</h3>
+	<p>Font-størrelse øker litt hver gang knappen eller hurtigtast trykkes. </p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/font.jpg" height="50" width="50" alt="Fontstørrelse ikon" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$:
+		$<//container[@id="view"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_VIEW_LARGEFONT"]/mnemonic/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_LARGEFONT"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_VIEW_LARGEFONT"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Tilbakestille font-størrelse</h3>
+	<p>Tilbakestille font-størrelse til original størrelse.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="view"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_VIEW_RESETFONT"]/mnemonic/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_RESETFONT"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_VIEW_RESETFONT"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h2>Avspilling</h2>
+	
+	<h3>Avspilling og pause</h3>
+	<p>Vil du spille av, trykk, &quot;Play&quot; endre til &quot;Pause&quot; og omvendt.</p>
+	<!--Don't translate this block except for the word "or" between images and except for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$: 
+			<img src="./img/play.jpg" height="50" width="50" alt="Spill ikon" />
+			or
+			<img src="./img/pause.jpg" height="50" width="50" alt="Pause ikon"/>
+		</li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAYPAUSE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAYPAUSE"][1]/parent::switch/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAYPAUSE"][1]/caption/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAYPAUSE"][2]/parent::switch/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAYPAUSE"][2]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Øke volum</h3>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_VOLUP"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_VOLUP"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAY_VOLUP"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Redusere volum</h3>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_VOLDOWN"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_VOLDOWN"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAY_VOLDOWN"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Raskere</h3>
+	<p>Dette øker lesehastigheten uten å forstyrre tonehøyden.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:<img src="./img/faster.jpg" height="50" width="50" alt="Øk hastighet ikon" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_FASTER"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_FASTER"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAY_FASTER"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Saktere</h3>
+	<p>Dette reduserer lesehastighet uten å forstyrre tonehøyde.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/slower.jpg" height="50" width="50" alt="Reduser hastighet ikon" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_SLOWER"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_SLOWER"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAY_SLOWER"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Normal hastighet</h3>
+	<p>Dette tilbakestiller lesingen til normalt tempo.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/normalSpeed.jpg" height="50" width="50" alt="normal hastighet ikon" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_NORMALSPEED"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_NORMALSPEED"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAY_NORMALSPEED"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	
+	<h2>Navigasjon</h2>
+	
+	<h3>Neste avsnitt</h3>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/nextSection.jpg" height="50" width="50" alt="neste avsnitt ikon" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_NEXTSECTION"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_NEXTSECTION"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_NEXTSECTION"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Forrige avsnitt</h3>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/prevSection.jpg" height="50" width="50" alt="Forrige avsnitt ikon" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_PREVSECTION"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_PREVSECTION"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_PREVSECTION"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Vis masppestruktur</h3>
+	<p>Denne kommandoen tillater deg å begrense eller utvide mappestrukturen. Som standard når du åpner en bok, vises alle seksjoner i boken i navigasjonsmenyen (rotmenyen) til venstre.</p>
+	<p>Listen over navigasjonsnivåer (1, 2, 3, osv) finner du i en undermeny i navigasjonsmenyen.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="navigate"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//container[@id="sectiondepth"]/mnemonic/text>$
+	</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//container[@id="navigate"]/caption/text>$
+    -&gt;
+    $<//container[@id="sectiondepth"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Neste frase</h3>
+	<p>En frase kan være en setning eller et avsnitt, avhengig av produksjonsstilen til publikasjonen.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/nextPhrase.jpg" height="50" width="50" alt="neste frase ikon" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_NEXTPHRASE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_NEXTPHRASE"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_NEXTPHRASE"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Forrige frase</h3>
+	<p>En frase kan være en setning eller et avsnitt, avhengig av produksjonsstilen til publikasjonen.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/prevPhrase.jpg" height="50" width="50" alt="forrige frase ikon" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_PREVPHRASE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_PREVPHRASE"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_PREVPHRASE"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Neste side</h3>
+	<p>Sidekommandoer er bare tilgjengelig hvis publikasjonen inneholder sider.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/nextPage.jpg" height="50" width="50" alt="neste side ikon" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_NEXTPAGE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_NEXTPAGE"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_NEXTPAGE"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Forrige side</h3>
+	<p>Sidekommandoer er bare tilgjengelig hvis publikasjonen inneholder sider.</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/prevPage.jpg" height="50" width="50" alt="forrige side ikon" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_PREVPAGE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_PREVPAGE"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_PREVPAGE"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Gå til side</h3>
+	<p>Sidekommandoer er bare tilgjengelig hvis publikasjonen inneholder sider.</p>
+	<!--Don't translSidekommandoer er bare tilgjengelig hvis publikasjonen inneholder siderate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_GOTOPAGE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_GOTOPAGE"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_GOTOPAGE"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Finn i teksten</h3>
+	<p>Finn i tekst-funksjonen er bare tilgjengelig hvis publikasjon inneholder tekst.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_FINDINTEXT"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_FINDINTEXT"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_FINDINTEXT"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Unngå et emne</h3>
+	<p>Noen emner kan unnvikes, for eksempel utenfor teksten-strukturer (tabeller etc.) eller supplementerende informasjon (navigasjonsmenyer på siden etc). Dette betyr at du leser tekst umiddelbart før og etter en utenfor teksten-struktur uten avbrudd</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_ESCAPE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_ESCAPE"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAY_ESCAPE"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	
+	<h2>Selektiv lesing</h2>
+	<p>Et kjennetegn med DAISY bøker er at de kan inneholde mulighet for selektiv lesing. Et selektivt element er et element du kan aktivere eller deaktivere i boken. Eksempler på mulige selektive elementer er sidenummer eller fotnoter. Hvis du ikke ønsker å høre disse elementene mens du leser, sørg for at de er merket av i &#34;Skippable Items&#34; rubrikken.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$:
+		$<//container[@id="info"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_INFO_SKIP"]/mnemonic/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_INFO_SKIP"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_INFO_SKIP"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	
+	<h2>Bokmerker</h2>
+	
+	<h3>Legge til et bokmerke</h3>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/addBookmark.jpg" height="50" width="50" alt="legg til bokmerke ikon" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_BMK_ADD"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_BMK_ADD"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_BMK_ADD"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>Åpne et bomerke</h3>
+	<p>Når du åpner en bok, blir alle bokmerker i boken automatisk hentet frem. Nye bokmerker blir lagt til listen i bokmerkemenyen.</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="bookmarks"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//container[@id="bookmarks"]/caption/text>$
+    </li>
+	</ul>
+	<!--end block-->
+
+	<h2>Sammendrag</h2>
+	<p>Det er tre typer av sammendrag gitt av AMIS: Fullt sammendrag, løpende posisjon, og navigasjonsalternativer. Hvert sammendrag er tilgjengelig som en dialogboks, aktivert jennom informasjonsmenyen (&#34;Alt + I&#34;)</p>
+
+	<h2>Avslutte AMIS</h2>
+		<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_EXIT"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_EXIT"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_FILE_EXIT"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+
+
+<h1>Påbyggingspakker</h1>
+<p>AMIS støtter tilpasninger via påbyggingspakker, slik som "plug-ins" og språkpakker.</p>
+<h2>Plug-ins</h2>
+<div class="image">
+	<img src="./img/joystick.jpg" height="100" width="100" alt="plug-in ikon"/>
+</div>
+<p>AMIS støtter plug-ins, som er enten kun software eller software med hardware grensesnitt. Navigeringsverktøy, rensbare Brailleskjermer og scannermenyter er alle sammen eksempler på "plug-ins". Alle "plug-ins" er tilgjengelige for nedlasting fra hjemmesiden vår (http://amis.sf.net).</p>
+<h2>Språkpakker</h2>
+<div class="image">
+	<!--translate the alt-text of these images-->
+	<img src="./img/us-flag.ico" alt="US flag" width="25" height="25"/>
+	<img src="./img/jp-flag.ico" alt="Japan's flag" width="25" height="25"/>
+	<img src="./img/malay-flag.ico" alt="Malaysia's flag"  width="25" height="25"/>
+	<img src="./img/india-flag.ico" alt="India's flag"  width="25" height="25"/>
+	<img src="./img/nepal-flag.ico" alt="Nepal's flag"  width="25" height="25"/>
+	<img src="./img/fr-flag.ico" alt="French flag"  width="25" height="25"/>
+	<img src="./img/srilanka-flag.ico" alt="Sri Lanka's flag"  width="25" height="25"/>
+	<img src="./img/thai-flag.ico" alt="Thailand's flag"  width="25" height="25"/>
+	<img src="./img/arab-league-flag.ico" alt="League of Arab Nations flag" width="25" height="25"/>
+	<img src="./img/vietnam-flag.ico" alt="Vietnam's flag" width="25" height="25"/>
+	<img src="./img/indonesia-flag.ico" alt="Indonesia's flag" width="25" height="25"/>
+	<img src="./img/pakistan-flag.ico" alt="Pakistan's flag" width="25" height="25"/>
+	<img src="./img/bangladesh-flag.ico" alt="Bangladesh's flag" width="25" height="25"/>
+	<img src="./img/norwegian-flag.ico" alt="Norwegian flag" width="25" height="25"/>
+
+</div>
+<p>AMIS støtter UNICODE og kan bli konfigurert til å bruke forskjellige språkpakker. Alle språkpakkene kan lastes ned fra vår nettside (http://amis.sf.net).</p>
+</body>
+</html>

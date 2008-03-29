@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Sa mga Tabing ng Dialog" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:24" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="24.142s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_0007" id="amis_0007" />
+<seq>
+<audio src="06_Sa_mga_Tabing_ng_Dialog.mp3" clip-begin="npt=0.000s" clip-end="npt=1.929s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0017" id="xami_0017" />
+<seq>
+<audio src="06_Sa_mga_Tabing_ng_Dialog.mp3" clip-begin="npt=1.929s" clip-end="npt=5.507s" id="qwrt_0002" />
+<audio src="06_Sa_mga_Tabing_ng_Dialog.mp3" clip-begin="npt=5.507s" clip-end="npt=7.635s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0018" id="xami_0018" />
+<seq>
+<audio src="06_Sa_mga_Tabing_ng_Dialog.mp3" clip-begin="npt=7.635s" clip-end="npt=12.963s" id="qwrt_0004" />
+<audio src="06_Sa_mga_Tabing_ng_Dialog.mp3" clip-begin="npt=12.963s" clip-end="npt=18.956s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0019" id="xami_0019" />
+<seq>
+<audio src="06_Sa_mga_Tabing_ng_Dialog.mp3" clip-begin="npt=18.956s" clip-end="npt=24.142s" id="qwrt_0006" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_001a" id="xami_001a" />
+</par>
+</seq>
+</body>
+</smil>

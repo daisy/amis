@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Kembalikan Saiz Fon" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:20" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="19.579s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_001e" id="amis_001e" />
+<seq>
+<audio src="29_Kembalikan_Saiz_Fon.mp3" clip-begin="npt=0.000s" clip-end="npt=0.444s" id="qwrt_0001" />
+<audio src="29_Kembalikan_Saiz_Fon.mp3" clip-begin="npt=0.444s" clip-end="npt=2.795s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_004f" id="xami_004f" />
+<seq>
+<audio src="29_Kembalikan_Saiz_Fon.mp3" clip-begin="npt=2.795s" clip-end="npt=3.239s" id="qwrt_0003" />
+<audio src="29_Kembalikan_Saiz_Fon.mp3" clip-begin="npt=3.239s" clip-end="npt=6.191s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0050" id="xami_0050" />
+<seq>
+<audio src="29_Kembalikan_Saiz_Fon.mp3" clip-begin="npt=6.191s" clip-end="npt=6.831s" id="qwrt_0005" />
+<audio src="29_Kembalikan_Saiz_Fon.mp3" clip-begin="npt=6.831s" clip-end="npt=9.430s" id="qwrt_0006" />
+<audio src="29_Kembalikan_Saiz_Fon.mp3" clip-begin="npt=9.430s" clip-end="npt=11.037s" id="qwrt_0007" />
+<audio src="29_Kembalikan_Saiz_Fon.mp3" clip-begin="npt=11.037s" clip-end="npt=13.584s" id="qwrt_0008" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0051" id="xami_0051" />
+<seq>
+<audio src="29_Kembalikan_Saiz_Fon.mp3" clip-begin="npt=13.584s" clip-end="npt=14.224s" id="qwrt_0009" />
+<audio src="29_Kembalikan_Saiz_Fon.mp3" clip-begin="npt=14.224s" clip-end="npt=15.530s" id="qwrt_000A" />
+<audio src="29_Kembalikan_Saiz_Fon.mp3" clip-begin="npt=15.530s" clip-end="npt=16.915s" id="qwrt_000B" />
+<audio src="29_Kembalikan_Saiz_Fon.mp3" clip-begin="npt=16.915s" clip-end="npt=19.579s" id="qwrt_000C" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

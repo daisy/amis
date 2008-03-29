@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Pilihan Umum" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:18" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="18.181s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_000f" id="amis_000f" />
+<seq>
+<audio src="14_Pilihan_Umum.mp3" clip-begin="npt=0.000s" clip-end="npt=1.998s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_002a" id="xami_002a" />
+<seq>
+<audio src="14_Pilihan_Umum.mp3" clip-begin="npt=1.998s" clip-end="npt=2.638s" id="qwrt_0002" />
+<audio src="14_Pilihan_Umum.mp3" clip-begin="npt=2.638s" clip-end="npt=7.392s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_002b" id="xami_002b" />
+<seq>
+<audio src="14_Pilihan_Umum.mp3" clip-begin="npt=7.392s" clip-end="npt=7.888s" id="qwrt_0004" />
+<audio src="14_Pilihan_Umum.mp3" clip-begin="npt=7.888s" clip-end="npt=10.710s" id="qwrt_0005" />
+<audio src="14_Pilihan_Umum.mp3" clip-begin="npt=10.710s" clip-end="npt=13.792s" id="qwrt_0006" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_002c" id="xami_002c" />
+<seq>
+<audio src="14_Pilihan_Umum.mp3" clip-begin="npt=13.792s" clip-end="npt=15.634s" id="qwrt_0007" />
+<audio src="14_Pilihan_Umum.mp3" clip-begin="npt=15.634s" clip-end="npt=16.901s" id="qwrt_0008" />
+<audio src="14_Pilihan_Umum.mp3" clip-begin="npt=16.901s" clip-end="npt=18.181s" id="qwrt_0009" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

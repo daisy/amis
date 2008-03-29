@@ -1,0 +1,2286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/xml+html; charset=UTF-8"/>
+    <title>Amis localization interface</title>
+    <style type="text/css">
+          body { background-color: white; color: black;
+            font-family: sans-serif }
+          table { border-collapse: collapse }
+          td { border: solid black thin; padding: 4px }
+          select { border: solid black thin }
+          textarea { background-color: #ffd; border: solid black thin;
+            padding:4px; margin-bottom: 4px }
+          .show { display: none; }
+        </style>
+    <script src="/amis-l10n/ui.js" type="text/javascript"/>
+  </head>
+  <body>
+    <h1>Amis localization interface</h1>
+    <form action="/cgi-bin/ui-form.pl" method="post" onReset="return check_reset()">
+<!--#s/LANG/$params{lang}/-->
+      <input type="hidden" name="lang" value="LANG"/>
+      <h2 id="_head_file">Container “File” (file)</h2>
+      <p>
+        <a href="#_head_file" class="hide" id="_hide_file" onclick="hide(this,'file')">(hide)</a>
+        <a href="#_head_file" class="show" id="_show_file" onclick="show(this,'file')">(show)</a>
+      </p>
+      <table id="file">
+        <tbody>
+          <tr>
+            <td valign="top">File</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id52734">File</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Open...</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id52771">Open...</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Open a Daisy book from the local file system</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id52788">Open a Daisy book from the local file system</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Load CD</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id52831">Load CD</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Load a DAISY book from CD ROM</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id52848">Load a DAISY book from CD ROM</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Search...</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id52874">Search...</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Search local drives for DAISY books</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id52891">Search local drives for DAISY books</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Preferences...</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id52918">Preferences...</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">This is the application preferences dialog.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id52934">This is the application preferences dialog.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Recent</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id52959">Recent</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Empty</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id52994">Empty</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">There are no recently read books.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53007">There are no recently read books.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Exit</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53063">Exit</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Exit AMIS</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53079">Exit AMIS</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="Save"/>
+              <input type="reset"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="_head_view">Container “View” (view)</h2>
+      <p>
+        <a href="#_head_view" class="hide" id="_hide_view" onclick="hide(this,'view')">(hide)</a>
+        <a href="#_head_view" class="show" id="_show_view" onclick="show(this,'view')">(show)</a>
+      </p>
+      <table id="view">
+        <tbody>
+          <tr>
+            <td valign="top">View</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53106">View</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Sidebar</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53133">Sidebar</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Turn the sidebar on or off.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53149">Turn the sidebar on or off.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Basic View Mode</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53177">Basic View Mode</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Switch the view to basic mode.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53193">Switch the view to basic mode.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">High Contrast</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53229">High Contrast</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Use high contrast colors for the text display.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53245">Use high contrast colors for the text display.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Increase Font Size</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53280">Increase Font Size</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Gradually increase the font size.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53296">Gradually increase the font size.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Reset Font Size</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53323">Reset Font Size</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Set the font size to the default setting.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53340">Set the font size to the default setting.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="Save"/>
+              <input type="reset"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="_head_play">Container “Play” (play)</h2>
+      <p>
+        <a href="#_head_play" class="hide" id="_hide_play" onclick="hide(this,'play')">(hide)</a>
+        <a href="#_head_play" class="show" id="_show_play" onclick="show(this,'play')">(show)</a>
+      </p>
+      <table id="play">
+        <tbody>
+          <tr>
+            <td valign="top">Play</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53394">Play</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Play</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53443">Play</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Start synchronized playback.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53459">Start synchronized playback.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Pause</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53504">Pause</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Pause playback of this DAISY book.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53520">Pause playback of this DAISY book.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Escape</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53550">Escape</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Jump out of the currently playing item or structure.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53566">Jump out of the currently playing item or structure.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Faster</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53604">Faster</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Increase the playback rate.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53620">Increase the playback rate.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Slower</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53656">Slower</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Slow down the playback rate.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53672">Slow down the playback rate.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Normal Speed</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53708">Normal Speed</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Reset the playback rate to normal.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53725">Reset the playback rate to normal.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Increase Volume</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53754">Increase Volume</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Gradually raise the volume.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53770">Gradually raise the volume.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Decrease Volume</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53799">Decrease Volume</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Gradually lower the volume.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53815">Gradually lower the volume.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="Save"/>
+              <input type="reset"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="_head_navigate">Container “Navigate” (navigate)</h2>
+      <p>
+        <a href="#_head_navigate" class="hide" id="_hide_navigate" onclick="hide(this,'navigate')">(hide)</a>
+        <a href="#_head_navigate" class="show" id="_show_navigate" onclick="show(this,'navigate')">(show)</a>
+      </p>
+      <table id="navigate">
+        <tbody>
+          <tr>
+            <td valign="top">Navigate</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53842">Navigate</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Previous Section</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53885">Previous Section</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Go to the previous section.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53902">Go to the previous section.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Next Section</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53945">Next Section</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Go to the next section.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53961">Go to the next section.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Show Section Depth</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id53986">Show Section Depth</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Empty</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54019">Empty</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">There are no section levels.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54034">There are no section levels.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Previous Phrase</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54099">Previous Phrase</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Go to the previous phrase.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54113">Go to the previous phrase.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Next Phrase</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54149">Next Phrase</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Go to the next phrase.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54164">Go to the next phrase.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Previous Page</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54200">Previous Page</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Go to the previous page.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54214">Go to the previous page.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Next Page</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54250">Next Page</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Go to the next page.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54265">Go to the next page.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Go to Page...</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54293">Go to Page...</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Go to a specific page.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54308">Go to a specific page.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Find in Text</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54336">Find in Text</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Search for a word or phrase in the text.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54352">Search for a word or phrase in the text.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="Save"/>
+              <input type="reset"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="_head_bookmarks">Container “Bookmarks” (bookmarks)</h2>
+      <p>
+        <a href="#_head_bookmarks" class="hide" id="_hide_bookmarks" onclick="hide(this,'bookmarks')">(hide)</a>
+        <a href="#_head_bookmarks" class="show" id="_show_bookmarks" onclick="show(this,'bookmarks')">(show)</a>
+      </p>
+      <table id="bookmarks">
+        <tbody>
+          <tr>
+            <td valign="top">Bookmarks</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54380">Bookmarks</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Add Bookmark</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54416">Add Bookmark</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Bookmark your current position.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54433">Bookmark your current position.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="Save"/>
+              <input type="reset"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="_head_info">Container “Info” (info)</h2>
+      <p>
+        <a href="#_head_info" class="hide" id="_hide_info" onclick="hide(this,'info')">(hide)</a>
+        <a href="#_head_info" class="show" id="_show_info" onclick="show(this,'info')">(show)</a>
+      </p>
+      <table id="info">
+        <tbody>
+          <tr>
+            <td valign="top">Info</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54484">Info</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Skippable Items...</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54511">Skippable Items...</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">View the skippable items for this publication.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54528">View the skippable items for this publication.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Full Summary</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54562">Full Summary</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Get all summary info for this publication.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54578">Get all summary info for this publication.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Current Position</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54605">Current Position</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Get information about your current position.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54622">Get information about your current position.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Navigation Options</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54649">Navigation Options</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Learn about your navigation options for this publication.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54666">Learn about your navigation options for this publication.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="Save"/>
+              <input type="reset"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="_head_help">Container “Help” (help)</h2>
+      <p>
+        <a href="#_head_help" class="hide" id="_hide_help" onclick="hide(this,'help')">(hide)</a>
+        <a href="#_head_help" class="show" id="_show_help" onclick="show(this,'help')">(show)</a>
+      </p>
+      <table id="help">
+        <tbody>
+          <tr>
+            <td valign="top">Help</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54694">Help</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Contents</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54735">Contents</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Get help using AMIS</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54751">Get help using AMIS</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">About AMIS</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54777">About AMIS</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Find out about AMIS and DAISY-for-All.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54794">Find out about AMIS and DAISY-for-All.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="Save"/>
+              <input type="reset"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="_head_IDD_FIND">Dialog “Find in Text” (IDD_FIND)</h2>
+      <p>
+        <a href="#_head_IDD_FIND" class="hide" id="_hide_IDD_FIND" onclick="hide(this,'IDD_FIND')">(hide)</a>
+        <a href="#_head_IDD_FIND" class="show" id="_show_IDD_FIND" onclick="show(this,'IDD_FIND')">(show)</a>
+      </p>
+      <table id="IDD_FIND">
+        <tbody>
+          <tr>
+            <td valign="top">Find in Text</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54822">Find in Text</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Here you can search the full text in either direction.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54837">Here you can search the full text in either direction.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">After typing in your search, press enter to begin searching.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54861">After typing in your search, press enter to begin searching.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Press to begin searching for text in the file.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54910">Press to begin searching for text in the file.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Type the text to search for.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54957">Type the text to search for.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Find Next</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id54983">Find Next</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Find Previous</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id55027">Find Previous</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="Save"/>
+              <input type="reset"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="_head_IDD_CDSEARCH">Dialog “Multiple books found” (IDD_CDSEARCH)</h2>
+      <p>
+        <a href="#_head_IDD_CDSEARCH" class="hide" id="_hide_IDD_CDSEARCH" onclick="hide(this,'IDD_CDSEARCH')">(hide)</a>
+        <a href="#_head_IDD_CDSEARCH" class="show" id="_show_IDD_CDSEARCH" onclick="show(this,'IDD_CDSEARCH')">(show)</a>
+      </p>
+      <table id="IDD_CDSEARCH">
+        <tbody>
+          <tr>
+            <td valign="top">Multiple books found</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id55070">Multiple books found</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">More than one book was found on this CD. Please select a book from the list below and press Alt + O to open.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id55087">More than one book was found on this CD. Please select a book from the list below and press Alt + O to open.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Open</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id55157">Open</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Press to close this dialog and open the selected book.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id55173">Press to close this dialog and open the selected book.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Use the arrow keys to move around this list of titles.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id55196">Use the arrow keys to move around this list of titles.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="Save"/>
+              <input type="reset"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="_head_IDD_ABOUT">Dialog “About AMIS” (IDD_ABOUT)</h2>
+      <p>
+        <a href="#_head_IDD_ABOUT" class="hide" id="_hide_IDD_ABOUT" onclick="hide(this,'IDD_ABOUT')">(hide)</a>
+        <a href="#_head_IDD_ABOUT" class="show" id="_show_IDD_ABOUT" onclick="show(this,'IDD_ABOUT')">(show)</a>
+      </p>
+      <table id="IDD_ABOUT">
+        <tbody>
+          <tr>
+            <td valign="top">About AMIS</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id55236">About AMIS</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Dialog with information about AMIS software.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id55250">Dialog with information about AMIS software.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">AMIS: \nAdaptive Multimedia Information System</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id55290">AMIS: \nAdaptive Multimedia Information System</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="Save"/>
+              <input type="reset"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="_head_IDD_SEARCHDAISY">Dialog “Search for DAISY Books” (IDD_SEARCHDAISY)</h2>
+      <p>
+        <a href="#_head_IDD_SEARCHDAISY" class="hide" id="_hide_IDD_SEARCHDAISY" onclick="hide(this,'IDD_SEARCHDAISY')">(hide)</a>
+        <a href="#_head_IDD_SEARCHDAISY" class="show" id="_show_IDD_SEARCHDAISY" onclick="show(this,'IDD_SEARCHDAISY')">(show)</a>
+      </p>
+      <table id="IDD_SEARCHDAISY">
+        <tbody>
+          <tr>
+            <td valign="top">Search for DAISY Books</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id55409">Search for DAISY Books</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">You can search your computer for DAISY books.  Enter a path or browse for a folder to search, then press Search to begin searching.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id55426">You can search your computer for DAISY books.  Enter a path or browse for a folder to search, then press Search to begin searching.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Type the path to the folder in this field.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id55478">Type the path to the folder in this field.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Search</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id55524">Search</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Press to start searching.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id55540">Press to start searching.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Stop</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id55563">Stop</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Press to stop searching.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id55579">Press to stop searching.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Ready</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id55608">Ready</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Searching...</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id55625">Searching...</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Search stopped.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id55641">Search stopped.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Search complete: No files found.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id55658">Search complete: No files found.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Search complete: One file found.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id55676">Search complete: One file found.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">files were found.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id55706">files were found.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Use the arrow keys to move around this list of titles.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id55732">Use the arrow keys to move around this list of titles.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Open</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id55768">Open</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Press to open the selected title.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id55784">Press to open the selected title.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="Save"/>
+              <input type="reset"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="_head_IDD_SKIP">Dialog “Skippable Items” (IDD_SKIP)</h2>
+      <p>
+        <a href="#_head_IDD_SKIP" class="hide" id="_hide_IDD_SKIP" onclick="hide(this,'IDD_SKIP')">(hide)</a>
+        <a href="#_head_IDD_SKIP" class="show" id="_show_IDD_SKIP" onclick="show(this,'IDD_SKIP')">(show)</a>
+      </p>
+      <table id="IDD_SKIP">
+        <tbody>
+          <tr>
+            <td valign="top">Skippable Items</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id55832">Skippable Items</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">This book contains the following special structures.  Check the ones you want skipped.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id55855">This book contains the following special structures.  Check the ones you want skipped.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">This publication has no skippable elements.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id55877">This publication has no skippable elements.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Skippable items</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id55945">Skippable items</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Use the arrow keys to move around this list of skippable items.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id55960">Use the arrow keys to move around this list of skippable items.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="Save"/>
+              <input type="reset"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="_head_IDD_PROPPAGE4">Dialog “Language” (IDD_PROPPAGE4)</h2>
+      <p>
+        <a href="#_head_IDD_PROPPAGE4" class="hide" id="_hide_IDD_PROPPAGE4" onclick="hide(this,'IDD_PROPPAGE4')">(hide)</a>
+        <a href="#_head_IDD_PROPPAGE4" class="show" id="_show_IDD_PROPPAGE4" onclick="show(this,'IDD_PROPPAGE4')">(show)</a>
+      </p>
+      <table id="IDD_PROPPAGE4">
+        <tbody>
+          <tr>
+            <td valign="top">Language</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56023">Language</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Here you can change the language of the software.  New language packs are detected automatically.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56040">Here you can change the language of the software.  New language packs are detected automatically.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Select Language</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56096">Select Language</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Press to confirm your language selection for the AMIS user interface</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56110">Press to confirm your language selection for the AMIS user interface</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Your language choices are:</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56136">Your language choices are:</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Use the arrow keys to move around this list of languages.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56151">Use the arrow keys to move around this list of languages.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">You are currently using AMIS in</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56189">You are currently using AMIS in</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="Save"/>
+              <input type="reset"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="_head_IDD_PROPPAGE2">Dialog “Set Colors” (IDD_PROPPAGE2)</h2>
+      <p>
+        <a href="#_head_IDD_PROPPAGE2" class="hide" id="_hide_IDD_PROPPAGE2" onclick="hide(this,'IDD_PROPPAGE2')">(hide)</a>
+        <a href="#_head_IDD_PROPPAGE2" class="show" id="_show_IDD_PROPPAGE2" onclick="show(this,'IDD_PROPPAGE2')">(show)</a>
+      </p>
+      <table id="IDD_PROPPAGE2">
+        <tbody>
+          <tr>
+            <td valign="top">Set Colors</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56224">Set Colors</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Here you can set color options for AMIS.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56238">Here you can set color options for AMIS.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Phrase Highlighting</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56283">Phrase Highlighting</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Text Foreground: </td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56306">Text Foreground: </textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Text Background: </td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56328">Text Background: </textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Selection Border: </td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56350">Selection Border: </textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">High Contrast Settings</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56373">High Contrast Settings</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Page Foreground: </td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56395">Page Foreground: </textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Page Background: </td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56418">Page Background: </textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Reset Colors</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56440">Reset Colors</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Preview of phrase highlight colors.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56462">Preview of phrase highlight colors.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Preview of page contrast colors.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56486">Preview of page contrast colors.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="Save"/>
+              <input type="reset"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="_head_IDD_CURRENTPOSITION">Dialog “Current Position” (IDD_CURRENTPOSITION)</h2>
+      <p>
+        <a href="#_head_IDD_CURRENTPOSITION" class="hide" id="_hide_IDD_CURRENTPOSITION" onclick="hide(this,'IDD_CURRENTPOSITION')">(hide)</a>
+        <a href="#_head_IDD_CURRENTPOSITION" class="show" id="_show_IDD_CURRENTPOSITION" onclick="show(this,'IDD_CURRENTPOSITION')">(show)</a>
+      </p>
+      <table id="IDD_CURRENTPOSITION">
+        <tbody>
+          <tr>
+            <td valign="top">Current Position</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56513">Current Position</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">This is a list of data about your current position.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56578">This is a list of data about your current position.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Your current section is titled:</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56610">Your current section is titled:</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Number of pages in this section:</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56638">Number of pages in this section:</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Number of subsections in this section:</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56664">Number of subsections in this section:</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="Save"/>
+              <input type="reset"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="_head_IDD_PROPPAGE1">Dialog “General Preferences” (IDD_PROPPAGE1)</h2>
+      <p>
+        <a href="#_head_IDD_PROPPAGE1" class="hide" id="_hide_IDD_PROPPAGE1" onclick="hide(this,'IDD_PROPPAGE1')">(hide)</a>
+        <a href="#_head_IDD_PROPPAGE1" class="show" id="_show_IDD_PROPPAGE1" onclick="show(this,'IDD_PROPPAGE1')">(show)</a>
+      </p>
+      <table id="IDD_PROPPAGE1">
+        <tbody>
+          <tr>
+            <td valign="top">General Preferences</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56700">General Preferences</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Here you can set general preferences for AMIS.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56715">Here you can set general preferences for AMIS.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Use self-voicing</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56797">Use self-voicing</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Select TTS voice:</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56839">Select TTS voice:</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Use the arrow keys to move around this list of voices</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56854">Use the arrow keys to move around this list of voices</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Start AMIS in the basic view mode.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56890">Start AMIS in the basic view mode.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Upon switching to basic view, tell the user how to go back to the default view.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56935">Upon switching to basic view, tell the user how to go back to the default view.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Load the most recently read book when the software starts.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id56981">Load the most recently read book when the software starts.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Bookmarks directory:</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57028">Bookmarks directory:</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Type the path to the bookmarks folder in this field.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57043">Type the path to the bookmarks folder in this field.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="Save"/>
+              <input type="reset"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="_head_IDD_NAVIGATIONOPTIONS">Dialog “Navigation Options” (IDD_NAVIGATIONOPTIONS)</h2>
+      <p>
+        <a href="#_head_IDD_NAVIGATIONOPTIONS" class="hide" id="_hide_IDD_NAVIGATIONOPTIONS" onclick="hide(this,'IDD_NAVIGATIONOPTIONS')">(hide)</a>
+        <a href="#_head_IDD_NAVIGATIONOPTIONS" class="show" id="_show_IDD_NAVIGATIONOPTIONS" onclick="show(this,'IDD_NAVIGATIONOPTIONS')">(show)</a>
+      </p>
+      <table id="IDD_NAVIGATIONOPTIONS">
+        <tbody>
+          <tr>
+            <td valign="top">Navigation Options</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57070">Navigation Options</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">This is a list of items to which you may navigate directly.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57135">This is a list of items to which you may navigate directly.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="Save"/>
+              <input type="reset"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="_head_IDD_GOTOPAGE">Dialog “Go To Page” (IDD_GOTOPAGE)</h2>
+      <p>
+        <a href="#_head_IDD_GOTOPAGE" class="hide" id="_hide_IDD_GOTOPAGE" onclick="hide(this,'IDD_GOTOPAGE')">(hide)</a>
+        <a href="#_head_IDD_GOTOPAGE" class="show" id="_show_IDD_GOTOPAGE" onclick="show(this,'IDD_GOTOPAGE')">(show)</a>
+      </p>
+      <table id="IDD_GOTOPAGE">
+        <tbody>
+          <tr>
+            <td valign="top">Go To Page</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57182">Go To Page</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Here you can jump to a page number or page label.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57197">Here you can jump to a page number or page label.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">After typing in your page number, press enter to go there.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57221">After typing in your page number, press enter to go there.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Press this button to go to the desired page.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57270">Press this button to go to the desired page.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Enter a page number:</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57318">Enter a page number:</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Type the number or label of the page you want to go to.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57333">Type the number or label of the page you want to go to.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="Save"/>
+              <input type="reset"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="_head_IDD_FULLSUMMARY">Dialog “Publication Summary” (IDD_FULLSUMMARY)</h2>
+      <p>
+        <a href="#_head_IDD_FULLSUMMARY" class="hide" id="_hide_IDD_FULLSUMMARY" onclick="hide(this,'IDD_FULLSUMMARY')">(hide)</a>
+        <a href="#_head_IDD_FULLSUMMARY" class="show" id="_show_IDD_FULLSUMMARY" onclick="show(this,'IDD_FULLSUMMARY')">(show)</a>
+      </p>
+      <table id="IDD_FULLSUMMARY">
+        <tbody>
+          <tr>
+            <td valign="top">Publication Summary</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57360">Publication Summary</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">This is a list of publication metadata.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57425">This is a list of publication metadata.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">This book is titled:</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57456">This book is titled:</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Written by:</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57482">Written by:</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Published by:</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57507">Published by:</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Description:</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57534">Description:</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Number of navigation points in the table of contents:</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57559">Number of navigation points in the table of contents:</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Maximum section depth:</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57586">Maximum section depth:</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Front matter pages:</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57614">Front matter pages:</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Regular pages:</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57641">Regular pages:</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Special pages:</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57669">Special pages:</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Total duration:</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57694">Total duration:</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="Save"/>
+              <input type="reset"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="_head__prompts">Prompt items</h2>
+      <p>
+        <a href="#_head__prompts" class="hide" id="_hide__prompts" onclick="hide(this,'_prompts')">(hide)</a>
+        <a href="#_head__prompts" class="show" id="_show__prompts" onclick="show(this,'_prompts')">(show)</a>
+      </p>
+      <table id="_prompts">
+        <tbody>
+          <tr>
+            <td valign="top">Press Alt + C to close the dialog.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57725">Press Alt + C to close the dialog.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Press Alt + C to cancel the dialog.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57743">Press Alt + C to cancel the dialog.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">This item</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57761">This item</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Press the space bar to toggle the value.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57777">Press the space bar to toggle the value.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Hit tab to move around the options on the dialog.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57795">Hit tab to move around the options on the dialog.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Press control + 2 to switch to the colors dialog.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57813">Press control + 2 to switch to the colors dialog.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Press control + 3 to switch to the language options dialog.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57832">Press control + 3 to switch to the language options dialog.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Press control + 1 to switch to the general preferences dialog.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57850">Press control + 1 to switch to the general preferences dialog.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">This item is currently</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57868">This item is currently</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Press enter to close the dialog.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57885">Press enter to close the dialog.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Browse...</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57903">Browse...</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Press to open the folder browse dialog.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57922">Press to open the folder browse dialog.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">OK</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57940">OK</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Press OK to close this dialog.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57956">Press OK to close this dialog.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Cancel</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57973">Cancel</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Press to cancel this dialog.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id57992">Press to cancel this dialog.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">This list will be read automatically.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58009">This list will be read automatically.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Press Control + R to repeat the last prompt.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58027">Press Control + R to repeat the last prompt.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">This dialog is not yet self-voicing.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58045">This dialog is not yet self-voicing.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Press escape to cancel</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58063">Press escape to cancel</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Press Control + I to hear instructions for this dialog.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58080">Press Control + I to hear instructions for this dialog.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Press Control + R to repeat the text in the last text box.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58098">Press Control + R to repeat the text in the last text box.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Navigation</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58117">Navigation</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Sections</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58133">Sections</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Pages</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58150">Pages</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Footnotes</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58166">Footnotes</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Producer notes</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58183">Producer notes</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Sidebars</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58199">Sidebars</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Grouped items</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58216">Grouped items</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Navigation</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58233">Navigation</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Ready</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58249">Ready</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Preferences</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58266">Preferences</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Select a Folder</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58282">Select a Folder</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Select a folder from the directory below.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58299">Select a folder from the directory below.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">DAISY Books</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58317">DAISY Books</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">The folder %s does not exist. Do you want the folder to be created?</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58333">The folder %s does not exist. Do you want the folder to be created?</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">This folder name is invalid. Please choose another.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58352">This folder name is invalid. Please choose another.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">This folder can not be created. Please double check.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58370">This folder can not be created. Please double check.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Not available</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58389">Not available</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">0</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58409">0</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">1</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58426">1</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">2</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58442">2</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">3</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58458">3</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">4</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58474">4</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">5</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58490">5</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">6</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58506">6</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">7</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58523">7</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">8</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58539">8</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">9</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58555">9</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">deleted</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58571">deleted</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">will be skipped</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58588">will be skipped</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">will be played</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58604">will be played</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">on</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58621">on</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">off</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58637">off</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">selected</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58653">selected</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">deselected</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58669">deselected</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Keyboard Shortcut</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58686">Keyboard Shortcut</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Icon</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58703">Icon</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Menu</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58720">Menu</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">followed by</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58741">followed by</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Dialog closed.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58763">Dialog closed.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Text field entry is:</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58782">Text field entry is:</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">The location of the book you are looking for has changed.  A different book was found instead.  Did the contents of your CD-ROM drive change?</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58817">The location of the book you are looking for has changed.  A different book was found instead.  Did the contents of your CD-ROM drive change?</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">An error occurred while trying to open the book.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58841">An error occurred while trying to open the book.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">There is not a CD in the CD-ROM drive.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58871">There is not a CD in the CD-ROM drive.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Plug-in error: init() function not found in the plug-in DLL.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58896">Plug-in error: init() function not found in the plug-in DLL.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Plug-in error: The following plug-in library could not be loaded: </td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58918">Plug-in error: The following plug-in library could not be loaded: </textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">You are now using the basic view mode.  Press F11 to switch back to the default view mode.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58944">You are now using the basic view mode.  Press F11 to switch back to the default view mode.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Open File Dialog</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58966">Open File Dialog</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Use the "search for books" feature, under the file menu, to find DAISY books on your hard drive.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id58986">Use the "search for books" feature, under the file menu, to find DAISY books on your hard drive.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Browse for folder dialog</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id59013">Browse for folder dialog</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Then, type the path of the folder you want in the text box.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id59037">Then, type the path of the folder you want in the text box.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Canceled</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id59058">Canceled</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Loading</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id59078">Loading</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Please restart to see your changes.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id59098">Please restart to see your changes.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">No DAISY books were found on this CD-ROM.</td>
+            <td valign="top" style="text-align:right">
+              <textarea cols="64" rows="6" name="id59119">No DAISY books were found on this CD-ROM.</textarea>
+              <br/>
+              <input type="submit" value="Save"/>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="Save"/>
+              <input type="reset"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </body>
+</html>

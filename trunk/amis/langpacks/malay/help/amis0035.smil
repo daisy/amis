@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Informasi Ringkasan" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:20" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="19.664s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_0035" id="amis_0035" />
+<seq>
+<audio src="52_Informasi_Ringkasan.mp3" clip-begin="npt=0.000s" clip-end="npt=0.940s" id="qwrt_0001" />
+<audio src="52_Informasi_Ringkasan.mp3" clip-begin="npt=0.940s" clip-end="npt=2.991s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0093" id="xami_0093" />
+<seq>
+<audio src="52_Informasi_Ringkasan.mp3" clip-begin="npt=2.991s" clip-end="npt=3.631s" id="qwrt_0003" />
+<audio src="52_Informasi_Ringkasan.mp3" clip-begin="npt=3.631s" clip-end="npt=6.257s" id="qwrt_0004" />
+<audio src="52_Informasi_Ringkasan.mp3" clip-begin="npt=6.257s" clip-end="npt=8.203s" id="qwrt_0005" />
+<audio src="52_Informasi_Ringkasan.mp3" clip-begin="npt=8.203s" clip-end="npt=9.219s" id="qwrt_0006" />
+<audio src="52_Informasi_Ringkasan.mp3" clip-begin="npt=9.219s" clip-end="npt=10.890s" id="qwrt_0007" />
+<audio src="52_Informasi_Ringkasan.mp3" clip-begin="npt=10.890s" clip-end="npt=11.679s" id="qwrt_0008" />
+<audio src="52_Informasi_Ringkasan.mp3" clip-begin="npt=11.679s" clip-end="npt=13.834s" id="qwrt_0009" />
+<audio src="52_Informasi_Ringkasan.mp3" clip-begin="npt=13.834s" clip-end="npt=14.850s" id="qwrt_000A" />
+<audio src="52_Informasi_Ringkasan.mp3" clip-begin="npt=14.850s" clip-end="npt=16.174s" id="qwrt_000B" />
+<audio src="52_Informasi_Ringkasan.mp3" clip-begin="npt=16.174s" clip-end="npt=17.308s" id="qwrt_000C" />
+<audio src="52_Informasi_Ringkasan.mp3" clip-begin="npt=17.308s" clip-end="npt=18.094s" id="qwrt_000D" />
+<audio src="52_Informasi_Ringkasan.mp3" clip-begin="npt=18.094s" clip-end="npt=18.710s" id="qwrt_000E" />
+<audio src="52_Informasi_Ringkasan.mp3" clip-begin="npt=18.710s" clip-end="npt=19.664s" id="qwrt_000F" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

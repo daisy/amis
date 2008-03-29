@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="ncc:timeInThisSmil" content="00:00:20.088"/>
+		<meta name="ncc:totalElapsedTime" content="00:04:29.368"/>
+		<layout>
+			<region id="txt-view"/>
+		</layout>
+		<meta name="ncc:generator" content="EasePublisher 2.02 Build 025 # 091650"/>
+        <meta name="title" content="Valitse viimeisimpien kirjojen listalta"/>
+        <meta name="dc:title" content="help"/>
+        <meta name="dc:identifier" content="celia"/>
+    </head>
+	<body>
+		<seq dur="20.088s">
+			<par endsync="last" id="ifbo_0002">
+				<text src="amishelp.html#ifbo_0053" id="uscd_0001"/>
+				<seq>
+					<audio src="12_Valitse_viime.mp3" clip-begin="npt=0.000s" clip-end="npt=3.899s" id="audio_0001"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0003">
+				<text src="amishelp.html#ifbo_0054" id="uscd_0002"/>
+				<seq>
+					<audio src="12_Valitse_viime.mp3" clip-begin="npt=3.899s" clip-end="npt=11.459s" id="audio_0002"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0004">
+				<text src="amishelp.html#ifbo_0055" id="uscd_0003"/>
+				<seq>
+					<audio src="12_Valitse_viime.mp3" clip-begin="npt=11.459s" clip-end="npt=16.318s" id="audio_0003"/>
+				</seq>
+			</par>
+			<par endsync="last" id="ifbo_0005">
+				<text src="amishelp.html#ifbo_0056" id="uscd_0004"/>
+				<seq>
+					<audio src="12_Valitse_viime.mp3" clip-begin="npt=16.318s" clip-end="npt=20.088s" id="audio_0004"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

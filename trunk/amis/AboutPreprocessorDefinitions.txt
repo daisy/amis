@@ -1,0 +1,35 @@
+AmisCore
+--------
+	Pick a platform by defining one of the following:
+		AMIS_PLATFORM_OSX
+		AMIS_PLATFORM_LINUX
+		AMIS_PLATFORM_WINDOWS
+	
+	Pick a compiler
+		AMIS_COMPILER_GCC
+		AMIS_COMPILER_MSVC
+
+	Say whether an external SMIL player is being used (like Ambulant):
+		WITH_EXTERNAL_SMIL_PLAYER
+
+AmisGuiMFC2
+-----------
+	Do we support protected books?  (PDTB 1.0 spec for Daisy 2.02 books)
+		WITH_DAISY_PDTB
+		HTML_LOAD_AMBULANT_PDTB
+		WITH_PROTECTED_BOOK_SUPPORT
+		
+	Is Ambulant being given an HTML widget?
+		WITH_HTML_WIDGET
+
+	Is Ambulant not getting a log window?
+		WITHOUT_LOG_WINDOW
+		
+	Use Ambulant workaround (I don't know what this is, but it seems helpful to have it defined)
+		AMBULANT_SEEK_WORKAROUND
+		
+	This is in the self-voicing AudioSequencePlayer, and I don't know what it does.
+		CCS_ACTIVE
+
+	Use the speed-up algorithm for the Audio playback.  Question: does this just affect the self-voicing player or does it affect Ambulant too?
+		WITH_TPB_AUDIO_SPEEDUP

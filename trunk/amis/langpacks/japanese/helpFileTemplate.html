@@ -1,0 +1,664 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<title>AMIS</title>
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<div>
+		<h1>AMIS</h1>
+		<p>Adaptive Multimedia Information System</p>
+		<p>Website: http://amis.sf.net</p>
+		<div class="image">
+			<!--translate the alt-text of the image-->
+			<img src="./img/amis.gif" height="256" width="256" alt="アミ　ロゴ"/>
+		</div>
+		<div class="image">
+			<!--translate the alt-text of the image-->
+			<img src="./img/Nipponfoundation.gif" height="73" width="300" alt="日本財団　ロゴ" />
+			<!--translate the alt-text of the image-->
+			<img src="./img/dfa-log.jpg" alt="DFA　ロゴ" />
+		</div>
+	</div>
+	<div>
+		<br />
+		<br />
+	</div>
+	<h1>AMISについて</h1>
+	<div class="image">
+		<!--translate the alt-text of the image-->
+		<img src="./img/amis.gif" height="100" width="100" alt="アミ　ロゴ" />
+	</div>
+	<p>AMISはDAISY録音図書の再生用ソフトウェアです。音声読み上げ機能を持っているので、スクリーンリーダーは必要ありません。AMISはオープンソース・ソフトウェアであり、無料で提供されます。AMISは、DAISY for All Projectにより開発され、サポートされます。(DAISY for All Projectは日本財団より助成を受けています。)。AMISは多くの言語をサポートしています。 AMISのWEBサイトより言語パックをダウンロードしてください。AMISの機能については以下を参照して下さい。</p>
+	<div>
+		<br/>
+		<br/>
+	</div>
+	<h1>DAISYについて</h1>
+	<div class="image">
+		<!--translate the alt-text of the image-->
+		<img src="./img/daisy.jpg" width="100" height="100" alt="デイジーコンソーシアム　ロゴ"/>
+	</div>
+	<p>DAISYはアクセシブルな情報システムの規格です。 DAISY録音図書は誰もが理解しやすいデジタルトーキングブックです。 DAISYを使用することで、セクション、ページ、脚注、サイドバー、ブックマークなどですばやく操作することができます。 DAISYに関しての詳しい情報は http://www.daisy.org を参照して下さい。</p>
+	<div>
+		<br/>
+		<br />
+	</div>
+	<h1>クイック・マニュアル</h1>
+	<p>AMISを使うための基本的なコマンドリストを紹介します。</p>
+	
+	<h2>図書を再生する</h2>
+	<p>ヘルプを表示する：　「F1」</p>
+	<p>CD-ROMから図書を読み込む：　「Ctrl + L」</p>
+	<p>ハードディスクから図書を読み込む：　「Ctrl + O」</p>
+	<p>ナビゲーション画面を選択する：　「Ctrl + N」 選択後、矢印キーで項目を移動</p>
+	<p>再生と停止： 「Space」</p>
+	<p>AMISを終了する：　「Alt + F4」</p>
+	<p>メインテキスト画面を選択する：　「Ctrl + A」</p>
+	<p>セクションのレベルを下げる：　「Ctrl + P」</p>
+	<p>セクションのレベルを上げる：　「Ctrl + Q」</p>
+	
+	<h2>ダイアログ</h2>
+	<p>開いているダイアログの説明：　「Ctrl + I」</p>
+	<p>入力したテキストを読み上げる：　「Ctrl + T」（入力可能なテキストボックスがある場合のみ）</p>
+	<p>音声読み上げの繰り返し：　「Ctrl + R」</p>
+	<div>
+		<br />
+		<br />
+	</div>
+	 
+	<h1>AMISコマンドリスト</h1>
+	 
+	<h2>DAISY図書を開く</h2>
+	 
+	<h3>ファイルから開く</h3>
+	<p>ハードディスクからファイルを読み込みます。「ファイルを開く」ダイアログが表示されますのでDAISY図書を選択します。</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+    <li>$<//promptItem[@id="icon"]/text>$:
+    <img src="./img/folder.jpg" height="50" width="50" alt="ファイルから開く　アイコン" /></li>
+    <li>$<//promptItem[@id="keyboardShortcut"]/text>$:
+    $<//action[@mfcid="ID_MENU_FILE_OPEN"]/accelerator/text>$</li>
+    <li>$<//promptItem[@id="menu"]/text>$:
+    $<//action[@mfcid="ID_MENU_FILE_OPEN"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_FILE_OPEN"]/caption/text>$
+    </li>
+	</ul>
+	
+	<h3>CD-ROMから開く</h3>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/cd.jpg" height="50" width="50" alt="CD-ROMから開く　アイコン"/></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_LOADCD"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_LOADCD"]/parent::container/caption/text>$
+		-&gt;
+		$<//action[@mfcid="ID_MENU_FILE_LOADCD"]/caption/text>$</li>
+	</ul>
+	
+	<h3>ハードディスクから検索する</h3>
+	<p>ハードディスクの図書を検索します。ダイアログが表示されますのでパスを参照します。結果リストはダイアログ内に表示されます。</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/searchForBooks.jpg" height="50" width="50" alt="ハードディスクから検索する　アイコン"/></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="file"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_FILE_SEARCHDRIVE"]/mnemonic/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_SEARCHDRIVE"]/parent::container/caption/text>$
+		-&gt;
+		$<//action[@mfcid="ID_MENU_FILE_SEARCHDRIVE"]/caption/text>$
+		</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>図書履歴リストから選択する</h3>
+	<p>最近読まれた図書がサブメニューに表示されます。</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$:
+		$<//container[@id="file"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+    $<//container[@id="recentBooksList"]/mnemonic/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$:
+		$<//container[@id="file"]/caption/text>$
+    -&gt;
+    $<//container[@id="recentBooksList"]/caption/text>$
+		</li>
+	</ul>
+	<!--end block-->
+	
+	
+	<h2>設定</h2>
+	<p>ここでAMISの設定を調整することができます。一般設定、ブックマークの保存場所、色の設定、インストールされていれば言語パックを選択することができます。</p>
+	
+	<h3>一般設定</h3>
+	<p>設定ダイアログで標準で表示されるタブです。</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="file"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/mnemonic/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/caption/text>$
+		</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>色の設定</h3>
+	<p>設定ダイアログの２つ目のタブです。</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="file"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/mnemonic/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//dialog[@mfcid="IDD_PROPPAGE2"]/accelerator/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/caption/text>$
+		</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>言語設定</h3>
+	<p>設定ダイアログの３つ目のタブです。</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="file"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/mnemonic/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//dialog[@mfcid="IDD_PROPPAGE4"]/accelerator/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_FILE_PREFERENCES"]/caption/text>$
+		</li>
+	</ul>
+	<!--end block-->
+	
+	
+	<h2>表示切替</h2>
+	
+	<h3>標準表示</h3>
+	<p>この表示モードはメニュー、ツールバー、サイドバーが表示されます。一般的な他のアプリケーションと似ています。これがAMISの標準の表示モードです。ショートカットキーで標準表示と簡易表示を切り替えることができます。</p>
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$:
+		$<//action[@mfcid="ID_MENU_VIEW_BASIC"]/accelerator/text>$</li>
+	</ul>
+	
+	<h3>簡易表示</h3>
+	<p>この表示モードはメニューおよびサイドバーが表示されません。ツールバーは画面下部に６個の大きなボタンで表示されます。</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_BASIC"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_BASIC"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_VIEW_BASIC"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h2>サイドバー</h2>
+	<div>
+		<!--translate the alt-text of the image-->
+		<img src="./img/sidebar.jpg" alt="サイドバー" />
+	</div>
+	<p>サイドバーはセクションなどのナビゲーションとページ、脚注などを含んでいます。これらはそれぞれリストで構成され、タブで切り替えることができます。</p>
+	<p>ショートカットキーは「Ctrl + N」です。サイドバーが選択され、表示されているリスト内で移動することができます。表示メニューを使って表示するリストを変更することができます。</p>
+	
+	<h3>サイドバーの表示・非表示</h3>
+	<p>サイドバーは表示・非表示を切り替えることができます。表示メニューを使うか、サイドバー右上の&#34;x&#34;をクリックすると非表示にすることができます。</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="view"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF"]/mnemonic/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>表示位置</h3>
+	<p>サイドバーはタイトルバーをドラッグすることにより表示位置を移動することができます。画面の上下左右の端近くにドラッグしてください。</p>
+	
+	<h3>セクション</h3>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/sections.jpg" height="50" width="50" alt="セクション　アイコン" /></li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//container[@id="view"]/caption/text>$
+    -&gt;
+    $<//promptItem[@id="sections"]/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>ページ</h3>
+	<p>注意：　ページが無い図書は表示することはできません。</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/pages.jpg" height="50" width="50" alt="ページ　アイコン"/></li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//container[@id="view"]/caption/text>$
+    -&gt;
+    $<//promptItem[@id="pages"]/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>特殊アイテム</h3>
+	<p>特殊アイテムとは、脚注、サイドバー（AMISのサイドバーでは無く、テキストブックのサイドバー）、プロデューサーノート、その他分類されたアイテムのことです。これらが使われている図書のみ、AMISのサイドバーと表示メニューに表示されます。</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/figures.jpg" height="50" width="50" alt="特殊アイテム　アイコン"/></li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//container[@id="view"]/caption/text>$
+ 		</li>
+	</ul>
+	<!--end block-->
+	
+	<h2>表示効果</h2>
+	
+	<h3>カラーコントラスト</h3>
+	<p>ボタンまたはショートカットキーを押すたびに効果がオン・オフされます。設定ダイアログの色の設定のタブで任意のカラーコントラストを選択することができます。</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/contrast.jpg" height="50" width="50" alt="カラーコントラスト　アイコン" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_CONTRAST"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_CONTRAST"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_VIEW_CONTRAST"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>フォントサイズ拡大</h3>
+	<p>ボタンまたはショートカットキーを押すたびにフォントサイズが徐々に大きくなります。</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/font.jpg" height="50" width="50" alt="フォントサイズ　アイコン" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$:
+		$<//container[@id="view"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_VIEW_LARGEFONT"]/mnemonic/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_LARGEFONT"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_VIEW_LARGEFONT"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>標準のフォントサイズ</h3>
+	<p>元のフォントサイズに戻します。</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="view"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_VIEW_RESETFONT"]/mnemonic/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_VIEW_RESETFONT"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_VIEW_RESETFONT"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h2>再生</h2>
+	
+	<h3>再生・停止</h3>
+	<p>再生中は&quot;再生&quot;が&quot;停止&quot;に、停止中は&quot;停止&quot;が&quot;再生&quot;に切り替わります。</p>
+	<!--Don't translate this block except for the word "or" between images and except for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$: 
+			<img src="./img/play.jpg" height="50" width="50" alt="再生　アイコン" />
+			または
+			<img src="./img/pause.jpg" height="50" width="50" alt="停止　アイコン"/>
+		</li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAYPAUSE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAYPAUSE"][1]/parent::switch/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAYPAUSE"][1]/caption/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAYPAUSE"][2]/parent::switch/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAYPAUSE"][2]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>ボリュームアップ</h3>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_VOLUP"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_VOLUP"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAY_VOLUP"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>ボリュームダウン</h3>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_VOLDOWN"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_VOLDOWN"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAY_VOLDOWN"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>スピードアップ</h3>
+	<p>再生スピードを早くします。音声ピッチを歪めることはありません。</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:<img src="./img/faster.jpg" height="50" width="50" alt="スピードアップ　アイコン" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_FASTER"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_FASTER"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAY_FASTER"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>スピードダウン</h3>
+	<p>再生スピードを遅くします。音声ピッチを歪めることはありません。</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/slower.jpg" height="50" width="50" alt="スピードダウン　アイコン" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_SLOWER"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_SLOWER"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAY_SLOWER"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>ノーマルスピード</h3>
+	<p>元の再生スピードに戻します。</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/normalSpeed.jpg" height="50" width="50" alt="ノーマルスピード　アイコン" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_NORMALSPEED"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_NORMALSPEED"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAY_NORMALSPEED"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	
+	<h2>ナビゲーション</h2>
+	
+	<h3>次のセクション</h3>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/nextSection.jpg" height="50" width="50" alt="次のセクション　アイコン" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_NEXTSECTION"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_NEXTSECTION"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_NEXTSECTION"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>前のセクション</h3>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/prevSection.jpg" height="50" width="50" alt="前のセクション　アイコン" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_PREVSECTION"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_PREVSECTION"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_PREVSECTION"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>表示する階層</h3>
+	<p>表示するセクションの階層を指定することができます。図書を開いた場合は最初にすべてのセクションがサイドバーに表示されます。</p>
+	<p>セクションの階層数（1、2、3、...）のリストがナビゲーションメニューのサブメニューに表示されます。</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="navigate"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//container[@id="sectiondepth"]/mnemonic/text>$
+	</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//container[@id="navigate"]/caption/text>$
+    -&gt;
+    $<//container[@id="sectiondepth"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>次のフレーズ</h3>
+	<p>フレーズの長さは製作スタイルによって違ってきます。</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/nextPhrase.jpg" height="50" width="50" alt="次のフレーズ　アイコン" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_NEXTPHRASE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_NEXTPHRASE"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_NEXTPHRASE"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>前のフレーズ</h3>
+	<p>フレーズの長さは製作スタイルによって違ってきます。</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/prevPhrase.jpg" height="50" width="50" alt="前のフレーズ　アイコン" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_PREVPHRASE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_PREVPHRASE"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_PREVPHRASE"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>次のページ</h3>
+	<p>ページが付いている図書のみこの機能を使うことができます。</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/nextPage.jpg" height="50" width="50" alt="次のページ　アイコン" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_NEXTPAGE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_NEXTPAGE"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_NEXTPAGE"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>前のページ</h3>
+	<p>ページが付いている図書のみこの機能を使うことができます。</p>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/prevPage.jpg" height="50" width="50" alt="前のページ　アイコン" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_PREVPAGE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_PREVPAGE"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_PREVPAGE"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>指定したページへ移動</h3>
+	<p>ページが付いている図書のみこの機能を使うことができます。</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_GOTOPAGE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_GOTOPAGE"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_GOTOPAGE"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>テキスト検索</h3>
+	<p>テキストが付いている図書のみこの機能を使うことができます。</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_FINDINTEXT"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_NAV_FINDINTEXT"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_NAV_FINDINTEXT"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>エスケープ</h3>
+	<p>サイドバーやメニュー、ダイアログから元の再生位置へ戻り図書の再生を続けることができます。</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_ESCAPE"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_PLAY_ESCAPE"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_PLAY_ESCAPE"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	
+	<h2>スキップアイテム</h2>
+	<p>DAISY図書はスキップアイテムを含んでいることがあります。スキップアイテムは有効、無効を選択できます。例えば再生中にページ番号や脚注を聞きたくない場合は、&#34;スキップアイテム&#34;ダイアログの中でチェックマークを付けるとそのアイテムはスキップして再生します。</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$:
+		$<//container[@id="info"]/accelerator/text>$
+		$<//promptItem[@id="followedBy"]/text>$
+		$<//action[@mfcid="ID_MENU_INFO_SKIP"]/mnemonic/text>$
+		</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_INFO_SKIP"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_INFO_SKIP"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	
+	<h2>ブックマーク</h2>
+	
+	<h3>ブックマーク追加</h3>
+	<!--Don't translate this block EXCEPT for the alt-text of the image-->
+	<ul>
+		<li>$<//promptItem[@id="icon"]/text>$:
+		<img src="./img/addBookmark.jpg" height="50" width="50" alt="ブックマーク追加　アイコン" /></li>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_BMK_ADD"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_BMK_ADD"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_BMK_ADD"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+	
+	<h3>ブックマーク読込</h3>
+	<p>図書を開くとその図書のブックマークが自動的に読み込まれます。新しく追加したブックマークもブックマークメニューのリストの中に表示されます。</p>
+	<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//container[@id="bookmarks"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//container[@id="bookmarks"]/caption/text>$
+    </li>
+	</ul>
+	<!--end block-->
+
+	<h2>図書情報</h2>
+	<p>書誌情報、現在位置、ナビゲーションオプションの３つの図書情報を利用することができます。それぞれ情報メニュー(&#34;Alt + I&#34;)からダイアログで表示することができます。</p>
+
+	<h2>終了</h2>
+		<!--Don't translate this block-->
+	<ul>
+		<li>$<//promptItem[@id="keyboardShortcut"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_EXIT"]/accelerator/text>$</li>
+		<li>$<//promptItem[@id="menu"]/text>$: 
+		$<//action[@mfcid="ID_MENU_FILE_EXIT"]/parent::container/caption/text>$
+    -&gt;
+    $<//action[@mfcid="ID_MENU_FILE_EXIT"]/caption/text>$</li>
+	</ul>
+	<!--end block-->
+
+
+<h1>追加機能</h1>
+<p>AMISは言語パックやプラグインなどの追加機能をサポートしています。</p>
+<h2>プラグイン</h2>
+<div class="image">
+	<img src="./img/joystick.jpg" height="100" width="100" alt="プラグイン　アイコン"/>
+</div>
+<p>AMISはプラグインをサポートしています。プラグインはソフトウェアのみ、またはソフトウェアとインターフェース機器から構成されます。例えばジョイスティック、点字ディスプレイ、スキャニングメニューがあります。AMISのWEBサイト(http://amis.sf.net)よりダウンロードすることができます。</p>
+<h2>言語パック</h2>
+<div class="image">
+	<!--translate the alt-text of these images-->
+	<!--Feel free to add your flag to this list.-->
+	<img src="./img/us-flag.ico" alt="アメリカ国旗" width="25" height="25"/>
+	<img src="./img/jp-flag.ico" alt="日本国旗" width="25" height="25"/>
+	<img src="./img/malay-flag.ico" alt="マレーシア国旗"  width="25" height="25"/>
+	<img src="./img/india-flag.ico" alt="インド国旗"  width="25" height="25"/>
+	<img src="./img/nepal-flag.ico" alt="ネパール国旗"  width="25" height="25"/>
+	<img src="./img/fr-flag.ico" alt="フランス国旗"  width="25" height="25"/>
+	<img src="./img/srilanka-flag.ico" alt="スリランカ国旗"  width="25" height="25"/>
+	<img src="./img/thai-flag.ico" alt="タイ国旗"  width="25" height="25"/>
+	<img src="./img/arab-league-flag.ico" alt="アラブ連盟旗" width="25" height="25"/>
+	<img src="./img/vietnam-flag.ico" alt="ベトナム国旗" width="25" height="25"/>
+	<img src="./img/indonesia-flag.ico" alt="インドネシア国旗" width="25" height="25"/>
+	<img src="./img/pakistan-flag.ico" alt="パキスタン国旗" width="25" height="25"/>
+	<img src="./img/bangladesh-flag.ico" alt="バングラディッシュ国旗" width="25" height="25"/>
+</div>
+<p>AMISはUNICODEをサポートしているので複数の言語パックを使用することができます。AMISのWEBサイト(http://amis.sf.net)よりダウンロードすることができます。</p>
+</body>
+</html>

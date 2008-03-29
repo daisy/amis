@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<moduleDesc xmlns="http://amis.sf.net" id="ben-BD" filename="./AmisLangpack.dll" type="langpack" enabled="yes">
+	<label>
+			<text>বাংলা ভাষায় (Bangla)</text>
+			<audio src="./thislang.mp3"/>
+			<image src="./flag.ico"/>
+	</label>
+</moduleDesc>

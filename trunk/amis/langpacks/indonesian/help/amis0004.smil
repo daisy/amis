@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Apakah DAISY?" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:35" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="34.882s">
+<par endsync="last">
+<text src="amishelp.html#amis_0004" id="amis_0004" />
+<seq>
+<audio src="03_Apakah_DAISY.mp3" clip-begin="npt=0.000s" clip-end="npt=1.651s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0013" id="xami_0013" />
+<seq>
+<audio src="03_Apakah_DAISY.mp3" clip-begin="npt=1.651s" clip-end="npt=3.581s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0015" id="xami_0015" />
+<seq>
+<audio src="03_Apakah_DAISY.mp3" clip-begin="npt=3.581s" clip-end="npt=7.834s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0016" id="xami_0016" />
+<seq>
+<audio src="03_Apakah_DAISY.mp3" clip-begin="npt=7.834s" clip-end="npt=13.002s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0017" id="xami_0017" />
+<seq>
+<audio src="03_Apakah_DAISY.mp3" clip-begin="npt=13.002s" clip-end="npt=22.309s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0018" id="xami_0018" />
+<seq>
+<audio src="03_Apakah_DAISY.mp3" clip-begin="npt=22.309s" clip-end="npt=33.424s" id="qwrt_0006" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0019" id="xami_0019" />
+<seq>
+<audio src="03_Apakah_DAISY.mp3" clip-begin="npt=33.424s" clip-end="npt=34.882s" id="qwrt_0007" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+    <meta name="ncc:generator" content="LpStudioGen 1.6" />
+    <meta name="dc:format" content="Daisy 2.02" />
+    <meta name="dc:title" content="AMIS Help" />
+    <meta name="ncc:timeInThisSmil" content="00:00:00" />
+    <layout>
+        <region id="txtView" />
+    </layout>
+</head>
+<body>
+    <ref title="" src="amis0001.smil" id="amis_0001" />
+    <ref title="AMIS (Versi Bahasa Melayu)" src="amis0002.smil" id="amis_0002" />
+    <ref title="Apa Itu AMIS?" src="amis0003.smil" id="amis_0003" />
+    <ref title="Apa Itu DAISY?" src="amis0004.smil" id="amis_0004" />
+    <ref title="Bermula Dengan Pantas" src="amis0005.smil" id="amis_0005" />
+    <ref title="Ketika Membaca Buku" src="amis0006.smil" id="amis_0006" />
+    <ref title="Skrin Dialog" src="amis0007.smil" id="amis_0007" />
+    <ref title="Senarai lengkap ciri-ciri untuk AMIS" src="amis0008.smil" id="amis_0008" />
+    <ref title="Membuka buku DAISY" src="amis0009.smil" id="amis_0009" />
+    <ref title="Membuka fail" src="amis000a.smil" id="amis_000a" />
+    <ref title="Memuat CDROM" src="amis000b.smil" id="amis_000b" />
+    <ref title="Mencari buku dalam cakera keras" src="amis000c.smil" id="amis_000c" />
+    <ref title="Pilih sesuatu dari senarai buku terkini" src="amis000d.smil" id="amis_000d" />
+    <ref title="Pilihan" src="amis000e.smil" id="amis_000e" />
+    <ref title="Pilihan Umum" src="amis000f.smil" id="amis_000f" />
+    <ref title="Tetapan Warna" src="amis0010.smil" id="amis_0010" />
+    <ref title="Tetapan Bahasa" src="amis0011.smil" id="amis_0011" />
+    <ref title="Paparan Berlainan" src="amis0012.smil" id="amis_0012" />
+    <ref title="Paparan Asal" src="amis0013.smil" id="amis_0013" />
+    <ref title="Paparan Asas" src="amis0014.smil" id="amis_0014" />
+    <ref title="Bar Sisi" src="amis0015.smil" id="amis_0015" />
+    <ref title="Memasang Atau Menutup" src="amis0016.smil" id="amis_0016" />
+    <ref title="Dock dan float" src="amis0017.smil" id="amis_0017" />
+    <ref title="Seksyen" src="amis0018.smil" id="amis_0018" />
+    <ref title="Halaman-halaman" src="amis0019.smil" id="amis_0019" />
+    <ref title="Item-item Khas" src="amis001a.smil" id="amis_001a" />
+    <ref title="Kesan" src="amis001b.smil" id="amis_001b" />
+    <ref title="Beza Jelas Warna" src="amis001c.smil" id="amis_001c" />
+    <ref title="Besarkan Saiz Fon" src="amis001d.smil" id="amis_001d" />
+    <ref title="Kembalikan Saiz Fon" src="amis001e.smil" id="amis_001e" />
+    <ref title="Main Semula" src="amis001f.smil" id="amis_001f" />
+    <ref title="Mainkan dan Hentikan" src="amis0020.smil" id="amis_0020" />
+    <ref title="Kuatkan Suara" src="amis0021.smil" id="amis_0021" />
+    <ref title="Perlahankan Suara" src="amis0022.smil" id="amis_0022" />
+    <ref title="Lajukan" src="amis0023.smil" id="amis_0023" />
+    <ref title="Lambatkan" src="amis0024.smil" id="amis_0024" />
+    <ref title="Kelajuan Normal" src="amis0025.smil" id="amis_0025" />
+    <ref title="Navigasi" src="amis0026.smil" id="amis_0026" />
+    <ref title="Seksyen Berikut" src="amis0027.smil" id="amis_0027" />
+    <ref title="Seksyen Terdahulu" src="amis0028.smil" id="amis_0028" />
+    <ref title="Tunjukkan Hiraki Seksyen" src="amis0029.smil" id="amis_0029" />
+    <ref title="Frasa Berikut" src="amis002a.smil" id="amis_002a" />
+    <ref title="Frasa Terdahulu" src="amis002b.smil" id="amis_002b" />
+    <ref title="Halaman Berikut" src="amis002c.smil" id="amis_002c" />
+    <ref title="Halaman Terdahulu" src="amis002d.smil" id="amis_002d" />
+    <ref title="Pergi Ke Halaman" src="amis002e.smil" id="amis_002e" />
+    <ref title="Mencari Dalam Teks" src="amis002f.smil" id="amis_002f" />
+    <ref title="Mengelak Dari Sesuatu Item" src="amis0030.smil" id="amis_0030" />
+    <ref title="Item Yang Boleh Dilangkau" src="amis0031.smil" id="amis_0031" />
+    <ref title="Penanda Buku" src="amis0032.smil" id="amis_0032" />
+    <ref title="Tambahkan Penanda Buku" src="amis0033.smil" id="amis_0033" />
+    <ref title="Memuat Penanda Buku" src="amis0034.smil" id="amis_0034" />
+    <ref title="Informasi Ringkasan" src="amis0035.smil" id="amis_0035" />
+    <ref title="Keluar Dari AMIS" src="amis0036.smil" id="amis_0036" />
+    <ref title="Penambahan" src="amis0037.smil" id="amis_0037" />
+    <ref title="Pemalam" src="amis0038.smil" id="amis_0038" />
+    <ref title="Pakej Bahasa" src="amis0039.smil" id="amis_0039" />
+</body>
+</smil>

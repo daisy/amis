@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Susunod na Parirala" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:20" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="19.985s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_002a" id="amis_002a" />
+<seq>
+<audio src="41_Susunod_na_Parirala.mp3" clip-begin="npt=0.000s" clip-end="npt=1.852s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0071" id="xami_0071" />
+<seq>
+<audio src="41_Susunod_na_Parirala.mp3" clip-begin="npt=1.852s" clip-end="npt=10.185s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0072" id="xami_0072" />
+<seq>
+<audio src="41_Susunod_na_Parirala.mp3" clip-begin="npt=10.185s" clip-end="npt=11.334s" id="qwrt_0003" />
+<audio src="41_Susunod_na_Parirala.mp3" clip-begin="npt=11.334s" clip-end="npt=13.986s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0073" id="xami_0073" />
+<seq>
+<audio src="41_Susunod_na_Parirala.mp3" clip-begin="npt=13.986s" clip-end="npt=16.322s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0074" id="xami_0074" />
+<seq>
+<audio src="41_Susunod_na_Parirala.mp3" clip-begin="npt=16.322s" clip-end="npt=18.339s" id="qwrt_0006" />
+<audio src="41_Susunod_na_Parirala.mp3" clip-begin="npt=18.339s" clip-end="npt=19.985s" id="qwrt_0007" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Item yang dapat dilewati" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:29" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="28.898s">
+<par endsync="last">
+<text src="amishelp.html#amis_0031" id="amis_0031" />
+<seq>
+<audio src="48_Item_yang_dapat_dilewati.mp3" clip-begin="npt=0.000s" clip-end="npt=2.168s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_00d5" id="xami_00d5" />
+<seq>
+<audio src="48_Item_yang_dapat_dilewati.mp3" clip-begin="npt=2.168s" clip-end="npt=5.530s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_00d6" id="xami_00d6" />
+<seq>
+<audio src="48_Item_yang_dapat_dilewati.mp3" clip-begin="npt=5.530s" clip-end="npt=9.474s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_00d7" id="xami_00d7" />
+<seq>
+<audio src="48_Item_yang_dapat_dilewati.mp3" clip-begin="npt=9.474s" clip-end="npt=13.473s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_00d8" id="xami_00d8" />
+<seq>
+<audio src="48_Item_yang_dapat_dilewati.mp3" clip-begin="npt=13.473s" clip-end="npt=22.170s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_00d9" id="xami_00d9" />
+<seq>
+<audio src="48_Item_yang_dapat_dilewati.mp3" clip-begin="npt=22.170s" clip-end="npt=25.552s" id="qwrt_0006" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_00da" id="xami_00da" />
+<seq>
+<audio src="48_Item_yang_dapat_dilewati.mp3" clip-begin="npt=25.552s" clip-end="npt=28.898s" id="qwrt_0007" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

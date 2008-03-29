@@ -1,0 +1,675 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\AmisGuiMFC2.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SIDEBAR, DIALOG
+    BEGIN
+        RIGHTMARGIN, 86
+        BOTTOMMARGIN, 181
+    END
+
+    IDD_SEARCHDAISY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 305
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 280
+    END
+
+    IDD_GOTOPAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 131
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 59
+    END
+
+    IDD_FIND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 174
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_CDSEARCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 246
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 173
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 90
+    END
+
+    IDD_PUBLICATIONSUMMARY, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 315
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 183
+    END
+
+    IDD_OPENURL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 63
+    END
+
+    IDD_PREFERENCES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 249
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 216
+    END
+
+    IDD_TEXTSTYLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 165
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 142
+    END
+
+    IDD_READING_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 229
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 184
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_AMISTYPE MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open...\tCtrl+O",            ID_AMIS_OPEN_FILE
+        MENUITEM "Open from &URL",              ID_AMIS_OPEN_URL
+        MENUITEM "&Close",                      ID_AMIS_CLOSE_BOOK
+        MENUITEM "&Load CD\tCtrl+L",            ID_AMIS_LOAD_CD
+        MENUITEM "&Search drives...",           ID_AMIS_SEARCH_LOCAL_DRIVES
+        MENUITEM SEPARATOR
+        MENUITEM "&Preferences...",             ID_AMIS_SHOW_PREFERENCES
+        MENUITEM SEPARATOR
+        POPUP "&Recent"
+        BEGIN
+            MENUITEM "Empty",                       ID_AMIS_RECENT_BOOKS_EMPTY
+            , INACTIVE
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tAlt+F4",               ID_AMIS_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Sidebar",                    ID_AMIS_TOGGLE_SIDEBAR
+        , CHECKED
+        MENUITEM "&Basic View Mode\tF11",       ID_AMIS_TOGGLE_VIEW
+        MENUITEM SEPARATOR
+        POPUP "&Page Style"
+        BEGIN
+            MENUITEM "None",                        ID_AMIS_NO_PAGE_STYLES
+            , CHECKED
+        END
+        MENUITEM "Bi&gger Font",                ID_AMIS_BIGGER_FONT
+        MENUITEM "S&maller Font",               ID_AMIS_SMALLER_FONT
+        MENUITEM "&Text style...",              ID_AMIS_SHOW_TEXTSTYLE
+    END
+    POPUP "&Play"
+    BEGIN
+        MENUITEM "&Play\tSpace",                ID_AMIS_PLAYPAUSE
+        MENUITEM SEPARATOR
+        MENUITEM "&Escape\tEsc",                ID_AMIS_ESCAPE
+        MENUITEM SEPARATOR
+        MENUITEM "&Faster\tCtrl++",             ID_AMIS_FASTER
+        MENUITEM "&Slower\tCtrl+-",             ID_AMIS_SLOWER
+        MENUITEM "&Normal Speed\tCtrl+0",       ID_AMIS_RESET_SPEED
+        MENUITEM SEPARATOR
+        MENUITEM "&Increase Volume\tCtrl+Up",   ID_AMIS_INCREASE_VOLUME
+        MENUITEM "&Decrease Volume\tCtrl+Down", ID_AMIS_DECREASE_VOLUME
+    END
+    POPUP "&Navigate"
+    BEGIN
+        MENUITEM "&Previous Section\tUp",       ID_AMIS_PREVIOUS_SECTION
+        MENUITEM "&Next Section\tDown",         ID_AMIS_NEXT_SECTION
+        POPUP "&Show Section Depth"
+        BEGIN
+            MENUITEM "Empty",                       ID_AMIS_SECTION_DEPTH_EMPTY
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Previous Phrase\tLeft",       ID_AMIS_PREVIOUS_PHRASE
+        MENUITEM "Next Phrase\tRight",          ID_AMIS_NEXT_PHRASE
+        MENUITEM SEPARATOR
+        MENUITEM "Previous Page\tCtrl+Left",    ID_AMIS_PREVIOUS_PAGE
+        MENUITEM "Next Page\tCtrl+Right",       ID_AMIS_NEXT_PAGE
+        MENUITEM "Go to Page...\tCtrl+G",       ID_AMIS_GOTO_PAGE
+        MENUITEM SEPARATOR
+        MENUITEM "&Find in Text\tCtrl+F",       ID_AMIS_FIND_IN_TEXT
+    END
+    POPUP "&Bookmarks"
+    BEGIN
+        MENUITEM "&Add Bookmark\tCtrl+D",       ID_AMIS_ADD_BOOKMARK
+        MENUITEM SEPARATOR
+    END
+    POPUP "&Info"
+    BEGIN
+        MENUITEM "&Reading Options...",         ID_AMIS_SHOW_READING_OPTIONS
+        MENUITEM "&Publication Summary",        ID_AMIS_SHOW_PUBLICATION_SUMMARY
+
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Contents",                   ID_AMIS_SHOW_HELP_CONTENTS
+        MENUITEM "&About AMIS",                 ID_AMIS_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SIDEBAR DIALOGEX 0, 0, 175, 183
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_VISIBLE | 
+    WS_CLIPCHILDREN | WS_BORDER
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "Tab1",IDC_TAB,"SysTabControl32",TCS_BOTTOM,0,163,175,18
+    CONTROL         "Tree1",IDC_TREE,"SysTreeView32",TVS_HASLINES | 
+                    TVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,0,0,175,164
+    CONTROL         "List1",IDC_LIST_PAGE,"SysListView32",LVS_LIST | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | 
+                    LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | 
+                    WS_TABSTOP,0,0,175,164
+END
+
+IDD_SEARCHDAISY DIALOGEX 0, 0, 312, 287
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Search for DAISY Books"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         186,IDC_PICTURE,"Static",SS_BITMAP,7,7,85,79
+    LTEXT           "You can search your computer for DAISY books. Enter a path or browse for a folder to search, then press Search to begin searching.",
+                    IDC_SEARCHINSTRUCTIONS,105,15,149,9
+    EDITTEXT        IDC_SEARCHPATH,108,32,144,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_BROWSE,260,34,45,13
+    PUSHBUTTON      "&Search",IDC_STARTSEARCH,141,56,50,15
+    PUSHBUTTON      "S&top",IDC_STOPSEARCH,201,56,50,14
+    CTEXT           "Ready",IDC_SEARCHING,7,92,298,13,NOT WS_VISIBLE
+    LISTBOX         IDC_FILESFOUND,7,105,298,156,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Open",IDC_OPENBOOK,103,266,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,158,266,50,14
+END
+
+IDD_GOTOPAGE DIALOGEX 0, 0, 138, 66
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Go To Page"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Go To Page",IDC_GOTOPAGE_CAPTION,7,7,69,8
+    EDITTEXT        IDC_PAGENUM,7,22,40,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,45,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,63,45,50,14
+END
+
+IDD_FIND DIALOGEX 0, 0, 181, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Find in Text"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_SEARCHSTRING,7,7,106,13,ES_AUTOHSCROLL
+    CONTROL         "Find Next",IDC_FINDNEXT,"Button",BS_AUTORADIOBUTTON,19,
+                    27,46,10
+    CONTROL         "Find Previous",IDC_FINDPREV,"Button",BS_AUTORADIOBUTTON,
+                    19,38,59,10
+    DEFPUSHBUTTON   "OK",IDOK,124,7,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,124,21,50,14
+END
+
+IDD_CDSEARCH DIALOGEX 0, 0, 253, 180
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Multiple books found"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "More than one book was found on this CD. Please select a book from the list below and press Alt + O to open.",
+                    IDC_MULTIVOLCD_INSTRUCTIONS,7,7,239,18
+    LISTBOX         IDC_BOOKLIST,7,27,239,124,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Open",IDC_OPENBOOK,71,159,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,129,159,50,14
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 97
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About AMIS"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    ICON            IDI_AMIS,IDC_AMISICON,11,17,20,20
+    LTEXT           "AMIS: \nAdaptive Multimedia Information System",
+                    IDC_AMISNAME,40,10,132,31,SS_NOPREFIX
+    LTEXT           "Version 3.0 beta",IDC_VERSION,39,44,128,8
+    LTEXT           "Release Date: 01 January 2008",IDC_VERSIONNOTE,40,59,
+                    124,11
+    LTEXT           "Copyright © 2008 DAISY for All",IDC_COPYRIGHT,40,82,119,
+                    8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_PUBLICATIONSUMMARY DIALOGEX 0, 0, 322, 191
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Publication Summary"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_SUMMARYLIST,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | 
+                    WS_TABSTOP,6,25,309,137
+    DEFPUSHBUTTON   "OK",IDOK,137,169,50,14
+    LTEXT           "Information about this publication and your current position:",
+                    IDC_PUBLICATIONSUMMARYCAPTION,6,7,309,17
+END
+
+IDD_OPENURL DIALOGEX 0, 0, 265, 70
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Open URL"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Enter the URL of the book you want to open:",
+                    IDC_OPENURL_CAPTION,7,7,146,8
+    EDITTEXT        IDC_URL,7,26,251,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,73,49,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,127,49,50,14
+END
+
+IDD_PREFERENCES DIALOGEX 0, 0, 256, 223
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Preferences"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Use self-voicing",IDC_ISSELFVOICING,"Button",
+                    BS_AUTOCHECKBOX | BS_NOTIFY | WS_TABSTOP,7,7,241,10
+    LTEXT           "Select TTS voice:",IDC_SELTTSLABEL,7,22,242,8
+    COMBOBOX        IDC_TTSVOICES,7,35,108,88,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Highlight text as it is read aloud",IDC_HIGHLIGHTTEXT,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,59,242,10
+    CONTROL         "Load the most recently read book on startup",
+                    IDC_LOADLASTBOOK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,
+                    76,242,10
+    CONTROL         "Start in basic view mode",IDC_STARTINBASICVIEW,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,94,242,10
+    CONTROL         "Pause audio when switching applications",
+                    IDC_PAUSEONLOSTFOCUS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,112,242,10
+    CONTROL         "Disable the screensaver while reading",
+                    IDC_DISABLESCREENSAVER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,130,242,10
+    LTEXT           "You are currently using AMIS in:",IDC_CURRLANG,7,153,
+                    242,8
+    COMBOBOX        IDC_INSTALLEDLANGUAGES,7,166,108,88,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    ICON            IDI_LANGICON,IDC_LANGICON,127,164,20,20
+    DEFPUSHBUTTON   "OK",IDOK,57,202,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,112,202,50,14
+END
+
+IDD_TEXTSTYLE DIALOGEX 0, 0, 172, 149
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Text Style"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Sidebar font:",IDC_FONTLABEL,7,7,155,12
+    COMBOBOX        IDC_FONT,7,20,155,63,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Highlighted text color:",IDC_HIGHLIGHTFOREGROUNDLABEL,7,
+                    45,155,11
+    COMBOBOX        IDC_HIGHLIGHTFOREGROUND,7,57,155,63,CBS_DROPDOWN | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Highlight background color:",
+                    IDC_HIGHLIGHTBACKGROUNDLABEL,7,83,156,8
+    COMBOBOX        IDC_HIGHLIGHTBACKGROUND,7,98,156,52,CBS_DROPDOWN | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,30,128,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,94,128,50,14
+END
+
+IDD_READING_OPTIONS DIALOGEX 0, 0, 236, 191
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Reading Options"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,94,170,50,14
+    LTEXT           "This book contains the following special types of items. Checked items will be played.  Unchecked items will be skipped.",
+                    IDC_READING_OPTIONS_INSTRUCTIONS,7,7,222,31
+    LISTBOX         IDC_OPTIONS_LIST,7,31,222,134,LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BOOKSHELFMAG        BITMAP                  "bookshelfmag.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,4,0,0
+ PRODUCTVERSION 2,4,0,0
+ FILEFLAGSMASK 0x37L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "AMIS (Adaptive Multimedia Information System)"
+            VALUE "FileVersion", "2, 4, 0, 0"
+            VALUE "InternalName", "AMIS"
+            VALUE "LegalCopyright", "Copyright (C) 2006"
+            VALUE "OriginalFilename", "AMIS.exe"
+            VALUE "ProductName", "AMIS (Adaptive Multimedia Information System)"
+            VALUE "ProductVersion", "2, 4, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_AMIS                ICON                    "amis.ico"
+IDI_LANGICON            ICON                    "flag.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_AMISTYPE ACCELERATORS 
+BEGIN
+    "Q",            ID_AMIS_DECREASE_SECTION_DEPTH, VIRTKEY, CONTROL, 
+                                                    NOINVERT
+    VK_DOWN,        ID_AMIS_DECREASE_VOLUME, VIRTKEY, CONTROL, NOINVERT
+    VK_ESCAPE,      ID_AMIS_ESCAPE,         VIRTKEY, NOINVERT
+    VK_F4,          ID_AMIS_EXIT,           VIRTKEY, ALT, NOINVERT
+    VK_ADD,         ID_AMIS_FASTER,         VIRTKEY, CONTROL, NOINVERT
+    VK_OEM_PLUS,    ID_AMIS_FASTER,         VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_AMIS_FIND_IN_TEXT,   VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_AMIS_FOCUS_ON_SIDEBAR, VIRTKEY, CONTROL, NOINVERT
+    "A",            ID_AMIS_FOCUS_ON_TEXT,  VIRTKEY, CONTROL, NOINVERT
+    "G",            ID_AMIS_GOTO_PAGE,      VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_AMIS_INCREASE_SECTION_DEPTH, VIRTKEY, CONTROL, 
+                                                    NOINVERT
+    VK_UP,          ID_AMIS_INCREASE_VOLUME, VIRTKEY, CONTROL, NOINVERT
+    "L",            ID_AMIS_LOAD_CD,        VIRTKEY, CONTROL, NOINVERT
+    "D",            ID_AMIS_ADD_BOOKMARK,   VIRTKEY, CONTROL, NOINVERT
+    VK_RIGHT,       ID_AMIS_NEXT_PAGE,      VIRTKEY, CONTROL, NOINVERT
+    VK_RIGHT,       ID_AMIS_NEXT_PHRASE,    VIRTKEY, NOINVERT
+    VK_DOWN,        ID_AMIS_NEXT_SECTION,   VIRTKEY, NOINVERT
+    "O",            ID_AMIS_OPEN_FILE,      VIRTKEY, CONTROL, NOINVERT
+    "U",            ID_AMIS_OPEN_URL,       VIRTKEY, CONTROL, NOINVERT
+    VK_SPACE,       ID_AMIS_PLAYPAUSE,      VIRTKEY, NOINVERT
+    VK_LEFT,        ID_AMIS_PREVIOUS_PAGE,  VIRTKEY, CONTROL, NOINVERT
+    VK_LEFT,        ID_AMIS_PREVIOUS_PHRASE, VIRTKEY, NOINVERT
+    VK_UP,          ID_AMIS_PREVIOUS_SECTION, VIRTKEY, NOINVERT
+    "E",            ID_AMIS_RESET_HIGHLIGHT_COLORS, VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "0",            ID_AMIS_RESET_SPEED,    VIRTKEY, CONTROL, NOINVERT
+    VK_F1,          ID_AMIS_SHOW_HELP_CONTENTS, VIRTKEY, NOINVERT
+    VK_OEM_MINUS,   ID_AMIS_SLOWER,         VIRTKEY, CONTROL, NOINVERT
+    VK_SUBTRACT,    ID_AMIS_SLOWER,         VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_AMIS_TOGGLE_AUDIO_CONTENT_PLAYBACK, VIRTKEY, SHIFT, 
+                                                    CONTROL, NOINVERT
+    "G",            ID_AMIS_TOGGLE_AUDIO_SELFVOICING_PLAYBACK, VIRTKEY, 
+                                                    SHIFT, CONTROL, NOINVERT
+    VK_F11,         ID_AMIS_TOGGLE_VIEW,    VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "AMIS"
+    IDR_AMISTYPE            "\nAMIS\nAMIS\nAMIS\n"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "AMIS"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PROPSHT_CAPTION     "Preferences"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_SELFOLDER_TITLE     "Select a Folder"
+    IDS_SELFOLDER_INSTR     "Select a folder from the directory below."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_FOLDERDOESNOTEXIST  "The folder %s does not exist. Do you want the folder to be created?"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_FOLDERINVALID       "This folder name is invalid. Please choose another."
+    IDS_FOLDERCANTBECREATED "This folder can not be created. Please double check."
+    IDS_FILE_OPEN_DAISY_BOOKS "DAISY Books"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_AMIS_BIGGER_FONT     "Increase the font size."
+    ID_AMIS_SMALLER_FONT    "Reduce the font size."
+    ID_AMIS_PLAYPAUSE       "Start synchronized playback."
+    ID_AMIS_ESCAPE          "Jump out of the currently playing item or structure."
+    ID_AMIS_FASTER          "Increase the playback rate."
+    ID_AMIS_SLOWER          "Slow down the playback rate."
+    ID_AMIS_RESET_SPEED     "Reset the playback rate to normal."
+    ID_AMIS_INCREASE_VOLUME "Gradually raise the volume."
+    ID_AMIS_DECREASE_VOLUME "Gradually lower the volume."
+    ID_AMIS_PREVIOUS_SECTION "Go to the previous section."
+    ID_AMIS_NEXT_SECTION    "Go to the next section."
+    ID_AMIS_PREVIOUS_PHRASE "Go to the previous phrase."
+    ID_AMIS_NEXT_PHRASE     "Go to the next phrase."
+    ID_AMIS_PREVIOUS_PAGE   "Go to the previous page."
+END
+
+STRINGTABLE 
+BEGIN
+    ID_AMIS_NEXT_PAGE       "Go to the next page."
+    ID_AMIS_GOTO_PAGE       "Go to a specific page."
+    ID_AMIS_FIND_IN_TEXT    "Search for a word or phrase in the text."
+    ID_AMIS_ADD_BOOKMARK    "Bookmark your current position."
+    ID_AMIS_SHOW_READING_OPTIONS 
+                            "View the skippable items for this publication."
+    ID_AMIS_SHOW_PUBLICATION_SUMMARY 
+                            "Get all summary info for this publication."
+    ID_AMIS_SHOW_HELP_CONTENTS "Get help using AMIS"
+    ID_AMIS_ABOUT           "Find out about AMIS and DAISY-for-All."
+END
+
+STRINGTABLE 
+BEGIN
+    ID_AMIS_OPEN_FILE       "Open a Daisy book from the local file system"
+    ID_AMIS_CLOSE_BOOK      "Close the publication."
+    ID_AMIS_LOAD_CD         "Load a DAISY book from CD ROM"
+    ID_AMIS_SEARCH_LOCAL_DRIVES "Search local drives for DAISY books"
+    ID_AMIS_SHOW_PREFERENCES "This is the application preferences dialog."
+    ID_AMIS_EXIT            "Exit AMIS"
+    ID_AMIS_TOGGLE_SIDEBAR  "Turn the sidebar on or off."
+    ID_AMIS_TOGGLE_VIEW     "Switch the view to basic mode."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\AmisGuiMFC2.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

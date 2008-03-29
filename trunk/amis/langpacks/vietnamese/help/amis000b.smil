@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.7" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="N&#7841;p m&#7897;t &#273;&#297;a CD-ROM" />
+<meta name="dc:title" content="AMIS Version 2.0 Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:12" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="12.278s">
+<par endsync="last">
+<text src="amishelp-entity.html#amis_000b" id="amis_000b" />
+<seq>
+<audio src="10_Np_mt_dia_CDROM.mp2" clip-begin="npt=0.000s" clip-end="npt=1.599s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_001f" id="xami_001f" />
+<seq>
+<audio src="10_Np_mt_dia_CDROM.mp2" clip-begin="npt=1.599s" clip-end="npt=4.999s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0020" id="xami_0020" />
+<seq>
+<audio src="10_Np_mt_dia_CDROM.mp2" clip-begin="npt=4.999s" clip-end="npt=5.420s" id="qwrt_0003" />
+<audio src="10_Np_mt_dia_CDROM.mp2" clip-begin="npt=5.420s" clip-end="npt=7.799s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp-entity.html#xami_0021" id="xami_0021" />
+<seq>
+<audio src="10_Np_mt_dia_CDROM.mp2" clip-begin="npt=7.799s" clip-end="npt=9.404s" id="qwrt_0005" />
+<audio src="10_Np_mt_dia_CDROM.mp2" clip-begin="npt=9.404s" clip-end="npt=12.278s" id="qwrt_0006" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="ncc:timeInThisSmil" content="00:00:31.111"/>
+		<meta name="ncc:totalElapsedTime" content="00:04:05.503"/>
+		<layout>
+			<region id="txt-view"/>
+		</layout>
+		<meta name="ncc:generator" content="EasePublisher 2.02 Build 025 # 089113"/>
+        <meta name="title" content="Søk gjennom harddisken etter bøker"/>
+        <meta name="dc:title" content="AMIS hjelp"/>
+        <meta name="dc:identifier" content="AMIS_hjelp"/>
+    </head>
+	<body>
+		<seq dur="31.111s">
+			<par endsync="last" id="nwcb_0002">
+				<text src="amishelp.html#nwcb_0071" id="stdb_0001"/>
+				<seq>
+					<audio src="11_S_k_gjennom_harddisken_etter_b_ker.mp3" clip-begin="npt=0.000s" clip-end="npt=4.446s" id="audio_0001"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0003">
+				<text src="amishelp.html#nwcb_0072" id="stdb_0002"/>
+				<seq>
+					<audio src="11_S_k_gjennom_harddisken_etter_b_ker.mp3" clip-begin="npt=4.446s" clip-end="npt=8.159s" id="audio_0002"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0004">
+				<text src="amishelp.html#nwcb_0073" id="stdb_0003"/>
+				<seq>
+					<audio src="11_S_k_gjennom_harddisken_etter_b_ker.mp3" clip-begin="npt=8.159s" clip-end="npt=9.180s" id="audio_0003"/>
+					<audio src="11_S_k_gjennom_harddisken_etter_b_ker.mp3" clip-begin="npt=9.180s" clip-end="npt=12.239s" id="audio_0004"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0005">
+				<text src="amishelp.html#nwcb_0074" id="stdb_0004"/>
+				<seq>
+					<audio src="11_S_k_gjennom_harddisken_etter_b_ker.mp3" clip-begin="npt=12.239s" clip-end="npt=14.038s" id="audio_0005"/>
+					<audio src="11_S_k_gjennom_harddisken_etter_b_ker.mp3" clip-begin="npt=14.038s" clip-end="npt=16.189s" id="audio_0006"/>
+					<audio src="11_S_k_gjennom_harddisken_etter_b_ker.mp3" clip-begin="npt=16.189s" clip-end="npt=19.841s" id="audio_0007"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0006">
+				<text src="amishelp.html#nwcb_0075" id="stdb_0005"/>
+				<seq>
+					<audio src="11_S_k_gjennom_harddisken_etter_b_ker.mp3" clip-begin="npt=19.841s" clip-end="npt=21.103s" id="audio_0008"/>
+					<audio src="11_S_k_gjennom_harddisken_etter_b_ker.mp3" clip-begin="npt=21.103s" clip-end="npt=22.481s" id="audio_0009"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0007">
+				<text src="amishelp.html#nwcb_0076" id="stdb_0006"/>
+				<seq>
+					<audio src="11_S_k_gjennom_harddisken_etter_b_ker.mp3" clip-begin="npt=22.481s" clip-end="npt=25.841s" id="audio_0010"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0008">
+				<text src="amishelp.html#nwcb_0077" id="stdb_0007"/>
+				<seq>
+					<audio src="11_S_k_gjennom_harddisken_etter_b_ker.mp3" clip-begin="npt=25.841s" clip-end="npt=27.341s" id="audio_0011"/>
+				</seq>
+			</par>
+			<par endsync="last" id="nwcb_0009">
+				<text src="amishelp.html#nwcb_0078" id="stdb_0008"/>
+				<seq>
+					<audio src="11_S_k_gjennom_harddisken_etter_b_ker.mp3" clip-begin="npt=27.341s" clip-end="npt=31.111s" id="audio_0012"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

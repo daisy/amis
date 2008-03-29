@@ -1,0 +1,2345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/xsl' href='amis.xsl'?>
+<ui xml:lang="en">
+  <containers>
+    <container id="file">
+      <note>This is the menu header "File"</note>
+      <caption>
+        <text>ไฟล์</text>
+        <originalText>File</originalText>
+        
+      <audio src="./audio/002.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0003.smil#text_0003"/></caption>
+      <action mfcid="ID_MENU_FILE_OPEN" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and a toolbar item</note>
+        <icon src="./open.png" type="smallIcon"/>
+        <caption>
+          <text>เปิด...</text>
+          <originalText>Open...</originalText>
+          
+        <audio src="./audio/003.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0004.smil#text_0004"/></caption>
+        <description>
+          <text>เปิดหนังสือเดซี่แบบเลือกจากไฟล์</text>
+          <originalText>Open a Daisy book from the local file system</originalText>
+          
+        <audio src="./audio/004.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0005.smil#text_0005"/></description>
+        <accelerator>
+          <text>Ctrl+O</text>
+          <originalText>Ctrl+O</originalText>
+          
+        <audio src="./audio/005_CtrlO.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0006.smil#text_0006"/></accelerator>
+        <mnemonic>
+          <text>O</text>
+          <originalText>O</originalText>
+          
+        <audio src="./audio/006_O.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0007.smil#text_0007"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_LOADCD" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and a toolbar item</note>
+        <icon src="./settings/img/cd3.ico" type="smallIcon"/>
+        <icon src="./settings/img/cd_big.ico" type="largeIcon"/>
+        <caption>
+          <text>อ่านแผ่นซีดี</text>
+          <originalText>Load CD</originalText>
+          
+        <audio src="./audio/007.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0008.smil#text_0008"/></caption>
+        <description>
+          <text>เปิดหนังสือเดซี่จากแผ่นซีดี</text>
+          <originalText>Load a DAISY book from CD ROM</originalText>
+          
+        <audio src="./audio/008.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0009.smil#text_0009"/></description>
+        <accelerator>
+          <text>Ctrl+L</text>
+          <originalText>Ctrl+L</originalText>
+          
+        <audio src="./audio/009_CtrlL.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis000a.smil#text_000a"/></accelerator>
+        <mnemonic>
+          <text>L</text>
+          <originalText>L</originalText>
+          
+        <audio src="./audio/010_L.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis000b.smil#text_000b"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_SEARCHDRIVE" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>ค้นหา...</text>
+          <originalText>Search...</originalText>
+          
+        <audio src="./audio/011.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis000c.smil#text_000c"/></caption>
+        <description>
+          <text>ค้นหาหนังสือเดซี่ที่มีอยู่ในเครื่องนี้</text>
+          <originalText>Search local drives for DAISY books</originalText>
+          
+        <audio src="./audio/012.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis000d.smil#text_000d"/></description>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/013_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis000e.smil#text_000e"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_PREFERENCES" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>ปรับแต่งโปรแกรม...</text>
+          <originalText>Preferences...</originalText>
+          
+        <audio src="./audio/014.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis000f.smil#text_000f"/></caption>
+        <description>
+          <text>หน้าต่างสำหรับปรับแต่งโปรแกรม</text>
+          <originalText>This is the application preferences dialog.</originalText>
+          
+        <audio src="./audio/015.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0010.smil#text_0010"/></description>
+        <mnemonic>
+          <text>P</text>
+          <originalText>P</originalText>
+          
+        <audio src="./audio/016_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0011.smil#text_0011"/></mnemonic>
+      </action>
+      <container id="recentBooksList">
+        <note>This is the menu header for the recent books sub-menu.</note>
+        <caption>
+          <text>รายการล่าสุด</text>
+          <originalText>Recent</originalText>
+          
+        <audio src="./audio/017.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0012.smil#text_0012"/></caption>
+        <switch element="action">
+          <action mfcid="ID_FILE_RECENT_EMPTY" widget="menuItem" condition="ID_FILE_RECENT_EMPTY">
+            <note>This is going to be a menu item</note>
+            <caption>
+              <text>ว่าง</text>
+              <originalText>Empty</originalText>
+              
+            <audio src="./audio/018.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0013.smil#text_0013"/></caption>
+            <description>
+              <text>ไม่พบรายการหนังสือล่าสุดที่ถูกอ่าน</text>
+              <originalText>There are no recently read books.</originalText>
+              
+            <audio src="./audio/019.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0014.smil#text_0014"/></description>
+          </action>
+          <action mfcid="BOOK_BASE_ID" widget="menuItem" condition="BOOK_BASE_ID">
+            <note>This is going to be a menu item</note>
+            <list repeat="yes">
+              <caption>
+                <promptVar name="RECENT_BOOK_TITLE"/>
+              </caption>
+            </list>
+          </action>
+        </switch>
+        <mnemonic>
+          <text>R</text>
+          <originalText>R</originalText>
+          
+        <audio src="./audio/020_R.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0015.smil#text_0015"/></mnemonic>
+      </container>
+      <action mfcid="ID_MENU_FILE_EXIT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>ออก</text>
+          <originalText>Exit</originalText>
+          
+        <audio src="./audio/021.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0016.smil#text_0016"/></caption>
+        <description>
+          <text>ออกจากโปรแกรม</text>
+          <originalText>Exit AMIS</originalText>
+          
+        <audio src="./audio/022.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0017.smil#text_0017"/></description>
+        <accelerator>
+          <text>Alt+F4</text>
+          <originalText>Alt+F4</originalText>
+          
+        <audio src="./audio/023_AltF4.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0018.smil#text_0018"/></accelerator>
+        <mnemonic>
+          <text>x</text>
+          <originalText>x</originalText>
+          
+        <audio src="./audio/024_x.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0019.smil#text_0019"/></mnemonic>
+      </action>
+      <accelerator>
+        <text>Alt+F</text>
+        <originalText>Alt+F</originalText>
+        
+      <audio src="./audio/025_AltF.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis001a.smil#text_001a"/></accelerator>
+      <mnemonic>
+        <text>F</text>
+        <originalText>F</originalText>
+        
+      <audio src="./audio/026_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis001b.smil#text_001b"/></mnemonic>
+    </container>
+    <container id="view">
+      <note>This is the menu header "View"</note>
+      <caption>
+        <text>มุมมอง</text>
+        <originalText>View</originalText>
+        
+      <audio src="./audio/027.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis001c.smil#text_001c"/></caption>
+      <action mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>แถบเลื่อน</text>
+          <originalText>Sidebar</originalText>
+          
+        <audio src="./audio/028.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis001d.smil#text_001d"/></caption>
+        <description>
+          <text>เปิดหรือปิดแถบเลื่อน</text>
+          <originalText>Turn the sidebar on or off.</originalText>
+          
+        <audio src="./audio/029.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis001e.smil#text_001e"/></description>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/030_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis001f.smil#text_001f"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_BASIC" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>มุมมองพื้นฐาน</text>
+          <originalText>Basic View Mode</originalText>
+          
+        <audio src="./audio/031.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0020.smil#text_0020"/></caption>
+        <description>
+          <text>เปลี่ยนไปยังมุมมองพื้นฐาน</text>
+          <originalText>Switch the view to basic mode.</originalText>
+          
+        <audio src="./audio/032.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0021.smil#text_0021"/></description>
+        <accelerator>
+          <text>F11</text>
+          <originalText>F11</originalText>
+          
+        <audio src="./audio/033_F11.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0022.smil#text_0022"/></accelerator>
+        <mnemonic>
+          <text>B</text>
+          <originalText>B</originalText>
+          
+        <audio src="./audio/034_B.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0023.smil#text_0023"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_CONTRAST" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item</note>
+        <icon src="./settings/img/contrast.ico" type="smallIcon"/>
+        <caption>
+          <text>มุมมองแบบสีตัดกัน</text>
+          <originalText>High Contrast</originalText>
+          
+        <audio src="./audio/035.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0024.smil#text_0024"/></caption>
+        <description>
+          <text>เปลี่ยนไปยังมุมมองแบบสีตัดกัน</text>
+          <originalText>Use high contrast colors for the text display.</originalText>
+          
+        <audio src="./audio/036.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0025.smil#text_0025"/></description>
+        <accelerator>
+          <text>Ctrl+S</text>
+          <originalText>Ctrl+S</originalText>
+          
+        <audio src="./audio/037_CtrlS.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0026.smil#text_0026"/></accelerator>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/038_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0027.smil#text_0027"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_LARGEFONT" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/font.ico" type="smallIcon"/>
+        <caption>
+          <text>เพิ่มขนาดตัวอักษร</text>
+          <originalText>Increase Font Size</originalText>
+          
+        <audio src="./audio/039.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0028.smil#text_0028"/></caption>
+        <description>
+          <text>เพิ่มขนาดตัวอักษรขึ้น</text>
+          <originalText>Gradually increase the font size.</originalText>
+          
+        <audio src="./audio/040.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0029.smil#text_0029"/></description>
+        <mnemonic>
+          <text>I</text>
+          <originalText>I</originalText>
+          
+        <audio src="./audio/041_I.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis002a.smil#text_002a"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_RESETFONT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>ขนาดตัวอักษรปกติ</text>
+          <originalText>Reset Font Size</originalText>
+          
+        <audio src="./audio/042.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis002b.smil#text_002b"/></caption>
+        <description>
+          <text>ปรับเป็นขนาดตัวอักษรปกติ</text>
+          <originalText>Set the font size to the default setting.</originalText>
+          
+        <audio src="./audio/043.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis002c.smil#text_002c"/></description>
+        <mnemonic>
+          <text>R</text>
+          <originalText>R</originalText>
+          
+        <audio src="./audio/044_R.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis002d.smil#text_002d"/></mnemonic>
+      </action>
+      <action mfcid="NAVLIST_BASE_ID" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <promptVar name="NAV_LIST_NAME"/>
+        </caption>
+        <description>
+          <promptVar name="NAV_LIST_DESCRIPTION"/>
+        </description>
+      </action>
+      <accelerator>
+        <text>Alt+V</text>
+        <originalText>Alt+V</originalText>
+        
+      <audio src="./audio/045_AltV.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis002e.smil#text_002e"/></accelerator>
+      <mnemonic>
+        <text>V</text>
+        <originalText>V</originalText>
+        
+      <audio src="./audio/046_V.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis002f.smil#text_002f"/></mnemonic>
+    </container>
+    <container id="play">
+      <note>This is the menu header "Play"</note>
+      <caption>
+        <text>อ่าน</text>
+        <originalText>Play</originalText>
+        
+      <audio src="./audio/047.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0030.smil#text_0030"/></caption>
+      <switch element="action">
+        <action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" condition="canPlay">
+          <note>This is going to be a menu item and toolbar item</note>
+          <icon src="./settings/img/play-big.ico" type="smallIcon"/>
+          <icon src="./settings/img/play_big.ico" type="largeIcon"/>
+          <caption>
+            <text>อ่าน</text>
+            <originalText>Play</originalText>
+            
+          <audio src="./audio/048.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0031.smil#text_0031"/></caption>
+          <description>
+            <text>เริ่มอ่านหนังสือเดซี่</text>
+            <originalText>Start synchronized playback.</originalText>
+            
+          <audio src="./audio/049.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0032.smil#text_0032"/></description>
+          <accelerator>
+            <text>Space</text>
+            <originalText>Space</originalText>
+            
+          <audio src="./audio/050_Space.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0033.smil#text_0033"/></accelerator>
+          <mnemonic>
+            <text>P</text>
+            <originalText>P</originalText>
+            
+          <audio src="./audio/051_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0034.smil#text_0034"/></mnemonic>
+        </action>
+        <action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" condition="canPause">
+          <note>This is going to be a menu item and toolbar item</note>
+          <icon src="./settings/img/pause.ico" type="smallIcon"/>
+          <icon src="./settings/img/pause_big.ico" type="largeIcon"/>
+          <caption>
+            <text>หยุด</text>
+            <originalText>Pause</originalText>
+            
+          <audio src="./audio/052.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0035.smil#text_0035"/></caption>
+          <description>
+            <text>หยุดอ่านหนังสือเดซี่ชั่วคราว</text>
+            <originalText>Pause playback of this DAISY book.</originalText>
+            
+          <audio src="./audio/053.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0036.smil#text_0036"/></description>
+          <accelerator>
+            <text>Space</text>
+            <originalText>Space</originalText>
+            
+          <audio src="./audio/054_Space.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0037.smil#text_0037"/></accelerator>
+          <mnemonic>
+            <text>a</text>
+            <originalText>a</originalText>
+            
+          <audio src="./audio/055_a.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0038.smil#text_0038"/></mnemonic>
+        </action>
+      </switch>
+      <action mfcid="ID_MENU_PLAY_ESCAPE" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>ออก</text>
+          <originalText>Escape</originalText>
+          
+        <audio src="./audio/056.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0039.smil#text_0039"/></caption>
+        <description>
+          <text>ออกจากการอ่านหนังสือเล่มนี้</text>
+          <originalText>Jump out of the currently playing item or structure.</originalText>
+          
+        <audio src="./audio/057.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis003a.smil#text_003a"/></description>
+        <accelerator>
+          <text>Esc</text>
+          <originalText>Esc</originalText>
+          
+        <audio src="./audio/058_Esc.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis003b.smil#text_003b"/></accelerator>
+        <mnemonic>
+          <text>E</text>
+          <originalText>E</originalText>
+          
+        <audio src="./audio/059_E.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis003c.smil#text_003c"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_FASTER" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/fullspeedahead.ico" type="smallIcon"/>
+        <caption>
+          <text>ความเร็วสูงขึ้น</text>
+          <originalText>Faster</originalText>
+          
+        <audio src="./audio/060.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis003d.smil#text_003d"/></caption>
+        <description>
+          <text>เพิ่มความเร็วในการอ่าน</text>
+          <originalText>Increase the playback rate.</originalText>
+          
+        <audio src="./audio/061.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis003e.smil#text_003e"/></description>
+        <accelerator>
+          <text>Ctrl++</text>
+          <originalText>Ctrl++</originalText>
+          
+        <audio src="./audio/062_Ctrl.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis003f.smil#text_003f"/></accelerator>
+        <mnemonic>
+          <text>F</text>
+          <originalText>F</originalText>
+          
+        <audio src="./audio/063_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0040.smil#text_0040"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_SLOWER" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/slowdown.ico" type="smallIcon"/>
+        <caption>
+          <text>ความเร็วช้าลง</text>
+          <originalText>Slower</originalText>
+          
+        <audio src="./audio/064.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0041.smil#text_0041"/></caption>
+        <description>
+          <text>ลดความเร็วในการอ่าน</text>
+          <originalText>Slow down the playback rate.</originalText>
+          
+        <audio src="./audio/065.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0042.smil#text_0042"/></description>
+        <accelerator>
+          <text>Ctrl+-</text>
+          <originalText>Ctrl+-</originalText>
+          
+        <audio src="./audio/066_Ctrl.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0043.smil#text_0043"/></accelerator>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/067_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0044.smil#text_0044"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_NORMALSPEED" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/normalspeed.ico" type="smallIcon"/>
+        <caption>
+          <text>ความเร็วปกติ</text>
+          <originalText>Normal Speed</originalText>
+          
+        <audio src="./audio/068.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0045.smil#text_0045"/></caption>
+        <description>
+          <text>ปรับความเร็วในการอ่านเป็นความเร็วปกติ</text>
+          <originalText>Reset the playback rate to normal.</originalText>
+          
+        <audio src="./audio/069.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0046.smil#text_0046"/></description>
+        <accelerator>
+          <text>Ctrl+0</text>
+          <originalText>Ctrl+0</originalText>
+          
+        <audio src="./audio/070_Ctrl0.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0047.smil#text_0047"/></accelerator>
+        <mnemonic>
+          <text>N</text>
+          <originalText>N</originalText>
+          
+        <audio src="./audio/071_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0048.smil#text_0048"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_VOLUP" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>ระดับเสียงสูงขึ้น</text>
+          <originalText>Increase Volume</originalText>
+          
+        <audio src="./audio/072.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0049.smil#text_0049"/></caption>
+        <description>
+          <text>เพิ่มระดับเสียงในการอ่าน</text>
+          <originalText>Gradually raise the volume.</originalText>
+          
+        <audio src="./audio/073.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis004a.smil#text_004a"/></description>
+        <accelerator>
+          <text>Ctrl+Up</text>
+          <originalText>Ctrl+Up</originalText>
+          
+        <audio src="./audio/074_CtrlUp.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis004b.smil#text_004b"/></accelerator>
+        <mnemonic>
+          <text>I</text>
+          <originalText>I</originalText>
+          
+        <audio src="./audio/075_I.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis004c.smil#text_004c"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_VOLDOWN" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>ระดับเสียงลดลง</text>
+          <originalText>Decrease Volume</originalText>
+          
+        <audio src="./audio/076.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis004d.smil#text_004d"/></caption>
+        <description>
+          <text>ลดระดับเสียงในการอ่าน</text>
+          <originalText>Gradually lower the volume.</originalText>
+          
+        <audio src="./audio/077.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis004e.smil#text_004e"/></description>
+        <accelerator>
+          <text>Ctrl+Down</text>
+          <originalText>Ctrl+Down</originalText>
+          
+        <audio src="./audio/078_CtrlDown.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis004f.smil#text_004f"/></accelerator>
+        <mnemonic>
+          <text>D</text>
+          <originalText>D</originalText>
+          
+        <audio src="./audio/079_D.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0050.smil#text_0050"/></mnemonic>
+      </action>
+      <accelerator>
+        <text>Alt+P</text>
+        <originalText>Alt+P</originalText>
+        
+      <audio src="./audio/080_AltP.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0051.smil#text_0051"/></accelerator>
+      <mnemonic>
+        <text>P</text>
+        <originalText>P</originalText>
+        
+      <audio src="./audio/081_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0052.smil#text_0052"/></mnemonic>
+    </container>
+    <container id="navigate">
+      <note>This is the menu header "Navigate"</note>
+      <caption>
+        <text>ควบคุม</text>
+        <originalText>Navigate</originalText>
+        
+      <audio src="./audio/082.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0053.smil#text_0053"/></caption>
+      <action mfcid="ID_MENU_NAV_PREVSECTION" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevsection.ico" type="smallIcon"/>
+        <icon src="./settings/img/prevsection_big.ico" type="largeIcon"/>
+        <caption>
+          <text>หัวข้อก่อนหน้า</text>
+          <originalText>Previous Section</originalText>
+          
+        <audio src="./audio/083.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0054.smil#text_0054"/></caption>
+        <description>
+          <text>ไปยังหัวข้อก่อนหน้า</text>
+          <originalText>Go to the previous section.</originalText>
+          
+        <audio src="./audio/084.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0055.smil#text_0055"/></description>
+        <accelerator>
+          <text>Up</text>
+          <originalText>Up</originalText>
+          
+        <audio src="./audio/085_Up.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0056.smil#text_0056"/></accelerator>
+        <mnemonic>
+          <text>P</text>
+          <originalText>P</originalText>
+          
+        <audio src="./audio/086_P.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0057.smil#text_0057"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTSECTION" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextsection.ico" type="smallIcon"/>
+        <icon src="./settings/img/nextsection_big.ico" type="largeIcon"/>
+        <caption>
+          <text>หัวข้อถัดไป</text>
+          <originalText>Next Section</originalText>
+          
+        <audio src="./audio/087.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0058.smil#text_0058"/></caption>
+        <description>
+          <text>ไปยังหัวข้อถัดไป</text>
+          <originalText>Go to the next section.</originalText>
+          
+        <audio src="./audio/088.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0059.smil#text_0059"/></description>
+        <accelerator>
+          <text>Down</text>
+          <originalText>Down</originalText>
+          
+        <audio src="./audio/089_Down.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis005a.smil#text_005a"/></accelerator>
+        <mnemonic>
+          <text>N</text>
+          <originalText>N</originalText>
+          
+        <audio src="./audio/090_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis005b.smil#text_005b"/></mnemonic>
+      </action>
+      <container id="sectiondepth">
+        <note>This is the "show section depth" sub-menu pop-up</note>
+        <caption>
+          <text>ปรับระดับความลึกในการแสดงหัวข้อย่อย</text>
+          <originalText>Show Section Depth</originalText>
+          
+        <audio src="./audio/091.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis005c.smil#text_005c"/></caption>
+        <switch element="action">
+          <action mfcid="ID_EMPTY" widget="menuItem" condition="ID_EMPTY">
+            <note>This is going to be a menu item</note>
+            <caption>
+              <text>ไม่มีหัวข้อย่อย</text>
+              <originalText>Empty</originalText>
+              
+            <audio src="./audio/092.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis005d.smil#text_005d"/></caption>
+            <description>
+              <text>หนังสือเล่มนี้ไม่มีหัวข้อย่อย</text>
+              <originalText>There are no section levels.</originalText>
+              
+            <audio src="./audio/093.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis005e.smil#text_005e"/></description>
+          </action>
+          <action mfcid="SECTION_DEPTH_BASE_ID" widget="menuItem" condition="SECTION_DEPTH_BASE_ID">
+            <note>This is going to be a menu item</note>
+            <list repeat="yes">
+              <caption>
+                <promptVar name="SECTION_DEPTH_OPTION"/>
+              </caption>
+            </list>
+          </action>
+        </switch>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/094_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis005f.smil#text_005f"/></mnemonic>
+      </container>
+      <action mfcid="ID_MENU_NAV_PREVPHRASE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevphasecirc.ico" type="smallIcon"/>
+        <caption>
+          <text>ประโยคก่อนหน้า</text>
+          <originalText>Previous Phrase</originalText>
+          
+        <audio src="./audio/095.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0060.smil#text_0060"/></caption>
+        <description>
+          <text>ไปยังประโยคก่อนหน้า</text>
+          <originalText>Go to the previous phrase.</originalText>
+          
+        <audio src="./audio/096.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0061.smil#text_0061"/></description>
+        <accelerator>
+          <text>Left</text>
+          <originalText>Left</originalText>
+          
+        <audio src="./audio/097_Left.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0062.smil#text_0062"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTPHRASE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextphrasecirc.ico" type="smallIcon"/>
+        <caption>
+          <text>ประโยคถัดไป</text>
+          <originalText>Next Phrase</originalText>
+          
+        <audio src="./audio/098.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0063.smil#text_0063"/></caption>
+        <description>
+          <text>ไปยังประโยคถัดไป</text>
+          <originalText>Go to the next phrase.</originalText>
+          
+        <audio src="./audio/099.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0064.smil#text_0064"/></description>
+        <accelerator>
+          <text>Right</text>
+          <originalText>Right</originalText>
+          
+        <audio src="./audio/100_Right.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0065.smil#text_0065"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_PREVPAGE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevpage.ico" type="smallIcon"/>
+        <caption>
+          <text>หน้าก่อนหน้านี้</text>
+          <originalText>Previous Page</originalText>
+          
+        <audio src="./audio/101.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0066.smil#text_0066"/></caption>
+        <description>
+          <text>ไปยังหน้าก่อนหน้านี้</text>
+          <originalText>Go to the previous page.</originalText>
+          
+        <audio src="./audio/102.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0067.smil#text_0067"/></description>
+        <accelerator>
+          <text>Ctrl+Left</text>
+          <originalText>Ctrl+Left</originalText>
+          
+        <audio src="./audio/103_CtrlLeft.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0068.smil#text_0068"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTPAGE" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextpage.ico" type="smallIcon"/>
+        <caption>
+          <text>หน้าถัดไป</text>
+          <originalText>Next Page</originalText>
+          
+        <audio src="./audio/104.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0069.smil#text_0069"/></caption>
+        <description>
+          <text>ไปยังหน้าถัดไป</text>
+          <originalText>Go to the next page.</originalText>
+          
+        <audio src="./audio/105.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis006a.smil#text_006a"/></description>
+        <accelerator>
+          <text>Ctrl+Right</text>
+          <originalText>Ctrl+Right</originalText>
+          
+        <audio src="./audio/106_CtrlRight.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis006b.smil#text_006b"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_GOTOPAGE" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>ไปยังหน้า...</text>
+          <originalText>Go to Page...</originalText>
+          
+        <audio src="./audio/107.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis006c.smil#text_006c"/></caption>
+        <description>
+          <text>ไปยังหน้าที่ต้องการ</text>
+          <originalText>Go to a specific page.</originalText>
+          
+        <audio src="./audio/108.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis006d.smil#text_006d"/></description>
+        <accelerator>
+          <text>Ctrl+G</text>
+          <originalText>Ctrl+G</originalText>
+          
+        <audio src="./audio/109_CtrlG.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis006e.smil#text_006e"/></accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_FINDINTEXT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>ค้นหาข้อความจากเนื้อหา</text>
+          <originalText>Find in Text</originalText>
+          
+        <audio src="./audio/110.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis006f.smil#text_006f"/></caption>
+        <description>
+          <text>ค้นหาข้อความจากเนื้อหาในหนังสือ</text>
+          <originalText>Search for a word or phrase in the text.</originalText>
+          
+        <audio src="./audio/111.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0070.smil#text_0070"/></description>
+        <accelerator>
+          <text>Ctrl+F</text>
+          <originalText>Ctrl+F</originalText>
+          
+        <audio src="./audio/112_CtrlF.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0071.smil#text_0071"/></accelerator>
+        <mnemonic>
+          <text>F</text>
+          <originalText>F</originalText>
+          
+        <audio src="./audio/113_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0072.smil#text_0072"/></mnemonic>
+      </action>
+      <accelerator>
+        <text>Alt+N</text>
+        <originalText>Alt+N</originalText>
+        
+      <audio src="./audio/114_AltN.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0073.smil#text_0073"/></accelerator>
+      <mnemonic>
+        <text>N</text>
+        <originalText>N</originalText>
+        
+      <audio src="./audio/115_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0074.smil#text_0074"/></mnemonic>
+    </container>
+    <container id="bookmarks">
+      <note>This is the menu header "Bookmarks"</note>
+      <caption>
+        <text>ที่กั้นหน้า</text>
+        <originalText>Bookmarks</originalText>
+        
+      <audio src="./audio/116.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0075.smil#text_0075"/></caption>
+      <action mfcid="ID_MENU_BMK_ADD" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/adbookmark.ico" type="smallIcon"/>
+        <caption>
+          <text>เพิ่มที่กั้นหน้า</text>
+          <originalText>Add Bookmark</originalText>
+          
+        <audio src="./audio/117.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0076.smil#text_0076"/></caption>
+        <description>
+          <text>เพิ่มที่กั้นหน้าในตำแหน่งนี้</text>
+          <originalText>Bookmark your current position.</originalText>
+          
+        <audio src="./audio/118.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0077.smil#text_0077"/></description>
+        <accelerator>
+          <text>Ctrl+D</text>
+          <originalText>Ctrl+D</originalText>
+          
+        <audio src="./audio/119_CtrlD.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0078.smil#text_0078"/></accelerator>
+        <mnemonic>
+          <text>A</text>
+          <originalText>A</originalText>
+          
+        <audio src="./audio/120_A.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0079.smil#text_0079"/></mnemonic>
+      </action>
+      <action mfcid="BOOKMARK_BASE_ID" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOKMARK_TITLE"/>
+          </caption>
+        </list>
+      </action>
+      <accelerator>
+        <text>Alt+B</text>
+        <originalText>Alt+B</originalText>
+        
+      <audio src="./audio/121_AltB.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis007a.smil#text_007a"/></accelerator>
+      <mnemonic>
+        <text>B</text>
+        <originalText>B</originalText>
+        
+      <audio src="./audio/122_B.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis007b.smil#text_007b"/></mnemonic>
+    </container>
+    <container id="info">
+      <note>This is the menu header "Info"</note>
+      <caption>
+        <text>ข้อมูล</text>
+        <originalText>Info</originalText>
+        
+      <audio src="./audio/123.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis007c.smil#text_007c"/></caption>
+      <action mfcid="ID_MENU_INFO_SKIP" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>รายการที่สามารถข้ามได้...</text>
+          <originalText>Skippable Items...</originalText>
+          
+        <audio src="./audio/124.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis007d.smil#text_007d"/></caption>
+        <description>
+          <text>เรียกดูรายการที่สามารถข้ามได้ในหนังสือเล่มนี้</text>
+          <originalText>View the skippable items for this publication.</originalText>
+          
+        <audio src="./audio/125.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis007e.smil#text_007e"/></description>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/126_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis007f.smil#text_007f"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_SUMMARY" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/info.ico" type="smallIcon"/>
+        <caption>
+          <text>รายละเอียดหนังสือ</text>
+          <originalText>Full Summary</originalText>
+          
+        <audio src="./audio/127.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0080.smil#text_0080"/></caption>
+        <description>
+          <text>ดูรายละเอียดทั้งหมดของหนังสือเล่มนี้</text>
+          <originalText>Get all summary info for this publication.</originalText>
+          
+        <audio src="./audio/128.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0081.smil#text_0081"/></description>
+        <mnemonic>
+          <text>F</text>
+          <originalText>F</originalText>
+          
+        <audio src="./audio/129_F.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0082.smil#text_0082"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_CURRENTPOSITION" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>ตำแหน่งปัจจุบัน</text>
+          <originalText>Current Position</originalText>
+          
+        <audio src="./audio/130.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0083.smil#text_0083"/></caption>
+        <description>
+          <text>ดูรายละเอียดของตำแหน่งปัจจุบัน</text>
+          <originalText>Get information about your current position.</originalText>
+          
+        <audio src="./audio/131.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0084.smil#text_0084"/></description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/132_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0085.smil#text_0085"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_NAVOPTIONS" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>ตัวเลือกการควบคุม</text>
+          <originalText>Navigation Options</originalText>
+          
+        <audio src="./audio/133.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0086.smil#text_0086"/></caption>
+        <description>
+          <text>เรียกดูตัวเลือกการควบคุมในหนังสือเล่มนี้</text>
+          <originalText>Learn about your navigation options for this publication.</originalText>
+          
+        <audio src="./audio/134.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0087.smil#text_0087"/></description>
+        <mnemonic>
+          <text>N</text>
+          <originalText>N</originalText>
+          
+        <audio src="./audio/135_N.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0088.smil#text_0088"/></mnemonic>
+      </action>
+      <accelerator>
+        <text>Alt+I</text>
+        <originalText>Alt+I</originalText>
+        
+      <audio src="./audio/136_AltI.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0089.smil#text_0089"/></accelerator>
+      <mnemonic>
+        <text>I</text>
+        <originalText>I</originalText>
+        
+      <audio src="./audio/137_I.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis008a.smil#text_008a"/></mnemonic>
+    </container>
+    <container id="help">
+      <note>This is the menu header "Help"</note>
+      <caption>
+        <text>ช่วยเหลือ</text>
+        <originalText>Help</originalText>
+        
+      <audio src="./audio/138.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis008b.smil#text_008b"/></caption>
+      <action mfcid="ID_MENU_HELP_CONTENTS" widget="menuItem toolbarItem">
+        <note>This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/help.ico" type="smallIcon"/>
+        <icon src="./settings/img/help_big.ico" type="largeIcon"/>
+        <caption>
+          <text>เปิดหนังสือช่วยเหลือ</text>
+          <originalText>Contents</originalText>
+          
+        <audio src="./audio/139.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis008c.smil#text_008c"/></caption>
+        <description>
+          <text>เปิดหนังสือคู่มือการใช้โปรแกรม</text>
+          <originalText>Get help using AMIS</originalText>
+          
+        <audio src="./audio/140.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis008d.smil#text_008d"/></description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/141_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis008e.smil#text_008e"/></mnemonic>
+      </action>
+      <action mfcid="ID_MENU_HELP_ABOUT" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <caption>
+          <text>เกี่ยวกับโปรแกรม</text>
+          <originalText>About AMIS</originalText>
+          
+        <audio src="./audio/142.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis008f.smil#text_008f"/></caption>
+        <description>
+          <text>เกี่ยวกับโครงการ AMIS และ DAISY-for-All</text>
+          <originalText>Find out about AMIS and DAISY-for-All.</originalText>
+          
+        <audio src="./audio/143__AMIS__DAISYforAll.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0090.smil#text_0090"/></description>
+        <mnemonic>
+          <text>A</text>
+          <originalText>A</originalText>
+          
+        <audio src="./audio/144_A.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0091.smil#text_0091"/></mnemonic>
+      </action>
+      <accelerator>
+        <text>Alt+H</text>
+        <originalText>Alt+H</originalText>
+        
+      <audio src="./audio/145_AltH.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0092.smil#text_0092"/></accelerator>
+      <mnemonic>
+        <text>H</text>
+        <originalText>H</originalText>
+        
+      <audio src="./audio/146_H.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0093.smil#text_0093"/></mnemonic>
+    </container>
+  </containers>
+  <dialogs>
+    <dialog mfcid="IDD_FIND">
+      <note>This is the find in text dialog</note>
+      <caption>
+        <text>ค้นหาข้อความจากเนื้อหา</text>
+        <originalText>Find in Text</originalText>
+        
+      <audio src="./audio/147.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0094.smil#text_0094"/></caption>
+      <description>
+        <text>ตรงนี้คุณสามารถค้นหาข้อความจากเนื้อหาทั้งหมดได้ทั้งแบบก่อนหน้าและแบบถัดไป</text>
+        <originalText>Here you can search the full text in either direction.</originalText>
+        
+      <audio src="./audio/148.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0095.smil#text_0095"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem>
+          <text>หลังจากพิมพ์ข้อมความที่ต้องการค้นหาแล้ว ให้กดปุ่ม Enter เพื่อเริ่มการค้นหา</text>
+          <originalText>After typing in your search, press enter to begin searching.</originalText>
+          
+        <audio src="./audio/149___Enter_.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0096.smil#text_0096"/></promptItem>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <!--removed this as it is probably not very useful, and it was incorrectly recorded-->
+        <!-- <promptItem refid="textBoxRepeatInstr"/>-->
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <text>กดปุ่มนี้เพื่อเริ่มค้นหาข้อความจากเนื้อหา</text>
+          <originalText>Press to begin searching for text in the file.</originalText>
+          
+        <audio src="./audio/150.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0097.smil#text_0097"/></description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/151_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0098.smil#text_0098"/></mnemonic>
+      </control>
+      <control mfcid="IDC_SEARCHSTRING" widget="textfield">
+        <description>
+          <text>ช่องนี้ไว้พิมพ์ข้อความที่ต้องการค้นหา</text>
+          <originalText>Type the text to search for.</originalText>
+          
+        <audio src="./audio/152.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0099.smil#text_0099"/></description>
+      </control>
+      <control mfcid="IDC_FINDNEXT" widget="radiobutton">
+        <note>This indicates the direction of the search</note>
+        <caption>
+          <text>ค้นหาแบบถัดไป</text>
+          <originalText>Find Next</originalText>
+          
+        <audio src="./audio/153.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis009a.smil#text_009a"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="SELECTED_OR_DESELECTED" param="FIND_NEXT_IN_TEXT"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_FINDPREV" widget="radiobutton">
+        <note>This indicates the direction of the search</note>
+        <caption>
+          <text>ค้นหาแบบก่อนหน้า</text>
+          <originalText>Find Previous</originalText>
+          
+        <audio src="./audio/154.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis009b.smil#text_009b"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptName name="SELECTED_OR_DESELECTED" param="FIND_PREV_IN_TEXT"/>
+          </prompt>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_CDSEARCH">
+      <note>This dialog appears when more than one book is on a CD-ROM</note>
+      <caption>
+        <text>พบหนังสือหลายเล่ม</text>
+        <originalText>Multiple books found</originalText>
+        
+      <audio src="./audio/155.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis009c.smil#text_009c"/></caption>
+      <description mfcid="IDC_STATIC">
+        <text>พบหนังสือหลายเล่มในซีดีแผ่นนี้ กรุณาเลือกเล่มที่ต้องการฟังจากช่องรายการด้านล่าง แล้วกดปุ่ม ALT+O เพื่อเปิดหนังสือ</text>
+        <originalText>More than one book was found on this CD. Please select a book from the list below and press Alt + O to open.</originalText>
+        
+      <audio src="./audio/156____ALTO_.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis009d.smil#text_009d"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_CANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/157_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis009e.smil#text_009e"/></mnemonic>
+      </control>
+      <control mfcid="IDC_OPENBOOK" widget="button">
+        <caption>
+          <text>เปิด</text>
+          <originalText>Open</originalText>
+          
+        <audio src="./audio/158.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis009f.smil#text_009f"/></caption>
+        <description>
+          <text>กดปุ่มนี้เพื่อปิดหน้าต่างนี้แล้วเปิดหนังสือที่เลือกไว้</text>
+          <originalText>Press to close this dialog and open the selected book.</originalText>
+          
+        <audio src="./audio/159.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00a0.smil#text_00a0"/></description>
+        <mnemonic>
+          <text>O</text>
+          <originalText>O</originalText>
+          
+        <audio src="./audio/160_O.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00a1.smil#text_00a1"/></mnemonic>
+      </control>
+      <control mfcid="IDC_BOOKLIST" widget="list">
+        <description>
+          <text>ใช้ปุ่มลูกศรเพื่อเลือกหนังสือที่ต้องการอ่าน</text>
+          <originalText>Use the arrow keys to move around this list of titles.</originalText>
+          
+        <audio src="./audio/161.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00a2.smil#text_00a2"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOK_TITLE"/>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_ABOUTBOX">
+      <note>This dialog gives some basic information about AMIS.</note>
+      <caption>
+        <text>เกี่ยวกับโปรแกรม</text>
+        <originalText>About AMIS</originalText>
+        
+      <audio src="./audio/162.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00a3.smil#text_00a3"/></caption>
+      <description>
+        <text>หน้าต่างแสดงข้อมูลเกี่ยวกับ AMIS</text>
+        <originalText>Dialog with information about AMIS software.</originalText>
+        
+      <audio src="./audio/163__AMIS.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00a4.smil#text_00a4"/></description>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_AMISNAME" widget="textlabel">
+        <caption>
+          <text>AMIS: \nAdaptive Multimedia Information System</text>
+          <originalText>AMIS: \nAdaptive Multimedia Information System</originalText>
+          
+        <audio src="./audio/164_AMIS_nAdaptive_Multimedia_Info.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00a5.smil#text_00a5"/></caption>
+      </control>
+      <control mfcid="IDC_VERSION" translate="no">
+        <caption>
+          <text>Version 2.0</text>
+          <originalText>Version 2.0</originalText>
+          
+        <audio src="./audio/165_Version_20.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00a6.smil#text_00a6"/></caption>
+      </control>
+      <control mfcid="IDC_VERSIONNOTE" translate="no">
+        <caption>
+          <text>Release Date: 23 Oct 2005</text>
+          <originalText>Release Date: 23 Oct 2005</originalText>
+          
+        <audio src="./audio/166_Release_Date_23_Oct_2005.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00a7.smil#text_00a7"/></caption>
+      </control>
+      <control mfcid="IDC_COPYRIGHT" widget="textlabel" translate="no">
+        <caption>
+          <text>Copyright © 2006 DAISY for All</text>
+          <originalText>Copyright © 2006 DAISY for All</originalText>
+          
+        <audio src="./audio/167_Copyright__2006_DAISY_for_All.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00a8.smil#text_00a8"/></caption>
+      </control>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_SEARCHDAISY">
+      <note>This dialog is for searching your hard drive for DAISY books.</note>
+      <caption>
+        <text>ค้นหาหนังสือเดซี่</text>
+        <originalText>Search for DAISY Books</originalText>
+        
+      <audio src="./audio/168.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00a9.smil#text_00a9"/></caption>
+      <description mfcid="IDC_STATIC">
+        <text>คุณสามารถค้นหาหนังสือเดซี่ในเครื่องของคุณได้ กรุณาระบุตำแหน่งที่ต้องการค้นหา หรือ  Browse ไปยังตำแหน่งที่ต้องการค้นหาแล้วกดปุ่มค้นหา</text>
+        <originalText>You can search your computer for DAISY books.  Enter a path or browse for a folder to search, then press Search to begin searching.</originalText>
+        
+      <audio src="./audio/169____Browse_.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00aa.smil#text_00aa"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <!--removed this as it is probably not very useful, and it was incorrectly recorded-->
+        <!--<promptItem refid="textBoxRepeatInstr"/>-->
+      </prompt>
+      <control mfcid="IDC_SEARCHPATH" widget="textfield">
+        <description>
+          <text>พิมพ์ตำแหน่งที่ต้องการค้นหา</text>
+          <originalText>Type the path to the folder in this field.</originalText>
+          
+        <audio src="./audio/170.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00ab.smil#text_00ab"/></description>
+      </control>
+      <control mfcid="IDC_BROWSE" widget="button">
+        <caption>
+          <promptItem refid="browse_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="browse_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_STARTSEARCH" widget="button">
+        <caption>
+          <text>ค้นหา</text>
+          <originalText>Search</originalText>
+          
+        <audio src="./audio/171.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00ac.smil#text_00ac"/></caption>
+        <description>
+          <text>กดปุ่มนี้เพื่อเริ่มการค้นหา</text>
+          <originalText>Press to start searching.</originalText>
+          
+        <audio src="./audio/172.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00ad.smil#text_00ad"/></description>
+        <mnemonic>
+          <text>S</text>
+          <originalText>S</originalText>
+          
+        <audio src="./audio/173_S.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00ae.smil#text_00ae"/></mnemonic>
+      </control>
+      <control mfcid="IDC_STOPSEARCH" widget="button">
+        <caption>
+          <text>หยุด</text>
+          <originalText>Stop</originalText>
+          
+        <audio src="./audio/174.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00af.smil#text_00af"/></caption>
+        <description>
+          <text>กดปุ่มนี้เพื่อหยุดการค้นหา</text>
+          <originalText>Press to stop searching.</originalText>
+          
+        <audio src="./audio/175.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00b0.smil#text_00b0"/></description>
+        <mnemonic>
+          <text>t</text>
+          <originalText>t</originalText>
+          
+        <audio src="./audio/176_t.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00b1.smil#text_00b1"/></mnemonic>
+      </control>
+      <control mfcid="IDC_SEARCHING" widget="textlabel">
+        <switch element="caption">
+          <caption condition="default">
+            <text>พร้อม</text>
+            <originalText>Ready</originalText>
+            
+          <audio src="./audio/177.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00b2.smil#text_00b2"/></caption>
+          <caption condition="WhileSearching">
+            <text>กำลังค้นหา...</text>
+            <originalText>Searching...</originalText>
+            
+          <audio src="./audio/178.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00b3.smil#text_00b3"/></caption>
+          <caption condition="SearchAborted">
+            <text>การค้นหาสิ้นสุด</text>
+            <originalText>Search stopped.</originalText>
+            
+          <audio src="./audio/179.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00b4.smil#text_00b4"/></caption>
+          <caption condition="SearchCompleteNoFilesFound">
+            <text>เสร็จสิ้นการค้นหา ไม่พบแฟ้มข้อมูลที่ต้องการ</text>
+            <originalText>Search complete: No files found.</originalText>
+            
+          <audio src="./audio/180__.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00b5.smil#text_00b5"/></caption>
+          <caption condition="SearchCompleteOneFileFound">
+            <text>เสร็จสิ้นการค้นหา พบแฟ้มข้อมูลที่ต้องการ 1 แฟ้ม</text>
+            <originalText>Search complete: One file found.</originalText>
+            
+          <audio src="./audio/181___1_.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00b6.smil#text_00b6"/></caption>
+          <caption condition="SearchCompleteFilesFound">
+            <prompt>
+              <promptVar name="NUM_FILES_FOUND"/>
+              <promptItem>
+                <note>This is used in the sentence "7 files were found"</note>
+                <text>แฟ้มถูกค้นพบ</text>
+                <originalText>files were found.</originalText>
+                
+              <audio src="./audio/182.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00b7.smil#text_00b7"/></promptItem>
+            </prompt>
+          </caption>
+        </switch>
+      </control>
+      <control mfcid="IDC_FILESFOUND" widget="list">
+        <description>
+          <text>ใช้ลูกศรเลื่อนไปตามรายชื่อแฟ้มข้อมูล</text>
+          <originalText>Use the arrow keys to move around this list of titles.</originalText>
+          
+        <audio src="./audio/183.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00b8.smil#text_00b8"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOK_TITLE"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_OPENBOOK" widget="button">
+        <caption>
+          <text>เปิด</text>
+          <originalText>Open</originalText>
+          
+        <audio src="./audio/184.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00b9.smil#text_00b9"/></caption>
+        <description>
+          <text>กดปุ่มนี้เพื่อเปิดหัวข้อที่ถูกเลือกไว้</text>
+          <originalText>Press to open the selected title.</originalText>
+          
+        <audio src="./audio/185.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00ba.smil#text_00ba"/></description>
+        <mnemonic>
+          <text>O</text>
+          <originalText>O</originalText>
+          
+        <audio src="./audio/186_O.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00bb.smil#text_00bb"/></mnemonic>
+      </control>
+      <control mfcid="IDC_CANCELBUTTON">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/187_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00bc.smil#text_00bc"/></mnemonic>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_SKIP">
+      <note>This dialog lets the user control rendering of skippable structures.</note>
+      <caption>
+        <text>หัวข้อที่สามารถข้ามได้</text>
+        <originalText>Skippable Items</originalText>
+        
+      <audio src="./audio/188.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00bd.smil#text_00bd"/></caption>
+      <switch element="description">
+        <description mfcid="IDC_STATIC" condition="hasSkippableStructures">
+          <text>หนังสือเล่มนี้มีโครงสร้างพิเศษ กรุณาเลือกห้วข้อที่ต้องการข้าม</text>
+          <originalText>This book contains the following special structures.  Check the ones you want skipped.</originalText>
+          
+        <audio src="./audio/189__.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00be.smil#text_00be"/></description>
+        <description mfcid="IDC_STATIC" condition="hasNoSkippableStructures">
+          <text>หนังสือเล่มนี้ไม่มีหัวข้อที่สามาถข้ามได้</text>
+          <originalText>This publication has no skippable elements.</originalText>
+          
+        <audio src="./audio/190.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00bf.smil#text_00bf"/></description>
+      </switch>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="altC_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SKIPS" widget="list">
+        <caption>
+          <text>หัวข้อที่สามารถข้ามได้</text>
+          <originalText>Skippable items</originalText>
+          
+        <audio src="./audio/191.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00c0.smil#text_00c0"/></caption>
+        <description>
+          <text>ใช้ลูกศรเลื่อนไปตามรายชื่อหัวข้อที่สามารถข้ามได้</text>
+          <originalText>Use the arrow keys to move around this list of skippable items.</originalText>
+          
+        <audio src="./audio/192.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00c1.smil#text_00c1"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="SKIPPABLE_ITEM"/>
+          </caption>
+          <description>
+            <prompt>
+              <promptVar name="SKIPPABLE_ITEM"/>
+              <promptItem refid="thisItem"/>
+              <promptVar name="WILL_SKIP_OR_NOT" param="SKIPPABLE_ITEM_ID"/>
+            </prompt>
+          </description>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE4">
+      <note>This dialog lets the user select a language pack.</note>
+      <caption>
+        <text>ภาษา</text>
+        <originalText>Language</originalText>
+        
+      <audio src="./audio/193.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00c2.smil#text_00c2"/></caption>
+      <description mfcid="IDC_STATIC">
+        <text>คุณสามารถเปลี่ยนภาษาบรรยายโปรแกรมได้ โดยภาษาใหม่จะถูกตรวจเจอโดยอัตโนมัติ</text>
+        <originalText>Here you can change the language of the software.  New language packs are detected automatically.</originalText>
+        
+      <audio src="./audio/194__.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00c3.smil#text_00c3"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="ctrl1_for_prefsdialog"/>
+        <promptItem refid="ctrl2_for_colorsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDC_BTN_SELECTLANG" widget="button">
+        <caption>
+          <text>เลือกภาษา</text>
+          <originalText>Select Language</originalText>
+          
+        <audio src="./audio/195.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00c4.smil#text_00c4"/></caption>
+        <description>
+          <text>กรุณายืนยันเืพื่อเปลี่ยนภาษา</text>
+          <originalText>Press to confirm your language selection for the AMIS user interface</originalText>
+          
+        <audio src="./audio/196.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00c5.smil#text_00c5"/></description>
+      </control>
+      <control mfcid="IDC_LANGLIST" widget="list">
+        <caption mfcid="IDC_STATIC">
+          <text>ตัวเลือกภาษาของคุณเลือกคือ:</text>
+          <originalText>Your language choices are:</originalText>
+          
+        <audio src="./audio/197.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00c6.smil#text_00c6"/></caption>
+        <description>
+          <text>ใช้ลูกศรเลื่อนไปตามรายชื่อภาษา</text>
+          <originalText>Use the arrow keys to move around this list of languages.</originalText>
+          
+        <audio src="./audio/198.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00c7.smil#text_00c7"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="LANGUAGE_NAME"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_CURRLANG">
+        <caption>
+          <prompt>
+            <promptItem>
+              <text>คุณกำลังใช้ภาษา </text>
+              <originalText>You are currently using AMIS in</originalText>
+              
+            <audio src="./audio/199.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00c8.smil#text_00c8"/></promptItem>
+            <promptVar name="CURR_LANGUAGE_NAME"/>
+          </prompt>
+        </caption>
+      </control>
+      <accelerator>
+        <text>Ctrl+3</text>
+        <originalText>Ctrl+3</originalText>
+        
+      <audio src="./audio/200_Ctrl3.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00c9.smil#text_00c9"/></accelerator>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE2">
+      <note>This dialog lets the user select which colors AMIS uses</note>
+      <caption>
+        <text>ปรับสี</text>
+        <originalText>Set Colors</originalText>
+        
+      <audio src="./audio/201.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00ca.smil#text_00ca"/></caption>
+      <description>
+        <text>คุณสามารถปรับสีของโปรแกรมได้ที่ตำแหน่งนี้</text>
+        <originalText>Here you can set color options for AMIS.</originalText>
+        
+      <audio src="./audio/202.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00cb.smil#text_00cb"/></description>
+      <prompt type="instructions">
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem refid="ctrl1_for_prefsdialog"/>
+        <promptItem refid="ctrl3_for_langsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+      </prompt>
+      <control mfcid="IDC_PHRASES" widget="other">
+        <caption>
+          <text>สีระบายประโยคที่กำลังอ่าน</text>
+          <originalText>Phrase Highlighting</originalText>
+          
+        <audio src="./audio/203.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00cc.smil#text_00cc"/></caption>
+      </control>
+      <control mfcid="IDC_TEXTFG" widget="textlabel">
+        <caption>
+          <text>สีตัวอักษร :</text>
+          <originalText>Text Foreground: </originalText>
+          
+        <audio src="./audio/204__.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00cd.smil#text_00cd"/></caption>
+      </control>
+      <control mfcid="IDC_TEXTBG" widget="textlabel">
+        <caption>
+          <text>สีพื้นหลัง: </text>
+          <originalText>Text Background: </originalText>
+          
+        <audio src="./audio/205.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00ce.smil#text_00ce"/></caption>
+      </control>
+      <control mfcid="IDC_BORDER" widget="textlabel">
+        <caption>
+          <text>สีของกรอบ: </text>
+          <originalText>Selection Border: </originalText>
+          
+        <audio src="./audio/206.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00cf.smil#text_00cf"/></caption>
+      </control>
+      <control mfcid="IDC_CONTRAST" widget="other">
+        <caption>
+          <text>ปรับมุมมองของสีที่ตัดกัน</text>
+          <originalText>High Contrast Settings</originalText>
+          
+        <audio src="./audio/207.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00d0.smil#text_00d0"/></caption>
+      </control>
+      <control mfcid="IDC_PAGEFG" widget="textlabel">
+        <caption>
+          <text>สีตัวอักษร :</text>
+          <originalText>Page Foreground: </originalText>
+          
+        <audio src="./audio/208__.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00d1.smil#text_00d1"/></caption>
+      </control>
+      <control mfcid="IDC_PAGEBG" widget="textlabel">
+        <caption>
+          <text>สีพื้นหลัง: </text>
+          <originalText>Page Background: </originalText>
+          
+        <audio src="./audio/209.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00d2.smil#text_00d2"/></caption>
+      </control>
+      <control mfcid="IDC_BTN_RESETCOLORS" widget="button">
+        <caption>
+          <text>เปลี่ยนกลับไปยังสีเดิม</text>
+          <originalText>Reset Colors</originalText>
+          
+        <audio src="./audio/210.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00d3.smil#text_00d3"/></caption>
+      </control>
+      <control mfcid="IDC_PHRASEPREVIEW" widget="textfield">
+        <caption>
+          <text>ตัวอย่างสีระบายประโยคที่กำลังอ่าน</text>
+          <originalText>Preview of phrase highlight colors.</originalText>
+          
+        <audio src="./audio/211.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00d4.smil#text_00d4"/></caption>
+      </control>
+      <control mfcid="IDC_CONTRASTPREVIEW" widget="textfield">
+        <caption>
+          <text>ตัวอย่างปรับมุมมองของสีที่ตัดกัน</text>
+          <originalText>Preview of page contrast colors.</originalText>
+          
+        <audio src="./audio/212.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00d5.smil#text_00d5"/></caption>
+      </control>
+      <accelerator>
+        <text>Ctrl+2</text>
+        <originalText>Ctrl+2</originalText>
+        
+      <audio src="./audio/213_Ctrl2.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00d6.smil#text_00d6"/></accelerator>
+    </dialog>
+    <dialog mfcid="IDD_CURRENTPOSITION">
+      <note>This dialog gives the user information about their current position in the publication.</note>
+      <caption>
+        <text>ตำแหน่งปัจจุบัน</text>
+        <originalText>Current Position</originalText>
+        
+      <audio src="./audio/214.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00d7.smil#text_00d7"/></caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text>รายการข้อมูลนี้จะบอกคุณเกี่ยวกับตำแหน่งปัจจุบันของคุณ</text>
+          <originalText>This is a list of data about your current position.</originalText>
+          
+        <audio src="./audio/215.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00d8.smil#text_00d8"/></caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="no">
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>หัวข้อที่คุณอยู่:</text>
+                <originalText>Your current section is titled:</originalText>
+                
+              <audio src="./audio/216.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00d9.smil#text_00d9"/></promptItem>
+              <promptVar name="CURRENT_SECTION_TITLE"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text>จำนวนหน้าในหัวข้อนี้:</text>
+                <originalText>Number of pages in this section:</originalText>
+                
+              <audio src="./audio/217.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00da.smil#text_00da"/></promptItem>
+              <promptVar name="CURRENT_SECTION_NUM_PAGES"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>จำนวนหัวข้อย่อยในหัวข้อนี้:</text>
+                <originalText>Number of subsections in this section:</originalText>
+                
+              <audio src="./audio/218.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00db.smil#text_00db"/></promptItem>
+              <promptVar name="CURRENT_SECTION_NUM_SUBSECTIONS"/>
+            </prompt>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE1">
+      <note>This dialog lets the user set some basic preferences for AMIS.</note>
+      <caption>
+        <text>ตัวปรับตัวเลือก</text>
+        <originalText>General Preferences</originalText>
+        
+      <audio src="./audio/219.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00dc.smil#text_00dc"/></caption>
+      <description>
+        <text>ตรงนี้คุณสามารถปรับตัวเลือกของโปรแกรมได้</text>
+        <originalText>Here you can set general preferences for AMIS.</originalText>
+        
+      <audio src="./audio/220.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00dd.smil#text_00dd"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem refid="ctrl2_for_colorsdialog"/>
+        <promptItem refid="ctrl3_for_langsdialog"/>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <!--removed this as it is probably not very useful, and it was incorrectly recorded-->
+        <!--<promptItem refid="textBoxRepeatInstr"/>-->
+      </prompt>
+      <control mfcid="IDC_BMKDIRBROWSE" widget="button">
+        <caption>
+          <promptItem refid="browse_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="browse_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SELFVOICING" widget="checkbox">
+        <caption>
+          <text>ใช้เสียงบรรยายโปรแกรม</text>
+          <originalText>Use self-voicing</originalText>
+          
+        <audio src="./audio/221.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00de.smil#text_00de"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="SELF_VOICING_FEATURE"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_TTSVOICE" widget="list">
+        <caption mfcid="IDC_SELTTSLABEL">
+          <text>เลือกโปรแกรมสังเคราะห์เสียง</text>
+          <originalText>Select TTS voice:</originalText>
+          
+        <audio src="./audio/222.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00df.smil#text_00df"/></caption>
+        <description>
+          <text>ใช้ลูกศรเลื่อนไปตามรายการโปรแกรมสังเคราะห์เสียง</text>
+          <originalText>Use the arrow keys to move around this list of voices</originalText>
+          
+        <audio src="./audio/223.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00e0.smil#text_00e0"/></description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="TTS_VOICE_NAME"/>
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_BASIC" widget="checkbox">
+        <caption>
+          <text>เริ่มโปรแกรมด้วยมุมมองพื้นฐาน</text>
+          <originalText>Start AMIS in the basic view mode.</originalText>
+          
+        <audio src="./audio/224.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00e1.smil#text_00e1"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="BASIC_VIEW_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_PROMPTONBASICVIEW" widget="checkbox">
+        <caption>
+          <text>ช่วงที่เปลี่ยนเป็นมุมมองพื้นฐานให้บอกวิธีเปลี่ยนกลับไปเป็นมุมมองปกติ</text>
+          <originalText>Upon switching to basic view, tell the user how to go back to the default view.</originalText>
+          
+        <audio src="./audio/225.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00e2.smil#text_00e2"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="PROMPT_ON_BASIC_VIEW_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_LOADLASTDTB" widget="checkbox">
+        <caption>
+          <text>เปิดหนังสือเล่มที่อ่านล่าสุดเวลาเริ่มโปรแกรม</text>
+          <originalText>Load the most recently read book when the software starts.</originalText>
+          
+        <audio src="./audio/226.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00e3.smil#text_00e3"/></caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently"/>
+            <promptVar name="ON_OR_OFF" param="LOAD_LAST_READ_FEATURE"/>
+            <promptItem refid="spaceToToggle"/>
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_BMKDIR" widget="textfield">
+        <caption mfcid="IDC_BMKDIRLABEL">
+          <text>ที่เก็บข้อมูลตัวกั้นหนังสือ:</text>
+          <originalText>Bookmarks directory:</originalText>
+          
+        <audio src="./audio/227.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00e4.smil#text_00e4"/></caption>
+        <description>
+          <text>ระบุตำแหน่งที่เก็บข้อมูลตัวกั้นหนังสือในช่องนี้</text>
+          <originalText>Type the path to the bookmarks folder in this field.</originalText>
+          
+        <audio src="./audio/228.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00e5.smil#text_00e5"/></description>
+      </control>
+      <accelerator>
+        <text>Ctrl+1</text>
+        <originalText>Ctrl+1</originalText>
+        
+      <audio src="./audio/229_Ctrl1.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00e6.smil#text_00e6"/></accelerator>
+    </dialog>
+    <dialog mfcid="IDD_NAVIGATIONOPTIONS">
+      <note>This dialog lists navigation options for the current publication.</note>
+      <caption>
+        <text>ตัวเลือกการควบคุม</text>
+        <originalText>Navigation Options</originalText>
+        
+      <audio src="./audio/230.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00e7.smil#text_00e7"/></caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text>รายการที่คุณสามารถไปได้ทันที</text>
+          <originalText>This is a list of items to which you may navigate directly.</originalText>
+          
+        <audio src="./audio/231.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00e8.smil#text_00e8"/></caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="TOC_CATEGORIES"/>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_GOTOPAGE">
+      <note>This dialog lets the user jump to a certain page</note>
+      <caption>
+        <text>ไปยังหน้า</text>
+        <originalText>Go To Page</originalText>
+        
+      <audio src="./audio/232.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00e9.smil#text_00e9"/></caption>
+      <description>
+        <text>คุณสามารถไปยังหน้าต่างๆได้จากตรงนี้</text>
+        <originalText>Here you can jump to a page number or page label.</originalText>
+        
+      <audio src="./audio/233.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00ea.smil#text_00ea"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem>
+          <text>กรุณาพิมพ์หมายเลขหน้าที่ต้องการไปจากนั้นให้กดปุ่ม Enter</text>
+          <originalText>After typing in your page number, press enter to go there.</originalText>
+          
+        <audio src="./audio/234__Enter.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00eb.smil#text_00eb"/></promptItem>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+        <!--removed this as it is probably not very useful, and it was incorrectly recorded-->
+        <!--<promptItem refid="textBoxRepeatInstr"/>-->
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <text>หลังจากพิมพ์เลขหน้าแล้วกดปุ่มนี้เพื่อไปยังหน้าที่คุณต้องการ</text>
+          <originalText>Press this button to go to the desired page.</originalText>
+          
+        <audio src="./audio/235.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00ec.smil#text_00ec"/></description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/236_C.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00ed.smil#text_00ed"/></mnemonic>
+      </control>
+      <control mfcid="IDC_PAGENUM" widget="textfield">
+        <caption mfcid="IDC_STATIC">
+          <text>พิมพ์หมายเลขหน้า:</text>
+          <originalText>Enter a page number:</originalText>
+          
+        <audio src="./audio/237.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00ee.smil#text_00ee"/></caption>
+        <description>
+          <text>พิมพ์หมายเลขหน้าที่ต้องการไป</text>
+          <originalText>Type the number or label of the page you want to go to.</originalText>
+          
+        <audio src="./audio/238.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00ef.smil#text_00ef"/></description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_FULLSUMMARY">
+      <note>This dialog lists key publication metadata.</note>
+      <caption>
+        <text>ข้อมูลสรุปรายละเอียดหนังสือ</text>
+        <originalText>Publication Summary</originalText>
+        
+      <audio src="./audio/239.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00f0.smil#text_00f0"/></caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description"/>
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text>รายการข้อมูลรายละเอียดหนังสือ</text>
+          <originalText>This is a list of publication metadata.</originalText>
+          
+        <audio src="./audio/240.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00f1.smil#text_00f1"/></caption>
+        <description>
+          <promptItem refid="list_reads_automatically"/>
+        </description>
+        <list repeat="no">
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>ชื่อเรื่อง:</text>
+                <originalText>This book is titled:</originalText>
+                
+              <audio src="./audio/241.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00f2.smil#text_00f2"/></promptItem>
+              <promptVar name="META_TITLE"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>แต่งโดย:</text>
+                <originalText>Written by:</originalText>
+                
+              <audio src="./audio/242.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00f3.smil#text_00f3"/></promptItem>
+              <promptVar name="META_CREATOR"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>พิมพ์โดย:</text>
+                <originalText>Published by:</originalText>
+                
+              <audio src="./audio/243.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00f4.smil#text_00f4"/></promptItem>
+              <promptVar name="META_PUBLISHER"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_DESCRIPTION">
+            <prompt>
+              <promptItem>
+                <text>บทคัดย่อ:</text>
+                <originalText>Description:</originalText>
+                
+              <audio src="./audio/244.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00f5.smil#text_00f5"/></promptItem>
+              <promptVar name="META_DESC"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>จำนวนตัวควบคุมในสารบัญ:</text>
+                <originalText>Number of navigation points in the table of contents:</originalText>
+                
+              <audio src="./audio/245.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00f6.smil#text_00f6"/></promptItem>
+              <promptVar name="META_TOCITEMS"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>จำนวนชั้นของหัวข้อย่อย:</text>
+                <originalText>Maximum section depth:</originalText>
+                
+              <audio src="./audio/246.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00f7.smil#text_00f7"/></promptItem>
+              <promptVar name="META_DEPTH"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text>จำนวนหน้าช่วงแรก:</text>
+                <originalText>Front matter pages:</originalText>
+                
+              <audio src="./audio/247.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00f8.smil#text_00f8"/></promptItem>
+              <promptVar name="META_PAGEFRONT"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text>จำนวนหน้าช่วงปกติ:</text>
+                <originalText>Regular pages:</originalText>
+                
+              <audio src="./audio/248.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00f9.smil#text_00f9"/></promptItem>
+              <promptVar name="META_PAGENORMAL"/>
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text>จำนวนหน้าพิเศษ:</text>
+                <originalText>Special pages:</originalText>
+                
+              <audio src="./audio/249.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00fa.smil#text_00fa"/></promptItem>
+              <promptVar name="META_PAGESPECIAL"/>
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text>ความยาวทั้งหมด:</text>
+                <originalText>Total duration:</originalText>
+                
+              <audio src="./audio/250.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00fb.smil#text_00fb"/></promptItem>
+              <promptVar name="META_TOTALTIME"/>
+            </prompt>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+  </dialogs>
+  <prompts>
+    <promptItemRefs>
+      <promptItem id="altC_to_close">
+        <text>กดปุ่ม Alt + C เพื่อปิดหน้าต่างนี้</text>
+        <originalText>Press Alt + C to close the dialog.</originalText>
+        
+      <audio src="./audio/251__Alt__C_.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00fc.smil#text_00fc"/></promptItem>
+      <promptItem id="altC_to_cancel">
+        <text>กดปุ่ม Alt + C เพื่อยกเลิกหน้าต่างนี้</text>
+        <originalText>Press Alt + C to cancel the dialog.</originalText>
+        
+      <audio src="./audio/252__Alt__C_.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00fd.smil#text_00fd"/></promptItem>
+      <promptItem id="thisItem">
+        <text>รายการนี้</text>
+        <originalText>This item</originalText>
+        
+      <audio src="./audio/253.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00fe.smil#text_00fe"/></promptItem>
+      <promptItem id="spaceToToggle">
+        <text>กดปุ่ม Space bar เพื่อเปลี่ยนค่า</text>
+        <originalText>Press the space bar to toggle the value.</originalText>
+        
+      <audio src="./audio/254__Space_bar_.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis00ff.smil#text_00ff"/></promptItem>
+      <promptItem id="tabAround">
+        <text>กดปุ่ม Tab เพื่อไปย้ายไปปรับค่าอื่นในหน้าต่างนี้</text>
+        <originalText>Hit tab to move around the options on the dialog.</originalText>
+        
+      <audio src="./audio/255__Tab_.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0100.smil#text_0100"/></promptItem>
+      <promptItem id="ctrl2_for_colorsdialog">
+        <text>กดปุ่ม Control + 2 เพื่อเปิดหน้าปรับสี</text>
+        <originalText>Press control + 2 to switch to the colors dialog.</originalText>
+        
+      <audio src="./audio/256__Control__2_.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0101.smil#text_0101"/></promptItem>
+      <promptItem id="ctrl3_for_langsdialog">
+        <text>กดปุ่ม control + 3 เพื่อเปิดหน้าปรับภาษา</text>
+        <originalText>Press control + 3 to switch to the language options dialog.</originalText>
+        
+      <audio src="./audio/257__control__3_.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0102.smil#text_0102"/></promptItem>
+      <promptItem id="ctrl1_for_prefsdialog">
+        <text>กดปุ่ม control + 1 เพื่อเปิดหน้าปรับแต่งตัวเลือกของโปรแกรม</text>
+        <originalText>Press control + 1 to switch to the general preferences dialog.</originalText>
+        
+      <audio src="./audio/258__control__1_.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0103.smil#text_0103"/></promptItem>
+      <promptItem id="thisItemIsCurrently">
+        <text>รายการนี้กำลัง</text>
+        <originalText>This item is currently</originalText>
+        
+      <audio src="./audio/259.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0104.smil#text_0104"/></promptItem>
+      <promptItem id="enter_to_close">
+        <text>กดปุ่ม enterเพื่อปิดหน้าต่าง</text>
+        <originalText>Press enter to close the dialog.</originalText>
+        
+      <audio src="./audio/260__enter.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0105.smil#text_0105"/></promptItem>
+      <promptItem id="browse_button_caption">
+        <text>เลือกตำแหน่ง...</text>
+        <originalText>Browse...</originalText>
+        
+      <audio src="./audio/261.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0106.smil#text_0106"/></promptItem>
+      <promptItem id="browse_button_description">
+        <text>กดปุ่มนี้เพื่อเปิดหน้าต่างสำหรับเลือกตำแหน่ง</text>
+        <originalText>Press to open the folder browse dialog.</originalText>
+        
+      <audio src="./audio/262.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0107.smil#text_0107"/></promptItem>
+      <promptItem id="ok_button_caption">
+        <text>ตกลง</text>
+        <originalText>OK</originalText>
+        
+      <audio src="./audio/263.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0108.smil#text_0108"/></promptItem>
+      <promptItem id="ok_button_description">
+        <text>กดปุ่มตกลงเพื่อปิดหน้าต่างนี้</text>
+        <originalText>Press OK to close this dialog.</originalText>
+        
+      <audio src="./audio/264.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0109.smil#text_0109"/></promptItem>
+      <promptItem id="cancel_button_caption">
+        <text mnemonic="C">ยกเลิก</text>
+        <originalText>Cancel</originalText>
+        
+      <audio src="./audio/265.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis010a.smil#text_010a"/></promptItem>
+      <promptItem id="cancel_button_description">
+        <text>กดปุ่มเพื่อยกเลิกหน้าต่างนี้</text>
+        <originalText>Press to cancel this dialog.</originalText>
+        
+      <audio src="./audio/266.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis010b.smil#text_010b"/></promptItem>
+      <promptItem id="list_reads_automatically">
+        <text>รายการนี้จะถูกอ่านโดยอัตโนมัติ</text>
+        <originalText>This list will be read automatically.</originalText>
+        
+      <audio src="./audio/267.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis010c.smil#text_010c"/></promptItem>
+      <promptItem id="repeatLastPromptInstr">
+        <text>กดปุ่ม Control + R เพื่อฟังข้อความสุดท้ายใหม่อีกครั้ง</text>
+        <originalText>Press Control + R to repeat the last prompt.</originalText>
+        
+      <audio src="./audio/268__Control__R_.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis010d.smil#text_010d"/></promptItem>
+      <promptItem id="thisDialogNotSelfVoicing">
+        <text>หน้าต่างนี้ไม่มีเสียงบรรยายโปรแกรม กรุณาใช้โปรแกรมอ่านหน้่าจอของคุณมาช่วย</text>
+        <originalText>This dialog is not yet self-voicing.</originalText>
+        
+      <audio src="./audio/269__.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis010e.smil#text_010e"/></promptItem>
+      <promptItem id="escapeToCancel">
+        <text>กดปุ่ม escape เพื่อยกเลิก</text>
+        <originalText>Press escape to cancel</originalText>
+        
+      <audio src="./audio/270__escape_.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis010f.smil#text_010f"/></promptItem>
+      <promptItem id="hearDlgInstructions">
+        <text>กดปุ่ม Control + I เพื่อฟังคำแนะนำสำหรับหน้าต่างนี้</text>
+        <originalText>Press Control + I to hear instructions for this dialog.</originalText>
+        
+      <audio src="./audio/271__Control__I_.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0110.smil#text_0110"/></promptItem>
+      <promptItem id="textBoxRepeatInstr">
+        <text>กดปุ่ม Control + T เพื่อซ้ำข้อความสุดท้าย</text>
+        <originalText>Press Control + T to repeat the text in the last text box.</originalText>
+        
+      <audio src="./audio/272__Control__T_.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0111.smil#text_0111"/></promptItem>
+      <promptItem id="nav_window">
+        <text>ควบคุม</text>
+        <originalText>Navigation</originalText>
+        
+      <audio src="./audio/273.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0112.smil#text_0112"/></promptItem>
+      <promptItem id="sections">
+        <text>ส่วน</text>
+        <originalText>Sections</originalText>
+        
+      <audio src="./audio/274.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0113.smil#text_0113"/></promptItem>
+      <promptItem id="pages">
+        <text>หน้า</text>
+        <originalText>Pages</originalText>
+        
+      <audio src="./audio/275.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0114.smil#text_0114"/></promptItem>
+      <promptItem id="noterefs">
+        <text>ส่วนต่อท้าย</text>
+        <originalText>Footnotes</originalText>
+        
+      <audio src="./audio/276.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0115.smil#text_0115"/></promptItem>
+      <promptItem id="prodnotes">
+        <text>บันทึกจากผู้จัดทำ</text>
+        <originalText>Producer notes</originalText>
+        
+      <audio src="./audio/277.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0116.smil#text_0116"/></promptItem>
+      <promptItem id="sidebars">
+        <text>ตัวเลื่อน</text>
+        <originalText>Sidebars</originalText>
+        
+      <audio src="./audio/278.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0117.smil#text_0117"/></promptItem>
+      <promptItem id="groups">
+        <text>กลุ่มตัวเลือก</text>
+        <originalText>Grouped items</originalText>
+        
+      <audio src="./audio/279.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0118.smil#text_0118"/></promptItem>
+      <promptItem id="navigation_sidebar_caption">
+        <text>ควบคุม</text>
+        <originalText>Navigation</originalText>
+        
+      <audio src="./audio/280.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0119.smil#text_0119"/></promptItem>
+      <promptItem id="ready">
+        <text>พร้อม</text>
+        <originalText>Ready</originalText>
+        
+      <audio src="./audio/281.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis011a.smil#text_011a"/></promptItem>
+      <promptItem id="property_sheet_caption">
+        <text>ตัวเลือก</text>
+        <originalText>Preferences</originalText>
+        
+      <audio src="./audio/282.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis011b.smil#text_011b"/></promptItem>
+      <promptItem id="selfolder_title">
+        <text>เลือก Folder</text>
+        <originalText>Select a Folder</originalText>
+        
+      <audio src="./audio/283__Folder.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis011c.smil#text_011c"/></promptItem>
+      <promptItem id="selfolder_instr">
+        <text>เลือก Folder จากรายการ Folder ด้านล่าง</text>
+        <originalText>Select a folder from the directory below.</originalText>
+        
+      <audio src="./audio/284__Folder__Folder_.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis011d.smil#text_011d"/></promptItem>
+      <promptItem id="daisy_books">
+        <text>หนังสือ DAISY</text>
+        <originalText>DAISY Books</originalText>
+        
+      <audio src="./audio/285__DAISY.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis011e.smil#text_011e"/></promptItem>
+      <promptItem id="folder_does_not_exist">
+        <text>ไม่มี Folder %s นี้อยู่ คุณต้องการสร้างใหม่ใช่ไหม?</text>
+        <originalText>The folder %s does not exist. Do you want the folder to be created?</originalText>
+        
+      <audio src="./audio/286__Folder_s__.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis011f.smil#text_011f"/></promptItem>
+      <promptItem id="folder_invalid">
+        <text>ชื่อ Folder ไม่ถูกต้อง กรุณาเลือกใหม่อีกครั้ง</text>
+        <originalText>This folder name is invalid. Please choose another.</originalText>
+        
+      <audio src="./audio/287__Folder__.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0120.smil#text_0120"/></promptItem>
+      <promptItem id="cant_create_folder">
+        <text>ชื่อ Folder นี้ไม่สามารถสร้างได้ กรุณาตรวจสอบใหม่อีกครั้ง</text>
+        <originalText>This folder can not be created. Please double check.</originalText>
+        
+      <audio src="./audio/288__Folder__.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0121.smil#text_0121"/></promptItem>
+      <promptItem id="not_available">
+        <text>ไม่ว่าง</text>
+        <originalText>Not available</originalText>
+        
+      <audio src="./audio/289.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0122.smil#text_0122"/></promptItem>
+      <promptItem id="numeric_zero">
+        <note>All numerals should be translated into numerals, not words.</note>
+        <text>๐</text>
+        <originalText>0</originalText>
+        
+      <audio src="./audio/290.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0123.smil#text_0123"/></promptItem>
+      <promptItem id="numeric_one">
+        <text>๑</text>
+        <originalText>1</originalText>
+        
+      <audio src="./audio/291.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0124.smil#text_0124"/></promptItem>
+      <promptItem id="numeric_two">
+        <text>๒</text>
+        <originalText>2</originalText>
+        
+      <audio src="./audio/292.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0125.smil#text_0125"/></promptItem>
+      <promptItem id="numeric_three">
+        <text>๓</text>
+        <originalText>3</originalText>
+        
+      <audio src="./audio/293.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0126.smil#text_0126"/></promptItem>
+      <promptItem id="numeric_four">
+        <text>๔</text>
+        <originalText>4</originalText>
+        
+      <audio src="./audio/294.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0127.smil#text_0127"/></promptItem>
+      <promptItem id="numeric_five">
+        <text>๕</text>
+        <originalText>5</originalText>
+        
+      <audio src="./audio/295.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0128.smil#text_0128"/></promptItem>
+      <promptItem id="numeric_six">
+        <text>๖</text>
+        <originalText>6</originalText>
+        
+      <audio src="./audio/296.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0129.smil#text_0129"/></promptItem>
+      <promptItem id="numeric_seven">
+        <text>๗</text>
+        <originalText>7</originalText>
+        
+      <audio src="./audio/297.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis012a.smil#text_012a"/></promptItem>
+      <promptItem id="numeric_eight">
+        <text>๘</text>
+        <originalText>8</originalText>
+        
+      <audio src="./audio/298.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis012b.smil#text_012b"/></promptItem>
+      <promptItem id="numeric_nine">
+        <text>๙</text>
+        <originalText>9</originalText>
+        
+      <audio src="./audio/299.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis012c.smil#text_012c"/></promptItem>
+      <promptItem id="deleted">
+        <text>ถูกลบ</text>
+        <originalText>deleted</originalText>
+        
+      <audio src="./audio/300.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis012d.smil#text_012d"/></promptItem>
+      <promptItem id="will_be_skipped">
+        <text>จะถูกข้าม</text>
+        <originalText>will be skipped</originalText>
+        
+      <audio src="./audio/301.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis012e.smil#text_012e"/></promptItem>
+      <promptItem id="will_be_played">
+        <text>จะถูกอ่าน</text>
+        <originalText>will be played</originalText>
+        
+      <audio src="./audio/302.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis012f.smil#text_012f"/></promptItem>
+      <promptItem id="item_on">
+        <text>เปิด</text>
+        <originalText>on</originalText>
+        
+      <audio src="./audio/303.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0130.smil#text_0130"/></promptItem>
+      <promptItem id="item_off">
+        <text>ปิด</text>
+        <originalText>off</originalText>
+        
+      <audio src="./audio/304.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0131.smil#text_0131"/></promptItem>
+      <promptItem id="item_selected">
+        <text>ถูกเลือก</text>
+        <originalText>selected</originalText>
+        
+      <audio src="./audio/305.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0132.smil#text_0132"/></promptItem>
+      <promptItem id="item_deselected">
+        <text>ไม่ถูกเลือก</text>
+        <originalText>deselected</originalText>
+        
+      <audio src="./audio/306.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0133.smil#text_0133"/></promptItem>
+      <promptItem id="keyboardShortcut">
+        <text>แป้นพิมพ์ลัด</text>
+        <originalText>Keyboard Shortcut</originalText>
+        
+      <audio src="./audio/307.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0134.smil#text_0134"/></promptItem>
+      <promptItem id="icon">
+        <text>ไอคอน</text>
+        <originalText>Icon</originalText>
+        
+      <audio src="./audio/308.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0135.smil#text_0135"/></promptItem>
+      <promptItem id="menu">
+        <text>รายการ</text>
+        <originalText>Menu</originalText>
+        
+      <audio src="./audio/309.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0136.smil#text_0136"/></promptItem>
+      <promptItem id="followedBy">
+        <note>This is used in the context of a sequence of key presses, as in "Press Alt + V, followed by S"</note>
+        <text>ตามด้วย</text>
+        <originalText>followed by</originalText>
+        
+      <audio src="./audio/310.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0137.smil#text_0137"/></promptItem>
+      <promptItem id="submenu">
+        <text>เมนูย่อย</text>
+        <originalText>Sub Menu</originalText>
+        
+      <audio src="./audio/311.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0138.smil#text_0138"/></promptItem>
+    </promptItemRefs>
+    <generalPrompts>
+      <prompt id="dialogClosed">
+        <promptItem>
+          <text>ปิดหน้าต่าง</text>
+          <originalText>Dialog closed.</originalText>
+          
+        <audio src="./audio/312.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0139.smil#text_0139"/></promptItem>
+      </prompt>
+      <prompt id="textFieldEntry">
+        <promptItem>
+          <text>ข้อความคือ:</text>
+          <originalText>Text field entry is:</originalText>
+          
+        <audio src="./audio/313.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis013a.smil#text_013a"/></promptItem>
+        <promptVar name="TEXT_FIELD"/>
+      </prompt>
+      <prompt id="notSelfVoicing">
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+      </prompt>
+      <prompt id="bookAtPathChanged">
+        <promptItem>
+          <text>ตำแหน่งของหนังสือที่คุณมองหาอยู่ได้เปลี่ยนไป โปรแกรมได้เจอหนังสือเล่มอื่นแทน กรุณาตรวจสอบแผ่นซีดีใหม่อีกครั้ง</text>
+          <originalText>The location of the book you are looking for has changed.  A different book was found instead.  Did the contents of your CD-ROM drive change?</originalText>
+          
+        <audio src="./audio/314___.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis013b.smil#text_013b"/></promptItem>
+      </prompt>
+      <prompt id="generalBookError">
+        <promptItem>
+          <text>เกิดข้อผิดพลาดขณะเปิดหนังสือ</text>
+          <originalText>An error occurred while trying to open the book.</originalText>
+          
+        <audio src="./audio/315.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis013c.smil#text_013c"/></promptItem>
+        <promptVar name="BOOK_PATH"/>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+      <prompt id="noCdLoaded">
+        <promptItem>
+          <text>ไม่มีแผ่นซีดีในไดร์ฟซีดีรอม</text>
+          <originalText>There is not a CD in the CD-ROM drive.</originalText>
+          
+        <audio src="./audio/316.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis013d.smil#text_013d"/></promptItem>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+      <prompt id="pluginErrorInit">
+        <promptItem>
+          <text>Plug-in error: init() ไม่พบ function ใน plug-in DLL.</text>
+          <originalText>Plug-in error: init() function not found in the plug-in DLL.</originalText>
+          
+        <audio src="./audio/317_Plugin_error_init__function__p.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis013e.smil#text_013e"/></promptItem>
+      </prompt>
+      <prompt id="pluginErrorDll">
+        <promptItem>
+          <text>Plug-in error: plug-in library ต่อไปนี้ไม่สามารถเรียกใช้งานได้: </text>
+          <originalText>Plug-in error: The following plug-in library could not be loaded: </originalText>
+          
+        <audio src="./audio/318_Plugin_error_plugin_library_.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis013f.smil#text_013f"/></promptItem>
+        <promptVar name="PLUGIN_LIB"/>
+      </prompt>
+      <prompt id="basicViewPrompt">
+        <promptItem>
+          <text>คุณกำลังใช้มุมมองพื้นฐาน กดปุ่ม F11 เพื่อเปลี่ยนไปยัมุมมองปกติ</text>
+          <originalText>You are now using the basic view mode.  Press F11 to switch back to the default view mode.</originalText>
+          
+        <audio src="./audio/319___F11_.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0140.smil#text_0140"/></promptItem>
+      </prompt>
+      <prompt id="OpenFile_notSelfVoicing">
+        <promptItem>
+          <text>เปิดหน้าต่างแฟ้ม</text>
+          <originalText>Open File Dialog</originalText>
+          
+        <audio src="./audio/320.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0141.smil#text_0141"/></promptItem>
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem>
+          <text>ใช้วิธี ค้นหาหนังสือในเมนูแฟ้มเพื่อหาหนังสือเดซี่ทั้งหมดในเครื่องของคุณ</text>
+          <originalText>Use the "search for books" feature, under the file menu, to find DAISY books on your hard drive.</originalText>
+          
+        <audio src="./audio/321__.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0142.smil#text_0142"/></promptItem>
+        <promptItem refid="escapeToCancel"/>
+      </prompt>
+      <prompt id="BrowseForFolder_notSelfVoicing">
+        <promptItem>
+          <text>เลือกสำหรับหน้าต่าง Folder</text>
+          <originalText>Browse for folder dialog</originalText>
+          
+        <audio src="./audio/322__Folder.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0143.smil#text_0143"/></promptItem>
+        <promptItem refid="thisDialogNotSelfVoicing"/>
+        <promptItem refid="escapeToCancel"/>
+        <promptItem>
+          <text>จากนั้นพิมพ์ตำแหน่งที่คุณต้องการในช่องข้อความ</text>
+          <originalText>Then, type the path of the folder you want in the text box.</originalText>
+          
+        <audio src="./audio/323.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0144.smil#text_0144"/></promptItem>
+      </prompt>
+      <prompt id="canceled">
+        <promptItem>
+          <text>ถูกยกเลิก</text>
+          <originalText>Canceled</originalText>
+          
+        <audio src="./audio/324.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0145.smil#text_0145"/></promptItem>
+      </prompt>
+      <prompt id="loading">
+        <promptItem>
+          <text>กำลังนำเข้า</text>
+          <originalText>Loading</originalText>
+          
+        <audio src="./audio/325.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0146.smil#text_0146"/></promptItem>
+      </prompt>
+      <prompt id="restartForChanges">
+        <promptItem>
+          <text>กรุณาเริ่มโปรแกรมใหม่เพื่อดูการเปลี่ยนแปลง</text>
+          <originalText>Please restart to see your changes.</originalText>
+          
+        <audio src="./audio/326.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0147.smil#text_0147"/></promptItem>
+      </prompt>
+      <prompt id="noBooksFoundOnCd">
+        <promptItem>
+          <text>ไม่พบหนังสือเดซี่ในซีดีรอมนี้</text>
+          <originalText>No DAISY books were found on this CD-ROM.</originalText>
+          
+        <audio src="./audio/327.mp3" from="file://c:/devel/amis/trunk/Langpacks/thai/prompts/amis0148.smil#text_0148"/></promptItem>
+        <promptItem refid="enter_to_close"/>
+      </prompt>
+    </generalPrompts>
+  </prompts>
+</ui>

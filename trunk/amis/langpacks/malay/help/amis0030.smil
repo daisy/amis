@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.20" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Mengelak Dari Sesuatu Item" />
+<meta name="dc:title" content="AMIS Help" />
+<meta name="ncc:timeInThisSmil" content="0:00:27" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="26.736s">
+<par endsync="last">
+<text src="amishelpfile.html#amis_0030" id="amis_0030" />
+<seq>
+<audio src="47_Mengelak_Dari_Sesuatu_Item.mp3" clip-begin="npt=0.000s" clip-end="npt=0.888s" id="qwrt_0001" />
+<audio src="47_Mengelak_Dari_Sesuatu_Item.mp3" clip-begin="npt=0.888s" clip-end="npt=3.396s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0087" id="xami_0087" />
+<seq>
+<audio src="47_Mengelak_Dari_Sesuatu_Item.mp3" clip-begin="npt=3.396s" clip-end="npt=7.928s" id="qwrt_0003" />
+<audio src="47_Mengelak_Dari_Sesuatu_Item.mp3" clip-begin="npt=7.928s" clip-end="npt=10.658s" id="qwrt_0004" />
+<audio src="47_Mengelak_Dari_Sesuatu_Item.mp3" clip-begin="npt=10.658s" clip-end="npt=12.317s" id="qwrt_0005" />
+<audio src="47_Mengelak_Dari_Sesuatu_Item.mp3" clip-begin="npt=12.317s" clip-end="npt=17.750s" id="qwrt_0006" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0088" id="xami_0088" />
+<seq>
+<audio src="47_Mengelak_Dari_Sesuatu_Item.mp3" clip-begin="npt=17.750s" clip-end="npt=18.390s" id="qwrt_0007" />
+<audio src="47_Mengelak_Dari_Sesuatu_Item.mp3" clip-begin="npt=18.390s" clip-end="npt=20.859s" id="qwrt_0008" />
+<audio src="47_Mengelak_Dari_Sesuatu_Item.mp3" clip-begin="npt=20.859s" clip-end="npt=22.739s" id="qwrt_0009" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelpfile.html#xami_0089" id="xami_0089" />
+<seq>
+<audio src="47_Mengelak_Dari_Sesuatu_Item.mp3" clip-begin="npt=22.739s" clip-end="npt=23.183s" id="qwrt_000A" />
+<audio src="47_Mengelak_Dari_Sesuatu_Item.mp3" clip-begin="npt=23.183s" clip-end="npt=24.450s" id="qwrt_000B" />
+<audio src="47_Mengelak_Dari_Sesuatu_Item.mp3" clip-begin="npt=24.450s" clip-end="npt=25.978s" id="qwrt_000C" />
+<audio src="47_Mengelak_Dari_Sesuatu_Item.mp3" clip-begin="npt=25.978s" clip-end="npt=26.736s" id="qwrt_000D" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

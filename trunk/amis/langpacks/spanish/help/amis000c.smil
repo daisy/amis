@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.22" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Buscar libros en su disco duro" />
+<meta name="dc:title" content="AMIS Libro de Ayuda" />
+<meta name="ncc:timeInThisSmil" content="0:00:21" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="20.945s">
+<par endsync="last">
+<text src="amis-help-spanish.html#amis_000c" id="amis_000c" />
+<seq>
+<audio src="11_Buscar_libros_en_su_disco_duro.mp3" clip-begin="npt=0.000s" clip-end="npt=2.675s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0022" id="xami_0022" />
+<seq>
+<audio src="11_Buscar_libros_en_su_disco_duro.mp3" clip-begin="npt=2.675s" clip-end="npt=6.502s" id="qwrt_0002" />
+<audio src="11_Buscar_libros_en_su_disco_duro.mp3" clip-begin="npt=6.502s" clip-end="npt=10.410s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0023" id="xami_0023" />
+<seq>
+<audio src="11_Buscar_libros_en_su_disco_duro.mp3" clip-begin="npt=10.410s" clip-end="npt=11.837s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0024" id="xami_0024" />
+<seq>
+<audio src="11_Buscar_libros_en_su_disco_duro.mp3" clip-begin="npt=11.837s" clip-end="npt=16.815s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amis-help-spanish.html#xami_0025" id="xami_0025" />
+<seq>
+<audio src="11_Buscar_libros_en_su_disco_duro.mp3" clip-begin="npt=16.815s" clip-end="npt=18.228s" id="qwrt_0006" />
+<audio src="11_Buscar_libros_en_su_disco_duro.mp3" clip-begin="npt=18.228s" clip-end="npt=20.945s" id="qwrt_0007" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

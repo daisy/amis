@@ -1,0 +1,2340 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ui xml:lang="ur" dir="rtl">
+  <containers>
+    <container id="file">
+      <note xml:lang="en" dir="ltr">This is the menu header "File"</note>
+      <caption>
+        <text id="_id52734" status="ok">فائل1:</text>
+        <originalText xml:lang="en" dir="ltr">File</originalText>
+        <audio src="./audio/002_1.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0003.smil#text_0003" />
+      </caption>
+      <action mfcid="ID_MENU_FILE_OPEN" widget="menuItem toolbarItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item and a toolbar item</note>
+        <icon src="./open.png" type="smallIcon" />
+        <caption>
+          <text id="_id52766" status="ok">اوپن...:</text>
+          <originalText xml:lang="en" dir="ltr">Open...</originalText>
+          <audio src="./audio/003.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0004.smil#text_0004" />
+        </caption>
+        <description>
+          <text id="_id52781" status="ok">لوکل فائل سسٹم سے ڈیزی کتاب کھولنا:</text>
+          <originalText xml:lang="en" dir="ltr">Open a Daisy book from the local file system</originalText>
+          <audio src="./audio/004_______.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0005.smil#text_0005" />
+        </description>
+        <accelerator>
+          <text id="_id52796" xml:lang="en" dir="ltr">Ctrl+O</text>
+          <originalText xml:lang="en" dir="ltr">Ctrl+O</originalText>
+          <audio src="./audio/005_CtrlO.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0006.smil#text_0006" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id52799" xml:lang="en" dir="ltr">O</text>
+          <originalText xml:lang="en" dir="ltr">O</originalText>
+          <audio src="./audio/006_O.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0007.smil#text_0007" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_LOADCD" widget="menuItem toolbarItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item and a toolbar item</note>
+        <icon src="./settings/img/cd3.ico" type="smallIcon" />
+        <icon src="./settings/img/cd_big.ico" type="largeIcon" />
+        <caption>
+          <text id="_id52829" status="ok">CD لوڈ کرنا:</text>
+          <originalText xml:lang="en" dir="ltr">Load CD</originalText>
+          <audio src="./audio/007_CD__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0008.smil#text_0008" />
+        </caption>
+        <description>
+          <text id="_id52844" status="ok">ROM سے کوئی DAISY کتاب لوڈ کرنا:</text>
+          <originalText xml:lang="en" dir="ltr">Load a DAISY book from CD ROM</originalText>
+          <audio src="./audio/008_ROM___DAISY___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0009.smil#text_0009" />
+        </description>
+        <accelerator>
+          <text id="_id52858" xml:lang="en" dir="ltr">Ctrl+L</text>
+          <originalText xml:lang="en" dir="ltr">Ctrl+L</originalText>
+          <audio src="./audio/009_CtrlL.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis000a.smil#text_000a" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id52861" xml:lang="en" dir="ltr">L</text>
+          <originalText xml:lang="en" dir="ltr">L</originalText>
+          <audio src="./audio/010_L.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis000b.smil#text_000b" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_SEARCHDRIVE" widget="menuItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item</note>
+        <caption>
+          <text id="_id52877" status="ok">سرچ...:</text>
+          <originalText xml:lang="en" dir="ltr">Search...</originalText>
+          <audio src="./audio/011.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis000c.smil#text_000c" />
+        </caption>
+        <description>
+          <text id="_id52892" status="ok">کتابوں کیلئے لوکل ڈرائیو سرچ کرنا:</text>
+          <originalText xml:lang="en" dir="ltr">Search local drives for DAISY books</originalText>
+          <audio src="./audio/012______.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis000d.smil#text_000d" />
+        </description>
+        <mnemonic>
+          <text id="_id52906" xml:lang="en" dir="ltr">S</text>
+          <originalText xml:lang="en" dir="ltr">S</originalText>
+          <audio src="./audio/013_S.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis000e.smil#text_000e" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_FILE_PREFERENCES" widget="menuItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item</note>
+        <caption>
+          <text id="_id52922" status="ok">پری فرنسیز:</text>
+          <originalText xml:lang="en" dir="ltr">Preferences...</originalText>
+          <audio src="./audio/014__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis000f.smil#text_000f" />
+        </caption>
+        <description>
+          <text id="_id52936" status="ok">یہ ایپلی کیشن پری فرنسیز ڈائیلاگ ہے۔:</text>
+          <originalText xml:lang="en" dir="ltr">This is the application preferences dialog.</originalText>
+          <audio src="./audio/015_______.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0010.smil#text_0010" />
+        </description>
+        <mnemonic>
+          <text id="_id52951" xml:lang="en" dir="ltr">P</text>
+          <originalText xml:lang="en" dir="ltr">P</originalText>
+          <audio src="./audio/016_P.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0011.smil#text_0011" />
+        </mnemonic>
+      </action>
+      <container id="recentBooksList">
+        <note xml:lang="en" dir="ltr">This is the menu header for the recent books sub-menu.</note>
+        <caption>
+          <text id="_id52965" status="ok">ریسنٹ6:</text>
+          <originalText xml:lang="en" dir="ltr">Recent</originalText>
+          <audio src="./audio/017_6.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0012.smil#text_0012" />
+        </caption>
+        <switch element="action">
+          <action mfcid="ID_FILE_RECENT_EMPTY" widget="menuItem" condition="ID_FILE_RECENT_EMPTY">
+            <note xml:lang="en" dir="ltr">This is going to be a menu item</note>
+            <caption>
+              <text id="_id52997" status="ok">خالی:</text>
+              <originalText xml:lang="en" dir="ltr">Empty</originalText>
+              <audio src="./audio/018.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0013.smil#text_0013" />
+            </caption>
+            <description>
+              <text id="_id53011" status="ok">حال میں کوئی پڑھی ہوئی کتاب نہیں ہے۔:</text>
+              <originalText xml:lang="en" dir="ltr">There are no recently read books.</originalText>
+              <audio src="./audio/019________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0014.smil#text_0014" />
+            </description>
+          </action>
+          <action mfcid="BOOK_BASE_ID" widget="menuItem" condition="BOOK_BASE_ID">
+            <note xml:lang="en" dir="ltr">This is going to be a menu item</note>
+            <list repeat="yes">
+              <caption>
+                <promptVar name="RECENT_BOOK_TITLE" />
+              </caption>
+            </list>
+          </action>
+        </switch>
+        <mnemonic>
+          <text id="_id53052" xml:lang="en" dir="ltr">R</text>
+          <originalText xml:lang="en" dir="ltr">R</originalText>
+          <audio src="./audio/020_R.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0015.smil#text_0015" />
+        </mnemonic>
+      </container>
+      <action mfcid="ID_MENU_FILE_EXIT" widget="menuItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53068" status="ok">باہر:</text>
+          <originalText xml:lang="en" dir="ltr">Exit</originalText>
+          <audio src="./audio/021.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0016.smil#text_0016" />
+        </caption>
+        <description>
+          <text id="_id53082" status="ok">AMIS سے باہر:</text>
+          <originalText xml:lang="en" dir="ltr">Exit AMIS</originalText>
+          <audio src="./audio/022_AMIS__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0017.smil#text_0017" />
+        </description>
+        <accelerator>
+          <text id="_id53096" xml:lang="en" dir="ltr">Alt+F4</text>
+          <originalText xml:lang="en" dir="ltr">Alt+F4</originalText>
+          <audio src="./audio/023_AltF4.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0018.smil#text_0018" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id53099" xml:lang="en" dir="ltr">x</text>
+          <originalText xml:lang="en" dir="ltr">x</originalText>
+          <audio src="./audio/024_x.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0019.smil#text_0019" />
+        </mnemonic>
+      </action>
+      <accelerator>
+        <text id="_id53103" xml:lang="en" dir="ltr">Alt+F</text>
+        <originalText xml:lang="en" dir="ltr">Alt+F</originalText>
+        <audio src="./audio/025_AltF.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis001a.smil#text_001a" />
+      </accelerator>
+      <mnemonic>
+        <text id="_id53107" xml:lang="en" dir="ltr">F</text>
+        <originalText xml:lang="en" dir="ltr">F</originalText>
+        <audio src="./audio/026_F.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis001b.smil#text_001b" />
+      </mnemonic>
+    </container>
+    <container id="view">
+      <note xml:lang="en" dir="ltr">This is the menu header "View"</note>
+      <caption>
+        <text id="_id53120" status="ok">ویو1:</text>
+        <originalText xml:lang="en" dir="ltr">View</originalText>
+        <audio src="./audio/027_1.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis001c.smil#text_001c" />
+      </caption>
+      <action mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF" widget="menuItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53145" status="ok">سائڈبار:</text>
+          <originalText xml:lang="en" dir="ltr">Sidebar</originalText>
+          <audio src="./audio/sidebar.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis001d.smil#text_001d" />
+        </caption>
+        <description>
+          <text id="_id53160" status="ok">سائڈبار کو آن یا آف کرنا۔:</text>
+          <originalText xml:lang="en" dir="ltr">Turn the sidebar on or off.</originalText>
+          <audio src="./audio/028______.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis001e.smil#text_001e" />
+        </description>
+        <mnemonic>
+          <text id="_id53173" xml:lang="en" dir="ltr">S</text>
+          <originalText xml:lang="en" dir="ltr">S</originalText>
+          <audio src="./audio/029_S.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis001f.smil#text_001f" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_BASIC" widget="menuItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53189" status="ok">بیسک ویو موڈ:</text>
+          <originalText xml:lang="en" dir="ltr">Basic View Mode</originalText>
+          <audio src="./audio/030___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0020.smil#text_0020" />
+        </caption>
+        <description>
+          <text id="_id53204" status="ok">ویو کو بیسک موڈ میں بدلنا:</text>
+          <originalText xml:lang="en" dir="ltr">Switch the view to basic mode.</originalText>
+          <audio src="./audio/031______.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0021.smil#text_0021" />
+        </description>
+        <accelerator>
+          <text id="_id53217" xml:lang="en" dir="ltr">F11</text>
+          <originalText xml:lang="en" dir="ltr">F11</originalText>
+          <audio src="./audio/032_F11.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0022.smil#text_0022" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id53221" xml:lang="en" dir="ltr">B</text>
+          <originalText xml:lang="en" dir="ltr">B</originalText>
+          <audio src="./audio/033_B.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0023.smil#text_0023" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_CONTRAST" widget="menuItem toolbarItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item</note>
+        <icon src="./settings/img/contrast.ico" type="smallIcon" />
+        <caption>
+          <text id="_id53243" status="ok">ہائی کنٹراسٹ:</text>
+          <originalText xml:lang="en" dir="ltr">High Contrast</originalText>
+          <audio src="./audio/034__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0024.smil#text_0024" />
+        </caption>
+        <description>
+          <text id="_id53258" status="ok">ٹیکسٹ ڈسپلے کیلئے ہائی کلرکنٹراسٹ استعمال کریں۔:</text>
+          <originalText xml:lang="en" dir="ltr">Use high contrast colors for the text display.</originalText>
+          <audio src="./audio/035_______.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0025.smil#text_0025" />
+        </description>
+        <accelerator>
+          <text id="_id53272" xml:lang="en" dir="ltr">Ctrl+C</text>
+          <originalText xml:lang="en" dir="ltr">Ctrl+C</originalText>
+          <audio src="./audio/036_CtrlS.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0026.smil#text_0026" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id53276" xml:lang="en" dir="ltr">C</text>
+          <originalText xml:lang="en" dir="ltr">C</originalText>
+          <audio src="./audio/037_C.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0027.smil#text_0027" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_LARGEFONT" widget="menuItem toolbarItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/font.ico" type="smallIcon" />
+        <caption>
+          <text id="_id53299" status="ok">فونٹ سائز بڑا کریں:</text>
+          <originalText xml:lang="en" dir="ltr">Increase Font Size</originalText>
+          <audio src="./audio/038____.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0028.smil#text_0028" />
+        </caption>
+        <description>
+          <text id="_id53314" status="ok">فونٹ سائز کو بتدریج بڑا کریں۔:</text>
+          <originalText xml:lang="en" dir="ltr">Gradually increase the font size.</originalText>
+          <audio src="./audio/039______.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0029.smil#text_0029" />
+        </description>
+        <mnemonic>
+          <text id="_id53328" xml:lang="en" dir="ltr">I</text>
+          <originalText xml:lang="en" dir="ltr">I</originalText>
+          <audio src="./audio/040_I.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis002a.smil#text_002a" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_VIEW_RESETFONT" widget="menuItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53344" status="ok">ریسیٹ فونٹ سائز:</text>
+          <originalText xml:lang="en" dir="ltr">Reset Font Size</originalText>
+          <audio src="./audio/041___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis002b.smil#text_002b" />
+        </caption>
+        <description>
+          <text id="_id53358" status="ok">ڈفالٹ سیٹنگ کے مطابق فونٹ سائز کو سیٹ کریں۔:</text>
+          <originalText xml:lang="en" dir="ltr">Set the font size to the default setting.</originalText>
+          <audio src="./audio/042_________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis002c.smil#text_002c" />
+        </description>
+        <mnemonic>
+          <text id="_id53373" xml:lang="en" dir="ltr">R</text>
+          <originalText xml:lang="en" dir="ltr">R</originalText>
+          <audio src="./audio/043_R.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis002d.smil#text_002d" />
+        </mnemonic>
+      </action>
+      <action mfcid="NAVLIST_BASE_ID" widget="menuItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item</note>
+        <caption>
+          <promptVar name="NAV_LIST_NAME" />
+        </caption>
+        <description>
+          <promptVar name="NAV_LIST_DESCRIPTION" />
+        </description>
+      </action>
+      <accelerator>
+        <text id="_id53403" xml:lang="en" dir="ltr">Alt+V</text>
+        <originalText xml:lang="en" dir="ltr">Alt+V</originalText>
+        <audio src="./audio/044_AltV.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis002e.smil#text_002e" />
+      </accelerator>
+      <mnemonic>
+        <text id="_id53407" xml:lang="en" dir="ltr">V</text>
+        <originalText xml:lang="en" dir="ltr">V</originalText>
+        <audio src="./audio/045_V.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis002f.smil#text_002f" />
+      </mnemonic>
+    </container>
+    <container id="play">
+      <note xml:lang="en" dir="ltr">This is the menu header "Play"</note>
+      <caption>
+        <text id="_id53420" status="ok">پلے1:</text>
+        <originalText xml:lang="en" dir="ltr">Play</originalText>
+        <audio src="./audio/046_1.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0030.smil#text_0030" />
+      </caption>
+      <switch element="action">
+        <action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" condition="canPlay">
+          <note xml:lang="en" dir="ltr">This is going to be a menu item and toolbar item</note>
+          <icon src="./settings/img/play-big.ico" type="smallIcon" />
+          <icon src="./settings/img/play_big.ico" type="largeIcon" />
+          <caption>
+            <text id="_id53465" status="ok">پلے:</text>
+            <originalText xml:lang="en" dir="ltr">Play</originalText>
+            <audio src="./audio/047.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0031.smil#text_0031" />
+          </caption>
+          <description>
+            <text id="_id53480" status="ok">ساتھ‍ ساتھ‍ پلے بیک شروع کریں۔:</text>
+            <originalText xml:lang="en" dir="ltr">Start synchronized playback.</originalText>
+            <audio src="./audio/048______.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0032.smil#text_0032" />
+          </description>
+          <accelerator>
+            <text id="_id53494" xml:lang="en" dir="ltr">Space</text>
+            <originalText xml:lang="en" dir="ltr">Space</originalText>
+            <audio src="./audio/049_Space.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0033.smil#text_0033" />
+          </accelerator>
+          <mnemonic>
+            <text id="_id53497" xml:lang="en" dir="ltr">P</text>
+            <originalText xml:lang="en" dir="ltr">P</originalText>
+            <audio src="./audio/050_P.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0034.smil#text_0034" />
+          </mnemonic>
+        </action>
+        <action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" condition="canPause">
+          <note xml:lang="en" dir="ltr">This is going to be a menu item and toolbar item</note>
+          <icon src="./settings/img/pause.ico" type="smallIcon" />
+          <icon src="./settings/img/pause_big.ico" type="largeIcon" />
+          <caption>
+            <text id="_id53529" status="ok">پاز۔</text>
+            <originalText xml:lang="en" dir="ltr">Pause</originalText>
+            <audio src="./audio/051.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0035.smil#text_0035" />
+          </caption>
+          <description>
+            <text id="_id53544" status="check">اسDAISY کتاب کے پڑھنےمیں تھوڑا وقفہ دیں۔:</text>
+            <originalText xml:lang="en" dir="ltr">Pause playback of this DAISY book.</originalText>
+            <audio src="./audio/052_DAISY______.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0036.smil#text_0036" />
+          </description>
+          <accelerator>
+            <text id="_id53558" xml:lang="en" dir="ltr">Space</text>
+            <originalText xml:lang="en" dir="ltr">Space</originalText>
+            <audio src="./audio/053_Space.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0037.smil#text_0037" />
+          </accelerator>
+          <mnemonic>
+            <text id="_id53561" xml:lang="en" dir="ltr">a</text>
+            <originalText xml:lang="en" dir="ltr">a</originalText>
+            <audio src="./audio/054_a.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0038.smil#text_0038" />
+          </mnemonic>
+        </action>
+      </switch>
+      <action mfcid="ID_MENU_PLAY_ESCAPE" widget="menuItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53578" status="ok">اسکیپ:</text>
+          <originalText xml:lang="en" dir="ltr">Escape</originalText>
+          <audio src="./audio/055.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0039.smil#text_0039" />
+        </caption>
+        <description>
+          <text id="_id53593" status="ok">حالیہ پلیئنگ آئیٹم یا اسٹرکچر سے باہر آئیں۔:</text>
+          <originalText xml:lang="en" dir="ltr">Jump out of the currently playing item or structure.</originalText>
+          <audio src="./audio/056________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis003a.smil#text_003a" />
+        </description>
+        <accelerator>
+          <text id="_id53608" xml:lang="en" dir="ltr">Esc</text>
+          <originalText xml:lang="en" dir="ltr">Esc</originalText>
+          <audio src="./audio/057_Esc.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis003b.smil#text_003b" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id53611" xml:lang="en" dir="ltr">E</text>
+          <originalText xml:lang="en" dir="ltr">E</originalText>
+          <audio src="./audio/058_E.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis003c.smil#text_003c" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_FASTER" widget="menuItem toolbarItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/fullspeedahead.ico" type="smallIcon" />
+        <caption>
+          <text id="_id53634" status="ok">تیزتر:</text>
+          <originalText xml:lang="en" dir="ltr">Faster</originalText>
+          <audio src="./audio/059.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis003d.smil#text_003d" />
+        </caption>
+        <description>
+          <text id="_id53649" status="check">پڑھنے کی رفتار بڑھائیں:</text>
+          <originalText xml:lang="en" dir="ltr">Increase the playback rate.</originalText>
+          <audio src="./audio/060____.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis003e.smil#text_003e" />
+        </description>
+        <accelerator>
+          <text id="_id53662" xml:lang="en" dir="ltr">Ctrl++</text>
+          <originalText xml:lang="en" dir="ltr">Ctrl++</originalText>
+          <audio src="./audio/061_Ctrl.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis003f.smil#text_003f" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id53666" xml:lang="en" dir="ltr">F</text>
+          <originalText xml:lang="en" dir="ltr">F</originalText>
+          <audio src="./audio/062_F.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0040.smil#text_0040" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_SLOWER" widget="menuItem toolbarItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/slowdown.ico" type="smallIcon" />
+        <caption>
+          <text id="_id53689" status="ok">سست تر:</text>
+          <originalText xml:lang="en" dir="ltr">Slower</originalText>
+          <audio src="./audio/063__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0041.smil#text_0041" />
+        </caption>
+        <description>
+          <text id="_id53704" status="check">پڑھنے کی رفتار سست کریں:</text>
+          <originalText xml:lang="en" dir="ltr">Slow down the playback rate.</originalText>
+          <audio src="./audio/064_____.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0042.smil#text_0042" />
+        </description>
+        <accelerator>
+          <text id="_id53717" xml:lang="en" dir="ltr">Ctrl+-</text>
+          <originalText xml:lang="en" dir="ltr">Ctrl+-</originalText>
+          <audio src="./audio/065_Ctrl.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0043.smil#text_0043" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id53721" xml:lang="en" dir="ltr">S</text>
+          <originalText xml:lang="en" dir="ltr">S</originalText>
+          <audio src="./audio/066_S.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0044.smil#text_0044" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_NORMALSPEED" widget="menuItem toolbarItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/normalspeed.ico" type="smallIcon" />
+        <caption>
+          <text id="_id53744" status="ok">نارمل رفتار:</text>
+          <originalText xml:lang="en" dir="ltr">Normal Speed</originalText>
+          <audio src="./audio/067__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0045.smil#text_0045" />
+        </caption>
+        <description>
+          <text id="_id53758" status="check">پڑھنے کی رفتار پھر سے نارمل کریں۔:</text>
+          <originalText xml:lang="en" dir="ltr">Reset the playback rate to normal.</originalText>
+          <audio src="./audio/068_______.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0046.smil#text_0046" />
+        </description>
+        <accelerator>
+          <text id="_id53773" xml:lang="en" dir="ltr">Ctrl+0</text>
+          <originalText xml:lang="en" dir="ltr">Ctrl+0</originalText>
+          <audio src="./audio/069_Ctrl0.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0047.smil#text_0047" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id53776" xml:lang="en" dir="ltr">N</text>
+          <originalText xml:lang="en" dir="ltr">N</originalText>
+          <audio src="./audio/070_N.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0048.smil#text_0048" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_VOLUP" widget="menuItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53792" status="ok">وولیوم بڑھائیں:</text>
+          <originalText xml:lang="en" dir="ltr">Increase Volume</originalText>
+          <audio src="./audio/071__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0049.smil#text_0049" />
+        </caption>
+        <description>
+          <text id="_id53807" status="ok">بتدریج وولیوم بڑھائیں۔:</text>
+          <originalText xml:lang="en" dir="ltr">Gradually raise the volume.</originalText>
+          <audio src="./audio/072___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis004a.smil#text_004a" />
+        </description>
+        <accelerator>
+          <text id="_id53821" xml:lang="en" dir="ltr">Ctrl+Up</text>
+          <originalText xml:lang="en" dir="ltr">Ctrl+Up</originalText>
+          <audio src="./audio/073_CtrlUp.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis004b.smil#text_004b" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id53824" xml:lang="en" dir="ltr">I</text>
+          <originalText xml:lang="en" dir="ltr">I</originalText>
+          <audio src="./audio/074_I.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis004c.smil#text_004c" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_PLAY_VOLDOWN" widget="menuItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item</note>
+        <caption>
+          <text id="_id53840" status="ok">وولیوم گھٹائیں:</text>
+          <originalText xml:lang="en" dir="ltr">Decrease Volume</originalText>
+          <audio src="./audio/075__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis004d.smil#text_004d" />
+        </caption>
+        <description>
+          <text id="_id53854" status="ok">وولیوم بتدریج گھٹائیں۔:</text>
+          <originalText xml:lang="en" dir="ltr">Gradually lower the volume.</originalText>
+          <audio src="./audio/076___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis004e.smil#text_004e" />
+        </description>
+        <accelerator>
+          <text id="_id53868" xml:lang="en" dir="ltr">Ctrl+Down</text>
+          <originalText xml:lang="en" dir="ltr">Ctrl+Down</originalText>
+          <audio src="./audio/077_CtrlDown.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis004f.smil#text_004f" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id53872" xml:lang="en" dir="ltr">D</text>
+          <originalText xml:lang="en" dir="ltr">D</originalText>
+          <audio src="./audio/078_D.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0050.smil#text_0050" />
+        </mnemonic>
+      </action>
+      <accelerator>
+        <text id="_id53876" xml:lang="en" dir="ltr">Alt+P</text>
+        <originalText xml:lang="en" dir="ltr">Alt+P</originalText>
+        <audio src="./audio/079_AltP.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0051.smil#text_0051" />
+      </accelerator>
+      <mnemonic>
+        <text id="_id53879" xml:lang="en" dir="ltr">P</text>
+        <originalText xml:lang="en" dir="ltr">P</originalText>
+        <audio src="./audio/080_P.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0052.smil#text_0052" />
+      </mnemonic>
+    </container>
+    <container id="navigate">
+      <note xml:lang="en" dir="ltr">This is the menu header "Navigate"</note>
+      <caption>
+        <text id="_id53893" status="ok">نیوی گیٹ1:</text>
+        <originalText xml:lang="en" dir="ltr">Navigate</originalText>
+        <audio src="./audio/081__1.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0053.smil#text_0053" />
+      </caption>
+      <action mfcid="ID_MENU_NAV_PREVSECTION" widget="menuItem toolbarItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevsection.ico" type="smallIcon" />
+        <icon src="./settings/img/prevsection_big.ico" type="largeIcon" />
+        <caption>
+          <text id="_id53932" status="ok">پچھلا سیکشن:</text>
+          <originalText xml:lang="en" dir="ltr">Previous Section</originalText>
+          <audio src="./audio/082__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0054.smil#text_0054" />
+        </caption>
+        <description>
+          <text id="_id53947" status="ok">پچھلے سیکشن پر جائیں۔:</text>
+          <originalText xml:lang="en" dir="ltr">Go to the previous section.</originalText>
+          <audio src="./audio/083____.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0055.smil#text_0055" />
+        </description>
+        <accelerator>
+          <text id="_id53961" xml:lang="en" dir="ltr">Up</text>
+          <originalText xml:lang="en" dir="ltr">Up</originalText>
+          <audio src="./audio/084_Up.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0056.smil#text_0056" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id53964" xml:lang="en" dir="ltr">P</text>
+          <originalText xml:lang="en" dir="ltr">P</originalText>
+          <audio src="./audio/085_P.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0057.smil#text_0057" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTSECTION" widget="menuItem toolbarItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextsection.ico" type="smallIcon" />
+        <icon src="./settings/img/nextsection_big.ico" type="largeIcon" />
+        <caption>
+          <text id="_id53994" status="ok">اگلا سیکشن:</text>
+          <originalText xml:lang="en" dir="ltr">Next Section</originalText>
+          <audio src="./audio/086__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0058.smil#text_0058" />
+        </caption>
+        <description>
+          <text id="_id54009" status="ok">اگلے سیکشن پر جائیں:</text>
+          <originalText xml:lang="en" dir="ltr">Go to the next section.</originalText>
+          <audio src="./audio/087____.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0059.smil#text_0059" />
+        </description>
+        <accelerator>
+          <text id="_id54022" xml:lang="en" dir="ltr">Down</text>
+          <originalText xml:lang="en" dir="ltr">Down</originalText>
+          <audio src="./audio/088_Down.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis005a.smil#text_005a" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id54026" xml:lang="en" dir="ltr">N</text>
+          <originalText xml:lang="en" dir="ltr">N</originalText>
+          <audio src="./audio/089_N.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis005b.smil#text_005b" />
+        </mnemonic>
+      </action>
+      <container id="sectiondepth">
+        <note xml:lang="en" dir="ltr">This is the "show section depth" sub-menu pop-up</note>
+        <caption>
+          <text id="_id54040" status="ok">شوسیکشن دیپتھ‍ 4:</text>
+          <originalText xml:lang="en" dir="ltr">Show Section Depth</originalText>
+          <audio src="./audio/090___4.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis005c.smil#text_005c" />
+        </caption>
+        <switch element="action">
+          <action mfcid="ID_EMPTY" widget="menuItem" condition="ID_EMPTY">
+            <note xml:lang="en" dir="ltr">This is going to be a menu item</note>
+            <caption>
+              <text id="_id54071" status="ok">خالی:</text>
+              <originalText xml:lang="en" dir="ltr">Empty</originalText>
+              <audio src="./audio/091.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis005d.smil#text_005d" />
+            </caption>
+            <description>
+              <text id="_id54086" status="ok">سیکشن لیول نہیں ہیں:</text>
+              <originalText xml:lang="en" dir="ltr">There are no section levels.</originalText>
+              <audio src="./audio/092____.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis005e.smil#text_005e" />
+            </description>
+          </action>
+          <action mfcid="SECTION_DEPTH_BASE_ID" widget="menuItem" condition="SECTION_DEPTH_BASE_ID">
+            <note xml:lang="en" dir="ltr">This is going to be a menu item</note>
+            <list repeat="yes">
+              <caption>
+                <promptVar name="SECTION_DEPTH_OPTION" />
+              </caption>
+            </list>
+          </action>
+        </switch>
+        <mnemonic>
+          <text id="_id54128" xml:lang="en" dir="ltr">S</text>
+          <originalText xml:lang="en" dir="ltr">S</originalText>
+          <audio src="./audio/093_S.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis005f.smil#text_005f" />
+        </mnemonic>
+      </container>
+      <action mfcid="ID_MENU_NAV_PREVPHRASE" widget="menuItem toolbarItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevphasecirc.ico" type="smallIcon" />
+        <caption>
+          <text id="_id54152" status="ok">پری ویس فریز:</text>
+          <originalText xml:lang="en" dir="ltr">Previous Phrase</originalText>
+          <audio src="./audio/094___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0060.smil#text_0060" />
+        </caption>
+        <description>
+          <text id="_id54166" status="ok">پری ویس فریز پر جائیں:</text>
+          <originalText xml:lang="en" dir="ltr">Go to the previous phrase.</originalText>
+          <audio src="./audio/095_____.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0061.smil#text_0061" />
+        </description>
+        <accelerator>
+          <text id="_id54180" xml:lang="en" dir="ltr">Left</text>
+          <originalText xml:lang="en" dir="ltr">Left</originalText>
+          <audio src="./audio/096_Left.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0062.smil#text_0062" />
+        </accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTPHRASE" widget="menuItem toolbarItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextphrasecirc.ico" type="smallIcon" />
+        <caption>
+          <text id="_id54204" status="ok">اگلافریز:</text>
+          <originalText xml:lang="en" dir="ltr">Next Phrase</originalText>
+          <audio src="./audio/097.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0063.smil#text_0063" />
+        </caption>
+        <description>
+          <text id="_id54218" status="ok">اگلے فریز پر جائیں:</text>
+          <originalText xml:lang="en" dir="ltr">Go to the next phrase.</originalText>
+          <audio src="./audio/098____.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0064.smil#text_0064" />
+        </description>
+        <accelerator>
+          <text id="_id54232" xml:lang="en" dir="ltr">Right</text>
+          <originalText xml:lang="en" dir="ltr">Right</originalText>
+          <audio src="./audio/099_Right.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0065.smil#text_0065" />
+        </accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_PREVPAGE" widget="menuItem toolbarItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/prevpage.ico" type="smallIcon" />
+        <caption>
+          <text id="_id54256" status="ok">پچھلا پیج:</text>
+          <originalText xml:lang="en" dir="ltr">Previous Page</originalText>
+          <audio src="./audio/100__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0066.smil#text_0066" />
+        </caption>
+        <description>
+          <text id="_id54270" status="ok">پچھلے پیج پر جائیں۔:</text>
+          <originalText xml:lang="en" dir="ltr">Go to the previous page.</originalText>
+          <audio src="./audio/101____.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0067.smil#text_0067" />
+        </description>
+        <accelerator>
+          <text id="_id54284" xml:lang="en" dir="ltr">Ctrl+Left</text>
+          <originalText xml:lang="en" dir="ltr">Ctrl+Left</originalText>
+          <audio src="./audio/102_CtrlLeft.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0068.smil#text_0068" />
+        </accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_NEXTPAGE" widget="menuItem toolbarItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/nextpage.ico" type="smallIcon" />
+        <caption>
+          <text id="_id54307" status="ok">اگلا پیج:</text>
+          <originalText xml:lang="en" dir="ltr">Next Page</originalText>
+          <audio src="./audio/103__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0069.smil#text_0069" />
+        </caption>
+        <description>
+          <text id="_id54322" status="ok">اگلے پیج پر جائیں۔:</text>
+          <originalText xml:lang="en" dir="ltr">Go to the next page.</originalText>
+          <audio src="./audio/104____.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis006a.smil#text_006a" />
+        </description>
+        <accelerator>
+          <text id="_id54336" xml:lang="en" dir="ltr">Ctrl+Right</text>
+          <originalText xml:lang="en" dir="ltr">Ctrl+Right</originalText>
+          <audio src="./audio/105_CtrlRight.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis006b.smil#text_006b" />
+        </accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_GOTOPAGE" widget="menuItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item</note>
+        <caption>
+          <text id="_id54352" status="ok">پیج پر جائیں۔:</text>
+          <originalText xml:lang="en" dir="ltr">Go to Page...</originalText>
+          <audio src="./audio/106___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis006c.smil#text_006c" />
+        </caption>
+        <description>
+          <text id="_id54366" status="ok">پیج پر جائیں۔:</text>
+          <originalText xml:lang="en" dir="ltr">Go to a specific page.</originalText>
+          <audio src="./audio/107___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis006d.smil#text_006d" />
+        </description>
+        <accelerator>
+          <text id="_id54380" xml:lang="en" dir="ltr">Ctrl+G</text>
+          <originalText xml:lang="en" dir="ltr">Ctrl+G</originalText>
+          <audio src="./audio/108_CtrlG.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis006e.smil#text_006e" />
+        </accelerator>
+      </action>
+      <action mfcid="ID_MENU_NAV_FINDINTEXT" widget="menuItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item</note>
+        <caption>
+          <text id="_id54396" status="ok">ٹیکسٹ میں فائند کرنا:</text>
+          <originalText xml:lang="en" dir="ltr">Find in Text</originalText>
+          <audio src="./audio/109____.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis006f.smil#text_006f" />
+        </caption>
+        <description>
+          <text id="_id54410" status="ok">ٹیکسٹ میں کسی لفظ یا فریزکو ڈھونڈیں۔:</text>
+          <originalText xml:lang="en" dir="ltr">Search for a word or phrase in the text.</originalText>
+          <audio src="./audio/110_______.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0070.smil#text_0070" />
+        </description>
+        <accelerator>
+          <text id="_id54425" xml:lang="en" dir="ltr">Ctrl+F</text>
+          <originalText xml:lang="en" dir="ltr">Ctrl+F</originalText>
+          <audio src="./audio/111_CtrlF.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0071.smil#text_0071" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id54428" xml:lang="en" dir="ltr">F</text>
+          <originalText xml:lang="en" dir="ltr">F</originalText>
+          <audio src="./audio/112_F.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0072.smil#text_0072" />
+        </mnemonic>
+      </action>
+      <accelerator>
+        <text id="_id54432" xml:lang="en" dir="ltr">Alt+N</text>
+        <originalText xml:lang="en" dir="ltr">Alt+N</originalText>
+        <audio src="./audio/113_AltN.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0073.smil#text_0073" />
+      </accelerator>
+      <mnemonic>
+        <text id="_id54436" xml:lang="en" dir="ltr">N</text>
+        <originalText xml:lang="en" dir="ltr">N</originalText>
+        <audio src="./audio/114_N.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0074.smil#text_0074" />
+      </mnemonic>
+    </container>
+    <container id="bookmarks">
+      <note xml:lang="en" dir="ltr">This is the menu header "Bookmarks"</note>
+      <caption>
+        <text id="_id54449" status="ok">بک مارکس1:</text>
+        <originalText xml:lang="en" dir="ltr">Bookmarks</originalText>
+        <audio src="./audio/115__1.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0075.smil#text_0075" />
+      </caption>
+      <action mfcid="ID_MENU_BMK_ADD" widget="menuItem toolbarItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/adbookmark.ico" type="smallIcon" />
+        <caption>
+          <text id="_id54481" status="ok">ایڈ بک مارکس:</text>
+          <originalText xml:lang="en" dir="ltr">Add Bookmark</originalText>
+          <audio src="./audio/116___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0076.smil#text_0076" />
+        </caption>
+        <description>
+          <text id="_id54496" status="ok">اپنے موجودہ پوزیشن کو بک مارک کریں:</text>
+          <originalText xml:lang="en" dir="ltr">Bookmark your current position.</originalText>
+          <audio src="./audio/117_______.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0077.smil#text_0077" />
+        </description>
+        <accelerator>
+          <text id="_id54510" xml:lang="en" dir="ltr">Ctrl+D</text>
+          <originalText xml:lang="en" dir="ltr">Ctrl+D</originalText>
+          <audio src="./audio/118_CtrlD.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0078.smil#text_0078" />
+        </accelerator>
+        <mnemonic>
+          <text id="_id54513" xml:lang="en" dir="ltr">A</text>
+          <originalText xml:lang="en" dir="ltr">A</originalText>
+          <audio src="./audio/119_A.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0079.smil#text_0079" />
+        </mnemonic>
+      </action>
+      <action mfcid="BOOKMARK_BASE_ID" widget="menuItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item</note>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOKMARK_TITLE" />
+          </caption>
+        </list>
+      </action>
+      <accelerator>
+        <text id="_id54542" xml:lang="en" dir="ltr">Alt+B</text>
+        <originalText xml:lang="en" dir="ltr">Alt+B</originalText>
+        <audio src="./audio/120_AltB.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis007a.smil#text_007a" />
+      </accelerator>
+      <mnemonic>
+        <text id="_id54545" xml:lang="en" dir="ltr">B</text>
+        <originalText xml:lang="en" dir="ltr">B</originalText>
+        <audio src="./audio/121_B.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis007b.smil#text_007b" />
+      </mnemonic>
+    </container>
+    <container id="info">
+      <note xml:lang="en" dir="ltr">This is the menu header "Info"</note>
+      <caption>
+        <text id="_id54558" status="ok">انفو1:</text>
+        <originalText xml:lang="en" dir="ltr">Info</originalText>
+        <audio src="./audio/122_1.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis007c.smil#text_007c" />
+      </caption>
+      <action mfcid="ID_MENU_INFO_SKIP" widget="menuItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item</note>
+        <caption>
+          <text id="_id54583" status="ok">اسکیپ ایبل آئیٹمز...:</text>
+          <originalText xml:lang="en" dir="ltr">Skippable Items...</originalText>
+          <audio src="./audio/123___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis007d.smil#text_007d" />
+        </caption>
+        <description>
+          <text id="_id54598" status="ok">اس پبلیکیشن کیلئے اسکیپ ایبل آئیٹموں کو دیکھیں۔:</text>
+          <originalText xml:lang="en" dir="ltr">View the skippable items for this publication.</originalText>
+          <audio src="./audio/124________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis007e.smil#text_007e" />
+        </description>
+        <mnemonic>
+          <text id="_id54613" xml:lang="en" dir="ltr">S</text>
+          <originalText xml:lang="en" dir="ltr">S</originalText>
+          <audio src="./audio/125_S.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis007f.smil#text_007f" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_SUMMARY" widget="menuItem toolbarItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/info.ico" type="smallIcon" />
+        <caption>
+          <text id="_id54636" status="ok">مکمل خلاصہ:</text>
+          <originalText xml:lang="en" dir="ltr">Full Summary</originalText>
+          <audio src="./audio/126__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0080.smil#text_0080" />
+        </caption>
+        <description>
+          <text id="_id54650" status="ok">اس پبلی کیشن کیلئے خلاصہ سے متعلق سبھی معلومات حاصل کریں۔:</text>
+          <originalText xml:lang="en" dir="ltr">Get all summary info for this publication.</originalText>
+          <audio src="./audio/127___________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0081.smil#text_0081" />
+        </description>
+        <mnemonic>
+          <text id="_id54665" xml:lang="en" dir="ltr">F</text>
+          <originalText xml:lang="en" dir="ltr">F</originalText>
+          <audio src="./audio/128_F.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0082.smil#text_0082" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_CURRENTPOSITION" widget="menuItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item</note>
+        <caption>
+          <text id="_id54680" status="ok">موجودہ پوزیشن:</text>
+          <originalText xml:lang="en" dir="ltr">Current Position</originalText>
+          <audio src="./audio/129__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0083.smil#text_0083" />
+        </caption>
+        <description>
+          <text id="_id54695" status="ok">اپنے موجودہ پوزیشن کے بارے میں معلومات حاصل کریں:</text>
+          <originalText xml:lang="en" dir="ltr">Get information about your current position.</originalText>
+          <audio src="./audio/130_________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0084.smil#text_0084" />
+        </description>
+        <mnemonic>
+          <text id="_id54710" xml:lang="en" dir="ltr">C</text>
+          <originalText xml:lang="en" dir="ltr">C</originalText>
+          <audio src="./audio/131_C.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0085.smil#text_0085" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_INFO_NAVOPTIONS" widget="menuItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item</note>
+        <caption>
+          <text id="_id54725" status="ok">نیوی گیشن آپشنز:</text>
+          <originalText xml:lang="en" dir="ltr">Navigation Options</originalText>
+          <audio src="./audio/132___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0086.smil#text_0086" />
+        </caption>
+        <description>
+          <text id="_id54740" status="ok">اس پبلیکیشن کیلئے اپنے نیوی گیشن آپشنز کے بارے میں جانیں۔:</text>
+          <originalText xml:lang="en" dir="ltr">Learn about your navigation options for this publication.</originalText>
+          <audio src="./audio/133___________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0087.smil#text_0087" />
+        </description>
+        <mnemonic>
+          <text id="_id54755" xml:lang="en" dir="ltr">N</text>
+          <originalText xml:lang="en" dir="ltr">N</originalText>
+          <audio src="./audio/134_N.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0088.smil#text_0088" />
+        </mnemonic>
+      </action>
+      <accelerator>
+        <text id="_id54760" xml:lang="en" dir="ltr">Alt+I</text>
+        <originalText xml:lang="en" dir="ltr">Alt+I</originalText>
+        <audio src="./audio/135_AltI.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0089.smil#text_0089" />
+      </accelerator>
+      <mnemonic>
+        <text id="_id54763" xml:lang="en" dir="ltr">I</text>
+        <originalText xml:lang="en" dir="ltr">I</originalText>
+        <audio src="./audio/136_I.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis008a.smil#text_008a" />
+      </mnemonic>
+    </container>
+    <container id="help">
+      <note xml:lang="en" dir="ltr">This is the menu header "Help"</note>
+      <caption>
+        <text id="_id54776" status="ok">ہیلپ1:</text>
+        <originalText xml:lang="en" dir="ltr">Help</originalText>
+        <audio src="./audio/137_1.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis008b.smil#text_008b" />
+      </caption>
+      <action mfcid="ID_MENU_HELP_CONTENTS" widget="menuItem toolbarItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item and toolbar item</note>
+        <icon src="./settings/img/help.ico" type="smallIcon" />
+        <icon src="./settings/img/help_big.ico" type="largeIcon" />
+        <caption>
+          <text id="_id54815" status="ok">کاٹنٹس:</text>
+          <originalText xml:lang="en" dir="ltr">Contents</originalText>
+          <audio src="./audio/138.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis008c.smil#text_008c" />
+        </caption>
+        <description>
+          <text id="_id54830" status="check">AMIS کے استعمال کیلئے مدد حاصل کریں:</text>
+          <originalText xml:lang="en" dir="ltr">Get help using AMIS</originalText>
+          <audio src="./audio/139_AMIS______.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis008d.smil#text_008d" />
+        </description>
+        <mnemonic>
+          <text id="_id54844" xml:lang="en" dir="ltr">C</text>
+          <originalText xml:lang="en" dir="ltr">C</originalText>
+          <audio src="./audio/140_C.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis008e.smil#text_008e" />
+        </mnemonic>
+      </action>
+      <action mfcid="ID_MENU_HELP_ABOUT" widget="menuItem">
+        <note xml:lang="en" dir="ltr">This is going to be a menu item</note>
+        <caption>
+          <text id="_id54859" status="ok">AMIS کے بارے میں:</text>
+          <originalText xml:lang="en" dir="ltr">About AMIS</originalText>
+          <audio src="./audio/141_AMIS___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis008f.smil#text_008f" />
+        </caption>
+        <description>
+          <text id="_id54874" status="ok">AMIS اورDAISY فارآل کے بارے میں دریافت کریں۔:</text>
+          <originalText xml:lang="en" dir="ltr">Find out about AMIS and DAISY-for-All.</originalText>
+          <audio src="./audio/142_AMIS_DAISY______.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0090.smil#text_0090" />
+        </description>
+        <mnemonic>
+          <text id="_id54888" xml:lang="en" dir="ltr">A</text>
+          <originalText xml:lang="en" dir="ltr">A</originalText>
+          <audio src="./audio/143_A.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0091.smil#text_0091" />
+        </mnemonic>
+      </action>
+      <accelerator>
+        <text id="_id54892" xml:lang="en" dir="ltr">Alt+H</text>
+        <originalText xml:lang="en" dir="ltr">Alt+H</originalText>
+        <audio src="./audio/144_AltH.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0092.smil#text_0092" />
+      </accelerator>
+      <mnemonic>
+        <text id="_id54896" xml:lang="en" dir="ltr">H</text>
+        <originalText xml:lang="en" dir="ltr">H</originalText>
+        <audio src="./audio/145_H.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0093.smil#text_0093" />
+      </mnemonic>
+    </container>
+  </containers>
+  <dialogs>
+    <dialog mfcid="IDD_FIND">
+      <note xml:lang="en" dir="ltr">This is the find in text dialog</note>
+      <caption>
+        <text id="_id54912" status="ok">فائنڈ ان ٹیکسٹ:</text>
+        <originalText xml:lang="en" dir="ltr">Find in Text</originalText>
+        <audio src="./audio/146___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0094.smil#text_0094" />
+      </caption>
+      <description>
+        <text id="_id54927" status="ok">یہاں آپ دوسری جانب پوری ٹیکسٹ کو تلاش کرسکتے ہیں۔:</text>
+        <originalText xml:lang="en" dir="ltr">Here you can search the full text in either direction.</originalText>
+        <audio src="./audio/147__________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0095.smil#text_0095" />
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround" />
+        <promptItem>
+          <text id="_id54951" status="ok">اپنے سرچ میں ٹائپ کرنے کے بعد تلاش شروع کرنے کیلئےانٹر کی دبائیں۔:</text>
+          <originalText xml:lang="en" dir="ltr">After typing in your search, press enter to begin searching.</originalText>
+          <audio src="./audio/148_____________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0096.smil#text_0096" />
+        </promptItem>
+        <promptItem refid="altC_to_cancel" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+        <promptItem refid="textBoxRepeatInstr" />
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption" />
+        </caption>
+        <description>
+          <text id="_id55000" status="ok">فائل میں ٹیکسٹ کی تلاش شروع کرنے کیلئے دبائیں۔:</text>
+          <originalText xml:lang="en" dir="ltr">Press to begin searching for text in the file.</originalText>
+          <audio src="./audio/149_________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0097.smil#text_0097" />
+        </description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description" />
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          <audio src="./audio/037_C.mp3" />
+        </mnemonic>
+      </control>
+      <control mfcid="IDC_SEARCHSTRING" widget="textfield">
+        <description>
+          <text id="_id55046" status="ok">اس ٹیکسٹ کو ٹائپ کریں جسکی تلاش کرنی ہے۔:</text>
+          <originalText xml:lang="en" dir="ltr">Type the text to search for.</originalText>
+          <audio src="./audio/150_________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0098.smil#text_0098" />
+        </description>
+      </control>
+      <control mfcid="IDC_FINDNEXT" widget="radiobutton">
+        <note xml:lang="en" dir="ltr">This indicates the direction of the search</note>
+        <caption>
+          <text id="_id55073" status="ok">فائنڈ نکسٹ:</text>
+          <originalText xml:lang="en" dir="ltr">Find Next</originalText>
+          <audio src="./audio/151__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0099.smil#text_0099" />
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently" />
+            <promptVar name="SELECTED_OR_DESELECTED" param="FIND_NEXT_IN_TEXT" />
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_FINDPREV" widget="radiobutton">
+        <note xml:lang="en" dir="ltr">This indicates the direction of the search</note>
+        <caption>
+          <text id="_id55117" status="ok">فائنڈ پری ویس:</text>
+          <originalText xml:lang="en" dir="ltr">Find Previous</originalText>
+          <audio src="./audio/152___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis009a.smil#text_009a" />
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently" />
+            <promptName name="SELECTED_OR_DESELECTED" param="FIND_PREV_IN_TEXT" />
+          </prompt>
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_CDSEARCH">
+      <note xml:lang="en" dir="ltr">This dialog appears when more than one book is on a CD-ROM</note>
+      <caption>
+        <text id="_id55160" status="ok">ملٹی پل بکس فاؤنڈ:</text>
+        <originalText xml:lang="en" dir="ltr">Multiple books found</originalText>
+        <audio src="./audio/153____.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis009b.smil#text_009b" />
+      </caption>
+      <description mfcid="IDC_STATIC">
+        <text id="_id55177" status="ok">ایک سے زیادہ کتابیں اسCD پرملی۔ براہ مہربانی نیچے کی لسٹ میں سے ایک چنیں اور کھولنے کیلئے Alt+O دبائیں۔:</text>
+        <originalText xml:lang="en" dir="ltr">More than one book was found on this CD. Please select a book from the list below and press Alt + O to open.</originalText>
+        <audio src="./audio/154_____CD______________AltO_.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis009c.smil#text_009c" />
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround" />
+        <promptItem refid="altC_to_cancel" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+      </prompt>
+      <control mfcid="IDC_CANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description" />
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          <audio src="./audio/037_C.mp3" />
+        </mnemonic>
+      </control>
+      <control mfcid="IDC_OPENBOOK" widget="button">
+        <caption>
+          <text id="_id55246" status="ok">اوپن:</text>
+          <originalText xml:lang="en" dir="ltr">Open</originalText>
+          <audio src="./audio/155.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis009d.smil#text_009d" />
+        </caption>
+        <description>
+          <text id="_id55261" status="ok">سلیکٹڈ باکس کو کھولنے اور اس ڈائلاگ کو بند کرنے کیلئے دبائیں۔:</text>
+          <originalText xml:lang="en" dir="ltr">Press to close this dialog and open the selected book.</originalText>
+          <audio src="./audio/156____________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis009e.smil#text_009e" />
+        </description>
+        <mnemonic>
+          <text id="_id55276" xml:lang="en" dir="ltr">O</text>
+          <originalText xml:lang="en" dir="ltr">O</originalText>
+          <audio src="./audio/157_O.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis009f.smil#text_009f" />
+        </mnemonic>
+      </control>
+      <control mfcid="IDC_BOOKLIST" widget="list">
+        <description>
+          <text id="_id55288" status="ok">کتابوں کے ناموں کی لسٹ میں گھومنے کیلئے تیر والے کیز کا استعمال کریں۔:.</text>
+          <originalText xml:lang="en" dir="ltr">Use the arrow keys to move around this list of titles.</originalText>
+          <audio src="./audio/158______________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00a0.smil#text_00a0" />
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOK_TITLE" />
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_ABOUTBOX">
+      <note xml:lang="en" dir="ltr">This dialog gives some basic information about AMIS.</note>
+      <caption>
+        <text id="_id55327" status="ok">AMIS کے بارے میں:</text>
+        <originalText xml:lang="en" dir="ltr">About AMIS</originalText>
+        <audio src="./audio/159_AMIS___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00a1.smil#text_00a1" />
+      </caption>
+      <description>
+        <text id="_id55341" status="ok">AMIS سافٹ وئیرکے بارے میں معلومات کے ساتھ‍ ڈائلاگ۔:</text>
+        <originalText xml:lang="en" dir="ltr">Dialog with information about AMIS software.</originalText>
+        <audio src="./audio/160_AMIS________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00a2.smil#text_00a2" />
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+      </prompt>
+      <control mfcid="IDC_AMISNAME" widget="textlabel">
+        <caption>
+          <text id="_id55382" status="ok">AMIS: /ایڈپٹوملٹی میڈیا انفارمیشن سسٹم:</text>
+          <originalText xml:lang="en" dir="ltr">AMIS: \nAdaptive Multimedia Information System</originalText>
+          <audio src="./audio/161_AMIS____.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00a3.smil#text_00a3" />
+        </caption>
+      </control>
+      <control mfcid="IDC_VERSION" translate="no">
+        <caption>
+          <text id="_id55404" xml:lang="en" dir="ltr">Version 2.0</text>
+          <originalText xml:lang="en" dir="ltr">Version 2.0</originalText>
+          <audio src="../version.mp3"/>
+        </caption>
+      </control>
+      <control mfcid="IDC_VERSIONNOTE" translate="no">
+        <caption>
+          <text id="_id55426" xml:lang="en" dir="ltr">Release Date: 23 Oct 2005</text>
+          <originalText xml:lang="en" dir="ltr">Release Date: 23 Oct 2005</originalText>
+          <audio src="../releasedate.mp3"/>
+        </caption>
+      </control>
+      <control mfcid="IDC_COPYRIGHT" widget="textlabel" translate="no">
+        <caption>
+          <text id="_id55450" xml:lang="en" dir="ltr">Copyright © 2006 DAISY for All</text>
+          <originalText xml:lang="en" dir="ltr">Copyright © 2006 DAISY for All</originalText>
+          <audio src="./audio/164_Copyright__2006_DAISY_for_All.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00a6.smil#text_00a6" />
+        </caption>
+      </control>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description" />
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_SEARCHDAISY">
+      <note xml:lang="en" dir="ltr">This dialog is for searching your hard drive for DAISY books.</note>
+      <caption>
+        <text id="_id55500" status="ok">DAISY کتابوں کیلئے سرچ:</text>
+        <originalText xml:lang="en" dir="ltr">Search for DAISY Books</originalText>
+        <audio src="./audio/165_DAISY___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00a7.smil#text_00a7" />
+      </caption>
+      <description mfcid="IDC_STATIC">
+        <text id="_id55517" status="ok">آپ اپنے کمپوٹر پرDAISY کتابوں کی تلاش کرسکتے ہیں۔ اس کیلئے آپ پاتھ‍ ڈالیں یا فولڈرکی تلاش کیلئے براؤز کریں،شروع کرنے کیلئے تبسرچ پر جائیں۔:</text>
+        <originalText xml:lang="en" dir="ltr">You can search your computer for DAISY books.  Enter a path or browse for a folder to search, then press Search to begin searching.</originalText>
+        <audio src="./audio/166____DAISY_____________________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00a8.smil#text_00a8" />
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround" />
+        <promptItem refid="altC_to_close" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+        <promptItem refid="textBoxRepeatInstr" />
+      </prompt>
+      <control mfcid="IDC_SEARCHPATH" widget="textfield">
+        <description>
+          <text id="_id55569" status="ok">اس فیلڈ میں فولڈر تک جانے کیلئے پاتھ‍ ٹائپ کریں۔:</text>
+          <originalText xml:lang="en" dir="ltr">Type the path to the folder in this field.</originalText>
+          <audio src="./audio/167__________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00a9.smil#text_00a9" />
+        </description>
+      </control>
+      <control mfcid="IDC_BROWSE" widget="button">
+        <caption>
+          <promptItem refid="browse_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="browse_button_description" />
+        </description>
+      </control>
+      <control mfcid="IDC_STARTSEARCH" widget="button">
+        <caption>
+          <text id="_id55615" status="ok">سرچ:</text>
+          <originalText xml:lang="en" dir="ltr">Search</originalText>
+          <audio src="./audio/168.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00aa.smil#text_00aa" />
+        </caption>
+        <description>
+          <text id="_id55630" status="ok">سرچ شروع کرنے کیلئے دبائیں:</text>
+          <originalText xml:lang="en" dir="ltr">Press to start searching.</originalText>
+          <audio src="./audio/169_____.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00ab.smil#text_00ab" />
+        </description>
+        <mnemonic>
+          <text id="_id55644" xml:lang="en" dir="ltr">S</text>
+          <originalText xml:lang="en" dir="ltr">S</originalText>
+          <audio src="./audio/170_S.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00ac.smil#text_00ac" />
+        </mnemonic>
+      </control>
+      <control mfcid="IDC_STOPSEARCH" widget="button">
+        <caption>
+          <text id="_id55655" status="ok">اسٹاپ:</text>
+          <originalText xml:lang="en" dir="ltr">Stop</originalText>
+          <audio src="./audio/171.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00ad.smil#text_00ad" />
+        </caption>
+        <description>
+          <text id="_id55670" status="ok">سرچ بند کرنے کیلئے اسٹاپ دبائیں۔:</text>
+          <originalText xml:lang="en" dir="ltr">Press to stop searching.</originalText>
+          <audio src="./audio/172______.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00ae.smil#text_00ae" />
+        </description>
+        <mnemonic>
+          <text id="_id55684" xml:lang="en" dir="ltr">t</text>
+          <originalText xml:lang="en" dir="ltr">t</originalText>
+          <audio src="./audio/173_t.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00af.smil#text_00af" />
+        </mnemonic>
+      </control>
+      <control mfcid="IDC_SEARCHING" widget="textlabel">
+        <switch element="caption">
+          <caption condition="default">
+            <text id="_id55702" status="ok">ریڈی:</text>
+            <originalText xml:lang="en" dir="ltr">Ready</originalText>
+            <audio src="./audio/174.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00b0.smil#text_00b0" />
+          </caption>
+          <caption condition="WhileSearching">
+            <text id="_id55718" status="ok">سرچنگ...:</text>
+            <originalText xml:lang="en" dir="ltr">Searching...</originalText>
+            <audio src="./audio/175.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00b1.smil#text_00b1" />
+          </caption>
+          <caption condition="SearchAborted">
+            <text id="_id55735" status="ok">سرچ اسٹاپٹ۔:</text>
+            <originalText xml:lang="en" dir="ltr">Search stopped.</originalText>
+            <audio src="./audio/176__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00b2.smil#text_00b2" />
+          </caption>
+          <caption condition="SearchCompleteNoFilesFound">
+            <text id="_id55752" status="ok">سرچ مکمل: کوئی فائل نہیں ملی:</text>
+            <originalText xml:lang="en" dir="ltr">Search complete: No files found.</originalText>
+            <audio src="./audio/177______.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00b3.smil#text_00b3" />
+          </caption>
+          <caption condition="SearchCompleteOneFileFound">
+            <text id="_id55770" status="ok">سرچ مکمل: ایک فائل ملی:</text>
+            <originalText xml:lang="en" dir="ltr">Search complete: One file found.</originalText>
+            <audio src="./audio/178_____.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00b4.smil#text_00b4" />
+          </caption>
+          <caption condition="SearchCompleteFilesFound">
+            <prompt>
+              <promptVar name="NUM_FILES_FOUND" />
+              <promptItem>
+                <note xml:lang="en" dir="ltr">This is used in the sentence "7 files were found"</note>
+                <text id="_id55800" status="ok">ملی ہوئی فائلیں</text>
+                <originalText xml:lang="en" dir="ltr">files were found.</originalText>
+                <audio src="./audio/179___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00b5.smil#text_00b5" />
+              </promptItem>
+            </prompt>
+          </caption>
+        </switch>
+      </control>
+      <control mfcid="IDC_FILESFOUND" widget="list">
+        <description>
+          <text id="_id55826" status="ok">کتابوں کے ٹائٹل میں چاروں طرف گھومنے کیلئے تیر والی کیز کا استعمال کریں۔:</text>
+          <originalText xml:lang="en" dir="ltr">Use the arrow keys to move around this list of titles.</originalText>
+          <audio src="./audio/180______________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00b6.smil#text_00b6" />
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="BOOK_TITLE" />
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_OPENBOOK" widget="button">
+        <caption>
+          <text id="_id55862" status="ok">اوپن:</text>
+          <originalText xml:lang="en" dir="ltr">Open</originalText>
+          <audio src="./audio/181.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00b7.smil#text_00b7" />
+        </caption>
+        <description>
+          <text id="_id55876" status="ok">منتخبہ کتاب کو کھولنے کیلئے دبائیں۔:</text>
+          <originalText xml:lang="en" dir="ltr">Press to open the selected title.</originalText>
+          <audio src="./audio/182______.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00b8.smil#text_00b8" />
+        </description>
+        <mnemonic>
+          <text id="_id55891" xml:lang="en" dir="ltr">O</text>
+          <originalText xml:lang="en" dir="ltr">O</originalText>
+          <audio src="./audio/183_O.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00b9.smil#text_00b9" />
+        </mnemonic>
+      </control>
+      <control mfcid="IDC_CANCELBUTTON">
+        <caption>
+          <promptItem refid="cancel_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description" />
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          <audio src="./audio/037_C.mp3" />
+        </mnemonic>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_SKIP">
+      <note xml:lang="en" dir="ltr">This dialog lets the user control rendering of skippable structures.</note>
+      <caption>
+        <text id="_id55927" status="ok">اسکیپ ایبل آئیٹمز1:</text>
+        <originalText xml:lang="en" dir="ltr">Skippable Items</originalText>
+        <audio src="./audio/184___1.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00ba.smil#text_00ba" />
+      </caption>
+      <switch element="description">
+        <description mfcid="IDC_STATIC" condition="hasSkippableStructures">
+          <text id="_id55950" status="ok">اس کتاب میں درج ذیل خاص اسٹرکسچر ہیں ۔ جسے آپ نظرانداز کرنا چاہتے ہیں تو اسے چیک کردیں۔:</text>
+          <originalText xml:lang="en" dir="ltr">This book contains the following special structures.  Check the ones you want skipped.</originalText>
+          <audio src="./audio/185___________________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00bb.smil#text_00bb" />
+        </description>
+        <description mfcid="IDC_STATIC" condition="hasNoSkippableStructures">
+          <text id="_id55972" status="ok">اس پبلیکیشن میں کوئی اسکیپ ایبل آئیٹم نہیں ہیں۔:</text>
+          <originalText xml:lang="en" dir="ltr">This publication has no skippable elements.</originalText>
+          <audio src="./audio/186_________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00bc.smil#text_00bc" />
+        </description>
+      </switch>
+      <prompt type="instructions">
+        <promptItem refid="tabAround" />
+        <promptItem refid="altC_to_close" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description" />
+        </description>
+      </control>
+      <control mfcid="IDC_SKIPS" widget="list">
+        <caption>
+          <text id="_id56041" status="ok">اسکیپ ایبل آئیٹم:</text>
+          <originalText xml:lang="en" dir="ltr">Skippable items</originalText>
+          <audio src="./audio/187___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00bd.smil#text_00bd" />
+        </caption>
+        <description>
+          <text id="_id56055" status="ok">اسکیپ ایبل آئیٹموں کی لسٹ میں گھومنے کیلئے تیر والے کیز کا استعمال کریں۔:</text>
+          <originalText xml:lang="en" dir="ltr">Use the arrow keys to move around this list of skippable items.</originalText>
+          <audio src="./audio/188______________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00be.smil#text_00be" />
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="SKIPPABLE_ITEM" />
+          </caption>
+          <description>
+            <prompt>
+              <promptVar name="SKIPPABLE_ITEM" />
+              <promptItem refid="thisItem" />
+              <promptVar name="WILL_SKIP_OR_NOT" param="SKIPPABLE_ITEM_ID" />
+            </prompt>
+          </description>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE4">
+      <note xml:lang="en" dir="ltr">This dialog lets the user select a language pack.</note>
+      <caption>
+        <text id="_id56116" status="ok">لینگویج:</text>
+        <originalText xml:lang="en" dir="ltr">Language</originalText>
+        <audio src="./audio/189.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00bf.smil#text_00bf" />
+      </caption>
+      <description mfcid="IDC_STATIC">
+        <text id="_id56133" status="ok">یہاں آپ سافٹ ویئر کی زبان تبدیل کرسکتے ہیں۔ نئے لینگویج پیک خودبخود منکشف ہوتےہیں۔:</text>
+        <originalText xml:lang="en" dir="ltr">Here you can change the language of the software.  New language packs are detected automatically.</originalText>
+        <audio src="./audio/190_______________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00c0.smil#text_00c0" />
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround" />
+        <promptItem refid="ctrl1_for_prefsdialog" />
+        <promptItem refid="ctrl2_for_colorsdialog" />
+        <promptItem refid="altC_to_cancel" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+      </prompt>
+      <control mfcid="IDC_BTN_SELECTLANG" widget="button">
+        <caption>
+          <text id="_id56189" status="ok">سلیکٹ لینگویج:</text>
+          <originalText xml:lang="en" dir="ltr">Select Language</originalText>
+          <audio src="./audio/191__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00c1.smil#text_00c1" />
+        </caption>
+        <description>
+          <text id="_id56203" status="ok">AMIS یوزر انٹرفیس کیلئے اپنی زبان کی سیٹنگ کی توثیق کیلئے دبائیں:</text>
+          <originalText xml:lang="en" dir="ltr">Press to confirm your language selection for the AMIS user interface</originalText>
+          <audio src="./audio/192_AMIS___________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00c2.smil#text_00c2" />
+        </description>
+      </control>
+      <control mfcid="IDC_LANGLIST" widget="list">
+        <caption mfcid="IDC_STATIC">
+          <text id="_id56229" status="ok">آپکا لینگویج انتخاب:</text>
+          <originalText xml:lang="en" dir="ltr">Your language choices are:</originalText>
+          <audio src="./audio/193___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00c3.smil#text_00c3" />
+        </caption>
+        <description>
+          <text id="_id56244" status="ok">اس لینگویج لسٹ میں چاروںطرف گھومنے کیلئے ایرو کیز دبائیں۔:</text>
+          <originalText xml:lang="en" dir="ltr">Use the arrow keys to move around this list of languages.</originalText>
+          <audio src="./audio/194__________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00c4.smil#text_00c4" />
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="LANGUAGE_NAME" />
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_CURRLANG">
+        <caption>
+          <prompt>
+            <promptItem>
+              <text id="_id56282" status="ok">آپ اس وقت AMIS استعمال کر رہے ہیں۔:</text>
+              <originalText xml:lang="en" dir="ltr">You are currently using AMIS in</originalText>
+              <audio src="./audio/195____AMIS____.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00c5.smil#text_00c5" />
+            </promptItem>
+            <promptVar name="CURR_LANGUAGE_NAME" />
+          </prompt>
+        </caption>
+      </control>
+      <accelerator>
+        <text id="_id56304" xml:lang="en" dir="ltr">Ctrl+3</text>
+        <originalText xml:lang="en" dir="ltr">Ctrl+3</originalText>
+        <audio src="./audio/196_Ctrl3.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00c6.smil#text_00c6" />
+      </accelerator>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE2">
+      <note xml:lang="en" dir="ltr">This dialog lets the user select which colors AMIS uses</note>
+      <caption>
+        <text id="_id56318" status="ok">سیٹ کلرز:</text>
+        <originalText xml:lang="en" dir="ltr">Set Colors</originalText>
+        <audio src="./audio/197__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00c7.smil#text_00c7" />
+      </caption>
+      <description>
+        <text id="_id56333" status="ok">یہاں آپ AMISکیلئے رنگوں کے آپشنز کو سیٹ کرسکتے ہیں۔:</text>
+        <originalText xml:lang="en" dir="ltr">Here you can set color options for AMIS.</originalText>
+        <audio src="./audio/198___AMIS_______.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00c8.smil#text_00c8" />
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="thisDialogNotSelfVoicing" />
+        <promptItem refid="ctrl1_for_prefsdialog" />
+        <promptItem refid="ctrl3_for_langsdialog" />
+        <promptItem refid="altC_to_cancel" />
+      </prompt>
+      <control mfcid="IDC_PHRASES" widget="other">
+        <caption>
+          <text id="_id56378" status="ok">ٹیکسٹ کا پیش منظر :</text>
+          <originalText xml:lang="en" dir="ltr">Phrase Highlighting</originalText>
+          <audio src="./audio/199_____.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00c9.smil#text_00c9" />
+        </caption>
+      </control>
+      <control mfcid="IDC_TEXTFG" widget="textlabel">
+        <caption>
+          <text id="_id56400" status="ok">ٹیکسٹ کا پیش منظر :</text>
+          <originalText xml:lang="en" dir="ltr">Text Foreground: </originalText>
+          <audio src="./audio/200_____.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00ca.smil#text_00ca" />
+        </caption>
+      </control>
+      <control mfcid="IDC_TEXTBG" widget="textlabel">
+        <caption>
+          <text id="_id56422" status="ok">ٹیکسٹ کاپس منظر:</text>
+          <originalText xml:lang="en" dir="ltr">Text Background: </originalText>
+          <audio src="./audio/201___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00cb.smil#text_00cb" />
+        </caption>
+      </control>
+      <control mfcid="IDC_BORDER" widget="textlabel">
+        <caption>
+          <text id="_id56445" status="ok">سلیکشن باڈر:</text>
+          <originalText xml:lang="en" dir="ltr">Selection Border: </originalText>
+          <audio src="./audio/202__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00cc.smil#text_00cc" />
+        </caption>
+      </control>
+      <control mfcid="IDC_CONTRAST" widget="other">
+        <caption>
+          <text id="_id56467" status="ok">ہائی کنٹراسٹ سیٹنگ:</text>
+          <originalText xml:lang="en" dir="ltr">High Contrast Settings</originalText>
+          <audio src="./audio/203___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00cd.smil#text_00cd" />
+        </caption>
+      </control>
+      <control mfcid="IDC_PAGEFG" widget="textlabel">
+        <caption>
+          <text id="_id56490" status="ok">پیج پیش منظر:</text>
+          <originalText xml:lang="en" dir="ltr">Page Foreground: </originalText>
+          <audio src="./audio/204___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00ce.smil#text_00ce" />
+        </caption>
+      </control>
+      <control mfcid="IDC_PAGEBG" widget="textlabel">
+        <caption>
+          <text id="_id56512" status="ok">پیج پس منظر:</text>
+          <originalText xml:lang="en" dir="ltr">Page Background: </originalText>
+          <audio src="./audio/205___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00cf.smil#text_00cf" />
+        </caption>
+      </control>
+      <control mfcid="IDC_BTN_RESETCOLORS" widget="button">
+        <caption>
+          <text id="_id56535" status="ok">کلرریسیٹ کرنا:</text>
+          <originalText xml:lang="en" dir="ltr">Reset Colors</originalText>
+          <audio src="./audio/206__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00d0.smil#text_00d0" />
+        </caption>
+      </control>
+      <control mfcid="IDC_PHRASEPREVIEW" widget="textfield">
+        <caption>
+          <text id="_id56557" status="ok">فریز ہائی لائٹ کلرز کا پری ویو۔:</text>
+          <originalText xml:lang="en" dir="ltr">Preview of phrase highlight colors.</originalText>
+          <audio src="./audio/207_______.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00d1.smil#text_00d1" />
+        </caption>
+      </control>
+      <control mfcid="IDC_CONTRASTPREVIEW" widget="textfield">
+        <caption>
+          <text id="_id56580" status="ok">پیج کنٹراسٹ کلرز کا پری ویو۔:</text>
+          <originalText xml:lang="en" dir="ltr">Preview of page contrast colors.</originalText>
+          <audio src="./audio/208______.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00d2.smil#text_00d2" />
+        </caption>
+      </control>
+      <accelerator>
+        <text id="_id56596" xml:lang="en" dir="ltr">Ctrl+2</text>
+        <originalText xml:lang="en" dir="ltr">Ctrl+2</originalText>
+        <audio src="./audio/209_Ctrl2.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00d3.smil#text_00d3" />
+      </accelerator>
+    </dialog>
+    <dialog mfcid="IDD_CURRENTPOSITION">
+      <note xml:lang="en" dir="ltr">This dialog gives the user information about their current position in the publication.</note>
+      <caption>
+        <text id="_id56610" status="ok">موجودہ پوزیشن1:</text>
+        <originalText xml:lang="en" dir="ltr">Current Position</originalText>
+        <audio src="./audio/210__1.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00d4.smil#text_00d4" />
+      </caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description" />
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text id="_id56676" status="ok">یہ آپکے موجودہ پوزیشن کے بارے میں ڈاٹا لسٹ ہے۔:</text>
+          <originalText xml:lang="en" dir="ltr">This is a list of data about your current position.</originalText>
+          <audio src="./audio/211__________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00d5.smil#text_00d5" />
+        </caption>
+        <description>
+          <promptItem refid="list_reads_automatically" />
+        </description>
+        <list repeat="no">
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id56708" status="ok">آپکے موجودہ سیکشن کا نام:</text>
+                <originalText xml:lang="en" dir="ltr">Your current section is titled:</originalText>
+                <audio src="./audio/212_____.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00d6.smil#text_00d6" />
+              </promptItem>
+              <promptVar name="CURRENT_SECTION_TITLE" />
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id56736" status="ok">اس سیکشن کے صفحات کی تعداد:</text>
+                <originalText xml:lang="en" dir="ltr">Number of pages in this section:</originalText>
+                <audio src="./audio/213______.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00d7.smil#text_00d7" />
+              </promptItem>
+              <promptVar name="CURRENT_SECTION_NUM_PAGES" />
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id56762" status="ok">اس سیکشن کے سب سیکشنوں کی تعداد</text>
+                <originalText xml:lang="en" dir="ltr">Number of subsections in this section:</originalText>
+                <audio src="./audio/214_______.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00d8.smil#text_00d8" />
+              </promptItem>
+              <promptVar name="CURRENT_SECTION_NUM_SUBSECTIONS" />
+            </prompt>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_PROPPAGE1">
+      <note xml:lang="en" dir="ltr">This dialog lets the user set some basic preferences for AMIS.</note>
+      <caption>
+        <text id="_id56796" status="ok">جنرل پری فرنسیز:</text>
+        <originalText xml:lang="en" dir="ltr">General Preferences</originalText>
+        <audio src="./audio/215___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00d9.smil#text_00d9" />
+      </caption>
+      <description>
+        <text id="_id56811" status="ok">یہاں آپ AMIS کیلئے جنرل پری فرنسیز سیٹ کرسکتے ہیں۔:</text>
+        <originalText xml:lang="en" dir="ltr">Here you can set general preferences for AMIS.</originalText>
+        <audio src="./audio/216___AMIS_______.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00da.smil#text_00da" />
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround" />
+        <promptItem refid="ctrl2_for_colorsdialog" />
+        <promptItem refid="ctrl3_for_langsdialog" />
+        <promptItem refid="altC_to_cancel" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+        <promptItem refid="textBoxRepeatInstr" />
+      </prompt>
+      <control mfcid="IDC_BMKDIRBROWSE" widget="button">
+        <caption>
+          <promptItem refid="browse_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="browse_button_description" />
+        </description>
+      </control>
+      <control mfcid="IDC_SELFVOICING" widget="checkbox">
+        <caption>
+          <text id="_id56892" status="ok">سیلف وائسنگ استعمال کریں:</text>
+          <originalText xml:lang="en" dir="ltr">Use self-voicing</originalText>
+          <audio src="./audio/217____.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00db.smil#text_00db" />
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently" />
+            <promptVar name="ON_OR_OFF" param="SELF_VOICING_FEATURE" />
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_TTSVOICE" widget="list">
+        <caption mfcid="IDC_SELTTSLABEL">
+          <text id="_id56934" status="ok">سلیکٹ TTS وائس:</text>
+          <originalText xml:lang="en" dir="ltr">Select TTS voice:</originalText>
+          <audio src="./audio/218__TTS_.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00dc.smil#text_00dc" />
+        </caption>
+        <description>
+          <text id="_id56949" status="ok">آواز کی لسٹ میں گھومنے کیلئے تیر والے بٹنوں کا استعمال کریں:</text>
+          <originalText xml:lang="en" dir="ltr">Use the arrow keys to move around this list of voices</originalText>
+          <audio src="./audio/219____________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00dd.smil#text_00dd" />
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="TTS_VOICE_NAME" />
+          </caption>
+        </list>
+      </control>
+      <control mfcid="IDC_BASIC" widget="checkbox">
+        <caption>
+          <text id="_id56985" status="ok">بیسک ویوموڈ میںAMIS شروع کریں:</text>
+          <originalText xml:lang="en" dir="ltr">Start AMIS in the basic view mode.</originalText>
+          <audio src="./audio/220___AMIS__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00de.smil#text_00de" />
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently" />
+            <promptVar name="ON_OR_OFF" param="BASIC_VIEW_FEATURE" />
+            <promptItem refid="spaceToToggle" />
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_PROMPTONBASICVIEW" widget="checkbox">
+        <caption>
+          <text id="_id57030" status="ok">بیسک ویو میں جانے کیلئے، یوزر کو بتائیں کہ ڈفالٹ ویو میں واپس کیسے جایا جاتا ہے۔:</text>
+          <originalText xml:lang="en" dir="ltr">Upon switching to basic view, tell the user how to go back to the default view.</originalText>
+          <audio src="./audio/221_________________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00df.smil#text_00df" />
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently" />
+            <promptVar name="ON_OR_OFF" param="PROMPT_ON_BASIC_VIEW_FEATURE" />
+            <promptItem refid="spaceToToggle" />
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_LOADLASTDTB" widget="checkbox">
+        <caption>
+          <text id="_id57076" status="ok">سب سے حا لیہ پڑھی ہوئی کتاب کو لوڈ کریں جب سافٹ ویئر شروع ہو۔:</text>
+          <originalText xml:lang="en" dir="ltr">Load the most recently read book when the software starts.</originalText>
+          <audio src="./audio/222_______________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00e0.smil#text_00e0" />
+        </caption>
+        <description>
+          <prompt>
+            <promptItem refid="thisItemIsCurrently" />
+            <promptVar name="ON_OR_OFF" param="LOAD_LAST_READ_FEATURE" />
+            <promptItem refid="spaceToToggle" />
+          </prompt>
+        </description>
+      </control>
+      <control mfcid="IDC_BMKDIR" widget="textfield">
+        <caption mfcid="IDC_BMKDIRLABEL">
+          <text id="_id57124" status="ok">بک مارک ڈائریکٹری:</text>
+          <originalText xml:lang="en" dir="ltr">Bookmarks directory:</originalText>
+          <audio src="./audio/223___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00e1.smil#text_00e1" />
+        </caption>
+        <description>
+          <text id="_id57139" status="ok">اس فلڈ میں بک مارک فولڈر کے کیلئے پاتھ‍ ٹائپ کریں۔:</text>
+          <originalText xml:lang="en" dir="ltr">Type the path to the bookmarks folder in this field.</originalText>
+          <audio src="./audio/224___________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00e2.smil#text_00e2" />
+        </description>
+      </control>
+      <accelerator>
+        <text id="_id57155" xml:lang="en" dir="ltr">Ctrl+1</text>
+        <originalText xml:lang="en" dir="ltr">Ctrl+1</originalText>
+        <audio src="./audio/225_Ctrl1.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00e3.smil#text_00e3" />
+      </accelerator>
+    </dialog>
+    <dialog mfcid="IDD_NAVIGATIONOPTIONS">
+      <note xml:lang="en" dir="ltr">This dialog lists navigation options for the current publication.</note>
+      <caption>
+        <text id="_id57169" status="ok">نیوی گیشن آپشنز1:</text>
+        <originalText xml:lang="en" dir="ltr">Navigation Options</originalText>
+        <audio src="./audio/226___1.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00e4.smil#text_00e4" />
+      </caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description" />
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text id="_id57234" status="ok">یہ آئیثموں کی لسٹ ہے جسمیں آپ سیدھے نیوی گیٹ کرسکتے ہیں۔:</text>
+          <originalText xml:lang="en" dir="ltr">This is a list of items to which you may navigate directly.</originalText>
+          <audio src="./audio/227____________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00e5.smil#text_00e5" />
+        </caption>
+        <description>
+          <promptItem refid="list_reads_automatically" />
+        </description>
+        <list repeat="yes">
+          <caption>
+            <promptVar name="TOC_CATEGORIES" />
+          </caption>
+        </list>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_GOTOPAGE">
+      <note xml:lang="en" dir="ltr">This dialog lets the user jump to a certain page</note>
+      <caption>
+        <text id="_id57281" status="ok">پیج پر جائیں:</text>
+        <originalText xml:lang="en" dir="ltr">Go To Page</originalText>
+        <audio src="./audio/228___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00e6.smil#text_00e6" />
+      </caption>
+      <description>
+        <text id="_id57296" status="ok">یہاں آپ پیج نمبر اور پیج لیبل پر جا سکتے ہیں۔:</text>
+        <originalText xml:lang="en" dir="ltr">Here you can jump to a page number or page label.</originalText>
+        <audio src="./audio/229___________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00e7.smil#text_00e7" />
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround" />
+        <promptItem>
+          <text id="_id57320" status="ok">پیج نمبر ٹائپ کرنے کے بعد، اس پیج پر جانے کیلئے انٹر دبائیں۔:</text>
+          <originalText xml:lang="en" dir="ltr">After typing in your page number, press enter to go there.</originalText>
+          <audio src="./audio/230_____________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00e8.smil#text_00e8" />
+        </promptItem>
+        <promptItem refid="altC_to_cancel" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+        <promptItem refid="textBoxRepeatInstr" />
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption" />
+        </caption>
+        <description>
+          <text id="_id57369" status="ok">اس صفحہ کا نمبر یا لیبل ٹائپ کریں جس پر آپ جانا چاہتے ہیں۔:</text>
+          <originalText xml:lang="en" dir="ltr">Press this button to go to the desired page.</originalText>
+          <audio src="./audio/231______________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00e9.smil#text_00e9" />
+        </description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description" />
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          <audio src="./audio/037_C.mp3" />
+        </mnemonic>
+      </control>
+      <control mfcid="IDC_PAGENUM" widget="textfield">
+        <caption mfcid="IDC_STATIC">
+          <text id="_id57417" status="ok">پیج نمبر داخل کریں:</text>
+          <originalText xml:lang="en" dir="ltr">Enter a page number:</originalText>
+          <audio src="./audio/232____.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00ea.smil#text_00ea" />
+        </caption>
+        <description>
+          <text id="_id57432" status="ok">اپنی پسند کے صفحہ پر جانے کیلئے پیج کے لیبل یا نمبر کو ٹائپ کریں۔:</text>
+          <originalText xml:lang="en" dir="ltr">Type the number or label of the page you want to go to.</originalText>
+          <audio src="./audio/233_______________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00eb.smil#text_00eb" />
+        </description>
+      </control>
+    </dialog>
+    <dialog mfcid="IDD_FULLSUMMARY">
+      <note xml:lang="en" dir="ltr">This dialog lists key publication metadata.</note>
+      <caption>
+        <text id="_id57459" status="ok">پبلیکیشن کا خلاصہ1:</text>
+        <originalText xml:lang="en" dir="ltr">Publication Summary</originalText>
+        <audio src="./audio/234___1.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00ec.smil#text_00ec" />
+      </caption>
+      <prompt type="instructions">
+        <promptItem refid="enter_to_close" />
+        <promptItem refid="repeatLastPromptInstr" />
+        <promptItem refid="hearDlgInstructions" />
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption" />
+        </caption>
+        <description>
+          <promptItem refid="ok_button_description" />
+        </description>
+      </control>
+      <control mfcid="IDC_SUMMARY" widget="list">
+        <caption mfcid="IDC_LISTCAPTION">
+          <text id="_id57524" status="ok">یہ پبلیکیشن میٹاڈۤاٹا کی لسٹ ہے۔:</text>
+          <originalText xml:lang="en" dir="ltr">This is a list of publication metadata.</originalText>
+          <audio src="./audio/235______.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00ed.smil#text_00ed" />
+        </caption>
+        <description>
+          <promptItem refid="list_reads_automatically" />
+        </description>
+        <list repeat="no">
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id57555" status="ok">اس کتاب کا نام:</text>
+                <originalText xml:lang="en" dir="ltr">This book is titled:</originalText>
+                <audio src="./audio/236____.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00ee.smil#text_00ee" />
+              </promptItem>
+              <promptVar name="META_TITLE" />
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id57581" status="ok">لکھنے والے کا نام:</text>
+                <originalText xml:lang="en" dir="ltr">Written by:</originalText>
+                <audio src="./audio/237____.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00ef.smil#text_00ef" />
+              </promptItem>
+              <promptVar name="META_CREATOR" />
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id57606" status="ok">چھاپنے والے کانام:</text>
+                <originalText xml:lang="en" dir="ltr">Published by:</originalText>
+                <audio src="./audio/238___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00f0.smil#text_00f0" />
+              </promptItem>
+              <promptVar name="META_PUBLISHER" />
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_DESCRIPTION">
+            <prompt>
+              <promptItem>
+                <text id="_id57633" status="ok">تفصیلات:</text>
+                <originalText xml:lang="en" dir="ltr">Description:</originalText>
+                <audio src="./audio/239.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00f1.smil#text_00f1" />
+              </promptItem>
+              <promptVar name="META_DESC" />
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id57658" status="ok">ٹیبل آف کنٹنٹ میں نیوی گیشن کے پائنٹوں کی تعداد:</text>
+                <originalText xml:lang="en" dir="ltr">Number of navigation points in the table of contents:</originalText>
+                <audio src="./audio/240__________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00f2.smil#text_00f2" />
+              </promptItem>
+              <promptVar name="META_TOCITEMS" />
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id57685" status="ok">زیادہ سے زیادہ سیکشن کی گہرائی:</text>
+                <originalText xml:lang="en" dir="ltr">Maximum section depth:</originalText>
+                <audio src="./audio/241______.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00f3.smil#text_00f3" />
+              </promptItem>
+              <promptVar name="META_DEPTH" />
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id57713" status="ok">فرنٹ میٹرصفحات:</text>
+                <originalText xml:lang="en" dir="ltr">Front matter pages:</originalText>
+                <audio src="./audio/242__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00f4.smil#text_00f4" />
+              </promptItem>
+              <promptVar name="META_PAGEFRONT" />
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id57741" status="ok">ریگولر صفحات:</text>
+                <originalText xml:lang="en" dir="ltr">Regular pages:</originalText>
+                <audio src="./audio/243__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00f5.smil#text_00f5" />
+              </promptItem>
+              <promptVar name="META_PAGENORMAL" />
+            </prompt>
+          </caption>
+          <caption condition="BOOK_HAS_PAGES">
+            <prompt>
+              <promptItem>
+                <text id="_id57768" status="ok">خاص صفحات:</text>
+                <originalText xml:lang="en" dir="ltr">Special pages:</originalText>
+                <audio src="./audio/244__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00f6.smil#text_00f6" />
+              </promptItem>
+              <promptVar name="META_PAGESPECIAL" />
+            </prompt>
+          </caption>
+          <caption>
+            <prompt>
+              <promptItem>
+                <text id="_id57793" status="ok">کل وقت:</text>
+                <originalText xml:lang="en" dir="ltr">Total duration:</originalText>
+                <audio src="./audio/245__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00f7.smil#text_00f7" />
+              </promptItem>
+              <promptVar name="META_TOTALTIME" />
+            </prompt>
+          </caption>
+        </list>
+      </control>
+    </dialog>
+  </dialogs>
+  <prompts>
+    <promptItemRefs>
+      <promptItem id="altC_to_close">
+        <text id="_id57825" status="ok">ڈائیلاگ بند کرنے کیلئےAlt+ C دبائیں۔:</text>
+        <originalText xml:lang="en" dir="ltr">Press Alt + C to close the dialog.</originalText>
+        <audio src="./audio/246____Alt_C_.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00f8.smil#text_00f8" />
+      </promptItem>
+      <promptItem id="altC_to_cancel">
+        <text id="_id57842" status="ok">ڈائیلاگ کینسل کرنے کیلئے Alt+C دبائیں۔:</text>
+        <originalText xml:lang="en" dir="ltr">Press Alt + C to cancel the dialog.</originalText>
+        <audio src="./audio/247_____AltC_.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00f9.smil#text_00f9" />
+      </promptItem>
+      <promptItem id="thisItem">
+        <text id="_id57860" status="ok">یہ آئٹم:</text>
+        <originalText xml:lang="en" dir="ltr">This item</originalText>
+        <audio src="./audio/248__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00fa.smil#text_00fa" />
+      </promptItem>
+      <promptItem id="spaceToToggle">
+        <text id="_id57876" status="ok">ویلومیں آنے جانے کیلئے اسپیس بار دبائیں۔:</text>
+        <originalText xml:lang="en" dir="ltr">Press the space bar to toggle the value.</originalText>
+        <audio src="./audio/249_______.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00fb.smil#text_00fb" />
+      </promptItem>
+      <promptItem id="tabAround">
+        <text id="_id57894" status="ok">ڈائیلاگ باکس کے آپشن میں گھومنے کیلئے ٹیب دبائیں۔:</text>
+        <originalText xml:lang="en" dir="ltr">Hit tab to move around the options on the dialog.</originalText>
+        <audio src="./audio/250_________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00fc.smil#text_00fc" />
+      </promptItem>
+      <promptItem id="ctrl2_for_colorsdialog">
+        <text id="_id57912" status="ok">دوسرے کلرڈائیلاگ آپشن میں جانے کیلئے Ctrl+2 دبائیں۔:</text>
+        <originalText xml:lang="en" dir="ltr">Press control + 2 to switch to the colors dialog.</originalText>
+        <audio src="./audio/251_______Ctrl2_.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00fd.smil#text_00fd" />
+      </promptItem>
+      <promptItem id="ctrl3_for_langsdialog">
+        <text id="_id57931" status="ok">لینگویج ڈائیلاگ میں جانے کیلئے ctrl+3 دبائیں۔:</text>
+        <originalText xml:lang="en" dir="ltr">Press control + 3 to switch to the language options dialog.</originalText>
+        <audio src="./audio/252______ctrl3_.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00fe.smil#text_00fe" />
+      </promptItem>
+      <promptItem id="ctrl1_for_prefsdialog">
+        <text id="_id57949" status="ok">جنرل پریفرنسیز ڈائیلاگ میں جانے کیلئے Ctrl+1 دبائیں۔:</text>
+        <originalText xml:lang="en" dir="ltr">Press control + 1 to switch to the general preferences dialog.</originalText>
+        <audio src="./audio/253_______Ctrl1_.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis00ff.smil#text_00ff" />
+      </promptItem>
+      <promptItem id="thisItemIsCurrently">
+        <text id="_id57968" status="ok">یہ آئیٹم حال میں :</text>
+        <originalText xml:lang="en" dir="ltr">This item is currently</originalText>
+        <audio src="./audio/254_____.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0100.smil#text_0100" />
+      </promptItem>
+      <promptItem id="enter_to_close">
+        <text id="_id57985" status="ok">ڈائیلاگ کو بند کرنے کیلئے انٹر کی دبائیں۔:</text>
+        <originalText xml:lang="en" dir="ltr">Press enter to close the dialog.</originalText>
+        <audio src="./audio/255________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0101.smil#text_0101" />
+      </promptItem>
+      <promptItem id="browse_button_caption">
+        <text id="_id58002" status="ok">براؤز...:</text>
+        <originalText xml:lang="en" dir="ltr">Browse...</originalText>
+        <audio src="./audio/256.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0102.smil#text_0102" />
+      </promptItem>
+      <promptItem id="browse_button_description">
+        <text id="_id58019" status="ok">براؤز ڈائیلاگ کو کھولنے کیلئے دبائیں۔:</text>
+        <originalText xml:lang="en" dir="ltr">Press to open the folder browse dialog.</originalText>
+        <audio src="./audio/257______.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0103.smil#text_0103" />
+      </promptItem>
+      <promptItem id="ok_button_caption">
+        <text id="_id58037" status="ok">اوکے:</text>
+        <originalText xml:lang="en" dir="ltr">OK</originalText>
+        <audio src="./audio/258.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0104.smil#text_0104" />
+      </promptItem>
+      <promptItem id="ok_button_description">
+        <text id="_id58053" status="ok">اس ڈائیلاگ کو بند کرنے کیلئے اوکے: دبائیں۔:</text>
+        <originalText xml:lang="en" dir="ltr">Press OK to close this dialog.</originalText>
+        <audio src="./audio/259________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0105.smil#text_0105" />
+      </promptItem>
+      <promptItem id="cancel_button_caption">
+        <text id="_id58071" status="ok">کینسل:</text>
+        <originalText xml:lang="en" dir="ltr">Cancel</originalText>
+        <audio src="./audio/260.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0106.smil#text_0106" />
+      </promptItem>
+      <promptItem id="cancel_button_description">
+        <text id="_id58088" status="ok">اس ڈائیلاگ کوکینسل کرنے کیلئے دبائیں۔:</text>
+        <originalText xml:lang="en" dir="ltr">Press to cancel this dialog.</originalText>
+        <audio src="./audio/261______.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0107.smil#text_0107" />
+      </promptItem>
+      <promptItem id="list_reads_automatically">
+        <text id="_id58105" status="ok">یہ لسٹ خودبخود پڑھی جائیگی۔:</text>
+        <originalText xml:lang="en" dir="ltr">This list will be read automatically.</originalText>
+        <audio src="./audio/262_____.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0108.smil#text_0108" />
+      </promptItem>
+      <promptItem id="repeatLastPromptInstr">
+        <text id="_id58123" status="ok">آخری پرومپٹ کو دوہرانے کیلئے Ctrl+ R دبائیں۔:</text>
+        <originalText xml:lang="en" dir="ltr">Press Control + R to repeat the last prompt.</originalText>
+        <audio src="./audio/263______Ctrl_R_.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0109.smil#text_0109" />
+      </promptItem>
+      <promptItem id="thisDialogNotSelfVoicing">
+        <text id="_id58141" status="ok">یہ ڈائیلاگ اب تک خودبخود نہیں بول رہا ہے۔:</text>
+        <originalText xml:lang="en" dir="ltr">This dialog is not yet self-voicing.</originalText>
+        <audio src="./audio/264_________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis010a.smil#text_010a" />
+      </promptItem>
+      <promptItem id="escapeToCancel">
+        <text id="_id58158" status="ok">کینسل کرنے کیلئے اسکیپ دبائیں:</text>
+        <originalText xml:lang="en" dir="ltr">Press escape to cancel</originalText>
+        <audio src="./audio/265_____.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis010b.smil#text_010b" />
+      </promptItem>
+      <promptItem id="hearDlgInstructions">
+        <text id="_id58176" status="ok">اس ڈائیلاگ کیلئے ہدایات کو سننے کیلئے Ctrl+ I دبائیں۔:</text>
+        <originalText xml:lang="en" dir="ltr">Press Control + I to hear instructions for this dialog.</originalText>
+        <audio src="./audio/266________Ctrl_I_.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis010c.smil#text_010c" />
+      </promptItem>
+      <promptItem id="textBoxRepeatInstr">
+        <text id="_id58194" status="ok">آخری ٹیکسٹ باکس میں ٹیکسٹ کو ریپیٹ کرنے کیلئے Ctrl+ R دبائیں۔:</text>
+        <originalText xml:lang="en" dir="ltr">Press Control + R to repeat the text in the last text box.</originalText>
+        <audio src="./audio/267__________Ctrl_R_.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis010d.smil#text_010d" />
+      </promptItem>
+      <promptItem id="nav_window">
+        <text id="_id58212" status="ok">نیوی گیشن:</text>
+        <originalText xml:lang="en" dir="ltr">Navigation</originalText>
+        <audio src="./audio/268__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis010e.smil#text_010e" />
+      </promptItem>
+      <promptItem id="sections">
+        <text id="_id58229" status="ok">سیکشنز:</text>
+        <originalText xml:lang="en" dir="ltr">Sections</originalText>
+        <audio src="./audio/269.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis010f.smil#text_010f" />
+      </promptItem>
+      <promptItem id="pages">
+        <text id="_id58245" status="ok">صفحات:</text>
+        <originalText xml:lang="en" dir="ltr">Pages</originalText>
+        <audio src="./audio/270.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0110.smil#text_0110" />
+      </promptItem>
+      <promptItem id="noterefs">
+        <text id="_id58262" status="ok">فٹ نوٹس:</text>
+        <originalText xml:lang="en" dir="ltr">Footnotes</originalText>
+        <audio src="./audio/271__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0111.smil#text_0111" />
+      </promptItem>
+      <promptItem id="prodnotes">
+        <text id="_id58278" status="ok">پروڈیوسرنوٹس:</text>
+        <originalText xml:lang="en" dir="ltr">Producer notes</originalText>
+        <audio src="./audio/272.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0112.smil#text_0112" />
+      </promptItem>
+      <promptItem id="sidebars">
+        <text id="_id58295" status="ok">سائڈبار:</text>
+        <originalText xml:lang="en" dir="ltr">Sidebars</originalText>
+        <audio src="./audio/273.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0113.smil#text_0113" />
+      </promptItem>
+      <promptItem id="groups">
+        <text id="_id58311" status="ok">گروپ کئے ہوئے آئیٹم:</text>
+        <originalText xml:lang="en" dir="ltr">Grouped items</originalText>
+        <audio src="./audio/274____.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0114.smil#text_0114" />
+      </promptItem>
+      <promptItem id="navigation_sidebar_caption">
+        <text id="_id58328" status="ok">نیوی گیشن:</text>
+        <originalText xml:lang="en" dir="ltr">Navigation</originalText>
+        <audio src="./audio/275__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0115.smil#text_0115" />
+      </promptItem>
+      <promptItem id="ready">
+        <text id="_id58345" status="ok">ریڈی:</text>
+        <originalText xml:lang="en" dir="ltr">Ready</originalText>
+        <audio src="./audio/276.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0116.smil#text_0116" />
+      </promptItem>
+      <promptItem id="property_sheet_caption">
+        <text id="_id58361" status="ok">پرفرنسیز:</text>
+        <originalText xml:lang="en" dir="ltr">Preferences</originalText>
+        <audio src="./audio/277.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0117.smil#text_0117" />
+      </promptItem>
+      <promptItem id="selfolder_title">
+        <text id="_id58378" status="ok">فولڈر سلیکٹ کریں:</text>
+        <originalText xml:lang="en" dir="ltr">Select a Folder</originalText>
+        <audio src="./audio/278___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0118.smil#text_0118" />
+      </promptItem>
+      <promptItem id="selfolder_instr">
+        <text id="_id58394" status="ok">نیچے کی ڈائریکٹری سے فولڈ چنیں۔:</text>
+        <originalText xml:lang="en" dir="ltr">Select a folder from the directory below.</originalText>
+        <audio src="./audio/279______.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0119.smil#text_0119" />
+      </promptItem>
+      <promptItem id="daisy_books">
+        <text id="_id58412" status="ok">DAISY کتابیں:</text>
+        <originalText xml:lang="en" dir="ltr">DAISY Books</originalText>
+        <audio src="./audio/280_DAISY_.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis011a.smil#text_011a" />
+      </promptItem>
+      <promptItem id="folder_does_not_exist">
+        <text id="_id58429" status="ok">فولڈر کا ٪ موجود نہیں ہے۔ کیا فولڈ بنانا چاہتے ہیں؟:</text>
+        <originalText xml:lang="en" dir="ltr">The folder %s does not exist. Do you want the folder to be created?</originalText>
+        <audio src="./audio/281___________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis011b.smil#text_011b" />
+      </promptItem>
+      <promptItem id="folder_invalid">
+        <text id="_id58448" status="ok">فولڈر کا یہ نام معقول نہیں ہے۔ براہ مہربانی دوسرا چنیں۔:</text>
+        <originalText xml:lang="en" dir="ltr">This folder name is invalid. Please choose another.</originalText>
+        <audio src="./audio/282___________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis011c.smil#text_011c" />
+      </promptItem>
+      <promptItem id="cant_create_folder">
+        <text id="_id58466" status="ok">یہ فولڈر نہیں بن سکتا۔ براہ مہربانی پھر سے چیک کریں۔:</text>
+        <originalText xml:lang="en" dir="ltr">This folder can not be created. Please double check.</originalText>
+        <audio src="./audio/283___________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis011d.smil#text_011d" />
+      </promptItem>
+      <promptItem id="not_available">
+        <text id="_id58484" status="ok">دستیاب نہیں:</text>
+        <originalText xml:lang="en" dir="ltr">Not available</originalText>
+        <audio src="./audio/284__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis011e.smil#text_011e" />
+      </promptItem>
+      <promptItem id="numeric_zero">
+        <note xml:lang="en" dir="ltr">All numerals should be translated into numerals, not words.</note>
+        <text id="_id58505" status="ok">0</text>
+        <originalText xml:lang="en" dir="ltr">0</originalText>
+        <audio src="./audio/285_0.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis011f.smil#text_011f" />
+      </promptItem>
+      <promptItem id="numeric_one">
+        <text id="_id58521" status="ok">1</text>
+        <originalText xml:lang="en" dir="ltr">1</originalText>
+        <audio src="./audio/286_1.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0120.smil#text_0120" />
+      </promptItem>
+      <promptItem id="numeric_two">
+        <text id="_id58537" status="ok">2</text>
+        <originalText xml:lang="en" dir="ltr">2</originalText>
+        <audio src="./audio/287_2.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0121.smil#text_0121" />
+      </promptItem>
+      <promptItem id="numeric_three">
+        <text id="_id58553" status="ok">3</text>
+        <originalText xml:lang="en" dir="ltr">3</originalText>
+        <audio src="./audio/288_3.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0122.smil#text_0122" />
+      </promptItem>
+      <promptItem id="numeric_four">
+        <text id="_id58570" status="ok">4</text>
+        <originalText xml:lang="en" dir="ltr">4</originalText>
+        <audio src="./audio/289_4.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0123.smil#text_0123" />
+      </promptItem>
+      <promptItem id="numeric_five">
+        <text id="_id58586" status="ok">5</text>
+        <originalText xml:lang="en" dir="ltr">5</originalText>
+        <audio src="./audio/290_5.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0124.smil#text_0124" />
+      </promptItem>
+      <promptItem id="numeric_six">
+        <text id="_id58602" status="ok">6</text>
+        <originalText xml:lang="en" dir="ltr">6</originalText>
+        <audio src="./audio/291_6.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0125.smil#text_0125" />
+      </promptItem>
+      <promptItem id="numeric_seven">
+        <text id="_id58618" status="ok">7</text>
+        <originalText xml:lang="en" dir="ltr">7</originalText>
+        <audio src="./audio/292_7.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0126.smil#text_0126" />
+      </promptItem>
+      <promptItem id="numeric_eight">
+        <text id="_id58634" status="ok">8</text>
+        <originalText xml:lang="en" dir="ltr">8</originalText>
+        <audio src="./audio/293_8.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0127.smil#text_0127" />
+      </promptItem>
+      <promptItem id="numeric_nine">
+        <text id="_id58650" status="ok">9</text>
+        <originalText xml:lang="en" dir="ltr">9</originalText>
+        <audio src="./audio/294_9.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0128.smil#text_0128" />
+      </promptItem>
+      <promptItem id="deleted">
+        <text id="_id58666" status="ok">ڈیلیٹڈ:</text>
+        <originalText xml:lang="en" dir="ltr">deleted</originalText>
+        <audio src="./audio/295.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0129.smil#text_0129" />
+      </promptItem>
+      <promptItem id="will_be_skipped">
+        <text id="_id58683" status="ok">نظرانداز کیا جائیگا:</text>
+        <originalText xml:lang="en" dir="ltr">will be skipped</originalText>
+        <audio src="./audio/296___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis012a.smil#text_012a" />
+      </promptItem>
+      <promptItem id="will_be_played">
+        <text id="_id58700" status="check">پڑھا جائیگا:</text>
+        <originalText xml:lang="en" dir="ltr">will be played</originalText>
+        <audio src="./audio/297__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis012b.smil#text_012b" />
+      </promptItem>
+      <promptItem id="item_on">
+        <text id="_id58716" status="ok">آن:</text>
+        <originalText xml:lang="en" dir="ltr">on</originalText>
+        <audio src="./audio/298.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis012c.smil#text_012c" />
+      </promptItem>
+      <promptItem id="item_off">
+        <text id="_id58732" status="ok">آف:</text>
+        <originalText xml:lang="en" dir="ltr">off</originalText>
+        <audio src="./audio/299.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis012d.smil#text_012d" />
+      </promptItem>
+      <promptItem id="item_selected">
+        <text id="_id58748" status="ok">سلیکٹڈ:</text>
+        <originalText xml:lang="en" dir="ltr">selected</originalText>
+        <audio src="./audio/300.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis012e.smil#text_012e" />
+      </promptItem>
+      <promptItem id="item_deselected">
+        <text id="_id58765" status="ok">ڈی سلیکٹڈ:</text>
+        <originalText xml:lang="en" dir="ltr">deselected</originalText>
+        <audio src="./audio/301__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis012f.smil#text_012f" />
+      </promptItem>
+      <promptItem id="keyboardShortcut">
+        <text id="_id58781" status="ok">کی بورڈ شارٹ کٹ:</text>
+        <originalText xml:lang="en" dir="ltr">Keyboard Shortcut</originalText>
+        <audio src="./audio/302____.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0130.smil#text_0130" />
+      </promptItem>
+      <promptItem id="icon">
+        <text id="_id58798" status="ok">آئیکان:</text>
+        <originalText xml:lang="en" dir="ltr">Icon</originalText>
+        <audio src="./audio/303.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0131.smil#text_0131" />
+      </promptItem>
+      <promptItem id="menu">
+        <text id="_id58815" status="ok">مینو:</text>
+        <originalText xml:lang="en" dir="ltr">Menu</originalText>
+        <audio src="./audio/304.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0132.smil#text_0132" />
+      </promptItem>
+      <promptItem id="followedBy">
+        <note xml:lang="en" dir="ltr">This is used in the context of a sequence of key presses, as in "Press Alt + V, followed by S"</note>
+        <text id="_id58836" status="ok">کے بعد1:</text>
+        <originalText xml:lang="en" dir="ltr">followed by</originalText>
+        <audio src="./audio/305__1.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0133.smil#text_0133" />
+      </promptItem>
+      <promptItem id="submenu">
+        <text id="_id58853" status="ok">سبمینو:</text>
+        <originalText xml:lang="en" dir="ltr">Submenu</originalText>
+        <audio src="./audio/306.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0134.smil#text_0134" />
+      </promptItem>
+    </promptItemRefs>
+    <generalPrompts>
+      <prompt id="dialogClosed">
+        <promptItem>
+          <text id="_id58870" status="ok">ڈائلاگ بند:</text>
+          <originalText xml:lang="en" dir="ltr">Dialog closed.</originalText>
+          <audio src="./audio/307__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0135.smil#text_0135" />
+        </promptItem>
+      </prompt>
+      <prompt id="textFieldEntry">
+        <promptItem>
+          <text id="_id58890" status="ok">ٹکسٹ فلڈ انٹری ہے:</text>
+          <originalText xml:lang="en" dir="ltr">Text field entry is:</originalText>
+          <audio src="./audio/308____.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0136.smil#text_0136" />
+        </promptItem>
+        <promptVar name="TEXT_FIELD" />
+      </prompt>
+      <prompt id="notSelfVoicing">
+        <promptItem refid="thisDialogNotSelfVoicing" />
+      </prompt>
+      <prompt id="bookAtPathChanged">
+        <promptItem>
+          <text id="_id58925" status="ok">جس کتاب کو آپ ڈھونڈ رہے ہیں اسکا لوکیشن تبدیل ہوگیا ہے۔ اس کتاب کی جگہ پر ایک دوسری کتاب ملی تھی۔ کیا آپکے CD-ROM ڈرائیو کا کنٹنٹ بدل گیا تھا؟?</text>
+          <originalText xml:lang="en" dir="ltr">The location of the book you are looking for has changed.  A different book was found instead.  Did the contents of your CD-ROM drive change?</originalText>
+          <audio src="./audio/309_________________________CDROM_.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0137.smil#text_0137" />
+        </promptItem>
+      </prompt>
+      <prompt id="generalBookError">
+        <promptItem>
+          <text id="_id58949" status="ok">کتاب کھولنے کی کوشش میں غلطی ہوئی۔:</text>
+          <originalText xml:lang="en" dir="ltr">An error occurred while trying to open the book.</originalText>
+          <audio src="./audio/310_______.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0138.smil#text_0138" />
+        </promptItem>
+        <promptVar name="BOOK_PATH" />
+        <promptItem refid="enter_to_close" />
+      </prompt>
+      <prompt id="noCdLoaded">
+        <promptItem>
+          <text id="_id58979" status="ok">CD-ROM میں کوئى CD نہیں ہے۔:</text>
+          <originalText xml:lang="en" dir="ltr">There is not a CD in the CD-ROM drive.</originalText>
+          <audio src="./audio/311_CDROM___CD__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0139.smil#text_0139" />
+        </promptItem>
+        <promptItem refid="enter_to_close" />
+      </prompt>
+      <prompt id="pluginErrorInit">
+        <promptItem>
+          <text id="_id59004" status="ok">پلگ ان ایرر: اسکا فنکشن() پلگ انDDL میں نہیں ملا۔:</text>
+          <originalText xml:lang="en" dir="ltr">Plug-in error: init() function not found in the plug-in DLL.</originalText>
+          <audio src="./audio/312_______DDL___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis013a.smil#text_013a" />
+        </promptItem>
+      </prompt>
+      <prompt id="pluginErrorDll">
+        <promptItem>
+          <text id="_id59025" status="ok">پلگ ان ایرر: ذیل کا پلگ ان لائبریری لوڈ نہیں ہو سکا:</text>
+          <originalText xml:lang="en" dir="ltr">Plug-in error: The following plug-in library could not be loaded: </originalText>
+          <audio src="./audio/313____________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis013b.smil#text_013b" />
+        </promptItem>
+        <promptVar name="PLUGIN_LIB" />
+      </prompt>
+      <prompt id="basicViewPrompt">
+        <promptItem>
+          <text id="_id59052" status="ok">دبائیں۔: اس وقت آپ بیسک ویو موڈ استعمال کر رہے ہیں۔ ڈفالٹ ویو موڈ میں واپس جانے کیلئےF11</text>
+          <originalText xml:lang="en" dir="ltr">You are now using the basic view mode.  Press F11 to switch back to the default view mode.</originalText>
+          <audio src="./audio/314__________________F11.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis013c.smil#text_013c" />
+        </promptItem>
+      </prompt>
+      <prompt id="OpenFile_notSelfVoicing">
+        <promptItem>
+          <text id="_id59074" status="ok">فائل ڈائلاگ کھولیں:</text>
+          <originalText xml:lang="en" dir="ltr">Open File Dialog</originalText>
+          <audio src="./audio/315___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis013d.smil#text_013d" />
+        </promptItem>
+        <promptItem refid="thisDialogNotSelfVoicing" />
+        <promptItem>
+          <text id="_id59094" status="ok">اپنے ہارڈ ڈرائیو پر DAISYکتابوں کو تلاش کرنے کیلئے فائل مینو کے فیچر ”سرچ فاربکس“ کا استعمال کریں۔:</text>
+          <originalText xml:lang="en" dir="ltr">Use the "search for books" feature, under the file menu, to find DAISY books on your hard drive.</originalText>
+          <audio src="./audio/316_____DAISY_____________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis013e.smil#text_013e" />
+        </promptItem>
+        <promptItem refid="escapeToCancel" />
+      </prompt>
+      <prompt id="BrowseForFolder_notSelfVoicing">
+        <promptItem>
+          <text id="_id59121" status="ok">فولڈرڈائلاگ کیلئے برا‎ؤز کریں:</text>
+          <originalText xml:lang="en" dir="ltr">Browse for folder dialog</originalText>
+          <audio src="./audio/317____.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis013f.smil#text_013f" />
+        </promptItem>
+        <promptItem refid="thisDialogNotSelfVoicing" />
+        <promptItem refid="escapeToCancel" />
+        <promptItem>
+          <text id="_id59145" status="ok">تب، جس فولڈر کوآپ چاہتے ہیں ٹیکسٹ باکس میں اسکا پاتھ‍ ٹائپ کریں۔:</text>
+          <originalText xml:lang="en" dir="ltr">Then, type the path of the folder you want in the text box.</originalText>
+          <audio src="./audio/318_____________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0140.smil#text_0140" />
+        </promptItem>
+      </prompt>
+      <prompt id="canceled">
+        <promptItem>
+          <text id="_id59166" status="ok">کینسلڈ:</text>
+          <originalText xml:lang="en" dir="ltr">Canceled</originalText>
+          <audio src="./audio/319.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0141.smil#text_0141" />
+        </promptItem>
+      </prompt>
+      <prompt id="loading">
+        <promptItem>
+          <text id="_id59186" status="ok">لوڈ کرنا:</text>
+          <originalText xml:lang="en" dir="ltr">Loading</originalText>
+          <audio src="./audio/320__.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0142.smil#text_0142" />
+        </promptItem>
+      </prompt>
+      <prompt id="restartForChanges">
+        <promptItem>
+          <text id="_id59206" status="ok">براہ مہربانی اپنی کی گئی تبدیلیوں کو دیکھنے کیلئے ری اسٹارٹ کریں۔:</text>
+          <originalText xml:lang="en" dir="ltr">Please restart to see your changes.</originalText>
+          <audio src="./audio/321____________.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0143.smil#text_0143" />
+        </promptItem>
+      </prompt>
+      <prompt id="noBooksFoundOnCd">
+        <promptItem>
+          <text id="_id59227" status="ok">اسCD-ROM پرکوئیDAISY کتاب نہیں ملی</text>
+          <originalText xml:lang="en" dir="ltr">No DAISY books were found on this CD-ROM.</originalText>
+          <audio src="./audio/322_CDROM_DAISY___.mp3" from="file:///C:/devel/amis/Langpacks/urdu/prompts/amis0144.smil#text_0144" />
+        </promptItem>
+        <promptItem refid="enter_to_close" />
+      </prompt>
+    </generalPrompts>
+  </prompts>
+</ui>
