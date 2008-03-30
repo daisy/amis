@@ -26,13 +26,13 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "util/SearchForFilesMFC.h"
 #include "AmisCore.h"
 #include "Preferences.h"
+#include "gui/dialogs/PathDialog.h"
 
 #include "gui/self-voicing/datamodel/DataTree.h"
 
 using namespace amis::gui::dialogs;
 
 BEGIN_MESSAGE_MAP(SearchForBooksDialog, CDialog)
-	//{{AFX_MSG_MAP(SearchForBooksDialog)
 	ON_WM_PAINT()
 	ON_BN_CLICKED(IDC_BROWSE, OnBrowse)
 	ON_BN_CLICKED(IDC_STARTSEARCH, OnStartsearch)
@@ -40,7 +40,6 @@ BEGIN_MESSAGE_MAP(SearchForBooksDialog, CDialog)
 	ON_LBN_DBLCLK(IDC_FILESFOUND, OnDblclkFilelist)
 	ON_BN_CLICKED(IDC_OPENBOOK, OnOpenbook)
 	ON_LBN_SELCHANGE(IDC_FILESFOUND, OnSelchangeFilelist)
-	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
 
@@ -251,18 +250,14 @@ void SearchForBooksDialog::OnBrowse()
 	sel_folder_title.LoadString(IDS_SELFOLDER_TITLE);
 	sel_folder_instr.LoadString(IDS_SELFOLDER_INSTR);
 
-/*	CPathDialog path_dlg(sel_folder_title, sel_folder_instr, curr_path, NULL);
-
+	CPathDialog path_dlg(sel_folder_title, sel_folder_instr, curr_path, NULL);
 	if (path_dlg.DoModal() == IDOK)
 	{
 		curr_path = path_dlg.GetPathName();
-
 		CEdit* p_edit = NULL;
 		p_edit = (CEdit*)this->GetDlgItem(IDC_SEARCHPATH);
 		p_edit->SetWindowText(curr_path);
-	}	*/
-
-	AfxMessageBox(_T("TODO: add browse-for-folder dialog"));
+	}
 }
 
 void SearchForBooksDialog::OnStartsearch() 

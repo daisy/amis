@@ -108,7 +108,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="../../../bin/copyLangpack.bat eng-US  ..\..\src\DefaultLangpack ..\..\..\bin\settings\lang debug"
+				CommandLine="..\..\..\bin\copyLangpack.bat eng-US  ..\..\DefaultLangpack ..\..\..\bin\settings\lang debug"
 			/>
 		</Configuration>
 		<Configuration
@@ -203,7 +203,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="../../../bin/copyLangpack.bat eng-US  ..\..\src\DefaultLangpack ..\..\..\bin\settings\lang release"
+				CommandLine="..\..\..\bin\copyLangpack.bat eng-US  ..\..\DefaultLangpack ..\..\..\bin\settings\lang release"
 			/>
 		</Configuration>
 	</Configurations>

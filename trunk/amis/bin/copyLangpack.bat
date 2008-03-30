@@ -11,6 +11,10 @@ IF "%3"=="" GOTO end
 IF "%4"=="" SET %2="Release"
 IF "%4"=="" ECHO Warning: 'release' or 'debug' not specified. Copying 'release' files by default.
 
+ECHO Copying %1 (%4) 
+ECHO From %2 
+ECHO To %3
+
 REM remove old files first
 rmdir /S %3\%1 /Q
 

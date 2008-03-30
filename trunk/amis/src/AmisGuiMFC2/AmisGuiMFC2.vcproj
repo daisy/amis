@@ -101,7 +101,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="..\bin\copyAmbulantDll.bat"
+				CommandLine="..\..\bin\copyAmbulantDll.bat"
 			/>
 		</Configuration>
 		<Configuration
@@ -314,6 +314,10 @@
 					</File>
 					<File
 						RelativePath=".\include\gui\dialogs\OpenUrlDialog.h"
+						>
+					</File>
+					<File
+						RelativePath=".\include\gui\dialogs\PathDialog.h"
 						>
 					</File>
 					<File
@@ -859,6 +863,10 @@
 								UsePrecompiledHeader="0"
 							/>
 						</FileConfiguration>
+					</File>
+					<File
+						RelativePath=".\src\gui\dialogs\PathDialog.cpp"
+						>
 					</File>
 					<File
 						RelativePath=".\src\gui\dialogs\PreferencesDialog.cpp"
