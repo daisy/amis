@@ -1656,6 +1656,53 @@
         </mnemonic>
       </control>
     </dialog>
+    <!-- new dialog -->
+  	<dialog mfcid="IDD_OPENURL">
+      <note>This is the open URL dialog</note>
+      <caption>
+        <text>Open URL</text>
+      	<audio src=""/>
+      </caption>
+      <description mfcid="IDC_OPENURL_CAPTION">
+        <text>Enter the URL of the book you want to open:</text>
+      	<audio src=""/>
+      </description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem>
+          <originalText>After typing in the URL, press enter.</originalText>    
+        	<audio src=""/>
+        </promptItem>
+        <promptItem refid="altC_to_cancel"/>
+      </prompt>
+      <control mfcid="IDC_URL" widget="textfield">
+        <description>
+          <text>Type the URL in this field.</text>
+        	<audio src="" />
+        </description>
+      </control>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <text>Press to load the URL</text>
+          <audio src=""/>
+        </description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text id="xx">C</text>
+          <audio src=""/>
+        </mnemonic>
+      </control>
+    </dialog>
   </dialogs>
   <prompts>
     <promptItemRefs>
