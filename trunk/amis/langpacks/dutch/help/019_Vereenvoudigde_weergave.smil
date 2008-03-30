@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="ncc:generator" content="Version 0.9.120"/>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="title" content="Vereenvoudigde weergave "/>
+		<meta name="dc:identifier" content="374000306"/><meta name="dc:title" content="AMIS Help"/>
+		<meta name="ncc:totalElapsedTime" content="00:07:16"/><meta name="ncc:timeInThisSmil" content="00:00:23"/>
+		<layout>
+			<region id="txtView"/>
+		</layout>
+	</head>
+	<body>
+		<seq dur="22.779s">
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0048" id="txt_0013"/>
+				<seq>
+					<audio src="019_Vereenvoudigde_weergave.mp3" clip-begin="npt=0.000s" clip-end="npt=3.004s" id="phr_019_0000"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0049" id="txt_0014"/>
+				<seq>
+					<audio src="019_Vereenvoudigde_weergave.mp3" clip-begin="npt=3.004s" clip-end="npt=12.199s" id="phr_019_0001"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_004A" id="txt_0015"/>
+				<seq>
+					<audio src="019_Vereenvoudigde_weergave.mp3" clip-begin="npt=12.199s" clip-end="npt=15.308s" id="phr_019_0002"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_004B" id="txt_0016"/>
+				<seq>
+					<audio src="019_Vereenvoudigde_weergave.mp3" clip-begin="npt=15.308s" clip-end="npt=22.779s" id="phr_019_0003"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

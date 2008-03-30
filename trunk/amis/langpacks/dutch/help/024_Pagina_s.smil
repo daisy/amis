@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="ncc:generator" content="Version 0.9.120"/>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="title" content="Pagina's "/>
+		<meta name="dc:identifier" content="374000306"/><meta name="dc:title" content="AMIS Help"/>
+		<meta name="ncc:totalElapsedTime" content="00:09:20"/><meta name="ncc:timeInThisSmil" content="00:00:18"/>
+		<layout>
+			<region id="txtView"/>
+		</layout>
+	</head>
+	<body>
+		<seq dur="18.390s">
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0059" id="txt_0018"/>
+				<seq>
+					<audio src="024_Pagina_s.mp3" clip-begin="npt=0.000s" clip-end="npt=2.403s" id="phr_024_0000"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_005A" id="txt_0019"/>
+				<seq>
+					<audio src="024_Pagina_s.mp3" clip-begin="npt=2.403s" clip-end="npt=8.333s" id="phr_024_0001"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_005B" id="txt_001A"/>
+				<seq>
+					<audio src="024_Pagina_s.mp3" clip-begin="npt=8.333s" clip-end="npt=11.520s" id="phr_024_0002"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_005C" id="txt_001B"/>
+				<seq>
+					<audio src="024_Pagina_s.mp3" clip-begin="npt=11.520s" clip-end="npt=18.390s" id="phr_024_0003"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

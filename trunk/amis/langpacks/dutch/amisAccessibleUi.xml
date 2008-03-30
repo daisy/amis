@@ -1,0 +1,2393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui xml:lang="nl">
+	<containers>
+		<container id="file">
+			<note>This is the menu header "File"</note>
+			<caption>
+				<text>Bestand</text>
+				<originalText>File</originalText>
+				
+			<audio src="./audio/001_Bestand.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/001_Bestand.smil#txt_0001"/></caption>
+			<action mfcid="ID_MENU_FILE_OPEN" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and a toolbar item</note>
+				<icon src="./open.png" type="smallIcon"/>
+				<caption>
+					<text>Openen...</text>
+					<originalText>Open...</originalText>
+					
+				<audio src="./audio/002_Openen.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/002_Openen.smil#txt_0002"/></caption>
+				<description>
+					<text>Open een Daisy document vanaf de vaste schijf</text>
+					<originalText>Open a Daisy book from the local file system</originalText>
+					
+				<audio src="./audio/003_Open_een_Daisy_document.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/003_Open_een_Daisy_document.smil#txt_0003"/></description>
+				<accelerator>
+					<text>Ctrl+O</text>
+					<originalText>Ctrl+O</originalText>
+					
+				<audio src="./audio/004_Ctrl_O.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/004_Ctrl_O.smil#txt_0004"/></accelerator>
+				<mnemonic>
+					<text>O</text>
+					<originalText>O</originalText>
+					
+				<audio src="./audio/005_O.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/005_O.smil#txt_0005"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_FILE_OPENURL" widget="menuItem">
+        <note>This is going to be a menu item</note>
+        <icon src="./open.png" type="smallIcon"/>
+        <caption>
+          <text>Open Internet-adres...</text>
+          <originalText>Open URL...</originalText>
+          
+        <audio src="./audio/006_Open_Internet-adres.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/006_Open_Internet-adres.smil#txt_0006"/></caption>
+        <description>
+          <text>Open een Daisy boek op het Internet </text>
+          <originalText>Open a Daisy book from a URL</originalText>
+          
+        <audio src="./audio/007_Open_een_Daisy_boek_op_.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/007_Open_een_Daisy_boek_op_.smil#txt_0007"/></description>
+        <accelerator>
+          <text>Ctrl+U</text>
+          <originalText>Ctrl+U</originalText>
+          
+        <audio src="./audio/008_Ctrl_U.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/008_Ctrl_U.smil#txt_0008"/></accelerator>
+      </action>
+			<action mfcid="ID_MENU_FILE_LOADCD" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and a toolbar item</note>
+				<icon src="./settings/img/cd3.ico" type="smallIcon"/>
+				<icon src="./settings/img/cd_big.ico" type="largeIcon"/>
+				<caption>
+					<text>Cd-rom laden</text>
+					<originalText>Load CD</originalText>
+					
+				<audio src="./audio/009_Cd-rom_laden.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/009_Cd-rom_laden.smil#txt_0009"/></caption>
+				<description>
+					<text>Laad een DAISY document van Cd rom</text>
+					<originalText>Load a DAISY book from CD ROM</originalText>
+					
+				<audio src="./audio/010_Laad_een_DAISY_document.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/010_Laad_een_DAISY_document.smil#txt_000A"/></description>
+				<accelerator>
+					<text>Ctrl+L</text>
+					<originalText>Ctrl+L</originalText>
+					
+				<audio src="./audio/011_Ctrl_L.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/011_Ctrl_L.smil#txt_000B"/></accelerator>
+				<mnemonic>
+					<text>L</text>
+					<originalText>L</originalText>
+					
+				<audio src="./audio/012_L.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/012_L.smil#txt_000C"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_FILE_SEARCHDRIVE" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text>DAISY document zoeken...</text>
+					<originalText>Search...</originalText>
+					
+				<audio src="./audio/013_DAISY_document_zoeken.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/013_DAISY_document_zoeken.smil#txt_000D"/></caption>
+				<description>
+					<text>Zoeken op uw computer naar DAISY documenten</text>
+					<originalText>Search local drives for DAISY books</originalText>
+					
+				<audio src="./audio/014_Zoeken_op_uw_computer_n.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/014_Zoeken_op_uw_computer_n.smil#txt_000E"/></description>
+				<mnemonic>
+					<text>S</text>
+					<originalText>S</originalText>
+					
+				<audio src="./audio/015_S.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/015_S.smil#txt_000F"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_FILE_PREFERENCES" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text>Instellingen...</text>
+					<originalText>Preferences...</originalText>
+					
+				<audio src="./audio/016_Instellingen.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/016_Instellingen.smil#txt_0010"/></caption>
+				<description>
+					<text>Dit opent het dialoogvenster Instellingen</text>
+					<originalText>This is the application preferences dialog.</originalText>
+					
+				<audio src="./audio/017_Dit_opent_het_dialoogve.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/017_Dit_opent_het_dialoogve.smil#txt_0011"/></description>
+				<mnemonic>
+					<text>P</text>
+					<originalText>P</originalText>
+					
+				<audio src="./audio/018_P.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/018_P.smil#txt_0012"/></mnemonic>
+			</action>
+			<container id="recentBooksList">
+				<note>This is the menu header for the recent books sub-menu.</note>
+				<caption>
+					<text>Onlangs geopend</text>
+					<originalText>Recent</originalText>
+					
+				<audio src="./audio/019_Onlangs_geopend.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/019_Onlangs_geopend.smil#txt_0013"/></caption>
+				<switch element="action">
+					<action mfcid="ID_FILE_RECENT_EMPTY" widget="menuItem" condition="ID_FILE_RECENT_EMPTY">
+						<note>This is going to be a menu item</note>
+						<caption>
+							<text>Leeg</text>
+							<originalText>Empty</originalText>
+							
+						<audio src="./audio/020_Leeg.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/020_Leeg.smil#txt_0014"/></caption>
+						<description>
+							<text>Er zijn geen onlangs geopende documenten.</text>
+							<originalText>There are no recently read books.</originalText>
+							
+						<audio src="./audio/021_Er_zijn_geen_onlangs_ge.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/021_Er_zijn_geen_onlangs_ge.smil#txt_0015"/></description>
+					</action>
+					<action mfcid="BOOK_BASE_ID" widget="menuItem" condition="BOOK_BASE_ID">
+						<note>This is going to be a menu item</note>
+						<list repeat="yes">
+							<caption>
+								<promptVar name="RECENT_BOOK_TITLE"/>
+							</caption>
+						</list>
+					</action>
+				</switch>
+				<mnemonic>
+					<text>R</text>
+					<originalText>R</originalText>
+					
+				<audio src="./audio/022_R.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/022_R.smil#txt_0016"/></mnemonic>
+			</container>
+			<action mfcid="ID_MENU_FILE_EXIT" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text>Afsluiten</text>
+					<originalText>Exit</originalText>
+					
+				<audio src="./audio/023_Afsluiten.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/023_Afsluiten.smil#txt_0017"/></caption>
+				<description>
+					<text>AMIS afsluiten</text>
+					<originalText>Exit AMIS</originalText>
+					
+				<audio src="./audio/024_AMIS_afsluiten.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/024_AMIS_afsluiten.smil#txt_0018"/></description>
+				<accelerator>
+					<text>Alt+F4</text>
+					<originalText>Alt+F4</originalText>
+					
+				<audio src="./audio/025_Alt_F4.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/025_Alt_F4.smil#txt_0019"/></accelerator>
+				<mnemonic>
+					<text>x</text>
+					<originalText>x</originalText>
+					
+				<audio src="./audio/026_x.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/026_x.smil#txt_001A"/></mnemonic>
+			</action>
+			<accelerator>
+				<text>Alt+F</text>
+				<originalText>Alt+F</originalText>
+				
+			<audio src="./audio/027_Alt_F.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/027_Alt_F.smil#txt_001B"/></accelerator>
+			<mnemonic>
+				<text>F</text>
+				<originalText>F</originalText>
+				
+			<audio src="./audio/028_F.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/028_F.smil#txt_001C"/></mnemonic>
+		</container>
+		<container id="view">
+			<note>This is the menu header "View"</note>
+			<caption>
+				<text>Weergave</text>
+				<originalText>View</originalText>
+				
+			<audio src="./audio/029_Weergave.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/029_Weergave.smil#txt_001D"/></caption>
+			<action mfcid="ID_MENU_VIEW_SIDEBAR_ONOFF" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text>Navigatievenster</text>
+					<originalText>Sidebar</originalText>
+					
+				<audio src="./audio/030_Navigatievenster.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/030_Navigatievenster.smil#txt_001E"/></caption>
+				<description>
+					<text>Schakel het navigatievenster in of uit.</text>
+					<originalText>Turn the sidebar on or off.</originalText>
+					
+				<audio src="./audio/031_Schakel_het_navigatieve.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/031_Schakel_het_navigatieve.smil#txt_001F"/></description>
+				<mnemonic>
+					<text>S</text>
+					<originalText>S</originalText>
+					
+				<audio src="./audio/032_S.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/032_S.smil#txt_0020"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_VIEW_BASIC" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text>Eenvoudig</text>
+					<originalText>Basic View Mode</originalText>
+					
+				<audio src="./audio/033_Eenvoudig.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/033_Eenvoudig.smil#txt_0021"/></caption>
+				<description>
+					<text>Schakel naar vereenvoudigde weergave.</text>
+					<originalText>Switch the view to basic mode.</originalText>
+					
+				<audio src="./audio/034_Schakel_naar_vereenvoud.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/034_Schakel_naar_vereenvoud.smil#txt_0022"/></description>
+				<accelerator>
+					<text>F11</text>
+					<originalText>F11</originalText>
+					
+				<audio src="./audio/035_F11.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/035_F11.smil#txt_0023"/></accelerator>
+				<mnemonic>
+					<text>B</text>
+					<originalText>B</originalText>
+					
+				<audio src="./audio/036_B.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/036_B.smil#txt_0024"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_VIEW_CONTRAST" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item</note>
+				<icon src="./settings/img/contrast.ico" type="smallIcon"/>
+				<caption>
+					<text>Andere paginakleuren</text>
+					<originalText>High Contrast</originalText>
+					
+				<audio src="./audio/037_Andere_paginakleuren.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/037_Andere_paginakleuren.smil#txt_0025"/></caption>
+				<description>
+					<text>Gebruik de alternatieve kleurinstellingen.</text>
+					<originalText>Use high contrast colors for the text display.</originalText>
+					
+				<audio src="./audio/038_Gebruik_de_alternatieve.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/038_Gebruik_de_alternatieve.smil#txt_0026"/></description>
+				<accelerator>
+					<text>Ctrl+S</text>
+					<originalText>Ctrl+S</originalText>
+					
+				<audio src="./audio/039_Ctrl_S.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/039_Ctrl_S.smil#txt_0027"/></accelerator>
+				<mnemonic>
+					<text>C</text>
+					<originalText>C</originalText>
+					
+				<audio src="./audio/040_C.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/040_C.smil#txt_0028"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_VIEW_LARGEFONT" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/font.ico" type="smallIcon"/>
+				<caption>
+					<text>Lettertype vergroten</text>
+					<originalText>Increase Font Size</originalText>
+					
+				<audio src="./audio/041_Lettertype_vergroten.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/041_Lettertype_vergroten.smil#txt_0029"/></caption>
+				<description>
+					<text>Lettertype stapsgewijs vergroten.</text>
+					<originalText>Gradually increase the font size.</originalText>
+					
+				<audio src="./audio/042_Lettertype_stapsgewijs_.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/042_Lettertype_stapsgewijs_.smil#txt_002A"/></description>
+				<mnemonic>
+					<text>I</text>
+					<originalText>I</originalText>
+					
+				<audio src="./audio/043_I.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/043_I.smil#txt_002B"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_VIEW_RESETFONT" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text>Lettergrootte herstellen</text>
+					<originalText>Reset Font Size</originalText>
+					
+				<audio src="./audio/044_Lettergrootte_herstellen.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/044_Lettergrootte_herstellen.smil#txt_002C"/></caption>
+				<description>
+					<text>Schakel terug naar standaard lettertype.</text>
+					<originalText>Set the font size to the default setting.</originalText>
+					
+				<audio src="./audio/045_Schakel_terug_naar_stan.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/045_Schakel_terug_naar_stan.smil#txt_002D"/></description>
+				<mnemonic>
+					<text>R</text>
+					<originalText>R</originalText>
+					
+				<audio src="./audio/046_R.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/046_R.smil#txt_002E"/></mnemonic>
+			</action>
+			<action mfcid="NAVLIST_BASE_ID" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<promptVar name="NAV_LIST_NAME"/>
+				</caption>
+				<description>
+					<promptVar name="NAV_LIST_DESCRIPTION"/>
+				</description>
+			</action>
+			<accelerator>
+				<text>Alt+V</text>
+				<originalText>Alt+V</originalText>
+				
+			<audio src="./audio/047_Alt_V.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/047_Alt_V.smil#txt_002F"/></accelerator>
+			<mnemonic>
+				<text>V</text>
+				<originalText>V</originalText>
+				
+			<audio src="./audio/048_V.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/048_V.smil#txt_0030"/></mnemonic>
+		</container>
+		<container id="play">
+			<note>This is the menu header "Play"</note>
+			<caption>
+				<text>Afspelen</text>
+				<originalText>Play</originalText>
+				
+			<audio src="./audio/049_Afspelen.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/049_Afspelen.smil#txt_0031"/></caption>
+			<switch element="action">
+				<action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" condition="canPlay">
+					<note>This is going to be a menu item and toolbar item</note>
+					<icon src="./settings/img/play-big.ico" type="smallIcon"/>
+					<icon src="./settings/img/play_big.ico" type="largeIcon"/>
+					<caption>
+						<text>Afspelen</text>
+						<originalText>Play</originalText>
+						
+					<audio src="./audio/050_Afspelen.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/050_Afspelen.smil#txt_0032"/></caption>
+					<description>
+						<text>Start synchroon afspelen.</text>
+						<originalText>Start synchronized playback.</originalText>
+						
+					<audio src="./audio/051_Start_synchroon_afspelen.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/051_Start_synchroon_afspelen.smil#txt_0033"/></description>
+					<accelerator>
+						<text>Spatie</text>
+						<originalText>Space</originalText>
+						
+					<audio src="./audio/052_Spatie.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/052_Spatie.smil#txt_0034"/></accelerator>
+					<mnemonic>
+						<text>P</text>
+						<originalText>P</originalText>
+						
+					<audio src="./audio/053_P.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/053_P.smil#txt_0035"/></mnemonic>
+				</action>
+				<action mfcid="ID_MENU_PLAYPAUSE" widget="menuItem toolbarItem" condition="canPause">
+					<note>This is going to be a menu item and toolbar item</note>
+					<icon src="./settings/img/pause.ico" type="smallIcon"/>
+					<icon src="./settings/img/pause_big.ico" type="largeIcon"/>
+					<caption>
+						<text>Pause</text>
+						<originalText>Pause</originalText>
+						
+					<audio src="./audio/054_Pause.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/054_Pause.smil#txt_0036"/></caption>
+					<description>
+						<text>Pauseer het afspelen van dit DAISY document.</text>
+						<originalText>Pause playback of this DAISY book.</originalText>
+						
+					<audio src="./audio/055_Pauseer_het_afspelen_va.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/055_Pauseer_het_afspelen_va.smil#txt_0037"/></description>
+					<accelerator>
+						<text>Spatie</text>
+						<originalText>Space</originalText>
+						
+					<audio src="./audio/056_Spatie.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/056_Spatie.smil#txt_0038"/></accelerator>
+					<mnemonic>
+						<text>a</text>
+						<originalText>a</originalText>
+						
+					<audio src="./audio/057_a.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/057_a.smil#txt_0039"/></mnemonic>
+				</action>
+			</switch>
+			<action mfcid="ID_MENU_PLAY_ESCAPE" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text>Overslaan</text>
+					<originalText>Escape</originalText>
+					
+				<audio src="./audio/058_Overslaan.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/058_Overslaan.smil#txt_003A"/></caption>
+				<description>
+					<text>Verlaat huidig item en ga naar volgend item.</text>
+					<originalText>Jump out of the currently playing item or structure.</originalText>
+					
+				<audio src="./audio/059_Verlaat_huidig_item_en_.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/059_Verlaat_huidig_item_en_.smil#txt_003B"/></description>
+				<accelerator>
+					<text>Esc</text>
+					<originalText>Esc</originalText>
+					
+				<audio src="./audio/060_Esc.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/060_Esc.smil#txt_003C"/></accelerator>
+				<mnemonic>
+					<text>E</text>
+					<originalText>E</originalText>
+					
+				<audio src="./audio/061_E.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/061_E.smil#txt_003D"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_PLAY_FASTER" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/fullspeedahead.ico" type="smallIcon"/>
+				<caption>
+					<text>Sneller</text>
+					<originalText>Faster</originalText>
+					
+				<audio src="./audio/062_Sneller.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/062_Sneller.smil#txt_003E"/></caption>
+				<description>
+					<text>Verhoog de afspeelsnelheid stapsgewijs.</text>
+					<originalText>Increase the playback rate.</originalText>
+					
+				<audio src="./audio/063_Verhoog_de_afspeelsnelh.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/063_Verhoog_de_afspeelsnelh.smil#txt_003F"/></description>
+				<accelerator>
+					<text>Ctrl++</text>
+					<originalText>Ctrl++</originalText>
+					
+				<audio src="./audio/064_Ctrl.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/064_Ctrl.smil#txt_0040"/></accelerator>
+				<mnemonic>
+					<text>F</text>
+					<originalText>F</originalText>
+					
+				<audio src="./audio/065_F.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/065_F.smil#txt_0041"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_PLAY_SLOWER" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/slowdown.ico" type="smallIcon"/>
+				<caption>
+					<text>Langzamer</text>
+					<originalText>Slower</originalText>
+					
+				<audio src="./audio/066_Langzamer.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/066_Langzamer.smil#txt_0042"/></caption>
+				<description>
+					<text>Verlaag de afspeelsnelheid stapsgewijs.</text>
+					<originalText>Slow down the playback rate.</originalText>
+					
+				<audio src="./audio/067_Verlaag_de_afspeelsnelh.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/067_Verlaag_de_afspeelsnelh.smil#txt_0043"/></description>
+				<accelerator>
+					<text>Ctrl+-</text>
+					<originalText>Ctrl+-</originalText>
+					
+				<audio src="./audio/068_Ctrl_-.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/068_Ctrl_-.smil#txt_0044"/></accelerator>
+				<mnemonic>
+					<text>S</text>
+					<originalText>S</originalText>
+					
+				<audio src="./audio/069_S.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/069_S.smil#txt_0045"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_PLAY_NORMALSPEED" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/normalspeed.ico" type="smallIcon"/>
+				<caption>
+					<text>Normale snelheid</text>
+					<originalText>Normal Speed</originalText>
+					
+				<audio src="./audio/070_Normale_snelheid.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/070_Normale_snelheid.smil#txt_0046"/></caption>
+				<description>
+					<text>Schakel terug naar standaard afspeelsnelheid.</text>
+					<originalText>Reset the playback rate to normal.</originalText>
+					
+				<audio src="./audio/071_Schakel_terug_naar_stan.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/071_Schakel_terug_naar_stan.smil#txt_0047"/></description>
+				<accelerator>
+					<text>Ctrl+0</text>
+					<originalText>Ctrl+0</originalText>
+					
+				<audio src="./audio/072_Ctrl_0.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/072_Ctrl_0.smil#txt_0048"/></accelerator>
+				<mnemonic>
+					<text>N</text>
+					<originalText>N</originalText>
+					
+				<audio src="./audio/073_N.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/073_N.smil#txt_0049"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_PLAY_VOLUP" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text>Harder</text>
+					<originalText>Increase Volume</originalText>
+					
+				<audio src="./audio/074_Harder.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/074_Harder.smil#txt_004A"/></caption>
+				<description>
+					<text>Verhoog het volume stapsgewijs.</text>
+					<originalText>Gradually raise the volume.</originalText>
+					
+				<audio src="./audio/075_Verhoog_het_volume_stap.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/075_Verhoog_het_volume_stap.smil#txt_004B"/></description>
+				<accelerator>
+					<text>Ctrl+pijl omhoog</text>
+					<originalText>Ctrl+Up</originalText>
+					
+				<audio src="./audio/076_Ctrl_pijl_omhoog.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/076_Ctrl_pijl_omhoog.smil#txt_004C"/></accelerator>
+				<mnemonic>
+					<text>I</text>
+					<originalText>I</originalText>
+					
+				<audio src="./audio/077_I.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/077_I.smil#txt_004D"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_PLAY_VOLDOWN" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text>Zachter</text>
+					<originalText>Decrease Volume</originalText>
+					
+				<audio src="./audio/078_Zachter.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/078_Zachter.smil#txt_004E"/></caption>
+				<description>
+					<text>Verlaag het volume stapsgewijs.</text>
+					<originalText>Gradually lower the volume.</originalText>
+					
+				<audio src="./audio/079_Verlaag_het_volume_stap.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/079_Verlaag_het_volume_stap.smil#txt_004F"/></description>
+				<accelerator>
+					<text>Ctrl+pijl omlaag</text>
+					<originalText>Ctrl+Down</originalText>
+					
+				<audio src="./audio/080_Ctrl_pijl_omlaag.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/080_Ctrl_pijl_omlaag.smil#txt_0050"/></accelerator>
+				<mnemonic>
+					<text>D</text>
+					<originalText>D</originalText>
+					
+				<audio src="./audio/081_D.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/081_D.smil#txt_0051"/></mnemonic>
+			</action>
+			<accelerator>
+				<text>Alt+P</text>
+				<originalText>Alt+P</originalText>
+				
+			<audio src="./audio/082_Alt_P.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/082_Alt_P.smil#txt_0052"/></accelerator>
+			<mnemonic>
+				<text>P</text>
+				<originalText>P</originalText>
+				
+			<audio src="./audio/083_P.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/083_P.smil#txt_0053"/></mnemonic>
+		</container>
+		<container id="navigate">
+			<note>This is the menu header "Navigate"</note>
+			<caption>
+				<text>Navigeren</text>
+				<originalText>Navigate</originalText>
+				
+			<audio src="./audio/084_Navigeren.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/084_Navigeren.smil#txt_0054"/></caption>
+			<action mfcid="ID_MENU_NAV_PREVSECTION" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/prevsection.ico" type="smallIcon"/>
+				<icon src="./settings/img/prevsection_big.ico" type="largeIcon"/>
+				<caption>
+					<text>Vorige sectie</text>
+					<originalText>Previous Section</originalText>
+					
+				<audio src="./audio/085_Vorige_sectie.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/085_Vorige_sectie.smil#txt_0055"/></caption>
+				<description>
+					<text>Ga naar de vorige sectie.</text>
+					<originalText>Go to the previous section.</originalText>
+					
+				<audio src="./audio/086_Ga_naar_de_vorige_sectie.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/086_Ga_naar_de_vorige_sectie.smil#txt_0056"/></description>
+				<accelerator>
+					<text>Pijl omhoog</text>
+					<originalText>Up</originalText>
+					
+				<audio src="./audio/087_Pijl_omhoog.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/087_Pijl_omhoog.smil#txt_0057"/></accelerator>
+				<mnemonic>
+					<text>P</text>
+					<originalText>P</originalText>
+					
+				<audio src="./audio/088_P.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/088_P.smil#txt_0058"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_NAV_NEXTSECTION" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/nextsection.ico" type="smallIcon"/>
+				<icon src="./settings/img/nextsection_big.ico" type="largeIcon"/>
+				<caption>
+					<text>Volgende sectie</text>
+					<originalText>Next Section</originalText>
+					
+				<audio src="./audio/089_Volgende_sectie.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/089_Volgende_sectie.smil#txt_0059"/></caption>
+				<description>
+					<text>Ga naar de volgende sectie.</text>
+					<originalText>Go to the next section.</originalText>
+					
+				<audio src="./audio/090_Ga_naar_de_volgende_sec.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/090_Ga_naar_de_volgende_sec.smil#txt_005A"/></description>
+				<accelerator>
+					<text>Pijl omlaag</text>
+					<originalText>Down</originalText>
+					
+				<audio src="./audio/091_Pijl_omlaag.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/091_Pijl_omlaag.smil#txt_005B"/></accelerator>
+				<mnemonic>
+					<text>N</text>
+					<originalText>N</originalText>
+					
+				<audio src="./audio/092_N.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/092_N.smil#txt_005C"/></mnemonic>
+			</action>
+			<container id="sectiondepth">
+				<note>This is the "show section depth" sub-menu pop-up</note>
+				<caption>
+					<text>Sectieniveau's tonen</text>
+					<originalText>Show Section Depth</originalText>
+					
+				<audio src="./audio/093_Sectieniveau_s_tonen.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/093_Sectieniveau_s_tonen.smil#txt_005D"/></caption>
+				<switch element="action">
+					<action mfcid="ID_EMPTY" widget="menuItem" condition="ID_EMPTY">
+						<note>This is going to be a menu item</note>
+						<caption>
+							<text>Leeg</text>
+							<originalText>Empty</originalText>
+							
+						<audio src="./audio/094_Leeg.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/094_Leeg.smil#txt_005E"/></caption>
+						<description>
+							<text>Er zijn geen sectieniveau's.</text>
+							<originalText>There are no section levels.</originalText>
+							
+						<audio src="./audio/095_Er_zijn_geen_sectienive.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/095_Er_zijn_geen_sectienive.smil#txt_005F"/></description>
+					</action>
+					<action mfcid="SECTION_DEPTH_BASE_ID" widget="menuItem" condition="SECTION_DEPTH_BASE_ID">
+						<note>This is going to be a menu item</note>
+						<list repeat="yes">
+							<caption>
+								<promptVar name="SECTION_DEPTH_OPTION"/>
+							</caption>
+						</list>
+					</action>
+				</switch>
+				<mnemonic>
+					<text>S</text>
+					<originalText>S</originalText>
+					
+				<audio src="./audio/096_S.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/096_S.smil#txt_0060"/></mnemonic>
+			</container>
+			<action mfcid="ID_MENU_NAV_PREVPHRASE" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/prevphasecirc.ico" type="smallIcon"/>
+				<caption>
+					<text>Vorig tekstdeel</text>
+					<originalText>Previous Phrase</originalText>
+					
+				<audio src="./audio/097_Vorig_tekstdeel.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/097_Vorig_tekstdeel.smil#txt_0061"/></caption>
+				<description>
+					<text>Ga naar het vorige tekstdeel.</text>
+					<originalText>Go to the previous phrase.</originalText>
+					
+				<audio src="./audio/098_Ga_naar_het_vorige_teks.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/098_Ga_naar_het_vorige_teks.smil#txt_0062"/></description>
+				<accelerator>
+					<text>Pijl links</text>
+					<originalText>Left</originalText>
+					
+				<audio src="./audio/099_Pijl_links.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/099_Pijl_links.smil#txt_0063"/></accelerator>
+			</action>
+			<action mfcid="ID_MENU_NAV_NEXTPHRASE" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/nextphrasecirc.ico" type="smallIcon"/>
+				<caption>
+					<text>Volgend tekstdeel</text>
+					<originalText>Next Phrase</originalText>
+					
+				<audio src="./audio/100_Volgend_tekstdeel.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/100_Volgend_tekstdeel.smil#txt_0064"/></caption>
+				<description>
+					<text>Ga naar het volgende tekstdeel.</text>
+					<originalText>Go to the next phrase.</originalText>
+					
+				<audio src="./audio/101_Ga_naar_het_volgende_te.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/101_Ga_naar_het_volgende_te.smil#txt_0065"/></description>
+				<accelerator>
+					<text>Pijl rechts</text>
+					<originalText>Right</originalText>
+					
+				<audio src="./audio/102_Pijl_rechts.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/102_Pijl_rechts.smil#txt_0066"/></accelerator>
+			</action>
+			<action mfcid="ID_MENU_NAV_PREVPAGE" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/prevpage.ico" type="smallIcon"/>
+				<caption>
+					<text>Vorige pagina</text>
+					<originalText>Previous Page</originalText>
+					
+				<audio src="./audio/103_Vorige_pagina.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/103_Vorige_pagina.smil#txt_0067"/></caption>
+				<description>
+					<text>Ga naar de vorige pagina.</text>
+					<originalText>Go to the previous page.</originalText>
+					
+				<audio src="./audio/104_Ga_naar_de_vorige_pagina.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/104_Ga_naar_de_vorige_pagina.smil#txt_0068"/></description>
+				<accelerator>
+					<text>Ctrl+pijl links</text>
+					<originalText>Ctrl+Left</originalText>
+					
+				<audio src="./audio/105_Ctrl_pijl_links.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/105_Ctrl_pijl_links.smil#txt_0069"/></accelerator>
+			</action>
+			<action mfcid="ID_MENU_NAV_NEXTPAGE" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/nextpage.ico" type="smallIcon"/>
+				<caption>
+					<text>Volgende pagina</text>
+					<originalText>Next Page</originalText>
+					
+				<audio src="./audio/106_Volgende_pagina.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/106_Volgende_pagina.smil#txt_006A"/></caption>
+				<description>
+					<text>Ga naar de volgende pagina.</text>
+					<originalText>Go to the next page.</originalText>
+					
+				<audio src="./audio/107_Ga_naar_de_volgende_pag.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/107_Ga_naar_de_volgende_pag.smil#txt_006B"/></description>
+				<accelerator>
+					<text>Ctrl+pijl rechts</text>
+					<originalText>Ctrl+Right</originalText>
+					
+				<audio src="./audio/108_Ctrl_pijl_rechts.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/108_Ctrl_pijl_rechts.smil#txt_006C"/></accelerator>
+			</action>
+			<action mfcid="ID_MENU_NAV_GOTOPAGE" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text>Ga naar pagina...</text>
+					<originalText>Go to Page...</originalText>
+					
+				<audio src="./audio/109_Ga_naar_pagina.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/109_Ga_naar_pagina.smil#txt_006D"/></caption>
+				<description>
+					<text>Ga naar een specifieke pagina.</text>
+					<originalText>Go to a specific page.</originalText>
+					
+				<audio src="./audio/110_Ga_naar_een_specifieke_.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/110_Ga_naar_een_specifieke_.smil#txt_006E"/></description>
+				<accelerator>
+					<text>Ctrl+G</text>
+					<originalText>Ctrl+G</originalText>
+					
+				<audio src="./audio/111_Ctrl_G.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/111_Ctrl_G.smil#txt_006F"/></accelerator>
+			</action>
+			<action mfcid="ID_MENU_NAV_FINDINTEXT" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text>Zoeken in tekst...</text>
+					<originalText>Find in Text</originalText>
+					
+				<audio src="./audio/112_Zoeken_in_tekst.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/112_Zoeken_in_tekst.smil#txt_0070"/></caption>
+				<description>
+					<text>Zoek in de tekst naar woorden of woordcombinaties.</text>
+					<originalText>Search for a word or phrase in the text.</originalText>
+					
+				<audio src="./audio/113_Zoek_in_de_tekst_naar_w.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/113_Zoek_in_de_tekst_naar_w.smil#txt_0071"/></description>
+				<accelerator>
+					<text>Ctrl+F</text>
+					<originalText>Ctrl+F</originalText>
+					
+				<audio src="./audio/114_Ctrl_F.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/114_Ctrl_F.smil#txt_0072"/></accelerator>
+				<mnemonic>
+					<text>F</text>
+					<originalText>F</originalText>
+					
+				<audio src="./audio/115_F.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/115_F.smil#txt_0073"/></mnemonic>
+			</action>
+			<accelerator>
+				<text>Alt+N</text>
+				<originalText>Alt+N</originalText>
+				
+			<audio src="./audio/116_Alt_N.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/116_Alt_N.smil#txt_0074"/></accelerator>
+			<mnemonic>
+				<text>N</text>
+				<originalText>N</originalText>
+				
+			<audio src="./audio/117_N.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/117_N.smil#txt_0075"/></mnemonic>
+		</container>
+		<container id="bookmarks">
+			<note>This is the menu header "Bookmarks"</note>
+			<caption>
+				<text>Bladwijzers</text>
+				<originalText>Bookmarks</originalText>
+				
+			<audio src="./audio/118_Bladwijzers.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/118_Bladwijzers.smil#txt_0076"/></caption>
+			<action mfcid="ID_MENU_BMK_ADD" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/adbookmark.ico" type="smallIcon"/>
+				<caption>
+					<text>Bladwijzer toevoegen</text>
+					<originalText>Add Bookmark</originalText>
+					
+				<audio src="./audio/119_Bladwijzer_toevoegen.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/119_Bladwijzer_toevoegen.smil#txt_0077"/></caption>
+				<description>
+					<text>Voeg op de huidige positie een bladwijzer toe.</text>
+					<originalText>Bookmark your current position.</originalText>
+					
+				<audio src="./audio/120_Voeg_op_de_huidige_posi.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/120_Voeg_op_de_huidige_posi.smil#txt_0078"/></description>
+				<accelerator>
+					<text>Ctrl+D</text>
+					<originalText>Ctrl+D</originalText>
+					
+				<audio src="./audio/121_Ctrl_D.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/121_Ctrl_D.smil#txt_0079"/></accelerator>
+				<mnemonic>
+					<text>A</text>
+					<originalText>A</originalText>
+					
+				<audio src="./audio/122_A.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/122_A.smil#txt_007A"/></mnemonic>
+			</action>
+			<action mfcid="BOOKMARK_BASE_ID" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<list repeat="yes">
+					<caption>
+						<promptVar name="BOOKMARK_TITLE"/>
+					</caption>
+				</list>
+			</action>
+			<accelerator>
+				<text>Alt+B</text>
+				<originalText>Alt+B</originalText>
+				
+			<audio src="./audio/123_Alt_B.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/123_Alt_B.smil#txt_007B"/></accelerator>
+			<mnemonic>
+				<text>B</text>
+				<originalText>B</originalText>
+				
+			<audio src="./audio/124_B.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/124_B.smil#txt_007C"/></mnemonic>
+		</container>
+		<container id="info">
+			<note>This is the menu header "Info"</note>
+			<caption>
+				<text>Info</text>
+				<originalText>Info</originalText>
+				
+			<audio src="./audio/125_Info.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/125_Info.smil#txt_007D"/></caption>
+			<action mfcid="ID_MENU_INFO_SKIP" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text>Onderdelen weglaten...</text>
+					<originalText>Skippable Items...</originalText>
+					
+				<audio src="./audio/126_Onderdelen_weglaten.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/126_Onderdelen_weglaten.smil#txt_007E"/></caption>
+				<description>
+					<text>Bekijk en selecteer items die overgeslagen kunnen worden.</text>
+					<originalText>View the skippable items for this publication.</originalText>
+					
+				<audio src="./audio/127_Bekijk_en_selecteer_ite.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/127_Bekijk_en_selecteer_ite.smil#txt_007F"/></description>
+				<mnemonic>
+					<text>S</text>
+					<originalText>S</originalText>
+					
+				<audio src="./audio/128_S.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/128_S.smil#txt_0080"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_INFO_SUMMARY" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/info.ico" type="smallIcon"/>
+				<caption>
+					<text>Productiegegevens</text>
+					<originalText>Full Summary</originalText>
+					
+				<audio src="./audio/129_Productiegegevens.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/129_Productiegegevens.smil#txt_0081"/></caption>
+				<description>
+					<text>Gegevens en eigenschappen van dit document.</text>
+					<originalText>Get all summary info for this publication.</originalText>
+					
+				<audio src="./audio/130_Gegevens_en_eigenschapp.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/130_Gegevens_en_eigenschapp.smil#txt_0082"/></description>
+				<mnemonic>
+					<text>F</text>
+					<originalText>F</originalText>
+					
+				<audio src="./audio/131_F.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/131_F.smil#txt_0083"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_INFO_CURRENTPOSITION" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text>Huidige positie</text>
+					<originalText>Current Position</originalText>
+					
+				<audio src="./audio/132_Huidige_positie.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/132_Huidige_positie.smil#txt_0084"/></caption>
+				<description>
+					<text>Informatie over de huidige positie.</text>
+					<originalText>Get information about your current position.</originalText>
+					
+				<audio src="./audio/133_Informatie_over_de_huid.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/133_Informatie_over_de_huid.smil#txt_0085"/></description>
+				<mnemonic>
+					<text>C</text>
+					<originalText>C</originalText>
+					
+				<audio src="./audio/134_C.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/134_C.smil#txt_0086"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_INFO_NAVOPTIONS" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text>Navigatiemogelijkheden</text>
+					<originalText>Navigation Options</originalText>
+					
+				<audio src="./audio/135_Navigatiemogelijkheden.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/135_Navigatiemogelijkheden.smil#txt_0087"/></caption>
+				<description>
+					<text>Informatie over de navigatie mogelijkheden.</text>
+					<originalText>Learn about your navigation options for this publication.</originalText>
+					
+				<audio src="./audio/136_Informatie_over_de_navi.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/136_Informatie_over_de_navi.smil#txt_0088"/></description>
+				<mnemonic>
+					<text>N</text>
+					<originalText>N</originalText>
+					
+				<audio src="./audio/137_N.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/137_N.smil#txt_0089"/></mnemonic>
+			</action>
+			<accelerator>
+				<text>Alt+I</text>
+				<originalText>Alt+I</originalText>
+				
+			<audio src="./audio/138_Alt_I.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/138_Alt_I.smil#txt_008A"/></accelerator>
+			<mnemonic>
+				<text>I</text>
+				<originalText>I</originalText>
+				
+			<audio src="./audio/139_I.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/139_I.smil#txt_008B"/></mnemonic>
+		</container>
+		<container id="help">
+			<note>This is the menu header "Help"</note>
+			<caption>
+				<text>Help</text>
+				<originalText>Help</originalText>
+				
+			<audio src="./audio/140_Help.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/140_Help.smil#txt_008C"/></caption>
+			<action mfcid="ID_MENU_HELP_CONTENTS" widget="menuItem toolbarItem">
+				<note>This is going to be a menu item and toolbar item</note>
+				<icon src="./settings/img/help.ico" type="smallIcon"/>
+				<icon src="./settings/img/help_big.ico" type="largeIcon"/>
+				<caption>
+					<text>Inhoud</text>
+					<originalText>Contents</originalText>
+					
+				<audio src="./audio/141_Inhoud.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/141_Inhoud.smil#txt_008D"/></caption>
+				<description>
+					<text>Help voor AMIS openen</text>
+					<originalText>Get help using AMIS</originalText>
+					
+				<audio src="./audio/142_Help_voor_AMIS_openen.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/142_Help_voor_AMIS_openen.smil#txt_008E"/></description>
+				<mnemonic>
+					<text>C</text>
+					<originalText>C</originalText>
+					
+				<audio src="./audio/143_C.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/143_C.smil#txt_008F"/></mnemonic>
+			</action>
+			<action mfcid="ID_MENU_HELP_ABOUT" widget="menuItem">
+				<note>This is going to be a menu item</note>
+				<caption>
+					<text>Over AMIS</text>
+					<originalText>About AMIS</originalText>
+					
+				<audio src="./audio/144_Over_AMIS.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/144_Over_AMIS.smil#txt_0090"/></caption>
+				<description>
+					<text>Meer informatie over AMIS en DAISY-for-All.</text>
+					<originalText>Find out about AMIS and DAISY-for-All.</originalText>
+					
+				<audio src="./audio/145_Meer_informatie_over_AM.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/145_Meer_informatie_over_AM.smil#txt_0091"/></description>
+				<mnemonic>
+					<text>A</text>
+					<originalText>A</originalText>
+					
+				<audio src="./audio/146_A.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/146_A.smil#txt_0092"/></mnemonic>
+			</action>
+			<accelerator>
+				<text>Alt+H</text>
+				<originalText>Alt+H</originalText>
+				
+			<audio src="./audio/147_Alt_H.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/147_Alt_H.smil#txt_0093"/></accelerator>
+			<mnemonic>
+				<text>H</text>
+				<originalText>H</originalText>
+				
+			<audio src="./audio/148_H.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/148_H.smil#txt_0094"/></mnemonic>
+		</container>
+	</containers>
+	<dialogs>
+		<dialog mfcid="IDD_FIND">
+			<note>This is the find in text dialog</note>
+			<caption>
+				<text>Zoek in tekst</text>
+				<originalText>Find in Text</originalText>
+				
+			<audio src="./audio/149_Zoek_in_tekst.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/149_Zoek_in_tekst.smil#txt_0095"/></caption>
+			<description>
+				<text>Hier kunt u zowel vooruit als achteruit zoeken in de volledige tekst.</text>
+				<originalText>Here you can search the full text in either direction.</originalText>
+				
+			<audio src="./audio/150_Hier_kunt_u_zowel_vooru.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/150_Hier_kunt_u_zowel_vooru.smil#txt_0096"/></description>
+			<prompt type="instructions">
+				<promptItem refid="tabAround"/>
+				<promptItem>
+					<text>Vul de zoekterm in en druk op enter.</text>
+					<originalText>After typing in your search, press enter to begin searching.</originalText>
+					
+				<audio src="./audio/151_Vul_de_zoekterm_in_en_d.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/151_Vul_de_zoekterm_in_en_d.smil#txt_0097"/></promptItem>
+				<promptItem refid="altC_to_cancel"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+				<promptItem refid="textBoxRepeatInstr"/>
+			</prompt>
+			<control mfcid="IDOK" widget="button">
+				<caption>
+					<promptItem refid="ok_button_caption"/>
+				</caption>
+				<description>
+					<text>Druk om het zoeken in de tekst te beginnen.</text>
+					<originalText>Press to begin searching for text in the file.</originalText>
+					
+				<audio src="./audio/152_Druk_om_het_zoeken_in_d.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/152_Druk_om_het_zoeken_in_d.smil#txt_0098"/></description>
+			</control>
+			<control mfcid="IDCANCEL" widget="button">
+				<caption>
+					<promptItem refid="cancel_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="cancel_button_description"/>
+				</description>
+			</control>
+			<control mfcid="IDC_SEARCHSTRING" widget="textfield">
+				<description>
+					<text>Vul de zoekterm in</text>
+					<originalText>Type the text to search for.</originalText>
+					
+				<audio src="./audio/153_Vul_de_zoekterm_in.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/153_Vul_de_zoekterm_in.smil#txt_0099"/></description>
+			</control>
+			<control mfcid="IDC_FINDNEXT" widget="radiobutton">
+				<note>This indicates the direction of the search</note>
+				<caption>
+					<text>Vind volgende</text>
+					<originalText>Find Next</originalText>
+					
+				<audio src="./audio/154_Vind_volgende.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/154_Vind_volgende.smil#txt_009A"/></caption>
+				<description>
+					<prompt>
+						<promptItem refid="thisItemIsCurrently"/>
+						<promptVar name="SELECTED_OR_DESELECTED" param="FIND_NEXT_IN_TEXT"/>
+					</prompt>
+				</description>
+			</control>
+			<control mfcid="IDC_FINDPREV" widget="radiobutton">
+				<note>This indicates the direction of the search</note>
+				<caption>
+					<text>Vind vorige</text>
+					<originalText>Find Previous</originalText>
+					
+				<audio src="./audio/155_Vind_vorige.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/155_Vind_vorige.smil#txt_009B"/></caption>
+				<description>
+					<prompt>
+						<promptItem refid="thisItemIsCurrently"/>
+						<promptName name="SELECTED_OR_DESELECTED" param="FIND_PREV_IN_TEXT"/>
+					</prompt>
+				</description>
+			</control>
+		</dialog>
+		<dialog mfcid="IDD_CDSEARCH">
+			<note>This dialog appears when more than one book is on a CD-ROM</note>
+			<caption>
+				<text>Meerdere documenten gevonden</text>
+				<originalText>Multiple books found</originalText>
+				
+			<audio src="./audio/156_Meerdere_documenten_gev.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/156_Meerdere_documenten_gev.smil#txt_009C"/></caption>
+			<description mfcid="IDC_STATIC">
+				<text>Er zijn meerdere documenten gevonden op deze Cd-rom. Selecteer een document uit de onderstaande lijst en druk op Alt + O om te openen.</text>
+				<originalText>More than one book was found on this CD. Please select a book from the list below and press Alt + O to open.</originalText>
+				
+			<audio src="./audio/157_Er_zijn_meerdere_docume.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/157_Er_zijn_meerdere_docume.smil#txt_009D"/></description>
+			<prompt type="instructions">
+				<promptItem refid="tabAround"/>
+				<promptItem refid="altC_to_cancel"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+			</prompt>
+			<control mfcid="IDC_CANCEL" widget="button">
+				<caption>
+					<promptItem refid="cancel_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="cancel_button_description"/>
+				</description>
+			</control>
+			<control mfcid="IDC_OPENBOOK" widget="button">
+				<caption>
+					<text>Open</text>
+					<originalText>Open</originalText>
+					
+				<audio src="./audio/158_Open.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/158_Open.smil#txt_009E"/></caption>
+				<description>
+					<text>Druk op de toets om dit dialoogvenster te sluiten en het geselecteerde document te openen.</text>
+					<originalText>Press to close this dialog and open the selected book.</originalText>
+					
+				<audio src="./audio/159_Druk_op_de_toets_om_dit.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/159_Druk_op_de_toets_om_dit.smil#txt_009F"/></description>
+				<mnemonic>
+					<text>O</text>
+					<originalText>O</originalText>
+					
+				<audio src="./audio/160_O.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/160_O.smil#txt_00A0"/></mnemonic>
+			</control>
+			<control mfcid="IDC_BOOKLIST" widget="list">
+				<description>
+					<text>Gebruik de pijltjestoetsen om te navigeren door de lijst van items.</text>
+					<originalText>Use the arrow keys to move around this list of titles.</originalText>
+					
+				<audio src="./audio/161_Gebruik_de_pijltjestoet.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/161_Gebruik_de_pijltjestoet.smil#txt_00A1"/></description>
+				<list repeat="yes">
+					<caption>
+						<promptVar name="BOOK_TITLE"/>
+					</caption>
+				</list>
+			</control>
+		</dialog>
+		<dialog mfcid="IDD_ABOUTBOX">
+			<note>This dialog gives some basic information about AMIS.</note>
+			<caption>
+				<text>Over AMIS</text>
+				<originalText>About AMIS</originalText>
+				
+			<audio src="./audio/162_Over_AMIS.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/162_Over_AMIS.smil#txt_00A2"/></caption>
+			<description>
+				<text>Dialoogvenster met informatie over AMIS software.</text>
+				<originalText>Dialog with information about AMIS software.</originalText>
+				
+			<audio src="./audio/163_Dialoogvenster_met_info.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/163_Dialoogvenster_met_info.smil#txt_00A3"/></description>
+			<prompt type="instructions">
+				<promptItem refid="enter_to_close"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+			</prompt>
+			<control mfcid="IDC_AMISNAME" widget="textlabel">
+				<caption>
+					<text>AMIS: \nAdaptive Multimedia Information System</text>
+					<originalText>AMIS: \nAdaptive Multimedia Information System</originalText>
+					
+				<audio src="./audio/164_AMIS_Adaptive_Multimedi.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/164_AMIS_Adaptive_Multimedi.smil#txt_00A4"/></caption>
+			</control>
+			<control mfcid="IDC_VERSION" translate="no">
+				<caption>
+					<text>Versie 2.0</text>
+					<originalText>Version 2.0</originalText>
+					
+				<audio src="../version.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/165_Versie_2_0.smil#txt_00A5"/></caption>
+			</control>
+			<control mfcid="IDC_VERSIONNOTE" translate="no">
+				<caption>
+					<text>Datum: 23 Oct 2005</text>
+					<originalText>Release Date: 23 Oct 2005</originalText>
+					
+				<audio src="../releasedate.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/166_Datum_23_Oct_2005.smil#txt_00A6"/></caption>
+			</control>
+			<control mfcid="IDC_COPYRIGHT" widget="textlabel" translate="no">
+				<caption>
+					<text>Copyright © 2006 DAISY for All</text>
+					<originalText>Copyright © 2006 DAISY for All</originalText>
+					
+				<audio src="./audio/167_Copyright_2006_DAISY_fo.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/167_Copyright_2006_DAISY_fo.smil#txt_00A7"/></caption>
+			</control>
+			<control mfcid="IDOK" widget="button">
+				<caption>
+					<promptItem refid="ok_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="ok_button_description"/>
+				</description>
+			</control>
+		</dialog>
+		<dialog mfcid="IDD_SEARCHDAISY">
+			<note>This dialog is for searching your hard drive for DAISY books.</note>
+			<caption>
+				<text>Zoek naar DAISY documenten</text>
+				<originalText>Search for DAISY Books</originalText>
+				
+			<audio src="./audio/168_Zoek_naar_DAISY_documen.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/168_Zoek_naar_DAISY_documen.smil#txt_00A8"/></caption>
+			<description mfcid="IDC_STATIC">
+				<text>Hier kunt u zoeken naar DAISY documenten op uw computer. Vul een padnaam in of blader door uw mapstructuur. Druk op Zoeken om te starten.</text>
+				<originalText>You can search your computer for DAISY books.  Enter a path or browse for a folder to search, then press Search to begin searching.</originalText>
+				
+			<audio src="./audio/169_Hier_kunt_u_zoeken_naar.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/169_Hier_kunt_u_zoeken_naar.smil#txt_00A9"/></description>
+			<prompt type="instructions">
+				<promptItem refid="tabAround"/>
+				<promptItem refid="altC_to_close"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+				<promptItem refid="textBoxRepeatInstr"/>
+			</prompt>
+			<control mfcid="IDC_SEARCHPATH" widget="textfield">
+				<description>
+					<text>Typ de padnaam in dit veld</text>
+					<originalText>Type the path to the folder in this field.</originalText>
+					
+				<audio src="./audio/170_Typ_de_padnaam_in_dit_v.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/170_Typ_de_padnaam_in_dit_v.smil#txt_00AA"/></description>
+			</control>
+			<control mfcid="IDC_BROWSE" widget="button">
+				<caption>
+					<promptItem refid="browse_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="browse_button_description"/>
+				</description>
+			</control>
+			<control mfcid="IDC_STARTSEARCH" widget="button">
+				<caption>
+					<text>Zoek</text>
+					<originalText>Search</originalText>
+					
+				<audio src="./audio/171_Zoek.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/171_Zoek.smil#txt_00AB"/></caption>
+				<description>
+					<text>Druk op de toets om het zoeken te starten</text>
+					<originalText>Press to start searching.</originalText>
+					
+				<audio src="./audio/172_Druk_op_de_toets_om_het.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/172_Druk_op_de_toets_om_het.smil#txt_00AC"/></description>
+				<mnemonic>
+					<text>S</text>
+					<originalText>S</originalText>
+					
+				<audio src="./audio/173_S.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/173_S.smil#txt_00AD"/></mnemonic>
+			</control>
+			<control mfcid="IDC_STOPSEARCH" widget="button">
+				<caption>
+					<text>Stop</text>
+					<originalText>Stop</originalText>
+					
+				<audio src="./audio/174_Stop.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/174_Stop.smil#txt_00AE"/></caption>
+				<description>
+					<text>Druk op de toets om het zoeken te stoppen.</text>
+					<originalText>Press to stop searching.</originalText>
+					
+				<audio src="./audio/175_Druk_op_de_toets_om_het.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/175_Druk_op_de_toets_om_het.smil#txt_00AF"/></description>
+				<mnemonic>
+					<text>t</text>
+					<originalText>t</originalText>
+					
+				<audio src="./audio/176_t.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/176_t.smil#txt_00B0"/></mnemonic>
+			</control>
+			<control mfcid="IDC_SEARCHING" widget="textlabel">
+				<switch element="caption">
+					<caption condition="default">
+						<text>Klaar</text>
+						<originalText>Ready</originalText>
+						
+					<audio src="./audio/177_Klaar.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/177_Klaar.smil#txt_00B1"/></caption>
+					<caption condition="WhileSearching">
+						<text>Bezig met zoeken...</text>
+						<originalText>Searching...</originalText>
+						
+					<audio src="./audio/178_Bezig_met_zoeken.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/178_Bezig_met_zoeken.smil#txt_00B2"/></caption>
+					<caption condition="SearchAborted">
+						<text>Zoeken gestopt.</text>
+						<originalText>Search stopped.</originalText>
+						
+					<audio src="./audio/179_Zoeken_gestopt.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/179_Zoeken_gestopt.smil#txt_00B3"/></caption>
+					<caption condition="SearchCompleteNoFilesFound">
+						<text>Zoekopdracht afgerond: geen bestanden gevonden.</text>
+						<originalText>Search complete: No files found.</originalText>
+						
+					<audio src="./audio/180_Zoekopdracht_afgerond_g.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/180_Zoekopdracht_afgerond_g.smil#txt_00B4"/></caption>
+					<caption condition="SearchCompleteOneFileFound">
+						<text>Zoekopdracht afgerond: één bestand gevonden.</text>
+						<originalText>Search complete: One file found.</originalText>
+						
+					<audio src="./audio/181_Zoekopdracht_afgerond_e.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/181_Zoekopdracht_afgerond_e.smil#txt_00B5"/></caption>
+					<caption condition="SearchCompleteFilesFound">
+						<prompt>
+							<promptVar name="NUM_FILES_FOUND"/>
+							<promptItem>
+								<note>This is used in the sentence "7 files were found"</note>
+								<text>bestanden gevonden.</text>
+								<originalText>files were found.</originalText>
+								
+							<audio src="./audio/182_bestanden_gevonden.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/182_bestanden_gevonden.smil#txt_00B6"/></promptItem>
+						</prompt>
+					</caption>
+				</switch>
+			</control>
+			<control mfcid="IDC_FILESFOUND" widget="list">
+				<description>
+					<text>Gebruik de pijltjestoetsen om te navigeren door de lijst van items.</text>
+					<originalText>Use the arrow keys to move around this list of titles.</originalText>
+					
+				<audio src="./audio/183_Gebruik_de_pijltjestoet.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/183_Gebruik_de_pijltjestoet.smil#txt_00B7"/></description>
+				<list repeat="yes">
+					<caption>
+						<promptVar name="BOOK_TITLE"/>
+					</caption>
+				</list>
+			</control>
+			<control mfcid="IDC_OPENBOOK" widget="button">
+				<caption>
+					<text>Open</text>
+					<originalText>Open</originalText>
+					
+				<audio src="./audio/184_Open.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/184_Open.smil#txt_00B8"/></caption>
+				<description>
+					<text>Druk op de toets om de geselecteerde titel te openen.</text>
+					<originalText>Press to open the selected title.</originalText>
+					
+				<audio src="./audio/185_Druk_op_de_toets_om_de_.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/185_Druk_op_de_toets_om_de_.smil#txt_00B9"/></description>
+				<mnemonic>
+					<text>O</text>
+					<originalText>O</originalText>
+					
+				<audio src="./audio/186_O.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/186_O.smil#txt_00BA"/></mnemonic>
+			</control>
+			<control mfcid="IDC_CANCELBUTTON">
+				<caption>
+					<promptItem refid="cancel_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="cancel_button_description"/>
+				</description>
+			</control>
+		</dialog>
+		<dialog mfcid="IDD_SKIP">
+			<note>This dialog lets the user control rendering of skippable structures.</note>
+			<caption>
+				<text>Onderdelen weglaten</text>
+				<originalText>Skippable Items</originalText>
+				
+			<audio src="./audio/187_Onderdelen_weglaten.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/187_Onderdelen_weglaten.smil#txt_00BB"/></caption>
+			<switch element="description">
+				<description mfcid="IDC_STATIC" condition="hasSkippableStructures">
+					<text>Dit document bevat de volgende speciale onderdelen. Selecteer de onderdelen die u wilt weglaten.</text>
+					<originalText>This book contains the following special structures.  Check the ones you want skipped.</originalText>
+					
+				<audio src="./audio/188_Dit_document_bevat_de_v.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/188_Dit_document_bevat_de_v.smil#txt_00BC"/></description>
+				<description mfcid="IDC_STATIC" condition="hasNoSkippableStructures">
+					<text>Dit document bevat géén speciale onderdelen.</text>
+					<originalText>This publication has no skippable elements.</originalText>
+					
+				<audio src="./audio/189_Dit_document_bevat_g_n_.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/189_Dit_document_bevat_g_n_.smil#txt_00BD"/></description>
+			</switch>
+			<prompt type="instructions">
+				<promptItem refid="tabAround"/>
+				<promptItem refid="altC_to_close"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+			</prompt>
+			<control mfcid="IDOK" widget="button">
+				<caption>
+					<promptItem refid="ok_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="ok_button_description"/>
+				</description>
+			</control>
+			<control mfcid="IDC_SKIPS" widget="list">
+				<caption>
+					<text>Speciale onderdelen</text>
+					<originalText>Skippable items</originalText>
+					
+				<audio src="./audio/190_Speciale_onderdelen.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/190_Speciale_onderdelen.smil#txt_00BE"/></caption>
+				<description>
+					<text>Gebruik de pijltjestoetsen om te navigeren door de lijst van items.</text>
+					<originalText>Use the arrow keys to move around this list of skippable items.</originalText>
+					
+				<audio src="./audio/191_Gebruik_de_pijltjestoet.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/191_Gebruik_de_pijltjestoet.smil#txt_00BF"/></description>
+				<list repeat="yes">
+					<caption>
+						<promptVar name="SKIPPABLE_ITEM"/>
+					</caption>
+					<description>
+						<prompt>
+							<promptVar name="SKIPPABLE_ITEM"/>
+							<promptItem refid="thisItem"/>
+							<promptVar name="WILL_SKIP_OR_NOT" param="SKIPPABLE_ITEM_ID"/>
+						</prompt>
+					</description>
+				</list>
+			</control>
+		</dialog>
+		<dialog mfcid="IDD_PROPPAGE4">
+			<note>This dialog lets the user select a language pack.</note>
+			<caption>
+				<text>Taal</text>
+				<originalText>Language</originalText>
+				
+			<audio src="./audio/192_Taal.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/192_Taal.smil#txt_00C0"/></caption>
+			<description mfcid="IDC_STATIC">
+				<text>Hier kunt u de taalinstelling van het programma veranderen. Nieuwe taalmodules worden automatisch gevonden.</text>
+				<originalText>Here you can change the language of the software.  New language packs are detected automatically.</originalText>
+				
+			<audio src="./audio/193_Hier_kunt_u_de_taalinst.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/193_Hier_kunt_u_de_taalinst.smil#txt_00C1"/></description>
+			<prompt type="instructions">
+				<promptItem refid="tabAround"/>
+				<promptItem refid="ctrl1_for_prefsdialog"/>
+				<promptItem refid="ctrl2_for_colorsdialog"/>
+				<promptItem refid="altC_to_cancel"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+			</prompt>
+			<control mfcid="IDC_BTN_SELECTLANG" widget="button">
+				<caption>
+					<text>Selecteer taal</text>
+					<originalText>Select Language</originalText>
+					
+				<audio src="./audio/194_Selecteer_taal.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/194_Selecteer_taal.smil#txt_00C2"/></caption>
+				<description>
+					<text>Druk op de toets om uw taalkeuze te bevestigen</text>
+					<originalText>Press to confirm your language selection for the AMIS user interface</originalText>
+					
+				<audio src="./audio/195_Druk_op_de_toets_om_uw_.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/195_Druk_op_de_toets_om_uw_.smil#txt_00C3"/></description>
+			</control>
+			<control mfcid="IDC_LANGLIST" widget="list">
+				<caption mfcid="IDC_STATIC">
+					<text>Beschikbare talen:</text>
+					<originalText>Your language choices are:</originalText>
+					
+				<audio src="./audio/196_Beschikbare_talen.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/196_Beschikbare_talen.smil#txt_00C4"/></caption>
+				<description>
+					<text>Gebruik de pijltjestoetsen om te navigeren door de lijst van items.</text>
+					<originalText>Use the arrow keys to move around this list of languages.</originalText>
+					
+				<audio src="./audio/197_Gebruik_de_pijltjestoet.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/197_Gebruik_de_pijltjestoet.smil#txt_00C5"/></description>
+				<list repeat="yes">
+					<caption>
+						<promptVar name="LANGUAGE_NAME"/>
+					</caption>
+				</list>
+			</control>
+			<control mfcid="IDC_CURRLANG">
+				<caption>
+					<prompt>
+						<promptItem>
+							<text>De huidige taalinstelling is: </text>
+							<originalText>You are currently using AMIS in</originalText>
+							
+						<audio src="./audio/198_De_huidige_taalinstelli.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/198_De_huidige_taalinstelli.smil#txt_00C6"/></promptItem>
+						<promptVar name="CURR_LANGUAGE_NAME"/>
+					</prompt>
+				</caption>
+			</control>
+			<accelerator>
+				<text>Ctrl+3</text>
+				<originalText>Ctrl+3</originalText>
+				
+			<audio src="./audio/199_Ctrl_3.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/199_Ctrl_3.smil#txt_00C7"/></accelerator>
+		</dialog>
+		<dialog mfcid="IDD_PROPPAGE2">
+			<note>This dialog lets the user select which colors AMIS uses</note>
+			<caption>
+				<text>Kleurinstellingen</text>
+				<originalText>Set Colors</originalText>
+				
+			<audio src="./audio/200_Kleurinstellingen.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/200_Kleurinstellingen.smil#txt_00C8"/></caption>
+			<description>
+				<text>Hier kunt u de kleurinstellingen wijzigen.</text>
+				<originalText>Here you can set color options for AMIS.</originalText>
+				
+			<audio src="./audio/201_Hier_kunt_u_de_kleurins.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/201_Hier_kunt_u_de_kleurins.smil#txt_00C9"/></description>
+			<prompt type="instructions">
+				<promptItem refid="thisDialogNotSelfVoicing"/>
+				<promptItem refid="ctrl1_for_prefsdialog"/>
+				<promptItem refid="ctrl3_for_langsdialog"/>
+				<promptItem refid="altC_to_cancel"/>
+			</prompt>
+			<control mfcid="IDC_PHRASES" widget="other">
+				<caption>
+					<text>Kleuren van de tekstbalk</text>
+					<originalText>Phrase Highlighting</originalText>
+					
+				<audio src="./audio/202_Kleuren_van_de_tekstbalk.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/202_Kleuren_van_de_tekstbalk.smil#txt_00CA"/></caption>
+			</control>
+			<control mfcid="IDC_TEXTFG" widget="textlabel">
+				<caption>
+					<text>Tekst: </text>
+					<originalText>Text Foreground: </originalText>
+					
+				<audio src="./audio/203_Tekst.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/203_Tekst.smil#txt_00CB"/></caption>
+			</control>
+			<control mfcid="IDC_TEXTBG" widget="textlabel">
+				<caption>
+					<text>Achtergrond: </text>
+					<originalText>Text Background: </originalText>
+					
+				<audio src="./audio/204_Achtergrond.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/204_Achtergrond.smil#txt_00CC"/></caption>
+			</control>
+			<control mfcid="IDC_BORDER" widget="textlabel">
+				<caption>
+					<text>Rand: </text>
+					<originalText>Selection Border: </originalText>
+					
+				<audio src="./audio/205_Rand.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/205_Rand.smil#txt_00CD"/></caption>
+			</control>
+			<control mfcid="IDC_CONTRAST" widget="other">
+				<caption>
+					<text>Kleuren van alternatieve opmaak</text>
+					<originalText>High Contrast Settings</originalText>
+					
+				<audio src="./audio/206_Kleuren_van_alternatiev.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/206_Kleuren_van_alternatiev.smil#txt_00CE"/></caption>
+			</control>
+			<control mfcid="IDC_PAGEFG" widget="textlabel">
+				<caption>
+					<text>Tekst: </text>
+					<originalText>Page Foreground: </originalText>
+					
+				<audio src="./audio/207_Tekst.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/207_Tekst.smil#txt_00CF"/></caption>
+			</control>
+			<control mfcid="IDC_PAGEBG" widget="textlabel">
+				<caption>
+					<text>Achtergrond: </text>
+					<originalText>Page Background: </originalText>
+					
+				<audio src="./audio/208_Achtergrond.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/208_Achtergrond.smil#txt_00D0"/></caption>
+			</control>
+			<control mfcid="IDC_BTN_RESETCOLORS" widget="button">
+				<caption>
+					<text>Standaard kleuren</text>
+					<originalText>Reset Colors</originalText>
+					
+				<audio src="./audio/209_Standaard_kleuren.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/209_Standaard_kleuren.smil#txt_00D1"/></caption>
+			</control>
+			<control mfcid="IDC_PHRASEPREVIEW" widget="textfield">
+				<caption>
+					<text>Voorbeeld.</text>
+					<originalText>Preview of phrase highlight colors.</originalText>
+					
+				<audio src="./audio/210_Voorbeeld.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/210_Voorbeeld.smil#txt_00D2"/></caption>
+			</control>
+			<control mfcid="IDC_CONTRASTPREVIEW" widget="textfield">
+				<caption>
+					<text>Voorbeeld.</text>
+					<originalText>Preview of page contrast colors.</originalText>
+					
+				<audio src="./audio/211_Voorbeeld.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/211_Voorbeeld.smil#txt_00D3"/></caption>
+			</control>
+			<accelerator>
+				<text>Ctrl+2</text>
+				<originalText>Ctrl+2</originalText>
+				
+			<audio src="./audio/212_Ctrl_2.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/212_Ctrl_2.smil#txt_00D4"/></accelerator>
+		</dialog>
+		<dialog mfcid="IDD_CURRENTPOSITION">
+			<note>This dialog gives the user information about their current position in the publication.</note>
+			<caption>
+				<text>Huidige positie</text>
+				<originalText>Current Position</originalText>
+				
+			<audio src="./audio/213_Huidige_positie.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/213_Huidige_positie.smil#txt_00D5"/></caption>
+			<prompt type="instructions">
+				<promptItem refid="enter_to_close"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+			</prompt>
+			<control mfcid="IDOK" widget="button">
+				<caption>
+					<promptItem refid="ok_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="ok_button_description"/>
+				</description>
+			</control>
+			<control mfcid="IDC_SUMMARY" widget="list">
+				<caption mfcid="IDC_LISTCAPTION">
+					<text>Gegevens over uw huidige positie.</text>
+					<originalText>This is a list of data about your current position.</originalText>
+					
+				<audio src="./audio/214_Gegevens_over_uw_huidig.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/214_Gegevens_over_uw_huidig.smil#txt_00D6"/></caption>
+				<description>
+					<promptItem refid="list_reads_automatically"/>
+				</description>
+				<list repeat="no">
+					<caption>
+						<prompt>
+							<promptItem>
+								<text>Huidige sectie:</text>
+								<originalText>Your current section is titled:</originalText>
+								
+							<audio src="./audio/215_Huidige_sectie.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/215_Huidige_sectie.smil#txt_00D7"/></promptItem>
+							<promptVar name="CURRENT_SECTION_TITLE"/>
+						</prompt>
+					</caption>
+					<caption condition="BOOK_HAS_PAGES">
+						<prompt>
+							<promptItem>
+								<text>Aantal pagina's in deze sectie:</text>
+								<originalText>Number of pages in this section:</originalText>
+								
+							<audio src="./audio/216_Aantal_pagina_s_in_deze.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/216_Aantal_pagina_s_in_deze.smil#txt_00D8"/></promptItem>
+							<promptVar name="CURRENT_SECTION_NUM_PAGES"/>
+						</prompt>
+					</caption>
+					<caption>
+						<prompt>
+							<promptItem>
+								<text>Aantal subsecties:</text>
+								<originalText>Number of subsections in this section:</originalText>
+								
+							<audio src="./audio/217_Aantal_subsecties.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/217_Aantal_subsecties.smil#txt_00D9"/></promptItem>
+							<promptVar name="CURRENT_SECTION_NUM_SUBSECTIONS"/>
+						</prompt>
+					</caption>
+				</list>
+			</control>
+		</dialog>
+		<dialog mfcid="IDD_PROPPAGE1">
+			<note>This dialog lets the user set some basic preferences for AMIS.</note>
+			<caption>
+				<text>Algemene instellingen</text>
+				<originalText>General Preferences</originalText>
+				
+			<audio src="./audio/218_Algemene_instellingen.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/218_Algemene_instellingen.smil#txt_00DA"/></caption>
+			<description>
+				<text>Hier kunt u de algemene instellingen wijzigen.</text>
+				<originalText>Here you can set general preferences for AMIS.</originalText>
+				
+			<audio src="./audio/219_Hier_kunt_u_de_algemene.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/219_Hier_kunt_u_de_algemene.smil#txt_00DB"/></description>
+			<prompt type="instructions">
+				<promptItem refid="tabAround"/>
+				<promptItem refid="ctrl2_for_colorsdialog"/>
+				<promptItem refid="ctrl3_for_langsdialog"/>
+				<promptItem refid="altC_to_cancel"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+				<promptItem refid="textBoxRepeatInstr"/>
+			</prompt>
+			<control mfcid="IDC_BMKDIRBROWSE" widget="button">
+				<caption>
+					<promptItem refid="browse_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="browse_button_description"/>
+				</description>
+			</control>
+			<control mfcid="IDC_SELFVOICING" widget="checkbox">
+				<caption>
+					<text>Gebruik synthetische spraak</text>
+					<originalText>Use self-voicing</originalText>
+					
+				<audio src="./audio/220_Gebruik_synthetische_sp.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/220_Gebruik_synthetische_sp.smil#txt_00DC"/></caption>
+				<description>
+					<prompt>
+						<promptItem refid="thisItemIsCurrently"/>
+						<promptVar name="ON_OR_OFF" param="SELF_VOICING_FEATURE"/>
+					</prompt>
+				</description>
+			</control>
+			<control mfcid="IDC_TTSVOICE" widget="list">
+				<caption mfcid="IDC_SELTTSLABEL">
+					<text>Selecteer TTS stem:</text>
+					<originalText>Select TTS voice:</originalText>
+					
+				<audio src="./audio/221_Selecteer_TTS_stem.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/221_Selecteer_TTS_stem.smil#txt_00DD"/></caption>
+				<description>
+					<text>Gebruik de pijltjestoetsen om te navigeren door de lijst van items.</text>
+					<originalText>Use the arrow keys to move around this list of voices</originalText>
+					
+				<audio src="./audio/222_Gebruik_de_pijltjestoet.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/222_Gebruik_de_pijltjestoet.smil#txt_00DE"/></description>
+				<list repeat="yes">
+					<caption>
+						<promptVar name="TTS_VOICE_NAME"/>
+					</caption>
+				</list>
+			</control>
+			<control mfcid="IDC_BASIC" widget="checkbox">
+				<caption>
+					<text>Start AMIS op in de vereenvoudigde weergave.</text>
+					<originalText>Start AMIS in the basic view mode.</originalText>
+					
+				<audio src="./audio/223_Start_AMIS_op_in_de_ver.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/223_Start_AMIS_op_in_de_ver.smil#txt_00DF"/></caption>
+				<description>
+					<prompt>
+						<promptItem refid="thisItemIsCurrently"/>
+						<promptVar name="ON_OR_OFF" param="BASIC_VIEW_FEATURE"/>
+						<promptItem refid="spaceToToggle"/>
+					</prompt>
+				</description>
+			</control>
+			<control mfcid="IDC_PROMPTONBASICVIEW" widget="checkbox">
+				<caption>
+					<text>Bij het schakelen naar vereenvoudigde weergave, toon melding Toets F11 voor de standaardweergave.</text>
+					<originalText>Upon switching to basic view, tell the user how to go back to the default view.</originalText>
+					
+				<audio src="./audio/224_Bij_het_schakelen_naar_.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/224_Bij_het_schakelen_naar_.smil#txt_00E0"/></caption>
+				<description>
+					<prompt>
+						<promptItem refid="thisItemIsCurrently"/>
+						<promptVar name="ON_OR_OFF" param="PROMPT_ON_BASIC_VIEW_FEATURE"/>
+						<promptItem refid="spaceToToggle"/>
+					</prompt>
+				</description>
+			</control>
+			<control mfcid="IDC_LOADLASTDTB" widget="checkbox">
+				<caption>
+					<text>Laad het meest recente document bij het opstarten van AMIS.</text>
+					<originalText>Load the most recently read book when the software starts.</originalText>
+					
+				<audio src="./audio/225_Laad_het_meest_recente_.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/225_Laad_het_meest_recente_.smil#txt_00E1"/></caption>
+				<description>
+					<prompt>
+						<promptItem refid="thisItemIsCurrently"/>
+						<promptVar name="ON_OR_OFF" param="LOAD_LAST_READ_FEATURE"/>
+						<promptItem refid="spaceToToggle"/>
+					</prompt>
+				</description>
+			</control>
+			<control mfcid="IDC_BMKDIR" widget="textfield">
+				<caption mfcid="IDC_BMKDIRLABEL">
+					<text>Bladwijzer map:</text>
+					<originalText>Bookmarks directory:</originalText>
+					
+				<audio src="./audio/226_Bladwijzer_map.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/226_Bladwijzer_map.smil#txt_00E2"/></caption>
+				<description>
+					<text>Typ de padnaam naar de folder met bladwijzers in dit veld.</text>
+					<originalText>Type the path to the bookmarks folder in this field.</originalText>
+					
+				<audio src="./audio/227_Typ_de_padnaam_naar_de_.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/227_Typ_de_padnaam_naar_de_.smil#txt_00E3"/></description>
+			</control>
+			<accelerator>
+				<text>Ctrl+1</text>
+				<originalText>Ctrl+1</originalText>
+				
+			<audio src="./audio/228_Ctrl_1.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/228_Ctrl_1.smil#txt_00E4"/></accelerator>
+		</dialog>
+		<dialog mfcid="IDD_NAVIGATIONOPTIONS">
+			<note>This dialog lists navigation options for the current publication.</note>
+			<caption>
+				<text>Navigatiemogelijkheden</text>
+				<originalText>Navigation Options</originalText>
+				
+			<audio src="./audio/229_Navigatiemogelijkheden.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/229_Navigatiemogelijkheden.smil#txt_00E5"/></caption>
+			<prompt type="instructions">
+				<promptItem refid="enter_to_close"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+			</prompt>
+			<control mfcid="IDOK" widget="button">
+				<caption>
+					<promptItem refid="ok_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="ok_button_description"/>
+				</description>
+			</control>
+			<control mfcid="IDC_SUMMARY" widget="list">
+				<caption mfcid="IDC_LISTCAPTION">
+					<text>Dit is een lijst met onderdelen waar u rechtstreeks naar toe kunt .</text>
+					<originalText>This is a list of items to which you may navigate directly.</originalText>
+					
+				<audio src="./audio/230_Dit_is_een_lijst_met_on.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/230_Dit_is_een_lijst_met_on.smil#txt_00E6"/></caption>
+				<description>
+					<promptItem refid="list_reads_automatically"/>
+				</description>
+				<list repeat="yes">
+					<caption>
+						<promptVar name="TOC_CATEGORIES"/>
+					</caption>
+				</list>
+			</control>
+		</dialog>
+		<dialog mfcid="IDD_GOTOPAGE">
+			<note>This dialog lets the user jump to a certain page</note>
+			<caption>
+				<text>Ga naar pagina</text>
+				<originalText>Go To Page</originalText>
+				
+			<audio src="./audio/231_Ga_naar_pagina.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/231_Ga_naar_pagina.smil#txt_00E7"/></caption>
+			<description>
+				<text>Ga direct naar opgegeven paginanummer</text>
+				<originalText>Here you can jump to a page number or page label.</originalText>
+				
+			<audio src="./audio/232_Ga_direct_naar_opgegeve.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/232_Ga_direct_naar_opgegeve.smil#txt_00E8"/></description>
+			<prompt type="instructions">
+				<promptItem refid="tabAround"/>
+				<promptItem>
+					<text>Typ paginanummer en geef enter om direct naar pagina te gaan.</text>
+					<originalText>After typing in your page number, press enter to go there.</originalText>
+					
+				<audio src="./audio/233_Typ_paginanummer_en_gee.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/233_Typ_paginanummer_en_gee.smil#txt_00E9"/></promptItem>
+				<promptItem refid="altC_to_cancel"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+				<promptItem refid="textBoxRepeatInstr"/>
+			</prompt>
+			<control mfcid="IDOK" widget="button">
+				<caption>
+					<promptItem refid="ok_button_caption"/>
+				</caption>
+				<description>
+					<text>Toets deze knop om naar gewenste pagina te gaan.</text>
+					<originalText>Press this button to go to the desired page.</originalText>
+					
+				<audio src="./audio/234_Toets_deze_knop_om_naar.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/234_Toets_deze_knop_om_naar.smil#txt_00EA"/></description>
+			</control>
+			<control mfcid="IDCANCEL" widget="button">
+				<caption>
+					<promptItem refid="cancel_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="cancel_button_description"/>
+				</description>
+			</control>
+			<control mfcid="IDC_PAGENUM" widget="textfield">
+				<caption mfcid="IDC_STATIC">
+					<text>Geef een pagina nummer in:</text>
+					<originalText>Enter a page number:</originalText>
+					
+				<audio src="./audio/235_Geef_een_pagina_nummer_.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/235_Geef_een_pagina_nummer_.smil#txt_00EB"/></caption>
+				<description>
+					<text>Typ het nummer of label van de gewenste pagina.</text>
+					<originalText>Type the number or label of the page you want to go to.</originalText>
+					
+				<audio src="./audio/236_Typ_het_nummer_of_label.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/236_Typ_het_nummer_of_label.smil#txt_00EC"/></description>
+			</control>
+		</dialog>
+		<dialog mfcid="IDD_FULLSUMMARY">
+			<note>This dialog lists key publication metadata.</note>
+			<caption>
+				<text>Productiegegevens</text>
+				<originalText>Publication Summary</originalText>
+				
+			<audio src="./audio/237_Productiegegevens.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/237_Productiegegevens.smil#txt_00ED"/></caption>
+			<prompt type="instructions">
+				<promptItem refid="enter_to_close"/>
+				<promptItem refid="repeatLastPromptInstr"/>
+				<promptItem refid="hearDlgInstructions"/>
+			</prompt>
+			<control mfcid="IDOK" widget="button">
+				<caption>
+					<promptItem refid="ok_button_caption"/>
+				</caption>
+				<description>
+					<promptItem refid="ok_button_description"/>
+				</description>
+			</control>
+			<control mfcid="IDC_SUMMARY" widget="list">
+				<caption mfcid="IDC_LISTCAPTION">
+					<text>Dit is een lijst met productiegegevens.</text>
+					<originalText>This is a list of publication metadata.</originalText>
+					
+				<audio src="./audio/238_Dit_is_een_lijst_met_pr.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/238_Dit_is_een_lijst_met_pr.smil#txt_00EE"/></caption>
+				<description>
+					<promptItem refid="list_reads_automatically"/>
+				</description>
+				<list repeat="no">
+					<caption>
+						<prompt>
+							<promptItem>
+								<text>Titel document:</text>
+								<originalText>This book is titled:</originalText>
+								
+							<audio src="./audio/239_Titel_document.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/239_Titel_document.smil#txt_00EF"/></promptItem>
+							<promptVar name="META_TITLE"/>
+						</prompt>
+					</caption>
+					<caption>
+						<prompt>
+							<promptItem>
+								<text>Auteur:</text>
+								<originalText>Written by:</originalText>
+								
+							<audio src="./audio/240_Auteur.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/240_Auteur.smil#txt_00F0"/></promptItem>
+							<promptVar name="META_CREATOR"/>
+						</prompt>
+					</caption>
+					<caption>
+						<prompt>
+							<promptItem>
+								<text>Uitgever:</text>
+								<originalText>Published by:</originalText>
+								
+							<audio src="./audio/241_Uitgever.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/241_Uitgever.smil#txt_00F1"/></promptItem>
+							<promptVar name="META_PUBLISHER"/>
+						</prompt>
+					</caption>
+					<caption condition="BOOK_HAS_DESCRIPTION">
+						<prompt>
+							<promptItem>
+								<text>Omschrijving:</text>
+								<originalText>Description:</originalText>
+								
+							<audio src="./audio/242_Omschrijving.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/242_Omschrijving.smil#txt_00F2"/></promptItem>
+							<promptVar name="META_DESC"/>
+						</prompt>
+					</caption>
+					<caption>
+						<prompt>
+							<promptItem>
+								<text>Aantal navigatie punten in de inhoudsopgave:</text>
+								<originalText>Number of navigation points in the table of contents:</originalText>
+								
+							<audio src="./audio/243_Aantal_navigatie_punten.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/243_Aantal_navigatie_punten.smil#txt_00F3"/></promptItem>
+							<promptVar name="META_TOCITEMS"/>
+						</prompt>
+					</caption>
+					<caption>
+						<prompt>
+							<promptItem>
+								<text>Aantal sectie niveau's:</text>
+								<originalText>Maximum section depth:</originalText>
+								
+							<audio src="./audio/244_Aantal_sectie_niveau_s.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/244_Aantal_sectie_niveau_s.smil#txt_00F4"/></promptItem>
+							<promptVar name="META_DEPTH"/>
+						</prompt>
+					</caption>
+					<caption condition="BOOK_HAS_PAGES">
+						<prompt>
+							<promptItem>
+								<text>Voorpagina(s):</text>
+								<originalText>Front matter pages:</originalText>
+								
+							<audio src="./audio/245_Voorpagina_s.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/245_Voorpagina_s.smil#txt_00F5"/></promptItem>
+							<promptVar name="META_PAGEFRONT"/>
+						</prompt>
+					</caption>
+					<caption condition="BOOK_HAS_PAGES">
+						<prompt>
+							<promptItem>
+								<text>Normale pagina's:</text>
+								<originalText>Regular pages:</originalText>
+								
+							<audio src="./audio/246_Normale_pagina_s.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/246_Normale_pagina_s.smil#txt_00F6"/></promptItem>
+							<promptVar name="META_PAGENORMAL"/>
+						</prompt>
+					</caption>
+					<caption condition="BOOK_HAS_PAGES">
+						<prompt>
+							<promptItem>
+								<text>Speciale pagina's:</text>
+								<originalText>Special pages:</originalText>
+								
+							<audio src="./audio/247_Speciale_pagina_s.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/247_Speciale_pagina_s.smil#txt_00F7"/></promptItem>
+							<promptVar name="META_PAGESPECIAL"/>
+						</prompt>
+					</caption>
+					<caption>
+						<prompt>
+							<promptItem>
+								<text>Totale speelduur:</text>
+								<originalText>Total duration:</originalText>
+								
+							<audio src="./audio/248_Totale_speelduur.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/248_Totale_speelduur.smil#txt_00F8"/></promptItem>
+							<promptVar name="META_TOTALTIME"/>
+						</prompt>
+					</caption>
+				</list>
+			</control>
+		</dialog>
+		<dialog mfcid="IDD_OPENURL">
+      <note>This is the open URL dialog</note>
+      <caption>
+        <text>Open Internet-adres</text>
+        <originalText>Open URL</originalText>
+        
+      <audio src="./audio/249_Open_Internet-adres.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/249_Open_Internet-adres.smil#txt_00F9"/></caption>
+      <description mfcid="IDC_DESC">
+        <text>Tik het internet-adres van het boek om te openen:</text>
+        <originalText>Enter the URL of the book you want to open:</originalText>
+        
+      <audio src="./audio/250_Tik_het_internet-adres_.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/250_Tik_het_internet-adres_.smil#txt_00FA"/></description>
+      <prompt type="instructions">
+        <promptItem refid="tabAround"/>
+        <promptItem>
+          <text>Druk op enter om het boek te openen.</text>
+          <originalText>After typing in the URL, press enter.</originalText>
+          
+        <audio src="./audio/251_Druk_op_enter_om_het_bo.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/251_Druk_op_enter_om_het_bo.smil#txt_00FB"/></promptItem>
+        <promptItem refid="altC_to_cancel"/>
+        <promptItem refid="repeatLastPromptInstr"/>
+        <promptItem refid="hearDlgInstructions"/>
+      </prompt>
+      <control mfcid="IDOK" widget="button">
+        <caption>
+          <promptItem refid="ok_button_caption"/>
+        </caption>
+        <description>
+          <text>Klik hier om het boek te openen.</text>
+          <originalText>Press to load the URL.</originalText>
+          
+        <audio src="./audio/252_Klik_hier_om_het_boek_t.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/252_Klik_hier_om_het_boek_t.smil#txt_00FC"/></description>
+      </control>
+      <control mfcid="IDCANCEL" widget="button">
+        <caption>
+          <promptItem refid="cancel_button_caption"/>
+        </caption>
+        <description>
+          <promptItem refid="cancel_button_description"/>
+        </description>
+        <mnemonic>
+          <text>C</text>
+          <originalText>C</originalText>
+          
+        <audio src="./audio/253_C.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/253_C.smil#txt_00FD"/></mnemonic>
+      </control>
+      <control mfcid="IDC_URL" widget="textfield">
+        <description>
+          <text>Tik het internet-adres in dit veld.</text>
+          <originalText>Type the URL in this field.</originalText>
+          
+        <audio src="./audio/254_Tik_het_internet-adres_.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/254_Tik_het_internet-adres_.smil#txt_00FE"/></description>
+      </control>
+    </dialog>
+	</dialogs>
+	<prompts>
+		<promptItemRefs>
+			<promptItem id="altC_to_close">
+				<text>Toets Alt + C om het dialoogvenster te sluiten.</text>
+				<originalText>Press Alt + C to close the dialog.</originalText>
+				
+			<audio src="./audio/255_Toets_Alt_C_om_het_dial.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/255_Toets_Alt_C_om_het_dial.smil#txt_00FF"/></promptItem>
+			<promptItem id="altC_to_cancel">
+				<text>Toets Alt + C om het dialoogvenster te annuleren.</text>
+				<originalText>Press Alt + C to cancel the dialog.</originalText>
+				
+			<audio src="./audio/256_Toets_Alt_C_om_het_dial.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/256_Toets_Alt_C_om_het_dial.smil#txt_0100"/></promptItem>
+			<promptItem id="thisItem">
+				<text>Dit item</text>
+				<originalText>This item</originalText>
+				
+			<audio src="./audio/257_Dit_item.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/257_Dit_item.smil#txt_0101"/></promptItem>
+			<promptItem id="spaceToToggle">
+				<text>Toets op de spatiebalk om de waarde te veranderen.</text>
+				<originalText>Press the space bar to toggle the value.</originalText>
+				
+			<audio src="./audio/258_Toets_op_de_spatiebalk_.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/258_Toets_op_de_spatiebalk_.smil#txt_0102"/></promptItem>
+			<promptItem id="tabAround">
+				<text>Toets TAB om door de opties te lopen.</text>
+				<originalText>Hit tab to move around the options on the dialog.</originalText>
+				
+			<audio src="./audio/259_Toets_TAB_om_door_de_op.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/259_Toets_TAB_om_door_de_op.smil#txt_0103"/></promptItem>
+			<promptItem id="ctrl2_for_colorsdialog">
+				<text>Toets control + 2 om te schakelen naar kleurinstellingen.</text>
+				<originalText>Press control + 2 to switch to the colors dialog.</originalText>
+				
+			<audio src="./audio/260_Toets_control_2_om_te_s.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/260_Toets_control_2_om_te_s.smil#txt_0104"/></promptItem>
+			<promptItem id="ctrl3_for_langsdialog">
+				<text>Toets control + 3 om te schakelen naar taalinstellingen.</text>
+				<originalText>Press control + 3 to switch to the language options dialog.</originalText>
+				
+			<audio src="./audio/261_Toets_control_3_om_te_s.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/261_Toets_control_3_om_te_s.smil#txt_0105"/></promptItem>
+			<promptItem id="ctrl1_for_prefsdialog">
+				<text>Toets control + 1 om te schakelen naar algemene instellingen.</text>
+				<originalText>Press control + 1 to switch to the general preferences dialog.</originalText>
+				
+			<audio src="./audio/262_Toets_control_1_om_te_s.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/262_Toets_control_1_om_te_s.smil#txt_0106"/></promptItem>
+			<promptItem id="thisItemIsCurrently">
+				<text>Dit item is momenteel</text>
+				<originalText>This item is currently</originalText>
+				
+			<audio src="./audio/263_Dit_item_is_momenteel.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/263_Dit_item_is_momenteel.smil#txt_0107"/></promptItem>
+			<promptItem id="enter_to_close">
+				<text>Toets enter om het dialoogvenster te sluiten.</text>
+				<originalText>Press enter to close the dialog.</originalText>
+				
+			<audio src="./audio/264_Toets_enter_om_het_dial.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/264_Toets_enter_om_het_dial.smil#txt_0108"/></promptItem>
+			<promptItem id="browse_button_caption">
+				<text>Bladeren...</text>
+				<originalText>Browse...</originalText>
+				
+			<audio src="./audio/265_Bladeren.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/265_Bladeren.smil#txt_0109"/></promptItem>
+			<promptItem id="browse_button_description">
+				<text>Druk om mapstructuur te openen.</text>
+				<originalText>Press to open the folder browse dialog.</originalText>
+				
+			<audio src="./audio/266_Druk_om_mapstructuur_te.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/266_Druk_om_mapstructuur_te.smil#txt_010A"/></promptItem>
+			<promptItem id="ok_button_caption">
+				<text>OK</text>
+				<originalText>OK</originalText>
+				
+			<audio src="./audio/267_OK.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/267_OK.smil#txt_010B"/></promptItem>
+			<promptItem id="ok_button_description">
+				<text>Toets OK om dit dialoogvenster te sluiten.</text>
+				<originalText>Press OK to close this dialog.</originalText>
+				
+			<audio src="./audio/268_Toets_OK_om_dit_dialoog.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/268_Toets_OK_om_dit_dialoog.smil#txt_010C"/></promptItem>
+			<promptItem id="cancel_button_caption">
+				<text>Annuleren</text>
+				<originalText>Cancel</originalText>
+				
+			<audio src="./audio/269_Annuleren.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/269_Annuleren.smil#txt_010D"/></promptItem>
+			<promptItem id="cancel_button_description">
+				<text>Druk om dit dialoogvenster te annuleren.</text>
+				<originalText>Press to cancel this dialog.</originalText>
+				
+			<audio src="./audio/270_Druk_om_dit_dialoogvens.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/270_Druk_om_dit_dialoogvens.smil#txt_010E"/></promptItem>
+			<promptItem id="list_reads_automatically">
+				<text>Deze lijst wordt automatisch voorgelezen.</text>
+				<originalText>This list will be read automatically.</originalText>
+				
+			<audio src="./audio/271_Deze_lijst_wordt_automa.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/271_Deze_lijst_wordt_automa.smil#txt_010F"/></promptItem>
+			<promptItem id="repeatLastPromptInstr">
+				<text>Toets Control + R om de tekst in het dialoogvenster te herhalen.</text>
+				<originalText>Press Control + R to repeat the last prompt.</originalText>
+				
+			<audio src="./audio/272_Toets_Control_R_om_de_t.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/272_Toets_Control_R_om_de_t.smil#txt_0110"/></promptItem>
+			<promptItem id="thisDialogNotSelfVoicing">
+				<text>Dit dialoogvenster heeft nog geen synthetische spraak.</text>
+				<originalText>This dialog is not yet self-voicing.</originalText>
+				
+			<audio src="./audio/273_Dit_dialoogvenster_heef.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/273_Dit_dialoogvenster_heef.smil#txt_0111"/></promptItem>
+			<promptItem id="escapeToCancel">
+				<text>Toets escape om the annuleren</text>
+				<originalText>Press escape to cancel</originalText>
+				
+			<audio src="./audio/274_Toets_escape_om_the_ann.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/274_Toets_escape_om_the_ann.smil#txt_0112"/></promptItem>
+			<promptItem id="hearDlgInstructions">
+				<text>Toets Control + I om naar de instructies van dit dialoogvenster te luisteren.</text>
+				<originalText>Press Control + I to hear instructions for this dialog.</originalText>
+				
+			<audio src="./audio/275_Toets_Control_I_om_naar.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/275_Toets_Control_I_om_naar.smil#txt_0113"/></promptItem>
+			<promptItem id="textBoxRepeatInstr">
+				<text>Toets Control + R om de tekst in het laatste invulveld te herhalen.</text>
+				<originalText>Press Control + R to repeat the text in the last text box.</originalText>
+				
+			<audio src="./audio/276_Toets_Control_R_om_de_t.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/276_Toets_Control_R_om_de_t.smil#txt_0114"/></promptItem>
+			<promptItem id="nav_window">
+				<text>Navigeren</text>
+				<originalText>Navigation</originalText>
+				
+			<audio src="./audio/277_Navigeren.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/277_Navigeren.smil#txt_0115"/></promptItem>
+			<promptItem id="sections">
+				<text>Secties</text>
+				<originalText>Sections</originalText>
+				
+			<audio src="./audio/278_Secties.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/278_Secties.smil#txt_0116"/></promptItem>
+			<promptItem id="pages">
+				<text>Pagina's</text>
+				<originalText>Pages</originalText>
+				
+			<audio src="./audio/279_Pagina_s.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/279_Pagina_s.smil#txt_0117"/></promptItem>
+			<promptItem id="noterefs">
+				<text>Voetnoten</text>
+				<originalText>Footnotes</originalText>
+				
+			<audio src="./audio/280_Voetnoten.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/280_Voetnoten.smil#txt_0118"/></promptItem>
+			<promptItem id="prodnotes">
+				<text>Productienotities</text>
+				<originalText>Producer notes</originalText>
+				
+			<audio src="./audio/281_Productienotities.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/281_Productienotities.smil#txt_0119"/></promptItem>
+			<promptItem id="sidebars">
+				<text>Navigatievensters</text>
+				<originalText>Sidebars</originalText>
+				
+			<audio src="./audio/282_Navigatievensters.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/282_Navigatievensters.smil#txt_011A"/></promptItem>
+			<promptItem id="groups">
+				<text>Gegroepeerde items</text>
+				<originalText>Grouped items</originalText>
+				
+			<audio src="./audio/283_Gegroepeerde_items.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/283_Gegroepeerde_items.smil#txt_011B"/></promptItem>
+			<promptItem id="navigation_sidebar_caption">
+				<text>Navigeren</text>
+				<originalText>Navigation</originalText>
+				
+			<audio src="./audio/284_Navigeren.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/284_Navigeren.smil#txt_011C"/></promptItem>
+			<promptItem id="ready">
+				<text>Klaar</text>
+				<originalText>Ready</originalText>
+				
+			<audio src="./audio/285_Klaar.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/285_Klaar.smil#txt_011D"/></promptItem>
+			<promptItem id="property_sheet_caption">
+				<text>Instellingen</text>
+				<originalText>Preferences</originalText>
+				
+			<audio src="./audio/286_Instellingen.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/286_Instellingen.smil#txt_011E"/></promptItem>
+			<promptItem id="selfolder_title">
+				<text>Selecteer een map</text>
+				<originalText>Select a Folder</originalText>
+				
+			<audio src="./audio/287_Selecteer_een_map.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/287_Selecteer_een_map.smil#txt_011F"/></promptItem>
+			<promptItem id="selfolder_instr">
+				<text>Selecteer een map uit de onderstaande structuur</text>
+				<originalText>Select a folder from the directory below.</originalText>
+				
+			<audio src="./audio/288_Selecteer_een_map_uit_d.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/288_Selecteer_een_map_uit_d.smil#txt_0120"/></promptItem>
+			<promptItem id="daisy_books">
+				<text>DAISY documenten</text>
+				<originalText>DAISY Books</originalText>
+				
+			<audio src="./audio/289_DAISY_documenten.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/289_DAISY_documenten.smil#txt_0121"/></promptItem>
+			<promptItem id="folder_does_not_exist">
+				<text>De map %s bestaat niet. Wilt u de map aanmaken?</text>
+				<originalText>The folder %s does not exist. Do you want the folder to be created?</originalText>
+				
+			<audio src="./audio/290_De_map_s_bestaat_niet_W.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/290_De_map_s_bestaat_niet_W.smil#txt_0122"/></promptItem>
+			<promptItem id="folder_invalid">
+				<text>De naam van de map is niet geldig. Kies a.u.b. een andere naam.</text>
+				<originalText>This folder name is invalid. Please choose another.</originalText>
+				
+			<audio src="./audio/291_De_naam_van_de_map_is_n.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/291_De_naam_van_de_map_is_n.smil#txt_0123"/></promptItem>
+			<promptItem id="cant_create_folder">
+				<text>Deze map kan niet aangemaakt worden. Controleer a.u.b.</text>
+				<originalText>This folder can not be created. Please double check.</originalText>
+				
+			<audio src="./audio/292_Deze_map_kan_niet_aange.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/292_Deze_map_kan_niet_aange.smil#txt_0124"/></promptItem>
+			<promptItem id="not_available">
+				<text>Niet beschikbaar</text>
+				<originalText>Not available</originalText>
+				
+			<audio src="./audio/293_Niet_beschikbaar.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/293_Niet_beschikbaar.smil#txt_0125"/></promptItem>
+			<promptItem id="numeric_zero">
+				<note>All numerals should be translated into numerals, not words.</note>
+				<text>0</text>
+				<originalText>0</originalText>
+				
+			<audio src="./audio/294_0.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/294_0.smil#txt_0126"/></promptItem>
+			<promptItem id="numeric_one">
+				<text>1</text>
+				<originalText>1</originalText>
+				
+			<audio src="./audio/295_1.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/295_1.smil#txt_0127"/></promptItem>
+			<promptItem id="numeric_two">
+				<text>2</text>
+				<originalText>2</originalText>
+				
+			<audio src="./audio/296_2.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/296_2.smil#txt_0128"/></promptItem>
+			<promptItem id="numeric_three">
+				<text>3</text>
+				<originalText>3</originalText>
+				
+			<audio src="./audio/297_3.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/297_3.smil#txt_0129"/></promptItem>
+			<promptItem id="numeric_four">
+				<text>4</text>
+				<originalText>4</originalText>
+				
+			<audio src="./audio/298_4.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/298_4.smil#txt_012A"/></promptItem>
+			<promptItem id="numeric_five">
+				<text>5</text>
+				<originalText>5</originalText>
+				
+			<audio src="./audio/299_5.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/299_5.smil#txt_012B"/></promptItem>
+			<promptItem id="numeric_six">
+				<text>6</text>
+				<originalText>6</originalText>
+				
+			<audio src="./audio/300_6.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/300_6.smil#txt_012C"/></promptItem>
+			<promptItem id="numeric_seven">
+				<text>7</text>
+				<originalText>7</originalText>
+				
+			<audio src="./audio/301_7.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/301_7.smil#txt_012D"/></promptItem>
+			<promptItem id="numeric_eight">
+				<text>8</text>
+				<originalText>8</originalText>
+				
+			<audio src="./audio/302_8.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/302_8.smil#txt_012E"/></promptItem>
+			<promptItem id="numeric_nine">
+				<text>9</text>
+				<originalText>9</originalText>
+				
+			<audio src="./audio/303_9.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/303_9.smil#txt_012F"/></promptItem>
+			<promptItem id="deleted">
+				<text>gewist</text>
+				<originalText>deleted</originalText>
+				
+			<audio src="./audio/304_gewist.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/304_gewist.smil#txt_0130"/></promptItem>
+			<promptItem id="will_be_skipped">
+				<text>wordt overgeslagen</text>
+				<originalText>will be skipped</originalText>
+				
+			<audio src="./audio/305_wordt_overgeslagen.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/305_wordt_overgeslagen.smil#txt_0131"/></promptItem>
+			<promptItem id="will_be_played">
+				<text>wordt afgespeeld</text>
+				<originalText>will be played</originalText>
+				
+			<audio src="./audio/306_wordt_afgespeeld.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/306_wordt_afgespeeld.smil#txt_0132"/></promptItem>
+			<promptItem id="item_on">
+				<text>aan</text>
+				<originalText>on</originalText>
+				
+			<audio src="./audio/307_aan.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/307_aan.smil#txt_0133"/></promptItem>
+			<promptItem id="item_off">
+				<text>uit</text>
+				<originalText>off</originalText>
+				
+			<audio src="./audio/308_uit.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/308_uit.smil#txt_0134"/></promptItem>
+			<promptItem id="item_selected">
+				<text>geselecteerd</text>
+				<originalText>selected</originalText>
+				
+			<audio src="./audio/309_geselecteerd.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/309_geselecteerd.smil#txt_0135"/></promptItem>
+			<promptItem id="item_deselected">
+				<text>niet geselecteerd</text>
+				<originalText>deselected</originalText>
+				
+			<audio src="./audio/310_niet_geselecteerd.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/310_niet_geselecteerd.smil#txt_0136"/></promptItem>
+			<promptItem id="keyboardShortcut">
+				<text>Sneltoets</text>
+				<originalText>Keyboard Shortcut</originalText>
+				
+			<audio src="./audio/311_Sneltoets.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/311_Sneltoets.smil#txt_0137"/></promptItem>
+			<promptItem id="icon">
+				<text>Pictogram</text>
+				<originalText>Icon</originalText>
+				
+			<audio src="./audio/312_Pictogram.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/312_Pictogram.smil#txt_0138"/></promptItem>
+			<promptItem id="menu">
+				<text>Menu</text>
+				<originalText>Menu</originalText>
+				
+			<audio src="./audio/313_Menu.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/313_Menu.smil#txt_0139"/></promptItem>
+			<promptItem id="followedBy">
+				<note>This is used in the context of a sequence of key presses, as in "Press Alt + V, followed by S"</note>
+				<text>gevolgd door</text>
+				<originalText>followed by</originalText>
+				
+			<audio src="./audio/314_gevolgd_door.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/314_gevolgd_door.smil#txt_013A"/></promptItem>
+			<promptItem id="submenu">
+				<text>Submenu</text>
+				<originalText>Sub Menu</originalText>
+				
+			<audio src="./audio/315_Submenu.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/315_Submenu.smil#txt_013B"/></promptItem>
+		</promptItemRefs>
+		<generalPrompts>
+			<prompt id="dialogClosed">
+				<promptItem>
+					<text>Dialoogvenster gesloten.</text>
+					<originalText>Dialog closed.</originalText>
+					
+				<audio src="./audio/316_Dialoogvenster_gesloten.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/316_Dialoogvenster_gesloten.smil#txt_013C"/></promptItem>
+			</prompt>
+			<prompt id="textFieldEntry">
+				<promptItem>
+					<text>Het invulveld is:</text>
+					<originalText>Text field entry is:</originalText>
+					
+				<audio src="./audio/317_Het_invulveld_is.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/317_Het_invulveld_is.smil#txt_013D"/></promptItem>
+				<promptVar name="TEXT_FIELD"/>
+			</prompt>
+			<prompt id="notSelfVoicing">
+				<promptItem refid="thisDialogNotSelfVoicing"/>
+			</prompt>
+			<prompt id="bookAtPathChanged">
+				<promptItem>
+					<text>De locatie van het document dat u zoekt is veranderd. Een ander document is gevonden. Heeft u de juiste Cd-rom geladen?</text>
+					<originalText>The location of the book you are looking for has changed.  A different book was found instead.  Did the contents of your CD-ROM drive change?</originalText>
+					
+				<audio src="./audio/318_De_locatie_van_het_docu.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/318_De_locatie_van_het_docu.smil#txt_013E"/></promptItem>
+			</prompt>
+			<prompt id="generalBookError">
+				<promptItem>
+					<text>Er is een fout opgetreden tijdens het openen van het document.</text>
+					<originalText>An error occurred while trying to open the book.</originalText>
+					
+				<audio src="./audio/319_Er_is_een_fout_opgetred.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/319_Er_is_een_fout_opgetred.smil#txt_013F"/></promptItem>
+				<promptVar name="BOOK_PATH"/>
+				<promptItem refid="enter_to_close"/>
+			</prompt>
+			<prompt id="noCdLoaded">
+				<promptItem>
+					<text>Geen Cd gevonden. Cd-lade leeg?</text>
+					<originalText>There is not a CD in the CD-ROM drive.</originalText>
+					
+				<audio src="./audio/320_Geen_Cd_gevonden_Cd-lad.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/320_Geen_Cd_gevonden_Cd-lad.smil#txt_0140"/></promptItem>
+				<promptItem refid="enter_to_close"/>
+			</prompt>
+			<prompt id="pluginErrorInit">
+				<promptItem>
+					<text>Plug-in fout: init() function kan niet gevonden worden in de plug-in DLL.</text>
+					<originalText>Plug-in error: init() function not found in the plug-in DLL.</originalText>
+					
+				<audio src="./audio/321_Plug-in_fout_init_funct.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/321_Plug-in_fout_init_funct.smil#txt_0141"/></promptItem>
+			</prompt>
+			<prompt id="pluginErrorDll">
+				<promptItem>
+					<text>Plug-in fout: de volgende plug-in library kan niet worden geladen: </text>
+					<originalText>Plug-in error: The following plug-in library could not be loaded: </originalText>
+					
+				<audio src="./audio/322_Plug-in_fout_de_volgend.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/322_Plug-in_fout_de_volgend.smil#txt_0142"/></promptItem>
+				<promptVar name="PLUGIN_LIB"/>
+			</prompt>
+			<prompt id="basicViewPrompt">
+				<promptItem>
+					<text>U gebruikt nu de vereenvoudigde weergave. Toets F11 voor de standaardweergave.</text>
+					<originalText>You are now using the basic view mode.  Press F11 to switch back to the default view mode.</originalText>
+					
+				<audio src="./audio/323_U_gebruikt_nu_de_vereen.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/323_U_gebruikt_nu_de_vereen.smil#txt_0143"/></promptItem>
+			</prompt>
+			<prompt id="OpenFile_notSelfVoicing">
+				<promptItem>
+					<text>Open het dialoogvenster Bestand</text>
+					<originalText>Open File Dialog</originalText>
+					
+				<audio src="./audio/324_Open_het_dialoogvenster.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/324_Open_het_dialoogvenster.smil#txt_0144"/></promptItem>
+				<promptItem refid="thisDialogNotSelfVoicing"/>
+				<promptItem>
+					<text>Gebruik de optie DAISY document zoeken in het menu Bestand, om te zoeken naar DAISY documenten op uw PC.</text>
+					<originalText>Use the "search for books" feature, under the file menu, to find DAISY books on your hard drive.</originalText>
+					
+				<audio src="./audio/325_Gebruik_de_optie_DAISY_.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/325_Gebruik_de_optie_DAISY_.smil#txt_0145"/></promptItem>
+				<promptItem refid="escapeToCancel"/>
+			</prompt>
+			<prompt id="BrowseForFolder_notSelfVoicing">
+				<promptItem>
+					<text>Bladeren in de mapstructuur</text>
+					<originalText>Browse for folder dialog</originalText>
+					
+				<audio src="./audio/326_Bladeren_in_de_mapstruc.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/326_Bladeren_in_de_mapstruc.smil#txt_0146"/></promptItem>
+				<promptItem refid="thisDialogNotSelfVoicing"/>
+				<promptItem refid="escapeToCancel"/>
+				<promptItem>
+					<text>Geef de padnaam naar de gewenste map op in het tekstveld.</text>
+					<originalText>Then, type the path of the folder you want in the text box.</originalText>
+					
+				<audio src="./audio/327_Geef_de_padnaam_naar_de.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/327_Geef_de_padnaam_naar_de.smil#txt_0147"/></promptItem>
+			</prompt>
+			<prompt id="canceled">
+				<promptItem>
+					<text>Geannuleerd</text>
+					<originalText>Canceled</originalText>
+					
+				<audio src="./audio/328_Geannuleerd.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/328_Geannuleerd.smil#txt_0148"/></promptItem>
+			</prompt>
+			<prompt id="loading">
+				<promptItem>
+					<text>Bezig met laden</text>
+					<originalText>Loading</originalText>
+					
+				<audio src="./audio/329_Bezig_met_laden.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/329_Bezig_met_laden.smil#txt_0149"/></promptItem>
+			</prompt>
+			<prompt id="restartForChanges">
+				<promptItem>
+					<text>U dient het programma te herstarten om de veranderingen te activeren.</text>
+					<originalText>Please restart to see your changes.</originalText>
+					
+				<audio src="./audio/330_U_dient_het_programma_t.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/330_U_dient_het_programma_t.smil#txt_014A"/></promptItem>
+			</prompt>
+			<prompt id="noBooksFoundOnCd">
+				<promptItem>
+					<text>Er zijn geen DAISY documenten aangetroffen op deze Cd-rom.</text>
+					<originalText>No DAISY books were found on this CD-ROM.</originalText>
+					
+				<audio src="./audio/331_Er_zijn_geen_DAISY_docu.mp3" from="file://c:/devel/Langpacks/DutchLangpack/AMIS_prompts/331_Er_zijn_geen_DAISY_docu.smil#txt_014B"/></promptItem>
+				<promptItem refid="enter_to_close"/>
+			</prompt>
+		</generalPrompts>
+	</prompts>
+</ui>

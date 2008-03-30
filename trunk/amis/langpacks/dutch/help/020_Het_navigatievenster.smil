@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="ncc:generator" content="Version 0.9.120"/>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="title" content="Het navigatievenster "/>
+		<meta name="dc:identifier" content="374000306"/><meta name="dc:title" content="AMIS Help"/>
+		<meta name="ncc:totalElapsedTime" content="00:07:38"/><meta name="ncc:timeInThisSmil" content="00:00:41"/>
+		<layout>
+			<region id="txtView"/>
+		</layout>
+	</head>
+	<body>
+		<seq dur="41.279s">
+			<par endsync="last">
+				<text src="amishelp.html#cnt_004C" id="txt_0014"/>
+				<seq>
+					<audio src="020_Het_navigatievenster.mp3" clip-begin="npt=0.000s" clip-end="npt=2.370s" id="phr_020_0000"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_004D" id="txt_0015"/>
+				<seq>
+					<audio src="020_Het_navigatievenster.mp3" clip-begin="npt=2.370s" clip-end="npt=3.109s" id="phr_020_0001"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_004E" id="txt_0016"/>
+				<seq>
+					<audio src="020_Het_navigatievenster.mp3" clip-begin="npt=3.109s" clip-end="npt=14.420s" id="phr_020_0002"/>
+					<audio src="020_Het_navigatievenster.mp3" clip-begin="npt=14.420s" clip-end="npt=22.498s" id="phr_020_0003"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_004F" id="txt_0017"/>
+				<seq>
+					<audio src="020_Het_navigatievenster.mp3" clip-begin="npt=22.498s" clip-end="npt=32.869s" id="phr_020_0004"/>
+					<audio src="020_Het_navigatievenster.mp3" clip-begin="npt=32.869s" clip-end="npt=41.279s" id="phr_020_0005"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

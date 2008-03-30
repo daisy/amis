@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="ncc:generator" content="Version 0.9.120"/>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="title" content="Een document openen "/>
+		<meta name="dc:identifier" content="374000306"/><meta name="dc:title" content="AMIS Help"/>
+		<meta name="ncc:totalElapsedTime" content="00:03:32"/><meta name="ncc:timeInThisSmil" content="00:00:25"/>
+		<layout>
+			<region id="txtView"/>
+		</layout>
+	</head>
+	<body>
+		<seq dur="24.997s">
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0021" id="txt_0008"/>
+				<seq>
+					<audio src="008_Een_document_openen.mp3" clip-begin="npt=0.000s" clip-end="npt=2.612s" id="phr_008_0000"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0022" id="txt_0009"/>
+				<seq>
+					<audio src="008_Een_document_openen.mp3" clip-begin="npt=2.612s" clip-end="npt=13.609s" id="phr_008_0001"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0023" id="txt_000A"/>
+				<seq>
+					<audio src="008_Een_document_openen.mp3" clip-begin="npt=13.609s" clip-end="npt=16.588s" id="phr_008_0002"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0024" id="txt_000B"/>
+				<seq>
+					<audio src="008_Een_document_openen.mp3" clip-begin="npt=16.588s" clip-end="npt=20.506s" id="phr_008_0003"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0025" id="txt_000C"/>
+				<seq>
+					<audio src="008_Een_document_openen.mp3" clip-begin="npt=20.506s" clip-end="npt=24.997s" id="phr_008_0004"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

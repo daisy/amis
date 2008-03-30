@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="ncc:generator" content="Version 0.9.120"/>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="title" content="Open URL "/>
+		<meta name="dc:identifier" content="374000306"/><meta name="dc:title" content="AMIS Help"/>
+		<meta name="ncc:totalElapsedTime" content="00:03:57"/><meta name="ncc:timeInThisSmil" content="00:00:15"/>
+		<layout>
+			<region id="txtView"/>
+		</layout>
+	</head>
+	<body>
+		<seq dur="15.177s">
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0026" id="txt_0009"/>
+				<seq>
+					<audio src="009_Open_URL.mp3" clip-begin="npt=0.000s" clip-end="npt=2.586s" id="phr_009_0000"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0027" id="txt_000A"/>
+				<seq>
+					<audio src="009_Open_URL.mp3" clip-begin="npt=2.586s" clip-end="npt=7.288s" id="phr_009_0001"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0028" id="txt_000B"/>
+				<seq>
+					<audio src="009_Open_URL.mp3" clip-begin="npt=7.288s" clip-end="npt=15.177s" id="phr_009_0002"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

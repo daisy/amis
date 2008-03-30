@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="ncc:generator" content="Version 0.9.120"/>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="title" content="Slepen en verplaatsen "/>
+		<meta name="dc:identifier" content="374000306"/><meta name="dc:title" content="AMIS Help"/>
+		<meta name="ncc:totalElapsedTime" content="00:08:49"/><meta name="ncc:timeInThisSmil" content="00:00:20"/>
+		<layout>
+			<region id="txtView"/>
+		</layout>
+	</head>
+	<body>
+		<seq dur="19.774s">
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0054" id="txt_0016"/>
+				<seq>
+					<audio src="022_Slepen_en_verplaatsen.mp3" clip-begin="npt=0.000s" clip-end="npt=2.900s" id="phr_022_0000"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0055" id="txt_0017"/>
+				<seq>
+					<audio src="022_Slepen_en_verplaatsen.mp3" clip-begin="npt=2.900s" clip-end="npt=8.986s" id="phr_022_0001"/>
+					<audio src="022_Slepen_en_verplaatsen.mp3" clip-begin="npt=8.986s" clip-end="npt=19.774s" id="phr_022_0002"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="ncc:generator" content="Version 0.9.120"/>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="title" content="Harder "/>
+		<meta name="dc:identifier" content="374000306"/><meta name="dc:title" content="AMIS Help"/>
+		<meta name="ncc:totalElapsedTime" content="00:12:18"/><meta name="ncc:timeInThisSmil" content="00:00:12"/>
+		<layout>
+			<region id="txtView"/>
+		</layout>
+	</head>
+	<body>
+		<seq dur="11.598s">
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0077" id="txt_0020"/>
+				<seq>
+					<audio src="032_Harder.mp3" clip-begin="npt=0.000s" clip-end="npt=1.907s" id="phr_032_0000"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0078" id="txt_0021"/>
+				<seq>
+					<audio src="032_Harder.mp3" clip-begin="npt=1.907s" clip-end="npt=5.486s" id="phr_032_0001"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0079" id="txt_0022"/>
+				<seq>
+					<audio src="032_Harder.mp3" clip-begin="npt=5.486s" clip-end="npt=11.598s" id="phr_032_0002"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

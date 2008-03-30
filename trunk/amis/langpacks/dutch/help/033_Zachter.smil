@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="ncc:generator" content="Version 0.9.120"/>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="title" content="Zachter "/>
+		<meta name="dc:identifier" content="374000306"/><meta name="dc:title" content="AMIS Help"/>
+		<meta name="ncc:totalElapsedTime" content="00:12:30"/><meta name="ncc:timeInThisSmil" content="00:00:12"/>
+		<layout>
+			<region id="txtView"/>
+		</layout>
+	</head>
+	<body>
+		<seq dur="12.382s">
+			<par endsync="last">
+				<text src="amishelp.html#cnt_007A" id="txt_0021"/>
+				<seq>
+					<audio src="033_Zachter.mp3" clip-begin="npt=0.000s" clip-end="npt=2.142s" id="phr_033_0000"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_007B" id="txt_0022"/>
+				<seq>
+					<audio src="033_Zachter.mp3" clip-begin="npt=2.142s" clip-end="npt=5.564s" id="phr_033_0001"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_007C" id="txt_0023"/>
+				<seq>
+					<audio src="033_Zachter.mp3" clip-begin="npt=5.564s" clip-end="npt=12.382s" id="phr_033_0002"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

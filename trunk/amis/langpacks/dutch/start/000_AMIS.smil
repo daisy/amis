@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="ncc:generator" content="Version 0.9.120"/>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="title" content="AMIS "/>
+		<meta name="dc:identifier" content="374000206"/><meta name="dc:title" content="AMIS Start"/>
+		<meta name="ncc:totalElapsedTime" content="00:00:00"/><meta name="ncc:timeInThisSmil" content="00:00:23"/>
+		<layout>
+			<region id="txtView"/>
+		</layout>
+	</head>
+	<body>
+		<seq dur="23.385s">
+			<par endsync="last">
+				<text src="amis-splash-screen_dutch.html#cnt_0000" id="txt_0000"/>
+				<seq>
+					<audio src="000_AMIS.mp3" clip-begin="npt=0.000s" clip-end="npt=1.567s" id="phr_000_0000"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amis-splash-screen_dutch.html#cnt_0001" id="txt_0001"/>
+				<seq>
+					<audio src="000_AMIS.mp3" clip-begin="npt=1.567s" clip-end="npt=5.407s" id="phr_000_0001"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amis-splash-screen_dutch.html#cnt_0002" id="txt_0002"/>
+				<seq>
+					<audio src="000_AMIS.mp3" clip-begin="npt=5.407s" clip-end="npt=14.534s" id="phr_000_0002"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amis-splash-screen_dutch.html#cnt_0003" id="txt_0003"/>
+				<seq>
+					<audio src="000_AMIS.mp3" clip-begin="npt=14.534s" clip-end="npt=15.491s" id="phr_000_0003"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amis-splash-screen_dutch.html#cnt_0004" id="txt_0004"/>
+				<seq>
+					<audio src="000_AMIS.mp3" clip-begin="npt=15.491s" clip-end="npt=19.356s" id="phr_000_0004"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amis-splash-screen_dutch.html#cnt_0005" id="txt_0005"/>
+				<seq>
+					<audio src="000_AMIS.mp3" clip-begin="npt=19.356s" clip-end="npt=23.385s" id="phr_000_0005"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="ncc:generator" content="Version 0.9.120"/>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="title" content="Een bladwijzer toevoegen "/>
+		<meta name="dc:identifier" content="374000306"/><meta name="dc:title" content="AMIS Help"/>
+		<meta name="ncc:totalElapsedTime" content="00:18:29"/><meta name="ncc:timeInThisSmil" content="00:00:21"/>
+		<layout>
+			<region id="txtView"/>
+		</layout>
+	</head>
+	<body>
+		<seq dur="20.584s">
+			<par endsync="last">
+				<text src="amishelp.html#cnt_00BF" id="txt_0032"/>
+				<seq>
+					<audio src="050_Een_bladwijzer_toevoegen.mp3" clip-begin="npt=0.000s" clip-end="npt=2.900s" id="phr_050_0000"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_00C0" id="txt_0033"/>
+				<seq>
+					<audio src="050_Een_bladwijzer_toevoegen.mp3" clip-begin="npt=2.900s" clip-end="npt=7.602s" id="phr_050_0001"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_00C1" id="txt_0034"/>
+				<seq>
+					<audio src="050_Een_bladwijzer_toevoegen.mp3" clip-begin="npt=7.602s" clip-end="npt=11.755s" id="phr_050_0002"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_00C2" id="txt_0035"/>
+				<seq>
+					<audio src="050_Een_bladwijzer_toevoegen.mp3" clip-begin="npt=11.755s" clip-end="npt=20.584s" id="phr_050_0003"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+	<meta name="ncc:generator" content="Version 0.9.120" />
+	<meta name="dc:format" content="Daisy 2.02" />
+	<meta name="dc:title" content="AMIS_Help " /> 
+	<meta name="ncc:timeInThisSmil" content="00:20:44" />
+	<meta name="dc:identifier" content="374000306" />
+<layout>
+	<region id="txtView" />
+</layout>
+</head>
+<body>
+<ref title=" " src="000_AMIS.smil" id="mstr_0000" />
+<ref title=" " src="001_Wat_is_AMIS.smil" id="mstr_0001" />
+<ref title=" " src="002_Wat_is_DAISY.smil" id="mstr_0002" />
+<ref title=" " src="003_Snel_van_start.smil" id="mstr_0003" />
+<ref title=" " src="004_Een_document_lezen.smil" id="mstr_0004" />
+<ref title=" " src="005_In_de_dialoogvensters.smil" id="mstr_0005" />
+<ref title=" " src="006_Volledige_lijst_van_fun.smil" id="mstr_0006" />
+<ref title=" " src="007_Een_DAISY-document_open.smil" id="mstr_0007" />
+<ref title=" " src="008_Een_document_openen.smil" id="mstr_0008" />
+<ref title=" " src="009_Open_URL.smil" id="mstr_0009" />
+<ref title=" " src="010_Een_cd-rom_laden.smil" id="mstr_000A" />
+<ref title=" " src="011_DAISY-documenten_zoeken.smil" id="mstr_000B" />
+<ref title=" " src="012_Onlangs_geopende_docume.smil" id="mstr_000C" />
+<ref title=" " src="013_Instellingen.smil" id="mstr_000D" />
+<ref title=" " src="014_Algemene_instellingen.smil" id="mstr_000E" />
+<ref title=" " src="015_Kleurinstellingen.smil" id="mstr_000F" />
+<ref title=" " src="016_Taalinstellingen.smil" id="mstr_0010" />
+<ref title=" " src="017_Verschillende_weergaven.smil" id="mstr_0011" />
+<ref title=" " src="018_Standaardweergave.smil" id="mstr_0012" />
+<ref title=" " src="019_Vereenvoudigde_weergave.smil" id="mstr_0013" />
+<ref title=" " src="020_Het_navigatievenster.smil" id="mstr_0014" />
+<ref title=" " src="021_Tonen_en_verbergen.smil" id="mstr_0015" />
+<ref title=" " src="022_Slepen_en_verplaatsen.smil" id="mstr_0016" />
+<ref title=" " src="023_Secties.smil" id="mstr_0017" />
+<ref title=" " src="024_Pagina_s.smil" id="mstr_0018" />
+<ref title=" " src="025_Speciale_items.smil" id="mstr_0019" />
+<ref title=" " src="026_Opmaak.smil" id="mstr_001A" />
+<ref title=" " src="027_Alternatieve_paginakleu.smil" id="mstr_001B" />
+<ref title=" " src="028_Lettertype_vergroten.smil" id="mstr_001C" />
+<ref title=" " src="029_Lettergrootte_herstellen.smil" id="mstr_001D" />
+<ref title=" " src="030_Afspelen.smil" id="mstr_001E" />
+<ref title=" " src="031_Afspelen_en_pauzeren.smil" id="mstr_001F" />
+<ref title=" " src="032_Harder.smil" id="mstr_0020" />
+<ref title=" " src="033_Zachter.smil" id="mstr_0021" />
+<ref title=" " src="034_Sneller.smil" id="mstr_0022" />
+<ref title=" " src="035_Langzamer.smil" id="mstr_0023" />
+<ref title=" " src="036_Normale_snelheid.smil" id="mstr_0024" />
+<ref title=" " src="037_Navigeren.smil" id="mstr_0025" />
+<ref title=" " src="038_Volgende_sectie.smil" id="mstr_0026" />
+<ref title=" " src="039_Vorige_sectie.smil" id="mstr_0027" />
+<ref title=" " src="040_Sectieniveau_s_tonen.smil" id="mstr_0028" />
+<ref title=" " src="041_Volgend_tekstdeel.smil" id="mstr_0029" />
+<ref title=" " src="042_Vorig_tekstdeel.smil" id="mstr_002A" />
+<ref title=" " src="043_Volgende_pagina.smil" id="mstr_002B" />
+<ref title=" " src="044_Vorige_pagina.smil" id="mstr_002C" />
+<ref title=" " src="045_Naar_een_pagina_gaan.smil" id="mstr_002D" />
+<ref title=" " src="046_Zoeken_in_de_tekst.smil" id="mstr_002E" />
+<ref title=" " src="047_Een_item_overslaan.smil" id="mstr_002F" />
+<ref title=" " src="048_Onderdelen_weglaten.smil" id="mstr_0030" />
+<ref title=" " src="049_Bladwijzers.smil" id="mstr_0031" />
+<ref title=" " src="050_Een_bladwijzer_toevoegen.smil" id="mstr_0032" />
+<ref title=" " src="051_Bladwijzers_laden.smil" id="mstr_0033" />
+<ref title=" " src="052_Informatie.smil" id="mstr_0034" />
+<ref title=" " src="053_AMIS_afsluiten.smil" id="mstr_0035" />
+<ref title=" " src="054_Extra_software.smil" id="mstr_0036" />
+<ref title=" " src="055_Plug-ins.smil" id="mstr_0037" />
+<ref title=" " src="056_Taalmodules.smil" id="mstr_0038" />
+
+</body>
+</smil>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+	<meta name="ncc:generator" content="Version 0.9.120" />
+	<meta name="dc:format" content="Daisy 2.02" />
+	<meta name="dc:title" content="AMIS_Start " /> 
+	<meta name="ncc:timeInThisSmil" content="00:00:23" />
+	<meta name="dc:identifier" content="374000206" />
+<layout>
+	<region id="txtView" />
+</layout>
+</head>
+<body>
+<ref title=" " src="000_AMIS.smil" id="mstr_0000" />
+
+</body>
+</smil>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="ncc:generator" content="Version 0.9.120"/>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="title" content="Volgende sectie "/>
+		<meta name="dc:identifier" content="374000306"/><meta name="dc:title" content="AMIS Help"/>
+		<meta name="ncc:totalElapsedTime" content="00:13:53"/><meta name="ncc:timeInThisSmil" content="00:00:16"/>
+		<layout>
+			<region id="txtView"/>
+		</layout>
+	</head>
+	<body>
+		<seq dur="16.378s">
+			<par endsync="last">
+				<text src="amishelp.html#cnt_008D" id="txt_0026"/>
+				<seq>
+					<audio src="038_Volgende_sectie.mp3" clip-begin="npt=0.000s" clip-end="npt=2.220s" id="phr_038_0000"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_008E" id="txt_0027"/>
+				<seq>
+					<audio src="038_Volgende_sectie.mp3" clip-begin="npt=2.220s" clip-end="npt=5.486s" id="phr_038_0001"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_008F" id="txt_0028"/>
+				<seq>
+					<audio src="038_Volgende_sectie.mp3" clip-begin="npt=5.486s" clip-end="npt=7.236s" id="phr_038_0002"/>
+					<audio src="038_Volgende_sectie.mp3" clip-begin="npt=7.236s" clip-end="npt=8.490s" id="phr_038_0003"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0090" id="txt_0029"/>
+				<seq>
+					<audio src="038_Volgende_sectie.mp3" clip-begin="npt=8.490s" clip-end="npt=16.378s" id="phr_038_0004"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

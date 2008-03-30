@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="ncc:generator" content="Version 0.9.120"/>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="title" content="Onderdelen weglaten "/>
+		<meta name="dc:identifier" content="374000306"/><meta name="dc:title" content="AMIS Help"/>
+		<meta name="ncc:totalElapsedTime" content="00:17:46"/><meta name="ncc:timeInThisSmil" content="00:00:40"/>
+		<layout>
+			<region id="txtView"/>
+		</layout>
+	</head>
+	<body>
+		<seq dur="39.576s">
+			<par endsync="last">
+				<text src="amishelp.html#cnt_00BA" id="txt_0030"/>
+				<seq>
+					<audio src="048_Onderdelen_weglaten.mp3" clip-begin="npt=0.000s" clip-end="npt=3.004s" id="phr_048_0000"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_00BB" id="txt_0031"/>
+				<seq>
+					<audio src="048_Onderdelen_weglaten.mp3" clip-begin="npt=3.004s" clip-end="npt=8.307s" id="phr_048_0001"/>
+					<audio src="048_Onderdelen_weglaten.mp3" clip-begin="npt=8.307s" clip-end="npt=12.304s" id="phr_048_0002"/>
+					<audio src="048_Onderdelen_weglaten.mp3" clip-begin="npt=12.304s" clip-end="npt=17.893s" id="phr_048_0003"/>
+					<audio src="048_Onderdelen_weglaten.mp3" clip-begin="npt=17.893s" clip-end="npt=26.722s" id="phr_048_0004"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_00BC" id="txt_0032"/>
+				<seq>
+					<audio src="048_Onderdelen_weglaten.mp3" clip-begin="npt=26.722s" clip-end="npt=31.765s" id="phr_048_0005"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_00BD" id="txt_0033"/>
+				<seq>
+					<audio src="048_Onderdelen_weglaten.mp3" clip-begin="npt=31.765s" clip-end="npt=39.576s" id="phr_048_0006"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="ncc:generator" content="Version 0.9.120"/>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="title" content="Plug-ins "/>
+		<meta name="dc:identifier" content="374000306"/><meta name="dc:title" content="AMIS Help"/>
+		<meta name="ncc:totalElapsedTime" content="00:19:55"/><meta name="ncc:timeInThisSmil" content="00:00:27"/>
+		<layout>
+			<region id="txtView"/>
+		</layout>
+	</head>
+	<body>
+		<seq dur="26.776s">
+			<par endsync="last">
+				<text src="amishelp.html#cnt_00CE" id="txt_0037"/>
+				<seq>
+					<audio src="055_Plug-ins.mp3" clip-begin="npt=0.000s" clip-end="npt=1.255s" id="phr_055_0000"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_00CF" id="txt_0038"/>
+				<seq>
+					<audio src="055_Plug-ins.mp3" clip-begin="npt=1.255s" clip-end="npt=1.698s" id="phr_055_0001"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_00D0" id="txt_0039"/>
+				<seq>
+					<audio src="055_Plug-ins.mp3" clip-begin="npt=1.698s" clip-end="npt=10.109s" id="phr_055_0002"/>
+					<audio src="055_Plug-ins.mp3" clip-begin="npt=10.109s" clip-end="npt=14.733s" id="phr_055_0003"/>
+					<audio src="055_Plug-ins.mp3" clip-begin="npt=14.733s" clip-end="npt=26.776s" id="phr_055_0004"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="ncc:generator" content="Version 0.9.120"/>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="title" content="Langzamer "/>
+		<meta name="dc:identifier" content="374000306"/><meta name="dc:title" content="AMIS Help"/>
+		<meta name="ncc:totalElapsedTime" content="00:13:04"/><meta name="ncc:timeInThisSmil" content="00:00:22"/>
+		<layout>
+			<region id="txtView"/>
+		</layout>
+	</head>
+	<body>
+		<seq dur="22.384s">
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0082" id="txt_0023"/>
+				<seq>
+					<audio src="035_Langzamer.mp3" clip-begin="npt=0.000s" clip-end="npt=2.142s" id="phr_035_0000"/>
+					<audio src="035_Langzamer.mp3" clip-begin="npt=2.142s" clip-end="npt=2.320s" id="phr_035_0001"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0083" id="txt_0024"/>
+				<seq>
+					<audio src="035_Langzamer.mp3" clip-begin="npt=2.320s" clip-end="npt=6.996s" id="phr_035_0002"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0084" id="txt_0025"/>
+				<seq>
+					<audio src="035_Langzamer.mp3" clip-begin="npt=6.996s" clip-end="npt=10.914s" id="phr_035_0003"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0085" id="txt_0026"/>
+				<seq>
+					<audio src="035_Langzamer.mp3" clip-begin="npt=10.914s" clip-end="npt=14.393s" id="phr_035_0004"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0086" id="txt_0027"/>
+				<seq>
+					<audio src="035_Langzamer.mp3" clip-begin="npt=14.393s" clip-end="npt=22.384s" id="phr_035_0005"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="ncc:generator" content="Version 0.9.120"/>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="title" content="Sneller "/>
+		<meta name="dc:identifier" content="374000306"/><meta name="dc:title" content="AMIS Help"/>
+		<meta name="ncc:totalElapsedTime" content="00:12:42"/><meta name="ncc:timeInThisSmil" content="00:00:22"/>
+		<layout>
+			<region id="txtView"/>
+		</layout>
+	</head>
+	<body>
+		<seq dur="21.577s">
+			<par endsync="last">
+				<text src="amishelp.html#cnt_007D" id="txt_0022"/>
+				<seq>
+					<audio src="034_Sneller.mp3" clip-begin="npt=0.000s" clip-end="npt=1.062s" id="phr_034_0000"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_007E" id="txt_0023"/>
+				<seq>
+					<audio src="034_Sneller.mp3" clip-begin="npt=1.062s" clip-end="npt=6.322s" id="phr_034_0001"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_007F" id="txt_0024"/>
+				<seq>
+					<audio src="034_Sneller.mp3" clip-begin="npt=6.322s" clip-end="npt=10.500s" id="phr_034_0002"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0080" id="txt_0025"/>
+				<seq>
+					<audio src="034_Sneller.mp3" clip-begin="npt=10.500s" clip-end="npt=14.289s" id="phr_034_0003"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0081" id="txt_0026"/>
+				<seq>
+					<audio src="034_Sneller.mp3" clip-begin="npt=14.289s" clip-end="npt=21.577s" id="phr_034_0004"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>

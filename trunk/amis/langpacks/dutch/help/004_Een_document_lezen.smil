@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="ncc:generator" content="Version 0.9.120"/>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="title" content="Een document lezen "/>
+		<meta name="dc:identifier" content="374000306"/><meta name="dc:title" content="AMIS Help"/>
+		<meta name="ncc:totalElapsedTime" content="00:01:54"/><meta name="ncc:timeInThisSmil" content="00:01:06"/>
+		<layout>
+			<region id="txtView"/>
+		</layout>
+	</head>
+	<body>
+		<seq dur="65.682s">
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0010" id="txt_0004"/>
+				<seq>
+					<audio src="004_Een_document_lezen.mp3" clip-begin="npt=0.000s" clip-end="npt=2.978s" id="phr_004_0000"/>
+					<audio src="004_Een_document_lezen.mp3" clip-begin="npt=2.978s" clip-end="npt=3.096s" id="phr_004_0001"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0011" id="txt_0005"/>
+				<seq>
+					<audio src="004_Een_document_lezen.mp3" clip-begin="npt=3.096s" clip-end="npt=4.820s" id="phr_004_0002"/>
+					<audio src="004_Een_document_lezen.mp3" clip-begin="npt=4.820s" clip-end="npt=8.215s" id="phr_004_0003"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0012" id="txt_0006"/>
+				<seq>
+					<audio src="004_Een_document_lezen.mp3" clip-begin="npt=8.215s" clip-end="npt=15.070s" id="phr_004_0004"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0013" id="txt_0007"/>
+				<seq>
+					<audio src="004_Een_document_lezen.mp3" clip-begin="npt=15.070s" clip-end="npt=22.870s" id="phr_004_0005"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0014" id="txt_0008"/>
+				<seq>
+					<audio src="004_Een_document_lezen.mp3" clip-begin="npt=22.870s" clip-end="npt=35.826s" id="phr_004_0006"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0015" id="txt_0009"/>
+				<seq>
+					<audio src="004_Een_document_lezen.mp3" clip-begin="npt=35.826s" clip-end="npt=41.051s" id="phr_004_0007"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0016" id="txt_000A"/>
+				<seq>
+					<audio src="004_Een_document_lezen.mp3" clip-begin="npt=41.051s" clip-end="npt=45.805s" id="phr_004_0008"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0017" id="txt_000B"/>
+				<seq>
+					<audio src="004_Een_document_lezen.mp3" clip-begin="npt=45.805s" clip-end="npt=52.310s" id="phr_004_0009"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0018" id="txt_000C"/>
+				<seq>
+					<audio src="004_Een_document_lezen.mp3" clip-begin="npt=52.310s" clip-end="npt=57.691s" id="phr_004_000A"/>
+				</seq>
+			</par>
+			<par endsync="last">
+				<text src="amishelp.html#cnt_0019" id="txt_000D"/>
+				<seq>
+					<audio src="004_Een_document_lezen.mp3" clip-begin="npt=57.691s" clip-end="npt=65.682s" id="phr_004_000B"/>
+				</seq>
+			</par>
+		</seq>
+	</body>
+</smil>
