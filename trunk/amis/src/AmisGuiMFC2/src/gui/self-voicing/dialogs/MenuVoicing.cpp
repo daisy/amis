@@ -507,17 +507,17 @@ namespace amis
 						/*
 
 						//is this a	view menu item (sections/prodnotes/etc)
-						else if	(nItemID >=	VIEW_MENU_BASE_ID && nItemID < VIEW_MENU_BASE_ID + 
+						else if	(nItemID >=	AMIS_VIEW_MENU_BASE_ID && nItemID < AMIS_VIEW_MENU_BASE_ID + 
 						MenuManip::Instance()->getNumberOfViewMenuAdditions())
 						{
 						//first	item in	the	list is	always "sections"
-						if (nItemID	== VIEW_MENU_BASE_ID)
+						if (nItemID	== AMIS_VIEW_MENU_BASE_ID)
 						{
 						//playPrompt("sections");
 						theApp.playPromptItemFromStringId("sections");
 						}
 						//then "pages",	if exists
-						else if	(nItemID ==	VIEW_MENU_BASE_ID +	1 && 
+						else if	(nItemID ==	AMIS_VIEW_MENU_BASE_ID +	1 && 
 						NavParse::Instance()->getNavModel()->hasPages()	== true)
 						{
 						//playPrompt("pages");
@@ -528,7 +528,7 @@ namespace amis
 						//otherwise	it's a nav list	so ask NavParse	for	the	nav	list ID
 						//subtract 1 because the menu items	include	sections, pages, navlists
 						//we want just the index relative to nav lists
-						int	idx	= nItemID -	VIEW_MENU_BASE_ID -	1;
+						int	idx	= nItemID -	AMIS_VIEW_MENU_BASE_ID -	1;
 
 						//adjust again by subtracting 1	if there are pages in this book
 						if (NavParse::Instance()->getNavModel()->hasPages()	== true)

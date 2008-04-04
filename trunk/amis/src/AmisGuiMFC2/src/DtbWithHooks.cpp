@@ -97,6 +97,8 @@ bool DtbWithHooks::open(const ambulant::net::url* filename, const ambulant::net:
 	amis::dtb::BookmarkSet* p_bmks = NULL;
 	p_bmks = this->getBookmarks();
 	amis::gui::MenuManip::Instance()->setupNavigationOptions();
+	//TODO: this causes the menus to crash
+	//amis::gui::MenuManip::Instance()->addNavContainersToViewMenu();
 	amis::gui::MenuManip::Instance()->loadBookmarks(p_bmks);
 
 	return true;

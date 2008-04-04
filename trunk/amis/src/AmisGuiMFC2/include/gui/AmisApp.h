@@ -107,6 +107,7 @@ public:
 	afx_msg void OnApplyPageStyle(UINT);
 	afx_msg void OnNextPageStyle();
 	afx_msg void OnShowTextStyle();
+	afx_msg void OnChangeTab(UINT);
 protected:
 	HMENU m_hMDIMenu;
 	HACCEL m_hMDIAccel;

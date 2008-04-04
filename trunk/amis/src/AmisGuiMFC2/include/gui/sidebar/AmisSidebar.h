@@ -62,6 +62,7 @@ public:
 	void setFontSize(double);
 	void setSelectedNode(amis::dtb::nav::NavPoint*);
 	void setSelectedNode(amis::dtb::nav::PageTarget*);
+	void selectTab(int);
 	enum { IDD = IDD_SIDEBAR };
 	CTabCtrl mTabStrip;
 	CTreeCtrl mTree;
@@ -86,6 +87,7 @@ private:
 	void showNavMap();
 	void treeBranchCollapse(HTREEITEM);
 	void treeBranchExpand(HTREEITEM, int);
+	void changeView(int);
 
 	CRect mInitialRect;
 	CRect mInitialParentRect;

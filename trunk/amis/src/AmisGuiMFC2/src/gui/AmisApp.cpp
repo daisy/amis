@@ -114,6 +114,7 @@ BEGIN_MESSAGE_MAP(CAmisApp, CWinApp)
 	ON_COMMAND_RANGE(AMIS_PAGE_STYLE_BASE_ID, AMIS_PAGE_STYLE_BASE_ID + AMIS_MAX_ANYTHING, OnApplyPageStyle)
 	ON_COMMAND(ID_AMIS_NEXT_PAGE_STYLE, OnNextPageStyle)
 	ON_COMMAND(ID_AMIS_SHOW_TEXTSTYLE, OnShowTextStyle)
+	ON_COMMAND_RANGE(AMIS_VIEW_MENU_BASE_ID, AMIS_VIEW_MENU_BASE_ID + AMIS_MAX_ANYTHING, OnChangeTab)
 END_MESSAGE_MAP()
 
 
@@ -844,7 +845,13 @@ void CAmisApp::OnShowTextStyle()
 		MainWndParts::Instance()->mpSidebar->m_wndDlg.setFontName(Preferences::Instance()->getSidebarFontName());
 	}
 }
-
+//the user selected "sections" or "pages" or a nav list id from the view menu
+void CAmisApp::OnChangeTab(UINT id)
+{
+	int idx;
+	idx = id - AMIS_VIEW_MENU_BASE_ID;
+	MainWndParts::Instance()->mpSidebar->m_wndDlg.selectTab(idx);
+}
 /***************************************************
 * (MED) I moved these functions out of the menu handler area
 *****************************************************/

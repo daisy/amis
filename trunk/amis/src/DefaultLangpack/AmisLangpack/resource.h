@@ -21,7 +21,6 @@
 #define ID_TOGGLE_AUDIO_CONTENT_PLAYBACK        133
 #define ID_TOGGLE_AUDIO_SELFVOICING_PLAYBACK		134
 #define IDD_FIND                        147
-#define VIEW_MENU_BASE_ID               150
 #define IDD_SKIP                        153
 #define IDI_AMIS                        164
 #define IDD_SEARCHDAISY                 177

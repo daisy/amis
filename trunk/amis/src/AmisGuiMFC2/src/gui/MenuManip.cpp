@@ -137,6 +137,51 @@ void MenuManip::setupNavigationOptions()
 	//remember that other enabling/disabling is done in CMainFrame's ON_UPDATE_COMMAND_UI handlers
 }
 
+//add a list of navigation containers to the view menu
+void MenuManip::addNavContainersToViewMenu()
+{
+	amis::dtb::nav::NavModel* p_model = NULL;
+	p_model = amis::dtb::DtbWithHooks::Instance()->getNavModel();
+	if (p_model == NULL) return;
+	
+	CMenu* p_menu = NULL;
+	p_menu = MainWndParts::Instance()->mpMainFrame->GetMenu();
+	//exit if no menu is present..this could mean we are in basic view mode
+	if (p_menu == NULL) return;
+	
+	//get "View"
+	p_menu = p_menu->GetSubMenu(1);
+
+	//remove old stuff (anything below "Text style...", whose index is 6)
+	int len = p_menu->GetMenuItemCount();
+	for (int i=7; i<len; i++)
+		p_menu->RemoveMenu(i, MF_BYPOSITION);
+
+	
+	//add a separator
+	p_menu->AppendMenu(MF_SEPARATOR);
+
+	//add the nav map (sections)
+	int count = 0;
+	CString label = p_model->getNavMap()->getLabel()->getText()->getTextString().c_str();
+	p_menu->AppendMenu(MF_STRING, AMIS_VIEW_MENU_BASE_ID, label);
+	count++;
+	if (p_model->hasPages() == true)
+	{
+		label = p_model->getPageList()->getLabel()->getText()->getTextString().c_str();
+		p_menu->AppendMenu(MF_STRING, AMIS_VIEW_MENU_BASE_ID + count, label);
+		count++;
+	}
+	for (int i = 0; i<p_model->getNumberOfNavLists(); i++)
+	{
+		amis::dtb::nav::NavList* p_list = NULL;
+		p_list = p_model->getNavList(i);
+		if (p_list == NULL) continue;
+		label = p_list->getLabel()->getText()->getTextString().c_str();
+		p_menu->AppendMenu(MF_STRING, AMIS_VIEW_MENU_BASE_ID + count, label);
+		count++;
+	}
+}
 void MenuManip::setViewItemCheckmark(bool isChecked, UINT itemId)
 {
 	CMenu* p_menu = NULL;

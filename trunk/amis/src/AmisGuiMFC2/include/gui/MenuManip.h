@@ -45,6 +45,7 @@ public:
 	void clearBookmarks();
 	void setupNavigationOptions();
 	void addPageStyles();
+	void addNavContainersToViewMenu();
 private:
 	static MenuManip* pinstance;
 };

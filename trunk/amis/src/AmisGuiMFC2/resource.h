@@ -76,11 +76,7 @@
 #define IDC_FONTLABEL                   1109
 #define IDC_HIGHLIGHTFOREGROUNDLABEL    1110
 #define IDC_HIGHLIGHTBACKGROUNDLABEL    1111
-#define IDC_TEXTSTYLEPREVIEW            1112
-#define IDC_TEXTPREVIEW                 1113
-#define IDC_EDIT1                       1114
 #define IDC_READING_OPTIONS_INSTRUCTIONS 1115
-#define IDC_LIST1                       1116
 #define IDC_OPTIONS_LIST                1116
 #define SELF_VOICING_PLAY_NEXT          6969
 #define IDC_CURRLANG                    9002

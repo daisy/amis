@@ -61,7 +61,7 @@ amis::StringMap* amis::dtb::nav::ResolveSmilDataVisitor::getSmilTextMap()
 
 //this will match up file.smil#id lists to each NavPoint and PageTarget
 //it will also index the text in the SMIL files (since it's parsing them already)
-void amis::dtb::nav::ResolveSmilDataVisitor::resolve(amis::dtb::nav::NavModel* pModel, amis::dtb::Spine* pSpine, /*const ambulant::net::url* bookDir,*/  bool resolveNavNodeAudioData)
+void amis::dtb::nav::ResolveSmilDataVisitor::resolve(amis::dtb::nav::NavModel* pModel, amis::dtb::Spine* pSpine, bool resolveNavNodeAudioData)
 {
 	if (pSpine == NULL)
 		return;

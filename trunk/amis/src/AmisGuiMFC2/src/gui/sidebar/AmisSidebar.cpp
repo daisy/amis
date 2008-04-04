@@ -172,20 +172,7 @@ void CAmisSidebar::setFontSize(double pct)
 void CAmisSidebar::OnSelchangeTab(NMHDR* pNMHDR, LRESULT* pResult) 
 {
 	mTabSel = mTabStrip.GetCurSel();
-	if (mTabSel == 0) 
-	{
-		showNavMap();
-	}
-	else if(mTabSel == 1)
-	{
-		if (amis::dtb::DtbWithHooks::Instance()->getNavModel()->hasPages() == true) showPageList();
-		else showNavList(mTabSel-1);
-	}
-	else
-	{
-		if (amis::dtb::DtbWithHooks::Instance()->getNavModel()->hasPages() == true) showNavList(mTabSel-2);
-		else showNavList(mTabSel-1);
-	}
+	changeView(mTabSel);
 	*pResult = 0;
 }
 
@@ -644,4 +631,27 @@ void CAmisSidebar::setSelectedNode(amis::dtb::nav::PageTarget* pNode)
 	mPageList.SetItemState(pNode->getIndex(), 0, LVIS_SELECTED);
 
 	mbIgnorePageListSelect = false;
+}
+void CAmisSidebar::selectTab(int sel)
+{
+	if (sel > mTabStrip.GetItemCount() - 1) return;
+	mTabStrip.SetCurSel(sel);
+	changeView(sel);
+}
+void CAmisSidebar::changeView(int sel)
+{
+	if (mTabSel == 0) 
+	{
+		showNavMap();
+	}
+	else if(mTabSel == 1)
+	{
+		if (amis::dtb::DtbWithHooks::Instance()->getNavModel()->hasPages() == true) showPageList();
+		else showNavList(mTabSel-1);
+	}
+	else
+	{
+		if (amis::dtb::DtbWithHooks::Instance()->getNavModel()->hasPages() == true) showNavList(mTabSel-2);
+		else showNavList(mTabSel-1);
+	}
 }
