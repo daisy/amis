@@ -1,1 +1,0 @@
-Language packs in this directory require an upgrade to the format created for the April 2006 DFA workshop.

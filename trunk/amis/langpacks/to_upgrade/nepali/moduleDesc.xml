@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<moduleDesc xmlns="http://amis.sf.net" id="nep-NP" filename="./AmisLangpack.dll" type="langpack" enabled="yes">
-	<label>
-			<text>Nepali (Nepali)</text>
-			<audio src="./thislang.mp3"/>
-			<image src="./flag.ico"/>
-	</label>
-</moduleDesc>

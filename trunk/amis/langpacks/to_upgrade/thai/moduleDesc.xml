@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<moduleDesc xmlns="http://amis.sf.net" id="tha-TH" filename="./AmisLangpack.dll" type="langpack" enabled="yes">
-	<label>
-			<text>Thai</text>
-			<audio src="./thislang.mp3"/>
-			<image src="./flag.ico"/>
-	</label>
-</moduleDesc>

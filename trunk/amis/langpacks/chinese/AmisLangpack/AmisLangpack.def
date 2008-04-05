@@ -1,7 +1,0 @@
-; AmisLangpack.def : Declares the module parameters for the DLL.
-
-LIBRARY      "AmisLangpack"
-DESCRIPTION  'AmisLangpack Windows Dynamic Link Library'
-
-EXPORTS
-    ; Explicit exports can go here

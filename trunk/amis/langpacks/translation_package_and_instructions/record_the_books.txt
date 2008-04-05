@@ -1,3 +1,0 @@
-When you make the help book, make it as a full-text, full-audio book. Also, you should set up your production software to highlight the images, and then you'll read their descriptions.
-
-For the prompts book, you can make an NCC-only book.  Another important point is to keep the text of the prompts file as-is: don't remove or add headings, even if there appears to be duplicates.  Otherwise the automated conversion back into AMIS' own format gets messed up. 
