@@ -1,0 +1,17 @@
+body { background-color: white; color: black; font-family: sans-serif;
+  margin: 2em; }
+h1 { font-family: sans-serif; font-size: 150% }
+table { border-collapse: collapse; }
+td { border: solid black thin; padding: 4px; }
+select { border: solid black thin; }
+textarea { background-color: #ffd; border: solid black thin; padding: 4px;
+  margin-bottom: 4px; }
+textarea.remarks {background-color: #ffffff}
+label { float: left; text-align: right; width: 5em; }
+input { margin-left: 2em; border: thin black solid; }
+.blank { margin-top: 90%; font-size: small; text-align: right; }
+.ok { background-color: #dfd; }
+.todo { background-color: #ffd; }
+.new { background-color: #fdd; }
+.comments {font-style: italic; font-size: small}
+.warning {font-weight: bold !important; color: red !important; background-color: yellow !important; border: thin solid red !important;}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Template for the language chooser -->
+<div xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:ui="http://daisy-for-all.org/ns/ui">
+  <form action="/cgi-bin/form.pl" method="get">
+    <p>
+      <select name="lang">
+        <option value="">Please choose a language</option>
+        <option value="ar">Arabic</option>
+        <option value="hi">Hindi</option>
+        <option value="id">Indonesian</option>
+        <option value="mi">Maori</option>
+        <option value="ta">Tamil</option>
+        <option value="ur">Urdu</option>
+        <option value="vi">Vietnamese</option>
+      </select>
+      <input type="submit" value="Go"/>
+    </p>
+  </form>
+  <ui:if test="exists $params{lang} &amp;&amp; $params{lang} eq ''">
+    <p class="wrong">Your choice was invalid, please choose again.</p>
+  </ui:if>
+</div>
