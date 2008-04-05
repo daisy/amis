@@ -27,7 +27,7 @@ def xhtml_die(errorbody):
 
 
 def connect_to_db(user):
-    db = connect_to_db_from_localhost(user)
+    db = connect_to_db_from_local_machine(user)
     if db == None:
         xhtml_die("<p>Could not connect to database</p>")
     else:
