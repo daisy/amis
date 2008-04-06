@@ -337,6 +337,8 @@ CAmisHtmlView::smilPlayerDeleted()
 		mpLoaderBridge = NULL;
 	}
 #endif
+	//this->Navigate2(_T("about:blank"));
+	TextRenderBrain::Instance()->gotoUriTarget("about:blank");
 }
 
 #ifdef HTML_LOAD_MANUALLY

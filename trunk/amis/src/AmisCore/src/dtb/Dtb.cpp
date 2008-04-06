@@ -368,7 +368,7 @@ bool amis::dtb::Dtb::processOpf(const ambulant::net::url* filepath)
 	#else
 		//TODO: convert string on other platforms
 	#endif
-	if (p_item == NULL || str_content != "ANSI/NISO Z39.86-2005")
+	if (0) // (p_item == NULL || str_content != "ANSI/NISO Z39.86-2005")
 	{
 		std::string msg = "This format is unsupported: ";
 		if (p_item == NULL) msg += "dc:Format not found";
