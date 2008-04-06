@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ui xmlns="http://amisproject.org" next-id="t327" xml:lang="en">
+<ui xmlns="http://amisproject.org" next-id="t368" xml:lang="en">
   <containers>
     <container id="file">
       <note>This is the menu header "File"</note>
@@ -28,41 +28,39 @@
           <audio src="./audio/speechgen0006.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0006.smil#txtd37e9"/>
         </mnemonic>
       </action>
-      <!--new action-->
       <action mfcid="ID_AMIS_OPEN_URL" widget="menuItem">
         <note>This is going to be a menu item</note>
         <icon src="./open.png" type="smallIcon"/>
         <caption>
-          <text id="xx">Open URL...</text>
+          <text id="t327" flag="new">Open URL...</text>
           <audio src="./audio/speechgen0007.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0007.smil#txtd44e9"/>
         </caption>
         <description>
-          <text id="xx">Open a DAISY publication from a URL</text>
+          <text id="t328" flag="new">Open a DAISY publication from a URL</text>
           <audio src="./audio/speechgen0008.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0008.smil#txtd51e9"/>
         </description>
         <accelerator>
-          <text id="xx">Ctrl+U</text>
+          <text id="t329" flag="new">Ctrl+U</text>
           <audio src="./audio/speechgen0009.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0009.smil#txtd58e9"/>
         </accelerator>
         <mnemonic>
-          <text id="xx">U</text>
+          <text id="t330" flag="new">U</text>
           <audio src="./audio/speechgen0010.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0010.smil#txtd65e9"/>
         </mnemonic>
       </action>
-      <!--new action-->
       <action mfcid="ID_AMIS_CLOSE_BOOK" widget="menuItem">
         <note>This is going to be a menu item</note>
         <icon src="./close.png" type="smallIcon"/>
         <caption>
-          <text id="xx">Close</text>
+          <text id="t331" flag="new">Close</text>
           <audio src="./audio/speechgen0011.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0011.smil#txtd72e9"/>
         </caption>
         <description>
-          <text id="xx">Close the DAISY publication.</text>
+          <text id="t332" flag="new">Close the DAISY publication.</text>
           <audio src="./audio/speechgen0012.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0012.smil#txtd79e9"/>
         </description>
         <mnemonic>
-          <text id="xx">C</text>
+          <text id="t333" flag="new">C</text>
           <audio src="./audio/speechgen0013.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0013.smil#txtd86e9"/>
         </mnemonic>
       </action>
@@ -90,8 +88,7 @@
       <action mfcid="ID_AMIS_SEARCH_LOCAL_DRIVES" widget="menuItem">
         <note>This is going to be a menu item</note>
         <caption>
-          <!--changed text-->
-          <text id="t10">Search drives...</text>
+          <text id="t10" flag="changed">Search drives...</text>
           <audio src="./audio/speechgen0018.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0018.smil#txtd121e9"/>
         </caption>
         <description>
@@ -202,8 +199,7 @@
       <action mfcid="ID_AMIS_TOGGLE_VIEW" widget="menuItem">
         <note>This is going to be a menu item</note>
         <caption>
-          <!--changed text-->
-          <text id="t30">Basic View</text>
+          <text id="t30" flag="changed">Basic View</text>
           <audio src="./audio/speechgen0038.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0038.smil#txtd261e9"/>
         </caption>
         <description>
@@ -219,17 +215,16 @@
           <audio src="./audio/speechgen0041.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0041.smil#txtd282e9"/>
         </mnemonic>
       </action>
-      <!--new item-->
       <container id="pageStylesList">
         <note>This is the menu header for the list of styles available for this page.</note>
         <caption>
-          <text id="xx">Page Style</text>
+          <text id="t334" flag="new">Page Style</text>
           <audio src="./audio/speechgen0042.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0042.smil#txtd289e9"/>
         </caption>
         <action mfcid="ID_AMIS_NO_PAGE_STYLES" widget="menuItem">
           <note>This is going to be a menu item</note>
           <caption>
-            <text id="xx">None</text>
+            <text id="t335" flag="new">None</text>
             <audio src="./audio/speechgen0043.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0043.smil#txtd296e9"/>
           </caption>
         </action>
@@ -242,7 +237,7 @@
           </list>
         </action>
         <mnemonic>
-          <text id="xx">P</text>
+          <text id="t336" flag="new">P</text>
           <audio src="./audio/speechgen0044.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0044.smil#txtd303e9"/>
         </mnemonic>
       </container>
@@ -250,8 +245,7 @@
         <note>This is going to be a menu item and toolbar item</note>
         <icon src="./settings/img/font.ico" type="smallIcon"/>
         <caption>
-          <!--changed text-->
-          <text id="t38">Bigger Font</text>
+          <text id="t38" flag="changed">Bigger Font</text>
           <audio src="./audio/speechgen0045.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0045.smil#txtd310e9"/>
         </caption>
         <description>
@@ -259,41 +253,38 @@
           <audio src="./audio/speechgen0046.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0046.smil#txtd317e9"/>
         </description>
         <mnemonic>
-          <!--changed text-->
-          <text id="t40">G</text>
+          <text id="t40" flag="changed">G</text>
           <audio src="./audio/speechgen0047.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0047.smil#txtd324e9"/>
         </mnemonic>
       </action>
-      <!--new item-->
       <action mfcid="ID_AMIS_SMALLER_FONT" widget="menuItem toolbarItem">
         <note>This is going to be a menu item and toolbar item</note>
         <icon src="./settings/img/font.ico" type="smallIcon"/>
         <caption>
-          <text id="xx">Smaller Font</text>
+          <text id="t337" flag="new">Smaller Font</text>
           <audio src="./audio/speechgen0048.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0048.smil#txtd331e9"/>
         </caption>
         <description>
-          <text id="xx">Gradually decrease the font size.</text>
+          <text id="t338" flag="new">Gradually decrease the font size.</text>
           <audio src="./audio/speechgen0049.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0049.smil#txtd338e9"/>
         </description>
         <mnemonic>
-          <text id="xx">M</text>
+          <text id="t339" flag="new">M</text>
           <audio src="./audio/speechgen0050.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0050.smil#txtd345e9"/>
         </mnemonic>
       </action>
-      <!--new item-->
       <action mfcid="ID_AMIS_SHOW_TEXTSTYLE" widget="menuItem">
         <note>This is going to be a menu item</note>
         <caption>
-          <text id="xx">Text style...</text>
+          <text id="t340" flag="new">Text style...</text>
           <audio src="./audio/speechgen0051.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0051.smil#txtd352e9"/>
         </caption>
         <description>
-          <text id="xx">Change the text style properties.</text>
+          <text id="t341" flag="new">Change the text style properties.</text>
           <audio src="./audio/speechgen0052.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0052.smil#txtd359e9"/>
         </description>
         <mnemonic>
-          <text id="xx">T</text>
+          <text id="t342" flag="new">T</text>
           <audio src="./audio/speechgen0053.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0053.smil#txtd366e9"/>
         </mnemonic>
       </action>
@@ -730,34 +721,30 @@
       <action mfcid="ID_AMIS_SHOW_READING_OPTIONS" widget="menuItem">
         <note>This is going to be a menu item</note>
         <caption>
-          <!--changed text-->
-          <text id="t123">Reading Options...</text>
+          <text id="t123" flag="changed">Reading Options...</text>
           <audio src="./audio/speechgen0133.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0133.smil#txtd926e9"/>
         </caption>
         <description>
-          <!--changed text-->
-          <text id="t124">View the reading options for this publication.</text>
+          <text id="t124" flag="changed">View the reading options for this publication.</text>
           <audio src="./audio/speechgen0134.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0134.smil#txtd933e9"/>
         </description>
         <mnemonic>
-          <!--changed text-->
-          <text id="t125">R</text>
+          <text id="t125" flag="changed">R</text>
           <audio src="./audio/speechgen0135.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0135.smil#txtd940e9"/>
         </mnemonic>
       </action>
-      <!--new item-->
       <action mfcid="ID_AMIS_SHOW_PUBLICATION_SUMMARY" widget="menuItem">
         <note>This is going to be a menu item</note>
         <caption>
-          <text id="xx">Publication Summary</text>
+          <text id="t343" flag="new">Publication Summary</text>
           <audio src="./audio/speechgen0136.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0136.smil#txtd947e9"/>
         </caption>
         <description>
-          <text id="xx">View information about this publication.</text>
+          <text id="t344" flag="new">View information about this publication.</text>
           <audio src="./audio/speechgen0137.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0137.smil#txtd954e9"/>
         </description>
         <mnemonic>
-          <text id="xx">P</text>
+          <text id="t345" flag="new">P</text>
           <audio src="./audio/speechgen0138.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0138.smil#txtd961e9"/>
         </mnemonic>
       </action>
@@ -1128,8 +1115,7 @@
     <dialog mfcid="IDD_READING_OPTIONS">
       <note>This dialog lets the user control rendering of skippable structures.</note>
       <caption>
-        <!--changed text-->
-        <text id="t187">Reading Options</text>
+        <text id="t187" flag="changed">Reading Options</text>
         <audio src="./audio/speechgen0191.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0191.smil#txtd1334e9"/>
       </caption>
       <description mfcid="IDC_READING_OPTIONS_INSTRUCTIONS">
@@ -1172,12 +1158,10 @@
         </list>
       </control>
     </dialog>
-    <!--new item; copied some old stuff (see which already have text ids)-->
     <dialog mfcid="IDD_PREFERENCES">
       <note>This dialog lets the user set some basic preferences for AMIS.</note>
       <caption>
-        <!--changed text-->
-        <text id="t218">Preferences</text>
+        <text id="t218" flag="changed">Preferences</text>
         <audio src="./audio/speechgen0195.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0195.smil#txtd1364e9"/>
       </caption>
       <description>
@@ -1218,10 +1202,9 @@
           </caption>
         </list>
       </control>
-      <!--new item-->
       <control mfcid="IDC_HIGHLIGHTTEXT" widget="checkbox">
         <caption>
-          <text id="xx">Highlight text as it is read aloud</text>
+          <text id="t346" flag="new">Highlight text as it is read aloud</text>
           <audio src="./audio/speechgen0200.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0200.smil#txtd1399e9"/>
         </caption>
         <description>
@@ -1234,8 +1217,7 @@
       </control>
       <control mfcid="IDC_LOADLASTBOOK" widget="checkbox">
         <caption>
-          <!--changed text-->
-          <text id="t225">Load the most recently read book on startup</text>
+          <text id="t225" flag="changed">Load the most recently read book on startup</text>
           <audio src="./audio/speechgen0201.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0201.smil#txtd1406e9"/>
         </caption>
         <description>
@@ -1248,8 +1230,7 @@
       </control>
       <control mfcid="IDC_STARTINBASICVIEW" widget="checkbox">
         <caption>
-          <!--changed text-->
-          <text id="t223">Start in basic view mode</text>
+          <text id="t223" flag="changed">Start in basic view mode</text>
           <audio src="./audio/speechgen0202.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0202.smil#txtd1413e9"/>
         </caption>
         <description>
@@ -1260,10 +1241,9 @@
           </prompt>
         </description>
       </control>
-      <!--new item-->
       <control mfcid="IDC_PAUSEONLOSTFOCUS" widget="checkbox">
         <caption>
-          <text id="xx">Pause audio when switching applications</text>
+          <text id="t347" flag="new">Pause audio when switching applications</text>
           <audio src="./audio/speechgen0203.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0203.smil#txtd1420e9"/>
         </caption>
         <description>
@@ -1274,10 +1254,9 @@
           </prompt>
         </description>
       </control>
-      <!--new item-->
       <control mfcid="IDC_DISABLESCREENSAVER" widget="checkbox">
         <caption>
-          <text id="xx">Disable the screensaver while reading</text>
+          <text id="t348" flag="new">Disable the screensaver while reading</text>
           <audio src="./audio/speechgen0204.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0204.smil#txtd1427e9"/>
         </caption>
         <description>
@@ -1288,10 +1267,9 @@
           </prompt>
         </description>
       </control>
-      <!--new item (except for t197)-->
       <control mfcid="IDC_INSTALLEDLANGUAGES" widget="list">
         <caption mfcid="IDC_CURRLANG">
-          <text id="xx">You are currently using AMIS in:</text>
+          <text id="t349" flag="new">You are currently using AMIS in:</text>
           <audio src="./audio/speechgen0205.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0205.smil#txtd1434e9"/>
         </caption>
         <description>
@@ -1320,7 +1298,7 @@
           <promptItem refid="cancel_button_description"/>
         </description>
         <mnemonic>
-          <text id="xx">C</text>
+          <text id="t350" flag="new">C</text>
           <audio src="./audio/speechgen0207.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0207.smil#txtd1448e9"/>
         </mnemonic>
       </control>
@@ -1398,8 +1376,7 @@
       </control>
       <control mfcid="IDC_SUMMARYLIST" widget="list">
         <caption mfcid="IDC_LISTCAPTION">
-          <!--changed text-->
-          <text id="t214">Information about this publication and your current position:</text>
+          <text id="t214" flag="changed">Information about this publication and your current position:</text>
           <audio src="./audio/speechgen0216.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0216.smil#txtd1511e9"/>
         </caption>
         <description>
@@ -1409,8 +1386,7 @@
           <caption>
             <prompt>
               <promptItem>
-                <!--changed text-->
-                <text id="t240">Title:</text>
+                <text id="t240" flag="changed">Title:</text>
                 <audio src="./audio/speechgen0217.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0217.smil#txtd1518e9"/>
               </promptItem>
               <promptVar name="META_TITLE"/>
@@ -1419,8 +1395,7 @@
           <caption>
             <prompt>
               <promptItem>
-                <!--changed text-->
-                <text id="t241">Author:</text>
+                <text id="t241" flag="changed">Author:</text>
                 <audio src="./audio/speechgen0218.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0218.smil#txtd1525e9"/>
               </promptItem>
               <promptVar name="META_CREATOR"/>
@@ -1429,8 +1404,7 @@
           <caption condition="DATA_EXISTS">
             <prompt>
               <promptItem>
-                <!--changed text-->
-                <text id="t242">Publisher:</text>
+                <text id="t242" flag="changed">Publisher:</text>
                 <audio src="./audio/speechgen0219.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0219.smil#txtd1532e9"/>
               </promptItem>
               <promptVar name="META_PUBLISHER"/>
@@ -1445,11 +1419,10 @@
               <promptVar name="META_DESC"/>
             </prompt>
           </caption>
-          <!--new item-->
           <caption condition="DATA_EXISTS">
             <prompt>
               <promptItem>
-                <text id="xx">Narrator:</text>
+                <text id="t351" flag="new">Narrator:</text>
                 <audio src="./audio/speechgen0221.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0221.smil#txtd1546e9"/>
               </promptItem>
               <promptVar name="META_NARRATOR"/>
@@ -1464,61 +1437,55 @@
               <promptVar name="META_TOTALTIME"/>
             </prompt>
           </caption>
-          <!--new item-->
           <caption condition="DATA_EXISTS">
             <prompt>
               <promptItem>
-                <text id="xx">Total pages:</text>
+                <text id="t352" flag="new">Total pages:</text>
                 <audio src="./audio/speechgen0223.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0223.smil#txtd1560e9"/>
               </promptItem>
               <promptVar name="META_NUMPAGES"/>
             </prompt>
           </caption>
-          <!--new item-->
           <caption condition="DATA_EXISTS">
             <prompt>
               <promptItem>
-                <text id="xx">Date:</text>
+                <text id="t353" flag="new">Date:</text>
                 <audio src="./audio/speechgen0224.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0224.smil#txtd1567e9"/>
               </promptItem>
               <promptVar name="META_DATE"/>
             </prompt>
           </caption>
-          <!--new item-->
           <caption condition="DATA_EXISTS">
             <prompt>
               <promptItem>
-                <text id="xx">Format:</text>
+                <text id="t354" flag="new">Format:</text>
                 <audio src="./audio/speechgen0225.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0225.smil#txtd1574e9"/>
               </promptItem>
               <promptVar name="META_FORMAT"/>
             </prompt>
           </caption>
-          <!--new item-->
           <caption condition="DATA_EXISTS">
             <prompt>
               <promptItem>
-                <text id="xx">Features:</text>
+                <text id="t355" flag="new">Features:</text>
                 <audio src="./audio/speechgen0226.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0226.smil#txtd1581e9"/>
               </promptItem>
               <promptVar name="TOC_CATEGORIES"/>
             </prompt>
           </caption>
-          <!--new item-->
           <caption condition="DATA_EXISTS">
             <prompt>
               <promptItem>
-                <text id="xx">Current page:</text>
+                <text id="t356" flag="new">Current page:</text>
                 <audio src="./audio/speechgen0227.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0227.smil#txtd1588e9"/>
               </promptItem>
               <promptVar name="CURRENT_PAGE"/>
             </prompt>
           </caption>
-          <!--new item-->
           <caption condition="DATA_EXISTS">
             <prompt>
               <promptItem>
-                <text id="xx">Current time:</text>
+                <text id="t357" flag="new">Current time:</text>
                 <audio src="./audio/speechgen0228.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0228.smil#txtd1595e9"/>
               </promptItem>
               <promptVar name="CURRENT_TIME"/>
@@ -1527,25 +1494,21 @@
           <caption condition="DATA_EXISTS">
             <prompt>
               <promptItem>
-                <!--changed text-->
-                <text id="t215">Current section:</text>
+                <text id="t215" flag="changed">Current section:</text>
                 <audio src="./audio/speechgen0229.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0229.smil#txtd1602e9"/>
               </promptItem>
               <promptVar name="CURRENT_SECTION_TITLE"/>
             </prompt>
           </caption>
-          <!--new item (except for some reused texts)-->
           <caption condition="DATA_EXISTS">
             <prompt>
               <promptItem>
-                <!--changed text-->
-                <text id="t217">subsections, </text>
+                <text id="t217" flag="changed">subsections, </text>
                 <audio src="./audio/speechgen0230.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0230.smil#txtd1609e9"/>
               </promptItem>
               <promptVar name="CURRENT_SECTION_NUM_SUBSECTIONS"/>
               <promptItem>
-                <!--changed text-->
-                <text id="t216">pages</text>
+                <text id="t216" flag="changed">pages</text>
                 <audio src="./audio/speechgen0231.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0231.smil#txtd1616e9"/>
               </promptItem>
               <promptVar name="CURRENT_SECTION_NUM_PAGES"/>
@@ -1554,8 +1517,7 @@
           <caption condition="DATA_EXISTS">
             <prompt>
               <promptItem>
-                <!--changed text-->
-                <text id="t244">Total TOC items:</text>
+                <text id="t244" flag="changed">Total TOC items:</text>
                 <audio src="./audio/speechgen0232.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0232.smil#txtd1623e9"/>
               </promptItem>
               <promptVar name="META_TOCITEMS"/>
@@ -1564,8 +1526,7 @@
           <caption condition="DATA_EXISTS">
             <prompt>
               <promptItem>
-                <!--changed text-->
-                <text id="t245">Max. section depth:</text>
+                <text id="t245" flag="changed">Max. section depth:</text>
                 <audio src="./audio/speechgen0233.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0233.smil#txtd1630e9"/>
               </promptItem>
               <promptVar name="META_DEPTH"/>
@@ -1577,11 +1538,11 @@
     <dialog>
       <note>This dialog lets the user set text style properties.</note>
       <caption>
-        <text id="xx">Text Style</text>
+        <text id="t358" flag="new">Text Style</text>
         <audio src="./audio/speechgen0234.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0234.smil#txtd1637e9"/>
       </caption>
       <description>
-        <text id="xx">Here you can change text style properties.</text>
+        <text id="t359" flag="new">Here you can change text style properties.</text>
         <audio src="./audio/speechgen0235.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0235.smil#txtd1644e9"/>
       </description>
       <prompt type="instructions">
@@ -1592,11 +1553,11 @@
       </prompt>
       <control mfcid="IDC_FONT" widget="list">
         <caption mfcid="IDC_FONTLABEL">
-          <text id="xx">Sidebar font:</text>
+          <text id="t360" flag="new">Sidebar font:</text>
           <audio src="./audio/speechgen0236.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0236.smil#txtd1651e9"/>
         </caption>
         <description>
-          <text id="xx">Use the arrow keys to move around this list of font names.</text>
+          <text id="t361" flag="new">Use the arrow keys to move around this list of font names.</text>
           <audio src="./audio/speechgen0237.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0237.smil#txtd1658e9"/>
         </description>
         <list repeat="yes">
@@ -1607,11 +1568,11 @@
       </control>
       <control mfcid="IDC_HIGHLIGHTFOREGROUND" widget="list">
         <caption mfcid="IDC_HIGHLIGHTFOREGROUNDLABEL">
-          <text id="xx">Highlighted text color:</text>
+          <text id="t362" flag="new">Highlighted text color:</text>
           <audio src="./audio/speechgen0238.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0238.smil#txtd1665e9"/>
         </caption>
         <description>
-          <text id="xx">Use the arrow keys to move around this list of colors.</text>
+          <text id="t363" flag="new">Use the arrow keys to move around this list of colors.</text>
           <audio src="./audio/speechgen0239.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0239.smil#txtd1672e9"/>
         </description>
         <list repeat="yes">
@@ -1622,11 +1583,11 @@
       </control>
       <control mfcid="IDC_HIGHLIGHTBACKGROUND" widget="list">
         <caption mfcid="IDC_HIGHLIGHTBACKGROUNDLABEL">
-          <text id="xx">Highlight background color:</text>
+          <text id="t364" flag="new">Highlight background color:</text>
           <audio src="./audio/speechgen0240.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0240.smil#txtd1679e9"/>
         </caption>
         <description>
-          <text id="xx">Use the arrow keys to move around this list of colors.</text>
+          <text id="t365" flag="new">Use the arrow keys to move around this list of colors.</text>
           <audio src="./audio/speechgen0241.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0241.smil#txtd1686e9"/>
         </description>
         <list repeat="yes">
@@ -1651,7 +1612,7 @@
           <promptItem refid="cancel_button_description"/>
         </description>
         <mnemonic>
-          <text id="xx">C</text>
+          <text id="t366" flag="new">C</text>
           <audio src="./audio/speechgen0242.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0242.smil#txtd1693e9"/>
         </mnemonic>
       </control>
@@ -1698,7 +1659,7 @@
           <promptItem refid="cancel_button_description"/>
         </description>
         <mnemonic>
-          <text id="xx">C</text>
+          <text id="t367" flag="new">C</text>
           <audio src=""/>
         </mnemonic>
       </control>
