@@ -60,7 +60,7 @@ Preferences::Preferences()
 	//whereas in the prefs XML file, they are relative to the prefs XML file
 	//they get overridden by reading in the preferences file; these defaults are just here as a safety measure
 	mFontsizeCssDir = ambulant::net::url::from_filename("./settings/css/font/");
-	mCustomCssDir = ambulant::net::url::from_filename("./settings/css/contrast/");
+	mCustomCssDir = ambulant::net::url::from_filename("./settings/css/customStyles/");
 	mLangpacksDir = ambulant::net::url::from_filename("./settings/lang/");
 	mUserBmkDir = ambulant::net::url::from_filename("./settings/bmk/");
 	mAmisCssFile = ambulant::net::url::from_filename("./settings/css/amis.css");	
