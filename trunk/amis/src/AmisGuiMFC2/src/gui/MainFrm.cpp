@@ -85,7 +85,7 @@ BEGIN_MESSAGE_MAP(CMainFrame, CMDIFrameWnd)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_NEXT_PHRASE, OnUpdateCmdUiGeneral)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_FIND_IN_TEXT, OnUpdateCmdUiFindInText)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_SHOW_PUBLICATION_SUMMARY, OnUpdateCmdUiGeneral)
-	ON_UPDATE_COMMAND_UI(ID_AMIS_NEXT_PAGE_STYLE, OnUpdateCmdUiGeneral)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_NEXT_PAGE_STYLE, OnUpdateCmdUiPageStyle)
 	//TODO: make these two more intelligent
 	ON_UPDATE_COMMAND_UI(ID_AMIS_INCREASE_SECTION_DEPTH, OnUpdateCmdUiGeneral)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_DECREASE_SECTION_DEPTH, OnUpdateCmdUiGeneral)
@@ -514,10 +514,9 @@ void CMainFrame::OnUpdateCmdUiCheckSidebar(CCmdUI* pCmdUi)
 	else
 		pCmdUi->SetCheck(0);
 }
-//TODO: re-enable when find in text works
 void CMainFrame::OnUpdateCmdUiFindInText(CCmdUI* pCmdUi)
 {
-	pCmdUi->Enable(false);
+	pCmdUi->Enable(theApp.isBookOpen());
 }
 void CMainFrame::OnUpdateCmdUiPlayPause(CCmdUI* pCmdUi)
 {
@@ -535,7 +534,7 @@ void CMainFrame::OnUpdateCmdUiPlayPause(CCmdUI* pCmdUi)
 }
 void amis::gui::CMainFrame::OnUpdateCmdUiPageStyle(CCmdUI* pCmdUi)
 {
-	if (theApp.isBookOpen())
+	if (theApp.isBookOpen() && Preferences::Instance()->getCustomCssFiles()->size() > 0)
 	{
 		int curr = TextRenderBrain::Instance()->getCurrentCustomStyleIndex();		
 		if (curr == -1)
@@ -574,7 +573,6 @@ void amis::gui::CMainFrame::OnUpdateCmdUiBookmarks(CCmdUI* pCmdUi)
 	else
 		updateUiCommandState(pCmdUi, false);
 }
-
 //the ON_UPDATE_COMMAND_UI messages end up here because it takes care of the toolbars too
 void amis::gui::CMainFrame::updateUiCommandState(CCmdUI* pCmdUi, bool value)
 {
@@ -645,14 +643,17 @@ void amis::gui::CMainFrame::updateToolbarState(toolbar::Toolbar* pToolbar)
 	pToolbar->enable(ID_AMIS_PREVIOUS_PHRASE, b_is_book_open);
 	pToolbar->enable(ID_AMIS_NEXT_PHRASE, b_is_book_open);
 	pToolbar->enable(ID_AMIS_SHOW_PUBLICATION_SUMMARY, b_is_book_open);
-	pToolbar->enable(ID_AMIS_NEXT_PAGE_STYLE, b_is_book_open);
+	if (b_is_book_open && Preferences::Instance()->getCustomCssFiles()->size() > 0)
+		pToolbar->enable(ID_AMIS_NEXT_PAGE_STYLE, true);
+	else
+		pToolbar->enable(ID_AMIS_NEXT_PAGE_STYLE, false);
+
 	pToolbar->enable(ID_AMIS_INCREASE_SECTION_DEPTH, b_is_book_open);
 	pToolbar->enable(ID_AMIS_DECREASE_SECTION_DEPTH, b_is_book_open);
 	pToolbar->enable(ID_AMIS_INCREASE_VOLUME, b_is_book_open);
 	pToolbar->enable(ID_AMIS_DECREASE_VOLUME, b_is_book_open);
 
-	//TODO: re-enable when the find in text feature works
-	pToolbar->enable(ID_AMIS_FIND_IN_TEXT, false);
+	pToolbar->enable(ID_AMIS_FIND_IN_TEXT, b_is_book_open);
 }
 void amis::gui::CMainFrame::RecalcLayout(BOOL bNotify)
 {
