@@ -1617,28 +1617,27 @@
         </mnemonic>
       </control>
     </dialog>
-    <!-- new dialog -->
   	<dialog mfcid="IDD_OPENURL">
       <note>This is the open URL dialog</note>
       <caption>
-        <text>Open URL</text>
+        <text id="t368" flag="new">Open URL</text>
       	<audio src=""/>
       </caption>
       <description mfcid="IDC_OPENURL_CAPTION">
-        <text>Enter the URL of the book you want to open:</text>
+        <text id="t369" flag="new">Enter the URL of the book you want to open:</text>
       	<audio src=""/>
       </description>
       <prompt type="instructions">
         <promptItem refid="tabAround"/>
         <promptItem>
-          <originalText>After typing in the URL, press enter.</originalText>    
+			<text id="t370" flag="new">After typing in the URL, press enter.</text>    
         	<audio src=""/>
         </promptItem>
         <promptItem refid="altC_to_cancel"/>
       </prompt>
       <control mfcid="IDC_URL" widget="textfield">
         <description>
-          <text>Type the URL in this field.</text>
+          	<text id="t371" flag="new">Type the URL in this field.</text>
         	<audio src="" />
         </description>
       </control>
@@ -1647,7 +1646,7 @@
           <promptItem refid="ok_button_caption"/>
         </caption>
         <description>
-          <text>Press to load the URL</text>
+          <text id="t372" flag="new">Press to load the URL</text>
           <audio src=""/>
         </description>
       </control>
