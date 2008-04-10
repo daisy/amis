@@ -322,7 +322,7 @@
             <audio src="./audio/speechgen0057.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0057.smil#txtd394e9"/>
           </caption>
           <description>
-            <text id="t48">Start synchronized playback.</text>
+            <text id="t48" flag="changed">Start or pause synchronized playback.</text>
             <audio src="./audio/speechgen0058.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0058.smil#txtd401e9"/>
           </description>
           <accelerator keys="Space">
@@ -343,7 +343,7 @@
             <audio src="./audio/speechgen0061.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0061.smil#txtd422e9"/>
           </caption>
           <description>
-            <text id="t52">Pause playback of this DAISY book.</text>
+            <text id="t52" flag="changed">Start or pause playback of this DAISY book.</text>
             <audio src="./audio/speechgen0062.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0062.smil#txtd429e9"/>
           </description>
           <accelerator keys="Space">

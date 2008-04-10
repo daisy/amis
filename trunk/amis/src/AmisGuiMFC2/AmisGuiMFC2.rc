@@ -558,7 +558,7 @@ STRINGTABLE
 BEGIN
     ID_AMIS_BIGGER_FONT     "Increase the font size."
     ID_AMIS_SMALLER_FONT    "Reduce the font size."
-    ID_AMIS_PLAYPAUSE       "Start synchronized playback."
+    ID_AMIS_PLAYPAUSE       "Start or pause synchronized playback."
     ID_AMIS_ESCAPE          "Jump out of the currently playing item or structure."
     ID_AMIS_FASTER          "Increase the playback rate."
     ID_AMIS_SLOWER          "Slow down the playback rate."

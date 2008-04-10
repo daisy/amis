@@ -83,9 +83,12 @@ public:
 	void addButton(ToolbarButton*);
 	ToolbarButton* getButtonOne();
 	ToolbarButton* getButtonTwo();
+	void setCurrent(ToolbarButton*);
+	ToolbarButton* getCurrent();
 private:
 	ToolbarButton* mpButtonOne;
 	ToolbarButton* mpButtonTwo;
+	ToolbarButton* mpCurrent;
 };
 
 enum ToolbarPlacement {TOP, BOTTOM, LEFT, RIGHT};
@@ -132,7 +135,9 @@ private:
 	CToolTipCtrl* mpToolTips;
 	CImageList m_images;
 	ToolbarSettings* mpSettings;
+	ToolbarButton* mpCurrentForPlayOrPause;
 	DECLARE_MESSAGE_MAP()
+
 };
 }
 }

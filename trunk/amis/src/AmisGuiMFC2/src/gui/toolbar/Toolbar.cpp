@@ -112,12 +112,14 @@ ToolbarToggleButton::~ToolbarToggleButton()
 //add a button as the first or second (or don't add it if there are no empty slots)
 void ToolbarToggleButton::addButton(ToolbarButton* pButton)
 {
-	if (mpButtonOne == NULL) mpButtonOne = pButton;
-	else if (mpButtonTwo == NULL) mpButtonTwo = pButton;
+	if (mpButtonOne == NULL) setButtonOne(pButton);
+	else if (mpButtonTwo == NULL) setButtonTwo(pButton);
 }
 void ToolbarToggleButton::setButtonOne(ToolbarButton* pButton)
 {
 	mpButtonOne = pButton;
+	//default is button one
+	mpCurrent = mpButtonOne;
 }
 void ToolbarToggleButton::setButtonTwo(ToolbarButton* pButton)
 {
@@ -131,7 +133,14 @@ ToolbarButton* ToolbarToggleButton::getButtonTwo()
 {
 	return mpButtonTwo;
 }
-
+void ToolbarToggleButton::setCurrent(ToolbarButton* pButton)
+{
+	mpCurrent = pButton;
+}
+ToolbarButton* ToolbarToggleButton::getCurrent()
+{
+	return mpCurrent;
+}
 /**
 * settings for the toolbar
 **/
@@ -278,10 +287,12 @@ void Toolbar::togglePlayPause(bool bShowPlay)
 	if (bShowPlay == true)
 	{
 		play_or_pause.iBitmap = play_button->getImageIndex();
+		play_pause_button->setCurrent(play_button);
 	}
 	else
 	{
 		play_or_pause.iBitmap = pause_button->getImageIndex();
+		play_pause_button->setCurrent(pause_button); 
 	}
 	DeleteButton(index_of_toggle);
 	InsertButton(index_of_toggle, &play_or_pause);
@@ -358,7 +369,7 @@ int Toolbar::OnCreate(LPCREATESTRUCT lpCreateStruct)
 			buttons[i].iBitmap = j;
 			buttons[i].fsState = TBSTATE_ENABLED;
 			buttons[i].fsStyle=TBSTYLE_BUTTON;
-			buttons[i].iString = 0; //TODO: fill this in
+			buttons[i].iString = p_button->getCommandId();
 			buttons[i].idCommand = p_button->getCommandId();
 			j++;
 		}
@@ -370,7 +381,7 @@ int Toolbar::OnCreate(LPCREATESTRUCT lpCreateStruct)
 			p_button->getButtonTwo()->setImageIndex(j+1);
 			buttons[i].fsState = TBSTATE_ENABLED;
 			buttons[i].fsStyle=TBSTYLE_BUTTON;
-			buttons[i].iString = 0; //TODO: fill this in
+			buttons[i].iString = p_button->getButtonOne()->getCommandId();
 			buttons[i].idCommand = p_button->getButtonOne()->getCommandId();
 			j+=2;
 		}
@@ -393,11 +404,15 @@ BOOL Toolbar::OnToolTipNotify( UINT id, NMHDR * pNMHDR, LRESULT * pResult )
 	   ToolbarItems items = mpSettings->getItems();
 	   for (unsigned int i=0; i<items.size(); i++)
 	   {
-		   if (items[i]->getType() == BUTTON 
-			   && ((ToolbarButton*)items[i])->getCommandId() == nID)
+		   if ((items[i]->getType() == BUTTON && 
+			   ((ToolbarButton*)items[i])->getCommandId() == nID)
+				||
+			   (items[i]->getType() == TOGGLE && 
+			   ((ToolbarToggleButton*)items[i])->getCurrent()->getCommandId() == nID)
+			   )
+
 		  {
-			//TODO: redo this when string id is filled in
-			//pTTT->lpszText = (unsigned short*)mButtons[i]->mStringId;
+			pTTT->lpszText = (unsigned short*)nID;
 			pTTT->hinst = AfxGetResourceHandle();
 			break;
 		  }
