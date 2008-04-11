@@ -72,7 +72,7 @@ protected:
 	afx_msg void OnActivate( UINT nState, CWnd* pWndOther, BOOL bMinimized ); 
 	afx_msg void OnSysCommand(UINT nID, LPARAM lParam);
 	//these update the menu items and toolbar buttons for the mapped command
-	afx_msg void OnUpdateCmdUiPageCommands(CCmdUI*);
+	afx_msg void OnUpdateCmdUiGoToPage(CCmdUI*);
 	afx_msg void OnUpdateCmdUiGeneral(CCmdUI*);
 	afx_msg void OnUpdateCmdUiInfoSkip(CCmdUI*);
 	afx_msg void OnUpdateCmdUiPlaySlower(CCmdUI*);
@@ -84,6 +84,12 @@ protected:
 	afx_msg void OnUpdateCmdUiBiggerFont(CCmdUI*);
 	afx_msg void OnUpdateCmdUiSmallerFont(CCmdUI*);
 	afx_msg void OnUpdateCmdUiBookmarks(CCmdUI*);
+	afx_msg void OnUpdateCmdUiPreviousSection(CCmdUI*);
+	afx_msg void OnUpdateCmdUiNextSection(CCmdUI*);
+	afx_msg void OnUpdateCmdUiPreviousPhrase(CCmdUI*);
+	afx_msg void OnUpdateCmdUiNextPhrase(CCmdUI*);
+	afx_msg void OnUpdateCmdUiPreviousPage(CCmdUI*);
+	afx_msg void OnUpdateCmdUiNextPage(CCmdUI*);
 	afx_msg void OnClose();
 	DECLARE_MESSAGE_MAP()
 public:

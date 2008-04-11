@@ -65,9 +65,9 @@ BEGIN_MESSAGE_MAP(CMainFrame, CMDIFrameWnd)
 	ON_WM_EXITMENULOOP()
 	//ON_WM_KEYDOWN()
 	ON_WM_SYSCOMMAND()
-	ON_UPDATE_COMMAND_UI(ID_AMIS_NEXT_PAGE, OnUpdateCmdUiPageCommands)
-	ON_UPDATE_COMMAND_UI(ID_AMIS_PREVIOUS_PAGE, OnUpdateCmdUiPageCommands)
-	ON_UPDATE_COMMAND_UI(ID_AMIS_GOTO_PAGE, OnUpdateCmdUiPageCommands)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_NEXT_PAGE, OnUpdateCmdUiNextPage)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_PREVIOUS_PAGE, OnUpdateCmdUiPreviousPage)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_GOTO_PAGE, OnUpdateCmdUiGoToPage)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_ADD_BOOKMARK, OnUpdateCmdUiBookmarks)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_FASTER, OnUpdateCmdUiPlayFaster)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_CLOSE_BOOK, OnUpdateCmdUiGeneral)
@@ -79,10 +79,10 @@ BEGIN_MESSAGE_MAP(CMainFrame, CMDIFrameWnd)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_PLAYPAUSE, OnUpdateCmdUiPlayPause)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_ESCAPE, OnUpdateCmdUiGeneral)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_RESET_SPEED, OnUpdateCmdUiGeneral)
-	ON_UPDATE_COMMAND_UI(ID_AMIS_PREVIOUS_SECTION, OnUpdateCmdUiGeneral)
-	ON_UPDATE_COMMAND_UI(ID_AMIS_NEXT_SECTION, OnUpdateCmdUiGeneral)
-	ON_UPDATE_COMMAND_UI(ID_AMIS_PREVIOUS_PHRASE, OnUpdateCmdUiGeneral)
-	ON_UPDATE_COMMAND_UI(ID_AMIS_NEXT_PHRASE, OnUpdateCmdUiGeneral)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_PREVIOUS_SECTION, OnUpdateCmdUiPreviousSection)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_NEXT_SECTION, OnUpdateCmdUiNextSection)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_PREVIOUS_PHRASE, OnUpdateCmdUiPreviousPhrase)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_NEXT_PHRASE, OnUpdateCmdUiNextPhrase)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_FIND_IN_TEXT, OnUpdateCmdUiFindInText)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_SHOW_PUBLICATION_SUMMARY, OnUpdateCmdUiGeneral)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_NEXT_PAGE_STYLE, OnUpdateCmdUiPageStyle)
@@ -472,7 +472,7 @@ void CMainFrame::OnSysCommand(UINT nID, LPARAM lParam)
 //---------------------------------------------
 //beginning of menu command updater functions
 //---------------------------------------------
-void CMainFrame::OnUpdateCmdUiPageCommands(CCmdUI* pCmdUi)
+void CMainFrame::OnUpdateCmdUiGoToPage(CCmdUI* pCmdUi)
 {
 	if (theApp.isBookOpen() && amis::dtb::DtbWithHooks::Instance()->getNavModel()->hasPages())
 		updateUiCommandState(pCmdUi, true);
@@ -573,6 +573,48 @@ void amis::gui::CMainFrame::OnUpdateCmdUiBookmarks(CCmdUI* pCmdUi)
 	else
 		updateUiCommandState(pCmdUi, false);
 }
+void amis::gui::CMainFrame::OnUpdateCmdUiPreviousPhrase(CCmdUI* pCmdUi)
+{
+	if (theApp.isBookOpen() && amis::dtb::DtbWithHooks::Instance()->canGoToPreviousPhrase())
+		updateUiCommandState(pCmdUi, true);
+	else
+		updateUiCommandState(pCmdUi, false);
+}
+void amis::gui::CMainFrame::OnUpdateCmdUiNextPhrase(CCmdUI* pCmdUi)
+{
+	if (theApp.isBookOpen() && amis::dtb::DtbWithHooks::Instance()->canGoToNextPhrase())
+		updateUiCommandState(pCmdUi, true);
+	else
+		updateUiCommandState(pCmdUi, false);
+}
+void amis::gui::CMainFrame::OnUpdateCmdUiPreviousSection(CCmdUI* pCmdUi)
+{
+	if (theApp.isBookOpen() && amis::dtb::DtbWithHooks::Instance()->canGoToPreviousSection())
+		updateUiCommandState(pCmdUi, true);
+	else
+		updateUiCommandState(pCmdUi, false);
+}
+void amis::gui::CMainFrame::OnUpdateCmdUiNextSection(CCmdUI* pCmdUi)
+{
+	if (theApp.isBookOpen() && amis::dtb::DtbWithHooks::Instance()->canGoToNextSection())
+		updateUiCommandState(pCmdUi, true);
+	else
+		updateUiCommandState(pCmdUi, false);
+}
+void amis::gui::CMainFrame::OnUpdateCmdUiPreviousPage(CCmdUI* pCmdUi)
+{
+	if (theApp.isBookOpen() && amis::dtb::DtbWithHooks::Instance()->canGoToPreviousPage())
+		updateUiCommandState(pCmdUi, true);
+	else
+		updateUiCommandState(pCmdUi, false);
+}
+void amis::gui::CMainFrame::OnUpdateCmdUiNextPage(CCmdUI* pCmdUi)
+{
+	if (theApp.isBookOpen() && amis::dtb::DtbWithHooks::Instance()->canGoToNextPage())
+		updateUiCommandState(pCmdUi, true);
+	else
+		updateUiCommandState(pCmdUi, false);
+}
 //the ON_UPDATE_COMMAND_UI messages end up here because it takes care of the toolbars too
 void amis::gui::CMainFrame::updateUiCommandState(CCmdUI* pCmdUi, bool value)
 {
@@ -591,18 +633,30 @@ void amis::gui::CMainFrame::updateToolbarState(toolbar::Toolbar* pToolbar)
 		pToolbar->enable(ID_AMIS_SLOWER, theApp.canDecreasePlaybackSpeed());
 		pToolbar->enable(ID_AMIS_FASTER, theApp.canIncreasePlaybackSpeed());
 	
-	//page navigation
+	//navigation
 	if (b_is_book_open)
 	{
-		pToolbar->enable(ID_AMIS_NEXT_PAGE, amis::dtb::DtbWithHooks::Instance()->getNavModel()->hasPages());
-		pToolbar->enable(ID_AMIS_PREVIOUS_PAGE, amis::dtb::DtbWithHooks::Instance()->getNavModel()->hasPages());
-		pToolbar->enable(ID_AMIS_GOTO_PAGE, amis::dtb::DtbWithHooks::Instance()->getNavModel()->hasPages());
+		if (amis::dtb::DtbWithHooks::Instance()->getNavModel()->hasPages())
+		{
+			pToolbar->enable(ID_AMIS_NEXT_PAGE, amis::dtb::DtbWithHooks::Instance()->canGoToNextPage());
+			pToolbar->enable(ID_AMIS_PREVIOUS_PAGE, amis::dtb::DtbWithHooks::Instance()->canGoToPreviousPage());
+			pToolbar->enable(ID_AMIS_GOTO_PAGE, true);
+		}
+		pToolbar->enable(ID_AMIS_PREVIOUS_SECTION, amis::dtb::DtbWithHooks::Instance()->canGoToPreviousSection());
+		pToolbar->enable(ID_AMIS_NEXT_SECTION, amis::dtb::DtbWithHooks::Instance()->canGoToNextSection());
+	
+		pToolbar->enable(ID_AMIS_PREVIOUS_PHRASE, amis::dtb::DtbWithHooks::Instance()->canGoToPreviousPhrase());
+		pToolbar->enable(ID_AMIS_NEXT_PHRASE, amis::dtb::DtbWithHooks::Instance()->canGoToNextPhrase());
 	}
 	else
 	{
 		pToolbar->enable(ID_AMIS_NEXT_PAGE, false);
 		pToolbar->enable(ID_AMIS_PREVIOUS_PAGE, false);
 		pToolbar->enable(ID_AMIS_GOTO_PAGE, false);
+		pToolbar->enable(ID_AMIS_PREVIOUS_SECTION, false);
+		pToolbar->enable(ID_AMIS_NEXT_SECTION, false);
+		pToolbar->enable(ID_AMIS_PREVIOUS_PHRASE, false);
+		pToolbar->enable(ID_AMIS_NEXT_PHRASE, false);
 	}
 
 	//font sizes
@@ -638,10 +692,6 @@ void amis::gui::CMainFrame::updateToolbarState(toolbar::Toolbar* pToolbar)
 	pToolbar->enable(ID_AMIS_PLAYPAUSE, b_is_book_open);
 	pToolbar->enable(ID_AMIS_ESCAPE, b_is_book_open);
 	pToolbar->enable(ID_AMIS_RESET_SPEED, b_is_book_open);
-	pToolbar->enable(ID_AMIS_PREVIOUS_SECTION, b_is_book_open);
-	pToolbar->enable(ID_AMIS_NEXT_SECTION, b_is_book_open);
-	pToolbar->enable(ID_AMIS_PREVIOUS_PHRASE, b_is_book_open);
-	pToolbar->enable(ID_AMIS_NEXT_PHRASE, b_is_book_open);
 	pToolbar->enable(ID_AMIS_SHOW_PUBLICATION_SUMMARY, b_is_book_open);
 	if (b_is_book_open && Preferences::Instance()->getCustomCssFiles()->size() > 0)
 		pToolbar->enable(ID_AMIS_NEXT_PAGE_STYLE, true);

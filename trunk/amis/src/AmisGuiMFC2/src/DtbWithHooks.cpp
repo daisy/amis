@@ -157,7 +157,6 @@ smil::SmilMediaGroup* DtbWithHooks::startReading(bool loadLastmark)
 	return pData;
 #endif
 }
-
 smil::SmilMediaGroup* DtbWithHooks::nextPhrase()
 {
 	amis::gui::MainWndParts::Instance()->mpMmView->nextPhrase();
@@ -473,4 +472,64 @@ void DtbWithHooks::nextPage()
 	{
 		p_log->writeWarning("current nav node is NULL", "DtbWithHooks::nextPage", "AmisGuiMFC2");
 	}
+}
+//always true until the nextPhrase + document_stopped event can be untangled in MmView
+//to find out if we really have a next phrase or not
+bool DtbWithHooks::canGoToNextPhrase()
+{
+	return true;	
+}
+//always true until the previousPhrase + document_stopped event can be untangled in MmView
+//to find out if we really have a previous phrase or not
+bool DtbWithHooks::canGoToPreviousPhrase()
+{
+	return true;
+}
+bool DtbWithHooks::canGoToNextSection()
+{
+	amis::dtb::nav::NavNode* p_node = getCurrentNavNode();
+	if (p_node != NULL)
+	{
+		std::string id = p_node->getId();
+		p_node = getNavModel()->nextSection(p_node->getPlayOrder());
+		if (p_node != NULL) return true;
+		else return false;
+	}
+	return false;
+}
+bool DtbWithHooks::canGoToPreviousSection()
+{
+	amis::dtb::nav::NavNode* p_node = getCurrentNavNode();
+	if (p_node != NULL)
+	{
+		std::string id = p_node->getId();
+		p_node = getNavModel()->previousSection(p_node->getPlayOrder());
+		if (p_node != NULL) return true;
+		else return false;
+	}
+	return false;
+}
+bool DtbWithHooks::canGoToNextPage()
+{
+	amis::dtb::nav::NavNode* p_node = getCurrentNavNode();
+	if (p_node != NULL)
+	{
+		std::string id = p_node->getId();
+		p_node = getNavModel()->nextPage(p_node->getPlayOrder());
+		if (p_node != NULL) return true;
+		else return false;
+	}
+	return false;
+}
+bool DtbWithHooks::canGoToPreviousPage()
+{
+	amis::dtb::nav::NavNode* p_node = getCurrentNavNode();
+	if (p_node != NULL)
+	{
+		std::string id = p_node->getId();
+		p_node = getNavModel()->previousPage(p_node->getPlayOrder());
+		if (p_node != NULL) return true;
+		else return false;
+	}
+	return false;
 }

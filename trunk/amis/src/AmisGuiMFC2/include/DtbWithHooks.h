@@ -57,6 +57,12 @@ public:
 	amis::dtb::Bookmark* addBookmark();
 	void loadBookmark(int);
 	amis::dtb::smil::SmilMediaGroup* loadSmilFromUrl(const ambulant::net::url*);
+	bool canGoToNextPhrase();
+	bool canGoToPreviousPhrase();
+	bool canGoToNextSection();
+	bool canGoToPreviousSection();
+	bool canGoToNextPage();
+	bool canGoToPreviousPage();
 
 private:
 	void addToHistory();
