@@ -368,10 +368,6 @@ void CAmisApp::initializeSelfVoicing()
 	{
 		amis::Preferences::Instance()->setIsSelfVoicing(false);
 	}
-
-//TODO: this is for testing until the alpha 2 (in alpha 1, Self-Voicing is totally disabled)	
-amis::Preferences::Instance()->setIsSelfVoicing(true);
-	
 }
 const ambulant::net::url& CAmisApp::getBookURL() const
 {
@@ -808,9 +804,9 @@ void CAmisApp::OnPreferences()
 		prefs_io.writeToFile(Preferences::Instance()->getSourceUrl()->get_file(), Preferences::Instance());
 		Preferences::Instance()->logUserControllablePreferences();
 	}
-	else {
-		amis::util::Log::Instance()->writeMessage("Dialog cancelled", "CAmisApp::OnPreferences", "AmisGuiMFC2");
-		
+	else 
+	{
+		amis::util::Log::Instance()->writeMessage("Dialog cancelled", "CAmisApp::OnPreferences", "AmisGuiMFC2");	
 		// make sure to restore the original voice (which may have been changed in the preference dialog)
 		amis::tts::TTSPlayer::Instance()->ChangeVoice(Preferences::Instance()->getTTSVoiceIndex());
 	}
