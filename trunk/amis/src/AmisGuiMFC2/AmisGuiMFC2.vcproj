@@ -305,6 +305,10 @@
 						>
 					</File>
 					<File
+						RelativePath=".\include\gui\dialogs\FindInTextDialog.h"
+						>
+					</File>
+					<File
 						RelativePath=".\include\gui\dialogs\GoToPageDialog.h"
 						>
 					</File>
@@ -835,6 +839,10 @@
 								UsePrecompiledHeader="0"
 							/>
 						</FileConfiguration>
+					</File>
+					<File
+						RelativePath=".\src\gui\dialogs\FindInTextDialog.cpp"
+						>
 					</File>
 					<File
 						RelativePath=".\src\gui\dialogs\GoToPageDialog.cpp"

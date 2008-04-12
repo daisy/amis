@@ -69,6 +69,7 @@ public:
 	void setNewLastmark(ambulant::net::url);
 	ambulant::net::url calculateUriOfData(amis::dtb::smil::SmilMediaGroup*);
 	amis::dtb::nav::NavNode* getCurrentNavNode();
+	wstring getLastTextSearchString();
 
 	amis::dtb::DaisyVersion getDaisyVersion();
 	bool isProtected();

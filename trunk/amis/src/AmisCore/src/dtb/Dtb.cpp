@@ -631,7 +631,10 @@ string amis::dtb::Dtb::searchFullTextPrevious()
 {
 	return searchFullTextRelative(-1);
 }
-
+wstring amis::dtb::Dtb::getLastTextSearchString()
+{
+	return mLastSearchString;
+}
 //input: filename#target
 amis::dtb::smil::SmilMediaGroup* amis::dtb::Dtb::loadSmilFromUrl(ambulant::net::url* filepath)
 {
@@ -652,8 +655,6 @@ amis::dtb::smil::SmilMediaGroup* amis::dtb::Dtb::loadSmilFromUrl(ambulant::net::
 	return mpSmilTree->goToId(filepath->get_ref());
 #endif
 }
-
-
 
 string amis::dtb::Dtb::searchFullTextRelative(int dir)
 {

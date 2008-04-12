@@ -28,7 +28,12 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 using namespace amis::gui::dialogs;
 
-void GoToPageDialog::resolvePromptVariables(Prompt* pPrompt) {
+BEGIN_MESSAGE_MAP(GoToPageDialog, CDialog)
+	ON_WM_PAINT()
+END_MESSAGE_MAP()
+
+void GoToPageDialog::resolvePromptVariables(Prompt* pPrompt) 
+{
 	return;
 }
 
@@ -70,10 +75,6 @@ std::wstring GoToPageDialog::getPageNumber()
 }
 
 
-BEGIN_MESSAGE_MAP(GoToPageDialog, CDialog)
-	ON_WM_PAINT()
-END_MESSAGE_MAP()
-
 void GoToPageDialog::OnPaint() 
 {
 	CPaintDC dc(this); // device context for painting
@@ -85,7 +86,7 @@ void GoToPageDialog::OnPaint()
 
 BOOL GoToPageDialog::PreTranslateMessage(MSG* pMsg)
 {
-		return AmisDialogBase::PreTranslateMessageTextField(pMsg, IDC_PAGENUM);
+	return AmisDialogBase::PreTranslateMessageTextField(pMsg, IDC_PAGENUM);
 
 	/*
 	if (pMsg->message == WM_KEYDOWN || pMsg->message == WM_KEYUP)

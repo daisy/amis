@@ -55,6 +55,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "gui/dialogs/PreferencesDialog.h"
 #include "gui/dialogs/PublicationSummaryDialog.h"
 #include "gui/dialogs/TextStyleDialog.h"
+#include "gui/dialogs/FindInTextDialog.h"
 
 #include "gui/self-voicing/directshow/dx_audio_player.h"
 
@@ -115,6 +116,9 @@ BEGIN_MESSAGE_MAP(CAmisApp, CWinApp)
 	ON_COMMAND(ID_AMIS_NEXT_PAGE_STYLE, OnNextPageStyle)
 	ON_COMMAND(ID_AMIS_SHOW_TEXTSTYLE, OnShowTextStyle)
 	ON_COMMAND_RANGE(AMIS_VIEW_MENU_BASE_ID, AMIS_VIEW_MENU_BASE_ID + AMIS_MAX_ANYTHING, OnChangeTab)
+	ON_COMMAND(ID_AMIS_FIND_IN_TEXT, OnShowFindInText)
+	ON_COMMAND(ID_AMIS_FIND_NEXT_IN_TEXT, OnFindNextInText)
+	ON_COMMAND(ID_AMIS_FIND_PREVIOUS_IN_TEXT, OnFindPreviousInText)
 END_MESSAGE_MAP()
 
 
@@ -852,6 +856,56 @@ void CAmisApp::OnChangeTab(UINT id)
 	idx = id - AMIS_VIEW_MENU_BASE_ID;
 	MainWndParts::Instance()->mpSidebar->m_wndDlg.selectTab(idx);
 }
+void CAmisApp::OnShowFindInText()
+{
+	amis::gui::dialogs::FindInTextDialog dlg;
+	CString last_val = 
+		amis::dtb::DtbWithHooks::Instance()->getLastTextSearchString().c_str();
+	dlg.forceSearchValue(last_val);
+	
+	if (dlg.DoModal() == IDOK)
+	{
+		CString tmp = dlg.getUserSearchString();
+		if (tmp.GetLength() == 0) return;
+		int dir = dlg.getSearchDirection();
+		wstring search_string = tmp;
+		//the address of the search result
+		std::string result;
+		//there should only be searchNext and searchPrevious, not searchFullText
+		//AmisCore needs fixing
+		if (dir == 1)
+			result = amis::dtb::DtbWithHooks::Instance()->searchFullText(search_string);
+		else
+			result = amis::dtb::DtbWithHooks::Instance()->searchFullText(search_string);
+		
+		if (result.size() > 0)
+		{
+			ambulant::net::url smil_url = ambulant::net::url::from_url(result);
+			amis::dtb::DtbWithHooks::Instance()->loadSmilFromUrl(&smil_url);
+		}
+	}
+}
+void CAmisApp::OnFindNextInText()
+{
+	string result;
+	result = amis::dtb::DtbWithHooks::Instance()->searchFullTextNext();
+	if (result.size() > 0)
+	{		
+		ambulant::net::url smil_url = ambulant::net::url::from_url(result);
+		amis::dtb::DtbWithHooks::Instance()->loadSmilFromUrl(&smil_url);
+	}
+}
+void CAmisApp::OnFindPreviousInText()
+{
+	string result;
+	result = amis::dtb::DtbWithHooks::Instance()->searchFullTextPrevious();
+	if (result.size() > 0)
+	{
+		ambulant::net::url smil_url = ambulant::net::url::from_url(result);
+		amis::dtb::DtbWithHooks::Instance()->loadSmilFromUrl(&smil_url);
+	}
+}
+
 /***************************************************
 * (MED) I moved these functions out of the menu handler area
 *****************************************************/

@@ -1,9 +1,9 @@
-﻿/*
+/*
 AMIS: Adaptive Multimedia Information System
 Software for playing DAISY books
 Homepage: http://amis.sf.net
 
-Copyright (C) 2004-2007  DAISY for All Project
+Copyright (C) 2004-2008  DAISY for All Project
 
 This library is free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public
@@ -19,8 +19,8 @@ You should have received a copy of the GNU Lesser General Public
 License along with this library; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
-#ifndef GOTOPAGEDIALOG_H
-#define GOTOPAGEDIALOG_H
+#ifndef FINDINTEXTDIALOG_H
+#define FINDINTEXTDIALOG_H
 
 #include "gui/dialogs/AmisDialogBase.h"
 #include "../resource.h"
@@ -32,26 +32,36 @@ namespace gui
 {
 namespace dialogs
 {
-class GoToPageDialog : public AmisDialogBase
+class FindInTextDialog : public AmisDialogBase
 {
 public:
+	FindInTextDialog(CWnd* pParent = NULL);
+	~FindInTextDialog();
+	enum { IDD = IDD_FIND };
+	CString getUserSearchString();
+	int getSearchDirection();
+	void forceSearchValue(CString);
 	void resolvePromptVariables(Prompt*);
 
-	GoToPageDialog(CWnd* pParent = NULL);
-	~GoToPageDialog();
-	//Dialog Data
-	enum { IDD = IDD_GOTOPAGE };
-	std::wstring getPageNumber();
-	virtual BOOL PreTranslateMessage(MSG* pMsg);
-protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
-	virtual BOOL OnInitDialog();
 private:
-	CString m_PageNumber;
+	CString mUserData;
+	int mDir;
+
 protected:
-	//{{AFX_MSG(GoToPageDialog)
+	virtual BOOL OnInitDialog();
+	virtual BOOL PreTranslateMessage(MSG* pMsg);
+
+	afx_msg void OnBnClickedOk();
+	afx_msg void OnBnClickedFindnext();
+	afx_msg void OnBnSetfocusFindnext();
+	afx_msg void OnBnClickedFindprev();
+	afx_msg void OnBnSetfocusFindprev();
+
 	afx_msg void OnPaint();
-	//}}AFX_MSG
+	afx_msg void OnEnChangeSearchstring();
+	afx_msg void OnSetfocusSearchString();
+	afx_msg void OnSetfocusOk();
+	afx_msg void OnSetfocusCancel();
 	DECLARE_MESSAGE_MAP()
 };
 }

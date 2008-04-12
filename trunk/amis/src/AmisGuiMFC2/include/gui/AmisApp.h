@@ -108,6 +108,9 @@ public:
 	afx_msg void OnNextPageStyle();
 	afx_msg void OnShowTextStyle();
 	afx_msg void OnChangeTab(UINT);
+	afx_msg void OnShowFindInText();
+	afx_msg void OnFindNextInText();
+	afx_msg void OnFindPreviousInText();
 protected:
 	HMENU m_hMDIMenu;
 	HACCEL m_hMDIAccel;
@@ -126,9 +129,7 @@ private:
 	bool mbBookIsOpen;
 	bool mbShouldIgnoreOpenDocEvent;
 	bool mbWasLastExitClean;
-	
 public:
-	//afx_msg void OnAppAbout();
 	DECLARE_MESSAGE_MAP()
 
 };

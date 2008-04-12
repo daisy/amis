@@ -14,6 +14,8 @@
 #define ID_AMIS_RESET_HIGHLIGHT_COLORS  132
 #define ID_AMIS_TOGGLE_AUDIO_CONTENT_PLAYBACK 133
 #define ID_AMIS_TOGGLE_AUDIO_SELFVOICING_PLAYBACK 134
+#define ID_AMIS_FIND_NEXT_IN_TEXT       143
+#define ID_AMIS_FIND_PREVIOUS_IN_TEXT   144
 #define IDD_FIND                        147
 #define AMIS_VIEW_MENU_BASE_ID          150
 #define IDI_AMIS                        164
@@ -130,8 +132,8 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_3D_CONTROLS                     1
 #define _APS_NEXT_RESOURCE_VALUE        194
-#define _APS_NEXT_COMMAND_VALUE         32955
+#define _APS_NEXT_COMMAND_VALUE         32957
 #define _APS_NEXT_CONTROL_VALUE         1117
-#define _APS_NEXT_SYMED_VALUE           143
+#define _APS_NEXT_SYMED_VALUE           145
 #endif
 #endif
