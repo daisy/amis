@@ -256,6 +256,8 @@ Section Uninstall
   RMDir "$INSTDIR"
   DeleteRegKey ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}"
   DeleteRegKey HKLM "${PRODUCT_DIR_REGKEY}"
+  Delete "$SMPROGRAMS\AMIS\AMIS.lnk" 
+  Delete "$DESKTOP\AMIS.lnk" 
   SetAutoClose true
 SectionEnd
 
