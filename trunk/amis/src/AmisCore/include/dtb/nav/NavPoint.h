@@ -44,7 +44,7 @@ public:
 	NavPoint* getParent();
 	NavPoint* next();
 
-	//@todo: finish previous() function
+	//TODO: finish previous() function
 	NavPoint* previous();
 	void resetChildCount();
 	int getNumChildren();

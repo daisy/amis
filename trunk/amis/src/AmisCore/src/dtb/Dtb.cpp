@@ -494,7 +494,6 @@ amis::dtb::smil::SmilMediaGroup* amis::dtb::Dtb::nextPhrase()
 			}
 			else
 			{
-				//todo: else, set status that we are at the end of the book
 				//cout<<"** end of book **"<<endl;
 			}
 		}

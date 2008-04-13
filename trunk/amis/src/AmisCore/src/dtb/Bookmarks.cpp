@@ -176,7 +176,6 @@ void amis::dtb::BookmarkSet::addBookmark(Bookmark* pBookmark)
 {
 	mItems.push_back(pBookmark);
 }
-//todo: verify that this function works
 void amis::dtb::BookmarkSet::deleteItem(unsigned int idx)
 {
 	if (mItems.size() == 0 || idx > mItems.size()-1) return;

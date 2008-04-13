@@ -133,13 +133,12 @@ void TextRenderBrain::webDocumentComplete()
 {
 	if (mbWaitForDocumentLoad)
 	{
-		//mpAmisCss = MainWndParts::Instance()->mpHtmlView->applyStylesheet
-		//	(Preferences::Instance()->getAmisCssFile());
-		//TODO: does this ever work?  need to test more books.
-		if (amis::dtb::DtbWithHooks::Instance()->getDaisyVersion() == amis::dtb::DAISY_2005)
-			MainWndParts::Instance()->mpHtmlView->applyStylesheet(Preferences::Instance()->getZed2005CssFile());
-
+		//this is the user's css file
+		mpAmisCss = MainWndParts::Instance()->mpHtmlView->applyStylesheet
+			(Preferences::Instance()->getAmisCssFile());
+		
 		MainWndParts::Instance()->mpHtmlView->RedrawWindow();
+		MainWndParts::Instance()->mpMainFrame->RecalcLayout();
 		mbWaitForDocumentLoad = false;
 
 		//refresh font size and contrast settings for the newly loaded page

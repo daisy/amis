@@ -79,8 +79,6 @@ void CAmisSidebar::clearAll()
 		p_navl = mNavLists[i];
 		if (p_navl) 
 		{
-			//TODO: Why does this crash when enabled ??!
-			//p_navl->DeleteAllItems();
 			p_navl->DestroyWindow();
 		}
 		mNavLists.pop_back();

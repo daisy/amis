@@ -62,8 +62,6 @@ void amis::dtb::nav::NavMap::printNode(NavPoint* pNode, int level)
 	int cnt;
 	int i;
 
-	//@todo: move level and parent data printouts to NavPoint eventually
-
 	// print out the correct number of tabs
 	for (i = 0; i<level; i++)
 	{

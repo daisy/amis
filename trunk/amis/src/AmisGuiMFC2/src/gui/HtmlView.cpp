@@ -633,6 +633,8 @@ IHTMLStyleSheet* CAmisHtmlView::applyStylesheet(const ambulant::net::url* styles
 	//without this line, the stylesheet gets a weird leftover border from the previous style
 	//it still happens sometimes though
 	//if you move the window or scroll, the weird border goes away
+	
+	MainWndParts::Instance()->mpMainFrame->RecalcLayout();
 	MainWndParts::Instance()->mpMainFrame->ShowWindow(SW_SHOWNA);
 	
 	return pStyleSheet;

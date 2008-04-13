@@ -94,13 +94,10 @@ bool amis::io::NavFileReader::readFromFile(const ambulant::net::url* filepath)
 	}
 }
 
-//todo: move custom tests out of nav model
 void amis::io::NavFileReader::addCustomTest(string id, bool override, 
 								  bool defaultState, string bookStruct)
 {
-	//amis::dtb::CustomTest* p_temp;
 	amis::dtb::CustomTest* p_custom_test = new amis::dtb::CustomTest();
-
 	p_custom_test->setId(id);
 	p_custom_test->setOverride(override);
 	p_custom_test->setDefaultState(defaultState);

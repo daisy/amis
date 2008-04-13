@@ -290,8 +290,6 @@ void PreferencesDialog::initializeUiLanguageOption()
 	}
 	list->SetCurSel(sel);
 	setCurrentLanguageLabel();
-
-	//TODO: ensure that the icon for the language will get loaded based on what language pack/resource set we are using
 }
 
 //This just appends the name of the current language to the dialog label

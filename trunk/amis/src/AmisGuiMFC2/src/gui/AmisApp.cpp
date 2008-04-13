@@ -557,7 +557,6 @@ void CAmisApp::OnNavPrevPage()
 	amis::dtb::DtbWithHooks::Instance()->previousPage();
 }
 
-//TODO need to fix this...how do I stop ambulant?
 void CAmisApp::OnFileClose()
 {
 	amis::util::Log::Instance()->writeMessage("Closing book", "CAmisApp::OnFileClose", "AmisGuiMFC2");

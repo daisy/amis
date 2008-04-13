@@ -83,7 +83,7 @@ amis::dtb::nav::NavPoint* amis::dtb::nav::NavPoint::next()
 }
 
 
-//@todo: complete this function
+//TODO: complete this function
 amis::dtb::nav::NavPoint* amis::dtb::nav::NavPoint::previous()
 {
 	return NULL;

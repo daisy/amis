@@ -119,12 +119,6 @@ void DtbWithHooks::updateCustomTestStates(bool playAll)
 		if (this->getDaisyVersion() == DAISY_202) test_id.append("-on");
 		bool state = p_tests->getCustomTest(i)->getCurrentState() | playAll;
 		ambulant::smil2::test_attrs::set_current_system_component_value(test_id, state);
-		//TODO: review skippability across document boundaries
-		//this commented-out line in mmview might be interesting:
-		//player->set_custom_test ... 
-		//we need to decide 1. if it will make ambulant listen to custom test changes on the active file
-		//and 2. if so, where to put it (here or mmview)
-
 		p_tests->getCustomTest(i)->setCurrentState(state);
 	}
 }
