@@ -509,3 +509,8 @@ void Preferences::logUserControllablePreferences()
 	else log_msg += "No";
 	p_log->writeMessage(log_msg);
 }
+void Preferences::resetColors()
+{
+	mHighlightFG.set("#000000");
+	mHighlightBG.set("#FFFF00");
+}

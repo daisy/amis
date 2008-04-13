@@ -46,6 +46,7 @@ public:
 	void setupNavigationOptions();
 	void addPageStyles();
 	void addNavContainersToViewMenu();
+	void setCheckmarkOnForNavigationContainer(UINT);
 private:
 	static MenuManip* pinstance;
 };

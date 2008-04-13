@@ -154,7 +154,7 @@ void MenuManip::addNavContainersToViewMenu()
 
 	//remove old stuff (anything below "Text style...", whose index is 6)
 	int len = p_menu->GetMenuItemCount();
-	for (int i=7; i<len; i++)
+	for (int i=len-1; i>6; i--)
 		p_menu->RemoveMenu(i, MF_BYPOSITION);
 
 	
@@ -181,6 +181,8 @@ void MenuManip::addNavContainersToViewMenu()
 		p_menu->AppendMenu(MF_STRING, AMIS_VIEW_MENU_BASE_ID + count, label);
 		count++;
 	}
+	//put a checkmark by the "sections" item
+	setCheckmarkOnForNavigationContainer(0);
 }
 void MenuManip::setViewItemCheckmark(bool isChecked, UINT itemId)
 {
@@ -362,4 +364,22 @@ void MenuManip::addPageStyles()
 		menu_label = A2T(file_name.c_str());
 		p_menu->AppendMenu(MF_STRING, AMIS_PAGE_STYLE_BASE_ID + i, menu_label);
 	}
+}
+void MenuManip::setCheckmarkOnForNavigationContainer(UINT idx)
+{
+	CMenu* p_menu = NULL;
+	p_menu = MainWndParts::Instance()->mpMainFrame->GetMenu();
+	//exit if no menu is present..this could mean we are in basic view mode
+	if (p_menu == NULL) return;
+	//get "View"
+	p_menu = p_menu->GetSubMenu(1);
+	
+	//turn off the checkmark for all navigation container items
+	//all the navigation containers are below a separator whose index is 7)
+	int count = p_menu->GetMenuItemCount() - 7;
+	for (int i = 0; i<count; i++)
+		setViewItemCheckmark(false, AMIS_VIEW_MENU_BASE_ID + i);
+
+	//turn on the checkmark for the given index
+	setViewItemCheckmark(true, AMIS_VIEW_MENU_BASE_ID + idx);
 }

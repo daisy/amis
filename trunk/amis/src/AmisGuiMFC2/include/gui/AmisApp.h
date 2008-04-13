@@ -111,6 +111,11 @@ public:
 	afx_msg void OnShowFindInText();
 	afx_msg void OnFindNextInText();
 	afx_msg void OnFindPreviousInText();
+	afx_msg void OnFocusOnSidebar();
+	afx_msg void OnToggleSelfVoicingAudio();
+	afx_msg void OnFocusOnText();
+	afx_msg void OnResetHighlightColors();
+	afx_msg void OnToggleContentAudio();
 protected:
 	HMENU m_hMDIMenu;
 	HACCEL m_hMDIAccel;

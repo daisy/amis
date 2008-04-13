@@ -63,6 +63,7 @@ public:
 	void setSelectedNode(amis::dtb::nav::NavPoint*);
 	void setSelectedNode(amis::dtb::nav::PageTarget*);
 	void selectTab(int);
+	void setFocusToActiveList();
 	enum { IDD = IDD_SIDEBAR };
 	CTabCtrl mTabStrip;
 	CTreeCtrl mTree;

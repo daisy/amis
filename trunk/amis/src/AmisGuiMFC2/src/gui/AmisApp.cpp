@@ -119,6 +119,11 @@ BEGIN_MESSAGE_MAP(CAmisApp, CWinApp)
 	ON_COMMAND(ID_AMIS_FIND_IN_TEXT, OnShowFindInText)
 	ON_COMMAND(ID_AMIS_FIND_NEXT_IN_TEXT, OnFindNextInText)
 	ON_COMMAND(ID_AMIS_FIND_PREVIOUS_IN_TEXT, OnFindPreviousInText)
+	ON_COMMAND(ID_AMIS_FOCUS_ON_SIDEBAR, OnFocusOnSidebar)
+	ON_COMMAND(ID_AMIS_TOGGLE_AUDIO_SELFVOICING_PLAYBACK, OnToggleSelfVoicingAudio)
+	ON_COMMAND(ID_AMIS_FOCUS_ON_TEXT, OnFocusOnText)
+	ON_COMMAND(ID_AMIS_RESET_HIGHLIGHT_COLORS, OnResetHighlightColors)
+	ON_COMMAND(ID_AMIS_TOGGLE_AUDIO_CONTENT_PLAYBACK, OnToggleContentAudio)
 END_MESSAGE_MAP()
 
 
@@ -903,7 +908,40 @@ void CAmisApp::OnFindPreviousInText()
 		amis::dtb::DtbWithHooks::Instance()->loadSmilFromUrl(&smil_url);
 	}
 }
-
+void CAmisApp::OnFocusOnSidebar()
+{
+	MainWndParts::Instance()->mpSidebar->m_wndDlg.setFocusToActiveList();
+}
+void CAmisApp::OnToggleSelfVoicingAudio()
+{
+	bool val = Preferences::Instance()->getIsSelfVoicing();
+	Preferences::Instance()->setIsSelfVoicing(!val);
+	//TODO: update title menu to reflect this change
+}
+void CAmisApp::OnFocusOnText()
+{	
+	MainWndParts::Instance()->mpHtmlView->m_wndBrowser.SetFocus();
+}
+void CAmisApp::OnResetHighlightColors()
+{
+	if (isBookOpen())
+	{
+		//reset the highlight colors to their predictable yellow default
+		amis::Preferences::Instance()->resetColors();
+		//make sure text highlight is on
+		amis::Preferences::Instance()->setHighlightText(true);
+		//refresh the display
+		TextRenderBrain::Instance()->redoPageColors();
+	}
+}
+void CAmisApp::OnToggleContentAudio()
+{
+	if (isBookOpen())
+	{
+		//TODO: this command doesn't work yet
+		//Need to find out how to do this with Ambulant
+	}
+}
 /***************************************************
 * (MED) I moved these functions out of the menu handler area
 *****************************************************/

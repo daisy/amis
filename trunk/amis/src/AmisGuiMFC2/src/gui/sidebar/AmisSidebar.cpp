@@ -30,6 +30,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "../../../resource.h"
 #include "util/Log.h"
 #include "Preferences.h"
+#include "gui/MenuManip.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -633,23 +634,29 @@ void CAmisSidebar::setSelectedNode(amis::dtb::nav::PageTarget* pNode)
 void CAmisSidebar::selectTab(int sel)
 {
 	if (sel > mTabStrip.GetItemCount() - 1) return;
-	mTabStrip.SetCurSel(sel);
 	changeView(sel);
 }
 void CAmisSidebar::changeView(int sel)
 {
-	if (mTabSel == 0) 
+	mTabStrip.SetCurSel(sel);
+	MenuManip::Instance()->setCheckmarkOnForNavigationContainer(sel);
+	if (sel == 0) 
 	{
 		showNavMap();
 	}
-	else if(mTabSel == 1)
+	else if(sel == 1)
 	{
 		if (amis::dtb::DtbWithHooks::Instance()->getNavModel()->hasPages() == true) showPageList();
-		else showNavList(mTabSel-1);
+		else showNavList(sel-1);
 	}
 	else
 	{
-		if (amis::dtb::DtbWithHooks::Instance()->getNavModel()->hasPages() == true) showNavList(mTabSel-2);
-		else showNavList(mTabSel-1);
+		if (amis::dtb::DtbWithHooks::Instance()->getNavModel()->hasPages() == true) showNavList(sel-2);
+		else showNavList(sel-1);
 	}
+}
+void CAmisSidebar::setFocusToActiveList()
+{
+	int idx = mTabStrip.GetCurSel();
+	changeView(idx);
 }

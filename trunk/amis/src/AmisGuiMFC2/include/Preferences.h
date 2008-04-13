@@ -44,6 +44,7 @@ public:
 	void scanAll();
 	void logAllPreferences();
 	void logUserControllablePreferences();
+	void resetColors();
 
 	//ACCESSORS
 	void setUiLangId(string);
