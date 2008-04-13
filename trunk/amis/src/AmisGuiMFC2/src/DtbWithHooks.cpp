@@ -328,6 +328,12 @@ amis::dtb::Bookmark* DtbWithHooks::addBookmark()
 	wstring curr_text = amis::gui::TextRenderBrain::Instance()->getCurrentText();
 	//use the first 20 chars of the current text for the bookmark's note field
 	if (curr_text.size() > 20) curr_text = curr_text.substr(0, 20);
+	
+	//temporarily convert to CString because the Replace function is better
+	CString cstr_curr_text = curr_text.c_str();
+	cstr_curr_text.Replace(_T("<br/>"), _T(""));
+	curr_text = cstr_curr_text;
+
 	p_note_text->setTextString(curr_text);
 	p_note->setText(p_note_text);
 
