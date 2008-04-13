@@ -248,6 +248,9 @@ BOOL CAmisApp::InitInstance()
 	//set the callback function to handle book key registration
 	amis::dtb::DtbWithHooks::Instance()->setCallbackForPreprocessingBookKey(registerBookKeyFile);
 
+	if (Preferences::Instance()->getStartInBasicView() == true)
+		MainWndParts::Instance()->basicView();
+
 	//if we're not opening from the command line, try loading the last-read book
 	if (b_open_from_cmdline == false 
 		&& Preferences::Instance()->getLoadLastBook() == true 

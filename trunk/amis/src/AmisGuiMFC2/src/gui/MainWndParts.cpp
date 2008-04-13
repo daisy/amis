@@ -21,6 +21,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 #include "gui/MainWndParts.h"
 #include "gui/MenuManip.h"
+#include "gui/AmisApp.h"
+#include "DtbWithHooks.h"
 
 using namespace amis::gui;
 
@@ -82,13 +84,7 @@ void MainWndParts::basicView()
 {
 	if (this->mbSidebarVisible == true) toggleSidebar();
 
-	/* TODO: re-add this
-	//change the window title text to say "basic view mode"
-	mMainWindowTitle = this->mpMainFrame->GetTitle();
-	CString new_title = mMainWindowTitle + _T(": basic view");
-	this->mpMainFrame->SetTitle(new_title);
-	*/
-
+	// TODO: change the window title text to say "basic view mode"
 	mpMainFrame->ShowControlBar(mpStatusBar, FALSE, TRUE);
 	mpMainFrame->ShowControlBar(mpDefaultRebar, FALSE, TRUE);
 	mpMainFrame->ShowControlBar(mpBasicRebar, TRUE, TRUE);
@@ -101,16 +97,18 @@ void MainWndParts::defaultView()
 {
 	CMenu* p_menu  = NULL;
 	
-	//TODO: Set the title again
-	//this->mpMainFrame->SetTitle(mMainWindowTitle);
-
+	//TODO: Update the title bar
+	
 	mpMainFrame->restoreMenu();
-	/* TODO: re-add menu settings code
-	if (AmisBrain::Instance()->doesMenuNeedUpdate() == true)
+	if (theApp.isBookOpen())
 	{
-		AmisBrain::Instance()->updateMenus();
-		AmisBrain::Instance()->flagMenusForUpdate(false);
-	}*/
+		//update the menus
+		MenuManip::Instance()->addNavContainersToViewMenu();
+		MenuManip::Instance()->loadBookmarks(amis::dtb::DtbWithHooks::Instance()->getBookmarks());
+		MenuManip::Instance()->addPageStyles();
+		MenuManip::Instance()->setupNavigationOptions();
+		MenuManip::Instance()->refreshRecentBooksListMenu();
+	}
 
 	mpMainFrame->ShowControlBar(mpStatusBar, TRUE, TRUE);
 	mpMainFrame->ShowControlBar(mpDefaultRebar, TRUE, TRUE);
