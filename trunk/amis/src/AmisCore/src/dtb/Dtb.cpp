@@ -191,7 +191,6 @@ bool amis::dtb::Dtb::open(const ambulant::net::url* fileUrl,
 	{
 		if (!processOpf(mpFiles->getOpfFilepath())) 
 		{
-			amis::util::Log::Instance()->writeMessage("xx process opf failed");
 			return false;
 		}
 		mDaisyVersion = DAISY_2005;

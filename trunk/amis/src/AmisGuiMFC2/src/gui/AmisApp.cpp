@@ -411,7 +411,7 @@ void CAmisApp::openBook(const ambulant::net::url* filename)
 			(filename, amis::Preferences::Instance()->getUserBmkDir()))
 		{
 			//update the status in the title bar
-			MainWndParts::Instance()->updateTitleBar(MainWndParts::TITLEBAR_APPNAME, CString(L"Amis"));
+			MainWndParts::Instance()->updateTitleBar(MainWndParts::TITLEBAR_APPNAME, CString(L"AMIS"));
 			MainWndParts::Instance()->updateTitleViewMode();
 			MainWndParts::Instance()->updateTitleSelfVoicing(Preferences::Instance()->getIsSelfVoicing());
 
@@ -916,7 +916,7 @@ void CAmisApp::OnToggleSelfVoicingAudio()
 {
 	bool val = Preferences::Instance()->getIsSelfVoicing();
 	Preferences::Instance()->setIsSelfVoicing(!val);
-	//TODO: update title menu to reflect this change
+	MainWndParts::Instance()->updateTitleSelfVoicing(Preferences::Instance()->getIsSelfVoicing());
 }
 void CAmisApp::OnFocusOnText()
 {	

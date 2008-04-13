@@ -83,7 +83,8 @@ void MainWndParts::toggleSidebar()
 void MainWndParts::basicView()
 {
 	if (this->mbSidebarVisible == true) toggleSidebar();
-
+	
+	MainWndParts::Instance()->updateTitleViewMode();
 	// TODO: change the window title text to say "basic view mode"
 	mpMainFrame->ShowControlBar(mpStatusBar, FALSE, TRUE);
 	mpMainFrame->ShowControlBar(mpDefaultRebar, FALSE, TRUE);
@@ -96,9 +97,7 @@ void MainWndParts::basicView()
 void MainWndParts::defaultView()
 {
 	CMenu* p_menu  = NULL;
-	
-	//TODO: Update the title bar
-	
+	MainWndParts::Instance()->updateTitleViewMode();	
 	mpMainFrame->restoreMenu();
 	if (theApp.isBookOpen())
 	{
