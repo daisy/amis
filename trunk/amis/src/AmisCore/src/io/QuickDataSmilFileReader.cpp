@@ -66,14 +66,8 @@ bool amis::io::QuickDataSmilFileReader::readFromFile(const ambulant::net::url* f
 	mpNodes = pNodes;
 	mbFlag_GetNextAudio = false;
 
-	if (!this->parseFile(filepath))
-	{
-		return false;
-	}
-	else
-	{
-		return true;
-	}
+	if (!this->parseFile(filepath)) return false;
+	else return true;
 }
 
 void amis::io::QuickDataSmilFileReader::startElement(const   XMLCh* const    uri,
@@ -134,8 +128,6 @@ void amis::io::QuickDataSmilFileReader::endElement( const XMLCh* const uri,
 					const XMLCh* const localname,
 					 const XMLCh* const qname)
 {
-	//char* element_name = XMLString::transcode(qname);
-	//XMLString::release(&element_name);
 }
 
 

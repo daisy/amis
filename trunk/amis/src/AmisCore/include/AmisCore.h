@@ -73,16 +73,21 @@ namespace amis
 	typedef stdext::hash_map<std::string, ambulant::net::url> UrlMap;
 	typedef stdext::hash_map<std::string, bool> BooleanMap;
 	typedef stdext::hash_map<std::string, amis::ModuleDescData*> StringModuleMap;
+	typedef stdext::hash_map<std::string, amis::StdStringList>StringToStringsMap;
+
 #elif defined(AMIS_COMPILER_GCC)
 	typedef __gnu_cxx::hash_map<std::string, std::string> StringMap;
 	typedef __gnu_cxx::hash_map<std::string, ambulant::net::url> UrlMap;
 	typedef __gnu_cxx::hash_map<std::string, bool> BooleanMap;
 	typedef __gnu_cxx::hash_map<std::string, amis::ModuleDescData*> StringModuleMap;
+	typedef __gnu_cxx::hash_map<std::string, amis::StdStringList>StringToStringsMap;
+
 #endif
 
 	namespace dtb
 	{
 		class Dtb;
+		class DtbIndex;
 		class CustomTest;
 		class Metadata;
 		class MetaItem;

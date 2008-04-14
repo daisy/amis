@@ -99,7 +99,6 @@ private:
 	DtbFileSet* mpFiles;
 	amis::BookList* mpHistory;
 	std::wstring mUid;
-	amis::StringMap* mpTextSmilMap;
 	wstring mLastSearchString;
 	string mLastSearchResult;
 	string mLastSearchedTextFile;

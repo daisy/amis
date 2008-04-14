@@ -129,8 +129,6 @@ void amis::dtb::nav::ResolveSmilDataVisitor::resolve(amis::dtb::nav::NavModel* p
 	}
 
 	pModel->setSmilIdNodeMap(mpMap);
-
-	//printMap(true);
 	
 }
 //then assign each NavNode a list of file#id values

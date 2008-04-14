@@ -40,35 +40,24 @@ XERCES_CPP_NAMESPACE_END
 
 using namespace std;
 
-class SmilTree;
-
-//! The Smil Tree Builder parses a SMIL file and builds a tree
-/*!
-	The input files must be valid SMIL documents. Xerces SAX 2 is the parsing engine. 
-	The Smil Tree Builder acts as a Xerces Content and Error handler object.
-*/
 namespace amis
 {
 namespace io
 {
-
 class QuickDataSmilFileReader : public XercesSaxParseBase 
 {
 public:
 	QuickDataSmilFileReader();
 	~QuickDataSmilFileReader();
 
-	//!main method to create a smil tree from a filepath
+	//main method to create a smil tree from a filepath
 	bool readFromFile(const ambulant::net::url*, StdStringList*, StringMap*, amis::dtb::nav::NavNodeList*);
 	
-	//SAX METHODS
-	//!xerces start element event
 	void startElement(const   XMLCh* const    uri,
 			const   XMLCh* const    localname,
 			const   XMLCh* const    qname,
 			const   Attributes&	attributes);
-	//!xerces end element event
-    void endElement(const XMLCh* const uri,
+	void endElement(const XMLCh* const uri,
 		const XMLCh* const localname,
 		const XMLCh* const qname);
 	void characters(const XMLCh *const, const unsigned int);

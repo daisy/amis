@@ -360,6 +360,10 @@
 					</FileConfiguration>
 				</File>
 				<File
+					RelativePath=".\src\dtb\DtbIndex.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\src\dtb\Metadata.cpp"
 					>
 					<FileConfiguration
@@ -737,6 +741,10 @@
 				</File>
 				<File
 					RelativePath=".\include\dtb\DtbFileSet.h"
+					>
+				</File>
+				<File
+					RelativePath=".\include\dtb\DtbIndex.h"
 					>
 				</File>
 				<File

@@ -318,8 +318,7 @@ bool amis::dtb::Dtb::processNcc(const ambulant::net::url* filepath)
 	mpFiles->setAdditionalDataAfterInitialParse(mUid, NULL, NULL, mpHistory);
 	amis::dtb::nav::ResolveSmilDataVisitor resolve_smil_visitor;
 	resolve_smil_visitor.resolve(mpNavModel, mpSpine, true);
-	this->mpTextSmilMap = resolve_smil_visitor.getSmilTextMap();
-
+    this->mpTextSmilMap = resolve_smil_visitor.getSmilTextMap();	
 	return true;
 }
 
@@ -333,10 +332,7 @@ bool amis::dtb::Dtb::processNcx(const ambulant::net::url* filepath)
 
 	mpNavModel = ncx_file_reader.getNavModel();
 	mpCustomTests = ncx_file_reader.getCustomTests();
-
-	amis::dtb::nav::ResolveSmilDataVisitor resolve_smil_visitor;
-
-	//note that this step takes a very long time if the book is large, because
+	 //note that this step takes a very long time if the book is large, because
 	//it involves walking the nav model and also opening all the SMIL files
 	resolve_smil_visitor.resolve(mpNavModel, mpSpine, false);
 	this->mpTextSmilMap = resolve_smil_visitor.getSmilTextMap();
