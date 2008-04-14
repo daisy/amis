@@ -269,14 +269,18 @@ void TTSPlayer::ChangeVoice(int index) {
 }
 
 
-void TTSPlayer::ChangeVoice(bool speakNotify) {
+std::string TTSPlayer::ChangeVoice(bool speakNotify) {
 
+	USES_CONVERSION;
 	
 	HRESULT                             hr = S_OK;
 CComPtr<ISpObjectToken>             cpVoiceToken;
 CComPtr<IEnumSpObjectTokens>        cpEnum;
 ULONG                               ulCount = 0;
-
+    CSpDynamicString*                szDescription;
+    
+    //ISpObjectToken                  *pToken = NULL;
+    //WCHAR *pszCurTokenId = NULL;
 
 if(SUCCEEDED(hr))
     hr = SpEnumTokens(SPCAT_VOICES, NULL, NULL, &cpEnum);
@@ -288,6 +292,7 @@ m_currentVoiceNumber ++;
 if (m_currentVoiceNumber >= ulCount) {
 	m_currentVoiceNumber = 0;
 }
+            szDescription = new CSpDynamicString [ulCount];
 
 ULONG counter = -1;
 
@@ -298,6 +303,7 @@ while (SUCCEEDED(hr) && ulCount -- )
 
     if(SUCCEEDED(hr))
         hr = cpEnum->Next( 1, &cpVoiceToken, NULL );
+           HRESULT hResult = SpGetDescription(cpVoiceToken, &szDescription[counter]);
 
 	if (counter == m_currentVoiceNumber) {
 		break;
@@ -306,8 +312,14 @@ while (SUCCEEDED(hr) && ulCount -- )
 
     if(SUCCEEDED(hr))
         hr = m_iV->SetVoice(cpVoiceToken);
+
 cpVoiceToken.Release();
+
+CString str = W2T(szDescription[m_currentVoiceNumber]);
+string str2 = W2CA(str);
+
 if(SUCCEEDED(hr) && speakNotify)
        Play( L"This is my new voice !");
 
+return str2;
 }

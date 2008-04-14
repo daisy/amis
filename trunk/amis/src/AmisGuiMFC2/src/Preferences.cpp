@@ -27,6 +27,10 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "util/FilePathTools.h"
 #include "io/ModuleDescReader.h"
 #include "util/Log.h"
+
+
+#include "gui/self-voicing/TTSPlayer.h"
+
 using namespace amis;
 
 Preferences* Preferences::pinstance = 0;
@@ -422,6 +426,16 @@ void Preferences::logAllPreferences()
 	p_log->writeMessage(log_msg);
 	
 	//TODO: log tts voice index as something meaningful
+	int indexTTSVoice = getTTSVoiceIndex();
+	log_msg = "\tTTS voice index ";
+	char strTTSVoice[3];
+	sprintf(strTTSVoice, "%d", indexTTSVoice);
+	log_msg += strTTSVoice;
+	std::string strVoice = amis::tts::TTSPlayer::Instance()->ChangeVoice(false);
+	log_msg += " // ";
+	log_msg += strVoice;
+	p_log->writeMessage(log_msg);
+	
 
 	log_msg = "\tUsing TTS or pre-recorded audio? ";
 	if (getUseTTSNotAudio()) log_msg += "TTS";

@@ -3,6 +3,8 @@
 
 #pragma once
 
+#include <string>
+
 //#define USE_WSTRING
 
 #ifdef USE_WSTRING
@@ -43,7 +45,7 @@ void WaitUntilDone();
 	long GetSpeechRate();
 	bool SetSpeechRate(long newRate);
 	
-	void ChangeVoice(bool speakNotify);
+	std::string ChangeVoice(bool speakNotify);
 	void ChangeVoice(int index);
 
 	int initVoiceList(HWND);
