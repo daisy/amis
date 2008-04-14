@@ -237,6 +237,7 @@ BEGIN
     POPUP "&Help"
     BEGIN
         MENUITEM "&Contents",                   ID_AMIS_SHOW_HELP_CONTENTS
+        MENUITEM "&Keyboard shortcuts",         ID_AMIS_SHOW_KEYBOARD_SHORTCUTS
         MENUITEM "&About AMIS",                 ID_AMIS_ABOUT
     END
 END

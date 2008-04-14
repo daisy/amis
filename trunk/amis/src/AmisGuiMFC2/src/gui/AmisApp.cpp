@@ -873,14 +873,8 @@ void CAmisApp::OnShowFindInText()
 		int dir = dlg.getSearchDirection();
 		wstring search_string = tmp;
 		//the address of the search result
-		std::string result;
-		//there should only be searchNext and searchPrevious, not searchFullText
-		//AmisCore needs fixing
-		if (dir == 1)
-			result = amis::dtb::DtbWithHooks::Instance()->searchFullText(search_string);
-		else
-			result = amis::dtb::DtbWithHooks::Instance()->searchFullText(search_string);
-		
+		std::string result = amis::dtb::DtbWithHooks::Instance()->searchFullText(search_string, 
+				TextRenderBrain::Instance()->getCurrentUrl(), dir);
 		if (result.size() > 0)
 		{
 			ambulant::net::url smil_url = ambulant::net::url::from_url(result);

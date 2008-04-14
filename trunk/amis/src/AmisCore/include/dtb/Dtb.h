@@ -62,7 +62,7 @@ public:
 	amis::dtb::CustomTestSet* getCustomTestSet();
 	void setFileSearcher(amis::util::SearchForFiles*);
 	amis::util::SearchForFiles* getFileSearcher();
-	string searchFullText(wstring);
+	string searchFullText(wstring, ambulant::net::url, int);
 	amis::dtb::smil::SmilTree* getSmilTree();
 	string searchFullTextNext();
 	string searchFullTextPrevious();

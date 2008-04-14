@@ -589,33 +589,17 @@ void amis::dtb::Dtb::setNewLastmark(ambulant::net::url positionUri)
 	bmk_file_io.writeToFile(mpFiles->getBookmarksFilepath(), mpBookmarks);
 }
 
-string amis::dtb::Dtb::searchFullText(wstring search)
+string amis::dtb::Dtb::searchFullText(wstring search, ambulant::net::url currentTextUrl, int dir)
 {
 	amis::io::TextSearch text_search;
 	UrlList* p_text_files = mpFiles->getTextFiles();
 	UrlList::iterator it;
 	string result = "";
 	mLastSearchString.assign(search);
-
-	for (it = p_text_files->begin(); it != p_text_files->end(); ++it)
-	{
-		result = text_search.searchForText(search, &(*it));
-		if (result != "")
-			break;
-	}
-
-	//we should now have the text id of the item
-	if (result != "")
-	{
-		mLastSearchedTextFile  = amis::util::FilePathTools::getFileName(it->get_path());
-		mLastSearchedTextFile += "#" + result;
-		mLastSearchResult = (*mpTextSmilMap)[mLastSearchedTextFile.c_str()];
-		//now we have just the filename#id, so we can compare it to our hash map
-		return mLastSearchResult;
-	}
-
-	mLastSearchResult = "";
-	return "";
+	string file_name = amis::util::FilePathTools::getFileName(currentTextUrl.get_url());
+	string elm_id = currentTextUrl.get_ref();
+	mLastSearchedTextFile = file_name + "#" + elm_id;
+	return searchFullTextRelative(dir);
 }
 string amis::dtb::Dtb::searchFullTextNext()
 {
@@ -630,34 +614,13 @@ wstring amis::dtb::Dtb::getLastTextSearchString()
 {
 	return mLastSearchString;
 }
-//input: filename#target
-amis::dtb::smil::SmilMediaGroup* amis::dtb::Dtb::loadSmilFromUrl(ambulant::net::url* filepath)
-{
-#ifdef WITH_EXTERNAL_SMIL_PLAYER
-	return NULL;
-#else
-	assert(filepath);
-	ambulant::net::url smilfile = filepath->join_to_base(*this->getFileSet()->getBookDirectory());
-
-	if (!mpFiles->getSmilFile()->same_document(smilfile))
-	{
-		mpSpine->goToFile(filepath);
-		mpFiles->setSmilFile(&smilfile);
-		if (!processSmil(mpFiles->getSmilFile()))
-			return NULL;
-	}
-	//else, the document is already loaded in the smil tree
-	return mpSmilTree->goToId(filepath->get_ref());
-#endif
-}
-
 string amis::dtb::Dtb::searchFullTextRelative(int dir)
 {
 	amis::io::TextSearch text_search;
 	UrlList* p_text_files = mpFiles->getTextFiles();
 	UrlList::iterator it;
 	string result = "";
-	string last_file_name = amis::util::FilePathTools::clearTarget(mLastSearchedTextFile );
+	string last_file_name = amis::util::FilePathTools::clearTarget(mLastSearchedTextFile);
 	string last_id = amis::util::FilePathTools::getTarget(mLastSearchedTextFile);
 
 	bool b_filefound = false;
@@ -666,7 +629,7 @@ string amis::dtb::Dtb::searchFullTextRelative(int dir)
 		//start at the file we left off at last time
 		if (b_filefound == false)
 		{
-			string it_filename = amis::util::FilePathTools::getFileName(it->get_path());
+			string it_filename = amis::util::FilePathTools::getFileName(it->get_url());
 			if (last_file_name == it_filename) b_filefound = true;
 		}
 		if (b_filefound == true)
@@ -695,6 +658,26 @@ string amis::dtb::Dtb::searchFullTextRelative(int dir)
 	return "";
 }
 
+//input: filename#target
+amis::dtb::smil::SmilMediaGroup* amis::dtb::Dtb::loadSmilFromUrl(ambulant::net::url* filepath)
+{
+#ifdef WITH_EXTERNAL_SMIL_PLAYER
+	return NULL;
+#else
+	assert(filepath);
+	ambulant::net::url smilfile = filepath->join_to_base(*this->getFileSet()->getBookDirectory());
+
+	if (!mpFiles->getSmilFile()->same_document(smilfile))
+	{
+		mpSpine->goToFile(filepath);
+		mpFiles->setSmilFile(&smilfile);
+		if (!processSmil(mpFiles->getSmilFile()))
+			return NULL;
+	}
+	//else, the document is already loaded in the smil tree
+	return mpSmilTree->goToId(filepath->get_ref());
+#endif
+}
 
 ambulant::net::url amis::dtb::Dtb::calculateUriOfData(amis::dtb::smil::SmilMediaGroup* pData)
 {

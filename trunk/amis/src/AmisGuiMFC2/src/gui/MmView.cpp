@@ -927,13 +927,6 @@ void MmView::node_started(const ambulant::lib::node* n)
 	id_string.assign(id);
 	m_current_url = m_current_url.add_fragment(id_string);
 
-	// We also store the URL that the most recent text node refers to,
-	// this is used as a starting point for searches. 
-	if (tagname == "text")
-	{
-//		AmisBrain::Instance()->mAmbulantCurrentTextPos = n->get_url("src").get_url();
-	}
-
 	//set the lastmark
 	amis::dtb::DtbWithHooks::Instance()->setNewLastmark(m_current_url);
 

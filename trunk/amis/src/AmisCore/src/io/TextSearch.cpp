@@ -146,7 +146,7 @@ void amis::io::TextSearch::endElement( const XMLCh* const uri,
 	if (mbFlag_Analyze == true)
 	{
 		if (mId.size() > 0) mIdStack.pop_back();
-		mCharDataStack.pop_back();
+		if (mCharDataStack.size() > 0) mCharDataStack.pop_back();
 	}
 
 	if (strcmp(element_name, "body") == 0 ||

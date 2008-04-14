@@ -467,6 +467,10 @@ wstring TextRenderBrain::getCurrentText()
 {
 	return mCurrentElmText;
 }
+ambulant::net::url TextRenderBrain::getCurrentUrl()
+{
+	return mCurrentUrl.add_fragment(mTextElmId);
+}
 
 void TextRenderBrain::redoPageColors()
 {
