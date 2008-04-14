@@ -334,6 +334,7 @@ bool amis::dtb::Dtb::processNcx(const ambulant::net::url* filepath)
 	mpCustomTests = ncx_file_reader.getCustomTests();
 	 //note that this step takes a very long time if the book is large, because
 	//it involves walking the nav model and also opening all the SMIL files
+	amis::dtb::nav::ResolveSmilDataVisitor resolve_smil_visitor;
 	resolve_smil_visitor.resolve(mpNavModel, mpSpine, false);
 	this->mpTextSmilMap = resolve_smil_visitor.getSmilTextMap();
 	return true;
