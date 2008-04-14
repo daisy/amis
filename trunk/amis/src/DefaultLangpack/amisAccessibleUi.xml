@@ -1546,7 +1546,7 @@
         </list>
       </control>
     </dialog>
-    <dialog>
+    <dialog mfcid="IDD_TEXTSTYLE">
       <note>This dialog lets the user set text style properties.</note>
       <caption>
         <text id="t358" flag="new">Text Style</text>

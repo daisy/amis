@@ -178,8 +178,9 @@ p_log->writeMessage("== THREAD BEFORE WAIT TOGGLE");
 	}
 	TRACE(L"\n== THREAD AFTER WAIT TOGGLE %d\n", nn);
 	
-p_log->writeMessage("== THREAD AFTER WAIT TOGGLE");
-					p_log->writeMessage(strNN);
+//TODO: re-instates this logging message (causes app crash if called during exit)
+//p_log->writeMessage("== THREAD AFTER WAIT TOGGLE");
+//p_log->writeMessage(strNN);
 	break;
 										  }
 #endif

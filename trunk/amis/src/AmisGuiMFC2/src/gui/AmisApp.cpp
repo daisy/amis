@@ -870,7 +870,7 @@ void CAmisApp::OnShowFindInText()
 		amis::dtb::DtbWithHooks::Instance()->getLastTextSearchString().c_str();
 	dlg.forceSearchValue(last_val);
 	
-	if (dlg.DoModal() == IDOK)
+	if (dlg.do_modal() == IDOK)
 	{
 		CString tmp = dlg.getUserSearchString();
 		if (tmp.GetLength() == 0) return;

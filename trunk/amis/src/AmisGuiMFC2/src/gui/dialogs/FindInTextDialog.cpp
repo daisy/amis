@@ -102,7 +102,7 @@ void FindInTextDialog::OnPaint()
 }
 BOOL FindInTextDialog::PreTranslateMessage(MSG* pMsg)
 {
-	return CDialog::PreTranslateMessage(pMsg);
+	return AmisDialogBase::PreTranslateMessageTextField(pMsg, IDC_SEARCHSTRING);
 }
 
 void FindInTextDialog::OnEnChangeSearchstring()

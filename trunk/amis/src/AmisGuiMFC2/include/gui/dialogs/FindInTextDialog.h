@@ -35,6 +35,7 @@ namespace dialogs
 class FindInTextDialog : public AmisDialogBase
 {
 public:
+
 	FindInTextDialog(CWnd* pParent = NULL);
 	~FindInTextDialog();
 	enum { IDD = IDD_FIND };

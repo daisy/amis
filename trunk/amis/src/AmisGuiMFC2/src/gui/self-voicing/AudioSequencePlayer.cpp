@@ -1015,6 +1015,11 @@ void AudioSequencePlayer::fillSequenceContainerPromptFromId(AudioSequence* seq, 
 			if (keyboardShortcutAccelerator != NULL) {
 				fillSequenceContentAndPrompt(seq, keyboardShortcutAccelerator, NULL);
 			}
+			
+			Label* menomonic = p_container->getMnemonic();
+			if (menomonic != NULL) {
+				fillSequenceContentAndPrompt(seq, menomonic, NULL);
+			}
 		}
 	}
 }
