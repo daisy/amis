@@ -299,6 +299,10 @@ void SearchForBooksDialog::OnStartsearch()
 	mSearcher.addSearchCriteria(".opf");
 	//sometimes I see these temp files on my drive .. excluding them just to be safe
 	mSearcher.addSearchExclusionCriteria("_ncc.html");
+
+	// SVN folders are interfering
+	mSearcher.addSearchExclusionCriteria(".svn-base");
+
 	mSearcher.setRecursiveSearch(true);
 	//start the search
 	mFiles_found = mSearcher.startSearch(T2A(search_string));
@@ -344,7 +348,7 @@ BOOL SearchForBooksDialog::PreTranslateMessage(MSG* pMsg)
 		{
 			int id = p_wnd->GetDlgCtrlID();
 
-			if (id = IDC_FILESFOUND && (pMsg->wParam == VK_UP || pMsg->wParam == VK_DOWN))
+			if (id == IDC_FILESFOUND && (pMsg->wParam == VK_UP || pMsg->wParam == VK_DOWN))
 			{
 				return CDialog::PreTranslateMessage(pMsg);
 			}
@@ -353,8 +357,10 @@ BOOL SearchForBooksDialog::PreTranslateMessage(MSG* pMsg)
 			//we're overriding this here.
 			if (pMsg->wParam == VK_RETURN)
 			{
+				CEdit* p_edit =	(CEdit*)GetDlgItem(IDC_SEARCHPATH);
+
 				//if the textbox has focus and the user pressed enter, start searching
-				 if (id == IDC_SEARCHPATH)
+				if (id == IDC_SEARCHPATH && pMsg->hwnd == p_wnd->m_hWnd && p_edit->m_hWnd == pMsg->hwnd) // making sure that we're not capturing events from the Japanese IME
 				 {
 					pMsg->wParam = NULL;
 					OnStartsearch();
