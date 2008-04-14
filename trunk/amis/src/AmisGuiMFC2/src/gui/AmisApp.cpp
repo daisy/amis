@@ -272,6 +272,10 @@ BOOL CAmisApp::InitInstance()
 
 int CAmisApp::ExitInstance() 
 {
+	
+					amis::util::Log* p_log = amis::util::Log::Instance();
+  
+					p_log->writeMessage("Starting to EXIT");
 	TRACE("\nStarting to EXIT\n\n");
 
 	Preferences::Instance()->setWasExitClean(true);
@@ -1006,6 +1010,52 @@ void CAmisApp::generalBookErrorMsgBox(CString str)
 	if (amis::Preferences::Instance()->getIsSelfVoicing() == true) {
 		AudioSequencePlayer::playPromptFromStringId("generalBookError");
 	}
+
+	/* TODO: How the popup text could be obtained from the language resource:
+
+	Prompt* p_prompt_ = DataTree::Instance()->findPrompt(promptId);
+
+	if (p_prompt_ != NULL)
+	{
+
+		resolvePromptVariables(prompt, pResolver);
+
+		int sz = prompt->getNumberOfItems();
+		for (int i=0; i<sz; i++)
+		{
+			PromptItemBase* pib = prompt->getItem(i);
+			switch(pib->getPromptItemType()) {
+			case PROMPT_ITEM: {
+				PromptItem* pi = (PromptItem*) pib;
+
+				TextAudioPair* pair = pi->getContents();
+				if (pair != NULL) {
+
+					TextNodeSV * textN = pair->getText();
+					if (textN != NULL) 
+					{
+						CONCAT(textN->getTextString().c_str());
+					}
+				}
+				break;
+							  }
+			case PROMPT_VARIABLE: {
+				PromptVar* pi = (PromptVar*) pib;
+				TextAudioPair* pair = pi->getContents();
+				if (pair != NULL) {
+
+					TextNodeSV * textN = pair->getText();
+					if (textN != NULL) 
+					{
+						CONCAT(textN->getTextString().c_str());
+					}
+				}
+				break;
+								  }
+			}
+		}
+	}
+	*/
 	AfxMessageBox(str);
 	afterModalBox(b);
 }

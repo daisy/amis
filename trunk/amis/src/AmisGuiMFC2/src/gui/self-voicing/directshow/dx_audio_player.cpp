@@ -34,6 +34,10 @@
 // CLSID_FilterGraph
 //#include <uuids.h>
 #include <dshow.h>
+
+
+#include "util/Log.h"
+
 #ifndef AM_DBG
 #define AM_DBG if(0)
 #endif
@@ -74,7 +78,18 @@ DWORD __stdcall eventHandler(LPVOID lpParam) {
 	gui::dx::audio_playerX *pPlayer = (gui::dx::audio_playerX*)lpParam;
 
 	int nn = ++nTimes;
+
+	char strOTHER[10];
+
+	char strNN[5];
+	sprintf(strNN, "%d", nn);
+
 	TRACE(L"\n== THREAD BEGIN %d\n", nn);
+
+					amis::util::Log* p_log = amis::util::Log::Instance();
+					p_log->writeMessage("== THREAD BEGIN");
+					p_log->writeMessage(strNN);
+					
 
 	while(!bSelfBreak
 #ifdef SINGLE_THREAD_HACK
@@ -90,18 +105,29 @@ DWORD __stdcall eventHandler(LPVOID lpParam) {
 #endif
 		
 	TRACE(L"\n== THREAD BEFORE EVENT %d\n", nn);
+p_log->writeMessage("== THREAD BEFORE EVENT");
+					p_log->writeMessage(strNN);
+
 		hResult = pPlayer->m_media_event->GetEvent(&lEventCode, &lParam1, &lParam2, INFINITE);
 		pPlayer->m_media_event->FreeEventParams(lEventCode, lParam1, lParam2);
 	TRACE(L"\n== THREAD AFTER EVENT %d\n", nn);
+p_log->writeMessage("== THREAD AFTER EVENT");
+					p_log->writeMessage(strNN);
 
 		if (hResult == S_OK) {
 			switch(lEventCode) {
 						case EC_COMPLETE:
 							{
 							TRACE(L"\n== THREAD EVENT COMPLETE %d\n", nn);
+							
+p_log->writeMessage("== THREAD EVENT COMPLETE");
+					p_log->writeMessage(strNN);
 							pPlayer->stop(false, true);
 							
 							TRACE(L"\n== THREAD BEFORE CALLBACK %d\n", nn);
+							
+p_log->writeMessage("== THREAD BEFORE CALLBACK");
+					p_log->writeMessage(strNN);
 							pPlayer->sendMessageCallback();
 #ifndef SINGLE_THREAD_HACK
 							bSelfBreak = true;
@@ -110,6 +136,9 @@ DWORD __stdcall eventHandler(LPVOID lpParam) {
 							}
 						case EC_USER + 4: {
 							TRACE(L"\n== THREAD EVENT USER+4 %d\n", nn);
+							
+p_log->writeMessage("== THREAD EVENT USER+4");
+					p_log->writeMessage(strNN);
 							//pPlayer->stop(false, true);
 							//pPlayer->sendMessageCallback();
 
@@ -120,6 +149,9 @@ DWORD __stdcall eventHandler(LPVOID lpParam) {
 #ifdef SINGLE_THREAD_HACK
 case EC_USER + 5: {
 TRACE(L"\n== THREAD BEFORE WAIT TOGGLE %d\n", nn);
+
+p_log->writeMessage("== THREAD BEFORE WAIT TOGGLE");
+					p_log->writeMessage(strNN);
 	DWORD hr = WaitForSingleObject(pPlayer->m_hEventWakeup, INFINITE);
 	switch (hr) {
 	case WAIT_FAILED: {
@@ -145,16 +177,28 @@ TRACE(L"\n== THREAD BEFORE WAIT TOGGLE %d\n", nn);
 
 	}
 	TRACE(L"\n== THREAD AFTER WAIT TOGGLE %d\n", nn);
+	
+p_log->writeMessage("== THREAD AFTER WAIT TOGGLE");
+					p_log->writeMessage(strNN);
 	break;
 										  }
 #endif
 
 						default:
 							TRACE(L"\n== THREAD EVENT OTHER %d (%d)\n", nn, lEventCode);
+							
+p_log->writeMessage("== THREAD EVENT OTHER");
+					p_log->writeMessage(strNN);
+					
+	sprintf(strOTHER, "%d", lEventCode);
+					p_log->writeMessage(strOTHER);
 			}
 		}
 	}
 	TRACE(L"\n== THREAD END %d\n", nn);
+	
+p_log->writeMessage("== THREAD END");
+					p_log->writeMessage(strNN);
 
     //_endthreadex( 0 );
     return 0;
@@ -191,6 +235,9 @@ gui::dx::audio_playerX::~audio_playerX()
 	stop(true);
 	
 #ifdef SINGLE_THREAD_HACK
+	
+					amis::util::Log* p_log = amis::util::Log::Instance();
+					p_log->writeMessage("####### ~audio_playerX || SetEvent(m_hEventWakeup)");
 	TRACE(L"\n####### ~audio_playerX || SetEvent(m_hEventWakeup)\n");
 	//end_thread();
 	bDestroyBreak = true;
@@ -227,6 +274,8 @@ void gui::dx::audio_playerX::end_thread() {
 	if (hEventHandler==NULL) return;
 
 
+					amis::util::Log* p_log = amis::util::Log::Instance();
+					p_log->writeMessage("WAIT for thread end.");
 TRACE("\nWAIT for thread end.\n");
 
 	IMediaEventSink *pIMES = NULL;
@@ -259,7 +308,7 @@ TRACE("\nWAIT for thread end.\n");
 		break;}
 
 	}
-	
+					p_log->writeMessage("WAIT for thread end DONE.");
 TRACE("\nWAIT for thread end DONE.\n");
 	hEventHandler = NULL;
 }
@@ -309,17 +358,21 @@ void gui::dx::audio_playerX::stop(bool fromPlay, bool fromThread) {
 			return;
 		}
 
+					amis::util::Log* p_log = amis::util::Log::Instance();
+					p_log->writeMessage("####### -- STOP DX");
 	TRACE(L"\n####### -- STOP DX\n");
 
 		if(m_media_control == 0) {
 			
 	TRACE(L"\n####### -- STOP DX || m_media_control == 0\n");
+	p_log->writeMessage("####### -- STOP DX || m_media_control == 0");
 			return;
 		}
 	{
 		if (!fromPlay) {
 
 	TRACE(L"\n####### -- STOP DX || CS IN\n");
+	p_log->writeMessage("####### -- STOP DX || CS IN");
 			EnterCriticalSection(&m_csSequence);
 		}
 
@@ -337,6 +390,8 @@ void gui::dx::audio_playerX::stop(bool fromPlay, bool fromThread) {
 //Sleep(100);
 
 	TRACE(L"\n####### -- STOP DX || AFTER END THREAD\n");
+	
+	p_log->writeMessage("####### -- STOP DX || AFTER END THREAD");
 
 			HRESULT hr = m_media_control->Stop();
 			if(FAILED(hr)) {
@@ -344,6 +399,7 @@ void gui::dx::audio_playerX::stop(bool fromPlay, bool fromThread) {
 			}
 
 	TRACE(L"\n####### -- STOP DX || AFTER STOP\n");
+		p_log->writeMessage("####### -- STOP DX || AFTER STOP");
 
 			if (m_media_control->StopWhenReady() != S_OK) {
 				long state, i;
@@ -358,12 +414,15 @@ void gui::dx::audio_playerX::stop(bool fromPlay, bool fromThread) {
 				}
 			}
 		TRACE(L"\n####### -- STOP DX || AFTER STOP WHEN READY\n");
+		p_log->writeMessage("####### -- STOP DX || AFTER STOP WHEN READY");
 		release_player();
+		p_log->writeMessage("####### -- STOP DX || AFTER RELEASE");
 		TRACE(L"\n####### -- STOP DX || AFTER RELEASE\n");
 
 		if (!fromPlay) {
 			LeaveCriticalSection(&m_csSequence);
 			
+			p_log->writeMessage("####### -- STOP DX ||  CS OUT");
 		TRACE(L"\n####### -- STOP DX ||  CS OUT\n");
 		}
 	}
@@ -717,6 +776,9 @@ bool gui::dx::audio_playerX::play(const char * url) {
 #endif
 
 				TRACE(L"\n####### -- PLAY DX\n");
+				
+					amis::util::Log* p_log = amis::util::Log::Instance();
+					p_log->writeMessage("####### -- PLAY DX");
 	//m_url = url;
 	m_url.assign(url);
 
@@ -810,6 +872,12 @@ bool gui::dx::audio_playerX::play(const char * url) {
 		hEventHandler = CreateThread(NULL, 0, &eventHandler, this, 0, &lpdwThreadID);
 		//GetCurrentThreadId
 		TRACE("\nTHREAD ID (DX_AUDIO_PLAYER): %x\n", lpdwThreadID);
+		
+					amis::util::Log* p_log = amis::util::Log::Instance();
+					p_log->writeMessage("THREAD ID (DX_AUDIO_PLAYER)");
+					char strID[10];
+					sprintf(strID, "%x", lpdwThreadID);
+					p_log->writeMessage(strID);
 	}
 #ifdef SINGLE_THREAD_HACK
 	SetEvent(m_hEventWakeup);

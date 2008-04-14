@@ -12,6 +12,8 @@
 #include "gui/AmisApp.h"
 #include "gui/MainWndParts.h"
 
+#include "util/Log.h"
+
 namespace amis
 {
 	namespace gui
@@ -32,9 +34,15 @@ namespace amis
 		std::string	MenuVoicing::computeRootMenuFromFirstChildID(unsigned int firstItemId, bool playPrompt)
 		{
 
+			
+	USES_CONVERSION;
+
 			CString	dbg;
 			dbg.Format(_T("\n===firstItemId %d####\n"),	firstItemId);
 			TRACE(dbg);
+
+	amis::util::Log* p_log = amis::util::Log::Instance();
+	p_log->writeMessage(W2CA(dbg));
 
 			string str_id;
 
@@ -144,7 +152,11 @@ namespace amis
 			if (pSysMenu != NULL)
 			{
 				if (pSysMenu->m_hMenu == hSysMenu) {
+					
+					amis::util::Log* p_log = amis::util::Log::Instance();
+					p_log->writeMessage("System Menu !");
 					TRACE("System Menu !");
+
 					isSysMenu = true;
 				}
 			}
@@ -223,6 +235,10 @@ namespace amis
 					s.Format(_T("\nMenuVoicing::OnMenuSelect(%d) '%s'\n"), nItemID, prompt.c_str());	 //DAN_MENU_DEBUG
 					TRACE(s);
 
+					
+					amis::util::Log* p_log = amis::util::Log::Instance();
+					p_log->writeMessage(W2CA(s));
+
 			AudioSequence* seq = createSeqPrepend(nFlags);
 
 					if (prompt.compare("file") == 0	|| prompt.compare("recentBooksList") ==	0) {
@@ -292,6 +308,10 @@ namespace amis
 					s.Format(_T("\nMenuVoicing::OnMenuSelect(%d)\n"), nItemID);	 //DAN_MENU_DEBUG
 					TRACE(s);
 
+		
+					amis::util::Log* p_log = amis::util::Log::Instance();
+					p_log->writeMessage(W2CA(s));
+
 			AudioSequence* seq = createSeqPrepend(nFlags);
 
 					switch (nItemID) {
@@ -345,6 +365,8 @@ namespace amis
 					
 				TRACE(s);
 
+					amis::util::Log* p_log = amis::util::Log::Instance();
+					p_log->writeMessage(W2CA(s));
 
 				amis::BookList* books = theApp.getHistory();
 				int nRecentBooks = (books ? books->getNumberOfEntries() : 0);

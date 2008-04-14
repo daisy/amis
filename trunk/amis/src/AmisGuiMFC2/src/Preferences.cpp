@@ -425,7 +425,6 @@ void Preferences::logAllPreferences()
 	else log_msg += "No";
 	p_log->writeMessage(log_msg);
 	
-	//TODO: log tts voice index as something meaningful
 	int indexTTSVoice = getTTSVoiceIndex();
 	log_msg = "\tTTS voice index ";
 	char strTTSVoice[3];

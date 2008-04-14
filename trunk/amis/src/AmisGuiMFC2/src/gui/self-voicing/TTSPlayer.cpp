@@ -8,6 +8,7 @@
 #include "gui/self-voicing/TTSPlayer.h"
 
 
+#include "util/Log.h"
 
 #include <sapi.h>
 #include <sphelper.h>
@@ -88,10 +89,14 @@ void TTSPlayer::Play(CString str)
 
 	EnterCriticalSection(&m_csSequence);
 
+					amis::util::Log* p_log = amis::util::Log::Instance();
+					p_log->writeMessage("*-*=*+*");
 	TRACE(L"\n*-*=*+*");
+	p_log->writeMessage(W2CA(str));
 	TRACE(str);
 	if (IsSpeaking()) {
-		TRACE("????????");
+		p_log->writeMessage("IsSpeaking????????");
+		TRACE("IsSpeaking????????");
 	}
 	TRACE("\n");
 mbDoNotProcessEndEvent = true;
@@ -115,6 +120,9 @@ LeaveCriticalSection(&m_csSequence);
 void TTSPlayer::Stop()
 {
 	EnterCriticalSection(&m_csSequence);
+	
+					amis::util::Log* p_log = amis::util::Log::Instance();
+					p_log->writeMessage("Stop TTS");
                 TRACE(_T("\nStop TTS\r\n") );
 
 				mbDoNotProcessEndEvent = true;
@@ -132,8 +140,12 @@ LeaveCriticalSection(&m_csSequence);
 
 void TTSPlayer::WaitUntilDone()
 {
+					amis::util::Log* p_log = amis::util::Log::Instance();
+					p_log->writeMessage("//// TTS BEFORE WAIT");
 TRACE(_T("\n//// TTS BEFORE WAIT \r\n") );
 	m_iV->WaitUntilDone(INFINITE);
+
+	p_log->writeMessage("//// TTS AFTER WAIT");
 TRACE(_T("\n//// TTS AFTER WAIT \r\n") );
 }
 
@@ -154,11 +166,14 @@ void TTSPlayer::callback() {
 	//ISpVoice* m_iV = TTSPlayer::Instance()->m_iV;
 	//ISpVoice* m_iV = ((TTSPlayer *)lParam)->m_iV;
 
+					amis::util::Log* p_log = amis::util::Log::Instance();
     while( event.GetFrom(m_iV) == S_OK )
     {
         switch( event.eEventId )
         {
             case SPEI_START_INPUT_STREAM:
+				
+					p_log->writeMessage("StartStream event");
                 TRACE(_T("\nStartStream event\r\n") );
 				m_isSpeaking = TRUE;
                 
@@ -171,10 +186,13 @@ void TTSPlayer::callback() {
 
 				if (mbDoNotProcessEndEvent) {
 					
+					p_log->writeMessage("EndStream 1 mbDoNotProcessEndEvent");
                 TRACE(_T("\nEndStream 1 mbDoNotProcessEndEvent\r\n") );
 					mbDoNotProcessEndEvent = false;
 				} else {
 					
+					
+					p_log->writeMessage("EndStream 2 sendMessageCallback");
                 TRACE(_T("\nEndStream 2 sendMessageCallback\r\n") );
 					sendMessageCallback();
 				}
@@ -184,6 +202,8 @@ void TTSPlayer::callback() {
                 break;     
                 
             case SPEI_VOICE_CHANGE:
+				
+					p_log->writeMessage("Voicechange event");
                 TRACE(_T("\nVoicechange event\r\n") );
                 
                 break;

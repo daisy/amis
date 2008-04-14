@@ -277,6 +277,10 @@ void CMainFrame::Dump(CDumpContext& dc) const
 
 void CMainFrame::OnMenuSelect( UINT	nItemID, UINT nFlags, HMENU	hSysMenu )
 {
+	
+					amis::util::Log* p_log = amis::util::Log::Instance();
+  
+					p_log->writeMessage("CMainFrame::OnMenuSelect()");
 	TRACE("\nCMainFrame::OnMenuSelect()\n");
 	CFrameWnd::OnMenuSelect(nItemID, nFlags, hSysMenu);
 
@@ -288,6 +292,9 @@ void CMainFrame::OnMenuSelect( UINT	nItemID, UINT nFlags, HMENU	hSysMenu )
 
 void CMainFrame::OnInitMenuPopup(CMenu*	pPopupMenu,	UINT nIndex, BOOL bSysMenu)	
 {
+					amis::util::Log* p_log = amis::util::Log::Instance();
+  
+					p_log->writeMessage("CMainFrame::OnInitMenuPopup()");
 	TRACE("\nCMainFrame::OnInitMenuPopup()\n");
 	m_lastOpenPopupMenu	= pPopupMenu;
 
@@ -327,6 +334,10 @@ void CMainFrame::OnInitMenuPopup(CMenu*	pPopupMenu,	UINT nIndex, BOOL bSysMenu)
 
 void CMainFrame::OnInitMenu(CMenu* pMenu)
 {
+	
+					amis::util::Log* p_log = amis::util::Log::Instance();
+  
+					p_log->writeMessage("CMainFrame::OnInitMenu()");
 	TRACE("\nCMainFrame::OnInitMenu()\n");
 	CMDIFrameWnd::OnInitMenu(pMenu);
 }

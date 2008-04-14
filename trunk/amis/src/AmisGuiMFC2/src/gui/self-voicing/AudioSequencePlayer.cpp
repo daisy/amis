@@ -21,6 +21,8 @@
 //#include "ambulant/net/url.h"
 #include "../../AmisGuiMFC2/resource.h"
 
+#include "util/Log.h"
+
 using namespace amis::tts;
 
 using namespace amis::gui::spoken;
@@ -407,6 +409,8 @@ AudioSequencePlayer::AudioSequencePlayer(void)
 void AudioSequencePlayer::waitForSequenceEnd()
 {
 	
+					amis::util::Log* p_log = amis::util::Log::Instance();
+					p_log->writeMessage("WAIT for SEQ end.");
 TRACE("\nWAIT for SEQ end.\n");
 	DWORD hr = WaitForSingleObject(m_hEventEnd, 3000);
 	switch (hr) {
@@ -430,6 +434,7 @@ TRACE("\nWAIT for SEQ end.\n");
 
 	}
 	
+					p_log->writeMessage("WAIT for SEQ end DONE.");
 TRACE("\nWAIT for SEQ end DONE.\n");
 }
 void AudioSequencePlayer::DestroyInstance()
@@ -535,6 +540,14 @@ void AudioSequencePlayer::WaitForEndSeqAndRestartBook() {
 		//AfxBeginThread(eventHandlerX,0);
 			//GetCurrentThreadId
 		TRACE("\nTHREAD ID (WaitForEndSeqAndRestartBook): %x\n", lpdwThreadID);
+
+		
+					amis::util::Log* p_log = amis::util::Log::Instance();
+					p_log->writeMessage("THREAD ID (WaitForEndSeqAndRestartBook)");
+					char strID[10];
+					sprintf(strID, "%x", lpdwThreadID);
+					p_log->writeMessage(strID);
+
 }
 
 void AudioSequencePlayer::Stop(bool fromPlay)
@@ -556,6 +569,8 @@ SetEvent(m_hEventEnd);
 
 			bool bExpectEndEventForWakeUp = false;
 
+					amis::util::Log* p_log = amis::util::Log::Instance();
+
 			if (TTSPlayer::Instance()->IsSpeaking()) {	
 				bIgnoreTTSEnd = true;
 				m_nEndEventsToExpect++;
@@ -563,6 +578,8 @@ SetEvent(m_hEventEnd);
 				TTSPlayer::Instance()->Stop();
 				//TTSPlayer::Instance()->WaitUntilDone();
 				TRACE(L"\n####### ++++ STOP TTS\n");
+				
+					p_log->writeMessage("####### ++++ STOP TTS");
 			}
 
 			if (ambulantX::gui::dx::audio_playerX::Instance()->is_playing()) {
@@ -572,6 +589,8 @@ SetEvent(m_hEventEnd);
 				ambulantX::gui::dx::audio_playerX::Instance()->stop(false);
 				//m_wakeUpOriginator = 3; // AUDIO CLIP END
 				//SetEvent(m_hEventWakeup);
+				
+					p_log->writeMessage("####### ++++ STOP AUDIO");
 				TRACE(L"\n####### ++++ STOP AUDIO\n");
 			}
 
@@ -589,11 +608,17 @@ SetEvent(m_hEventEnd);
 }
 void AudioSequencePlayer::playNext(bool fromEndEvent) {
 
+USES_CONVERSION;
+
 	if (m_currentAudioSequence == NULL) return;
 
 #ifdef CCS_ACTIVE
 	if (fromEndEvent) EnterCriticalSection(&m_csSequence);
 #endif
+	
+					amis::util::Log* p_log = amis::util::Log::Instance();
+
+					p_log->writeMessage("*** PLAY NEXT");
 
 					TRACE(L"\n*** PLAY NEXT\n");
 	
@@ -615,6 +640,7 @@ if (comp->m_isAudioClip) {
 	_ASSERT(hr == S_FALSE);
 	}
 
+					p_log->writeMessage("============ PLAY AUDIO CLIP");
 					TRACE(L"\n============ PLAY AUDIO CLIP\n");
 						bool b = playAudioPrompt(comp->m_AudioClip);
 
@@ -632,6 +658,10 @@ if (comp->m_isAudioClip) {
 					CString strDebug;
 					strDebug.Format(_T("============ PLAY AUDIO TTS: --%s--\n"), comp->m_String);
 					TRACE(strDebug);
+
+					p_log->writeMessage("============ PLAY AUDIO TTS");
+					p_log->writeMessage(W2CA(comp->m_String));
+
 					bIgnoreTTSEnd = false;
 					TTSPlayer::Instance()->Play(comp->m_String);
 						delete comp;
@@ -647,10 +677,14 @@ DWORD __stdcall eventHandlerX(LPVOID lpParam) {
 
 	AudioSequencePlayer *pPlayer = (AudioSequencePlayer*)lpParam;
 
+	
+					amis::util::Log* p_log = amis::util::Log::Instance();
+					p_log->writeMessage("/// THREAD PLAY BEGIN");
 	TRACE(L"\n/// THREAD PLAY BEGIN\n");
 
 	pPlayer->playNext(true);
 
+					p_log->writeMessage("/// THREAD PLAY END");
 	TRACE(L"\n/// THREAD PLAY END\n");
 
     //_endthreadex( 0 );
@@ -668,6 +702,8 @@ void AudioSequencePlayer::Play(AudioSequence* audioSequence, bool doNotRegisterI
 		EnterCriticalSection(&m_csSequence);
 #endif
 		
+					amis::util::Log* p_log = amis::util::Log::Instance();
+					p_log->writeMessage("####### -- PLAY SEQ");
 				TRACE(L"\n####### -- PLAY SEQ\n");
 
 	Stop(true);
@@ -729,6 +765,8 @@ if (!doNotRegisterInHistory) {
 				//ResetEvent(pThis->m_hEventWakeup);
 				TTSPlayer::Instance()->Stop();
 				//TTSPlayer::Instance()->WaitUntilDone();
+				
+					p_log->writeMessage("#######--- STOP TTS");
 				TRACE(L"\n#######--- STOP TTS\n");
 			}
 			if (ambulantX::gui::dx::audio_playerX::Instance()->is_playing()) {
@@ -738,6 +776,8 @@ if (!doNotRegisterInHistory) {
 				ambulantX::gui::dx::audio_playerX::Instance()->stop(false);
 				//m_wakeUpOriginator = 3; // AUDIO CLIP END
 				//SetEvent(m_hEventWakeup);
+				
+					p_log->writeMessage("#######--- STOP AUDIO");
 				TRACE(L"\n#######--- STOP AUDIO\n");
 			}
 
@@ -747,6 +787,7 @@ if (!doNotRegisterInHistory) {
 				m_wakeUpOriginator = 1; // PLAY
 				
 		
+					p_log->writeMessage(" ---- m_hEventWakeup PLAY");
 	TRACE(L"\n ---- m_hEventWakeup PLAY\n");
 				SetEvent(m_hEventWakeup);
 			}
@@ -827,6 +868,10 @@ bool AudioSequencePlayer::playAudioPrompt(amis::AudioNode* pAudio)
 // This works for Containers (menus).
 void AudioSequencePlayer::playPromptFromUiId(int nItemID, AudioSequence* seq)
 {
+	USES_CONVERSION;
+	
+					amis::util::Log* p_log = amis::util::Log::Instance();
+
 //amis::Preferences::Instance()->mbUseTTSNotAudio == true)
 		if (nItemID != -1)
 		{
@@ -916,6 +961,10 @@ void AudioSequencePlayer::playPromptFromUiId(int nItemID, AudioSequence* seq)
 						strDebug.Format(_T("+++ 1 --%s--\n"), str); //DAN_MENU_DEBUG
 						TRACE(strDebug);
 
+						
+					p_log->writeMessage("+++ 1 --%s--");
+					p_log->writeMessage(W2CA(str));
+
 						if (! str.IsEmpty()) {
 							seq->append(str);
 						}
@@ -929,6 +978,10 @@ void AudioSequencePlayer::playPromptFromUiId(int nItemID, AudioSequence* seq)
 				CString strDebug;
 				strDebug.Format(_T("+++ 2 --%s--\n"), strText); //DAN_MENU_DEBUG
 				TRACE(strDebug);
+
+
+					p_log->writeMessage("+++ 1 --%s--");
+					p_log->writeMessage(W2CA(strText));
 
 				if (! strText.IsEmpty()) {
 					seq->append(strText);

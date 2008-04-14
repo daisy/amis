@@ -7,6 +7,9 @@
 #include "../../AmisGuiMFC2/resource.h"
 //#include "gui/AmisApp.h"
 
+
+#include "util/Log.h"
+
 PreTranslateMessageHandler::PreTranslateMessageHandler(int idUiDialog)
 {
 	m_instructionsDialogID = idUiDialog;
@@ -258,6 +261,10 @@ void PreTranslateMessageHandler::handle(PromptResolver * pResolver, MSG* pMsg, i
 				//if (seq != NULL && !(seq->IsEmpty()) && playNow) AudioSequencePlayer::Instance()->Play(seq, true);
 				//else AudioSequencePlayer::Instance()->Stop();
 				TRACE(L"\n @@@ CONTROL KEY STOP\n");
+				
+					amis::util::Log* p_log = amis::util::Log::Instance();
+					p_log->writeMessage(" @@@ CONTROL KEY STOP");
+
 				AudioSequencePlayer::Instance()->Stop();
 			}
 			mbKeyControl = false;
