@@ -903,7 +903,7 @@ void AudioSequencePlayer::playPromptFromUiId(int nItemID, AudioSequence* seq)
 			//AppendAudioSequenceStringResource(seq, nItemID);
 
 			UiItem* p_uiItem = DataTree::Instance()->findUiItemInContainers(nItemID, strCondition);
-			if (p_uiItem != NULL) {
+			if (p_uiItem != NULL && AMIS_PAGE_STYLE_BASE_ID != nItemID) { //TODO: temp fix to let the CSS file name be spoken via TTS
 
 				Label* keyboardShortcutAccelerator = NULL;
 				Label* mnemonic = NULL;
