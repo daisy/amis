@@ -166,7 +166,7 @@ BEGIN
     POPUP "&File"
     BEGIN
         MENUITEM "&Open...\tCtrl+O",            ID_AMIS_OPEN_FILE
-        MENUITEM "Open from &URL",              ID_AMIS_OPEN_URL
+        MENUITEM "Open from &URL... \t Ctrl+U", ID_AMIS_OPEN_URL
         MENUITEM "&Close",                      ID_AMIS_CLOSE_BOOK
         MENUITEM "&Load CD\tCtrl+L",            ID_AMIS_LOAD_CD
         MENUITEM "&Search drives...",           ID_AMIS_SEARCH_LOCAL_DRIVES
@@ -236,7 +236,7 @@ BEGIN
     END
     POPUP "&Help"
     BEGIN
-        MENUITEM "&Contents",                   ID_AMIS_SHOW_HELP_CONTENTS
+        MENUITEM "&Contents \tF1",              ID_AMIS_SHOW_HELP_CONTENTS
         MENUITEM "&Keyboard shortcuts",         ID_AMIS_SHOW_KEYBOARD_SHORTCUTS
         MENUITEM "&About AMIS",                 ID_AMIS_ABOUT
     END

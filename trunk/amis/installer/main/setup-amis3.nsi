@@ -2,7 +2,7 @@
 
 ; HM NIS Edit Wizard helper defines
 !define PRODUCT_NAME "AMIS"
-!define PRODUCT_VERSION "3.0 Alpha 2"
+!define PRODUCT_VERSION "3.0 Beta 1"
 !define PRODUCT_PUBLISHER "DAISY for All Project"
 !define PRODUCT_WEB_SITE "http://amisproject.org"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\AMIS.exe"
@@ -68,7 +68,7 @@ Page custom SapiPage
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION} (${LANG_NAME})"
 ;this is the name of the installer that gets created.  
 ;for some reason, i vaguely remember that it shouldn't have spaces in the filename.
-OutFile "Setup-amis3-alpha2-${DEFAULT_LANGPACK}.exe"
+OutFile "Setup-amis3-beta1-${DEFAULT_LANGPACK}.exe"
 InstallDir "$PROGRAMFILES\AMIS"
 InstallDirRegKey HKLM "${PRODUCT_DIR_REGKEY}" ""
 ShowInstDetails show
