@@ -43,6 +43,7 @@ public:
 	INT_PTR do_modal();
 	void setFirstDraw(bool);
 
+	void triggerVirtualKeyStroke(CWnd* cwnd);
 	BOOL PreTranslateMessageTextField(MSG* pMsg, UINT id);
 	virtual BOOL PreTranslateMessage(MSG* pMsg);
 protected:

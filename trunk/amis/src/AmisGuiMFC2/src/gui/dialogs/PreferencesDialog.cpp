@@ -60,12 +60,12 @@ void PreferencesDialog::resolvePromptVariables(Prompt* pPrompt) {
 	
 	CButton* p_button = NULL;
 
-	PromptVar* p_var = NULL;
 	PromptItem* promptNotAvailable = DataTree::Instance()->findPromptItem("not_available");
 
 	PromptItem* promptSelected = DataTree::Instance()->findPromptItem("item_selected");
 	PromptItem* promptDeSelected = DataTree::Instance()->findPromptItem("item_deselected");
 
+	PromptVar* p_var = NULL;
 	for (int i=0; i<pPrompt->getNumberOfItems(); i++)
 	{
 		if (pPrompt->getItem(i)->getPromptItemType() == PROMPT_VARIABLE)
@@ -336,35 +336,12 @@ BOOL PreferencesDialog::PreTranslateMessage(MSG* pMsg)
 	return AmisDialogBase::PreTranslateMessage(pMsg);
 }
 
-void PreferencesDialog::triggerVirtualKeyStroke() {
-
-	if (amis::Preferences::Instance()->getIsSelfVoicing() == false) {
-		
-		return;
-	}
-	CWnd* cwnd = this->GetFocus();
-	MSG * msg = new MSG();
-
-	msg->message = WM_KEYDOWN;
-	msg->hwnd = cwnd->GetSafeHwnd();
-	msg->lParam = 0;
-	msg->wParam = VK_UP;
-	
-	//PreTranslateMessage(msg);
-	mCommonPreTranslateMessageHandler->handle(this, msg, (cwnd == NULL ? -1 : cwnd->GetDlgCtrlID()));
-	
-	msg->message = WM_KEYUP;
-	
-	//PreTranslateMessage(msg);
-	mCommonPreTranslateMessageHandler->handle(this, msg, (cwnd == NULL ? -1 : cwnd->GetDlgCtrlID()));
-
-	delete msg;
-}
 
 //widget event handlers
 void PreferencesDialog::OnBnClickedIsSelfVoicing()
 {
-	triggerVirtualKeyStroke();
+	CWnd* cwnd = this->GetFocus();
+	triggerVirtualKeyStroke(cwnd);
 }
 void PreferencesDialog::OnBnSetfocusIsSelfVoicing()
 {
@@ -376,22 +353,22 @@ void PreferencesDialog::OnCbnSelchangeTTSVoices()
 	int selected = list->GetCurSel();
 	mTTSVoiceIndex = selected;
 
-	triggerVirtualKeyStroke();
+	OnBnClickedIsSelfVoicing();
 }
 void PreferencesDialog::OnCbnSetfocusTTSVoices()
 {
-	triggerVirtualKeyStroke();
+	OnBnClickedIsSelfVoicing();
 }
 void PreferencesDialog::OnBnClickedStartInBasicView()
 {
-	triggerVirtualKeyStroke();
+	OnBnClickedIsSelfVoicing();
 }
 void PreferencesDialog::OnBnSetfocusStartInBasicView()
 {
 }
 void PreferencesDialog::OnBnClickedLoadLastBook()
 {
-	triggerVirtualKeyStroke();
+	OnBnClickedIsSelfVoicing();
 }
 void PreferencesDialog::OnBnSetfocusLoadLastBook()
 {
@@ -401,7 +378,7 @@ void PreferencesDialog::OnBnSetfocusHighlightText()
 }
 void PreferencesDialog::OnBnClickedHighlightText()
 {
-	triggerVirtualKeyStroke();
+	OnBnClickedIsSelfVoicing();
 }
 void PreferencesDialog::OnCbnSelchangeInstalledLanguages()
 {
@@ -413,16 +390,16 @@ void PreferencesDialog::OnCbnSelchangeInstalledLanguages()
 	for (int i = 0; i<sel; i++) it++;
 	mUiLanguageSelection = it->first;
 
-	triggerVirtualKeyStroke();
+	OnBnClickedIsSelfVoicing();
 }
 void PreferencesDialog::OnCbnSetfocusInstalledLanguages()
 {
-	triggerVirtualKeyStroke();
+	OnBnClickedIsSelfVoicing();
 }
 void PreferencesDialog::OnBnSetfocusDisableScreensaver()
 {
 }
 void PreferencesDialog::OnBnClickedDisableScreensaver()
 {
-	triggerVirtualKeyStroke();
+	OnBnClickedIsSelfVoicing();
 }

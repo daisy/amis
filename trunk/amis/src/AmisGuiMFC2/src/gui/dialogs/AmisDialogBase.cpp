@@ -34,6 +34,30 @@ IMPLEMENT_DYNAMIC(AmisDialogBase, CDialog)
 void AmisDialogBase::resolvePromptVariables(Prompt* pPrompt) {
 	return;
 }
+
+void AmisDialogBase::triggerVirtualKeyStroke(CWnd* cwnd) {
+
+	if (amis::Preferences::Instance()->getIsSelfVoicing() == false) {
+		
+		return;
+	}
+	MSG * msg = new MSG();
+
+	msg->message = WM_KEYDOWN;
+	msg->hwnd = cwnd->GetSafeHwnd();
+	msg->lParam = 0;
+	msg->wParam = VK_UP;
+	
+	//PreTranslateMessage(msg);
+	mCommonPreTranslateMessageHandler->handle(this, msg, (cwnd == NULL ? -1 : cwnd->GetDlgCtrlID()));
+	
+	msg->message = WM_KEYUP;
+	
+	//PreTranslateMessage(msg);
+	mCommonPreTranslateMessageHandler->handle(this, msg, (cwnd == NULL ? -1 : cwnd->GetDlgCtrlID()));
+
+	delete msg;
+}
 BOOL AmisDialogBase::PreTranslateMessageTextField(MSG* pMsg, UINT id)
 {
 	if (Preferences::Instance()->getIsSelfVoicing() == false) 

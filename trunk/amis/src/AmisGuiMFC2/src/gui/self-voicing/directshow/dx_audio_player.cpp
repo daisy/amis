@@ -197,9 +197,10 @@ p_log->writeMessage("== THREAD EVENT OTHER");
 		}
 	}
 	TRACE(L"\n== THREAD END %d\n", nn);
-	
-p_log->writeMessage("== THREAD END");
-					p_log->writeMessage(strNN);
+
+	//todo: potentially makes app crash at exit time, because logger has been destroyed
+//p_log->writeMessage("== THREAD END");
+//					p_log->writeMessage(strNN);
 
     //_endthreadex( 0 );
     return 0;

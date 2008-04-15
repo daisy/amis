@@ -76,7 +76,6 @@ protected:
 	DECLARE_MESSAGE_MAP()
 private:
 	
-	void triggerVirtualKeyStroke();
 	void initializeTTSVoiceOption();
 	void initializeUiLanguageOption();
 	void setCurrentLanguageLabel();

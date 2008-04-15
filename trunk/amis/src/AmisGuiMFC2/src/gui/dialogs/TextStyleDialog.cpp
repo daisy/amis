@@ -43,7 +43,52 @@ BEGIN_MESSAGE_MAP(TextStyleDialog, CDialog)
 END_MESSAGE_MAP()
 
 void TextStyleDialog::resolvePromptVariables(Prompt* pPrompt) {
-	return;
+	
+	USES_CONVERSION;
+	
+	PromptVar* p_var = NULL;
+	for (int i=0; i<pPrompt->getNumberOfItems(); i++)
+	{
+		if (pPrompt->getItem(i)->getPromptItemType() == PROMPT_VARIABLE)
+		{
+			p_var = (PromptVar*)pPrompt->getItem(i);
+
+			if (p_var->getName().compare("FONT_NAME") == 0)
+			{
+	CString tmp_font;
+	CComboBox* p_font_list = (CComboBox*)GetDlgItem(IDC_FONT);
+	p_font_list->GetWindowText(tmp_font);
+
+				wstring str;
+				str = tmp_font;
+	p_var->setContents(str, "");
+			} else 
+			if (p_var->getName().compare("FOREGROUND_COLOR_NAME") == 0)
+			{
+
+	CString tmp_fore;
+	CComboBox* p_foreground_list = (CComboBox*)GetDlgItem(IDC_HIGHLIGHTFOREGROUND);
+	p_foreground_list->GetWindowText(tmp_fore);
+	
+				wstring str;
+				str = tmp_fore;
+	p_var->setContents(str, "");
+			} else 
+			if (p_var->getName().compare("BACKGROUND_COLOR_NAME") == 0)
+			{
+
+	CString tmp_back;
+	CComboBox* p_background_list = (CComboBox*)GetDlgItem(IDC_HIGHLIGHTBACKGROUND);
+	p_background_list->GetWindowText(tmp_back);
+
+	
+				wstring str;
+				str = tmp_back;
+	p_var->setContents(str, "");
+			} 
+		}
+	}
+	AmisDialogBase::resolvePromptVariables(pPrompt);
 }
 
 BOOL CALLBACK EnumFontCallback (LPLOGFONT lplf, LPTEXTMETRIC lptm, DWORD dwType, LPARAM lpData)	
@@ -139,22 +184,33 @@ BOOL TextStyleDialog::PreTranslateMessage(MSG* pMsg)
 //widget event handlers
 void TextStyleDialog::OnCbnSelchangeFont()
 {
+	CWnd* cwnd = this->GetFocus();
+	CComboBox* p = (CComboBox*)GetDlgItem(IDC_FONT);
+	triggerVirtualKeyStroke(p);
 }
 void TextStyleDialog::OnCbnSetfocusFont()
 {
+	OnCbnSelchangeFont();
 }
 void TextStyleDialog::OnCbnSelchangeHighlightForeground()
 {
+	CWnd* cwnd = this->GetFocus();
+	CComboBox* p = (CComboBox*)GetDlgItem(IDC_HIGHLIGHTFOREGROUND);
+	triggerVirtualKeyStroke(p);
 }
 void TextStyleDialog::OnCbnSetfocusHighlightForeground()
 {
+	OnCbnSelchangeHighlightForeground();
 }
 void TextStyleDialog::OnCbnSelchangeHighlightBackground()
 {
+	CWnd* cwnd = this->GetFocus();
+	CComboBox* p = (CComboBox*)GetDlgItem(IDC_HIGHLIGHTBACKGROUND);
+	triggerVirtualKeyStroke(p);
 }
 void TextStyleDialog::OnCbnSetfocusHighlightBackground()
 {
-
+	OnCbnSelchangeHighlightBackground();
 }
 void amis::gui::dialogs::TextStyleDialog::OnOK()
 {

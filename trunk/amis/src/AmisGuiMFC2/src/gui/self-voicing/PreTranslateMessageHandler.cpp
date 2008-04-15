@@ -250,6 +250,7 @@ void PreTranslateMessageHandler::handle(PromptResolver * pResolver, MSG* pMsg, i
 	}
 	else if (pMsg->message == WM_KEYUP)
 	{
+		
 		bool wasSameKey = false;
 		if (mLastKeyDown == pMsg->wParam) { //Prevents repeat
 			mLastKeyDown = -1;
@@ -330,7 +331,7 @@ void PreTranslateMessageHandler::handle(PromptResolver * pResolver, MSG* pMsg, i
 
 						mSeq = new AudioSequence();
 
-						if (idUiFocus == IDC_URL) { // TODO: this is a temporary hack until there is XML data for the URL open dialog
+						if (idUiFocus == 111111) {
 
 							Prompt* p_prompt_ = DataTree::Instance()->findPrompt("textFieldEntry");
 

@@ -1588,7 +1588,7 @@
         </description>
         <list repeat="yes">
           <caption>
-            <promptVar name="COLOR_NAME"/>
+            <promptVar name="FOREGROUND_COLOR_NAME"/>
           </caption>
         </list>
       </control>
@@ -1603,7 +1603,7 @@
         </description>
         <list repeat="yes">
           <caption>
-            <promptVar name="COLOR_NAME"/>
+            <promptVar name="BACKGROUND_COLOR_NAME"/>
           </caption>
         </list>
       </control>
