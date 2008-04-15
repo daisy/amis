@@ -241,7 +241,7 @@ void PublicationSummaryDialog::displayData()
 	CString format = _T("Format:");
 	CString features = _T("Features:");
 	CString curr_page = _T("Current page:");
-	CString curr_time = _T("Current time:");
+	//CString curr_time = _T("Current time:");
 	CString curr_section = _T("Current section:");
 	CString section_contents = _T("Section contents:");
 	CString maxdepth = _T("Max section depth:");
@@ -272,15 +272,17 @@ void PublicationSummaryDialog::displayData()
 		appendToList(p_list, curr_page, mpCurrentPage->getText()->getTextString());
 	else 
 		appendToList(p_list, curr_page, L"");
-	wvalue = L"TODO";
-	appendToList(p_list, curr_time, wvalue);
+	//wvalue = L"TODO";
+	//appendToList(p_list, curr_time, wvalue);
 	if (mpSectionName != NULL)
 	{
 		appendToList(p_list, curr_section, mpSectionName->getText()->getTextString());
 		value.Format(_T("%d subsections and %d pages"), mNumSubsections, mNumPagesForSection);
 		wvalue = value;
 		appendToList(p_list, section_contents, wvalue);
-	} else {
+	} 
+	else 
+	{
 		appendToList(p_list, curr_section, L"");
 		appendToList(p_list, section_contents, L"");
 	}
@@ -292,7 +294,8 @@ void PublicationSummaryDialog::displayData()
 	appendToList(p_list, maxdepth, wvalue);
 }
 
-CString PublicationSummaryDialog::computeAuthor() {
+CString PublicationSummaryDialog::computeAuthor() 
+{
 	CString value;
 	
 	if (mCreator.size() > 0) value = mCreator.c_str();
@@ -300,7 +303,8 @@ CString PublicationSummaryDialog::computeAuthor() {
 
 	return value;
 }
-CString PublicationSummaryDialog::computeTitle() {
+CString PublicationSummaryDialog::computeTitle() 
+{
 	CString value;
 
 	if (mpTitle != NULL) value = mpTitle->getText()->getTextString().c_str();
@@ -311,7 +315,6 @@ CString PublicationSummaryDialog::computeTitle() {
 
 void PublicationSummaryDialog::OnLvnItemchangedSummary(NMHDR *pNMHDR, LRESULT *pResult)
 {
-	
 	if (amis::Preferences::Instance()->getIsSelfVoicing() == false) {
 		
 	*pResult = 0;
@@ -539,10 +542,10 @@ void PublicationSummaryDialog::resolvePromptVariables(Prompt* pPrompt) {
 					p_var->setContents(promptNotAvailable->getContents()->clone());
 				}
 			} 
-			else if (p_var->getName().compare("CURRENT_TIME") == 0)
+			/*else if (p_var->getName().compare("CURRENT_TIME") == 0)
 			{
 					p_var->setContents(promptNotAvailable->getContents()->clone());
-			} 
+			} */
 
 			else if (p_var->getName().compare("CURRENT_SECTION_TITLE") == 0)
 			{

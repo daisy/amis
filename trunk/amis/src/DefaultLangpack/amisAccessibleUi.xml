@@ -1496,15 +1496,6 @@
           <caption condition="DATA_EXISTS">
             <prompt>
               <promptItem>
-                <text id="t357" flag="new">Current time:</text>
-                <audio src="./audio/speechgen0228.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0228.smil#txtd1595e9"/>
-              </promptItem>
-              <promptVar name="CURRENT_TIME"/>
-            </prompt>
-          </caption>
-          <caption condition="DATA_EXISTS">
-            <prompt>
-              <promptItem>
                 <text id="t215" flag="changed">Current section:</text>
                 <audio src="./audio/speechgen0229.mp3" from="file:///Users/marisa/amisxml/narrated/daisy202/speechgen0229.smil#txtd1602e9"/>
               </promptItem>
