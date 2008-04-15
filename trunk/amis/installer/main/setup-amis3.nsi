@@ -52,7 +52,7 @@ Page custom SapiPage
 !define DEFAULT_LANGPACK "eng-US"
 
 ;this is the name of the language
-!define LANG_NAME "English"
+!define LANG_NAME "U.S. English"
 
 ;this is the path to where the AMIS executable lives
 !define BIN_DIR	"..\..\bin"
@@ -76,7 +76,6 @@ ShowUnInstDetails show
 
 Section "MainSection" SEC01
 
-
   SetOutPath "$INSTDIR"
   SetOverwrite try
   File "${BIN_DIR}\AMIS.exe"
@@ -86,7 +85,7 @@ Section "MainSection" SEC01
   
   ;copy the DLLs
   File "${BIN_DIR}\libambulant_shwin32.dll"
-  File "${BIN_DIR}\xerces-c_2_7.dll"
+  File "${BIN_DIR}\xerces-c_2_8.dll"
   File "${BIN_DIR}\libamplugin_pdtb.dll"
   File "${BIN_DIR}\PdtbIePlugin.dll"
   File "${BIN_DIR}\TransformSample.ax"
@@ -125,20 +124,16 @@ Section "MainSection" SEC01
   File "${BIN_DIR}\settings\lang\version.mp3"
   File "${BIN_DIR}\settings\lang\releasedate.mp3"
   
-  ;Call CopyDefaultLangpack
-
   ;copy the lang directory readme file
   SetOutPath "$INSTDIR\settings\lang"
   File "${BIN_DIR}\settings\lang\readme.txt"
-  
- 
- ;copy MFC runtimes
-  SetOverwrite off
-  SetOutPath "$SYSDIR"
- 	File "${WIN32_DIR}\MSVCR71.DLL"
-  File "${WIN32_DIR}\MSVCP71.DLL"
-  File "${WIN32_DIR}\MFC71U.DLL"
-  
+
+  ;copy the MSVC redistributables exe
+  SetOutPath ${INSTDIR}\temp
+  ;TODO: make c:\program files a variable
+  File "c:\Program Files\Microsoft Visual Studio 8\SDK\v2.0\BootStrapper\Packages\vcredist_x86\vcredist_x86.exe"
+	
+	  
   ;TODO: ask the user if they want to change their registry to support Thai books
   ;TODO: if so, add this key in HKLM
   ;Software\Classes\MIME\Database\Charset\TIS-620 and set AliasForCharset to windows-874
@@ -147,7 +142,6 @@ SectionEnd
 
 ;******************************
 ;copy the files for the given langpack
-
 Section -CopyDefaultLangpack
   
   ;copy the langpack root files
@@ -190,6 +184,9 @@ Section -Post
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayVersion" "${PRODUCT_VERSION}"
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "URLInfoAbout" "${PRODUCT_WEB_SITE}"
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "Publisher" "${PRODUCT_PUBLISHER}"
+  
+  Call RunMSVCRuntimeSetup
+
 SectionEnd
 
 ;******************************
@@ -263,7 +260,7 @@ SectionEnd
 
 ;uninstall the default langpack
 Section -un.CopyDefaultLangpack
-Delete "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}\*"
+	Delete "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}\*"
   Delete "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}\start\*"
   Delete "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}\help\*"
   Delete "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}\help\img\*"
@@ -275,3 +272,19 @@ Delete "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}\*"
   RMDir "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}\audio"
   RMDir "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}"
 SectionEnd
+
+
+;*********************
+;install the MSVC runtimes setup
+Function RunMSVCRuntimeSetup
+  Var /GLOBAL MSVC_RUNTIME_INSTALLER
+	
+  StrCpy $MSVC_RUNTIME_INSTALLER "$INSTDIR\temp\vcredist_x86.exe"
+   
+  ExecWait "$MSVC_RUNTIME_INSTALLER" $0
+  StrCmp $0 "0" End Error
+  Error:
+    MessageBox MB_ICONEXCLAMATION "There was an error encountered while attempting to install the Microsoft runtime files.  Please download from http://www.microsoft.com/downloads/details.aspx?FamilyID=200B2FD9-AE1A-4A14-984D-389C36F85647&displaylang=en and install manually."
+    Goto End
+  End:
+FunctionEnd
