@@ -24,6 +24,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 #include "AmisCore.h"
 #include "ambulant/net/url.h"
+#include "dtb/Dtb.h"
 
 namespace amis
 {
@@ -36,12 +37,15 @@ class DtbIndex
 public:
 	DtbIndex();
 	~DtbIndex();
-	
+	void initialize(amis::dtb::Dtb*);
 	void indexLocation(const ambulant::net::url*);
-	bool wasFileIndexedAlready(string);
-
+	bool wasFileIndexedAlready(const ambulant::net::url*);
+	void calculateNodeRangeData(const ambulant::net::url*);
+private:
 	amis::StringMap mTextIdToSmilAddressMap;
-	amis::StringToStringsMap mSmilFileToSmilIdMap;
+	amis::UrlPtrToStringListMap mSmilFileToSmilIdMap;
+	amis::dtb::nav::NodeRefMap mSmilIdToNavNodeMap;
+	amis::dtb::Dtb* mpDtb;
 };
 }
 }

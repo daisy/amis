@@ -16,7 +16,11 @@
 #define ID_AMIS_TOGGLE_AUDIO_SELFVOICING_PLAYBACK 134
 #define ID_AMIS_FIND_NEXT_IN_TEXT       143
 #define ID_AMIS_FIND_PREVIOUS_IN_TEXT   144
+#define ID_AMIS_DECREASE_CONTENT_VOLUME 145
+#define ID_AMIS_DECREASE_UI_VOLUME      146
 #define IDD_FIND                        147
+#define ID_AMIS_INCREASE_CONTENT_VOLUME 147
+#define ID_AMIS_INCREASE_UI_VOLUME      148
 #define AMIS_VIEW_MENU_BASE_ID          150
 #define IDI_AMIS                        164
 #define IDD_SEARCHDAISY                 177
@@ -136,6 +140,6 @@
 #define _APS_NEXT_RESOURCE_VALUE        194
 #define _APS_NEXT_COMMAND_VALUE         32959
 #define _APS_NEXT_CONTROL_VALUE         1117
-#define _APS_NEXT_SYMED_VALUE           145
+#define _APS_NEXT_SYMED_VALUE           149
 #endif
 #endif

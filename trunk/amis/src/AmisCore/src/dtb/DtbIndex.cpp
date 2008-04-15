@@ -32,12 +32,22 @@ amis::dtb::DtbIndex::DtbIndex()
 amis::dtb::DtbIndex::~DtbIndex()
 {
 }
-
+void amis::dtb::DtbIndex::initialize(amis::dtb::Dtb* pDtb)
+{
+	mpDtb = pDtb;
+	//initalize the map with the names of each SMIL file
+	amis::dtb::Spine* p_spine = mpDtb->getSpine();
+	amis::StdStringList empty_list;
+	empty_list.empty();
+	for (int i = 0; i<p_spine->getNumberOfSmilFiles(); i++)
+	{
+		mSmilFileToSmilIdMap[p_spine->getSmilFilePath(i)] = empty_list;
+	}
+}
 //parse the file and add its data to the indices	
 void amis::dtb::DtbIndex::indexLocation(const ambulant::net::url* pLocation)
 {
-	string smil_file_name = amis::util::FilePathTools::getFileName(pLocation->get_file());
-	if (wasFileIndexedAlready(smil_file_name) == true) return;
+	if (wasFileIndexedAlready(pLocation) == true) return;
 	amis::io::QuickDataSmilFileReader quick_reader;
 	//get all the ids and text src's from this smil file.  also fill in the audio data for the nav nodes.
 	//big id list is a list of all SMIL element IDs
@@ -48,18 +58,33 @@ void amis::dtb::DtbIndex::indexLocation(const ambulant::net::url* pLocation)
 	if (!quick_reader.readFromFile(pLocation, &id_list, &mTextIdToSmilAddressMap, NULL)) 
 		return;
 	//store the file name and all its IDs
-	mSmilFileToSmilIdMap[smil_file_name] = id_list;
-
+	mSmilFileToSmilIdMap[pLocation] = id_list;
+	calculateNodeRangeData(pLocation);
 }
-//This function DOES NOT WORK!!!
-bool amis::dtb::DtbIndex::wasFileIndexedAlready(string file)
+bool amis::dtb::DtbIndex::wasFileIndexedAlready(const ambulant::net::url* file)
 {
-	if (mSmilFileToSmilIdMap.size() > 0 ) //&& key "file" exists
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
+	if (mSmilFileToSmilIdMap[file].size() > 0) return true;
+	else return false;
+}
+//this function assumes the given file has been indexed already and that data is available
+void amis::dtb::DtbIndex::calculateNodeRangeData(const ambulant::net::url* file)
+{
+	amis::dtb::nav::WhoRefersToThisSmilFile who_visitor;
+	amis::dtb::nav::NavNodeList* p_nodes = who_visitor.findOut(mpDtb->getNavModel(), file);
+	
+	//now we have all the nav nodes that refer to the given smil file
+
+	//get a range for each one -- get its start ID from Node.content
+	//get its end ID:
+	// - end of the file
+	// - right before the start of the node of the same type (e.g. 2 NavPoints)
+	//This assumes that NavPoint ranges (at the deepest section depth) do not cross SMIL file boundaries 
+	//this is a safe assumption for NavPoints (in practice).
+	//However, this may not give an accurate range for pages.  but do we need those now that we have the new
+	//play order list?
+	//the ranges are being calculated as the indexing is occuring, so using the end of the file is
+	//convenient, since the next or previous file might not be indexed when we would need it if we
+	//wanted to cross SMIL file boundaries.
+
+	//add each ID in the range to mSmilIdToNavNodeMap
 }

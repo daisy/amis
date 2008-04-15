@@ -73,7 +73,7 @@ namespace amis
 	typedef stdext::hash_map<std::string, ambulant::net::url> UrlMap;
 	typedef stdext::hash_map<std::string, bool> BooleanMap;
 	typedef stdext::hash_map<std::string, amis::ModuleDescData*> StringModuleMap;
-	typedef stdext::hash_map<std::string, amis::StdStringList>StringToStringsMap;
+	typedef stdext::hash_map<const ambulant::net::url*, amis::StdStringList>UrlPtrToStringListMap;
 
 #elif defined(AMIS_COMPILER_GCC)
 	typedef __gnu_cxx::hash_map<std::string, std::string> StringMap;
