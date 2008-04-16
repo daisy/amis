@@ -129,9 +129,10 @@ Section "MainSection" SEC01
   File "${BIN_DIR}\settings\lang\readme.txt"
 
   ;copy the MSVC redistributables exe
-  SetOutPath ${INSTDIR}\temp
-  ;TODO: make c:\program files a variable
-  File "c:\Program Files\Microsoft Visual Studio 8\SDK\v2.0\BootStrapper\Packages\vcredist_x86\vcredist_x86.exe"
+  ;if you are making an installer, be sure to get the latest one from Microsoft.  
+  ;the one included in Visual Studio 8, even SP1, is outdated.
+  SetOutPath $TEMP
+  File "c:\devel\vcredist_x86.exe"
 	
 	  
   ;TODO: ask the user if they want to change their registry to support Thai books
@@ -279,7 +280,7 @@ SectionEnd
 Function RunMSVCRuntimeSetup
   Var /GLOBAL MSVC_RUNTIME_INSTALLER
 	
-  StrCpy $MSVC_RUNTIME_INSTALLER "$INSTDIR\temp\vcredist_x86.exe"
+  StrCpy $MSVC_RUNTIME_INSTALLER "$TEMP\vcredist_x86.exe"
    
   ExecWait "$MSVC_RUNTIME_INSTALLER" $0
   StrCmp $0 "0" End Error
