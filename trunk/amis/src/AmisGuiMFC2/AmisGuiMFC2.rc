@@ -422,12 +422,12 @@ BEGIN
         BLOCK "040904b0"
         BEGIN
             VALUE "FileDescription", "AMIS (Adaptive Multimedia Information System)"
-            VALUE "FileVersion", "2, 4, 0, 0"
+            VALUE "FileVersion", "3, 0, 0, 0"
             VALUE "InternalName", "AMIS"
-            VALUE "LegalCopyright", "Copyright (C) 2006"
+            VALUE "LegalCopyright", "Copyright (C) 2008"
             VALUE "OriginalFilename", "AMIS.exe"
             VALUE "ProductName", "AMIS (Adaptive Multimedia Information System)"
-            VALUE "ProductVersion", "2, 4, 0, 0"
+            VALUE "ProductVersion", "3, 0, 0, 0"
         END
     END
     BLOCK "VarFileInfo"
