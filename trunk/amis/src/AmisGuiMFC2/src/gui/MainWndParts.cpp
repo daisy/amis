@@ -84,7 +84,6 @@ void MainWndParts::basicView()
 {
 	if (this->mbSidebarVisible == true) toggleSidebar();
 	
-	MainWndParts::Instance()->updateTitleViewMode();
 	// TODO: change the window title text to say "basic view mode"
 	mpMainFrame->ShowControlBar(mpStatusBar, FALSE, TRUE);
 	mpMainFrame->ShowControlBar(mpDefaultRebar, FALSE, TRUE);
@@ -92,12 +91,13 @@ void MainWndParts::basicView()
 	mpMainFrame->SetMenu(NULL);
 	mpMainFrame->RecalcLayout();
 	mbBasicView = true;	
+
+	MainWndParts::Instance()->updateTitleViewMode();
 }
 
 void MainWndParts::defaultView()
 {
 	CMenu* p_menu  = NULL;
-	MainWndParts::Instance()->updateTitleViewMode();	
 	mpMainFrame->restoreMenu();
 	if (theApp.isBookOpen())
 	{
@@ -116,6 +116,8 @@ void MainWndParts::defaultView()
 	mbBasicView = false;
 	//TODO: make this smarter: only turn the sidebar on if it had been on before
 	if (this->mbSidebarVisible == false) toggleSidebar();
+	
+	MainWndParts::Instance()->updateTitleViewMode();	
 }
 
 bool MainWndParts::isBasicView()
