@@ -76,7 +76,7 @@ bool DtbWithHooks::open(const ambulant::net::url* filename, const ambulant::net:
 
 	//turn on all skippable options to start with
 	updateCustomTestStates(true);
-	if (getDaisyVersion() == DAISY_202) makeAllNavContainerLabelsHumanReadable();
+	makeAllNavContainerLabelsHumanReadable();
 	
 	amis::gui::sidebar::AmisSidebarLoader::Instance()->loadNavigationData
 		(this->getNavModel(), &amis::gui::MainWndParts::Instance()->mpSidebar->m_wndDlg);
