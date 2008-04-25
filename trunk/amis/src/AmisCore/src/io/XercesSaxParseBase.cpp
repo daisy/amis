@@ -174,5 +174,7 @@ void amis::io::XercesSaxParseBase::fatalError(const SAXParseException& e)
 	itoa(line, ch_line, 10);
 	string msg = "Parse fatal error: \n\t" + mFilepath.get_url() + "\n\tline: " + ch_line +  "\n\t" + xerces_msg;
 	amis::util::Log::Instance()->writeError(msg, "XercesSaxParseBase::error", "AmisCore");
+	mError.setCode(amis::PARSE_ERROR);
+	mError.setMessage(msg);
 	XMLString::release(&xerces_msg);
 }

@@ -77,7 +77,7 @@ ambulant::net::url chooseBook()
 	vector<ambulant::net::url> books;	
 	books.push_back(ambulant::net::url::from_filename("C:\\daisybooks\\Mountains_skip\\ncc.html"));
 	books.push_back(ambulant::net::url::from_filename("C:\\daisybooks\\voiceover_guide_zed\\06-SPEECHGEN.OPF"));
-
+	books.push_back(ambulant::net::url::from_filename("C:\\daisybooks\\j-say-book2\\Ncc.html"));
 	//present the list of books
 	for (int i = 0; i<books.size(); i++)
 		cout<<i+1<<". "<<books[i].get_file()<<endl;
@@ -139,7 +139,7 @@ void searchText()
 	cout<<"Enter text to search for: "<<endl;
 	wcin>>search;
 
-	string result = gBook->searchFullText(search);
+	string result = gBook->searchFullText(search, gBook->getBookmarks()->getLastmark()->mUri, 1);
 	if (result == "")
 	{
 		cout<<"Not found!"<<endl;
