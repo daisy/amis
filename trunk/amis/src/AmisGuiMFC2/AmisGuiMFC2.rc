@@ -263,11 +263,11 @@ CAPTION "Search for DAISY Books"
 FONT 8, "MS Sans Serif", 0, 0, 0x0
 BEGIN
     CONTROL         186,IDC_PICTURE,"Static",SS_BITMAP,7,7,85,79
-    LTEXT           "You can search your computer for DAISY books. Enter a path or browse for a folder to search, then press Search to begin searching.",IDC_SEARCHINSTRUCTIONS,105,15,149,9
-    EDITTEXT        IDC_SEARCHPATH,108,32,144,14,ES_AUTOHSCROLL
-    PUSHBUTTON      "Browse...",IDC_BROWSE,260,34,45,13
-    PUSHBUTTON      "&Search",IDC_STARTSEARCH,141,56,50,15
-    PUSHBUTTON      "S&top",IDC_STOPSEARCH,201,56,50,14
+    LTEXT           "You can search your computer for DAISY books. Enter a path or browse for a folder to search, then press Search to begin searching.",IDC_SEARCHINSTRUCTIONS,94,7,211,32
+    EDITTEXT        IDC_SEARCHPATH,108,46,144,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_BROWSE,260,48,45,13
+    PUSHBUTTON      "&Search",IDC_STARTSEARCH,141,70,50,15
+    PUSHBUTTON      "S&top",IDC_STOPSEARCH,201,70,50,14
     CTEXT           "Ready",IDC_SEARCHING,7,92,298,13,NOT WS_VISIBLE
     LISTBOX         IDC_FILESFOUND,7,105,298,156,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
     PUSHBUTTON      "&Open",IDC_OPENBOOK,103,266,50,14

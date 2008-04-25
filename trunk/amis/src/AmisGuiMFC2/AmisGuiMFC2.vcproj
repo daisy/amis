@@ -4,6 +4,7 @@
 	Version="8.00"
 	Name="AmisGuiMFC2"
 	ProjectGUID="{A7A37247-BAAC-4376-8354-96A8C09F926A}"
+	RootNamespace="AmisGuiMFC2"
 	Keyword="MFCProj"
 	>
 	<Platforms>
@@ -101,7 +102,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="..\..\bin\copyAmbulantDll.bat"
+				CommandLine="..\..\bin\AmisGuiMFC2_postbuild.bat"
 			/>
 		</Configuration>
 		<Configuration

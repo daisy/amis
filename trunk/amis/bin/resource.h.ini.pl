@@ -2,10 +2,13 @@
 
 #create resource.h.ini from resource.h
 
-open(INFILE, "<./src/AmisGuiMFC2/resource.h");
+$infile = shift;
+$outfile = shift;
+
+open(INFILE, "<$infile");
 @lines = <INFILE>;
 
-open(OUTFILE, ">./settings/resource.h.ini");
+open(OUTFILE, ">$outfile");
 print OUTFILE ";\n[resources]\n";
 
 $re_comments = '^//.*$'; 
@@ -31,4 +34,4 @@ foreach $line (@lines)
 close(INFILE);
 close(OUTFILE);
 
-print "done\n";
+print "Created bin/settings/resource.h.ini\n";
