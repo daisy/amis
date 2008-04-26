@@ -34,7 +34,9 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #ifdef HTML_LOAD_AMBULANT_PDTB
 // The PdtbBridge COM object allows us to communicate our datasource
 // factory to the PluggableProtocol
+#ifdef WITH_PROTECTED_BOOK_SUPPORT
 #include "PdtbBridge.h"
+#endif
 #endif
 
 namespace amis
@@ -105,7 +107,9 @@ private:
 	CString mNavStringUrl;
 #endif
 #ifdef HTML_LOAD_AMBULANT_PDTB
+#ifdef WITH_PROTECTED_BOOK_SUPPORT
 	IPdtbBridge *mpLoaderBridge;
+#endif
 #endif
 
 //Add the following functions. This action prevents the leak because the

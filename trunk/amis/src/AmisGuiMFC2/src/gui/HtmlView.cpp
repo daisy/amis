@@ -85,14 +85,18 @@ END_MESSAGE_MAP()
 CAmisHtmlView::CAmisHtmlView()
 {
 #ifdef HTML_LOAD_AMBULANT_PDTB
+#ifdef WITH_PROTECTED_BOOK_SUPPORT
 	mpLoaderBridge = NULL;
+#endif
 #endif
 }
 
 CAmisHtmlView::CAmisHtmlView(const RECT& rect, CWnd* parent)
 {
 #ifdef HTML_LOAD_AMBULANT_PDTB
+#ifdef WITH_PROTECTED_BOOK_SUPPORT
 	mpLoaderBridge = NULL;
+#endif
 #endif
 	Create(NULL,_T("HtmlWidget"),WS_VISIBLE,rect,parent,AFX_IDW_PANE_FIRST);
 }
@@ -100,11 +104,13 @@ CAmisHtmlView::CAmisHtmlView(const RECT& rect, CWnd* parent)
 CAmisHtmlView::~CAmisHtmlView()
 {
 #ifdef HTML_LOAD_AMBULANT_PDTB
+#ifdef WITH_PROTECTED_BOOK_SUPPORT
 	if (mpLoaderBridge) 
 	{
 		mpLoaderBridge->Release();
 		mpLoaderBridge = NULL;
 	}
+#endif
 #endif
 }
 
@@ -288,6 +294,7 @@ LPARAM CAmisHtmlView::OnHighlightUrlTarget(WPARAM wParam, LPARAM lParam)
 	std::string *url = (std::string *)lParam;
 	std::string newurl = *url;
 #ifdef HTML_LOAD_AMBULANT_PDTB
+#ifdef WITH_PROTECTED_BOOK_SUPPORT
 	//todo: move this flag into the Dtb class
 	if ( amis::dtb::DtbWithHooks::Instance()->isProtected())
 	{
@@ -322,6 +329,7 @@ LPARAM CAmisHtmlView::OnHighlightUrlTarget(WPARAM wParam, LPARAM lParam)
 		}
 	}
 #endif
+#endif
 	TextRenderBrain::Instance()->gotoUriTarget(newurl);
 	delete url;
 	return 0;
@@ -331,11 +339,13 @@ void
 CAmisHtmlView::smilPlayerDeleted()
 {
 #ifdef HTML_LOAD_AMBULANT_PDTB
+#ifdef WITH_PROTECTED_BOOK_SUPPORT
 	if (mpLoaderBridge) 
 	{
 		mpLoaderBridge->Release();
 		mpLoaderBridge = NULL;
 	}
+#endif
 #endif
 	//this->Navigate2(_T("about:blank"));
 	TextRenderBrain::Instance()->gotoUriTarget("about:blank");

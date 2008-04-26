@@ -4,18 +4,17 @@
 #include <algorithm>
 #include "util/Log.h"
 
-//stupid hack .. for now
-#define WITH_PROTECTED_BOOK_SUPPORT	1
-
-#ifdef WITH_PROTECTED_BOOK_SUPPORT
-
 #include "ambulant/common/plugin_engine.h"
+#ifdef WITH_PROTECTED_BOOK_SUPPORT
 #include "../../ambulant-private/pdtbplugin/pdtbplugin.h"
+#endif
 #include "util/FilePathTools.h"
 
 //get the private key from the registry and load it in the ambulant plugin engine
 void addUserKeysToAmbulantPluginEngine()
 {
+#ifdef WITH_PROTECTED_BOOK_SUPPORT
+
 	// XXXJack this currently gets only a single UAK. That is silly...
 	CWinApp *app = AfxGetApp();
 	assert(app);
@@ -37,11 +36,13 @@ void addUserKeysToAmbulantPluginEngine()
 	pdata->add_uak_data(keydata);
 	amis::util::Log::Instance()->writeMessage("Loaded UAK", 
 		"pdtb.cpp, addUserKeysToAmbulantPluginEngine()", "AmisGuiMFC2");
+#endif
 }
 
 //import a new private key into the registry
 bool importUserKeysIntoRegistry(std::string filename)
 {
+#ifdef WITH_PROTECTED_BOOK_SUPPORT
 	// XXXJack this currently supports storage of only one UAK. That is silly...
 	FILE *fp = fopen(filename.c_str(), "rb");
 	if (fp == NULL) return false; //TODO give error message
@@ -67,12 +68,16 @@ bool importUserKeysIntoRegistry(std::string filename)
 	// Also add the new key to the pdtb plugin.
 	addUserKeysToAmbulantPluginEngine();
 	return true;
+#else
+	return false;
+#endif
 }
 
 //amis::dtb::Dtb::processNcc calls this function via callback
 //set the book key in the ambulant plugin engine
 bool registerBookKeyFile(const ambulant::net::url* navfile, const ambulant::net::url* keyfile)
 {
+#ifdef WITH_PROTECTED_BOOK_SUPPORT
 	// Check whether the plugin is available.
 	ambulant::common::plugin_engine *pe = ambulant::common::plugin_engine::get_plugin_engine();
 	assert(pe);
@@ -85,14 +90,21 @@ bool registerBookKeyFile(const ambulant::net::url* navfile, const ambulant::net:
 	}
 	return pdata->set_key(*navfile, *keyfile);
 	return false;
+#else
+	return false;
+#endif
 }
 
 bool isUserKeyFile(string filename)
 {
+#ifdef WITH_PROTECTED_BOOK_SUPPORT
+
 	string file_ext = amis::util::FilePathTools::getExtension(filename);
 	//convert the string to lower case before doing a comparison
 	std::transform(file_ext.begin(), file_ext.end(), file_ext.begin(), (int(*)(int))tolower);
 	if (file_ext == "uak") return true;
 	else return false;
-}
+#else
+	return false;
 #endif
+}
