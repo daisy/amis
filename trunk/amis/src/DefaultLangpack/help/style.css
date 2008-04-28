@@ -1,0 +1,38 @@
+﻿body { 
+	font-size: medium; 
+	font-family: Helvetica, sans-serif; 
+	line-height: 115%;
+	margin-left: 2%;
+	margin-right: 2%; 
+}
+
+a img{
+text-decoration: none;
+border-width: 0px;
+}
+
+li {
+	line-height : 150%;
+}
+
+img {
+    margin: 2%;
+}
+
+em {
+    font-style: normal;
+    font-weight: bold;
+}
+
+.footnote {
+    font-style: italic;
+}
+
+.header {
+    background-color: #E0ECF8;
+    padding: 2%;
+}
+
+img.rect {
+    margin-bottom: 3%;
+}
