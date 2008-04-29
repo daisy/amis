@@ -9,10 +9,10 @@
 <body>
 <div class="header">
 <h1>AMIS User Guide</h1>
-<img src="./img/amis.gif" height="110" width="110" alt="AMIS logo" />   
-<img src="./img/dfa-log.jpg" alt="DAISY-for-All project logo" class="rect"/>   
-<img src="./img/Nipponfoundation.gif" height="73" width="300" alt="Nippon Foundation logo" class="rect" />
-<img src="./img/daisy.jpg" height="110" alt="DAISY Consortium logo"/>
+<img src="./img/amis.gif" height="110" width="110" alt="AMIS logo"/>   
+<img src="./img/dfa-log.jpg" class="rect" alt="DAISY-for-All project logo"/>   
+<img src="./img/Nipponfoundation.gif" height="73" width="300"  class="rect" alt="Nippon Foundation logo"/>
+<img src="./img/daisy.jpg" height="110" class="dclogo" alt="DAISY Consortium logo"/>
 </div>
 
 <p>This document gives a brief introduction to AMIS, including its features, requirements, and options.  For a list of all commands and shortcut keys, please read the Keyboard Shortcuts document, found under the Help menu.</p>
@@ -21,11 +21,13 @@
 
 <p>AMIS stands for <em>A</em>daptive <em>M</em>ultimedia <em>I</em>nformation <em>S</em>ystem.</p>
 
-<p>AMIS is a software program that you can use to read DAISY talking books. It is self-voicing, meaning that no specialized screen-reading software is needed in order for it to be used by visually impaired people. AMIS is open source software and is provided free of charge.  It has been translated into dozens of languages.  Go to <a href="http://amisproject.org">http://amisproject.org</a> to download language packs.</p>
+<p>AMIS is a software program that you can use to read DAISY books. It is self-voicing, meaning that no specialized screen-reading software is needed in order for it to be used by visually impaired people. AMIS is open source software and is provided free of charge.  It has been translated into dozens of languages.  Go to <a href="http://amisproject.org">http://amisproject.org</a> to download language packs.</p>
 
 <h2>What is DAISY?</h2>
 
-<p>DAISY stands for <em>D</em>igital <em>A</em>ccessible <em>I</em>nformation <em>SY</em>stem.  DAISY books are fully accessible talking books. Common features of books, such as sections, pages, footnotes, sidebars, and bookmarks are represented in a way that allows users to quickly navigate using them.</p>
+<p>DAISY stands for <em>D</em>igital <em>A</em>ccessible <em>I</em>nformation <em>SY</em>stem.  DAISY books are fully accessible digital talking books. Common features of books, such as sections, pages, footnotes, sidebars, and bookmarks are represented in a way that allows users to quickly navigate using them.</p>
+
+<p>In fact, the document you are reading now is a DAISY book!  You can see and hear the synchronized text and audio, and move around by section or phrase.</p>
 
 <p>The DAISY standard is a globally recognized technical standard, originally developed to benefit people who are unable to read print due to a disability.  It also has broad applications for improved access to text in the mainstream.</p>
 
@@ -40,10 +42,7 @@
 <ul>
 <li>DAISY 2.02 </li>
 <li>DAISY 3 (also referred to as ANSI/NISO z39.86-2005)</li>
-<li>SMIL<sup>[1]</sup></li>
 </ul>
-
-<p>1. Any SMIL presentation must include a DAISY-formatted navigation file that references that presentation.</p>
 
 <h2>System Requirements</h2>
 
@@ -53,53 +52,51 @@
 <li>Windows XP, Windows Vista, or Windows 2000</li>
 <li>DirectX 9</li>
 <li>SAPI 5.1 text-to-speech engine</li>
-<li>Internet Explorer 7 <sup>[2]</sup></li>
+<li>Internet Explorer 7 (Other versions will work, but this is the recommended version.)</li>
 <li>50 MB disk space</li>
 </ul>
 
 <p>The AMIS installer will report if a required component is missing.</p>
 
-<p>2. Other versions of Internet Explorer will work, but this is the recommended version.</p>
-
 <h2>Screen Layout</h2>
 
 <p>The screen has two view modes: default and basic.  AMIS will start in default view mode unless you tell it to start in basic view (this setting is in the Preferences dialog).</p>
 
-<p>The default view has four major pieces: a menu, a toolbar, a navigation window to the left, and a content window in the center of the screen.  The toolbar has eleven medium-sized buttons.  The sidebar contains one or more tabbed lists, depending on what the book contains.  The first list is always a hierarchical list of sections.  The second list contains page numbers (if the book has pages).  The subsequent lists contain special items such as footnotes or figures (again, if the book contains these items), with each item type appearing in its own list.</p>
+<p>The default view has four major pieces: a menu, a toolbar, a navigation window to the left, and a content window in the center of the screen.</p>  
 
-<p>The basic view has two major pieces: a toolbar along the bottom of the screen and a content window in the center of the screen.  The toolbar has four large buttons.  There is no menu or sidebar in basic view mode.</p>
+<div class="example">
+<img src="./img/amis-default-view.jpg" alt="default view for AMIS"/>
+<p class="caption">Screenshot of AMIS</p>
+</div>
+
+<p>The toolbar has eleven medium-sized buttons: <span class="command">open a book</span>, <span class="command">load a cd</span>, <span class="command">go to the previous phrase</span>, <span class="command">play/pause</span>, <span class="command">go to the next phrase</span>, <span class="command">slow down</span>, <span class="command">speed up</span>, <span class="command">smaller font</span>, <span class="command">bigger font</span>, <span class="command">change the page style</span>, and <span class="command">add a bookmark</span>.</p> 
+
+<div class="example">
+<img src="./img/amis-default-toolbar.jpg" alt="default toolbar for AMIS"/>
+<p class="caption">The toolbar</p>
+</div>
+
+<p>The sidebar contains one or more tabbed lists, depending on what the book contains.  The first list is always a hierarchical list of sections.  The second list contains page numbers (if the book has pages).  The subsequent lists contain special items such as footnotes or figures (again, if the book contains these items), with each item type appearing in its own list.</p>
+
+<div class="example">
+<img src="./img/amis-sidebar.jpg" alt="the sidebar of AMIS"/>
+<p class="caption">The sidebar</p>
+</div>
+
+<p>The basic view has two major pieces: a toolbar along the bottom of the screen and a content window in the center of the screen.  The toolbar has four large buttons:  <span class="command">go to the previous phrase</span>, <span class="command">play/pause</span>, <span class="command">go to the next phrase</span>, <span class="command">switch back to default view mode</span>. There is no menu or sidebar in basic view mode.</p>
+
+<div class="example">
+<img src="./img/amis-basic-view.jpg" alt="basic view for AMIS"/>
+<p class="caption">AMIS in basic view mode</p>
+</div>
 
 <h2>Features</h2>
 
-<h3>Navigation Commands</h3>
+<p>The following sections contain brief descriptions of the features in AMIS, organized by topic.</p>
 
-<ul>
-<li>Previous/Next phrase</li>
-<li>Previous/Next page</li>
-<li>Previous/Next section</li>
-<li>Go to page</li>
-<li>Search for text</li>
-</ul>
+<h3>Opening a book</h3>
 
-<h3>Navigation Sidebar</h3>
-
-<p>Use the items in the sidebar to browse the structure of a book.</p>
-
-<ul>
-<li>Hierarchical view of sections</li>
-<li>List of pages</li>
-<li>Lists for each special type of item in the book</li>
-</ul>
-
-<h3>Bookmarking</h3>
-
-<ul>
-<li>Add bookmark (named automatically based on what you are bookmarking)</li>
-<li>Go to bookmark</li>
-<li>The list of bookmarks for a particular book loads when you open that book.</li>
-</ul>
-
-<h3>Open a Book</h3>
+<p>DAISY books can be on your hard drive, on a CD-ROM or located remotely.</p>
 
 <ul>
 <li>Open a recently-read book</li>
@@ -110,23 +107,82 @@
 <li>Open a book from a remote URL</li>
 </ul>
 
-<h3>Control Playback</h3>
+<h3>Controlling playback</h3>
+<p>DAISY books are played automatically from beginning to end.  You can control the following playback features:</p>
 
 <ul>
-<li>Speed-up audio playback</li>
 <li>Play and pause the book</li>
-<li>Toggle reading options, like page number announcements and footnotes</li>
+<li>Speed-up audio playback</li>
+<li>Toggle playback of reading options, like page number announcements and footnotes</li>
 </ul>
 
-<h3>Find Out More</h3>
+<h3>Navigating</h3>
+
+<p>In addition to linear playback, DAISY books offer other ways to move around.</p>
 
 <ul>
-<li>See publication summary information for the book</li>
+<li>Previous/Next phrase</li>
+<li>Previous/Next page</li>
+<li>Previous/Next section</li>
+<li>Go to page</li>
+<li>Search for text</li>
+</ul>
+
+<h3>Using the navigation sidebar</h3>
+
+<p>Use the items in the sidebar to browse the structure of a book.</p>
+
+<ul>
+<li>Hierarchical view of sections</li>
+<li>List of pages</li>
+<li>Lists for each special type of item in the book</li>
+</ul>
+
+<h3>Setting bookmarks</h3>
+
+<ul>
+<li>Add bookmark (named automatically based on what you are bookmarking)</li>
+<li>Go to bookmark</li>
+<li>The list of bookmarks for a particular book loads when you open that book.</li>
+</ul>
+
+
+<h3>Getting information about the publication</h3>
+
+<p>It is easy to get more information about the book you are reading by using the publication summary dialog of AMIS.  Here is a full list what is available:</p>
+
+<ul>
+<li>Title</li>
+<li>Author</li>
+<li>Publisher</li>
+<li>Description</li>
+<li>Narrator</li>
+<li>Total duration</li>
+<li>Total pages</li>
+<li>Date</li>
+<li>Format</li>
+<li>Features (things like sections, pages, and footnotes)</li>
+<li>Current page</li>
+<li>Current section (including the number of pages and subsections)</li>
+<li>Total number of items in the table of contents</li>
+<li>Maximum section depth</li>
+</ul>
+
+<div class="example">
+<img src="./img/amis-publication-summary-dialog.jpg" alt="the publication summary dialog"/>
+<p class="caption">The publication summary dialog</p>
+</div>
+
+<h3>Getting help with AMIS</h3>
+<ul>
 <li>Find out basic information about AMIS</li>
+<li>Read the user guide (this document)</li>
 <li>Learn all the commands and shortcut keys for AMIS</li>
 </ul>
 
-<h3>User Interface Features</h3>
+<h3>Changing the look</h3>
+
+<p>The AMIS user interface lets you choose different display options for the screen layout and the DAISY book style.</p>
 
 <ul>
 <li>Use basic or default view mode</li>
@@ -137,9 +193,7 @@
 <li>Adjust highlight colors and change the sidebar font through the Text Style dialog</li>
 </ul>
 
-<h2>Settings</h2>
-
-<h3>Preferences</h3>
+<h3>Setting preferences</h3>
 
 <p>The following settings are accessed via the Preferences dialog under the File menu.</p>
 
@@ -154,7 +208,12 @@
 <li>Select a language pack for use with AMIS</li>
 </ul>
 
-<h3>Text Style</h3>
+<div class="example">
+<img src="./img/amis-preferences-dialog.jpg" alt="the preferences dialog"/>
+<p class="caption">The preferences dialog</p>
+</div>
+
+<h3>Setting text styles</h3>
 
 <p>The following settings are accessed via the Text Style dialog under the View menu.</p>
 
@@ -162,6 +221,10 @@
 <li>Select a font for the text in the navigation sidebar of AMIS</li>
 <li>Select foreground and background colors for the text highlight used during playback</li>
 </ul>
+<div class="example">
+<img src="./img/amis-text-style-dialog.jpg" alt="The text style dialog"/>
+<p class="caption">The text style dialog</p>
+</div>
 
 <h2>Contact Us</h2>
 

@@ -2,8 +2,7 @@
 	font-size: medium; 
 	font-family: Helvetica, sans-serif; 
 	line-height: 115%;
-	margin-left: 2%;
-	margin-right: 2%; 
+	margin: 3%;
 }
 
 a img{
@@ -15,7 +14,7 @@ li {
 	line-height : 150%;
 }
 
-img {
+.header img {
     margin: 2%;
 }
 
@@ -24,15 +23,22 @@ em {
     font-weight: bold;
 }
 
-.footnote {
+img.rect {
+    margin-bottom: 3%;
+}
+img.dclogo{
+    margin-bottom: .6%;
+}
+.command {
     font-style: italic;
 }
 
-.header {
-    background-color: #E0ECF8;
-    padding: 2%;
+.caption {
+    font-style: italic;
+    font-size: smaller;
 }
 
-img.rect {
-    margin-bottom: 3%;
+div.example {
+    padding: 1%;
+    margin: 2%;
 }
