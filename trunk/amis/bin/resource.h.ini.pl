@@ -27,7 +27,7 @@ foreach $line (@lines)
   $x =~ s/$re_ifdef//g;
   $x =~ s/$re_ifndef//g;
   $x =~ s/$re_endif//g;
-  print ">>$x\n";
+  #print ">>$x\n";
   
   print OUTFILE "$x"; 
 }

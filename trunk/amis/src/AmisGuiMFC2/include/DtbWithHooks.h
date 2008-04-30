@@ -66,8 +66,8 @@ public:
 
 private:
 	void addToHistory();
-	void makeAllNavContainerLabelsHumanReadable();
-	void makeNavContainerLabelHumanReadable(nav::NavContainer*);
+	void makeAllLabelsHumanReadable();
+	void makeLabelHumanReadable(amis::MediaGroup*, std::string);
 
 	//this object is instantiated and destroyed by this class, but otherwise is managed by the base class
 	amis::util::SearchForFilesMFC* mpFileSearcherTmp;

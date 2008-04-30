@@ -208,7 +208,7 @@ void SkipDialog::fillListBox()
 		if (p_test != NULL)
 		{
 			CString entry;
-			entry = A2CW(p_test->getId().c_str());
+			entry = p_test->getLabel()->getText()->getTextString().c_str();
 			int idx = m_ListSkips.AddString(entry);
 			m_ListSkips.SetItemData(idx,(DWORD)p_test);
 

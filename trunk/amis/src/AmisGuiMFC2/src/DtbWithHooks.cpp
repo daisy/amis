@@ -76,7 +76,7 @@ bool DtbWithHooks::open(const ambulant::net::url* filename, const ambulant::net:
 
 	//turn on all skippable options to start with
 	updateCustomTestStates(true);
-	makeAllNavContainerLabelsHumanReadable();
+	makeAllLabelsHumanReadable();
 	
 	amis::gui::sidebar::AmisSidebarLoader::Instance()->loadNavigationData
 		(this->getNavModel(), &amis::gui::MainWndParts::Instance()->mpSidebar->m_wndDlg);
@@ -215,8 +215,9 @@ void DtbWithHooks::addToHistory()
 }
 
 
-void DtbWithHooks::makeAllNavContainerLabelsHumanReadable()
+void DtbWithHooks::makeAllLabelsHumanReadable()
 {
+	//update the navigation containers
 	nav::NavMap* p_map = getNavModel()->getNavMap();
 	//make a dummy label if there's nothing there
 	//it will get replaced in the next step
@@ -229,7 +230,8 @@ void DtbWithHooks::makeAllNavContainerLabelsHumanReadable()
 		p_media->setText(p_text);
 		p_map->setLabel(p_media);
 	}
-	makeNavContainerLabelHumanReadable(getNavModel()->getNavMap());
+	makeLabelHumanReadable(getNavModel()->getNavMap()->getLabel(), 
+		getNavModel()->getNavMap()->getId());
 
 	if (getNavModel()->hasPages()) 
 	{
@@ -246,7 +248,8 @@ void DtbWithHooks::makeAllNavContainerLabelsHumanReadable()
 			p_media->setText(p_text);
 			p_pages->setLabel(p_media);
 		}
-		makeNavContainerLabelHumanReadable(getNavModel()->getPageList());
+		makeLabelHumanReadable(getNavModel()->getPageList()->getLabel(),
+			getNavModel()->getPageList()->getId());
 	}
 
 	nav::NavListList* p_lists = NULL;
@@ -266,22 +269,38 @@ void DtbWithHooks::makeAllNavContainerLabelsHumanReadable()
 				p_media->setText(p_text);
 				((*p_lists)[i])->setLabel(p_media);
 			}
-			makeNavContainerLabelHumanReadable(((nav::NavListList)(*p_lists))[i]);
+			nav::NavList* p_list = ((nav::NavListList)(*p_lists))[i];
+			makeLabelHumanReadable(p_list->getLabel(), p_list->getId());
+		}
+	}
+	
+	amis::dtb::CustomTestSet* p_custom_tests = getCustomTestSet();
+	if (p_custom_tests != NULL)
+	{
+		for (int i=0; i<p_custom_tests->getLength(); i++)
+		{
+			amis::dtb::CustomTest* p_custom_test = p_custom_tests->getCustomTest(i);
+			amis::MediaGroup* p_label = new amis::MediaGroup();
+			amis::TextNode* p_text = new amis::TextNode();
+			p_text->setTextString(L"customtest");
+			p_label->setText(p_text);
+			p_custom_test->setLabel(p_label);
+			makeLabelHumanReadable(p_label, p_custom_test->getId());
 		}
 	}
 }
 //used to make NCC labels consistent
-void DtbWithHooks::makeNavContainerLabelHumanReadable(nav::NavContainer* pData)
+void DtbWithHooks::makeLabelHumanReadable(amis::MediaGroup* pLabel, std::string id)
 {
 	std::wstring search_for;
 	search_for.clear();
-	std::string id = pData->getId();
 
 	//replace NCC identifiers with more human-readable names
 	if (id.compare("sidebar") == 0 ||
 		id.compare("sidebars") == 0)
 	{
-		search_for.assign(L"sidebars");		
+		search_for.assign(L"sidebars");	
+		search_for.assign(L"Sidebars");
 	}
 	else if (id.compare("optional-prodnote") == 0 ||
 		id.compare("optional-prodnotes") == 0 ||
@@ -317,7 +336,7 @@ void DtbWithHooks::makeNavContainerLabelHumanReadable(nav::NavContainer* pData)
 	
 	//TODO: match the item in the accessible UI data set
 	//for now, just use the search_for text
-	pData->getLabel()->getText()->setTextString(search_for);
+	pLabel->getText()->setTextString(search_for);
 }
 
 amis::dtb::Bookmark* DtbWithHooks::addBookmark()

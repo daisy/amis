@@ -24,6 +24,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 #include <string>
 #include <vector>
+#include "Media.h"
+
 using namespace std;
 
 namespace amis
@@ -34,46 +36,31 @@ namespace dtb
 class CustomTest
 {
 public:
-	//!default constructor
 	CustomTest();
-	//!destructor
 	~CustomTest();
 
-	//!set the id
 	void setId(const string);
-	//!set the user override 
 	void setOverride(bool);
-	//!set the default state
 	void setDefaultState(bool);
-	//!set the book struct name
 	void setBookStruct(const string);
-	//!set the current state
 	void setCurrentState(bool);
+	void setLabel(amis::MediaGroup*);
 
-	//!get the id
 	const string getId();
-	//!get the user override
 	bool getOverride();
-	//!get the default state
 	bool getDefaultState();
-	//!get the book struct name
 	const string getBookStruct();
-	//!get the current state
 	bool getCurrentState();
+	amis::MediaGroup* getLabel();
 
 private:
-	//!custom test id
 	string mId;
-	//!can the user override the default state? (true = encourage, false = discourage)
 	bool mbOverride;
-	//!default state (true = render, false = skip)
 	bool mbDefaultState;
-	//!book structure name
 	string mBookStruct;
-	//!current state (true = render, false = skip)
 	bool mbCurrentState;
-
-};
+	amis::MediaGroup* mpLabel;
+};	
 
 class CustomTestSet
 {

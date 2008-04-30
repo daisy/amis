@@ -32,11 +32,11 @@ amis::dtb::CustomTest::CustomTest()
 	mbDefaultState = false;
 	mBookStruct = "";
 	mbCurrentState = false;
+	mpLabel = NULL;
 }
 amis::dtb::CustomTest::~CustomTest()
 {
-	mId = "";
-	mBookStruct = "";
+	if (mpLabel != NULL) delete mpLabel;
 }
 void amis::dtb::CustomTest::setId(const string id)
 {
@@ -58,6 +58,10 @@ void amis::dtb::CustomTest::setCurrentState(bool currentState)
 {
 	mbCurrentState = currentState;
 }
+void amis::dtb::CustomTest::setLabel(amis::MediaGroup* pLabel)
+{
+	mpLabel = pLabel;
+}
 const string amis::dtb::CustomTest::getId()
 {
 	return mId;
@@ -77,6 +81,10 @@ const string amis::dtb::CustomTest::getBookStruct()
 bool amis::dtb::CustomTest::getCurrentState()
 {
 	return mbCurrentState;
+}
+amis::MediaGroup* amis::dtb::CustomTest::getLabel()
+{
+	return mpLabel;
 }
 amis::dtb::CustomTestSet::CustomTestSet()
 {

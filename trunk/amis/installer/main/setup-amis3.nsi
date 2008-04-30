@@ -101,6 +101,8 @@ Section "MainSection" SEC01
   File "${BIN_DIR}\settings\defaultToolbar.xml"
   File "${BIN_DIR}\settings\basicToolbar.xml"
   File "${BIN_DIR}\settings\resource.h.ini"
+  File "${BIN_DIR}\settings\amisHistory.xml.default"
+  File "${BIN_DIR}\settings\clearHistory.bat"
   
   ;copy the css files
   SetOutPath "$INSTDIR\settings\css"
