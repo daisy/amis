@@ -823,6 +823,13 @@
                 <text id="t146">Find in Text</text>
                 <audio src="./audio/speechgen0156.mp3" />
             </caption>
+			<!--REMOVED t147-->
+			<!--
+				 <description>
+		                <text id="t147" flag="changed">Here you can search the text of the book.</text>
+		                <audio src="./audio/speechgen0157.mp3" />
+		            </description>
+			-->
             <instructions>
                 <promptItem refid="tabAround"/>
                 <promptItem refid="escapeToCancel"/>
@@ -839,7 +846,14 @@
                     <audio src="./audio/speechgen0161.mp3" />
                 </description>
             </control>
-            <control mfcid="IDC_FINDPREVIOUS" widget="radiobutton">
+			<!--REMOVED t153-->
+			<!--
+			 <caption>
+                    <text id="t153">Find Previous</text>
+                    <audio src="./audio/speechgen0163.mp3" />
+            </caption>
+        	-->
+			<control mfcid="IDC_FINDPREVIOUS" widget="radiobutton">
                 <note>This indicates the direction of the search</note>
                 <caption>
                     <text id="t152" flag="changed">Find previous</text>
