@@ -62,6 +62,8 @@
 #define IDC_LANGICON                    1065
 #define IDC_FINDNEXT                    1068
 #define IDC_FINDPREV                    1069
+#define IDC_SEARCHPREV                  1069
+#define IDC_FINDPREVIOUS                1069
 #define IDC_SELTTSLABEL                 1072
 #define IDC_PAUSEONLOSTFOCUS            1074
 #define IDC_DISABLESCREENSAVER          1075
@@ -84,6 +86,7 @@
 #define IDC_HIGHLIGHTBACKGROUNDLABEL    1111
 #define IDC_READING_OPTIONS_INSTRUCTIONS 1115
 #define IDC_OPTIONS_LIST                1116
+#define IDC_FIND_DESCRIPTION            1118
 #define SELF_VOICING_PLAY_NEXT          6969
 #define IDC_CURRLANG                    9002
 #define IDC_VERSION                     9006
@@ -139,7 +142,7 @@
 #define _APS_3D_CONTROLS                     1
 #define _APS_NEXT_RESOURCE_VALUE        194
 #define _APS_NEXT_COMMAND_VALUE         32959
-#define _APS_NEXT_CONTROL_VALUE         1117
+#define _APS_NEXT_CONTROL_VALUE         1119
 #define _APS_NEXT_SYMED_VALUE           149
 #endif
 #endif

@@ -682,8 +682,10 @@ void CAmisApp::OnSkipInfo()
 	amis::util::Log::Instance()->writeMessage("Showing reading options dialog (skippability)", "CAmisApp::OnSkipInfo", "AmisGuiMFC2");
 	amis::gui::dialogs::SkipDialog skip_dialog;
 	skip_dialog.initializeData(amis::dtb::DtbWithHooks::Instance()->getCustomTestSet());
-	skip_dialog.do_modal();
-	amis::dtb::DtbWithHooks::Instance()->updateCustomTestStates();
+	if (skip_dialog.do_modal() == IDOK)
+	{
+		amis::dtb::DtbWithHooks::Instance()->updateCustomTestStates();
+	}
 }
 
 void CAmisApp::OnAddBookmark()

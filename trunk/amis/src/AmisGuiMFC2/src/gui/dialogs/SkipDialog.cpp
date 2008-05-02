@@ -46,8 +46,8 @@ BEGIN_MESSAGE_MAP(SkipDialog, CDialog)
 	ON_WM_PAINT()
 END_MESSAGE_MAP()
 
-void SkipDialog::resolvePromptVariables(Prompt* pPrompt) {
-
+void SkipDialog::resolvePromptVariables(Prompt* pPrompt) 
+{
 	PromptVar* p_var = NULL;
 	PromptItem* promptNotAvailable = DataTree::Instance()->findPromptItem("not_available");
 
@@ -113,12 +113,10 @@ void SkipDialog::resolvePromptVariables(Prompt* pPrompt) {
 SkipDialog::SkipDialog(CWnd* pParent /*=NULL*/)
 	 : AmisDialogBase(SkipDialog::IDD)
 {
-	
 	if (Preferences::Instance()->getIsSelfVoicing() == true)
 	{
 		mpSkipDialogVoicing = new amis::gui::dialogs::SkipDialogVoicing(this);
 	}
-
 	mpCustomTests = NULL;
 }
 
@@ -131,7 +129,6 @@ SkipDialog::~SkipDialog()
 }
 BOOL SkipDialog::PreTranslateMessage(MSG* pMsg)
 {
-
 	if (Preferences::Instance()->getIsSelfVoicing() == false)
 	{
 		return CDialog::PreTranslateMessage(pMsg);
@@ -162,10 +159,8 @@ BOOL SkipDialog::PreTranslateMessage(MSG* pMsg)
 void SkipDialog::DoDataExchange(CDataExchange* pDX)
 {
 	CDialog::DoDataExchange(pDX);
-	//{{AFX_DATA_MAP(CSkipDialog)
 	DDX_Control(pDX, IDC_OPTIONS_LIST, m_ListSkips);
 	DDX_Control(pDX, IDOK, m_Ok);
-	//}}AFX_DATA_MAP
 }
 
 
@@ -177,7 +172,6 @@ void SkipDialog::initializeData(amis::dtb::CustomTestSet* pTests)
 
 BOOL SkipDialog::OnInitDialog() 
 {
-
 	CDialog::OnInitDialog();
 	
 	//clear the list box
@@ -242,12 +236,9 @@ void SkipDialog::OnSelchangeSkips()
 
 void SkipDialog::OnPaint() 
 {
-
 	CPaintDC dc(this); // device context for painting
 	// Let the window do its default painting...
 	CWnd::DefWindowProc( WM_PAINT, (WPARAM)dc.m_hDC, 0 );
 	//call the base class on_paint function
-
 	on_paint();
-
 }
