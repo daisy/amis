@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ui xmlns="http://amisproject.org" next-id="t376" xml:lang="en">
+<ui xmlns="http://amisproject.org" next-id="t380" xml:lang="en">
     <containers>
         <container id="file">
             <note>This is the menu header "File"</note>
@@ -823,45 +823,34 @@
                 <text id="t146">Find in Text</text>
                 <audio src="./audio/speechgen0156.mp3" />
             </caption>
-            <description>
-                <text id="t147" flag="changed">Here you can search the text of the book.</text>
-                <audio src="./audio/speechgen0157.mp3" />
-            </description>
-            <prompt type="instructions">
+            <instructions>
                 <promptItem refid="tabAround"/>
                 <promptItem refid="escapeToCancel"/>
-            </prompt>
+            </instructions>
+			<control mfcid="IDC_FIND_DESCRIPTION" widget="static">
+				<caption>
+					<text id="t379" flag="new">Enter the text to search for:</text>
+					<audio src=""/>
+				</caption>
+			</control>
             <control mfcid="IDC_SEARCHSTRING" widget="textfield">
                 <description>
-                    <text id="t151">Type the text to search for.</text>
+                    <text id="t151">Type the text in this field.</text>
                     <audio src="./audio/speechgen0161.mp3" />
                 </description>
             </control>
-            <control mfcid="IDC_FINDNEXT" widget="radiobutton">
+            <control mfcid="IDC_FINDPREVIOUS" widget="radiobutton">
                 <note>This indicates the direction of the search</note>
                 <caption>
-                    <text id="t152">Find Next</text>
-                    <audio src="./audio/speechgen0162.mp3" />
+                    <text id="t152" flag="changed">Find previous</text>
+                    <audio src="" />
                 </caption>
                 <description>
-                    <prompt>
-                        <promptItem refid="thisItemIsCurrently"/>
-                        <promptVar name="SELECTED_OR_DESELECTED" param="FIND_NEXT_IN_TEXT"/>
-                    </prompt>
-                </description>
-            </control>
-            <control mfcid="IDC_FINDPREV" widget="radiobutton">
-                <note>This indicates the direction of the search</note>
-                <caption>
-                    <text id="t153">Find Previous</text>
-                    <audio src="./audio/speechgen0163.mp3" />
-                </caption>
-                <description>
-                    <prompt>
+                  	<prompt>
                         <promptItem refid="thisItemIsCurrently"/>
                         <promptName name="SELECTED_OR_DESELECTED" param="FIND_PREV_IN_TEXT"/>
                     </prompt>
-                </description>
+				</description>
             </control>
             <control mfcid="IDOK" widget="button">
                 <caption>
