@@ -159,7 +159,10 @@ void AmisDialogBase::on_paint()
 	{
 		if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 		{
-			AudioSequencePlayer::playDialogTextControlsFromUiId(mId, this);
+			AudioSequencePlayer::playDialogWelcome(mId, this);
+
+			//AudioSequencePlayer::playDialogTextControlsFromUiId(mId, this);
+			//AudioSequencePlayer::Instance()->playDialogInstructionsFromUiId(mId);
 		}
 		mbFlag_FirstDraw = false;
 	}	

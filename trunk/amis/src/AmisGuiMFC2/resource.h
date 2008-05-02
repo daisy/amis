@@ -60,9 +60,6 @@
 #define IDC_BOOKLIST                    1058
 #define IDC_OPENBOOK                    1059
 #define IDC_LANGICON                    1065
-#define IDC_FINDNEXT                    1068
-#define IDC_FINDPREV                    1069
-#define IDC_SEARCHPREV                  1069
 #define IDC_FINDPREVIOUS                1069
 #define IDC_SELTTSLABEL                 1072
 #define IDC_PAUSEONLOSTFOCUS            1074

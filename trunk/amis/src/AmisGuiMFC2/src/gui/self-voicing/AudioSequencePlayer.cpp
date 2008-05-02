@@ -1119,6 +1119,27 @@ void AudioSequencePlayer::playDialogTextControlsFromUiId(int nItemID, PromptReso
 		
 	}
 }
+void AudioSequencePlayer::playDialogWelcome(int nItemID, PromptResolver * presolver) {
+
+	if (nItemID != -1) {
+					
+				AudioSequence * seq = new AudioSequence;
+			
+		Dialog* p_dialog = DataTree::Instance()->findDialog(nItemID);
+		if (p_dialog != NULL) {
+			fillSequenceCaptionAndDescription(seq, p_dialog, presolver, "default");
+			
+			Prompt* prompt = p_dialog->getPrompt("instructions");
+			if (prompt != NULL) {
+				fillSequencePrompt(seq, prompt, NULL);
+			}
+		
+		}
+
+		if (seq->GetCount()==0){delete seq;return;}else{ AudioSequencePlayer::Instance()->Play(seq);}
+		
+	}
+}
 
 
 void AudioSequencePlayer::fillOK_CANCEL(AudioSequence * seq, UINT ctrlId) {

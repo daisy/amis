@@ -53,10 +53,6 @@ protected:
 	virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 	afx_msg void OnBnClickedOk();
-	afx_msg void OnBnClickedFindnext();
-	afx_msg void OnBnSetfocusFindnext();
-	afx_msg void OnBnClickedFindprev();
-	afx_msg void OnBnSetfocusFindprev();
 
 	afx_msg void OnPaint();
 	afx_msg void OnEnChangeSearchstring();

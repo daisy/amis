@@ -24,6 +24,13 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "gui/dialogs/FindInTextDialog.h"
 #include "../resource.h"
 
+#include "gui/self-voicing/datamodel/DataTree.h"
+#include "gui/self-voicing/datamodel/Dialog.h"
+#include "gui/self-voicing/datamodel/Switch.h"
+#include "gui/self-voicing/datamodel/Label.h"
+#include "gui/self-voicing/Prompt.h"
+#include "gui/self-voicing/UiMediaTypes.h"
+
 using namespace amis::gui::dialogs;
 
 BEGIN_MESSAGE_MAP(FindInTextDialog, CDialog)
@@ -33,10 +40,6 @@ BEGIN_MESSAGE_MAP(FindInTextDialog, CDialog)
 	ON_EN_SETFOCUS(IDC_SEARCHSTRING, OnSetfocusSearchString)
 	ON_EN_CHANGE(IDC_SEARCHSTRING, OnEnChangeSearchstring)
 	ON_BN_SETFOCUS(IDCANCEL, OnSetfocusCancel)
-	ON_BN_SETFOCUS(IDC_FINDNEXT, OnBnSetfocusFindnext)
-	ON_BN_CLICKED(IDC_FINDNEXT,	OnBnClickedFindnext)
-	ON_BN_SETFOCUS(IDC_FINDPREV, OnBnSetfocusFindprev)
-	ON_BN_CLICKED(IDC_FINDPREV, OnBnClickedFindprev)
 END_MESSAGE_MAP()
 
 
@@ -68,19 +71,16 @@ BOOL FindInTextDialog::OnInitDialog()
 	CEdit* p_edit =	(CEdit*)GetDlgItem(IDC_SEARCHSTRING);
 	p_edit->SetWindowText(mUserData);
 
-	CButton* p_radio_next =	(CButton*)GetDlgItem(IDC_FINDNEXT);
-	CButton* p_radio_prev =	(CButton*)GetDlgItem(IDC_FINDPREV);
+	CButton* p_check_prev =	(CButton*)GetDlgItem(IDC_FINDPREVIOUS);
 	if (mDir ==	1 || mDir == 0)
 	{
-		p_radio_next->SetCheck(1);
-		p_radio_prev->SetCheck(0);
+		p_check_prev->SetCheck(0);
 	}
 	else
 	{
-		p_radio_next->SetCheck(0);
-		p_radio_prev->SetCheck(1);
+		p_check_prev->SetCheck(1);
 	}
-	p_edit->SetFocus();
+	//p_edit->SetFocus();
 	p_edit->SetSel(0, 99);
 
 	//return TRUE unless you set the focus	to a control
@@ -116,8 +116,8 @@ void FindInTextDialog::OnBnClickedOk()
 	CEdit* p_edit =	(CEdit*)GetDlgItem(IDC_SEARCHSTRING);
 	p_edit->GetWindowText(mUserData);
 
-	CButton* p_radio = (CButton*)GetDlgItem(IDC_FINDPREV);
-	if (p_radio->GetCheck()	== 1) mDir = -1;
+	CButton* p_check = (CButton*)GetDlgItem(IDC_FINDPREVIOUS);
+	if (p_check->GetCheck()	== 1) mDir = -1;
 	else mDir = 1;
 
 	OnOK();
@@ -128,19 +128,42 @@ void FindInTextDialog::OnSetfocusOk()
 void FindInTextDialog::OnSetfocusCancel() 
 {
 }
-void FindInTextDialog::OnBnClickedFindnext()
-{
-}
-void FindInTextDialog::OnBnSetfocusFindnext()
-{
-}
-void FindInTextDialog::OnBnSetfocusFindprev()
-{
-}
-void FindInTextDialog::OnBnClickedFindprev()
-{
-}
 void FindInTextDialog::resolvePromptVariables(Prompt* pPrompt) 
 {
-	return;
+	
+	PromptVar* p_var = NULL;
+	PromptItem* promptNotAvailable = DataTree::Instance()->findPromptItem("not_available");
+
+	for (int i=0; i<pPrompt->getNumberOfItems(); i++)
+	{
+		if (pPrompt->getItem(i)->getPromptItemType() == PROMPT_VARIABLE)
+		{
+			p_var = (PromptVar*)pPrompt->getItem(i);
+
+			if (p_var->getName().compare("SELECTED_OR_DESELECTED") == 0)
+			{
+				string strSelect;
+				
+	CButton* p_check_prev =	(CButton*)GetDlgItem(IDC_FINDPREVIOUS);
+
+					if (p_check_prev->GetCheck() == 1)
+					{
+						strSelect = "item_selected";
+					}
+					else
+					{
+						strSelect = "item_deselected";
+					}
+
+					amis::gui::spoken::PromptItem* pi = NULL;
+
+					pi = amis::gui::spoken::DataTree::Instance()->findPromptItem(strSelect);
+					if (pi != NULL)
+					{
+						p_var->setContents(pi->getContents()->clone());
+					}
+			}
+		}
+	}
+	AmisDialogBase::resolvePromptVariables(pPrompt);
 }

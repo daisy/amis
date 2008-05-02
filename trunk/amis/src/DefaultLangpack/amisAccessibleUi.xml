@@ -823,21 +823,19 @@
                 <text id="t146">Find in Text</text>
                 <audio src="./audio/speechgen0156.mp3" />
             </caption>
-			<!--REMOVED t147-->
-			<!--
 				 <description>
 		                <text id="t147" flag="changed">Here you can search the text of the book.</text>
 		                <audio src="./audio/speechgen0157.mp3" />
 		            </description>
-			-->
-            <instructions>
+			
+            <prompt type="instructions">
                 <promptItem refid="tabAround"/>
                 <promptItem refid="escapeToCancel"/>
-            </instructions>
+            </prompt>
 			<control mfcid="IDC_FIND_DESCRIPTION" widget="static">
 				<caption>
-					<text id="t379" flag="new">Enter the text to search for:</text>
-					<audio src=""/>
+					<text id="t379" flag="new">Here you can search the text of the book.</text>
+					<audio src="./audio/speechgen0157.mp3" />
 				</caption>
 			</control>
             <control mfcid="IDC_SEARCHSTRING" widget="textfield">
@@ -862,7 +860,7 @@
                 <description>
                   	<prompt>
                         <promptItem refid="thisItemIsCurrently"/>
-                        <promptName name="SELECTED_OR_DESELECTED" param="FIND_PREV_IN_TEXT"/>
+                        <promptVar name="SELECTED_OR_DESELECTED" param="FIND_PREV_IN_TEXT"/>
                     </prompt>
 				</description>
             </control>
