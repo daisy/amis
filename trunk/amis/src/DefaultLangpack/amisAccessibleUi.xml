@@ -956,25 +956,25 @@
             <prompt type="instructions">
                 <promptItem refid="enter_to_close"/>
             </prompt>
-            <control mfcid="IDC_AMISNAME" translate="no" widget="textlabel">
+            <control mfcid="IDC_AMISNAME" translate="no" widget="textlabel autoplay">
                 <caption>
                     <text id="t163">AMIS: \nAdaptive Multimedia Information System</text>
                     <audio src="./audio/speechgen0168.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0168.smil#txtd1172e9"/>
                 </caption>
             </control>
-            <control mfcid="IDC_VERSION" translate="no" widget="textlabel">
+            <control mfcid="IDC_VERSION" translate="no" widget="textlabel autoplay">
                 <caption>
                     <text id="t164">Version 3.0 beta 2</text>
                     <audio src="./audio/speechgen0169.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0169.smil#txtd1179e9"/>
                 </caption>
             </control>
-            <control mfcid="IDC_VERSIONNOTE" translate="no" widget="textlabel">
+            <control mfcid="IDC_VERSIONNOTE" translate="no" widget="textlabel autoplay">
                 <caption>
                     <text id="t165">Release Date: 14 May 2008</text>
                     <audio src="./audio/speechgen0170.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0170.smil#txtd1186e9"/>
                 </caption>
             </control>
-            <control mfcid="IDC_COPYRIGHT" translate="no" widget="textlabel">
+            <control mfcid="IDC_COPYRIGHT" translate="no" widget="textlabel autoplay">
                 <caption>
                     <text id="t166">Copyright (c) 2008 DAISY for All</text>
                     <audio src="./audio/speechgen0171.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0171.smil#txtd1193e9"/>
@@ -1751,10 +1751,13 @@
 				    <audio src="./audio/speechgen0270.mp3"/>
 				</promptItem>
 			-->
+			<!--REMOVED t267-->
+            <!--
             <promptItem id="repeatLastPromptInstr">
                 <text id="t267">Press Control + R to repeat the last prompt.</text>
                 <audio src="./audio/speechgen0259.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0259.smil#txtd1812e9"/>
             </promptItem>
+            -->
             <promptItem id="thisDialogNotSelfVoicing">
                 <text id="t268" flag="changed">This dialog is not self-voicing.</text>
                 <audio src="./audio/speechgen0260.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0260.smil#txtd1819e9"/>

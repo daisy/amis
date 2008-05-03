@@ -1133,6 +1133,16 @@ void AudioSequencePlayer::playDialogWelcome(int nItemID, PromptResolver * presol
 			if (prompt != NULL) {
 				fillSequencePrompt(seq, prompt, NULL);
 			}
+
+			int count = p_dialog->getNumChildControls();
+			for (int i = 0 ; i < count; i++) {
+				DialogControl* control = p_dialog->getChildControl(i);
+				string strCat = control->getWidgetCategories();
+				int find = strCat.find("autoplay");
+				if (-1 != find) {
+					fillSequenceCaptionAndDescription(seq, control, presolver, "default");
+				}
+			}
 		
 		}
 
