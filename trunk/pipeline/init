@@ -1,0 +1,23 @@
+#!/bin/bash
+
+echo "Copying amisAccessibleUi.xml from Default Langpack directory"
+cp ../amis/src/DefaultLangpack/amisAccessibleUi.xml ./
+echo "running XSLT to generate prompts as XHTML"
+xsltproc prompts.xslt amisAccessibleUi.xml > amisPrompts.html
+xmllint --format amisPrompts.html > temp.html
+mv temp.html amisPrompts.html
+rm -rf book
+rm -rf audio
+mkdir book
+mkdir audio
+rm amisPrompts.xml
+rm amisPromptsFixed.xml
+rm amisAccessibleUiWithAudio.xml
+echo ""
+echo "**TODO: remove the namespace declaration from amisPrompts.html"
+echo ""
+echo "Now use the pipeline to generate the TTS"
+echo ""
+
+
+

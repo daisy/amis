@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "Filling in amisAccessibleUi.xml with audio data"
+cd ../../../../lion/lionapp/trunk/lion/local/
+perl audio-files.pl -d --nobarf ../../../../../amis/amisapp/trunk/pipeline/book/daisy202/ncc.html  ../../../../../amis/amisapp/trunk/pipeline/amisAccessibleUi.xml  | perl -pe'BEGIN{binmode STDOUT, ":utf8"}s/&#x([^;]+);/chr(hex($1))/ge' > ../../../../../amis/amisapp/trunk/pipeline/amisAccessibleUiWithAudio.xml
+cd ../../../../../amis/amisapp/trunk/pipeline/
+xmllint --format amisAccessibleUiWithAudio.xml > out.xml
+mv out.xml amisAccessibleUiWithAudio.xml
+mv ./book/daisy202/*.mp3 ./audio
+echo "Done filling in audio data."
+echo ""
+echo "Now use Audacity to trim the mp3 files"
+echo ""
+
