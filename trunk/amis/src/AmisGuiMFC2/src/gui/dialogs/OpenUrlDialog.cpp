@@ -55,8 +55,12 @@ BOOL OpenUrlDialog::OnInitDialog()
 	CDialog::OnInitDialog();
 	
 	CEdit* p_edit =	(CEdit*)GetDlgItem(IDC_URL);
-	p_edit->SetFocus();
+	//p_edit->SetFocus();
 	p_edit->SetSel(0, 99);
+
+	
+	CButton* p_butt =	(CButton*)GetDlgItem(IDCANCEL);
+	p_butt->SetFocus();
 
 	//return TRUE;	// return TRUE unless you set the focus	to a control
 	return FALSE;
