@@ -823,17 +823,15 @@
                 <text id="t146">Find in Text</text>
                 <audio src="./audio/speechgen0153.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0153.smil#txtd1066e9"/>
             </caption>
-            <!--REMOVED t147-->
-            <!--
 				 <description>
-		                <text id="t147" flag="changed">Here you can search the text of the book.</text>
-		                <audio src="./audio/speechgen0157.mp3" />
+            <!-- description prompt is the same as IDC_FIND_DESCRIPTION below -->
+		                <text id="t147" flag="changed">Search the text of the book in either direction.</text>
+		                <audio src="./audio/speechgen0154.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0154.smil#txtd1073e9"/>
 		            </description>
-			-->
-            <instructions>
+            <prompt type="instructions">
                 <promptItem refid="tabAround"/>
                 <promptItem refid="escapeToCancel"/>
-            </instructions>
+            </prompt>
             <control mfcid="IDC_FIND_DESCRIPTION" widget="static">
                 <caption>
                     <text id="t379" flag="new">Search the text of the book in either direction.</text>
@@ -862,7 +860,7 @@
                 <description>
                     <prompt>
                         <promptItem refid="thisItemIsCurrently"/>
-                        <promptName name="SELECTED_OR_DESELECTED" param="FIND_PREV_IN_TEXT"/>
+                        <promptVar name="SELECTED_OR_DESELECTED" param="FIND_PREV_IN_TEXT"/>
                     </prompt>
                 </description>
             </control>
@@ -1663,6 +1661,7 @@
 				    <audio src="./audio/speechgen0255.mp3"/>
 				</promptItem>
 			-->
+			
             <promptItem id="thisItem">
                 <text id="t252">This item</text>
                 <audio src="./audio/speechgen0250.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0250.smil#txtd1749e9"/>
