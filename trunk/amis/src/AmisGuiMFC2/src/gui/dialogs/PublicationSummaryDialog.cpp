@@ -57,17 +57,20 @@ void PublicationSummaryDialog::DoDataExchange(CDataExchange* pDX)
 	CDialog::DoDataExchange(pDX);
 }
 BOOL PublicationSummaryDialog::OnInitDialog() 
-{	
+{
 	if (mpBook == NULL)
 	{
 		amis::util::Log::Instance()->writeError(
 			"Publication summary dialog cannot load because mpBook is NULL", 
 			"PublicationSummaryDialog::OnInitDialog", "AmisGuiMFC2");
-		return FALSE;
+		return TRUE;
 	}
-	if (calculateData() == true)
+	if (calculateData() == true) {
+		CDialog::OnInitDialog();
 		displayData();
-	return CDialog::OnInitDialog();
+	}
+
+	return TRUE;
 }
 
 void PublicationSummaryDialog::OnPaint() 

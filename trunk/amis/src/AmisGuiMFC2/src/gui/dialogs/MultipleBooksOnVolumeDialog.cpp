@@ -51,17 +51,10 @@ MultipleBooksOnVolumeDialog::~MultipleBooksOnVolumeDialog()
 BOOL MultipleBooksOnVolumeDialog::OnInitDialog() 
 {
 	CDialog::OnInitDialog();
+
 	populateListControl();
-	//set focus to the listbox
-	CWnd* p_control = NULL;
-	p_control = GetDlgItem(IDC_BOOKLIST);
-	if (p_control)
-	{
-		p_control->SetFocus();
-		return FALSE;
-	}
-	// return TRUE unless you set the focus to a control
-	else return TRUE;
+
+	return TRUE;
 }
 
 //TODO: fill in titles, not URLs

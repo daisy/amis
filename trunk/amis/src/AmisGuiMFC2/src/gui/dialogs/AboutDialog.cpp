@@ -44,7 +44,6 @@ BOOL AboutDialog::OnInitDialog()
 	USES_CONVERSION;
 
 	CDialog::OnInitDialog();
-	on_init();
 
 	CStatic* p_ctrl_version = NULL;
 	CStatic* p_ctrl_version_note = NULL;
@@ -57,8 +56,8 @@ BOOL AboutDialog::OnInitDialog()
 		p_ctrl_version->SetWindowText(mVersion);
 		p_ctrl_version_note->SetWindowText(mVersionNote);
 	}
-	
-	return TRUE;  
+
+	return TRUE;
 }
 
 BEGIN_MESSAGE_MAP(AboutDialog, CDialog)

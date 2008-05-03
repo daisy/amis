@@ -865,6 +865,7 @@
                     <prompt>
                         <promptItem refid="thisItemIsCurrently"/>
                         <promptVar name="SELECTED_OR_DESELECTED" param="FIND_PREV_IN_TEXT"/>
+                        <promptItem refid="spaceToToggle"/>
                     </prompt>
                 </description>
             </control>
@@ -1130,19 +1131,11 @@
             </description>
             <prompt type="instructions">
                 <promptItem refid="tabAround"/>
-                <promptItem refid="escapeToCancel"/>
+                <promptItem refid="enter_to_close"/>
             </prompt>
-            <control mfcid="IDOK" widget="button">
-                <caption>
-                    <promptItem refid="ok_button_caption"/>
-                </caption>
-                <description>
-                    <promptItem refid="ok_button_description"/>
-                </description>
-            </control>
             <control mfcid="IDC_OPTIONS_LIST" widget="list">
                 <caption>
-                    <text id="t190" flag="changed">Reading options list</text>
+                    <text id="t190" flag="changed">Reading options list:</text>
                     <audio src="./audio/speechgen0196.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0196.smil#txtd1371e9"/>
                 </caption>
                 <description>
@@ -1157,9 +1150,18 @@
                         <prompt>
                             <promptItem refid="thisItemIsCurrently"/>
                             <promptVar name="WILL_SKIP_OR_NOT" param="SKIPPABLE_ITEM_ID"/>
+                            <promptItem refid="spaceToToggle"/>
                         </prompt>
                     </description>
                 </list>
+            </control>
+            <control mfcid="IDOK" widget="button">
+                <caption>
+                    <promptItem refid="ok_button_caption"/>
+                </caption>
+                <description>
+                    <promptItem refid="ok_button_description"/>
+                </description>
             </control>
         </dialog>
         <dialog mfcid="IDD_PREFERENCES">
@@ -1362,13 +1364,18 @@
                 <text id="t238">Publication Summary</text>
                 <audio src="./audio/speechgen0217.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0217.smil#txtd1518e9"/>
             </caption>
+            <description mfcid="IDC_LISTCAPTION">
+                    <text id="t214" flag="changed">Information about this publication and your current position</text>
+                    <audio src="./audio/speechgen0218.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0218.smil#txtd1525e9"/>
+            </description>
             <prompt type="instructions">
+                <promptItem refid="tabAround"/>
                 <promptItem refid="enter_to_close"/>
             </prompt>
             <control mfcid="IDC_SUMMARYLIST" widget="list">
-                <caption mfcid="IDC_LISTCAPTION">
-                    <text id="t214" flag="changed">Information about this publication and your current position:</text>
-                    <audio src="./audio/speechgen0218.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0218.smil#txtd1525e9"/>
+                <caption>
+                    <text id="t214" flag="new">Publication information list:</text>
+                    <audio src=""/>
                 </caption>
                 <description>
                     <text id="t266">This list will be read automatically.</text>

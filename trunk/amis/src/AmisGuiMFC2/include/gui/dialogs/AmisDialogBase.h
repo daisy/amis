@@ -38,10 +38,8 @@ public:
 	void resolvePromptVariables(Prompt*);
 	AmisDialogBase(int);
 	~AmisDialogBase();
-	void on_init();
 	void on_paint();
 	INT_PTR do_modal();
-	void setFirstDraw(bool);
 
 	void triggerVirtualKeyStroke(CWnd* cwnd);
 	BOOL PreTranslateMessageTextField(MSG* pMsg, UINT id);

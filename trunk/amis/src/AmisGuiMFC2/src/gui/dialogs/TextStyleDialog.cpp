@@ -113,8 +113,11 @@ TextStyleDialog::~TextStyleDialog()
 }
 BOOL TextStyleDialog::OnInitDialog() 
 {	
+	CDialog::OnInitDialog();
+
 	initializeCombos();
-	return CDialog::OnInitDialog();
+	
+	return TRUE;
 }
 void TextStyleDialog::initializeCombos()
 {

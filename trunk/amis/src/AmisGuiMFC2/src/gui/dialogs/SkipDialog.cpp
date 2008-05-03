@@ -180,12 +180,13 @@ BOOL SkipDialog::OnInitDialog()
 
 	fillListBox();
 
+	/* 
 	//if the list has something in it, set focus to the listbox; else to the OK button
 	if (mpCustomTests != NULL && mpCustomTests->getLength() > 0) m_ListSkips.SetFocus();
 	else m_Ok.SetFocus();
+	*/
 
-	// return TRUE unless you set the focus to a control
-	return FALSE;
+	return TRUE;
 }
 
 void SkipDialog::fillListBox()

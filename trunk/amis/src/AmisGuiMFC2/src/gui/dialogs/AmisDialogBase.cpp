@@ -131,20 +131,12 @@ INT_PTR AmisDialogBase::do_modal()
 AmisDialogBase::AmisDialogBase(int id) : CDialog(id)
 {
 	mId = id;
+	mbFlag_FirstDraw = true;
 	mCommonPreTranslateMessageHandler = new PreTranslateMessageHandler(mId);
 }
 AmisDialogBase::~AmisDialogBase()
 {
 	delete mCommonPreTranslateMessageHandler;
-}
-void AmisDialogBase::setFirstDraw(bool val)
-{
-	mbFlag_FirstDraw = val;
-}
-
-void AmisDialogBase::on_init()
-{
-	mbFlag_FirstDraw = true;
 }
 
 void AmisDialogBase::on_paint()
@@ -159,6 +151,11 @@ void AmisDialogBase::on_paint()
 	{
 		if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 		{
+			CButton* p_butt =	(CButton*)GetDlgItem(IDCANCEL);
+			if (p_butt == NULL) p_butt = (CButton*)GetDlgItem(IDOK);
+	
+			if (p_butt != NULL) p_butt->SetFocus();
+
 			AudioSequencePlayer::playDialogWelcome(mId, this);
 
 			//AudioSequencePlayer::playDialogTextControlsFromUiId(mId, this);

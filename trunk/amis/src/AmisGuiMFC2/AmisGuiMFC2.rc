@@ -326,9 +326,9 @@ STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Publication Summary"
 FONT 8, "MS Sans Serif", 0, 0, 0x0
 BEGIN
+    LTEXT           "Information about this publication and your current position:",IDC_PUBLICATIONSUMMARYCAPTION,6,7,309,17
     CONTROL         "",IDC_SUMMARYLIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,6,25,309,137
     DEFPUSHBUTTON   "OK",IDOK,137,169,50,14
-    LTEXT           "Information about this publication and your current position:",IDC_PUBLICATIONSUMMARYCAPTION,6,7,309,17
 END
 
 IDD_OPENURL DIALOGEX 0, 0, 265, 70
@@ -386,9 +386,9 @@ STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSM
 CAPTION "Reading Options"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
-    DEFPUSHBUTTON   "OK",IDOK,94,170,50,14
     LTEXT           "This book contains the following special types of items. Checked items will be played.  Unchecked items will be skipped.",IDC_READING_OPTIONS_INSTRUCTIONS,7,7,222,31
     LISTBOX         IDC_OPTIONS_LIST,7,31,222,134,LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,94,170,50,14
 END
 
 

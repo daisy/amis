@@ -55,18 +55,7 @@ void GoToPageDialog::DoDataExchange(CDataExchange* pDX)
 
 BOOL GoToPageDialog::OnInitDialog() 
 {
-	CDialog::OnInitDialog();
-	
-	//set focus to the field
-	CWnd* p_control = NULL;
-	p_control = GetDlgItem(IDC_PAGENUM);
-	if (p_control)
-	{
-		p_control->SetFocus();
-		return FALSE;
-	}
-	// return TRUE unless you set the focus to a control
-	else return TRUE;
+	return CDialog::OnInitDialog();
 }
 
 std::wstring GoToPageDialog::getPageNumber()

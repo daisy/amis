@@ -24,6 +24,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "gui/dialogs/FindInTextDialog.h"
 #include "../resource.h"
 
+#include "Preferences.h"
+
 #include "gui/self-voicing/datamodel/DataTree.h"
 #include "gui/self-voicing/datamodel/Dialog.h"
 #include "gui/self-voicing/datamodel/Switch.h"
@@ -81,14 +83,10 @@ BOOL FindInTextDialog::OnInitDialog()
 	{
 		p_check_prev->SetCheck(1);
 	}
-	//p_edit->SetFocus();
+
 	p_edit->SetSel(0, 99);
 
-	CButton* p_butt =	(CButton*)GetDlgItem(IDCANCEL);
-	p_butt->SetFocus();
-
-	//return TRUE unless you set the focus to a control
-	return FALSE;
+	return TRUE;
 }
 
 void FindInTextDialog::forceSearchValue(CString searchString)

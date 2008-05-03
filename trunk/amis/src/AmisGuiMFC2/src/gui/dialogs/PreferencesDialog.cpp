@@ -238,8 +238,7 @@ void PreferencesDialog::DoDataExchange(CDataExchange* pDX)
 	DDX_Check(pDX, IDC_DISABLESCREENSAVER, mbDisableScreensaver);
 }
 BOOL PreferencesDialog::OnInitDialog() 
-{	
-	
+{
 	mbIsSelfVoicing = Preferences::Instance()->getIsSelfVoicing();
 	mbPauseOnLostFocus = Preferences::Instance()->getPauseOnLostFocus();
 	mbLoadLastBook = Preferences::Instance()->getLoadLastBook();
@@ -248,10 +247,12 @@ BOOL PreferencesDialog::OnInitDialog()
 	mUiLanguageSelection = Preferences::Instance()->getUiLangId();
 	mbDisableScreensaver = Preferences::Instance()->getDisableScreensaver();
 
+	CDialog::OnInitDialog();
+
 	initializeTTSVoiceOption();
 	initializeUiLanguageOption();
 	
-	return CDialog::OnInitDialog();
+	return TRUE;
 }
 
 void PreferencesDialog::initializeTTSVoiceOption()

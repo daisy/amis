@@ -23,6 +23,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "gui/dialogs/OpenUrlDialog.h"
 #include "../resource.h"
 
+#include "Preferences.h"
+
 using namespace amis::gui::dialogs;
 
 BEGIN_MESSAGE_MAP(OpenUrlDialog, CDialog)
@@ -53,17 +55,11 @@ void OpenUrlDialog::DoDataExchange(CDataExchange* pDX)
 BOOL OpenUrlDialog::OnInitDialog() 
 {
 	CDialog::OnInitDialog();
-	
-	CEdit* p_edit =	(CEdit*)GetDlgItem(IDC_URL);
-	//p_edit->SetFocus();
+
+	CEdit* p_edit =	(CEdit*)GetDlgItem(IDC_URL);	
 	p_edit->SetSel(0, 99);
-
 	
-	CButton* p_butt =	(CButton*)GetDlgItem(IDCANCEL);
-	p_butt->SetFocus();
-
-	//return TRUE;	// return TRUE unless you set the focus	to a control
-	return FALSE;
+	return TRUE;
 }
 
 CString OpenUrlDialog::getUrl()
