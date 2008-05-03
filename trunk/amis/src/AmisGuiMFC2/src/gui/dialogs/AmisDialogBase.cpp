@@ -157,7 +157,7 @@ void AmisDialogBase::on_paint()
 			if (p_butt != NULL) p_butt->SetFocus();
 			*/
 
-			AudioSequencePlayer::playDialogWelcome(mId, this);
+			AudioSequencePlayer::playDialogWelcome(mId, this, true);
 
 			//AudioSequencePlayer::playDialogTextControlsFromUiId(mId, this);
 			//AudioSequencePlayer::Instance()->playDialogInstructionsFromUiId(mId);

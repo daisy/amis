@@ -1415,8 +1415,14 @@
                     <audio src=""/>
                 </caption>
                 <description>
+                
+                    <promptItem refid="useArrowsList"/>
+                    
+                    <!-- REMOVED t266
                     <text id="t266">This list will be read automatically.</text>
                     <audio src="./audio/speechgen0219.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0219.smil#txtd1532e9"/>
+                    -->
+                    
                 </description>
                 <list repeat="no">
                     <caption>

@@ -1119,7 +1119,7 @@ void AudioSequencePlayer::playDialogTextControlsFromUiId(int nItemID, PromptReso
 		
 	}
 }
-void AudioSequencePlayer::playDialogWelcome(int nItemID, PromptResolver * presolver) {
+void AudioSequencePlayer::playDialogWelcome(int nItemID, PromptResolver * presolver, bool playfull) {
 
 	if (nItemID != -1) {
 					
@@ -1134,13 +1134,16 @@ void AudioSequencePlayer::playDialogWelcome(int nItemID, PromptResolver * presol
 				fillSequencePrompt(seq, prompt, NULL);
 			}
 
-			int count = p_dialog->getNumChildControls();
-			for (int i = 0 ; i < count; i++) {
-				DialogControl* control = p_dialog->getChildControl(i);
-				string strCat = control->getWidgetCategories();
-				int find = strCat.find("autoplay");
-				if (-1 != find) {
-					fillSequenceCaptionAndDescription(seq, control, presolver, "default");
+			if (playfull) {
+
+				int count = p_dialog->getNumChildControls();
+				for (int i = 0 ; i < count; i++) {
+					DialogControl* control = p_dialog->getChildControl(i);
+					string strCat = control->getWidgetCategories();
+					int find = strCat.find("autoplay");
+					if (-1 != find) {
+						fillSequenceCaptionAndDescription(seq, control, presolver, "default");
+					}
 				}
 			}
 		}

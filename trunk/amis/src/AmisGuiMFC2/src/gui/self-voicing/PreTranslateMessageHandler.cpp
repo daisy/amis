@@ -277,7 +277,7 @@ void PreTranslateMessageHandler::handle(PromptResolver * pResolver, MSG* pMsg, i
 		}
 		else if (pMsg->wParam == VK_F1 && wasSameKey)
 		{
-			AudioSequencePlayer::playDialogWelcome(m_instructionsDialogID, NULL);
+			AudioSequencePlayer::playDialogWelcome(m_instructionsDialogID, NULL, false);
 			return;
 		}
 		else  if(pMsg->wParam == 'I' && mbKeyControl == true)
@@ -286,7 +286,7 @@ void PreTranslateMessageHandler::handle(PromptResolver * pResolver, MSG* pMsg, i
 			//repeat the instructions
 			//AudioSequencePlayer::Instance()->playDialogInstructionsFromUiId(m_instructionsDialogID);
 			
-			AudioSequencePlayer::playDialogWelcome(m_instructionsDialogID, NULL);
+			AudioSequencePlayer::playDialogWelcome(m_instructionsDialogID, NULL, false);
 			return;
 		}
 		else if(pMsg->wParam == 'R' && mbKeyControl == true)

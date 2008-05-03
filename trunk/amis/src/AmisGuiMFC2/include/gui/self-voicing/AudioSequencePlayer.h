@@ -76,7 +76,7 @@ void WaitForEndSeqAndRestartBook();
 	static void playPromptItemFromStringId(string);
 	static void playDialogInstructionsFromUiId(int nItemID);
 	static void playDialogTextControlsFromUiId(int nItemID, PromptResolver* pResolver);
-	static void playDialogWelcome(int nItemID, PromptResolver* pResolver);
+	static void playDialogWelcome(int nItemID, PromptResolver* pResolver, bool playfull);
 	static AudioSequence * playDialogControlFromUiIds(int dlgID, int ctrlId, PromptResolver* pResolver, bool playNow, string switchCondition);
 	
 	static void fillSequenceContainerPromptFromId(AudioSequence* seq, string id);
