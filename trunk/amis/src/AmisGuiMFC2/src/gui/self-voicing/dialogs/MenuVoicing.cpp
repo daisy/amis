@@ -229,7 +229,7 @@ namespace amis
 				}
 
 
-				if ((nItemID ==	8 || nItemID ==	2 || nItemID ==	3) && mFrm->m_lastOpenPopupMenu != NULL) { // 8 => "recent" (including separators), 2 => "show section depth"
+				if ((nItemID ==	8 || nItemID ==	2 || nItemID ==	3) && mFrm->m_lastOpenPopupMenu != NULL && ::IsMenu(mFrm->m_lastOpenPopupMenu->m_hMenu)) { // 8 => "recent" (including separators), 2 => "show section depth"
 					UINT nID = mFrm->m_lastOpenPopupMenu->GetMenuItemID(0);
 					std::string	prompt = computeRootMenuFromFirstChildID(nID, false);
 

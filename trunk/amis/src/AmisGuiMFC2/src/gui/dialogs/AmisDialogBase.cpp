@@ -151,10 +151,11 @@ void AmisDialogBase::on_paint()
 	{
 		if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 		{
+			/*
 			CButton* p_butt =	(CButton*)GetDlgItem(IDCANCEL);
 			if (p_butt == NULL) p_butt = (CButton*)GetDlgItem(IDOK);
-	
 			if (p_butt != NULL) p_butt->SetFocus();
+			*/
 
 			AudioSequencePlayer::playDialogWelcome(mId, this);
 

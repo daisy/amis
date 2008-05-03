@@ -1143,7 +1143,6 @@ void AudioSequencePlayer::playDialogWelcome(int nItemID, PromptResolver * presol
 					fillSequenceCaptionAndDescription(seq, control, presolver, "default");
 				}
 			}
-		
 		}
 
 		if (seq->GetCount()==0){delete seq;return;}else{ AudioSequencePlayer::Instance()->Play(seq);}

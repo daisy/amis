@@ -824,7 +824,6 @@
                 <audio src="./audio/speechgen0153.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0153.smil#txtd1066e9"/>
             </caption>
 				 <description mfcid="IDC_FIND_DESCRIPTION">
-            <!-- description prompt is the same as IDC_FIND_DESCRIPTION below -->
 		                <text id="t147" flag="changed">Search the text of the book in either direction.</text>
 		                <audio src="./audio/speechgen0154.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0154.smil#txtd1073e9"/>
 		            </description>
@@ -843,7 +842,7 @@
                 </caption>
             </control>
         	-->
-            <control mfcid="IDC_SEARCHSTRING" widget="textfield">
+            <control mfcid="IDC_SEARCHSTRING" widget="textfield autoplay">
                 <description>
                     <text id="t151">Type the text to search for in this field.</text>
                     <audio src="./audio/speechgen0155.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0155.smil#txtd1080e9"/>
@@ -907,7 +906,7 @@
                 <promptItem refid="escapeToCancel"/>
                 <promptItem refid="hearDlgInstructions"/>
             </prompt>
-            <control mfcid="IDC_BOOKLIST" widget="list">
+            <control mfcid="IDC_BOOKLIST" widget="list autoplay">
                 <description>
                 
                     <promptItem refid="useArrowsList"/>
@@ -1013,7 +1012,7 @@
                 <promptItem refid="escapeToCancel"/>
                 <promptItem refid="hearDlgInstructions"/>
             </prompt>
-            <control mfcid="IDC_SEARCHPATH" widget="textfield">
+            <control mfcid="IDC_SEARCHPATH" widget="textfield autoplay">
                 <description>
                     <text id="t169">Type the path to the folder in this field.</text>
                     <audio src="./audio/speechgen0174.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0174.smil#txtd1215e9"/>
@@ -1150,7 +1149,7 @@
                 <promptItem refid="enter_to_close"/>
                 <promptItem refid="hearDlgInstructions"/>
             </prompt>
-            <control mfcid="IDC_OPTIONS_LIST" widget="list">
+            <control mfcid="IDC_OPTIONS_LIST" widget="list autoplay">
                 <caption>
                     <text id="t190" flag="changed">Reading options list:</text>
                     <audio src="./audio/speechgen0196.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0196.smil#txtd1371e9"/>
@@ -1202,7 +1201,7 @@
                 <promptItem refid="escapeToCancel"/>
                 <promptItem refid="hearDlgInstructions"/>
             </prompt>
-            <control mfcid="IDC_ISSELFVOICING" widget="checkbox">
+            <control mfcid="IDC_ISSELFVOICING" widget="checkbox autoplay">
                 <caption>
                     <text id="t220">Use self-voicing</text>
                     <audio src="./audio/speechgen0200.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0200.smil#txtd1399e9"/>
@@ -1363,7 +1362,7 @@
                 <promptItem refid="escapeToCancel"/>
                 <promptItem refid="hearDlgInstructions"/>
             </prompt>
-            <control mfcid="IDC_PAGENUM" widget="textfield">
+            <control mfcid="IDC_PAGENUM" widget="textfield autoplay">
                 <caption mfcid="IDC_STATIC">
                     <text id="t236">Enter a page number:</text>
                     <audio src="./audio/speechgen0213.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0213.smil#txtd1490e9"/>
@@ -1410,7 +1409,7 @@
                 <promptItem refid="enter_to_close"/>
                 <promptItem refid="hearDlgInstructions"/>
             </prompt>
-            <control mfcid="IDC_SUMMARYLIST" widget="list">
+            <control mfcid="IDC_SUMMARYLIST" widget="list autoplay">
                 <caption>
                     <text id="t214" flag="new">Publication information list:</text>
                     <audio src=""/>
@@ -1586,7 +1585,7 @@
                 <promptItem refid="escapeToCancel"/>
                 <promptItem refid="hearDlgInstructions"/>
             </prompt>
-            <control mfcid="IDC_FONT" widget="list">
+            <control mfcid="IDC_FONT" widget="list autoplay">
                 <caption mfcid="IDC_FONTLABEL">
                     <text id="t360" flag="new">Sidebar font:</text>
                     <audio src="./audio/speechgen0238.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0238.smil#txtd1665e9"/>
@@ -1685,7 +1684,7 @@
                 <promptItem refid="escapeToCancel"/>
                 <promptItem refid="hearDlgInstructions"/>
             </prompt>
-            <control mfcid="IDC_URL" widget="textfield">
+            <control mfcid="IDC_URL" widget="textfield autoplay">
                 <description>
                     <text id="t371" flag="new">Type the URL in this field.</text>
                     <audio src="./audio/speechgen0247.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0247.smil#txtd1728e9"/>
