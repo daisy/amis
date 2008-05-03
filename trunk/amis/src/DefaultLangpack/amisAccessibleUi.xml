@@ -831,6 +831,7 @@
             <prompt type="instructions">
                 <promptItem refid="tabAround"/>
                 <promptItem refid="escapeToCancel"/>
+                <promptItem refid="hearDlgInstructions"/>
             </prompt>
             
             <!--REMOVED t379-->
@@ -904,6 +905,7 @@
             <prompt type="instructions">
                 <promptItem refid="tabAround"/>
                 <promptItem refid="escapeToCancel"/>
+                <promptItem refid="hearDlgInstructions"/>
             </prompt>
             <control mfcid="IDC_BOOKLIST" widget="list">
                 <description>
@@ -961,6 +963,7 @@
             </description>
             <prompt type="instructions">
                 <promptItem refid="enter_to_close"/>
+                <promptItem refid="hearDlgInstructions"/>
             </prompt>
             <control mfcid="IDC_AMISNAME" translate="no" widget="textlabel autoplay">
                 <caption>
@@ -1008,6 +1011,7 @@
             <prompt type="instructions">
                 <promptItem refid="tabAround"/>
                 <promptItem refid="escapeToCancel"/>
+                <promptItem refid="hearDlgInstructions"/>
             </prompt>
             <control mfcid="IDC_SEARCHPATH" widget="textfield">
                 <description>
@@ -1144,6 +1148,7 @@
             <prompt type="instructions">
                 <promptItem refid="tabAround"/>
                 <promptItem refid="enter_to_close"/>
+                <promptItem refid="hearDlgInstructions"/>
             </prompt>
             <control mfcid="IDC_OPTIONS_LIST" widget="list">
                 <caption>
@@ -1195,6 +1200,7 @@
             <prompt type="instructions">
                 <promptItem refid="tabAround"/>
                 <promptItem refid="escapeToCancel"/>
+                <promptItem refid="hearDlgInstructions"/>
             </prompt>
             <control mfcid="IDC_ISSELFVOICING" widget="checkbox">
                 <caption>
@@ -1355,6 +1361,7 @@
             <prompt type="instructions">
                 <promptItem refid="tabAround"/>
                 <promptItem refid="escapeToCancel"/>
+                <promptItem refid="hearDlgInstructions"/>
             </prompt>
             <control mfcid="IDC_PAGENUM" widget="textfield">
                 <caption mfcid="IDC_STATIC">
@@ -1401,6 +1408,7 @@
             <prompt type="instructions">
                 <promptItem refid="tabAround"/>
                 <promptItem refid="enter_to_close"/>
+                <promptItem refid="hearDlgInstructions"/>
             </prompt>
             <control mfcid="IDC_SUMMARYLIST" widget="list">
                 <caption>
@@ -1576,6 +1584,7 @@
             <prompt type="instructions">
                 <promptItem refid="tabAround"/>
                 <promptItem refid="escapeToCancel"/>
+                <promptItem refid="hearDlgInstructions"/>
             </prompt>
             <control mfcid="IDC_FONT" widget="list">
                 <caption mfcid="IDC_FONTLABEL">
@@ -1674,6 +1683,7 @@
             <prompt type="instructions">
                 <promptItem refid="tabAround"/>
                 <promptItem refid="escapeToCancel"/>
+                <promptItem refid="hearDlgInstructions"/>
             </prompt>
             <control mfcid="IDC_URL" widget="textfield">
                 <description>
@@ -1819,13 +1829,12 @@
                 <text id="t269">Press escape to cancel</text>
                 <audio src="./audio/speechgen0261.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0261.smil#txtd1826e9"/>
             </promptItem>
-            <!--REMOVED t270-->
-            <!--
+            
 				<promptItem id="hearDlgInstructions">
-					<text id="t270">Press Control + I to hear instructions for this dialog.</text>
-				    <audio src="./audio/speechgen0274.mp3"/>
+					<text id="t270" flag="changed">Press F1 to repeat the dialog's description.</text>
+				    <audio src=""/>
 				</promptItem>
-			-->
+			
             <!--REMOVED t271-->
             <!--
 				<promptItem id="textBoxRepeatInstr">

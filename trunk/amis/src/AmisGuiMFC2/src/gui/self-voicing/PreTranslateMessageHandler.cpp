@@ -275,6 +275,11 @@ void PreTranslateMessageHandler::handle(PromptResolver * pResolver, MSG* pMsg, i
 		{
 			return;
 		}
+		else if (pMsg->wParam == VK_F1 && wasSameKey)
+		{
+			AudioSequencePlayer::playDialogWelcome(m_instructionsDialogID, NULL);
+			return;
+		}
 		else  if(pMsg->wParam == 'I' && mbKeyControl == true)
 		{
 			mbKeyControl = false;
