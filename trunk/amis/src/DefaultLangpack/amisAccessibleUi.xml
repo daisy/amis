@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ui xmlns="http://amisproject.org" next-id="t380" xml:lang="en">
+<ui xmlns="http://amisproject.org" next-id="t381" xml:lang="en">
     <containers>
         <container id="file">
             <note>This is the menu header "File"</note>
@@ -907,8 +907,14 @@
             </prompt>
             <control mfcid="IDC_BOOKLIST" widget="list">
                 <description>
+                
+                    <promptItem refid="useArrowsList"/>
+                    
+            <!--REMOVED t160-->
+            <!--
                     <text id="t160">Use the arrow keys to move around this list of titles.</text>
                     <audio src="./audio/speechgen0161.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0161.smil#txtd1123e9"/>
+            -->
                 </description>
                 <list repeat="yes">
                     <caption>
@@ -1083,8 +1089,14 @@
             </control>
             <control mfcid="IDC_FILESFOUND" widget="list">
                 <description>
+                
+                    <promptItem refid="useArrowsList"/>
+                    
+            <!--REMOVED t182-->
+            <!--
                     <text id="t182">Use the arrow keys to move around this list of titles.</text>
                     <audio src="./audio/speechgen0189.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0189.smil#txtd1320e9"/>
+            -->
                 </description>
                 <list repeat="yes">
                     <caption>
@@ -1139,8 +1151,14 @@
                     <audio src="./audio/speechgen0196.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0196.smil#txtd1371e9"/>
                 </caption>
                 <description>
+                
+                    <promptItem refid="useArrowsList"/>
+                    
+            <!--REMOVED t191-->
+            <!--
                     <text id="t191" flag="changed">Use the arrow keys to move around this list of reading options.</text>
                     <audio src="./audio/speechgen0197.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0197.smil#txtd1378e9"/>
+          	-->
                 </description>
                 <list repeat="yes">
                     <caption>
@@ -1202,8 +1220,14 @@
                     </caption>
                 </list>
                 <description>
+                
+                    <promptItem refid="useArrowsList"/>
+                    
+            <!--REMOVED t222-->
+            <!--
                     <text id="t222">Use the arrow keys to move around this list of voices</text>
                     <audio src="./audio/speechgen0202.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0202.smil#txtd1413e9"/>
+                    -->
                 </description>
             </control>
             <control mfcid="IDC_HIGHLIGHTTEXT" widget="checkbox">
@@ -1287,8 +1311,14 @@
                     </caption>
                 </list>
                 <description>
+                
+                    <promptItem refid="useArrowsList"/>
+                    
+            <!--REMOVED t197-->
+            <!--
                     <text id="t197">Use the arrow keys to move around this list of languages.</text>
                     <audio src="./audio/speechgen0209.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0209.smil#txtd1462e9"/>
+                    -->
                 </description>
             </control>
             <control mfcid="IDOK" widget="button">
@@ -1558,8 +1588,14 @@
                     </caption>
                 </list>
                 <description>
+                
+                    <promptItem refid="useArrowsList"/>
+                    
+            <!--REMOVED t361-->
+            <!--
                     <text id="t361" flag="new">Use the arrow keys to move around this list of font names.</text>
                     <audio src="./audio/speechgen0239.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0239.smil#txtd1672e9"/>
+                    -->
                 </description>
             </control>
             <control mfcid="IDC_HIGHLIGHTFOREGROUND" widget="list">
@@ -1573,8 +1609,14 @@
                     </caption>
                 </list>
                 <description>
+                
+                    <promptItem refid="useArrowsList"/>
+                    
+            <!--REMOVED t363-->
+            <!--
                     <text id="t363" flag="new">Use the arrow keys to move around this list of colors.</text>
                     <audio src="./audio/speechgen0241.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0241.smil#txtd1686e9"/>
+                    -->
                 </description>
             </control>
             <control mfcid="IDC_HIGHLIGHTBACKGROUND" widget="list">
@@ -1588,8 +1630,14 @@
                     </caption>
                 </list>
                 <description>
+                
+                    <promptItem refid="useArrowsList"/>
+                    
+            <!--REMOVED t365-->
+            <!--
                     <text id="t365" flag="new">Use the arrow keys to move around this list of colors.</text>
                     <audio src="./audio/speechgen0243.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0243.smil#txtd1700e9"/>
+                    -->
                 </description>
             </control>
             <control mfcid="IDOK" widget="button">
@@ -1673,6 +1721,11 @@
 				</promptItem>
 			-->
 			
+            <promptItem id="useArrowsList">
+                <text id="t380" flag="new">Use the arrow keys to move around the list of items</text>
+                <audio src=""/>
+            </promptItem>
+            
             <promptItem id="thisItem">
                 <text id="t252">This item</text>
                 <audio src="./audio/speechgen0250.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0250.smil#txtd1749e9"/>

@@ -189,6 +189,7 @@ void TextStyleDialog::OnCbnSelchangeFont()
 {
 	CWnd* cwnd = this->GetFocus();
 	CComboBox* p = (CComboBox*)GetDlgItem(IDC_FONT);
+	int sel = p->GetCurSel();
 	triggerVirtualKeyStroke(p);
 }
 void TextStyleDialog::OnCbnSetfocusFont()

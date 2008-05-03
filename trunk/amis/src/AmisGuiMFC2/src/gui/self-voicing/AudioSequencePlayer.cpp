@@ -1276,14 +1276,14 @@ void AudioSequencePlayer::fillSequenceCaptionAndDescription(AudioSequence* seq, 
 		fillSequenceContentAndPrompt(seq, label, pResolver);
 	}
 
+	LabelList * p_list = uiItem->getLabelList();
+
 	label = uiItem->getDescription();
-	if (label != NULL) {
+	if (p_list == NULL && label != NULL) {
 		fillSequenceContentAndPrompt(seq, label, pResolver);
 	}
 
 	fillSequenceSwitch(seq, uiItem, pResolver, switchCondition);
-
-	LabelList * p_list = uiItem->getLabelList();
 
 	if (p_list != NULL)
 	{
@@ -1297,6 +1297,9 @@ void AudioSequencePlayer::fillSequenceCaptionAndDescription(AudioSequence* seq, 
 				fillSequencePrompt(seq, p_prompt, pResolver);
 			}
 		}*/
+	}
+	if (p_list != NULL && label != NULL) {
+		fillSequenceContentAndPrompt(seq, label, pResolver);
 	}
 }
 
