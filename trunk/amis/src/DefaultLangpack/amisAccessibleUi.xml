@@ -957,13 +957,13 @@
                     <audio src="./audio/speechgen0168.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0168.smil#txtd1172e9"/>
                 </caption>
             </control>
-            <control mfcid="IDC_VERSION" translate="no">
+            <control mfcid="IDC_VERSION" translate="no" widget="textlabel">
                 <caption>
                     <text id="t164">Version 3.0 beta 2</text>
                     <audio src="./audio/speechgen0169.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0169.smil#txtd1179e9"/>
                 </caption>
             </control>
-            <control mfcid="IDC_VERSIONNOTE" translate="no">
+            <control mfcid="IDC_VERSIONNOTE" translate="no" widget="textlabel">
                 <caption>
                     <text id="t165">Release Date: 14 May 2008</text>
                     <audio src="./audio/speechgen0170.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0170.smil#txtd1186e9"/>
@@ -1101,7 +1101,7 @@
                     <audio src="./audio/speechgen0192.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0192.smil#txtd1341e9"/>
                 </mnemonic>
             </control>
-            <control mfcid="IDCANCEL">
+            <control mfcid="IDCANCEL" widget="button">
                 <caption>
                     <promptItem refid="cancel_button_caption"/>
                 </caption>
