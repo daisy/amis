@@ -832,7 +832,7 @@
                 <promptItem refid="tabAround"/>
                 <promptItem refid="escapeToCancel"/>
             </prompt>
-            <control mfcid="IDC_FIND_DESCRIPTION" widget="static">
+            <control mfcid="IDC_FIND_DESCRIPTION" widget="textlabel">
                 <caption>
                     <text id="t379" flag="new">Search the text of the book in either direction.</text>
                     <audio src="./audio/speechgen0154.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0154.smil#txtd1073e9"/>
