@@ -52,6 +52,7 @@ void MenuManip::DestroyInstance()
 
 MenuManip::MenuManip()
 {
+	mCountViewMenuNavContainers = 0;
 }
 
 MenuManip::~MenuManip()
@@ -136,6 +137,10 @@ void MenuManip::setupNavigationOptions()
 	}
 	//remember that other enabling/disabling is done in CMainFrame's ON_UPDATE_COMMAND_UI handlers
 }
+int MenuManip::getNumberOfViewMenuNavContainers() 
+{
+	return mCountViewMenuNavContainers;
+}
 
 //add a list of navigation containers to the view menu
 void MenuManip::addNavContainersToViewMenu()
@@ -181,6 +186,7 @@ void MenuManip::addNavContainersToViewMenu()
 		p_menu->AppendMenu(MF_STRING, AMIS_VIEW_MENU_BASE_ID + count, label);
 		count++;
 	}
+	mCountViewMenuNavContainers = count;
 	//put a checkmark by the "sections" item
 	setCheckmarkOnForNavigationContainer(0);
 }

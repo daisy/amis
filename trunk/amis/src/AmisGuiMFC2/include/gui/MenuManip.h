@@ -47,8 +47,10 @@ public:
 	void addPageStyles();
 	void addNavContainersToViewMenu();
 	void setCheckmarkOnForNavigationContainer(UINT);
+	int getNumberOfViewMenuNavContainers();
 private:
 	static MenuManip* pinstance;
+	int mCountViewMenuNavContainers;
 };
 }
 }

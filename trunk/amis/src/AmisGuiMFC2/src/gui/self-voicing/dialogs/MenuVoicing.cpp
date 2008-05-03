@@ -11,6 +11,7 @@
 #include "DtbWithHooks.h"
 #include "gui/AmisApp.h"
 #include "gui/MainWndParts.h"
+#include "gui/MenuManip.h"
 
 #include "util/Log.h"
 
@@ -524,69 +525,62 @@ namespace amis
 							}
 
 						}
-
-
-						/*
-
 						//is this a	view menu item (sections/prodnotes/etc)
 						else if	(nItemID >=	AMIS_VIEW_MENU_BASE_ID && nItemID < AMIS_VIEW_MENU_BASE_ID + 
-						MenuManip::Instance()->getNumberOfViewMenuAdditions())
+						MenuManip::Instance()->getNumberOfViewMenuNavContainers())
 						{
+
+						amis::dtb::nav::NavModel* p_model = amis::dtb::DtbWithHooks::Instance()->getNavModel();
+	
+
 						//first	item in	the	list is	always "sections"
 						if (nItemID	== AMIS_VIEW_MENU_BASE_ID)
 						{
-						//playPrompt("sections");
-						theApp.playPromptItemFromStringId("sections");
+							AudioSequencePlayer::playPromptItemFromStringId("sections");
 						}
 						//then "pages",	if exists
-						else if	(nItemID ==	AMIS_VIEW_MENU_BASE_ID +	1 && 
-						NavParse::Instance()->getNavModel()->hasPages()	== true)
+						else if	(nItemID ==	AMIS_VIEW_MENU_BASE_ID + 1 && 
+						p_model != NULL && p_model->hasPages())
 						{
-						//playPrompt("pages");
-						theApp.playPromptItemFromStringId("pages");
+							AudioSequencePlayer::playPromptItemFromStringId("pages");
 						}
-						else
+						else if (p_model != NULL)
 						{
 						//otherwise	it's a nav list	so ask NavParse	for	the	nav	list ID
 						//subtract 1 because the menu items	include	sections, pages, navlists
 						//we want just the index relative to nav lists
-						int	idx	= nItemID -	AMIS_VIEW_MENU_BASE_ID -	1;
+						int	idx	= nItemID -	AMIS_VIEW_MENU_BASE_ID - 1;
 
 						//adjust again by subtracting 1	if there are pages in this book
-						if (NavParse::Instance()->getNavModel()->hasPages()	== true)
+						if (p_model->hasPages()	== true)
 						{
-						idx--;
+							idx--;
 						}
 
-						std::string	item_id	= NavParse::Instance()->getNavModel()->getNavList(idx)->getId();
+						std::string	item_id	= p_model->getNavList(idx)->getId();
 
 						if (item_id.compare("prodnote")	== 0 ||
 						item_id.compare("optional-prodnote") ==	0 )
 						{
-						//playPrompt("prodnotes");
-						theApp.playPromptItemFromStringId("prodnotes");
+						AudioSequencePlayer::playPromptItemFromStringId("prodnotes");
 						}
 						else if	(item_id.compare("sidebar")	== 0)
 						{
-						//playPrompt("sidebars");
-						theApp.playPromptItemFromStringId("sidebars");
+						AudioSequencePlayer::playPromptItemFromStringId("sidebars");
 						}
 						else if	(item_id.compare("footnote") ==	0 ||
 						item_id.compare("noteref") == 0)
 						{
-						//playPrompt("footnotes");
-						theApp.playPromptItemFromStringId("noterefs");
+						AudioSequencePlayer::playPromptItemFromStringId("noterefs");
 						}
 						else 
 						{
 						//we can't identify	it,	so read	its	name with TTS
-						theApp.playPromptFromUiId(nItemID);
+						AudioSequencePlayer::playPromptFromUiId(nItemID);
 						}
 						}
 
 						}
-						else
-						*/
 
 						else 
 						{
