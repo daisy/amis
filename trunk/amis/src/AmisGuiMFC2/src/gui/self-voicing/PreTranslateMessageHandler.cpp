@@ -271,11 +271,17 @@ void PreTranslateMessageHandler::handle(PromptResolver * pResolver, MSG* pMsg, i
 			mbKeyControl = false;
 			return;
 		}
-		else if(pMsg->wParam == 'I' && mbKeyControl == true)
+		else if (pMsg->wParam == VK_SHIFT)
+		{
+			return;
+		}
+		else  if(pMsg->wParam == 'I' && mbKeyControl == true)
 		{
 			mbKeyControl = false;
 			//repeat the instructions
-			AudioSequencePlayer::Instance()->playDialogInstructionsFromUiId(m_instructionsDialogID);
+			//AudioSequencePlayer::Instance()->playDialogInstructionsFromUiId(m_instructionsDialogID);
+			
+			AudioSequencePlayer::playDialogWelcome(m_instructionsDialogID, NULL);
 			return;
 		}
 		else if(pMsg->wParam == 'R' && mbKeyControl == true)
@@ -286,24 +292,28 @@ void PreTranslateMessageHandler::handle(PromptResolver * pResolver, MSG* pMsg, i
 		}
 		else if(pMsg->wParam == 'T' && mbKeyControl == true)
 		{
-			AudioSequence * mSeq = new AudioSequence();
 
 			mbKeyControl = false;
 
-			Prompt* p_prompt_ = DataTree::Instance()->findPrompt("textFieldEntry");
-
-			if (p_prompt_ != NULL)
-			{
-				AudioSequencePlayer::Instance()->fillSequencePrompt(mSeq, p_prompt_, pResolver);
-			}
 
 			if (!strTextFieldFULL.IsEmpty()) {
+
+				AudioSequence * mSeq = new AudioSequence();
+				Prompt* p_prompt_ = DataTree::Instance()->findPrompt("textFieldEntry");
+
+				if (p_prompt_ != NULL)
+				{
+					AudioSequencePlayer::Instance()->fillSequencePrompt(mSeq, p_prompt_, pResolver);
+				}
+
 				if (strTextFieldFULL.GetLength() == 1) {
 					strTextFieldFULL = convertKeystrokeToSpeakableString(strTextFieldFULL.GetAt(0));
 				}
 				mSeq->append(strTextFieldFULL);
+
+
+				AudioSequencePlayer::Instance()->Play(mSeq);
 			}
-			AudioSequencePlayer::Instance()->Play(mSeq);
 
 			return;
 		}
@@ -368,7 +378,7 @@ void PreTranslateMessageHandler::handle(PromptResolver * pResolver, MSG* pMsg, i
 				
 			AudioSequence * mSeq = new AudioSequence();
 
-			if (!(pMsg->wParam == VK_HOME || pMsg->wParam == VK_END || pMsg->wParam == VK_UP || pMsg->wParam == VK_DOWN || pMsg->wParam == VK_LEFT || pMsg->wParam == VK_RIGHT))
+			if (!(pMsg->wParam == VK_SHIFT || pMsg->wParam == VK_HOME || pMsg->wParam == VK_END || pMsg->wParam == VK_UP || pMsg->wParam == VK_DOWN || pMsg->wParam == VK_LEFT || pMsg->wParam == VK_RIGHT))
 			{
 				if (pMsg->wParam == VK_SPACE)
 				{
@@ -378,7 +388,9 @@ void PreTranslateMessageHandler::handle(PromptResolver * pResolver, MSG* pMsg, i
 				}
 				else
 				{
-					mSeq->append(convertKeystrokeToSpeakableString(pMsg, false, true, false));
+					if (! strTextField.IsEmpty()) {
+						mSeq->append(convertKeystrokeToSpeakableString(pMsg, false, true, false));
+					}
 				}
 			}
 				if (! strTextField.IsEmpty()) {

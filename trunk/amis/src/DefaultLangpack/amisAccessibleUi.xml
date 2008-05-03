@@ -823,7 +823,7 @@
                 <text id="t146">Find in Text</text>
                 <audio src="./audio/speechgen0153.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0153.smil#txtd1066e9"/>
             </caption>
-				 <description>
+				 <description mfcid="IDC_FIND_DESCRIPTION">
             <!-- description prompt is the same as IDC_FIND_DESCRIPTION below -->
 		                <text id="t147" flag="changed">Search the text of the book in either direction.</text>
 		                <audio src="./audio/speechgen0154.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0154.smil#txtd1073e9"/>
@@ -832,12 +832,16 @@
                 <promptItem refid="tabAround"/>
                 <promptItem refid="escapeToCancel"/>
             </prompt>
+            
+            <!--REMOVED t379-->
+            <!--
             <control mfcid="IDC_FIND_DESCRIPTION" widget="textlabel">
                 <caption>
                     <text id="t379" flag="new">Search the text of the book in either direction.</text>
                     <audio src="./audio/speechgen0154.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0154.smil#txtd1073e9"/>
                 </caption>
             </control>
+        	-->
             <control mfcid="IDC_SEARCHSTRING" widget="textfield">
                 <description>
                     <text id="t151">Type the text to search for in this field.</text>

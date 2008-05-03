@@ -37,6 +37,7 @@ BEGIN_MESSAGE_MAP(FindInTextDialog, CDialog)
 	ON_WM_PAINT()
 	ON_BN_SETFOCUS(IDOK, OnSetfocusOk)
 	ON_BN_CLICKED(IDOK,	OnBnClickedOk)
+	ON_BN_CLICKED(IDC_FINDPREVIOUS,	OnBnClickedTick)
 	ON_EN_SETFOCUS(IDC_SEARCHSTRING, OnSetfocusSearchString)
 	ON_EN_CHANGE(IDC_SEARCHSTRING, OnEnChangeSearchstring)
 	ON_BN_SETFOCUS(IDCANCEL, OnSetfocusCancel)
@@ -83,7 +84,10 @@ BOOL FindInTextDialog::OnInitDialog()
 	//p_edit->SetFocus();
 	p_edit->SetSel(0, 99);
 
-	//return TRUE unless you set the focus	to a control
+	CButton* p_butt =	(CButton*)GetDlgItem(IDCANCEL);
+	p_butt->SetFocus();
+
+	//return TRUE unless you set the focus to a control
 	return FALSE;
 }
 
@@ -121,6 +125,11 @@ void FindInTextDialog::OnBnClickedOk()
 	else mDir = 1;
 
 	OnOK();
+}
+void FindInTextDialog::OnBnClickedTick()
+{
+	CWnd* cwnd = this->GetFocus();
+	triggerVirtualKeyStroke(cwnd);
 }
 void FindInTextDialog::OnSetfocusOk() 
 {
