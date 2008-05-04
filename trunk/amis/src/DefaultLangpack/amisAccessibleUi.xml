@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ui xmlns="http://amisproject.org" next-id="t381" xml:lang="en">
+<ui xmlns="http://amisproject.org" next-id="t382" xml:lang="en">
     <containers>
         <container id="file">
             <note>This is the menu header "File"</note>
@@ -1185,6 +1185,18 @@
                     <promptItem refid="ok_button_description"/>
                 </description>
             </control>
+			<control mfcid="IDCANCEL" widget="button">
+                <caption>
+                    <promptItem refid="cancel_button_caption"/>
+                </caption>
+                <description>
+                    <promptItem refid="cancel_button_description"/>
+                </description>
+                <mnemonic>
+                    <text id="t381" flag="new">C</text>
+                    <audio src=""/>
+                </mnemonic>
+            </control>
         </dialog>
         <dialog mfcid="IDD_PREFERENCES">
             <note>This dialog lets the user set some basic preferences for AMIS.</note>
@@ -1353,9 +1365,9 @@
                 <text id="t231">Go To Page</text>
                 <audio src="./audio/speechgen0211.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0211.smil#txtd1476e9"/>
             </caption>
-            <description>
-                <text id="t232">Here you can jump to a page number or page label.</text>
-                <audio src="./audio/speechgen0212.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0212.smil#txtd1483e9"/>
+            <description mfcid="IDC_GOTOPAGE_CAPTION">
+                <text id="t236" flag="changed">Enter the number or label of the page that you want to go to:</text>
+            	<audio src="./audio/speechgen0213.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0213.smil#txtd1490e9"/>
             </description>
             <prompt type="instructions">
                 <promptItem refid="tabAround"/>
@@ -1363,12 +1375,8 @@
                 <promptItem refid="hearDlgInstructions"/>
             </prompt>
             <control mfcid="IDC_PAGENUM" widget="textfield autoplay">
-                <caption mfcid="IDC_STATIC">
-                    <text id="t236">Enter a page number:</text>
-                    <audio src="./audio/speechgen0213.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0213.smil#txtd1490e9"/>
-                </caption>
                 <description>
-                    <text id="t237">Type the number or label of the page you want to go to.</text>
+                    <text id="t237" flag="changed">Type the number or label of the page here.</text>
                     <audio src="./audio/speechgen0214.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0214.smil#txtd1497e9"/>
                 </description>
             </control>
@@ -1377,7 +1385,7 @@
                     <promptItem refid="ok_button_caption"/>
                 </caption>
                 <description>
-                    <text id="t234">Press this button to go to the desired page.</text>
+                    <text id="t234" flag="changed">Press to go to the desired page.</text>
                     <audio src="./audio/speechgen0215.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0215.smil#txtd1504e9"/>
                 </description>
             </control>
@@ -1779,7 +1787,7 @@
                 <audio src="./audio/speechgen0253.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0253.smil#txtd1770e9"/>
             </promptItem>
             <promptItem id="enter_to_close">
-                <text id="t259">Press enter to close the dialog.</text>
+                <text id="t259">Press to close the dialog.</text>
                 <audio src="./audio/speechgen0254.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0254.smil#txtd1777e9"/>
             </promptItem>
             <!--MOVED t260-->
@@ -1801,7 +1809,7 @@
                 <audio src="./audio/speechgen0255.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0255.smil#txtd1784e9"/>
             </promptItem>
             <promptItem id="ok_button_description">
-                <text id="t263">Press OK to close this dialog.</text>
+                <text id="t263" flag="changed">Press to close this dialog.</text>
                 <audio src="./audio/speechgen0256.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0256.smil#txtd1791e9"/>
             </promptItem>
             <promptItem id="cancel_button_caption">
@@ -1836,7 +1844,7 @@
             </promptItem>
             
 				<promptItem id="hearDlgInstructions">
-					<text id="t270" flag="changed">Press F1 to repeat the dialog's description.</text>
+					<text id="t270" flag="changed">Press F1 for dialog help.</text>
 				    <audio src=""/>
 				</promptItem>
 			
