@@ -1408,7 +1408,7 @@
                 <text id="t238">Publication Summary</text>
                 <audio src="./audio/speechgen0217.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0217.smil#txtd1518e9"/>
             </caption>
-            <description mfcid="IDC_LISTCAPTION">
+            <description mfcid="IDC_PUBLICATIONSUMMARYCAPTION">
                     <text id="t214" flag="changed">Information about this publication and your current position</text>
                     <audio src="./audio/speechgen0218.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0218.smil#txtd1525e9"/>
             </description>
