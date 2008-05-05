@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ui xmlns="http://amisproject.org" next-id="t383" xml:lang="en">
+<ui xmlns="http://amisproject.org" next-id="t390" xml:lang="en">
     <containers>
         <container id="file">
             <note>This is the menu header "File"</note>
@@ -2183,6 +2183,49 @@
 					<text id="t382" flag="new">The book could not be opened.  AMIS will re-open your previous book.</text>
 					<audio src=""/>
 				</promptItem>
+			</prompt>
+			<prompt id="shift_key">
+				<promptItem>
+					<text id="t383" flag="new">shift</text>
+					<audio src=""/>
+				</promptItem>
+			</prompt>
+			<prompt id="control_key">
+				<promptItem>
+					<text id="t384" flag="new">control</text>
+					<audio src=""/>
+				</promptItem>
+			</prompt>
+			<prompt id="alt_key">
+				<promptItem>
+					<text id="t385" flag="new">alt</text>
+					<audio src=""/>
+				</promptItem>
+			</prompt>
+			<prompt id="space_key">
+				<promptItem>
+					<text id="t386" flag="new">space</text>
+					<audio src=""/>
+				</promptItem>
+			</prompt>
+			<prompt id="delete_key">
+				<promptItem>
+					<text id="t387" flag="new">delete</text>
+					<audio src=""/>
+				</promptItem>
+			</prompt>
+			<prompt id="backspace_key">
+				<promptItem>
+					<text id="t388" flag="new">backspace</text>
+					<audio src=""/>
+				</promptItem>
+			</prompt>
+			<prompt id="enter_key">
+				<promptItem>
+					<text id="t389" flag="new">enter</text>
+					<audio src=""/>
+				</promptItem>
+			</prompt>
         </generalPrompts>
     </prompts>
 </ui>
