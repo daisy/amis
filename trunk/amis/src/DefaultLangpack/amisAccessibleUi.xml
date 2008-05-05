@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ui xmlns="http://amisproject.org" next-id="t390" xml:lang="en">
+<ui xmlns="http://amisproject.org" next-id="t390" xml:lang="en" removed="t379 t153 t160 t182 t191 t222 t197 t361 t363 t365 t250 t251 t255 t256 t257 t267 t271 t279 t281 t299 t302 t303 t316 t317 t318 t320 t322 t323">
     <containers>
         <container id="file">
             <note>This is the menu header "File"</note>
@@ -1745,7 +1745,7 @@
 			-->
 			
             <promptItem id="useArrowsList">
-                <text id="t380" flag="new">Use the arrow keys to move around the list of items</text>
+                <text id="t380" flag="new">Use the arrow keys to move around the list of items.</text>
                 <audio src=""/>
             </promptItem>
             
@@ -1758,7 +1758,7 @@
                 <audio src="./audio/speechgen0251.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0251.smil#txtd1756e9"/>
             </promptItem>
             <promptItem id="tabAround">
-                <text id="t254" flag="changed">Press tab to move around the options on the dialog.</text>
+                <text id="t254" flag="changed">Press tab to move around the dialog items.</text>
                 <audio src="./audio/speechgen0252.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0252.smil#txtd1763e9"/>
             </promptItem>
             <!--REMOVED t255-->
@@ -1839,7 +1839,7 @@
                 <audio src="./audio/speechgen0260.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0260.smil#txtd1819e9"/>
             </promptItem>
             <promptItem id="escapeToCancel">
-                <text id="t269">Press escape to cancel</text>
+                <text id="t269">Press escape to cancel.</text>
                 <audio src="./audio/speechgen0261.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0261.smil#txtd1826e9"/>
             </promptItem>
             
