@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ui xmlns="http://amisproject.org" next-id="t382" xml:lang="en">
+<ui xmlns="http://amisproject.org" next-id="t383" xml:lang="en">
     <containers>
         <container id="file">
             <note>This is the menu header "File"</note>
@@ -15,7 +15,7 @@
                     <audio src="./audio/speechgen0003.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0003.smil#txtd16e9"/>
                 </caption>
                 <description>
-                    <text id="t3">Open a Daisy book from the local file system</text>
+                    <text id="t3" flag="changed">Open a DAISY book from the local file system</text>
                     <audio src="./audio/speechgen0004.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0004.smil#txtd23e9"/>
                 </description>
                 <!--keys = the actual keys; text = the name of the keys-->
@@ -56,7 +56,7 @@
                     <audio src="./audio/speechgen0011.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0011.smil#txtd72e9"/>
                 </caption>
                 <description>
-                    <text id="t332" flag="new">Close the DAISY publication.</text>
+                    <text id="t332" flag="new">Close the DAISY publication</text>
                     <audio src="./audio/speechgen0012.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0012.smil#txtd79e9"/>
                 </description>
                 <mnemonic>
@@ -1883,10 +1883,13 @@
                 <text id="t278">Grouped items</text>
                 <audio src="./audio/speechgen0268.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0268.smil#txtd1875e9"/>
             </promptItem>
+			<!--REMOVED t279-->
+			<!--
             <promptItem id="navigation_sidebar_caption">
                 <text id="t279">Navigation</text>
                 <audio src="./audio/speechgen0269.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0269.smil#txtd1882e9"/>
             </promptItem>
+		-->
             <promptItem id="ready">
                 <text id="t280">Ready</text>
                 <audio src="./audio/speechgen0270.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0270.smil#txtd1889e9"/>
@@ -2058,7 +2061,7 @@
             </prompt>
             <prompt id="generalBookError">
                 <promptItem>
-                    <text id="t314" flag="changed">Error opening book.</text>
+                    <text id="t314" flag="changed">The book could not be opened.</text>
                     <audio src="./audio/speechgen0300.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0300.smil#txtd2102e9"/>
                 </promptItem>
                 <promptVar name="BOOK_PATH"/>
@@ -2105,10 +2108,13 @@
                     <audio src="./audio/speechgen0302.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0302.smil#txtd2116e9"/>
                 </promptItem>
                 <promptItem refid="thisDialogNotSelfVoicing"/>
-                <promptItem>
-                    <text id="t320">Use the "search for books" to find DAISY books on your hard drive.</text>
+                <!--REMOVED t320-->
+				<!--
+				<promptItem>
+                    <text id="t320">Search for books to find DAISY books on your hard drive.</text>
                     <audio src="./audio/speechgen0303.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0303.smil#txtd2123e9"/>
                 </promptItem>
+				-->
                 <promptItem refid="escapeToCancel"/>
             </prompt>
             <prompt id="BrowseForFolder_notSelfVoicing">
@@ -2126,13 +2132,15 @@
                 </promptItem>
 				-->
             </prompt>
-            <!--can we remove t323-->
+            <!--REMOVED t323-->
+			<!--
             <prompt id="canceled">
                 <promptItem>
                     <text id="t323">Canceled</text>
                     <audio src="./audio/speechgen0305.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0305.smil#txtd2137e9"/>
                 </promptItem>
             </prompt>
+			-->
             <prompt id="loading">
                 <promptItem>
                     <text id="t324">Loading</text>
@@ -2141,7 +2149,7 @@
             </prompt>
             <prompt id="restartForChanges">
                 <promptItem>
-                    <text id="t325">Please restart to see your changes.</text>
+                    <text id="t325" flag="changed">Please restart to change the language of AMIS.</text>
                     <audio src="./audio/speechgen0307.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0307.smil#txtd2151e9"/>
                 </promptItem>
             </prompt>
@@ -2170,6 +2178,11 @@
                     <audio src="./audio/speechgen0311.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0311.smil#txtd2179e9"/>
                 </promptItem>
             </prompt>
+			<prompt id="generalBookErrorReloading">
+				<promptItem>
+					<text id="t382" flag="new">The book could not be opened.  AMIS will re-open your previous book.</text>
+					<audio src=""/>
+				</promptItem>
         </generalPrompts>
     </prompts>
 </ui>
