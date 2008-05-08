@@ -1837,31 +1837,9 @@
                 <text id="t305">deselected</text>
                 <audio src="./audio/speechgen0283.mp3"/>
             </promptItem>
-            <!--This is for the keyboard shortcuts document and can eventually be removed from this XML document-->
-            <promptItem id="keyboardShortcut">
-                <text id="t306">Keyboard Shortcut</text>
-                <audio src="./audio/speechgen0284.mp3"/>
-            </promptItem>
-            <!--This is for the keyboard shortcuts document and can eventually be removed from this XML document-->
-            <promptItem id="icon">
-                <text id="t307">Icon</text>
-                <audio src="./audio/speechgen0285.mp3"/>
-            </promptItem>
-            <!--This is for the keyboard shortcuts document and can eventually be removed from this XML document-->
-            <promptItem id="menu">
+			<promptItem id="menu">
                 <text id="t308">Menu</text>
                 <audio src="./audio/speechgen0286.mp3"/>
-            </promptItem>
-            <!--This is for the keyboard shortcuts document and can eventually be removed from this XML document-->
-            <promptItem id="followedBy">
-                <note>This is used in the context of a sequence of key presses, as in "Press Alt + V, followed by S".  </note>
-                <text id="t309">followed by</text>
-                <audio src="./audio/speechgen0287.mp3"/>
-            </promptItem>
-            <!--This is for the keyboard shortcuts document and can eventually be removed from this XML document-->
-            <promptItem id="submenu">
-                <text id="t310">Sub Menu</text>
-                <audio src="./audio/speechgen0288.mp3"/>
             </promptItem>
         </promptItemRefs>
         <generalPrompts>
