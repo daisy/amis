@@ -25,7 +25,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 using namespace amis::gui::dialogs;
 
-void AboutDialog::resolvePromptVariables(Prompt* pPrompt) {
+void AboutDialog::resolvePromptVariables(Prompt* pPrompt)
+{
 	return;
 }
 AboutDialog::AboutDialog() : AmisDialogBase(AboutDialog::IDD)

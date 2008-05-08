@@ -1,3 +1,25 @@
+/*
+AMIS: Adaptive Multimedia Information System
+Software for playing DAISY books
+Homepage: http://amis.sf.net
+
+Copyright (C) 2004-2007  DAISY for All Project
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+*/
+
 #include "gui/self-voicing/datamodel/LabelList.h"
 #include <fstream>
 
@@ -44,29 +66,6 @@ Label* LabelList::getLabel(int idx)
 bool LabelList::doesListRepeat()
 {
 	return mbRepeat;
-}
-
-void LabelList::testPrint(std::string outfile, int numTabs)
-{
-	fstream out;
-	out.open(outfile.c_str(), ios::app | ios::out);
-
-	int i = 0;
-	for (i = 0; i<numTabs; i++){out<<"\t";}
-	out<<"List";
-	
-	if (mbRepeat == true)
-		out<<"\t repeat = yes"<<endl;
-	else
-		out<<"\t repeat = no"<<endl;
-
-	out.close();
-
-	for (i=0; i<mLabels.size(); i++)
-	{
-		mLabels[i]->testPrint(outfile, numTabs + 1);
-	}
-
 }
 
 void LabelList::setRepeat(bool repeat)

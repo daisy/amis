@@ -34,7 +34,8 @@ BEGIN_MESSAGE_MAP(MultipleBooksOnVolumeDialog, CDialog)
 END_MESSAGE_MAP()
 
 
-void MultipleBooksOnVolumeDialog::resolvePromptVariables(Prompt* pPrompt) {
+void MultipleBooksOnVolumeDialog::resolvePromptVariables(Prompt* pPrompt)
+{
 	return;
 }
 

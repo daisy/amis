@@ -42,7 +42,8 @@ BEGIN_MESSAGE_MAP(TextStyleDialog, CDialog)
 	ON_WM_PAINT()
 END_MESSAGE_MAP()
 
-void TextStyleDialog::resolvePromptVariables(Prompt* pPrompt) {
+void TextStyleDialog::resolvePromptVariables(Prompt* pPrompt)
+{
 	
 	USES_CONVERSION;
 	

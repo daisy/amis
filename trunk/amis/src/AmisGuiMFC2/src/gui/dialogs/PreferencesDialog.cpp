@@ -55,7 +55,8 @@ BEGIN_MESSAGE_MAP(PreferencesDialog, CDialog)
 	ON_WM_PAINT()
 END_MESSAGE_MAP()
 
-void PreferencesDialog::resolvePromptVariables(Prompt* pPrompt) {
+void PreferencesDialog::resolvePromptVariables(Prompt* pPrompt)
+{
 	
 	
 	CButton* p_button = NULL;
@@ -180,7 +181,8 @@ void PreferencesDialog::resolvePromptVariables(Prompt* pPrompt) {
 				p_var->setContents(str, "");
 
 				amis::ModuleDescData* p_data = Preferences::Instance()->getCurrentLanguageData();
-				if (p_data != NULL || p_data->getLabel() != NULL) {
+				if (p_data != NULL || p_data->getLabel() != NULL)
+				{
 
 					amis::MediaGroup* p_media = p_data->getLabel();
 					//p_media->getText()->getTextString().c_str();

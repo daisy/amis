@@ -1,3 +1,26 @@
+/*
+AMIS: Adaptive Multimedia Information System
+Software for playing DAISY books
+Homepage: http://amis.sf.net
+
+Copyright (C) 2004-2007  DAISY for All Project
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+*/
+
+
 #include "gui/self-voicing/datamodel/Switch.h"
 
 #include "../../AmisGuiMFC2/resource.h"
@@ -65,6 +88,38 @@ Action* Switch::getAction(std::string condition)
 	return p_action;
 }
 
+//switch captions/descriptions
+Label* Switch::getLabel(std::string condition)
+{
+	Label* p_label = NULL;
+
+	for (int i=0; i<mLabels.size(); i++)
+	{
+		if (mLabels[i]->getCondition() == condition)
+		{
+			p_label = mLabels[i];
+			break;
+		}
+	}
+
+	return p_label;
+}
+
+void Switch::setSwitchType(SwitchType type)
+{
+	mSwitchType = type;
+}
+
+void Switch::addAction(Action* pAction)
+{
+	mActions.push_back(pAction);
+}
+
+void Switch::addLabel(Label* pLabel)
+{
+	mLabels.push_back(pLabel);
+}
+
 					/*
 UiItem* Switch::findUiItem(string switchCondition) {
 	
@@ -119,63 +174,3 @@ Action* Switch::getAction(std::string condition, int mfcId)
 
 	return p_action;
 }*/
-
-//switch captions/descriptions
-Label* Switch::getLabel(std::string condition)
-{
-	Label* p_label = NULL;
-
-	for (int i=0; i<mLabels.size(); i++)
-	{
-		if (mLabels[i]->getCondition() == condition)
-		{
-			p_label = mLabels[i];
-			break;
-		}
-	}
-
-	return p_label;
-}
-
-void Switch::setSwitchType(SwitchType type)
-{
-	mSwitchType = type;
-}
-
-void Switch::addAction(Action* pAction)
-{
-	mActions.push_back(pAction);
-}
-
-void Switch::addLabel(Label* pLabel)
-{
-	mLabels.push_back(pLabel);
-}
-
-void Switch::testPrint(std::string outfile, int numTabs)
-{
-	fstream out;
-	out.open(outfile.c_str(), ios::app | ios::out);
-
-	int i=0;
-	
-	for (i=0; i<numTabs; i++){out<<"\t";}
-	out<<"Switch"<<endl;
-
-	out.close();
-
-	if (mSwitchType == ACTIONSWITCH)
-	{
-		for (i=0; i<mActions.size(); i++)
-		{
-			mActions[i]->testPrint(outfile, numTabs + 1);
-		}
-	}
-	else
-	{
-		for (i=0; i<mLabels.size(); i++)
-		{
-			mLabels[i]->testPrint(outfile, numTabs + 1);
-		}
-	}
-}

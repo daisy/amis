@@ -1,3 +1,26 @@
+/*
+AMIS: Adaptive Multimedia Information System
+Software for playing DAISY books
+Homepage: http://amis.sf.net
+
+Copyright (C) 2004-2007  DAISY for All Project
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+*/
+
+
 #include "gui/self-voicing/datamodel/DialogControl.h"
 #include "gui/self-voicing/datamodel/Switch.h"
 #include <fstream>
@@ -27,51 +50,6 @@ Label* DialogControl::getMnemonic()
 std::string DialogControl::getWidgetCategories()
 {
 	return mWidgetCategories;
-}
-
-
-void DialogControl::testPrint(std::string outfile, int numTabs)
-{
-	fstream out;
-	out.open(outfile.c_str(), ios::app | ios::out);
-
-	int i = 0;
-
-	for (i=0; i<numTabs; i++){out<<"\t";}
-	out<<"Control"<<endl;
-
-	for (i=0; i<numTabs + 1; i++){out<<"\t";}
-	out<<"mfc id = "<<this->getMfcId()<<endl;
-
-	for (i=0; i<numTabs + 1; i++){out<<"\t";}
-	out<<"Widget type = "<<mWidgetCategories<<endl;
-
-	out.close();
-
-	if (this->getSwitch() != NULL)
-	{
-		this->getSwitch()->testPrint(outfile, numTabs + 1);
-	}
-
-	Label* p_label = NULL;
-	p_label = this->getCaption();
-	if (p_label!=NULL)
-	{
-		p_label->testPrint(outfile, numTabs+1);
-	}
-
-	p_label = NULL;
-	p_label = this->getDescription();
-	if (p_label != NULL)
-	{
-		p_label->testPrint(outfile, numTabs+1);
-	}
-
-	LabelList* p_list = NULL;
-	p_list = this->getLabelList();
-	if (p_list != NULL)
-		p_list->testPrint(outfile, numTabs + 1);
-		
 }
 
 void DialogControl::setWidgetCategories(std::string widgetCategories)

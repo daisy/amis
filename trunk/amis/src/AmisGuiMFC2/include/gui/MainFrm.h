@@ -38,7 +38,6 @@ class CMainFrame : public CMDIFrameWnd
 
 public:
 	CMainFrame();
-	CMenu* m_lastOpenPopupMenu;
 	PreTranslateMessageHandler* mCommonPreTranslateMessageHandler;
 	
 	bool mbWasPlayingWhenLostFocus;

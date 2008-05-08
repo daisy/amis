@@ -68,8 +68,9 @@ void amis::MediaNode::setId(string id)
 void amis::MediaNode::setSrc(string src)
 {
 	mSrc.assign(src);
-	if (mSrc.length()==0 && mMediaNodeType==AUDIO) {
-		int i = 0;
+	if (mSrc.length()==0 && mMediaNodeType==AUDIO)
+	{
+		int debug = 0;
 	}
 }
 

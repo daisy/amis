@@ -65,7 +65,8 @@ BOOL PublicationSummaryDialog::OnInitDialog()
 			"PublicationSummaryDialog::OnInitDialog", "AmisGuiMFC2");
 		return TRUE;
 	}
-	if (calculateData() == true) {
+	if (calculateData() == true)
+	{
 		CDialog::OnInitDialog();
 		displayData();
 	}
@@ -328,14 +329,17 @@ CString PublicationSummaryDialog::computeTitle()
 
 void PublicationSummaryDialog::OnLvnItemchangedSummary(NMHDR *pNMHDR, LRESULT *pResult)
 {
-	if (amis::Preferences::Instance()->getIsSelfVoicing() == false) {
+	if (amis::Preferences::Instance()->getIsSelfVoicing() == false)
+	{
 		
 	*pResult = 0;
 		return;
 	}
 	LPNMLISTVIEW pNMLV = reinterpret_cast<LPNMLISTVIEW>(pNMHDR);
-	if (pNMLV->iItem != -1) {
-		if (pNMLV->uNewState == 3) {
+	if (pNMLV->iItem != -1)
+	{
+		if (pNMLV->uNewState == 3)
+		{
 			
 			CListCtrl* p_ctrl_list = (CListCtrl*)this->GetDlgItem(IDC_SUMMARYLIST);
 			//int i = p_ctrl_list->GetSelectionMark(); // Should = pNMLV->iItem
@@ -356,7 +360,12 @@ void PublicationSummaryDialog::OnLvnItemchangedSummary(NMHDR *pNMHDR, LRESULT *p
 						{
 							AudioSequence* seq = new AudioSequence();
 							AudioSequencePlayer::Instance()->fillSequencePrompt(seq, p_prompt, this);
-							if (seq->IsEmpty()) {delete seq;}else{ 
+							if (seq->IsEmpty()) 
+							{
+								delete seq;
+							}
+							else
+							{ 
 								AudioSequencePlayer::Instance()->Play(seq);
 							}
 						}
@@ -387,14 +396,17 @@ void PublicationSummaryDialog::resolvePromptVariables(Prompt* pPrompt) {
 				str = computeTitle();
 
 				if (node == NULL) {
-					if (str.length() != 0) {
+					if (str.length() != 0)
+					{
 						p_var->setContents(str, "");
 					}
 					else if (promptNotAvailable != NULL)
 					{
 						p_var->setContents(promptNotAvailable->getContents()->clone());
 					}
-				} else {
+				}
+				else
+				{
 					p_var->setContents(str, node->clone());
 				}
 			}
@@ -402,7 +414,8 @@ void PublicationSummaryDialog::resolvePromptVariables(Prompt* pPrompt) {
 			{
 				wstring str;
 				str = computeAuthor();
-				if (str.length() != 0) {
+				if (str.length() != 0)
+				{
 					p_var->setContents(str, "");
 				}
 				else if (promptNotAvailable != NULL)
@@ -413,7 +426,8 @@ void PublicationSummaryDialog::resolvePromptVariables(Prompt* pPrompt) {
 			
 			else if (p_var->getName().compare("META_PUBLISHER") == 0)
 			{
-				if (mPublisher.length() != 0) {
+				if (mPublisher.length() != 0)
+				{
 					p_var->setContents(mPublisher, "");
 				}
 				else if (promptNotAvailable != NULL)
@@ -423,7 +437,8 @@ void PublicationSummaryDialog::resolvePromptVariables(Prompt* pPrompt) {
 			} 
 			else if (p_var->getName().compare("META_DESC") == 0)
 			{
-				if (mDescription.length() != 0) {
+				if (mDescription.length() != 0)
+				{
 					p_var->setContents(mDescription, "");
 				}
 				else if (promptNotAvailable != NULL)
@@ -433,7 +448,8 @@ void PublicationSummaryDialog::resolvePromptVariables(Prompt* pPrompt) {
 			} 
 			else if (p_var->getName().compare("META_NARRATOR") == 0)
 			{
-				if (mNarrator.length() != 0) {
+				if (mNarrator.length() != 0)
+				{
 					p_var->setContents(mNarrator, "");
 				}
 				else if (promptNotAvailable != NULL)
@@ -443,7 +459,8 @@ void PublicationSummaryDialog::resolvePromptVariables(Prompt* pPrompt) {
 			} 
 			else if (p_var->getName().compare("META_TOTALTIME") == 0)
 			{
-				if (mTotalTime.length() != 0) {
+				if (mTotalTime.length() != 0)
+				{
 					p_var->setContents(mTotalTime, "");
 				}
 				else if (promptNotAvailable != NULL)
@@ -461,7 +478,8 @@ void PublicationSummaryDialog::resolvePromptVariables(Prompt* pPrompt) {
 			} 
 			else if (p_var->getName().compare("META_DATE") == 0)
 			{
-				if (mDate.length() != 0) {
+				if (mDate.length() != 0)
+				{
 					p_var->setContents(mDate, "");
 				}
 				else if (promptNotAvailable != NULL)
@@ -471,7 +489,8 @@ void PublicationSummaryDialog::resolvePromptVariables(Prompt* pPrompt) {
 			} 
 			else if (p_var->getName().compare("META_FORMAT") == 0)
 			{
-				if (mFormat.length() != 0) {
+				if (mFormat.length() != 0)
+				{
 					p_var->setContents(mFormat, "");
 				}
 				else if (promptNotAvailable != NULL)
@@ -504,7 +523,8 @@ void PublicationSummaryDialog::resolvePromptVariables(Prompt* pPrompt) {
 			} 
 			else if (p_var->getName().compare("TOC_CATEGORIES") == 0)
 			{
-				if (mNavigableItems.length() != 0) {
+				if (mNavigableItems.length() != 0)
+				{
 
 					p_var->setContents(mNavigableItems, "");
 
@@ -514,7 +534,9 @@ void PublicationSummaryDialog::resolvePromptVariables(Prompt* pPrompt) {
 					{
 						amis::AudioNode * node = p_nav->getNavMap()->getLabel()->getAudio(0);
 						p_var->setContents(p_nav->getNavMap()->getLabel()->getText()->getTextString(), node);
-					} else {
+					}
+					else
+					{
 						p_var->setContents(mNavigableItems, "");
 					}
 					*/
@@ -551,7 +573,8 @@ void PublicationSummaryDialog::resolvePromptVariables(Prompt* pPrompt) {
 				if (mpCurrentPage != NULL) {
 					amis::AudioNode * node = mpCurrentPage->getAudio(0);
 					p_var->setContents(mpCurrentPage->getText()->getTextString(), (node != NULL ? node->clone() : NULL));
-				} else if (promptNotAvailable != NULL) {
+				} else if (promptNotAvailable != NULL)
+				{
 					p_var->setContents(promptNotAvailable->getContents()->clone());
 				}
 			} 
@@ -566,7 +589,8 @@ void PublicationSummaryDialog::resolvePromptVariables(Prompt* pPrompt) {
 				{
 					amis::AudioNode * node = mpSectionName->getAudio(0);
 					p_var->setContents(mpSectionName->getText()->getTextString(), (node != NULL ? node->clone() : NULL));
-				} else if (promptNotAvailable != NULL) {
+				} else if (promptNotAvailable != NULL)
+				{
 					p_var->setContents(promptNotAvailable->getContents()->clone());
 				}
 			} 

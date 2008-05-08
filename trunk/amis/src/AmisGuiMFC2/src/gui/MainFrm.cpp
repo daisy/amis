@@ -114,7 +114,6 @@ amis::gui::MenuVoicing* mMenuVoicing;
 CMainFrame::CMainFrame()
 {	
 	mbWasPlayingWhenLostFocus =	false;	
-	m_lastOpenPopupMenu	= NULL;
 	mSavedMenu.LoadMenu(IDR_AMISTYPE);
 	mCommonPreTranslateMessageHandler =	new	PreTranslateMessageHandler(-1);
 	mMenuVoicing =	new	amis::gui::MenuVoicing(this);
@@ -294,43 +293,16 @@ void CMainFrame::OnMenuSelect( UINT	nItemID, UINT nFlags, HMENU	hSysMenu )
 void CMainFrame::OnInitMenuPopup(CMenu*	pPopupMenu,	UINT nIndex, BOOL bSysMenu)	
 {
 	amis::util::Log* p_log = amis::util::Log::Instance();
-  
+
 	p_log->writeMessage("CMainFrame::OnInitMenuPopup()");
 	TRACE("\nCMainFrame::OnInitMenuPopup()\n");
-	m_lastOpenPopupMenu	= pPopupMenu;
 
-	CFrameWnd::OnInitMenuPopup(pPopupMenu, nIndex, bSysMenu);
-
-	return;
-
-	/*
-
-	USES_CONVERSION;
-
-	if (pPopupMenu == NULL)
+	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 	{
-		TRACE(_T("popup	is null"));
-		return;
+		mMenuVoicing->OnInitMenuPopup(pPopupMenu, nIndex, bSysMenu);
 	}
 
-	CString	dbg;
-	CString	tmpstr;
-
-	UINT nID = pPopupMenu->GetMenuItemID(0);
-	dbg.Format(_T("\tThis popup	menu's first item's	ID = %d	\n"), nID);
-	TRACE(dbg);
-
-	dbg.Format(_T("\t----------	This popup menu's INDEX	= %d \n"), nIndex);
-	TRACE(dbg);
-
-	std::string	prompt;
-	//prompt = PromptsGuiIds::Instance()->lookupPromptMenuPopup(nID);
-	prompt = mMenuVoicing->computeRootMenuFromFirstChildID(nID, false); //Preferences::Instance()->mbIsSelfVoicing);
-
-	tmpstr = A2T(prompt.c_str());
-	dbg.Format(_T("\tPrompt	for	this popup 1 = --%s-- \n"),	tmpstr);  //DAN_MENU_DEBUG
-	TRACE(dbg);
-	*/
+	CFrameWnd::OnInitMenuPopup(pPopupMenu, nIndex, bSysMenu);
 }
 
 void CMainFrame::OnInitMenu(CMenu* pMenu)
@@ -348,13 +320,19 @@ void CMainFrame::OnEnterMenuLoop(BOOL bIsTrackPopupMenu)
 {
 	CMDIFrameWnd::OnEnterMenuLoop(bIsTrackPopupMenu);
 
-	if (amis::Preferences::Instance()->getIsSelfVoicing() == false)
+
+	/* Nothing to do here.
+	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
+	{
+		mMenuVoicing->OnEnterMenuLoop(bIsTrackPopupMenu);
+	} */
+
+	MmView *view = MainWndParts::Instance()->mpMmView;
+	assert(view); // XXXJack: or what to do if view == NULL? Skip?
+	if (view==NULL)
 	{
 		return;
 	}
-	MmView *view = MainWndParts::Instance()->mpMmView;
-	assert(view); // XXXJack: or what to do if view == NULL? Skip?
-	if (view==NULL) {return;}
 	bool b_BookIsPlaying = view->isPlaying(); // BOOK Audio	Player
 	mbWasPlayingWhenLostFocus =	b_BookIsPlaying;
 	if (mbWasPlayingWhenLostFocus)
@@ -366,15 +344,13 @@ void CMainFrame::OnExitMenuLoop(BOOL bIsTrackPopupMenu)
 {
 	CMDIFrameWnd::OnExitMenuLoop(bIsTrackPopupMenu);
 
-
-	if (amis::Preferences::Instance()->getIsSelfVoicing() == false)
+	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 	{
-		return;
+		mMenuVoicing->OnExitMenuLoop(bIsTrackPopupMenu);
 	}
 
-	AudioSequencePlayer::Instance()->Stop();
-
-	if (mbWasPlayingWhenLostFocus) {
+	if (mbWasPlayingWhenLostFocus)
+	{
 
 		MmView *view = MainWndParts::Instance()->mpMmView;
 		assert(view); // XXXJack: or what to do if view == NULL? Skip?
@@ -384,39 +360,23 @@ void CMainFrame::OnExitMenuLoop(BOOL bIsTrackPopupMenu)
 	}
 	mbWasPlayingWhenLostFocus =	false;
 
-	m_lastOpenPopupMenu	= NULL;
 }
 
 BOOL CMainFrame::PreTranslateMessage(MSG* pMsg)
 {
-	if (pMsg->message == WM_KEYUP)
-	{
-		CWnd* cwnd = this->GetFocus();
-		if (pMsg->wParam == VK_ESCAPE) {
-			if (m_lastOpenPopupMenu != NULL) {
-				m_lastOpenPopupMenu = NULL;
-			}
-		//TRACE("\n---------------DANOUL1\n\n");
-		//TRACE(L"%d", cwnd);
-		}
-	}
 	if (amis::Preferences::Instance()->getIsSelfVoicing() == true &&
 		(pMsg->message == WM_KEYDOWN	|| pMsg->message ==	WM_KEYUP))
 	{
+
+		if (pMsg->message == WM_KEYUP)
+		{
+			if (pMsg->wParam == VK_ESCAPE) {
+				mMenuVoicing->resetLastOpenPopupMenu();
+			}
+		}
+
 		CWnd* cwnd = this->GetFocus();
 		if (cwnd) mCommonPreTranslateMessageHandler->handle(NULL, pMsg, (cwnd	== NULL	? -1 : cwnd->GetDlgCtrlID()));
-	}
-	if (pMsg->message == WM_CANCELMODE) {
-		//TRACE("\n---------------DANOUL2\n\n");
-		//TRACE(L"%d", pMsg->message);
-	}
-	if (pMsg->wParam == WM_CANCELMODE) {
-		//TRACE("\n---------------DANOUL3\n\n");
-		//TRACE(L"%d", pMsg->wParam);
-	}
-	if (pMsg->lParam == WM_CANCELMODE) {
-		//TRACE("\n---------------DANOUL4\n\n");
-		//TRACE(L"%d", pMsg->lParam);
 	}
 	return CFrameWnd::PreTranslateMessage(pMsg);
 }
@@ -432,13 +392,14 @@ void CMainFrame::OnActivate( UINT nState, CWnd*	pWndOther, BOOL	bMinimized )
 		MmView *view = MainWndParts::Instance()->mpMmView;
 		assert(view); // XXXJack: or what to do if view == NULL? Skip?
 
-		if (view=NULL) {
+		if (view=NULL)
+		{
 			return;
 		}
-		if	( nState ==	WA_INACTIVE	 ) {
-			if ( ! AfxGetMainWnd()->IsChild(pWndOther) ) {
-
-
+		if	( nState ==	WA_INACTIVE	 )
+		{
+			if ( ! AfxGetMainWnd()->IsChild(pWndOther) )
+			{
 				bool b_BookIsPlaying = view->isPlaying(); // BOOK Audio	Player
 
 				//mbWasPlayingWhenLostFocus	= b_BookIsPlaying || b_GuiIsPlaying;
@@ -454,8 +415,11 @@ void CMainFrame::OnActivate( UINT nState, CWnd*	pWndOther, BOOL	bMinimized )
 					}
 				}
 			}
-		} else { //WA_ACTIVE
-			if (mbWasPlayingWhenLostFocus) {
+		}
+		else
+		{ //WA_ACTIVE
+			if (mbWasPlayingWhenLostFocus)
+			{
 
 				view->OnFilePlay();
 

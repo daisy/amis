@@ -1,3 +1,24 @@
+/*
+AMIS: Adaptive Multimedia Information System
+Software for playing DAISY books
+Homepage: http://amis.sf.net
+
+Copyright (C) 2004-2007  DAISY for All Project
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+*/
 
 
 #define _WIN32_DCOM
@@ -53,11 +74,16 @@ long TTSPlayer::GetSpeechRate()
 	long pRate;
 	HRESULT hr = 0;
 	hr = m_iV->GetRate(&pRate);
-	if (SUCCEEDED(hr)) {
+	if (SUCCEEDED(hr))
+	{
 		return pRate;
-	} else if (hr == E_POINTER) {
+	}
+	else if (hr == E_POINTER) 
+	{
 		return LONG_MAX;
-	} else {
+	}
+	else
+	{
 		_ASSERT(0);
 		return LONG_MAX; // Should never happen !
 	}
@@ -69,11 +95,16 @@ bool TTSPlayer::SetSpeechRate(long newRate)
 
 	HRESULT hr = 0;
 	hr = m_iV->SetRate(newRate);
-	if (SUCCEEDED(hr)) {
+	if (SUCCEEDED(hr))
+	{
 		return true;
-	} else if (hr == E_INVALIDARG) {
+	}
+	else if (hr == E_INVALIDARG)
+	{
 		return false;
-	} else {
+	}
+	else
+	{
 		_ASSERT(0);
 		return false; // Should never happen !
 	}
@@ -94,7 +125,8 @@ void TTSPlayer::Play(CString str)
 	TRACE(L"\n*-*=*+*");
 	p_log->writeMessage(W2CA(str));
 	TRACE(str);
-	if (IsSpeaking()) {
+	if (IsSpeaking())
+	{
 		p_log->writeMessage("IsSpeaking????????");
 		TRACE("IsSpeaking????????");
 	}
@@ -149,11 +181,13 @@ TRACE(_T("\n//// TTS BEFORE WAIT \r\n") );
 TRACE(_T("\n//// TTS AFTER WAIT \r\n") );
 }
 
-void __stdcall SpkCallback(WPARAM wParam, LPARAM lParam) {
+void __stdcall SpkCallback(WPARAM wParam, LPARAM lParam)
+{
 	((TTSPlayer *)lParam)->callback();
 }
 
-void TTSPlayer::callback() {
+void TTSPlayer::callback()
+{
 
     CSpEvent        event;  // helper class in sphelper.h for events that releases any 
                             // allocated memory in it's destructor - SAFER than SPEVENT
@@ -181,22 +215,28 @@ void TTSPlayer::callback() {
 
             case SPEI_END_INPUT_STREAM:
 
-				if (m_isSpeaking) {
+				if (m_isSpeaking)
+				{
 				m_isSpeaking = FALSE;
 
-				if (mbDoNotProcessEndEvent) {
+				if (mbDoNotProcessEndEvent)
+				{
 					
 					p_log->writeMessage("EndStream 1 mbDoNotProcessEndEvent");
                 TRACE(_T("\nEndStream 1 mbDoNotProcessEndEvent\r\n") );
 					mbDoNotProcessEndEvent = false;
-				} else {
+				}
+				else
+				{
 					
 					
 					p_log->writeMessage("EndStream 2 sendMessageCallback");
                 TRACE(_T("\nEndStream 2 sendMessageCallback\r\n") );
 					sendMessageCallback();
 				}
-				} else {
+				}
+				else
+				{
 				int i = 9;
 				}				
                 break;     
@@ -216,7 +256,8 @@ void TTSPlayer::callback() {
     }
 }
 
-bool TTSPlayer::IsSpeaking(void) {
+bool TTSPlayer::IsSpeaking(void)
+{
 	
 	return m_isSpeaking;
 }
@@ -259,8 +300,12 @@ TTSPlayer::TTSPlayer(void)
 	m_iV->SetVolume(50); //TODO: this value works well on my laptop/configuration...but how about other machines ??
 }
 
-void TTSPlayer::DestroyInstance() {
-	if (pinstance != NULL) {delete pinstance;}
+void TTSPlayer::DestroyInstance()
+{
+	if (pinstance != NULL)
+	{
+		delete pinstance;
+	}
 }
 
 TTSPlayer::~TTSPlayer(void)
@@ -279,17 +324,26 @@ int TTSPlayer::initVoiceList(HWND hWnd)
 
 	HRESULT hr = SpInitTokenComboBox( GetDlgItem( hWnd, IDC_TTSVOICES ), SPCAT_VOICES );
 	//HRESULT hr = SpInitTokenComboBox( GetDlgItem( IDC_TTSVOICE )->GetSafeHwnd(), SPCAT_VOICES );
-	if ( SUCCEEDED( hr ) ) {return m_currentVoiceNumber;} else {return -1;}
+	if ( SUCCEEDED( hr ) )
+	{
+		return m_currentVoiceNumber;
+	}
+	else
+	{
+		return -1;
+	}
 
 }
 
-void TTSPlayer::ChangeVoice(int index) {
+void TTSPlayer::ChangeVoice(int index)
+{
 	m_currentVoiceNumber = index-1; // Because ++ will be applied in ChangeVoice(). 0 is the start index for both 'index' and 'm_currentVoiceNumber'
 	ChangeVoice(false);
 }
 
 
-std::string TTSPlayer::ChangeVoice(bool speakNotify) {
+std::string TTSPlayer::ChangeVoice(bool speakNotify)
+{
 
 	USES_CONVERSION;
 	
@@ -309,7 +363,8 @@ if(SUCCEEDED(hr))
     hr = cpEnum->GetCount(&ulCount);
 
 m_currentVoiceNumber ++;
-if (m_currentVoiceNumber >= ulCount) {
+if (m_currentVoiceNumber >= ulCount)
+{
 	m_currentVoiceNumber = 0;
 }
             szDescription = new CSpDynamicString [ulCount];
@@ -325,7 +380,8 @@ while (SUCCEEDED(hr) && ulCount -- )
         hr = cpEnum->Next( 1, &cpVoiceToken, NULL );
            HRESULT hResult = SpGetDescription(cpVoiceToken, &szDescription[counter]);
 
-	if (counter == m_currentVoiceNumber) {
+	if (counter == m_currentVoiceNumber)
+	{
 		break;
 	}
 }

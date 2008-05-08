@@ -1,3 +1,24 @@
+/*
+AMIS: Adaptive Multimedia Information System
+Software for playing DAISY books
+Homepage: http://amis.sf.net
+
+Copyright (C) 2004-2007  DAISY for All Project
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+*/
 
 #include "gui/self-voicing/pretranslatemessagehandler.h"
 
@@ -5,8 +26,6 @@
 #include "gui/self-voicing/datamodel/DataTree.h"
 
 #include "../../AmisGuiMFC2/resource.h"
-//#include "gui/AmisApp.h"
-
 
 #include "util/Log.h"
 
@@ -21,20 +40,28 @@ PreTranslateMessageHandler::~PreTranslateMessageHandler(void)
 {
 }
 
-bool PreTranslateMessageHandler::isControlPressed() {
+bool PreTranslateMessageHandler::isControlPressed()
+{
 	return mbKeyControl;
 }
 
-CString PreTranslateMessageHandler::normalizeTextEntry(CString str, int nStartChar, int nEndChar) {
+CString PreTranslateMessageHandler::normalizeTextEntry(CString str, int nStartChar, int nEndChar)
+{
 
 	CString strNew = str;
-	if (nStartChar == nEndChar && nStartChar != -1) {
-		if (nStartChar >= str.GetLength()) {
+	if (nStartChar == nEndChar && nStartChar != -1)
+	{
+		if (nStartChar >= str.GetLength())
+		{
 			//str = L"";
-		} else {
+		}
+		else
+		{
 			strNew = str.Mid(nStartChar, 1);
 		}
-	} else if (nStartChar != -1 && nEndChar != -1) {
+	}
+	else if (nStartChar != -1 && nEndChar != -1)
+	{
 		strNew = str.Mid(nStartChar, nEndChar-nStartChar);
 	}
 	return strNew;
@@ -82,13 +109,6 @@ CString PreTranslateMessageHandler::convertKeystrokeToSpeakableString(WPARAM ch,
 
 			//echo keystrokes
 			return CString((char)ch);
-			/*if (cstr == L".") {
-			cstr = L"dot";
-			} else if (cstr == L"-") {
-			cstr = L"minus";
-			} else if (!ignoreSpaceKey && cstr == L" ") {
-			cstr = L"space";
-			}*/
 		}
 	}
 	return L"";
@@ -210,17 +230,19 @@ CString PreTranslateMessageHandler::convertKeystrokeToSpeakableString(MSG* pMsg,
 }
 
 
-void PreTranslateMessageHandler::handleCommand(WPARAM cmdid) {
-	if (SELF_VOICING_PLAY_NEXT == cmdid) {
+void PreTranslateMessageHandler::handleCommand(WPARAM cmdid)
+{
+	if (SELF_VOICING_PLAY_NEXT == cmdid)
+	{
 		AudioSequencePlayer::Instance()->playNext(true);
 	}
 }
-void PreTranslateMessageHandler::handle(PromptResolver * pResolver, MSG* pMsg, int idUiFocus, bool ignoreSpaceKey, bool ignoreArrowKeys, CString strTextField, CString strTextFieldFULL, bool ignoreCharKeys) {
-
-
+void PreTranslateMessageHandler::handle(PromptResolver * pResolver, MSG* pMsg, int idUiFocus, bool ignoreSpaceKey, bool ignoreArrowKeys, CString strTextField, CString strTextFieldFULL, bool ignoreCharKeys)
+{
 	if (pMsg->message == WM_KEYDOWN)
 	{
-		if (mLastKeyDown == pMsg->wParam) { //Prevents repeat
+		if (mLastKeyDown == pMsg->wParam)
+		{
 			return;
 		}
 		mLastKeyDown = pMsg->wParam;
@@ -230,21 +252,7 @@ void PreTranslateMessageHandler::handle(PromptResolver * pResolver, MSG* pMsg, i
 			mbKeyControl = true;
 		}	
 
-		/*
-		CString cstr = convertKeystrokeToSpeakableString(pMsg, ignoreSpaceKey, ignoreArrowKeys, ignoreCharKeys);
-
-		if (!cstr.IsEmpty()) {
-
-			TRACE(cstr);
-			if (mSeq == NULL) {
-			mSeq = new AudioSequence();
-			mSeq->append(cstr);
-		}
-		*/
 			return;
-
-			//mSeq = NULL;
-			//AudioSequencePlayer::Instance()->Play(seq, true);
 
 		
 	}
@@ -252,13 +260,15 @@ void PreTranslateMessageHandler::handle(PromptResolver * pResolver, MSG* pMsg, i
 	{
 		
 		bool wasSameKey = false;
-		if (mLastKeyDown == pMsg->wParam) { //Prevents repeat
+		if (mLastKeyDown == pMsg->wParam)
+		{
 			mLastKeyDown = -1;
 			wasSameKey = true;
 		}
 		if (pMsg->wParam == VK_CONTROL)
 		{
-			if (mbKeyControl && wasSameKey) {
+			if (mbKeyControl && wasSameKey)
+			{
 				//if (seq != NULL && !(seq->IsEmpty()) && playNow) AudioSequencePlayer::Instance()->Play(seq, true);
 				//else AudioSequencePlayer::Instance()->Stop();
 				TRACE(L"\n @@@ CONTROL KEY STOP\n");
@@ -301,7 +311,8 @@ void PreTranslateMessageHandler::handle(PromptResolver * pResolver, MSG* pMsg, i
 			mbKeyControl = false;
 
 
-			if (!strTextFieldFULL.IsEmpty()) {
+			if (!strTextFieldFULL.IsEmpty())
+			{
 
 				AudioSequence * mSeq = new AudioSequence();
 				Prompt* p_prompt_ = DataTree::Instance()->findPrompt("textFieldEntry");
@@ -311,7 +322,8 @@ void PreTranslateMessageHandler::handle(PromptResolver * pResolver, MSG* pMsg, i
 					AudioSequencePlayer::Instance()->fillSequencePrompt(mSeq, p_prompt_, pResolver);
 				}
 
-				if (strTextFieldFULL.GetLength() == 1) {
+				if (strTextFieldFULL.GetLength() == 1)
+				{
 					strTextFieldFULL = convertKeystrokeToSpeakableString(strTextFieldFULL.GetAt(0));
 				}
 				mSeq->append(strTextFieldFULL);
@@ -338,48 +350,51 @@ void PreTranslateMessageHandler::handle(PromptResolver * pResolver, MSG* pMsg, i
 					AudioSequencePlayer::Instance()->playDialogControlFromUiIds(m_instructionsDialogID, IDCANCEL, pResolver, true, "default");
 					return;
 
-				} else if (idUiFocus >= 0) {
+				}
+				else if (idUiFocus >= 0)
+				{
 					
 					AudioSequence * mSeq = AudioSequencePlayer::Instance()->playDialogControlFromUiIds(m_instructionsDialogID, idUiFocus, pResolver, false, "default");
 
-					if (mSeq == NULL) {
+					if (mSeq == NULL)
+					{
 
 						mSeq = new AudioSequence();
 
-						if (idUiFocus == 111111) {
-
-							Prompt* p_prompt_ = DataTree::Instance()->findPrompt("textFieldEntry");
-
-							if (p_prompt_ != NULL)
-							{
-								AudioSequencePlayer::Instance()->fillSequencePrompt(mSeq, p_prompt_, pResolver);
-							}
-						}
 					}
 
 
-					if (! strTextField.IsEmpty()) {
-						if (strTextField.GetLength() == 1) {
+					if (! strTextField.IsEmpty())
+					{
+						if (strTextField.GetLength() == 1)
+						{
 							strTextField = convertKeystrokeToSpeakableString(strTextField.GetAt(0));
 						}
 						mSeq->append(strTextField);
 					}
 					
-					if (! strTextFieldFULL.IsEmpty() && strTextField.Compare(strTextFieldFULL) != 0) {
-						if (strTextFieldFULL.GetLength() == 1) {
+					if (! strTextFieldFULL.IsEmpty() && strTextField.Compare(strTextFieldFULL) != 0)
+					{
+						if (strTextFieldFULL.GetLength() == 1)
+						{
 							strTextFieldFULL = convertKeystrokeToSpeakableString(strTextFieldFULL.GetAt(0));
 						}
 						mSeq->append(strTextFieldFULL);
 					}
-					if (mSeq->GetCount() == 0) {
+					if (mSeq->GetCount() == 0)
+					{
 						delete mSeq;
-					} else {
+					}
+					else
+					{
 						AudioSequencePlayer::Instance()->Play(mSeq);
 					}
 					return;
 				}  
 					
-			} else {
+			}
+			else
+			{
 				
 			AudioSequence * mSeq = new AudioSequence();
 
@@ -387,23 +402,28 @@ void PreTranslateMessageHandler::handle(PromptResolver * pResolver, MSG* pMsg, i
 			{
 				if (pMsg->wParam == VK_SPACE)
 				{
-					if (! strTextField.IsEmpty()) {
+					if (! strTextField.IsEmpty())
+					{
 						mSeq->append(convertKeystrokeToSpeakableString(pMsg, false, true, false));
 					}
 				}
 				else
 				{
-					if (! strTextField.IsEmpty()) {
+					if (! strTextField.IsEmpty())
+					{
 						mSeq->append(convertKeystrokeToSpeakableString(pMsg, false, true, false));
 					}
 				}
 			}
-				if (! strTextField.IsEmpty()) {
-					if (strTextField.GetLength() == 1) {
+				if (! strTextField.IsEmpty())
+				{
+					if (strTextField.GetLength() == 1)
+					{
 						strTextField = convertKeystrokeToSpeakableString(strTextField.GetAt(0));
 					}
 					mSeq->append(strTextField);
-					if (strTextField.Compare(strTextFieldFULL) != 0) {
+					if (strTextField.Compare(strTextFieldFULL) != 0)
+					{
 
 						Prompt* p_prompt_ = DataTree::Instance()->findPrompt("textFieldEntry");
 
@@ -415,53 +435,17 @@ void PreTranslateMessageHandler::handle(PromptResolver * pResolver, MSG* pMsg, i
 					}
 					//if (playNow) AudioSequencePlayer::Instance()->Play(seq);
 				}
-				if (!(mSeq->IsEmpty())) { // && wasSameKey) {
+				if (!(mSeq->IsEmpty()))  // && wasSameKey)
+				{
 					AudioSequencePlayer::Instance()->Play(mSeq, true);
 					
 					return;
-				} else {
+				}
+				else
+				{
 					delete mSeq;
 				}
 			}
 		}
 	}
-	//bool doProcessKeyFeedback = processGeneralDialogFeedback(playNow, seq ,pMsg, idUiFocus, ignoreSpaceKey, ignoreArrowKeys, strTextField);
-	//if (doProcessKeyFeedback) processGeneralKeyPressFeedback(playNow, seq, pMsg, ignoreSpaceKey, ignoreArrowKeys);
-
-	/*
-	if (mSeq != NULL && mSeq->GetCount() == 0) 
-		delete mSeq;
-		mSeq=NULL;
-	}
-	*/
 }
-
-/*
-bool PreTranslateMessageHandler::processGeneralDialogFeedback(bool playNow, AudioSequence* seq, MSG* pMsg, int idUiFocus, bool ignoreSpaceKey, bool ignoreArrowKeys, CString strTextField) {
-
-if (seq == NULL) {
-seq = new AudioSequence();
-}
-
-if (pMsg->message == WM_KEYDOWN)
-{
-}
-else if (pMsg->message == WM_KEYUP)
-{
-
-}
-
-return true;
-}
-
-void PreTranslateMessageHandler::processGeneralKeyPressFeedback(bool playNow, AudioSequence* seq, MSG* pMsg, bool ignoreSpaceKey, bool ignoreArrowKeys)
-{
-
-if (seq == NULL) {
-seq = new AudioSequence();
-}
-if (pMsg->message == WM_KEYDOWN)
-{
-}
-}
-*/

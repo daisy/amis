@@ -296,42 +296,55 @@ void MenuManip::setPauseState(bool pauseState)
 		|| !pauseState;
 	
 	UiItem* p_uiItem = DataTree::Instance()->findUiItemInContainers(ID_AMIS_PLAYPAUSE, (b_BookIsPlaying ? "canPause" : "canPlay"));
-	if (p_uiItem != NULL) {
+	if (p_uiItem != NULL)
+	{
 		Label* accelerator = NULL;
-		if (p_uiItem->getUiItemType() == ACTION) {
+		if (p_uiItem->getUiItemType() == ACTION)
+		{
 			accelerator = ((Action*)p_uiItem)->getKeyboardAccelerator();
 		}
 		Label* mnemonic = NULL;
-		if (p_uiItem->getUiItemType() == ACTION) {
+		if (p_uiItem->getUiItemType() == ACTION)
+		{
 			mnemonic = ((Action*)p_uiItem)->getMnemonic();
 		}
 		Label* p_caption = p_uiItem->getCaption();
-		if (p_caption != NULL) {
+		if (p_caption != NULL)
+		{
 			TextAudioPair* pair = p_caption->getContents();
-			if (pair != NULL) {
+			if (pair != NULL)
+			{
 				TextNodeSV* textNode = pair->getText();
-				if (textNode != NULL) {
+				if (textNode != NULL)
+				{
 					wstring str = textNode->getTextString();
-					if (mnemonic != NULL) {
+					if (mnemonic != NULL)
+					{
 						TextAudioPair* pair = mnemonic->getContents();
-						if (pair != NULL) {
+						if (pair != NULL)
+						{
 							TextNodeSV* node = pair->getText();
-							if (node != NULL) {
+							if (node != NULL)
+							{
 								wstring strMnemonic = node->getTextString();
 								int index = str.find_first_of(strMnemonic, 0);
-								if (index != -1) {
+								if (index != -1)
+								{
 									str.insert(index, _T("&"));
 								}
 							}
 						}
 					}
 
-					if (accelerator != NULL) {
+					if (accelerator != NULL)
+					{
 						str.append(_T("\t"));
 						TextAudioPair* pair = accelerator->getContents();
-						if (pair != NULL) {
+						if (pair != NULL)
+						{
 							TextNodeSV* node = pair->getText();
-							if (node != NULL) {
+							if (node != NULL)
+							{
 								str.append(node->getTextString());
 							}
 						}

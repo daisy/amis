@@ -1,3 +1,26 @@
+/*
+AMIS: Adaptive Multimedia Information System
+Software for playing DAISY books
+Homepage: http://amis.sf.net
+
+Copyright (C) 2004-2007  DAISY for All Project
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+*/
+
+
 #include "gui/self-voicing/datamodel/DataTree.h"
 #include <fstream>
 
@@ -148,7 +171,8 @@ Dialog* DataTree::findDialog(int mfcid)
 	return p_dlg;
 }
 
-UiItem* DataTree::findUiItemInContainers(int mfcID, string switchCondition) {
+UiItem* DataTree::findUiItemInContainers(int mfcID, string switchCondition)
+{
 
 	for (int i=0; i<mContainersList.size(); i++)
 	{
@@ -175,7 +199,9 @@ Container* DataTree::findContainer(std::string id)
 		{
 			p_container = mContainersList[i];
 			break;
-		} else {
+		}
+		else
+		{
 			p_container = container->findContainer(id);
 			if (p_container != NULL)
 			{
@@ -280,58 +306,10 @@ void DataTree::resolvePromptItemsWithRefIds()
 		if (p_ref != NULL)
 		{
 			mNeedsResolution[i]->setReferenceContents(p_ref);
-		} else {
+		}
+		else
+		{
 			int debug = 0;
 		}
 	}
-}
-
-void DataTree::testPrint(std::string outfile)
-{
-	fstream out;
-	out.open(outfile.c_str(), ios::trunc | ios::out);
-
-	out<<"Data Tree\n=========================="<<endl;
-	out<<"Containers\n-----"<<endl;
-
-	out.close();
-
-	for (int i=0; i<mContainersList.size(); i++)
-	{
-		mContainersList[i]->testPrint(outfile, 1);
-	}
-
-	out.open(outfile.c_str(), ios::app | ios::out);
-
-	out<<"Dialogs\n-----"<<endl;
-
-	out.close();
-
-	for (int i=0; i<mDialogsList.size(); i++)
-	{
-		mDialogsList[i]->testPrint(outfile, 1);
-	}
-
-	out.open(outfile.c_str(), ios::app | ios::out);
-
-	out<<"General Prompts\n-----"<<endl;
-
-	out.close();
-
-	for (int i=0; i<mGeneralPromptsList.size(); i++)
-	{
-		mGeneralPromptsList[i]->testPrint(outfile, 1);
-	}
-
-	out.open(outfile.c_str(), ios::app | ios::out);
-
-	out<<"Prompt Item Refs\n-----"<<endl;
-
-	out.close();
-
-	for (int i=0; i<mPromptItemsList.size(); i++)
-	{
-		mPromptItemsList[i]->testPrint(outfile, 1);
-	}
-
 }

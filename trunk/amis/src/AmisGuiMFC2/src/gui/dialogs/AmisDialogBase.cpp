@@ -31,13 +31,16 @@ using namespace amis::gui::dialogs;
 IMPLEMENT_DYNAMIC(AmisDialogBase, CDialog)
 //IMPLEMENT_DYNCREATE(AmisDialogBase, CDialog)
 
-void AmisDialogBase::resolvePromptVariables(Prompt* pPrompt) {
+void AmisDialogBase::resolvePromptVariables(Prompt* pPrompt)
+{
 	return;
 }
 
-void AmisDialogBase::triggerVirtualKeyStroke(CWnd* cwnd) {
+void AmisDialogBase::triggerVirtualKeyStroke(CWnd* cwnd)
+{
 
-	if (amis::Preferences::Instance()->getIsSelfVoicing() == false) {
+	if (amis::Preferences::Instance()->getIsSelfVoicing() == false)
+	{
 		
 		return;
 	}
@@ -70,13 +73,15 @@ BOOL AmisDialogBase::PreTranslateMessageTextField(MSG* pMsg, UINT id)
 		{
 			//int id = cwnd->GetDlgCtrlID();
 			CEdit* p_edit = (CEdit*)GetDlgItem(id);
-			if (cwnd == p_edit) {
+			if (cwnd == p_edit)
+			{
 
 				CString str;
 				p_edit->GetWindowText(str);
 
 
-				if (!str.IsEmpty()) {
+				if (!str.IsEmpty())
+				{
 
 					CString strFULL = str;
 
@@ -86,7 +91,8 @@ BOOL AmisDialogBase::PreTranslateMessageTextField(MSG* pMsg, UINT id)
 
 					str = mCommonPreTranslateMessageHandler->normalizeTextEntry(str, nStartChar, nEndChar);
 
-					if (!str.IsEmpty()) { // && (pMsg->wParam == VK_UP || pMsg->wParam == VK_DOWN || pMsg->wParam == VK_LEFT || pMsg->wParam == VK_RIGHT)) {
+					if (!str.IsEmpty())  // && (pMsg->wParam == VK_UP || pMsg->wParam == VK_DOWN || pMsg->wParam == VK_LEFT || pMsg->wParam == VK_RIGHT)) {
+					{
 						mCommonPreTranslateMessageHandler->handle(this, pMsg, (cwnd == NULL ? -1 : cwnd->GetDlgCtrlID()),false,true,str, strFULL, false);
 						return CDialog::PreTranslateMessage(pMsg);
 					}

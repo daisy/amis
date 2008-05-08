@@ -1,3 +1,25 @@
+/*
+AMIS: Adaptive Multimedia Information System
+Software for playing DAISY books
+Homepage: http://amis.sf.net
+
+Copyright (C) 2004-2007  DAISY for All Project
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+*/
+
 #ifndef TTSPLAYER_H
 #define TTSPLAYER_H
 
@@ -8,7 +30,7 @@
 //#define USE_WSTRING
 
 #ifdef USE_WSTRING
-#include <string>
+#include <wstring>
 #else
 #ifndef __AFXWIN_H__
 #include <afxwin.h>
@@ -17,55 +39,51 @@
 
 namespace amis
 {
-namespace tts
-{
+	namespace tts
+	{
 
-class TTSPlayer
-{
-public:
-	
-	 typedef void (*sendMessageCallbackFn)(void);
-	 
-	 sendMessageCallbackFn sendMessageCallback;
-	void setCallback(sendMessageCallbackFn pFunction);
-
-	static void DestroyInstance();
-	static TTSPlayer* Instance();	
-
-#ifdef USE_WSTRING
-	void Play(std::wstring str);
-#else
-	void Play(CString str);
-#endif
-	void Stop();
-	
-void callback();
-void WaitUntilDone();
-
-	long GetSpeechRate();
-	bool SetSpeechRate(long newRate);
-	
-	std::string ChangeVoice(bool speakNotify);
-	void ChangeVoice(int index);
-
-	int initVoiceList(HWND);
-
-bool IsSpeaking(void);
-
-	bool m_isSpeaking;
-	static TTSPlayer* pinstance;
-
-
-	CRITICAL_SECTION m_csSequence;
-
-	ULONG m_currentVoiceNumber;
-
-	bool mbDoNotProcessEndEvent;
+		class TTSPlayer
+		{
+		public:
 			TTSPlayer(void);
 			~TTSPlayer(void);
 
+			typedef void (*sendMessageCallbackFn)(void);
 
-};
-}
-}
+			sendMessageCallbackFn sendMessageCallback;
+			void setCallback(sendMessageCallbackFn pFunction);
+
+			static void DestroyInstance();
+			static TTSPlayer* Instance();	
+
+#ifdef USE_WSTRING
+			void Play(std::wstring str);
+#else
+			void Play(CString str);
 #endif
+			void Stop();
+
+			void callback();
+			void WaitUntilDone();
+
+			long GetSpeechRate();
+			bool SetSpeechRate(long newRate);
+
+			std::string ChangeVoice(bool speakNotify);
+			void ChangeVoice(int index);
+
+			int initVoiceList(HWND);
+
+			bool IsSpeaking(void);
+
+		private:
+
+			bool m_isSpeaking;
+			static TTSPlayer* pinstance;
+			CRITICAL_SECTION m_csSequence;
+			ULONG m_currentVoiceNumber;
+			bool mbDoNotProcessEndEvent;
+		};
+	}
+}
+#endif //TTSPLAYER_H

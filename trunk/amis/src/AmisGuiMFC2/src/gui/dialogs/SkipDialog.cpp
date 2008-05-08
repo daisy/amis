@@ -60,7 +60,10 @@ void SkipDialog::resolvePromptVariables(Prompt* pPrompt)
 			if (p_var->getName().compare("SKIPPABLE_ITEM") == 0)
 			{
 				int i = m_ListSkips.GetCurSel();
-				if (i < 0) { i = 0; }
+				if (i < 0)
+				{
+					i = 0;
+				}
 
 				amis::dtb::CustomTest* p_custom_test = (amis::dtb::CustomTest*)m_ListSkips.GetItemData(i);
 
@@ -78,7 +81,10 @@ void SkipDialog::resolvePromptVariables(Prompt* pPrompt)
 				//SKIPPABLE_ITEM_ID
 
 				int i = m_ListSkips.GetCurSel();
-				if (i < 0) { i = 0; }
+				if (i < 0)
+				{
+					i = 0;
+				}
 
 				amis::dtb::CustomTest* p_custom_test = (amis::dtb::CustomTest*)m_ListSkips.GetItemData(i);
 

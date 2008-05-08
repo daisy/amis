@@ -1,3 +1,25 @@
+/*
+AMIS: Adaptive Multimedia Information System
+Software for playing DAISY books
+Homepage: http://amis.sf.net
+
+Copyright (C) 2004-2007  DAISY for All Project
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+*/
+
 
 #include "gui/self-voicing/Prompt.h"
 #include <fstream>
@@ -12,7 +34,8 @@ PromptItemBase::PromptItemBase()
 }
 PromptItemBase::~PromptItemBase()
 {
-	if (mpContents != NULL) {	
+	if (mpContents != NULL)
+	{	
 		delete mpContents;
 	}
 }
@@ -46,7 +69,8 @@ void PromptItemBase::setContents(std::wstring textString, amis::AudioNode* p_aud
 	TextAudioPair* p_pair = new TextAudioPair();
 
 	TextNodeSV* p_text = NULL;
-	if (!textString.empty()) {
+	if (!textString.empty())
+	{
 		p_text = new TextNodeSV();
 		p_text->setTextString(textString);
 		p_pair->setText(p_text);
@@ -65,14 +89,16 @@ void PromptItemBase::setContents(std::wstring textString, std::string audioSrc)
 	TextAudioPair* p_pair = new TextAudioPair();
 
 	TextNodeSV* p_text = NULL;
-	if (!textString.empty()) {
+	if (!textString.empty())
+	{
 		p_text = new TextNodeSV();
 		p_text->setTextString(textString);
 		p_pair->setText(p_text);
 	}
 
 	amis::AudioNode* p_audio = NULL;
-	if (!audioSrc.empty()) {
+	if (!audioSrc.empty())
+	{
 		p_audio = new amis::AudioNode();
 		p_audio->setSrc(audioSrc);
 		p_pair->setAudio(p_audio);
@@ -178,25 +204,7 @@ PromptItem* PromptItem::clone()
 	return p_new;
 
 }
-void PromptItem::testPrint(std::string outfile, int numTabs)
-{	
-	fstream out;
-	out.open(outfile.c_str(), ios::app | ios::out);
 
-	int i=0;
-
-	for (i=0; i<numTabs; i++){out<<"\t";}
-	out<<"Prompt Item"<<endl;
-
-	if (mRefId.size() > 0)
-	{
-		for (i=0; i<numTabs + 1; i++){out<<"\t";}
-		out<<"ref id = "<<mRefId<<endl;
-	}
-	out.close();
-	this->getContents()->testPrint(outfile, numTabs + 1);
-
-}
 
 //**
 //PromptVar
@@ -245,38 +253,6 @@ PromptVar* PromptVar::clone()
 	return p_new;
 
 }
-void PromptVar::testPrint(std::string outfile, int numTabs)
-{	
-	fstream out;
-	out.open(outfile.c_str(), ios::app | ios::out);
-
-	int i=0;
-
-	for (i=0; i<numTabs; i++){out<<"\t";}
-	out<<"Prompt Variable"<<endl;
-
-	if (mName.size() > 0)
-	{
-		for (i=0; i<numTabs + 1; i++){out<<"\t";}
-		out<<"Name = "<<mName<<endl;
-	}
-
-	if (mParam.size() > 0)
-	{
-		for (i=0; i<numTabs + 1; i++){out<<"\t";}
-		out<<"Param = "<<mParam<<endl;
-	}
-
-	if (this->getContents() != NULL)
-	{
-		this->getContents()->testPrint(outfile, numTabs + 1);
-	}
-
-	out.close();
-
-
-}
-
 //**
 //Prompt
 Prompt::Prompt()
@@ -299,11 +275,15 @@ Prompt::~Prompt()
 	{
 		p_item = mItems[i];
 		mItems.pop_back();
-		if (p_item != NULL) {
-			if (p_item->getPromptItemType() == PROMPT_VARIABLE) {
+		if (p_item != NULL)
+		{
+			if (p_item->getPromptItemType() == PROMPT_VARIABLE)
+			{
 				PromptVar* p = (PromptVar*)p_item;
 				delete p;
-			} else {
+			}
+			else
+			{
 				PromptItem* p = (PromptItem*)p_item;
 				delete p;
 			}
@@ -422,27 +402,4 @@ Prompt* Prompt::clone()
 	}
 
 	return p_new;
-}
-void Prompt::testPrint(std::string outfile, int numTabs)
-{
-	fstream out;
-	out.open(outfile.c_str(), ios::app | ios::out);
-
-	int i=0;
-
-	for (i=0; i<numTabs; i++){out<<"\t";}
-	out<<"Prompt"<<endl;
-	
-	for (i=0; i<numTabs + 1; i++){out<<"\t";}
-	out<<"id = "<<mId<<endl;
-
-	for (i=0; i<numTabs + 1; i++){out<<"\t";}
-	out<<"type = "<<mType<<endl;
-
-	out.close();
-
-	for(int j=0; j<mItems.size(); j++)
-	{
-		mItems[j]->testPrint(outfile, numTabs + 1);
-	}
 }

@@ -33,7 +33,8 @@ END_MESSAGE_MAP()
 
 //IMPLEMENT_DYNAMIC(OpenUrlDialog, CDialog)
 
-void OpenUrlDialog::resolvePromptVariables(Prompt* pPrompt) {
+void OpenUrlDialog::resolvePromptVariables(Prompt* pPrompt)
+{
 	return;
 }
 OpenUrlDialog::OpenUrlDialog(CWnd* pParent /*=NULL*/)

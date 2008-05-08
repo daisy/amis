@@ -1,3 +1,25 @@
+/*
+AMIS: Adaptive Multimedia Information System
+Software for playing DAISY books
+Homepage: http://amis.sf.net
+
+Copyright (C) 2004-2007  DAISY for All Project
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+*/
+
 #include "../../../../resource.h"
 #include "gui/self-voicing/datamodel/DataTree.h"
 #include "gui/self-voicing/datamodel/Dialog.h"
@@ -22,28 +44,43 @@ namespace amis
 		MenuVoicing::MenuVoicing(CMainFrame * frm)
 		{
 			mFrm= frm;
+			m_lastOpenPopupMenu	= NULL;
 		}
 
 		MenuVoicing::~MenuVoicing(void)
 		{
-
+			;
 		}
 
+		void MenuVoicing::resetLastOpenPopupMenu()
+		{
+			if (m_lastOpenPopupMenu != NULL)
+			{
+				m_lastOpenPopupMenu = NULL;
+			}
+		}
+		void MenuVoicing::OnInitMenuPopup(CMenu* pPopupMenu,	UINT nIndex, BOOL bSysMenu)	
+		{
+			m_lastOpenPopupMenu	= pPopupMenu;
+		}
+		void MenuVoicing::OnExitMenuLoop(BOOL bIsTrackPopupMenu)
+		{	
+			AudioSequencePlayer::Instance()->Stop();
+			m_lastOpenPopupMenu	= NULL;
+		}
 		//todo:	replace	this by	something like:
 		// Container* container	= DataTree::Instance()->findContainerWhichHasFirstItem(id)
 		// container.id
 		std::string	MenuVoicing::computeRootMenuFromFirstChildID(unsigned int firstItemId, bool playPrompt)
 		{
-
-			
-	USES_CONVERSION;
+			USES_CONVERSION;
 
 			CString	dbg;
 			dbg.Format(_T("\n===firstItemId %d####\n"),	firstItemId);
 			TRACE(dbg);
 
-	amis::util::Log* p_log = amis::util::Log::Instance();
-	p_log->writeMessage(W2CA(dbg));
+			amis::util::Log* p_log = amis::util::Log::Instance();
+			p_log->writeMessage(W2CA(dbg));
 
 			string str_id;
 
@@ -52,14 +89,16 @@ namespace amis
 				str_id = "file";
 			}
 			else if	(firstItemId ==	ID_AMIS_RECENT_BOOKS_EMPTY ||
-				firstItemId == AMIS_RECENT_BOOK_BASE_ID) {
+				firstItemId == AMIS_RECENT_BOOK_BASE_ID)
+			{
 					str_id = "recentBooksList";
-				}
-				
+			}
+
 			else if	(firstItemId ==	ID_AMIS_NO_PAGE_STYLES ||
-				firstItemId == AMIS_PAGE_STYLE_BASE_ID) {
+				firstItemId == AMIS_PAGE_STYLE_BASE_ID)
+			{
 					str_id = "pageStylesList";
-				}
+			}
 			else if(firstItemId	== ID_AMIS_TOGGLE_SIDEBAR)
 			{
 				str_id = "view";
@@ -95,9 +134,11 @@ namespace amis
 			{
 				str_id = "";
 			}
-			if (!str_id.empty()) {
+			if (!str_id.empty())
+			{
 
-				if (playPrompt)	{
+				if (playPrompt)
+				{
 					AudioSequence* seq = new AudioSequence();
 
 					AudioSequencePlayer::fillSequenceContainerPromptFromId(seq, str_id);
@@ -108,13 +149,17 @@ namespace amis
 					{
 						AudioSequencePlayer::fillSequenceContents(seq, p_prompt_);
 					}
-					else {
+					else
+					{
 						seq->append(_T("menu"));
 					}		
 
-					if (seq->GetCount() == 0) {
+					if (seq->GetCount() == 0)
+					{
 						delete seq;
-					} else {
+					}
+					else
+					{
 						AudioSequencePlayer::Instance()->Play(seq);
 					}
 				}
@@ -123,8 +168,9 @@ namespace amis
 			return str_id;
 		}
 
-		AudioSequence* MenuVoicing::createSeqPrepend(UINT nFlags) {
-			
+		AudioSequence* MenuVoicing::createSeqPrepend(UINT nFlags)
+		{
+
 			AudioSequence* seq	= new AudioSequence();
 
 			if ( nFlags	& MF_GRAYED	)
@@ -152,8 +198,9 @@ namespace amis
 			CMenu * pSysMenu = mFrm->GetSystemMenu(FALSE);
 			if (pSysMenu != NULL)
 			{
-				if (pSysMenu->m_hMenu == hSysMenu) {
-					
+				if (pSysMenu->m_hMenu == hSysMenu)
+				{
+
 					amis::util::Log* p_log = amis::util::Log::Instance();
 					p_log->writeMessage("System Menu !");
 					TRACE("System Menu !");
@@ -162,7 +209,8 @@ namespace amis
 				}
 			}
 
-			if (isSysMenu) {
+			if (isSysMenu)
+			{
 				CString str;
 				pSysMenu->GetMenuString(nItemID, str, MF_BYCOMMAND);
 
@@ -229,20 +277,22 @@ namespace amis
 				}
 
 
-				if ((nItemID ==	8 || nItemID ==	2 || nItemID ==	3) && mFrm->m_lastOpenPopupMenu != NULL && ::IsMenu(mFrm->m_lastOpenPopupMenu->m_hMenu)) { // 8 => "recent" (including separators), 2 => "show section depth"
-					UINT nID = mFrm->m_lastOpenPopupMenu->GetMenuItemID(0);
+				if ((nItemID ==	8 || nItemID ==	2 || nItemID ==	3) && m_lastOpenPopupMenu != NULL && ::IsMenu(m_lastOpenPopupMenu->m_hMenu))  // 8 => "recent" (including separators), 2 => "show section depth"
+				{
+					UINT nID = m_lastOpenPopupMenu->GetMenuItemID(0);
 					std::string	prompt = computeRootMenuFromFirstChildID(nID, false);
 
-					s.Format(_T("\nMenuVoicing::OnMenuSelect(%d) '%s'\n"), nItemID, prompt.c_str());	 //DAN_MENU_DEBUG
+					s.Format(_T("\nMenuVoicing::OnMenuSelect(%d) '%s'\n"), nItemID, prompt.c_str());
 					TRACE(s);
 
-					
+
 					amis::util::Log* p_log = amis::util::Log::Instance();
 					p_log->writeMessage(W2CA(s));
 
-			AudioSequence* seq = createSeqPrepend(nFlags);
+					AudioSequence* seq = createSeqPrepend(nFlags);
 
-					if (prompt.compare("file") == 0	|| prompt.compare("recentBooksList") ==	0) {
+					if (prompt.compare("file") == 0	|| prompt.compare("recentBooksList") ==	0)
+					{
 						AudioSequencePlayer::fillSequenceContainerPromptFromId(seq, "recentBooksList");
 
 						PromptItem* p_prompt_	= DataTree::Instance()->findPromptItem("menu");
@@ -251,17 +301,23 @@ namespace amis
 						{
 							AudioSequencePlayer::fillSequenceContents(seq, p_prompt_);
 						}
-						else {
+						else
+						{
 							seq->append(_T("menu"));
 						}		
 
-						if (seq->GetCount() == 0) {
+						if (seq->GetCount() == 0)
+						{
 							delete seq;
-						} else {
+						}
+						else
+						{
 							AudioSequencePlayer::Instance()->Play(seq);
 						}
 						return;
-					} else if (prompt.compare("navigate") == 0 || prompt.compare("sectiondepth") ==	0) {
+					}
+					else if (prompt.compare("navigate") == 0 || prompt.compare("sectiondepth") ==	0)
+					{
 						AudioSequencePlayer::fillSequenceContainerPromptFromId(seq, "sectiondepth");
 
 
@@ -271,17 +327,23 @@ namespace amis
 						{
 							AudioSequencePlayer::fillSequenceContents(seq, p_prompt_);
 						}
-						else {
+						else
+						{
 							seq->append(_T("menu"));
 						}	
 
-						if (seq->GetCount() == 0) {
+						if (seq->GetCount() == 0)
+						{
 							delete seq;
-						} else {
+						}
+						else
+						{
 							AudioSequencePlayer::Instance()->Play(seq);
 						}
 						return;
-					} else if (prompt.compare("view") == 0 || prompt.compare("pageStylesList") ==	0) {
+					}
+					else if (prompt.compare("view") == 0 || prompt.compare("pageStylesList") ==	0)
+					{
 						AudioSequencePlayer::fillSequenceContainerPromptFromId(seq, "pageStylesList");
 
 
@@ -291,31 +353,39 @@ namespace amis
 						{
 							AudioSequencePlayer::fillSequenceContents(seq, p_prompt_);
 						}
-						else {
+						else
+						{
 							seq->append(_T("menu"));
 						}	
 
-						if (seq->GetCount() == 0) {
+						if (seq->GetCount() == 0)
+						{
 							delete seq;
-						} else {
+						}
+						else
+						{
 							AudioSequencePlayer::Instance()->Play(seq);
 						}
 						return;
-					} else {
+					}
+					else
+					{
 						delete seq;
 					}
-				} else if ((nItemID >=0 && nItemID <=6) && (mFrm->m_lastOpenPopupMenu == NULL)) { //TODO:	Yuuk ! UGLY	! This is only a temporary workaround !	//(nFlags & MF_GRAYED)
+				} else if ((nItemID >=0 && nItemID <=6) && (m_lastOpenPopupMenu == NULL))  //TODO:	Yuuk ! UGLY	! This is only a temporary workaround !	//(nFlags & MF_GRAYED)
+				{
 
-					s.Format(_T("\nMenuVoicing::OnMenuSelect(%d)\n"), nItemID);	 //DAN_MENU_DEBUG
+					s.Format(_T("\nMenuVoicing::OnMenuSelect(%d)\n"), nItemID);
 					TRACE(s);
 
-		
+
 					amis::util::Log* p_log = amis::util::Log::Instance();
 					p_log->writeMessage(W2CA(s));
 
-			AudioSequence* seq = createSeqPrepend(nFlags);
+					AudioSequence* seq = createSeqPrepend(nFlags);
 
-					switch (nItemID) {
+					switch (nItemID)
+					{
 				case 0:
 					AudioSequencePlayer::fillSequenceContainerPromptFromId(seq, "file");
 					break;
@@ -350,9 +420,12 @@ namespace amis
 
 					}
 
-					if (seq->GetCount() == 0) {
+					if (seq->GetCount() == 0)
+					{
 						delete seq;
-					} else {
+					}
+					else
+					{
 						AudioSequencePlayer::Instance()->Play(seq);
 					}
 					return;
@@ -361,13 +434,13 @@ namespace amis
 			}
 			else
 			{
-				
-					s.Format(_T("\nMenuVoicing::OnMenuSelect(%d is	selected)\n"), nItemID);	 //DAN_MENU_DEBUG
-					
+
+				s.Format(_T("\nMenuVoicing::OnMenuSelect(%d is	selected)\n"), nItemID);
+
 				TRACE(s);
 
-					amis::util::Log* p_log = amis::util::Log::Instance();
-					p_log->writeMessage(W2CA(s));
+				amis::util::Log* p_log = amis::util::Log::Instance();
+				p_log->writeMessage(W2CA(s));
 
 				amis::BookList* books = theApp.getHistory();
 				int nRecentBooks = (books ? books->getNumberOfEntries() : 0);
@@ -382,7 +455,7 @@ namespace amis
 					//DanTodo: surely, there must be a way to get a title instead of rendering the URL with TTS ??! (see bookmark methd commented below)
 					string str = p_entry->mPath.get_url();
 
-			AudioSequence* seq = createSeqPrepend(nFlags);
+					AudioSequence* seq = createSeqPrepend(nFlags);
 
 					seq->append(A2T(str.c_str()));
 
@@ -439,7 +512,7 @@ namespace amis
 						//amis::dtb::BookmarkSet* p_bmks = amis::dtb::DtbWithHooks::Instance()->getBookmarks();
 						//amis::dtb::PositionMark* p_mark = p_bmks->getItem(idx);
 
-			AudioSequence* seq = createSeqPrepend(nFlags);
+						AudioSequence* seq = createSeqPrepend(nFlags);
 						amis::MediaGroup* p_note = amis::dtb::DtbWithHooks::Instance()->getBookmarks()->getItem(idx)->mpNote;
 						if (p_note!=NULL)
 						{
@@ -451,7 +524,7 @@ namespace amis
 								if (p_audio	!= NULL)
 								{
 									amis::TextNode* p_text = NULL;
-								p_text	= p_note->getText();
+									p_text	= p_note->getText();
 									seq->append(p_audio->clone(), (p_text != NULL ? p_text->getTextString().c_str() : L""));
 									AudioSequencePlayer::Instance()->Play(seq);
 									return;
@@ -479,45 +552,56 @@ namespace amis
 							&& nItemID <= (AMIS_SECTION_DEPTH_BASE_ID + AMIS_MAX_ANYTHING))
 						{
 							string strPrompt;
-							switch (nItemID) {
-					case (AMIS_SECTION_DEPTH_BASE_ID+1): {
+							switch (nItemID)
+							{
+					case (AMIS_SECTION_DEPTH_BASE_ID+1):
+						{
 						strPrompt = "numeric_one";
 						break;
 														 }
-					case (AMIS_SECTION_DEPTH_BASE_ID+2): {
+					case (AMIS_SECTION_DEPTH_BASE_ID+2):
+						{
 						strPrompt = "numeric_two";
 						break;
 														 }
-					case (AMIS_SECTION_DEPTH_BASE_ID+3): {
+					case (AMIS_SECTION_DEPTH_BASE_ID+3):
+						{
 						strPrompt = "numeric_three";
 						break;
 														 }
-					case (AMIS_SECTION_DEPTH_BASE_ID+4): {
+					case (AMIS_SECTION_DEPTH_BASE_ID+4):
+						{
 						strPrompt = "numeric_four";
 						break;
 														 }
-					case (AMIS_SECTION_DEPTH_BASE_ID+5): {
+					case (AMIS_SECTION_DEPTH_BASE_ID+5):
+						{
 						strPrompt = "numeric_five";
 						break;
 														 }
-					case (AMIS_SECTION_DEPTH_BASE_ID+6): {
+					case (AMIS_SECTION_DEPTH_BASE_ID+6):
+						{
 						strPrompt = "numeric_six";
 						break;
 														 }
-					case (AMIS_SECTION_DEPTH_BASE_ID+7): {
+					case (AMIS_SECTION_DEPTH_BASE_ID+7):
+						{
 						strPrompt = "numeric_seven";
 						break;
 														 }
-					case (AMIS_SECTION_DEPTH_BASE_ID+8): {
+					case (AMIS_SECTION_DEPTH_BASE_ID+8):
+						{
 						strPrompt = "numeric_eight";
 						break;
 														 }
-					case (AMIS_SECTION_DEPTH_BASE_ID+9): {
+					case (AMIS_SECTION_DEPTH_BASE_ID+9):
+						{
 						strPrompt = "numeric_nine";
 						break;
 														 }
 							}
-							if (!strPrompt.empty()) {
+							if (!strPrompt.empty())
+							{
 								//seq->append(strPrompt.c_str()); TEST ONLY
 								AudioSequencePlayer::playPromptItemFromStringId(strPrompt);
 
@@ -527,58 +611,58 @@ namespace amis
 						}
 						//is this a	view menu item (sections/prodnotes/etc)
 						else if	(nItemID >=	AMIS_VIEW_MENU_BASE_ID && nItemID < AMIS_VIEW_MENU_BASE_ID + 
-						MenuManip::Instance()->getNumberOfViewMenuNavContainers())
+							MenuManip::Instance()->getNumberOfViewMenuNavContainers())
 						{
 
-						amis::dtb::nav::NavModel* p_model = amis::dtb::DtbWithHooks::Instance()->getNavModel();
-	
+							amis::dtb::nav::NavModel* p_model = amis::dtb::DtbWithHooks::Instance()->getNavModel();
 
-						//first	item in	the	list is	always "sections"
-						if (nItemID	== AMIS_VIEW_MENU_BASE_ID)
-						{
-							AudioSequencePlayer::playPromptItemFromStringId("sections");
-						}
-						//then "pages",	if exists
-						else if	(nItemID ==	AMIS_VIEW_MENU_BASE_ID + 1 && 
-						p_model != NULL && p_model->hasPages())
-						{
-							AudioSequencePlayer::playPromptItemFromStringId("pages");
-						}
-						else if (p_model != NULL)
-						{
-						//otherwise	it's a nav list	so ask NavParse	for	the	nav	list ID
-						//subtract 1 because the menu items	include	sections, pages, navlists
-						//we want just the index relative to nav lists
-						int	idx	= nItemID -	AMIS_VIEW_MENU_BASE_ID - 1;
 
-						//adjust again by subtracting 1	if there are pages in this book
-						if (p_model->hasPages()	== true)
-						{
-							idx--;
-						}
+							//first	item in	the	list is	always "sections"
+							if (nItemID	== AMIS_VIEW_MENU_BASE_ID)
+							{
+								AudioSequencePlayer::playPromptItemFromStringId("sections");
+							}
+							//then "pages",	if exists
+							else if	(nItemID ==	AMIS_VIEW_MENU_BASE_ID + 1 && 
+								p_model != NULL && p_model->hasPages())
+							{
+								AudioSequencePlayer::playPromptItemFromStringId("pages");
+							}
+							else if (p_model != NULL)
+							{
+								//otherwise	it's a nav list	so ask NavParse	for	the	nav	list ID
+								//subtract 1 because the menu items	include	sections, pages, navlists
+								//we want just the index relative to nav lists
+								int	idx	= nItemID -	AMIS_VIEW_MENU_BASE_ID - 1;
 
-						std::string	item_id	= p_model->getNavList(idx)->getId();
+								//adjust again by subtracting 1	if there are pages in this book
+								if (p_model->hasPages()	== true)
+								{
+									idx--;
+								}
 
-						if (item_id.compare("prodnote")	== 0 ||
-						item_id.compare("optional-prodnote") ==	0 )
-						{
-						AudioSequencePlayer::playPromptItemFromStringId("prodnotes");
-						}
-						else if	(item_id.compare("sidebar")	== 0)
-						{
-						AudioSequencePlayer::playPromptItemFromStringId("sidebars");
-						}
-						else if	(item_id.compare("footnote") ==	0 ||
-						item_id.compare("noteref") == 0)
-						{
-						AudioSequencePlayer::playPromptItemFromStringId("noterefs");
-						}
-						else 
-						{
-						//we can't identify	it,	so read	its	name with TTS
-						AudioSequencePlayer::playPromptFromUiId(nItemID);
-						}
-						}
+								std::string	item_id	= p_model->getNavList(idx)->getId();
+
+								if (item_id.compare("prodnote")	== 0 ||
+									item_id.compare("optional-prodnote") ==	0 )
+								{
+									AudioSequencePlayer::playPromptItemFromStringId("prodnotes");
+								}
+								else if	(item_id.compare("sidebar")	== 0)
+								{
+									AudioSequencePlayer::playPromptItemFromStringId("sidebars");
+								}
+								else if	(item_id.compare("footnote") ==	0 ||
+									item_id.compare("noteref") == 0)
+								{
+									AudioSequencePlayer::playPromptItemFromStringId("noterefs");
+								}
+								else 
+								{
+									//we can't identify	it,	so read	its	name with TTS
+									AudioSequencePlayer::playPromptFromUiId(nItemID);
+								}
+							}
 
 						}
 

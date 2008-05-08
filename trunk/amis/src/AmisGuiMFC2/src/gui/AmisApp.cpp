@@ -359,10 +359,7 @@ void CAmisApp::initializeSelfVoicing()
 	amis::ErrorCode did_it_work = new_data_reader.readFile(lang_xml_file.get_file(), p_new_data_tree);
 
 	if (did_it_work == amis::OK)
-	{
-		//test print to an output file
-		//p_new_data_tree->testPrint("c:\\devel\\amis\\Langpacks\\sandbox\\dataout.txt");
-		
+	{	
 		//AudioSequence* seq = new AudioSequence;
 		//seq->append(L"A");
 		//seq = AudioSequencePlayer::playPromptFromStringId("canceled", false, seq);
@@ -991,9 +988,9 @@ void CAmisApp::afterModalBox(bool b_was_playing)
 			AudioSequencePlayer::Instance()->WaitForEndSeqAndRestartBook();
 		}
 
-	} else {
-
-		//resume playback
+	}
+	else
+	{
 		if (b_was_playing == true)
 		{
 			//MainWndParts::Instance()->mpMainFrame->PostMessage(WM_COMMAND, ID_AMBULANT_PLAY);
@@ -1008,10 +1005,13 @@ void CAmisApp::generalBookErrorMsgBox(CString str)
 {
 
 	bool b = beforeModalBox();
-	//AudioSequencePlayer::Instance()->Stop();
-	if (amis::Preferences::Instance()->getIsSelfVoicing() == true) {
+	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
+	{
+		//AudioSequencePlayer::Instance()->Stop();
 		AudioSequencePlayer::playPromptFromStringId("generalBookError");
 	}
+	AfxMessageBox(str);
+	afterModalBox(b);
 
 	/* TODO: How the popup text could be obtained from the language resource:
 
@@ -1058,8 +1058,6 @@ void CAmisApp::generalBookErrorMsgBox(CString str)
 		}
 	}
 	*/
-	AfxMessageBox(str);
-	afterModalBox(b);
 }
 
 void CAmisApp::updateFontSizeButtons()

@@ -1,4 +1,24 @@
-//amis menu data
+/*
+AMIS: Adaptive Multimedia Information System
+Software for playing DAISY books
+Homepage: http://amis.sf.net
+
+Copyright (C) 2004-2007  DAISY for All Project
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+*/
 
 
 #include "gui/self-voicing/datamodel/Container.h"
@@ -57,7 +77,8 @@ Container::~Container()
 		p_item = NULL;
 	}
 }
-Container* Container::findContainer(string id) {
+Container* Container::findContainer(string id)
+{
 	for (int i=mChildItems.size()-1; i>=0; i--)
 	{
 		UiItem* uiItemZz = (UiItem*) mChildItems[i];
@@ -66,14 +87,17 @@ Container* Container::findContainer(string id) {
 		switch(uiItemZz->getUiItemType()) {
 			case CONTAINER: {
 						
-				if (uiItemZz->getId().compare(id) == 0) {
+				if (uiItemZz->getId().compare(id) == 0)
+				{
 					return (Container*)uiItemZz;
 				}
 				Container* container = ((Container*)uiItemZz)->findContainer(id);
-				if (container != NULL) {
+				if (container != NULL)
+				{
 					return container;
 				}
 				break;
+							
 							}
 			case NONE: // todo: What is this type anyway ??
 			case ACTION:
@@ -84,11 +108,14 @@ Container* Container::findContainer(string id) {
 	}
 	return NULL;
 }
-UiItem* Container::findUiItem(int mfcID, string switchCondition) {
+UiItem* Container::findUiItem(int mfcID, string switchCondition)
+{
 	UiItem* uiItem = NULL;
-	if (!switchCondition.empty()) {
+	if (!switchCondition.empty())
+	{
 		uiItem = UiItem::findUiItemInSwitch(switchCondition); // Super class method (hack for SWITCH)
-		if (uiItem != NULL) {
+		if (uiItem != NULL)
+		{
 			return uiItem;
 		}
 	}
@@ -96,14 +123,17 @@ UiItem* Container::findUiItem(int mfcID, string switchCondition) {
 	{
 		UiItem* uiItemZz = (UiItem*) mChildItems[i];
 
-		if (uiItemZz->getMfcId() == mfcID) {
+		if (uiItemZz->getMfcId() == mfcID)
+		{
 			return uiItemZz;
 		}
 
-		switch(uiItemZz->getUiItemType()) {
+		switch(uiItemZz->getUiItemType())
+		{
 			case CONTAINER:
 				uiItem = ((Container*)uiItemZz)->findUiItem(mfcID, switchCondition);
-				if (uiItem != NULL) {
+				if (uiItem != NULL)
+				{
 					return uiItem;
 				}
 				break;
@@ -111,9 +141,11 @@ UiItem* Container::findUiItem(int mfcID, string switchCondition) {
 			case ACTION:
 			case DIALOG:
 			case CONTROL:
-				if (!switchCondition.empty()) {
+				if (!switchCondition.empty())
+				{
 					uiItem = uiItemZz->findUiItemInSwitch(switchCondition);
-					if (uiItem != NULL) {
+					if (uiItem != NULL) 
+					{
 						return uiItem;
 					}
 				}
@@ -161,49 +193,4 @@ UiItem* Container::getChildItem(int idx)
 void Container::addChildItem(UiItem* pItem)
 {
 	mChildItems.push_back(pItem);
-}
-
-void Container::testPrint(std::string outfile, int numTabs)
-{
-	fstream out;
-	out.open(outfile.c_str(), ios::app | ios::out);
-
-	int i=0;
-	int j=0;
-
-	for (i=0; i<numTabs; i++){out<<"\t";}
-	out<<"Container"<<endl;
-
-	for (i=0; i<numTabs+1; i++){out<<"\t";}
-	out<<"id = "<<this->getId()<<endl;
-	
-	for (i=0; i<numTabs+1; i++){out<<"\t";}
-	out<<"id = "<<this->getKeyboardAccelerator()<<endl;
-
-	out.close();
-
-	Label* p_label = NULL;
-	p_label = this->getCaption();
-	if (p_label!=NULL)
-	{
-		p_label->testPrint(outfile, numTabs+1);
-	}
-
-	p_label = NULL;
-	p_label = this->getDescription();
-	if (p_label != NULL)
-	{
-		p_label->testPrint(outfile, numTabs+1);
-	}
-
-	if (this->getSwitch() != NULL)
-	{
-		this->getSwitch()->testPrint(outfile, numTabs + 1);
-	}
-
-	for (i=0; i<mChildItems.size(); i++)
-	{
-		mChildItems[i]->testPrint(outfile, numTabs + 1);
-	}
-
 }

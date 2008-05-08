@@ -1,5 +1,24 @@
-//xerces includes
+/*
+AMIS: Adaptive Multimedia Information System
+Software for playing DAISY books
+Homepage: http://amis.sf.net
 
+Copyright (C) 2004-2007  DAISY for All Project
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+*/
 
 #include <xercesc/util/XMLString.hpp>
 #include <xercesc/sax2/Attributes.hpp>
@@ -42,11 +61,13 @@ DataReader::~DataReader()
 	
 }
 
-void DataReader::setAppPath(string appPath) {
+void DataReader::setAppPath(string appPath)
+{
 	mAppPath = appPath;
 }
 
-string DataReader::getIniFilePath() {
+string DataReader::getIniFilePath()
+{
 	if (! mIniFilePath.empty()) return mIniFilePath;
 
 	//mIniFilePath = amis::Preferences::Instance()->mUiLangDir;
@@ -143,11 +164,16 @@ void DataReader::startElement(const   XMLCh* const    uri,
 		if (!mfcid.empty())
 		{
 				int valueInt;
-				if (mfcid.compare("IDOK") == 0) {
+				if (mfcid.compare("IDOK") == 0)
+				{
 					valueInt = 1;
-				} else if (mfcid.compare("IDCANCEL") == 0) {
+				}
+				else if (mfcid.compare("IDCANCEL") == 0)
+				{
 					valueInt = 2;
-				} else {
+				}
+				else
+				{
 					string valueStr = CIniFile::GetValue(mfcid, "resources", getIniFilePath());
 					CIniFile::string2int(valueStr.c_str(), valueInt);
 				}
@@ -209,11 +235,16 @@ void DataReader::startElement(const   XMLCh* const    uri,
 		{
 			
 				int valueInt;
-				if (mfcid.compare("IDOK") == 0) {
+				if (mfcid.compare("IDOK") == 0)
+				{
 					valueInt = 1;
-				} else if (mfcid.compare("IDCANCEL") == 0) {
+				}
+				else if (mfcid.compare("IDCANCEL") == 0) 
+				{
 					valueInt = 2;
-				} else {
+				}
+				else
+				{
 					string valueStr = CIniFile::GetValue(mfcid, "resources", getIniFilePath());
 					CIniFile::string2int(valueStr.c_str(), valueInt);
 				}
@@ -328,7 +359,9 @@ void DataReader::startElement(const   XMLCh* const    uri,
 						p_item->setDescription(p_label);
 					}
 				}
-			} else {
+			}
+			else
+			{
 				int debug = 0;
 			}
 
@@ -560,11 +593,16 @@ void DataReader::startElement(const   XMLCh* const    uri,
 		{
 
 				int valueInt;
-				if (mfcid.compare("IDOK") == 0) {
+				if (mfcid.compare("IDOK") == 0)
+				{
 					valueInt = 1;
-				} else if (mfcid.compare("IDCANCEL") == 0) {
+				}
+				else if (mfcid.compare("IDCANCEL") == 0)
+				{
 					valueInt = 2;
-				} else {
+				}
+				else 
+				{
 					string valueStr = CIniFile::GetValue(mfcid, "resources", getIniFilePath());
 					CIniFile::string2int(valueStr.c_str(), valueInt);
 				}
@@ -597,11 +635,16 @@ void DataReader::startElement(const   XMLCh* const    uri,
 		{
 				
 				int valueInt;
-				if (mfcid.compare("IDOK") == 0) {
+				if (mfcid.compare("IDOK") == 0)
+				{
 					valueInt = 1;
-				} else if (mfcid.compare("IDCANCEL") == 0) {
+				}
+				else if (mfcid.compare("IDCANCEL") == 0)
+				{
 					valueInt = 2;
-				} else {
+				}
+				else
+				{
 					string valueStr = CIniFile::GetValue(mfcid, "resources", getIniFilePath());
 					CIniFile::string2int(valueStr.c_str(), valueInt);
 				}
@@ -729,7 +772,9 @@ void DataReader::startElement(const   XMLCh* const    uri,
 			if (mpRecentLabel != NULL)
 			{
 				mpRecentLabel->setPrompt(mpRecentPrompt);
-			} else {
+			}
+			else
+			{
 				int debug  = 0 ;
 			}
 		}

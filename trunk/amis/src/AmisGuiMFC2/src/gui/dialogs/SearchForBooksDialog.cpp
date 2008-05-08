@@ -52,9 +52,11 @@ void SearchForBooksDialog::OnSelchangeFilelist()
 		p_filelist = (CListBox*)this->GetDlgItem(IDC_FILESFOUND);
 
 		int sel = p_filelist->GetCurSel();
-		if (sel >= 0) { 
+		if (sel >= 0)
+		{ 
 			amis::UrlList* p_search_results = mSearcher.getSearchResults();
-			if (sel > -1 && sel < p_search_results->size()) {
+			if (sel > -1 && sel < p_search_results->size())
+			{
 				//mLoadBookOnDialogClose = (*p_search_results)[sel];
 				AudioSequence * seq = new AudioSequence();
 				CString str;
@@ -65,7 +67,8 @@ void SearchForBooksDialog::OnSelchangeFilelist()
 		}
 	}
 }
-void SearchForBooksDialog::resolvePromptVariables(Prompt* pPrompt) {
+void SearchForBooksDialog::resolvePromptVariables(Prompt* pPrompt)
+{
 	
 	PromptVar* p_var = NULL;
 	PromptItem* promptNotAvailable = DataTree::Instance()->findPromptItem("not_available");
