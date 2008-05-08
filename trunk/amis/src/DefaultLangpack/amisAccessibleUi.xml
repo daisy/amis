@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ui xmlns="http://amisproject.org" next-id="t391" xml:lang="en">
+<ui xmlns="http://amisproject.org" next-id="t391" xml:lang="en" removed="t379 t153 t160 t182 t191 t222 t197 t361 t363 t365 t250 t251 t255 t256 t257 t267 t271 t279 t281 t299 t302 t303 t316 t317 t318 t320 t322 t323">
     <containers>
         <container id="file">
             <note>This is the menu header "File"</note>
@@ -15,7 +15,7 @@
                     <audio src="./audio/speechgen0003.mp3"/>
                 </caption>
                 <description>
-                    <text id="t3">Open a DAISY book from the local file system</text>
+                    <text id="t3" flag="changed">Open a DAISY book from the local file system</text>
                     <audio src="./audio/speechgen0004.mp3"/>
                 </description>
                 <!--keys = the actual keys; text = the name of the keys-->
@@ -32,19 +32,19 @@
                 <note>This is going to be a menu item</note>
                 <icon src="./open.png" type="smallIcon"/>
                 <caption>
-                    <text id="t327">Open URL...</text>
+                    <text id="t327" flag="new">Open URL...</text>
                     <audio src="./audio/speechgen0007.mp3"/>
                 </caption>
                 <description>
-                    <text id="t328">Open a DAISY publication from a URL</text>
+                    <text id="t328" flag="new">Open a DAISY publication from a URL</text>
                     <audio src="./audio/speechgen0008.mp3"/>
                 </description>
                 <accelerator>
-                    <text id="t329">Ctrl+U</text>
+                    <text id="t329" flag="new">Ctrl+U</text>
                     <audio src="./audio/speechgen0009.mp3"/>
                 </accelerator>
                 <mnemonic>
-                    <text id="t330">U</text>
+                    <text id="t330" flag="new">U</text>
                     <audio src="./audio/speechgen0010.mp3"/>
                 </mnemonic>
             </action>
@@ -52,15 +52,15 @@
                 <note>This is going to be a menu item</note>
                 <icon src="./close.png" type="smallIcon"/>
                 <caption>
-                    <text id="t331">Close</text>
+                    <text id="t331" flag="new">Close</text>
                     <audio src="./audio/speechgen0011.mp3"/>
                 </caption>
                 <description>
-                    <text id="t332">Close the DAISY publication</text>
+                    <text id="t332" flag="new">Close the DAISY publication</text>
                     <audio src="./audio/speechgen0012.mp3"/>
                 </description>
                 <mnemonic>
-                    <text id="t333">C</text>
+                    <text id="t333" flag="new">C</text>
                     <audio src="./audio/speechgen0013.mp3"/>
                 </mnemonic>
             </action>
@@ -88,7 +88,7 @@
             <action mfcid="ID_AMIS_SEARCH_LOCAL_DRIVES" widget="menuItem">
                 <note>This is going to be a menu item</note>
                 <caption>
-                    <text id="t10">Search Drives...</text>
+                    <text id="t10" flag="changed">Search Drives...</text>
                     <audio src="./audio/speechgen0018.mp3"/>
                 </caption>
                 <description>
@@ -199,7 +199,7 @@
             <action mfcid="ID_AMIS_TOGGLE_VIEW" widget="menuItem">
                 <note>This is going to be a menu item</note>
                 <caption>
-                    <text id="t30">Basic View</text>
+                    <text id="t30" flag="changed">Basic View</text>
                     <audio src="./audio/speechgen0038.mp3"/>
                 </caption>
                 <description>
@@ -218,13 +218,13 @@
             <container id="pageStylesList">
                 <note>This is the menu header for the list of styles available for this page.</note>
                 <caption>
-                    <text id="t334">Page Style</text>
+                    <text id="t334" flag="new">Page Style</text>
                     <audio src="./audio/speechgen0042.mp3"/>
                 </caption>
                 <action mfcid="ID_AMIS_NO_PAGE_STYLES" widget="menuItem">
                     <note>This is going to be a menu item</note>
                     <caption>
-                        <text id="t335">None</text>
+                        <text id="t335" flag="new">None</text>
                         <audio src="./audio/speechgen0043.mp3"/>
                     </caption>
                 </action>
@@ -237,7 +237,7 @@
                     </list>
                 </action>
                 <mnemonic>
-                    <text id="t336">P</text>
+                    <text id="t336" flag="new">P</text>
                     <audio src="./audio/speechgen0044.mp3"/>
                 </mnemonic>
             </container>
@@ -245,7 +245,7 @@
                 <note>This is going to be a menu item and toolbar item</note>
                 <icon src="./settings/img/font.ico" type="smallIcon"/>
                 <caption>
-                    <text id="t38">Bigger Font</text>
+                    <text id="t38" flag="changed">Bigger Font</text>
                     <audio src="./audio/speechgen0045.mp3"/>
                 </caption>
                 <description>
@@ -253,7 +253,7 @@
                     <audio src="./audio/speechgen0046.mp3"/>
                 </description>
                 <mnemonic>
-                    <text id="t40">G</text>
+                    <text id="t40" flag="changed">G</text>
                     <audio src="./audio/speechgen0047.mp3"/>
                 </mnemonic>
             </action>
@@ -261,30 +261,30 @@
                 <note>This is going to be a menu item and toolbar item</note>
                 <icon src="./settings/img/font.ico" type="smallIcon"/>
                 <caption>
-                    <text id="t337">Smaller Font</text>
+                    <text id="t337" flag="new">Smaller Font</text>
                     <audio src="./audio/speechgen0048.mp3"/>
                 </caption>
                 <description>
-                    <text id="t338">Gradually decrease the font size.</text>
+                    <text id="t338" flag="new">Gradually decrease the font size.</text>
                     <audio src="./audio/speechgen0049.mp3"/>
                 </description>
                 <mnemonic>
-                    <text id="t339">M</text>
+                    <text id="t339" flag="new">M</text>
                     <audio src="./audio/speechgen0050.mp3"/>
                 </mnemonic>
             </action>
             <action mfcid="ID_AMIS_SHOW_TEXTSTYLE" widget="menuItem">
                 <note>This is going to be a menu item</note>
                 <caption>
-                    <text id="t340">Text Style...</text>
+                    <text id="t340" flag="new">Text Style...</text>
                     <audio src="./audio/speechgen0051.mp3"/>
                 </caption>
                 <description>
-                    <text id="t341">Change the text style properties.</text>
+                    <text id="t341" flag="new">Change the text style properties.</text>
                     <audio src="./audio/speechgen0052.mp3"/>
                 </description>
                 <mnemonic>
-                    <text id="t342">T</text>
+                    <text id="t342" flag="new">T</text>
                     <audio src="./audio/speechgen0053.mp3"/>
                 </mnemonic>
             </action>
@@ -322,7 +322,7 @@
                         <audio src="./audio/speechgen0057.mp3"/>
                     </caption>
                     <description>
-                        <text id="t48">Start or pause synchronized playback.</text>
+                        <text id="t48" flag="changed">Start or pause synchronized playback.</text>
                         <audio src="./audio/speechgen0058.mp3"/>
                     </description>
                     <accelerator keys="Space">
@@ -343,7 +343,7 @@
                         <audio src="./audio/speechgen0061.mp3"/>
                     </caption>
                     <description>
-                        <text id="t52">Start or pause playback of this DAISY book.</text>
+                        <text id="t52" flag="changed">Start or pause playback of this DAISY book.</text>
                         <audio src="./audio/speechgen0062.mp3"/>
                     </description>
                     <accelerator keys="Space">
@@ -721,30 +721,30 @@
             <action mfcid="ID_AMIS_SHOW_READING_OPTIONS" widget="menuItem">
                 <note>This is going to be a menu item</note>
                 <caption>
-                    <text id="t123">Reading Options...</text>
+                    <text id="t123" flag="changed">Reading Options...</text>
                     <audio src="./audio/speechgen0133.mp3"/>
                 </caption>
                 <description>
-                    <text id="t124">View the reading options for this publication.</text>
+                    <text id="t124" flag="changed">View the reading options for this publication.</text>
                     <audio src="./audio/speechgen0134.mp3"/>
                 </description>
                 <mnemonic>
-                    <text id="t125">R</text>
+                    <text id="t125" flag="changed">R</text>
                     <audio src="./audio/speechgen0135.mp3"/>
                 </mnemonic>
             </action>
             <action mfcid="ID_AMIS_SHOW_PUBLICATION_SUMMARY" widget="menuItem">
                 <note>This is going to be a menu item</note>
                 <caption>
-                    <text id="t343">Publication Summary...</text>
+                    <text id="t343" flag="new">Publication Summary...</text>
                     <audio src="./audio/speechgen0136.mp3"/>
                 </caption>
                 <description>
-                    <text id="t344">View information about this publication.</text>
+                    <text id="t344" flag="new">View information about this publication.</text>
                     <audio src="./audio/speechgen0137.mp3"/>
                 </description>
                 <mnemonic>
-                    <text id="t345">P</text>
+                    <text id="t345" flag="new">P</text>
                     <audio src="./audio/speechgen0138.mp3"/>
                 </mnemonic>
             </action>
@@ -779,15 +779,15 @@
             </action>
             <action mfcid="ID_AMIS_SHOW_KEYBOARD_SHORTCUTS" widget="menuItem">
                 <caption>
-                    <text id="t373">Keyboard shortcuts</text>
+                    <text id="t373" flag="new">Keyboard shortcuts</text>
                     <audio src="./audio/speechgen0145.mp3"/>
                 </caption>
                 <description>
-                    <text id="t374">See and hear all the keyboard shortcuts for AMIS.</text>
+                    <text id="t374" flag="new">See and hear all the keyboard shortcuts for AMIS.</text>
                     <audio src="./audio/speechgen0146.mp3"/>
                 </description>
                 <mnemonic>
-                    <text id="t375">K</text>
+                    <text id="t375" flag="new">K</text>
                     <audio src="./audio/speechgen0147.mp3"/>
                 </mnemonic>
             </action>
@@ -824,7 +824,7 @@
                 <audio src="./audio/speechgen0153.mp3"/>
             </caption>
             <description mfcid="IDC_FIND_DESCRIPTION">
-                <text id="t147">Search the text of the book in either direction.</text>
+                <text id="t147" flag="changed">Search the text of the book in either direction.</text>
                 <audio src="./audio/speechgen0154.mp3"/>
             </description>
             <prompt type="instructions">
@@ -841,7 +841,7 @@
             <control mfcid="IDC_FINDPREVIOUS" widget="radiobutton">
                 <note>This indicates the direction of the search</note>
                 <caption>
-                    <text id="t152">Find previous</text>
+                    <text id="t152" flag="changed">Find previous</text>
                     <audio src="./audio/speechgen0156.mp3"/>
                 </caption>
                 <description>
@@ -881,7 +881,7 @@
                 <audio src="./audio/speechgen0159.mp3"/>
             </caption>
             <description mfcid="IDC_MULTIVOLCD_INSTRUCTIONS">
-                <text id="t155">More than one book was found on this CD. Please select a book from the list below.</text>
+                <text id="t155" flag="changed">More than one book was found on this CD. Please select a book from the list below.</text>
                 <audio src="./audio/speechgen0160.mp3"/>
             </description>
             <prompt type="instructions">
@@ -1106,7 +1106,7 @@
         <dialog mfcid="IDD_READING_OPTIONS">
             <note>This dialog lets the user control rendering of skippable structures.</note>
             <caption>
-                <text id="t187">Reading Options</text>
+                <text id="t187" flag="changed">Reading Options</text>
                 <audio src="./audio/speechgen0192.mp3"/>
             </caption>
             <description mfcid="IDC_READING_OPTIONS_INSTRUCTIONS">
@@ -1120,7 +1120,7 @@
             </prompt>
             <control mfcid="IDC_OPTIONS_LIST" widget="list autoplay">
                 <caption>
-                    <text id="t190">Reading options list:</text>
+                    <text id="t190" flag="changed">Reading options list:</text>
                     <audio src="./audio/speechgen0194.mp3"/>
                 </caption>
                 <description>
@@ -1155,7 +1155,7 @@
                     <promptItem refid="cancel_button_description"/>
                 </description>
                 <mnemonic>
-                    <text id="t381">C</text>
+                    <text id="t381" flag="new">C</text>
                     <audio src="./audio/speechgen0195.mp3"/>
                 </mnemonic>
             </control>
@@ -1163,7 +1163,7 @@
         <dialog mfcid="IDD_PREFERENCES">
             <note>This dialog lets the user set some basic preferences for AMIS.</note>
             <caption>
-                <text id="t218">Preferences</text>
+                <text id="t218" flag="changed">Preferences</text>
                 <audio src="./audio/speechgen0196.mp3"/>
             </caption>
             <description>
@@ -1204,7 +1204,7 @@
             </control>
             <control mfcid="IDC_HIGHLIGHTTEXT" widget="checkbox">
                 <caption>
-                    <text id="t346">Highlight text as it is read aloud</text>
+                    <text id="t346" flag="new">Highlight text as it is read aloud</text>
                     <audio src="./audio/speechgen0200.mp3"/>
                 </caption>
                 <description>
@@ -1217,7 +1217,7 @@
             </control>
             <control mfcid="IDC_LOADLASTBOOK" widget="checkbox">
                 <caption>
-                    <text id="t225">Load the most recently read book on startup</text>
+                    <text id="t225" flag="changed">Load the most recently read book on startup</text>
                     <audio src="./audio/speechgen0201.mp3"/>
                 </caption>
                 <description>
@@ -1230,7 +1230,7 @@
             </control>
             <control mfcid="IDC_STARTINBASICVIEW" widget="checkbox">
                 <caption>
-                    <text id="t223">Start in basic view mode</text>
+                    <text id="t223" flag="changed">Start in basic view mode</text>
                     <audio src="./audio/speechgen0202.mp3"/>
                 </caption>
                 <description>
@@ -1243,7 +1243,7 @@
             </control>
             <control mfcid="IDC_PAUSEONLOSTFOCUS" widget="checkbox">
                 <caption>
-                    <text id="t347">Pause audio when switching applications</text>
+                    <text id="t347" flag="new">Pause audio when switching applications</text>
                     <audio src="./audio/speechgen0203.mp3"/>
                 </caption>
                 <description>
@@ -1256,7 +1256,7 @@
             </control>
             <control mfcid="IDC_DISABLESCREENSAVER" widget="checkbox">
                 <caption>
-                    <text id="t348">Disable the screensaver while reading</text>
+                    <text id="t348" flag="new">Disable the screensaver while reading</text>
                     <audio src="./audio/speechgen0204.mp3"/>
                 </caption>
                 <description>
@@ -1271,7 +1271,7 @@
                 <caption mfcid="IDC_CURRLANG">
                     <prompt>
                         <promptItem>
-                            <text id="t349">You are currently using AMIS in: </text>
+                            <text id="t349" flag="new">You are currently using AMIS in: </text>
                             <audio src="./audio/speechgen0205.mp3"/>
                         </promptItem>
                         <promptVar name="CURRENT_LANGUAGE_NAME"/>
@@ -1302,7 +1302,7 @@
                     <promptItem refid="cancel_button_description"/>
                 </description>
                 <mnemonic>
-                    <text id="t350">C</text>
+                    <text id="t350" flag="new">C</text>
                     <audio src="./audio/speechgen0206.mp3"/>
                 </mnemonic>
             </control>
@@ -1314,7 +1314,7 @@
                 <audio src="./audio/speechgen0207.mp3"/>
             </caption>
             <description mfcid="IDC_GOTOPAGE_CAPTION">
-                <text id="t236">Enter the number or label of the page that you want to go to:</text>
+                <text id="t236" flag="changed">Enter the number or label of the page that you want to go to:</text>
                 <audio src="./audio/speechgen0208.mp3"/>
             </description>
             <prompt type="instructions">
@@ -1324,7 +1324,7 @@
             </prompt>
             <control mfcid="IDC_PAGENUM" widget="textfield autoplay">
                 <description>
-                    <text id="t237">Type the number or label of the page here.</text>
+                    <text id="t237" flag="changed">Type the number or label of the page here.</text>
                     <audio src="./audio/speechgen0209.mp3"/>
                 </description>
             </control>
@@ -1333,7 +1333,7 @@
                     <promptItem refid="ok_button_caption"/>
                 </caption>
                 <description>
-                    <text id="t234">Press to go to the desired page.</text>
+                    <text id="t234" flag="changed">Press to go to the desired page.</text>
                     <audio src="./audio/speechgen0210.mp3"/>
                 </description>
             </control>
@@ -1357,7 +1357,7 @@
                 <audio src="./audio/speechgen0212.mp3"/>
             </caption>
             <description mfcid="IDC_PUBLICATIONSUMMARYCAPTION">
-                <text id="t214">Information about this publication and your current position</text>
+                <text id="t214" flag="changed">Information about this publication and your current position</text>
                 <audio src="./audio/speechgen0213.mp3"/>
             </description>
             <prompt type="instructions">
@@ -1367,21 +1367,17 @@
             </prompt>
             <control mfcid="IDC_SUMMARYLIST" widget="list autoplay">
                 <caption>
-                    <text id="t214">Publication information list:</text>
+                    <text id="t214" flag="new">Publication information list:</text>
                     <audio src="./audio/speechgen0214.mp3"/>
                 </caption>
                 <description>
                     <promptItem refid="useArrowsList"/>
-                    <!-- REMOVED t266
-                    <text id="t266">This list will be read automatically.</text>
-                    <audio src="./audio/speechgen0219.mp3"/>
-                    -->
                 </description>
                 <list repeat="no">
                     <caption>
                         <prompt>
                             <promptItem>
-                                <text id="t240">Title:</text>
+                                <text id="t240" flag="changed">Title:</text>
                                 <audio src="./audio/speechgen0215.mp3"/>
                             </promptItem>
                             <promptVar name="META_TITLE"/>
@@ -1390,7 +1386,7 @@
                     <caption>
                         <prompt>
                             <promptItem>
-                                <text id="t241">Author:</text>
+                                <text id="t241" flag="changed">Author:</text>
                                 <audio src="./audio/speechgen0216.mp3"/>
                             </promptItem>
                             <promptVar name="META_CREATOR"/>
@@ -1399,7 +1395,7 @@
                     <caption condition="DATA_EXISTS">
                         <prompt>
                             <promptItem>
-                                <text id="t242">Publisher:</text>
+                                <text id="t242" flag="changed">Publisher:</text>
                                 <audio src="./audio/speechgen0217.mp3"/>
                             </promptItem>
                             <promptVar name="META_PUBLISHER"/>
@@ -1417,7 +1413,7 @@
                     <caption condition="DATA_EXISTS">
                         <prompt>
                             <promptItem>
-                                <text id="t351">Narrator:</text>
+                                <text id="t351" flag="new">Narrator:</text>
                                 <audio src="./audio/speechgen0219.mp3"/>
                             </promptItem>
                             <promptVar name="META_NARRATOR"/>
@@ -1435,7 +1431,7 @@
                     <caption condition="DATA_EXISTS">
                         <prompt>
                             <promptItem>
-                                <text id="t352">Total pages:</text>
+                                <text id="t352" flag="new">Total pages:</text>
                                 <audio src="./audio/speechgen0221.mp3"/>
                             </promptItem>
                             <promptVar name="META_NUMPAGES"/>
@@ -1444,7 +1440,7 @@
                     <caption condition="DATA_EXISTS">
                         <prompt>
                             <promptItem>
-                                <text id="t353">Date:</text>
+                                <text id="t353" flag="new">Date:</text>
                                 <audio src="./audio/speechgen0222.mp3"/>
                             </promptItem>
                             <promptVar name="META_DATE"/>
@@ -1453,7 +1449,7 @@
                     <caption condition="DATA_EXISTS">
                         <prompt>
                             <promptItem>
-                                <text id="t354">Format:</text>
+                                <text id="t354" flag="new">Format:</text>
                                 <audio src="./audio/speechgen0223.mp3"/>
                             </promptItem>
                             <promptVar name="META_FORMAT"/>
@@ -1462,7 +1458,7 @@
                     <caption condition="DATA_EXISTS">
                         <prompt>
                             <promptItem>
-                                <text id="t355">Features:</text>
+                                <text id="t355" flag="new">Features:</text>
                                 <audio src="./audio/speechgen0224.mp3"/>
                             </promptItem>
                             <promptVar name="TOC_CATEGORIES"/>
@@ -1471,7 +1467,7 @@
                     <caption condition="DATA_EXISTS">
                         <prompt>
                             <promptItem>
-                                <text id="t356">Current page:</text>
+                                <text id="t356" flag="new">Current page:</text>
                                 <audio src="./audio/speechgen0225.mp3"/>
                             </promptItem>
                             <promptVar name="CURRENT_PAGE"/>
@@ -1480,7 +1476,7 @@
                     <caption condition="DATA_EXISTS">
                         <prompt>
                             <promptItem>
-                                <text id="t215">Current section:</text>
+                                <text id="t215" flag="changed">Current section:</text>
                                 <audio src="./audio/speechgen0226.mp3"/>
                             </promptItem>
                             <promptVar name="CURRENT_SECTION_TITLE"/>
@@ -1489,7 +1485,7 @@
                     <caption condition="DATA_EXISTS">
                         <prompt>
 							<promptItem>
-								<text id="t390">Section contents: </text>
+								<text id="t390" flag="new">Section contents: </text>
 								<audio src=""/>
 							</promptItem>
 							<promptVar name="CURRENT_SECTION_NUM_SUBSECTIONS"/>
@@ -1507,7 +1503,7 @@
                     <caption condition="DATA_EXISTS">
                         <prompt>
                             <promptItem>
-                                <text id="t244">Total TOC items:</text>
+                                <text id="t244" flag="changed">Total TOC items:</text>
                                 <audio src="./audio/speechgen0229.mp3"/>
                             </promptItem>
                             <promptVar name="META_TOCITEMS"/>
@@ -1516,7 +1512,7 @@
                     <caption condition="DATA_EXISTS">
                         <prompt>
                             <promptItem>
-                                <text id="t245">Max. section depth:</text>
+                                <text id="t245" flag="changed">Max. section depth:</text>
                                 <audio src="./audio/speechgen0230.mp3"/>
                             </promptItem>
                             <promptVar name="META_DEPTH"/>
@@ -1536,11 +1532,11 @@
         <dialog mfcid="IDD_TEXTSTYLE">
             <note>This dialog lets the user set text style properties.</note>
             <caption>
-                <text id="t358">Text Style</text>
+                <text id="t358" flag="new">Text Style</text>
                 <audio src="./audio/speechgen0231.mp3"/>
             </caption>
             <description>
-                <text id="t359">Here you can change text style properties.</text>
+                <text id="t359" flag="new">Here you can change text style properties.</text>
                 <audio src="./audio/speechgen0232.mp3"/>
             </description>
             <prompt type="instructions">
@@ -1550,7 +1546,7 @@
             </prompt>
             <control mfcid="IDC_FONT" widget="list autoplay">
                 <caption mfcid="IDC_FONTLABEL">
-                    <text id="t360">Sidebar font:</text>
+                    <text id="t360" flag="new">Sidebar font:</text>
                     <audio src="./audio/speechgen0233.mp3"/>
                 </caption>
                 <list repeat="yes">
@@ -1564,7 +1560,7 @@
             </control>
             <control mfcid="IDC_HIGHLIGHTFOREGROUND" widget="list">
                 <caption mfcid="IDC_HIGHLIGHTFOREGROUNDLABEL">
-                    <text id="t362">Highlighted text color:</text>
+                    <text id="t362" flag="new">Highlighted text color:</text>
                     <audio src="./audio/speechgen0234.mp3"/>
                 </caption>
                 <list repeat="yes">
@@ -1578,7 +1574,7 @@
             </control>
             <control mfcid="IDC_HIGHLIGHTBACKGROUND" widget="list">
                 <caption mfcid="IDC_HIGHLIGHTBACKGROUNDLABEL">
-                    <text id="t364">Highlight background color:</text>
+                    <text id="t364" flag="new">Highlight background color:</text>
                     <audio src="./audio/speechgen0235.mp3"/>
                 </caption>
                 <list repeat="yes">
@@ -1606,7 +1602,7 @@
                     <promptItem refid="cancel_button_description"/>
                 </description>
                 <mnemonic>
-                    <text id="t366">C</text>
+                    <text id="t366" flag="new">C</text>
                     <audio src="./audio/speechgen0236.mp3"/>
                 </mnemonic>
             </control>
@@ -1614,11 +1610,11 @@
         <dialog mfcid="IDD_OPENURL">
             <note>This is the open URL dialog</note>
             <caption>
-                <text id="t368">Open URL</text>
+                <text id="t368" flag="new">Open URL</text>
                 <audio src="./audio/speechgen0237.mp3"/>
             </caption>
             <description mfcid="IDC_OPENURL_CAPTION">
-                <text id="t369">Enter the URL of the book you want to open:</text>
+                <text id="t369" flag="new">Enter the URL of the book you want to open:</text>
                 <audio src="./audio/speechgen0238.mp3"/>
             </description>
             <prompt type="instructions">
@@ -1628,7 +1624,7 @@
             </prompt>
             <control mfcid="IDC_URL" widget="textfield autoplay">
                 <description>
-                    <text id="t371">Type the URL in this field.</text>
+                    <text id="t371" flag="new">Type the URL in this field.</text>
                     <audio src="./audio/speechgen0239.mp3"/>
                 </description>
             </control>
@@ -1637,7 +1633,7 @@
                     <promptItem refid="ok_button_caption"/>
                 </caption>
                 <description>
-                    <text id="t372">Press to load the URL</text>
+                    <text id="t372" flag="new">Press to load the URL</text>
                     <audio src="./audio/speechgen0240.mp3"/>
                 </description>
             </control>
@@ -1649,7 +1645,7 @@
                     <promptItem refid="cancel_button_description"/>
                 </description>
                 <mnemonic>
-                    <text id="t367">C</text>
+                    <text id="t367" flag="new">C</text>
                     <audio src="./audio/speechgen0241.mp3"/>
                 </mnemonic>
             </control>
@@ -1658,7 +1654,7 @@
     <prompts>
         <promptItemRefs>
             <promptItem id="useArrowsList">
-                <text id="t380">Use the arrow keys to move around the list of items.</text>
+                <text id="t380" flag="new">Use the arrow keys to move around the list of items.</text>
                 <audio src="./audio/speechgen0242.mp3"/>
             </promptItem>
             <promptItem id="thisItem">
@@ -1670,7 +1666,7 @@
                 <audio src="./audio/speechgen0244.mp3"/>
             </promptItem>
             <promptItem id="tabAround">
-                <text id="t254">Press tab to move around the dialog items.</text>
+                <text id="t254" flag="changed">Press tab to move around the dialog items.</text>
                 <audio src="./audio/speechgen0245.mp3"/>
             </promptItem>
             <promptItem id="thisItemIsCurrently">
@@ -1681,26 +1677,12 @@
                 <text id="t259">Press to close the dialog.</text>
                 <audio src="./audio/speechgen0247.mp3"/>
             </promptItem>
-            <!--MOVED t260-->
-            <!--
-				<promptItem id="browse_button_caption">
-		        	<text id="t260">Browse...</text>
-		      		<audio src="./audio/speechgen0264.mp3"/>
-				</promptItem>
-			-->
-            <!--MOVED t261-->
-            <!--
-		      	<promptItem id="browse_button_description">
-		        	<text id="t261">Press to open the folder browse dialog.</text>
-		      		<audio src="./audio/speechgen0265.mp3"/>
-				</promptItem>
-		  -->
             <promptItem id="ok_button_caption">
                 <text id="t262">OK</text>
                 <audio src="./audio/speechgen0248.mp3"/>
             </promptItem>
             <promptItem id="ok_button_description">
-                <text id="t263">Press to close this dialog.</text>
+                <text id="t263" flag="changed">Press to close this dialog.</text>
                 <audio src="./audio/speechgen0249.mp3"/>
             </promptItem>
             <promptItem id="cancel_button_caption">
@@ -1712,7 +1694,7 @@
                 <audio src="./audio/speechgen0251.mp3"/>
             </promptItem>
             <promptItem id="thisDialogNotSelfVoicing">
-                <text id="t268">This dialog is not self-voicing.</text>
+                <text id="t268" flag="changed">This dialog is not self-voicing.</text>
                 <audio src="./audio/speechgen0252.mp3"/>
             </promptItem>
             <promptItem id="escapeToCancel">
@@ -1720,7 +1702,7 @@
                 <audio src="./audio/speechgen0253.mp3"/>
             </promptItem>
             <promptItem id="hearDlgInstructions">
-                <text id="t270">Press F1 for dialog help.</text>
+                <text id="t270" flag="changed">Press F1 for dialog help.</text>
                 <audio src="./audio/speechgen0254.mp3"/>
             </promptItem>
             <promptItem id="nav_window">
@@ -1841,9 +1823,30 @@
                 <text id="t305">deselected</text>
                 <audio src="./audio/speechgen0283.mp3"/>
             </promptItem>
-			<promptItem id="menu">
+            <promptItem id="menu">
                 <text id="t308">Menu</text>
                 <audio src="./audio/speechgen0286.mp3"/>
+            </promptItem>
+			<!--This is for the keyboard shortcuts document and can eventually be removed from this XML document-->
+            <promptItem id="keyboardShortcut">
+                <text id="t306">Keyboard Shortcut</text>
+                <audio src="./audio/speechgen0284.mp3"/>
+            </promptItem>
+            <!--This is for the keyboard shortcuts document and can eventually be removed from this XML document-->
+            <promptItem id="icon">
+                <text id="t307">Icon</text>
+                <audio src="./audio/speechgen0285.mp3"/>
+            </promptItem>
+            <!--This is for the keyboard shortcuts document and can eventually be removed from this XML document-->
+            <promptItem id="followedBy">
+                <note>This is used in the context of a sequence of key presses, as in "Press Alt + V, followed by S".  </note>
+                <text id="t309">followed by</text>
+                <audio src="./audio/speechgen0287.mp3"/>
+            </promptItem>
+            <!--This is for the keyboard shortcuts document and can eventually be removed from this XML document-->
+            <promptItem id="submenu">
+                <text id="t310">Sub Menu</text>
+                <audio src="./audio/speechgen0288.mp3"/>
             </promptItem>
         </promptItemRefs>
         <generalPrompts>
@@ -1855,20 +1858,20 @@
             </prompt>
             <prompt id="textFieldEntry">
                 <promptItem>
-                    <text id="t312">The text field contains:</text>
+                    <text id="t312" flag="changed">The text field contains:</text>
                     <audio src="./audio/speechgen0290.mp3"/>
                 </promptItem>
                 <promptVar name="TEXT_FIELD"/>
             </prompt>
             <prompt id="bookAtPathChanged">
                 <promptItem>
-                    <text id="t313">The book you tried to open could not be found.</text>
+                    <text id="t313" flag="changed">The book you tried to open could not be found.</text>
                     <audio src="./audio/speechgen0291.mp3"/>
                 </promptItem>
             </prompt>
             <prompt id="generalBookError">
                 <promptItem>
-                    <text id="t314">The book could not be opened.</text>
+                    <text id="t314" flag="changed">The book could not be opened.</text>
                     <audio src="./audio/speechgen0292.mp3"/>
                 </promptItem>
                 <promptVar name="BOOK_PATH"/>
@@ -1876,7 +1879,7 @@
             </prompt>
             <prompt id="noCdLoaded">
                 <promptItem>
-                    <text id="t315">There is no CD inserted.</text>
+                    <text id="t315" flag="changed">There is no CD inserted.</text>
                     <audio src="./audio/speechgen0293.mp3"/>
                 </promptItem>
                 <promptItem refid="enter_to_close"/>
@@ -1905,7 +1908,7 @@
             </prompt>
             <prompt id="restartForChanges">
                 <promptItem>
-                    <text id="t325">Please restart to change the language of AMIS.</text>
+                    <text id="t325" flag="changed">Please restart to change the language of AMIS.</text>
                     <audio src="./audio/speechgen0297.mp3"/>
                 </promptItem>
             </prompt>
@@ -1918,67 +1921,67 @@
             </prompt>
             <prompt id="done">
                 <promptItem>
-                    <text id="t376">Done</text>
+                    <text id="t376" flag="new">Done</text>
                     <audio src="./audio/speechgen0299.mp3"/>
                 </promptItem>
             </prompt>
             <prompt id="sidebarHasFocus">
                 <promptItem>
-                    <text id="t377">Sidebar has focus</text>
+                    <text id="t377" flag="new">Sidebar has focus</text>
                     <audio src="./audio/speechgen0300.mp3"/>
                 </promptItem>
             </prompt>
             <prompt id="textWindowHasFocus">
                 <promptItem>
-                    <text id="t378">Text window has focus</text>
+                    <text id="t378" flag="new">Text window has focus</text>
                     <audio src="./audio/speechgen0301.mp3"/>
                 </promptItem>
             </prompt>
             <prompt id="generalBookErrorReloading">
                 <promptItem>
-                    <text id="t382">The book could not be opened.  AMIS will re-open your previous book.</text>
+                    <text id="t382" flag="new">The book could not be opened.  AMIS will re-open your previous book.</text>
                     <audio src="./audio/speechgen0302.mp3"/>
                 </promptItem>
             </prompt>
             <prompt id="shift_key">
                 <promptItem>
-                    <text id="t383">shift</text>
+                    <text id="t383" flag="new">shift</text>
                     <audio src="./audio/speechgen0303.mp3"/>
                 </promptItem>
             </prompt>
             <prompt id="control_key">
                 <promptItem>
-                    <text id="t384">control</text>
+                    <text id="t384" flag="new">control</text>
                     <audio src="./audio/speechgen0304.mp3"/>
                 </promptItem>
             </prompt>
             <prompt id="alt_key">
                 <promptItem>
-                    <text id="t385">alt</text>
+                    <text id="t385" flag="new">alt</text>
                     <audio src="./audio/speechgen0305.mp3"/>
                 </promptItem>
             </prompt>
             <prompt id="space_key">
                 <promptItem>
-                    <text id="t386">space</text>
+                    <text id="t386" flag="new">space</text>
                     <audio src="./audio/speechgen0306.mp3"/>
                 </promptItem>
             </prompt>
             <prompt id="delete_key">
                 <promptItem>
-                    <text id="t387">delete</text>
+                    <text id="t387" flag="new">delete</text>
                     <audio src="./audio/speechgen0307.mp3"/>
                 </promptItem>
             </prompt>
             <prompt id="backspace_key">
                 <promptItem>
-                    <text id="t388">backspace</text>
+                    <text id="t388" flag="new">backspace</text>
                     <audio src="./audio/speechgen0308.mp3"/>
                 </promptItem>
             </prompt>
             <prompt id="enter_key">
                 <promptItem>
-                    <text id="t389">enter</text>
+                    <text id="t389" flag="new">enter</text>
                     <audio src="./audio/speechgen0309.mp3"/>
                 </promptItem>
             </prompt>
