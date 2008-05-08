@@ -5,7 +5,31 @@
 #define IDD_ABOUTBOX                    100
 #define IDS_PROPSHT_CAPTION             102
 #define IDD_SIDEBAR                     103
+#define IDS_META_TITLE                  103
+#define IDS_META_AUTHOR                 104
+#define IDS_META_PUBLISHER              105
+#define IDS_META_DESCRIPTION            106
+#define IDS_META_NARRATOR               107
+#define IDS_META_TOTAL_DURATION         108
+#define IDS_META_TOTAL_PAGES            109
+#define IDS_META_DATE                   110
+#define IDS_META_FORMAT                 111
+#define IDS_META_FEATURES               112
+#define IDS_META_CURRENT_PAGE           113
+#define IDS_META_CURRENT_SECTION        114
+#define IDS_META_MAX_SECTION_DEPTH      115
+#define IDS_META_TOC_ENTRIES            116
+#define IDS_META_SECTION_CONTENTS_LIST  117
+#define IDS_META_SECTION_CONTENTS       118
+#define IDS_NOT_AVAILABLE               119
+#define IDS_SEARCHING                   120
+#define IDS_SEARCH_STOPPED              121
+#define IDS_NO_FILES_FOUND              122
 #define ID_AMIS_FOCUS_ON_SIDEBAR        123
+#define IDS_ONE_FILE_FOUND              123
+#define IDS_FILES_FOUND                 124
+#define IDS_NO_BOOKS_ON_CD              125
+#define IDS_PLEASE_RESTART              126
 #define ID_AMIS_FOCUS_ON_TEXT           127
 #define IDR_MAINFRAME                   128
 #define IDR_AMISTYPE                    129
@@ -39,6 +63,15 @@
 #define AMIS_PAGE_STYLE_BASE_ID         350
 #define AMIS_BOOKMARKS_BASE_ID          400
 #define ID_AMIS_NEXT_PAGE_STYLE         450
+#define IDS_ERROR_OPENING_RELOADING     500
+#define IDS_ERROR_OPENING               501
+#define IDS_NAVIGATION                  502
+#define IDS_SECTIONS                    503
+#define IDS_PAGES                       504
+#define IDS_FOOTNOTES                   505
+#define IDS_PRODUCER_NOTES              506
+#define IDS_SIDEBARS                    507
+#define IDS_GROUPED_ITEMS               508
 #define ID_AMBULANT_PLAY                700
 #define IDC_TREE                        1000
 #define IDC_TAB                         1001
@@ -52,7 +85,6 @@
 #define IDC_HIGHLIGHTTEXT               1042
 #define IDC_STARTINBASICVIEW            1043
 #define IDC_STOPSEARCH                  1048
-#define IDC_PICTURE                     1050
 #define IDC_SEARCHING                   1051
 #define IDC_FILESFOUND                  1052
 #define IDC_PAGENUM                     1055
@@ -125,6 +157,8 @@
 #define ID_AMIS_NO_PAGE_STYLES          32954
 #define ID_HELP_KEYBOARDSHORTCUTS       32957
 #define ID_AMIS_SHOW_KEYBOARD_SHORTCUTS 32958
+#define ID_AMIS_INCREASE_VOLUME_SELF_VOICING 32959
+#define ID_AMIS_DECREASE_VOLUME_SELF_VOICING 32960
 #define IDS_SELFOLDER_TITLE             61258
 #define IDS_SELFOLDER_INSTR             61259
 #define IDS_FOLDERDOESNOTEXIST          61279
@@ -138,7 +172,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_3D_CONTROLS                     1
 #define _APS_NEXT_RESOURCE_VALUE        194
-#define _APS_NEXT_COMMAND_VALUE         32959
+#define _APS_NEXT_COMMAND_VALUE         32962
 #define _APS_NEXT_CONTROL_VALUE         1119
 #define _APS_NEXT_SYMED_VALUE           149
 #endif

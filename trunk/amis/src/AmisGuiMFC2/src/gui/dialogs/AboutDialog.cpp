@@ -32,34 +32,6 @@ AboutDialog::AboutDialog() : AmisDialogBase(AboutDialog::IDD)
 {
 }
 
-
-void AboutDialog::DoDataExchange(CDataExchange* pDX)
-{
-	CDialog::DoDataExchange(pDX);
-}
-
-
-BOOL AboutDialog::OnInitDialog() 
-{
-	USES_CONVERSION;
-
-	CDialog::OnInitDialog();
-
-	CStatic* p_ctrl_version = NULL;
-	CStatic* p_ctrl_version_note = NULL;
-
-	p_ctrl_version = (CStatic*)this->GetDlgItem(IDC_VERSION);
-	p_ctrl_version_note = (CStatic*)this->GetDlgItem(IDC_VERSIONNOTE);
-
-	if (p_ctrl_version != NULL && p_ctrl_version_note != NULL)
-	{
-		p_ctrl_version->SetWindowText(mVersion);
-		p_ctrl_version_note->SetWindowText(mVersionNote);
-	}
-
-	return TRUE;
-}
-
 BEGIN_MESSAGE_MAP(AboutDialog, CDialog)
 	ON_WM_PAINT()
 END_MESSAGE_MAP()

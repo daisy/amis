@@ -292,51 +292,66 @@ void DtbWithHooks::makeAllLabelsHumanReadable()
 //used to make NCC labels consistent
 void DtbWithHooks::makeLabelHumanReadable(amis::MediaGroup* pLabel, std::string id)
 {
-	std::wstring search_for;
-	search_for.clear();
+	std::string amis_xml_item_id;
+	std::wstring item_name;
 
 	//replace NCC identifiers with more human-readable names
 	if (id.compare("sidebar") == 0 ||
 		id.compare("sidebars") == 0)
 	{
-		search_for.assign(L"sidebars");	
-		search_for.assign(L"Sidebars");
+		amis_xml_item_id = "sidebars";
+		CString temp;
+		temp.LoadStringW(IDS_SIDEBARS);
+		item_name = temp;
 	}
 	else if (id.compare("optional-prodnote") == 0 ||
 		id.compare("optional-prodnotes") == 0 ||
 		id.compare("prodnote") == 0 ||
 		id.compare("prodnotes") == 0)
 	{
-		search_for.assign(L"prodnotes");
+		amis_xml_item_id = "prodnotes";
+		CString temp;
+		temp.LoadStringW(IDS_PRODUCER_NOTES);
+		item_name = temp;
 	}
 	else if (id.compare("noteref") == 0 ||
 		id.compare("noterefs") == 0 ||
 		id.compare("footnote") == 0 ||
 		id.compare("footnotes") == 0)
 	{
-		search_for.assign(L"noterefs");
+		amis_xml_item_id = "noterefs";
+		CString temp;
+		temp.LoadStringW(IDS_FOOTNOTES);
+		item_name = temp;
 	}
 	else if (id.compare("group") == 0 ||
 		id.compare("groups") == 0)
 	{
-		search_for.assign(L"groups");
+		amis_xml_item_id = "groups";
+		CString temp;
+		temp.LoadStringW(IDS_GROUPED_ITEMS);
+		item_name = temp;
 	}
 	else if (id.compare("page") == 0 ||
 		id.compare("pages") == 0 ||
 		id.compare("pagenumber") == 0 ||
 		id.compare("pagenumbers") == 0)
 	{
-		search_for.assign(L"pages");
+		amis_xml_item_id = "pages";
+		CString temp;
+		temp.LoadStringW(IDS_PAGES);
+		item_name = temp;
 	}
 	else if (id.compare("section") == 0 ||
 		id.compare("sections") == 0)
 	{
-		search_for.assign(L"sections");
+		amis_xml_item_id = "sections";
+		CString temp;
+		temp.LoadStringW(IDS_SECTIONS);
+		item_name = temp;
 	}
 	
-	//TODO: match the item in the accessible UI data set
-	//for now, just use the search_for text
-	pLabel->getText()->setTextString(search_for);
+	pLabel->getText()->setTextString(item_name);
 }
 
 amis::dtb::Bookmark* DtbWithHooks::addBookmark()

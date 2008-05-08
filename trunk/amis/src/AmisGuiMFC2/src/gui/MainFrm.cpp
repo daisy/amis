@@ -143,9 +143,10 @@ BOOL CMainFrame::OnCommand(WPARAM wParam, LPARAM lParam)
 int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 {
 	if (CMDIFrameWnd::OnCreate(lpCreateStruct) == -1) return -1;
-
-	//TODO: use localized data
-	if (!mSidebar.Create(_T("navigation"),	this, CSize(0, 0),
+	
+	CString temp;
+	temp.LoadStringW(IDS_NAVIGATION);
+	if (!mSidebar.Create(temp, this, CSize(0, 0),
 		TRUE /*bHasGripper*/, AFX_IDW_CONTROLBAR_FIRST + 32))
 	{
 		amis::util::Log::Instance()->writeError("Failed to create sidebar", "CMainFrame::OnCreate",
@@ -278,9 +279,9 @@ void CMainFrame::Dump(CDumpContext& dc) const
 void CMainFrame::OnMenuSelect( UINT	nItemID, UINT nFlags, HMENU	hSysMenu )
 {
 	
-					amis::util::Log* p_log = amis::util::Log::Instance();
+	amis::util::Log* p_log = amis::util::Log::Instance();
   
-					p_log->writeMessage("CMainFrame::OnMenuSelect()");
+	p_log->writeMessage("CMainFrame::OnMenuSelect()");
 	TRACE("\nCMainFrame::OnMenuSelect()\n");
 	CFrameWnd::OnMenuSelect(nItemID, nFlags, hSysMenu);
 
@@ -292,9 +293,9 @@ void CMainFrame::OnMenuSelect( UINT	nItemID, UINT nFlags, HMENU	hSysMenu )
 
 void CMainFrame::OnInitMenuPopup(CMenu*	pPopupMenu,	UINT nIndex, BOOL bSysMenu)	
 {
-					amis::util::Log* p_log = amis::util::Log::Instance();
+	amis::util::Log* p_log = amis::util::Log::Instance();
   
-					p_log->writeMessage("CMainFrame::OnInitMenuPopup()");
+	p_log->writeMessage("CMainFrame::OnInitMenuPopup()");
 	TRACE("\nCMainFrame::OnInitMenuPopup()\n");
 	m_lastOpenPopupMenu	= pPopupMenu;
 

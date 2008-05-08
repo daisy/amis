@@ -84,9 +84,9 @@ BEGIN
     IDD_GOTOPAGE, DIALOG
     BEGIN
         LEFTMARGIN, 7
-        RIGHTMARGIN, 113
+        RIGHTMARGIN, 147
         TOPMARGIN, 7
-        BOTTOMMARGIN, 39
+        BOTTOMMARGIN, 66
     END
 
     IDD_FIND, DIALOG
@@ -94,7 +94,7 @@ BEGIN
         LEFTMARGIN, 7
         RIGHTMARGIN, 185
         TOPMARGIN, 7
-        BOTTOMMARGIN, 80
+        BOTTOMMARGIN, 71
     END
 
     IDD_CDSEARCH, DIALOG
@@ -108,9 +108,9 @@ BEGIN
     IDD_ABOUTBOX, DIALOG
     BEGIN
         LEFTMARGIN, 7
-        RIGHTMARGIN, 228
+        RIGHTMARGIN, 172
         TOPMARGIN, 7
-        BOTTOMMARGIN, 114
+        BOTTOMMARGIN, 115
     END
 
     IDD_PUBLICATIONSUMMARY, DIALOG
@@ -118,7 +118,7 @@ BEGIN
         LEFTMARGIN, 6
         RIGHTMARGIN, 315
         TOPMARGIN, 7
-        BOTTOMMARGIN, 183
+        BOTTOMMARGIN, 178
     END
 
     IDD_OPENURL, DIALOG
@@ -126,7 +126,7 @@ BEGIN
         LEFTMARGIN, 7
         RIGHTMARGIN, 258
         TOPMARGIN, 7
-        BOTTOMMARGIN, 63
+        BOTTOMMARGIN, 56
     END
 
     IDD_PREFERENCES, DIALOG
@@ -149,7 +149,7 @@ BEGIN
     BEGIN
         LEFTMARGIN, 7
         RIGHTMARGIN, 229
-        TOPMARGIN, 7
+        TOPMARGIN, 6
         BOTTOMMARGIN, 184
     END
 END
@@ -262,30 +262,29 @@ STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Search for DAISY Books"
 FONT 8, "MS Sans Serif", 0, 0, 0x0
 BEGIN
-    CONTROL         186,IDC_PICTURE,"Static",SS_BITMAP,7,7,85,79
-    LTEXT           "You can search your computer for DAISY books. Enter a path or browse for a folder to search, then press Search to begin searching.",IDC_SEARCHINSTRUCTIONS,94,7,211,32
-    EDITTEXT        IDC_SEARCHPATH,108,46,144,14,ES_AUTOHSCROLL
-    PUSHBUTTON      "Browse...",IDC_BROWSE,260,48,45,13
-    PUSHBUTTON      "&Search",IDC_STARTSEARCH,141,70,50,15
-    PUSHBUTTON      "S&top",IDC_STOPSEARCH,201,70,50,14
+    LTEXT           "You can search your computer for DAISY books. Enter a path or browse for a folder to search, then press Search to begin searching.",IDC_SEARCHINSTRUCTIONS,7,7,298,30
+    EDITTEXT        IDC_SEARCHPATH,7,39,245,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_BROWSE,260,39,45,13
+    PUSHBUTTON      "&Search",IDC_STARTSEARCH,103,63,50,15
     CTEXT           "Ready",IDC_SEARCHING,7,92,298,13,NOT WS_VISIBLE
     LISTBOX         IDC_FILESFOUND,7,105,298,156,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
     PUSHBUTTON      "&Open",IDC_OPENBOOK,103,266,50,14
     PUSHBUTTON      "&Cancel",IDCANCEL,158,266,50,14
+    PUSHBUTTON      "S&top",IDC_STOPSEARCH,158,63,50,15
 END
 
-IDD_GOTOPAGE DIALOGEX 0, 0, 120, 46
+IDD_GOTOPAGE DIALOGEX 0, 0, 154, 73
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Go To Page"
 FONT 8, "MS Sans Serif", 0, 0, 0x0
 BEGIN
-    LTEXT           "Enter a page number:",IDC_GOTOPAGE_CAPTION,7,7,82,14
-    EDITTEXT        IDC_PAGENUM,91,7,22,14,ES_AUTOHSCROLL
-    DEFPUSHBUTTON   "OK",IDOK,7,25,50,14
-    PUSHBUTTON      "&Cancel",IDCANCEL,63,25,50,14
+    LTEXT           "Enter the number or label of the page that you want to go to.",IDC_GOTOPAGE_CAPTION,7,7,140,20
+    EDITTEXT        IDC_PAGENUM,7,27,86,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,23,52,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,82,52,50,14
 END
 
-IDD_FIND DIALOGEX 0, 0, 192, 87
+IDD_FIND DIALOGEX 0, 0, 192, 78
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Find in Text"
 FONT 8, "MS Sans Serif", 0, 0, 0x0
@@ -293,8 +292,8 @@ BEGIN
     LTEXT           "Search the text of the book in either direction",IDC_FIND_DESCRIPTION,7,7,178,8
     EDITTEXT        IDC_SEARCHSTRING,7,22,178,13,ES_AUTOHSCROLL
     CONTROL         "Find previous",IDC_FINDPREVIOUS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,41,58,10
-    DEFPUSHBUTTON   "OK",IDOK,42,66,50,14
-    PUSHBUTTON      "&Cancel",IDCANCEL,99,66,50,14
+    DEFPUSHBUTTON   "OK",IDOK,42,57,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,99,57,50,14
 END
 
 IDD_CDSEARCH DIALOGEX 0, 0, 253, 180
@@ -308,7 +307,7 @@ BEGIN
     PUSHBUTTON      "&Cancel",IDCANCEL,130,159,50,14
 END
 
-IDD_ABOUTBOX DIALOGEX 0, 0, 235, 121
+IDD_ABOUTBOX DIALOGEX 0, 0, 179, 122
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "About AMIS"
 FONT 8, "MS Sans Serif", 0, 0, 0x0
@@ -317,29 +316,29 @@ BEGIN
     LTEXT           "AMIS: \nAdaptive Multimedia Information System",IDC_AMISNAME,40,10,132,31,SS_NOPREFIX
     LTEXT           "Version 3.0 beta 2",IDC_VERSION,39,44,128,8
     LTEXT           "Release Date: 14 May 2008",IDC_VERSIONNOTE,40,59,124,11
-    LTEXT           "Copyright © 2008 DAISY for All",IDC_COPYRIGHT,40,75,119,8
-    DEFPUSHBUTTON   "OK",IDOK,79,100,50,14,WS_GROUP
+    LTEXT           "Copyright © 2008 DAISY for All",IDC_COPYRIGHT,40,75,132,16
+    DEFPUSHBUTTON   "OK",IDOK,65,101,50,14,WS_GROUP
 END
 
-IDD_PUBLICATIONSUMMARY DIALOGEX 0, 0, 322, 191
+IDD_PUBLICATIONSUMMARY DIALOGEX 0, 0, 322, 186
 STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Publication Summary"
 FONT 8, "MS Sans Serif", 0, 0, 0x0
 BEGIN
     LTEXT           "Information about this publication and your current position:",IDC_PUBLICATIONSUMMARYCAPTION,6,7,309,17
     CONTROL         "",IDC_SUMMARYLIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,6,25,309,137
-    DEFPUSHBUTTON   "OK",IDOK,137,169,50,14
+    DEFPUSHBUTTON   "OK",IDOK,137,164,50,14
 END
 
-IDD_OPENURL DIALOGEX 0, 0, 265, 70
+IDD_OPENURL DIALOGEX 0, 0, 265, 63
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Open URL"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     LTEXT           "Enter the URL of the book you want to open:",IDC_OPENURL_CAPTION,7,7,146,8
     EDITTEXT        IDC_URL,7,26,251,12,ES_AUTOHSCROLL
-    DEFPUSHBUTTON   "OK",IDOK,73,49,50,14
-    PUSHBUTTON      "&Cancel",IDCANCEL,127,49,50,14
+    DEFPUSHBUTTON   "OK",IDOK,79,42,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,133,42,50,14
 END
 
 IDD_PREFERENCES DIALOGEX 0, 0, 256, 223
@@ -386,9 +385,10 @@ STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSM
 CAPTION "Reading Options"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
-    LTEXT           "This book contains the following special types of items. Checked items will be played.  Unchecked items will be skipped.",IDC_READING_OPTIONS_INSTRUCTIONS,7,7,222,31
-    LISTBOX         IDC_OPTIONS_LIST,7,31,222,134,LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
-    DEFPUSHBUTTON   "OK",IDOK,94,170,50,14
+    LTEXT           "This book contains the following special types of items. Checked items will be played.  Unchecked items will be skipped.",IDC_READING_OPTIONS_INSTRUCTIONS,7,6,222,26
+    LISTBOX         IDC_OPTIONS_LIST,7,33,222,134,LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,65,170,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,121,170,50,14
 END
 
 
@@ -462,8 +462,10 @@ BEGIN
     VK_ADD,         ID_AMIS_FASTER,         VIRTKEY, CONTROL, NOINVERT
     VK_OEM_PLUS,    ID_AMIS_FASTER,         VIRTKEY, CONTROL, NOINVERT
     "F",            ID_AMIS_FIND_IN_TEXT,   VIRTKEY, CONTROL, NOINVERT
+    VK_F3,          ID_AMIS_FIND_NEXT_IN_TEXT, VIRTKEY, NOINVERT
+    VK_F3,          ID_AMIS_FIND_PREVIOUS_IN_TEXT, VIRTKEY, SHIFT, NOINVERT
     "N",            ID_AMIS_FOCUS_ON_SIDEBAR, VIRTKEY, CONTROL, NOINVERT
-    "A",            ID_AMIS_FOCUS_ON_TEXT,  VIRTKEY, CONTROL, NOINVERT
+    "T",            ID_AMIS_FOCUS_ON_TEXT,  VIRTKEY, CONTROL, NOINVERT
     "G",            ID_AMIS_GOTO_PAGE,      VIRTKEY, CONTROL, NOINVERT
     "P",            ID_AMIS_INCREASE_SECTION_DEPTH, VIRTKEY, CONTROL, NOINVERT
     VK_UP,          ID_AMIS_INCREASE_VOLUME, VIRTKEY, CONTROL, NOINVERT
@@ -485,8 +487,8 @@ BEGIN
     "F",            ID_AMIS_TOGGLE_AUDIO_CONTENT_PLAYBACK, VIRTKEY, SHIFT, CONTROL, NOINVERT
     "G",            ID_AMIS_TOGGLE_AUDIO_SELFVOICING_PLAYBACK, VIRTKEY, SHIFT, CONTROL, NOINVERT
     VK_F11,         ID_AMIS_TOGGLE_VIEW,    VIRTKEY, NOINVERT
-    VK_F3,          ID_AMIS_FIND_NEXT_IN_TEXT, VIRTKEY, NOINVERT
-    VK_F3,          ID_AMIS_FIND_PREVIOUS_IN_TEXT, VIRTKEY, SHIFT, NOINVERT
+    VK_UP,          ID_AMIS_INCREASE_VOLUME_SELF_VOICING, VIRTKEY, SHIFT, CONTROL, NOINVERT
+    VK_DOWN,        ID_AMIS_DECREASE_VOLUME_SELF_VOICING, VIRTKEY, SHIFT, CONTROL, NOINVERT
 END
 
 
@@ -527,6 +529,15 @@ END
 STRINGTABLE 
 BEGIN
     IDS_PROPSHT_CAPTION     "Preferences"
+    IDS_META_TITLE          "Title:"
+    IDS_META_AUTHOR         "Author:"
+    IDS_META_PUBLISHER      "Publisher:"
+    IDS_META_DESCRIPTION    "Description:"
+    IDS_META_NARRATOR       "Narrator:"
+    IDS_META_TOTAL_DURATION "Total duration:"
+    IDS_META_TOTAL_PAGES    "Total pages:"
+    IDS_META_DATE           "Date:"
+    IDS_META_FORMAT         "Format:"
 END
 
 STRINGTABLE 
@@ -599,6 +610,39 @@ BEGIN
     ID_AMIS_EXIT            "Exit AMIS"
     ID_AMIS_TOGGLE_SIDEBAR  "Turn the sidebar on or off."
     ID_AMIS_TOGGLE_VIEW     "Switch the view to basic mode."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_META_FEATURES       "Features:"
+    IDS_META_CURRENT_PAGE   "Current page:"
+    IDS_META_CURRENT_SECTION "Current section:"
+    IDS_META_MAX_SECTION_DEPTH "Max section depth:"
+    IDS_META_TOC_ENTRIES    "TOC entries:"
+    IDS_META_SECTION_CONTENTS_LIST """%d subsections, %d pages"""
+    IDS_META_SECTION_CONTENTS "Section contents:"
+    IDS_NOT_AVAILABLE       "Not available"
+    IDS_SEARCHING           "Searching..."
+    IDS_SEARCH_STOPPED      "Search stopped"
+    IDS_NO_FILES_FOUND      "No files found"
+    IDS_ONE_FILE_FOUND      "One file found"
+    IDS_FILES_FOUND         "%d files found"
+    IDS_NO_BOOKS_ON_CD      "No DAISY books were found on this CD-ROM."
+    IDS_PLEASE_RESTART      "Please restart to change the language of AMIS."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERROR_OPENING_RELOADING 
+                            "The book could not be opened.  AMIS will re-open your previous book."
+    IDS_ERROR_OPENING       "The book could not be opened."
+    IDS_NAVIGATION          "Navigation"
+    IDS_SECTIONS            "Sections"
+    IDS_PAGES               "Pages"
+    IDS_FOOTNOTES           "Footnotes"
+    IDS_PRODUCER_NOTES      "Producer notes"
+    IDS_SIDEBARS            "Sidebars"
+    IDS_GROUPED_ITEMS       "Grouped items"
 END
 
 #endif    // English (U.S.) resources

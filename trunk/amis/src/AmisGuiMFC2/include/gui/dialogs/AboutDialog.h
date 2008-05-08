@@ -35,33 +35,12 @@ namespace dialogs
 class AboutDialog : public AmisDialogBase
 {
 public:
-	
 	void resolvePromptVariables(Prompt*);
-
 	AboutDialog();
 	~AboutDialog(){};
-
-// Dialog Data
-	//{{AFX_DATA(CAboutDialog)
 	enum { IDD = IDD_ABOUTBOX };
-	//}}AFX_DATA
-
-	// ClassWizard generated virtual function overrides
-	//{{AFX_VIRTUAL(CAboutDialog)
-	protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
-	//}}AFX_VIRTUAL
-
-private:
-	CString mVersion;
-	CString mVersionNote;
-
-// Implementation
 protected:
-	//{{AFX_MSG(CAboutDialog)
-	virtual BOOL OnInitDialog();
 	afx_msg void OnPaint();
-	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 };
 }

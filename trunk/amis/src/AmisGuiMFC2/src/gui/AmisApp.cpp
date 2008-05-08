@@ -272,10 +272,9 @@ BOOL CAmisApp::InitInstance()
 
 int CAmisApp::ExitInstance() 
 {
-	
-					amis::util::Log* p_log = amis::util::Log::Instance();
+	amis::util::Log* p_log = amis::util::Log::Instance();
   
-					p_log->writeMessage("Starting to EXIT");
+	p_log->writeMessage("Starting to EXIT");
 	TRACE("\nStarting to EXIT\n\n");
 
 	Preferences::Instance()->setWasExitClean(true);
@@ -428,18 +427,18 @@ void CAmisApp::openBook(const ambulant::net::url* filename)
 		}
 		else
 		{
-			//TODO localize these messages
-			CString message1 = _T("Error opening book");
-			CString message2 = _T("Error opening book.  Reloading previous book.");
-
 			if (b_a_book_was_open)
 			{
-				generalBookErrorMsgBox(message2);
+				CString temp;
+				temp.LoadStringW(IDS_ERROR_OPENING_RELOADING);
+				generalBookErrorMsgBox(temp);
 				openLastReadBook();
 			}
 			else
 			{
-				generalBookErrorMsgBox(message1);
+				CString temp;
+				temp.LoadStringW(IDS_ERROR_OPENING);
+				generalBookErrorMsgBox(temp);
 			}
 		}
 	}
@@ -764,7 +763,9 @@ void CAmisApp::OnLoadCd()
 	//TODO: localize this string
 	if (num_books == 0) 
 	{
-		generalBookErrorMsgBox(_T("No files found on this CD-ROM"));
+		CString temp;
+		temp.LoadStringW(IDS_NO_BOOKS_ON_CD);
+		generalBookErrorMsgBox(temp);
 		amis::util::Log::Instance()->writeWarning("No DAISY books on CD-ROM", "CAmisApp::OnLoadCd", "AmisGuiMFC2");
 	}
 	else 
@@ -809,8 +810,7 @@ void CAmisApp::OnPreferences()
 		if (prefs.mUiLanguageSelection != Preferences::Instance()->getUiLangId())
 		{
 			Preferences::Instance()->setUiLangId(prefs.mUiLanguageSelection);
-			//TODO: replace with real message from localized file
-			AfxMessageBox(_T("Please restart to change the language of AMIS"));
+			AfxMessageBox(IDS_PLEASE_RESTART);
 		}
 
 		amis::io::PreferencesFileIO prefs_io;

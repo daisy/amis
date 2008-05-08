@@ -33,6 +33,10 @@ namespace gui
 {
 namespace dialogs
 {
+enum SearchStatus 
+{
+	SEARCHING, READY, STOPPED, NONE_FOUND, ONE_FOUND, MANY_FOUND
+};
 class SearchForBooksDialog : public AmisDialogBase
 {
 public:
@@ -55,8 +59,8 @@ protected:
 	DECLARE_MESSAGE_MAP()
 
 private:
-	int mFiles_found;
-	void announceStatus(CString); //should be AccessibleUi::Label* as the parameter
+	int mFilesFound;
+	void announceStatus(CString, SearchStatus); 
 	void populateListControl();
 	void loadBook();
 
@@ -64,13 +68,12 @@ private:
 	amis::util::SearchForFilesMFC mSearcher;
 	ambulant::net::url mLoadBookOnDialogClose;
 
-	/*These will be AccessibleUi::Label* pointers in the end*/
-	CString mpCaptionWhileSearching;
-	CString mpCaptionDefault;
-	CString mpCaptionSearchAborted;
-	CString mpCaptionSearchCompleteNoFilesFound;
-	CString mpCaptionSearchCompleteOneFileFound;
-	CString mpCaptionSearchCompleteFilesFound;
+	CString mCaptionWhileSearching;
+	CString mCaptionDefault;
+	CString mCaptionSearchAborted;
+	CString mCaptionSearchCompleteNoFilesFound;
+	CString mCaptionSearchCompleteOneFileFound;
+	CString mCaptionSearchCompleteFilesFound;
 public:
 	virtual BOOL PreTranslateMessage(MSG* pMsg);
 };

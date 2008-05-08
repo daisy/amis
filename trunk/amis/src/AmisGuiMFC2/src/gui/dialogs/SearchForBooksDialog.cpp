@@ -79,7 +79,7 @@ void SearchForBooksDialog::resolvePromptVariables(Prompt* pPrompt) {
 			if (p_var->getName().compare("NUM_FILES_FOUND") == 0)
 			{
 				CString value;
-				value.Format(_T("%d"), mFiles_found);
+				value.Format(_T("%d"), mFilesFound);
 				wstring str;
 				str = value;
 				p_var->setContents(str, "");
@@ -92,14 +92,13 @@ void SearchForBooksDialog::resolvePromptVariables(Prompt* pPrompt) {
 SearchForBooksDialog::SearchForBooksDialog(CWnd* pParent /*=NULL*/)
 	: AmisDialogBase(SearchForBooksDialog::IDD)
 {
-	//Temporary until data gets loaded from accessible ui XML file
-	mpCaptionWhileSearching = _T("Searching...");
-	mpCaptionDefault = _T("Ready");
-	mpCaptionSearchAborted = _T("Search stopped");
-	mpCaptionSearchCompleteNoFilesFound = _T("No files found");
-	mpCaptionSearchCompleteOneFileFound = _T("1 file found");
-	mpCaptionSearchCompleteFilesFound = _T("files found");
-	mFiles_found = 0;
+	mCaptionWhileSearching.LoadStringW(IDS_SEARCHING);
+	mCaptionDefault.LoadStringW(AFX_IDS_IDLEMESSAGE);
+	mCaptionSearchAborted.LoadStringW(IDS_SEARCH_STOPPED);
+	mCaptionSearchCompleteNoFilesFound.LoadStringW(IDS_NO_FILES_FOUND);
+	mCaptionSearchCompleteOneFileFound.LoadStringW(IDS_ONE_FILE_FOUND);
+	mCaptionSearchCompleteFilesFound.LoadStringW(IDS_FILES_FOUND);
+	mFilesFound = 0;
 
 	mbShouldStopSearching = false;
 }
@@ -122,56 +121,64 @@ BOOL SearchForBooksDialog::OnInitDialog()
 }
 
 
-void SearchForBooksDialog::announceStatus(CString status)
+void SearchForBooksDialog::announceStatus(CString msg, SearchStatus status)
 {
 	CWnd* p_label_widget = NULL;
 	p_label_widget = this->GetDlgItem(IDC_SEARCHING);
 	if (p_label_widget)
 	{
-		p_label_widget->SetWindowText(status);
+		p_label_widget->SetWindowText(msg);
 		p_label_widget->ShowWindow(SW_SHOW);
 	}
-	if (amis::Preferences::Instance()->getIsSelfVoicing() == true) {
-	if (mpCaptionWhileSearching.Compare(status) == 0) {
-		AudioSequencePlayer::Instance()->playDialogControlFromUiIds(IDD_SEARCHDAISY, IDC_SEARCHING, this, true, "WhileSearching");
-	} else 
-	if (mpCaptionSearchCompleteNoFilesFound.Compare(status) == 0) {
-		AudioSequencePlayer::Instance()->playDialogControlFromUiIds(IDD_SEARCHDAISY, IDC_SEARCHING, this, true, "SearchCompleteNoFilesFound");
-	} else 
-	if (mpCaptionSearchCompleteOneFileFound.Compare(status) == 0 || mpCaptionSearchCompleteFilesFound.Compare(status) == 0) {
-		CListBox* p_filelist = NULL;
-		p_filelist = (CListBox*)this->GetDlgItem(IDC_FILESFOUND);
-		p_filelist->SetCurSel(0);
+	if (amis::Preferences::Instance()->getIsSelfVoicing() == true) 
+	{
+		if (status == SEARCHING) 
+		{
+			AudioSequencePlayer::Instance()->playDialogControlFromUiIds(IDD_SEARCHDAISY, IDC_SEARCHING, this, true, "WhileSearching");
+		} 
+		else if (status == NONE_FOUND) 
+		{
+			AudioSequencePlayer::Instance()->playDialogControlFromUiIds(IDD_SEARCHDAISY, IDC_SEARCHING, this, true, "SearchCompleteNoFilesFound");
+		} 
+		else if (status == ONE_FOUND || status == MANY_FOUND) 
+		{
+			CListBox* p_filelist = NULL;
+			p_filelist = (CListBox*)this->GetDlgItem(IDC_FILESFOUND);
+			p_filelist->SetCurSel(0);
 
-		AudioSequence * seq = NULL;
-		if (mpCaptionSearchCompleteOneFileFound.Compare(status) == 0) {
-			seq = AudioSequencePlayer::Instance()->playDialogControlFromUiIds(IDD_SEARCHDAISY, IDC_SEARCHING, this, false, "SearchCompleteOneFileFound");
-		} else {
-			seq = AudioSequencePlayer::Instance()->playDialogControlFromUiIds(IDD_SEARCHDAISY, IDC_SEARCHING, this, false, "SearchCompleteFilesFound");
-		}
-		AudioSequence * seq2 = AudioSequencePlayer::Instance()->playDialogControlFromUiIds(IDD_SEARCHDAISY, IDC_FILESFOUND, this, false, "default");
-		seq->appendAll(seq2);
-		delete seq2;
-		
-		int sel = p_filelist->GetCurSel();
-		if (sel >= 0) { 
-			amis::UrlList* p_search_results = mSearcher.getSearchResults();
-			if (sel > -1 && sel < p_search_results->size()) {
-				//mLoadBookOnDialogClose = (*p_search_results)[sel];
-				
-				CString str;
-				p_filelist->GetText(sel, str);
-				seq->append(str);
+			AudioSequence * seq = NULL;
+			if (status == ONE_FOUND) 
+			{
+				seq = AudioSequencePlayer::Instance()->playDialogControlFromUiIds(IDD_SEARCHDAISY, IDC_SEARCHING, this, false, "SearchCompleteOneFileFound");
+			} 
+			else 
+			{
+				seq = AudioSequencePlayer::Instance()->playDialogControlFromUiIds(IDD_SEARCHDAISY, IDC_SEARCHING, this, false, "SearchCompleteFilesFound");
 			}
-		}
-		AudioSequencePlayer::Instance()->Play(seq);
+		
+			AudioSequence * seq2 = AudioSequencePlayer::Instance()->playDialogControlFromUiIds(IDD_SEARCHDAISY, IDC_FILESFOUND, this, false, "default");
+			seq->appendAll(seq2);
+			delete seq2;
+		
+			int sel = p_filelist->GetCurSel();
+			if (sel >= 0) 
+			{ 
+				amis::UrlList* p_search_results = mSearcher.getSearchResults();
+				if (sel > -1 && sel < p_search_results->size()) 
+				{
+					//mLoadBookOnDialogClose = (*p_search_results)[sel];	
+					CString str;
+					p_filelist->GetText(sel, str);
+					seq->append(str);
+				}
+			}
+			AudioSequencePlayer::Instance()->Play(seq);
 
-
-	} else 
-	
-	if (mpCaptionSearchAborted.Compare(status) == 0) {
-		AudioSequencePlayer::Instance()->playDialogControlFromUiIds(IDD_SEARCHDAISY, IDC_SEARCHING, this, true, "SearchAborted");
-	} 
+		} 
+		else if (status == STOPPED) 
+		{
+			AudioSequencePlayer::Instance()->playDialogControlFromUiIds(IDD_SEARCHDAISY, IDC_SEARCHING, this, true, "SearchAborted");
+		} 
 	}
 }
 
@@ -275,7 +282,7 @@ void SearchForBooksDialog::OnStartsearch()
 	if (search_string.IsEmpty() == TRUE) return;
 	
 	//change the text on the side to say "searching"
-	announceStatus(mpCaptionWhileSearching);
+	announceStatus(mCaptionWhileSearching, SEARCHING);
 
 	//gray-out the search button and enable the stop button
 	p_button = (CButton*)this->GetDlgItem(IDC_STARTSEARCH);
@@ -296,12 +303,17 @@ void SearchForBooksDialog::OnStartsearch()
 
 	mSearcher.setRecursiveSearch(true);
 	//start the search
-	mFiles_found = mSearcher.startSearch(T2A(search_string));
+	mFilesFound = mSearcher.startSearch(T2A(search_string));
 	populateListControl();
 
-	if (mFiles_found == 0) announceStatus(this->mpCaptionSearchCompleteNoFilesFound);
-	else if (mFiles_found == 1) announceStatus(this->mpCaptionSearchCompleteOneFileFound);
-	else announceStatus(this->mpCaptionSearchCompleteFilesFound);
+	if (mFilesFound == 0) announceStatus(this->mCaptionSearchCompleteNoFilesFound, NONE_FOUND);
+	else if (mFilesFound == 1) announceStatus(this->mCaptionSearchCompleteOneFileFound, ONE_FOUND);
+	else
+	{
+		CString temp;
+		temp.Format(mCaptionSearchCompleteFilesFound, mFilesFound);
+		announceStatus(temp, MANY_FOUND);
+	}
 
 	//reverse the gray-out button states
 	p_button = (CButton*)this->GetDlgItem(IDC_STARTSEARCH);
@@ -316,7 +328,7 @@ void SearchForBooksDialog::OnStopsearch()
 {
 	mbShouldStopSearching = true;
 	mSearcher.stopSearch();
-	announceStatus(mpCaptionSearchAborted);
+	announceStatus(mCaptionSearchAborted, STOPPED);
 }
 
 void SearchForBooksDialog::OnOpenbook() 

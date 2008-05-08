@@ -217,14 +217,11 @@ bool PublicationSummaryDialog::calculateData()
 		mNumSubsections = 0;
 		mNumPagesForSection = 0;
 	}
-	
-	//TODO: figure out current timestamp
+
 
 	return true;
 }
 
-//this will be taken over by the accessible ui list/prompt data
-//for now, it's just temporary to a. see how it looks and b. see if the data is correct
 void PublicationSummaryDialog::displayData()
 {
 	CListCtrl* p_list = (CListCtrl*)GetDlgItem(IDC_SUMMARYLIST);
@@ -233,23 +230,38 @@ void PublicationSummaryDialog::displayData()
 	p_list->InsertColumn(0, _T("Field"), LVCFMT_LEFT, 100);
 	p_list->InsertColumn(1, _T("Value"), LVCFMT_LEFT, 400);
 
-	CString title = _T("Title:");
-	CString author = _T("Author:");
-	CString publisher = _T("Publisher:");
-	CString description = _T("Description:");
-	CString narrator = _T("Narrator:");
-	CString total_time = _T("Total duration:");
-	CString total_pages = _T("Total pages:");
-	CString date = _T("Date:");
-	CString format = _T("Format:");
-	CString features = _T("Features:");
-	CString curr_page = _T("Current page:");
-	//CString curr_time = _T("Current time:");
-	CString curr_section = _T("Current section:");
-	CString section_contents = _T("Section contents:");
-	CString maxdepth = _T("Max section depth:");
-	CString tocs = _T("TOC entries:");
-
+	CString title;
+	title.LoadStringW(IDS_META_TITLE);
+	CString author;
+	author.LoadStringW(IDS_META_AUTHOR);
+	CString publisher;
+	publisher.LoadStringW(IDS_META_PUBLISHER);
+	CString description;
+	description.LoadStringW(IDS_META_DESCRIPTION);
+	CString narrator;
+	narrator.LoadStringW(IDS_META_NARRATOR);
+	CString total_time;
+	total_time.LoadStringW(IDS_META_TOTAL_DURATION);
+	CString total_pages;
+	total_pages.LoadStringW(IDS_META_TOTAL_PAGES);
+	CString date;
+	date.LoadStringW(IDS_META_DATE);
+	CString format;
+	format.LoadStringW(IDS_META_FORMAT);
+	CString features;
+	features.LoadStringW(IDS_META_FEATURES);
+	CString curr_page;
+	curr_page.LoadStringW(IDS_META_CURRENT_PAGE);
+	CString curr_section;
+	curr_section.LoadStringW(IDS_META_CURRENT_SECTION);
+	CString section_contents;
+	section_contents.LoadStringW(IDS_META_SECTION_CONTENTS);
+	CString maxdepth;
+	maxdepth.LoadStringW(IDS_META_MAX_SECTION_DEPTH);
+	CString tocs;
+	tocs.LoadStringW(IDS_META_TOC_ENTRIES);
+	CString section_contents_list;
+	section_contents_list.LoadStringW(IDS_META_SECTION_CONTENTS_LIST);
 
 	CString value;
 	wstring wvalue;	
@@ -275,12 +287,10 @@ void PublicationSummaryDialog::displayData()
 		appendToList(p_list, curr_page, mpCurrentPage->getText()->getTextString());
 	else 
 		appendToList(p_list, curr_page, L"");
-	//wvalue = L"TODO";
-	//appendToList(p_list, curr_time, wvalue);
 	if (mpSectionName != NULL)
 	{
 		appendToList(p_list, curr_section, mpSectionName->getText()->getTextString());
-		value.Format(_T("%d subsections and %d pages"), mNumSubsections, mNumPagesForSection);
+		value.Format(section_contents_list, mNumSubsections, mNumPagesForSection);
 		wvalue = value;
 		appendToList(p_list, section_contents, wvalue);
 	} 
@@ -302,7 +312,7 @@ CString PublicationSummaryDialog::computeAuthor()
 	CString value;
 	
 	if (mCreator.size() > 0) value = mCreator.c_str();
-	else value = _T("not available");
+	else value.LoadStringW(IDS_NOT_AVAILABLE);
 
 	return value;
 }
@@ -311,7 +321,7 @@ CString PublicationSummaryDialog::computeTitle()
 	CString value;
 
 	if (mpTitle != NULL) value = mpTitle->getText()->getTextString().c_str();
-	else value = _T("not available");
+	else value.LoadStringW(IDS_NOT_AVAILABLE);
 	
 	return value;
 }
