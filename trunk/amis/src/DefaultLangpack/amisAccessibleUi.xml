@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ui xmlns="http://amisproject.org" next-id="t390" xml:lang="en">
+<ui xmlns="http://amisproject.org" next-id="t391" xml:lang="en">
     <containers>
         <container id="file">
             <note>This is the menu header "File"</note>
@@ -1488,16 +1488,20 @@
                     </caption>
                     <caption condition="DATA_EXISTS">
                         <prompt>
+							<promptItem>
+								<text id="t390">Section contents: </text>
+								<audio src=""/>
+							</promptItem>
+							<promptVar name="CURRENT_SECTION_NUM_SUBSECTIONS"/>
                             <promptItem>
                                 <text id="t217">subsections, </text>
                                 <audio src="./audio/speechgen0227.mp3"/>
                             </promptItem>
-                            <promptVar name="CURRENT_SECTION_NUM_SUBSECTIONS"/>
+                            <promptVar name="CURRENT_SECTION_NUM_PAGES"/>
                             <promptItem>
                                 <text id="t216">pages</text>
                                 <audio src="./audio/speechgen0228.mp3"/>
                             </promptItem>
-                            <promptVar name="CURRENT_SECTION_NUM_PAGES"/>
                         </prompt>
                     </caption>
                     <caption condition="DATA_EXISTS">
