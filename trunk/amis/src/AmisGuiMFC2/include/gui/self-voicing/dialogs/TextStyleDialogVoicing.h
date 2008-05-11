@@ -20,10 +20,10 @@ License along with this library; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#ifndef SKIPDIALOG_VOICING_H
-#define SKIPDIALOG_VOICING_H
+#ifndef TEXTSTYLEDIALOG_VOICING_H
+#define TEXTSTYLEDIALOG_VOICING_H
 
-#include "gui/dialogs/SkipDialog.h";
+#include "gui/dialogs/TextStyleDialog.h";
 
 #include "gui/self-voicing/datamodel/DataTree.h"
 #include "gui/self-voicing/datamodel/Dialog.h"
@@ -38,18 +38,14 @@ namespace amis
 	{
 		namespace dialogs
 		{
-			class SkipDialogVoicing
+			class TextStyleDialogVoicing
 			{
 			private:
-				amis::gui::dialogs::SkipDialog * mpDialog;
-				void appendSeqListContent(AudioSequence* seq, amis::dtb::CustomTest* p_custom_test, int i);
+				amis::gui::dialogs::TextStyleDialog * mpDialog;
 
 			public:
-				SkipDialogVoicing(amis::gui::dialogs::SkipDialog * dlg);
-				~SkipDialogVoicing(void);
-
-				void OnSelchangeSkips();
-				static amis::gui::spoken::PromptItem* getPromptItemForReadingOptionName(string item_id);
+				TextStyleDialogVoicing(amis::gui::dialogs::TextStyleDialog * dlg);
+				~TextStyleDialogVoicing(void);
 
 				void resolvePromptVariables(Prompt* pPrompt);
 			};
@@ -57,4 +53,4 @@ namespace amis
 	}
 }
 
-#endif //SKIPDIALOG_VOICING_H
+#endif //TEXTSTYLEDIALOG_VOICING_H

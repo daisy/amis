@@ -21,14 +21,23 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
 #include "stdafx.h"
+
 #include "gui/dialogs/TextStyleDialog.h"
+//#include "..\..\..\include\gui\dialogs\textstyledialog.h"
+
 #include "../resource.h"
 #include "AmisCore.h"
 #include "util/Color.h"
 #include "Preferences.h"
-#include "..\..\..\include\gui\dialogs\textstyledialog.h"
+
+#include "gui/self-voicing/dialogs/TextStyleDialogVoicing.h"
 
 using namespace amis::gui::dialogs;
+
+using namespace amis::gui::spoken;
+
+amis::gui::dialogs::TextStyleDialogVoicing * mpTextStyleDialogVoicing = NULL;
+
 
 BEGIN_MESSAGE_MAP(TextStyleDialog, CDialog)
 	ON_WM_KEYUP()
@@ -44,51 +53,7 @@ END_MESSAGE_MAP()
 
 void TextStyleDialog::resolvePromptVariables(Prompt* pPrompt)
 {
-	
-	USES_CONVERSION;
-	
-	PromptVar* p_var = NULL;
-	for (int i=0; i<pPrompt->getNumberOfItems(); i++)
-	{
-		if (pPrompt->getItem(i)->getPromptItemType() == PROMPT_VARIABLE)
-		{
-			p_var = (PromptVar*)pPrompt->getItem(i);
-
-			if (p_var->getName().compare("FONT_NAME") == 0)
-			{
-	CString tmp_font;
-	CComboBox* p_font_list = (CComboBox*)GetDlgItem(IDC_FONT);
-	p_font_list->GetWindowText(tmp_font);
-
-				wstring str;
-				str = tmp_font;
-	p_var->setContents(str, "");
-			} else 
-			if (p_var->getName().compare("FOREGROUND_COLOR_NAME") == 0)
-			{
-
-	CString tmp_fore;
-	CComboBox* p_foreground_list = (CComboBox*)GetDlgItem(IDC_HIGHLIGHTFOREGROUND);
-	p_foreground_list->GetWindowText(tmp_fore);
-	
-				wstring str;
-				str = tmp_fore;
-	p_var->setContents(str, "");
-			} else 
-			if (p_var->getName().compare("BACKGROUND_COLOR_NAME") == 0)
-			{
-
-	CString tmp_back;
-	CComboBox* p_background_list = (CComboBox*)GetDlgItem(IDC_HIGHLIGHTBACKGROUND);
-	p_background_list->GetWindowText(tmp_back);
-
-	
-				wstring str;
-				str = tmp_back;
-	p_var->setContents(str, "");
-			} 
-		}
-	}
+	mpTextStyleDialogVoicing->resolvePromptVariables(pPrompt);
 	AmisDialogBase::resolvePromptVariables(pPrompt);
 }
 
@@ -108,9 +73,17 @@ BOOL CALLBACK EnumFontCallback (LPLOGFONT lplf, LPTEXTMETRIC lptm, DWORD dwType,
 TextStyleDialog::TextStyleDialog(CWnd* pParent /*=NULL*/)
 	: AmisDialogBase(TextStyleDialog::IDD)
 {
+	if (Preferences::Instance()->getIsSelfVoicing() == true)
+	{
+		mpTextStyleDialogVoicing = new amis::gui::dialogs::TextStyleDialogVoicing(this);
+	}
 }
 TextStyleDialog::~TextStyleDialog()
 {
+	if (mpTextStyleDialogVoicing != NULL)
+	{
+		delete mpTextStyleDialogVoicing;
+	}
 }
 BOOL TextStyleDialog::OnInitDialog() 
 {	

@@ -48,71 +48,7 @@ END_MESSAGE_MAP()
 
 void SkipDialog::resolvePromptVariables(Prompt* pPrompt) 
 {
-	PromptVar* p_var = NULL;
-	PromptItem* promptNotAvailable = DataTree::Instance()->findPromptItem("not_available");
-
-	for (int i=0; i<pPrompt->getNumberOfItems(); i++)
-	{
-		if (pPrompt->getItem(i)->getPromptItemType() == PROMPT_VARIABLE)
-		{
-			p_var = (PromptVar*)pPrompt->getItem(i);
-
-			if (p_var->getName().compare("SKIPPABLE_ITEM") == 0)
-			{
-				int i = m_ListSkips.GetCurSel();
-				if (i < 0)
-				{
-					i = 0;
-				}
-
-				amis::dtb::CustomTest* p_custom_test = (amis::dtb::CustomTest*)m_ListSkips.GetItemData(i);
-
-				if (p_custom_test != NULL)
-				{
-					string item_id = p_custom_test->getId();
-					amis::gui::spoken::PromptItem* pi = SkipDialogVoicing::getPromptItemForReadingOptionName(item_id);
-					if (pi != NULL)
-					{
-						p_var->setContents(pi->getContents()->clone());
-					}
-				}
-			} else if (p_var->getName().compare("WILL_SKIP_OR_NOT") == 0)
-			{
-				//SKIPPABLE_ITEM_ID
-
-				int i = m_ListSkips.GetCurSel();
-				if (i < 0)
-				{
-					i = 0;
-				}
-
-				amis::dtb::CustomTest* p_custom_test = (amis::dtb::CustomTest*)m_ListSkips.GetItemData(i);
-
-				if (p_custom_test != NULL)
-				{
-					string strSelect;
-
-					//false = skip this item
-					if (m_ListSkips.GetCheck(i) == 1) //p_custom_test->getCurrentState() == false)
-					{
-						strSelect = "item_selected";
-					}
-					else
-					{
-						strSelect = "item_deselected";
-					}
-
-					amis::gui::spoken::PromptItem* pi = NULL;
-
-					pi = amis::gui::spoken::DataTree::Instance()->findPromptItem(strSelect);
-					if (pi != NULL)
-					{
-						p_var->setContents(pi->getContents()->clone());
-					}
-				}
-			}
-		}
-	}
+	mpSkipDialogVoicing->resolvePromptVariables(pPrompt);
 	AmisDialogBase::resolvePromptVariables(pPrompt);
 }
 
