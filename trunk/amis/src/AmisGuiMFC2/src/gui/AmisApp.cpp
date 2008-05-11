@@ -943,6 +943,11 @@ void CAmisApp::OnFindPreviousInText()
 void CAmisApp::OnFocusOnSidebar()
 {
 	MainWndParts::Instance()->mpSidebar->m_wndDlg.setFocusToActiveList();
+	
+	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
+	{
+		AudioSequencePlayer::playPromptFromStringId("sidebarHasFocus");
+	}
 }
 void CAmisApp::OnToggleSelfVoicingAudio()
 {
@@ -953,6 +958,11 @@ void CAmisApp::OnToggleSelfVoicingAudio()
 void CAmisApp::OnFocusOnText()
 {	
 	MainWndParts::Instance()->mpHtmlView->m_wndBrowser.SetFocus();
+	
+	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
+	{
+		AudioSequencePlayer::playPromptFromStringId("textWindowHasFocus");
+	}
 }
 void CAmisApp::OnResetHighlightColors()
 {

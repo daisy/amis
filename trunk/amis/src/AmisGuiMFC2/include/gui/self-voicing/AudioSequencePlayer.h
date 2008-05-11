@@ -74,7 +74,9 @@ namespace amis
 
 				static void playPromptFromUiId(int nItemID, AudioSequence* seq = NULL);
 
+				static std::wstring getTextForPromptFromStringId(string promptId);
 				static void playPromptFromStringId(string);
+
 				static void playPromptItemFromStringId(string);
 				static void playDialogInstructionsFromUiId(int nItemID);
 				static void playDialogTextControlsFromUiId(int nItemID, PromptResolver* pResolver);

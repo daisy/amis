@@ -31,6 +31,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "util/Log.h"
 #include "Preferences.h"
 #include "gui/MenuManip.h"
+#include "Preferences.h"
+#include "gui/self-voicing/audiosequenceplayer.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -653,6 +655,11 @@ void CAmisSidebar::changeView(int sel)
 	{
 		if (amis::dtb::DtbWithHooks::Instance()->getNavModel()->hasPages() == true) showNavList(sel-2);
 		else showNavList(sel-1);
+	}
+	
+	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
+	{
+		AudioSequencePlayer::playPromptFromStringId("sidebarHasFocus");
 	}
 }
 void CAmisSidebar::setFocusToActiveList()

@@ -31,6 +31,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "ambulant/net/url.h"
 #include "ambulant/smil2/test_attrs.h"
 #include "util/Log.h"
+#include "gui/self-voicing/audiosequenceplayer.h"
+#include "Preferences.h"
 
 using namespace amis::dtb;
 
@@ -69,6 +71,15 @@ DtbWithHooks::~DtbWithHooks()
 
 bool DtbWithHooks::open(const ambulant::net::url* filename, const ambulant::net::url* bookmarksPath)
 {
+	std::wstring str = AudioSequencePlayer::getTextForPromptFromStringId("loading");
+	CString strx(str.c_str());
+	amis::gui::MainWndParts::Instance()->updateTitleBar(amis::gui::MainWndParts::TITLEBAR_BOOKTITLE, strx);
+
+	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
+	{
+		AudioSequencePlayer::playPromptFromStringId("loading");
+	}
+	
 	getFileSearcher()->clearSearchResults();
 	
 	//call the base class
@@ -100,6 +111,16 @@ bool DtbWithHooks::open(const ambulant::net::url* filename, const ambulant::net:
 	//TODO: this causes the menus to crash
 	amis::gui::MenuManip::Instance()->addNavContainersToViewMenu();
 	amis::gui::MenuManip::Instance()->loadBookmarks(p_bmks);
+
+	std::wstring str2 = AudioSequencePlayer::getTextForPromptFromStringId("done");
+
+	if (MainWndParts::Instance()->mpMainFrame)
+		MainWndParts::Instance()->mpMainFrame->PostMessage(WM_APP, 0, (LPARAM)str2.c_str());
+
+	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
+	{
+		AudioSequencePlayer::playPromptFromStringId("done");
+	}
 
 	return true;
 }

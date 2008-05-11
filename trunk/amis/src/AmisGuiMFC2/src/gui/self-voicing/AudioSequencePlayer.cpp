@@ -590,6 +590,36 @@ void AudioSequencePlayer::fillSequenceContainerPromptFromId(AudioSequence* seq, 
 	}
 }
 
+
+std::wstring AudioSequencePlayer::getTextForPromptFromStringId(string promptId)
+{
+	std::wstring str;
+
+	Prompt* prompt = DataTree::Instance()->findPrompt(promptId);
+
+	if (prompt != NULL)
+	{
+		int sz = prompt->getNumberOfItems();
+		for (int i=0; i<sz; i++)
+		{
+			PromptItemBase* pi = prompt->getItem(i);
+
+
+			TextAudioPair* pair = pi->getContents();
+			if (pair != NULL)
+			{
+				TextNodeSV * textN = pair->getText();
+				if (textN != NULL) 
+				{
+					str.append(textN->getTextString());
+				}
+			}
+		}
+	}
+
+	return str;
+}
+
 void AudioSequencePlayer::playPromptFromStringId(string promptId)
 {
 	Prompt* p_prompt_ = DataTree::Instance()->findPrompt(promptId);
