@@ -243,6 +243,7 @@ m_basic_audio(0),
 hEventHandler(0)
 {
 	set_rate(1.0);
+	set_volume(100);
 
 #ifdef SINGLE_THREAD_HACK
 	bDestroyBreak = false;
@@ -758,9 +759,29 @@ void gui::dx::audio_playerX::set_rate(double rate) {
 
 #endif
 
+void
+gui::dx::audio_playerX::set_global_level(double level)
+{
+	s_global_level = level;
+	ambulantX::gui::dx::audio_playerX::Instance()->set_volume((long)(s_global_level*100));
+}
+
+double
+gui::dx::audio_playerX::change_global_level(double factor)
+{
+	s_global_level *= factor;
+	set_global_level(s_global_level);
+	return s_global_level;
+}
+
+
+long gui::dx::audio_playerX::get_volume() {
+	return s_current_volume;
+}
 // -val is the attenuation in decibels 
 // can be 0 to 100
 void gui::dx::audio_playerX::set_volume(long val) {
+	s_current_volume = val;
 	if(m_basic_audio == 0) return;
 	if (val < 0) val = 0;
 	if (val > 100) val = 100;
@@ -889,6 +910,8 @@ bool gui::dx::audio_playerX::play(const char * url) {
 			win_report_error("QueryInterface(IID_IBasicAudio, ...)", hr);	
 		}
 	}
+	
+	set_volume(s_current_volume);
 
 	if (hEventHandler == NULL) {
 		unsigned long lpdwThreadID;

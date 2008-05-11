@@ -92,8 +92,8 @@ BEGIN_MESSAGE_MAP(CMainFrame, CMDIFrameWnd)
 	ON_UPDATE_COMMAND_UI_RANGE(AMIS_PAGE_STYLE_BASE_ID, AMIS_PAGE_STYLE_BASE_ID + AMIS_MAX_ANYTHING, OnUpdateCmdUiPageStyle)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_SMALLER_FONT, OnUpdateCmdUiSmallerFont)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_BIGGER_FONT, OnUpdateCmdUiBiggerFont)
-	ON_UPDATE_COMMAND_UI(ID_AMIS_INCREASE_VOLUME, OnUpdateCmdUiGeneral)
-	ON_UPDATE_COMMAND_UI(ID_AMIS_DECREASE_VOLUME, OnUpdateCmdUiGeneral)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_INCREASE_CONTENT_VOLUME, OnUpdateCmdUiGeneral)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_DECREASE_CONTENT_VOLUME, OnUpdateCmdUiGeneral)
 	ON_UPDATE_COMMAND_UI_RANGE(AMIS_BOOKMARKS_BASE_ID, AMIS_BOOKMARKS_BASE_ID + AMIS_MAX_ANYTHING, OnUpdateCmdUiGeneral)
 	//}}AFX_MSG_MAP
 	ON_WM_SIZE()
@@ -423,10 +423,10 @@ void CMainFrame::OnActivate( UINT nState, CWnd*	pWndOther, BOOL	bMinimized )
 
 				view->OnFilePlay();
 
-				if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
+				/*if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 				{
 					AudioSequencePlayer::Instance()->RepeatLast();
-				}
+				}*/
 			}
 			mbWasPlayingWhenLostFocus =	false;
 		}
@@ -675,8 +675,9 @@ void amis::gui::CMainFrame::updateToolbarState(toolbar::Toolbar* pToolbar)
 
 	pToolbar->enable(ID_AMIS_INCREASE_SECTION_DEPTH, b_is_book_open);
 	pToolbar->enable(ID_AMIS_DECREASE_SECTION_DEPTH, b_is_book_open);
-	pToolbar->enable(ID_AMIS_INCREASE_VOLUME, b_is_book_open);
-	pToolbar->enable(ID_AMIS_DECREASE_VOLUME, b_is_book_open);
+
+	//pToolbar->enable(ID_AMIS_INCREASE_CONTENT_VOLUME, b_is_book_open);
+	//pToolbar->enable(ID_AMIS_DECREASE__CONTENT_VOLUME, b_is_book_open);
 
 	pToolbar->enable(ID_AMIS_FIND_IN_TEXT, b_is_book_open);
 }

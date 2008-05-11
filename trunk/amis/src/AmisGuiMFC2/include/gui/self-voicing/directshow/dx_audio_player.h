@@ -150,6 +150,8 @@ DECLARE_INTERFACE_(IVuppInterface, IUnknown) {
 
 typedef void (*sendMessageCallbackFn)(void);
 
+static double s_global_level = 1.0;
+static long s_current_volume = 100;
 static double s_current_playback_rate = 1.0;
 
 #define SINGLE_THREAD_HACK
@@ -195,7 +197,11 @@ class audio_playerX {
 	// -val is the attenuation in decibels 
 	// can be 0 to 100
 	void set_volume(long val);
+	long get_volume();
 		
+static void set_global_level(double level);
+static double change_global_level(double factor);
+
 	// can be -100 to 100
 	// 0 sets a neutral balance
 	// and 10 sets -10 db to right and -90 db to left

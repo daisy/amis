@@ -97,6 +97,10 @@ public:
 	afx_msg void OnLoadCd();
 	afx_msg void OnVolumeUp();
 	afx_msg void OnVolumeDown();
+	afx_msg void OnVolumeUpBOOK();
+	afx_msg void OnVolumeDownBOOK();
+	afx_msg void OnVolumeUpUI();
+	afx_msg void OnVolumeDownUI();
 	afx_msg void OnSpeedUp();
 	afx_msg void OnSpeedDown();
 	afx_msg void OnSpeedNormal();

@@ -108,6 +108,10 @@ BEGIN_MESSAGE_MAP(CAmisApp, CWinApp)
 	ON_COMMAND(ID_AMIS_FASTER, OnSpeedUp)
 	ON_COMMAND(ID_AMIS_INCREASE_VOLUME, OnVolumeUp)
 	ON_COMMAND(ID_AMIS_DECREASE_VOLUME, OnVolumeDown)
+	ON_COMMAND(ID_AMIS_INCREASE_UI_VOLUME, OnVolumeUpUI)
+	ON_COMMAND(ID_AMIS_DECREASE_UI_VOLUME, OnVolumeDownUI)
+	ON_COMMAND(ID_AMIS_INCREASE_CONTENT_VOLUME, OnVolumeUpBOOK)
+	ON_COMMAND(ID_AMIS_DECREASE_CONTENT_VOLUME, OnVolumeDownBOOK)
 	ON_COMMAND(ID_AMIS_SHOW_PREFERENCES, OnPreferences)
 	ON_COMMAND(ID_AMIS_SHOW_PUBLICATION_SUMMARY, OnPublicationSummary)
 	ON_COMMAND(ID_AMIS_TOGGLE_VIEW, OnToggleView)
@@ -578,20 +582,42 @@ void CAmisApp::OnFileClose()
 	}
 }
 
+#define VOLUME_RATIO 1.8
+
+void CAmisApp::OnVolumeUpBOOK()
+{
+	amis::util::Log::Instance()->writeMessage("Volume increase BOOK", "CAmisApp::OnVolumeUp", "AmisGuiMFC2");
+	ambulant::gui::dx::change_global_level(VOLUME_RATIO);
+}
+
+void CAmisApp::OnVolumeDownBOOK()
+{
+	amis::util::Log::Instance()->writeMessage("Volume decrease BOOK", "CAmisApp::OnVolumeDown", "AmisGuiMFC2");
+    ambulant::gui::dx::change_global_level(1.0/VOLUME_RATIO);
+}
+
+void CAmisApp::OnVolumeUpUI()
+{
+	amis::util::Log::Instance()->writeMessage("Volume increase UI", "CAmisApp::OnVolumeUp", "AmisGuiMFC2");
+	ambulantX::gui::dx::audio_playerX::change_global_level(VOLUME_RATIO);
+}
+
+void CAmisApp::OnVolumeDownUI()
+{
+	amis::util::Log::Instance()->writeMessage("Volume decrease UI", "CAmisApp::OnVolumeDown", "AmisGuiMFC2");
+    ambulantX::gui::dx::audio_playerX::change_global_level(1.0/VOLUME_RATIO);
+}
+
 void CAmisApp::OnVolumeUp()
 {
-	amis::util::Log::Instance()->writeMessage("Volume increase", "CAmisApp::OnVolumeUp", "AmisGuiMFC2");
-    //amis::audio::AmisAudio::Instance()->adjustVolume(1.2); REMOVED because it makes more sense to allow book volume control than the whole application: otherwise users would use their OS-level volume control.
-	ambulant::gui::dx::change_global_level(1.2);
-	//amis::gui::spoken::AudioSequencePlayer::Instance()->playPromptFromUiId(ID_MENU_PLAY_VOLUP, true, NULL);
+	OnVolumeUpUI();
+	OnVolumeUpBOOK();
 }
 
 void CAmisApp::OnVolumeDown()
 {
-	amis::util::Log::Instance()->writeMessage("Volume decrease", "CAmisApp::OnVolumeDown", "AmisGuiMFC2");
-    //amis::audio::AmisAudio::Instance()->adjustVolume(1.0/1.2); REMOVED because it makes more sense to allow book volume control than the whole application: otherwise users would use their OS-level volume control.
-    ambulant::gui::dx::change_global_level(1.0/1.2);
-	//amis::gui::spoken::AudioSequencePlayer::Instance()->playPromptFromUiId(ID_MENU_PLAY_VOLDOWN, true, NULL);
+	OnVolumeDownUI();
+	OnVolumeDownBOOK();
 }
 
 void CAmisApp::OnSpeedUp()
@@ -614,11 +640,9 @@ void CAmisApp::OnSpeedDown()
 	long currentRate = amis::tts::TTSPlayer::Instance()->GetSpeechRate();
 	amis::tts::TTSPlayer::Instance()->SetSpeechRate(currentRate-1);
 
-	//TODO: Doesn't seem to affect the playback speed at all
 	double rate = ambulant::gui::dx::change_global_rate(-0.7);
 	ambulantX::gui::dx::audio_playerX::Instance()->set_rate(rate);
 	updateSpeedButtons();
-	//amis::gui::spoken::AudioSequencePlayer::Instance()->playPromptFromUiId(ID_MENU_PLAY_SLOWER, true, NULL);
 }
 
 void CAmisApp::OnSpeedNormal()
@@ -630,7 +654,6 @@ void CAmisApp::OnSpeedNormal()
 	ambulant::gui::dx::set_global_rate(1.0);
 	ambulantX::gui::dx::audio_playerX::Instance()->set_rate(1.0);
 	updateSpeedButtons();
-      //amis::gui::spoken::AudioSequencePlayer::Instance()->playPromptFromUiId(ID_MENU_PLAY_NORMALSPEED, true, NULL);
 }
 
 

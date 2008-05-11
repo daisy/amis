@@ -427,7 +427,7 @@ void MmView::OnFilePlay()
 		theApp.setPauseState(false);
 		player->play();
 		needs_done_redraw = true;
-		InvalidateRect(NULL);
+		//InvalidateRect(NULL); REMOVED, otherwise crashes.
 	}
 	/*DBG*/in_here = 0;
 }
