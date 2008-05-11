@@ -600,8 +600,11 @@ void CAmisApp::OnVolumeUpUI()
 {
 	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 	{
-	amis::util::Log::Instance()->writeMessage("Volume increase UI", "CAmisApp::OnVolumeUp", "AmisGuiMFC2");
-	ambulantX::gui::dx::audio_playerX::change_global_level(VOLUME_RATIO);
+		amis::util::Log::Instance()->writeMessage("Volume increase UI", "CAmisApp::OnVolumeUp", "AmisGuiMFC2");
+		ambulantX::gui::dx::audio_playerX::change_global_level(VOLUME_RATIO);
+
+		AudioSequence* seq	= new AudioSequence();
+		AudioSequencePlayer::playPromptFromUiId(ID_AMIS_INCREASE_VOLUME, seq);
 	}
 }
 
@@ -609,8 +612,11 @@ void CAmisApp::OnVolumeDownUI()
 {
 	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 	{
-	amis::util::Log::Instance()->writeMessage("Volume decrease UI", "CAmisApp::OnVolumeDown", "AmisGuiMFC2");
-    ambulantX::gui::dx::audio_playerX::change_global_level(1.0/VOLUME_RATIO);
+		amis::util::Log::Instance()->writeMessage("Volume decrease UI", "CAmisApp::OnVolumeDown", "AmisGuiMFC2");
+		ambulantX::gui::dx::audio_playerX::change_global_level(1.0/VOLUME_RATIO);
+	
+		AudioSequence* seq	= new AudioSequence();
+		AudioSequencePlayer::playPromptFromUiId(ID_AMIS_DECREASE_VOLUME, seq);
 	}
 }
 

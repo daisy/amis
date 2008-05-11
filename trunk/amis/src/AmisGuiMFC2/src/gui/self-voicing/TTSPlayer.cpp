@@ -397,5 +397,7 @@ string str2 = W2CA(str);
 if(SUCCEEDED(hr) && speakNotify)
        Play( L"This is my new voice !");
 
+delete [] szDescription;
+
 return str2;
 }

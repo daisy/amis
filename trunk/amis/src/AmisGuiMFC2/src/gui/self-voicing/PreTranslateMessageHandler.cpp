@@ -251,14 +251,11 @@ void PreTranslateMessageHandler::handle(PromptResolver * pResolver, MSG* pMsg, i
 		{
 			mbKeyControl = true;
 		}	
-
-			return;
-
 		
+		return;		
 	}
 	else if (pMsg->message == WM_KEYUP)
 	{
-		
 		bool wasSameKey = false;
 		if (mLastKeyDown == pMsg->wParam)
 		{
@@ -267,7 +264,7 @@ void PreTranslateMessageHandler::handle(PromptResolver * pResolver, MSG* pMsg, i
 		}
 		if (pMsg->wParam == VK_CONTROL)
 		{
-			if (mbKeyControl && wasSameKey)
+			if (mbKeyControl && wasSameKey && mLastKeyDown == VK_CONTROL)
 			{
 				//if (seq != NULL && !(seq->IsEmpty()) && playNow) AudioSequencePlayer::Instance()->Play(seq, true);
 				//else AudioSequencePlayer::Instance()->Stop();
