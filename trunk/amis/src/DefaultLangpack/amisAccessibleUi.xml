@@ -39,7 +39,7 @@
                     <text id="t328">Open a DAISY publication from a URL</text>
                     <audio src="./audio/speechgen0008.mp3"/>
                 </description>
-                <accelerator>
+                <accelerator keys="Ctrl+U">
                     <text id="t329">Ctrl+U</text>
                     <audio src="./audio/speechgen0009.mp3"/>
                 </accelerator>
