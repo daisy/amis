@@ -598,14 +598,20 @@ void CAmisApp::OnVolumeDownBOOK()
 
 void CAmisApp::OnVolumeUpUI()
 {
+	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
+	{
 	amis::util::Log::Instance()->writeMessage("Volume increase UI", "CAmisApp::OnVolumeUp", "AmisGuiMFC2");
 	ambulantX::gui::dx::audio_playerX::change_global_level(VOLUME_RATIO);
+	}
 }
 
 void CAmisApp::OnVolumeDownUI()
 {
+	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
+	{
 	amis::util::Log::Instance()->writeMessage("Volume decrease UI", "CAmisApp::OnVolumeDown", "AmisGuiMFC2");
     ambulantX::gui::dx::audio_playerX::change_global_level(1.0/VOLUME_RATIO);
+	}
 }
 
 void CAmisApp::OnVolumeUp()
