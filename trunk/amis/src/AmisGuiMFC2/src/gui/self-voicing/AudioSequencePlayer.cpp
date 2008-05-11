@@ -722,7 +722,6 @@ void AudioSequencePlayer::playDialogWelcome(int nItemID, PromptResolver * presol
 
 	if (nItemID != -1)
 	{
-
 		AudioSequence * seq = new AudioSequence;
 
 		Dialog* p_dialog = DataTree::Instance()->findDialog(nItemID);
@@ -736,7 +735,7 @@ void AudioSequencePlayer::playDialogWelcome(int nItemID, PromptResolver * presol
 				fillSequencePrompt(seq, prompt, NULL);
 			}
 
-			if (playfull)
+			if (playfull || nItemID == IDD_ABOUTBOX)
 			{
 				int count = p_dialog->getNumChildControls();
 				for (int i = 0 ; i < count; i++)

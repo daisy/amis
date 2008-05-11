@@ -24,26 +24,20 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #define _WIN32_DCOM
 #define WINVER 0x0400
 
-#include <stdlib.h>
-
 #include "gui/self-voicing/TTSPlayer.h"
 
-
-#include "util/Log.h"
-
+#include <stdlib.h>
 #include <sapi.h>
 #include <sphelper.h>
 #include <spuihelp.h>
 
+#include "Preferences.h"
+#include "../../AmisGuiMFC2/resource.h"
+#include "util/Log.h"
+
 #ifndef TRACE
 #define TRACE ATLTRACE
 #endif
-
-
-
-//#include <gui/MainWndParts.h>
-#include "Preferences.h"
-#include "../../AmisGuiMFC2/resource.h"
 
 using namespace amis::tts;
 
@@ -53,7 +47,7 @@ static ISpVoice* m_iV; // Voice Interface
 
 void TTSPlayer::setCallback(sendMessageCallbackFn pFunction)
 {
-	 sendMessageCallback = pFunction;
+	sendMessageCallback = pFunction;
 }
 
 TTSPlayer* TTSPlayer::pinstance = 0;
@@ -61,10 +55,10 @@ TTSPlayer* TTSPlayer::pinstance = 0;
 TTSPlayer* TTSPlayer::Instance()
 {
 	if (pinstance == 0)  // is it the first call?
-    {  
-      pinstance = new TTSPlayer; // create sole instance
-    }
-    return pinstance; // address of sole instance
+	{  
+		pinstance = new TTSPlayer; // create sole instance
+	}
+	return pinstance; // address of sole instance
 }
 
 // between -10 and 10. 0 is default rate (engine dependant).
@@ -120,8 +114,8 @@ void TTSPlayer::Play(CString str)
 
 	EnterCriticalSection(&m_csSequence);
 
-					amis::util::Log* p_log = amis::util::Log::Instance();
-					p_log->writeMessage("*-*=*+*");
+	amis::util::Log* p_log = amis::util::Log::Instance();
+	p_log->writeMessage("*-*=*+*");
 	TRACE(L"\n*-*=*+*");
 	p_log->writeMessage(W2CA(str));
 	TRACE(str);
@@ -131,54 +125,54 @@ void TTSPlayer::Play(CString str)
 		TRACE("IsSpeaking????????");
 	}
 	TRACE("\n");
-mbDoNotProcessEndEvent = true;
+	mbDoNotProcessEndEvent = true;
 
-m_iV->Speak(NULL, SPF_PURGEBEFORESPEAK, NULL);
-WaitUntilDone();
+	m_iV->Speak(NULL, SPF_PURGEBEFORESPEAK, NULL);
+	WaitUntilDone();
 
-mbDoNotProcessEndEvent = false;
+	mbDoNotProcessEndEvent = false;
 
 #ifdef USE_WSTRING
-			m_iV->Speak(str, SPF_ASYNC, NULL);	
+	m_iV->Speak(str, SPF_ASYNC, NULL);	
 #else
 
 	//LPCWSTR str_ = T2W(str);
-m_iV->Speak(str, SPF_ASYNC, NULL);	
+	m_iV->Speak(str, SPF_ASYNC, NULL);	
 #endif
 
-LeaveCriticalSection(&m_csSequence);
+	LeaveCriticalSection(&m_csSequence);
 }
 
 void TTSPlayer::Stop()
 {
 	EnterCriticalSection(&m_csSequence);
-	
-					amis::util::Log* p_log = amis::util::Log::Instance();
-					p_log->writeMessage("Stop TTS");
-                TRACE(_T("\nStop TTS\r\n") );
 
-				mbDoNotProcessEndEvent = true;
+	amis::util::Log* p_log = amis::util::Log::Instance();
+	p_log->writeMessage("Stop TTS");
+	TRACE(_T("\nStop TTS\r\n") );
+
+	mbDoNotProcessEndEvent = true;
 	m_iV->Speak(NULL, SPF_PURGEBEFORESPEAK, NULL);
 	//m_iV->Speak(L"", SPF_PURGEBEFORESPEAK, NULL);
-	
+
 	//m_iV->Speak(L"", SPF_ASYNC | SPF_PURGEBEFORESPEAK, NULL);
 
-WaitUntilDone();
+	WaitUntilDone();
 
-m_isSpeaking = FALSE;
+	m_isSpeaking = FALSE;
 
-LeaveCriticalSection(&m_csSequence);
+	LeaveCriticalSection(&m_csSequence);
 }
 
 void TTSPlayer::WaitUntilDone()
 {
-					amis::util::Log* p_log = amis::util::Log::Instance();
-					p_log->writeMessage("//// TTS BEFORE WAIT");
-TRACE(_T("\n//// TTS BEFORE WAIT \r\n") );
+	amis::util::Log* p_log = amis::util::Log::Instance();
+	p_log->writeMessage("//// TTS BEFORE WAIT");
+	TRACE(_T("\n//// TTS BEFORE WAIT \r\n") );
 	m_iV->WaitUntilDone(INFINITE);
 
 	p_log->writeMessage("//// TTS AFTER WAIT");
-TRACE(_T("\n//// TTS AFTER WAIT \r\n") );
+	TRACE(_T("\n//// TTS AFTER WAIT \r\n") );
 }
 
 void __stdcall SpkCallback(WPARAM wParam, LPARAM lParam)
@@ -189,76 +183,76 @@ void __stdcall SpkCallback(WPARAM wParam, LPARAM lParam)
 void TTSPlayer::callback()
 {
 
-    CSpEvent        event;  // helper class in sphelper.h for events that releases any 
-                            // allocated memory in it's destructor - SAFER than SPEVENT
-    //SPVOICESTATUS   Stat;
-    WPARAM          nStart;
-    LPARAM          nEnd;
-    int             i = 0;
-    HRESULT 		hr = S_OK;
+	CSpEvent        event;  // helper class in sphelper.h for events that releases any 
+	// allocated memory in it's destructor - SAFER than SPEVENT
+	//SPVOICESTATUS   Stat;
+	WPARAM          nStart;
+	LPARAM          nEnd;
+	int             i = 0;
+	HRESULT 		hr = S_OK;
 
 	//ISpVoice* m_iV = TTSPlayer::Instance()->m_iV;
 	//ISpVoice* m_iV = ((TTSPlayer *)lParam)->m_iV;
 
-					amis::util::Log* p_log = amis::util::Log::Instance();
-    while( event.GetFrom(m_iV) == S_OK )
-    {
-        switch( event.eEventId )
-        {
-            case SPEI_START_INPUT_STREAM:
-				
-					p_log->writeMessage("StartStream event");
-                TRACE(_T("\nStartStream event\r\n") );
-				m_isSpeaking = TRUE;
-                
-                break; 
+	amis::util::Log* p_log = amis::util::Log::Instance();
+	while( event.GetFrom(m_iV) == S_OK )
+	{
+		switch( event.eEventId )
+		{
+		case SPEI_START_INPUT_STREAM:
 
-            case SPEI_END_INPUT_STREAM:
+			p_log->writeMessage("StartStream event");
+			TRACE(_T("\nStartStream event\r\n") );
+			m_isSpeaking = TRUE;
 
-				if (m_isSpeaking)
-				{
+			break; 
+
+		case SPEI_END_INPUT_STREAM:
+
+			if (m_isSpeaking)
+			{
 				m_isSpeaking = FALSE;
 
 				if (mbDoNotProcessEndEvent)
 				{
-					
+
 					p_log->writeMessage("EndStream 1 mbDoNotProcessEndEvent");
-                TRACE(_T("\nEndStream 1 mbDoNotProcessEndEvent\r\n") );
+					TRACE(_T("\nEndStream 1 mbDoNotProcessEndEvent\r\n") );
 					mbDoNotProcessEndEvent = false;
 				}
 				else
 				{
-					
-					
+
+
 					p_log->writeMessage("EndStream 2 sendMessageCallback");
-                TRACE(_T("\nEndStream 2 sendMessageCallback\r\n") );
+					TRACE(_T("\nEndStream 2 sendMessageCallback\r\n") );
 					sendMessageCallback();
 				}
-				}
-				else
-				{
+			}
+			else
+			{
 				int i = 9;
-				}				
-                break;     
-                
-            case SPEI_VOICE_CHANGE:
-				
-					p_log->writeMessage("Voicechange event");
-                TRACE(_T("\nVoicechange event\r\n") );
-                
-                break;
+			}				
+			break;     
 
-            default:
-               //TRACE(_T("Unknown message\r\n") );
-                break;
-        }
+		case SPEI_VOICE_CHANGE:
+
+			p_log->writeMessage("Voicechange event");
+			TRACE(_T("\nVoicechange event\r\n") );
+
+			break;
+
+		default:
+			//TRACE(_T("Unknown message\r\n") );
+			break;
+		}
 		//break;
-    }
+	}
 }
 
 bool TTSPlayer::IsSpeaking(void)
 {
-	
+
 	return m_isSpeaking;
 }
 
@@ -280,24 +274,16 @@ TTSPlayer::TTSPlayer(void)
 
 	hr = CoCreateInstance(CLSID_SpVoice, NULL, CLSCTX_INPROC_SERVER,
 		IID_ISpVoice, (void**) &m_iV);
-	_ASSERT(hr == S_OK);	// If this assertion is hit then the Speech runtime is probably not
-						// installed. All calls to Speak() will be ignored.
+	_ASSERT(hr == S_OK);	// If this assertion is hit then the Speech runtime is probably not installed
 
-	
 	//HWND hWnd = amis::gui::MainWndParts::Instance()->mpMainFrame->GetSafeHwnd();
+	//m_iV->SetNotifyWindowMessage( hWnd, WM_TTSAPPCUSTOMEVENT, 0, 0 );
+	m_iV->SetNotifyCallbackFunction(SpkCallback, 0, (LPARAM)this );
+	m_iV->SetInterest( SPFEI_ALL_TTS_EVENTS, SPFEI_ALL_TTS_EVENTS );
 
+	ChangeVoice(amis::Preferences::Instance()->getTTSVoiceIndex());
 
-
-		//m_iV->SetNotifyWindowMessage( hWnd, WM_TTSAPPCUSTOMEVENT, 0, 0 );
-		m_iV->SetNotifyCallbackFunction(SpkCallback, 0, (LPARAM)this );
-		m_iV->SetInterest( SPFEI_ALL_TTS_EVENTS, SPFEI_ALL_TTS_EVENTS );
-	
-	
-		ChangeVoice(amis::Preferences::Instance()->getTTSVoiceIndex());
-
-	//ChangeVoice(FALSE);
-
-	m_iV->SetVolume(50); //TODO: this value works well on my laptop/configuration...but how about other machines ??
+	m_iV->SetVolume(50);
 }
 
 void TTSPlayer::DestroyInstance()
@@ -316,8 +302,6 @@ TTSPlayer::~TTSPlayer(void)
 
 	DeleteCriticalSection(&m_csSequence);
 }
-
-
 
 int TTSPlayer::initVoiceList(HWND hWnd)
 {
@@ -346,58 +330,58 @@ std::string TTSPlayer::ChangeVoice(bool speakNotify)
 {
 
 	USES_CONVERSION;
-	
+
 	HRESULT                             hr = S_OK;
-CComPtr<ISpObjectToken>             cpVoiceToken;
-CComPtr<IEnumSpObjectTokens>        cpEnum;
-ULONG                               ulCount = 0;
-    CSpDynamicString*                szDescription;
-    
-    //ISpObjectToken                  *pToken = NULL;
-    //WCHAR *pszCurTokenId = NULL;
+	CComPtr<ISpObjectToken>             cpVoiceToken;
+	CComPtr<IEnumSpObjectTokens>        cpEnum;
+	ULONG                               ulCount = 0;
+	CSpDynamicString*                szDescription;
 
-if(SUCCEEDED(hr))
-    hr = SpEnumTokens(SPCAT_VOICES, NULL, NULL, &cpEnum);
+	//ISpObjectToken                  *pToken = NULL;
+	//WCHAR *pszCurTokenId = NULL;
 
-if(SUCCEEDED(hr))
-    hr = cpEnum->GetCount(&ulCount);
+	if(SUCCEEDED(hr))
+		hr = SpEnumTokens(SPCAT_VOICES, NULL, NULL, &cpEnum);
 
-m_currentVoiceNumber ++;
-if (m_currentVoiceNumber >= ulCount)
-{
-	m_currentVoiceNumber = 0;
-}
-            szDescription = new CSpDynamicString [ulCount];
+	if(SUCCEEDED(hr))
+		hr = cpEnum->GetCount(&ulCount);
 
-ULONG counter = -1;
-
-while (SUCCEEDED(hr) && ulCount -- )
-{
-	counter ++;
-    cpVoiceToken.Release();
-
-    if(SUCCEEDED(hr))
-        hr = cpEnum->Next( 1, &cpVoiceToken, NULL );
-           HRESULT hResult = SpGetDescription(cpVoiceToken, &szDescription[counter]);
-
-	if (counter == m_currentVoiceNumber)
+	m_currentVoiceNumber ++;
+	if (m_currentVoiceNumber >= ulCount)
 	{
-		break;
+		m_currentVoiceNumber = 0;
 	}
-}
+	szDescription = new CSpDynamicString [ulCount];
 
-    if(SUCCEEDED(hr))
-        hr = m_iV->SetVoice(cpVoiceToken);
+	ULONG counter = -1;
 
-cpVoiceToken.Release();
+	while (SUCCEEDED(hr) && ulCount -- )
+	{
+		counter ++;
+		cpVoiceToken.Release();
 
-CString str = W2T(szDescription[m_currentVoiceNumber]);
-string str2 = W2CA(str);
+		if(SUCCEEDED(hr))
+			hr = cpEnum->Next( 1, &cpVoiceToken, NULL );
+		HRESULT hResult = SpGetDescription(cpVoiceToken, &szDescription[counter]);
 
-if(SUCCEEDED(hr) && speakNotify)
-       Play( L"This is my new voice !");
+		if (counter == m_currentVoiceNumber)
+		{
+			break;
+		}
+	}
 
-delete [] szDescription;
+	if(SUCCEEDED(hr))
+		hr = m_iV->SetVoice(cpVoiceToken);
 
-return str2;
+	cpVoiceToken.Release();
+
+	CString str = W2T(szDescription[m_currentVoiceNumber]);
+	string str2 = W2CA(str);
+
+	if(SUCCEEDED(hr) && speakNotify)
+		Play( L"This is my new voice !");
+
+	delete [] szDescription;
+
+	return str2;
 }

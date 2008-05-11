@@ -432,6 +432,10 @@ void CAmisApp::openBook(const ambulant::net::url* filename)
 			{
 				CString temp;
 				temp.LoadStringW(IDS_ERROR_OPENING_RELOADING);
+				if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
+				{
+					AudioSequencePlayer::playPromptFromStringId("generalBookErrorReloading");
+				}
 				generalBookErrorMsgBox(temp);
 				openLastReadBook();
 			}
@@ -439,6 +443,10 @@ void CAmisApp::openBook(const ambulant::net::url* filename)
 			{
 				CString temp;
 				temp.LoadStringW(IDS_ERROR_OPENING);
+				if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
+				{
+					AudioSequencePlayer::playPromptFromStringId("generalBookError");
+				}
 				generalBookErrorMsgBox(temp);
 			}
 		}
@@ -795,10 +803,15 @@ void CAmisApp::OnLoadCd()
 	//TODO: localize this string
 	if (num_books == 0) 
 	{
+		amis::util::Log::Instance()->writeWarning("No DAISY books on CD-ROM", "CAmisApp::OnLoadCd", "AmisGuiMFC2");
+
 		CString temp;
 		temp.LoadStringW(IDS_NO_BOOKS_ON_CD);
+		if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
+		{
+			AudioSequencePlayer::playPromptFromStringId("noBooksFoundOnCd");
+		}
 		generalBookErrorMsgBox(temp);
-		amis::util::Log::Instance()->writeWarning("No DAISY books on CD-ROM", "CAmisApp::OnLoadCd", "AmisGuiMFC2");
 	}
 	else 
 	{	
@@ -842,6 +855,12 @@ void CAmisApp::OnPreferences()
 		if (prefs.mUiLanguageSelection != Preferences::Instance()->getUiLangId())
 		{
 			Preferences::Instance()->setUiLangId(prefs.mUiLanguageSelection);
+
+			if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
+			{
+				AudioSequencePlayer::playPromptFromStringId("restartForChanges");
+			}
+
 			AfxMessageBox(IDS_PLEASE_RESTART);
 		}
 
@@ -1050,11 +1069,7 @@ void CAmisApp::generalBookErrorMsgBox(CString str)
 {
 
 	bool b = beforeModalBox();
-	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
-	{
-		//AudioSequencePlayer::Instance()->Stop();
-		AudioSequencePlayer::playPromptFromStringId("generalBookError");
-	}
+	
 	AfxMessageBox(str);
 	afterModalBox(b);
 

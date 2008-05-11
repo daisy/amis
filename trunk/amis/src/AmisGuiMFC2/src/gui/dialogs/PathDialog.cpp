@@ -12,6 +12,9 @@
 #include "../resource.h"
 #include <io.h>
 
+#include "Preferences.h"
+#include "gui/self-voicing/audiosequenceplayer.h"
+
 using namespace amis::gui::dialogs;
 
 #ifdef _DEBUG
@@ -268,6 +271,11 @@ int CPathDialog::MakeSurePathExists(LPCTSTR lpPath)
 		strMsg.LoadString(IDS_FOLDERDOESNOTEXIST);
 		strMsg.Replace(_T("%s"), lpPath);
 
+		if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
+		{
+			AudioSequencePlayer::playPromptFromStringId("folder_does_not_exist");
+		}
+
 		if(AfxMessageBox(strMsg, MB_YESNO|MB_ICONQUESTION) != IDYES)
 		{
 			return (int)-1;
@@ -289,10 +297,21 @@ int CPathDialog::MakeSurePathExists(LPCTSTR lpPath)
 		{
 			case 1:
 				strMsg.LoadString(IDS_FOLDERINVALID);
+
+				if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
+				{
+					AudioSequencePlayer::playPromptFromStringId("folder_invalid");
+				}
 				break;
 			case 2:
 			default:
+
 				strMsg.LoadString(IDS_FOLDERCANTBECREATED);
+
+				if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
+				{
+					AudioSequencePlayer::playPromptFromStringId("cant_create_folder");
+				}
 				break;
 		}
 
