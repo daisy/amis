@@ -35,6 +35,9 @@ namespace dialogs
 {
 class PreferencesDialog : public AmisDialogBase
 {
+//friend class amis::gui::spoken::PreferencesDialogVoicing;
+friend class PreferencesDialogVoicing;
+
 public:
 	void resolvePromptVariables(Prompt*);
 

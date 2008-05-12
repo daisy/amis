@@ -33,7 +33,12 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "gui/self-voicing/datamodel/DataTree.h"
 #include "gui/MainWndParts.h"
 
+#include "gui/self-voicing/dialogs/PreferencesDialogVoicing.h"
+
 using namespace amis::gui::dialogs;
+using namespace amis::gui::spoken;
+
+amis::gui::dialogs::PreferencesDialogVoicing * mpPreferencesDialogVoicing = NULL;
 
 BEGIN_MESSAGE_MAP(PreferencesDialog, CDialog)
 	ON_WM_KEYUP()
@@ -57,172 +62,25 @@ END_MESSAGE_MAP()
 
 void PreferencesDialog::resolvePromptVariables(Prompt* pPrompt)
 {
-	
-	
-	CButton* p_button = NULL;
-
-	PromptItem* promptNotAvailable = DataTree::Instance()->findPromptItem("not_available");
-
-	PromptItem* promptSelected = DataTree::Instance()->findPromptItem("item_selected");
-	PromptItem* promptDeSelected = DataTree::Instance()->findPromptItem("item_deselected");
-
-	PromptVar* p_var = NULL;
-	for (int i=0; i<pPrompt->getNumberOfItems(); i++)
-	{
-		if (pPrompt->getItem(i)->getPromptItemType() == PROMPT_VARIABLE)
-		{
-			p_var = (PromptVar*)pPrompt->getItem(i);
-
-			if (p_var->getName().compare("ON_OR_OFF") == 0)
-			{
-				
-
-				if (p_var->getParam().compare("SELF_VOICING_FEATURE") == 0)
-				{
-					p_button = (CButton*)this->GetDlgItem(IDC_ISSELFVOICING);
-				if (p_button != NULL)
-				{
-					if (p_button->GetCheck() == 1)
-					{
-						p_var->setContents(promptSelected->getContents()->clone());
-					}
-					else
-					{
-						p_var->setContents(promptDeSelected->getContents()->clone());
-					}
-				}
-				} else if (p_var->getParam().compare("HIGHLIGHTTEXT_FEATURE") == 0)
-				{
-					
-					p_button = (CButton*)this->GetDlgItem(IDC_HIGHLIGHTTEXT);
-				if (p_button != NULL)
-				{
-					if (p_button->GetCheck() == 1)
-					{
-						p_var->setContents(promptSelected->getContents()->clone());
-					}
-					else
-					{
-						p_var->setContents(promptDeSelected->getContents()->clone());
-					}
-				}
-				} else if (p_var->getParam().compare("LOAD_LAST_READ_FEATURE") == 0)
-				{
-					p_button = (CButton*)this->GetDlgItem(IDC_LOADLASTBOOK);
-				if (p_button != NULL)
-				{
-					if (p_button->GetCheck() == 1)
-					{
-						p_var->setContents(promptSelected->getContents()->clone());
-					}
-					else
-					{
-						p_var->setContents(promptDeSelected->getContents()->clone());
-					}
-				}
-				} else if (p_var->getParam().compare("BASIC_VIEW_FEATURE") == 0)
-				{
-					p_button = (CButton*)this->GetDlgItem(IDC_STARTINBASICVIEW);
-				if (p_button != NULL)
-				{
-					if (p_button->GetCheck() == 1)
-					{
-						p_var->setContents(promptSelected->getContents()->clone());
-					}
-					else
-					{
-						p_var->setContents(promptDeSelected->getContents()->clone());
-					}
-				}
-				}  else if (p_var->getParam().compare("PAUSEONLOSTFOCUS_FEATURE") == 0)
-				{
-					p_button = (CButton*)this->GetDlgItem(IDC_PAUSEONLOSTFOCUS);
-				if (p_button != NULL)
-				{
-					if (p_button->GetCheck() == 1)
-					{
-						p_var->setContents(promptSelected->getContents()->clone());
-					}
-					else
-					{
-						p_var->setContents(promptDeSelected->getContents()->clone());
-					}
-				}
-				}  else if (p_var->getParam().compare("DISABLESCREENSAVER_FEATURE") == 0)
-				{
-					p_button = (CButton*)this->GetDlgItem(IDC_DISABLESCREENSAVER);
-				if (p_button != NULL)
-				{
-					if (p_button->GetCheck() == 1)
-					{
-						p_var->setContents(promptSelected->getContents()->clone());
-					}
-					else
-					{
-						p_var->setContents(promptDeSelected->getContents()->clone());
-					}
-				}
-				}
-			}else if (p_var->getName().compare("LANGUAGE_NAME") == 0)
-			{
-
-				CComboBox* lang_combo = (CComboBox*)GetDlgItem(IDC_INSTALLEDLANGUAGES);
-				int sel = lang_combo->GetCurSel();
-				amis::StringModuleMap* p_langs = Preferences::Instance()->getInstalledLanguages();
-				amis::StringModuleMap::iterator it = p_langs->begin();
-				//increment the iterator to go to the same number as the combo selection
-				for (int i = 0; i<sel; i++) it++;
-				mUiLanguageSelection = it->first;
-
-
-				wstring str;
-				CString cstr(mUiLanguageSelection.c_str());
-				str = cstr;
-				p_var->setContents(str, "");
-
-				amis::ModuleDescData* p_data = Preferences::Instance()->getCurrentLanguageData();
-				if (p_data != NULL || p_data->getLabel() != NULL)
-				{
-
-					amis::MediaGroup* p_media = p_data->getLabel();
-					//p_media->getText()->getTextString().c_str();
-
-					p_var->setContents(p_media);
-
-				}
-
-
-				
-			}else if (p_var->getName().compare("TTS_VOICE_NAME") == 0)
-			{
-				CComboBox* list = (CComboBox*)GetDlgItem(IDC_TTSVOICES);
-
-				int selected = list->GetCurSel();
-				mTTSVoiceIndex = selected;
-
-					amis::tts::TTSPlayer::Instance()->ChangeVoice(selected);
-
-					CString cstr;
-					list->GetWindowText(cstr);
-					wstring str = L"Daniel";
-					str = cstr.GetBuffer();
-					p_var->setContents(str, "");
-				
-
-			}
-
-		}
-	}
+	mpPreferencesDialogVoicing->resolvePromptVariables(pPrompt);
 	AmisDialogBase::resolvePromptVariables(pPrompt);
 }
 
 PreferencesDialog::PreferencesDialog(CWnd* pParent /*=NULL*/)
 	: AmisDialogBase(PreferencesDialog::IDD)
 {
+	if (Preferences::Instance()->getIsSelfVoicing() == true)
+	{
+		mpPreferencesDialogVoicing = new amis::gui::dialogs::PreferencesDialogVoicing(this);
+	}
 }
 
 PreferencesDialog::~PreferencesDialog()
 {
+	if (mpPreferencesDialogVoicing != NULL)
+	{
+		delete mpPreferencesDialogVoicing;
+	}
 }
 
 string PreferencesDialog::getUiLangSelection()
