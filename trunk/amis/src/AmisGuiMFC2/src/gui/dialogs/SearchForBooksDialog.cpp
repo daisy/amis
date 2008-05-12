@@ -30,7 +30,12 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 #include "gui/self-voicing/datamodel/DataTree.h"
 
+#include "gui/self-voicing/dialogs/SearchForBooksDialogVoicing.h"
+
 using namespace amis::gui::dialogs;
+using namespace amis::gui::spoken;
+
+amis::gui::dialogs::SearchForBooksDialogVoicing * mpSearchForBooksDialogVoicing = NULL;
 
 BEGIN_MESSAGE_MAP(SearchForBooksDialog, CDialog)
 	ON_WM_PAINT()
@@ -69,32 +74,18 @@ void SearchForBooksDialog::OnSelchangeFilelist()
 }
 void SearchForBooksDialog::resolvePromptVariables(Prompt* pPrompt)
 {
-	
-	PromptVar* p_var = NULL;
-	PromptItem* promptNotAvailable = DataTree::Instance()->findPromptItem("not_available");
-
-	for (int i=0; i<pPrompt->getNumberOfItems(); i++)
-	{
-		if (pPrompt->getItem(i)->getPromptItemType() == PROMPT_VARIABLE)
-		{
-			p_var = (PromptVar*)pPrompt->getItem(i);
-
-			if (p_var->getName().compare("NUM_FILES_FOUND") == 0)
-			{
-				CString value;
-				value.Format(_T("%d"), mFilesFound);
-				wstring str;
-				str = value;
-				p_var->setContents(str, "");
-			}
-		}
-	}
+	mpSearchForBooksDialogVoicing->resolvePromptVariables(pPrompt);
 	AmisDialogBase::resolvePromptVariables(pPrompt);
 }
 
 SearchForBooksDialog::SearchForBooksDialog(CWnd* pParent /*=NULL*/)
 	: AmisDialogBase(SearchForBooksDialog::IDD)
 {
+	if (Preferences::Instance()->getIsSelfVoicing() == true)
+	{
+		mpSearchForBooksDialogVoicing = new amis::gui::dialogs::SearchForBooksDialogVoicing(this);
+	}
+
 	mCaptionWhileSearching.LoadStringW(IDS_SEARCHING);
 	mCaptionDefault.LoadStringW(AFX_IDS_IDLEMESSAGE);
 	mCaptionSearchAborted.LoadStringW(IDS_SEARCH_STOPPED);
@@ -108,6 +99,10 @@ SearchForBooksDialog::SearchForBooksDialog(CWnd* pParent /*=NULL*/)
 
 SearchForBooksDialog::~SearchForBooksDialog()
 {
+	if (mpSearchForBooksDialogVoicing != NULL)
+	{
+		delete mpSearchForBooksDialogVoicing;
+	}
 }
 
 BOOL SearchForBooksDialog::OnInitDialog() 
@@ -135,53 +130,7 @@ void SearchForBooksDialog::announceStatus(CString msg, SearchStatus status)
 	}
 	if (amis::Preferences::Instance()->getIsSelfVoicing() == true) 
 	{
-		if (status == SEARCHING) 
-		{
-			AudioSequencePlayer::Instance()->playDialogControlFromUiIds(IDD_SEARCHDAISY, IDC_SEARCHING, this, true, "WhileSearching");
-		} 
-		else if (status == NONE_FOUND) 
-		{
-			AudioSequencePlayer::Instance()->playDialogControlFromUiIds(IDD_SEARCHDAISY, IDC_SEARCHING, this, true, "SearchCompleteNoFilesFound");
-		} 
-		else if (status == ONE_FOUND || status == MANY_FOUND) 
-		{
-			CListBox* p_filelist = NULL;
-			p_filelist = (CListBox*)this->GetDlgItem(IDC_FILESFOUND);
-			p_filelist->SetCurSel(0);
-
-			AudioSequence * seq = NULL;
-			if (status == ONE_FOUND) 
-			{
-				seq = AudioSequencePlayer::Instance()->playDialogControlFromUiIds(IDD_SEARCHDAISY, IDC_SEARCHING, this, false, "SearchCompleteOneFileFound");
-			} 
-			else 
-			{
-				seq = AudioSequencePlayer::Instance()->playDialogControlFromUiIds(IDD_SEARCHDAISY, IDC_SEARCHING, this, false, "SearchCompleteFilesFound");
-			}
-		
-			AudioSequence * seq2 = AudioSequencePlayer::Instance()->playDialogControlFromUiIds(IDD_SEARCHDAISY, IDC_FILESFOUND, this, false, "default");
-			seq->appendAll(seq2);
-			delete seq2;
-		
-			int sel = p_filelist->GetCurSel();
-			if (sel >= 0) 
-			{ 
-				amis::UrlList* p_search_results = mSearcher.getSearchResults();
-				if (sel > -1 && sel < p_search_results->size()) 
-				{
-					//mLoadBookOnDialogClose = (*p_search_results)[sel];	
-					CString str;
-					p_filelist->GetText(sel, str);
-					seq->append(str);
-				}
-			}
-			AudioSequencePlayer::Instance()->Play(seq);
-
-		} 
-		else if (status == STOPPED) 
-		{
-			AudioSequencePlayer::Instance()->playDialogControlFromUiIds(IDD_SEARCHDAISY, IDC_SEARCHING, this, true, "SearchAborted");
-		} 
+		mpSearchForBooksDialogVoicing->announceStatus(msg, status);
 	}
 }
 

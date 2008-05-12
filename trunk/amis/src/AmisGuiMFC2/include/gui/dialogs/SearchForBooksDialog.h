@@ -39,6 +39,9 @@ enum SearchStatus
 };
 class SearchForBooksDialog : public AmisDialogBase
 {
+//friend class amis::gui::spoken::SearchForBooksDialogVoicing;
+friend class SearchForBooksDialogVoicing;
+
 public:
 	void resolvePromptVariables(Prompt*);
 
