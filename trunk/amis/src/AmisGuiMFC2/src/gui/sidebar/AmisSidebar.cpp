@@ -659,7 +659,7 @@ void CAmisSidebar::changeView(int sel)
 	
 	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 	{
-		AudioSequencePlayer::playPromptFromStringId("sidebarHasFocus");
+		amis::gui::CAmisApp::pauseBookAndMsg("sidebarHasFocus");
 	}
 }
 void CAmisSidebar::setFocusToActiveList()

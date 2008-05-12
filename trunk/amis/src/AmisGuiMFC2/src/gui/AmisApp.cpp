@@ -959,14 +959,26 @@ void CAmisApp::OnFindPreviousInText()
 		amis::dtb::DtbWithHooks::Instance()->loadSmilFromUrl(&smil_url);
 	}
 }
+void CAmisApp::pauseBookAndMsg(std::string msg)
+{
+	MmView *view = MainWndParts::Instance()->mpMmView;
+	bool b_was_playing = view->isPlaying();
+
+	if (b_was_playing == true)
+	{
+		view->OnFilePause();
+	}
+
+	AudioSequencePlayer::playPromptFromStringId(msg);
+
+	if (b_was_playing == true)
+	{
+		AudioSequencePlayer::Instance()->WaitForEndSeqAndRestartBook();
+	}
+}
 void CAmisApp::OnFocusOnSidebar()
 {
 	MainWndParts::Instance()->mpSidebar->m_wndDlg.setFocusToActiveList();
-	
-	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
-	{
-		AudioSequencePlayer::playPromptFromStringId("sidebarHasFocus");
-	}
 }
 void CAmisApp::OnToggleSelfVoicingAudio()
 {
@@ -980,7 +992,7 @@ void CAmisApp::OnFocusOnText()
 	
 	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 	{
-		AudioSequencePlayer::playPromptFromStringId("textWindowHasFocus");
+		amis::gui::CAmisApp::pauseBookAndMsg("textWindowHasFocus");
 	}
 }
 void CAmisApp::OnResetHighlightColors()
