@@ -497,6 +497,10 @@
 							>
 						</File>
 						<File
+							RelativePath=".\include\gui\self-voicing\dialogs\PublicationSummaryDialogVoicing.h"
+							>
+						</File>
+						<File
 							RelativePath=".\include\gui\self-voicing\dialogs\SearchForBooksDialogVoicing.h"
 							>
 						</File>
@@ -1481,6 +1485,18 @@
 							</FileConfiguration>
 							<FileConfiguration
 								Name="Release|Win32"
+								>
+								<Tool
+									Name="VCCLCompilerTool"
+									UsePrecompiledHeader="0"
+								/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath=".\src\gui\self-voicing\dialogs\PublicationSummaryDialogVoicing.cpp"
+							>
+							<FileConfiguration
+								Name="Debug|Win32"
 								>
 								<Tool
 									Name="VCCLCompilerTool"

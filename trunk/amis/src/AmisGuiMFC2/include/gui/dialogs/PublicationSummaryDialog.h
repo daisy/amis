@@ -22,6 +22,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #ifndef PUBLICATIONSUMMARY_H
 #define PUBLICATIONSUMMARY_H
 
+#include "stdafx.h"
 #include "gui/dialogs/AmisDialogBase.h"
 #include "../resource.h"
 #include "AmisCore.h"
@@ -35,6 +36,9 @@ namespace dialogs
 {
 class PublicationSummaryDialog : public AmisDialogBase
 {
+//friend class amis::gui::spoken::PublicationSummaryDialogVoicing;
+friend class PublicationSummaryDialogVoicing;
+
 public:
 	void resolvePromptVariables(Prompt*);
 	PublicationSummaryDialog(CWnd* pParent = NULL);
