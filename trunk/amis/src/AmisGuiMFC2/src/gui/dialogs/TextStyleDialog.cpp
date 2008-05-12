@@ -129,6 +129,7 @@ void TextStyleDialog::initializeCombos()
 	CClientDC dc(this);	
 	EnumFonts (dc, 0,(FONTENUMPROC)EnumFontCallback,(LPARAM)this->GetDlgItem(IDC_FONT));
 }
+
 void TextStyleDialog::OnPaint() 
 {
 	CPaintDC dc(this); // device context for painting
@@ -138,23 +139,8 @@ void TextStyleDialog::OnPaint()
 	on_paint();
 }
 
-
 BOOL TextStyleDialog::PreTranslateMessage(MSG* pMsg)
 {
-	if (pMsg->message == WM_KEYDOWN || pMsg->message == WM_KEYUP)
-	{
-		CWnd* p_wnd = this->GetFocus();
-		if (p_wnd)
-		{
-			int id = p_wnd->GetDlgCtrlID();
-			//inexplicably, the default behavior for pressing enter in a dialog is to close it.
-			//we're overriding this here.
-			if (pMsg->wParam == VK_RETURN)
-			{
-				//do nothing
-			}	
-		}
-	}
 	return AmisDialogBase::PreTranslateMessage(pMsg);
 }
 

@@ -180,20 +180,6 @@ void PreferencesDialog::OnPaint()
 
 BOOL PreferencesDialog::PreTranslateMessage(MSG* pMsg)
 {
-	if (pMsg->message == WM_KEYDOWN || pMsg->message == WM_KEYUP)
-	{
-		CWnd* p_wnd = this->GetFocus();
-		if (p_wnd)
-		{
-			int id = p_wnd->GetDlgCtrlID();
-			//inexplicably, the default behavior for pressing enter in a dialog is to close it.
-			//we're overriding this here.
-			if (pMsg->wParam == VK_RETURN)
-			{
-				//do nothing
-			}	
-		}
-	}
 	return AmisDialogBase::PreTranslateMessage(pMsg);
 }
 

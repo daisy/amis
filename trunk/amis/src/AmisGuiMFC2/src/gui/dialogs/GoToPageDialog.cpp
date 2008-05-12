@@ -76,41 +76,4 @@ void GoToPageDialog::OnPaint()
 BOOL GoToPageDialog::PreTranslateMessage(MSG* pMsg)
 {
 	return AmisDialogBase::PreTranslateMessageTextField(pMsg, IDC_PAGENUM);
-
-	/*
-	if (pMsg->message == WM_KEYDOWN || pMsg->message == WM_KEYUP)
-	{
-		CWnd* cwnd = this->GetFocus();
-		if (cwnd) {
-			//int id = cwnd->GetDlgCtrlID();
-			CEdit* p_edit = (CEdit*)GetDlgItem(IDC_PAGENUM);
-			if (cwnd == p_edit) {
-
-				CString str;
-				p_edit->GetWindowText(str);
-
-
-				if (!str.IsEmpty()) {
-
-					CString strFULL = str;
-
-					int nStartChar = -1;
-					int nEndChar = -1;
-					p_edit->GetSel(nStartChar, nEndChar);
-
-					str = mCommonPreTranslateMessageHandler->normalizeTextEntry(str, nStartChar, nEndChar);
-
-					if (!str.IsEmpty()) { // && (pMsg->wParam == VK_UP || pMsg->wParam == VK_DOWN || pMsg->wParam == VK_LEFT || pMsg->wParam == VK_RIGHT)) {
-						mCommonPreTranslateMessageHandler->handle(pMsg, (cwnd == NULL ? -1 : cwnd->GetDlgCtrlID()),false,true,str, strFULL, false);
-						return CDialog::PreTranslateMessage(pMsg);
-					}
-				}
-			}
-
-			mCommonPreTranslateMessageHandler->handle(pMsg, (cwnd == NULL ? -1 : cwnd->GetDlgCtrlID()));
-		}
-	}
-
-	return CDialog::PreTranslateMessage(pMsg);
-	*/
 }

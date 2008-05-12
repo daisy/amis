@@ -110,15 +110,6 @@ BOOL PublicationSummaryDialog::PreTranslateMessage(MSG* pMsg)
 			{
 				return CDialog::PreTranslateMessage(pMsg);
 			}
-
-
-			//inexplicably, the default behavior for pressing enter in a dialog is to close it.
-			//we're overriding this here.
-			if (pMsg->wParam == VK_RETURN)
-			{
-				//do nothing
-				//return CDialog::PreTranslateMessage(pMsg);
-			}	
 		}
 	}
 	return AmisDialogBase::PreTranslateMessage(pMsg);
