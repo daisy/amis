@@ -493,6 +493,10 @@
 						Name="dialogs"
 						>
 						<File
+							RelativePath=".\include\gui\self-voicing\dialogs\FindInTextDialogVoicing.h"
+							>
+						</File>
+						<File
 							RelativePath=".\include\gui\self-voicing\dialogs\MenuVoicing.h"
 							>
 						</File>
@@ -1476,6 +1480,18 @@
 					<Filter
 						Name="dialogs"
 						>
+						<File
+							RelativePath=".\src\gui\self-voicing\dialogs\FindInTextDialogVoicing.cpp"
+							>
+							<FileConfiguration
+								Name="Debug|Win32"
+								>
+								<Tool
+									Name="VCCLCompilerTool"
+									UsePrecompiledHeader="0"
+								/>
+							</FileConfiguration>
+						</File>
 						<File
 							RelativePath=".\src\gui\self-voicing\dialogs\MenuVoicing.cpp"
 							>

@@ -34,6 +34,9 @@ namespace dialogs
 {
 class FindInTextDialog : public AmisDialogBase
 {
+//friend class amis::gui::spoken::FindInTextDialogVoicing;
+friend class FindInTextDialogVoicing;
+
 public:
 
 	FindInTextDialog(CWnd* pParent = NULL);

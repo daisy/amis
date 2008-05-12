@@ -33,7 +33,12 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "gui/self-voicing/Prompt.h"
 #include "gui/self-voicing/UiMediaTypes.h"
 
+#include "gui/self-voicing/dialogs/FindInTextDialogVoicing.h"
+
 using namespace amis::gui::dialogs;
+using namespace amis::gui::spoken;
+
+amis::gui::dialogs::FindInTextDialogVoicing * mpFindInTextDialogVoicing = NULL;
 
 BEGIN_MESSAGE_MAP(FindInTextDialog, CDialog)
 	ON_WM_PAINT()
@@ -49,12 +54,20 @@ END_MESSAGE_MAP()
 FindInTextDialog::FindInTextDialog(CWnd* pParent /*=NULL*/)
 	: AmisDialogBase(FindInTextDialog::IDD)
 {
+	if (Preferences::Instance()->getIsSelfVoicing() == true)
+	{
+		mpFindInTextDialogVoicing = new amis::gui::dialogs::FindInTextDialogVoicing(this);
+	}
 	mUserData.Empty();
 	mDir = 0;
 }
 
 FindInTextDialog::~FindInTextDialog()
 {
+	if (mpFindInTextDialogVoicing != NULL)
+	{
+		delete mpFindInTextDialogVoicing;
+	}
 }
 
 CString	FindInTextDialog::getUserSearchString()
@@ -137,40 +150,6 @@ void FindInTextDialog::OnSetfocusCancel()
 }
 void FindInTextDialog::resolvePromptVariables(Prompt* pPrompt) 
 {
-	
-	PromptVar* p_var = NULL;
-	PromptItem* promptNotAvailable = DataTree::Instance()->findPromptItem("not_available");
-
-	for (int i=0; i<pPrompt->getNumberOfItems(); i++)
-	{
-		if (pPrompt->getItem(i)->getPromptItemType() == PROMPT_VARIABLE)
-		{
-			p_var = (PromptVar*)pPrompt->getItem(i);
-
-			if (p_var->getName().compare("SELECTED_OR_DESELECTED") == 0)
-			{
-				string strSelect;
-				
-	CButton* p_check_prev =	(CButton*)GetDlgItem(IDC_FINDPREVIOUS);
-
-					if (p_check_prev->GetCheck() == 1)
-					{
-						strSelect = "item_selected";
-					}
-					else
-					{
-						strSelect = "item_deselected";
-					}
-
-					amis::gui::spoken::PromptItem* pi = NULL;
-
-					pi = amis::gui::spoken::DataTree::Instance()->findPromptItem(strSelect);
-					if (pi != NULL)
-					{
-						p_var->setContents(pi->getContents()->clone());
-					}
-			}
-		}
-	}
+	mpFindInTextDialogVoicing->resolvePromptVariables(pPrompt);
 	AmisDialogBase::resolvePromptVariables(pPrompt);
 }
