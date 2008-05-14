@@ -102,6 +102,7 @@ SearchForBooksDialog::~SearchForBooksDialog()
 	if (mpSearchForBooksDialogVoicing != NULL)
 	{
 		delete mpSearchForBooksDialogVoicing;
+		mpSearchForBooksDialogVoicing = NULL;
 	}
 }
 

@@ -67,6 +67,7 @@ FindInTextDialog::~FindInTextDialog()
 	if (mpFindInTextDialogVoicing != NULL)
 	{
 		delete mpFindInTextDialogVoicing;
+		mpFindInTextDialogVoicing = NULL;
 	}
 }
 

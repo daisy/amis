@@ -62,6 +62,7 @@ PublicationSummaryDialog::~PublicationSummaryDialog()
 	if (mpPublicationSummaryDialogVoicing != NULL)
 	{
 		delete mpPublicationSummaryDialogVoicing;
+		mpPublicationSummaryDialogVoicing = NULL;
 	}
 }
 

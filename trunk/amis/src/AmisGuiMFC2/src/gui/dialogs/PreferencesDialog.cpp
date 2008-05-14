@@ -80,6 +80,7 @@ PreferencesDialog::~PreferencesDialog()
 	if (mpPreferencesDialogVoicing != NULL)
 	{
 		delete mpPreferencesDialogVoicing;
+		mpPreferencesDialogVoicing = NULL;
 	}
 }
 

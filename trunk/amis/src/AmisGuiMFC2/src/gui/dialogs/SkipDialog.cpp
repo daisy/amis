@@ -67,6 +67,7 @@ SkipDialog::~SkipDialog()
 	if (mpSkipDialogVoicing != NULL)
 	{
 		delete mpSkipDialogVoicing;
+		mpSkipDialogVoicing = NULL;
 	}
 }
 BOOL SkipDialog::PreTranslateMessage(MSG* pMsg)

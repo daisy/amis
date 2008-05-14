@@ -121,7 +121,10 @@ CMainFrame::CMainFrame()
 CMainFrame::~CMainFrame()
 {
 	delete mCommonPreTranslateMessageHandler;
+	mCommonPreTranslateMessageHandler = NULL;
+
 	delete mMenuVoicing;
+	mMenuVoicing = NULL;
 }
 
 void CMainFrame::OnClose() 

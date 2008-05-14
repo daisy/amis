@@ -36,6 +36,9 @@ namespace dialogs
 {
 class TextStyleDialog : public AmisDialogBase
 {
+//friend class amis::gui::spoken::TextStyleDialogVoicing;
+friend class TextStyleDialogVoicing;
+
 public:
 	void resolvePromptVariables(Prompt*);
 	virtual void DoDataExchange(CDataExchange*);
@@ -44,6 +47,7 @@ public:
 	~TextStyleDialog();
 	enum { IDD = IDD_TEXTSTYLE };
 protected:
+
 	void initializeCombos();
 	virtual BOOL OnInitDialog();
 	virtual BOOL PreTranslateMessage(MSG* pMsg);

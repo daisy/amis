@@ -40,7 +40,6 @@ namespace amis
 
 			void TextStyleDialogVoicing::resolvePromptVariables(Prompt* pPrompt)
 			{
-
 				USES_CONVERSION;
 
 				PromptVar* p_var = NULL;
@@ -52,41 +51,49 @@ namespace amis
 
 						if (p_var->getName().compare("FONT_NAME") == 0)
 						{
-							CString tmp_font;
 							CComboBox* p_font_list = (CComboBox*)mpDialog->GetDlgItem(IDC_FONT);
-							p_font_list->GetWindowText(tmp_font);
+
+							int sel = p_font_list->GetCurSel();
+							CString tmp_font;
+							p_font_list->GetLBText(sel, tmp_font);
 
 							wstring str;
 							str = tmp_font;
 							p_var->setContents(str, "");
-						} else 
+						}
+						else 
+						{
 							if (p_var->getName().compare("FOREGROUND_COLOR_NAME") == 0)
 							{
-
-								CString tmp_fore;
 								CComboBox* p_foreground_list = (CComboBox*)mpDialog->GetDlgItem(IDC_HIGHLIGHTFOREGROUND);
-								p_foreground_list->GetWindowText(tmp_fore);
+
+								int sel = p_foreground_list->GetCurSel();
+								CString tmp_fore;
+								p_foreground_list->GetLBText(sel, tmp_fore);
 
 								wstring str;
 								str = tmp_fore;
 								p_var->setContents(str, "");
-							} else 
+							}
+							else
+							{
 								if (p_var->getName().compare("BACKGROUND_COLOR_NAME") == 0)
 								{
-
-									CString tmp_back;
 									CComboBox* p_background_list = (CComboBox*)mpDialog->GetDlgItem(IDC_HIGHLIGHTBACKGROUND);
-									p_background_list->GetWindowText(tmp_back);
 
+									int sel = p_background_list->GetCurSel();
+									CString tmp_back;
+									p_background_list->GetLBText(sel, tmp_back);
 
 									wstring str;
 									str = tmp_back;
 									p_var->setContents(str, "");
 								} 
+							}
+						}
 					}
 				}
 			}
-
 		}
 	}
 }

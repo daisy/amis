@@ -38,7 +38,6 @@ using namespace amis::gui::spoken;
 
 amis::gui::dialogs::TextStyleDialogVoicing * mpTextStyleDialogVoicing = NULL;
 
-
 BEGIN_MESSAGE_MAP(TextStyleDialog, CDialog)
 	ON_WM_KEYUP()
 	ON_WM_KEYDOWN()
@@ -86,6 +85,7 @@ TextStyleDialog::~TextStyleDialog()
 	if (mpTextStyleDialogVoicing != NULL)
 	{
 		delete mpTextStyleDialogVoicing;
+		mpTextStyleDialogVoicing = NULL;
 	}
 }
 BOOL TextStyleDialog::OnInitDialog() 
@@ -153,6 +153,11 @@ void TextStyleDialog::OnCbnSelchangeFont()
 	CWnd* cwnd = this->GetFocus();
 	CComboBox* p = (CComboBox*)GetDlgItem(IDC_FONT);
 	int sel = p->GetCurSel();
+TRACE("SEL: %d", sel);
+	CString tmp;
+	p->GetWindowText(tmp);
+	p->GetLBText(sel, tmp);
+TRACE(tmp);
 	triggerVirtualKeyStroke(p);
 }
 void TextStyleDialog::OnCbnSetfocusFont()
