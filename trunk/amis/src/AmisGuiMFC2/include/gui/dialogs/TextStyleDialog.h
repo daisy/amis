@@ -38,6 +38,7 @@ class TextStyleDialog : public AmisDialogBase
 {
 public:
 	void resolvePromptVariables(Prompt*);
+	virtual void DoDataExchange(CDataExchange*);
 
 	TextStyleDialog(CWnd* pParent = NULL);
 	~TextStyleDialog();

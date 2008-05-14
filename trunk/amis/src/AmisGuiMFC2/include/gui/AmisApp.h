@@ -56,7 +56,8 @@ class CAmisApp : public CWinApp
 public:
 	CAmisApp();
 	
-	static void pauseBookAndMsg(std::string msg);
+	static std::wstring pauseBookAndEmitMessage(std::string msg);
+	static std::wstring emitMessage(std::string msg);
 
 	static bool beforeModalBox();
 	static void afterModalBox(bool b_was_playing);

@@ -657,10 +657,7 @@ void CAmisSidebar::changeView(int sel)
 		else showNavList(sel-1);
 	}
 	
-	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
-	{
-		amis::gui::CAmisApp::pauseBookAndMsg("sidebarHasFocus");
-	}
+	amis::gui::CAmisApp::pauseBookAndEmitMessage("sidebarHasFocus");
 }
 void CAmisSidebar::setFocusToActiveList()
 {

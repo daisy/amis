@@ -283,7 +283,7 @@ TTSPlayer::TTSPlayer(void)
 
 	ChangeVoice(amis::Preferences::Instance()->getTTSVoiceIndex());
 
-	m_iV->SetVolume(50);
+	m_iV->SetVolume(70);
 }
 
 void TTSPlayer::DestroyInstance()

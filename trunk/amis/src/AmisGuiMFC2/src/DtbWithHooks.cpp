@@ -71,14 +71,10 @@ DtbWithHooks::~DtbWithHooks()
 
 bool DtbWithHooks::open(const ambulant::net::url* filename, const ambulant::net::url* bookmarksPath)
 {
-	std::wstring str = AudioSequencePlayer::getTextForPromptFromStringId("loading");
+	std::wstring str = amis::gui::CAmisApp::emitMessage("loading");
+	
 	CString strx(str.c_str());
 	amis::gui::MainWndParts::Instance()->updateTitleBar(amis::gui::MainWndParts::TITLEBAR_BOOKTITLE, strx);
-
-	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
-	{
-		AudioSequencePlayer::playPromptFromStringId("loading");
-	}
 	
 	getFileSearcher()->clearSearchResults();
 	
@@ -112,15 +108,7 @@ bool DtbWithHooks::open(const ambulant::net::url* filename, const ambulant::net:
 	amis::gui::MenuManip::Instance()->addNavContainersToViewMenu();
 	amis::gui::MenuManip::Instance()->loadBookmarks(p_bmks);
 
-	std::wstring str2 = AudioSequencePlayer::getTextForPromptFromStringId("done");
-
-	if (MainWndParts::Instance()->mpMainFrame)
-		MainWndParts::Instance()->mpMainFrame->PostMessage(WM_APP, 0, (LPARAM)str2.c_str());
-
-	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
-	{
-		AudioSequencePlayer::playPromptFromStringId("done");
-	}
+	amis::gui::CAmisApp::emitMessage("done");
 
 	return true;
 }

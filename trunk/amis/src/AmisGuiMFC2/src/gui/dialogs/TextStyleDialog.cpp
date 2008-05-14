@@ -56,7 +56,10 @@ void TextStyleDialog::resolvePromptVariables(Prompt* pPrompt)
 	mpTextStyleDialogVoicing->resolvePromptVariables(pPrompt);
 	AmisDialogBase::resolvePromptVariables(pPrompt);
 }
-
+void TextStyleDialog::DoDataExchange(CDataExchange* pDX)
+{
+	CDialog::DoDataExchange(pDX);
+}
 BOOL CALLBACK EnumFontCallback (LPLOGFONT lplf, LPTEXTMETRIC lptm, DWORD dwType, LPARAM lpData)	
 {	
 	USES_CONVERSION;

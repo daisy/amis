@@ -732,7 +732,11 @@ void CAmisApp::OnAddBookmark()
 	amis::util::Log::Instance()->writeMessage("Adding bookmark", "CAmisApp::OnAddBookmark", "AmisGuiMFC2");
 	amis::dtb::Bookmark* p_bmk = NULL;
 	p_bmk = amis::dtb::DtbWithHooks::Instance()->addBookmark();
-	if (p_bmk) MenuManip::Instance()->addBookmark(p_bmk);
+	if (p_bmk)
+	{
+		MenuManip::Instance()->addBookmark(p_bmk);
+		pauseBookAndEmitMessage("done");
+	}
 }
 
 void CAmisApp::OnSelectBookmark(UINT id)
@@ -959,23 +963,6 @@ void CAmisApp::OnFindPreviousInText()
 		amis::dtb::DtbWithHooks::Instance()->loadSmilFromUrl(&smil_url);
 	}
 }
-void CAmisApp::pauseBookAndMsg(std::string msg)
-{
-	MmView *view = MainWndParts::Instance()->mpMmView;
-	bool b_was_playing = view->isPlaying();
-
-	if (b_was_playing == true)
-	{
-		view->OnFilePause();
-	}
-
-	AudioSequencePlayer::playPromptFromStringId(msg);
-
-	if (b_was_playing == true)
-	{
-		AudioSequencePlayer::Instance()->WaitForEndSeqAndRestartBook();
-	}
-}
 void CAmisApp::OnFocusOnSidebar()
 {
 	MainWndParts::Instance()->mpSidebar->m_wndDlg.setFocusToActiveList();
@@ -990,10 +977,7 @@ void CAmisApp::OnFocusOnText()
 {	
 	MainWndParts::Instance()->mpHtmlView->m_wndBrowser.SetFocus();
 	
-	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
-	{
-		amis::gui::CAmisApp::pauseBookAndMsg("textWindowHasFocus");
-	}
+	amis::gui::CAmisApp::pauseBookAndEmitMessage("textWindowHasFocus");
 }
 void CAmisApp::OnResetHighlightColors()
 {
@@ -1031,6 +1015,41 @@ void CAmisApp::setPauseState(bool pauseState)
 	
 	MainWndParts::Instance()->mpDefaultToolbar->togglePlayPause(pauseState);
 	MainWndParts::Instance()->mpBasicToolbar->togglePlayPause(pauseState);
+}
+
+std::wstring CAmisApp::pauseBookAndEmitMessage(std::string msgID)
+{
+	MmView *view = MainWndParts::Instance()->mpMmView;
+	bool b_was_playing = amis::Preferences::Instance()->getIsSelfVoicing() == true && view->isPlaying();
+
+	if (b_was_playing == true)
+	{
+		view->OnFilePause();
+	}
+
+	std::wstring str = emitMessage(msgID);
+
+	if (b_was_playing == true)
+	{
+		AudioSequencePlayer::Instance()->WaitForEndSeqAndRestartBook();
+	}
+	return str;
+}
+
+std::wstring CAmisApp::emitMessage(std::string msgID)
+{
+	std::wstring str2 = AudioSequencePlayer::getTextForPromptFromStringId(msgID);
+
+	if (str2.length() > 0 &&
+		MainWndParts::Instance()->mpMainFrame != NULL)
+		MainWndParts::Instance()->mpMainFrame->PostMessage(WM_APP, 0, (LPARAM)str2.c_str());
+
+	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
+	{
+		AudioSequencePlayer::playPromptFromStringId(msgID);
+	}
+	
+	return str2;
 }
 
 bool CAmisApp::beforeModalBox() 
@@ -1084,52 +1103,6 @@ void CAmisApp::generalBookErrorMsgBox(CString str)
 	
 	AfxMessageBox(str);
 	afterModalBox(b);
-
-	/* TODO: How the popup text could be obtained from the language resource:
-
-	Prompt* p_prompt_ = DataTree::Instance()->findPrompt(promptId);
-
-	if (p_prompt_ != NULL)
-	{
-
-		resolvePromptVariables(prompt, pResolver);
-
-		int sz = prompt->getNumberOfItems();
-		for (int i=0; i<sz; i++)
-		{
-			PromptItemBase* pib = prompt->getItem(i);
-			switch(pib->getPromptItemType()) {
-			case PROMPT_ITEM: {
-				PromptItem* pi = (PromptItem*) pib;
-
-				TextAudioPair* pair = pi->getContents();
-				if (pair != NULL) {
-
-					TextNodeSV * textN = pair->getText();
-					if (textN != NULL) 
-					{
-						CONCAT(textN->getTextString().c_str());
-					}
-				}
-				break;
-							  }
-			case PROMPT_VARIABLE: {
-				PromptVar* pi = (PromptVar*) pib;
-				TextAudioPair* pair = pi->getContents();
-				if (pair != NULL) {
-
-					TextNodeSV * textN = pair->getText();
-					if (textN != NULL) 
-					{
-						CONCAT(textN->getTextString().c_str());
-					}
-				}
-				break;
-								  }
-			}
-		}
-	}
-	*/
 }
 
 void CAmisApp::updateFontSizeButtons()

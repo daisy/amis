@@ -1491,6 +1491,14 @@
 									UsePrecompiledHeader="0"
 								/>
 							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|Win32"
+								>
+								<Tool
+									Name="VCCLCompilerTool"
+									UsePrecompiledHeader="0"
+								/>
+							</FileConfiguration>
 						</File>
 						<File
 							RelativePath=".\src\gui\self-voicing\dialogs\MenuVoicing.cpp"
@@ -1523,6 +1531,14 @@
 									UsePrecompiledHeader="0"
 								/>
 							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|Win32"
+								>
+								<Tool
+									Name="VCCLCompilerTool"
+									UsePrecompiledHeader="0"
+								/>
+							</FileConfiguration>
 						</File>
 						<File
 							RelativePath=".\src\gui\self-voicing\dialogs\PublicationSummaryDialogVoicing.cpp"
@@ -1535,12 +1551,28 @@
 									UsePrecompiledHeader="0"
 								/>
 							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|Win32"
+								>
+								<Tool
+									Name="VCCLCompilerTool"
+									UsePrecompiledHeader="0"
+								/>
+							</FileConfiguration>
 						</File>
 						<File
 							RelativePath=".\src\gui\self-voicing\dialogs\SearchForBooksDialogVoicing.cpp"
 							>
 							<FileConfiguration
 								Name="Debug|Win32"
+								>
+								<Tool
+									Name="VCCLCompilerTool"
+									UsePrecompiledHeader="0"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|Win32"
 								>
 								<Tool
 									Name="VCCLCompilerTool"
@@ -1573,6 +1605,14 @@
 							>
 							<FileConfiguration
 								Name="Debug|Win32"
+								>
+								<Tool
+									Name="VCCLCompilerTool"
+									UsePrecompiledHeader="0"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|Win32"
 								>
 								<Tool
 									Name="VCCLCompilerTool"
