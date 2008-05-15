@@ -2,7 +2,7 @@
 
 ; HM NIS Edit Wizard helper defines
 !define PRODUCT_NAME "AMIS"
-!define PRODUCT_VERSION "3.0 Beta 1"
+!define PRODUCT_VERSION "3.0 Beta 2"
 !define PRODUCT_PUBLISHER "DAISY for All Project"
 !define PRODUCT_WEB_SITE "http://amisproject.org"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\AMIS.exe"
@@ -68,7 +68,7 @@ Page custom SapiPage
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION} (${LANG_NAME})"
 ;this is the name of the installer that gets created.  
 ;for some reason, i vaguely remember that it shouldn't have spaces in the filename.
-OutFile "Setup-amis3-beta1-${DEFAULT_LANGPACK}.exe"
+OutFile "Setup-amis3-beta2-${DEFAULT_LANGPACK}.exe"
 InstallDir "$PROGRAMFILES\AMIS"
 InstallDirRegKey HKLM "${PRODUCT_DIR_REGKEY}" ""
 ShowInstDetails show
@@ -137,9 +137,11 @@ Section "MainSection" SEC01
   File "c:\devel\vcredist_x86.exe"
 	
 	  
-  ;TODO: ask the user if they want to change their registry to support Thai books
-  ;TODO: if so, add this key in HKLM
+  ;TODO: ask the user before doing this; but for now, just do it anyway
+  ;to support Thai encoding, add this key in HKLM
   ;Software\Classes\MIME\Database\Charset\TIS-620 and set AliasForCharset to windows-874
+   WriteRegStr HKLM "Software\Classes\MIME\Database\Charset\TIS-620" "AliasForCharset" "Windows-874"
+
    
 SectionEnd
 
@@ -161,10 +163,7 @@ Section -CopyDefaultLangpack
   SetOutPath "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}\help\img"
   File "${BIN_DIR}\settings\lang\${DEFAULT_LANGPACK}\help\img\*"
   
-  ;copy the start book files
-  SetOutPath "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}\start"
-  File "${BIN_DIR}\settings\lang\${DEFAULT_LANGPACK}\start\*"
- 
+  
  End:
 SectionEnd
 
