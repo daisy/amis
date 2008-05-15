@@ -368,14 +368,17 @@ void CAmisApp::initializeSelfVoicing()
 	p_new_data_tree = DataTree::Instance();
 
 	//a lang module file points to the moduleDescData.xml in the top-level directory of every langpack
+	amis::ModuleDescData* lang_data = amis::Preferences::Instance()->getCurrentLanguageData();
+	if (lang_data == NULL)
+	{
+		amis::util::Log::Instance()->writeError("No language pack data found", "AmisApp::initializeSelfVoicing", "AmisApp");
+	}
 	const ambulant::net::url* lang_module_file = amis::Preferences::Instance()->getCurrentLanguageData()->getXmlFileName();
 	
 	ambulant::net::url lang_xml_file = ambulant::net::url::from_filename("amisAccessibleUi.xml");
 	lang_xml_file = lang_xml_file.join_to_base(*lang_module_file);
-	
 	new_data_reader.setAppPath(mAppPath);
 	amis::ErrorCode did_it_work = new_data_reader.readFile(lang_xml_file.get_file(), p_new_data_tree);
-
 	if (did_it_work == amis::OK)
 	{	
 		//AudioSequence* seq = new AudioSequence;
@@ -392,6 +395,7 @@ void CAmisApp::initializeSelfVoicing()
 	//maybe we should try to load the default language pack here, and exit if that doesn't work.
 	else
 	{
+		amis::util::Log::Instance()->writeMessage("could not initialize self voicing");
 		amis::Preferences::Instance()->setIsSelfVoicing(false);
 	}
 	amis::util::Log::Instance()->writeMessage("end init self voicing");
