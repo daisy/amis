@@ -67,7 +67,8 @@ bool PreferencesFileIO::readFromFile(string filepath)
 	ambulant::net::url tmp_url = ambulant::net::url::from_filename(filepath);
 	mpPrefs->setSourceUrl(&tmp_url);
 	bool ret = parseFile(&tmp_url);
-	if (ret) mpPrefs->scanAll();
+	if (ret) 
+		mpPrefs->scanAll();
 	return ret;
 }
 

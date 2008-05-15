@@ -362,7 +362,6 @@ void CAmisApp::initializePathsAndFiles()
 
 void CAmisApp::initializeSelfVoicing()
 {
-	amis::util::Log::Instance()->writeMessage("start init self voicing");
 	DataReader new_data_reader;
 	DataTree* p_new_data_tree;
 	p_new_data_tree = DataTree::Instance();
@@ -395,10 +394,8 @@ void CAmisApp::initializeSelfVoicing()
 	//maybe we should try to load the default language pack here, and exit if that doesn't work.
 	else
 	{
-		amis::util::Log::Instance()->writeMessage("could not initialize self voicing");
 		amis::Preferences::Instance()->setIsSelfVoicing(false);
 	}
-	amis::util::Log::Instance()->writeMessage("end init self voicing");
 }
 const ambulant::net::url& CAmisApp::getBookURL() const
 {
