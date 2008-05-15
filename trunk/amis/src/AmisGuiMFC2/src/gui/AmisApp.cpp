@@ -166,6 +166,19 @@ BOOL CAmisApp::InitInstance()
 	amis::util::Log::Instance()->startLog(this->getAppPath() + "amisLog.txt");
 	Preferences::Instance()->logAllPreferences();
 	initializeSelfVoicing();
+
+	//load the resource dll
+	// one of the first things in the init code
+	std::string lang_dll = Preferences::Instance()->getUiLangId() + "\\" + 
+		Preferences::Instance()->getCurrentLanguageData()->getDllFileName();
+	ambulant::net::url localization_dll = ambulant::net::url::from_filename(lang_dll);
+	ambulant::net::url base_dir = *Preferences::Instance()->getLangpacksDir();
+	
+	localization_dll = localization_dll.join_to_base(base_dir);
+
+	HINSTANCE hInst_l10n = LoadLibrary(A2CW(localization_dll.get_file().c_str()));
+   if (hInst_l10n != NULL)
+     AfxSetResourceHandle(hInst_l10n);
 	AfxEnableControlContainer();
 	
 #ifdef _AFXDLL

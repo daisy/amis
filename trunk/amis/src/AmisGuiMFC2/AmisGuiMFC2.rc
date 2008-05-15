@@ -165,11 +165,11 @@ IDR_AMISTYPE MENU
 BEGIN
     POPUP "&File"
     BEGIN
-        MENUITEM "&Open...\tCtrl+O",            ID_AMIS_OPEN_FILE
-        MENUITEM "Open from &URL... \t Ctrl+U", ID_AMIS_OPEN_URL
+        MENUITEM "&Open...\tCtrl+O", 				ID_AMIS_OPEN_FILE
+        MENUITEM "Open &URL...\tCtrl+U", 			ID_AMIS_OPEN_URL
         MENUITEM "&Close",                      ID_AMIS_CLOSE_BOOK
         MENUITEM "&Load CD\tCtrl+L",            ID_AMIS_LOAD_CD
-        MENUITEM "&Search drives...",           ID_AMIS_SEARCH_LOCAL_DRIVES
+        MENUITEM "&Search Drives...",           ID_AMIS_SEARCH_LOCAL_DRIVES
         MENUITEM SEPARATOR
         MENUITEM "&Preferences...",             ID_AMIS_SHOW_PREFERENCES
         MENUITEM SEPARATOR
@@ -183,7 +183,7 @@ BEGIN
     POPUP "&View"
     BEGIN
         MENUITEM "&Sidebar",                    ID_AMIS_TOGGLE_SIDEBAR, CHECKED
-        MENUITEM "&Basic View Mode\tF11",       ID_AMIS_TOGGLE_VIEW
+        MENUITEM "&Basic View\tF11",       ID_AMIS_TOGGLE_VIEW
         MENUITEM SEPARATOR
         POPUP "&Page Style"
         BEGIN
@@ -191,7 +191,7 @@ BEGIN
         END
         MENUITEM "Bi&gger Font",                ID_AMIS_BIGGER_FONT
         MENUITEM "S&maller Font",               ID_AMIS_SMALLER_FONT
-        MENUITEM "&Text style...",              ID_AMIS_SHOW_TEXTSTYLE
+        MENUITEM "&Text Style...",              ID_AMIS_SHOW_TEXTSTYLE
     END
     POPUP "&Play"
     BEGIN
@@ -222,7 +222,7 @@ BEGIN
         MENUITEM "Next Page\tCtrl+Right",       ID_AMIS_NEXT_PAGE
         MENUITEM "Go to Page...\tCtrl+G",       ID_AMIS_GOTO_PAGE
         MENUITEM SEPARATOR
-        MENUITEM "&Find in Text\tCtrl+F",       ID_AMIS_FIND_IN_TEXT
+        MENUITEM "&Find in Text...\tCtrl+F",       ID_AMIS_FIND_IN_TEXT
     END
     POPUP "&Bookmarks"
     BEGIN
@@ -232,11 +232,11 @@ BEGIN
     POPUP "&Info"
     BEGIN
         MENUITEM "&Reading Options...",         ID_AMIS_SHOW_READING_OPTIONS
-        MENUITEM "&Publication Summary",        ID_AMIS_SHOW_PUBLICATION_SUMMARY
+        MENUITEM "&Publication Summary...",        ID_AMIS_SHOW_PUBLICATION_SUMMARY
     END
     POPUP "&Help"
     BEGIN
-        MENUITEM "&Contents \tF1",              ID_AMIS_SHOW_HELP_CONTENTS
+        MENUITEM "&Contents",              ID_AMIS_SHOW_HELP_CONTENTS
         MENUITEM "&Keyboard shortcuts",         ID_AMIS_SHOW_KEYBOARD_SHORTCUTS
         MENUITEM "&About AMIS",                 ID_AMIS_ABOUT
     END
@@ -262,7 +262,7 @@ STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Search for DAISY Books"
 FONT 8, "MS Sans Serif", 0, 0, 0x0
 BEGIN
-    LTEXT           "You can search your computer for DAISY books. Enter a path or browse for a folder to search, then press Search to begin searching.",IDC_SEARCHINSTRUCTIONS,7,7,298,30
+    LTEXT           "You can search your computer for DAISY books.  Enter a path or browse for a folder to search, then press Search to begin searching.",IDC_SEARCHINSTRUCTIONS,7,7,298,30
     EDITTEXT        IDC_SEARCHPATH,7,39,245,14,ES_AUTOHSCROLL
     PUSHBUTTON      "Browse...",IDC_BROWSE,260,39,45,13
     PUSHBUTTON      "&Search",IDC_STARTSEARCH,103,63,50,15
@@ -278,7 +278,7 @@ STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Go To Page"
 FONT 8, "MS Sans Serif", 0, 0, 0x0
 BEGIN
-    LTEXT           "Enter the number or label of the page that you want to go to.",IDC_GOTOPAGE_CAPTION,7,7,140,20
+    LTEXT           "Enter the number or label of the page that you want to go to:",IDC_GOTOPAGE_CAPTION,7,7,140,20
     EDITTEXT        IDC_PAGENUM,7,27,86,14,ES_AUTOHSCROLL
     DEFPUSHBUTTON   "OK",IDOK,23,52,50,14
     PUSHBUTTON      "&Cancel",IDCANCEL,82,52,50,14
@@ -289,7 +289,7 @@ STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Find in Text"
 FONT 8, "MS Sans Serif", 0, 0, 0x0
 BEGIN
-    LTEXT           "Search the text of the book in either direction",IDC_FIND_DESCRIPTION,7,7,178,8
+    LTEXT           "Search the text of the book in either direction.",IDC_FIND_DESCRIPTION,7,7,178,8
     EDITTEXT        IDC_SEARCHSTRING,7,22,178,13,ES_AUTOHSCROLL
     CONTROL         "Find previous",IDC_FINDPREVIOUS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,41,58,10
     DEFPUSHBUTTON   "OK",IDOK,42,57,50,14
@@ -316,7 +316,7 @@ BEGIN
     LTEXT           "AMIS: \nAdaptive Multimedia Information System",IDC_AMISNAME,40,10,132,31,SS_NOPREFIX
     LTEXT           "Version 3.0 beta 2",IDC_VERSION,39,44,128,8
     LTEXT           "Release Date: 14 May 2008",IDC_VERSIONNOTE,40,59,124,11
-    LTEXT           "Copyright © 2008 DAISY for All",IDC_COPYRIGHT,40,75,132,16
+    LTEXT           "Copyright (c) 2008 DAISY for All",IDC_COPYRIGHT,40,75,132,16
     DEFPUSHBUTTON   "OK",IDOK,65,101,50,14,WS_GROUP
 END
 
@@ -325,7 +325,7 @@ STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Publication Summary"
 FONT 8, "MS Sans Serif", 0, 0, 0x0
 BEGIN
-    LTEXT           "Information about this publication and your current position:",IDC_PUBLICATIONSUMMARYCAPTION,6,7,309,17
+    LTEXT           "Information about this publication and your current position",IDC_PUBLICATIONSUMMARYCAPTION,6,7,309,17
     CONTROL         "",IDC_SUMMARYLIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,6,25,309,137
     DEFPUSHBUTTON   "OK",IDOK,137,164,50,14
 END
@@ -358,11 +358,11 @@ BEGIN
                     "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,112,242,10
     CONTROL         "Disable the screensaver while reading",IDC_DISABLESCREENSAVER,
                     "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,130,242,10
-    LTEXT           "You are currently using AMIS in:",IDC_CURRLANG,7,153,242,8
+    LTEXT           "You are currently using AMIS in: ",IDC_CURRLANG,7,153,242,8
     COMBOBOX        IDC_INSTALLEDLANGUAGES,7,166,108,88,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
     ICON            IDI_LANGICON,IDC_LANGICON,127,164,20,20
     DEFPUSHBUTTON   "OK",IDOK,57,202,50,14
-    PUSHBUTTON      "Cancel",IDCANCEL,112,202,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,112,202,50,14
 END
 
 IDD_TEXTSTYLE DIALOGEX 0, 0, 172, 149
@@ -454,12 +454,12 @@ IDI_LANGICON            ICON                    "flag.ico"
 
 IDR_AMISTYPE ACCELERATORS 
 BEGIN
-    "D",            ID_AMIS_ADD_BOOKMARK,   VIRTKEY, CONTROL, NOINVERT
+    "D",            ID_AMIS_ADD_BOOKMARK, VIRTKEY, CONTROL, NOINVERT
     "Q",            ID_AMIS_DECREASE_SECTION_DEPTH, VIRTKEY, CONTROL, NOINVERT
     VK_DOWN,        ID_AMIS_DECREASE_VOLUME, VIRTKEY, CONTROL, NOINVERT
     VK_DOWN,        ID_AMIS_DECREASE_UI_VOLUME, VIRTKEY, SHIFT, CONTROL, NOINVERT
     VK_ESCAPE,      ID_AMIS_ESCAPE,         VIRTKEY, NOINVERT
-    VK_F4,          ID_AMIS_EXIT,           VIRTKEY, ALT, NOINVERT
+    VK_F4,          ID_AMIS_EXIT,  VIRTKEY, ALT, NOINVERT
     VK_ADD,         ID_AMIS_FASTER,         VIRTKEY, CONTROL, NOINVERT
     VK_OEM_PLUS,    ID_AMIS_FASTER,         VIRTKEY, CONTROL, NOINVERT
     "F",            ID_AMIS_FIND_IN_TEXT,   VIRTKEY, CONTROL, NOINVERT
@@ -530,7 +530,7 @@ END
 
 STRINGTABLE 
 BEGIN
-    IDS_PROPSHT_CAPTION     "Preferences"
+    IDS_PROPSHT_CAPTION     "NOT USED (said Preferences)"
     IDS_META_TITLE          "Title:"
     IDS_META_AUTHOR         "Author:"
     IDS_META_PUBLISHER      "Publisher:"
@@ -572,8 +572,8 @@ END
 
 STRINGTABLE 
 BEGIN
-    ID_AMIS_BIGGER_FONT     "Increase the font size."
-    ID_AMIS_SMALLER_FONT    "Reduce the font size."
+    ID_AMIS_BIGGER_FONT     "Gradually increase the font size."
+    ID_AMIS_SMALLER_FONT    "Gradually decrease the font size."
     ID_AMIS_PLAYPAUSE       "Start or pause synchronized playback."
     ID_AMIS_ESCAPE          "Jump out of the currently playing item or structure."
     ID_AMIS_FASTER          "Increase the playback rate."
@@ -595,17 +595,17 @@ BEGIN
     ID_AMIS_FIND_IN_TEXT    "Search for a word or phrase in the text."
     ID_AMIS_ADD_BOOKMARK    "Bookmark your current position."
     ID_AMIS_SHOW_READING_OPTIONS 
-                            "View the skippable items for this publication."
+                            "View the reading options for this publication."
     ID_AMIS_SHOW_PUBLICATION_SUMMARY 
-                            "Get all summary info for this publication."
+                            "View information about this publication."
     ID_AMIS_SHOW_HELP_CONTENTS "Get help using AMIS"
     ID_AMIS_ABOUT           "Find out about AMIS and DAISY-for-All."
 END
 
 STRINGTABLE 
 BEGIN
-    ID_AMIS_OPEN_FILE       "Open a Daisy book from the local file system"
-    ID_AMIS_CLOSE_BOOK      "Close the publication."
+    ID_AMIS_OPEN_FILE       "Open a DAISY book from the local file system"
+    ID_AMIS_CLOSE_BOOK      "Close the DAISY publication"
     ID_AMIS_LOAD_CD         "Load a DAISY book from CD ROM"
     ID_AMIS_SEARCH_LOCAL_DRIVES "Search local drives for DAISY books"
     ID_AMIS_SHOW_PREFERENCES "This is the application preferences dialog."
@@ -619,16 +619,16 @@ BEGIN
     IDS_META_FEATURES       "Features:"
     IDS_META_CURRENT_PAGE   "Current page:"
     IDS_META_CURRENT_SECTION "Current section:"
-    IDS_META_MAX_SECTION_DEPTH "Max section depth:"
-    IDS_META_TOC_ENTRIES    "TOC entries:"
-    IDS_META_SECTION_CONTENTS_LIST """%d subsections, %d pages"""
-    IDS_META_SECTION_CONTENTS "Section contents:"
+    IDS_META_MAX_SECTION_DEPTH "Max. section depth:"
+    IDS_META_TOC_ENTRIES    "Total TOC items:"
+    IDS_META_SECTION_CONTENTS_LIST "%d subsections,  %d pages "
+    IDS_META_SECTION_CONTENTS "Section contents: "
     IDS_NOT_AVAILABLE       "Not available"
     IDS_SEARCHING           "Searching..."
-    IDS_SEARCH_STOPPED      "Search stopped"
-    IDS_NO_FILES_FOUND      "No files found"
-    IDS_ONE_FILE_FOUND      "One file found"
-    IDS_FILES_FOUND         "%d files found"
+    IDS_SEARCH_STOPPED      "Search stopped."
+    IDS_NO_FILES_FOUND      "Search complete: No files found."
+    IDS_ONE_FILE_FOUND      "Search complete: One file found."
+    IDS_FILES_FOUND         "%d files were found. "
     IDS_NO_BOOKS_ON_CD      "No DAISY books were found on this CD-ROM."
     IDS_PLEASE_RESTART      "Please restart to change the language of AMIS."
 END
@@ -673,4 +673,5 @@ LANGUAGE 9, 1
 
 /////////////////////////////////////////////////////////////////////////////
 #endif    // not APSTUDIO_INVOKED
+
 
