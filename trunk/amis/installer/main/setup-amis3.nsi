@@ -263,12 +263,10 @@ SectionEnd
 ;uninstall the default langpack
 Section -un.CopyDefaultLangpack
 	Delete "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}\*"
-  Delete "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}\start\*"
   Delete "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}\help\*"
   Delete "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}\help\img\*"
   Delete "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}\audio\*"
   
-  RMDir "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}\start"
   RMDir "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}\help\img"
   RMDir "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}\help"
   RMDir "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}\audio"

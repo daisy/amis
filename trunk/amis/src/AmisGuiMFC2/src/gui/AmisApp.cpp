@@ -175,10 +175,10 @@ BOOL CAmisApp::InitInstance()
 	ambulant::net::url base_dir = *Preferences::Instance()->getLangpacksDir();
 	
 	localization_dll = localization_dll.join_to_base(base_dir);
-
+	
 	HINSTANCE hInst_l10n = LoadLibrary(A2CW(localization_dll.get_file().c_str()));
-   if (hInst_l10n != NULL)
-     AfxSetResourceHandle(hInst_l10n);
+	if (hInst_l10n != NULL)
+		AfxSetResourceHandle(hInst_l10n);
 	AfxEnableControlContainer();
 	
 #ifdef _AFXDLL
@@ -362,6 +362,7 @@ void CAmisApp::initializePathsAndFiles()
 
 void CAmisApp::initializeSelfVoicing()
 {
+	amis::util::Log::Instance()->writeMessage("start init self voicing");
 	DataReader new_data_reader;
 	DataTree* p_new_data_tree;
 	p_new_data_tree = DataTree::Instance();
@@ -393,6 +394,7 @@ void CAmisApp::initializeSelfVoicing()
 	{
 		amis::Preferences::Instance()->setIsSelfVoicing(false);
 	}
+	amis::util::Log::Instance()->writeMessage("end init self voicing");
 }
 const ambulant::net::url& CAmisApp::getBookURL() const
 {
