@@ -991,9 +991,11 @@ void CAmisApp::OnToggleSelfVoicingAudio()
 }
 void CAmisApp::OnFocusOnText()
 {	
-	MainWndParts::Instance()->mpHtmlView->m_wndBrowser.SetFocus();
-	
-	amis::gui::CAmisApp::pauseBookAndEmitMessage("textWindowHasFocus");
+	if (MainWndParts::Instance()->mpHtmlView && MainWndParts::Instance()->mpHtmlView->m_wndBrowser)
+	{
+		MainWndParts::Instance()->mpHtmlView->m_wndBrowser.SetFocus();
+		amis::gui::CAmisApp::pauseBookAndEmitMessage("textWindowHasFocus");
+	}
 }
 void CAmisApp::OnResetHighlightColors()
 {
