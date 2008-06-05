@@ -22,7 +22,6 @@ REM todo: check first if %3 ends in a slash or not
 mkdir %3\%1
 mkdir %3\%1\help
 mkdir %3\%1\help\img
-mkdir %3\%1\start
 mkdir %3\%1\audio
 
 REM todo: check first if %2 ends in a slash or not
@@ -34,7 +33,6 @@ copy %2\flag.ico %3\%1\ /y
 copy %2\amisAccessibleUi.xml %3\%1\ /y
 copy %2\help\*.* %3\%1\help\ /y
 copy %2\help\img\*.* %3\%1\help\img\ /y
-copy %2\start\*.* %3\%1\start\ /y
 copy %2\audio\*.* %3\%1\audio\ /y
 
 pause
