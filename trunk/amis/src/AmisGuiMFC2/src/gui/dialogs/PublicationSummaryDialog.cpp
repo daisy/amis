@@ -72,6 +72,10 @@ void PublicationSummaryDialog::DoDataExchange(CDataExchange* pDX)
 }
 BOOL PublicationSummaryDialog::OnInitDialog() 
 {
+	USES_CONVERSION;
+
+	
+
 	if (mpBook == NULL)
 	{
 		amis::util::Log::Instance()->writeError(
@@ -84,6 +88,19 @@ BOOL PublicationSummaryDialog::OnInitDialog()
 		CDialog::OnInitDialog();
 		displayData();
 	}
+	CListCtrl* p_list = (CListCtrl*)GetDlgItem(IDC_SUMMARYLIST);
+	CFont* p_font=p_list->GetFont();
+	LOGFONT lf;
+	p_font->GetLogFont(&lf);
+	CString font_name = A2T(amis::Preferences::Instance()->getSidebarFontName().c_str());
+	lstrcpy(lf.lfFaceName, font_name);
+	lf.lfWeight = 600;
+	lf.lfHeight = 100;
+	CFont font_obj;
+	font_obj.DeleteObject();
+	font_obj.CreatePointFontIndirect(&lf);
+	p_list->SetFont(&font_obj);
+	this->RedrawWindow();
 
 	return TRUE;
 }

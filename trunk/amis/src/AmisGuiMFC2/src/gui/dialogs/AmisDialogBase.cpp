@@ -75,16 +75,12 @@ BOOL AmisDialogBase::PreTranslateMessageTextField(MSG* pMsg, UINT id)
 			CEdit* p_edit = (CEdit*)GetDlgItem(id);
 			if (cwnd == p_edit)
 			{
-
 				CString str;
 				p_edit->GetWindowText(str);
 
-
 				if (!str.IsEmpty())
 				{
-
 					CString strFULL = str;
-
 					int nStartChar = -1;
 					int nEndChar = -1;
 					p_edit->GetSel(nStartChar, nEndChar);
@@ -129,8 +125,6 @@ INT_PTR AmisDialogBase::do_modal()
 	bool b = amis::gui::CAmisApp::beforeModalBox();
 	INT_PTR ret = DoModal();
 	theApp.afterModalBox(b);
-
-
 	return ret;
 }
 
