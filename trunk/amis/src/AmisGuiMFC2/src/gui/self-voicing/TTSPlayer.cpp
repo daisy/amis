@@ -305,10 +305,9 @@ TTSPlayer::~TTSPlayer(void)
 
 int TTSPlayer::initVoiceList(HWND hWnd)
 {
-
-	HRESULT hr = SpInitTokenComboBox( GetDlgItem( hWnd, IDC_TTSVOICES ), SPCAT_VOICES );
+	HRESULT hr = SpInitTokenComboBox(GetDlgItem(hWnd, IDC_TTSVOICES ), SPCAT_VOICES);
 	//HRESULT hr = SpInitTokenComboBox( GetDlgItem( IDC_TTSVOICE )->GetSafeHwnd(), SPCAT_VOICES );
-	if ( SUCCEEDED( hr ) )
+	if (SUCCEEDED(hr))
 	{
 		return m_currentVoiceNumber;
 	}
@@ -316,7 +315,6 @@ int TTSPlayer::initVoiceList(HWND hWnd)
 	{
 		return -1;
 	}
-
 }
 
 void TTSPlayer::ChangeVoice(int index)

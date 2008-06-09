@@ -107,9 +107,9 @@ BOOL PreferencesDialog::OnInitDialog()
 	mbHighlightText = Preferences::Instance()->getHighlightText();
 	mUiLanguageSelection = Preferences::Instance()->getUiLangId();
 	mbDisableScreensaver = Preferences::Instance()->getDisableScreensaver();
-
+	
 	CDialog::OnInitDialog();
-
+	this->setFontOnAllControls();
 	initializeTTSVoiceOption();
 	initializeUiLanguageOption();
 	

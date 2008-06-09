@@ -44,8 +44,10 @@ public:
 	void triggerVirtualKeyStroke(CWnd* cwnd);
 	BOOL PreTranslateMessageTextField(MSG* pMsg, UINT id);
 	virtual BOOL PreTranslateMessage(MSG* pMsg);
+	void setFontOnAllControls();
 protected:
 	bool mbFlag_FirstDraw;
+	static BOOL CALLBACK setFontOnControl(HWND, LPARAM);
 	//DECLARE_DYNCREATE(AmisDialogBase)
 	DECLARE_DYNAMIC(AmisDialogBase)
 
@@ -55,6 +57,8 @@ protected:
 protected:	
 	int mId;
 	PreTranslateMessageHandler* mCommonPreTranslateMessageHandler;
+private:
+	CFont mFont;
 };
 }
 }

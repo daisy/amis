@@ -165,8 +165,8 @@ IDR_AMISTYPE MENU
 BEGIN
     POPUP "&File"
     BEGIN
-        MENUITEM "&Open...\tCtrl+O", 				ID_AMIS_OPEN_FILE
-        MENUITEM "Open &URL...\tCtrl+U", 			ID_AMIS_OPEN_URL
+        MENUITEM "&Open...\tCtrl+O",            ID_AMIS_OPEN_FILE
+        MENUITEM "Open &URL...\tCtrl+U",        ID_AMIS_OPEN_URL
         MENUITEM "&Close",                      ID_AMIS_CLOSE_BOOK
         MENUITEM "&Load CD\tCtrl+L",            ID_AMIS_LOAD_CD
         MENUITEM "&Search Drives...",           ID_AMIS_SEARCH_LOCAL_DRIVES
@@ -183,7 +183,7 @@ BEGIN
     POPUP "&View"
     BEGIN
         MENUITEM "&Sidebar",                    ID_AMIS_TOGGLE_SIDEBAR, CHECKED
-        MENUITEM "&Basic View\tF11",       ID_AMIS_TOGGLE_VIEW
+        MENUITEM "&Basic View\tF11",            ID_AMIS_TOGGLE_VIEW
         MENUITEM SEPARATOR
         POPUP "&Page Style"
         BEGIN
@@ -222,7 +222,7 @@ BEGIN
         MENUITEM "Next Page\tCtrl+Right",       ID_AMIS_NEXT_PAGE
         MENUITEM "Go to Page...\tCtrl+G",       ID_AMIS_GOTO_PAGE
         MENUITEM SEPARATOR
-        MENUITEM "&Find in Text...\tCtrl+F",       ID_AMIS_FIND_IN_TEXT
+        MENUITEM "&Find in Text...\tCtrl+F",    ID_AMIS_FIND_IN_TEXT
     END
     POPUP "&Bookmarks"
     BEGIN
@@ -232,11 +232,11 @@ BEGIN
     POPUP "&Info"
     BEGIN
         MENUITEM "&Reading Options...",         ID_AMIS_SHOW_READING_OPTIONS
-        MENUITEM "&Publication Summary...",        ID_AMIS_SHOW_PUBLICATION_SUMMARY
+        MENUITEM "&Publication Summary...",     ID_AMIS_SHOW_PUBLICATION_SUMMARY
     END
     POPUP "&Help"
     BEGIN
-        MENUITEM "&Contents",              ID_AMIS_SHOW_HELP_CONTENTS
+        MENUITEM "&Contents",                   ID_AMIS_SHOW_HELP_CONTENTS
         MENUITEM "&Keyboard shortcuts",         ID_AMIS_SHOW_KEYBOARD_SHORTCUTS
         MENUITEM "&About AMIS",                 ID_AMIS_ABOUT
     END
@@ -454,12 +454,12 @@ IDI_LANGICON            ICON                    "flag.ico"
 
 IDR_AMISTYPE ACCELERATORS 
 BEGIN
-    "D",            ID_AMIS_ADD_BOOKMARK, VIRTKEY, CONTROL, NOINVERT
+    "D",            ID_AMIS_ADD_BOOKMARK,   VIRTKEY, CONTROL, NOINVERT
     "Q",            ID_AMIS_DECREASE_SECTION_DEPTH, VIRTKEY, CONTROL, NOINVERT
     VK_DOWN,        ID_AMIS_DECREASE_VOLUME, VIRTKEY, CONTROL, NOINVERT
     VK_DOWN,        ID_AMIS_DECREASE_UI_VOLUME, VIRTKEY, SHIFT, CONTROL, NOINVERT
     VK_ESCAPE,      ID_AMIS_ESCAPE,         VIRTKEY, NOINVERT
-    VK_F4,          ID_AMIS_EXIT,  VIRTKEY, ALT, NOINVERT
+    VK_F4,          ID_AMIS_EXIT,           VIRTKEY, ALT, NOINVERT
     VK_ADD,         ID_AMIS_FASTER,         VIRTKEY, CONTROL, NOINVERT
     VK_OEM_PLUS,    ID_AMIS_FASTER,         VIRTKEY, CONTROL, NOINVERT
     "F",            ID_AMIS_FIND_IN_TEXT,   VIRTKEY, CONTROL, NOINVERT
@@ -673,5 +673,4 @@ LANGUAGE 9, 1
 
 /////////////////////////////////////////////////////////////////////////////
 #endif    // not APSTUDIO_INVOKED
-
 

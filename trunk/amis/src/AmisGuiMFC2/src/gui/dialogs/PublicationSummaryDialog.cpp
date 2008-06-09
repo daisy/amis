@@ -74,8 +74,6 @@ BOOL PublicationSummaryDialog::OnInitDialog()
 {
 	USES_CONVERSION;
 
-	
-
 	if (mpBook == NULL)
 	{
 		amis::util::Log::Instance()->writeError(
@@ -88,23 +86,9 @@ BOOL PublicationSummaryDialog::OnInitDialog()
 		CDialog::OnInitDialog();
 		displayData();
 	}
-	CListCtrl* p_list = (CListCtrl*)GetDlgItem(IDC_SUMMARYLIST);
-	CFont* p_font=p_list->GetFont();
-	LOGFONT lf;
-	p_font->GetLogFont(&lf);
-	CString font_name = A2T(amis::Preferences::Instance()->getSidebarFontName().c_str());
-	lstrcpy(lf.lfFaceName, font_name);
-	lf.lfWeight = 600;
-	lf.lfHeight = 100;
-	CFont font_obj;
-	font_obj.DeleteObject();
-	font_obj.CreatePointFontIndirect(&lf);
-	p_list->SetFont(&font_obj);
-	this->RedrawWindow();
-
+	this->setFontOnAllControls();
 	return TRUE;
 }
-
 void PublicationSummaryDialog::OnPaint() 
 {
 	CPaintDC dc(this); // device context for painting
@@ -250,7 +234,7 @@ void PublicationSummaryDialog::displayData()
 	CListCtrl* p_list = (CListCtrl*)GetDlgItem(IDC_SUMMARYLIST);
 	p_list->DeleteAllItems();
 	//these column headers don't get shown, so it doesn't matter that they're not localized
-	p_list->InsertColumn(0, _T("Field"), LVCFMT_LEFT, 100);
+	p_list->InsertColumn(0, _T("Field"), LVCFMT_LEFT, 150);
 	p_list->InsertColumn(1, _T("Value"), LVCFMT_LEFT, 400);
 
 	CString title;
@@ -367,8 +351,6 @@ void PublicationSummaryDialog::resolvePromptVariables(Prompt* pPrompt)
 
 void PublicationSummaryDialog::appendToList(CListCtrl* pList, CString field, wstring value)
 {
-	//don't add empty items (no anymore: to match self-voicing exactly, and to support interactive navigation in the list)
-	//if (value.size() == 0) return;
 	int idx = pList->GetItemCount();
 	pList->InsertItem(idx, _T(""));
 	pList->SetItemText(idx, 0, field);

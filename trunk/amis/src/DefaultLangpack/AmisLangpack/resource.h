@@ -1,6 +1,6 @@
 //{{NO_DEPENDENCIES}}
 // Microsoft Visual C++ generated include file.
-// Used by AmisGuiMFC2.rc
+// Used by AmisLangpack.rc
 //
 #define IDD_ABOUTBOX                    100
 #define IDS_PROPSHT_CAPTION             102
@@ -116,6 +116,7 @@
 #define IDC_READING_OPTIONS_INSTRUCTIONS 1115
 #define IDC_OPTIONS_LIST                1116
 #define IDC_FIND_DESCRIPTION            1118
+#define IDC_LIST1                       1119
 #define SELF_VOICING_PLAY_NEXT          6969
 #define IDC_CURRLANG                    9002
 #define IDC_VERSION                     9006
@@ -171,7 +172,7 @@
 #define _APS_3D_CONTROLS                     1
 #define _APS_NEXT_RESOURCE_VALUE        194
 #define _APS_NEXT_COMMAND_VALUE         32964
-#define _APS_NEXT_CONTROL_VALUE         1119
+#define _APS_NEXT_CONTROL_VALUE         1120
 #define _APS_NEXT_SYMED_VALUE           149
 #endif
 #endif

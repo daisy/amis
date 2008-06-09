@@ -98,8 +98,9 @@ BOOL FindInTextDialog::OnInitDialog()
 		p_check_prev->SetCheck(1);
 	}
 
+	this->setFontOnAllControls();
 	p_edit->SetSel(0, 99);
-
+		
 	return TRUE;
 }
 

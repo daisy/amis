@@ -115,7 +115,8 @@ BOOL SearchForBooksDialog::OnInitDialog()
 
 	p_button = (CButton*)this->GetDlgItem(IDC_OPENBOOK);
 	p_button->EnableWindow(FALSE);
-	
+	this->setFontOnAllControls();
+
 	return TRUE;
 }
 

@@ -56,7 +56,7 @@ void OpenUrlDialog::DoDataExchange(CDataExchange* pDX)
 BOOL OpenUrlDialog::OnInitDialog() 
 {
 	CDialog::OnInitDialog();
-
+	this->setFontOnAllControls();
 	CEdit* p_edit =	(CEdit*)GetDlgItem(IDC_URL);	
 	p_edit->SetSel(0, 99);
 	

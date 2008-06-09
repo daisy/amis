@@ -52,9 +52,8 @@ MultipleBooksOnVolumeDialog::~MultipleBooksOnVolumeDialog()
 BOOL MultipleBooksOnVolumeDialog::OnInitDialog() 
 {
 	CDialog::OnInitDialog();
-
+	this->setFontOnAllControls();
 	populateListControl();
-
 	return TRUE;
 }
 

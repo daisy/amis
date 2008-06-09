@@ -55,7 +55,9 @@ void GoToPageDialog::DoDataExchange(CDataExchange* pDX)
 
 BOOL GoToPageDialog::OnInitDialog() 
 {
-	return CDialog::OnInitDialog();
+	BOOL res = CDialog::OnInitDialog();
+	this->setFontOnAllControls();
+	return res;
 }
 
 std::wstring GoToPageDialog::getPageNumber()

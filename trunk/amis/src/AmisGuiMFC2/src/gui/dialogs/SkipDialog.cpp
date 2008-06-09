@@ -128,6 +128,7 @@ BOOL SkipDialog::OnInitDialog()
 	if (mpCustomTests != NULL && mpCustomTests->getLength() > 0) m_ListSkips.SetFocus();
 	else m_Ok.SetFocus();
 	*/
+	this->setFontOnAllControls();
 
 	return TRUE;
 }

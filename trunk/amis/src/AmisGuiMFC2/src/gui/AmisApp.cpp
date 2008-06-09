@@ -179,6 +179,7 @@ BOOL CAmisApp::InitInstance()
 	HINSTANCE hInst_l10n = LoadLibrary(A2CW(localization_dll.get_file().c_str()));
 	if (hInst_l10n != NULL)
 		AfxSetResourceHandle(hInst_l10n);
+	
 	AfxEnableControlContainer();
 	
 #ifdef _AFXDLL

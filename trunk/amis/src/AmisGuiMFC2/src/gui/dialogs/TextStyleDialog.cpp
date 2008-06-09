@@ -91,7 +91,7 @@ TextStyleDialog::~TextStyleDialog()
 BOOL TextStyleDialog::OnInitDialog() 
 {	
 	CDialog::OnInitDialog();
-
+	this->setFontOnAllControls();
 	initializeCombos();
 	
 	return TRUE;

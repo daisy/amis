@@ -61,7 +61,8 @@ private:
 	CString computeAuthor();
 	bool calculateData();
 	void displayData();
-	void appendToList(CListCtrl*, CString, wstring);	
+	void appendToList(CListCtrl*, CString, wstring);
+
 	amis::dtb::Dtb* mpBook;
 	amis::MediaGroup* mpTitle;
 	wstring mCreator;
