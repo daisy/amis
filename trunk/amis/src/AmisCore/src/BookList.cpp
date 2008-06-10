@@ -26,17 +26,63 @@ using namespace std;
 
 amis::BookEntry::BookEntry()
 {
-	this->mbIsLastRead= false;
+	mbIsLastRead= false;
+	mpTitle = NULL;
 }
 
 amis::BookEntry::~BookEntry()
 {
+	if (mpTitle != NULL) delete mpTitle;
+}
+
+void amis::BookEntry::setTitleText(wstring text)
+{
+	if (mpTitle == NULL) mpTitle = new amis::MediaGroup();
+	if (mpTitle->getText() == NULL)
+	{
+		amis::TextNode* p_text = new amis::TextNode();
+		mpTitle->setText(p_text);
+	}
+	mpTitle->getText()->setTextString(text);
+}
+void amis::BookEntry::setTitleAudio(string src, string clipbegin, string clipend)
+{
+	if (mpTitle == NULL) mpTitle = new amis::MediaGroup();
+	if (mpTitle->getNumberOfAudioClips() == 0)
+	{
+		amis::AudioNode* p_audio = new amis::AudioNode();
+		mpTitle->addAudioClip(p_audio);
+	}
+	mpTitle->getAudio(0)->setSrc(src);
+	mpTitle->getAudio(0)->setClipBegin(clipbegin);
+	mpTitle->getAudio(0)->setClipEnd(clipend);
+}
+wstring amis::BookEntry::getTitleText()
+{
+	if (mpTitle != NULL && mpTitle->getText() != NULL)
+	{
+		return mpTitle->getText()->getTextString();
+	}
+	else
+	{
+		//maybe there's a better way to return an empty wide string?  
+		//returning NULL doesn't work.
+		wstring empty_string;
+		empty_string.erase();
+		return empty_string;
+	}
+}
+amis::AudioNode* amis::BookEntry::getTitleAudio()
+{
+	if (mpTitle != NULL && mpTitle->getNumberOfAudioClips() > 0)
+		return mpTitle->getAudio(0);
+	else
+		return NULL;
 }
 amis::BookList::BookList()
 {
 	mItems.clear();
 }
-
 amis::BookList::~BookList()
 {
 	cleanUpVector();

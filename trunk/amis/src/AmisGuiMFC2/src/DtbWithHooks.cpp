@@ -214,6 +214,9 @@ void DtbWithHooks::addToHistory()
 		else if (getDaisyVersion() == DAISY_2005)
 			p_entry->mPath = *this->getFileSet()->getOpfFilepath();
 
+		if (this->getTitle()->hasText() == true)
+			p_entry->setTitleText(this->getTitle()->getText()->getTextString());
+		
 		p_history->addEntry(p_entry);
 
 		amis::io::BookListFileIO io;

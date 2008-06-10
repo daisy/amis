@@ -123,8 +123,40 @@ void amis::io::BookListFileIO::startElement(const   XMLCh* const    uri,
 			mpCurrentEntry->mBmkPath = ambulant::net::url::from_url(tmpstr);
 		}
 	}
+	else if (strcmp(element_name, "title") == 0)
+	{
+		if (mpCurrentEntry != NULL)
+		{
+			string src;
+			string clipbegin;
+			string clipend;
+			src.assign(SimpleAttrs::get("src", &attributes));
+			clipbegin.assign(SimpleAttrs::get("clipBegin", &attributes));
+			clipend.assign(SimpleAttrs::get("clipEnd", &attributes));
+			mpCurrentEntry->setTitleAudio(src, clipbegin, clipend);
+			mbFlagGetChars = true;
+		}
+	}
 	XMLString::release(&element_name);
 }
+void amis::io::BookListFileIO::endElement(const XMLCh* const uri, const XMLCh* const localname, const XMLCh* const qname)
+{
+	char* element_name = XMLString::transcode(qname);
+
+	if (strcmp(element_name, "title") == 0)
+	{
+		this->mpCurrentEntry->setTitleText(mTempWChars);
+		mbFlagGetChars = false;
+	}
+	mTempWChars.erase();
+
+	XMLString::release(&element_name);
+}
+void amis::io::BookListFileIO::characters(const XMLCh *const chars, const unsigned int length)
+{
+	if (mbFlagGetChars == true) mTempWChars.append((wchar_t*)chars);
+}
+
 bool amis::io::BookListFileIO::writeToFile(const ambulant::net::url* filepath, amis::BookList* pFile)
 {
 	if (filepath != NULL && filepath->is_local_file() == false) return false;
@@ -246,6 +278,18 @@ void amis::io::BookListFileIO::writeBookEntry(amis::BookEntry* pEntry)
 	//create the title
 	DOMElement* p_book_elm = mpDoc->createElement(X("bookEntry"));
 	DOMElement* p_bmk_elm = NULL;
+	DOMElement* p_title_elm = mpDoc->createElement(X("title"));
+	DOMText* p_text_content = mpDoc->createTextNode(pEntry->getTitleText().c_str());
+	p_title_elm->appendChild(p_text_content);
+	amis::AudioNode* p_audio = pEntry->getTitleAudio();
+	if (p_audio != NULL)
+	{
+		p_title_elm->setAttribute(X("src"), X(p_audio->getSrc().c_str()));
+		p_title_elm->setAttribute(X("clipBegin"), X(p_audio->getClipBegin().c_str()));
+		p_title_elm->setAttribute(X("clipEnd"), X(p_audio->getClipEnd().c_str()));
+	}
+	p_book_elm->appendChild(p_title_elm);
+
 	if (pEntry->mBmkPath.is_empty_path() == false)
 	{
 		p_bmk_elm = mpDoc->createElement(X("bookmarks"));

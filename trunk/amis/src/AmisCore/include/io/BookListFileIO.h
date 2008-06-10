@@ -59,10 +59,8 @@ public:
 		const   Attributes&	attributes);
 	void endElement(const XMLCh* const uri,
 		const XMLCh* const localname,
-		const XMLCh* const qname)
-	{/*we don't need this method*/}
-	void characters(const XMLCh *const, const unsigned int)
-	{/*we don't need this method*/}
+		const XMLCh* const qname);
+	void characters(const XMLCh *const, const unsigned int);
 	
 private:
 	void writeBookEntry(amis::BookEntry*);	
@@ -72,6 +70,8 @@ private:
 	amis::BookEntry* mpCurrentEntry;
 	//The DOM document pointer
 	xercesc_2_8::DOMDocument* mpDoc;
+	wstring mTempWChars;
+	bool mbFlagGetChars;
 };
 }
 }

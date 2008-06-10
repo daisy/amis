@@ -94,9 +94,18 @@ void MenuManip::refreshRecentBooksListMenu()
 		for (int i=num_entries-1; i>=num_entries-max; i--)
 		{
 			p_entry = theApp.getHistory()->getEntry(i);
-			string filepath = p_entry->mPath.get_url();
-			CString cstr_filepath = A2T(filepath.c_str());
-			BOOL ret = p_menu->AppendMenu(MF_STRING, AMIS_RECENT_BOOK_BASE_ID + i, cstr_filepath);
+			CString menu_text;
+			wstring title_text = p_entry->getTitleText();
+			if (title_text.length() > 0)
+			{
+				menu_text = title_text.c_str();
+			}
+			else
+			{
+				string filepath = p_entry->mPath.get_url();
+				menu_text = A2T(filepath.c_str());
+			}
+			BOOL ret = p_menu->AppendMenu(MF_STRING, AMIS_RECENT_BOOK_BASE_ID + i, menu_text);
 		}		
 	}
 }

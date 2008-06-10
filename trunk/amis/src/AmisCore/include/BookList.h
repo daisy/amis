@@ -25,6 +25,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include <string>
 #include <vector>
 #include "ambulant/net/url.h"
+#include "Media.h"
 
 using namespace std;
 
@@ -35,11 +36,19 @@ class BookEntry
 public:
 	BookEntry();
 	~BookEntry();
+	void setTitleText(wstring);
+	void setTitleAudio(string, string, string);
+	wstring getTitleText();
+	amis::AudioNode* getTitleAudio();
 	
 	std::wstring mUid;
 	ambulant::net::url mPath;
 	ambulant::net::url mBmkPath;
 	bool mbIsLastRead;
+
+private:
+	amis::MediaGroup* mpTitle;
+	
 };
 class BookList
 {
