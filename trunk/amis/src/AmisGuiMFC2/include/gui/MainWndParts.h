@@ -66,9 +66,9 @@ public:
 	MmView* mpMmView;
 
 private:
-	bool mbSidebarVisible;
 	bool mbBasicView;
 	CString mMainWindowTitle;
+	bool mbSidebarWasVisible;
 
 private:
 	static MainWndParts* pinstance;

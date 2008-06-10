@@ -52,7 +52,7 @@ MainWndParts::MainWndParts()
 	mpMmDoc = NULL;
 	mpMmView = NULL;
 
-	mbSidebarVisible = true;
+	mbSidebarWasVisible = true;
 	mbBasicView = false;
 }
 
@@ -69,8 +69,7 @@ void MainWndParts::toggleViewMode()
 
 void MainWndParts::toggleSidebar()
 {
-	mbSidebarVisible = !mbSidebarVisible;
-	MenuManip::Instance()->setViewItemCheckmark(mbSidebarVisible, ID_AMIS_TOGGLE_SIDEBAR);
+	MenuManip::Instance()->setViewItemCheckmark(mpSidebar->IsVisible(), ID_AMIS_TOGGLE_SIDEBAR);
 
 	//if the window is hidden, show it
 	if (!mpSidebar->ShowWindow(SW_SHOWNA)) mpMainFrame->ShowControlBar(mpSidebar, TRUE, TRUE);
@@ -82,16 +81,22 @@ void MainWndParts::toggleSidebar()
 
 void MainWndParts::basicView()
 {
-	if (this->mbSidebarVisible == true) toggleSidebar();
-	
-	// TODO: change the window title text to say "basic view mode"
+	if (mpSidebar->IsVisible() == TRUE) 
+	{
+		mbSidebarWasVisible = true;
+		toggleSidebar();
+	}
+	else
+	{
+		mbSidebarWasVisible = false;
+	}
 	mpMainFrame->ShowControlBar(mpStatusBar, FALSE, TRUE);
 	mpMainFrame->ShowControlBar(mpDefaultRebar, FALSE, TRUE);
 	mpMainFrame->ShowControlBar(mpBasicRebar, TRUE, TRUE);
 	mpMainFrame->SetMenu(NULL);
 	mpMainFrame->RecalcLayout();
 	mbBasicView = true;	
-
+	
 	MainWndParts::Instance()->updateTitleViewMode();
 }
 
@@ -114,8 +119,9 @@ void MainWndParts::defaultView()
 	mpMainFrame->ShowControlBar(mpBasicRebar, FALSE, TRUE);
 	mpMainFrame->RecalcLayout();
 	mbBasicView = false;
-	//TODO: make this smarter: only turn the sidebar on if it had been on before
-	if (this->mbSidebarVisible == false) toggleSidebar();
+	
+	//the basic view always turns the sidebar off, so only turn it back on if it was previously visible
+	if (mbSidebarWasVisible == true) toggleSidebar();
 	
 	MainWndParts::Instance()->updateTitleViewMode();	
 }
