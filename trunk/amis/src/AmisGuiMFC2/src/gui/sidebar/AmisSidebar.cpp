@@ -470,7 +470,12 @@ void CAmisSidebar::addTab(std::wstring label)
 {
 	CString tab_label = label.c_str();
 	int pos = mTabStrip.GetItemCount() + 1;
-	mTabStrip.InsertItem(pos, tab_label, pos-1);
+	int max_image_index = mImagesForTab.GetImageCount() - 1;
+	int image_index = pos - 1;
+	//if we have more tabs than images, then re-use the last image in the image list
+	if (image_index > max_image_index) image_index = max_image_index;
+	
+	mTabStrip.InsertItem(pos, tab_label, image_index);
 
 	mNumTabs++;
 }
