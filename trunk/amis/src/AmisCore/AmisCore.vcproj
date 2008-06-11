@@ -228,6 +228,14 @@
 					</FileConfiguration>
 				</File>
 				<File
+					RelativePath=".\src\io\DiscInfoReader.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\src\io\DistInfoReader.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\src\io\ModuleDescReader.cpp"
 					>
 					<FileConfiguration
@@ -681,6 +689,14 @@
 				</File>
 				<File
 					RelativePath=".\include\io\BookmarksFileIO.h"
+					>
+				</File>
+				<File
+					RelativePath=".\include\io\DiscInfoReader.h"
+					>
+				</File>
+				<File
+					RelativePath=".\include\io\DistInfoReader.h"
 					>
 				</File>
 				<File
