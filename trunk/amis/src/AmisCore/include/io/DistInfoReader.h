@@ -47,7 +47,7 @@ class DistInfoReader : public XercesSaxParseBase
 
 public:
 	DistInfoReader();
-	virtual ~DistInfoReader() = 0;
+	virtual ~DistInfoReader();
 
 	bool readFromFile(const ambulant::net::url*);
 	amis::BookList* getBookList();
@@ -67,6 +67,7 @@ public:
 	
 private:
 	bool mbFlagGetChars;
+	bool mbFlagProcessingTitle;
 	wstring mTempWChars;
 	amis::BookEntry* mpCurrentEntry;
 	amis::BookList* mpBookList;

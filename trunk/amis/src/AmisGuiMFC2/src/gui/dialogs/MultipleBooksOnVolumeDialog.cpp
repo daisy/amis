@@ -39,10 +39,10 @@ void MultipleBooksOnVolumeDialog::resolvePromptVariables(Prompt* pPrompt)
 	return;
 }
 
-MultipleBooksOnVolumeDialog::MultipleBooksOnVolumeDialog(CWnd* pParent /*=NULL*/, amis::UrlList* pUrlList)
+MultipleBooksOnVolumeDialog::MultipleBooksOnVolumeDialog(CWnd* pParent /*=NULL*/, amis::BookList* pBookList)
 	: AmisDialogBase(MultipleBooksOnVolumeDialog::IDD)
 {
-	mpUrlList = pUrlList;
+	mpBookList = pBookList;
 }
 
 MultipleBooksOnVolumeDialog::~MultipleBooksOnVolumeDialog()
@@ -57,21 +57,17 @@ BOOL MultipleBooksOnVolumeDialog::OnInitDialog()
 	return TRUE;
 }
 
-//TODO: fill in titles, not URLs
 void MultipleBooksOnVolumeDialog::populateListControl()
 {
 	USES_CONVERSION;
 	CListBox* p_filelist = NULL;
 	p_filelist = (CListBox*)this->GetDlgItem(IDC_BOOKLIST);
 
-	amis::UrlList::iterator it;
-	int i = 0;
-	for (it = mpUrlList->begin(); it != mpUrlList->end(); ++it)
+	int num_titles = mpBookList->getNumberOfEntries();
+	for (int i = 0; i<num_titles; i++)
 	{
-		CString result;
-		result = A2T(it->get_file().c_str());
-		p_filelist->AddString(result);
-		i++;
+		CString title = mpBookList->getEntry(i)->getTitleText().c_str();
+		p_filelist->AddString(title);
 	}
 	
 	p_filelist->SetFocus();
@@ -84,7 +80,8 @@ void MultipleBooksOnVolumeDialog::loadBook()
 	CListBox* p_list = NULL;
 	p_list = (CListBox*)this->GetDlgItem(IDC_BOOKLIST);
 	int sel = p_list->GetCurSel();
-	if (sel > -1 && sel < mpUrlList->size()) mLoadBookOnDialogClose = (*mpUrlList)[sel];
+	if (sel > -1 && sel < mpBookList->getNumberOfEntries())
+		mLoadBookOnDialogClose = mpBookList->getEntry(sel)->mPath;
 	this->EndDialog(1);
 }
 

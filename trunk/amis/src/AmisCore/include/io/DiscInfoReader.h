@@ -47,7 +47,7 @@ class DiscInfoReader : public XercesSaxParseBase
 
 public:
 	DiscInfoReader();
-	virtual ~DiscInfoReader() = 0;
+	virtual ~DiscInfoReader();
 
 	bool readFromFile(const ambulant::net::url*);
 	amis::BookList* getBookList();

@@ -26,6 +26,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "../resource.h"
 #include "ambulant/net/url.h"
 #include "AmisCore.h"
+#include "BookList.h"
 
 namespace amis
 {
@@ -38,8 +39,8 @@ class MultipleBooksOnVolumeDialog : public AmisDialogBase
 public:
 	void resolvePromptVariables(Prompt*);
 
-	//the pUrlList parameter has a default value only because the compiler requires it
-	MultipleBooksOnVolumeDialog(CWnd* pParent = NULL, amis::UrlList* pUrlList = NULL);
+	//the pBookList parameter has a default value only because the compiler requires it
+	MultipleBooksOnVolumeDialog(CWnd* pParent = NULL, amis::BookList* pBookList = NULL);
 	~MultipleBooksOnVolumeDialog();
 	ambulant::net::url getBookToLoad();
 	enum { IDD = IDD_CDSEARCH };
@@ -56,7 +57,7 @@ private:
 	void loadBook();
 
 	ambulant::net::url mLoadBookOnDialogClose;
-	amis::UrlList* mpUrlList;
+	amis::BookList* mpBookList;
 };
 }
 }

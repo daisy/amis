@@ -29,6 +29,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "Preferences.h"
 #include "io/BookListFileIO.h"
 #include "io/PreferencesFileIO.h"
+#include "io/DiscInfoReader.h"
+#include "io/DistInfoReader.h"
 #include "util/SearchForFilesMFC.h"
 #include "util/Log.h"
 #include "pdtb.h"
@@ -812,47 +814,86 @@ void CAmisApp::OnLoadCd()
 	amis::util::Log::Instance()->writeMessage("Loading from CD", "CAmisApp::OnLoadCd", "AmisGuiMFC2");
 	amis::util::SearchForFilesMFC searcher;
 	//prepare the search tool
+	//first pass: ncc or opf at the root level
 	searcher.clearAll();
 	searcher.addSearchCriteria("ncc.htm");
 	searcher.addSearchCriteria(".opf");
 	//sometimes I see these temp files on my drive .. excluding them just to be safe
 	searcher.addSearchExclusionCriteria("_ncc.html");
-	searcher.setRecursiveSearch(true);
+	searcher.setRecursiveSearch(false);
+	int files_found = searcher.startSearchOnCdRom();
+	const ambulant::net::url* single_book = NULL;
 	
-	int num_books = searcher.startSearchOnCdRom();
-
-	//TODO: localize this string
-	if (num_books == 0) 
+	//there were no ncc or opf files at the root, so we need to make a
+	//second pass and look for disc info or dist info file at the root level
+	if (files_found == 0) 
 	{
-		amis::util::Log::Instance()->writeWarning("No DAISY books on CD-ROM", "CAmisApp::OnLoadCd", "AmisGuiMFC2");
-
-		CString temp;
-		temp.LoadStringW(IDS_NO_BOOKS_ON_CD);
-		if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
-		{
-			AudioSequencePlayer::playPromptFromStringId("noBooksFoundOnCd");
-		}
-		generalBookErrorMsgBox(temp);
-	}
-	else 
-	{	
-		amis::UrlList* p_results = searcher.getSearchResults();
-		if (p_results->size() > 1)
-		{
-			amis::util::Log::Instance()->writeMessage("Multiple books found on CD-ROM", "CAmisApp::OnLoadCd", "AmisGuiMFC2");
-			dialogs::MultipleBooksOnVolumeDialog dlg(NULL, p_results);
-			amis::util::Log::Instance()->writeMessage("Showing multiple books on volume dialog", "CAmisApp::OnLoadCd", "AmisGuiMFC2");
-			if (dlg.do_modal() == IDOK)
-				openBook(&dlg.getBookToLoad());
+		searcher.clearAll();
+		searcher.addSearchCriteria("discinfo.html");
+		searcher.addSearchCriteria("distInfo.dinf");
+		searcher.setRecursiveSearch(false);
+		files_found = searcher.startSearchOnCdRom();
+		
+		//there should be at most one discinfo or distinfo file
+		if (files_found == 1) 
+		{	
+			amis::UrlList* p_results = searcher.getSearchResults();
+			string filename = (*p_results)[0].get_file();
+			amis::BookList* p_list = NULL;
+			if (amis::util::FilePathTools::getExtension(filename) == "html")
+			{
+				amis::io::DiscInfoReader reader;
+				reader.readFromFile(&(*p_results)[0]);
+				p_list = reader.getBookList();
+			}
 			else
-				amis::util::Log::Instance()->writeMessage("Dialog cancelled", "CAmisApp::OnLoadCd", "AmisGuiMFC2");
+			{
+				amis::io::DistInfoReader reader;
+				reader.readFromFile(&(*p_results)[0]);
+				p_list = reader.getBookList();
+			}
+			
+			//if, for some reason, the distribution info file had only one listing, open it directly
+			if (p_list->getNumberOfEntries() == 1)
+			{
+				single_book = &p_list->getEntry(0)->mPath;
+			}
+			//otherwise, show the user a dialog so they can select which book to open
+			else
+			{
+				amis::util::Log::Instance()->writeMessage("Multiple books found on CD-ROM", "CAmisApp::OnLoadCd", "AmisGuiMFC2");
+				dialogs::MultipleBooksOnVolumeDialog dlg(NULL, p_list);
+				amis::util::Log::Instance()->writeMessage("Showing multiple books on volume dialog", "CAmisApp::OnLoadCd", "AmisGuiMFC2");
+				if (dlg.do_modal() == IDOK)
+					openBook(&dlg.getBookToLoad());
+				else
+					amis::util::Log::Instance()->writeMessage("Dialog cancelled", "CAmisApp::OnLoadCd", "AmisGuiMFC2");
+			}
 		}
-		else
+		else //files_found == 0
 		{
-			amis::util::Log::Instance()->writeMessage("Found one book on CD; opening it", "CAmisApp::OnLoadCd", "AmisGuiMFC2");
-			//open the first and only URL found
-			openBook(&(*p_results)[0]);
+			amis::util::Log::Instance()->writeWarning("No DAISY books on CD-ROM", "CAmisApp::OnLoadCd", "AmisGuiMFC2");
+			CString temp;
+			temp.LoadStringW(IDS_NO_BOOKS_ON_CD);
+			if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
+			{
+				AudioSequencePlayer::playPromptFromStringId("noBooksFoundOnCd");
+			}
+			generalBookErrorMsgBox(temp);
 		}
+	}
+	else //one ncc or opf file was found at the root
+	{
+		amis::UrlList* p_results = searcher.getSearchResults();
+		single_book = &((*p_results)[0]);
+	}
+	
+	//open a single book
+	if (single_book != NULL)
+	{
+		amis::util::Log::Instance()->writeMessage("Found one book on CD; opening it", "CAmisApp::OnLoadCd", "AmisGuiMFC2");
+		//open the first and only URL found
+		openBook(single_book);
 	}
 }
 

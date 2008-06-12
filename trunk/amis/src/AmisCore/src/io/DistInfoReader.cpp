@@ -66,7 +66,7 @@ bool amis::io::DistInfoReader::readFromFile(const ambulant::net::url* filepath)
 	mbFlagGetChars = false;
 	mpBookList = NULL;
 	mTempWChars.erase();
-
+	mbFlagProcessingTitle = false;
 	mpBookList = new amis::BookList();
 	
 	if (!this->parseFile(filepath))
@@ -85,7 +85,7 @@ void amis::io::DistInfoReader::startElement(const   XMLCh* const    uri,
 				const   XMLCh* const    qname,
 				const   Attributes&	attributes)
 {
-char* element_name;
+	char* element_name;
 	element_name = XMLString::transcode(qname);
 
 	if (strcmp(element_name, "distInfo") == 0)
@@ -104,16 +104,28 @@ char* element_name;
 
 		string tmpstr;
 		tmpstr.assign(SimpleAttrs::get("pkgRef", &attributes));
-		//TODO: make absolute
-		mpCurrentEntry->mPath = ambulant::net::url::from_url(tmpstr);
+		ambulant::net::url filepath = ambulant::net::url::from_filename(tmpstr);
+		mpCurrentEntry->mPath = filepath.join_to_base(*this->getFilepath());
 	}
 	else if (strcmp(element_name, "docTitle") == 0)
 	{
-		if (mpCurrentEntry != NULL)
-		{
-			//TODO: flag in docTitle
-		}
+		mbFlagProcessingTitle = true;
 	}
+	else if (strcmp(element_name, "text") == 0)
+	{
+		if (mbFlagProcessingTitle == true) mbFlagGetChars = true;
+	}
+	else if (strcmp(element_name, "audio") == 0)
+	{
+		string src;
+		string clipbegin;
+		string clipend;
+		src.assign(SimpleAttrs::get("src", &attributes));
+		clipbegin.assign(SimpleAttrs::get("clipBegin", &attributes));
+		clipend.assign(SimpleAttrs::get("clipEnd", &attributes));
+		if (mpCurrentEntry != NULL) mpCurrentEntry->setTitleAudio(src, clipbegin, clipend);
+	}
+	
 	XMLString::release(&element_name);
 }
 void amis::io::DistInfoReader::endElement(const XMLCh* const uri, const XMLCh* const localname, const XMLCh* const qname)
@@ -122,8 +134,14 @@ void amis::io::DistInfoReader::endElement(const XMLCh* const uri, const XMLCh* c
 
 	if (strcmp(element_name, "text") == 0)
 	{
-		this->mpCurrentEntry->setTitleText(mTempWChars);
+		if (mbFlagProcessingTitle == true &&
+			mpCurrentEntry != NULL)
+			this->mpCurrentEntry->setTitleText(mTempWChars);
 		mbFlagGetChars = false;
+	}
+	else if (strcmp(element_name, "docTitle") == 0) 
+	{
+		mbFlagProcessingTitle = false;
 	}
 	mTempWChars.erase();
 
