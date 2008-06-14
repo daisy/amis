@@ -124,6 +124,7 @@ public:
 	afx_msg void OnFocusOnText();
 	afx_msg void OnResetHighlightColors();
 	afx_msg void OnToggleContentAudio();
+	afx_msg void OnShowHelpContents();
 protected:
 	HMENU m_hMDIMenu;
 	HACCEL m_hMDIAccel;

@@ -130,6 +130,7 @@ BEGIN_MESSAGE_MAP(CAmisApp, CWinApp)
 	ON_COMMAND(ID_AMIS_FOCUS_ON_TEXT, OnFocusOnText)
 	ON_COMMAND(ID_AMIS_RESET_HIGHLIGHT_COLORS, OnResetHighlightColors)
 	ON_COMMAND(ID_AMIS_TOGGLE_AUDIO_CONTENT_PLAYBACK, OnToggleContentAudio)
+	ON_COMMAND(ID_AMIS_SHOW_HELP_CONTENTS, OnShowHelpContents)
 END_MESSAGE_MAP()
 
 
@@ -1057,6 +1058,37 @@ void CAmisApp::OnToggleContentAudio()
 	{
 		//TODO: this command doesn't work yet
 		//Need to find out how to do this with Ambulant
+	}
+}
+void CAmisApp::OnShowHelpContents()
+{
+	amis::util::SearchForFilesMFC searcher;
+	//search the langpack/help directory for opf or ncc file
+	searcher.clearAll();
+	searcher.addSearchCriteria("ncc.htm");
+	searcher.addSearchCriteria(".opf");
+	//sometimes I see these temp files on my drive .. excluding them just to be safe
+	searcher.addSearchExclusionCriteria("_ncc.html");
+	searcher.setRecursiveSearch(false);
+
+	ambulant::net::url help_dir = ambulant::net::url::from_filename("./help");
+	help_dir = help_dir.join_to_base(*amis::Preferences::Instance()->getCurrentLanguageData()->getXmlFileName());
+
+	int files_found = searcher.startSearch(help_dir.get_file());
+	if (files_found > 0)
+	{
+		amis::UrlList* p_url_list = searcher.getSearchResults();
+		openBook(&(*p_url_list)[0]);
+	}
+	else
+	{
+		CString temp;
+		temp.LoadStringW(IDS_ERROR_OPENING);
+		if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
+		{
+			AudioSequencePlayer::playPromptFromStringId("generalBookError");
+		}
+		generalBookErrorMsgBox(temp);
 	}
 }
 /***************************************************
