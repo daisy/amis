@@ -50,7 +50,7 @@ BEGIN
     "LANGUAGE 9, 1\r\n"
     "#pragma code_page(1252)\r\n"
     "#endif //_WIN32\r\n"
-    "#include ""res\\AmisGuiMFC2.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""res\\AmisLangpack.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
     "#include ""afxres.rc""         // Standard components\r\n"
     "#endif\r\n"
     "\0"
@@ -267,7 +267,7 @@ BEGIN
     PUSHBUTTON      "Browse...",IDC_BROWSE,260,39,45,13
     PUSHBUTTON      "&Search",IDC_STARTSEARCH,103,63,50,15
     CTEXT           "Ready",IDC_SEARCHING,7,92,298,13,NOT WS_VISIBLE
-    LISTBOX         IDC_FILESFOUND,7,105,298,156,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_FILESFOUND,7,105,298,156,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
     PUSHBUTTON      "&Open",IDC_OPENBOOK,103,266,50,14
     PUSHBUTTON      "&Cancel",IDCANCEL,158,266,50,14
     PUSHBUTTON      "S&top",IDC_STOPSEARCH,158,63,50,15
@@ -302,7 +302,7 @@ CAPTION "Multiple books found"
 FONT 8, "MS Sans Serif", 0, 0, 0x0
 BEGIN
     LTEXT           "More than one book was found on this CD. Please select a book from the list below.",IDC_MULTIVOLCD_INSTRUCTIONS,7,7,239,25
-    LISTBOX         IDC_BOOKLIST,7,32,239,125,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_BOOKLIST,7,32,239,125,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
     PUSHBUTTON      "&Open",IDC_OPENBOOK,73,159,50,14
     PUSHBUTTON      "&Cancel",IDCANCEL,130,159,50,14
 END
