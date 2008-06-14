@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE smil PUBLIC "-//NISO//DTD dtbsmil 2005-1//EN" "http://www.daisy.org/z3986/2005/dtbsmil-2005-1.dtd" []>
+<smil xmlns="http://www.w3.org/2001/SMIL20/">
+	  <head>
+		    <meta content="amis-help-us-eng-20080613" name="dtb:uid" />
+		    <meta content="TPB Narrator" name="dtb:generator" />
+		    <meta content="0:01:57.932" name="dtb:totalElapsedTime" />
+		
+	  </head>
+	  <body>
+		    <seq dur="0:00:17.823" fill="remove" id="mseq">
+		       <par id="tcp22">
+            <text id="text22" src="dtbook.xml#dtb22" />
+            <audio clipBegin="0:00:00" clipEnd="0:00:02.733" src="speechgen0005.mp3" />
+         </par>
+         <par id="tcp23">
+            <text id="text23" src="dtbook.xml#dtb23" />
+            <audio clipBegin="0:00:02.733" clipEnd="0:00:06.615" src="speechgen0005.mp3" />
+         </par>
+         <seq class="list" end="DTBuserEscape;tcp25.end" fill="remove" id="tcs1">
+            <par id="tcp24">
+               <text id="text24" src="dtbook.xml#dtb25" />
+               <audio clipBegin="0:00:06.615" clipEnd="0:00:08.790" src="speechgen0005.mp3" />
+            </par>
+            <par id="tcp25">
+               <text id="text25" src="dtbook.xml#dtb26" />
+               <audio clipBegin="0:00:08.790" clipEnd="0:00:17.823" src="speechgen0005.mp3" />
+            </par>
+         </seq>
+      </seq>
+	  </body>
+</smil>

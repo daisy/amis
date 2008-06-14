@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE ncx PUBLIC "-//NISO//DTD ncx 2005-1//EN" "http://www.daisy.org/z3986/2005/ncx-2005-1.dtd" []>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="en">
+	  <head>
+		    <meta content="amis-help-us-eng-20080613" name="dtb:uid" />
+		    <meta content="3" name="dtb:depth" />
+		
+		    <meta content="TPB Narrator" name="dtb:generator" />
+		    <meta content="0" name="dtb:totalPageCount" />
+		    <meta content="0" name="dtb:maxPageNumber" />
+	  </head>
+  
+	  <docTitle>
+	     <text>AMIS User Guide</text>
+      <audio clipBegin="0:00:00" clipEnd="0:00:04.768" src="speechgen0001.mp3" />
+   </docTitle>
+  
+	
+	
+	  <navMap id="navMap">
+      <navPoint class="h1" id="ncx-1" playOrder="1">
+         <navLabel>
+            <text>AMIS User Guide</text>
+            <audio clipBegin="0:00:00" clipEnd="0:00:02.768" src="speechgen0002.mp3" />
+         </navLabel>
+         <content src="speechgen0002.smil#tcp2" />
+         <navPoint class="h2" id="ncx-2" playOrder="2">
+            <navLabel>
+               <text>What is AMIS?</text>
+               <audio clipBegin="0:00:00" clipEnd="0:00:02.440" src="speechgen0003.mp3" />
+            </navLabel>
+            <content src="speechgen0003.smil#tcp5" />
+         </navPoint>
+         <navPoint class="h2" id="ncx-3" playOrder="3">
+            <navLabel>
+               <text>What is DAISY?</text>
+               <audio clipBegin="0:00:00" clipEnd="0:00:02.489" src="speechgen0004.mp3" />
+            </navLabel>
+            <content src="speechgen0004.smil#tcp12" />
+         </navPoint>
+         <navPoint class="h2" id="ncx-4" playOrder="4">
+            <navLabel>
+               <text>Supported Formats</text>
+               <audio clipBegin="0:00:00" clipEnd="0:00:02.733" src="speechgen0005.mp3" />
+            </navLabel>
+            <content src="speechgen0005.smil#tcp22" />
+         </navPoint>
+         <navPoint class="h2" id="ncx-5" playOrder="5">
+            <navLabel>
+               <text>System Requirements</text>
+               <audio clipBegin="0:00:00" clipEnd="0:00:02.812" src="speechgen0006.mp3" />
+            </navLabel>
+            <content src="speechgen0006.smil#tcp26" />
+         </navPoint>
+         <navPoint class="h2" id="ncx-6" playOrder="6">
+            <navLabel>
+               <text>Screen Layout</text>
+               <audio clipBegin="0:00:00" clipEnd="0:00:02.517" src="speechgen0007.mp3" />
+            </navLabel>
+            <content src="speechgen0007.smil#tcp34" />
+         </navPoint>
+         <navPoint class="h2" id="ncx-7" playOrder="7">
+            <navLabel>
+               <text>Features</text>
+               <audio clipBegin="0:00:00" clipEnd="0:00:02.159" src="speechgen0008.mp3" />
+            </navLabel>
+            <content src="speechgen0008.smil#tcp50" />
+            <navPoint class="h3" id="ncx-8" playOrder="8">
+               <navLabel>
+                  <text>Opening a book</text>
+                  <audio clipBegin="0:00:00" clipEnd="0:00:02.414" src="speechgen0009.mp3" />
+               </navLabel>
+               <content src="speechgen0009.smil#tcp52" />
+            </navPoint>
+            <navPoint class="h3" id="ncx-9" playOrder="9">
+               <navLabel>
+                  <text>Controlling playback</text>
+                  <audio clipBegin="0:00:00" clipEnd="0:00:02.783" src="speechgen0010.mp3" />
+               </navLabel>
+               <content src="speechgen0010.smil#tcp60" />
+            </navPoint>
+            <navPoint class="h3" id="ncx-10" playOrder="10">
+               <navLabel>
+                  <text>Navigating</text>
+                  <audio clipBegin="0:00:00" clipEnd="0:00:02.372" src="speechgen0011.mp3" />
+               </navLabel>
+               <content src="speechgen0011.smil#tcp66" />
+            </navPoint>
+            <navPoint class="h3" id="ncx-11" playOrder="11">
+               <navLabel>
+                  <text>Using the navigation sidebar</text>
+                  <audio clipBegin="0:00:00" clipEnd="0:00:03.437" src="speechgen0012.mp3" />
+               </navLabel>
+               <content src="speechgen0012.smil#tcp73" />
+            </navPoint>
+            <navPoint class="h3" id="ncx-12" playOrder="12">
+               <navLabel>
+                  <text>Setting bookmarks</text>
+                  <audio clipBegin="0:00:00" clipEnd="0:00:02.612" src="speechgen0013.mp3" />
+               </navLabel>
+               <content src="speechgen0013.smil#tcp78" />
+            </navPoint>
+            <navPoint class="h3" id="ncx-13" playOrder="13">
+               <navLabel>
+                  <text>Getting information about the publication</text>
+                  <audio clipBegin="0:00:00" clipEnd="0:00:03.813" src="speechgen0014.mp3" />
+               </navLabel>
+               <content src="speechgen0014.smil#tcp82" />
+            </navPoint>
+            <navPoint class="h3" id="ncx-14" playOrder="14">
+               <navLabel>
+                  <text>Getting help with AMIS</text>
+                  <audio clipBegin="0:00:00" clipEnd="0:00:02.974" src="speechgen0015.mp3" />
+               </navLabel>
+               <content src="speechgen0015.smil#tcp100" />
+            </navPoint>
+            <navPoint class="h3" id="ncx-15" playOrder="15">
+               <navLabel>
+                  <text>Changing the look</text>
+                  <audio clipBegin="0:00:00" clipEnd="0:00:02.577" src="speechgen0016.mp3" />
+               </navLabel>
+               <content src="speechgen0016.smil#tcp104" />
+            </navPoint>
+            <navPoint class="h3" id="ncx-16" playOrder="16">
+               <navLabel>
+                  <text>Setting preferences</text>
+                  <audio clipBegin="0:00:00" clipEnd="0:00:02.775" src="speechgen0017.mp3" />
+               </navLabel>
+               <content src="speechgen0017.smil#tcp112" />
+            </navPoint>
+            <navPoint class="h3" id="ncx-17" playOrder="17">
+               <navLabel>
+                  <text>Setting text styles</text>
+                  <audio clipBegin="0:00:00" clipEnd="0:00:02.917" src="speechgen0018.mp3" />
+               </navLabel>
+               <content src="speechgen0018.smil#tcp123" />
+            </navPoint>
+         </navPoint>
+         <navPoint class="h2" id="ncx-18" playOrder="18">
+            <navLabel>
+               <text>Contact Us</text>
+               <audio clipBegin="0:00:00" clipEnd="0:00:02.394" src="speechgen0019.mp3" />
+            </navLabel>
+            <content src="speechgen0019.smil#tcp128" />
+         </navPoint>
+      </navPoint>
+   </navMap>
+	
+	
+  
+</ncx>

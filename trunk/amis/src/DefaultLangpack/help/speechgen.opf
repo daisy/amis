@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE package PUBLIC "+//ISBN 0-9673008-1-9//DTD OEB 1.2 Package//EN" "http://openebook.org/dtds/oeb-1.2/oebpkg12.dtd" []>
+<package xmlns="http://openebook.org/namespaces/oeb-package/1.0/" unique-identifier="uid">
+	  <metadata>
+	
+		    <dc-metadata xmlns:oebpackage="http://openebook.org/namespaces/oeb-package/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+			      <dc:Format xmlns:dc="http://purl.org/dc/elements/1.1/">ANSI/NISO Z39.86-2005</dc:Format>
+		       <dc:Language xmlns:dc="http://purl.org/dc/elements/1.1/">en</dc:Language>
+         <dc:Publisher xmlns:dc="http://purl.org/dc/elements/1.1/">DAISY</dc:Publisher>
+         <dc:Title xmlns:dc="http://purl.org/dc/elements/1.1/">AMIS User Guide</dc:Title>
+         <dc:Date xmlns:dc="http://purl.org/dc/elements/1.1/">2008-06-13</dc:Date>
+         <dc:Identifier xmlns:dc="http://purl.org/dc/elements/1.1/" id="uid">amis-help-us-eng-20080613</dc:Identifier>
+      </dc-metadata>
+	
+		    <x-metadata>
+			      <meta content="audioFullText" name="dtb:multimediaType" />
+			      <meta content="Inläst med talsyntes." name="dtb:narrator" />
+		       <meta content="audio,text,image" name="dtb:multimediaContent" />
+         <meta content="0:08:52.392" name="dtb:totalTime" />
+      </x-metadata>
+	
+	  </metadata>
+	
+	  <manifest>
+	     <item href="speechgen0001.smil" id="smil-1" media-type="application/smil" />
+      <item href="speechgen0002.smil" id="smil-2" media-type="application/smil" />
+      <item href="speechgen0003.smil" id="smil-3" media-type="application/smil" />
+      <item href="speechgen0004.smil" id="smil-4" media-type="application/smil" />
+      <item href="speechgen0005.smil" id="smil-5" media-type="application/smil" />
+      <item href="speechgen0006.smil" id="smil-6" media-type="application/smil" />
+      <item href="speechgen0007.smil" id="smil-7" media-type="application/smil" />
+      <item href="speechgen0008.smil" id="smil-8" media-type="application/smil" />
+      <item href="speechgen0009.smil" id="smil-9" media-type="application/smil" />
+      <item href="speechgen0010.smil" id="smil-10" media-type="application/smil" />
+      <item href="speechgen0011.smil" id="smil-11" media-type="application/smil" />
+      <item href="speechgen0012.smil" id="smil-12" media-type="application/smil" />
+      <item href="speechgen0013.smil" id="smil-13" media-type="application/smil" />
+      <item href="speechgen0014.smil" id="smil-14" media-type="application/smil" />
+      <item href="speechgen0015.smil" id="smil-15" media-type="application/smil" />
+      <item href="speechgen0016.smil" id="smil-16" media-type="application/smil" />
+      <item href="speechgen0017.smil" id="smil-17" media-type="application/smil" />
+      <item href="speechgen0018.smil" id="smil-18" media-type="application/smil" />
+      <item href="speechgen0019.smil" id="smil-19" media-type="application/smil" />
+      <item href="./img/daisy.jpg" id="opf-20" media-type="image/jpeg" />
+      <item href="./img/amis-sidebar.jpg" id="opf-21" media-type="image/jpeg" />
+      <item href="speechgen.ncx" id="ncx" media-type="application/x-dtbncx+xml" />
+      <item href="speechgen0010.mp3" id="opf-22" media-type="audio/mpeg" />
+      <item href="./img/amis.jpg" id="opf-23" media-type="image/jpeg" />
+      <item href="speechgen0007.mp3" id="opf-24" media-type="audio/mpeg" />
+      <item href="./img/amis-publication-summary-dialog.jpg" id="opf-25" media-type="image/jpeg" />
+      <item href="speechgen0015.mp3" id="opf-26" media-type="audio/mpeg" />
+      <item href="dtbook.2005.basic.css" id="opf-27" media-type="text/css" />
+      <item href="speechgen0011.mp3" id="opf-28" media-type="audio/mpeg" />
+      <item href="speechgen0013.mp3" id="opf-29" media-type="audio/mpeg" />
+      <item href="tpbnarrator.res" id="resource" media-type="application/x-dtbresource+xml" />
+      <item href="./img/amis-default-toolbar.jpg" id="opf-30" media-type="image/jpeg" />
+      <item href="speechgen0008.mp3" id="opf-31" media-type="audio/mpeg" />
+      <item href="speechgen0004.mp3" id="opf-32" media-type="audio/mpeg" />
+      <item href="speechgen0017.mp3" id="opf-33" media-type="audio/mpeg" />
+      <item href="./img/amis-preferences-dialog.jpg" id="opf-34" media-type="image/jpeg" />
+      <item href="tpbnarrator_res.mp3" id="opf-35" media-type="audio/mpeg" />
+      <item href="speechgen0003.mp3" id="opf-36" media-type="audio/mpeg" />
+      <item href="speechgen0019.mp3" id="opf-37" media-type="audio/mpeg" />
+      <item href="./img/amis-default-view.jpg" id="opf-38" media-type="image/jpeg" />
+      <item href="speechgen0012.mp3" id="opf-39" media-type="audio/mpeg" />
+      <item href="speechgen0005.mp3" id="opf-40" media-type="audio/mpeg" />
+      <item href="./img/Nipponfoundation.jpg" id="opf-41" media-type="image/jpeg" />
+      <item href="speechgen0006.mp3" id="opf-42" media-type="audio/mpeg" />
+      <item href="speechgen.opf" id="opf-43" media-type="text/xml" />
+      <item href="speechgen0014.mp3" id="opf-44" media-type="audio/mpeg" />
+      <item href="dtbook.xml" id="opf-45" media-type="application/x-dtbook+xml" />
+      <item href="speechgen0002.mp3" id="opf-46" media-type="audio/mpeg" />
+      <item href="speechgen0009.mp3" id="opf-47" media-type="audio/mpeg" />
+      <item href="speechgen0016.mp3" id="opf-48" media-type="audio/mpeg" />
+      <item href="speechgen0018.mp3" id="opf-49" media-type="audio/mpeg" />
+      <item href="./img/amis-basic-view.jpg" id="opf-50" media-type="image/jpeg" />
+      <item href="speechgen0001.mp3" id="opf-51" media-type="audio/mpeg" />
+      <item href="./img/amis-text-style-dialog.jpg" id="opf-52" media-type="image/jpeg" />
+      <item href="./img/dfa-log.jpg" id="opf-53" media-type="image/jpeg" />
+   </manifest>
+	
+	  <spine>
+	     <itemref idref="smil-1" />
+      <itemref idref="smil-2" />
+      <itemref idref="smil-3" />
+      <itemref idref="smil-4" />
+      <itemref idref="smil-5" />
+      <itemref idref="smil-6" />
+      <itemref idref="smil-7" />
+      <itemref idref="smil-8" />
+      <itemref idref="smil-9" />
+      <itemref idref="smil-10" />
+      <itemref idref="smil-11" />
+      <itemref idref="smil-12" />
+      <itemref idref="smil-13" />
+      <itemref idref="smil-14" />
+      <itemref idref="smil-15" />
+      <itemref idref="smil-16" />
+      <itemref idref="smil-17" />
+      <itemref idref="smil-18" />
+      <itemref idref="smil-19" />
+   </spine>
+
+</package>
