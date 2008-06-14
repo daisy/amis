@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ui xmlns="http://amisproject.org" next-id="t434" xml:lang="en">
+<ui xmlns="http://amisproject.org" next-id="t435" xml:lang="en">
     <containers>
         <container id="file">
             <note>This is the menu header "File"</note>
@@ -1367,7 +1367,7 @@
             </prompt>
             <control mfcid="IDC_SUMMARYLIST" widget="list autoplay">
                 <caption>
-                    <text id="t214">Publication information list:</text>
+                    <text id="t434">Publication information list:</text>
                     <audio src="./audio/speechgen0214.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0214.smil#txtd1497e9"/>
                 </caption>
                 <description>
