@@ -65,6 +65,7 @@ public:
 	const ambulant::lib::node *m_recent_par_node;
 	bool m_expecting_audio;
 	bool m_previous_in_progress;
+	bool m_saw_audio;
 // Overrides
 	public:
 	virtual void OnDraw(CDC* pDC);  // overridden to draw this view

@@ -8,18 +8,18 @@
 		
 	  </head>
 	  <body>
-		    <seq dur="0:00:18.057" fill="remove" id="mseq">
+		    <seq dur="0:00:18.057" id="mseq">
 		       <par id="tcp2">
             <text id="text2" src="dtbook.xml#dtb2" />
-            <audio clipBegin="0:00:00" clipEnd="0:00:02.768" src="speechgen0002.mp3" />
+            <audio clipBegin="0:00:00" clipEnd="0:00:02.768" src="speechgen0002.mp3" id="aud1"/>
          </par>
          <par id="tcp3">
             <text id="text3" src="dtbook.xml#dtb3" />
-            <audio clipBegin="0:00:02.768" clipEnd="0:00:09.104" src="speechgen0002.mp3" />
+            <audio clipBegin="0:00:02.768" clipEnd="0:00:09.104" src="speechgen0002.mp3" id="aud2"/>
          </par>
          <par id="tcp4">
             <text id="text4" src="dtbook.xml#dtb4" />
-            <audio clipBegin="0:00:09.104" clipEnd="0:00:18.057" src="speechgen0002.mp3" />
+            <audio clipBegin="0:00:09.104" clipEnd="0:00:18.057" src="speechgen0002.mp3" id="aud3"/>
          </par>
       </seq>
 	  </body>

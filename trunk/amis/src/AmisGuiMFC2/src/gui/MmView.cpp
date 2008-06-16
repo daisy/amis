@@ -874,6 +874,9 @@ void MmView::document_stopped()
 {
 	TRACE(_T("MmView::document_stopped()\n"));
 	m_recent_media_node = NULL;
+	this->m_recent_par_node = NULL;
+	this->m_saw_audio = false;
+	this->m_expecting_audio = false;
 	if (!player) 
 	{
 		// If player is NULL we're actually in the process of stopping
@@ -909,11 +912,12 @@ void MmView::node_started(const ambulant::lib::node* n)
 	// Remember this node so we can later use it for local navigation
 	// (next, prev, escape).
 	if (tagname == "text" || tagname == "audio") m_recent_media_node = n;
-
+	if (tagname == "audio") m_saw_audio = true;
 	// Also, if it is a <par> we remember it, so that we can pause at the
 	// end of the par if we haven't seen any audio.
 	if (tagname == "par") 
 	{
+		m_saw_audio = false;
 		m_recent_par_node = n;
 		// If there's a sequence we assume there's gonna be audio in there:
 		m_expecting_audio = (n->get_first_child("audio") != NULL || n->get_first_child("seq") != NULL);
@@ -937,6 +941,11 @@ void MmView::node_started(const ambulant::lib::node* n)
 
 void MmView::node_stopped(const ambulant::lib::node *n)
 {
+	//if we are ending a par and we were expecting audio
+	if (n->get_local_name() == "par" && m_recent_par_node != NULL && m_saw_audio == false)
+	{
+		player->pause();
+	}
 
 }
 
