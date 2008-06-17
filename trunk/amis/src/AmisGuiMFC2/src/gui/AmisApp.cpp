@@ -232,6 +232,7 @@ BOOL CAmisApp::InitInstance()
 	CString cmd_file_name = cmdInfo.m_strFileName;
 	bool b_open_from_cmdline = false;
 	ambulant::net::url book_to_open;
+	mbIsPlayingHelpBook = false;
 	if (Preferences::Instance()->getIsFirstTime() == true)
 	{
 		book_to_open = findHelpBook();
@@ -424,7 +425,7 @@ bool CAmisApp::shouldIgnoreOpenDocEvent()
 	return mbShouldIgnoreOpenDocEvent;
 }
 //this function is used by all functions here that lead to a book being opened
-void CAmisApp::openBook(const ambulant::net::url* filename)
+bool CAmisApp::openBook(const ambulant::net::url* filename, bool saveInHistory)
 {
 	bool b_a_book_was_open = false;
 	//close the open book
@@ -437,7 +438,7 @@ void CAmisApp::openBook(const ambulant::net::url* filename)
 	if (!filename->is_empty_path()) 
 	{
 		if (amis::dtb::DtbWithHooks::Instance()->open
-			(filename, amis::Preferences::Instance()->getUserBmkDir()))
+			(filename, amis::Preferences::Instance()->getUserBmkDir(), saveInHistory))
 		{
 			//update the status in the title bar
 			MainWndParts::Instance()->updateTitleBar(MainWndParts::TITLEBAR_APPNAME, CString(L"AMIS"));
@@ -450,6 +451,7 @@ void CAmisApp::openBook(const ambulant::net::url* filename)
 			MainWndParts::Instance()->mpMainFrame->updateToolbarState
 				(MainWndParts::Instance()->mpDefaultToolbar);
 			amis::dtb::DtbWithHooks::Instance()->startReading(true);
+			return true;
 		}
 		else
 		{
@@ -463,6 +465,7 @@ void CAmisApp::openBook(const ambulant::net::url* filename)
 				}
 				generalBookErrorMsgBox(temp);
 				openLastReadBook();
+				return false;
 			}
 			else
 			{
@@ -473,8 +476,13 @@ void CAmisApp::openBook(const ambulant::net::url* filename)
 					AudioSequencePlayer::playPromptFromStringId("generalBookError");
 				}
 				generalBookErrorMsgBox(temp);
+				return false;
 			}
 		}
+	}
+	else //empty file path
+	{
+		return false;
 	}
 }
 void CAmisApp::openLastReadBook()
@@ -612,6 +620,14 @@ void CAmisApp::OnFileClose()
 		amis::gui::MenuManip::Instance()->clearBookmarks();
 		//update the status in the title bar
 		amis::gui::MainWndParts::Instance()->updateTitleBar(amis::gui::MainWndParts::TITLEBAR_BOOKTITLE, _T(""));
+
+		if (mbIsPlayingHelpBook == true)
+		{
+			mbIsPlayingHelpBook = false;
+			//load the last-read book
+			if (mpHistory->getLastRead() != NULL)
+				openBook(&mpHistory->getLastRead()->mPath);
+		}
 	}
 }
 
@@ -1070,7 +1086,8 @@ void CAmisApp::OnShowHelpContents()
 	const ambulant::net::url url = findHelpBook();
 	if (url.is_empty_path() == false)
 	{
-		openBook(&url);
+		if (openBook(&url, false) == true)
+			mbIsPlayingHelpBook = true;
 	}
 	else
 	{

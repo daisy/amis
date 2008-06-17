@@ -69,7 +69,7 @@ DtbWithHooks::~DtbWithHooks()
 	if (mpFileSearcherTmp != NULL) delete mpFileSearcherTmp;
 }
 
-bool DtbWithHooks::open(const ambulant::net::url* filename, const ambulant::net::url* bookmarksPath)
+bool DtbWithHooks::open(const ambulant::net::url* filename, const ambulant::net::url* bookmarksPath, bool saveInHistory)
 {
 	std::wstring str = amis::gui::CAmisApp::emitMessage("loading");
 	
@@ -78,8 +78,12 @@ bool DtbWithHooks::open(const ambulant::net::url* filename, const ambulant::net:
 	
 	getFileSearcher()->clearSearchResults();
 	
-	//call the base class
-	if (!Dtb::open(filename, bookmarksPath, theApp.getHistory())) return false;
+	BookList* p_history = NULL;
+	if (saveInHistory == true)
+		p_history = theApp.getHistory();
+
+	//call the base class	
+	if (!Dtb::open(filename, bookmarksPath, p_history)) return false;
 
 	//turn on all skippable options to start with
 	updateCustomTestStates(true);
@@ -100,7 +104,7 @@ bool DtbWithHooks::open(const ambulant::net::url* filename, const ambulant::net:
 		}
 	}
 
-	addToHistory();
+	if (saveInHistory == true) addToHistory();
 	amis::dtb::BookmarkSet* p_bmks = NULL;
 	p_bmks = this->getBookmarks();
 	amis::gui::MenuManip::Instance()->setupNavigationOptions();

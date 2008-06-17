@@ -42,7 +42,7 @@ public:
 	static bool isNull();
 	void DestroyInstance();
 	~DtbWithHooks();
-	bool open(const ambulant::net::url*, const ambulant::net::url*);
+	bool open(const ambulant::net::url*, const ambulant::net::url*, bool saveInHistory=true);
 	smil::SmilMediaGroup* startReading(bool);
 	smil::SmilMediaGroup* nextPhrase();
 	smil::SmilMediaGroup* previousPhrase();

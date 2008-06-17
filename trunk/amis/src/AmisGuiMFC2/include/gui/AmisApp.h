@@ -132,7 +132,7 @@ protected:
 private:
 	void initializePathsAndFiles();
 	void initializeSelfVoicing();
-	void openBook(const ambulant::net::url*);
+	bool openBook(const ambulant::net::url* url, bool saveInHistory = true);
 	void openLastReadBook();
 	void updateFontSizeButtons();
 	void updateSpeedButtons();
@@ -144,6 +144,7 @@ private:
 	bool mbShouldIgnoreOpenDocEvent;
 	bool mbWasLastExitClean;
 	ambulant::net::url findHelpBook();
+	bool mbIsPlayingHelpBook;
 public:
 	DECLARE_MESSAGE_MAP()
 

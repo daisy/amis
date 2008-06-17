@@ -76,15 +76,15 @@ void amis::dtb::DtbFileSet::initWithNccOrOpf(const ambulant::net::url* filepath,
 void amis::dtb::DtbFileSet::setAdditionalDataAfterInitialParse(wstring uid, 
 															   const ambulant::net::url* navfile, 
 															   const ambulant::net::url* resourcefile,
-															   amis::BookList* bookmarkHistory)
+															   amis::BookList* bookHistory)
 {
 	if (uid.size() > 0)
 	{
 		amis::BookEntry* p_entry = NULL;
 		//try to find the book in the history and grab its bookmarks filepath
-		if (bookmarkHistory != NULL)
+		if (bookHistory != NULL)
 		{
-			p_entry = bookmarkHistory->findByUid(uid);
+			p_entry = bookHistory->findByUid(uid);
 			if (p_entry != NULL && p_entry->mBmkPath.is_empty_path() == false)
 				mBookmarksFilepath = p_entry->mBmkPath;
 		}
