@@ -143,6 +143,7 @@ private:
 	bool mbBookIsOpen;
 	bool mbShouldIgnoreOpenDocEvent;
 	bool mbWasLastExitClean;
+	ambulant::net::url findHelpBook();
 public:
 	DECLARE_MESSAGE_MAP()
 

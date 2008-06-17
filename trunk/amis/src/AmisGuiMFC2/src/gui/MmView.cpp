@@ -375,7 +375,7 @@ void MmView::SetMMDocument(LPCTSTR lpszPathName, bool autostart)
 	}
 
 	// Set the UI to paused, the document_started() callback will fix it.
-	CAmisApp* pApp = (CAmisApp *) AfxGetApp();
+//	CAmisApp* pApp = (CAmisApp *) AfxGetApp();
 //	pApp->setPlayPauseState(false);
 
 	dummy = create_player_instance(u, this);
@@ -885,7 +885,7 @@ void MmView::document_stopped()
 	}
 
 	CAmisApp* pApp = (CAmisApp*) AfxGetApp();
-//	pApp->setPlayPauseState(false);
+	pApp->setPauseState(true);
 	if (m_previous_in_progress) 
 	{
 		// This is step one in "goto previous sentence" across a smil boundary:

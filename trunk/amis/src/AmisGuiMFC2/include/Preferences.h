@@ -110,6 +110,9 @@ public:
 	amis::StringModuleMap* getInstalledLanguages();
 	amis::ModuleDescData* getCurrentLanguageData();
 
+	bool getIsFirstTime();
+	void setIsFirstTime(bool);
+
 private:
 	void scanDirectoriesForCssFiles();
 	void scanDirectoriesForLanguagePackFiles();
@@ -125,6 +128,7 @@ private:
 	bool mbWasExitClean;
 	bool mbHighlightText;
 	bool mbDisableScreensaver;
+	bool mbIsFirstTime;
 	util::Color mHighlightFG;
 	util::Color mHighlightBG;
 	std::string mSidebarFontName;

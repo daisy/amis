@@ -21,5 +21,6 @@
 <entry id="highlight-fg-color" value="#FFFFFF"/>
 <entry id="highlight-bg-color" value="#FFFF00"/>
 <entry id="sidebar-font-name" value="Verdana"/>
+<entry id="is-first-time" value="yes"/>
 </section>
 </preferences>

@@ -81,6 +81,8 @@ Preferences::Preferences()
 	mHighlightFG.set("#000000");
 	mHighlightBG.set("#FFFF00");
 	mSidebarFontName = "Arial";
+
+	mbIsFirstTime = false;
 }
 
 //this function should be called after the preferences XML file has been parsed
@@ -456,6 +458,11 @@ void Preferences::logAllPreferences()
 	else log_msg += "No";
 	p_log->writeMessage(log_msg);
 
+	log_msg = "\tFirst time running AMIS? ";
+	if (getIsFirstTime()) log_msg += "Yes";
+	else log_msg += "No";
+	p_log->writeMessage(log_msg);
+
 	p_log->writeMessage("\tBookmark dir = ", &mUserBmkDir);
 	p_log->writeMessage("\tLangpacks dir = ", &mLangpacksDir);
 	p_log->writeMessage("\tFontsize css dir = ", &mFontsizeCssDir);
@@ -526,4 +533,12 @@ void Preferences::resetColors()
 {
 	mHighlightFG.set("#000000");
 	mHighlightBG.set("#FFFF00");
+}
+void Preferences::setIsFirstTime(bool val)
+{
+	mbIsFirstTime = val;
+}
+bool Preferences::getIsFirstTime()
+{
+	return mbIsFirstTime;
 }

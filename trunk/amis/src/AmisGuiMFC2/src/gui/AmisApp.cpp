@@ -232,6 +232,11 @@ BOOL CAmisApp::InitInstance()
 	CString cmd_file_name = cmdInfo.m_strFileName;
 	bool b_open_from_cmdline = false;
 	ambulant::net::url book_to_open;
+	if (Preferences::Instance()->getIsFirstTime() == true)
+	{
+		book_to_open = findHelpBook();
+		Preferences::Instance()->setIsFirstTime(false);
+	}
 	if (cmd_file_name.GetLength() > 0)
 	{
 		b_open_from_cmdline = true;
@@ -1062,23 +1067,10 @@ void CAmisApp::OnToggleContentAudio()
 }
 void CAmisApp::OnShowHelpContents()
 {
-	amis::util::SearchForFilesMFC searcher;
-	//search the langpack/help directory for opf or ncc file
-	searcher.clearAll();
-	searcher.addSearchCriteria("ncc.htm");
-	searcher.addSearchCriteria(".opf");
-	//sometimes I see these temp files on my drive .. excluding them just to be safe
-	searcher.addSearchExclusionCriteria("_ncc.html");
-	searcher.setRecursiveSearch(false);
-
-	ambulant::net::url help_dir = ambulant::net::url::from_filename("./help");
-	help_dir = help_dir.join_to_base(*amis::Preferences::Instance()->getCurrentLanguageData()->getXmlFileName());
-
-	int files_found = searcher.startSearch(help_dir.get_file());
-	if (files_found > 0)
+	const ambulant::net::url url = findHelpBook();
+	if (url.is_empty_path() == false)
 	{
-		amis::UrlList* p_url_list = searcher.getSearchResults();
-		openBook(&(*p_url_list)[0]);
+		openBook(&url);
 	}
 	else
 	{
@@ -1228,4 +1220,30 @@ bool CAmisApp::canDecreasePlaybackSpeed()
 	double rate = ambulantX::gui::dx::audio_playerX::Instance()->get_rate();
 	if (rate <= 1) return false;
 	else return true;
+}
+
+ambulant::net::url CAmisApp::findHelpBook()
+{
+	amis::util::SearchForFilesMFC searcher;
+	//search the langpack/help directory for opf or ncc file
+	searcher.clearAll();
+	searcher.addSearchCriteria("ncc.htm");
+	searcher.addSearchCriteria(".opf");
+	//sometimes I see these temp files on my drive .. excluding them just to be safe
+	searcher.addSearchExclusionCriteria("_ncc.html");
+	searcher.setRecursiveSearch(false);
+
+	ambulant::net::url help_dir = ambulant::net::url::from_filename("./help");
+	help_dir = help_dir.join_to_base(*amis::Preferences::Instance()->getCurrentLanguageData()->getXmlFileName());
+
+	int files_found = searcher.startSearch(help_dir.get_file());
+	if (files_found > 0)
+	{
+		amis::UrlList* p_url_list = searcher.getSearchResults();
+		return (*p_url_list)[0];
+	}
+	else
+	{
+		return ambulant::net::url::from_filename("");
+	}
 }

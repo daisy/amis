@@ -217,6 +217,13 @@ void PreferencesFileIO::addEntry(string id, string value)
 	{
 		mpPrefs->setSidebarFontName(value);
 	}
+	else if (id.compare("is-first-time") == 0)
+	{
+		if (value.compare("yes") == 0)
+			mpPrefs->setIsFirstTime(true);
+		else
+			mpPrefs->setIsFirstTime(false);
+	}
 }
 
 
@@ -346,6 +353,9 @@ void PreferencesFileIO::writeData()
 	pGeneralSection->appendChild((DOMNode*)pEntry);
 
 	pEntry = createEntry("sidebar-font-name", mpPrefs->getSidebarFontName());
+	pGeneralSection->appendChild((DOMNode*)pEntry);
+
+	pEntry = createEntry("is-first-time", mpPrefs->getIsFirstTime());
 	pGeneralSection->appendChild((DOMNode*)pEntry);
 
 	//get a pointer to the root element
