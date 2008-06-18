@@ -60,8 +60,8 @@ public:
 	void setPageFGColor(amis::util::Color);
 	void setFontName(std::string);
 	void setFontSize(double);
-	void setSelectedNode(amis::dtb::nav::NavPoint*);
-	void setSelectedNode(amis::dtb::nav::PageTarget*);
+	void updateSelection();
+
 	void selectTab(int);
 	void setFocusToActiveList();
 	enum { IDD = IDD_SIDEBAR };
@@ -75,6 +75,7 @@ public:
 	afx_msg void OnNavListSelect(NMHDR* pNMHDR, LRESULT* pResult, amis::dtb::nav::NavTarget* pData);
 	afx_msg void OnPageListClick(NMHDR* pNMHDR, LRESULT* pResult);
 	afx_msg void OnPageListKeyDown(NMHDR* pNMHDR, LRESULT* pResult);
+	afx_msg void OnPageListSetFocus(NMHDR* pNMHDR, LRESULT* pResult);
 	afx_msg void OnLvnItemchangedListPage(NMHDR *pNMHDR, LRESULT *pResult);
 
 protected:
@@ -83,6 +84,8 @@ protected:
 	virtual BOOL OnInitDialog();
 	
 private:
+	void setSelectedNode(amis::dtb::nav::NavPoint*);
+	void setSelectedNode(amis::dtb::nav::PageTarget*);
 	void showPageList();
 	void showNavList(unsigned int);
 	void showNavMap();

@@ -201,8 +201,8 @@ bool PublicationSummaryDialog::calculateData()
 	
 	amis::dtb::nav::PageTarget* p_page = NULL;
 	amis::dtb::nav::NavPoint* p_section = NULL;
-	p_page = (amis::dtb::nav::PageTarget*)p_nav->getNodeForSmilId(file, mpBook->getNavModel()->getPageList());
-	p_section = (amis::dtb::nav::NavPoint*)p_nav->getNodeForSmilId(file, mpBook->getNavModel()->getNavMap());
+	p_page = (amis::dtb::nav::PageTarget*)p_nav->getNodeForSmilId(file, p_nav->getPageList());
+	p_section = (amis::dtb::nav::NavPoint*)p_nav->getNodeForSmilId(file, p_nav->getNavMap());
 
 	if (p_page != NULL) mpCurrentPage = p_page->getLabel();
 	if (p_section != NULL) 

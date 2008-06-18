@@ -42,12 +42,12 @@ int amis::dtb::nav::PageTarget::getType()
 	return mType;
 }
 
-int amis::dtb::nav::PageTarget::getIndex()
+/*int amis::dtb::nav::PageTarget::getIndex()
 {
 	return mIndex;
-}
+}*/
 
-void amis::dtb::nav::PageTarget::setIndex(int idx)
+/*void amis::dtb::nav::PageTarget::setIndex(int idx)
 {
 	mIndex = idx;
-}
+}*/

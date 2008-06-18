@@ -45,9 +45,9 @@ public:
 		PAGE_SPECIAL=2
 	};
 
-	int getIndex();
+//	int getIndex();
 
-	void setIndex(int);
+//	void setIndex(int);
 	void setType(int);
 
 

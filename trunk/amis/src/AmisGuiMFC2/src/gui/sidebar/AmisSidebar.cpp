@@ -27,6 +27,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "dtb/nav/NavMap.h"
 #include "dtb/nav/NavNode.h"
 #include "gui/AmisApp.h"
+#include "gui/MainWndParts.h"
 #include "../../../resource.h"
 #include "util/Log.h"
 #include "Preferences.h"
@@ -47,6 +48,7 @@ BEGIN_MESSAGE_MAP(CAmisSidebar, cdxCDynamicBarDlg)
 	ON_NOTIFY(TVN_SELCHANGED, IDC_TREE, OnSelchangeTree)
 	ON_NOTIFY(NM_CLICK, IDC_LIST_PAGE, OnPageListClick)
 	ON_NOTIFY(LVN_KEYDOWN, IDC_LIST_PAGE, OnPageListKeyDown)
+	ON_NOTIFY(NM_SETFOCUS, IDC_LIST_PAGE, OnPageListSetFocus)
 END_MESSAGE_MAP()
 
 CAmisSidebar::CAmisSidebar(CWnd* pParent /*=NULL*/)
@@ -211,6 +213,18 @@ void CAmisSidebar::OnPageListClick(NMHDR* pNMHDR, LRESULT* pResult)
 	}
 }
 
+void CAmisSidebar::OnPageListSetFocus(NMHDR* pNMHDR, LRESULT* pResult)
+{
+	//find the current page
+	/*const ambulant::net::url* p_url = amis::gui::MainWndParts::Instance()->mpMmView->getCurrentUrl();
+	string id = p_url->get_ref();
+	string file = amis::util::FilePathTools::getFileName(p_url->get_url());
+	file = file + "#" + id;
+	amis::dtb::nav::PageTarget* p_page = NULL;
+	amis::dtb::nav::NavModel* p_nav = amis::dtb::DtbWithHooks::Instance()->getNavModel();
+	p_page = (amis::dtb::nav::PageTarget*)p_nav->getNodeForSmilId(file, p_nav->getPageList());
+	setSelectedNode(p_page);*/
+}
 void CAmisSidebar::OnPageListKeyDown(NMHDR* pNMHDR, LRESULT* pResult)
 {
 	//right now, the current selection mark has not been updated
@@ -228,6 +242,7 @@ void CAmisSidebar::OnPageListKeyDown(NMHDR* pNMHDR, LRESULT* pResult)
 	int curr_sel;
 	string content;
 	curr_sel = mPageList.GetSelectionMark();
+	
 	if (pKeyDown->wVKey == VK_UP && (!mIsControlDown || !mIsShiftDown))
 	{
 		if (curr_sel - 1 > -1 && curr_sel - 1 < mPageList.GetItemCount())
@@ -395,8 +410,6 @@ void CAmisSidebar::showPageList()
 		mNavLists[i]->ShowWindow(SW_HIDE);
 
 	mPageList.SetFocus();
-	this->RedrawWindow();
-	//TODO: then amis should play an audio prompt "pages"
 }
 
 void CAmisSidebar::showNavList(unsigned int idx)
@@ -631,11 +644,10 @@ void CAmisSidebar::setSelectedNode(amis::dtb::nav::PageTarget* pNode)
 	if (pNode == NULL) return;
 	mbIgnorePageListSelect = true;
 	
-	LVITEM item;
-	mPageList.SetSelectionMark(pNode->getIndex());
-	mPageList.GetItem(&item);
-	mPageList.SetItemState(pNode->getIndex(), 0, LVIS_SELECTED);
-
+	int idx = pNode->getIndex();
+	mPageList.SetItemState(idx, LVIS_SELECTED, LVIS_SELECTED);
+	mPageList.SetSelectionMark(idx);
+	idx = mPageList.GetSelectionMark();
 	mbIgnorePageListSelect = false;
 }
 void CAmisSidebar::selectTab(int sel)
@@ -668,4 +680,20 @@ void CAmisSidebar::setFocusToActiveList()
 {
 	int idx = mTabStrip.GetCurSel();
 	changeView(idx);
+}
+void CAmisSidebar::updateSelection()
+{
+	const ambulant::net::url* p_url = MainWndParts::Instance()->mpMmView->getCurrentUrl();
+	string id = p_url->get_ref();
+	string file = amis::util::FilePathTools::getFileName(p_url->get_url());
+	file = file + "#" + id;
+	
+	amis::dtb::nav::NavModel* p_nav = amis::dtb::DtbWithHooks::Instance()->getNavModel();
+	amis::dtb::nav::PageTarget* p_page = NULL;
+	amis::dtb::nav::NavPoint* p_section = NULL;
+	p_page = (amis::dtb::nav::PageTarget*)p_nav->getNodeForSmilId(file, p_nav->getPageList());
+	p_section = (amis::dtb::nav::NavPoint*)p_nav->getNodeForSmilId(file, p_nav->getNavMap());
+
+	setSelectedNode(p_page);
+	setSelectedNode(p_section);
 }
