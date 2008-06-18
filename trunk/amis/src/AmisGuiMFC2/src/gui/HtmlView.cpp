@@ -348,7 +348,7 @@ CAmisHtmlView::smilPlayerDeleted()
 #endif
 #endif
 	//this->Navigate2(_T("about:blank"));
-	TextRenderBrain::Instance()->gotoUriTarget("about:blank");
+	if (theApp.isBookOpen() == false) TextRenderBrain::Instance()->gotoUriTarget("about:blank");
 }
 
 #ifdef HTML_LOAD_MANUALLY
