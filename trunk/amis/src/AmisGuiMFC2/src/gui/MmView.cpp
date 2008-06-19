@@ -28,11 +28,13 @@
 #include "gui/MmView.h"
 #include "gui/HtmlView.h"
 #include "gui/AmisApp.h"
+#include "gui/TextRenderBrain.h"
 
 #include "io/UrlInputSource.h"
 
 #include "dtb/nav/NavModel.h"
 #include "dtb/CustomTest.h"
+#include "DtbWithHooks.h"
 #include "../resource.h"
 
 #include <fstream>
@@ -868,6 +870,7 @@ void MmView::document_started()
 	TRACE(_T("MmView::document_started()\n"));
 	CAmisApp* pApp = (CAmisApp *) AfxGetApp();
 	pApp->setPauseState(false);
+	mbRememberNextTextSrc = false;
 }
 
 void MmView::document_stopped()
@@ -907,6 +910,26 @@ void MmView::node_started(const ambulant::lib::node* n)
 	USES_CONVERSION;
 	const char *id = n->get_attribute("id");
 	ambulant::lib::xml_string tagname = n->get_local_name();
+
+	//part of a workaround to stop highlighting of text nodes
+	//this highlighting happens sometimes to nodes that should be skipped
+	//the node_started/node_stopped events are over before the highlighting commands get sent
+	//i don't know where they come from..
+	//it only happens when we try to load the lastmark of a document (url#frag; ambulant not started playing yet)
+	if (amis::dtb::DtbWithHooks::Instance()->getIsWaitingForLastmarkNode() == true)
+	{
+		if (id != NULL && amis::dtb::DtbWithHooks::Instance()->getIdOfLastmarkNode().compare(id) == 0)
+			mbRememberNextTextSrc = true;
+	}
+	if (mbRememberNextTextSrc == true && tagname == "text")
+	{
+		string src = n->get_attribute("src");
+		ambulant::net::url url = ambulant::net::url::from_url(src);
+		amis::gui::TextRenderBrain::Instance()->setTextSrcToWaitFor(url);
+		mbRememberNextTextSrc = false;
+	}
+	//end workaround
+	
 	if (tagname != "par" && tagname != "text" && tagname != "audio") return;
 
 	// Remember this node so we can later use it for local navigation

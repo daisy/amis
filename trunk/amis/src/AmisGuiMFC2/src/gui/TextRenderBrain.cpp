@@ -78,10 +78,20 @@ void TextRenderBrain::gotoUriTarget(amis::TextNode* pText)
 
 //TODO: make sure this path comparison works for Japanese too
 void TextRenderBrain::gotoUriTarget(std::string urlstr)
-{
+ {
 	USES_CONVERSION;
+	
 	ambulant::net::url url = ambulant::net::url::from_url(urlstr);
 	string text_elm_id = url.get_ref();
+	
+	//if we know not to highlight anything until a certain point...
+	if (amis::dtb::DtbWithHooks::Instance()->getIsWaitingForLastmarkNode() == true)
+	{
+		if (text_elm_id == mTextSrcToWaitFor.get_ref())
+			amis::dtb::DtbWithHooks::Instance()->setIsWaitingForLastmarkNode(false);
+		else
+			return;
+	}
 
 	//make sure our document still exists; otherwise force a reload by setting mCurrentUrl to ""
 	if (MainWndParts::Instance()->mpHtmlView->GetHtmlDocument() == NULL) 
@@ -103,6 +113,8 @@ void TextRenderBrain::gotoUriTarget(std::string urlstr)
 		CString load_url(url.get_url().c_str());
 		mCurrentUrl = url.get_document();
 
+		if (mbWaitForDocumentLoad) TRACE(_T("Warning: already waiting for a document to load\n"));
+
 		mbWaitForDocumentLoad = true;
 		MainWndParts::Instance()->mpHtmlView->Navigate2(load_url, NULL, NULL);
 		
@@ -121,7 +133,6 @@ void TextRenderBrain::gotoUriTarget(std::string urlstr)
 		//	<audio src="clip2.wav"/>
 		//</seq></par>
 		if (text_elm_id == mTextElmId) return;
-
 		//save the current ID
 		mTextElmId = text_elm_id;
 		showElementAtId(mTextElmId);
@@ -217,7 +228,7 @@ void TextRenderBrain::showElementAtId(string elmId)
 		v_bool.vt = VT_BOOL;
 		v_bool.boolVal = TRUE;
 
-		p_elm->scrollIntoView(v_bool);
+		p_elm->scrollIntoView(v_bool); 
 	}
 	mpPreviousElm = p_elm;
 }
@@ -620,4 +631,11 @@ bool TextRenderBrain::isElementInView(IHTMLElement* pElm)
 
 	//otherwise we assume it's in view
 	return true;
+}
+
+//if we need to prevent anything from being highlighted until we reach a particular 
+//text element, then use this function
+void TextRenderBrain::setTextSrcToWaitFor(ambulant::net::url src)
+{
+	mTextSrcToWaitFor = src;
 }

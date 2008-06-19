@@ -146,9 +146,19 @@ smil::SmilMediaGroup* DtbWithHooks::startReading(bool loadLastmark)
 
 	//if we're not using the lastmark or it is unavailable, just load from the beginning
 	if (loadLastmark == false || p_lastmark == NULL)
+	{
 		smilfile = getSpine()->getFirstFile();
+		mIdOfLastmarkNode = "";
+		setIsWaitingForLastmarkNode(false);
+	}
 	else
+	{
 		smilfile = &getBookmarks()->getLastmark()->mUri;
+		//set a flag to stop highlighting of all text nodes until we hit the one belonging to the smil node
+		//with ref = smilfile->get_ref()
+		mIdOfLastmarkNode = smilfile->get_ref();
+		setIsWaitingForLastmarkNode(true);
+	}
 
 	loadSmilFromUrl(smilfile);
 	
@@ -178,6 +188,8 @@ smil::SmilMediaGroup* DtbWithHooks::previousPhrase()
 
 void DtbWithHooks::nextSmilDocument()
 {
+	if (theApp.isBookOpen() == false) return;
+
 	const ambulant::net::url* filepath = this->getSpine()->getNextFile();
 	if (filepath) 
 		amis::gui::MainWndParts::Instance()->mpMmView->ScheduleReplaceDoc(filepath->get_file());
@@ -185,6 +197,8 @@ void DtbWithHooks::nextSmilDocument()
 
 void DtbWithHooks::previousSmilDocument()
 {
+	if (theApp.isBookOpen() == false) return;
+
 	const ambulant::net::url* filepath = this->getSpine()->getPreviousFile();
 	if (filepath) 
 		amis::gui::MainWndParts::Instance()->mpMmView->ScheduleReplaceDoc(filepath->get_file());
@@ -582,4 +596,18 @@ bool DtbWithHooks::canGoToPreviousPage()
 		else return false;
 	}
 	return false;
+}
+
+bool DtbWithHooks::getIsWaitingForLastmarkNode()
+{
+	return mbIsWaitingForLastmarkNode;
+}
+void DtbWithHooks::setIsWaitingForLastmarkNode(bool val)
+{
+	mbIsWaitingForLastmarkNode = val;
+}
+
+string DtbWithHooks::getIdOfLastmarkNode()
+{
+	return mIdOfLastmarkNode;
 }

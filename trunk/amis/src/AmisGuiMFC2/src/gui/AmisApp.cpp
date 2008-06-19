@@ -75,7 +75,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 #if _DEBUG
 //get Visual Leak Detector version 1.0 here: http://dmoulding.googlepages.com/downloads
-#include <vld.h>
+//#include <vld.h>
 #endif
 
 using namespace amis::gui;

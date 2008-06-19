@@ -64,6 +64,15 @@ public:
 	bool canGoToNextPage();
 	bool canGoToPreviousPage();
 
+	//part of a workaround to stop highlighting of text nodes
+	//this highlighting happens sometimes to nodes that should be skipped
+	//the node_started/node_stopped events are over before the highlighting commands get sent
+	//i don't know where they come from..
+	//it only happens when we try to load the lastmark of a document (url#frag; ambulant not started playing yet)
+	string getIdOfLastmarkNode();
+	bool getIsWaitingForLastmarkNode();
+	void setIsWaitingForLastmarkNode(bool);
+
 private:
 	void addToHistory();
 	void makeAllLabelsHumanReadable();
@@ -71,6 +80,15 @@ private:
 
 	//this object is instantiated and destroyed by this class, but otherwise is managed by the base class
 	amis::util::SearchForFilesMFC* mpFileSearcherTmp;
+	
+	//part of a workaround to stop highlighting of text nodes
+	//this highlighting happens sometimes to nodes that should be skipped
+	//the node_started/node_stopped events are over before the highlighting commands get sent
+	//i don't know where they come from..
+	//it only happens when we try to load the lastmark of a document (url#frag; ambulant not started playing yet)
+	bool mbIsWaitingForLastmarkNode;
+	string mIdOfLastmarkNode;
+
 private:
 	static DtbWithHooks* pinstance;
 };
