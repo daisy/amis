@@ -870,7 +870,7 @@ void MmView::document_started()
 	TRACE(_T("MmView::document_started()\n"));
 	CAmisApp* pApp = (CAmisApp *) AfxGetApp();
 	pApp->setPauseState(false);
-	mbRememberNextTextSrc = false;
+	mbRememberParallelTextSrc = false;
 }
 
 void MmView::document_stopped()
@@ -919,14 +919,13 @@ void MmView::node_started(const ambulant::lib::node* n)
 	if (amis::dtb::DtbWithHooks::Instance()->getIsWaitingForLastmarkNode() == true)
 	{
 		if (id != NULL && amis::dtb::DtbWithHooks::Instance()->getIdOfLastmarkNode().compare(id) == 0)
-			mbRememberNextTextSrc = true;
+			mbRememberParallelTextSrc = true;
 	}
-	if (mbRememberNextTextSrc == true && tagname == "text")
+	//save the text src, we might need it
+	if (tagname == "text")
 	{
 		string src = n->get_attribute("src");
-		ambulant::net::url url = ambulant::net::url::from_url(src);
-		amis::gui::TextRenderBrain::Instance()->setTextSrcToWaitFor(url);
-		mbRememberNextTextSrc = false;
+		mRecentTextSrc = ambulant::net::url::from_url(src);
 	}
 	//end workaround
 	
@@ -968,6 +967,12 @@ void MmView::node_stopped(const ambulant::lib::node *n)
 	if (n->get_local_name() == "par" && m_recent_par_node != NULL && m_saw_audio == false)
 	{
 		player->pause();
+	}
+	//if we needed to know the text src and we have one
+	if (this->mbRememberParallelTextSrc && !mRecentTextSrc.is_empty_path())
+	{
+		amis::gui::TextRenderBrain::Instance()->setTextSrcToWaitFor(mRecentTextSrc);
+		mbRememberParallelTextSrc = false;
 	}
 
 }

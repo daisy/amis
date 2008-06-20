@@ -135,10 +135,11 @@ private:
 	//the node_started/node_stopped events are over before the highlighting commands get sent
 	//i don't know where they come from..
 	//it only happens when we try to load the lastmark of a document (url#frag; ambulant not started playing yet)
-	//anyway, this flag says to remember the src of the next text node, because it is part of
-	//where we want to start rendering the document
+	//anyway, this flag says to remember the src of the parallel text node (could come before or after the #frag)
+	//because it is part of where we want to start rendering the document
 	//the src-to-remember gets assigned to TextRenderBrain
-	bool mbRememberNextTextSrc;
+	bool mbRememberParallelTextSrc;
+	ambulant::net::url mRecentTextSrc;
 
 };
 
