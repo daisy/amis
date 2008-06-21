@@ -62,6 +62,7 @@ DtbWithHooks::DtbWithHooks()
 	mpFileSearcherTmp = NULL;
 	mpFileSearcherTmp = new amis::util::SearchForFilesMFC();
 	setFileSearcher(mpFileSearcherTmp);
+	mbIsWaitingForLastmarkNode = false;
 }
 
 DtbWithHooks::~DtbWithHooks()
@@ -77,7 +78,7 @@ bool DtbWithHooks::open(const ambulant::net::url* filename, const ambulant::net:
 	amis::gui::MainWndParts::Instance()->updateTitleBar(amis::gui::MainWndParts::TITLEBAR_BOOKTITLE, strx);
 	
 	getFileSearcher()->clearSearchResults();
-	
+	mbIsWaitingForLastmarkNode = false;
 	BookList* p_history = NULL;
 	if (saveInHistory == true)
 		p_history = theApp.getHistory();
