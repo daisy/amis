@@ -285,7 +285,7 @@ void CMainFrame::OnMenuSelect( UINT	nItemID, UINT nFlags, HMENU	hSysMenu )
   
 	p_log->writeMessage("CMainFrame::OnMenuSelect()");
 	TRACE("\nCMainFrame::OnMenuSelect()\n");
-	CFrameWnd::OnMenuSelect(nItemID, nFlags, hSysMenu);
+	CMDIFrameWnd::OnMenuSelect(nItemID, nFlags, hSysMenu);
 
 	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 	{
@@ -305,15 +305,13 @@ void CMainFrame::OnInitMenuPopup(CMenu*	pPopupMenu,	UINT nIndex, BOOL bSysMenu)
 		mMenuVoicing->OnInitMenuPopup(pPopupMenu, nIndex, bSysMenu);
 	}
 
-	CFrameWnd::OnInitMenuPopup(pPopupMenu, nIndex, bSysMenu);
+	CMDIFrameWnd::OnInitMenuPopup(pPopupMenu, nIndex, bSysMenu);
 }
 
 void CMainFrame::OnInitMenu(CMenu* pMenu)
 {
-	
-					amis::util::Log* p_log = amis::util::Log::Instance();
-  
-					p_log->writeMessage("CMainFrame::OnInitMenu()");
+	amis::util::Log* p_log = amis::util::Log::Instance();
+	p_log->writeMessage("CMainFrame::OnInitMenu()");
 	TRACE("\nCMainFrame::OnInitMenu()\n");
 	CMDIFrameWnd::OnInitMenu(pMenu);
 }
@@ -322,7 +320,6 @@ void CMainFrame::OnInitMenu(CMenu* pMenu)
 void CMainFrame::OnEnterMenuLoop(BOOL bIsTrackPopupMenu)
 {
 	CMDIFrameWnd::OnEnterMenuLoop(bIsTrackPopupMenu);
-
 
 	/* Nothing to do here.
 	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)

@@ -278,7 +278,7 @@ amis::dtb::nav::NavPoint* amis::dtb::nav::NavModel::previousSection(int currentP
 	//so a node with a play order of 10 will be in position 9
 	//and we want to start looking backwards from position 8
 	int idx = currentPlayOrder - 2;
-	if (idx >= mPlayOrderList.size() || idx <= 0) return NULL;
+	if (idx >= mPlayOrderList.size() || idx < 0) return NULL;
 
 	for (int i = idx; i >=0; i--)
 	{
@@ -293,7 +293,7 @@ amis::dtb::nav::NavPoint* amis::dtb::nav::NavModel::previousSection(int currentP
 amis::dtb::nav::NavPoint* amis::dtb::nav::NavModel::nextSection(int currentPlayOrder)
 {
 	int idx = currentPlayOrder;
-	if (idx >= mPlayOrderList.size() || idx <= 0) return NULL;
+	if (idx >= mPlayOrderList.size() || idx < 0) return NULL;
 
 	for (int i = idx; i < mPlayOrderList.size(); i++)
 	{
