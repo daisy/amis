@@ -266,8 +266,11 @@ void amis::dtb::DtbFileSet::findTextFiles(amis::util::SearchForFiles* fileSearch
 	if (this->mOpfFilepath.is_empty_path())
 	{
 		//we want to find the HTML files that are not NCC files
-		mpFileSearcher->addSearchCriteria(".html");
+		//mpFileSearcher->addSearchCriteria(".html");
+		mpFileSearcher->addSearchCriteria(".htm");
 		mpFileSearcher->addSearchExclusionCriteria("ncc.html");
+		mpFileSearcher->addSearchExclusionCriteria("._");
+		mpFileSearcher->addSearchExclusionCriteria(".svn-base");
 		mpFileSearcher->setRecursiveSearch(true);
 		mpFileSearcher->startSearch(mBookDirectory.get_file());
 	

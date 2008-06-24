@@ -1021,6 +1021,12 @@ void CAmisApp::OnShowFindInText()
 			ambulant::net::url smil_url = ambulant::net::url::from_url(result);
 			amis::dtb::DtbWithHooks::Instance()->loadSmilFromUrl(&smil_url);
 		}
+		else
+		{
+			//TODO
+			//play prompt "not found"
+			//display in status bar too
+		}
 	}
 }
 void CAmisApp::OnFindNextInText()
