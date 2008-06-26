@@ -450,7 +450,13 @@ void DtbWithHooks::previousSection()
 	if (p_node != NULL)
 	{
 		std::string id = p_node->getId();
-		p_node = getNavModel()->previousSection(p_node->getPlayOrder());
+
+		int sidebar_depth = MainWndParts::Instance()->mpSidebar->m_wndDlg.getExposedDepth();
+		if (sidebar_depth != getNavModel()->getNavMap()->getMaxDepth())
+			p_node = getNavModel()->previousSection(p_node->getPlayOrder(), sidebar_depth);
+		else
+			p_node = getNavModel()->previousSection(p_node->getPlayOrder());
+		
 		if (p_node != NULL) 
 		{
 			loadNavNode(p_node);
@@ -474,7 +480,12 @@ void DtbWithHooks::nextSection()
 	if (p_node != NULL)
 	{
 		std::string id = p_node->getId();
-		p_node = getNavModel()->nextSection(p_node->getPlayOrder());
+		int sidebar_depth = MainWndParts::Instance()->mpSidebar->m_wndDlg.getExposedDepth();
+		if (sidebar_depth != getNavModel()->getNavMap()->getMaxDepth())
+			p_node = getNavModel()->nextSection(p_node->getPlayOrder(), sidebar_depth);
+		else
+			p_node = getNavModel()->nextSection(p_node->getPlayOrder());
+		
 		if (p_node != NULL) 
 		{
 			loadNavNode(p_node);

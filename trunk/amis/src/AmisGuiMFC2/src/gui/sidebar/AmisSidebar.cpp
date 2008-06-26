@@ -543,18 +543,23 @@ void CAmisSidebar::expandSections(int level)
 		}
 	}
 	
-	//make sure the selection is visible
+	//update the selection
+	h_selected = findParentAtLevel(h_selected, level);
 	if (h_selected == NULL) h_selected = mTree.GetRootItem();
+	this->mbIgnoreTreeSelect = true;
 	mTree.EnsureVisible(h_selected);
+	mTree.SelectItem(h_selected);
+	this->mbIgnoreTreeSelect = false;
 }
 
 void CAmisSidebar::treeBranchCollapse(HTREEITEM hItem)
 {
 	HTREEITEM h_curr = hItem;
 
+	mTree.Expand(h_curr, TVE_COLLAPSE );
 	if(h_curr != NULL && mTree.ItemHasChildren(h_curr) == TRUE)
 	{
-		mTree.Expand(h_curr, TVE_COLLAPSE );
+		
         h_curr = mTree.GetChildItem(h_curr);
         
 		while (h_curr != NULL)
@@ -699,4 +704,22 @@ void CAmisSidebar::updateSelection()
 
 	setSelectedNode(p_page);
 	setSelectedNode(p_section);
+}
+
+HTREEITEM CAmisSidebar::findParentAtLevel(HTREEITEM hItem, int level)
+{
+	vector<HTREEITEM> parent_stack;
+	parent_stack.clear();
+	HTREEITEM parent = mTree.GetParentItem(hItem);
+	while (parent != NULL)
+	{
+		parent_stack.push_back(parent);
+		parent = mTree.GetParentItem(parent);
+	}
+
+	//level is 1-based
+	if (parent_stack.size() > 0 && level <= parent_stack.size()) 
+		return parent_stack[level-1];
+	else
+		return hItem;
 }

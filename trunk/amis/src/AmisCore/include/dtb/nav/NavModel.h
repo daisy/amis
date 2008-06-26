@@ -59,6 +59,8 @@ public:
 	void testMap();
 	NavPoint* previousSection(int);
 	NavPoint* nextSection(int);
+	NavPoint* previousSection(int, int);
+	NavPoint* nextSection(int, int);
 	PageTarget* previousPage(int);
 	PageTarget* nextPage(int);
 	//add a node to the big ordered list.  the node will not necessarily be next in sequence.

@@ -305,6 +305,33 @@ amis::dtb::nav::NavPoint* amis::dtb::nav::NavModel::nextSection(int currentPlayO
 	}
 	return NULL;
 }
+//get the previous section at the given level
+amis::dtb::nav::NavPoint* amis::dtb::nav::NavModel::previousSection(int currentPlayOrder, int level)
+{
+	NavPoint* p_nav = previousSection(currentPlayOrder);
+	while (p_nav != NULL)
+	{
+		if (p_nav->getLevel() <= level)
+			return p_nav;
+		else
+			p_nav = previousSection(p_nav->getPlayOrder());
+	}
+	return NULL;
+
+}
+//get the next section at the given level
+amis::dtb::nav::NavPoint* amis::dtb::nav::NavModel::nextSection(int currentPlayOrder, int level)
+{
+	NavPoint* p_nav = nextSection(currentPlayOrder);
+	while (p_nav != NULL)
+	{
+		if (p_nav->getLevel() <= level)
+			return p_nav;
+		else
+			p_nav = nextSection(p_nav->getPlayOrder());
+	}
+	return NULL;
+}
 amis::dtb::nav::PageTarget* amis::dtb::nav::NavModel::previousPage(int currentPlayOrder)
 {
 	int idx = currentPlayOrder - 2;

@@ -92,7 +92,7 @@ private:
 	void treeBranchCollapse(HTREEITEM);
 	void treeBranchExpand(HTREEITEM, int);
 	void changeView(int);
-
+	HTREEITEM findParentAtLevel(HTREEITEM, int);
 	CRect mInitialRect;
 	CRect mInitialParentRect;
 	std::vector<CNavListControl*> mNavLists;
