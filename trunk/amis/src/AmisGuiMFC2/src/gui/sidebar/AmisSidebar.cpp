@@ -498,6 +498,9 @@ void CAmisSidebar::addTab(std::wstring label)
 //*******************
 int CAmisSidebar::getExposedDepth()
 {
+	//TODO: dynamically determine the "real" exposed depth
+	//this just gives the depth specified by the section depth command
+	//in reality, the user could have expanded the tree by clicking on it
 	return mExposedDepth;
 }
 
@@ -713,13 +716,18 @@ HTREEITEM CAmisSidebar::findParentAtLevel(HTREEITEM hItem, int level)
 	HTREEITEM parent = mTree.GetParentItem(hItem);
 	while (parent != NULL)
 	{
+		CString text = mTree.GetItemText(parent);
 		parent_stack.push_back(parent);
 		parent = mTree.GetParentItem(parent);
 	}
 
 	//level is 1-based
-	if (parent_stack.size() > 0 && level <= parent_stack.size()) 
-		return parent_stack[level-1];
+	level = level - 1;
+	//count from the end because our stack has the innermost items first
+	level = parent_stack.size() - 1 - level;
+		
+	if (parent_stack.size() > 0 && level < parent_stack.size() && level >= 0) 
+		return parent_stack[level];
 	else
 		return hItem;
 }
