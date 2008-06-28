@@ -463,8 +463,9 @@ void DtbWithHooks::previousSection()
 		}
 		else 
 		{
-			std::string msg = "Previous section is NULL.  Current nav ID# = " + id;
+			std::string msg = "Previous section is NULL.  Reloading current. Current nav ID# = " + id;
 			p_log->writeMessage(msg, "DtbWithHooks::previousSection", "AmisGuiMFC2");
+			loadNavNode(getCurrentNavNode());
 		}
 	}
 	else
@@ -575,15 +576,16 @@ bool DtbWithHooks::canGoToNextSection()
 }
 bool DtbWithHooks::canGoToPreviousSection()
 {
+	return true;
+	/*
 	amis::dtb::nav::NavNode* p_node = getCurrentNavNode();
 	if (p_node != NULL)
 	{
 		std::string id = p_node->getId();
 		p_node = getNavModel()->previousSection(p_node->getPlayOrder());
 		if (p_node != NULL) return true;
-		else return false;
 	}
-	return false;
+	return false;*/
 }
 bool DtbWithHooks::canGoToNextPage()
 {
