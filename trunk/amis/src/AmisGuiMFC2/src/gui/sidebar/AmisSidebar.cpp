@@ -496,11 +496,9 @@ void CAmisSidebar::addTab(std::wstring label)
 //*******************
 //tree view expand and collapse
 //*******************
+//This gets the depth set by the 
 int CAmisSidebar::getExposedDepth()
 {
-	//TODO: dynamically determine the "real" exposed depth
-	//this just gives the depth specified by the section depth command
-	//in reality, the user could have expanded the tree by clicking on it
 	return mExposedDepth;
 }
 
