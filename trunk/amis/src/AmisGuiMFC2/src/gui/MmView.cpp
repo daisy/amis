@@ -250,6 +250,8 @@ MmView::~MmView()
 
 void MmView::SetStatusLine(const wchar_t *message)
 {
+	MainWndParts::Instance()->mpStatusBar->SetPaneText(0, message);
+
 	if (MainWndParts::Instance()->mpMainFrame)
 		MainWndParts::Instance()->mpMainFrame->PostMessage(WM_APP, 0, (LPARAM)message);
 }

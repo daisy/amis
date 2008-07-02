@@ -524,30 +524,6 @@ void CAmisApp::OnFileOpen()
 	}
 }
 
-
-void CAmisApp::OnPlayPause()
-{
-	if (MainWndParts::Instance()->mpMainFrame->mbWasPlayingWhenLostFocus) 
-		MainWndParts::Instance()->mpMainFrame->mbWasPlayingWhenLostFocus = false;
-
-	MmView *view = MainWndParts::Instance()->mpMmView;
-	assert(view); // XXXJack: or what to do if view == NULL? Skip?
-	if (view->isPlaying() == true)
-	{
-		amis::util::Log::Instance()->writeMessage("Pausing", "CAmisApp::OnPlayPause", "AmisGuiMFC2");
-		MainWndParts::Instance()->mpDefaultToolbar->togglePlayPause(true);
-		MainWndParts::Instance()->mpBasicToolbar->togglePlayPause(true);
-		view->OnFilePause();
-	}
-	else
-	{
-		amis::util::Log::Instance()->writeMessage("Playing", "CAmisApp::OnPlayPause", "AmisGuiMFC2");
-		MainWndParts::Instance()->mpDefaultToolbar->togglePlayPause(false);
-		MainWndParts::Instance()->mpBasicToolbar->togglePlayPause(false);
-		view->OnFilePlay();
-	}
-}
-
 void CAmisApp::OnNavPrevPhrase()
 {
 	amis::util::Log::Instance()->writeMessage("Previous phrase", "CAmisApp::OnNavPrevPhrase", "AmisGuiMFC2");
@@ -623,6 +599,8 @@ void CAmisApp::OnFileClose()
 		amis::gui::MenuManip::Instance()->clearBookmarks();
 		//update the status in the title bar
 		amis::gui::MainWndParts::Instance()->updateTitleBar(amis::gui::MainWndParts::TITLEBAR_BOOKTITLE, _T(""));
+		
+		amis::gui::CAmisApp::emitMessage("ready");
 
 		if (mbIsPlayingHelpBook == true)
 		{
@@ -1015,6 +993,7 @@ void CAmisApp::OnShowFindInText()
 		CString tmp = dlg.getUserSearchString();
 		if (tmp.GetLength() == 0) return;
 
+		// todo: we're fetching data from the search for books dialog...not ideal but it works fine and avoids having to create new data in the l10n XML
 		std::wstring str2 = AudioSequencePlayer::getTextForDialogControlFromUiIds(IDD_SEARCHDAISY, IDC_SEARCHING, NULL, "WhileSearching");
 		if (str2.length() > 0)
 			MainWndParts::Instance()->mpMmView->SetStatusLine(str2.c_str());
@@ -1049,7 +1028,7 @@ void CAmisApp::OnShowFindInText()
 			{
 				AudioSequencePlayer::Instance()->waitForSequenceEnd();
 			}
-			amis::gui::CAmisApp::emitMessage("not_available"); // todo: should be NOT_FOUND (does not exist yet in the l10n XML)
+			amis::gui::CAmisApp::emitMessage("not_available"); // todo: maybe this should be NOT_FOUND instead (does not exist yet in the l10n XML)
 			if (Preferences::Instance()->getIsSelfVoicing() == true)
 			{
 				AudioSequencePlayer::Instance()->waitForSequenceEnd();
@@ -1145,11 +1124,39 @@ void CAmisApp::OnShowHelpContents()
  */
 void CAmisApp::setPauseState(bool pauseState)
 {
+	std::wstring str2 = AudioSequencePlayer::getTextForPromptFromStringId((pauseState ? "paused" : "playing"));
+
+	if (str2.length() > 0)
+		MainWndParts::Instance()->mpMmView->SetStatusLine(str2.c_str());
+
 	amis::gui::MenuManip::Instance()->setPauseState(pauseState);
 	MainWndParts::Instance()->updateTitlePlayState(!pauseState);
 	
 	MainWndParts::Instance()->mpDefaultToolbar->togglePlayPause(pauseState);
 	MainWndParts::Instance()->mpBasicToolbar->togglePlayPause(pauseState);
+}
+
+void CAmisApp::OnPlayPause()
+{
+	if (MainWndParts::Instance()->mpMainFrame->mbWasPlayingWhenLostFocus) 
+		MainWndParts::Instance()->mpMainFrame->mbWasPlayingWhenLostFocus = false;
+
+	MmView *view = MainWndParts::Instance()->mpMmView;
+	assert(view); // XXXJack: or what to do if view == NULL? Skip?
+	if (view->isPlaying() == true)
+	{
+		amis::util::Log::Instance()->writeMessage("Pausing", "CAmisApp::OnPlayPause", "AmisGuiMFC2");
+
+		amis::gui::CAmisApp::emitMessage("paused");
+
+		view->OnFilePause(); // this calls CAmisApp::setPauseState(), see above
+	}
+	else
+	{
+		amis::util::Log::Instance()->writeMessage("Playing", "CAmisApp::OnPlayPause", "AmisGuiMFC2");
+
+		view->OnFilePlay(); // this calls CAmisApp::setPauseState(), see above
+	}
 }
 
 std::wstring CAmisApp::pauseBookAndEmitMessage(std::string msgID)
