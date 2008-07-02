@@ -291,6 +291,9 @@ BOOL CAmisApp::InitInstance()
 		if (mpHistory->getLastRead() != NULL)
 			book_to_open = mpHistory->getLastRead()->mPath;
 	}
+
+	amis::gui::CAmisApp::emitMessage("ready");
+
 	//open a book if we decided to either open the command line parameter or last-read book
 	if (!book_to_open.is_empty_path()) openBook(&book_to_open);
 	
@@ -1011,6 +1014,16 @@ void CAmisApp::OnShowFindInText()
 	{
 		CString tmp = dlg.getUserSearchString();
 		if (tmp.GetLength() == 0) return;
+
+		std::wstring str2 = AudioSequencePlayer::getTextForDialogControlFromUiIds(IDD_SEARCHDAISY, IDC_SEARCHING, NULL, "WhileSearching");
+		if (str2.length() > 0)
+			MainWndParts::Instance()->mpMmView->SetStatusLine(str2.c_str());
+
+		if (Preferences::Instance()->getIsSelfVoicing() == true)
+		{
+			AudioSequencePlayer::Instance()->playDialogControlFromUiIds(IDD_SEARCHDAISY, IDC_SEARCHING, NULL, true, "WhileSearching");
+		}
+
 		int dir = dlg.getSearchDirection();
 		wstring search_string = tmp;
 		//the address of the search result
@@ -1018,14 +1031,29 @@ void CAmisApp::OnShowFindInText()
 				TextRenderBrain::Instance()->getCurrentUrl(), dir);
 		if (result.size() > 0)
 		{
+			if (Preferences::Instance()->getIsSelfVoicing() == true)
+			{
+				AudioSequencePlayer::Instance()->waitForSequenceEnd();
+			}
+			amis::gui::CAmisApp::emitMessage("done");
+			if (Preferences::Instance()->getIsSelfVoicing() == true)
+			{
+				AudioSequencePlayer::Instance()->waitForSequenceEnd();
+			}
 			ambulant::net::url smil_url = ambulant::net::url::from_url(result);
 			amis::dtb::DtbWithHooks::Instance()->loadSmilFromUrl(&smil_url);
 		}
 		else
-		{
-			//TODO
-			//play prompt "not found"
-			//display in status bar too
+		{	
+			if (Preferences::Instance()->getIsSelfVoicing() == true)
+			{
+				AudioSequencePlayer::Instance()->waitForSequenceEnd();
+			}
+			amis::gui::CAmisApp::emitMessage("not_available"); // todo: should be NOT_FOUND (does not exist yet in the l10n XML)
+			if (Preferences::Instance()->getIsSelfVoicing() == true)
+			{
+				AudioSequencePlayer::Instance()->waitForSequenceEnd();
+			}
 		}
 	}
 }
@@ -1147,9 +1175,8 @@ std::wstring CAmisApp::emitMessage(std::string msgID)
 {
 	std::wstring str2 = AudioSequencePlayer::getTextForPromptFromStringId(msgID);
 
-	if (str2.length() > 0 &&
-		MainWndParts::Instance()->mpMainFrame != NULL)
-		MainWndParts::Instance()->mpMainFrame->PostMessage(WM_APP, 0, (LPARAM)str2.c_str());
+	if (str2.length() > 0)
+		MainWndParts::Instance()->mpMmView->SetStatusLine(str2.c_str());
 
 	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 	{

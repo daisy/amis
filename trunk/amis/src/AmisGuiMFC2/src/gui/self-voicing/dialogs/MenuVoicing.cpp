@@ -603,7 +603,7 @@ namespace amis
 							if (!strPrompt.empty())
 							{
 								//seq->append(strPrompt.c_str()); TEST ONLY
-								AudioSequencePlayer::playPromptItemFromStringId(strPrompt);
+								AudioSequencePlayer::playPromptFromStringId(strPrompt);
 
 								return;
 							}
@@ -620,13 +620,13 @@ namespace amis
 							//first	item in	the	list is	always "sections"
 							if (nItemID	== AMIS_VIEW_MENU_BASE_ID)
 							{
-								AudioSequencePlayer::playPromptItemFromStringId("sections");
+								AudioSequencePlayer::playPromptFromStringId("sections");
 							}
 							//then "pages",	if exists
 							else if	(nItemID ==	AMIS_VIEW_MENU_BASE_ID + 1 && 
 								p_model != NULL && p_model->hasPages())
 							{
-								AudioSequencePlayer::playPromptItemFromStringId("pages");
+								AudioSequencePlayer::playPromptFromStringId("pages");
 							}
 							else if (p_model != NULL)
 							{
@@ -646,16 +646,16 @@ namespace amis
 								if (item_id.compare("prodnote")	== 0 ||
 									item_id.compare("optional-prodnote") ==	0 )
 								{
-									AudioSequencePlayer::playPromptItemFromStringId("prodnotes");
+									AudioSequencePlayer::playPromptFromStringId("prodnotes");
 								}
 								else if	(item_id.compare("sidebar")	== 0)
 								{
-									AudioSequencePlayer::playPromptItemFromStringId("sidebars");
+									AudioSequencePlayer::playPromptFromStringId("sidebars");
 								}
 								else if	(item_id.compare("footnote") ==	0 ||
 									item_id.compare("noteref") == 0)
 								{
-									AudioSequencePlayer::playPromptItemFromStringId("noterefs");
+									AudioSequencePlayer::playPromptFromStringId("noterefs");
 								}
 								else 
 								{

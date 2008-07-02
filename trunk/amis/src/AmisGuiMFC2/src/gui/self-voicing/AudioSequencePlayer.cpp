@@ -590,7 +590,90 @@ void AudioSequencePlayer::fillSequenceContainerPromptFromId(AudioSequence* seq, 
 	}
 }
 
+std::wstring AudioSequencePlayer::getTextForDialogControlFromUiIds(int dlgID, int ctrlId, PromptResolver* pResolver, string switchCondition)
+{
+	//todo: not a high priority now, but the code below is far too incomplete to be usable generically (there is only one use of it right now, and it searches through the switch caption only).
+	
+	std::wstring str;
 
+	if (
+		(dlgID != -1 && ctrlId != -1)
+		|| (dlgID == -1 && (ctrlId == IDOK || ctrlId == IDCANCEL))
+		)
+	{
+
+		Dialog* p_dialog = DataTree::Instance()->findDialog(dlgID);
+		if (p_dialog != NULL)
+		{
+			DialogControl* uiItem = p_dialog->findControl(ctrlId);
+
+			if (uiItem != NULL)
+			{
+				Switch* zwitch;
+				if ((zwitch = uiItem->getSwitch()) != NULL)
+				{
+
+					switch(zwitch->getSwitchType())
+					{
+					case ACTIONSWITCH:
+						{
+							Action* action = zwitch->getAction(switchCondition);
+							if (action != NULL)
+							{
+								;//
+							}
+							break;
+						}
+					case CAPTIONSWITCH: {}
+					case DESCRIPTIONSWITCH:
+						{
+							Label* label = zwitch->getLabel(switchCondition);
+							if (label != NULL)
+							{
+															
+								TextAudioPair* pair = label->getContents();
+								if (pair != NULL)
+								{
+									TextNodeSV* textN = pair->getText();
+
+									if (textN != NULL) 
+									{
+										str.append(textN->getTextString());
+									}	
+								}
+							}
+							break;
+						}
+					}
+				}
+			}
+		}	
+	}
+
+	return str;
+}
+
+std::wstring AudioSequencePlayer::getTextForPromptItemFromStringId(string promptId)
+{
+	std::wstring str;
+
+	PromptItem* pi = DataTree::Instance()->findPromptItem(promptId);
+
+	if (pi != NULL)
+	{
+		TextAudioPair* pair = pi->getContents();
+		if (pair != NULL)
+		{
+			TextNodeSV * textN = pair->getText();
+			if (textN != NULL) 
+			{
+				str.append(textN->getTextString());
+			}
+		}
+	}
+
+	return str;
+}
 std::wstring AudioSequencePlayer::getTextForPromptFromStringId(string promptId)
 {
 	std::wstring str;
@@ -604,7 +687,6 @@ std::wstring AudioSequencePlayer::getTextForPromptFromStringId(string promptId)
 		{
 			PromptItemBase* pi = prompt->getItem(i);
 
-
 			TextAudioPair* pair = pi->getContents();
 			if (pair != NULL)
 			{
@@ -617,10 +699,15 @@ std::wstring AudioSequencePlayer::getTextForPromptFromStringId(string promptId)
 		}
 	}
 
+	if (str.length() == 0)
+	{
+		// Fallback on PromptItem instead of Prompt
+		str = getTextForPromptItemFromStringId(promptId);
+	}
 	return str;
 }
 
-void AudioSequencePlayer::playPromptFromStringId(string promptId)
+bool AudioSequencePlayer::playPromptFromStringId(string promptId)
 {
 	Prompt* p_prompt_ = DataTree::Instance()->findPrompt(promptId);
 
@@ -635,25 +722,40 @@ void AudioSequencePlayer::playPromptFromStringId(string promptId)
 		else
 		{
 			AudioSequencePlayer::Instance()->Play(seq);
+			return true;
 		}
 	}
+	else
+	{
+		// Fallback on PromptItem instead of Prompt
+		return playPromptItemFromStringId(promptId);
+	}
+	return false;
 }
 
-void AudioSequencePlayer::playPromptItemFromStringId(string promptId)
+bool AudioSequencePlayer::playPromptItemFromStringId(string promptId)
 {		
-	AudioSequence  * seq = new AudioSequence;
-
-
 	PromptItem* p_prompt_ = DataTree::Instance()->findPromptItem(promptId);
 
 	if (p_prompt_ != NULL)
 	{
+		AudioSequence  * seq = new AudioSequence;
 		fillSequenceContents(seq, p_prompt_);
+		if (seq->GetCount() == 0)
+		{
+			delete seq;
+		}
+		else
+		{
+			AudioSequencePlayer::Instance()->Play(seq);
+			return true;
+		}
 	}
-	AudioSequencePlayer::Instance()->Play(seq);
+	
+	return false;
 }
 
-void AudioSequencePlayer::playDialogInstructionsFromUiId(int nItemID)
+bool AudioSequencePlayer::playDialogInstructionsFromUiId(int nItemID)
 {
 	if (nItemID != -1)
 	{
@@ -676,12 +778,14 @@ void AudioSequencePlayer::playDialogInstructionsFromUiId(int nItemID)
 		else
 		{
 			AudioSequencePlayer::Instance()->Play(seq, true);
+			return true;
 		}
 	}
+	return false;
 
 }
 
-void AudioSequencePlayer::playDialogTextControlsFromUiId(int nItemID, PromptResolver * presolver)
+bool AudioSequencePlayer::playDialogTextControlsFromUiId(int nItemID, PromptResolver * presolver)
 {
 	if (nItemID != -1)
 	{
@@ -709,15 +813,17 @@ void AudioSequencePlayer::playDialogTextControlsFromUiId(int nItemID, PromptReso
 
 		if (seq->GetCount()==0)
 		{
-			delete seq;return;
+			delete seq;
 		}
 		else
 		{
 			AudioSequencePlayer::Instance()->Play(seq);
+			return true;
 		}
 	}
+	return false;
 }
-void AudioSequencePlayer::playDialogWelcome(int nItemID, PromptResolver * presolver, bool playfull)
+bool AudioSequencePlayer::playDialogWelcome(int nItemID, PromptResolver * presolver, bool playfull)
 {
 
 	if (nItemID != -1)
@@ -753,13 +859,15 @@ void AudioSequencePlayer::playDialogWelcome(int nItemID, PromptResolver * presol
 
 		if (seq->GetCount()==0)
 		{
-			delete seq;return;
+			delete seq;
 		}
 		else
 		{
 			AudioSequencePlayer::Instance()->Play(seq);
+			return true;
 		}
 	}
+	return false;
 }
 
 

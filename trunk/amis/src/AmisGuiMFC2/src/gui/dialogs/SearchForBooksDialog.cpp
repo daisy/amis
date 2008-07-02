@@ -27,6 +27,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "AmisCore.h"
 #include "Preferences.h"
 #include "gui/dialogs/PathDialog.h"
+#include "gui/MainWndParts.h"
 
 #include "gui/self-voicing/datamodel/DataTree.h"
 

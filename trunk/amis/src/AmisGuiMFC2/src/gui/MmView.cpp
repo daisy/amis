@@ -82,12 +82,6 @@ class logwindow_atltrace : public ambulant::lib::ostream
 };
 #endif
 
-//this function copied from AmbulantPlayer project and modified for AMIS
-void set_status_line(const char *message)
-{
-	if (MainWndParts::Instance()->mpMainFrame)
-		MainWndParts::Instance()->mpMainFrame->PostMessage(WM_APP, 0, (LPARAM)message);
-}
 
 static std::string get_log_filename() 
 {
@@ -254,6 +248,12 @@ MmView::~MmView()
 	ambulant::gui::dx::dx_player::cleanup();
 }
 
+void MmView::SetStatusLine(const wchar_t *message)
+{
+	if (MainWndParts::Instance()->mpMainFrame)
+		MainWndParts::Instance()->mpMainFrame->PostMessage(WM_APP, 0, (LPARAM)message);
+}
+
 BOOL MmView::PreCreateWindow(CREATESTRUCT& cs)
 {
 	cs.style |= WS_CLIPCHILDREN; // reduce flicker
@@ -384,7 +384,7 @@ void MmView::SetMMDocument(LPCTSTR lpszPathName, bool autostart)
 	m_curDocFilename = u.get_url().c_str();
 	player = dummy;
 	skipOptionsChanged();
-	set_status_line("Ready");
+
 	if (m_previous_in_progress) 
 	{
 		// Goto last node

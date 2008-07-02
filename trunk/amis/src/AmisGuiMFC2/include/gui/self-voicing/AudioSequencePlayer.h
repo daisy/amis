@@ -74,13 +74,19 @@ namespace amis
 
 				static void playPromptFromUiId(int nItemID, AudioSequence* seq = NULL);
 
+				
+				static std::wstring getTextForDialogControlFromUiIds(int dlgID, int ctrlId, PromptResolver* pResolver, string switchCondition);
+	
 				static std::wstring getTextForPromptFromStringId(string promptId);
-				static void playPromptFromStringId(string);
+				static std::wstring getTextForPromptItemFromStringId(string promptId);
+				
+				static bool playPromptFromStringId(string);
+				static bool playPromptItemFromStringId(string);
 
-				static void playPromptItemFromStringId(string);
-				static void playDialogInstructionsFromUiId(int nItemID);
-				static void playDialogTextControlsFromUiId(int nItemID, PromptResolver* pResolver);
-				static void playDialogWelcome(int nItemID, PromptResolver* pResolver, bool playfull);
+				static bool playDialogInstructionsFromUiId(int nItemID);
+				static bool playDialogTextControlsFromUiId(int nItemID, PromptResolver* pResolver);
+				static bool playDialogWelcome(int nItemID, PromptResolver* pResolver, bool playfull);
+
 				static AudioSequence * playDialogControlFromUiIds(int dlgID, int ctrlId, PromptResolver* pResolver, bool playNow, string switchCondition);
 
 				static void fillSequenceContainerPromptFromId(AudioSequence* seq, string id);

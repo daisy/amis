@@ -84,7 +84,11 @@ bool DtbWithHooks::open(const ambulant::net::url* filename, const ambulant::net:
 		p_history = theApp.getHistory();
 
 	//call the base class	
-	if (!Dtb::open(filename, bookmarksPath, p_history)) return false;
+	if (!Dtb::open(filename, bookmarksPath, p_history))
+	{
+		amis::gui::MainWndParts::Instance()->updateTitleBar(amis::gui::MainWndParts::TITLEBAR_BOOKTITLE, L"");
+		return false;
+	}
 
 	//turn on all skippable options to start with
 	updateCustomTestStates(true);
