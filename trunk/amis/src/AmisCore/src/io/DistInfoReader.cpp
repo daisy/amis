@@ -121,6 +121,10 @@ void amis::io::DistInfoReader::startElement(const   XMLCh* const    uri,
 		string clipbegin;
 		string clipend;
 		src.assign(SimpleAttrs::get("src", &attributes));
+		ambulant::net::url url_src = ambulant::net::url::from_filename(src);
+		url_src = url_src.join_to_base(*this->getFilepath());
+		src.assign(url_src.get_file());
+		
 		clipbegin.assign(SimpleAttrs::get("clipBegin", &attributes));
 		clipend.assign(SimpleAttrs::get("clipEnd", &attributes));
 		if (mpCurrentEntry != NULL) mpCurrentEntry->setTitleAudio(src, clipbegin, clipend);
