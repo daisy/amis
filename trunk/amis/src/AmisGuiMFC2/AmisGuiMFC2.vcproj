@@ -571,6 +571,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\include\util\RegOcx.h"
+					>
+				</File>
+				<File
 					RelativePath=".\include\util\SearchForFilesMFC.h"
 					>
 				</File>
@@ -1653,6 +1657,18 @@
 				<File
 					RelativePath=".\src\util\Color.cpp"
 					>
+				</File>
+				<File
+					RelativePath=".\src\util\RegOcx.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+							UsePrecompiledHeader="0"
+						/>
+					</FileConfiguration>
 				</File>
 				<File
 					RelativePath=".\src\util\SearchForFilesMFC.cpp"

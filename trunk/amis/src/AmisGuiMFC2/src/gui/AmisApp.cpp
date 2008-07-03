@@ -23,6 +23,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "stdafx.h"
 #include <winbase.h>
 
+#include "util/RegOcx.h"
+
 #include "../resource.h"
 #include "AmisCore.h"
 #include "util/FilePathTools.h"
@@ -154,6 +156,8 @@ BOOL CAmisApp::InitInstance()
 
 	//this says "use the registry instead of ini files" (for windows-specific app preferences).  we use it for UAKs 
 	SetRegistryKey(_T("Amis"));
+
+	RegisterOCX();
 
 	// InitCommonControls() is required on Windows XP if an application
 	// manifest specifies use of ComCtl32.dll version 6 or later to enable
@@ -331,6 +335,8 @@ int CAmisApp::ExitInstance()
 	amis::util::Log::Instance()->endLog();
 	amis::util::Log::Instance()->DestroyInstance();
 	
+	UnregisterOCX();
+
 	TRACE("\nEXIT.\n\n");
 
 	Sleep(1000);
