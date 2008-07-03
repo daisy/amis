@@ -224,6 +224,20 @@ void PreferencesFileIO::addEntry(string id, string value)
 		else
 			mpPrefs->setIsFirstTime(false);
 	}
+	else if (id.compare("is-logging-enabled") == 0)
+	{
+		if (value.compare("yes") == 0)
+			mpPrefs->setIsLoggingEnabled(true);
+		else
+			mpPrefs->setIsLoggingEnabled(false);
+	}
+	else if (id.compare("logging-level") == 0)
+	{
+		if (value.compare("FULL_LOGGING") == 0)
+			mpPrefs->setLogLevel(amis::util::FULL_LOGGING);
+		else
+			mpPrefs->setLogLevel(amis::util::NORMAL_LOGGING);
+	}
 }
 
 
@@ -356,6 +370,18 @@ void PreferencesFileIO::writeData()
 	pGeneralSection->appendChild((DOMNode*)pEntry);
 
 	pEntry = createEntry("is-first-time", mpPrefs->getIsFirstTime());
+	pGeneralSection->appendChild((DOMNode*)pEntry);
+
+	pEntry = createEntry("is-logging-enabled", mpPrefs->getIsLoggingEnabled());
+	pGeneralSection->appendChild((DOMNode*)pEntry);
+
+	std::string str_loglevel;
+	if (mpPrefs->getLogLevel() == amis::util::FULL_LOGGING)
+		str_loglevel = "FULL_LOGGING";
+	else
+		str_loglevel = "NORMAL_LOGGING";
+
+	pEntry = createEntry("logging-level", str_loglevel);
 	pGeneralSection->appendChild((DOMNode*)pEntry);
 
 	//get a pointer to the root element

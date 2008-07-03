@@ -38,6 +38,8 @@ amis::util::Log* amis::util::Log::Instance()
 amis::util::Log::Log()
 {
 	mbIsFileOpen = false;
+	mbEnabled = true;
+	mLevel = amis::util::NORMAL_LOGGING;
 }
 amis::util::Log::~Log()
 {
@@ -47,8 +49,19 @@ void amis::util::Log::DestroyInstance()
 	delete pinstance;
 }
 
+void amis::util::Log::enable(bool value)
+{
+	mbEnabled = value;
+}
+void amis::util::Log::setLevel(amis::util::LogLevel value)
+{
+	mLevel = value;
+}
+
 void amis::util::Log::startLog(string filename)
 {
+	if (!mbEnabled) return;
+
 	mFile.open(filename.c_str(), ios::out);
 	mbIsFileOpen = true;
 	mFile<<"AMIS Log"<<endl;
@@ -66,6 +79,8 @@ void amis::util::Log::startLog(string filename)
 
 void amis::util::Log::endLog()
 {
+	if (!mbEnabled) return;
+
 #ifdef AMIS_PLATFORM_WINDOWS
 	char datestr[10];
 	char timestr[10];
@@ -93,10 +108,14 @@ void amis::util::Log::writeWarning(string msg, string origin, string library)
 }
 void amis::util::Log::writeMessage(string msg, string origin, string library)
 {
+	if (mLevel != amis::util::FULL_LOGGING) return;
+	
 	writeData("", msg, origin, library);
 }
 void amis::util::Log::writeMessage(string msg, const ambulant::net::url* file, string origin, string library)
 {
+	if (mLevel != amis::util::FULL_LOGGING) return;
+
 	string log_msg = msg;
 	if (file != NULL) log_msg += file->get_url();
 	else log_msg += "*NULL file name*";
@@ -110,7 +129,7 @@ void amis::util::Log::writeWarning(string msg, const ambulant::net::url* file, s
 	writeWarning(log_msg, origin, library);
 }
 void amis::util::Log::writeError(string msg, const ambulant::net::url* file, string origin, string library)
-{
+{	
 	string log_msg = msg;
 	if (file != NULL) log_msg += file->get_url();
 	else log_msg += "*NULL file name*";
@@ -118,14 +137,19 @@ void amis::util::Log::writeError(string msg, const ambulant::net::url* file, str
 }
 void amis::util::Log::writeMessage(string msg)
 {
+	if (mLevel != amis::util::FULL_LOGGING) return;
+
 	writeData("", msg, "", "");
 }
 void amis::util::Log::writeMessage(string msg, const ambulant::net::url* file)
 {
+	if (mLevel != amis::util::FULL_LOGGING) return;
+
 	writeMessage("", file, "", "");
 }
 void amis::util::Log::writeData(string type, string msg, string origin, string library)
 {
+	if (!mbEnabled) return;
 	if (!mbIsFileOpen) return;
 
 	if (type != "") mFile<<type<<": ";

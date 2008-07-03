@@ -169,8 +169,10 @@ BOOL CAmisApp::InitInstance()
 	
 	//first read the preferences
 	initializePathsAndFiles();
-	//then start logging!  this is in case we decide to turn logging on/off via the preferences
+	//then start logging!  
 	amis::util::Log::Instance()->startLog(this->getAppPath() + "amisLog.txt");
+	amis::util::Log::Instance()->enable(Preferences::Instance()->getIsLoggingEnabled());
+	amis::util::Log::Instance()->setLevel(Preferences::Instance()->getLogLevel());
 	Preferences::Instance()->logAllPreferences();
 	initializeSelfVoicing();
 	

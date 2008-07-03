@@ -28,6 +28,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include <string>
 #include "AmisCore.h"
 #include "ModuleDescData.h"
+#include "util/Log.h"
 
 namespace amis
 {
@@ -115,6 +116,11 @@ public:
 	bool getIsFirstTime();
 	void setIsFirstTime(bool);
 
+	amis::util::LogLevel getLogLevel();
+	void setLogLevel(amis::util::LogLevel);
+	bool getIsLoggingEnabled();
+	void setIsLoggingEnabled(bool);
+
 private:
 	void scanDirectoriesForCssFiles();
 	void scanDirectoriesForLanguagePackFiles();
@@ -152,6 +158,9 @@ private:
 	//the source preferences XML file
 	ambulant::net::url mSourceUrl;
 
+	//the logging preferences
+	amis::util::LogLevel mLogLevel;
+	bool mbLoggingEnabled;
 private:
 	static Preferences* pinstance;
 

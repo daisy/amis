@@ -32,6 +32,8 @@ namespace amis
 {
 namespace util
 {
+enum LogLevel {NORMAL_LOGGING, FULL_LOGGING};
+
 class Log
 {
 protected:
@@ -52,12 +54,15 @@ public:
 	void writeError(string, const ambulant::net::url*, string, string);
 	void writeError(amis::Error, string, string);
 	void endLog();
-
+	void enable(bool);
+	void setLevel(LogLevel);
 private:
 	void writeData(string, string, string, string);
 	ofstream mFile;
 	static Log* pinstance;
 	bool mbIsFileOpen;
+	bool mbEnabled;
+	LogLevel mLevel;
 };
 }
 }

@@ -83,6 +83,15 @@ Preferences::Preferences()
 	mSidebarFontName = "Arial";
 
 	mbIsFirstTime = false;
+
+#ifdef _DEBUG
+	setIsLoggingEnabled(true);
+	setLogLevel(amis::util::FULL_LOGGING);
+#else
+	setIsLoggingEnabled(false);
+	setLogLevel(amis::util::NORMAL_LOGGING);
+#endif
+
 }
 
 //this function should be called after the preferences XML file has been parsed
@@ -547,4 +556,20 @@ void Preferences::setIsFirstTime(bool val)
 bool Preferences::getIsFirstTime()
 {
 	return mbIsFirstTime;
+}
+amis::util::LogLevel Preferences::getLogLevel()
+{
+	return mLogLevel;
+}
+void Preferences::setLogLevel(amis::util::LogLevel level)
+{
+	mLogLevel = level;
+}
+bool Preferences::getIsLoggingEnabled()
+{
+	return mbLoggingEnabled;
+}
+void Preferences::setIsLoggingEnabled(bool value)
+{
+	mbLoggingEnabled = value;
 }

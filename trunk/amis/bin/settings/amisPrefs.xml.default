@@ -22,5 +22,7 @@
 <entry id="highlight-bg-color" value="#FFFF00"/>
 <entry id="sidebar-font-name" value="Verdana"/>
 <entry id="is-first-time" value="yes"/>
+<entry id="is-logging-enabled" value="yes"/>
+<entry id="logging-level" value="FULL_LOGGING"/>
 </section>
 </preferences>
