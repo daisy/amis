@@ -21,7 +21,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
 #include "gui/self-voicing/dialogs/publicationsummarydialogvoicing.h"
-
+#include "DtbWithHooks.h"
 #include "dtb/Dtb.h"
 
 namespace amis
@@ -95,7 +95,11 @@ namespace amis
 
 						if (p_var->getName().compare("META_TITLE") == 0)
 						{
+							//amis::dtb::DtbWithHooks::Instance()->getTitle()->
 							amis::AudioNode * node = mpDialog->mpTitle->getAudio(0);
+							//xxxxx resolve full path
+							//join_to_base
+							//AudioSequencePlayer::Instance()->computeExpandedSrc(node, langID, url)
 
 							wstring str;
 							str = mpDialog->computeTitle();

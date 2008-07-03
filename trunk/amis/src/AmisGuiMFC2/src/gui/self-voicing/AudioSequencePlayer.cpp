@@ -385,17 +385,8 @@ std::string AudioSequencePlayer::computeExpandedSrc(amis::AudioNode* pAudio, std
 	string strFull = pAudio->getSrcExpanded();
 	if (strFull.length()==0)
 	{
-		if (str.compare("./thislang.mp3") >= 0)
-		{
-			int i = 0;
-		}
-		else
-		{
-			int i = 0;
-		}
-
 		ambulant::net::url audio_src = ambulant::net::url::from_filename(str);
-
+	
 		amis::ModuleDescData* p_langpack_data = NULL;
 		if (langID.length() == 0)
 		{
