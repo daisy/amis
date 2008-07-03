@@ -173,6 +173,9 @@ BOOL CAmisApp::InitInstance()
 	amis::util::Log::Instance()->startLog(this->getAppPath() + "amisLog.txt");
 	Preferences::Instance()->logAllPreferences();
 	initializeSelfVoicing();
+	
+	//our initial language preference
+	mLanguagePreference = Preferences::Instance()->getUiLangId();
 
 	//load the resource dll
 	// one of the first things in the init code
@@ -312,7 +315,9 @@ int CAmisApp::ExitInstance()
 	TRACE("\nStarting to EXIT\n\n");
 
 	Preferences::Instance()->setWasExitClean(true);
-	PreferencesFileIO prefs_io;
+	Preferences::Instance()->setUiLangId(mLanguagePreference);
+
+	PreferencesFileIO prefs_io;	
 	prefs_io.writeToFile(Preferences::Instance()->getSourceUrl()->get_file(), Preferences::Instance());
 	
 	amis::util::Log::Instance()->writeMessage("Exiting", "CAmisApp::ExitInstance", "AmisGuiMFC2");
@@ -923,15 +928,13 @@ void CAmisApp::OnPreferences()
 			Preferences::Instance()->setHighlightText(prefs.mbHighlightText);
 			TextRenderBrain::Instance()->redoPageColors();
 		}
-		if (prefs.mUiLanguageSelection != Preferences::Instance()->getUiLangId())
+		mLanguagePreference = prefs.mUiLanguageSelection;
+		if (mLanguagePreference != Preferences::Instance()->getUiLangId())
 		{
-			Preferences::Instance()->setUiLangId(prefs.mUiLanguageSelection);
-
 			if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 			{
 				AudioSequencePlayer::playPromptFromStringId("restartForChanges");
 			}
-
 			AfxMessageBox(IDS_PLEASE_RESTART);
 		}
 

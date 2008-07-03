@@ -145,6 +145,8 @@ private:
 	bool mbWasLastExitClean;
 	ambulant::net::url findHelpBook();
 	bool mbIsPlayingHelpBook;
+	std::string mLanguagePreference;
+
 public:
 	DECLARE_MESSAGE_MAP()
 
