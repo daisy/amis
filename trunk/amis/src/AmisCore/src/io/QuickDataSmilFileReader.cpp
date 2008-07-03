@@ -178,8 +178,13 @@ amis::AudioNode* amis::io::QuickDataSmilFileReader::makeAudioNode(const Attribut
 {
 	amis::AudioNode* p_audio = new amis::AudioNode();
 	p_audio->setId(SimpleAttrs::get("id", pAttrs));
-	p_audio->setSrc(SimpleAttrs::get("src", pAttrs));
 
+	string src;
+	src.assign(SimpleAttrs::get("src", pAttrs));
+	ambulant::net::url url_src = ambulant::net::url::from_filename(src);
+	url_src = url_src.join_to_base(*this->getFilepath());
+	p_audio->setSrc(url_src.get_file());	
+	
 	string clipBegin;
 	clipBegin.assign(SimpleAttrs::get("clip-begin", pAttrs));
 	if (clipBegin == "") clipBegin.assign(SimpleAttrs::get("clipBegin", pAttrs));
@@ -189,6 +194,8 @@ amis::AudioNode* amis::io::QuickDataSmilFileReader::makeAudioNode(const Attribut
 	clipEnd.assign(SimpleAttrs::get("clip-end", pAttrs));
 	if (clipEnd == "") clipEnd.assign(SimpleAttrs::get("clipEnd", pAttrs));
 	p_audio->setClipEnd(clipEnd);
+
+
 
 	return p_audio;
 }
