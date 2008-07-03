@@ -162,21 +162,22 @@ namespace amis
 							for (int i = 0; i<sel; i++) it++;
 							mpDialog->mUiLanguageSelection = it->first;
 
-
 							wstring str;
 							CString cstr(mpDialog->mUiLanguageSelection.c_str());
 							str = cstr;
 							p_var->setContents(str, "");
 
-							amis::ModuleDescData* p_data = Preferences::Instance()->getCurrentLanguageData();
+							amis::ModuleDescData* p_data = Preferences::Instance()->getLanguageData(mpDialog->mUiLanguageSelection);
+
 							if (p_data != NULL || p_data->getLabel() != NULL)
 							{
-
 								amis::MediaGroup* p_media = p_data->getLabel();
 								//p_media->getText()->getTextString().c_str();
 
-								p_var->setContents(p_media);
+								if (p_media->hasAudio())
+									AudioSequencePlayer::Instance()->computeExpandedSrc(p_media->getAudio(0), mpDialog->mUiLanguageSelection);
 
+								p_var->setContents(p_media);
 							}
 						}
 						else if (p_var->getName().compare("TTS_VOICE_NAME") == 0)

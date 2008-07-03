@@ -108,6 +108,8 @@ public:
 	amis::UrlList* getFontsizeCssFiles();
 	amis::UrlList* getCustomCssFiles();
 	amis::StringModuleMap* getInstalledLanguages();
+
+	amis::ModuleDescData* getLanguageData(std::string id);
 	amis::ModuleDescData* getCurrentLanguageData();
 
 	bool getIsFirstTime();

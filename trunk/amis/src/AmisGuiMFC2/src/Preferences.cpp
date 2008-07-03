@@ -368,6 +368,12 @@ amis::StringModuleMap* Preferences::getInstalledLanguages()
 	return &mInstalledLanguages;
 }
 
+amis::ModuleDescData* Preferences::getLanguageData(std::string id)
+{
+	amis::ModuleDescData* p_data = mInstalledLanguages[id];
+	return p_data;
+}
+
 amis::ModuleDescData* Preferences::getCurrentLanguageData()
 {
 	amis::ModuleDescData* p_data = mInstalledLanguages[mUiLangId];

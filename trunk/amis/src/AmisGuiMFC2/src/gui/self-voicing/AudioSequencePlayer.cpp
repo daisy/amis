@@ -375,27 +375,51 @@ void AudioSequencePlayer::Play(AudioSequence* audioSequence, bool doNotRegisterI
 	}
 }
 
-
-
-bool AudioSequencePlayer::playAudioPrompt(amis::AudioNode* pAudio)
+std::string AudioSequencePlayer::computeExpandedSrc(amis::AudioNode* pAudio, std::string langID)
 {
 	string str = pAudio->getSrc();
 	if (str.length()==0)
 	{
-		return false;
+		return "";
 	}
-
 	string strFull = pAudio->getSrcExpanded();
 	if (strFull.length()==0)
 	{
+		if (str.compare("./thislang.mp3") >= 0)
+		{
+			int i = 0;
+		}
+		else
+		{
+			int i = 0;
+		}
 
 		ambulant::net::url audio_src = ambulant::net::url::from_filename(str);
 
-		amis::ModuleDescData* p_langpack_data = amis::Preferences::Instance()->getCurrentLanguageData();
+		amis::ModuleDescData* p_langpack_data = NULL;
+		if (langID.length() == 0)
+		{
+			p_langpack_data = amis::Preferences::Instance()->getCurrentLanguageData();
+		}
+		else
+		{
+			p_langpack_data = amis::Preferences::Instance()->getLanguageData(langID);
+		}
 		audio_src = audio_src.join_to_base(*p_langpack_data->getXmlFileName());
 
 		pAudio->setSrcExpanded(audio_src.get_file());
 		strFull = pAudio->getSrcExpanded();
+	}
+	return strFull;
+}
+
+bool AudioSequencePlayer::playAudioPrompt(amis::AudioNode* pAudio)
+{
+	string strFull = computeExpandedSrc(pAudio);
+
+	if (strFull.length() == 0) 
+	{
+		return false;
 	}
 
 	return ambulantX::gui::dx::audio_playerX::Instance()->play(strFull.c_str()); 

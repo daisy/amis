@@ -126,6 +126,7 @@ void PromptItemBase::setContents(amis::MediaGroup* pMediaGroup)
 	{
 		amis::AudioNode* p_audio = new amis::AudioNode();
 		p_audio->setSrc(pMediaGroup->getAudio(0)->getSrc());
+		p_audio->setSrcExpanded(pMediaGroup->getAudio(0)->getSrcExpanded());
 		p_audio->setClipBegin(pMediaGroup->getAudio(0)->getClipBegin());
 		p_audio->setClipEnd(pMediaGroup->getAudio(0)->getClipEnd());
 
