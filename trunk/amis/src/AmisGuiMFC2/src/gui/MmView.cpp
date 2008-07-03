@@ -203,6 +203,7 @@ MmView::MmView()
 	m_autoplay = true;
 	m_recent_media_node = NULL;
 	m_recent_par_node = NULL;
+	m_recent_audio_node = NULL;
 	m_expecting_audio = false;
 	m_previous_in_progress = false;
 
@@ -873,6 +874,7 @@ void MmView::document_started()
 	CAmisApp* pApp = (CAmisApp *) AfxGetApp();
 	pApp->setPauseState(false);
 	mbRememberParallelTextSrc = false;
+	amis::dtb::DtbWithHooks::Instance()->getFileSet()->setSmilFile(&player->get_url());
 }
 
 void MmView::document_stopped()
@@ -931,6 +933,9 @@ void MmView::node_started(const ambulant::lib::node* n)
 	}
 	//end workaround
 	
+	if (tagname == "audio")
+		m_recent_audio_node = n;
+
 	if (tagname != "par" && tagname != "text" && tagname != "audio") return;
 
 	// Remember this node so we can later use it for local navigation

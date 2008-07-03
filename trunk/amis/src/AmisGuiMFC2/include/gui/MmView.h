@@ -64,6 +64,7 @@ public:
 #endif
 	const ambulant::lib::node *m_recent_media_node;
 	const ambulant::lib::node *m_recent_par_node;
+	const ambulant::lib::node *m_recent_audio_node;
 	bool m_expecting_audio;
 	bool m_previous_in_progress;
 	bool m_saw_audio;

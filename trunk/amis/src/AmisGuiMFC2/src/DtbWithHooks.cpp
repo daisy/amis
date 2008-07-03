@@ -205,6 +205,7 @@ void DtbWithHooks::previousSmilDocument()
 	if (theApp.isBookOpen() == false) return;
 
 	const ambulant::net::url* filepath = this->getSpine()->getPreviousFile();
+	
 	if (filepath) 
 		amis::gui::MainWndParts::Instance()->mpMmView->ScheduleReplaceDoc(filepath->get_file());
 }
@@ -410,9 +411,30 @@ amis::dtb::Bookmark* DtbWithHooks::addBookmark()
 	p_note_text->setTextString(curr_text);
 	p_note->setText(p_note_text);
 
-	//TODO: add an audio node (need to find out the information from Ambulant)
-	///add the audio clip of the current position to the bookmark's note's audio field
+	//get the audio from ambulant's most recent audio node
+	const ambulant::lib::node* amb_node = MainWndParts::Instance()->mpMmView->m_recent_audio_node;
+	if (amb_node != NULL)
+	{
+		amis::AudioNode* p_audio = new amis::AudioNode();
+		std::string src = amb_node->get_attribute("src");
+		ambulant::net::url url_src = ambulant::net::url::from_filename(src);
+		url_src = url_src.join_to_base(*this->getFileSet()->getSmilFile());
 
+		p_audio->setSrc(url_src.get_file());
+		p_audio->setSrcExpanded(url_src.get_file());
+
+		const char* clip_begin = amb_node->get_attribute("clipBegin");
+		const char* clip_end = amb_node->get_attribute("clipEnd");
+
+		if (!clip_begin) clip_begin = amb_node->get_attribute("clip-begin");
+		if (!clip_end) clip_end = amb_node->get_attribute("clip-end");
+	
+		p_audio->setClipBegin(clip_begin);
+		p_audio->setClipEnd(clip_end);
+
+		//add the audio clip of the current position to the bookmark's note's audio field
+		p_note->addAudioClip(p_audio);
+	}
 	return amis::dtb::Dtb::addBookmark(p_note);
 }
 

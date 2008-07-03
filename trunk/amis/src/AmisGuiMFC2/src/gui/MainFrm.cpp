@@ -289,8 +289,7 @@ BOOL CMainFrame::OnSetCursor(CWnd* pWnd, UINT nHitTest, UINT message)
 }
 
 void CMainFrame::OnMenuSelect( UINT	nItemID, UINT nFlags, HMENU	hSysMenu )
-{
-	
+{	
 	amis::util::Log* p_log = amis::util::Log::Instance();
   
 	p_log->writeMessage("CMainFrame::OnMenuSelect()");
