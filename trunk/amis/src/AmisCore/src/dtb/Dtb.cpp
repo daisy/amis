@@ -114,6 +114,10 @@ amis::MediaGroup* amis::dtb::Dtb::getTitle()
 {
 	return mpTitle;
 }
+amis::MediaGroup* amis::dtb::Dtb::getAuthor()
+{
+	return mpAuthor;
+}
 amis::dtb::Spine* amis::dtb::Dtb::getSpine()
 {
 	return mpSpine;

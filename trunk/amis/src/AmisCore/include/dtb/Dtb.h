@@ -53,6 +53,7 @@ public:
 	amis::dtb::smil::SmilMediaGroup* loadSmilFromUrl(ambulant::net::url*);
 	amis::dtb::Bookmark* addBookmark(amis::MediaGroup*);
 	amis::MediaGroup* getTitle();
+	amis::MediaGroup* getAuthor();
 	amis::dtb::Metadata* getMetadata();
 	amis::dtb::Spine* getSpine();
 	amis::dtb::nav::NavModel* getNavModel();

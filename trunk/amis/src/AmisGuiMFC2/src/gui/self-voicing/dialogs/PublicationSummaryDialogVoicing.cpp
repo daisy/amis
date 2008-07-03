@@ -95,11 +95,8 @@ namespace amis
 
 						if (p_var->getName().compare("META_TITLE") == 0)
 						{
-							//amis::dtb::DtbWithHooks::Instance()->getTitle()->
-							amis::AudioNode * node = mpDialog->mpTitle->getAudio(0);
-							//xxxxx resolve full path
-							//join_to_base
-							//AudioSequencePlayer::Instance()->computeExpandedSrc(node, langID, url)
+							amis:MediaGroup * group = mpDialog->mpTitle; 
+							amis::AudioNode * node = (group == 0 ? 0 : group->getAudio(0));
 
 							wstring str;
 							str = mpDialog->computeTitle();
@@ -121,15 +118,25 @@ namespace amis
 						}
 						else if (p_var->getName().compare("META_CREATOR") == 0)
 						{
+							amis::MediaGroup * group = mpDialog->mpBook->getAuthor(); 
+							amis::AudioNode * node = (group == 0 ? 0 : group->getAudio(0));
+
 							wstring str;
 							str = mpDialog->computeAuthor();
-							if (str.length() != 0)
-							{
-								p_var->setContents(str, "");
+							
+							if (node == NULL) {
+								if (str.length() != 0)
+								{
+									p_var->setContents(str, "");
+								}
+								else if (promptNotAvailable != NULL)
+								{
+									p_var->setContents(promptNotAvailable->getContents()->clone());
+								}
 							}
-							else if (promptNotAvailable != NULL)
+							else
 							{
-								p_var->setContents(promptNotAvailable->getContents()->clone());
+								p_var->setContents(str, node->clone());
 							}
 						} 
 
