@@ -143,6 +143,7 @@ void amis::io::BookmarksFileIO::startElement(const   XMLCh* const    uri,
 
 			src.assign(SimpleAttrs::get("src", &attributes));
 			p_audio->setSrc(src);
+			p_audio->setSrcExpanded(src);
 
 			clipBegin.assign(SimpleAttrs::get("clipBegin", &attributes));
 			p_audio->setClipBegin(clipBegin);

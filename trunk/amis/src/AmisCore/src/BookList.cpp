@@ -53,7 +53,9 @@ void amis::BookEntry::setTitleAudio(string src, string clipbegin, string clipend
 		amis::AudioNode* p_audio = new amis::AudioNode();
 		mpTitle->addAudioClip(p_audio);
 	}
+	//this should be a full path
 	mpTitle->getAudio(0)->setSrc(src);
+	mpTitle->getAudio(0)->setSrcExpanded(src);
 	mpTitle->getAudio(0)->setClipBegin(clipbegin);
 	mpTitle->getAudio(0)->setClipEnd(clipend);
 }

@@ -239,7 +239,11 @@ void DtbWithHooks::addToHistory()
 
 		if (this->getTitle()->hasText() == true)
 			p_entry->setTitleText(this->getTitle()->getText()->getTextString());
-		
+		if (this->getTitle()->hasAudio() == true)
+		{
+			amis::AudioNode* p_audio = this->getTitle()->getAudio(0);
+			p_entry->setTitleAudio(p_audio->getSrc(), p_audio->getClipBegin(), p_audio->getClipEnd());
+		}
 		p_history->addEntry(p_entry);
 
 		amis::io::BookListFileIO io;

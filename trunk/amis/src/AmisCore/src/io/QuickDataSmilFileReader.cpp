@@ -180,10 +180,10 @@ amis::AudioNode* amis::io::QuickDataSmilFileReader::makeAudioNode(const Attribut
 	p_audio->setId(SimpleAttrs::get("id", pAttrs));
 
 	string src;
-	src.assign(SimpleAttrs::get("src", pAttrs));
-	p_audio->setSrc(src);	
+	src.assign(SimpleAttrs::get("src", pAttrs));	
 	ambulant::net::url url_src = ambulant::net::url::from_filename(src);
 	url_src = url_src.join_to_base(*this->getFilepath());
+	p_audio->setSrc(url_src.get_file());
 	p_audio->setSrcExpanded(url_src.get_file());	
 	
 	string clipBegin;
