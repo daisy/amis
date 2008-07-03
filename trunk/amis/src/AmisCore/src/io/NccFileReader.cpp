@@ -45,6 +45,7 @@ amis::dtb::Metadata* amis::io::NccFileReader::getMetadata()
 bool amis::io::NccFileReader::readFromFile(const ambulant::net::url* filepath)
 {
 	mbFlag_ProcessMetadataChars = false;
+	mpTitle = NULL;
 	mpMetadata = new amis::dtb::Metadata();
 	return amis::io::NavFileReader::readFromFile(filepath);
 }
@@ -194,11 +195,14 @@ void amis::io::NccFileReader::processHeading(int level, const Attributes* pAttrs
 	
 	classname.assign(SimpleAttrs::get("class", pAttrs));
 	mpCurrentNavPoint->setClass(classname);
-	
+
 	id.assign(SimpleAttrs::get("id", pAttrs)); 
 	mpCurrentNavPoint->setId(id);
 
 	mpCurrentNavPoint->setLevel(level);
+
+	if (classname == "title")
+		mpTitle = mpCurrentNavPoint;
 
 	//set label (gather text and retrieve audio clip) are done during <a> tag processing
 	amis::MediaGroup* p_media_label = new amis::MediaGroup();
@@ -383,4 +387,8 @@ int amis::io::NccFileReader::isHeading(string nodeName)
 	{
 		return 0;
 	}
+}
+amis::dtb::nav::NavPoint* amis::io::NccFileReader::getTitle()
+{
+	return mpTitle;
 }

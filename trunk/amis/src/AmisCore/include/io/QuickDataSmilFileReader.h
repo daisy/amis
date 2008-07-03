@@ -64,13 +64,15 @@ public:
 
 private:
 	bool isSupported(string);
-	amis::dtb::nav::NavNode* matchesNodeInList(string content);
+	amis::dtb::nav::NavNode* matchesNodeInList(string);
+	amis::AudioNode* makeAudioNode(const Attributes*);
 
 	StdStringList* mpList;
 	StringMap* mpStringMap;
 	amis::dtb::nav::NavNodeList* mpNodes;
 	string mFilename;
 	bool mbFlag_GetNextAudio;
+	amis::dtb::nav::NavNode* mpNavNodeNeedsAudio;
 
 };
 }

@@ -65,6 +65,7 @@ bool amis::io::QuickDataSmilFileReader::readFromFile(const ambulant::net::url* f
 	mpStringMap = pTextMap;
 	mpNodes = pNodes;
 	mbFlag_GetNextAudio = false;
+	mpNavNodeNeedsAudio = NULL;
 
 	if (!this->parseFile(filepath)) return false;
 	else return true;
@@ -99,21 +100,23 @@ void amis::io::QuickDataSmilFileReader::startElement(const   XMLCh* const    uri
 		//if we need to fill in node data while we're in this file
 		if (mpNodes != NULL && mpNodes->empty() == false)
 		{
-			//see if we have a node to get audio data for
-			amis::dtb::nav::NavNode* p_node = NULL;
-			string search = mFilename + "#" + id;
-			p_node = matchesNodeInList(search);
-			if (p_node)
+			string search = id;
+			if (search.size() > 0)
 			{
-				mbFlag_GetNextAudio = true;
+				amis::dtb::nav::NavNode* p_result = NULL;
+				p_result = matchesNodeInList(search);
+				if (p_result != NULL)
+				{
+					mpNavNodeNeedsAudio = p_result;
+					mbFlag_GetNextAudio = true;
+				}
 			}
 			//if we are at an audio node
 			if (mbFlag_GetNextAudio == true && strcmp(element_name, "audio") == 0)
 			{
-				amis::dtb::smil::NodeFactory factory;
-				amis::AudioNode* p_audio = (amis::AudioNode*)factory.createNode(amis::dtb::smil::AUD, &attributes);
-				if (p_node->getLabel() != NULL)
-					p_node->getLabel()->addAudioClip(p_audio);
+				amis::AudioNode* p_audio = makeAudioNode(&attributes);
+				if (mpNavNodeNeedsAudio != NULL && mpNavNodeNeedsAudio->getLabel() != NULL)
+					mpNavNodeNeedsAudio->getLabel()->addAudioClip(p_audio);
 				else
 					delete p_audio;
 				mbFlag_GetNextAudio = false;
@@ -154,12 +157,13 @@ bool amis::io::QuickDataSmilFileReader::isSupported(string elementName)
 
 amis::dtb::nav::NavNode* amis::io::QuickDataSmilFileReader::matchesNodeInList(string content)
 {
-  bool b_found = false;
-  int i = 0;
+	bool b_found = false;
+	int i = 0;
 
 	for (i = 0; i<mpNodes->size(); i++)
 	{
-		if ((*mpNodes)[i]->getContent() == content)
+		std::string node_content = (*mpNodes)[i]->getContent();
+		if (node_content == content)
 		{
 			b_found = true;
 			break;
@@ -168,4 +172,23 @@ amis::dtb::nav::NavNode* amis::io::QuickDataSmilFileReader::matchesNodeInList(st
 
 	if (b_found) return (*mpNodes)[i];
 	else return NULL;
+}
+
+amis::AudioNode* amis::io::QuickDataSmilFileReader::makeAudioNode(const Attributes* pAttrs)
+{
+	amis::AudioNode* p_audio = new amis::AudioNode();
+	p_audio->setId(SimpleAttrs::get("id", pAttrs));
+	p_audio->setSrc(SimpleAttrs::get("src", pAttrs));
+
+	string clipBegin;
+	clipBegin.assign(SimpleAttrs::get("clip-begin", pAttrs));
+	if (clipBegin == "") clipBegin.assign(SimpleAttrs::get("clipBegin", pAttrs));
+	p_audio->setClipBegin(clipBegin);
+	
+	string clipEnd;
+	clipEnd.assign(SimpleAttrs::get("clip-end", pAttrs));
+	if (clipEnd == "") clipEnd.assign(SimpleAttrs::get("clipEnd", pAttrs));
+	p_audio->setClipEnd(clipEnd);
+
+	return p_audio;
 }

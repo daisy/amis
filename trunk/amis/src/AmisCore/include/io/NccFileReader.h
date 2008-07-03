@@ -51,6 +51,7 @@ public:
 
 	bool readFromFile(const ambulant::net::url*);
 	amis::dtb::Metadata* getMetadata();
+	amis::dtb::nav::NavPoint* getTitle();
 
 	//!xerces start element event
 	void startElement(const   XMLCh* const    uri,
@@ -73,7 +74,7 @@ private:
 	bool mbFlag_ProcessMetadataChars;
 	amis::dtb::Metadata* mpMetadata;
 	amis::dtb::MetaItem* mpCurrentMetaItem;
-	
+	amis::dtb::nav::NavPoint* mpTitle;
 
 
 };

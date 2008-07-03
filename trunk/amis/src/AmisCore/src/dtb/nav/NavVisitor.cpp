@@ -294,6 +294,9 @@ amis::dtb::nav::NavNodeList* amis::dtb::nav::WhoRefersToThisSmilFile::findOut(am
 bool amis::dtb::nav::WhoRefersToThisSmilFile::preVisit(NavNode* pNode)
 {
 	ambulant::net::url content = ambulant::net::url::from_url(pNode->getContent());
+	//a bit of cheating ... content won't be a full path unless we join it to the base
+	//this is fine for now
+	content = content.join_to_base(mFilename);
 	if (mFilename.same_document(content))
 	{
 		mpNodes->push_back(pNode);

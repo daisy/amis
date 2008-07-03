@@ -264,6 +264,7 @@ bool amis::dtb::Dtb::processNcc(const ambulant::net::url* filepath)
 	mpNavModel = ncc_file_reader.getNavModel();
 	mpMetadata = ncc_file_reader.getMetadata();
 	mpCustomTests = ncc_file_reader.getCustomTests();
+	amis::dtb::nav::NavPoint* p_title = ncc_file_reader.getTitle();
 
 	//if this NCC file turned out to be a protected book, then we need to get custom tests and a nav model
 	//from an encrypted file
@@ -307,18 +308,21 @@ bool amis::dtb::Dtb::processNcc(const ambulant::net::url* filepath)
 	amis::TextNode* p_title_text = new amis::TextNode();
 	p_title_text->setTextString(mpMetadata->getMetadataContent("dc:title"));
 	mpTitle->setText(p_title_text);
-
+	
 	mpAuthor = new amis::MediaGroup();
 	amis::TextNode* p_author_text = new amis::TextNode();
 	p_author_text->setTextString(mpMetadata->getMetadataContent("dc:creator"));
 	mpAuthor->setText(p_author_text);
 
-	//TODO: get the audio for the title (author audio not available in Daisy 202)
-
 	mpFiles->setAdditionalDataAfterInitialParse(mUid, NULL, NULL, mpHistory);
 	amis::dtb::nav::ResolveSmilDataVisitor resolve_smil_visitor;
 	resolve_smil_visitor.resolve(mpNavModel, mpSpine, true);
     this->mpTextSmilMap = resolve_smil_visitor.getSmilTextMap();	
+
+	//wait until after the smil data is parsed to set the title audio (otherwise it's not available)
+	if (p_title->getLabel()->hasAudio())
+		mpTitle->addAudioClip(p_title->getLabel()->getAudio(0)->clone());
+
 	return true;
 }
 
