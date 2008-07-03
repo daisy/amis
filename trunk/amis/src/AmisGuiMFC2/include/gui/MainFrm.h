@@ -43,6 +43,7 @@ public:
 	bool mbWasPlayingWhenLostFocus;
 	virtual BOOL PreTranslateMessage(MSG* pMsg);
 	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
+	BOOL OnSetCursor(CWnd*, UINT, UINT);
 	virtual ~CMainFrame();
 	void restoreMenu();
 #ifdef _DEBUG

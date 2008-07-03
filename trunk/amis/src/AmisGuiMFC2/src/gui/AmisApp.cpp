@@ -165,6 +165,7 @@ BOOL CAmisApp::InitInstance()
 	InitCommonControls();
 	CWinApp::InitInstance();
 	mbBookIsOpen = false;
+	mbIsWaitingToLoad = false;
 	mAppPath = "";
 	
 	//first read the preferences
@@ -443,6 +444,8 @@ bool CAmisApp::shouldIgnoreOpenDocEvent()
 //this function is used by all functions here that lead to a book being opened
 bool CAmisApp::openBook(const ambulant::net::url* filename, bool saveInHistory)
 {
+	setIsWaiting(true);
+
 	bool b_a_book_was_open = false;
 	//close the open book
 	if (mbBookIsOpen == true) 
@@ -466,7 +469,9 @@ bool CAmisApp::openBook(const ambulant::net::url* filename, bool saveInHistory)
 				(MainWndParts::Instance()->mpBasicToolbar);
 			MainWndParts::Instance()->mpMainFrame->updateToolbarState
 				(MainWndParts::Instance()->mpDefaultToolbar);
+
 			amis::dtb::DtbWithHooks::Instance()->startReading(true);
+			setIsWaiting(false);
 			return true;
 		}
 		else
@@ -479,12 +484,14 @@ bool CAmisApp::openBook(const ambulant::net::url* filename, bool saveInHistory)
 				{
 					AudioSequencePlayer::playPromptFromStringId("generalBookErrorReloading");
 				}
+				setIsWaiting(false);
 				generalBookErrorMsgBox(temp);
 				openLastReadBook();
 				return false;
 			}
 			else
 			{
+				setIsWaiting(false);
 				CString temp;
 				temp.LoadStringW(IDS_ERROR_OPENING);
 				if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
@@ -498,6 +505,7 @@ bool CAmisApp::openBook(const ambulant::net::url* filename, bool saveInHistory)
 	}
 	else //empty file path
 	{
+		setIsWaiting(false);
 		return false;
 	}
 }
@@ -508,6 +516,23 @@ void CAmisApp::openLastReadBook()
 	
 	if (mpHistory->getLastRead())
 		openBook(&mpHistory->getLastRead()->mPath);
+}
+void CAmisApp::setIsWaiting(bool value)
+{
+	if (value == true)
+	{
+		mbIsWaitingToLoad = true;
+		BeginWaitCursor();
+	}
+	else
+	{
+		mbIsWaitingToLoad = false;
+		EndWaitCursor();
+	}
+}
+bool CAmisApp::getIsWaiting()
+{
+	return mbIsWaitingToLoad;
 }
 
 /*******************************

@@ -73,6 +73,8 @@ public:
 	bool shouldIgnoreOpenDocEvent();
 	bool canIncreasePlaybackSpeed();
 	bool canDecreasePlaybackSpeed();
+	bool getIsWaiting();
+
 	//Menu handlers
 	afx_msg void OnFileOpen();
 	afx_msg void OnPlayPause();
@@ -136,6 +138,8 @@ private:
 	void openLastReadBook();
 	void updateFontSizeButtons();
 	void updateSpeedButtons();
+	void setIsWaiting(bool);
+	
 	std::string mAppPath;
 	std::string mLocalizationDll;
 	ambulant::net::url mURL;
@@ -146,6 +150,7 @@ private:
 	ambulant::net::url findHelpBook();
 	bool mbIsPlayingHelpBook;
 	std::string mLanguagePreference;
+	bool mbIsWaitingToLoad;
 
 public:
 	DECLARE_MESSAGE_MAP()

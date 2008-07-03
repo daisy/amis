@@ -65,6 +65,7 @@ BEGIN_MESSAGE_MAP(CMainFrame, CMDIFrameWnd)
 	ON_WM_EXITMENULOOP()
 	//ON_WM_KEYDOWN()
 	ON_WM_SYSCOMMAND()
+	ON_WM_SETCURSOR()
 	ON_UPDATE_COMMAND_UI(ID_AMIS_NEXT_PAGE, OnUpdateCmdUiNextPage)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_PREVIOUS_PAGE, OnUpdateCmdUiPreviousPage)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_GOTO_PAGE, OnUpdateCmdUiGoToPage)
@@ -277,6 +278,15 @@ void CMainFrame::Dump(CDumpContext& dc) const
 }
 #endif
 
+BOOL CMainFrame::OnSetCursor(CWnd* pWnd, UINT nHitTest, UINT message)
+{
+	if (theApp.getIsWaiting() == true)
+	{
+		RestoreWaitCursor();
+		return TRUE;
+	}
+	return CWnd::OnSetCursor(pWnd, nHitTest, message);
+}
 
 void CMainFrame::OnMenuSelect( UINT	nItemID, UINT nFlags, HMENU	hSysMenu )
 {
