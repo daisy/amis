@@ -413,26 +413,23 @@ bool AudioSequencePlayer::playAudioPrompt(amis::AudioNode* pAudio)
 		return false;
 	}
 
-	return ambulantX::gui::dx::audio_playerX::Instance()->play(strFull.c_str()); 
-
-
-	/*
-	// The code below is not needed for the UI XML audio, because it is assumed that MP3 files are not clipped.
-
 	string clipBegin = "";
 	string clipEnd = "";
 
 	if (pAudio->getClipBegin().size() > 0)
 	{
-	clipBegin = stringReplaceAll(pAudio->getClipBegin(), "npt=", "");
+		clipBegin = stringReplaceAll(pAudio->getClipBegin(), "npt=", "");
 	}
 
 	if (pAudio->getClipEnd().size() > 0)
 	{
-	clipEnd = stringReplaceAll(pAudio->getClipEnd(), "npt=", "");
-	}*/
+		clipEnd = stringReplaceAll(pAudio->getClipEnd(), "npt=", "");
+	}
 
-	//(char*)clipBegin.c_str(),  (char*)clipEnd.c_str());
+	return ambulantX::gui::dx::audio_playerX::Instance()->play(strFull.c_str(), (char*)clipBegin.c_str(), (char*)clipEnd.c_str());
+
+
+	
 }
 
 void AudioSequencePlayer::playPromptFromUiId(int nItemID, AudioSequence* seq)

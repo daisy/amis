@@ -206,7 +206,7 @@ static double change_global_level(double factor);
 	// 0 sets a neutral balance
 	// and 10 sets -10 db to right and -90 db to left
 	void set_balance(long val);
-	bool play(const char * url);
+	bool play(const char * url, char* clipBegin, char* clipEnd);
 
   private:
 

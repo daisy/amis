@@ -49,6 +49,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 #include "gui/self-voicing/directshow/dx_audio_player.h"
 
+#include "gui\self-voicing\mffmTimeCode\SmilTimeCode.H"
+
 //#include "ambulant/lib/logger.h"
 //#include "ambulant/lib/textptr.h"
 #include <math.h>
@@ -809,7 +811,7 @@ void gui::dx::audio_playerX::setCallback(sendMessageCallbackFn pFunction)
 
 //////////////////////////
 
-bool gui::dx::audio_playerX::play(const char * url) {
+bool gui::dx::audio_playerX::play(const char * url, char* clipBegin, char* clipEnd) {
 
 	EnterCriticalSection(&m_csSequence);
 
@@ -824,6 +826,8 @@ bool gui::dx::audio_playerX::play(const char * url) {
 				
 					amis::util::Log* p_log = amis::util::Log::Instance();
 					p_log->writeMessage("####### -- PLAY DX");
+
+
 	//m_url = url;
 	m_url.assign(url);
 
@@ -912,6 +916,49 @@ bool gui::dx::audio_playerX::play(const char * url) {
 	}
 	
 	set_volume(s_current_volume);
+
+	SmilTimeCode startStop(clipBegin, clipBegin, clipEnd);
+	unsigned long begin = startStop.getStart();
+	unsigned long end = startStop.getEnd();
+
+	LONGLONG llDuration = 0;
+
+	IMediaSeeking *pIMS;
+	if (m_graph_builder->QueryInterface(IID_IMediaSeeking, (void**) &pIMS) == S_OK)
+	{
+
+		if (pIMS->SetTimeFormat(&TIME_FORMAT_MEDIA_TIME) == S_OK) {
+			if (pIMS->GetPositions(NULL, &llDuration) != S_OK) llDuration = -10000;
+		}
+		else
+		{
+			llDuration = - 10000;
+		}
+
+		long duration = (long) ((llDuration / 10000) & 0xFFFFFFFF);	  
+
+		if (! (begin == 0 && end == 0)) {
+
+			if (begin >= 0 && begin < duration) {
+
+				LONGLONG Value = (LONGLONG) (begin);
+				Value *= 10000;
+				if (pIMS->SetTimeFormat(&TIME_FORMAT_MEDIA_TIME) == S_OK) {
+					if (pIMS->SetPositions(&Value, AM_SEEKING_AbsolutePositioning, NULL, AM_SEEKING_NoPositioning) != S_OK){}
+				}
+			}
+			
+			if (end >= 0 && end > begin && end < duration) {
+				
+				LONGLONG Value = (LONGLONG) (end);
+				Value *= 10000;
+				if (pIMS->SetTimeFormat(&TIME_FORMAT_MEDIA_TIME) == S_OK) {
+					if (pIMS->SetPositions(NULL, AM_SEEKING_NoPositioning, &Value, AM_SEEKING_AbsolutePositioning) != S_OK) {}
+				}
+			}
+		}
+		pIMS->Release();
+	}
 
 	if (hEventHandler == NULL) {
 		unsigned long lpdwThreadID;

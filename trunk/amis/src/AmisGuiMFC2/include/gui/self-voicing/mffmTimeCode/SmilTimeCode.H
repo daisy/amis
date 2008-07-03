@@ -176,7 +176,7 @@ class SmilTimeCode : public TimeCode<MASTERCOUNTERTYPE, ARRAYTYPE> {
       goto parseTok;
     }
     
-    for (i=0;i<FIELDCOUNT;i++)
+    for (int i=0;i<FIELDCOUNT;i++)
       cout<<counts[i]<<'\t';
     cout<<endl;
     
@@ -185,7 +185,7 @@ class SmilTimeCode : public TimeCode<MASTERCOUNTERTYPE, ARRAYTYPE> {
     tempTime=0;
     int factor=1,fractionalFactor=1;//Factor to multiply by
     //tempTime.dump();
-    for (i=0;i<FIELDCOUNT;i++){
+    for (int i=0;i<FIELDCOUNT;i++){
       switch (i) {
       case 0:	factor=1; fractionalFactor*=MAX_MILLISECONDS;
 	break;
