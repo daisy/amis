@@ -336,6 +336,9 @@ bool amis::dtb::Dtb::processNcx(const ambulant::net::url* filepath)
 
 	mpNavModel = ncx_file_reader.getNavModel();
 	mpCustomTests = ncx_file_reader.getCustomTests();
+	
+	mpTitle = ncx_file_reader.getTitle();
+	mpAuthor = ncx_file_reader.getAuthor();
 	 //note that this step takes a very long time if the book is large, because
 	//it involves walking the nav model and also opening all the SMIL files
 	amis::dtb::nav::ResolveSmilDataVisitor resolve_smil_visitor;
@@ -377,9 +380,9 @@ bool amis::dtb::Dtb::processOpf(const ambulant::net::url* filepath)
 		mDaisyVersion = UNSUPPORTED;
 		return false;
 	}
-	//fill in the text for the title and the author
 	mUid = getUid();
-	mpTitle = new amis::MediaGroup();
+	
+	/*mpTitle = new amis::MediaGroup();
 	amis::TextNode* p_title_text = new amis::TextNode();
 	p_title_text->setTextString(mpMetadata->getMetadataContent("dc:Title"));
 	mpTitle->setText(p_title_text);
@@ -387,7 +390,7 @@ bool amis::dtb::Dtb::processOpf(const ambulant::net::url* filepath)
 	mpAuthor = new amis::MediaGroup();
 	amis::TextNode* p_author_text = new amis::TextNode();
 	p_author_text->setTextString(mpMetadata->getMetadataContent("dc:Creator"));
-	mpAuthor->setText(p_author_text);
+	mpAuthor->setText(p_author_text);*/
 
 	const ambulant::net::url* navfile = opf_file_reader.getNavFilename();
 	const ambulant::net::url* resfile = opf_file_reader.getResourceFilename();
