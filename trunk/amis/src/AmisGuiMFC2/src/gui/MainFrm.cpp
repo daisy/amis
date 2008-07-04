@@ -602,6 +602,9 @@ void amis::gui::CMainFrame::OnUpdateCmdUiNextPage(CCmdUI* pCmdUi)
 //the ON_UPDATE_COMMAND_UI messages end up here because it takes care of the toolbars too
 void amis::gui::CMainFrame::updateUiCommandState(CCmdUI* pCmdUi, bool value)
 {
+	//don't do anything if we're waiting for a book to load
+	if (theApp.getIsWaiting() == true) value = false;
+
 	pCmdUi->Enable(value);
 	mDefaultToolbar.enable(pCmdUi->m_nID, value);
 	mBasicToolbar.enable(pCmdUi->m_nID, value);
@@ -613,6 +616,17 @@ void amis::gui::CMainFrame::updateUiCommandState(CCmdUI* pCmdUi, bool value)
 void amis::gui::CMainFrame::updateToolbarState(toolbar::Toolbar* pToolbar)
 {
 	bool b_is_book_open = theApp.isBookOpen();
+	
+	if (theApp.getIsWaiting() == true)
+	{
+		pToolbar->enableAll(false);
+		return;
+	}
+	else
+	{
+		//this just to turn something back on in case it isn't covered by the code below
+		pToolbar->enableAll(true);
+	}
 	//audio rate
 		pToolbar->enable(ID_AMIS_SLOWER, theApp.canDecreasePlaybackSpeed());
 		pToolbar->enable(ID_AMIS_FASTER, theApp.canIncreasePlaybackSpeed());
@@ -686,7 +700,7 @@ void amis::gui::CMainFrame::updateToolbarState(toolbar::Toolbar* pToolbar)
 	pToolbar->enable(ID_AMIS_DECREASE_SECTION_DEPTH, b_is_book_open);
 
 	//pToolbar->enable(ID_AMIS_INCREASE_CONTENT_VOLUME, b_is_book_open);
-	//pToolbar->enable(ID_AMIS_DECREASE__CONTENT_VOLUME, b_is_book_open);
+	//pToolbar->enable(ID_AMIS_DECREASE_CONTENT_VOLUME, b_is_book_open);
 
 	pToolbar->enable(ID_AMIS_FIND_IN_TEXT, b_is_book_open);
 }

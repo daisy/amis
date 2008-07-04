@@ -466,13 +466,15 @@ bool CAmisApp::openBook(const ambulant::net::url* filename, bool saveInHistory)
 			MainWndParts::Instance()->updateTitleSelfVoicing(amis::Preferences::Instance()->getIsSelfVoicing());
 
 			mbBookIsOpen = true;
+			
+			amis::dtb::DtbWithHooks::Instance()->startReading(true);
+			setIsWaiting(false);
+
 			MainWndParts::Instance()->mpMainFrame->updateToolbarState
 				(MainWndParts::Instance()->mpBasicToolbar);
 			MainWndParts::Instance()->mpMainFrame->updateToolbarState
 				(MainWndParts::Instance()->mpDefaultToolbar);
 
-			amis::dtb::DtbWithHooks::Instance()->startReading(true);
-			setIsWaiting(false);
 			return true;
 		}
 		else

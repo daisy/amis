@@ -428,3 +428,22 @@ void Toolbar::enable(UINT cmdId, bool value)
 {
 	this->EnableButton(cmdId, value);
 }
+void Toolbar::enableAll(bool value)
+{
+	ToolbarItems items = mpSettings->getItems();
+	for (int i = 0; i<items.size(); i++)
+	{
+		if (items[i]->getType() == amis::gui::toolbar::TOGGLE)
+		{
+			// get the commands
+			toolbar::ToolbarToggleButton* p_toggle = (ToolbarToggleButton*)items[i];
+			enable(p_toggle->getButtonOne()->getCommandId(), value);
+			enable(p_toggle->getButtonTwo()->getCommandId(), value);
+		}
+		else if (items[i]->getType() == amis::gui::toolbar::BUTTON)
+		{
+			toolbar::ToolbarButton* p_button = (ToolbarButton*)items[i];
+			enable(p_button->getCommandId(), value);
+		}
+	}
+}

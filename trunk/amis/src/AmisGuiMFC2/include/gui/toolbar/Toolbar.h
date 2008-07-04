@@ -125,6 +125,7 @@ public:
 	void setSettings(ToolbarSettings*);
 	void togglePlayPause(bool);
 	void enable(UINT, bool);
+	void enableAll(bool);
 protected:
 	afx_msg int OnCreate(LPCREATESTRUCT);
 	afx_msg BOOL OnToolTipNotify(UINT, NMHDR*, LRESULT*);
