@@ -33,6 +33,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "ambulant/net/url.h"
 #include "util/SearchForFiles.h"
 
+#include "util/ThreadYielder.h"
+
 namespace amis
 {
 namespace dtb
@@ -44,6 +46,8 @@ class Dtb
 public:
 	Dtb();
 	~Dtb();
+
+	void setThreadYielder(ThreadYielder * ty);
 
 	bool open(const ambulant::net::url*, const ambulant::net::url*, amis::BookList*);
 	bool open(string, string, amis::BookList*);
@@ -77,6 +81,8 @@ public:
 	void setCallbackForPreprocessingBookKey(ProtectedBookKeyHandlerFunctionPtr);
 
 private:
+	ThreadYielder * mThreadYielder;
+
 	bool processNcc(const ambulant::net::url*);
 	bool processNcx(const ambulant::net::url*);
 	bool processOpf(const ambulant::net::url*);

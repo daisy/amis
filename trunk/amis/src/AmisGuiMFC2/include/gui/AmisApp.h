@@ -57,7 +57,7 @@ public:
 	CAmisApp();
 	
 	static std::wstring pauseBookAndEmitMessage(std::string msg);
-	static std::wstring emitMessage(std::string msg);
+	static std::wstring emitMessage(std::string msg, bool repeat = false);
 
 	static bool beforeModalBox();
 	static void afterModalBox(bool b_was_playing);

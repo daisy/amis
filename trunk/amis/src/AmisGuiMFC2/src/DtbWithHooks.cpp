@@ -72,10 +72,12 @@ DtbWithHooks::~DtbWithHooks()
 
 bool DtbWithHooks::open(const ambulant::net::url* filename, const ambulant::net::url* bookmarksPath, bool saveInHistory)
 {
-	std::wstring str = amis::gui::CAmisApp::emitMessage("loading");
+	std::wstring str = amis::gui::CAmisApp::emitMessage("loading", true);
 	
 	CString strx(str.c_str());
 	amis::gui::MainWndParts::Instance()->updateTitleBar(amis::gui::MainWndParts::TITLEBAR_BOOKTITLE, strx);
+
+	setThreadYielder(amis::gui::MainWndParts::Instance());
 	
 	getFileSearcher()->clearSearchResults();
 	mbIsWaitingForLastmarkNode = false;

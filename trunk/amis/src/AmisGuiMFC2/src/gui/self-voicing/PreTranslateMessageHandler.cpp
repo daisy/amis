@@ -259,7 +259,7 @@ void PreTranslateMessageHandler::handle(PromptResolver * pResolver, MSG* pMsg, i
 		bool wasSameKey = false;
 		if (mLastKeyDown == pMsg->wParam)
 		{
-			mLastKeyDown = -1;
+			//mLastKeyDown = 0;
 			wasSameKey = true;
 		}
 		if (pMsg->wParam == VK_CONTROL)

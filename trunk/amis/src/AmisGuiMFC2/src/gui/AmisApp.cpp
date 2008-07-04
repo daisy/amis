@@ -441,6 +441,7 @@ bool CAmisApp::shouldIgnoreOpenDocEvent()
 {
 	return mbShouldIgnoreOpenDocEvent;
 }
+
 //this function is used by all functions here that lead to a book being opened
 bool CAmisApp::openBook(const ambulant::net::url* filename, bool saveInHistory)
 {
@@ -456,13 +457,13 @@ bool CAmisApp::openBook(const ambulant::net::url* filename, bool saveInHistory)
 
 	if (!filename->is_empty_path()) 
 	{
-		if (amis::dtb::DtbWithHooks::Instance()->open
+	if (amis::dtb::DtbWithHooks::Instance()->open
 			(filename, amis::Preferences::Instance()->getUserBmkDir(), saveInHistory))
 		{
 			//update the status in the title bar
 			MainWndParts::Instance()->updateTitleBar(MainWndParts::TITLEBAR_APPNAME, CString(L"AMIS"));
 			MainWndParts::Instance()->updateTitleViewMode();
-			MainWndParts::Instance()->updateTitleSelfVoicing(Preferences::Instance()->getIsSelfVoicing());
+			MainWndParts::Instance()->updateTitleSelfVoicing(amis::Preferences::Instance()->getIsSelfVoicing());
 
 			mbBookIsOpen = true;
 			MainWndParts::Instance()->mpMainFrame->updateToolbarState
@@ -502,6 +503,7 @@ bool CAmisApp::openBook(const ambulant::net::url* filename, bool saveInHistory)
 				return false;
 			}
 		}
+		return true;
 	}
 	else //empty file path
 	{
@@ -1214,7 +1216,7 @@ std::wstring CAmisApp::pauseBookAndEmitMessage(std::string msgID)
 	return str;
 }
 
-std::wstring CAmisApp::emitMessage(std::string msgID)
+std::wstring CAmisApp::emitMessage(std::string msgID, bool repeat)
 {
 	std::wstring str2 = AudioSequencePlayer::getTextForPromptFromStringId(msgID);
 
@@ -1223,7 +1225,7 @@ std::wstring CAmisApp::emitMessage(std::string msgID)
 
 	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 	{
-		AudioSequencePlayer::playPromptFromStringId(msgID);
+		AudioSequencePlayer::playPromptFromStringId(msgID, repeat);
 	}
 	
 	return str2;

@@ -819,7 +819,7 @@ bool gui::dx::audio_playerX::play(const char * url, char* clipBegin, char* clipE
 #ifdef _DEBUG
 	hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
 	if (hr == S_FALSE) CoUninitialize();
-	_ASSERT(hr == S_FALSE);
+	//_ASSERT(hr == S_FALSE);
 #endif
 
 				TRACE(L"\n####### -- PLAY DX\n");

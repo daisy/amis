@@ -66,6 +66,16 @@ void MainWndParts::toggleViewMode()
 	else defaultView();
 }
 
+void MainWndParts::peekAndPump()
+{
+	HWND hwnd = (mpMainFrame ? mpMainFrame->m_hWnd : 0);
+	MSG msg;
+	while ( ::PeekMessage(&msg, hwnd, NULL, NULL, PM_REMOVE) )
+	{
+		::TranslateMessage(&msg);
+		::DispatchMessage(&msg);
+	}
+}
 
 void MainWndParts::toggleSidebar()
 {

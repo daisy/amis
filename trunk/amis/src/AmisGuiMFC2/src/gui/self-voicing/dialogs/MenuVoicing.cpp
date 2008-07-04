@@ -452,11 +452,21 @@ namespace amis
 
 					amis::BookEntry* p_entry = theApp.getHistory()->getEntry(idx);
 
-					//DanTodo: surely, there must be a way to get a title instead of rendering the URL with TTS ??! (see bookmark methd commented below)
-					string str = p_entry->mPath.get_url();
-
 					AudioSequence* seq = createSeqPrepend(nFlags);
 
+					amis::AudioNode* node = p_entry->getTitleAudio();
+					std::wstring title = p_entry->getTitleText();
+					CString strTitle(title.c_str());
+					if (node != NULL && node->getSrc().length() > 0) // todo: the src string length check is there because there seems to be a bug in getTitleAudio
+					{
+						seq->append(node->clone(), strTitle);
+					}
+					else if (title.length() != 0)
+					{
+						seq->append(strTitle);
+					}
+					
+					string str = p_entry->mPath.get_url();
 					seq->append(A2T(str.c_str()));
 
 					AudioSequencePlayer::Instance()->Play(seq);

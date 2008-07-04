@@ -24,6 +24,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "util/SearchForFilesMFC.h"
 #include "ambulant/net/url.h"
 #include "util/VolMaster.h"
+#include "gui/MainWndParts.h"
 
 using namespace amis::util;
 
@@ -100,7 +101,8 @@ int SearchForFilesMFC::recursiveSearch(LPCTSTR path)
 		b_is_working = finder.FindNextFile();
 
 		// handle messages
-		doEvents();        
+		//doEvents();
+		amis::gui::MainWndParts::Instance()->peekAndPump();
 		
 		// received a stop signal
 		if (mbShouldStop == true) break;

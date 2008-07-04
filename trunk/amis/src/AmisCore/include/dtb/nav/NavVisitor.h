@@ -28,6 +28,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include <vector>
 #include "AmisCore.h"
 
+#include "util/ThreadYielder.h"
+
 using namespace std;
 
 namespace amis
@@ -47,6 +49,11 @@ public:
 	NavVisitor(){}
 	virtual ~NavVisitor() {}
 	virtual bool preVisit(amis::dtb::nav::NavNode*){return false;}
+	
+	inline void setThreadYielder(ThreadYielder * ty) {mThreadYielder = ty;}
+
+protected:
+	ThreadYielder * mThreadYielder;
 };
 
 class BuildSpineVisitor : public NavVisitor

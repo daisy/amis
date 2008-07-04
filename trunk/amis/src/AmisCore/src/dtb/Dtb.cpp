@@ -40,6 +40,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 //constructor
 amis::dtb::Dtb::Dtb()
 {
+	mThreadYielder = NULL;
 	mpFiles = NULL;
 	mpSmilTree = NULL;
 	mpNavModel = NULL;
@@ -164,6 +165,11 @@ bool amis::dtb::Dtb::open(string filepath, string bookmarksDirectory, amis::Book
 	ambulant::net::url bookmarksDirUrl = ambulant::net::url::from_url(bookmarksDirectory);
 	return open(&fileUrl, &bookmarksDirUrl, history);
 }
+void amis::dtb::Dtb::setThreadYielder(ThreadYielder * ty)
+{
+	mThreadYielder = ty;
+}
+
 //--------------------------------------------------
 //open an NCC or OPF file
 //--------------------------------------------------
@@ -186,14 +192,16 @@ bool amis::dtb::Dtb::open(const ambulant::net::url* fileUrl,
 	{
 		amis::util::Log::Instance()->writeMessage("This is a DAISY 2.02 book", "Dtb::open", "AmisCore");	
 		mDaisyVersion = DAISY_202;
-		if (!processNcc(mpFiles->getNavFilepath())) 
+		if (mThreadYielder != 0) mThreadYielder->peekAndPump();
+		if (!processNcc(mpFiles->getNavFilepath())) // xxxx time consuming !
 		{
 			return false;
 		}
 	}
 	else if (DtbFileSet::isOpfFile(fileUrl))
 	{
-		if (!processOpf(mpFiles->getOpfFilepath())) 
+		if (mThreadYielder != 0) mThreadYielder->peekAndPump();
+		if (!processOpf(mpFiles->getOpfFilepath()))  // xxxx time consuming !
 		{
 			return false;
 		}
@@ -320,7 +328,12 @@ bool amis::dtb::Dtb::processNcc(const ambulant::net::url* filepath)
 
 	mpFiles->setAdditionalDataAfterInitialParse(mUid, NULL, NULL, mpHistory);
 	amis::dtb::nav::ResolveSmilDataVisitor resolve_smil_visitor;
-	resolve_smil_visitor.resolve(mpNavModel, mpSpine, true);
+	
+	if (mThreadYielder != 0) mThreadYielder->peekAndPump();
+
+	resolve_smil_visitor.setThreadYielder(mThreadYielder);
+
+	resolve_smil_visitor.resolve(mpNavModel, mpSpine, true);  // xxxx time consuming !
     this->mpTextSmilMap = resolve_smil_visitor.getSmilTextMap();	
 
 	//wait until after the smil data is parsed to set the title audio (otherwise it's not available)
@@ -346,7 +359,12 @@ bool amis::dtb::Dtb::processNcx(const ambulant::net::url* filepath)
 	 //note that this step takes a very long time if the book is large, because
 	//it involves walking the nav model and also opening all the SMIL files
 	amis::dtb::nav::ResolveSmilDataVisitor resolve_smil_visitor;
-	resolve_smil_visitor.resolve(mpNavModel, mpSpine, false);
+	
+	if (mThreadYielder != 0) mThreadYielder->peekAndPump();
+
+	resolve_smil_visitor.setThreadYielder(mThreadYielder);
+
+	resolve_smil_visitor.resolve(mpNavModel, mpSpine, false);  // xxxx time consuming !
 	this->mpTextSmilMap = resolve_smil_visitor.getSmilTextMap();
 	return true;
 }

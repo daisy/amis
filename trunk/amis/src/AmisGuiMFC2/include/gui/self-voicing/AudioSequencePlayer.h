@@ -60,16 +60,17 @@ namespace amis
 				std::string computeExpandedSrc(amis::AudioNode* pAudio, std::string langID = "");
 
 				bool playAudioPrompt(amis::AudioNode* pAudio);
-				void Play(AudioSequence* audioSequence, bool doNotRegisterInHistory = false);
+				void Play(AudioSequence* audioSequence, bool doNotRegisterInHistory = false, bool repeat = false, bool repeating = false);
 
 				void Stop(bool fromPlay = false);
+
 				void playNext(bool fromEndEvent);
 
 				void RepeatLast();
 
 				void DestroyInstance();
 
-				void checkEndSeq();
+				bool checkEndSeq();
 
 				void WaitForEndSeqAndRestartBook();
 				void waitForSequenceEnd();
@@ -82,8 +83,8 @@ namespace amis
 				static std::wstring getTextForPromptFromStringId(string promptId);
 				static std::wstring getTextForPromptItemFromStringId(string promptId);
 				
-				static bool playPromptFromStringId(string);
-				static bool playPromptItemFromStringId(string);
+				static bool playPromptFromStringId(string, bool repeat = false);
+				static bool playPromptItemFromStringId(string, bool repeat = false);
 
 				static bool playDialogInstructionsFromUiId(int nItemID);
 				static bool playDialogTextControlsFromUiId(int nItemID, PromptResolver* pResolver);
@@ -122,6 +123,7 @@ namespace amis
 				bool bIgnoreTTSEnd;
 
 			private:
+				bool mRepeatLoop;
 				static AudioSequencePlayer* pinstance;
 				static void fillOK_CANCEL(AudioSequence * seq, UINT ctrlId);
 			};

@@ -25,6 +25,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "util/FilePathTools.h"
 #include <iostream>
 #include <fstream>
+//#include "gui/MainWndParts.h"
 
 /**************************************/
 /*BUILD SPINE VISITOR
@@ -79,6 +80,8 @@ void amis::dtb::nav::ResolveSmilDataVisitor::resolve(amis::dtb::nav::NavModel* p
 	//build a giant list of smil files and their element IDs
 	for (int i = 0; i<pSpine->getNumberOfSmilFiles(); i++)
 	{
+		if (mThreadYielder != 0) mThreadYielder->peekAndPump();
+
 		NavNodeList* p_nav_nodes = NULL;
 		//find out which nav nodes refer to this smil file
 		//then we'll send the list to the smil parser, and the nodes will
@@ -137,7 +140,9 @@ void amis::dtb::nav::ResolveSmilDataVisitor::resolve(amis::dtb::nav::NavModel* p
 //what is hard to tell: ranges for nav list items (so for now just give them one file#id
 //when we have dtbook support, this info can come from smilref attributes
 bool amis::dtb::nav::ResolveSmilDataVisitor::preVisit(NavNode* pNode)
-{
+{	
+	if (mThreadYielder != 0) mThreadYielder->peekAndPump();
+
 	//ranges aren't supported in nav targets yet
 	if (pNode != NULL && pNode->getTypeOfNode() == NavNode::NAV_TARGET)
 	{

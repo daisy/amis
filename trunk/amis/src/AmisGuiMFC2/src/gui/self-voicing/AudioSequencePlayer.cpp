@@ -52,11 +52,12 @@ static void ttsFinishedCallback()
 	AudioSequencePlayer::Instance()->checkEndSeq();
 	MainWndParts::Instance()->mpMainFrame->PostMessage(WM_COMMAND, (WPARAM)SELF_VOICING_PLAY_NEXT, (LPARAM)0);
 }
-void AudioSequencePlayer::checkEndSeq() {
+bool AudioSequencePlayer::checkEndSeq() {
 	if (m_currentAudioSequence != NULL && m_currentAudioSequence->GetCount() == 0)
 	{
 		SetEvent(m_hEventEnd);
-	} 
+	}
+	return mRepeatLoop;
 }
 //The message callback function ... signals end of the clip
 static void clipFinishedCallback()
@@ -79,6 +80,8 @@ AudioSequencePlayer* AudioSequencePlayer::Instance()
 }
 AudioSequencePlayer::AudioSequencePlayer(void)
 {
+	mRepeatLoop = false;
+
 	m_previousAudioSequence = NULL;
 	m_currentAudioSequence = NULL;
 	m_nextAudioSequence = NULL;
@@ -262,12 +265,15 @@ void AudioSequencePlayer::Stop(bool fromPlay)
 #endif
 	}
 }
+
 void AudioSequencePlayer::playNext(bool fromEndEvent)
 {
-
 	USES_CONVERSION;
 
-	if (m_currentAudioSequence == NULL) return;
+	if (m_currentAudioSequence == NULL)
+	{
+		return;
+	}
 
 #ifdef CCS_ACTIVE
 	if (fromEndEvent) EnterCriticalSection(&m_csSequence);
@@ -281,9 +287,17 @@ void AudioSequencePlayer::playNext(bool fromEndEvent)
 
 	if (m_currentAudioSequence->GetCount() == 0)
 	{
-
 		delete m_currentAudioSequence;
 		m_currentAudioSequence = NULL;
+		
+		if (mRepeatLoop)
+		{
+			if (m_previousAudioSequence)
+			{
+				Play(m_previousAudioSequence, false, true, true);
+			}
+		}
+
 		return;
 	}
 
@@ -293,12 +307,14 @@ void AudioSequencePlayer::playNext(bool fromEndEvent)
 	if (comp->m_isAudioClip)
 	{
 
+#ifdef _DEBUG
 		if (fromEndEvent)
 		{
 			HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
 			if (hr == S_FALSE) CoUninitialize();
 			_ASSERT(hr == S_FALSE);
 		}
+#endif
 
 		p_log->writeMessage("============ PLAY AUDIO CLIP");
 		TRACE(L"\n============ PLAY AUDIO CLIP\n");
@@ -332,8 +348,10 @@ void AudioSequencePlayer::playNext(bool fromEndEvent)
 }
 
 
-void AudioSequencePlayer::Play(AudioSequence* audioSequence, bool doNotRegisterInHistory)
+void AudioSequencePlayer::Play(AudioSequence* audioSequence, bool doNotRegisterInHistory, bool repeat, bool repeating)
 {
+	mRepeatLoop = repeat;
+
 	if (audioSequence == NULL || audioSequence->GetCount() == 0)
 	{
 		int debugHere = 0;
@@ -370,7 +388,6 @@ void AudioSequencePlayer::Play(AudioSequence* audioSequence, bool doNotRegisterI
 		LeaveCriticalSection(&m_csSequence);
 #endif
 
-		
 		MainWndParts::Instance()->mpMainFrame->SendMessage(WM_COMMAND, (WPARAM)SELF_VOICING_PLAY_NEXT, (LPARAM)0);
 	}
 }
@@ -719,7 +736,7 @@ std::wstring AudioSequencePlayer::getTextForPromptFromStringId(string promptId)
 	return str;
 }
 
-bool AudioSequencePlayer::playPromptFromStringId(string promptId)
+bool AudioSequencePlayer::playPromptFromStringId(string promptId, bool repeat)
 {
 	Prompt* p_prompt_ = DataTree::Instance()->findPrompt(promptId);
 
@@ -733,19 +750,19 @@ bool AudioSequencePlayer::playPromptFromStringId(string promptId)
 		}
 		else
 		{
-			AudioSequencePlayer::Instance()->Play(seq);
+			AudioSequencePlayer::Instance()->Play(seq, false, repeat);
 			return true;
 		}
 	}
 	else
 	{
 		// Fallback on PromptItem instead of Prompt
-		return playPromptItemFromStringId(promptId);
+		return playPromptItemFromStringId(promptId, repeat);
 	}
 	return false;
 }
 
-bool AudioSequencePlayer::playPromptItemFromStringId(string promptId)
+bool AudioSequencePlayer::playPromptItemFromStringId(string promptId, bool repeat)
 {		
 	PromptItem* p_prompt_ = DataTree::Instance()->findPromptItem(promptId);
 
@@ -759,7 +776,7 @@ bool AudioSequencePlayer::playPromptItemFromStringId(string promptId)
 		}
 		else
 		{
-			AudioSequencePlayer::Instance()->Play(seq);
+			AudioSequencePlayer::Instance()->Play(seq, false, repeat);
 			return true;
 		}
 	}

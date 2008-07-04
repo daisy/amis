@@ -29,6 +29,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "HtmlView.h"
 #include "MmDoc.h"
 #include "MmView.h"
+#include "util/ThreadYielder.h"
 
 using namespace amis::gui;
 
@@ -36,7 +37,7 @@ namespace amis
 {
 namespace gui
 {
-class MainWndParts
+	class MainWndParts : public ThreadYielder
 {
 protected:
 	MainWndParts();
@@ -52,6 +53,7 @@ public:
 	void toggleViewMode();
 	bool isBasicView();
 
+	void peekAndPump();
 
 public:
 	amis::gui::sidebar::cdxCDynamicBarT<amis::gui::sidebar::CAmisSidebar>* mpSidebar;
