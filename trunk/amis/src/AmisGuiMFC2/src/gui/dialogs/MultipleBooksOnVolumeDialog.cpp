@@ -24,6 +24,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "gui/dialogs/MultipleBooksOnVolumeDialog.h"
 #include "../resource.h"
 #include "AmisCore.h"
+#include "Preferences.h"
 
 using namespace amis::gui::dialogs;
 
@@ -31,9 +32,36 @@ BEGIN_MESSAGE_MAP(MultipleBooksOnVolumeDialog, CDialog)
 	ON_WM_PAINT()
 	ON_LBN_DBLCLK(IDC_BOOKLIST, OnDblclkFilelist)
 	ON_BN_CLICKED(IDC_OPENBOOK, OnOpenbook)
+	ON_LBN_SELCHANGE(IDC_BOOKLIST, OnSelchangeFilelist)
 END_MESSAGE_MAP()
 
 
+void MultipleBooksOnVolumeDialog::OnSelchangeFilelist() 
+{
+	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
+	{
+		//TODO: this list treatment removes the default XML prompts, needs improvement
+		CListBox* p_filelist = NULL;
+		p_filelist = (CListBox*)this->GetDlgItem(IDC_BOOKLIST);
+
+		int sel = p_filelist->GetCurSel();
+		if (sel >= 0)
+		{ 
+			if (sel > -1 && sel < mpBookList->getNumberOfEntries())
+			{
+				CString title = mpBookList->getEntry(sel)->getTitleText().c_str();
+				amis::AudioNode* node = mpBookList->getEntry(sel)->getTitleAudio();
+
+				AudioSequence * seq = new AudioSequence();
+				if (node != NULL)
+					seq->append(node->clone(), title);
+				else
+					seq->append(title);
+				AudioSequencePlayer::Instance()->Play(seq);
+			}
+		}
+	}
+}
 void MultipleBooksOnVolumeDialog::resolvePromptVariables(Prompt* pPrompt)
 {
 	return;
@@ -65,6 +93,7 @@ void MultipleBooksOnVolumeDialog::populateListControl()
 
 	int num_titles = mpBookList->getNumberOfEntries();
 	for (int i = 0; i<num_titles; i++)
+	//for (int i = num_titles-1; i>=0; i--)
 	{
 		CString title = mpBookList->getEntry(i)->getTitleText().c_str();
 		p_filelist->AddString(title);
@@ -117,6 +146,12 @@ BOOL MultipleBooksOnVolumeDialog::PreTranslateMessage(MSG* pMsg)
 		if (p_wnd)
 		{
 			int id = p_wnd->GetDlgCtrlID();
+
+			if (id == IDC_BOOKLIST && (pMsg->wParam == VK_UP || pMsg->wParam == VK_DOWN))
+			{
+				return CDialog::PreTranslateMessage(pMsg);
+			}
+
 			//inexplicably, the default behavior for pressing enter in a dialog is to close it.
 			//we're overriding this here.
 			if (pMsg->wParam == VK_RETURN)
@@ -126,6 +161,7 @@ BOOL MultipleBooksOnVolumeDialog::PreTranslateMessage(MSG* pMsg)
 				 {
 					 pMsg->wParam = NULL;
 					 loadBook();
+					 return CDialog::PreTranslateMessage(pMsg);
 				 }
 			}	
 		}

@@ -193,7 +193,7 @@ bool amis::dtb::Dtb::open(const ambulant::net::url* fileUrl,
 		amis::util::Log::Instance()->writeMessage("This is a DAISY 2.02 book", "Dtb::open", "AmisCore");	
 		mDaisyVersion = DAISY_202;
 		if (mThreadYielder != 0) mThreadYielder->peekAndPump();
-		if (!processNcc(mpFiles->getNavFilepath())) // xxxx time consuming !
+		if (!processNcc(mpFiles->getNavFilepath()))
 		{
 			return false;
 		}
@@ -201,7 +201,7 @@ bool amis::dtb::Dtb::open(const ambulant::net::url* fileUrl,
 	else if (DtbFileSet::isOpfFile(fileUrl))
 	{
 		if (mThreadYielder != 0) mThreadYielder->peekAndPump();
-		if (!processOpf(mpFiles->getOpfFilepath()))  // xxxx time consuming !
+		if (!processOpf(mpFiles->getOpfFilepath()))
 		{
 			return false;
 		}
@@ -333,7 +333,7 @@ bool amis::dtb::Dtb::processNcc(const ambulant::net::url* filepath)
 
 	resolve_smil_visitor.setThreadYielder(mThreadYielder);
 
-	resolve_smil_visitor.resolve(mpNavModel, mpSpine, true);  // xxxx time consuming !
+	resolve_smil_visitor.resolve(mpNavModel, mpSpine, true);
     this->mpTextSmilMap = resolve_smil_visitor.getSmilTextMap();	
 
 	//wait until after the smil data is parsed to set the title audio (otherwise it's not available)
@@ -364,7 +364,7 @@ bool amis::dtb::Dtb::processNcx(const ambulant::net::url* filepath)
 
 	resolve_smil_visitor.setThreadYielder(mThreadYielder);
 
-	resolve_smil_visitor.resolve(mpNavModel, mpSpine, false);  // xxxx time consuming !
+	resolve_smil_visitor.resolve(mpNavModel, mpSpine, false);
 	this->mpTextSmilMap = resolve_smil_visitor.getSmilTextMap();
 	return true;
 }

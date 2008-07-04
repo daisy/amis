@@ -50,6 +50,7 @@ protected:
 	afx_msg void OnDblclkFilelist();
 	afx_msg void OnOpenbook();
 	afx_msg void OnPaint();
+	afx_msg void OnSelchangeFilelist();
 	DECLARE_MESSAGE_MAP()
 
 private:

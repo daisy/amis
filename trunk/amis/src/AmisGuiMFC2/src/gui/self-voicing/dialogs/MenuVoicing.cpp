@@ -526,7 +526,6 @@ namespace amis
 						amis::MediaGroup* p_note = amis::dtb::DtbWithHooks::Instance()->getBookmarks()->getItem(idx)->mpNote;
 						if (p_note!=NULL)
 						{
-
 							if (p_note->hasAudio() == true)
 							{
 								amis::AudioNode* p_audio = NULL;
@@ -539,9 +538,9 @@ namespace amis
 									AudioSequencePlayer::Instance()->Play(seq);
 									return;
 								}
-							} else if (p_note->hasText() == true)
+							}
+							else if (p_note->hasText() == true)
 							{
-								//DanTodo: bmks generally have no audio, so how can we use the existing (open) book content to render audio voice here ?
 								amis::TextNode* p_text = NULL;
 								p_text	= p_note->getText();
 								if (p_text	!= NULL)
@@ -551,10 +550,7 @@ namespace amis
 									AudioSequencePlayer::Instance()->Play(seq);
 									return;
 								}
-
-
 							}
-
 						}
 					} else 
 
