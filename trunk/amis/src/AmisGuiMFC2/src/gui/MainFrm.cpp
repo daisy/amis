@@ -36,7 +36,6 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "util/Log.h"
 
 #include "gui/self-voicing/dialogs/MenuVoicing.h"
-#include "..\..\include\gui\mainfrm.h"
 
 #ifdef _DEBUG
 #define	new	DEBUG_NEW
@@ -71,31 +70,57 @@ BEGIN_MESSAGE_MAP(CMainFrame, CMDIFrameWnd)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_GOTO_PAGE, OnUpdateCmdUiGoToPage)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_ADD_BOOKMARK, OnUpdateCmdUiBookmarks)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_FASTER, OnUpdateCmdUiPlayFaster)
-	ON_UPDATE_COMMAND_UI(ID_AMIS_CLOSE_BOOK, OnUpdateCmdUiGeneral)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_CLOSE_BOOK, OnUpdateCmdUiAvailableWhenBookIsOpen)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_SHOW_READING_OPTIONS, OnUpdateCmdUiInfoSkip)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_SLOWER, OnUpdateCmdUiPlaySlower)
-	ON_UPDATE_COMMAND_UI(ID_AMIS_FOCUS_ON_TEXT, OnUpdateCmdUiGeneral)
-	ON_UPDATE_COMMAND_UI(ID_AMIS_TOGGLE_AUDIO_CONTENT_PLAYBACK, OnUpdateCmdUiGeneral)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_FOCUS_ON_TEXT, OnUpdateCmdUiAvailableWhenBookIsOpen)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_TOGGLE_AUDIO_CONTENT_PLAYBACK, OnUpdateCmdUiAvailableWhenBookIsOpen)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_NO_PAGE_STYLES, OnUpdateCmdUiPageStyle)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_PLAYPAUSE, OnUpdateCmdUiPlayPause)
-	ON_UPDATE_COMMAND_UI(ID_AMIS_ESCAPE, OnUpdateCmdUiGeneral)
-	ON_UPDATE_COMMAND_UI(ID_AMIS_RESET_SPEED, OnUpdateCmdUiGeneral)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_ESCAPE, OnUpdateCmdUiAvailableWhenBookIsOpen)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_RESET_SPEED, OnUpdateCmdUiAvailableWhenBookIsOpen)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_PREVIOUS_SECTION, OnUpdateCmdUiPreviousSection)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_NEXT_SECTION, OnUpdateCmdUiNextSection)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_PREVIOUS_PHRASE, OnUpdateCmdUiPreviousPhrase)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_NEXT_PHRASE, OnUpdateCmdUiNextPhrase)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_FIND_IN_TEXT, OnUpdateCmdUiFindInText)
-	ON_UPDATE_COMMAND_UI(ID_AMIS_SHOW_PUBLICATION_SUMMARY, OnUpdateCmdUiGeneral)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_SHOW_PUBLICATION_SUMMARY, OnUpdateCmdUiAvailableWhenBookIsOpen)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_NEXT_PAGE_STYLE, OnUpdateCmdUiPageStyle)
-	ON_UPDATE_COMMAND_UI(ID_AMIS_INCREASE_SECTION_DEPTH, OnUpdateCmdUiGeneral)
-	ON_UPDATE_COMMAND_UI(ID_AMIS_DECREASE_SECTION_DEPTH, OnUpdateCmdUiGeneral)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_TOGGLE_SIDEBAR, OnUpdateCmdUiCheckSidebar)
 	ON_UPDATE_COMMAND_UI_RANGE(AMIS_PAGE_STYLE_BASE_ID, AMIS_PAGE_STYLE_BASE_ID + AMIS_MAX_ANYTHING, OnUpdateCmdUiPageStyle)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_SMALLER_FONT, OnUpdateCmdUiSmallerFont)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_BIGGER_FONT, OnUpdateCmdUiBiggerFont)
-	ON_UPDATE_COMMAND_UI(ID_AMIS_INCREASE_CONTENT_VOLUME, OnUpdateCmdUiGeneral)
-	ON_UPDATE_COMMAND_UI(ID_AMIS_DECREASE_CONTENT_VOLUME, OnUpdateCmdUiGeneral)
-	ON_UPDATE_COMMAND_UI_RANGE(AMIS_BOOKMARKS_BASE_ID, AMIS_BOOKMARKS_BASE_ID + AMIS_MAX_ANYTHING, OnUpdateCmdUiGeneral)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_INCREASE_CONTENT_VOLUME, OnUpdateCmdUiAvailableWhenBookIsOpen)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_DECREASE_CONTENT_VOLUME, OnUpdateCmdUiAvailableWhenBookIsOpen)
+	ON_UPDATE_COMMAND_UI_RANGE(AMIS_BOOKMARKS_BASE_ID, AMIS_BOOKMARKS_BASE_ID + AMIS_MAX_ANYTHING, OnUpdateCmdUiAvailableWhenBookIsOpen)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_OPEN_FILE, OnUpdateCmdUiAlmostAlwaysAvailable)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_EXIT, OnUpdateCmdUiAlmostAlwaysAvailable)
+	ON_UPDATE_COMMAND_UI_RANGE(AMIS_RECENT_BOOK_BASE_ID, AMIS_RECENT_BOOK_BASE_ID + AMIS_MAX_ANYTHING, OnUpdateCmdUiAlmostAlwaysAvailable)
+	ON_UPDATE_COMMAND_UI_RANGE(AMIS_SECTION_DEPTH_BASE_ID, AMIS_SECTION_DEPTH_BASE_ID + AMIS_MAX_ANYTHING, OnUpdateCmdUiAvailableWhenBookIsOpen)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_ABOUT, OnUpdateCmdUiAlmostAlwaysAvailable)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_OPEN_URL, OnUpdateCmdUiAlmostAlwaysAvailable)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_SEARCH_LOCAL_DRIVES, OnUpdateCmdUiAlmostAlwaysAvailable)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_LOAD_CD, OnUpdateCmdUiAlmostAlwaysAvailable)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_INCREASE_VOLUME, OnUpdateCmdUiAlmostAlwaysAvailable)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_DECREASE_VOLUME, OnUpdateCmdUiAlmostAlwaysAvailable)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_SHOW_PREFERENCES, OnUpdateCmdUiAlmostAlwaysAvailable)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_TOGGLE_VIEW, OnUpdateCmdUiAlmostAlwaysAvailable)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_SHOW_TEXTSTYLE, OnUpdateCmdUiAlmostAlwaysAvailable)
+	ON_UPDATE_COMMAND_UI_RANGE(AMIS_VIEW_MENU_BASE_ID, AMIS_VIEW_MENU_BASE_ID + AMIS_MAX_ANYTHING, OnUpdateCmdUiAvailableWhenBookIsOpen)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_SHOW_HELP_CONTENTS, OnUpdateCmdUiAlmostAlwaysAvailable)
+
+	
+	//commands that we don't use in the menus, but that might be available on a toolbar
+	ON_UPDATE_COMMAND_UI(ID_AMIS_INCREASE_SECTION_DEPTH, OnUpdateCmdUiAvailableWhenBookIsOpen)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_DECREASE_SECTION_DEPTH, OnUpdateCmdUiAvailableWhenBookIsOpen)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_FIND_NEXT_IN_TEXT, OnUpdateCmdUiFindInText)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_FIND_PREVIOUS_IN_TEXT, OnUpdateCmdUiFindInText)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_INCREASE_UI_VOLUME, OnUpdateCmdUiAlmostAlwaysAvailable)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_DECREASE_UI_VOLUME, OnUpdateCmdUiAlmostAlwaysAvailable)	
+	ON_UPDATE_COMMAND_UI(ID_AMIS_FOCUS_ON_SIDEBAR, OnUpdateCmdUiAlmostAlwaysAvailable)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_TOGGLE_AUDIO_SELFVOICING_PLAYBACK, OnUpdateCmdUiAlmostAlwaysAvailable)
+	ON_UPDATE_COMMAND_UI(ID_AMIS_RESET_HIGHLIGHT_COLORS, OnUpdateCmdUiAlmostAlwaysAvailable)
+	
 	//}}AFX_MSG_MAP
 	ON_WM_SIZE()
 	ON_WM_SIZE()
@@ -464,9 +489,13 @@ void CMainFrame::OnUpdateCmdUiGoToPage(CCmdUI* pCmdUi)
 		updateUiCommandState(pCmdUi, false);
 }
 
-void CMainFrame::OnUpdateCmdUiGeneral(CCmdUI* pCmdUi)
+void CMainFrame::OnUpdateCmdUiAvailableWhenBookIsOpen(CCmdUI* pCmdUi)
 {
 	updateUiCommandState(pCmdUi, theApp.isBookOpen());
+}
+void CMainFrame::OnUpdateCmdUiAlmostAlwaysAvailable(CCmdUI* pCmdUi)
+{
+	updateUiCommandState(pCmdUi, true);
 }
 void CMainFrame::OnUpdateCmdUiInfoSkip(CCmdUI* pCmdUi)
 {
@@ -497,10 +526,12 @@ void CMainFrame::OnUpdateCmdUiCheckSidebar(CCmdUI* pCmdUi)
 		pCmdUi->SetCheck(1);
 	else
 		pCmdUi->SetCheck(0);
+
+	updateUiCommandState(pCmdUi, true);
 }
 void CMainFrame::OnUpdateCmdUiFindInText(CCmdUI* pCmdUi)
 {
-	pCmdUi->Enable(theApp.isBookOpen());
+	updateUiCommandState(pCmdUi, theApp.isBookOpen());
 }
 void CMainFrame::OnUpdateCmdUiPlayPause(CCmdUI* pCmdUi)
 {
@@ -512,6 +543,7 @@ void CMainFrame::OnUpdateCmdUiPlayPause(CCmdUI* pCmdUi)
 		MainWndParts::Instance()->mpDefaultToolbar->togglePlayPause(!b_is_playing);
 		MainWndParts::Instance()->mpBasicToolbar->togglePlayPause(!b_is_playing);
 		MenuManip::Instance()->setPauseState(!b_is_playing);
+		updateUiCommandState(pCmdUi, true);
 	}
 	else
 		updateUiCommandState(pCmdUi, false);
@@ -602,12 +634,13 @@ void amis::gui::CMainFrame::OnUpdateCmdUiNextPage(CCmdUI* pCmdUi)
 //the ON_UPDATE_COMMAND_UI messages end up here because it takes care of the toolbars too
 void amis::gui::CMainFrame::updateUiCommandState(CCmdUI* pCmdUi, bool value)
 {
+	bool enable = value;
 	//don't do anything if we're waiting for a book to load
-	if (theApp.getIsWaiting() == true) value = false;
+	if (theApp.getIsWaiting() == true) enable = false;
 
-	pCmdUi->Enable(value);
-	mDefaultToolbar.enable(pCmdUi->m_nID, value);
-	mBasicToolbar.enable(pCmdUi->m_nID, value);
+	pCmdUi->Enable(enable);
+	mDefaultToolbar.enable(pCmdUi->m_nID, enable);
+	mBasicToolbar.enable(pCmdUi->m_nID, enable);
 }
 
 //enable or disable the commands that only work when a book is open

@@ -446,6 +446,10 @@ bool CAmisApp::shouldIgnoreOpenDocEvent()
 bool CAmisApp::openBook(const ambulant::net::url* filename, bool saveInHistory)
 {
 	setIsWaiting(true);
+	MainWndParts::Instance()->mpMainFrame->updateToolbarState
+				(MainWndParts::Instance()->mpBasicToolbar);
+	MainWndParts::Instance()->mpMainFrame->updateToolbarState
+				(MainWndParts::Instance()->mpDefaultToolbar);
 
 	bool b_a_book_was_open = false;
 	//close the open book
@@ -467,9 +471,10 @@ bool CAmisApp::openBook(const ambulant::net::url* filename, bool saveInHistory)
 
 			mbBookIsOpen = true;
 			
-			amis::dtb::DtbWithHooks::Instance()->startReading(true);
 			setIsWaiting(false);
 
+			amis::dtb::DtbWithHooks::Instance()->startReading(true);
+			
 			MainWndParts::Instance()->mpMainFrame->updateToolbarState
 				(MainWndParts::Instance()->mpBasicToolbar);
 			MainWndParts::Instance()->mpMainFrame->updateToolbarState

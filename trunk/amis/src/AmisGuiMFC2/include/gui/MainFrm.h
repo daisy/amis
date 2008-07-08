@@ -73,7 +73,8 @@ protected:
 	afx_msg void OnSysCommand(UINT nID, LPARAM lParam);
 	//these update the menu items and toolbar buttons for the mapped command
 	afx_msg void OnUpdateCmdUiGoToPage(CCmdUI*);
-	afx_msg void OnUpdateCmdUiGeneral(CCmdUI*);
+	afx_msg void OnUpdateCmdUiAvailableWhenBookIsOpen(CCmdUI*);
+	afx_msg void OnUpdateCmdUiAlmostAlwaysAvailable(CCmdUI*);
 	afx_msg void OnUpdateCmdUiInfoSkip(CCmdUI*);
 	afx_msg void OnUpdateCmdUiPlaySlower(CCmdUI*);
 	afx_msg void OnUpdateCmdUiPlayFaster(CCmdUI*);
