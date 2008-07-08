@@ -1,31 +1,31 @@
-<?xml version="1.0" ?>
-<ui next-id="t435" xml:lang="en" xmlns="http://amisproject.org">
+<?xml version="1.0"?>
+<ui xmlns="http://amisproject.org" next-id="t435" xml:lang="en">
     <containers>
         <container id="file">
-            <note>This is the menu header &quot;File&quot;</note>
+            <note>This is the menu header "File"</note>
             <caption>
                 <text id="t1">File</text>
-                <audio from="" src="./audio/./audio/speechgen0002.mp3"/>
+                <audio src="./audio/speechgen0002.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0002.smil#text3"/>
             </caption>
             <action mfcid="ID_AMIS_OPEN_FILE" widget="menuItem toolbarItem">
                 <note>This is going to be a menu item and a toolbar item</note>
                 <icon src="./open.png" type="smallIcon"/>
                 <caption>
                     <text id="t2">Open...</text>
-                    <audio from="" src="./audio/./audio/speechgen0003.mp3"/>
+                    <audio src="./audio/speechgen0003.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0003.smil#text4"/>
                 </caption>
                 <description>
                     <text id="t3">Open a DAISY book from the local file system</text>
-                    <audio from="" src="./audio/./audio/speechgen0004.mp3"/>
+                    <audio src="./audio/speechgen0004.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0004.smil#text5"/>
                 </description>
                 <!--keys = the actual keys; text = the name of the keys-->
                 <accelerator keys="Ctrl+O">
                     <text id="t4">Ctrl+O</text>
-                    <audio from="" src="./audio/./audio/speechgen0005.mp3"/>
+                    <audio src="./audio/speechgen0005.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0005.smil#text6"/>
                 </accelerator>
                 <mnemonic>
                     <text id="t5">O</text>
-                    <audio from="" src="./audio/./audio/speechgen0006.mp3"/>
+                    <audio src="./audio/speechgen0006.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0006.smil#text7"/>
                 </mnemonic>
             </action>
             <action mfcid="ID_AMIS_OPEN_URL" widget="menuItem">
@@ -33,19 +33,19 @@
                 <icon src="./open.png" type="smallIcon"/>
                 <caption>
                     <text id="t327">Open URL...</text>
-                    <audio from="" src="./audio/./audio/speechgen0007.mp3"/>
+                    <audio src="./audio/speechgen0007.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0007.smil#text8"/>
                 </caption>
                 <description>
                     <text id="t328">Open a DAISY publication from a URL</text>
-                    <audio from="" src="./audio/./audio/speechgen0008.mp3"/>
+                    <audio src="./audio/speechgen0008.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0008.smil#text9"/>
                 </description>
                 <accelerator keys="Ctrl+U">
                     <text id="t329">Ctrl+U</text>
-                    <audio from="" src="./audio/./audio/speechgen0009.mp3"/>
+                    <audio src="./audio/speechgen0009.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0009.smil#text10"/>
                 </accelerator>
                 <mnemonic>
                     <text id="t330">U</text>
-                    <audio from="" src="./audio/./audio/speechgen0010.mp3"/>
+                    <audio src="./audio/speechgen0010.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0010.smil#text11"/>
                 </mnemonic>
             </action>
             <action mfcid="ID_AMIS_CLOSE_BOOK" widget="menuItem">
@@ -53,15 +53,15 @@
                 <icon src="./close.png" type="smallIcon"/>
                 <caption>
                     <text id="t331">Close</text>
-                    <audio from="" src="./audio/./audio/speechgen0011.mp3"/>
+                    <audio src="./audio/speechgen0011.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0011.smil#text12"/>
                 </caption>
                 <description>
                     <text id="t332">Close the DAISY publication</text>
-                    <audio from="" src="./audio/./audio/speechgen0012.mp3"/>
+                    <audio src="./audio/speechgen0012.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0012.smil#text13"/>
                 </description>
                 <mnemonic>
                     <text id="t333">C</text>
-                    <audio from="" src="./audio/./audio/speechgen0013.mp3"/>
+                    <audio src="./audio/speechgen0013.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0013.smil#text14"/>
                 </mnemonic>
             </action>
             <action mfcid="ID_AMIS_LOAD_CD" widget="menuItem toolbarItem">
@@ -70,67 +70,67 @@
                 <icon src="./settings/img/cd_big.ico" type="largeIcon"/>
                 <caption>
                     <text id="t6">Load CD</text>
-                    <audio from="" src="./audio/./audio/speechgen0014.mp3"/>
+                    <audio src="./audio/speechgen0014.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0014.smil#text15"/>
                 </caption>
                 <description>
                     <text id="t7">Load a DAISY book from CD ROM</text>
-                    <audio from="" src="./audio/./audio/speechgen0015.mp3"/>
+                    <audio src="./audio/speechgen0015.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0015.smil#text16"/>
                 </description>
                 <accelerator keys="Ctrl+L">
                     <text id="t8">Ctrl+L</text>
-                    <audio from="" src="./audio/./audio/speechgen0016.mp3"/>
+                    <audio src="./audio/speechgen0016.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0016.smil#text17"/>
                 </accelerator>
                 <mnemonic>
                     <text id="t9">L</text>
-                    <audio from="" src="./audio/./audio/speechgen0017.mp3"/>
+                    <audio src="./audio/speechgen0017.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0017.smil#text18"/>
                 </mnemonic>
             </action>
             <action mfcid="ID_AMIS_SEARCH_LOCAL_DRIVES" widget="menuItem">
                 <note>This is going to be a menu item</note>
                 <caption>
                     <text id="t10">Search Drives...</text>
-                    <audio from="" src="./audio/./audio/speechgen0018.mp3"/>
+                    <audio src="./audio/speechgen0018.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0018.smil#text19"/>
                 </caption>
                 <description>
                     <text id="t11">Search local drives for DAISY books</text>
-                    <audio from="" src="./audio/./audio/speechgen0019.mp3"/>
+                    <audio src="./audio/speechgen0019.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0019.smil#text20"/>
                 </description>
                 <mnemonic>
                     <text id="t12">S</text>
-                    <audio from="" src="./audio/./audio/speechgen0020.mp3"/>
+                    <audio src="./audio/speechgen0020.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0020.smil#text21"/>
                 </mnemonic>
             </action>
             <action mfcid="ID_AMIS_SHOW_PREFERENCES" widget="menuItem">
                 <note>This is going to be a menu item</note>
                 <caption>
                     <text id="t13">Preferences...</text>
-                    <audio from="" src="./audio/./audio/speechgen0021.mp3"/>
+                    <audio src="./audio/speechgen0021.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0021.smil#text22"/>
                 </caption>
                 <description>
                     <text id="t14">This is the application preferences dialog.</text>
-                    <audio from="" src="./audio/./audio/speechgen0022.mp3"/>
+                    <audio src="./audio/speechgen0022.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0022.smil#text23"/>
                 </description>
                 <mnemonic>
                     <text id="t15">P</text>
-                    <audio from="" src="./audio/./audio/speechgen0023.mp3"/>
+                    <audio src="./audio/speechgen0023.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0023.smil#text24"/>
                 </mnemonic>
             </action>
             <container id="recentBooksList">
                 <note>This is the menu header for the recent books sub-menu.</note>
                 <caption>
                     <text id="t16">Recent</text>
-                    <audio from="" src="./audio/./audio/speechgen0024.mp3"/>
+                    <audio src="./audio/speechgen0024.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0024.smil#text25"/>
                 </caption>
                 <switch element="action">
                     <action condition="ID_AMIS_RECENT_BOOKS_EMPTY" mfcid="ID_AMIS_RECENT_BOOKS_EMPTY" widget="menuItem">
                         <note>This is going to be a menu item</note>
                         <caption>
                             <text id="t17">Empty</text>
-                            <audio from="" src="./audio/./audio/speechgen0025.mp3"/>
+                            <audio src="./audio/speechgen0025.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0025.smil#text26"/>
                         </caption>
                         <description>
                             <text id="t18">There are no recently read books.</text>
-                            <audio from="" src="./audio/./audio/speechgen0026.mp3"/>
+                            <audio src="./audio/speechgen0026.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0026.smil#text27"/>
                         </description>
                     </action>
                     <action condition="AMIS_RECENT_BOOK_BASE_ID" mfcid="AMIS_RECENT_BOOK_BASE_ID" widget="menuItem">
@@ -144,88 +144,88 @@
                 </switch>
                 <mnemonic>
                     <text id="t19">R</text>
-                    <audio from="" src="./audio/./audio/speechgen0027.mp3"/>
+                    <audio src="./audio/speechgen0027.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0027.smil#text28"/>
                 </mnemonic>
             </container>
             <action mfcid="ID_AMIS_EXIT" widget="menuItem">
                 <note>This is going to be a menu item</note>
                 <caption>
                     <text id="t20">Exit</text>
-                    <audio from="" src="./audio/./audio/speechgen0028.mp3"/>
+                    <audio src="./audio/speechgen0028.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0028.smil#text29"/>
                 </caption>
                 <description>
                     <text id="t21">Exit AMIS</text>
-                    <audio from="" src="./audio/./audio/speechgen0029.mp3"/>
+                    <audio src="./audio/speechgen0029.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0029.smil#text30"/>
                 </description>
                 <accelerator keys="Alt+F4">
                     <text id="t22">Alt+F4</text>
-                    <audio from="" src="./audio/./audio/speechgen0030.mp3"/>
+                    <audio src="./audio/speechgen0030.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0030.smil#text31"/>
                 </accelerator>
                 <mnemonic>
                     <text id="t23">x</text>
-                    <audio from="" src="./audio/./audio/speechgen0031.mp3"/>
+                    <audio src="./audio/speechgen0031.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0031.smil#text32"/>
                 </mnemonic>
             </action>
             <accelerator keys="Alt+F">
                 <text id="t24">Alt+F</text>
-                <audio from="" src="./audio/./audio/speechgen0032.mp3"/>
+                <audio src="./audio/speechgen0032.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0032.smil#text33"/>
             </accelerator>
             <mnemonic>
                 <text id="t25">F</text>
-                <audio from="" src="./audio/./audio/speechgen0033.mp3"/>
+                <audio src="./audio/speechgen0033.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0033.smil#text34"/>
             </mnemonic>
         </container>
         <container id="view">
-            <note>This is the menu header &quot;View&quot;</note>
+            <note>This is the menu header "View"</note>
             <caption>
                 <text id="t26">View</text>
-                <audio from="" src="./audio/./audio/speechgen0034.mp3"/>
+                <audio src="./audio/speechgen0034.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0034.smil#text35"/>
             </caption>
             <action mfcid="ID_AMIS_TOGGLE_SIDEBAR" widget="menuItem">
                 <note>This is going to be a menu item</note>
                 <caption>
                     <text id="t27">Sidebar</text>
-                    <audio from="" src="./audio/./audio/speechgen0035.mp3"/>
+                    <audio src="./audio/speechgen0035.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0035.smil#text36"/>
                 </caption>
                 <description>
                     <text id="t28">Turn the sidebar on or off.</text>
-                    <audio from="" src="./audio/./audio/speechgen0036.mp3"/>
+                    <audio src="./audio/speechgen0036.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0036.smil#text37"/>
                 </description>
                 <mnemonic>
                     <text id="t29">S</text>
-                    <audio from="" src="./audio/./audio/speechgen0037.mp3"/>
+                    <audio src="./audio/speechgen0037.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0037.smil#text38"/>
                 </mnemonic>
             </action>
             <action mfcid="ID_AMIS_TOGGLE_VIEW" widget="menuItem">
                 <note>This is going to be a menu item</note>
                 <caption>
                     <text id="t30">Basic View</text>
-                    <audio from="" src="./audio/./audio/speechgen0038.mp3"/>
+                    <audio src="./audio/speechgen0038.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0038.smil#text39"/>
                 </caption>
                 <description>
                     <text id="t31">Change the view</text>
-                    <audio from="" src="./audio/./audio/speechgen0039.mp3"/>
+                    <audio src="./audio/speechgen0039.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0039.smil#text40"/>
                 </description>
                 <accelerator keys="F11">
                     <text id="t32">F11</text>
-                    <audio from="" src="./audio/./audio/speechgen0040.mp3"/>
+                    <audio src="./audio/speechgen0040.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0040.smil#text41"/>
                 </accelerator>
                 <mnemonic>
                     <text id="t33">B</text>
-                    <audio from="" src="./audio/./audio/speechgen0041.mp3"/>
+                    <audio src="./audio/speechgen0041.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0041.smil#text42"/>
                 </mnemonic>
             </action>
             <container id="pageStylesList">
                 <note>This is the menu header for the list of styles available for this page.</note>
                 <caption>
                     <text id="t334">Page Style</text>
-                    <audio from="" src="./audio/./audio/speechgen0042.mp3"/>
+                    <audio src="./audio/speechgen0042.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0042.smil#text43"/>
                 </caption>
                 <action mfcid="ID_AMIS_NO_PAGE_STYLES" widget="menuItem">
                     <note>This is going to be a menu item</note>
                     <caption>
                         <text id="t335">None</text>
-                        <audio from="" src="./audio/./audio/speechgen0043.mp3"/>
+                        <audio src="./audio/speechgen0043.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0043.smil#text44"/>
                     </caption>
                 </action>
                 <action mfcid="AMIS_PAGE_STYLE_BASE_ID" widget="menuItem">
@@ -238,7 +238,7 @@
                 </action>
                 <mnemonic>
                     <text id="t336">P</text>
-                    <audio from="" src="./audio/./audio/speechgen0044.mp3"/>
+                    <audio src="./audio/speechgen0044.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0044.smil#text45"/>
                 </mnemonic>
             </container>
             <action mfcid="ID_AMIS_BIGGER_FONT" widget="menuItem toolbarItem">
@@ -246,15 +246,15 @@
                 <icon src="./settings/img/font.ico" type="smallIcon"/>
                 <caption>
                     <text id="t38">Bigger Font</text>
-                    <audio from="" src="./audio/./audio/speechgen0045.mp3"/>
+                    <audio src="./audio/speechgen0045.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0045.smil#text46"/>
                 </caption>
                 <description>
                     <text id="t39">Gradually increase the font size.</text>
-                    <audio from="" src="./audio/./audio/speechgen0046.mp3"/>
+                    <audio src="./audio/speechgen0046.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0046.smil#text47"/>
                 </description>
                 <mnemonic>
                     <text id="t40">G</text>
-                    <audio from="" src="./audio/./audio/speechgen0047.mp3"/>
+                    <audio src="./audio/speechgen0047.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0047.smil#text48"/>
                 </mnemonic>
             </action>
             <action mfcid="ID_AMIS_SMALLER_FONT" widget="menuItem toolbarItem">
@@ -262,30 +262,30 @@
                 <icon src="./settings/img/font.ico" type="smallIcon"/>
                 <caption>
                     <text id="t337">Smaller Font</text>
-                    <audio from="" src="./audio/./audio/speechgen0048.mp3"/>
+                    <audio src="./audio/speechgen0048.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0048.smil#text49"/>
                 </caption>
                 <description>
                     <text id="t338">Gradually decrease the font size.</text>
-                    <audio from="" src="./audio/./audio/speechgen0049.mp3"/>
+                    <audio src="./audio/speechgen0049.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0049.smil#text50"/>
                 </description>
                 <mnemonic>
                     <text id="t339">M</text>
-                    <audio from="" src="./audio/./audio/speechgen0050.mp3"/>
+                    <audio src="./audio/speechgen0050.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0050.smil#text51"/>
                 </mnemonic>
             </action>
             <action mfcid="ID_AMIS_SHOW_TEXTSTYLE" widget="menuItem">
                 <note>This is going to be a menu item</note>
                 <caption>
                     <text id="t340">Text Style...</text>
-                    <audio from="" src="./audio/./audio/speechgen0051.mp3"/>
+                    <audio src="./audio/speechgen0051.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0051.smil#text52"/>
                 </caption>
                 <description>
                     <text id="t341">Change the text style properties.</text>
-                    <audio from="" src="./audio/./audio/speechgen0052.mp3"/>
+                    <audio src="./audio/speechgen0052.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0052.smil#text53"/>
                 </description>
                 <mnemonic>
                     <text id="t342">T</text>
-                    <audio from="" src="./audio/./audio/speechgen0053.mp3"/>
+                    <audio src="./audio/speechgen0053.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0053.smil#text54"/>
                 </mnemonic>
             </action>
             <action mfcid="AMIS_NAVLIST_BASE_ID" widget="menuItem">
@@ -299,18 +299,18 @@
             </action>
             <accelerator keys="Alt+V">
                 <text id="t44">Alt+V</text>
-                <audio from="" src="./audio/./audio/speechgen0054.mp3"/>
+                <audio src="./audio/speechgen0054.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0054.smil#text55"/>
             </accelerator>
             <mnemonic>
                 <text id="t45">V</text>
-                <audio from="" src="./audio/./audio/speechgen0055.mp3"/>
+                <audio src="./audio/speechgen0055.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0055.smil#text56"/>
             </mnemonic>
         </container>
         <container id="play">
-            <note>This is the menu header &quot;Play&quot;</note>
+            <note>This is the menu header "Play"</note>
             <caption>
                 <text id="t46">Play</text>
-                <audio from="" src="./audio/./audio/speechgen0056.mp3"/>
+                <audio src="./audio/speechgen0056.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0056.smil#text57"/>
             </caption>
             <switch element="action">
                 <action condition="canPlay" mfcid="ID_AMIS_PLAYPAUSE" widget="menuItem toolbarItem">
@@ -319,19 +319,19 @@
                     <icon src="./settings/img/play_big.ico" type="largeIcon"/>
                     <caption>
                         <text id="t47">Play</text>
-                        <audio from="" src="./audio/./audio/speechgen0057.mp3"/>
+                        <audio src="./audio/speechgen0057.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0057.smil#text58"/>
                     </caption>
                     <description>
                         <text id="t48">Start or pause synchronized playback.</text>
-                        <audio from="" src="./audio/./audio/speechgen0058.mp3"/>
+                        <audio src="./audio/speechgen0058.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0058.smil#text59"/>
                     </description>
                     <accelerator keys="Space">
                         <text id="t49">Space</text>
-                        <audio from="" src="./audio/./audio/speechgen0059.mp3"/>
+                        <audio src="./audio/speechgen0059.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0059.smil#text60"/>
                     </accelerator>
                     <mnemonic>
                         <text id="t50">P</text>
-                        <audio from="" src="./audio/./audio/speechgen0060.mp3"/>
+                        <audio src="./audio/speechgen0060.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0060.smil#text61"/>
                     </mnemonic>
                 </action>
                 <action condition="canPause" mfcid="ID_AMIS_PLAYPAUSE" widget="menuItem toolbarItem">
@@ -340,19 +340,19 @@
                     <icon src="./settings/img/pause_big.ico" type="largeIcon"/>
                     <caption>
                         <text id="t51">Pause</text>
-                        <audio from="" src="./audio/./audio/speechgen0061.mp3"/>
+                        <audio src="./audio/speechgen0061.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0061.smil#text62"/>
                     </caption>
                     <description>
                         <text id="t52">Start or pause playback of this DAISY book.</text>
-                        <audio from="" src="./audio/./audio/speechgen0062.mp3"/>
+                        <audio src="./audio/speechgen0062.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0062.smil#text63"/>
                     </description>
                     <accelerator keys="Space">
                         <text id="t53">Space</text>
-                        <audio from="" src="./audio/./audio/speechgen0063.mp3"/>
+                        <audio src="./audio/speechgen0063.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0063.smil#text64"/>
                     </accelerator>
                     <mnemonic>
                         <text id="t54">a</text>
-                        <audio from="" src="./audio/./audio/speechgen0064.mp3"/>
+                        <audio src="./audio/speechgen0064.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0064.smil#text65"/>
                     </mnemonic>
                 </action>
             </switch>
@@ -360,19 +360,19 @@
                 <note>This is going to be a menu item</note>
                 <caption>
                     <text id="t55">Escape</text>
-                    <audio from="" src="./audio/./audio/speechgen0065.mp3"/>
+                    <audio src="./audio/speechgen0065.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0065.smil#text66"/>
                 </caption>
                 <description>
                     <text id="t56">Jump out of the currently playing item or structure.</text>
-                    <audio from="" src="./audio/./audio/speechgen0066.mp3"/>
+                    <audio src="./audio/speechgen0066.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0066.smil#text67"/>
                 </description>
                 <accelerator keys="Esc">
                     <text id="t57">Esc</text>
-                    <audio from="" src="./audio/./audio/speechgen0067.mp3"/>
+                    <audio src="./audio/speechgen0067.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0067.smil#text68"/>
                 </accelerator>
                 <mnemonic>
                     <text id="t58">E</text>
-                    <audio from="" src="./audio/./audio/speechgen0068.mp3"/>
+                    <audio src="./audio/speechgen0068.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0068.smil#text69"/>
                 </mnemonic>
             </action>
             <action mfcid="ID_AMIS_FASTER" widget="menuItem toolbarItem">
@@ -380,19 +380,19 @@
                 <icon src="./settings/img/fullspeedahead.ico" type="smallIcon"/>
                 <caption>
                     <text id="t59">Faster</text>
-                    <audio from="" src="./audio/./audio/speechgen0069.mp3"/>
+                    <audio src="./audio/speechgen0069.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0069.smil#text70"/>
                 </caption>
                 <description>
                     <text id="t60">Increase the playback rate.</text>
-                    <audio from="" src="./audio/./audio/speechgen0070.mp3"/>
+                    <audio src="./audio/speechgen0070.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0070.smil#text71"/>
                 </description>
                 <accelerator keys="Ctrl++">
                     <text id="t61">Ctrl++</text>
-                    <audio from="" src="./audio/./audio/speechgen0071.mp3"/>
+                    <audio src="./audio/speechgen0071.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0071.smil#text72"/>
                 </accelerator>
                 <mnemonic>
                     <text id="t62">F</text>
-                    <audio from="" src="./audio/./audio/speechgen0072.mp3"/>
+                    <audio src="./audio/speechgen0072.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0072.smil#text73"/>
                 </mnemonic>
             </action>
             <action mfcid="ID_AMIS_SLOWER" widget="menuItem toolbarItem">
@@ -400,19 +400,19 @@
                 <icon src="./settings/img/slowdown.ico" type="smallIcon"/>
                 <caption>
                     <text id="t63">Slower</text>
-                    <audio from="" src="./audio/./audio/speechgen0073.mp3"/>
+                    <audio src="./audio/speechgen0073.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0073.smil#text74"/>
                 </caption>
                 <description>
                     <text id="t64">Slow down the playback rate.</text>
-                    <audio from="" src="./audio/./audio/speechgen0074.mp3"/>
+                    <audio src="./audio/speechgen0074.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0074.smil#text75"/>
                 </description>
                 <accelerator keys="Ctrl+-">
                     <text id="t65">Ctrl+-</text>
-                    <audio from="" src="./audio/./audio/speechgen0075.mp3"/>
+                    <audio src="./audio/speechgen0075.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0075.smil#text76"/>
                 </accelerator>
                 <mnemonic>
                     <text id="t66">S</text>
-                    <audio from="" src="./audio/./audio/speechgen0076.mp3"/>
+                    <audio src="./audio/speechgen0076.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0076.smil#text77"/>
                 </mnemonic>
             </action>
             <action mfcid="ID_AMIS_RESET_SPEED" widget="menuItem toolbarItem">
@@ -420,73 +420,73 @@
                 <icon src="./settings/img/normalspeed.ico" type="smallIcon"/>
                 <caption>
                     <text id="t67">Normal Speed</text>
-                    <audio from="" src="./audio/./audio/speechgen0077.mp3"/>
+                    <audio src="./audio/speechgen0077.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0077.smil#text78"/>
                 </caption>
                 <description>
                     <text id="t68">Reset the playback rate to normal.</text>
-                    <audio from="" src="./audio/./audio/speechgen0078.mp3"/>
+                    <audio src="./audio/speechgen0078.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0078.smil#text79"/>
                 </description>
                 <accelerator keys="Ctrl+0">
                     <text id="t69">Ctrl+0</text>
-                    <audio from="" src="./audio/./audio/speechgen0079.mp3"/>
+                    <audio src="./audio/speechgen0079.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0079.smil#text80"/>
                 </accelerator>
                 <mnemonic>
                     <text id="t70">N</text>
-                    <audio from="" src="./audio/./audio/speechgen0080.mp3"/>
+                    <audio src="./audio/speechgen0080.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0080.smil#text81"/>
                 </mnemonic>
             </action>
             <action mfcid="ID_AMIS_INCREASE_VOLUME" widget="menuItem">
                 <note>This is going to be a menu item</note>
                 <caption>
                     <text id="t71">Increase Volume</text>
-                    <audio from="" src="./audio/./audio/speechgen0081.mp3"/>
+                    <audio src="./audio/speechgen0081.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0081.smil#text82"/>
                 </caption>
                 <description>
                     <text id="t72">Gradually raise the volume.</text>
-                    <audio from="" src="./audio/./audio/speechgen0082.mp3"/>
+                    <audio src="./audio/speechgen0082.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0082.smil#text83"/>
                 </description>
                 <accelerator keys="Ctrl+Up">
                     <text id="t73">Ctrl+Up</text>
-                    <audio from="" src="./audio/./audio/speechgen0083.mp3"/>
+                    <audio src="./audio/speechgen0083.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0083.smil#text84"/>
                 </accelerator>
                 <mnemonic>
                     <text id="t74">I</text>
-                    <audio from="" src="./audio/./audio/speechgen0084.mp3"/>
+                    <audio src="./audio/speechgen0084.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0084.smil#text85"/>
                 </mnemonic>
             </action>
             <action mfcid="ID_AMIS_DECREASE_VOLUME" widget="menuItem">
                 <note>This is going to be a menu item</note>
                 <caption>
                     <text id="t75">Decrease Volume</text>
-                    <audio from="" src="./audio/./audio/speechgen0085.mp3"/>
+                    <audio src="./audio/speechgen0085.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0085.smil#text86"/>
                 </caption>
                 <description>
                     <text id="t76">Gradually lower the volume.</text>
-                    <audio from="" src="./audio/./audio/speechgen0086.mp3"/>
+                    <audio src="./audio/speechgen0086.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0086.smil#text87"/>
                 </description>
                 <accelerator keys="Ctrl+Down">
                     <text id="t77">Ctrl+Down</text>
-                    <audio from="" src="./audio/./audio/speechgen0087.mp3"/>
+                    <audio src="./audio/speechgen0087.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0087.smil#text88"/>
                 </accelerator>
                 <mnemonic>
                     <text id="t78">D</text>
-                    <audio from="" src="./audio/./audio/speechgen0088.mp3"/>
+                    <audio src="./audio/speechgen0088.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0088.smil#text89"/>
                 </mnemonic>
             </action>
             <accelerator keys="Alt+P">
                 <text id="t79">Alt+P</text>
-                <audio from="" src="./audio/./audio/speechgen0089.mp3"/>
+                <audio src="./audio/speechgen0089.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0089.smil#text90"/>
             </accelerator>
             <mnemonic>
                 <text id="t80">P</text>
-                <audio from="" src="./audio/./audio/speechgen0090.mp3"/>
+                <audio src="./audio/speechgen0090.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0090.smil#text91"/>
             </mnemonic>
         </container>
         <container id="navigate">
-            <note>This is the menu header &quot;Navigate&quot;</note>
+            <note>This is the menu header "Navigate"</note>
             <caption>
                 <text id="t81">Navigate</text>
-                <audio from="" src="./audio/./audio/speechgen0091.mp3"/>
+                <audio src="./audio/speechgen0091.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0091.smil#text92"/>
             </caption>
             <action mfcid="ID_AMIS_PREVIOUS_SECTION" widget="menuItem toolbarItem">
                 <note>This is going to be a menu item and toolbar item</note>
@@ -494,19 +494,19 @@
                 <icon src="./settings/img/prevsection_big.ico" type="largeIcon"/>
                 <caption>
                     <text id="t82">Previous Section</text>
-                    <audio from="" src="./audio/./audio/speechgen0092.mp3"/>
+                    <audio src="./audio/speechgen0092.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0092.smil#text93"/>
                 </caption>
                 <description>
                     <text id="t83">Go to the previous section.</text>
-                    <audio from="" src="./audio/./audio/speechgen0093.mp3"/>
+                    <audio src="./audio/speechgen0093.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0093.smil#text94"/>
                 </description>
                 <accelerator keys="Up">
                     <text id="t84">Up</text>
-                    <audio from="" src="./audio/./audio/speechgen0094.mp3"/>
+                    <audio src="./audio/speechgen0094.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0094.smil#text95"/>
                 </accelerator>
                 <mnemonic>
                     <text id="t85">P</text>
-                    <audio from="" src="./audio/./audio/speechgen0095.mp3"/>
+                    <audio src="./audio/speechgen0095.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0095.smil#text96"/>
                 </mnemonic>
             </action>
             <action mfcid="ID_AMIS_NEXT_SECTION" widget="menuItem toolbarItem">
@@ -515,37 +515,37 @@
                 <icon src="./settings/img/nextsection_big.ico" type="largeIcon"/>
                 <caption>
                     <text id="t86">Next Section</text>
-                    <audio from="" src="./audio/./audio/speechgen0096.mp3"/>
+                    <audio src="./audio/speechgen0096.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0096.smil#text97"/>
                 </caption>
                 <description>
                     <text id="t87">Go to the next section.</text>
-                    <audio from="" src="./audio/./audio/speechgen0097.mp3"/>
+                    <audio src="./audio/speechgen0097.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0097.smil#text98"/>
                 </description>
                 <accelerator keys="Down">
                     <text id="t88">Down</text>
-                    <audio from="" src="./audio/./audio/speechgen0098.mp3"/>
+                    <audio src="./audio/speechgen0098.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0098.smil#text99"/>
                 </accelerator>
                 <mnemonic>
                     <text id="t89">N</text>
-                    <audio from="" src="./audio/./audio/speechgen0099.mp3"/>
+                    <audio src="./audio/speechgen0099.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0099.smil#text100"/>
                 </mnemonic>
             </action>
             <container id="sectiondepth">
-                <note>This is the &quot;show section depth&quot; sub-menu pop-up</note>
+                <note>This is the "show section depth" sub-menu pop-up</note>
                 <caption>
                     <text id="t90">Show Section Depth</text>
-                    <audio from="" src="./audio/./audio/speechgen0100.mp3"/>
+                    <audio src="./audio/speechgen0100.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0100.smil#text101"/>
                 </caption>
                 <switch element="action">
                     <action condition="ID_AMIS_SECTION_DEPTH_EMPTY" mfcid="ID_AMIS_SECTION_DEPTH_EMPTY" widget="menuItem">
                         <note>This is going to be a menu item</note>
                         <caption>
                             <text id="t91">Empty</text>
-                            <audio from="" src="./audio/./audio/speechgen0101.mp3"/>
+                            <audio src="./audio/speechgen0101.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0101.smil#text102"/>
                         </caption>
                         <description>
                             <text id="t92">There are no section levels.</text>
-                            <audio from="" src="./audio/./audio/speechgen0102.mp3"/>
+                            <audio src="./audio/speechgen0102.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0102.smil#text103"/>
                         </description>
                     </action>
                     <action condition="AMIS_SECTION_DEPTH_BASE_ID" mfcid="AMIS_SECTION_DEPTH_BASE_ID" widget="menuItem">
@@ -559,7 +559,7 @@
                 </switch>
                 <mnemonic>
                     <text id="t93">S</text>
-                    <audio from="" src="./audio/./audio/speechgen0103.mp3"/>
+                    <audio src="./audio/speechgen0103.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0103.smil#text104"/>
                 </mnemonic>
             </container>
             <action mfcid="ID_AMIS_PREVIOUS_PHRASE" widget="menuItem toolbarItem">
@@ -567,15 +567,15 @@
                 <icon src="./settings/img/prevphasecirc.ico" type="smallIcon"/>
                 <caption>
                     <text id="t94">Previous Phrase</text>
-                    <audio from="" src="./audio/./audio/speechgen0104.mp3"/>
+                    <audio src="./audio/speechgen0104.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0104.smil#text105"/>
                 </caption>
                 <description>
                     <text id="t95">Go to the previous phrase.</text>
-                    <audio from="" src="./audio/./audio/speechgen0105.mp3"/>
+                    <audio src="./audio/speechgen0105.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0105.smil#text106"/>
                 </description>
                 <accelerator keys="Left">
                     <text id="t96">Left</text>
-                    <audio from="" src="./audio/./audio/speechgen0106.mp3"/>
+                    <audio src="./audio/speechgen0106.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0106.smil#text107"/>
                 </accelerator>
             </action>
             <action mfcid="ID_AMIS_NEXT_PHRASE" widget="menuItem toolbarItem">
@@ -583,15 +583,15 @@
                 <icon src="./settings/img/nextphrasecirc.ico" type="smallIcon"/>
                 <caption>
                     <text id="t97">Next Phrase</text>
-                    <audio from="" src="./audio/./audio/speechgen0107.mp3"/>
+                    <audio src="./audio/speechgen0107.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0107.smil#text108"/>
                 </caption>
                 <description>
                     <text id="t98">Go to the next phrase.</text>
-                    <audio from="" src="./audio/./audio/speechgen0108.mp3"/>
+                    <audio src="./audio/speechgen0108.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0108.smil#text109"/>
                 </description>
                 <accelerator keys="Right">
                     <text id="t99">Right</text>
-                    <audio from="" src="./audio/./audio/speechgen0109.mp3"/>
+                    <audio src="./audio/speechgen0109.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0109.smil#text110"/>
                 </accelerator>
             </action>
             <action mfcid="ID_AMIS_PREVIOUS_PAGE" widget="menuItem toolbarItem">
@@ -599,15 +599,15 @@
                 <icon src="./settings/img/prevpage.ico" type="smallIcon"/>
                 <caption>
                     <text id="t100">Previous Page</text>
-                    <audio from="" src="./audio/./audio/speechgen0110.mp3"/>
+                    <audio src="./audio/speechgen0110.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0110.smil#text111"/>
                 </caption>
                 <description>
                     <text id="t101">Go to the previous page.</text>
-                    <audio from="" src="./audio/./audio/speechgen0111.mp3"/>
+                    <audio src="./audio/speechgen0111.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0111.smil#text112"/>
                 </description>
                 <accelerator keys="Ctrl+Left">
                     <text id="t102">Ctrl+Left</text>
-                    <audio from="" src="./audio/./audio/speechgen0112.mp3"/>
+                    <audio src="./audio/speechgen0112.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0112.smil#text113"/>
                 </accelerator>
             </action>
             <action mfcid="ID_AMIS_NEXT_PAGE" widget="menuItem toolbarItem">
@@ -615,84 +615,84 @@
                 <icon src="./settings/img/nextpage.ico" type="smallIcon"/>
                 <caption>
                     <text id="t103">Next Page</text>
-                    <audio from="" src="./audio/./audio/speechgen0113.mp3"/>
+                    <audio src="./audio/speechgen0113.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0113.smil#text114"/>
                 </caption>
                 <description>
                     <text id="t104">Go to the next page.</text>
-                    <audio from="" src="./audio/./audio/speechgen0114.mp3"/>
+                    <audio src="./audio/speechgen0114.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0114.smil#text115"/>
                 </description>
                 <accelerator keys="Ctrl+Right">
                     <text id="t105">Ctrl+Right</text>
-                    <audio from="" src="./audio/./audio/speechgen0115.mp3"/>
+                    <audio src="./audio/speechgen0115.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0115.smil#text116"/>
                 </accelerator>
             </action>
             <action mfcid="ID_AMIS_GOTO_PAGE" widget="menuItem">
                 <note>This is going to be a menu item</note>
                 <caption>
                     <text id="t106">Go to Page...</text>
-                    <audio from="" src="./audio/./audio/speechgen0116.mp3"/>
+                    <audio src="./audio/speechgen0116.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0116.smil#text117"/>
                 </caption>
                 <description>
                     <text id="t107">Go to a specific page.</text>
-                    <audio from="" src="./audio/./audio/speechgen0117.mp3"/>
+                    <audio src="./audio/speechgen0117.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0117.smil#text118"/>
                 </description>
                 <accelerator keys="Ctrl+G">
                     <text id="t108">Ctrl+G</text>
-                    <audio from="" src="./audio/./audio/speechgen0118.mp3"/>
+                    <audio src="./audio/speechgen0118.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0118.smil#text119"/>
                 </accelerator>
             </action>
             <action mfcid="ID_AMIS_FIND_IN_TEXT" widget="menuItem">
                 <note>This is going to be a menu item</note>
                 <caption>
                     <text id="t109">Find in Text...</text>
-                    <audio from="" src="./audio/./audio/speechgen0119.mp3"/>
+                    <audio src="./audio/speechgen0119.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0119.smil#text120"/>
                 </caption>
                 <description>
                     <text id="t110">Search for a word or phrase in the text.</text>
-                    <audio from="" src="./audio/./audio/speechgen0120.mp3"/>
+                    <audio src="./audio/speechgen0120.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0120.smil#text121"/>
                 </description>
                 <accelerator keys="Ctrl+F">
                     <text id="t111">Ctrl+F</text>
-                    <audio from="" src="./audio/./audio/speechgen0121.mp3"/>
+                    <audio src="./audio/speechgen0121.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0121.smil#text122"/>
                 </accelerator>
                 <mnemonic>
                     <text id="t112">F</text>
-                    <audio from="" src="./audio/./audio/speechgen0122.mp3"/>
+                    <audio src="./audio/speechgen0122.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0122.smil#text123"/>
                 </mnemonic>
             </action>
             <accelerator keys="Alt+N">
                 <text id="t113">Alt+N</text>
-                <audio from="" src="./audio/./audio/speechgen0123.mp3"/>
+                <audio src="./audio/speechgen0123.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0123.smil#text124"/>
             </accelerator>
             <mnemonic>
                 <text id="t114">N</text>
-                <audio from="" src="./audio/./audio/speechgen0124.mp3"/>
+                <audio src="./audio/speechgen0124.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0124.smil#text125"/>
             </mnemonic>
         </container>
         <container id="bookmarks">
-            <note>This is the menu header &quot;Bookmarks&quot;</note>
+            <note>This is the menu header "Bookmarks"</note>
             <caption>
                 <text id="t115">Bookmarks</text>
-                <audio from="" src="./audio/./audio/speechgen0125.mp3"/>
+                <audio src="./audio/speechgen0125.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0125.smil#text126"/>
             </caption>
             <action mfcid="ID_AMIS_ADD_BOOKMARK" widget="menuItem toolbarItem">
                 <note>This is going to be a menu item and toolbar item</note>
                 <icon src="./settings/img/adbookmark.ico" type="smallIcon"/>
                 <caption>
                     <text id="t116">Add Bookmark</text>
-                    <audio from="" src="./audio/./audio/speechgen0126.mp3"/>
+                    <audio src="./audio/speechgen0126.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0126.smil#text127"/>
                 </caption>
                 <description>
                     <text id="t117">Bookmark your current position.</text>
-                    <audio from="" src="./audio/./audio/speechgen0127.mp3"/>
+                    <audio src="./audio/speechgen0127.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0127.smil#text128"/>
                 </description>
                 <accelerator keys="Ctrl+D">
                     <text id="t118">Ctrl+D</text>
-                    <audio from="" src="./audio/./audio/speechgen0128.mp3"/>
+                    <audio src="./audio/speechgen0128.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0128.smil#text129"/>
                 </accelerator>
                 <mnemonic>
                     <text id="t119">A</text>
-                    <audio from="" src="./audio/./audio/speechgen0129.mp3"/>
+                    <audio src="./audio/speechgen0129.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0129.smil#text130"/>
                 </mnemonic>
             </action>
             <action mfcid="AMIS_BOOKMARK_BASE_ID" widget="menuItem">
@@ -705,114 +705,114 @@
             </action>
             <accelerator keys="Alt+B">
                 <text id="t120">Alt+B</text>
-                <audio from="" src="./audio/./audio/speechgen0130.mp3"/>
+                <audio src="./audio/speechgen0130.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0130.smil#text131"/>
             </accelerator>
             <mnemonic>
                 <text id="t121">B</text>
-                <audio from="" src="./audio/./audio/speechgen0131.mp3"/>
+                <audio src="./audio/speechgen0131.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0131.smil#text132"/>
             </mnemonic>
         </container>
         <container id="info">
-            <note>This is the menu header &quot;Info&quot;</note>
+            <note>This is the menu header "Info"</note>
             <caption>
                 <text id="t122">Info</text>
-                <audio from="" src="./audio/./audio/speechgen0132.mp3"/>
+                <audio src="./audio/speechgen0132.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0132.smil#text133"/>
             </caption>
             <action mfcid="ID_AMIS_SHOW_READING_OPTIONS" widget="menuItem">
                 <note>This is going to be a menu item</note>
                 <caption>
                     <text id="t123">Reading Options...</text>
-                    <audio from="" src="./audio/./audio/speechgen0133.mp3"/>
+                    <audio src="./audio/speechgen0133.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0133.smil#text134"/>
                 </caption>
                 <description>
                     <text id="t124">View the reading options for this publication.</text>
-                    <audio from="" src="./audio/./audio/speechgen0134.mp3"/>
+                    <audio src="./audio/speechgen0134.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0134.smil#text135"/>
                 </description>
                 <mnemonic>
                     <text id="t125">R</text>
-                    <audio from="" src="./audio/./audio/speechgen0135.mp3"/>
+                    <audio src="./audio/speechgen0135.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0135.smil#text136"/>
                 </mnemonic>
             </action>
             <action mfcid="ID_AMIS_SHOW_PUBLICATION_SUMMARY" widget="menuItem">
                 <note>This is going to be a menu item</note>
                 <caption>
                     <text id="t343">Publication Summary...</text>
-                    <audio from="" src="./audio/./audio/speechgen0136.mp3"/>
+                    <audio src="./audio/speechgen0136.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0136.smil#text137"/>
                 </caption>
                 <description>
                     <text id="t344">View information about this publication.</text>
-                    <audio from="" src="./audio/./audio/speechgen0137.mp3"/>
+                    <audio src="./audio/speechgen0137.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0137.smil#text138"/>
                 </description>
                 <mnemonic>
                     <text id="t345">P</text>
-                    <audio from="" src="./audio/./audio/speechgen0138.mp3"/>
+                    <audio src="./audio/speechgen0138.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0138.smil#text139"/>
                 </mnemonic>
             </action>
             <accelerator keys="Alt+I">
                 <text id="t135">Alt+I</text>
-                <audio from="" src="./audio/./audio/speechgen0139.mp3"/>
+                <audio src="./audio/speechgen0139.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0139.smil#text140"/>
             </accelerator>
             <mnemonic>
                 <text id="t136">I</text>
-                <audio from="" src="./audio/./audio/speechgen0140.mp3"/>
+                <audio src="./audio/speechgen0140.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0140.smil#text141"/>
             </mnemonic>
         </container>
         <container id="help">
-            <note>This is the menu header &quot;Help&quot;</note>
+            <note>This is the menu header "Help"</note>
             <caption>
                 <text id="t137">Help</text>
-                <audio from="" src="./audio/./audio/speechgen0141.mp3"/>
+                <audio src="./audio/speechgen0141.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0141.smil#text142"/>
             </caption>
             <action mfcid="ID_AMIS_SHOW_HELP_CONTENTS" widget="menuItem toolbarItem">
                 <caption>
                     <text id="t138">Contents</text>
-                    <audio from="" src="./audio/./audio/speechgen0142.mp3"/>
+                    <audio src="./audio/speechgen0142.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0142.smil#text143"/>
                 </caption>
                 <description>
                     <text id="t139">Get help using AMIS</text>
-                    <audio from="" src="./audio/./audio/speechgen0143.mp3"/>
+                    <audio src="./audio/speechgen0143.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0143.smil#text144"/>
                 </description>
                 <mnemonic>
                     <text id="t140">C</text>
-                    <audio from="" src="./audio/./audio/speechgen0144.mp3"/>
+                    <audio src="./audio/speechgen0144.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0144.smil#text145"/>
                 </mnemonic>
             </action>
             <action mfcid="ID_AMIS_SHOW_KEYBOARD_SHORTCUTS" widget="menuItem">
                 <caption>
                     <text id="t373">Keyboard shortcuts</text>
-                    <audio from="" src="./audio/./audio/speechgen0145.mp3"/>
+                    <audio src="./audio/speechgen0145.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0145.smil#text146"/>
                 </caption>
                 <description>
                     <text id="t374">See and hear all the keyboard shortcuts for AMIS.</text>
-                    <audio from="" src="./audio/./audio/speechgen0146.mp3"/>
+                    <audio src="./audio/speechgen0146.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0146.smil#text147"/>
                 </description>
                 <mnemonic>
                     <text id="t375">K</text>
-                    <audio from="" src="./audio/./audio/speechgen0147.mp3"/>
+                    <audio src="./audio/speechgen0147.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0147.smil#text148"/>
                 </mnemonic>
             </action>
             <action mfcid="ID_AMIS_ABOUT" widget="menuItem">
                 <note>This is going to be a menu item</note>
                 <caption>
                     <text id="t141">About AMIS</text>
-                    <audio from="" src="./audio/./audio/speechgen0148.mp3"/>
+                    <audio src="./audio/speechgen0148.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0148.smil#text149"/>
                 </caption>
                 <description>
                     <text id="t142">Find out about AMIS and DAISY-for-All.</text>
-                    <audio from="" src="./audio/./audio/speechgen0149.mp3"/>
+                    <audio src="./audio/speechgen0149.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0149.smil#text150"/>
                 </description>
                 <mnemonic>
                     <text id="t143">A</text>
-                    <audio from="" src="./audio/./audio/speechgen0150.mp3"/>
+                    <audio src="./audio/speechgen0150.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0150.smil#text151"/>
                 </mnemonic>
             </action>
             <accelerator keys="Alt+H">
                 <text id="t144">Alt+H</text>
-                <audio from="" src="./audio/./audio/speechgen0151.mp3"/>
+                <audio src="./audio/speechgen0151.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0151.smil#text152"/>
             </accelerator>
             <mnemonic>
                 <text id="t145">H</text>
-                <audio from="" src="./audio/./audio/speechgen0152.mp3"/>
+                <audio src="./audio/speechgen0152.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0152.smil#text153"/>
             </mnemonic>
         </container>
     </containers>
@@ -821,11 +821,11 @@
             <note>This is the find in text dialog</note>
             <caption>
                 <text id="t146">Find in Text</text>
-                <audio from="" src="./audio/./audio/speechgen0153.mp3"/>
+                <audio src="./audio/speechgen0153.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0153.smil#text154"/>
             </caption>
             <description mfcid="IDC_FIND_DESCRIPTION">
                 <text id="t147">Search the text of the book in either direction.</text>
-                <audio from="" src="./audio/./audio/speechgen0154.mp3"/>
+                <audio src="./audio/speechgen0154.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0154.smil#text155"/>
             </description>
             <prompt type="instructions">
                 <promptItem refid="tabAround"/>
@@ -835,14 +835,14 @@
             <control mfcid="IDC_SEARCHSTRING" widget="textfield autoplay">
                 <description>
                     <text id="t151">Type the text to search for in this field.</text>
-                    <audio from="" src="./audio/./audio/speechgen0155.mp3"/>
+                    <audio src="./audio/speechgen0155.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0155.smil#text156"/>
                 </description>
             </control>
             <control mfcid="IDC_FINDPREVIOUS" widget="radiobutton">
                 <note>This indicates the direction of the search</note>
                 <caption>
                     <text id="t152">Find previous</text>
-                    <audio from="" src="./audio/./audio/speechgen0156.mp3"/>
+                    <audio src="./audio/speechgen0156.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0156.smil#text157"/>
                 </caption>
                 <description>
                     <prompt>
@@ -858,7 +858,7 @@
                 </caption>
                 <description>
                     <text id="t149">Press to begin searching for text in the file.</text>
-                    <audio from="" src="./audio/./audio/speechgen0157.mp3"/>
+                    <audio src="./audio/speechgen0157.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0157.smil#text158"/>
                 </description>
             </control>
             <control mfcid="IDCANCEL" widget="button">
@@ -870,7 +870,7 @@
                 </description>
                 <mnemonic>
                     <text id="t150">C</text>
-                    <audio from="" src="./audio/./audio/speechgen0158.mp3"/>
+                    <audio src="./audio/speechgen0158.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0158.smil#text159"/>
                 </mnemonic>
             </control>
         </dialog>
@@ -878,11 +878,11 @@
             <note>This dialog appears when more than one book is on a CD-ROM</note>
             <caption>
                 <text id="t154">Multiple books found</text>
-                <audio from="" src="./audio/./audio/speechgen0159.mp3"/>
+                <audio src="./audio/speechgen0159.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0159.smil#text160"/>
             </caption>
             <description mfcid="IDC_MULTIVOLCD_INSTRUCTIONS">
                 <text id="t155">More than one book was found on this CD. Please select a book from the list below.</text>
-                <audio from="" src="./audio/./audio/speechgen0160.mp3"/>
+                <audio src="./audio/speechgen0160.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0160.smil#text162"/>
             </description>
             <prompt type="instructions">
                 <promptItem refid="tabAround"/>
@@ -908,21 +908,21 @@
                 </description>
                 <mnemonic>
                     <text id="t156">C</text>
-                    <audio from="" src="./audio/./audio/speechgen0161.mp3"/>
+                    <audio src="./audio/speechgen0161.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0161.smil#text163"/>
                 </mnemonic>
             </control>
             <control mfcid="IDC_OPENBOOK" widget="button">
                 <caption>
                     <text id="t157">Open</text>
-                    <audio from="" src="./audio/./audio/speechgen0162.mp3"/>
+                    <audio src="./audio/speechgen0162.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0162.smil#text164"/>
                 </caption>
                 <description>
                     <text id="t158">Press to close this dialog and open the selected book.</text>
-                    <audio from="" src="./audio/./audio/speechgen0163.mp3"/>
+                    <audio src="./audio/speechgen0163.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0163.smil#text165"/>
                 </description>
                 <mnemonic>
                     <text id="t159">O</text>
-                    <audio from="" src="./audio/./audio/speechgen0164.mp3"/>
+                    <audio src="./audio/speechgen0164.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0164.smil#text166"/>
                 </mnemonic>
             </control>
         </dialog>
@@ -930,11 +930,11 @@
             <note>This dialog gives some basic information about AMIS.</note>
             <caption>
                 <text id="t161">About AMIS</text>
-                <audio from="" src="./audio/./audio/speechgen0165.mp3"/>
+                <audio src="./audio/speechgen0165.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0165.smil#text167"/>
             </caption>
             <description>
                 <text id="t162">Dialog with information about AMIS software.</text>
-                <audio from="" src="./audio/./audio/speechgen0166.mp3"/>
+                <audio src="./audio/speechgen0166.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0166.smil#text168"/>
             </description>
             <prompt type="instructions">
                 <promptItem refid="enter_to_close"/>
@@ -944,25 +944,25 @@
                 <caption>
                     <text id="t163">AMIS: 
 Adaptive Multimedia Information System</text>
-                    <audio from="" src="./audio/./audio/speechgen0167.mp3"/>
+                    <audio src="./audio/speechgen0167.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0167.smil#text169"/>
                 </caption>
             </control>
             <control mfcid="IDC_VERSION" translate="no" widget="textlabel autoplay">
                 <caption>
                     <text id="t164">Version 3.0 beta 2</text>
-                    <audio from="" src="./audio/./audio/speechgen0168.mp3"/>
+                    <audio src="./audio/speechgen0168.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0168.smil#text170"/>
                 </caption>
             </control>
             <control mfcid="IDC_VERSIONNOTE" translate="no" widget="textlabel autoplay">
                 <caption>
                     <text id="t165">Release Date: 14 May 2008</text>
-                    <audio from="" src="./audio/./audio/speechgen0169.mp3"/>
+                    <audio src="./audio/speechgen0169.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0169.smil#text171"/>
                 </caption>
             </control>
             <control mfcid="IDC_COPYRIGHT" translate="no" widget="textlabel autoplay">
                 <caption>
                     <text id="t166">Copyright (c) 2008 DAISY for All</text>
-                    <audio from="" src="./audio/./audio/speechgen0170.mp3"/>
+                    <audio src="./audio/speechgen0170.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0170.smil#text172"/>
                 </caption>
             </control>
             <control mfcid="IDOK" widget="button">
@@ -978,11 +978,11 @@ Adaptive Multimedia Information System</text>
             <note>This dialog is for searching your hard drive for DAISY books.</note>
             <caption>
                 <text id="t167">Search for DAISY Books</text>
-                <audio from="" src="./audio/./audio/speechgen0171.mp3"/>
+                <audio src="./audio/speechgen0171.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0171.smil#text173"/>
             </caption>
             <description mfcid="IDC_SEARCHINSTRUCTIONS">
                 <text id="t168">You can search your computer for DAISY books.  Enter a path or browse for a folder to search, then press Search to begin searching.</text>
-                <audio from="" src="./audio/./audio/speechgen0172.mp3"/>
+                <audio src="./audio/speechgen0172.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0172.smil#text175"/>
             </description>
             <prompt type="instructions">
                 <promptItem refid="tabAround"/>
@@ -992,76 +992,76 @@ Adaptive Multimedia Information System</text>
             <control mfcid="IDC_SEARCHPATH" widget="textfield autoplay">
                 <description>
                     <text id="t169">Type the path to the folder in this field.</text>
-                    <audio from="" src="./audio/./audio/speechgen0173.mp3"/>
+                    <audio src="./audio/speechgen0173.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0173.smil#text176"/>
                 </description>
             </control>
             <control mfcid="IDC_BROWSE" widget="button">
                 <caption>
                     <text id="t260">Browse...</text>
-                    <audio from="" src="./audio/./audio/speechgen0174.mp3"/>
+                    <audio src="./audio/speechgen0174.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0174.smil#text177"/>
                 </caption>
                 <description>
                     <text id="t261">Press to open the folder browse dialog.</text>
-                    <audio from="" src="./audio/./audio/speechgen0175.mp3"/>
+                    <audio src="./audio/speechgen0175.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0175.smil#text178"/>
                 </description>
             </control>
             <control mfcid="IDC_STARTSEARCH" widget="button">
                 <caption>
                     <text id="t170">Search</text>
-                    <audio from="" src="./audio/./audio/speechgen0176.mp3"/>
+                    <audio src="./audio/speechgen0176.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0176.smil#text179"/>
                 </caption>
                 <description>
                     <text id="t171">Press to start searching.</text>
-                    <audio from="" src="./audio/./audio/speechgen0177.mp3"/>
+                    <audio src="./audio/speechgen0177.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0177.smil#text180"/>
                 </description>
                 <mnemonic>
                     <text id="t172">S</text>
-                    <audio from="" src="./audio/./audio/speechgen0178.mp3"/>
+                    <audio src="./audio/speechgen0178.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0178.smil#text181"/>
                 </mnemonic>
             </control>
             <control mfcid="IDC_STOPSEARCH" widget="button">
                 <caption>
                     <text id="t173">Stop</text>
-                    <audio from="" src="./audio/./audio/speechgen0179.mp3"/>
+                    <audio src="./audio/speechgen0179.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0179.smil#text182"/>
                 </caption>
                 <description>
                     <text id="t174">Press to stop searching.</text>
-                    <audio from="" src="./audio/./audio/speechgen0180.mp3"/>
+                    <audio src="./audio/speechgen0180.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0180.smil#text183"/>
                 </description>
                 <mnemonic>
                     <text id="t175">t</text>
-                    <audio from="" src="./audio/./audio/speechgen0181.mp3"/>
+                    <audio src="./audio/speechgen0181.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0181.smil#text184"/>
                 </mnemonic>
             </control>
             <control mfcid="IDC_SEARCHING" widget="textlabel">
                 <switch element="caption">
                     <caption condition="default">
                         <text id="t176">Ready</text>
-                        <audio from="" src="./audio/./audio/speechgen0182.mp3"/>
+                        <audio src="./audio/speechgen0182.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0182.smil#text185"/>
                     </caption>
                     <caption condition="WhileSearching">
                         <text id="t177">Searching...</text>
-                        <audio from="" src="./audio/./audio/speechgen0183.mp3"/>
+                        <audio src="./audio/speechgen0183.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0183.smil#text186"/>
                     </caption>
                     <caption condition="SearchAborted">
                         <text id="t178">Search stopped.</text>
-                        <audio from="" src="./audio/./audio/speechgen0184.mp3"/>
+                        <audio src="./audio/speechgen0184.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0184.smil#text187"/>
                     </caption>
                     <caption condition="SearchCompleteNoFilesFound">
                         <text id="t179">Search complete: No files found.</text>
-                        <audio from="" src="./audio/./audio/speechgen0185.mp3"/>
+                        <audio src="./audio/speechgen0185.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0185.smil#text188"/>
                     </caption>
                     <caption condition="SearchCompleteOneFileFound">
                         <text id="t180">Search complete: One file found.</text>
-                        <audio from="" src="./audio/./audio/speechgen0186.mp3"/>
+                        <audio src="./audio/speechgen0186.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0186.smil#text189"/>
                     </caption>
                     <caption condition="SearchCompleteFilesFound">
                         <prompt>
                             <promptVar name="NUM_FILES_FOUND"/>
                             <promptItem>
-                                <note>This is used in the sentence &quot;7 files were found&quot;</note>
+                                <note>This is used in the sentence "7 files were found"</note>
                                 <text id="t181">files were found.</text>
-                                <audio from="" src="./audio/./audio/speechgen0187.mp3"/>
+                                <audio src="./audio/speechgen0187.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0187.smil#text190"/>
                             </promptItem>
                         </prompt>
                     </caption>
@@ -1080,15 +1080,15 @@ Adaptive Multimedia Information System</text>
             <control mfcid="IDC_OPENBOOK" widget="button">
                 <caption>
                     <text id="t183">Open</text>
-                    <audio from="" src="./audio/./audio/speechgen0188.mp3"/>
+                    <audio src="./audio/speechgen0188.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0188.smil#text191"/>
                 </caption>
                 <description>
                     <text id="t184">Press to open the selected title.</text>
-                    <audio from="" src="./audio/./audio/speechgen0189.mp3"/>
+                    <audio src="./audio/speechgen0189.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0189.smil#text192"/>
                 </description>
                 <mnemonic>
                     <text id="t185">O</text>
-                    <audio from="" src="./audio/./audio/speechgen0190.mp3"/>
+                    <audio src="./audio/speechgen0190.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0190.smil#text193"/>
                 </mnemonic>
             </control>
             <control mfcid="IDCANCEL" widget="button">
@@ -1100,7 +1100,7 @@ Adaptive Multimedia Information System</text>
                 </description>
                 <mnemonic>
                     <text id="t186">C</text>
-                    <audio from="" src="./audio/./audio/speechgen0191.mp3"/>
+                    <audio src="./audio/speechgen0191.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0191.smil#text194"/>
                 </mnemonic>
             </control>
         </dialog>
@@ -1108,11 +1108,11 @@ Adaptive Multimedia Information System</text>
             <note>This dialog lets the user control rendering of skippable structures.</note>
             <caption>
                 <text id="t187">Reading Options</text>
-                <audio from="" src="./audio/./audio/speechgen0192.mp3"/>
+                <audio src="./audio/speechgen0192.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0192.smil#text195"/>
             </caption>
             <description mfcid="IDC_READING_OPTIONS_INSTRUCTIONS">
                 <text id="t188">This book contains the following special types of items. Checked items will be played.  Unchecked items will be skipped.</text>
-                <audio from="" src="./audio/./audio/speechgen0193.mp3"/>
+                <audio src="./audio/speechgen0193.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0193.smil#text198"/>
             </description>
             <prompt type="instructions">
                 <promptItem refid="tabAround"/>
@@ -1122,7 +1122,7 @@ Adaptive Multimedia Information System</text>
             <control mfcid="IDC_OPTIONS_LIST" widget="list autoplay">
                 <caption>
                     <text id="t190">Reading options list:</text>
-                    <audio from="" src="./audio/./audio/speechgen0194.mp3"/>
+                    <audio src="./audio/speechgen0194.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0194.smil#text199"/>
                 </caption>
                 <description>
                     <promptItem refid="useArrowsList"/>
@@ -1157,7 +1157,7 @@ Adaptive Multimedia Information System</text>
                 </description>
                 <mnemonic>
                     <text id="t381">C</text>
-                    <audio from="" src="./audio/./audio/speechgen0195.mp3"/>
+                    <audio src="./audio/speechgen0195.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0195.smil#text200"/>
                 </mnemonic>
             </control>
         </dialog>
@@ -1165,11 +1165,11 @@ Adaptive Multimedia Information System</text>
             <note>This dialog lets the user set some basic preferences for AMIS.</note>
             <caption>
                 <text id="t218">Preferences</text>
-                <audio from="" src="./audio/./audio/speechgen0196.mp3"/>
+                <audio src="./audio/speechgen0196.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0196.smil#text201"/>
             </caption>
             <description>
                 <text id="t219">Here you can set general preferences for AMIS.</text>
-                <audio from="" src="./audio/./audio/speechgen0197.mp3"/>
+                <audio src="./audio/speechgen0197.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0197.smil#text202"/>
             </description>
             <prompt type="instructions">
                 <promptItem refid="tabAround"/>
@@ -1179,7 +1179,7 @@ Adaptive Multimedia Information System</text>
             <control mfcid="IDC_ISSELFVOICING" widget="checkbox autoplay">
                 <caption>
                     <text id="t220">Use self-voicing</text>
-                    <audio from="" src="./audio/./audio/speechgen0198.mp3"/>
+                    <audio src="./audio/speechgen0198.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0198.smil#text203"/>
                 </caption>
                 <description>
                     <prompt>
@@ -1192,7 +1192,7 @@ Adaptive Multimedia Information System</text>
             <control mfcid="IDC_TTSVOICES" widget="list">
                 <caption mfcid="IDC_SELTTSLABEL">
                     <text id="t221">Select TTS voice:</text>
-                    <audio from="" src="./audio/./audio/speechgen0199.mp3"/>
+                    <audio src="./audio/speechgen0199.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0199.smil#text204"/>
                 </caption>
                 <list repeat="yes">
                     <caption>
@@ -1206,7 +1206,7 @@ Adaptive Multimedia Information System</text>
             <control mfcid="IDC_HIGHLIGHTTEXT" widget="checkbox">
                 <caption>
                     <text id="t346">Highlight text as it is read aloud</text>
-                    <audio from="" src="./audio/./audio/speechgen0200.mp3"/>
+                    <audio src="./audio/speechgen0200.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0200.smil#text205"/>
                 </caption>
                 <description>
                     <prompt>
@@ -1219,7 +1219,7 @@ Adaptive Multimedia Information System</text>
             <control mfcid="IDC_LOADLASTBOOK" widget="checkbox">
                 <caption>
                     <text id="t225">Load the most recently read book on startup</text>
-                    <audio from="" src="./audio/./audio/speechgen0201.mp3"/>
+                    <audio src="./audio/speechgen0201.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0201.smil#text206"/>
                 </caption>
                 <description>
                     <prompt>
@@ -1232,7 +1232,7 @@ Adaptive Multimedia Information System</text>
             <control mfcid="IDC_STARTINBASICVIEW" widget="checkbox">
                 <caption>
                     <text id="t223">Start in basic view mode</text>
-                    <audio from="" src="./audio/./audio/speechgen0202.mp3"/>
+                    <audio src="./audio/speechgen0202.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0202.smil#text207"/>
                 </caption>
                 <description>
                     <prompt>
@@ -1245,7 +1245,7 @@ Adaptive Multimedia Information System</text>
             <control mfcid="IDC_PAUSEONLOSTFOCUS" widget="checkbox">
                 <caption>
                     <text id="t347">Pause audio when switching applications</text>
-                    <audio from="" src="./audio/./audio/speechgen0203.mp3"/>
+                    <audio src="./audio/speechgen0203.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0203.smil#text208"/>
                 </caption>
                 <description>
                     <prompt>
@@ -1258,7 +1258,7 @@ Adaptive Multimedia Information System</text>
             <control mfcid="IDC_DISABLESCREENSAVER" widget="checkbox">
                 <caption>
                     <text id="t348">Disable the screensaver while reading</text>
-                    <audio from="" src="./audio/./audio/speechgen0204.mp3"/>
+                    <audio src="./audio/speechgen0204.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0204.smil#text209"/>
                 </caption>
                 <description>
                     <prompt>
@@ -1273,7 +1273,7 @@ Adaptive Multimedia Information System</text>
                     <prompt>
                         <promptItem>
                             <text id="t349">You are currently using AMIS in: </text>
-                            <audio from="" src="./audio/./audio/speechgen0205.mp3"/>
+                            <audio src="./audio/speechgen0205.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0205.smil#text210"/>
                         </promptItem>
                         <promptVar name="CURRENT_LANGUAGE_NAME"/>
                     </prompt>
@@ -1304,7 +1304,7 @@ Adaptive Multimedia Information System</text>
                 </description>
                 <mnemonic>
                     <text id="t350">C</text>
-                    <audio from="" src="./audio/./audio/speechgen0206.mp3"/>
+                    <audio src="./audio/speechgen0206.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0206.smil#text211"/>
                 </mnemonic>
             </control>
         </dialog>
@@ -1312,11 +1312,11 @@ Adaptive Multimedia Information System</text>
             <note>This dialog lets the user jump to a certain page</note>
             <caption>
                 <text id="t231">Go To Page</text>
-                <audio from="" src="./audio/./audio/speechgen0207.mp3"/>
+                <audio src="./audio/speechgen0207.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0207.smil#text212"/>
             </caption>
             <description mfcid="IDC_GOTOPAGE_CAPTION">
                 <text id="t236">Enter the number or label of the page that you want to go to:</text>
-                <audio from="" src="./audio/./audio/speechgen0208.mp3"/>
+                <audio src="./audio/speechgen0208.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0208.smil#text213"/>
             </description>
             <prompt type="instructions">
                 <promptItem refid="tabAround"/>
@@ -1326,7 +1326,7 @@ Adaptive Multimedia Information System</text>
             <control mfcid="IDC_PAGENUM" widget="textfield autoplay">
                 <description>
                     <text id="t237">Type the number or label of the page here.</text>
-                    <audio from="" src="./audio/./audio/speechgen0209.mp3"/>
+                    <audio src="./audio/speechgen0209.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0209.smil#text214"/>
                 </description>
             </control>
             <control mfcid="IDOK" widget="button">
@@ -1335,7 +1335,7 @@ Adaptive Multimedia Information System</text>
                 </caption>
                 <description>
                     <text id="t234">Press to go to the desired page.</text>
-                    <audio from="" src="./audio/./audio/speechgen0210.mp3"/>
+                    <audio src="./audio/speechgen0210.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0210.smil#text215"/>
                 </description>
             </control>
             <control mfcid="IDCANCEL" widget="button">
@@ -1347,7 +1347,7 @@ Adaptive Multimedia Information System</text>
                 </description>
                 <mnemonic>
                     <text id="t235">C</text>
-                    <audio from="" src="./audio/./audio/speechgen0211.mp3"/>
+                    <audio src="./audio/speechgen0211.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0211.smil#text216"/>
                 </mnemonic>
             </control>
         </dialog>
@@ -1355,11 +1355,11 @@ Adaptive Multimedia Information System</text>
             <note>This dialog contains publication metadata and feedback about the user's current position.</note>
             <caption>
                 <text id="t238">Publication Summary</text>
-                <audio from="" src="./audio/./audio/speechgen0212.mp3"/>
+                <audio src="./audio/speechgen0212.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0212.smil#text217"/>
             </caption>
             <description mfcid="IDC_PUBLICATIONSUMMARYCAPTION">
                 <text id="t214">Information about this publication and your current position</text>
-                <audio from="" src="./audio/./audio/speechgen0213.mp3"/>
+                <audio src="./audio/speechgen0213.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0213.smil#text218"/>
             </description>
             <prompt type="instructions">
                 <promptItem refid="tabAround"/>
@@ -1369,7 +1369,7 @@ Adaptive Multimedia Information System</text>
             <control mfcid="IDC_SUMMARYLIST" widget="list autoplay">
                 <caption>
                     <text id="t434">Publication information list:</text>
-                    <audio from="" src="./audio/./audio/speechgen0214.mp3"/>
+                    <audio src="./audio/speechgen0214.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0214.smil#text219"/>
                 </caption>
                 <description>
                     <promptItem refid="useArrowsList"/>
@@ -1379,7 +1379,7 @@ Adaptive Multimedia Information System</text>
                         <prompt>
                             <promptItem>
                                 <text id="t240">Title:</text>
-                                <audio from="" src="./audio/./audio/speechgen0215.mp3"/>
+                                <audio src="./audio/speechgen0215.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0215.smil#text220"/>
                             </promptItem>
                             <promptVar name="META_TITLE"/>
                         </prompt>
@@ -1388,7 +1388,7 @@ Adaptive Multimedia Information System</text>
                         <prompt>
                             <promptItem>
                                 <text id="t241">Author:</text>
-                                <audio from="" src="./audio/./audio/speechgen0216.mp3"/>
+                                <audio src="./audio/speechgen0216.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0216.smil#text221"/>
                             </promptItem>
                             <promptVar name="META_CREATOR"/>
                         </prompt>
@@ -1397,7 +1397,7 @@ Adaptive Multimedia Information System</text>
                         <prompt>
                             <promptItem>
                                 <text id="t242">Publisher:</text>
-                                <audio from="" src="./audio/./audio/speechgen0217.mp3"/>
+                                <audio src="./audio/speechgen0217.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0217.smil#text222"/>
                             </promptItem>
                             <promptVar name="META_PUBLISHER"/>
                         </prompt>
@@ -1406,7 +1406,7 @@ Adaptive Multimedia Information System</text>
                         <prompt>
                             <promptItem>
                                 <text id="t243">Description:</text>
-                                <audio from="" src="./audio/./audio/speechgen0218.mp3"/>
+                                <audio src="./audio/speechgen0218.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0218.smil#text223"/>
                             </promptItem>
                             <promptVar name="META_DESC"/>
                         </prompt>
@@ -1415,7 +1415,7 @@ Adaptive Multimedia Information System</text>
                         <prompt>
                             <promptItem>
                                 <text id="t351">Narrator:</text>
-                                <audio from="" src="./audio/./audio/speechgen0219.mp3"/>
+                                <audio src="./audio/speechgen0219.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0219.smil#text224"/>
                             </promptItem>
                             <promptVar name="META_NARRATOR"/>
                         </prompt>
@@ -1424,7 +1424,7 @@ Adaptive Multimedia Information System</text>
                         <prompt>
                             <promptItem>
                                 <text id="t249">Total duration:</text>
-                                <audio from="" src="./audio/./audio/speechgen0220.mp3"/>
+                                <audio src="./audio/speechgen0220.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0220.smil#text225"/>
                             </promptItem>
                             <promptVar name="META_TOTALTIME"/>
                         </prompt>
@@ -1433,7 +1433,7 @@ Adaptive Multimedia Information System</text>
                         <prompt>
                             <promptItem>
                                 <text id="t352">Total pages:</text>
-                                <audio from="" src="./audio/./audio/speechgen0221.mp3"/>
+                                <audio src="./audio/speechgen0221.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0221.smil#text226"/>
                             </promptItem>
                             <promptVar name="META_NUMPAGES"/>
                         </prompt>
@@ -1442,7 +1442,7 @@ Adaptive Multimedia Information System</text>
                         <prompt>
                             <promptItem>
                                 <text id="t353">Date:</text>
-                                <audio from="" src="./audio/./audio/speechgen0222.mp3"/>
+                                <audio src="./audio/speechgen0222.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0222.smil#text227"/>
                             </promptItem>
                             <promptVar name="META_DATE"/>
                         </prompt>
@@ -1451,7 +1451,7 @@ Adaptive Multimedia Information System</text>
                         <prompt>
                             <promptItem>
                                 <text id="t354">Format:</text>
-                                <audio from="" src="./audio/./audio/speechgen0223.mp3"/>
+                                <audio src="./audio/speechgen0223.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0223.smil#text228"/>
                             </promptItem>
                             <promptVar name="META_FORMAT"/>
                         </prompt>
@@ -1460,7 +1460,7 @@ Adaptive Multimedia Information System</text>
                         <prompt>
                             <promptItem>
                                 <text id="t355">Features:</text>
-                                <audio from="" src="./audio/./audio/speechgen0224.mp3"/>
+                                <audio src="./audio/speechgen0224.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0224.smil#text229"/>
                             </promptItem>
                             <promptVar name="TOC_CATEGORIES"/>
                         </prompt>
@@ -1469,7 +1469,7 @@ Adaptive Multimedia Information System</text>
                         <prompt>
                             <promptItem>
                                 <text id="t356">Current page:</text>
-                                <audio from="" src="./audio/./audio/speechgen0225.mp3"/>
+                                <audio src="./audio/speechgen0225.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0225.smil#text230"/>
                             </promptItem>
                             <promptVar name="CURRENT_PAGE"/>
                         </prompt>
@@ -1478,7 +1478,7 @@ Adaptive Multimedia Information System</text>
                         <prompt>
                             <promptItem>
                                 <text id="t215">Current section:</text>
-                                <audio from="" src="./audio/./audio/speechgen0226.mp3"/>
+                                <audio src="./audio/speechgen0226.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0226.smil#text231"/>
                             </promptItem>
                             <promptVar name="CURRENT_SECTION_TITLE"/>
                         </prompt>
@@ -1487,17 +1487,17 @@ Adaptive Multimedia Information System</text>
                         <prompt>
                             <promptItem>
                                 <text id="t390">Section contents: </text>
-                                <audio from="" src="./audio/"/>
+                                <audio src="./audio/speechgen0227.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0227.smil#text232"/>
                             </promptItem>
                             <promptVar name="CURRENT_SECTION_NUM_SUBSECTIONS"/>
                             <promptItem>
                                 <text id="t217">subsections, </text>
-                                <audio from="" src="./audio/./audio/speechgen0227.mp3"/>
+                                <audio src="./audio/speechgen0228.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0228.smil#text233"/>
                             </promptItem>
                             <promptVar name="CURRENT_SECTION_NUM_PAGES"/>
                             <promptItem>
                                 <text id="t216">pages</text>
-                                <audio from="" src="./audio/./audio/speechgen0228.mp3"/>
+                                <audio src="./audio/speechgen0229.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0229.smil#text234"/>
                             </promptItem>
                         </prompt>
                     </caption>
@@ -1505,7 +1505,7 @@ Adaptive Multimedia Information System</text>
                         <prompt>
                             <promptItem>
                                 <text id="t244">Total TOC items:</text>
-                                <audio from="" src="./audio/./audio/speechgen0229.mp3"/>
+                                <audio src="./audio/speechgen0230.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0230.smil#text235"/>
                             </promptItem>
                             <promptVar name="META_TOCITEMS"/>
                         </prompt>
@@ -1514,7 +1514,7 @@ Adaptive Multimedia Information System</text>
                         <prompt>
                             <promptItem>
                                 <text id="t245">Max. section depth:</text>
-                                <audio from="" src="./audio/./audio/speechgen0230.mp3"/>
+                                <audio src="./audio/speechgen0231.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0231.smil#text236"/>
                             </promptItem>
                             <promptVar name="META_DEPTH"/>
                         </prompt>
@@ -1534,11 +1534,11 @@ Adaptive Multimedia Information System</text>
             <note>This dialog lets the user set text style properties.</note>
             <caption>
                 <text id="t358">Text Style</text>
-                <audio from="" src="./audio/./audio/speechgen0231.mp3"/>
+                <audio src="./audio/speechgen0232.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0232.smil#text237"/>
             </caption>
             <description>
                 <text id="t359">Here you can change text style properties.</text>
-                <audio from="" src="./audio/./audio/speechgen0232.mp3"/>
+                <audio src="./audio/speechgen0233.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0233.smil#text238"/>
             </description>
             <prompt type="instructions">
                 <promptItem refid="tabAround"/>
@@ -1548,7 +1548,7 @@ Adaptive Multimedia Information System</text>
             <control mfcid="IDC_FONT" widget="list autoplay">
                 <caption mfcid="IDC_FONTLABEL">
                     <text id="t360">Sidebar font:</text>
-                    <audio from="" src="./audio/./audio/speechgen0233.mp3"/>
+                    <audio src="./audio/speechgen0234.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0234.smil#text239"/>
                 </caption>
                 <list repeat="yes">
                     <caption>
@@ -1562,7 +1562,7 @@ Adaptive Multimedia Information System</text>
             <control mfcid="IDC_HIGHLIGHTFOREGROUND" widget="list">
                 <caption mfcid="IDC_HIGHLIGHTFOREGROUNDLABEL">
                     <text id="t362">Highlighted text color:</text>
-                    <audio from="" src="./audio/./audio/speechgen0234.mp3"/>
+                    <audio src="./audio/speechgen0235.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0235.smil#text240"/>
                 </caption>
                 <list repeat="yes">
                     <caption>
@@ -1576,7 +1576,7 @@ Adaptive Multimedia Information System</text>
             <control mfcid="IDC_HIGHLIGHTBACKGROUND" widget="list">
                 <caption mfcid="IDC_HIGHLIGHTBACKGROUNDLABEL">
                     <text id="t364">Highlight background color:</text>
-                    <audio from="" src="./audio/./audio/speechgen0235.mp3"/>
+                    <audio src="./audio/speechgen0236.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0236.smil#text241"/>
                 </caption>
                 <list repeat="yes">
                     <caption>
@@ -1604,7 +1604,7 @@ Adaptive Multimedia Information System</text>
                 </description>
                 <mnemonic>
                     <text id="t366">C</text>
-                    <audio from="" src="./audio/./audio/speechgen0236.mp3"/>
+                    <audio src="./audio/speechgen0237.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0237.smil#text242"/>
                 </mnemonic>
             </control>
         </dialog>
@@ -1612,11 +1612,11 @@ Adaptive Multimedia Information System</text>
             <note>This is the open URL dialog</note>
             <caption>
                 <text id="t368">Open URL</text>
-                <audio from="" src="./audio/./audio/speechgen0237.mp3"/>
+                <audio src="./audio/speechgen0238.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0238.smil#text243"/>
             </caption>
             <description mfcid="IDC_OPENURL_CAPTION">
                 <text id="t369">Enter the URL of the book you want to open:</text>
-                <audio from="" src="./audio/./audio/speechgen0238.mp3"/>
+                <audio src="./audio/speechgen0239.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0239.smil#text244"/>
             </description>
             <prompt type="instructions">
                 <promptItem refid="tabAround"/>
@@ -1626,7 +1626,7 @@ Adaptive Multimedia Information System</text>
             <control mfcid="IDC_URL" widget="textfield autoplay">
                 <description>
                     <text id="t371">Type the URL in this field.</text>
-                    <audio from="" src="./audio/./audio/speechgen0239.mp3"/>
+                    <audio src="./audio/speechgen0240.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0240.smil#text245"/>
                 </description>
             </control>
             <control mfcid="IDOK" widget="button">
@@ -1635,7 +1635,7 @@ Adaptive Multimedia Information System</text>
                 </caption>
                 <description>
                     <text id="t372">Press to load the URL</text>
-                    <audio from="" src="./audio/./audio/speechgen0240.mp3"/>
+                    <audio src="./audio/speechgen0241.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0241.smil#text246"/>
                 </description>
             </control>
             <control mfcid="IDCANCEL" widget="button">
@@ -1647,7 +1647,7 @@ Adaptive Multimedia Information System</text>
                 </description>
                 <mnemonic>
                     <text id="t367">C</text>
-                    <audio from="" src="./audio/./audio/speechgen0241.mp3"/>
+                    <audio src="./audio/speechgen0242.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0242.smil#text247"/>
                 </mnemonic>
             </control>
         </dialog>
@@ -1656,224 +1656,224 @@ Adaptive Multimedia Information System</text>
         <promptItemRefs>
             <promptItem id="useArrowsList">
                 <text id="t380">Use the arrow keys to move around the list of items.</text>
-                <audio from="" src="./audio/./audio/speechgen0242.mp3"/>
+                <audio src="./audio/speechgen0243.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0243.smil#text248"/>
             </promptItem>
             <promptItem id="thisItem">
                 <text id="t252">This item</text>
-                <audio from="" src="./audio/./audio/speechgen0243.mp3"/>
+                <audio src="./audio/speechgen0244.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0244.smil#text249"/>
             </promptItem>
             <promptItem id="spaceToToggle">
                 <text id="t253">Press the space bar to toggle the value.</text>
-                <audio from="" src="./audio/./audio/speechgen0244.mp3"/>
+                <audio src="./audio/speechgen0245.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0245.smil#text250"/>
             </promptItem>
             <promptItem id="tabAround">
                 <text id="t254">Press tab to move around the dialog items.</text>
-                <audio from="" src="./audio/./audio/speechgen0245.mp3"/>
+                <audio src="./audio/speechgen0246.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0246.smil#text251"/>
             </promptItem>
             <promptItem id="thisItemIsCurrently">
                 <text id="t258">This item is currently</text>
-                <audio from="" src="./audio/./audio/speechgen0246.mp3"/>
+                <audio src="./audio/speechgen0247.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0247.smil#text252"/>
             </promptItem>
             <promptItem id="enter_to_close">
                 <text id="t259">Press to close the dialog.</text>
-                <audio from="" src="./audio/./audio/speechgen0247.mp3"/>
+                <audio src="./audio/speechgen0248.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0248.smil#text253"/>
             </promptItem>
             <promptItem id="ok_button_caption">
                 <text id="t262">OK</text>
-                <audio from="" src="./audio/./audio/speechgen0248.mp3"/>
+                <audio src="./audio/speechgen0249.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0249.smil#text254"/>
             </promptItem>
             <promptItem id="ok_button_description">
                 <text id="t263">Press to close this dialog.</text>
-                <audio from="" src="./audio/./audio/speechgen0249.mp3"/>
+                <audio src="./audio/speechgen0250.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0250.smil#text255"/>
             </promptItem>
             <promptItem id="cancel_button_caption">
                 <text id="t264">Cancel</text>
-                <audio from="" src="./audio/./audio/speechgen0250.mp3"/>
+                <audio src="./audio/speechgen0251.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0251.smil#text256"/>
             </promptItem>
             <promptItem id="cancel_button_description">
                 <text id="t265">Press to cancel this dialog.</text>
-                <audio from="" src="./audio/./audio/speechgen0251.mp3"/>
+                <audio src="./audio/speechgen0252.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0252.smil#text257"/>
             </promptItem>
             <promptItem id="thisDialogNotSelfVoicing">
                 <text id="t268">This dialog is not self-voicing.</text>
-                <audio from="" src="./audio/./audio/speechgen0252.mp3"/>
+                <audio src="./audio/speechgen0253.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0253.smil#text258"/>
             </promptItem>
             <promptItem id="escapeToCancel">
                 <text id="t269">Press escape to cancel.</text>
-                <audio from="" src="./audio/./audio/speechgen0253.mp3"/>
+                <audio src="./audio/speechgen0254.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0254.smil#text259"/>
             </promptItem>
             <promptItem id="hearDlgInstructions">
                 <text id="t270">Press F1 for dialog help.</text>
-                <audio from="" src="./audio/./audio/speechgen0254.mp3"/>
+                <audio src="./audio/speechgen0255.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0255.smil#text260"/>
             </promptItem>
             <promptItem id="nav_window">
                 <text id="t272">Navigation</text>
-                <audio from="" src="./audio/./audio/speechgen0255.mp3"/>
+                <audio src="./audio/speechgen0256.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0256.smil#text261"/>
             </promptItem>
             <promptItem id="sections">
                 <text id="t273">Sections</text>
-                <audio from="" src="./audio/./audio/speechgen0256.mp3"/>
+                <audio src="./audio/speechgen0257.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0257.smil#text262"/>
             </promptItem>
             <promptItem id="pages">
                 <text id="t274">Pages</text>
-                <audio from="" src="./audio/./audio/speechgen0257.mp3"/>
+                <audio src="./audio/speechgen0258.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0258.smil#text263"/>
             </promptItem>
             <promptItem id="noterefs">
                 <text id="t275">Footnotes</text>
-                <audio from="" src="./audio/./audio/speechgen0258.mp3"/>
+                <audio src="./audio/speechgen0259.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0259.smil#text264"/>
             </promptItem>
             <promptItem id="prodnotes">
                 <text id="t276">Producer notes</text>
-                <audio from="" src="./audio/./audio/speechgen0259.mp3"/>
+                <audio src="./audio/speechgen0260.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0260.smil#text265"/>
             </promptItem>
             <promptItem id="sidebars">
                 <text id="t277">Sidebars</text>
-                <audio from="" src="./audio/./audio/speechgen0260.mp3"/>
+                <audio src="./audio/speechgen0261.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0261.smil#text266"/>
             </promptItem>
             <promptItem id="groups">
                 <text id="t278">Grouped items</text>
-                <audio from="" src="./audio/./audio/speechgen0261.mp3"/>
+                <audio src="./audio/speechgen0262.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0262.smil#text267"/>
             </promptItem>
             <promptItem id="ready">
                 <text id="t280">Ready</text>
-                <audio from="" src="./audio/./audio/speechgen0262.mp3"/>
+                <audio src="./audio/speechgen0263.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0263.smil#text268"/>
             </promptItem>
             <promptItem id="selfolder_title">
                 <text id="t282">Select a Folder</text>
-                <audio from="" src="./audio/./audio/speechgen0263.mp3"/>
+                <audio src="./audio/speechgen0264.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0264.smil#text269"/>
             </promptItem>
             <promptItem id="selfolder_instr">
                 <text id="t283">Select a folder from the directory below.</text>
-                <audio from="" src="./audio/./audio/speechgen0264.mp3"/>
+                <audio src="./audio/speechgen0265.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0265.smil#text270"/>
             </promptItem>
             <promptItem id="daisy_books">
                 <note>This is for the file open dialog's file type filter</note>
                 <text id="t284">DAISY Books</text>
-                <audio from="" src="./audio/./audio/speechgen0265.mp3"/>
+                <audio src="./audio/speechgen0266.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0266.smil#text271"/>
             </promptItem>
             <promptItem id="folder_does_not_exist">
                 <text id="t285">The folder %s does not exist. Do you want the folder to be created?</text>
-                <audio from="" src="./audio/./audio/speechgen0266.mp3"/>
+                <audio src="./audio/speechgen0267.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0267.smil#text273"/>
             </promptItem>
             <promptItem id="folder_invalid">
                 <text id="t286">This folder name is invalid. Please choose another.</text>
-                <audio from="" src="./audio/./audio/speechgen0267.mp3"/>
+                <audio src="./audio/speechgen0268.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0268.smil#text275"/>
             </promptItem>
             <promptItem id="cant_create_folder">
                 <text id="t287">This folder can not be created. Please double check.</text>
-                <audio from="" src="./audio/./audio/speechgen0268.mp3"/>
+                <audio src="./audio/speechgen0269.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0269.smil#text277"/>
             </promptItem>
             <promptItem id="not_available">
                 <text id="t288">Not available</text>
-                <audio from="" src="./audio/./audio/speechgen0269.mp3"/>
+                <audio src="./audio/speechgen0270.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0270.smil#text278"/>
             </promptItem>
             <promptItem id="numeric_zero">
                 <note>All numerals should be translated into numerals, not words.</note>
                 <text id="t289">0</text>
-                <audio from="" src="./audio/./audio/speechgen0270.mp3"/>
+                <audio src="./audio/speechgen0271.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0271.smil#text279"/>
             </promptItem>
             <promptItem id="numeric_one">
                 <text id="t290">1</text>
-                <audio from="" src="./audio/./audio/speechgen0271.mp3"/>
+                <audio src="./audio/speechgen0272.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0272.smil#text280"/>
             </promptItem>
             <promptItem id="numeric_two">
                 <text id="t291">2</text>
-                <audio from="" src="./audio/./audio/speechgen0272.mp3"/>
+                <audio src="./audio/speechgen0273.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0273.smil#text281"/>
             </promptItem>
             <promptItem id="numeric_three">
                 <text id="t292">3</text>
-                <audio from="" src="./audio/./audio/speechgen0273.mp3"/>
+                <audio src="./audio/speechgen0274.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0274.smil#text282"/>
             </promptItem>
             <promptItem id="numeric_four">
                 <text id="t293">4</text>
-                <audio from="" src="./audio/./audio/speechgen0274.mp3"/>
+                <audio src="./audio/speechgen0275.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0275.smil#text283"/>
             </promptItem>
             <promptItem id="numeric_five">
                 <text id="t294">5</text>
-                <audio from="" src="./audio/./audio/speechgen0275.mp3"/>
+                <audio src="./audio/speechgen0276.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0276.smil#text284"/>
             </promptItem>
             <promptItem id="numeric_six">
                 <text id="t295">6</text>
-                <audio from="" src="./audio/./audio/speechgen0276.mp3"/>
+                <audio src="./audio/speechgen0277.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0277.smil#text285"/>
             </promptItem>
             <promptItem id="numeric_seven">
                 <text id="t296">7</text>
-                <audio from="" src="./audio/./audio/speechgen0277.mp3"/>
+                <audio src="./audio/speechgen0278.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0278.smil#text286"/>
             </promptItem>
             <promptItem id="numeric_eight">
                 <text id="t297">8</text>
-                <audio from="" src="./audio/./audio/speechgen0278.mp3"/>
+                <audio src="./audio/speechgen0279.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0279.smil#text287"/>
             </promptItem>
             <promptItem id="numeric_nine">
                 <text id="t298">9</text>
-                <audio from="" src="./audio/./audio/speechgen0279.mp3"/>
+                <audio src="./audio/speechgen0280.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0280.smil#text288"/>
             </promptItem>
             <promptItem id="will_be_skipped">
                 <text id="t300">will be skipped</text>
-                <audio from="" src="./audio/./audio/speechgen0280.mp3"/>
+                <audio src="./audio/speechgen0281.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0281.smil#text289"/>
             </promptItem>
             <promptItem id="will_be_played">
                 <text id="t301">will be played</text>
-                <audio from="" src="./audio/./audio/speechgen0281.mp3"/>
+                <audio src="./audio/speechgen0282.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0282.smil#text290"/>
             </promptItem>
             <promptItem id="item_selected">
                 <text id="t304">selected</text>
-                <audio from="" src="./audio/./audio/speechgen0282.mp3"/>
+                <audio src="./audio/speechgen0283.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0283.smil#text291"/>
             </promptItem>
             <promptItem id="item_deselected">
                 <text id="t305">deselected</text>
-                <audio from="" src="./audio/./audio/speechgen0283.mp3"/>
+                <audio src="./audio/speechgen0284.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0284.smil#text292"/>
             </promptItem>
             <promptItem id="menu">
                 <text id="t308">Menu</text>
-                <audio from="" src="./audio/./audio/speechgen0286.mp3"/>
+                <audio src="./audio/speechgen0285.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0285.smil#text293"/>
             </promptItem>
             <!--This is for the keyboard shortcuts document and can eventually be removed from this XML document-->
             <promptItem id="keyboardShortcut">
                 <text id="t306">Keyboard Shortcut</text>
-                <audio from="" src="./audio/./audio/speechgen0284.mp3"/>
+                <audio src="./audio/speechgen0286.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0286.smil#text294"/>
             </promptItem>
             <!--This is for the keyboard shortcuts document and can eventually be removed from this XML document-->
             <promptItem id="icon">
                 <text id="t307">Icon</text>
-                <audio from="" src="./audio/./audio/speechgen0285.mp3"/>
+                <audio src="./audio/speechgen0287.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0287.smil#text295"/>
             </promptItem>
             <!--This is for the keyboard shortcuts document and can eventually be removed from this XML document-->
             <promptItem id="followedBy">
-                <note>This is used in the context of a sequence of key presses, as in &quot;Press Alt + V, followed by S&quot;.  </note>
+                <note>This is used in the context of a sequence of key presses, as in "Press Alt + V, followed by S".  </note>
                 <text id="t309">followed by</text>
-                <audio from="" src="./audio/./audio/speechgen0287.mp3"/>
+                <audio src="./audio/speechgen0288.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0288.smil#text296"/>
             </promptItem>
             <!--This is for the keyboard shortcuts document and can eventually be removed from this XML document-->
             <promptItem id="submenu">
                 <text id="t310">Sub Menu</text>
-                <audio from="" src="./audio/./audio/speechgen0288.mp3"/>
+                <audio src="./audio/speechgen0289.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0289.smil#text297"/>
             </promptItem>
         </promptItemRefs>
         <generalPrompts>
             <prompt id="dialogClosed">
                 <promptItem>
                     <text id="t311">Dialog closed.</text>
-                    <audio from="" src="./audio/./audio/speechgen0289.mp3"/>
+                    <audio src="./audio/speechgen0290.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0290.smil#text298"/>
                 </promptItem>
             </prompt>
             <prompt id="textFieldEntry">
                 <promptItem>
                     <text id="t312">The text field contains:</text>
-                    <audio from="" src="./audio/./audio/speechgen0290.mp3"/>
+                    <audio src="./audio/speechgen0291.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0291.smil#text299"/>
                 </promptItem>
                 <promptVar name="TEXT_FIELD"/>
             </prompt>
             <prompt id="bookAtPathChanged">
                 <promptItem>
                     <text id="t313">The book you tried to open could not be found.</text>
-                    <audio from="" src="./audio/./audio/speechgen0291.mp3"/>
+                    <audio src="./audio/speechgen0292.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0292.smil#text300"/>
                 </promptItem>
             </prompt>
             <prompt id="generalBookError">
                 <promptItem>
                     <text id="t314">The book could not be opened.</text>
-                    <audio from="" src="./audio/./audio/speechgen0292.mp3"/>
+                    <audio src="./audio/speechgen0293.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0293.smil#text301"/>
                 </promptItem>
                 <promptVar name="BOOK_PATH"/>
                 <promptItem refid="enter_to_close"/>
@@ -1881,14 +1881,14 @@ Adaptive Multimedia Information System</text>
             <prompt id="noCdLoaded">
                 <promptItem>
                     <text id="t315">There is no CD inserted.</text>
-                    <audio from="" src="./audio/./audio/speechgen0293.mp3"/>
+                    <audio src="./audio/speechgen0294.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0294.smil#text302"/>
                 </promptItem>
                 <promptItem refid="enter_to_close"/>
             </prompt>
             <prompt id="OpenFile_notSelfVoicing">
                 <promptItem>
                     <text id="t319">Open File Dialog</text>
-                    <audio from="" src="./audio/./audio/speechgen0294.mp3"/>
+                    <audio src="./audio/speechgen0295.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0295.smil#text303"/>
                 </promptItem>
                 <promptItem refid="thisDialogNotSelfVoicing"/>
                 <promptItem refid="escapeToCancel"/>
@@ -1896,7 +1896,7 @@ Adaptive Multimedia Information System</text>
             <prompt id="BrowseForFolder_notSelfVoicing">
                 <promptItem>
                     <text id="t321">Browse for folder dialog</text>
-                    <audio from="" src="./audio/./audio/speechgen0295.mp3"/>
+                    <audio src="./audio/speechgen0296.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0296.smil#text304"/>
                 </promptItem>
                 <promptItem refid="thisDialogNotSelfVoicing"/>
                 <promptItem refid="escapeToCancel"/>
@@ -1904,86 +1904,86 @@ Adaptive Multimedia Information System</text>
             <prompt id="loading">
                 <promptItem>
                     <text id="t324">Loading</text>
-                    <audio from="" src="./audio/./audio/speechgen0296.mp3"/>
+                    <audio src="./audio/speechgen0297.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0297.smil#text305"/>
                 </promptItem>
             </prompt>
             <prompt id="restartForChanges">
                 <promptItem>
                     <text id="t325">Please restart to change the language of AMIS.</text>
-                    <audio from="" src="./audio/./audio/speechgen0297.mp3"/>
+                    <audio src="./audio/speechgen0298.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0298.smil#text306"/>
                 </promptItem>
             </prompt>
             <prompt id="noBooksFoundOnCd">
                 <promptItem>
                     <text id="t326">No DAISY books were found on this CD-ROM.</text>
-                    <audio from="" src="./audio/./audio/speechgen0298.mp3"/>
+                    <audio src="./audio/speechgen0299.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0299.smil#text307"/>
                 </promptItem>
                 <promptItem refid="enter_to_close"/>
             </prompt>
             <prompt id="done">
                 <promptItem>
                     <text id="t376">Done</text>
-                    <audio from="" src="./audio/./audio/speechgen0299.mp3"/>
+                    <audio src="./audio/speechgen0300.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0300.smil#text308"/>
                 </promptItem>
             </prompt>
             <prompt id="sidebarHasFocus">
                 <promptItem>
                     <text id="t377">Sidebar has focus</text>
-                    <audio from="" src="./audio/./audio/speechgen0300.mp3"/>
+                    <audio src="./audio/speechgen0301.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0301.smil#text309"/>
                 </promptItem>
             </prompt>
             <prompt id="textWindowHasFocus">
                 <promptItem>
                     <text id="t378">Text window has focus</text>
-                    <audio from="" src="./audio/./audio/speechgen0301.mp3"/>
+                    <audio src="./audio/speechgen0302.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0302.smil#text310"/>
                 </promptItem>
             </prompt>
             <prompt id="generalBookErrorReloading">
                 <promptItem>
                     <text id="t382">The book could not be opened.  AMIS will re-open your previous book.</text>
-                    <audio from="" src="./audio/./audio/speechgen0302.mp3"/>
+                    <audio src="./audio/speechgen0303.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0303.smil#text312"/>
                 </promptItem>
             </prompt>
             <prompt id="shift_key">
                 <promptItem>
                     <text id="t383">shift</text>
-                    <audio from="" src="./audio/./audio/speechgen0303.mp3"/>
+                    <audio src="./audio/speechgen0304.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0304.smil#text313"/>
                 </promptItem>
             </prompt>
             <prompt id="control_key">
                 <promptItem>
                     <text id="t384">control</text>
-                    <audio from="" src="./audio/./audio/speechgen0304.mp3"/>
+                    <audio src="./audio/speechgen0305.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0305.smil#text314"/>
                 </promptItem>
             </prompt>
             <prompt id="alt_key">
                 <promptItem>
                     <text id="t385">alt</text>
-                    <audio from="" src="./audio/./audio/speechgen0305.mp3"/>
+                    <audio src="./audio/speechgen0306.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0306.smil#text315"/>
                 </promptItem>
             </prompt>
             <prompt id="space_key">
                 <promptItem>
                     <text id="t386">space</text>
-                    <audio from="" src="./audio/./audio/speechgen0306.mp3"/>
+                    <audio src="./audio/speechgen0307.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0307.smil#text316"/>
                 </promptItem>
             </prompt>
             <prompt id="delete_key">
                 <promptItem>
                     <text id="t387">delete</text>
-                    <audio from="" src="./audio/./audio/speechgen0307.mp3"/>
+                    <audio src="./audio/speechgen0308.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0308.smil#text317"/>
                 </promptItem>
             </prompt>
             <prompt id="backspace_key">
                 <promptItem>
                     <text id="t388">backspace</text>
-                    <audio from="" src="./audio/./audio/speechgen0308.mp3"/>
+                    <audio src="./audio/speechgen0309.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0309.smil#text318"/>
                 </promptItem>
             </prompt>
             <prompt id="enter_key">
                 <promptItem>
                     <text id="t389">enter</text>
-                    <audio from="" src="./audio/./audio/speechgen0309.mp3"/>
+                    <audio src="./audio/speechgen0310.mp3" from="file:///Users/marisa/Projects/amis/amisapp/trunk/pipeline/book/daisy202/speechgen0310.smil#text319"/>
                 </promptItem>
             </prompt>
         </generalPrompts>
