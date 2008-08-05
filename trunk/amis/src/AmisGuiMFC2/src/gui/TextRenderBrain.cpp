@@ -85,7 +85,8 @@ void TextRenderBrain::gotoUriTarget(std::string urlstr)
 	string text_elm_id = url.get_ref();
 	
 	//if we know not to highlight anything until a certain point...
-	if (amis::dtb::DtbWithHooks::Instance()->getIsWaitingForLastmarkNode())
+	if (amis::dtb::DtbWithHooks::Instance()->getIsWaitingForLastmarkNode() &&
+		mTextSrcToWaitFor.is_empty_path() == false)
 	{
 		//TODO: for good measure, make sure it's the same text document too
 		//remember that one url might have the full path and the other only the filename.

@@ -28,6 +28,8 @@ namespace amis
 {
 namespace gui
 {
+enum MainMenu {AMIS_FILE, AMIS_VIEW, AMIS_PLAY, AMIS_NAVIGATE, AMIS_INFO, AMIS_HELP};
+enum SubMenu {AMIS_SUBMENU_NONE = 0, AMIS_RECENT_BOOKS = 8, AMIS_PAGE_STYLE = 3, AMIS_SECTION_DEPTH = 2};
 class MenuManip
 {
 protected:
@@ -38,7 +40,7 @@ public:
 	void DestroyInstance();
 	~MenuManip();
 	void refreshRecentBooksListMenu();
-	void setViewItemCheckmark(bool, UINT);
+	void setItemCheckmark(MainMenu, bool, UINT, SubMenu submenuName=AMIS_SUBMENU_NONE);
 	void setPauseState(bool pauseState);
 	void addBookmark(amis::dtb::PositionMark*);
 	void loadBookmarks(amis::dtb::BookmarkSet*);
@@ -47,6 +49,7 @@ public:
 	void addPageStyles();
 	void addNavContainersToViewMenu();
 	void setCheckmarkOnForNavigationContainer(UINT);
+	void setSectionDepthCheckmark(UINT);
 	int getNumberOfViewMenuNavContainers();
 private:
 	static MenuManip* pinstance;

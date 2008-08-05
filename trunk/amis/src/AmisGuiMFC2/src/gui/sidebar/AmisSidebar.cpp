@@ -92,12 +92,12 @@ void CAmisSidebar::clearAll()
 
 	if (mTree) mTree.DeleteAllItems();
 	if (mPageList) mPageList.DeleteAllItems();
-
 	if (mTabStrip)
 	{
 		mTabStrip.DeleteAllItems();
 		this->RedrawWindow();
 	}
+
 	mNumTabs = 0;
 }
 void CAmisSidebar::setHighlightBGColor(amis::util::Color clr)
@@ -338,8 +338,8 @@ BOOL CAmisSidebar::PreTranslateMessage(MSG* pMsg)
 	if (pMsg->message == WM_KEYDOWN) 
 	{
 		//let the arrow keys operate the tree view
-		if ((pMsg->wParam == VK_UP ||
-			pMsg->wParam == VK_DOWN ||
+		if ((/*pMsg->wParam == VK_UP ||
+			pMsg->wParam == VK_DOWN ||*/
 			pMsg->wParam == VK_RETURN)&& 
 			mIsControlDown == false && 
 			mIsShiftDown == false)
@@ -640,7 +640,8 @@ void CAmisSidebar::setSelectedNode(amis::dtb::nav::NavPoint* pNode)
 		}
 	}
 
-	if (b_found == true && h_curr != NULL) 
+	//don't select an item if it is deeper than our exposed depth
+	if (b_found == true && h_curr != NULL && getLevel(h_curr) <= this->mExposedDepth) 
 		mTree.SelectItem(h_curr) == TRUE;
 
 	mbIgnoreTreeSelect = false;
@@ -728,4 +729,17 @@ HTREEITEM CAmisSidebar::findParentAtLevel(HTREEITEM hItem, int level)
 		return parent_stack[level];
 	else
 		return hItem;
+}
+
+int CAmisSidebar::getLevel(HTREEITEM hItem)
+{
+	HTREEITEM parent = mTree.GetParentItem(hItem);
+	int level = 1;
+	while (parent != NULL)
+	{
+		parent = mTree.GetParentItem(parent);
+		level++;
+	}
+	
+	return level;
 }

@@ -33,6 +33,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "io/PreferencesFileIO.h"
 #include "io/DiscInfoReader.h"
 #include "io/DistInfoReader.h"
+#include "io/BookmarksFileIO.h"
 #include "util/SearchForFilesMFC.h"
 #include "util/Log.h"
 #include "pdtb.h"
@@ -300,6 +301,20 @@ BOOL CAmisApp::InitInstance()
 	{
 		if (mpHistory->getLastRead() != NULL)
 			book_to_open = mpHistory->getLastRead()->mPath;
+	}
+
+	//clear the lastmark of our last read book if we didn't exit cleanly last time
+	//otherwise, the next time the book loads, AMIS will probably crash again.
+	if (mbWasLastExitClean == false)
+	{
+		amis::io::BookmarksFileIO bmk_io;
+		if (bmk_io.readFromFile(&mpHistory->getLastRead()->mBmkPath))
+		{
+			amis::dtb::BookmarkSet* p_bmks = bmk_io.getBookmarkSet();
+			p_bmks->setLastmark(NULL);
+			bmk_io.writeToFile(&mpHistory->getLastRead()->mBmkPath, p_bmks);
+			delete p_bmks;
+		}
 	}
 
 	amis::gui::CAmisApp::emitMessage("ready");
@@ -619,6 +634,7 @@ void CAmisApp::OnNavShowSectionDepth(UINT id)
 	string log_msg = "Setting section depth to " + level;
 	amis::util::Log::Instance()->writeMessage(log_msg, "CAmisApp::OnNavShowSectionDepth", "AmisGuiMFC2");
 	amis::gui::MainWndParts::Instance()->mpSidebar->m_wndDlg.expandSections(level);
+	amis::gui::MenuManip::Instance()->setSectionDepthCheckmark(id);
 }
 
 void CAmisApp::OnNavNextPage()

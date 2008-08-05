@@ -964,7 +964,6 @@ void MmView::node_started(const ambulant::lib::node* n)
 	amis::dtb::DtbWithHooks::Instance()->setNewLastmark(m_current_url);
 
 	//highlight the sidebar
-	//amis::dtb::nav::NavNode* p_node = amis::dtb::DtbWithHooks::Instance()->getCurrentNavNode();
 	amis::gui::MainWndParts::Instance()->mpSidebar->m_wndDlg.updateSelection();
 }
 

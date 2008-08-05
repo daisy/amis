@@ -52,7 +52,7 @@ void AmisSidebarLoader::loadNavigationData(amis::dtb::nav::NavModel* pNavModel, 
 	amis::util::Log::Instance()->writeMessage("Loading navigation data into the sidebar");
 	mpSidebar = pSidebar;
 	mpSidebar->clearAll();
-
+	
 	mpSidebar->mTabStrip.ShowWindow(SW_SHOW);
 
 	//1. load nav map
@@ -64,8 +64,8 @@ void AmisSidebarLoader::loadNavigationData(amis::dtb::nav::NavModel* pNavModel, 
 		//load its data
 		pNavModel->getNavMap()->acceptDepthFirst(this);
 		
-		mpSidebar->mTree.ShowWindow(SW_SHOW);
 		mpSidebar->mTree.Expand(mpSidebar->mTree.GetRootItem(), 3);
+		mpSidebar->mTree.RedrawWindow();
 	}
 	
 	//2. load the pagelist
@@ -73,6 +73,8 @@ void AmisSidebarLoader::loadNavigationData(amis::dtb::nav::NavModel* pNavModel, 
 	{
 		mpSidebar->addTab(getTextLabel(pNavModel->getPageList()));
 		loadNavList(pNavModel->getPageList(), &mpSidebar->mPageList);
+		mpSidebar->mPageList.RedrawItems(0, mpSidebar->mPageList.GetItemCount()-1);
+		mpSidebar->mPageList.RedrawWindow();
 	}
 	
 	//3. load the navlists (if exist)
@@ -86,6 +88,8 @@ void AmisSidebarLoader::loadNavigationData(amis::dtb::nav::NavModel* pNavModel, 
 			CNavListControl* p_list_widget = mpSidebar->addNavListWidget();
 			p_list_widget->setId((*p_lists)[i]->getId());
 			loadNavList((*p_lists)[i], p_list_widget);
+			p_list_widget->RedrawItems(0, p_list_widget->GetItemCount() - 1);
+			p_list_widget->RedrawWindow();
 		}
 	}
 
@@ -93,6 +97,7 @@ void AmisSidebarLoader::loadNavigationData(amis::dtb::nav::NavModel* pNavModel, 
 	mpSidebar->expandAllSections();
 	mpSidebar->setFontName(Preferences::Instance()->getSidebarFontName());
 	amis::util::Log::Instance()->writeMessage("Data loaded into sidebar");
+	mpSidebar->selectTab(0);
 }
 
 //this gets triggered while loading the nav map (navigation tree structure)

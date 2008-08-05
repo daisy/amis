@@ -79,7 +79,7 @@ void MainWndParts::peekAndPump()
 
 void MainWndParts::toggleSidebar()
 {
-	MenuManip::Instance()->setViewItemCheckmark(mpSidebar->IsVisible(), ID_AMIS_TOGGLE_SIDEBAR);
+	MenuManip::Instance()->setItemCheckmark(AMIS_VIEW, mpSidebar->IsVisible(), ID_AMIS_TOGGLE_SIDEBAR);
 
 	//if the window is hidden, show it
 	if (!mpSidebar->ShowWindow(SW_SHOWNA)) mpMainFrame->ShowControlBar(mpSidebar, TRUE, TRUE);

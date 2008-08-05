@@ -199,17 +199,40 @@ void MenuManip::addNavContainersToViewMenu()
 	//put a checkmark by the "sections" item
 	setCheckmarkOnForNavigationContainer(0);
 }
-void MenuManip::setViewItemCheckmark(bool isChecked, UINT itemId)
+void MenuManip::setItemCheckmark(MainMenu menuName, bool isChecked, UINT itemId, SubMenu submenuName)
 {
 	CMenu* p_menu = NULL;
 	p_menu = MainWndParts::Instance()->mpMainFrame->GetMenu();
 	assert(p_menu);
-	//get "view"
-	p_menu = p_menu->GetSubMenu(1);
+	//get the specified menu
+	p_menu = p_menu->GetSubMenu(menuName);
 	assert(p_menu);
-
+	if (submenuName != AMIS_SUBMENU_NONE)
+		p_menu = p_menu->GetSubMenu(submenuName);
+	
 	if (isChecked == true) p_menu->CheckMenuItem(itemId, MF_CHECKED);
 	else p_menu->CheckMenuItem(itemId, MF_UNCHECKED);
+}
+
+void MenuManip::setSectionDepthCheckmark(UINT itemId)
+{
+	CMenu* p_menu = NULL;
+	p_menu = MainWndParts::Instance()->mpMainFrame->GetMenu();
+	assert(p_menu);
+	//get "Navigate"
+	p_menu = p_menu->GetSubMenu(3);
+	//get "Show Section Depth" popup
+	p_menu = p_menu->GetSubMenu(2);
+	assert(p_menu);
+	
+	//turn off the checkmark for all navigation container items
+	//all the navigation containers are below a separator whose index is 7)
+	int count = p_menu->GetMenuItemCount();
+	for (int i = 0; i<count; i++)
+		setItemCheckmark(AMIS_NAVIGATE, false, AMIS_SECTION_DEPTH_BASE_ID + i, AMIS_SECTION_DEPTH);
+
+	//turn on the checkmark for the given index
+	setItemCheckmark(AMIS_NAVIGATE, true, itemId, AMIS_SECTION_DEPTH);
 }
 
 void MenuManip::addBookmark(amis::dtb::PositionMark* pBmk)
@@ -406,8 +429,8 @@ void MenuManip::setCheckmarkOnForNavigationContainer(UINT idx)
 	//all the navigation containers are below a separator whose index is 7)
 	int count = p_menu->GetMenuItemCount() - 7;
 	for (int i = 0; i<count; i++)
-		setViewItemCheckmark(false, AMIS_VIEW_MENU_BASE_ID + i);
+		setItemCheckmark(AMIS_VIEW, false, AMIS_VIEW_MENU_BASE_ID + i);
 
 	//turn on the checkmark for the given index
-	setViewItemCheckmark(true, AMIS_VIEW_MENU_BASE_ID + idx);
+	setItemCheckmark(AMIS_VIEW, true, AMIS_VIEW_MENU_BASE_ID + idx);
 }
