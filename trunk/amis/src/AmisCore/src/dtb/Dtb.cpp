@@ -605,7 +605,8 @@ void amis::dtb::Dtb::setNewLastmark(ambulant::net::url positionUri)
  			if (mpNavModel->hasPages() == true)
 			{
 				p_node = mpNavModel->getNodeForSmilId(smil_file_name, mpNavModel->getPageList());
-				if (p_node != NULL && mpCurrentNavNode->getPlayOrder() < p_node->getPlayOrder())
+				if (p_node != NULL && mpCurrentNavNode != NULL &&
+					mpCurrentNavNode->getPlayOrder() < p_node->getPlayOrder())
 				{
 					mpCurrentNavNode = p_node;
 				}

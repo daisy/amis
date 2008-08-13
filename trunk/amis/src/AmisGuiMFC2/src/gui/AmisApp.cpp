@@ -21,10 +21,11 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
 #include "stdafx.h"
+#include "ShlObj.h"
 #include <winbase.h>
 
-#include "util/RegOcx.h"
 
+#include "util/RegOcx.h"
 #include "../resource.h"
 #include "AmisCore.h"
 #include "util/FilePathTools.h"
@@ -79,6 +80,12 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #if _DEBUG
 //get Visual Leak Detector version 1.0 here: http://dmoulding.googlepages.com/downloads
 //#include <vld.h>
+#endif
+
+#if defined(AMIS_PLATFORM_WINDOWS)
+//for creating directories on windows
+#include "io.h"
+#include "direct.h"
 #endif
 
 using namespace amis::gui;
@@ -172,7 +179,7 @@ BOOL CAmisApp::InitInstance()
 	//first read the preferences
 	initializePathsAndFiles();
 	//then start logging!  
-	amis::util::Log::Instance()->startLog(this->getAppPath() + "amisLog.txt");
+	amis::util::Log::Instance()->startLog(this->getAppSettingsPath() + "amisLog.txt");
 	amis::util::Log::Instance()->enable(Preferences::Instance()->getIsLoggingEnabled());
 	amis::util::Log::Instance()->setLevel(Preferences::Instance()->getLogLevel());
 	Preferences::Instance()->logAllPreferences();
@@ -381,21 +388,48 @@ std::string CAmisApp::getAppPath()
 	}
 	return mAppPath;
 }
+std::string CAmisApp::getAppSettingsPath()
+{
+	USES_CONVERSION;
+	TCHAR szPath[MAX_PATH];
 
+	//TODO: make this stupid shell function call work
+	//HRESULT success = SHGetFolderPath(NULL, CSIDL_COMMON_APPDATA, NULL, 0, szPath);
+
+	//just for testing
+	if (0) //success == S_OK)
+	{
+		PathAppend(szPath, TEXT("AMIS"));
+		PathAppend(szPath, TEXT("settings"));
+		std::string app_settings_path = W2CA(szPath);
+		return app_settings_path;
+	}
+	else
+	{
+		//just for testing
+		string dir = getAppPath();
+		dir += "\\settings\\";
+		return dir;
+	}
+}
 void CAmisApp::initializePathsAndFiles()
 {
+	string settings_dir = getAppSettingsPath();
+
 	//read the preferences and mark the was-exit-clean flag as false
 	amis::io::PreferencesFileIO prefs_io;
-	string prefs_path = "./settings/amisPrefs.xml";
-	prefs_path = amis::util::FilePathTools::goRelativePath(theApp.getAppPath(), prefs_path);
+	string prefs_path = "./amisPrefs.xml";
+	//the preferences file is writeable and lives in a common app settings directory
+	prefs_path = amis::util::FilePathTools::goRelativePath(settings_dir, prefs_path);
 	prefs_io.readFromFile(prefs_path);
 	mbWasLastExitClean = Preferences::Instance()->getWasExitClean();
 	Preferences::Instance()->setWasExitClean(false);
 	prefs_io.writeToFile(prefs_path, Preferences::Instance());
 	
 	//read the recent books list
-	string history_path = "./settings/amisHistory.xml";
-	history_path = amis::util::FilePathTools::goRelativePath(theApp.getAppPath(), history_path);
+	string history_path = "./amisHistory.xml";
+	//the history file is writeable and lives in a common app settings directory
+	history_path = amis::util::FilePathTools::goRelativePath(settings_dir, history_path);
 	ambulant::net::url the_path = ambulant::net::url::from_filename(history_path);
 	amis::io::BookListFileIO history_io;
 	if (history_io.readFromFile(&the_path)) mpHistory = history_io.getBookList();

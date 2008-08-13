@@ -67,6 +67,7 @@ public:
 	virtual int ExitInstance();
 	const ambulant::net::url& getBookURL() const;
 	std::string getAppPath();
+	std::string getAppSettingsPath();
 	amis::BookList* getHistory();
 	bool isBookOpen();
 	void setPauseState(bool play);

@@ -70,7 +70,7 @@ Preferences::Preferences()
 	mAmisCssFile = ambulant::net::url::from_filename("./settings/css/amis.css");	
 	mZed2005CssFile = ambulant::net::url::from_filename("./settings/css/dtbook.2005.basic.css");
 
-	ambulant::net::url app_path = ambulant::net::url::from_filename(theApp.getAppPath());
+	ambulant::net::url app_path = ambulant::net::url::from_filename(theApp.getAppSettingsPath());
 	mFontsizeCssDir = mFontsizeCssDir.join_to_base(app_path);
 	mCustomCssDir = mCustomCssDir.join_to_base(app_path);
 	mLangpacksDir = mLangpacksDir.join_to_base(app_path);

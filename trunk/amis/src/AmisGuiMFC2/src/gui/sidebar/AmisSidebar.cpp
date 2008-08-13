@@ -287,7 +287,7 @@ BOOL CAmisSidebar::OnInitDialog()
 	//load the icons from file
 	HICON hIcon[3];
 	CString icon_tree, icon_pages, icon_special;
-	string app_path = theApp.getAppPath();
+	string app_path = theApp.getAppSettingsPath();
 	string str_icon_tree, str_icon_pages, str_icon_special;
 
  	str_icon_tree = app_path + "settings\\img\\hierarchy.ico";

@@ -70,7 +70,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="xerces-c_2D.lib AmisCoreD.lib libambulant_shwin32_D.lib strmiids.lib uuid.lib"
+				AdditionalDependencies="shell32.lib xerces-c_2D.lib AmisCoreD.lib libambulant_shwin32_D.lib strmiids.lib uuid.lib"
 				OutputFile="$(OutDir)/AMISD.exe"
 				LinkIncremental="2"
 				AdditionalLibraryDirectories="../../lib;../../../../../ambulant/lib/win32;&quot;$(VSInstallDir)\..\Microsoft Speech SDK 5.1\Lib\i386&quot;;&quot;$(VSInstallDir)\..\Visual Leak Detector&quot;"
