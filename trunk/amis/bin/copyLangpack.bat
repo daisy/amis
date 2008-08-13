@@ -1,39 +1,37 @@
 @echo off
-if "%1"=="help" echo Usage: copyLangpack LanguageID SourceDirectory DestinationDirectory [release or debug]
+if "%1"=="help" echo Usage: copyLangpack LanguageID SourceDirectory BuildType[release or debug]
 IF "%1"=="help" GOTO end
 
 IF "%1"=="" ECHO Error: Please specify a language ID
 IF "%1"=="" GOTO end
 IF "%2"=="" ECHO Error: Source path missing.
 IF "%2"=="" GOTO end
-IF "%3"=="" ECHO Error: Destination path missing.
-IF "%3"=="" GOTO end
-IF "%4"=="" SET %2="Release"
-IF "%4"=="" ECHO Warning: 'release' or 'debug' not specified. Copying 'release' files by default.
+IF "%3"=="" ECHO Warning: 'release' or 'debug' not specified. Copying 'release' files by default.
+IF "%3"=="" SET %3="Release"
 
-ECHO Copying %1 (%4) 
+SET DESTINATION=%systemdrive%\Documents and Settings\All Users\Application Data\AMIS\settings\lang\%1\
+
+ECHO Copying %1 (%3) 
 ECHO From %2 
-ECHO To %3
+ECHO To %DESTINATION%
 
 REM remove old files first
-rmdir /S %3\%1 /Q
+rmdir /S "%DESTINATION%" /Q
 
-REM todo: check first if %3 ends in a slash or not
-mkdir %3\%1
-mkdir %3\%1\help
-mkdir %3\%1\help\img
-mkdir %3\%1\audio
+mkdir %DESTINATION%
+mkdir %DESTINATION%help
+mkdir %DESTINATION%help\img
+mkdir %DESTINATION%audio
 
-REM todo: check first if %2 ends in a slash or not
-copy %2\AmisLangpack\%4\AmisLangpack.dll %3\%1\ /y
-copy %2\AmisLangpack\resource.h.ini %3\%1\ /y
-copy %2\moduleDesc.xml %3\%1\ /y
-copy %2\thislang.mp3 %3\%1\ /y
-copy %2\flag.ico %3\%1\ /y
-copy %2\amisAccessibleUi.xml %3\%1\ /y
-copy %2\help\*.* %3\%1\help\ /y
-copy %2\help\img\*.* %3\%1\help\img\ /y
-copy %2\audio\*.* %3\%1\audio\ /y
+copy %2\AmisLangpack\%4\AmisLangpack.dll %DESTINATION% /y
+copy %2\AmisLangpack\resource.h.ini %DESTINATION% /y
+copy %2\moduleDesc.xml %DESTINATION% /y
+copy %2\thislang.mp3 %DESTINATION% /y
+copy %2\flag.ico %DESTINATION% /y
+copy %2\amisAccessibleUi.xml %DESTINATION% /y
+copy %2\help\*.* %DESTINATION%help\ /y
+copy %2\help\img\*.* %DESTINATION%help\img\ /y
+copy %2\audio\*.* %DESTINATION%audio\ /y
 
 pause
 

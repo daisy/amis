@@ -63,6 +63,10 @@ Page custom SapiPage
 ;this is the path to your windows system 32 directory
 !define WIN32_DIR "c:\windows\system32"
 
+;this is the application settings directory
+;TODO: look for this as a system setting
+!define SETTINGS_DIR "c:\documents and settings\all users\amis\settings\"
+
 ;**********end custom defines*******
 
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION} (${LANG_NAME})"
@@ -91,11 +95,11 @@ Section "MainSection" SEC01
   File "${BIN_DIR}\TransformSample.ax"
   
   ;copy the bookmark readme file
-  SetOutPath "$INSTDIR\settings\bmk"
+  SetOutPath "$SETTINGS_DIR\bmk"
   File "${BIN_DIR}\settings\bmk\readme.txt"
   
   ;copy the default settings
-  SetOutPath "$INSTDIR\settings"
+  SetOutPath "$SETTINGS_DIR"
   File "${BIN_DIR}\settings\amisPrefs.xml"
   File "${BIN_DIR}\settings\amisHistory.xml"
   File "${BIN_DIR}\settings\defaultToolbar.xml"
@@ -105,34 +109,35 @@ Section "MainSection" SEC01
   File "${BIN_DIR}\settings\clearHistory.bat"
   
   ;copy the css files
-  SetOutPath "$INSTDIR\settings\css"
+  SetOutPath "$SETTINGS_DIR\css"
   File "${BIN_DIR}\settings\css\*.css"
-  SetOutPath "$INSTDIR\settings\css\customStyles"
+  SetOutPath "$SETTINGS_DIR\css\customStyles"
   File "${BIN_DIR}\settings\css\customStyles\*.css"
-  SetOutPath "$INSTDIR\settings\css\font"
+  SetOutPath "$SETTINGS_DIR\css\font"
   File "${BIN_DIR}\settings\css\font\*.css"
   
   ;copy the images
-  SetOutPath "$INSTDIR\settings\img"
+  SetOutPath "$SETTINGS_DIR\img"
   File "${BIN_DIR}\settings\img\*.ico"
-  SetOutPath "$INSTDIR\settings\img\defaultToolbar"
+  SetOutPath "$SETTINGS_DIR\img\defaultToolbar"
   File "${BIN_DIR}\settings\img\defaultToolbar\*.ico"
-  SetOutPath "$INSTDIR\settings\img\basicToolbar"
+  SetOutPath "$SETTINGS_DIR\img\basicToolbar"
   File "${BIN_DIR}\settings\img\basicToolbar\*.ico"
   
   
   ;copy a few default recordings, which give the version and release date
-  SetOutPath "$INSTDIR\settings\lang"
+  SetOutPath "$SETTINGS_DIR\lang"
   File "${BIN_DIR}\settings\lang\version.mp3"
   File "${BIN_DIR}\settings\lang\releasedate.mp3"
   
   ;copy the lang directory readme file
-  SetOutPath "$INSTDIR\settings\lang"
+  SetOutPath "$SETTINGS_DIR\lang"
   File "${BIN_DIR}\settings\lang\readme.txt"
 
   ;copy the MSVC redistributables exe
   ;if you are making an installer, be sure to get the latest one from Microsoft.  
   ;the one included in Visual Studio 8, even SP1, is outdated.
+  ;TODO: find out if the user even needs these files or not
   SetOutPath $TEMP
   File "c:\devel\vcredist_x86.exe"
 	
@@ -150,17 +155,17 @@ SectionEnd
 Section -CopyDefaultLangpack
   
   ;copy the langpack root files
-  SetOutPath "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}"
+  SetOutPath "$SETTINGS_DIR\lang\${DEFAULT_LANGPACK}"
   File "${BIN_DIR}\settings\lang\${DEFAULT_LANGPACK}\*"
   
   ;copy the langpack audio
-  SetOutPath "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}\audio"
+  SetOutPath "$SETTINGS_DIR\lang\${DEFAULT_LANGPACK}\audio"
   File "${BIN_DIR}\settings\lang\${DEFAULT_LANGPACK}\audio\*"
   
   ;copy the langpack help book files (and images)
-  SetOutPath "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}\help"
+  SetOutPath "$SETTINGS_DIR\lang\${DEFAULT_LANGPACK}\help"
   File "${BIN_DIR}\settings\lang\${DEFAULT_LANGPACK}\help\*"
-  SetOutPath "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}\help\img"
+  SetOutPath "$SETTINGS_DIR\lang\${DEFAULT_LANGPACK}\help\img"
   File "${BIN_DIR}\settings\lang\${DEFAULT_LANGPACK}\help\img\*"
   
   
@@ -287,4 +292,5 @@ Function RunMSVCRuntimeSetup
     MessageBox MB_ICONEXCLAMATION "There was an error encountered while attempting to install the Microsoft runtime files.  Please download from http://www.microsoft.com/downloads/details.aspx?FamilyID=200B2FD9-AE1A-4A14-984D-389C36F85647&displaylang=en and install manually."
     Goto End
   End:
+  ;TODO: remove the exe file
 FunctionEnd
