@@ -202,7 +202,7 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	DWORD align;
 	//create the default toolbar
 	amis::util::Log::Instance()->writeMessage("Loading default toolbar", "CMainFrame::OnCreate", "AmisGuiMFC2");
-	toolbar_file= ambulant::net::url::from_filename("./settings/defaultToolbar.xml");
+	toolbar_file= ambulant::net::url::from_filename("defaultToolbar.xml");
 	toolbar_file = toolbar_file.join_to_base(ambulant::net::url::from_filename(theApp.getAppSettingsPath()));
 	toolbar_reader.readFromFile(toolbar_file.get_file());
 	p_settings = toolbar_reader.getToolbarSettings();
@@ -232,7 +232,7 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 
 	//create the basic toolbar
 	amis::util::Log::Instance()->writeMessage("Loading basic toolbar", "CMainFrame::OnCreate", "AmisGuiMFC2");
-	toolbar_file = ambulant::net::url::from_filename("./settings/basicToolbar.xml");
+	toolbar_file = ambulant::net::url::from_filename("basicToolbar.xml");
 	toolbar_file = toolbar_file.join_to_base(ambulant::net::url::from_filename(theApp.getAppSettingsPath()));
 	toolbar_reader.readFromFile(toolbar_file.get_file());
 	p_settings = toolbar_reader.getToolbarSettings();

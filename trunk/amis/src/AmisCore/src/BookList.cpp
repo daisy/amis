@@ -168,6 +168,8 @@ void amis::BookList::deleteEntry(unsigned int idx)
 
 amis::BookEntry* amis::BookList::getLastRead()
 {
+	if (mItems.empty() == true) return NULL;
+
 	amis::BookEntry* p_tmp = NULL;
 	for (unsigned int i = 0; i<mItems.size(); i++)
 	{

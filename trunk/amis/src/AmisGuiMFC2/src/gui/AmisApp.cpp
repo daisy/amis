@@ -19,11 +19,8 @@ You should have received a copy of the GNU Lesser General Public
 License along with this library; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
-
 #include "stdafx.h"
-#include "ShlObj.h"
 #include <winbase.h>
-
 
 #include "util/RegOcx.h"
 #include "../resource.h"
@@ -315,7 +312,7 @@ BOOL CAmisApp::InitInstance()
 	if (mbWasLastExitClean == false)
 	{
 		amis::io::BookmarksFileIO bmk_io;
-		if (bmk_io.readFromFile(&mpHistory->getLastRead()->mBmkPath))
+		if (mpHistory->getLastRead() != NULL && bmk_io.readFromFile(&mpHistory->getLastRead()->mBmkPath))
 		{
 			amis::dtb::BookmarkSet* p_bmks = bmk_io.getBookmarkSet();
 			p_bmks->setLastmark(NULL);
@@ -393,23 +390,21 @@ std::string CAmisApp::getAppSettingsPath()
 	USES_CONVERSION;
 	TCHAR szPath[MAX_PATH];
 
-	//TODO: make this stupid shell function call work
-	//HRESULT success = SHGetFolderPath(NULL, CSIDL_COMMON_APPDATA, NULL, 0, szPath);
-
+	HRESULT success = SHGetFolderPath(NULL, CSIDL_COMMON_APPDATA, NULL, 0, szPath);
 	//just for testing
-	if (0) //success == S_OK)
+	if (success == S_OK)
 	{
+		//we will have created appdata\AMIS\settings during installation
 		PathAppend(szPath, TEXT("AMIS"));
 		PathAppend(szPath, TEXT("settings"));
 		std::string app_settings_path = W2CA(szPath);
+		app_settings_path.append("\\");
 		return app_settings_path;
 	}
 	else
 	{
-		//just for testing
-		string dir = getAppPath();
-		dir += "\\settings\\";
-		return dir;
+		TRACE(_T("app data directory not found"));
+		return "";
 	}
 }
 void CAmisApp::initializePathsAndFiles()
@@ -418,7 +413,7 @@ void CAmisApp::initializePathsAndFiles()
 
 	//read the preferences and mark the was-exit-clean flag as false
 	amis::io::PreferencesFileIO prefs_io;
-	string prefs_path = "./amisPrefs.xml";
+	string prefs_path = "amisPrefs.xml";
 	//the preferences file is writeable and lives in a common app settings directory
 	prefs_path = amis::util::FilePathTools::goRelativePath(settings_dir, prefs_path);
 	prefs_io.readFromFile(prefs_path);
@@ -427,7 +422,7 @@ void CAmisApp::initializePathsAndFiles()
 	prefs_io.writeToFile(prefs_path, Preferences::Instance());
 	
 	//read the recent books list
-	string history_path = "./amisHistory.xml";
+	string history_path = "amisHistory.xml";
 	//the history file is writeable and lives in a common app settings directory
 	history_path = amis::util::FilePathTools::goRelativePath(settings_dir, history_path);
 	ambulant::net::url the_path = ambulant::net::url::from_filename(history_path);
@@ -452,7 +447,7 @@ void CAmisApp::initializeSelfVoicing()
 	
 	ambulant::net::url lang_xml_file = ambulant::net::url::from_filename("amisAccessibleUi.xml");
 	lang_xml_file = lang_xml_file.join_to_base(*lang_module_file);
-	new_data_reader.setAppPath(mAppPath);
+	new_data_reader.setAppPath(getAppSettingsPath());
 	amis::ErrorCode did_it_work = new_data_reader.readFile(lang_xml_file.get_file(), p_new_data_tree);
 	if (did_it_work == amis::OK)
 	{	
