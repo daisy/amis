@@ -18,20 +18,20 @@ ECHO To %DESTINATION%
 REM remove old files first
 rmdir /S "%DESTINATION%" /Q
 
-mkdir %DESTINATION%
-mkdir %DESTINATION%help
-mkdir %DESTINATION%help\img
-mkdir %DESTINATION%audio
+mkdir "%DESTINATION%"
+mkdir "%DESTINATION%help"
+mkdir "%DESTINATION%help\img"
+mkdir "%DESTINATION%audio"
 
-copy %2\AmisLangpack\%4\AmisLangpack.dll %DESTINATION% /y
-copy %2\AmisLangpack\resource.h.ini %DESTINATION% /y
-copy %2\moduleDesc.xml %DESTINATION% /y
-copy %2\thislang.mp3 %DESTINATION% /y
-copy %2\flag.ico %DESTINATION% /y
-copy %2\amisAccessibleUi.xml %DESTINATION% /y
-copy %2\help\*.* %DESTINATION%help\ /y
-copy %2\help\img\*.* %DESTINATION%help\img\ /y
-copy %2\audio\*.* %DESTINATION%audio\ /y
+copy "%2\AmisLangpack\%4\AmisLangpack.dll" "%DESTINATION%" /y
+copy "%2\AmisLangpack\resource.h.ini" "%DESTINATION%" /y
+copy "%2\moduleDesc.xml" "%DESTINATION%" /y
+copy "%2\thislang.mp3" "%DESTINATION%" /y
+copy "%2\flag.ico" "%DESTINATION%" /y
+copy "%2\amisAccessibleUi.xml" "%DESTINATION%" /y
+copy "%2\help\*.*" "%DESTINATION%help\" /y
+copy "%2\help\img\*.*" "%DESTINATION%help\img\" /y
+copy "%2\audio\*.*" "%DESTINATION%audio\" /y
 
 pause
 

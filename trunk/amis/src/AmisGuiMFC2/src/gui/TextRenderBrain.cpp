@@ -81,9 +81,14 @@ void TextRenderBrain::gotoUriTarget(std::string urlstr)
  {
 	USES_CONVERSION;
 	
+	CString msg1;
+	msg1.Format(_T("^^^^^^^^^^ gotoUriTarget %s\n"), A2T(urlstr.c_str()));
+	TRACE(msg1);
+
 	ambulant::net::url url = ambulant::net::url::from_url(urlstr);
 	string text_elm_id = url.get_ref();
 	
+	/*
 	//if we know not to highlight anything until a certain point...
 	if (amis::dtb::DtbWithHooks::Instance()->getIsWaitingForLastmarkNode() &&
 		mTextSrcToWaitFor.is_empty_path() == false)
@@ -95,7 +100,7 @@ void TextRenderBrain::gotoUriTarget(std::string urlstr)
 		else
 			return;
 	}
-
+	*/
 	//make sure our document still exists; otherwise force a reload by setting mCurrentUrl to ""
 	if (MainWndParts::Instance()->mpHtmlView->GetHtmlDocument() == NULL) 
 	{
@@ -105,11 +110,20 @@ void TextRenderBrain::gotoUriTarget(std::string urlstr)
 
 	bool is_same_doc = url.same_document(mCurrentUrl);
 	// If it's identical ignore it (the previous call may still be waiting for the webDocumentComplete callback)
-	if (is_same_doc && text_elm_id == mTextElmId) return;
 
+
+	if (is_same_doc && text_elm_id == mTextElmId) 
+	{
+		TRACE(_T("^^^^^^^^^^ same document, same element\n"));
+		return;
+	}
+	
 	// If it's a different document: load it.
 	if (!is_same_doc)
 	{	
+		CString msg;
+		msg.Format(_T("^^^^^^^^^^ Loading HTML document %s\n"), A2T(url.get_url().c_str()));
+		TRACE(msg);
 		//save the current ID
 		mTextElmId = text_elm_id;
 
@@ -210,6 +224,41 @@ void TextRenderBrain::saveElementText(IHTMLElement* pElm)
 //put the element in view and optionally highlight it
 void TextRenderBrain::showElementAtId(string elmId)
 {
+	USES_CONVERSION;
+
+	//get the previous (currently highlighted) text element ID
+	string prev_text_elm_id = "";
+	if (mpPreviousElm)
+	{
+		const char* c_attr_id = "id";
+		BSTR attr_id;
+		attr_id = A2BSTR(c_attr_id);
+		VARIANT attr_val;
+		VariantInit(&attr_val);
+		attr_val.vt = VT_BSTR;
+		mpPreviousElm->getAttribute(attr_id, 0, &attr_val);
+		CString temp_cstr(OLE2CW(attr_val.bstrVal));
+		LPCTSTR tmp;
+		tmp = (LPCTSTR)temp_cstr;
+		prev_text_elm_id = T2A(tmp);
+		SysFreeString(attr_val.bstrVal);
+	}
+	else
+	{
+		TRACE(_T("^^^^^^^^^^ No previous element\n"));
+	}
+	if (prev_text_elm_id == mTextElmId)
+	{
+		TRACE(_T("^^^^^^^^^^ SAME ELEMENT\n"));
+	}
+	else
+	{
+		TRACE(_T("^^^^^^^^^^ NEW ELEMENT\n"));
+	}
+	CString msg;
+	msg.Format(_T("^^^^^^^^^^ ELEMENT HIGHLIGHT %s\n"), A2T(elmId.c_str()));
+	TRACE(msg);
+
 	if (elmId.size() == 0) return; 
 	IHTMLElement* p_elm = NULL;
 	p_elm = GetElementFromId(elmId, 0);
@@ -231,9 +280,10 @@ void TextRenderBrain::showElementAtId(string elmId)
 		v_bool.vt = VT_BOOL;
 		v_bool.boolVal = TRUE;
 
-		p_elm->scrollIntoView(v_bool); 
+		p_elm->scrollIntoView(v_bool);
 	}
 	mpPreviousElm = p_elm;
+	TRACE(_T("^^^^^^^^^^ Saved previous element"));
 }
 //reset the highlight from the previously highlighted element
 void TextRenderBrain::unHighlightPreviousElement()

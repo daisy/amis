@@ -914,13 +914,21 @@ void MmView::node_started(const ambulant::lib::node* n)
 	USES_CONVERSION;
 	const char *id = n->get_attribute("id");
 	ambulant::lib::xml_string tagname = n->get_local_name();
-
+	
+	CString msg;
+	msg.Format(_T("^^^^^^^^^^ Node started %s id=\"%s\" src=\"%s\"\n"), 
+		A2T(n->get_local_name().c_str()), 
+		A2T(n->get_attribute("id")),
+		A2T(n->get_attribute("src")));
+	TRACE(msg);
+	
+	
 	//part of a workaround to stop highlighting of text nodes
 	//this highlighting happens sometimes to nodes that should be skipped
 	//the node_started/node_stopped events are over before the highlighting commands get sent
 	//i don't know where they come from..
 	//it only happens when we try to load the lastmark of a document (url#frag; ambulant not started playing yet)
-	if (amis::dtb::DtbWithHooks::Instance()->getIsWaitingForLastmarkNode() == true)
+	/*if (amis::dtb::DtbWithHooks::Instance()->getIsWaitingForLastmarkNode() == true)
 	{
 		if (id != NULL && amis::dtb::DtbWithHooks::Instance()->getIdOfLastmarkNode().compare(id) == 0)
 			mbRememberParallelTextSrc = true;
@@ -932,6 +940,7 @@ void MmView::node_started(const ambulant::lib::node* n)
 		mRecentTextSrc = ambulant::net::url::from_url(src);
 	}
 	//end workaround
+	*/
 	
 	if (tagname == "audio")
 		m_recent_audio_node = n;
@@ -969,6 +978,11 @@ void MmView::node_started(const ambulant::lib::node* n)
 
 void MmView::node_stopped(const ambulant::lib::node *n)
 {
+	USES_CONVERSION;
+	CString msg;
+	msg.Format(_T("^^^^^^^^^^ Node stopped %s id=\"%s\"\n"), A2T(n->get_local_name().c_str()), A2T(n->get_attribute("id")));
+	TRACE(msg);
+
 	//if we are ending a par and we were expecting audio
 	if (n->get_local_name() == "par" && m_recent_par_node != NULL && m_saw_audio == false)
 	{

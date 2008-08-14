@@ -93,6 +93,7 @@ CAmisHtmlView::CAmisHtmlView()
 
 CAmisHtmlView::CAmisHtmlView(const RECT& rect, CWnd* parent)
 {
+	TRACE(_T("^^^^^^^^^^ Created HTML view\n"));
 #ifdef HTML_LOAD_AMBULANT_PDTB
 #ifdef WITH_PROTECTED_BOOK_SUPPORT
 	mpLoaderBridge = NULL;
@@ -167,8 +168,13 @@ void CAmisHtmlView::OnActivateView(BOOL bActivate, CView* pActivateView, CView* 
 //this signals the completion of a URL load request
 void CAmisHtmlView::OnDocumentComplete(LPCTSTR lpszURL) 
 {
-	TextRenderBrain::Instance()->webDocumentComplete();
+	CString msg;
+	msg.Format(_T("^^^^^^^^^^ HTML VIEW OnDocumentComplete %s\n"), lpszURL);
+	TRACE(msg);
 	CHtmlView::OnDocumentComplete(lpszURL);
+	CString url = lpszURL;
+	if (url.Compare(_T("about:blank")) != 0) TextRenderBrain::Instance()->webDocumentComplete();
+	else TRACE(_T("^^^^^^^^^^ ignoring document complete for about:blank\n"));
 }
 
 BOOL CAmisHtmlView::Create(LPCTSTR lpszClassName, LPCTSTR lpszWindowName, DWORD dwStyle, const RECT& rect, CWnd* pParentWnd, UINT nID, CCreateContext* pContext) 
@@ -331,6 +337,7 @@ LPARAM CAmisHtmlView::OnHighlightUrlTarget(WPARAM wParam, LPARAM lParam)
 #endif
 #endif
 	TextRenderBrain::Instance()->gotoUriTarget(newurl);
+	//Sleep(1000);
 	delete url;
 	return 0;
 }
@@ -732,6 +739,7 @@ html_browser_imp::~html_browser_imp()
 
 void html_browser_imp::goto_url(std::string urlstr, ambulant::net::datasource_factory *df) 
 {
+	USES_CONVERSION;
 #ifdef HTML_LOAD_MANUALLY
 	// First get the URL for the document (strip the fragment id)
 	ambulant::net::url url = ambulant::net::url::from_url(urlstr);
@@ -770,8 +778,12 @@ void html_browser_imp::goto_url(std::string urlstr, ambulant::net::datasource_fa
 		// Fall through so we also do the highlighting thing.
 	}
 #endif // HTML_LOAD_MANUALLY
+	CString msg;
+	msg.Format(_T("^^^^^^^^^^ go to url %s\n"), A2T(urlstr.c_str()));
+	TRACE(msg);
 	std::string *strcopy = new std::string(urlstr);
 	MainWndParts::Instance()->mpHtmlView->PostMessage(WM_MY_HIGHLIGHTURITARGET, 0, (LPARAM)strcopy);
+	Sleep(1000);
 }
 
 void html_browser_imp::hide() 
