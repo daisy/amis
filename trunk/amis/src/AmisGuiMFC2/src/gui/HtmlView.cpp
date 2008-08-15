@@ -170,7 +170,7 @@ void CAmisHtmlView::OnDocumentComplete(LPCTSTR lpszURL)
 {
 	CString msg;
 	msg.Format(_T("^^^^^^^^^^ HTML VIEW OnDocumentComplete %s\n"), lpszURL);
-	TRACE(msg);
+	TRACE(_T("%s"), msg);
 	CHtmlView::OnDocumentComplete(lpszURL);
 	CString url = lpszURL;
 	if (url.Compare(_T("about:blank")) != 0) TextRenderBrain::Instance()->webDocumentComplete();
@@ -780,7 +780,7 @@ void html_browser_imp::goto_url(std::string urlstr, ambulant::net::datasource_fa
 #endif // HTML_LOAD_MANUALLY
 	CString msg;
 	msg.Format(_T("^^^^^^^^^^ go to url %s\n"), A2T(urlstr.c_str()));
-	TRACE(msg);
+	TRACE(_T("%s"), msg);
 	std::string *strcopy = new std::string(urlstr);
 	MainWndParts::Instance()->mpHtmlView->PostMessage(WM_MY_HIGHLIGHTURITARGET, 0, (LPARAM)strcopy);
 	Sleep(1000);

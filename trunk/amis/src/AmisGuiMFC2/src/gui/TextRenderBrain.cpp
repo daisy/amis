@@ -99,7 +99,7 @@ void TextRenderBrain::gotoUriTarget(std::string urlstr)
 	if (is_same_doc && text_elm_id == mTextElmId) 
 	{
 		msg.Format(_T("^^^^^^^^^^ gotoUriTarget(%s): same document, same element\n"), cstr_url);
-		TRACE(msg);
+		TRACE(_T("%s"), msg);
 		return;
 	}
 	
@@ -107,7 +107,7 @@ void TextRenderBrain::gotoUriTarget(std::string urlstr)
 	if (!is_same_doc)
 	{	
 		msg.Format(_T("^^^^^^^^^^ gotoUriTarget(%s): Loading HTML document\n"), cstr_url);
-		TRACE(msg);
+		TRACE(_T("%s"), msg);
 		//save the current ID
 		mTextElmId = text_elm_id;
 
@@ -131,14 +131,14 @@ void TextRenderBrain::gotoUriTarget(std::string urlstr)
 		if (mbWaitForDocumentLoad == true)
 		{
 			msg.Format(_T("^^^^^^^^^^ gotoUriTarget(%s): still waiting for the document to load\n"), cstr_url);
-			TRACE(msg);
+			TRACE(_T("%s"), msg);
 			//just update the ID and continue to wait
 			this->mTextElmId = text_elm_id;
 		}
 		else
 		{
 			msg.Format(_T("^^^^^^^^^^ gotoUriTarget(%s): document already loaded\n"), cstr_url);
-			TRACE(msg);
+			TRACE(_T("%s"), msg);
 			//if we are already at this element, don't highlight it
 			//sometimes multiple events happen for a single text element
 			//like:
@@ -247,17 +247,17 @@ void TextRenderBrain::showElementAtId(string elmId)
 	else
 	{
 		msg.Format(_T("^^^^^^^^^^ showElementAtId(%s): No previous element.\n"), cstr_elm_id);
-		TRACE(msg);
+		TRACE(_T("%s"), msg);
 	}
 	if (prev_text_elm_id == mTextElmId)
 	{
 		msg.Format(_T("^^^^^^^^^^ showElementAtId(%s): Warning: we should have already highlighted this element.\n"), cstr_elm_id);
-		TRACE(msg);
+		TRACE(_T("%s"), msg);
 	}
 	else
 	{
 		msg.Format(_T("^^^^^^^^^^ showElementAtId(%s): This is a new element that I have never seen before in my life.\n"), cstr_elm_id);
-		TRACE(msg);
+		TRACE(_T("%s"), msg);
 	}
 	
 	if (elmId.size() == 0) return; 
