@@ -20,6 +20,7 @@ License along with this library; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 #include "stdafx.h"
+#include "afxmt.h"
 
 #include "Preferences.h"
 #include "gui/TextRenderBrain.h"
@@ -80,27 +81,12 @@ void TextRenderBrain::gotoUriTarget(amis::TextNode* pText)
 void TextRenderBrain::gotoUriTarget(std::string urlstr)
  {
 	USES_CONVERSION;
+	CString cstr_url = A2T(urlstr.c_str());
+	CString msg;
 	
-	CString msg1;
-	msg1.Format(_T("^^^^^^^^^^ gotoUriTarget %s\n"), A2T(urlstr.c_str()));
-	TRACE(msg1);
-
 	ambulant::net::url url = ambulant::net::url::from_url(urlstr);
 	string text_elm_id = url.get_ref();
 	
-	/*
-	//if we know not to highlight anything until a certain point...
-	if (amis::dtb::DtbWithHooks::Instance()->getIsWaitingForLastmarkNode() &&
-		mTextSrcToWaitFor.is_empty_path() == false)
-	{
-		//TODO: for good measure, make sure it's the same text document too
-		//remember that one url might have the full path and the other only the filename.
-		if (text_elm_id == mTextSrcToWaitFor.get_ref())
-			amis::dtb::DtbWithHooks::Instance()->setIsWaitingForLastmarkNode(false);
-		else
-			return;
-	}
-	*/
 	//make sure our document still exists; otherwise force a reload by setting mCurrentUrl to ""
 	if (MainWndParts::Instance()->mpHtmlView->GetHtmlDocument() == NULL) 
 	{
@@ -110,49 +96,63 @@ void TextRenderBrain::gotoUriTarget(std::string urlstr)
 
 	bool is_same_doc = url.same_document(mCurrentUrl);
 	// If it's identical ignore it (the previous call may still be waiting for the webDocumentComplete callback)
-
-
 	if (is_same_doc && text_elm_id == mTextElmId) 
 	{
-		TRACE(_T("^^^^^^^^^^ same document, same element\n"));
+		msg.Format(_T("^^^^^^^^^^ gotoUriTarget(%s): same document, same element\n"), cstr_url);
+		TRACE(msg);
 		return;
 	}
 	
 	// If it's a different document: load it.
 	if (!is_same_doc)
 	{	
-		CString msg;
-		msg.Format(_T("^^^^^^^^^^ Loading HTML document %s\n"), A2T(url.get_url().c_str()));
+		msg.Format(_T("^^^^^^^^^^ gotoUriTarget(%s): Loading HTML document\n"), cstr_url);
 		TRACE(msg);
 		//save the current ID
 		mTextElmId = text_elm_id;
 
-		CString load_url(url.get_url().c_str());
+		string temp_url = url.get_url().c_str();
+		temp_url = amis::util::FilePathTools::clearTarget(temp_url);
+		CString load_url(temp_url.c_str());
 		mCurrentUrl = url.get_document();
 
 		if (mbWaitForDocumentLoad) TRACE(_T("Warning: already waiting for a document to load\n"));
 
 		mbWaitForDocumentLoad = true;
 		MainWndParts::Instance()->mpHtmlView->Navigate2(load_url, NULL, NULL);
-		
 		//now wait for webDocumentComplete
 	}
 	else
 	{	// If it's not a different document: scroll and highlight only.
-
-		//if we are already at this element, don't highlight it
-		//sometimes multiple events happen for a single text element
-		//like:
-		//<par>
-		//<text id ="abc"/>
-		//<seq>
-		//	<audio src="clip1.wav"/>
-		//	<audio src="clip2.wav"/>
-		//</seq></par>
-		if (text_elm_id == mTextElmId) return;
-		//save the current ID
-		mTextElmId = text_elm_id;
-		showElementAtId(mTextElmId);
+		//however, we could still be waiting for the document to load
+		//this is a weird case but it does happen -- the renderer receives two requests for different
+		//nodes in the same document.  it tries to load the second while still waiting for the documentcomplete
+		//event from the first.
+		if (mbWaitForDocumentLoad == true)
+		{
+			msg.Format(_T("^^^^^^^^^^ gotoUriTarget(%s): still waiting for the document to load\n"), cstr_url);
+			TRACE(msg);
+			//just update the ID and continue to wait
+			this->mTextElmId = text_elm_id;
+		}
+		else
+		{
+			msg.Format(_T("^^^^^^^^^^ gotoUriTarget(%s): document already loaded\n"), cstr_url);
+			TRACE(msg);
+			//if we are already at this element, don't highlight it
+			//sometimes multiple events happen for a single text element
+			//like:
+			//<par>
+			//<text id ="abc"/>
+			//<seq>
+			//	<audio src="clip1.wav"/>
+			//	<audio src="clip2.wav"/>
+			//</seq></par>
+			if (text_elm_id == mTextElmId) return;
+			//save the current ID
+			mTextElmId = text_elm_id;
+			showElementAtId(mTextElmId);
+		}
 	}
 }
 
@@ -225,7 +225,8 @@ void TextRenderBrain::saveElementText(IHTMLElement* pElm)
 void TextRenderBrain::showElementAtId(string elmId)
 {
 	USES_CONVERSION;
-
+	CString cstr_elm_id = A2T(elmId.c_str());
+	CString msg;
 	//get the previous (currently highlighted) text element ID
 	string prev_text_elm_id = "";
 	if (mpPreviousElm)
@@ -245,20 +246,20 @@ void TextRenderBrain::showElementAtId(string elmId)
 	}
 	else
 	{
-		TRACE(_T("^^^^^^^^^^ No previous element\n"));
+		msg.Format(_T("^^^^^^^^^^ showElementAtId(%s): No previous element.\n"), cstr_elm_id);
+		TRACE(msg);
 	}
 	if (prev_text_elm_id == mTextElmId)
 	{
-		TRACE(_T("^^^^^^^^^^ SAME ELEMENT\n"));
+		msg.Format(_T("^^^^^^^^^^ showElementAtId(%s): Warning: we should have already highlighted this element.\n"), cstr_elm_id);
+		TRACE(msg);
 	}
 	else
 	{
-		TRACE(_T("^^^^^^^^^^ NEW ELEMENT\n"));
+		msg.Format(_T("^^^^^^^^^^ showElementAtId(%s): This is a new element that I have never seen before in my life.\n"), cstr_elm_id);
+		TRACE(msg);
 	}
-	CString msg;
-	msg.Format(_T("^^^^^^^^^^ ELEMENT HIGHLIGHT %s\n"), A2T(elmId.c_str()));
-	TRACE(msg);
-
+	
 	if (elmId.size() == 0) return; 
 	IHTMLElement* p_elm = NULL;
 	p_elm = GetElementFromId(elmId, 0);
@@ -283,7 +284,7 @@ void TextRenderBrain::showElementAtId(string elmId)
 		p_elm->scrollIntoView(v_bool);
 	}
 	mpPreviousElm = p_elm;
-	TRACE(_T("^^^^^^^^^^ Saved previous element"));
+	
 }
 //reset the highlight from the previously highlighted element
 void TextRenderBrain::unHighlightPreviousElement()
@@ -686,9 +687,3 @@ bool TextRenderBrain::isElementInView(IHTMLElement* pElm)
 	return true;
 }
 
-//if we need to prevent anything from being highlighted until we reach a particular 
-//text element, then use this function
-void TextRenderBrain::setTextSrcToWaitFor(ambulant::net::url src)
-{
-	mTextSrcToWaitFor = src;
-}

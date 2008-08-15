@@ -873,7 +873,6 @@ void MmView::document_started()
 	TRACE(_T("MmView::document_started()\n"));
 	CAmisApp* pApp = (CAmisApp *) AfxGetApp();
 	pApp->setPauseState(false);
-	mbRememberParallelTextSrc = false;
 	amis::dtb::DtbWithHooks::Instance()->getFileSet()->setSmilFile(&player->get_url());
 }
 
@@ -922,26 +921,6 @@ void MmView::node_started(const ambulant::lib::node* n)
 		A2T(n->get_attribute("src")));
 	TRACE(msg);
 	
-	
-	//part of a workaround to stop highlighting of text nodes
-	//this highlighting happens sometimes to nodes that should be skipped
-	//the node_started/node_stopped events are over before the highlighting commands get sent
-	//i don't know where they come from..
-	//it only happens when we try to load the lastmark of a document (url#frag; ambulant not started playing yet)
-	/*if (amis::dtb::DtbWithHooks::Instance()->getIsWaitingForLastmarkNode() == true)
-	{
-		if (id != NULL && amis::dtb::DtbWithHooks::Instance()->getIdOfLastmarkNode().compare(id) == 0)
-			mbRememberParallelTextSrc = true;
-	}
-	//save the text src, we might need it
-	if (tagname == "text")
-	{
-		string src = n->get_attribute("src");
-		mRecentTextSrc = ambulant::net::url::from_url(src);
-	}
-	//end workaround
-	*/
-	
 	if (tagname == "audio")
 		m_recent_audio_node = n;
 
@@ -988,13 +967,6 @@ void MmView::node_stopped(const ambulant::lib::node *n)
 	{
 		player->pause();
 	}
-	//if we needed to know the text src and we have one
-	if (this->mbRememberParallelTextSrc && !mRecentTextSrc.is_empty_path())
-	{
-		amis::gui::TextRenderBrain::Instance()->setTextSrcToWaitFor(mRecentTextSrc);
-		mbRememberParallelTextSrc = false;
-	}
-
 }
 
 void MmView::node_focussed(const ambulant::lib::node *n)
