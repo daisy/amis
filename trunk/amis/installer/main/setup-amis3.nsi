@@ -2,7 +2,7 @@
 
 ; HM NIS Edit Wizard helper defines
 !define PRODUCT_NAME "AMIS"
-!define PRODUCT_VERSION "3.0 Beta 3"
+!define PRODUCT_VERSION "3.0 Beta 4"
 !define PRODUCT_PUBLISHER "DAISY for All Project"
 !define PRODUCT_WEB_SITE "http://amisproject.org"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\AMIS.exe"
@@ -63,16 +63,12 @@ Page custom SapiPage
 ;this is the path to your windows system 32 directory
 !define WIN32_DIR "c:\windows\system32"
 
-;this is the application settings directory
-;TODO: look for this as a system setting
-!define SETTINGS_DIR "c:\documents and settings\all users\amis\settings\"
-
 ;**********end custom defines*******
 
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION} (${LANG_NAME})"
 ;this is the name of the installer that gets created.  
 ;for some reason, i vaguely remember that it shouldn't have spaces in the filename.
-OutFile "Setup-amis3-beta3-${DEFAULT_LANGPACK}.exe"
+OutFile "Setup-amis3-beta4-${DEFAULT_LANGPACK}.exe"
 InstallDir "$PROGRAMFILES\AMIS"
 InstallDirRegKey HKLM "${PRODUCT_DIR_REGKEY}" ""
 ShowInstDetails show
@@ -80,6 +76,14 @@ ShowUnInstDetails show
 
 Section "MainSection" SEC01
 
+	;the settings dir will live here
+	Var /GLOBAL SETTINGS_DIR
+
+	;figure out the user's application data directory
+	;look for the "all users" context
+	SetShellVarContext all
+	StrCpy $SETTINGS_DIR $APPDATA\AMIS\settings"
+	
   SetOutPath "$INSTDIR"
   SetOverwrite try
   File "${BIN_DIR}\AMIS.exe"
@@ -124,7 +128,6 @@ Section "MainSection" SEC01
   SetOutPath "$SETTINGS_DIR\img\basicToolbar"
   File "${BIN_DIR}\settings\img\basicToolbar\*.ico"
   
-  
   ;copy a few default recordings, which give the version and release date
   SetOutPath "$SETTINGS_DIR\lang"
   File "${BIN_DIR}\settings\lang\version.mp3"
@@ -141,13 +144,10 @@ Section "MainSection" SEC01
   SetOutPath $TEMP
   File "c:\devel\vcredist_x86.exe"
 	
-	  
-  ;TODO: ask the user before doing this; but for now, just do it anyway
   ;to support Thai encoding, add this key in HKLM
   ;Software\Classes\MIME\Database\Charset\TIS-620 and set AliasForCharset to windows-874
    WriteRegStr HKLM "Software\Classes\MIME\Database\Charset\TIS-620" "AliasForCharset" "Windows-874"
-
-   
+ 
 SectionEnd
 
 ;******************************
@@ -255,7 +255,30 @@ FunctionEnd
 ;***************************
 ;uninstall process
 Section Uninstall
-;todo: backup bookmarks
+
+	;figure out the user's application data directory
+	;look for the "all users" context
+	SetShellVarContext all 
+	StrCpy $SETTINGS_DIR $APPDATA\AMIS\settings"
+	MessageBox MB_OK "$SETTINGS_DIR"
+	
+	;TODO: none of this stuff gets deleted...
+	Delete "$SETTINGS_DIR\css\*.css"
+	Delete "$SETTINGS_DIR\css\font\*"
+	Delete "$SETTINGS_DIR\css\customStyles\*"
+	RMDir "$SETTINGS_DIR\css\font"
+	RMDir "$SETTINGS_DIR\css\customStyles"
+	RMDir "$SETTINGS_DIR\css"
+	
+	Delete "$SETTINGS_DIR\img\*"
+	Delete "$SETTINGS_DIR\img\basicToolbar\*"
+	Delete "$SETTINGS_DIR\img\defaultToolbar\*"
+	RMDir "$SETTINGS_DIR\img\defaultToolbar"
+	RMDir "$SETTINGS_DIR\img\basicToolbar"
+	RMDir "$SETTINGS_DIR\img"
+	
+	;We are leaving the bookmarks on purpose
+	
   Delete "$INSTDIR\*"
   RMDir "$INSTDIR"
   DeleteRegKey ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}"
@@ -267,15 +290,17 @@ SectionEnd
 
 ;uninstall the default langpack
 Section -un.CopyDefaultLangpack
-	Delete "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}\*"
-  Delete "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}\help\*"
-  Delete "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}\help\img\*"
-  Delete "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}\audio\*"
+	MessageBox MB_OK "$SETTINGS_DIR"
+	
+	Delete "$SETTINGS_DIR\lang\${DEFAULT_LANGPACK}\*"
+  Delete "$SETTINGS_DIR\lang\${DEFAULT_LANGPACK}\help\*"
+  Delete "$SETTINGS_DIR\lang\${DEFAULT_LANGPACK}\help\img\*"
+  Delete "$SETTINGS_DIR\lang\${DEFAULT_LANGPACK}\audio\*"
   
-  RMDir "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}\help\img"
-  RMDir "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}\help"
-  RMDir "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}\audio"
-  RMDir "$INSTDIR\settings\lang\${DEFAULT_LANGPACK}"
+  RMDir "$SETTINGS_DIR\lang\${DEFAULT_LANGPACK}\help\img"
+  RMDir "$SETTINGS_DIR\lang\${DEFAULT_LANGPACK}\help"
+  RMDir "$SETTINGS_DIR\lang\${DEFAULT_LANGPACK}\audio"
+  RMDir "$SETTINGS_DIR\lang\${DEFAULT_LANGPACK}"
 SectionEnd
 
 
@@ -292,5 +317,5 @@ Function RunMSVCRuntimeSetup
     MessageBox MB_ICONEXCLAMATION "There was an error encountered while attempting to install the Microsoft runtime files.  Please download from http://www.microsoft.com/downloads/details.aspx?FamilyID=200B2FD9-AE1A-4A14-984D-389C36F85647&displaylang=en and install manually."
     Goto End
   End:
-  ;TODO: remove the exe file
+  Delete "$MSVC_RUNTIME_INSTALLER"
 FunctionEnd
