@@ -56,7 +56,7 @@ bool amis::io::XercesSaxParseBase::parseFile(const ambulant::net::url* filepath)
 {
 	SAX2XMLReader* parser;
 	mFilepath = *filepath;
-	amis::util::Log::Instance()->writeMessage("Parsing file: ", filepath, "XercesSaxParseBase::parseFile", "AmisCore");
+	amis::util::Log::Instance()->writeMessage("Parsing file: ", filepath, "XercesSaxParseBase::parseFile");
 	//try-catch block for Xerces platform utilities
 	try
 	{
@@ -71,7 +71,7 @@ bool amis::io::XercesSaxParseBase::parseFile(const ambulant::net::url* filepath)
 		str.assign(msg);	
 		mError.setMessage(str);
 		XMLString::release(&msg);
-		amis::util::Log::Instance()->writeError(mError, "XercesSaxParseBase::parseFile", "AmisCore");
+		amis::util::Log::Instance()->writeError(mError, "XercesSaxParseBase::parseFile");
 		return false;
 	}
 		
@@ -92,7 +92,7 @@ bool amis::io::XercesSaxParseBase::parseFile(const ambulant::net::url* filepath)
 		delete p_input_source;
 		delete parser;
 		XMLPlatformUtils::Terminate();
-		amis::util::Log::Instance()->writeError(mError, "XercesSaxParseBase::parseFile", "AmisCore");
+		amis::util::Log::Instance()->writeError(mError, "XercesSaxParseBase::parseFile");
 		return false;
 	}
 
@@ -117,7 +117,7 @@ bool amis::io::XercesSaxParseBase::parseFile(const ambulant::net::url* filepath)
 		delete p_input_source;
 		delete parser;
 		XMLPlatformUtils::Terminate();
-		amis::util::Log::Instance()->writeError(mError, "XercesSaxParseBase::parseFile", "AmisCore");
+		amis::util::Log::Instance()->writeError(mError, "XercesSaxParseBase::parseFile");
 		return false;
 	}
 	
@@ -131,11 +131,11 @@ bool amis::io::XercesSaxParseBase::parseFile(const ambulant::net::url* filepath)
 	catch (...)//const XMLException& toCatch)
 	{
 		amis::util::Log::Instance()->writeWarning("Exception while terminating XMLPlatformUtils", 
-			"XercesSaxParseBase::parseFile", "AmisCore");
+			"XercesSaxParseBase::parseFile");
 	}
 
 	if (mError.getCode() != amis::OK) return false;
-	amis::util::Log::Instance()->writeMessage("Done parsing.", "XercesSaxParseBase::parseFile", "AmisCore");
+	amis::util::Log::Instance()->writeMessage("Done parsing.", "XercesSaxParseBase::parseFile");
 	return true;
 
 }
@@ -151,7 +151,7 @@ void amis::io::XercesSaxParseBase::warning(const SAXParseException& e)
 	char ch_line[10];
 	itoa(line, ch_line, 10);
 	string msg = "Parse warning: \n\t" + mFilepath.get_url() + "\n\tline: " + ch_line +  "\n\t" + xerces_msg;
-	amis::util::Log::Instance()->writeWarning(msg, "XercesSaxParseBase::error", "AmisCore");
+	amis::util::Log::Instance()->writeWarning(msg, "XercesSaxParseBase::error");
 	XMLString::release(&xerces_msg);
 }
 
@@ -162,7 +162,7 @@ void amis::io::XercesSaxParseBase::error(const SAXParseException& e)
 	char ch_line[10];
 	itoa(line, ch_line, 10);
 	string msg = "Parse error: \n\t" + mFilepath.get_url() + "\n\tline: " + ch_line +  "\n\t" + xerces_msg;
-	amis::util::Log::Instance()->writeError(msg, "XercesSaxParseBase::error", "AmisCore");
+	amis::util::Log::Instance()->writeError(msg, "XercesSaxParseBase::error");
 	XMLString::release(&xerces_msg);
 }
 
@@ -173,7 +173,7 @@ void amis::io::XercesSaxParseBase::fatalError(const SAXParseException& e)
 	char ch_line[10];
 	itoa(line, ch_line, 10);
 	string msg = "Parse fatal error: \n\t" + mFilepath.get_url() + "\n\tline: " + ch_line +  "\n\t" + xerces_msg;
-	amis::util::Log::Instance()->writeError(msg, "XercesSaxParseBase::error", "AmisCore");
+	amis::util::Log::Instance()->writeError(msg, "XercesSaxParseBase::error");
 	mError.setCode(amis::PARSE_ERROR);
 	mError.setMessage(msg);
 	XMLString::release(&xerces_msg);

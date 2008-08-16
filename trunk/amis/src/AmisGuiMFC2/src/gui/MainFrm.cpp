@@ -177,8 +177,7 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	if (!mSidebar.Create(temp, this, CSize(0, 0),
 		TRUE /*bHasGripper*/, AFX_IDW_CONTROLBAR_FIRST + 32))
 	{
-		amis::util::Log::Instance()->writeError("Failed to create sidebar", "CMainFrame::OnCreate",
-			"AmisGuiMFC2");
+		amis::util::Log::Instance()->writeError("Failed to create sidebar", "CMainFrame::OnCreate");
 		return -1;
 	}
 	mSidebar.SetBarStyle(mSidebar.GetBarStyle()	| CBRS_TOOLTIPS |	CBRS_FLYBY | CBRS_SIZE_DYNAMIC);
@@ -188,8 +187,7 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	if (!mStatusBar.Create(this) 
 		|| !mStatusBar.SetIndicators(indicators, sizeof(indicators)/sizeof(UINT)))
 	{
-		amis::util::Log::Instance()->writeError("Failed to create status bar", "CMainFrame::OnCreate",
-			"AmisGuiMFC2");
+		amis::util::Log::Instance()->writeError("Failed to create status bar", "CMainFrame::OnCreate");
 		return -1;
 	}
 
@@ -201,7 +199,7 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	amis::gui::toolbar::ToolbarSettings* p_settings = NULL;
 	DWORD align;
 	//create the default toolbar
-	amis::util::Log::Instance()->writeMessage("Loading default toolbar", "CMainFrame::OnCreate", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Loading default toolbar", "CMainFrame::OnCreate");
 	toolbar_file= ambulant::net::url::from_filename("defaultToolbar.xml");
 	toolbar_file = toolbar_file.join_to_base(ambulant::net::url::from_filename(theApp.getAppSettingsPath()));
 	toolbar_reader.readFromFile(toolbar_file.get_file());
@@ -210,8 +208,7 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	if (!mDefaultToolbar.Create(WS_CHILD | WS_VISIBLE |	TBSTYLE_FLAT | TBSTYLE_TOOLTIPS, 
 		rect, this,	mSidebar.GetDlgCtrlID()	+ 1))
 	{
-		amis::util::Log::Instance()->writeError("Failed to create default toolbar", "CMainFrame::OnCreate", 
-			"AmisGuiMFC2");
+		amis::util::Log::Instance()->writeError("Failed to create default toolbar", "CMainFrame::OnCreate");
 		return -1;
 	}
 	mDefaultToolbar.EnableToolTips(TRUE);
@@ -223,15 +220,14 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	if (mDefaultRebar.Create(this, 0, WS_CHILD | WS_VISIBLE	| WS_CLIPSIBLINGS |
 		WS_CLIPCHILDREN	| align, AFX_IDW_REBAR) == FALSE)
 	{
-		amis::util::Log::Instance()->writeError("Failed to create default rebar", "CMainFrame::OnCreate", 
-			"AmisGuiMFC2");
+		amis::util::Log::Instance()->writeError("Failed to create default rebar", "CMainFrame::OnCreate");
 		return -1;
 	}
 
 	mDefaultRebar.AddBar(&mDefaultToolbar);	
 
 	//create the basic toolbar
-	amis::util::Log::Instance()->writeMessage("Loading basic toolbar", "CMainFrame::OnCreate", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Loading basic toolbar", "CMainFrame::OnCreate");
 	toolbar_file = ambulant::net::url::from_filename("basicToolbar.xml");
 	toolbar_file = toolbar_file.join_to_base(ambulant::net::url::from_filename(theApp.getAppSettingsPath()));
 	toolbar_reader.readFromFile(toolbar_file.get_file());
@@ -240,8 +236,7 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	if (!mBasicToolbar.Create(WS_CHILD | WS_VISIBLE | TBSTYLE_FLAT | TBSTYLE_TOOLTIPS, 
 		rect, this,	mSidebar.GetDlgCtrlID()	+ 2))
 	{
-		amis::util::Log::Instance()->writeError("Failed to create basic toolbar", "CMainFrame::OnCreate", 
-			"AmisGuiMFC2");
+		amis::util::Log::Instance()->writeError("Failed to create basic toolbar", "CMainFrame::OnCreate");
 		return -1;
 	}
 	mBasicToolbar.EnableToolTips(TRUE);
@@ -253,8 +248,7 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	if (mBasicRebar.Create(this, RBS_BANDBORDERS, WS_CHILD | WS_VISIBLE	| WS_CLIPSIBLINGS |
 		WS_CLIPCHILDREN	| align, AFX_IDW_REBAR) == FALSE)
 	{
-		amis::util::Log::Instance()->writeError("Failed to create basic rebar", "CMainFrame::OnCreate", 
-			"AmisGuiMFC2");
+		amis::util::Log::Instance()->writeError("Failed to create basic rebar", "CMainFrame::OnCreate");
 		return -1;
 	}
 	mBasicRebar.AddBar(&mBasicToolbar);
@@ -317,7 +311,7 @@ void CMainFrame::OnMenuSelect( UINT	nItemID, UINT nFlags, HMENU	hSysMenu )
 {	
 	amis::util::Log* p_log = amis::util::Log::Instance();
   
-	p_log->writeMessage("CMainFrame::OnMenuSelect()");
+	p_log->writeTrace("CMainFrame::OnMenuSelect()");
 	TRACE("\nCMainFrame::OnMenuSelect()\n");
 	CMDIFrameWnd::OnMenuSelect(nItemID, nFlags, hSysMenu);
 
@@ -331,7 +325,7 @@ void CMainFrame::OnInitMenuPopup(CMenu*	pPopupMenu,	UINT nIndex, BOOL bSysMenu)
 {
 	amis::util::Log* p_log = amis::util::Log::Instance();
 
-	p_log->writeMessage("CMainFrame::OnInitMenuPopup()");
+	p_log->writeTrace("CMainFrame::OnInitMenuPopup()");
 	TRACE("\nCMainFrame::OnInitMenuPopup()\n");
 
 	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
@@ -345,7 +339,7 @@ void CMainFrame::OnInitMenuPopup(CMenu*	pPopupMenu,	UINT nIndex, BOOL bSysMenu)
 void CMainFrame::OnInitMenu(CMenu* pMenu)
 {
 	amis::util::Log* p_log = amis::util::Log::Instance();
-	p_log->writeMessage("CMainFrame::OnInitMenu()");
+	p_log->writeTrace("CMainFrame::OnInitMenu()");
 	TRACE("\nCMainFrame::OnInitMenu()\n");
 	CMDIFrameWnd::OnInitMenu(pMenu);
 }
@@ -473,7 +467,7 @@ void CMainFrame::OnSysCommand(UINT nID, LPARAM lParam)
 		&& MainWndParts::Instance()->mpMmView->isPlaying() == true
 		&& (nID & 0xFFF0) == SC_SCREENSAVE)
 	{
-		amis::util::Log::Instance()->writeMessage("Preventing screensaver from starting", "CMainFrame", "AmisGuiMFC2");
+		amis::util::Log::Instance()->writeMessage("Preventing screensaver from starting", "CMainFrame");
 		return;
 	}
 	CMDIFrameWnd::OnSysCommand(nID, lParam);

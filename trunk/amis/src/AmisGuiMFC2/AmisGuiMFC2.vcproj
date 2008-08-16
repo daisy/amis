@@ -134,7 +134,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				AdditionalIncludeDirectories="include;../../../../../ambulant/include/;&quot;../../../../../ambulant-private/pdtbplugin&quot;;&quot;../../../../../ambulant-private/pdtbplugin/PdtbIePlugin&quot;;../AmisCore/include;&quot;../../../../../xerces-c-src/src&quot;;&quot;$(VSInstallDir)\..\Microsoft Speech SDK 5.1\Include&quot;"
-				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;AMIS_COMPILER_MSVC;AMIS_PLATFORM_WINDOWS;WITH_EXTERNAL_SMIL_PLAYER; WITH_PROTECTED_BOOK_SUPPORT"
+				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;AMIS_COMPILER_MSVC;AMIS_PLATFORM_WINDOWS;WITH_EXTERNAL_SMIL_PLAYER; WITH_PROTECTED_BOOK_SUPPORT;WITH_SMIL30"
 				MinimalRebuild="false"
 				RuntimeLibrary="2"
 				TreatWChar_tAsBuiltInType="false"

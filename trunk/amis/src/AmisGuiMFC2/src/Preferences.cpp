@@ -116,7 +116,7 @@ void Preferences::scanDirectoriesForCssFiles()
 	{
 		TRACE(_T("No fontsize css files found\n"));
 		amis::util::Log::Instance()->writeWarning("No fontsize css files found in directory",
-			&mFontsizeCssDir, "Preferences::scanDirectoriesForCssFiles", "AmisGuiMFC2");
+			&mFontsizeCssDir, "Preferences::scanDirectoriesForCssFiles");
 	}
 	
 	searcher.clearSearchResults();
@@ -155,7 +155,7 @@ void Preferences::scanDirectoriesForLanguagePackFiles()
 					TRACE(_T("No data available for language pack\n"));
 					string log_msg = "No data available for language pack " + list[i].get_url();
 					amis::util::Log::Instance()->writeError("No data available for language pack", 
-						&list[i], "Preferences::scanDirectoriesForLanguagePackFiles", "AmisGuiMFC2");
+						&list[i], "Preferences::scanDirectoriesForLanguagePackFiles");
 				}
 				else
 				{
@@ -165,7 +165,7 @@ void Preferences::scanDirectoriesForLanguagePackFiles()
 						mInstalledLanguages[id] = p_data;
 						string log_msg = "Added language pack for " + id;
 						amis::util::Log::Instance()->writeMessage(log_msg, 
-							"Preferences::scanDirectoriesForLanguagePackFile", "AmisGuiMFC2");
+							"Preferences::scanDirectoriesForLanguagePackFile");
 					}
 				}
 			}
@@ -173,7 +173,7 @@ void Preferences::scanDirectoriesForLanguagePackFiles()
 			{
 				TRACE(_T("Could not read language pack file\n"));
 				amis::util::Log::Instance()->writeError("Could not read language pack file: ", &list[i], 
-					"Preferences::scanDirectoriesForLanguagePackFiles", "AmisGuiMFC2");
+					"Preferences::scanDirectoriesForLanguagePackFiles");
 			}
 		}
 	}
@@ -181,7 +181,7 @@ void Preferences::scanDirectoriesForLanguagePackFiles()
 	{
 		TRACE(_T("No language pack files found\n"));
 		amis::util::Log::Instance()->writeError("No language pack files found", 
-			"Preferences::scanDirectoriesForLanguagePackFiles", "AmisGuiMFC2");
+			"Preferences::scanDirectoriesForLanguagePackFiles");
 	}
 }
 
@@ -415,32 +415,32 @@ std::string Preferences::getSidebarFontName()
 void Preferences::logAllPreferences()
 {
 	amis::util::Log* p_log = amis::util::Log::Instance();
-	p_log->writeMessage("__Preferences (all)__");
+	p_log->writeMessage("__Preferences (all)__", "Preferences::logAllPreferences");
 	
-	p_log->writeMessage("\tPreferences XML File: ", getSourceUrl());
+	p_log->writeMessage("\tPreferences XML File: ", getSourceUrl(), "Preferences::logAllPreferences");
 	
 	string log_msg = "\tLanguage pack = " + getUiLangId();
-	p_log->writeMessage(log_msg);
+	p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
 
 	log_msg = "\tStartup view = ";
 	if (getStartInBasicView()) log_msg += "Basic";
 	else log_msg += "Default";
-	p_log->writeMessage(log_msg);
+	p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
 
 	log_msg = "\tWill load last book on startup? ";
 	if (getLoadLastBook()) log_msg += "Yes";
 	else log_msg += "No";
-	p_log->writeMessage(log_msg);
+	p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
 	
 	log_msg = "\tWill pause when AMIS loses application focus? ";
 	if (getPauseOnLostFocus()) log_msg += "Yes";
 	else log_msg += "No";
-	p_log->writeMessage(log_msg);
+	p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
 
 	log_msg = "\tIs self-voicing? ";
 	if (getIsSelfVoicing()) log_msg += "Yes";
 	else log_msg += "No";
-	p_log->writeMessage(log_msg);
+	p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
 	
 	int indexTTSVoice = getTTSVoiceIndex();
 	log_msg = "\tTTS voice index ";
@@ -450,99 +450,106 @@ void Preferences::logAllPreferences()
 	std::string strVoice = amis::tts::TTSPlayer::Instance()->ChangeVoice(false);
 	log_msg += " // ";
 	log_msg += strVoice;
-	p_log->writeMessage(log_msg);
+	p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
 	
 
 	log_msg = "\tUsing TTS or pre-recorded audio? ";
 	if (getUseTTSNotAudio()) log_msg += "TTS";
 	else log_msg += "Audio";
-	p_log->writeMessage(log_msg);
+	p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
 
 	log_msg = "\tDid AMIS exit cleanly last time? ";
 	if (getWasExitClean()) log_msg += "Yes";
 	else log_msg += "No";
-	p_log->writeMessage(log_msg);
+	p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
 
 	log_msg = "\tHighlight text? ";
 	if (getHighlightText()) log_msg += "Yes";
 	else log_msg += "No";
-	p_log->writeMessage(log_msg);
+	p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
 
 	log_msg = "\tDisable screensaver? ";
 	if (getDisableScreensaver()) log_msg += "Yes";
 	else log_msg += "No";
-	p_log->writeMessage(log_msg);
+	p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
 
 	log_msg = "\tFirst time running AMIS? ";
 	if (getIsFirstTime()) log_msg += "Yes";
 	else log_msg += "No";
-	p_log->writeMessage(log_msg);
+	p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
 
-	p_log->writeMessage("\tBookmark dir = ", &mUserBmkDir);
-	p_log->writeMessage("\tLangpacks dir = ", &mLangpacksDir);
-	p_log->writeMessage("\tFontsize css dir = ", &mFontsizeCssDir);
-	p_log->writeMessage("\tContrast css dir = ", &mCustomCssDir);
-	p_log->writeMessage("\tAmis css file = ", &mAmisCssFile);
-	p_log->writeMessage("\tZed2005 css file = ", &mZed2005CssFile);
+	p_log->writeMessage("\tBookmark dir = ", &mUserBmkDir, "Preferences::logAllPreferences");
+	p_log->writeMessage("\tLangpacks dir = ", &mLangpacksDir, "Preferences::logAllPreferences");
+	p_log->writeMessage("\tFontsize css dir = ", &mFontsizeCssDir, "Preferences::logAllPreferences");
+	p_log->writeMessage("\tContrast css dir = ", &mCustomCssDir, "Preferences::logAllPreferences");
+	p_log->writeMessage("\tAmis css file = ", &mAmisCssFile, "Preferences::logAllPreferences");
+	p_log->writeMessage("\tZed2005 css file = ", &mZed2005CssFile, "Preferences::logAllPreferences");
 
-	p_log->writeMessage("\tInstalled language packs:");
+	p_log->writeMessage("\tInstalled language packs:", "Preferences::logAllPreferences");
 	amis::StringModuleMap::iterator it;
 	it = mInstalledLanguages.begin();
 	while (it != mInstalledLanguages.end())
 	{
 		string lang_id = it->first;
 		log_msg = "\t\t" + lang_id;
-		p_log->writeMessage(log_msg);
+		p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
 		it++;
 	}
 
-	p_log->writeMessage("\tFontsize CSS files:");
+	p_log->writeMessage("\tFontsize CSS files:", "Preferences::logAllPreferences");
 	for (int i = 0; i<mFontsizeCssFiles.size(); i++)
-		p_log->writeMessage("\t\t", &mFontsizeCssFiles[i]);
+		p_log->writeMessage("\t\t", &mFontsizeCssFiles[i], "Preferences::logAllPreferences");
 
 
-	p_log->writeMessage("\tCustom CSS files:");
+	p_log->writeMessage("\tCustom CSS files:", "Preferences::logAllPreferences");
 	for (int i = 0; i<mCustomCssFiles.size(); i++)
-		p_log->writeMessage("\t\t", &mCustomCssFiles[i]);
+		p_log->writeMessage("\t\t", &mCustomCssFiles[i], "Preferences::logAllPreferences");
+
+	log_msg = "\tLogging level: ";
+	if (mLogLevel == amis::util::LOW_LOGGING) log_msg += "Low";
+	else if (mLogLevel == amis::util::MEDIUM_LOGGING) log_msg += "Medium";
+	else log_msg += "Full";
+	p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
+
 }
 
 void Preferences::logUserControllablePreferences()
 {
 	amis::util::Log* p_log = amis::util::Log::Instance();
-	p_log->writeMessage("__Preferences (user-controllable only)__");
+	p_log->writeMessage("__Preferences (user-controllable only)__", "Preferences::logUserControllablePreferences");
 
 	string log_msg = "\tLanguage pack = " + getUiLangId();
-	p_log->writeMessage(log_msg);
+	p_log->writeMessage(log_msg, "Preferences::logUserControllablePreferences");
 
 	log_msg = "\tStartup view = ";
 	if (getStartInBasicView()) log_msg += "Basic";
 	else log_msg += "Default";
-	p_log->writeMessage(log_msg);
+	p_log->writeMessage(log_msg, "Preferences::logUserControllablePreferences");
 
 	log_msg = "\tWill load last book on startup? ";
 	if (getLoadLastBook()) log_msg += "Yes";
 	else log_msg += "No";
-	p_log->writeMessage(log_msg);
+	p_log->writeMessage(log_msg, "Preferences::logUserControllablePreferences");
 	
 	log_msg = "\tWill pause when AMIS loses application focus? ";
 	if (getPauseOnLostFocus()) log_msg += "Yes";
 	else log_msg += "No";
-	p_log->writeMessage(log_msg);
+	p_log->writeMessage(log_msg, "Preferences::logUserControllablePreferences");
 
 	log_msg = "\tIs self-voicing? ";
 	if (getIsSelfVoicing()) log_msg += "Yes";
 	else log_msg += "No";
-	p_log->writeMessage(log_msg);
+	p_log->writeMessage(log_msg, "Preferences::logUserControllablePreferences");
 
 	log_msg = "\tHighlight text? ";
 	if (getHighlightText()) log_msg += "Yes";
 	else log_msg += "No";
-	p_log->writeMessage(log_msg);
+	p_log->writeMessage(log_msg, "Preferences::logUserControllablePreferences");
 
 	log_msg = "\tDisable screensaver? ";
 	if (getDisableScreensaver()) log_msg += "Yes";
 	else log_msg += "No";
-	p_log->writeMessage(log_msg);
+	p_log->writeMessage(log_msg, "Preferences::logUserControllablePreferences");
 }
 void Preferences::resetColors()
 {

@@ -49,7 +49,7 @@ AmisSidebarLoader::~AmisSidebarLoader()
 
 void AmisSidebarLoader::loadNavigationData(amis::dtb::nav::NavModel* pNavModel, amis::gui::sidebar::CAmisSidebar* pSidebar)
 {
-	amis::util::Log::Instance()->writeMessage("Loading navigation data into the sidebar");
+	amis::util::Log::Instance()->writeMessage("Loading navigation data into the sidebar", "AmisSidebarLoader::loadNavigationData");
 	mpSidebar = pSidebar;
 	mpSidebar->clearAll();
 	
@@ -96,7 +96,7 @@ void AmisSidebarLoader::loadNavigationData(amis::dtb::nav::NavModel* pNavModel, 
 	//expand all sections
 	mpSidebar->expandAllSections();
 	mpSidebar->setFontName(Preferences::Instance()->getSidebarFontName());
-	amis::util::Log::Instance()->writeMessage("Data loaded into sidebar");
+	amis::util::Log::Instance()->writeMessage("Data loaded into sidebar", "AmisSidebarLoader::loadNavigationData");
 	mpSidebar->selectTab(0);
 }
 

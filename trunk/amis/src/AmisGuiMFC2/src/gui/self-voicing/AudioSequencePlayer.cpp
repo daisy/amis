@@ -52,11 +52,11 @@ static void ttsFinishedCallback()
 	AudioSequencePlayer::Instance()->checkEndSeq();
 	MainWndParts::Instance()->mpMainFrame->PostMessage(WM_COMMAND, (WPARAM)SELF_VOICING_PLAY_NEXT, (LPARAM)0);
 }
-bool AudioSequencePlayer::checkEndSeq() {
+bool AudioSequencePlayer::checkEndSeq() 
+{
 	if (m_currentAudioSequence != NULL && m_currentAudioSequence->GetCount() == 0)
-	{
 		SetEvent(m_hEventEnd);
-	}
+	
 	return mRepeatLoop;
 }
 //The message callback function ... signals end of the clip
@@ -71,11 +71,7 @@ bool AudioSequencePlayer::InstanceExists()
 }
 AudioSequencePlayer* AudioSequencePlayer::Instance()
 {
-
-	if (pinstance == 0)
-	{
-		pinstance = new AudioSequencePlayer;
-	}
+	if (pinstance == 0)	pinstance = new AudioSequencePlayer;
 	return pinstance;
 }
 AudioSequencePlayer::AudioSequencePlayer(void)
@@ -107,38 +103,34 @@ AudioSequencePlayer::AudioSequencePlayer(void)
 void AudioSequencePlayer::waitForSequenceEnd()
 {
 	amis::util::Log* p_log = amis::util::Log::Instance();
-	p_log->writeMessage("WAIT for SEQ end.");
+	p_log->writeTrace("Wait for seq end.", "AudioSequencePlayer::waitForSequenceEnd");
 	TRACE("\nWAIT for SEQ end.\n");
 	DWORD hr = WaitForSingleObject(m_hEventEnd, 3000);
-	switch (hr) {
-	case WAIT_FAILED:
+	switch (hr) 
+	{
+		case WAIT_FAILED:
 		{
 			int i = 0;
 			break;
 		}
-
-		case WAIT_ABANDONED
-			:
+		case WAIT_ABANDONED:
 		{
 			int i = 0;
 			break;
 		}
-
-		case WAIT_OBJECT_0
-			:
+		case WAIT_OBJECT_0:
 		{
 			int i = 0;
 			break;
 		}
-
-	case WAIT_TIMEOUT:
+		case WAIT_TIMEOUT:
 		{
 			int i = 0;
 			break;
 		}
 	}
 
-	p_log->writeMessage("WAIT for SEQ end DONE.");
+	p_log->writeTrace("Wait for seq end: DONE." "AudioSequencePlayer::waitForSequenceEnd");
 	TRACE("\nWAIT for SEQ end DONE.\n");
 }
 void AudioSequencePlayer::DestroyInstance()
@@ -173,47 +165,40 @@ AudioSequencePlayer::~AudioSequencePlayer(void)
 	_ASSERT(rc);
 
 	CloseHandle(m_hEventEnd);
-
 	DeleteCriticalSection(&m_csSequence);
 }
 
 void AudioSequencePlayer::RepeatLast()
 {
 	if (m_previousAudioSequence)
-	{
 		Play(m_previousAudioSequence);
-	}
 }
 
 DWORD __stdcall thread_WaitAndPlayBook(LPVOID lpParam)
 {
 	AudioSequencePlayer::Instance()->waitForSequenceEnd();
-
 	try
 	{
 		MainWndParts::Instance()->mpMainFrame->PostMessage(WM_COMMAND, ID_AMBULANT_PLAY);
 	}
 	catch (exception e)
 	{
-		int debug = 0;
+		//TODO: trace the exception?
 	}
 
 	return 0;
 }
 void AudioSequencePlayer::WaitForEndSeqAndRestartBook()
 {
-
+	USES_CONVERSION;
 	unsigned long lpdwThreadID;
 	HANDLE xeventHandler = CreateThread(NULL, 0, &thread_WaitAndPlayBook, 0, 0, &lpdwThreadID);
-	
 	TRACE("\nTHREAD ID (WaitForEndSeqAndRestartBook): %x\n", lpdwThreadID);
-
 	amis::util::Log* p_log = amis::util::Log::Instance();
-	p_log->writeMessage("THREAD ID (WaitForEndSeqAndRestartBook)");
-	char strID[10];
-	sprintf(strID, "%x", lpdwThreadID);
-	p_log->writeMessage(strID);
-
+	CString cstr_log_msg;
+	cstr_log_msg.Format(_T("Thread ID: %d"), lpdwThreadID);
+	string log_msg = T2A(cstr_log_msg);
+	p_log->writeTrace(log_msg, "AudioSequencePlayer::WaitForEndSeqAndRestartBook");
 }
 
 void AudioSequencePlayer::Stop(bool fromPlay)
@@ -221,21 +206,12 @@ void AudioSequencePlayer::Stop(bool fromPlay)
 	SetEvent(m_hEventEnd);
 	{
 #ifdef CCS_ACTIVE
-		if (!fromPlay)
-			EnterCriticalSection(&m_csSequence);
+		if (!fromPlay) EnterCriticalSection(&m_csSequence);
 #endif
-		
-
-		if (m_currentAudioSequence)
-		{
-			delete m_currentAudioSequence;
-		}
+		if (m_currentAudioSequence) delete m_currentAudioSequence;
 		m_currentAudioSequence = NULL;
 
-		if (m_nextAudioSequence)
-		{
-			delete m_nextAudioSequence;
-		}
+		if (m_nextAudioSequence) delete m_nextAudioSequence;
 		m_nextAudioSequence = NULL;
 
 		amis::util::Log* p_log = amis::util::Log::Instance();
@@ -243,25 +219,20 @@ void AudioSequencePlayer::Stop(bool fromPlay)
 		if (TTSPlayer::Instance()->IsSpeaking())
 		{	
 			bIgnoreTTSEnd = true;
-			
 			TTSPlayer::Instance()->Stop();
-
-			p_log->writeMessage("####### ++++ STOP TTS");
-			TRACE(L"\n####### ++++ STOP TTS\n");
+			p_log->writeTrace("Stop TTS", "AudioSequencePlayer::Stop");
+			TRACE(L"STOP TTS\n");
 		}
 
 		if (ambulantX::gui::dx::audio_playerX::Instance()->is_playing())
 		{
 			ambulantX::gui::dx::audio_playerX::Instance()->stop(false);
-			
-			p_log->writeMessage("####### ++++ STOP AUDIO");
-			TRACE(L"\n####### ++++ STOP AUDIO\n");
+			p_log->writeTrace("Stop Audio", "AudioSequencePlayer::Stop");
+			TRACE(L"STOP AUDIO\n");
 		}
 
-
 #ifdef CCS_ACTIVE
-		if (!fromPlay)
-			LeaveCriticalSection(&m_csSequence);
+		if (!fromPlay) LeaveCriticalSection(&m_csSequence);
 #endif
 	}
 }
@@ -269,44 +240,29 @@ void AudioSequencePlayer::Stop(bool fromPlay)
 void AudioSequencePlayer::playNext(bool fromEndEvent)
 {
 	USES_CONVERSION;
-
-	if (m_currentAudioSequence == NULL)
-	{
-		return;
-	}
+	if (m_currentAudioSequence == NULL) return;
 
 #ifdef CCS_ACTIVE
 	if (fromEndEvent) EnterCriticalSection(&m_csSequence);
 #endif
 
 	amis::util::Log* p_log = amis::util::Log::Instance();
-
-	p_log->writeMessage("*** PLAY NEXT");
-
-	TRACE(L"\n*** PLAY NEXT\n");
+	p_log->writeTrace("Play next", "AudioSequencePlayer::playNext");
+	TRACE(L"PLAY NEXT\n");
 
 	if (m_currentAudioSequence->GetCount() == 0)
 	{
 		delete m_currentAudioSequence;
 		m_currentAudioSequence = NULL;
 		
-		if (mRepeatLoop)
-		{
-			if (m_previousAudioSequence)
-			{
-				Play(m_previousAudioSequence, false, true, true);
-			}
-		}
-
+		if (mRepeatLoop && m_previousAudioSequence)
+			Play(m_previousAudioSequence, false, true, true);
 		return;
 	}
 
 	AudioSequenceComponent* comp = m_currentAudioSequence->RemoveTail();
-
-
 	if (comp->m_isAudioClip)
 	{
-
 #ifdef _DEBUG
 		if (fromEndEvent)
 		{
@@ -315,9 +271,8 @@ void AudioSequencePlayer::playNext(bool fromEndEvent)
 			_ASSERT(hr == S_FALSE);
 		}
 #endif
-
-		p_log->writeMessage("============ PLAY AUDIO CLIP");
-		TRACE(L"\n============ PLAY AUDIO CLIP\n");
+		p_log->writeTrace("Play audio clip", "AudioSequencePlayer::playNext");
+		TRACE(L"PLAY AUDIO CLIP\n");
 		bool b = playAudioPrompt(comp->m_AudioClip);
 
 		if (!b && !comp->m_String.IsEmpty())
@@ -325,18 +280,18 @@ void AudioSequencePlayer::playNext(bool fromEndEvent)
 			bIgnoreTTSEnd = false;
 			TTSPlayer::Instance()->Play(comp->m_String);
 		}
-
 		delete comp;
 		comp=NULL;
 
-	} else {
+	} 
+	else 
+	{
 		CString strDebug;
-		strDebug.Format(_T("============ PLAY AUDIO TTS: --%s--\n"), comp->m_String);
+		strDebug.Format(_T("Play audio TTS: %s\n"), comp->m_String);
 		TRACE(strDebug);
-
-		p_log->writeMessage("============ PLAY AUDIO TTS");
-		p_log->writeMessage(W2CA(comp->m_String));
-
+		string log_msg = T2A(strDebug);
+		p_log->writeTrace(log_msg, "AudioSequencePlayer::playNext");
+	
 		bIgnoreTTSEnd = false;
 		TTSPlayer::Instance()->Play(comp->m_String);
 		delete comp;
@@ -351,43 +306,26 @@ void AudioSequencePlayer::playNext(bool fromEndEvent)
 void AudioSequencePlayer::Play(AudioSequence* audioSequence, bool doNotRegisterInHistory, bool repeat, bool repeating)
 {
 	mRepeatLoop = repeat;
-
-	if (audioSequence == NULL || audioSequence->GetCount() == 0)
-	{
-		int debugHere = 0;
-	}
 	{
 #ifdef CCS_ACTIVE
 		EnterCriticalSection(&m_csSequence);
 #endif
-
 		amis::util::Log* p_log = amis::util::Log::Instance();
-		p_log->writeMessage("####### -- PLAY SEQ");
-		TRACE(L"\n####### -- PLAY SEQ\n");
-
+		p_log->writeTrace("Play seq", "AudioSequencePlayer::Play");
+		TRACE(L"PLAY SEQ\n");
 		Stop(true);
-
 		if (!doNotRegisterInHistory)
 		{
-			if (m_previousAudioSequence)
-			{
-				if (audioSequence != m_previousAudioSequence)
-				{
-					delete m_previousAudioSequence;
-				}
-			}
+			if (m_previousAudioSequence && audioSequence != m_previousAudioSequence)
+				delete m_previousAudioSequence;
 			m_previousAudioSequence = audioSequence->clone();
 		}
-
-
 		m_currentAudioSequence = audioSequence;
 		ResetEvent(m_hEventEnd);
-
 
 #ifdef CCS_ACTIVE
 		LeaveCriticalSection(&m_csSequence);
 #endif
-
 		MainWndParts::Instance()->mpMainFrame->SendMessage(WM_COMMAND, (WPARAM)SELF_VOICING_PLAY_NEXT, (LPARAM)0);
 	}
 }
@@ -395,10 +333,8 @@ void AudioSequencePlayer::Play(AudioSequence* audioSequence, bool doNotRegisterI
 std::string AudioSequencePlayer::computeExpandedSrc(amis::AudioNode* pAudio, std::string langID)
 {
 	string str = pAudio->getSrc();
-	if (str.length()==0)
-	{
-		return "";
-	}
+	if (str.length()==0) return "";
+
 	string strFull = pAudio->getSrcExpanded();
 	if (strFull.length()==0)
 	{
@@ -406,15 +342,11 @@ std::string AudioSequencePlayer::computeExpandedSrc(amis::AudioNode* pAudio, std
 	
 		amis::ModuleDescData* p_langpack_data = NULL;
 		if (langID.length() == 0)
-		{
 			p_langpack_data = amis::Preferences::Instance()->getCurrentLanguageData();
-		}
 		else
-		{
 			p_langpack_data = amis::Preferences::Instance()->getLanguageData(langID);
-		}
-		audio_src = audio_src.join_to_base(*p_langpack_data->getXmlFileName());
 
+		audio_src = audio_src.join_to_base(*p_langpack_data->getXmlFileName());
 		pAudio->setSrcExpanded(audio_src.get_file());
 		strFull = pAudio->getSrcExpanded();
 	}
@@ -424,29 +356,18 @@ std::string AudioSequencePlayer::computeExpandedSrc(amis::AudioNode* pAudio, std
 bool AudioSequencePlayer::playAudioPrompt(amis::AudioNode* pAudio)
 {
 	string strFull = computeExpandedSrc(pAudio);
-
-	if (strFull.length() == 0) 
-	{
-		return false;
-	}
+	if (strFull.length() == 0) return false;
 
 	string clipBegin = "";
 	string clipEnd = "";
 
 	if (pAudio->getClipBegin().size() > 0)
-	{
 		clipBegin = stringReplaceAll(pAudio->getClipBegin(), "npt=", "");
-	}
 
 	if (pAudio->getClipEnd().size() > 0)
-	{
 		clipEnd = stringReplaceAll(pAudio->getClipEnd(), "npt=", "");
-	}
 
 	return ambulantX::gui::dx::audio_playerX::Instance()->play(strFull.c_str(), (char*)clipBegin.c_str(), (char*)clipEnd.c_str());
-
-
-	
 }
 
 void AudioSequencePlayer::playPromptFromUiId(int nItemID, AudioSequence* seq)
@@ -457,30 +378,25 @@ void AudioSequencePlayer::playPromptFromUiId(int nItemID, AudioSequence* seq)
 
 	if (nItemID != -1)
 	{
-		if (seq == NULL)
-		{
-			seq = new AudioSequence;
-		}
-
+		if (seq == NULL) seq = new AudioSequence;
 		amis::BookList* books = theApp.getHistory();
-
 		int nRecentBooks = (books ? books->getNumberOfEntries() : 0);
 		string strCondition;
 
 		if (ID_AMIS_PLAYPAUSE == nItemID)
 		{
-
 			MmView *view = MainWndParts::Instance()->mpMmView;
 			bool b_BookIsPlaying = MainWndParts::Instance()->mpMainFrame->mbWasPlayingWhenLostFocus || view->isPlaying(); // BOOK Audio Player
-
 			strCondition = (b_BookIsPlaying ? "canPause" : "canPlay");
-
-		} else if (ID_AMIS_RECENT_BOOKS_EMPTY == nItemID || (nItemID >= AMIS_RECENT_BOOK_BASE_ID && nItemID < AMIS_RECENT_BOOK_BASE_ID + nRecentBooks))
+		} 
+		else if (ID_AMIS_RECENT_BOOKS_EMPTY == nItemID || (nItemID >= AMIS_RECENT_BOOK_BASE_ID && nItemID < AMIS_RECENT_BOOK_BASE_ID + nRecentBooks))
 		{
 			if (nRecentBooks > 0)
 			{
 				strCondition = "AMIS_RECENT_BOOK_BASE_IDXX"; // Removing "XX" means that the list-repeat form AccessibleUiData.xml is used => the problem is that no prompt variable resolver exists for the list of recent books. Instead, it's all hardcoded below.
-			} else {
+			} 
+			else 
+			{
 				strCondition = "ID_AMIS_RECENT_BOOKS_EMPTY"; // This condition is never accepted by AccessibleDataUi.xml, so it's kinda of useless.
 			}
 		}
@@ -501,7 +417,9 @@ void AudioSequencePlayer::playPromptFromUiId(int nItemID, AudioSequence* seq)
 				Container* container = (Container*)p_uiItem;
 				keyboardShortcutAccelerator = container->getKeyboardAccelerator();
 				mnemonic = container->getMnemonic();
-			} else {
+			} 
+			else 
+			{
 				int debug = 1;
 			}
 
@@ -529,8 +447,8 @@ void AudioSequencePlayer::playPromptFromUiId(int nItemID, AudioSequence* seq)
 				fillSequenceContentAndPrompt(seq, list, NULL);
 			}
 		}
-		else {
-
+		else 
+		{
 			// Default fallback TTS rendering, based on the widge's text.
 			HWND hWnd = MainWndParts::Instance()->mpMainFrame->GetSafeHwnd();
 			HMENU hMenu = ::GetMenu(hWnd);
@@ -539,82 +457,52 @@ void AudioSequencePlayer::playPromptFromUiId(int nItemID, AudioSequence* seq)
 
 			if (nLen > 0)
 			{
-
 				LPTSTR lpszText = (LPTSTR)_alloca((nLen + 1) * sizeof(TCHAR));
 				if (::GetMenuString(hMenu, nItemID, lpszText, nLen + 1, MF_BYCOMMAND) == nLen)
 				{
-
 					CString str;
 					str.Append(lpszText);
 					str.Replace(CString("&"), CString(""));
 
 					CString strDebug;
-					strDebug.Format(_T("+++ 1 --%s--\n"), str);
+					strDebug.Format(_T("%s\n"), str);
 					TRACE(strDebug);
-
-
-					p_log->writeMessage("+++ 1 --%s--");
-					p_log->writeMessage(W2CA(str));
-
-					if (! str.IsEmpty())
-					{
-						seq->append(str);
-					}
+					p_log->writeTrace(T2A(strDebug), "AudioSequencePlayer::playPromptFromUiId");
+					
+					if (! str.IsEmpty()) seq->append(str);
 				}
 			}
 			CString strText;
 			strText.LoadString( nItemID );
 
 			CString strDebug;
-			strDebug.Format(_T("+++ 2 --%s--\n"), strText);
+			strDebug.Format(_T("%s\n"), strText);
 			TRACE(strDebug);
+			p_log->writeTrace(T2A(strDebug), "AudioSequencePlayer::playPromptFromUiId");
 
-
-			p_log->writeMessage("+++ 1 --%s--");
-			p_log->writeMessage(W2CA(strText));
-
-			if (! strText.IsEmpty())
-			{
-				seq->append(strText);
-			}
-			//strText.Empty();
+			if (! strText.IsEmpty()) seq->append(strText);
 		}
-
-		if (seq->GetCount() == 0)
-		{
-			delete seq;
-
-		}
-		else
-		{
-
-			AudioSequencePlayer::Instance()->Play(seq);
-		}
+		if (seq->GetCount() == 0) delete seq;
+		else AudioSequencePlayer::Instance()->Play(seq);
 	}
 }
 
 
 void AudioSequencePlayer::fillSequenceContainerPromptFromId(AudioSequence* seq, string id)
 {
-
-	if (!id.empty())  {
+	if (!id.empty())  
+	{
 		Container* p_container = DataTree::Instance()->findContainer(id);
 		if (p_container != NULL)
 		{
-
 			fillSequenceCaptionAndDescription(seq, p_container, NULL, "default");
-
 			Label* keyboardShortcutAccelerator = p_container->getKeyboardAccelerator();
 			if (keyboardShortcutAccelerator != NULL)
-			{
 				fillSequenceContentAndPrompt(seq, keyboardShortcutAccelerator, NULL);
-			}
-
+	
 			Label* menomonic = p_container->getMnemonic();
 			if (menomonic != NULL)
-			{
 				fillSequenceContentAndPrompt(seq, menomonic, NULL);
-			}
 		}
 	}
 }
@@ -622,29 +510,22 @@ void AudioSequencePlayer::fillSequenceContainerPromptFromId(AudioSequence* seq, 
 std::wstring AudioSequencePlayer::getTextForDialogControlFromUiIds(int dlgID, int ctrlId, PromptResolver* pResolver, string switchCondition)
 {
 	//todo: not a high priority now, but the code below is far too incomplete to be usable generically (there is only one use of it right now, and it searches through the switch caption only).
-	
 	std::wstring str;
-
-	if (
-		(dlgID != -1 && ctrlId != -1)
-		|| (dlgID == -1 && (ctrlId == IDOK || ctrlId == IDCANCEL))
-		)
+	if ((dlgID != -1 && ctrlId != -1) 
+		|| (dlgID == -1 && (ctrlId == IDOK || ctrlId == IDCANCEL)))
 	{
-
 		Dialog* p_dialog = DataTree::Instance()->findDialog(dlgID);
 		if (p_dialog != NULL)
 		{
 			DialogControl* uiItem = p_dialog->findControl(ctrlId);
-
 			if (uiItem != NULL)
 			{
 				Switch* zwitch;
 				if ((zwitch = uiItem->getSwitch()) != NULL)
 				{
-
 					switch(zwitch->getSwitchType())
 					{
-					case ACTIONSWITCH:
+						case ACTIONSWITCH:
 						{
 							Action* action = zwitch->getAction(switchCondition);
 							if (action != NULL)
@@ -653,18 +534,16 @@ std::wstring AudioSequencePlayer::getTextForDialogControlFromUiIds(int dlgID, in
 							}
 							break;
 						}
-					case CAPTIONSWITCH: {}
-					case DESCRIPTIONSWITCH:
+						case CAPTIONSWITCH: {}
+						case DESCRIPTIONSWITCH:
 						{
 							Label* label = zwitch->getLabel(switchCondition);
 							if (label != NULL)
-							{
-															
+							{									
 								TextAudioPair* pair = label->getContents();
 								if (pair != NULL)
 								{
 									TextNodeSV* textN = pair->getText();
-
 									if (textN != NULL) 
 									{
 										str.append(textN->getTextString());
@@ -678,7 +557,6 @@ std::wstring AudioSequencePlayer::getTextForDialogControlFromUiIds(int dlgID, in
 			}
 		}	
 	}
-
 	return str;
 }
 
@@ -694,52 +572,38 @@ std::wstring AudioSequencePlayer::getTextForPromptItemFromStringId(string prompt
 		if (pair != NULL)
 		{
 			TextNodeSV * textN = pair->getText();
-			if (textN != NULL) 
-			{
-				str.append(textN->getTextString());
-			}
+			if (textN != NULL) str.append(textN->getTextString());
 		}
 	}
-
 	return str;
 }
 std::wstring AudioSequencePlayer::getTextForPromptFromStringId(string promptId)
 {
 	std::wstring str;
-
 	Prompt* prompt = DataTree::Instance()->findPrompt(promptId);
-
 	if (prompt != NULL)
 	{
 		int sz = prompt->getNumberOfItems();
 		for (int i=0; i<sz; i++)
 		{
 			PromptItemBase* pi = prompt->getItem(i);
-
 			TextAudioPair* pair = pi->getContents();
 			if (pair != NULL)
 			{
 				TextNodeSV * textN = pair->getText();
-				if (textN != NULL) 
-				{
-					str.append(textN->getTextString());
-				}
+				if (textN != NULL) str.append(textN->getTextString());
 			}
 		}
 	}
-
-	if (str.length() == 0)
-	{
-		// Fallback on PromptItem instead of Prompt
-		str = getTextForPromptItemFromStringId(promptId);
-	}
+	
+	// Fallback on PromptItem instead of Prompt
+	if (str.length() == 0)	str = getTextForPromptItemFromStringId(promptId);
 	return str;
 }
 
 bool AudioSequencePlayer::playPromptFromStringId(string promptId, bool repeat)
 {
 	Prompt* p_prompt_ = DataTree::Instance()->findPrompt(promptId);
-
 	if (p_prompt_ != NULL)
 	{
 		AudioSequence * seq = new AudioSequence;
@@ -779,8 +643,7 @@ bool AudioSequencePlayer::playPromptItemFromStringId(string promptId, bool repea
 			AudioSequencePlayer::Instance()->Play(seq, false, repeat);
 			return true;
 		}
-	}
-	
+	}	
 	return false;
 }
 
@@ -788,17 +651,12 @@ bool AudioSequencePlayer::playDialogInstructionsFromUiId(int nItemID)
 {
 	if (nItemID != -1)
 	{
-
 		AudioSequence * seq = new AudioSequence;
-
 		Dialog* p_dialog = DataTree::Instance()->findDialog(nItemID);
 		if (p_dialog != NULL)
 		{
 			Prompt* prompt = p_dialog->getPrompt("instructions");
-			if (prompt != NULL)
-			{
-				fillSequencePrompt(seq, prompt, NULL);
-			}
+			if (prompt != NULL) fillSequencePrompt(seq, prompt, NULL);
 		}
 		if (seq->GetCount() == 0)
 		{
@@ -811,16 +669,13 @@ bool AudioSequencePlayer::playDialogInstructionsFromUiId(int nItemID)
 		}
 	}
 	return false;
-
 }
 
 bool AudioSequencePlayer::playDialogTextControlsFromUiId(int nItemID, PromptResolver * presolver)
 {
 	if (nItemID != -1)
 	{
-
 		AudioSequence * seq = new AudioSequence;
-
 		Dialog* p_dialog = DataTree::Instance()->findDialog(nItemID);
 		if (p_dialog != NULL)
 		{
@@ -854,22 +709,18 @@ bool AudioSequencePlayer::playDialogTextControlsFromUiId(int nItemID, PromptReso
 }
 bool AudioSequencePlayer::playDialogWelcome(int nItemID, PromptResolver * presolver, bool playfull)
 {
-
 	if (nItemID != -1)
 	{
 		AudioSequence * seq = new AudioSequence;
-
 		Dialog* p_dialog = DataTree::Instance()->findDialog(nItemID);
 		if (p_dialog != NULL)
 		{
 			fillSequenceCaptionAndDescription(seq, p_dialog, presolver, "default");
-
 			Prompt* prompt = p_dialog->getPrompt("instructions");
 			if (prompt != NULL)
 			{
 				fillSequencePrompt(seq, prompt, NULL);
 			}
-
 			if (playfull || nItemID == IDD_ABOUTBOX)
 			{
 				int count = p_dialog->getNumChildControls();
@@ -916,7 +767,6 @@ void AudioSequencePlayer::fillOK_CANCEL(AudioSequence * seq, UINT ctrlId)
 			fillSequenceContents(seq, p_prompt);
 
 		}
-
 	}
 	else if (ctrlId == IDOK)
 	{
@@ -937,15 +787,10 @@ void AudioSequencePlayer::fillOK_CANCEL(AudioSequence * seq, UINT ctrlId)
 
 AudioSequence * AudioSequencePlayer::playDialogControlFromUiIds(int dlgID, int ctrlId, PromptResolver* pResolver, bool playNow, string switchCondition)
 {
-
-	if (
-		(dlgID != -1 && ctrlId != -1)
-		|| (dlgID == -1 && (ctrlId == IDOK || ctrlId == IDCANCEL))
-		)
+	if ((dlgID != -1 && ctrlId != -1)
+		|| (dlgID == -1 && (ctrlId == IDOK || ctrlId == IDCANCEL)))
 	{
-
 		AudioSequence * seq = new AudioSequence;
-
 		if (dlgID == -1)
 		{
 			fillOK_CANCEL(seq, ctrlId);
@@ -956,7 +801,6 @@ AudioSequence * AudioSequencePlayer::playDialogControlFromUiIds(int dlgID, int c
 			if (p_dialog != NULL)
 			{
 				DialogControl* control = p_dialog->findControl(ctrlId);
-
 				if (control != NULL)
 				{
 					fillSequenceCaptionAndDescription(seq, control, pResolver, switchCondition);
@@ -967,7 +811,6 @@ AudioSequence * AudioSequencePlayer::playDialogControlFromUiIds(int dlgID, int c
 				fillOK_CANCEL(seq, ctrlId);
 			}
 		}
-
 		if (seq != NULL && seq->GetCount() == 0)
 		{
 			delete seq;
@@ -976,20 +819,16 @@ AudioSequence * AudioSequencePlayer::playDialogControlFromUiIds(int dlgID, int c
 		}
 		else if (playNow)
 		{
-
 			AudioSequencePlayer::Instance()->Play(seq);
 			return seq;
 		}
 		else return seq;
-
 	}
-
 	return NULL;
 }
 
 void AudioSequencePlayer::fillSequencePrompt(AudioSequence* seq, Prompt* prompt, PromptResolver* pResolver)
 {
-
 	resolvePromptVariables(prompt, pResolver);
 
 	int sz = prompt->getNumberOfItems();
@@ -998,12 +837,13 @@ void AudioSequencePlayer::fillSequencePrompt(AudioSequence* seq, Prompt* prompt,
 		PromptItemBase* pib = prompt->getItem(i);
 		switch(pib->getPromptItemType())
 		{
-		case PROMPT_ITEM: {
-			PromptItem* pi = (PromptItem*) pib;
-			fillSequenceContents(seq, pi);
-			break;
-						  }
-		case PROMPT_VARIABLE:
+			case PROMPT_ITEM: 
+			{
+				PromptItem* pi = (PromptItem*) pib;
+				fillSequenceContents(seq, pi);
+				break;
+			}
+			case PROMPT_VARIABLE:
 			{
 				PromptVar* pv = (PromptVar*) pib;
 				//seq->append(pv->getName().c_str());
@@ -1019,30 +859,17 @@ void AudioSequencePlayer::fillSequenceCaptionAndDescription(AudioSequence* seq, 
 {
 
 	Label* label = uiItem->getCaption();
-	if (label != NULL)
-	{
-		fillSequenceContentAndPrompt(seq, label, pResolver);
-	}
-
+	if (label != NULL) fillSequenceContentAndPrompt(seq, label, pResolver);
+	
 	LabelList * p_list = uiItem->getLabelList();
 
 	label = uiItem->getDescription();
-	if (p_list == NULL && label != NULL)
-	{
-		fillSequenceContentAndPrompt(seq, label, pResolver);
-	}
-
+	if (p_list == NULL && label != NULL) fillSequenceContentAndPrompt(seq, label, pResolver);
+	
 	fillSequenceSwitch(seq, uiItem, pResolver, switchCondition);
 
-	if (p_list != NULL)
-	{
-		fillSequenceContentAndPrompt(seq, p_list, pResolver);
-
-	}
-	if (p_list != NULL && label != NULL)
-	{
-		fillSequenceContentAndPrompt(seq, label, pResolver);
-	}
+	if (p_list != NULL) fillSequenceContentAndPrompt(seq, p_list, pResolver);
+	if (p_list != NULL && label != NULL) fillSequenceContentAndPrompt(seq, label, pResolver);
 }
 
 
@@ -1051,26 +878,19 @@ void AudioSequencePlayer::fillSequenceSwitch(AudioSequence* seq, UiItem* uiItem,
 	Switch* zwitch;
 	if ((zwitch = uiItem->getSwitch()) != NULL)
 	{
-
 		switch(zwitch->getSwitchType())
 		{
-		case ACTIONSWITCH:
+			case ACTIONSWITCH:
 			{
 				Action* action = zwitch->getAction(switchCondition);
-				if (action != NULL)
-				{
-					fillSequenceCaptionAndDescription(seq, action, pResolver, switchCondition);
-				}
+				if (action != NULL) fillSequenceCaptionAndDescription(seq, action, pResolver, switchCondition);
 				break;
 			}
-		case CAPTIONSWITCH: {}
-		case DESCRIPTIONSWITCH:
+			case CAPTIONSWITCH: {}
+			case DESCRIPTIONSWITCH:
 			{
 				Label* label = zwitch->getLabel(switchCondition);
-				if (label != NULL)
-				{
-					fillSequenceContentAndPrompt(seq, label, pResolver);
-				}
+				if (label != NULL)	fillSequenceContentAndPrompt(seq, label, pResolver);
 				break;
 			}
 		}
@@ -1082,10 +902,7 @@ void AudioSequencePlayer::fillSequenceContentAndPrompt(AudioSequence* seq, Label
 	for (int i = 0; i<p_list->getNumberOfLabels(); i++)
 	{
 		Prompt* p_prompt = p_list->getLabel(i)->getPrompt();
-		if (p_prompt != NULL)
-		{
-			fillSequencePrompt(seq, p_prompt, pResolver);
-		}
+		if (p_prompt != NULL) fillSequencePrompt(seq, p_prompt, pResolver);
 	}
 }
 
@@ -1095,32 +912,23 @@ void AudioSequencePlayer::fillSequenceContentAndPrompt(AudioSequence* seq, Label
 	if (pair != NULL)
 	{
 		amis::AudioNode* audio = pair->getAudio();
-
 		TextNodeSV* textN = pair->getText();
-
 		if (!Preferences::Instance()->getUseTTSNotAudio() && audio != NULL && audio->getSrc().length() != 0) 
 		{
 			seq->append(audio->clone(), (textN != NULL ? textN->getTextString().c_str() : L""));
 		} 
 		else 
 		{
-			if (textN != NULL) 
-			{
-				seq->append(textN->getTextString().c_str());
-			}
+			if (textN != NULL) seq->append(textN->getTextString().c_str());
 		}
 	}
 
 	Prompt* prompt = label->getPrompt();
-	if (prompt != NULL)
-	{
-		fillSequencePrompt(seq, prompt, pResolver);
-	}
+	if (prompt != NULL) fillSequencePrompt(seq, prompt, pResolver);
 }
 
 void AudioSequencePlayer::fillSequenceContents(AudioSequence* seq, PromptItemBase* pi)
 {
-
 	TextAudioPair* pair = pi->getContents();
 	if (pair != NULL)
 	{
@@ -1152,7 +960,6 @@ void AudioSequencePlayer::resolvePromptVariables(Prompt* pPrompt, PromptResolver
 		if (pPrompt->getItem(i)->getPromptItemType() == PROMPT_VARIABLE)
 		{
 			p_var = (PromptVar*)pPrompt->getItem(i);
-
 			if (p_var->getName().compare("BOOK_PATH") == 0)
 			{
 				//CString file_path = A2CW(mFilePath.c_str());
@@ -1168,8 +975,6 @@ void AudioSequencePlayer::resolvePromptVariables(Prompt* pPrompt, PromptResolver
 	}
 }
 
-
-
 // DanToDo: this string function should move to utilities.
 string AudioSequencePlayer::stringReplaceAll(string sourceStr, string searchStr, string replaceStr)
 {
@@ -1179,14 +984,7 @@ string AudioSequencePlayer::stringReplaceAll(string sourceStr, string searchStr,
 	while (pos > -1)
 	{
 		pos = source_str.find(searchStr);
-
-		if (pos > -1)
-		{
-			source_str.replace(pos, searchStr.length(), replaceStr);
-		}
-
+		if (pos > -1) source_str.replace(pos, searchStr.length(), replaceStr);
 	}
-
 	return source_str;
-
-}	
+}

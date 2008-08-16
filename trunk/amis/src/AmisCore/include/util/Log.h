@@ -32,7 +32,10 @@ namespace amis
 {
 namespace util
 {
-enum LogLevel {NORMAL_LOGGING, FULL_LOGGING};
+//LOW = errors and warnings only
+//MEDIUM = errors, warnings, messages
+//FULL = errors, warnings, messages, traces
+enum LogLevel {LOW_LOGGING, MEDIUM_LOGGING, FULL_LOGGING};
 
 class Log
 {
@@ -44,20 +47,29 @@ public:
 	~Log();
 
 	void startLog(string);
-	void writeMessage(string, string, string);
-	void writeMessage(string);
-	void writeMessage(string, const ambulant::net::url*);
-	void writeWarning(string, string, string);
-	void writeError(string, string, string);
-	void writeMessage(string, const ambulant::net::url*, string, string);
-	void writeWarning(string, const ambulant::net::url*, string, string);
-	void writeError(string, const ambulant::net::url*, string, string);
-	void writeError(amis::Error, string, string);
+	
+	//messages are for logging reporting information
+	void writeMessage(string msg, string origin);
+	void writeMessage(string msg, const ambulant::net::url* path, string origin);
+	
+	//warnings are non-fatal errors
+	void writeWarning(string msg, string origin);
+	void writeWarning(string msg, const ambulant::net::url* path, string origin);
+	
+	//errors are fatal, or at least really bad
+	void writeError(string msg, string origin);
+	void writeError(string msg, const ambulant::net::url* path, string origin);
+	void writeError(amis::Error err, string origin);
+	
+	//traces are for anything else
+	void writeTrace(string msg, string origin="");
+	void writeTrace(string msg, const ambulant::net::url* path, string origin="");
+
 	void endLog();
 	void enable(bool);
 	void setLevel(LogLevel);
 private:
-	void writeData(string, string, string, string);
+	void writeData(string type, string msg, string origin);
 	ofstream mFile;
 	static Log* pinstance;
 	bool mbIsFileOpen;

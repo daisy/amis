@@ -75,7 +75,7 @@ void CAmisSidebar::DoDataExchange(CDataExchange* pDX)
 
 void CAmisSidebar::clearAll()
 {
-	amis::util::Log::Instance()->writeMessage("Clearing all data from the sidebar", "CAmisSidebar::clearAll", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Clearing all data from the sidebar", "CAmisSidebar::clearAll");
 	CNavListControl* p_navl = NULL;
 	unsigned int sz = mNavLists.size();
 

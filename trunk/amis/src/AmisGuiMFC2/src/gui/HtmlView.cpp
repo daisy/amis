@@ -283,7 +283,7 @@ void CAmisHtmlView::OnBeforeNavigate2(LPCTSTR lpszURL, DWORD nFlags,
 			*pbCancel = TRUE;
 			string log_msg = "Loading smil file link: " + thisUrl.get_url();
 			amis::util::Log::Instance()->writeMessage("Loading smil file via hyperlink", &thisUrl, 
-				"CAmisHtmlView::OnBeforeNavigate2", "AmisGuiMFC2");
+				"CAmisHtmlView::OnBeforeNavigate2");
 			amis::dtb::DtbWithHooks::Instance()->loadSmilFromUrl(&thisUrl);
 		}
 		//else it's probably a text-file loading request that we sent ourselves
@@ -639,7 +639,7 @@ IHTMLStyleSheet* CAmisHtmlView::applyStylesheet(const ambulant::net::url* styles
 	css_path_bstr = css_path_cstr.AllocSysString();
 	
 	string log_msg = "Applying stylesheet: " + stylesheet->get_url();
-	amis::util::Log::Instance()->writeMessage("Applying stylesheet", stylesheet, "CAmisHtmlView::applyStylesheet", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Applying stylesheet", stylesheet, "CAmisHtmlView::applyStylesheet");
 	
 	IHTMLStyleSheet* pStyleSheet;
 	//i'm really not sure of the best value for the 2nd parameter
@@ -663,7 +663,7 @@ void CAmisHtmlView::removeStylesheet(IHTMLStyleSheet* pStyleSheet)
 	//i don't know if an exception is even raised, but i've seen it crash here, though not consistently
 	try
 	{
-		amis::util::Log::Instance()->writeMessage("Removing stylesheet", "CAmisHtmlView::removeStylesheet","AmisGuiMFC2");
+		amis::util::Log::Instance()->writeMessage("Removing stylesheet", "CAmisHtmlView::removeStylesheet");
 		pStyleSheet->put_disabled(VARIANT_TRUE);
 		pStyleSheet->Release();
 		pStyleSheet = NULL;

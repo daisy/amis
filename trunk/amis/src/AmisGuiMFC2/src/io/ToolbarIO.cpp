@@ -146,8 +146,7 @@ void ToolbarIO::endElement(const XMLCh* const uri,
 UINT ToolbarIO::getIdForCommandString(string mfcid)
 {
 	int int_value;
-	//TODO: formalize the location of this file
-	string resourcefile = theApp.getAppSettingsPath() + "/resource.h.ini";
+	string resourcefile = theApp.getAppSettingsPath() + "resource.h.ini";
 	string string_value = amis::gui::spoken::CIniFile::GetValue(mfcid, "resources", resourcefile);
 	CIniFile::string2int(string_value.c_str(), int_value);
 	return int_value;

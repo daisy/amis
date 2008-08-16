@@ -225,8 +225,7 @@ BOOL CAmisApp::InitInstance()
 	CMDIFrameWnd* pFrame = new CMainFrame;
 	if (!pFrame->LoadFrame(IDR_AMISTYPE)) 
 	{
-		amis::util::Log::Instance()->writeError("Could not load MFC frame IDR_AMISTYPE", "CMainFrame::InitInstance",
-			"AmisGuiMFC2");
+		amis::util::Log::Instance()->writeError("Could not load MFC frame IDR_AMISTYPE", "CMainFrame::InitInstance");
 		return FALSE;
 	}
 	m_pMainWnd = pFrame;
@@ -268,11 +267,11 @@ BOOL CAmisApp::InitInstance()
 		{
 			book_to_open = ambulant::net::url::from_filename(T2A(cmd_file_name));
 		}
-		amis::util::Log::Instance()->writeMessage("Command line parameter: ", &book_to_open, "CAmisApp::InitInstance", "AmisGuiMFC2");
+		amis::util::Log::Instance()->writeMessage("Command line parameter: ", &book_to_open, "CAmisApp::InitInstance");
 	}
 	if (!ProcessShellCommand(cmdInfo)) 
 	{
-		amis::util::Log::Instance()->writeError("Error processing shell command info", "CAmisApp::InitInstance", "AmisGuiMFC2");
+		amis::util::Log::Instance()->writeError("Error processing shell command info", "CAmisApp::InitInstance");
 		return FALSE;
 	}
 	mbShouldIgnoreOpenDocEvent = false;
@@ -333,7 +332,7 @@ int CAmisApp::ExitInstance()
 {
 	amis::util::Log* p_log = amis::util::Log::Instance();
   
-	p_log->writeMessage("Starting to EXIT");
+	p_log->writeTrace("Starting to EXIT", "CAmisApp::ExitInstance");
 	TRACE("\nStarting to EXIT\n\n");
 
 	Preferences::Instance()->setWasExitClean(true);
@@ -342,7 +341,7 @@ int CAmisApp::ExitInstance()
 	PreferencesFileIO prefs_io;	
 	prefs_io.writeToFile(Preferences::Instance()->getSourceUrl()->get_file(), Preferences::Instance());
 	
-	amis::util::Log::Instance()->writeMessage("Exiting", "CAmisApp::ExitInstance", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Exiting", "CAmisApp::ExitInstance");
 	if (m_hMDIMenu != NULL) FreeResource(m_hMDIMenu);
 	if (m_hMDIAccel != NULL)FreeResource(m_hMDIAccel);
 
@@ -358,7 +357,7 @@ int CAmisApp::ExitInstance()
 
 	CoUninitialize();
 
-	amis::util::Log::Instance()->writeMessage("AMIS EXIT.");
+	amis::util::Log::Instance()->writeTrace("AMIS EXIT done.", "CAmisApp::ExitInstance");
 	amis::util::Log::Instance()->endLog();
 	amis::util::Log::Instance()->DestroyInstance();
 	
@@ -439,33 +438,41 @@ void CAmisApp::initializeSelfVoicing()
 
 	//a lang module file points to the moduleDescData.xml in the top-level directory of every langpack
 	amis::ModuleDescData* lang_data = amis::Preferences::Instance()->getCurrentLanguageData();
+	bool b_try_default_langpack_instead = false;
 	if (lang_data == NULL)
 	{
-		amis::util::Log::Instance()->writeError("No language pack data found", "AmisApp::initializeSelfVoicing", "AmisApp");
+		b_try_default_langpack_instead = true;
+		amis::util::Log::Instance()->writeError("No language pack data found", "AmisApp::initializeSelfVoicing");
 	}
-	const ambulant::net::url* lang_module_file = amis::Preferences::Instance()->getCurrentLanguageData()->getXmlFileName();
-	
-	ambulant::net::url lang_xml_file = ambulant::net::url::from_filename("amisAccessibleUi.xml");
-	lang_xml_file = lang_xml_file.join_to_base(*lang_module_file);
-	new_data_reader.setAppPath(getAppSettingsPath());
-	amis::ErrorCode did_it_work = new_data_reader.readFile(lang_xml_file.get_file(), p_new_data_tree);
-	if (did_it_work == amis::OK)
-	{	
-		//AudioSequence* seq = new AudioSequence;
-		//seq->append(L"A");
-		//seq = AudioSequencePlayer::playPromptFromStringId("canceled", false, seq);
-		//seq->append(CString('1'));
-		//AudioSequencePlayer::Instance()->Play(seq);
-		
-	}
-	//if the UI file could not be read, then disable self-voicing
-	//todo: a more robust solution should go here:
-	// - what if the user re-enables self voicing via the AMIS prefs?
-	// - what if they switch langpacks?
-	//maybe we should try to load the default language pack here, and exit if that doesn't work.
 	else
 	{
-		amis::Preferences::Instance()->setIsSelfVoicing(false);
+		const ambulant::net::url* lang_module_file = amis::Preferences::Instance()->getCurrentLanguageData()->getXmlFileName();
+		ambulant::net::url lang_xml_file = ambulant::net::url::from_filename("amisAccessibleUi.xml");
+		lang_xml_file = lang_xml_file.join_to_base(*lang_module_file);
+		new_data_reader.setAppPath(getAppSettingsPath());
+		amis::ErrorCode did_it_work = new_data_reader.readFile(lang_xml_file.get_file(), p_new_data_tree);
+		
+		if (did_it_work != amis::OK) b_try_default_langpack_instead = true;
+	}
+	//if the chosen langpack could not be read, then try to load the default language pack 
+	//exit if that doesn't work.
+	if (b_try_default_langpack_instead == true)
+	{
+		if (Preferences::Instance()->getUiLangId() != "eng-US")
+		{
+			amis::util::Log::Instance()->writeWarning("Forcing load of default language pack", "AmisApp::initializeSelfVoicing");
+			Preferences::Instance()->setUiLangId("eng-US");
+			//save the file .. why not
+			PreferencesFileIO prefs_io;	
+			prefs_io.writeToFile(Preferences::Instance()->getSourceUrl()->get_file(), Preferences::Instance());
+			//try again with the new preferences setting
+			initializeSelfVoicing();
+		}
+		else
+		{
+			amis::util::Log::Instance()->writeError("Default (eng-US) language pack could not be loaded.  Exiting.", "AmisApp::initializeSelfVoicing");
+			this->ExitInstance();
+		}
 	}
 }
 const ambulant::net::url& CAmisApp::getBookURL() const
@@ -593,13 +600,13 @@ bool CAmisApp::getIsWaiting()
 ********************************/
 void CAmisApp::OnFileOpen() 
 {
-	amis::util::Log::Instance()->writeMessage("Showing file open dialog", "CAmisApp::OnFileOpen", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Showing file open dialog", "CAmisApp::OnFileOpen");
 	amis::gui::dialogs::AmisFileDialog dlg(amis::gui::dialogs::AmisFileDialog::getFileOpenFilter());
 
 	string filename = dlg.showOpen();
 	if (filename == "")
 	{
-		amis::util::Log::Instance()->writeMessage("Dialog cancelled", "CAmisApp::OnFileOpen", "AmisGuiMFC2");
+		amis::util::Log::Instance()->writeMessage("Dialog cancelled", "CAmisApp::OnFileOpen");
 		return;
 	}
 
@@ -617,18 +624,18 @@ void CAmisApp::OnFileOpen()
 
 void CAmisApp::OnNavPrevPhrase()
 {
-	amis::util::Log::Instance()->writeMessage("Previous phrase", "CAmisApp::OnNavPrevPhrase", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Previous phrase", "CAmisApp::OnNavPrevPhrase");
 	amis::dtb::DtbWithHooks::Instance()->previousPhrase();
 }
 
 void CAmisApp::OnNavNextPhrase()
 {
-	amis::util::Log::Instance()->writeMessage("Next phrase", "CAmisApp::OnNavNextPhrase", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Next phrase", "CAmisApp::OnNavNextPhrase");
 	amis::dtb::DtbWithHooks::Instance()->nextPhrase();
 }
 void CAmisApp::OnFileExit() 
 {
-	amis::util::Log::Instance()->writeMessage("Exiting", "CAmisApp::OnFileExit", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Exiting", "CAmisApp::OnFileExit");
 	CWnd * ptr = AfxGetMainWnd();
 	ptr->SendMessage(WM_CLOSE);
 }
@@ -642,45 +649,45 @@ void CAmisApp::OnFileRecentBook(UINT id)
 	amis::BookEntry* p_book = NULL;
 	p_book = mpHistory->getEntry(selection);
 	string log_msg = "Loading recent book " + p_book->mPath.get_url();
-	amis::util::Log::Instance()->writeMessage("Loading recent book", &p_book->mPath, "CAmisApp::OnFileRecentBook", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Loading recent book", &p_book->mPath, "CAmisApp::OnFileRecentBook");
 	openBook(&p_book->mPath);
 }
 
 void CAmisApp::OnNavNextSection() 
 {
-	amis::util::Log::Instance()->writeMessage("Next section", "CAmisApp::OnNavNextSection", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Next section", "CAmisApp::OnNavNextSection");
 	amis::dtb::DtbWithHooks::Instance()->nextSection();
 }
 
 void CAmisApp::OnNavPreviousSection()
 {
-	amis::util::Log::Instance()->writeMessage("Previous section", "CAmisApp::OnNavPreviousSection", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Previous section", "CAmisApp::OnNavPreviousSection");
 	amis::dtb::DtbWithHooks::Instance()->previousSection();
 }
 void CAmisApp::OnNavShowSectionDepth(UINT id)
 {
 	int level = id - AMIS_SECTION_DEPTH_BASE_ID;
 	string log_msg = "Setting section depth to " + level;
-	amis::util::Log::Instance()->writeMessage(log_msg, "CAmisApp::OnNavShowSectionDepth", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage(log_msg, "CAmisApp::OnNavShowSectionDepth");
 	amis::gui::MainWndParts::Instance()->mpSidebar->m_wndDlg.expandSections(level);
 	amis::gui::MenuManip::Instance()->setSectionDepthCheckmark(id);
 }
 
 void CAmisApp::OnNavNextPage()
 {
-	amis::util::Log::Instance()->writeMessage("Next page", "CAmisApp::OnNavNextPage", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Next page", "CAmisApp::OnNavNextPage");
 	amis::dtb::DtbWithHooks::Instance()->nextPage();
 }
 
 void CAmisApp::OnNavPrevPage()
 {
-	amis::util::Log::Instance()->writeMessage("Previous page", "CAmisApp::OnNavPrevPage", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Previous page", "CAmisApp::OnNavPrevPage");
 	amis::dtb::DtbWithHooks::Instance()->previousPage();
 }
 
 void CAmisApp::OnFileClose()
 {
-	amis::util::Log::Instance()->writeMessage("Closing book", "CAmisApp::OnFileClose", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Closing book", "CAmisApp::OnFileClose");
 	if (mbBookIsOpen)
 	{
 		mbBookIsOpen = false;
@@ -708,13 +715,13 @@ void CAmisApp::OnFileClose()
 
 void CAmisApp::OnVolumeUpBOOK()
 {
-	amis::util::Log::Instance()->writeMessage("Volume increase BOOK", "CAmisApp::OnVolumeUp", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Volume increase BOOK", "CAmisApp::OnVolumeUp");
 	ambulant::gui::dx::change_global_level(VOLUME_RATIO);
 }
 
 void CAmisApp::OnVolumeDownBOOK()
 {
-	amis::util::Log::Instance()->writeMessage("Volume decrease BOOK", "CAmisApp::OnVolumeDown", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Volume decrease BOOK", "CAmisApp::OnVolumeDown");
     ambulant::gui::dx::change_global_level(1.0/VOLUME_RATIO);
 }
 
@@ -722,7 +729,7 @@ void CAmisApp::OnVolumeUpUI()
 {
 	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 	{
-		amis::util::Log::Instance()->writeMessage("Volume increase UI", "CAmisApp::OnVolumeUp", "AmisGuiMFC2");
+		amis::util::Log::Instance()->writeMessage("Volume increase UI", "CAmisApp::OnVolumeUp");
 		ambulantX::gui::dx::audio_playerX::change_global_level(VOLUME_RATIO);
 
 		AudioSequence* seq	= new AudioSequence();
@@ -734,7 +741,7 @@ void CAmisApp::OnVolumeDownUI()
 {
 	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 	{
-		amis::util::Log::Instance()->writeMessage("Volume decrease UI", "CAmisApp::OnVolumeDown", "AmisGuiMFC2");
+		amis::util::Log::Instance()->writeMessage("Volume decrease UI", "CAmisApp::OnVolumeDown");
 		ambulantX::gui::dx::audio_playerX::change_global_level(1.0/VOLUME_RATIO);
 	
 		AudioSequence* seq	= new AudioSequence();
@@ -756,7 +763,7 @@ void CAmisApp::OnVolumeDown()
 
 void CAmisApp::OnSpeedUp()
 {
-	amis::util::Log::Instance()->writeMessage("Speed increase", "CAmisApp::OnSpeedUp", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Speed increase", "CAmisApp::OnSpeedUp");
 
 	long currentRate = amis::tts::TTSPlayer::Instance()->GetSpeechRate();
 	amis::tts::TTSPlayer::Instance()->SetSpeechRate(currentRate+1);
@@ -769,7 +776,7 @@ void CAmisApp::OnSpeedUp()
 
 void CAmisApp::OnSpeedDown()
 {
-	amis::util::Log::Instance()->writeMessage("Speed decrease", "CAmisApp::OnSpeedDown", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Speed decrease", "CAmisApp::OnSpeedDown");
 
 	long currentRate = amis::tts::TTSPlayer::Instance()->GetSpeechRate();
 	amis::tts::TTSPlayer::Instance()->SetSpeechRate(currentRate-1);
@@ -781,7 +788,7 @@ void CAmisApp::OnSpeedDown()
 
 void CAmisApp::OnSpeedNormal()
 {
-	amis::util::Log::Instance()->writeMessage("Speed reset to normal", "CAmisApp::OnSpeedNormal", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Speed reset to normal", "CAmisApp::OnSpeedNormal");
 	
     amis::tts::TTSPlayer::Instance()->SetSpeechRate(0);
 
@@ -793,20 +800,20 @@ void CAmisApp::OnSpeedNormal()
 
 void CAmisApp::OnAbout()
 {
-	amis::util::Log::Instance()->writeMessage("Showing about box", "CAmisApp::OnAbout", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Showing about box", "CAmisApp::OnAbout");
 	amis::gui::dialogs::AboutDialog about;
 	about.do_modal();
 }
 
 void CAmisApp::OnViewSidebarOnoff() 
 {
-	amis::util::Log::Instance()->writeMessage("Toggle sidebar", "CAmisApp::OnViewSidebarOnOff", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Toggle sidebar", "CAmisApp::OnViewSidebarOnOff");
 	MainWndParts::Instance()->toggleSidebar();
 }
 
 void CAmisApp::OnPlayEscape()
 {
-	amis::util::Log::Instance()->writeMessage("Escape", "CAmisApp::OnPlayEscape","AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Escape", "CAmisApp::OnPlayEscape");
 	MmView *view = MainWndParts::Instance()->mpMmView;
 	assert(view); 
 	view->escapeCurrent();
@@ -816,7 +823,7 @@ void CAmisApp::OnFileOpenFromUrl()
 {
 	USES_CONVERSION;
 
-	amis::util::Log::Instance()->writeMessage("Showing open from URL dialog", "CAmisApp::OnFileOpenFromUrl", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Showing open from URL dialog", "CAmisApp::OnFileOpenFromUrl");
 	amis::gui::dialogs::OpenUrlDialog dlg;
 	string str_url = "";
 
@@ -827,12 +834,12 @@ void CAmisApp::OnFileOpenFromUrl()
 		openBook(&book_url);
 	}
 	else
-		amis::util::Log::Instance()->writeMessage("Dialog cancelled", "CAmisApp::OnFileOpenFromUrl", "AmisGuiMFC2");
+		amis::util::Log::Instance()->writeMessage("Dialog cancelled", "CAmisApp::OnFileOpenFromUrl");
 }
 
 void CAmisApp::OnSkipInfo()
 {
-	amis::util::Log::Instance()->writeMessage("Showing reading options dialog (skippability)", "CAmisApp::OnSkipInfo", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Showing reading options dialog (skippability)", "CAmisApp::OnSkipInfo");
 	amis::gui::dialogs::SkipDialog skip_dialog;
 	skip_dialog.initializeData(amis::dtb::DtbWithHooks::Instance()->getCustomTestSet());
 	if (skip_dialog.do_modal() == IDOK)
@@ -843,7 +850,7 @@ void CAmisApp::OnSkipInfo()
 
 void CAmisApp::OnAddBookmark()
 {
-	amis::util::Log::Instance()->writeMessage("Adding bookmark", "CAmisApp::OnAddBookmark", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Adding bookmark", "CAmisApp::OnAddBookmark");
 	amis::dtb::Bookmark* p_bmk = NULL;
 	p_bmk = amis::dtb::DtbWithHooks::Instance()->addBookmark();
 	if (p_bmk)
@@ -857,14 +864,14 @@ void CAmisApp::OnSelectBookmark(UINT id)
 {
 	int idx;
 	idx = id - AMIS_BOOKMARKS_BASE_ID;
-	amis::util::Log::Instance()->writeMessage("Loading bookmark", "CAmisApp::OnSelectBookmark", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Loading bookmark", "CAmisApp::OnSelectBookmark");
 	amis::dtb::DtbWithHooks::Instance()->loadBookmark(idx);
 }
 
 void CAmisApp::OnGoToPage()
 {
 	amis::gui::dialogs::GoToPageDialog dialog;
-	amis::util::Log::Instance()->writeMessage("Showing go to page dialog", "CAmisApp::OnGoToPage", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Showing go to page dialog", "CAmisApp::OnGoToPage");
 	if (dialog.do_modal() == IDOK)
 	{
 		wstring page_number = dialog.getPageNumber();
@@ -878,23 +885,23 @@ void CAmisApp::OnGoToPage()
 		}
 	}
 	else
-		amis::util::Log::Instance()->writeMessage("Dialog cancelled", "CAmisApp::OnGoToPage", "AmisGuiMFC2");
+		amis::util::Log::Instance()->writeMessage("Dialog cancelled", "CAmisApp::OnGoToPage");
 }
 void CAmisApp::OnIncreaseFontSize()
 {
-	amis::util::Log::Instance()->writeMessage("Increase font size", "CAmisApp::OnIncreaseFontSize", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Increase font size", "CAmisApp::OnIncreaseFontSize");
 	TextRenderBrain::Instance()->increaseFontSize();
 	updateFontSizeButtons();
 }
 void CAmisApp::OnDecreaseFontSize()
 {
-	amis::util::Log::Instance()->writeMessage("Reset font size", "CAmisApp::OnResetFontSize", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Reset font size", "CAmisApp::OnResetFontSize");
 	TextRenderBrain::Instance()->decreaseFontSize();
 	updateFontSizeButtons();
 }
 void CAmisApp::OnSearchForBooks()
 {
-	amis::util::Log::Instance()->writeMessage("Showing search for books dialog", "CAmisApp::OnSearchForBooks", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Showing search for books dialog", "CAmisApp::OnSearchForBooks");
 	dialogs::SearchForBooksDialog search;
 	if (search.do_modal() == IDOK)
 	{
@@ -902,11 +909,11 @@ void CAmisApp::OnSearchForBooks()
 		this->openBook(&book_url);
 	}
 	else
-		amis::util::Log::Instance()->writeMessage("Dialog cancelled", "CAmisApp::OnSearchForBooks", "AmisGuiMFC2");
+		amis::util::Log::Instance()->writeMessage("Dialog cancelled", "CAmisApp::OnSearchForBooks");
 }
 void CAmisApp::OnLoadCd()
 {
-	amis::util::Log::Instance()->writeMessage("Loading from CD", "CAmisApp::OnLoadCd", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Loading from CD", "CAmisApp::OnLoadCd");
 	amis::util::SearchForFilesMFC searcher;
 	//prepare the search tool
 	//first pass: ncc or opf at the root level
@@ -956,18 +963,18 @@ void CAmisApp::OnLoadCd()
 			//otherwise, show the user a dialog so they can select which book to open
 			else
 			{
-				amis::util::Log::Instance()->writeMessage("Multiple books found on CD-ROM", "CAmisApp::OnLoadCd", "AmisGuiMFC2");
+				amis::util::Log::Instance()->writeMessage("Multiple books found on CD-ROM", "CAmisApp::OnLoadCd");
 				dialogs::MultipleBooksOnVolumeDialog dlg(NULL, p_list);
-				amis::util::Log::Instance()->writeMessage("Showing multiple books on volume dialog", "CAmisApp::OnLoadCd", "AmisGuiMFC2");
+				amis::util::Log::Instance()->writeMessage("Showing multiple books on volume dialog", "CAmisApp::OnLoadCd");
 				if (dlg.do_modal() == IDOK)
 					openBook(&dlg.getBookToLoad());
 				else
-					amis::util::Log::Instance()->writeMessage("Dialog cancelled", "CAmisApp::OnLoadCd", "AmisGuiMFC2");
+					amis::util::Log::Instance()->writeMessage("Dialog cancelled", "CAmisApp::OnLoadCd");
 			}
 		}
 		else //files_found == 0
 		{
-			amis::util::Log::Instance()->writeWarning("No DAISY books on CD-ROM", "CAmisApp::OnLoadCd", "AmisGuiMFC2");
+			amis::util::Log::Instance()->writeWarning("No DAISY books on CD-ROM", "CAmisApp::OnLoadCd");
 			CString temp;
 			temp.LoadStringW(IDS_NO_BOOKS_ON_CD);
 			if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
@@ -986,7 +993,7 @@ void CAmisApp::OnLoadCd()
 	//open a single book
 	if (single_book != NULL)
 	{
-		amis::util::Log::Instance()->writeMessage("Found one book on CD; opening it", "CAmisApp::OnLoadCd", "AmisGuiMFC2");
+		amis::util::Log::Instance()->writeMessage("Found one book on CD; opening it", "CAmisApp::OnLoadCd");
 		//open the first and only URL found
 		openBook(single_book);
 	}
@@ -995,7 +1002,7 @@ void CAmisApp::OnLoadCd()
 void CAmisApp::OnPreferences()
 {
 	dialogs::PreferencesDialog prefs;
-	amis::util::Log::Instance()->writeMessage("Showing preferences dialog", "CAmisApp::OnPreferences", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Showing preferences dialog", "CAmisApp::OnPreferences");
 	if (prefs.do_modal() == IDOK)
 	{
 		Preferences::Instance()->setTTSVoiceIndex(prefs.mTTSVoiceIndex);
@@ -1025,7 +1032,7 @@ void CAmisApp::OnPreferences()
 	}
 	else 
 	{
-		amis::util::Log::Instance()->writeMessage("Dialog cancelled", "CAmisApp::OnPreferences", "AmisGuiMFC2");	
+		amis::util::Log::Instance()->writeMessage("Dialog cancelled", "CAmisApp::OnPreferences");	
 		// make sure to restore the original voice (which may have been changed in the preference dialog)
 		amis::tts::TTSPlayer::Instance()->ChangeVoice(Preferences::Instance()->getTTSVoiceIndex());
 	}
@@ -1033,7 +1040,7 @@ void CAmisApp::OnPreferences()
 void CAmisApp::OnPublicationSummary()
 {
 	dialogs::PublicationSummaryDialog summary;
-	amis::util::Log::Instance()->writeMessage("Showing publication summary dialog", "CAmisApp::OnPublicationSummary", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Showing publication summary dialog", "CAmisApp::OnPublicationSummary");
 	summary.setBook(amis::dtb::DtbWithHooks::Instance());
 	summary.do_modal();
 }
@@ -1235,7 +1242,7 @@ void CAmisApp::OnPlayPause()
 	assert(view); // XXXJack: or what to do if view == NULL? Skip?
 	if (view->isPlaying() == true)
 	{
-		amis::util::Log::Instance()->writeMessage("Pausing", "CAmisApp::OnPlayPause", "AmisGuiMFC2");
+		amis::util::Log::Instance()->writeMessage("Pausing", "CAmisApp::OnPlayPause");
 
 		amis::gui::CAmisApp::emitMessage("paused");
 
@@ -1243,7 +1250,7 @@ void CAmisApp::OnPlayPause()
 	}
 	else
 	{
-		amis::util::Log::Instance()->writeMessage("Playing", "CAmisApp::OnPlayPause", "AmisGuiMFC2");
+		amis::util::Log::Instance()->writeMessage("Playing", "CAmisApp::OnPlayPause");
 
 		view->OnFilePlay(); // this calls CAmisApp::setPauseState(), see above
 	}

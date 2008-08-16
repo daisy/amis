@@ -93,8 +93,8 @@ bool speedup_filter_available_valid;
 static int nTimes = 0;
 
 //unsigned __stdcall eventHandler(void* lpParam) {
-DWORD __stdcall eventHandler(LPVOID lpParam) {
-
+DWORD __stdcall eventHandler(LPVOID lpParam) 
+{
 	long lEventCode, lParam1, lParam2;
 	HRESULT hResult = E_FAIL;
 	bool bSelfBreak = false;
@@ -102,132 +102,138 @@ DWORD __stdcall eventHandler(LPVOID lpParam) {
 	gui::dx::audio_playerX *pPlayer = (gui::dx::audio_playerX*)lpParam;
 
 	int nn = ++nTimes;
-
 	char strOTHER[10];
-
 	char strNN[5];
 	sprintf(strNN, "%d", nn);
+	TRACE(L"THREAD BEGIN %d\n", nn);
 
-	TRACE(L"\n== THREAD BEGIN %d\n", nn);
+	amis::util::Log* p_log = amis::util::Log::Instance();
+	string log_msg;
+	log_msg = "Thread before event, # times=";
+	log_msg.append(strNN);
+	p_log->writeTrace(log_msg, "dx_audio_player eventHandler");
 
-					amis::util::Log* p_log = amis::util::Log::Instance();
-					p_log->writeMessage("== THREAD BEGIN");
-					p_log->writeMessage(strNN);
-					
-
-	while(!bSelfBreak
 #ifdef SINGLE_THREAD_HACK
-	&& !bDestroyBreak
+	while(!bSelfBreak && !bDestroyBreak)
+#else
+	while (!bSelfBreak)
 #endif
-		) {
+	{
 		hResult = E_FAIL;
 #ifdef SINGLE_THREAD_HACK
-		if (pPlayer->m_media_event == NULL) {
+		if (pPlayer->m_media_event == NULL) 
+		{
 			//Sleep(100);
 			continue;
 		}
-#endif
-		
-	TRACE(L"\n== THREAD BEFORE EVENT %d\n", nn);
-p_log->writeMessage("== THREAD BEFORE EVENT");
-					p_log->writeMessage(strNN);
-
+#endif	
+		TRACE(L"\n== THREAD BEFORE EVENT %d\n", nn);
+		log_msg = "Thread before event, # times=";
+		log_msg.append(strNN);
+		p_log->writeTrace(log_msg, "dx_audio_player, eventHandler");
+	
 		hResult = pPlayer->m_media_event->GetEvent(&lEventCode, &lParam1, &lParam2, INFINITE);
 		pPlayer->m_media_event->FreeEventParams(lEventCode, lParam1, lParam2);
-	TRACE(L"\n== THREAD AFTER EVENT %d\n", nn);
-p_log->writeMessage("== THREAD AFTER EVENT");
-					p_log->writeMessage(strNN);
-
-		if (hResult == S_OK) {
-			switch(lEventCode) {
-						case EC_COMPLETE:
-							{
-							TRACE(L"\n== THREAD EVENT COMPLETE %d\n", nn);
-							
-p_log->writeMessage("== THREAD EVENT COMPLETE");
-					p_log->writeMessage(strNN);
-							pPlayer->stop(false, true);
-							
-							TRACE(L"\n== THREAD BEFORE CALLBACK %d\n", nn);
-							
-p_log->writeMessage("== THREAD BEFORE CALLBACK");
-					p_log->writeMessage(strNN);
-							pPlayer->sendMessageCallback();
-#ifndef SINGLE_THREAD_HACK
-							bSelfBreak = true;
-#endif
-							break;
-							}
-						case EC_USER + 4: {
-							TRACE(L"\n== THREAD EVENT USER+4 %d\n", nn);
-							
-p_log->writeMessage("== THREAD EVENT USER+4");
-					p_log->writeMessage(strNN);
-							//pPlayer->stop(false, true);
-							//pPlayer->sendMessageCallback();
-
-							bSelfBreak = true;
-							break;
-										  }
-
-#ifdef SINGLE_THREAD_HACK
-case EC_USER + 5: {
-TRACE(L"\n== THREAD BEFORE WAIT TOGGLE %d\n", nn);
-
-p_log->writeMessage("== THREAD BEFORE WAIT TOGGLE");
-					p_log->writeMessage(strNN);
-	DWORD hr = WaitForSingleObject(pPlayer->m_hEventWakeup, INFINITE);
-	switch (hr) {
-	case WAIT_FAILED: {
-		int i = 0;
-		break;
-					  }
-
-		case WAIT_ABANDONED
-			: {
-				int i = 0;
-				break;}
-
-				case WAIT_OBJECT_0
-					: {
-						int i = 0;
-						break;}
-
-	case WAIT_TIMEOUT: 
-		{
-		int i = 0;
-		break;
-		}
-
-	}
-	TRACE(L"\n== THREAD AFTER WAIT TOGGLE %d\n", nn);
+		
+		TRACE(L"\n== THREAD AFTER EVENT %d\n", nn);
+		log_msg = "Thread after event, # times=";
+		log_msg.append(strNN);
+		p_log->writeTrace(log_msg, "dx_audio_player, eventHandler");
 	
-//TODO: re-instates this logging message (causes app crash if called during exit)
-//p_log->writeMessage("== THREAD AFTER WAIT TOGGLE");
-//p_log->writeMessage(strNN);
-	break;
-										  }
-#endif
-
-						default:
-							TRACE(L"\n== THREAD EVENT OTHER %d (%d)\n", nn, lEventCode);
-							
-p_log->writeMessage("== THREAD EVENT OTHER");
-					p_log->writeMessage(strNN);
+		if (hResult == S_OK) 
+		{
+			switch(lEventCode) 
+			{
+				case EC_COMPLETE:
+				{
+					TRACE(L"\n== THREAD EVENT COMPLETE %d\n", nn);		
+					log_msg = "Thread event complete, # times=";
+					log_msg.append(strNN);
+					p_log->writeTrace(log_msg, "dx_audio_player, eventHandler");
 					
-	sprintf(strOTHER, "%d", lEventCode);
-					p_log->writeMessage(strOTHER);
-			}
-		}
-	}
+					pPlayer->stop(false, true);
+					TRACE(L"\n== THREAD BEFORE CALLBACK %d\n", nn);		
+					log_msg = "Thread before callback, # times=";
+					log_msg.append(strNN);
+					p_log->writeTrace(log_msg, "dx_audio_player, eventHandler");
+	
+					pPlayer->sendMessageCallback();
+#ifndef SINGLE_THREAD_HACK
+					bSelfBreak = true;
+#endif
+					break;
+				}
+				case EC_USER + 4: 
+				{
+					TRACE(L"\n== THREAD EVENT USER+4 %d\n", nn);		
+					log_msg = "Thread event user+4, # times=";
+					log_msg.append(strNN);
+					p_log->writeTrace(log_msg, "dx_audio_player, eventHandler");
+					//pPlayer->stop(false, true);
+					//pPlayer->sendMessageCallback();
+					bSelfBreak = true;
+					break;
+				}
+#ifdef SINGLE_THREAD_HACK
+				case EC_USER + 5: 
+				{
+					TRACE(L"\n== THREAD BEFORE WAIT TOGGLE %d\n", nn);
+					log_msg = "Thread before wait toggle, # times=";
+					log_msg.append(strNN);
+					p_log->writeTrace(log_msg, "dx_audio_player, eventHandler");
+					
+					DWORD hr = WaitForSingleObject(pPlayer->m_hEventWakeup, INFINITE);
+					switch (hr) 
+					{
+						case WAIT_FAILED: 
+						{
+							int i = 0;
+							break;
+						}
+						case WAIT_ABANDONED: 
+						{
+							int i = 0;
+							break;
+						}
+						case WAIT_OBJECT_0: 
+						{
+							int i = 0;
+							break;
+						}
+						case WAIT_TIMEOUT: 
+						{
+							int i = 0;
+							break;
+						}
+					}
+					TRACE(L"\n== THREAD AFTER WAIT TOGGLE %d\n", nn);
+	
+					//TODO: re-instates this logging message (causes app crash if called during exit)
+					////p_log->writeMessage("== THREAD AFTER WAIT TOGGLE");
+					////p_log->writeMessage(strNN);
+					break;
+				}
+#endif
+				default:
+				{
+					TRACE(L"\n== THREAD EVENT OTHER %d (%d)\n", nn, lEventCode);
+					log_msg = "Thread event other, # times=";
+					log_msg.append(strNN);
+					log_msg.append(", event code = ");
+					log_msg.append(strOTHER);
+					p_log->writeTrace(log_msg, "dx_audio_player, eventHandler");
+				}
+			} //end switch
+		} //end if (hResult == S_OK)
+	} //end while
+
 	TRACE(L"\n== THREAD END %d\n", nn);
-
 	//todo: potentially makes app crash at exit time, because logger has been destroyed
-//p_log->writeMessage("== THREAD END");
-//					p_log->writeMessage(strNN);
+	////p_log->writeMessage("== THREAD END");
+	////p_log->writeMessage(strNN);
 
-    //_endthreadex( 0 );
-    return 0;
+	//_endthreadex( 0 );
+	return 0;
 }
 
 
@@ -263,15 +269,14 @@ gui::dx::audio_playerX::~audio_playerX()
 	
 #ifdef SINGLE_THREAD_HACK
 	
-					amis::util::Log* p_log = amis::util::Log::Instance();
-					p_log->writeMessage("####### ~audio_playerX || SetEvent(m_hEventWakeup)");
+	amis::util::Log* p_log = amis::util::Log::Instance();
+	p_log->writeTrace("SetEvent(m_hEventWakeup)", "audio_playerX::~audio_playerX");
 	TRACE(L"\n####### ~audio_playerX || SetEvent(m_hEventWakeup)\n");
 	//end_thread();
 	bDestroyBreak = true;
 	SetEvent(m_hEventWakeup);
 	CloseHandle(m_hEventWakeup);
 #endif
-
 	DeleteCriticalSection(&m_csSequence);
 }
 
@@ -279,11 +284,8 @@ gui::dx::audio_playerX* gui::dx::audio_playerX::pinstance = 0;
 
 gui::dx::audio_playerX* gui::dx::audio_playerX::Instance()
 {
-	if (pinstance == 0)  // is it the first call?
-	{  
-		pinstance = new gui::dx::audio_playerX(); // create sole instance
-	}
-	return pinstance; // address of sole instance
+	if (pinstance == 0) pinstance = new gui::dx::audio_playerX();
+	return pinstance;
 }
 void gui::dx::audio_playerX::DestroyInstance()
 {
@@ -291,19 +293,20 @@ void gui::dx::audio_playerX::DestroyInstance()
 }
 
 
-void gui::dx::audio_playerX::start(double t) {
+void gui::dx::audio_playerX::start(double t) 
+{
 	if(is_playing()) pause();
 	seek(t);
 	resume();
 }
 
-void gui::dx::audio_playerX::end_thread() {
+void gui::dx::audio_playerX::end_thread() 
+{
 	if (hEventHandler==NULL) return;
 
-
-					amis::util::Log* p_log = amis::util::Log::Instance();
-					p_log->writeMessage("WAIT for thread end.");
-TRACE("\nWAIT for thread end.\n");
+	amis::util::Log* p_log = amis::util::Log::Instance();
+	//p_log->writeMessage("Wait for thread end.", "audio_playerX::end_thread");
+	TRACE("\nWAIT for thread end.\n");
 
 	IMediaEventSink *pIMES = NULL;
 	m_graph_builder->QueryInterface(IID_IMediaEventSink, (void**) &pIMES);
@@ -314,54 +317,61 @@ TRACE("\nWAIT for thread end.\n");
 	//Sleep(200);
 
 	DWORD hr = WaitForSingleObject(hEventHandler, 10000);
-	switch (hr) {
-	case WAIT_FAILED: {
-		int i = 0;
-		break;
-					  }
-
-		case WAIT_ABANDONED
-			: {
-				int i = 0;
-				break;}
-
-				case WAIT_OBJECT_0
-					: {
-						int i = 0;
-						break;}
-
-	case WAIT_TIMEOUT: {
-		int i = 0;
-		break;}
-
+	switch (hr) 
+	{
+		case WAIT_FAILED: 
+		{
+			int i = 0;
+			break;
+		}
+		case WAIT_ABANDONED: 
+		{
+			int i = 0;
+			break;
+		}
+		case WAIT_OBJECT_0: 
+		{
+			int i = 0;
+			break;
+		}
+		case WAIT_TIMEOUT: 
+		{
+			int i = 0;
+			break;
+		}
 	}
-					p_log->writeMessage("WAIT for thread end DONE.");
-TRACE("\nWAIT for thread end DONE.\n");
+	p_log->writeTrace("Wait for thread end: DONE.", "audio_playerX::end_thread");
+	TRACE("\nWAIT for thread end DONE.\n");
 	hEventHandler = NULL;
 }
 
-void gui::dx::audio_playerX::release_player() {
-
-	if(m_graph_builder) {
-
-		if(m_media_event) {
+void gui::dx::audio_playerX::release_player() 
+{
+	if(m_graph_builder) 
+	{
+		if(m_media_event) 
+		{
 			m_media_event->Release();
 			m_media_event = 0;
 		}
-		if(m_media_position) {
+		if(m_media_position) 
+		{
 			m_media_position->Release();
 			m_media_position = 0;
 		}
-		if(m_media_control) { 
+		if(m_media_control) 
+		{ 
 			m_media_control->Release();
 			m_media_control = 0;
 		}
-		if(m_basic_audio) {
+		if(m_basic_audio) 
+		{
 			m_basic_audio->Release();
 			m_basic_audio = 0;
 		}
 #ifdef WITH_TPB_AUDIO_SPEEDUP
-		if(m_audio_speedup) {
+		if(m_audio_speedup) 
+		{
 			m_audio_speedup->Release();
 			m_audio_speedup = 0;
 		}
@@ -371,13 +381,15 @@ void gui::dx::audio_playerX::release_player() {
 	}
 }
 
-void gui::dx::audio_playerX::stop(bool fromPlay, bool fromThread) {
+void gui::dx::audio_playerX::stop(bool fromPlay, bool fromThread) 
+{
 
 #ifdef SINGLE_THREAD_HACK
 	ResetEvent(m_hEventWakeup);
 #endif
 
-		if (fromThread) {
+		if (fromThread) 
+		{
 
 #ifndef SINGLE_THREAD_HACK
 			hEventHandler = NULL;
@@ -385,27 +397,27 @@ void gui::dx::audio_playerX::stop(bool fromPlay, bool fromThread) {
 			return;
 		}
 
-					amis::util::Log* p_log = amis::util::Log::Instance();
-					p_log->writeMessage("####### -- STOP DX");
-	TRACE(L"\n####### -- STOP DX\n");
+		amis::util::Log* p_log = amis::util::Log::Instance();
+		p_log->writeTrace("Stop DX", "audio_playerX::stop");
+		TRACE(L"\n####### -- STOP DX\n");
 
-		if(m_media_control == 0) {
-			
-	TRACE(L"\n####### -- STOP DX || m_media_control == 0\n");
-	p_log->writeMessage("####### -- STOP DX || m_media_control == 0");
+		if(m_media_control == 0) 
+		{			
+			TRACE(L"\n####### -- STOP DX || m_media_control == 0\n");
+			p_log->writeTrace("Stop DX, m_media_control == 0", "audio_playerX::stop");
 			return;
 		}
-	{
-		if (!fromPlay) {
-
-	TRACE(L"\n####### -- STOP DX || CS IN\n");
-	p_log->writeMessage("####### -- STOP DX || CS IN");
+		{ //TODO: what is this curly brace for??  i left it in ...
+		if (!fromPlay) 
+		{
+			TRACE(L"\n####### -- STOP DX || CS IN\n");
+			p_log->writeTrace("Stop DX, CS IN", "audio_playerX::stop");
 			EnterCriticalSection(&m_csSequence);
 		}
 
 #ifndef SINGLE_THREAD_HACK
-	TRACE(L"\n####### -- STOP DX || BEFORE END THREAD\n");
-			end_thread();
+		TRACE(L"\n####### -- STOP DX || BEFORE END THREAD\n");
+		end_thread();
 #else
 	IMediaEventSink *pIMES = NULL;
 	m_graph_builder->QueryInterface(IID_IMediaEventSink, (void**) &pIMES);
@@ -414,45 +426,45 @@ void gui::dx::audio_playerX::stop(bool fromPlay, bool fromThread) {
 	pIMES = NULL;
 #endif
 
-//Sleep(100);
+	//Sleep(100);
 
 	TRACE(L"\n####### -- STOP DX || AFTER END THREAD\n");
-	
-	p_log->writeMessage("####### -- STOP DX || AFTER END THREAD");
+	//p_log->writeMessage("Stop DX, after thread end", "audio_playerX::stop");
 
-			HRESULT hr = m_media_control->Stop();
-			if(FAILED(hr)) {
-				win_report_error("IMediaControl::stop()", hr);	
-			}
-
+	HRESULT hr = m_media_control->Stop();
+	if(FAILED(hr)) 
+	{
+		win_report_error("IMediaControl::stop()", hr);	
+	}
 	TRACE(L"\n####### -- STOP DX || AFTER STOP\n");
-		p_log->writeMessage("####### -- STOP DX || AFTER STOP");
+	p_log->writeTrace("Stop DX, After stop", "audio_playerX::stop");
 
-			if (m_media_control->StopWhenReady() != S_OK) {
-				long state, i;
-
-				for (i = 0; i < 100; i++) {
-					m_media_control->GetState(10, &state);
-					if (state == State_Stopped) break;
-				}
-
-				if (i == 100) {
-					int debug = 0;
-				}
-			}
-		TRACE(L"\n####### -- STOP DX || AFTER STOP WHEN READY\n");
-		p_log->writeMessage("####### -- STOP DX || AFTER STOP WHEN READY");
-		release_player();
-		p_log->writeMessage("####### -- STOP DX || AFTER RELEASE");
-		TRACE(L"\n####### -- STOP DX || AFTER RELEASE\n");
-
-		if (!fromPlay) {
-			LeaveCriticalSection(&m_csSequence);
-			
-			p_log->writeMessage("####### -- STOP DX ||  CS OUT");
-		TRACE(L"\n####### -- STOP DX ||  CS OUT\n");
+	if (m_media_control->StopWhenReady() != S_OK) 
+	{
+		long state, i;
+		for (i = 0; i < 100; i++) 
+		{
+			m_media_control->GetState(10, &state);
+			if (state == State_Stopped) break;
+		}
+		if (i == 100) 
+		{
+			int debug = 0;
 		}
 	}
+	TRACE(L"\n####### -- STOP DX || AFTER STOP WHEN READY\n");
+	//p_log->writeMessage("Stop DX, After stop when ready", "audio_playerX::stop");
+	release_player();
+	//p_log->writeMessage("Stop DX, After release", "audio_playerX::stop");
+	TRACE(L"\n####### -- STOP DX || AFTER RELEASE\n");
+
+	if (!fromPlay) 
+	{
+		LeaveCriticalSection(&m_csSequence);	
+		//p_log->writeMessage("Stop DX, CS out", "audio_playerX::stop");
+		TRACE(L"\n####### -- STOP DX ||  CS OUT\n");
+	}
+	} //counterpart to mysterious lone curly brace seen earlier
 }
 
 void gui::dx::audio_playerX::pause(void) {
@@ -822,20 +834,14 @@ bool gui::dx::audio_playerX::play(const char * url, char* clipBegin, char* clipE
 	//_ASSERT(hr == S_FALSE);
 #endif
 
-				TRACE(L"\n####### -- PLAY DX\n");
-				
-					amis::util::Log* p_log = amis::util::Log::Instance();
-					p_log->writeMessage("####### -- PLAY DX");
+	TRACE(L"\n####### -- PLAY DX\n");
+	amis::util::Log* p_log = amis::util::Log::Instance();
+	p_log->writeTrace("Play DX", "audio_playerX::play");
 
-
-	//m_url = url;
 	m_url.assign(url);
-
 	if (m_graph_builder != NULL) { 
 		stop(true);
 	}
-
-
 	if (m_graph_builder == NULL) { 
 		hr = CoCreateInstance(CLSID_FilterGraph,0,CLSCTX_INPROC_SERVER,
 			IID_IGraphBuilder,(void**)&m_graph_builder);
@@ -967,11 +973,12 @@ bool gui::dx::audio_playerX::play(const char * url, char* clipBegin, char* clipE
 		//GetCurrentThreadId
 		TRACE("\nTHREAD ID (DX_AUDIO_PLAYER): %x\n", lpdwThreadID);
 		
-					amis::util::Log* p_log = amis::util::Log::Instance();
-					p_log->writeMessage("THREAD ID (DX_AUDIO_PLAYER)");
-					char strID[10];
-					sprintf(strID, "%x", lpdwThreadID);
-					p_log->writeMessage(strID);
+		amis::util::Log* p_log = amis::util::Log::Instance();
+		string log_msg = "Thread ID: ";
+		char strID[10];
+		sprintf(strID, "%x", lpdwThreadID);			
+		log_msg.append(strID);
+		p_log->writeTrace(log_msg, "audio_playerX::play");
 	}
 #ifdef SINGLE_THREAD_HACK
 	SetEvent(m_hEventWakeup);
@@ -982,8 +989,6 @@ bool gui::dx::audio_playerX::play(const char * url, char* clipBegin, char* clipE
 		win_report_error("IMediaControl::run()", hr);	
 	}
 
-
 	LeaveCriticalSection(&m_csSequence);
 	return true;
 }
-

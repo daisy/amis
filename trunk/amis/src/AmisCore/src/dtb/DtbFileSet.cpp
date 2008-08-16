@@ -99,7 +99,7 @@ void amis::dtb::DtbFileSet::setAdditionalDataAfterInitialParse(wstring uid,
 	}
 	else
 	{
-		amis::util::Log::Instance()->writeError("No UID found.  Bookmarking unavailable.", "DtbFileSet::setAdditionalDataAfterInitialParse", "AmisCore");
+		amis::util::Log::Instance()->writeError("No UID found.  Bookmarking unavailable.", "DtbFileSet::setAdditionalDataAfterInitialParse");
 	}
 	if (navfile != NULL)
 	{

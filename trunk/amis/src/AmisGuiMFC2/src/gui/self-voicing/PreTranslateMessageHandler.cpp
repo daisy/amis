@@ -269,10 +269,8 @@ void PreTranslateMessageHandler::handle(PromptResolver * pResolver, MSG* pMsg, i
 				//if (seq != NULL && !(seq->IsEmpty()) && playNow) AudioSequencePlayer::Instance()->Play(seq, true);
 				//else AudioSequencePlayer::Instance()->Stop();
 				TRACE(L"\n @@@ CONTROL KEY STOP\n");
-				
-					amis::util::Log* p_log = amis::util::Log::Instance();
-					p_log->writeMessage(" @@@ CONTROL KEY STOP");
-
+				amis::util::Log* p_log = amis::util::Log::Instance();
+				p_log->writeTrace("CONTROL KEY STOP", "PreTranslateMessageHandler::handle");
 				AudioSequencePlayer::Instance()->Stop();
 			}
 			mbKeyControl = false;
@@ -304,13 +302,9 @@ void PreTranslateMessageHandler::handle(PromptResolver * pResolver, MSG* pMsg, i
 		}
 		else if(pMsg->wParam == 'T' && mbKeyControl == true)
 		{
-
 			mbKeyControl = false;
-
-
 			if (!strTextFieldFULL.IsEmpty())
 			{
-
 				AudioSequence * mSeq = new AudioSequence();
 				Prompt* p_prompt_ = DataTree::Instance()->findPrompt("textFieldEntry");
 
@@ -318,25 +312,20 @@ void PreTranslateMessageHandler::handle(PromptResolver * pResolver, MSG* pMsg, i
 				{
 					AudioSequencePlayer::Instance()->fillSequencePrompt(mSeq, p_prompt_, pResolver);
 				}
-
 				if (strTextFieldFULL.GetLength() == 1)
 				{
 					strTextFieldFULL = convertKeystrokeToSpeakableString(strTextFieldFULL.GetAt(0));
 				}
 				mSeq->append(strTextFieldFULL);
-
-
 				AudioSequencePlayer::Instance()->Play(mSeq);
 			}
 
 			return;
 		}
-		else {
-
-
+		else 
+		{
 			if (pMsg->wParam == VK_TAB || (!ignoreArrowKeys && (pMsg->wParam == VK_HOME || pMsg->wParam == VK_END || pMsg->wParam == VK_UP || pMsg->wParam == VK_DOWN || pMsg->wParam == VK_LEFT || pMsg->wParam == VK_RIGHT)))
 			{
-
 				if (idUiFocus == IDOK)
 				{
 					AudioSequencePlayer::Instance()->playDialogControlFromUiIds(m_instructionsDialogID, IDOK, pResolver, true, "default");
@@ -350,16 +339,11 @@ void PreTranslateMessageHandler::handle(PromptResolver * pResolver, MSG* pMsg, i
 				}
 				else if (idUiFocus >= 0)
 				{
-					
 					AudioSequence * mSeq = AudioSequencePlayer::Instance()->playDialogControlFromUiIds(m_instructionsDialogID, idUiFocus, pResolver, false, "default");
-
 					if (mSeq == NULL)
 					{
-
 						mSeq = new AudioSequence();
-
 					}
-
 
 					if (! strTextField.IsEmpty())
 					{
@@ -387,31 +371,28 @@ void PreTranslateMessageHandler::handle(PromptResolver * pResolver, MSG* pMsg, i
 						AudioSequencePlayer::Instance()->Play(mSeq);
 					}
 					return;
-				}  
-					
+				}  	
 			}
 			else
 			{
-				
-			AudioSequence * mSeq = new AudioSequence();
-
-			if (!(pMsg->wParam == VK_SHIFT || pMsg->wParam == VK_HOME || pMsg->wParam == VK_END || pMsg->wParam == VK_UP || pMsg->wParam == VK_DOWN || pMsg->wParam == VK_LEFT || pMsg->wParam == VK_RIGHT))
-			{
-				if (pMsg->wParam == VK_SPACE)
+				AudioSequence * mSeq = new AudioSequence();
+				if (!(pMsg->wParam == VK_SHIFT || pMsg->wParam == VK_HOME || pMsg->wParam == VK_END || pMsg->wParam == VK_UP || pMsg->wParam == VK_DOWN || pMsg->wParam == VK_LEFT || pMsg->wParam == VK_RIGHT))
 				{
-					if (! strTextField.IsEmpty())
+					if (pMsg->wParam == VK_SPACE)
 					{
-						mSeq->append(convertKeystrokeToSpeakableString(pMsg, false, true, false));
+						if (! strTextField.IsEmpty())
+						{
+							mSeq->append(convertKeystrokeToSpeakableString(pMsg, false, true, false));
+						}
+					}
+					else
+					{
+						if (! strTextField.IsEmpty())
+						{
+							mSeq->append(convertKeystrokeToSpeakableString(pMsg, false, true, false));
+						}
 					}
 				}
-				else
-				{
-					if (! strTextField.IsEmpty())
-					{
-						mSeq->append(convertKeystrokeToSpeakableString(pMsg, false, true, false));
-					}
-				}
-			}
 				if (! strTextField.IsEmpty())
 				{
 					if (strTextField.GetLength() == 1)
@@ -421,9 +402,7 @@ void PreTranslateMessageHandler::handle(PromptResolver * pResolver, MSG* pMsg, i
 					mSeq->append(strTextField);
 					if (strTextField.Compare(strTextFieldFULL) != 0)
 					{
-
 						Prompt* p_prompt_ = DataTree::Instance()->findPrompt("textFieldEntry");
-
 						if (p_prompt_ != NULL)
 						{
 							AudioSequencePlayer::Instance()->fillSequencePrompt(mSeq, p_prompt_, pResolver);
@@ -435,7 +414,6 @@ void PreTranslateMessageHandler::handle(PromptResolver * pResolver, MSG* pMsg, i
 				if (!(mSeq->IsEmpty()))  // && wasSameKey)
 				{
 					AudioSequencePlayer::Instance()->Play(mSeq, true);
-					
 					return;
 				}
 				else

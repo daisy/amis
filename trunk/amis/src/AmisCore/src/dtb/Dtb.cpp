@@ -180,7 +180,7 @@ bool amis::dtb::Dtb::open(const ambulant::net::url* fileUrl,
 	cleanUpObjects();
 	mpHistory = history;
 	string log_msg = "Opening book: " + fileUrl->get_url();
-	amis::util::Log::Instance()->writeMessage(log_msg, "Dtb::open", "AmisCore"); 
+	amis::util::Log::Instance()->writeMessage(log_msg, "Dtb::open"); 
 
 	mpFiles = NULL;
 	mpFiles = new amis::dtb::DtbFileSet();
@@ -190,7 +190,7 @@ bool amis::dtb::Dtb::open(const ambulant::net::url* fileUrl,
 	mpCurrentNavNode = NULL;
 	if (DtbFileSet::isNccFile(fileUrl))
 	{
-		amis::util::Log::Instance()->writeMessage("This is a DAISY 2.02 book", "Dtb::open", "AmisCore");	
+		amis::util::Log::Instance()->writeMessage("This is a DAISY 2.02 book", "Dtb::open");	
 		mDaisyVersion = DAISY_202;
 		if (mThreadYielder != 0) mThreadYielder->peekAndPump();
 		if (!processNcc(mpFiles->getNavFilepath()))
@@ -206,7 +206,7 @@ bool amis::dtb::Dtb::open(const ambulant::net::url* fileUrl,
 			return false;
 		}
 		mDaisyVersion = DAISY_2005;
-		amis::util::Log::Instance()->writeMessage("This is a Daisy 2005 book", "Dtb::open", "AmisCore");
+		amis::util::Log::Instance()->writeMessage("This is a Daisy 2005 book", "Dtb::open");
 		if (!processNcx(mpFiles->getNavFilepath())) return false;
 		//if (!processDaisyResourceFile(mpFiles->getResourceFilepath())) return false;
 	}
@@ -214,11 +214,11 @@ bool amis::dtb::Dtb::open(const ambulant::net::url* fileUrl,
 	{ 
 		mDaisyVersion = UNSUPPORTED;
 		amis::util::Log::Instance()->writeWarning("The type of book could not be determined", 
-			"Dtb::open", "AmisCore");
+			"Dtb::open");
 		return false;
 	}
 	loadBookmarks(mpFiles->getBookmarksFilepath());
-	amis::util::Log::Instance()->writeMessage("Opened book successfully", "Dtb::open", "AmisCore");
+	amis::util::Log::Instance()->writeMessage("Opened book successfully", "Dtb::open");
 	return true;
 }
 
@@ -270,7 +270,7 @@ bool amis::dtb::Dtb::processNcc(const ambulant::net::url* filepath)
 
 	if (!ncc_file_reader.readFromFile(filepath)) 
 	{
-		amis::util::Log::Instance()->writeError("Could not read NCC file!", "Dtb::processNcc", "AmisCore");
+		amis::util::Log::Instance()->writeError("Could not read NCC file!", "Dtb::processNcc");
 		return false;
 	}
 	mpNavModel = ncc_file_reader.getNavModel();
@@ -282,7 +282,7 @@ bool amis::dtb::Dtb::processNcc(const ambulant::net::url* filepath)
 	//from an encrypted file
 	if (checkForCopyProtection(mpMetadata))
 	{
-		amis::util::Log::Instance()->writeMessage("This is a protected book", "Dtb::processNcc", "AmisCore");
+		amis::util::Log::Instance()->writeMessage("This is a protected book", "Dtb::processNcc");
 		mbIsProtected = true;
 		if (mpCallbackForPreprocessingBookKey != NULL) 
 		{
@@ -307,7 +307,7 @@ bool amis::dtb::Dtb::processNcc(const ambulant::net::url* filepath)
 			then: playback of NCC.html continues and it will say "this book is protected... "
 			*/
 			amis::util::Log::Instance()->writeError("Protected book could not be read", 
-				"Dtb::processNcc", "AmisCore");
+				"Dtb::processNcc");
 		}
 	}
 
@@ -398,7 +398,7 @@ bool amis::dtb::Dtb::processOpf(const ambulant::net::url* filepath)
 		std::string msg = "This format is unsupported: ";
 		if (p_item == NULL) msg += "dc:Format not found";
 		else msg += str_content;
-		amis::util::Log::Instance()->writeError(msg, "Dtb::processOpf", "AmisCore");
+		amis::util::Log::Instance()->writeError(msg, "Dtb::processOpf");
 		mDaisyVersion = UNSUPPORTED;
 		return false;
 	}
@@ -737,7 +737,7 @@ amis::dtb::Bookmark* amis::dtb::Dtb::addBookmark(amis::MediaGroup* pNote)
 	amis::dtb::PositionData* p_pos = mpBookmarks->getLastmark()->copy();
 	
 	amis::util::Log::Instance()->writeMessage("Adding bookmark", &p_pos->mUri, 
-		"Dtb::addBookmark", "AmisCore");
+		"Dtb::addBookmark");
 
 	p_bmk->mType = amis::dtb::Bookmark::BOOKMARK;
 	p_bmk->mpStart = p_pos;
@@ -760,10 +760,10 @@ void amis::dtb::Dtb::setCallbackForPreprocessingBookKey(ProtectedBookKeyHandlerF
 {
 	if (pFunction == NULL)
 		amis::util::Log::Instance()->writeWarning("Setting NULL handler for protected books",
-		"Dtb::setCallbackForPreprocessingBookKey", "AmisCore");
+		"Dtb::setCallbackForPreprocessingBookKey");
 	else
 		amis::util::Log::Instance()->writeMessage("Setting handler for protected books", 
-		"Dtb::setCallbackForPreprocessingBookKey", "AmisCore");
+		"Dtb::setCallbackForPreprocessingBookKey");
 	mpCallbackForPreprocessingBookKey = pFunction;
 }
 

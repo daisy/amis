@@ -235,8 +235,10 @@ void PreferencesFileIO::addEntry(string id, string value)
 	{
 		if (value.compare("FULL_LOGGING") == 0)
 			mpPrefs->setLogLevel(amis::util::FULL_LOGGING);
+		else if (value.compare("MEDIUM_LOGGING") == 0)
+			mpPrefs->setLogLevel(amis::util::MEDIUM_LOGGING);
 		else
-			mpPrefs->setLogLevel(amis::util::NORMAL_LOGGING);
+			mpPrefs->setLogLevel(amis::util::LOW_LOGGING);
 	}
 }
 
@@ -378,8 +380,10 @@ void PreferencesFileIO::writeData()
 	std::string str_loglevel;
 	if (mpPrefs->getLogLevel() == amis::util::FULL_LOGGING)
 		str_loglevel = "FULL_LOGGING";
+	else if (mpPrefs->getLogLevel() == amis::util::MEDIUM_LOGGING)
+		str_loglevel = "MEDIUM_LOGGING";
 	else
-		str_loglevel = "NORMAL_LOGGING";
+		str_loglevel = "LOW_LOGGING";
 
 	pEntry = createEntry("logging-level", str_loglevel);
 	pGeneralSection->appendChild((DOMNode*)pEntry);

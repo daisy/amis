@@ -265,7 +265,7 @@ void Toolbar::togglePlayPause(bool bShowPlay)
 	}
 	if (play_pause_button == NULL)
 	{
-		amis::util::Log::Instance()->writeError("Play/pause button not found on toolbar", "Toolbar::togglePlayPause", "AmisGuiMFC2");
+		amis::util::Log::Instance()->writeError("Play/pause button not found on toolbar", "Toolbar::togglePlayPause");
 		return;
 	}
 	

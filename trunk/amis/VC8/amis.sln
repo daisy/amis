@@ -17,7 +17,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AmisGuiMFC2", "..\src\AmisG
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AmisLangpack", "..\src\DefaultLangpack\AmisLangpack\AmisLangpack.vcproj", "{92F93B73-6D27-47ED-89F3-B82590338216}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libambulant_win32", "..\..\..\..\ambulant\projects\vc8\libambulant_win32.vcproj", "{DBD4EFC0-7551-4FBA-AF5A-BFBFDA7D6785}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libambulant_win32", "..\..\..\..\ambulant\projects\vc8-smil3\libambulant_win32.vcproj", "{DBD4EFC0-7551-4FBA-AF5A-BFBFDA7D6785}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

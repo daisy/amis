@@ -30,12 +30,12 @@ void addUserKeysToAmbulantPluginEngine()
 	if (!pdata)
 	{
 		amis::util::Log::Instance()->writeError("Error loading UAK", 
-			"pdtb.cpp, addUserKeysToAmbulantPluginEngine()", "AmisGuiMFC2");
+			"pdtb.cpp, addUserKeysToAmbulantPluginEngine()");
 		return; 
 	}
 	pdata->add_uak_data(keydata);
 	amis::util::Log::Instance()->writeMessage("Loaded UAK", 
-		"pdtb.cpp, addUserKeysToAmbulantPluginEngine()", "AmisGuiMFC2");
+		"pdtb.cpp, addUserKeysToAmbulantPluginEngine()");
 #endif
 }
 
@@ -58,12 +58,12 @@ bool importUserKeysIntoRegistry(std::string filename)
 	if (!ok)
 	{
 		amis::util::Log::Instance()->writeError("Could not import UAK into registry",
-			"pdtb.cpp, importUserKeysIntoRegistry", "AmisGuiMFC2");
+			"pdtb.cpp, importUserKeysIntoRegistry");
 		return false;
 	}
 	else
 		amis::util::Log::Instance()->writeMessage("Imported UAK into registry",
-			"pdtb.cpp, importUserKeysIntoRegistry", "AmisGuiMFC2");
+			"pdtb.cpp, importUserKeysIntoRegistry");
 
 	// Also add the new key to the pdtb plugin.
 	addUserKeysToAmbulantPluginEngine();
@@ -85,7 +85,7 @@ bool registerBookKeyFile(const ambulant::net::url* navfile, const ambulant::net:
 	if (!pdata)
 	{
 		amis::util::Log::Instance()->writeError("Ambulant PDTB plugin not found", 
-			"pdtb.cpp, registerBookKeyFile", "AmisGuiMFC2");
+			"pdtb.cpp, registerBookKeyFile");
 		return false;
 	}
 	return pdata->set_key(*navfile, *keyfile);

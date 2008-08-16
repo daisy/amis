@@ -70,10 +70,7 @@ string DataReader::getIniFilePath()
 {
 	if (! mIniFilePath.empty()) return mIniFilePath;
 
-	//mIniFilePath = amis::Preferences::Instance()->mUiLangDir;
-	mIniFilePath = "./settings/";
-	mIniFilePath = amis::util::FilePathTools::goRelativePath(mAppPath, mIniFilePath);
-	mIniFilePath = amis::util::FilePathTools::goRelativePath(mIniFilePath, "./resource.h.ini");	
+	mIniFilePath = amis::util::FilePathTools::goRelativePath(mAppPath, "./resource.h.ini");	
 	mIniFilePath = amis::util::FilePathTools::getAsLocalFilePath(mIniFilePath);
 
 	return mIniFilePath;

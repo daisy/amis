@@ -39,7 +39,7 @@ amis::util::Log::Log()
 {
 	mbIsFileOpen = false;
 	mbEnabled = true;
-	mLevel = amis::util::NORMAL_LOGGING;
+	mLevel = amis::util::MEDIUM_LOGGING;
 }
 amis::util::Log::~Log()
 {
@@ -94,60 +94,70 @@ void amis::util::Log::endLog()
 	mFile.close();
 	mbIsFileOpen = false;
 }
-void amis::util::Log::writeError(amis::Error error, string origin, string library)
-{
-	writeError(error.getMessage(), origin, library);
-}
-void amis::util::Log::writeError(string msg, string origin, string library)
-{
-	writeData("ERROR", msg, origin, library);
-}
-void amis::util::Log::writeWarning(string msg, string origin, string library)
-{
-	writeData("WARNING", msg, origin, library);
-}
-void amis::util::Log::writeMessage(string msg, string origin, string library)
-{
-	if (mLevel != amis::util::FULL_LOGGING) return;
-	
-	writeData("", msg, origin, library);
-}
-void amis::util::Log::writeMessage(string msg, const ambulant::net::url* file, string origin, string library)
-{
-	if (mLevel != amis::util::FULL_LOGGING) return;
 
-	string log_msg = msg;
-	if (file != NULL) log_msg += file->get_url();
-	else log_msg += "*NULL file name*";
-	writeMessage(log_msg, origin, library);
-}
-void amis::util::Log::writeWarning(string msg, const ambulant::net::url* file, string origin, string library)
+//ERROR logging functions
+void amis::util::Log::writeError(amis::Error error, string origin)
 {
-	string log_msg = msg;
-	if (file != NULL) log_msg += file->get_url();
-	else log_msg += "*NULL file name*";
-	writeWarning(log_msg, origin, library);
+	writeError(error.getMessage(), origin);
 }
-void amis::util::Log::writeError(string msg, const ambulant::net::url* file, string origin, string library)
+void amis::util::Log::writeError(string msg, string origin)
+{
+	writeData("ERROR", msg, origin);
+}
+void amis::util::Log::writeError(string msg, const ambulant::net::url* file, string origin)
 {	
 	string log_msg = msg;
 	if (file != NULL) log_msg += file->get_url();
 	else log_msg += "*NULL file name*";
-	writeError(log_msg, origin, library);
+	writeError(log_msg, origin);
 }
-void amis::util::Log::writeMessage(string msg)
-{
-	if (mLevel != amis::util::FULL_LOGGING) return;
 
-	writeData("", msg, "", "");
-}
-void amis::util::Log::writeMessage(string msg, const ambulant::net::url* file)
+//WARNING logging functions
+void amis::util::Log::writeWarning(string msg, string origin)
 {
-	if (mLevel != amis::util::FULL_LOGGING) return;
-
-	writeMessage("", file, "", "");
+	writeData("WARNING", msg, origin);
 }
-void amis::util::Log::writeData(string type, string msg, string origin, string library)
+void amis::util::Log::writeWarning(string msg, const ambulant::net::url* file, string origin)
+{
+	string log_msg = msg;
+	if (file != NULL) log_msg += file->get_url();
+	else log_msg += "*NULL file name*";
+	writeWarning(log_msg, origin);
+}
+
+//MESSAGE logging functions
+void amis::util::Log::writeMessage(string msg, string origin)
+{
+	if (mLevel < amis::util::MEDIUM_LOGGING) return;
+	writeData("MESSAGE", msg, origin);
+}
+void amis::util::Log::writeMessage(string msg, const ambulant::net::url* file, string origin)
+{
+	if (mLevel < amis::util::MEDIUM_LOGGING) return;
+
+	string log_msg = msg;
+	if (file != NULL) log_msg += file->get_url();
+	else log_msg += "*NULL file name*";
+	writeMessage(log_msg, origin);
+}
+
+//TRACE logging functions
+void amis::util::Log::writeTrace(string msg, string origin)
+{
+	if (mLevel < amis::util::FULL_LOGGING) return;
+	writeData("TRACE", msg, origin);
+}
+void amis::util::Log::writeTrace(string msg, const ambulant::net::url* file, string origin)
+{
+	if (mLevel < amis::util::FULL_LOGGING) return;
+	string log_msg;
+	if (file != NULL) log_msg += file->get_url();
+	else log_msg += "*NULL file name*";
+	writeTrace(log_msg, origin);
+}
+
+//generic data-writing functions (all others end up here eventually)
+void amis::util::Log::writeData(string type, string msg, string origin)
 {
 	if (!mbEnabled) return;
 	if (!mbIsFileOpen) return;
@@ -155,7 +165,6 @@ void amis::util::Log::writeData(string type, string msg, string origin, string l
 	if (type != "") mFile<<type<<": ";
 	mFile<<msg; 
 	if (origin != "") mFile<<" ["<<origin;
-	if (library != "") mFile<<" ("<<library<<") ";
 	if (origin != "") mFile<<"]";
 	mFile<<endl;
 }

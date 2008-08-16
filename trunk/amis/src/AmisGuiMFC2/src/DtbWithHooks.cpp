@@ -215,10 +215,10 @@ void DtbWithHooks::loadNavNode(nav::NavNode* pNav)
 {
 	if (pNav == NULL) 
 	{
-		amis::util::Log::Instance()->writeWarning("Tried to load NULL nav node", "DtbWithHooks::loadNavNode", "AmisGuiMFC2");
+		amis::util::Log::Instance()->writeWarning("Tried to load NULL nav node", "DtbWithHooks::loadNavNode");
 		return;
 	}
-	amis::util::Log::Instance()->writeMessage("Loading nav node", "DtbWithHooks::loadNavNode", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Loading nav node", "DtbWithHooks::loadNavNode");
 	ambulant::net::url rel_path = ambulant::net::url::from_url(pNav->getContent());
 	loadSmilFromUrl(&rel_path);
 }
@@ -449,7 +449,7 @@ void DtbWithHooks::loadBookmark(int index)
 
 	p_mark = p_bmks->getItem(index);
 	if (!p_mark) return;
-	amis::util::Log::Instance()->writeMessage("Loading bookmark", "DtbWitHooks::loadBookmark", "AmisGuiMFC2");
+	amis::util::Log::Instance()->writeMessage("Loading bookmark", "DtbWitHooks::loadBookmark");
 	loadSmilFromUrl(&p_mark->mpStart->mUri);
 }
 
@@ -465,7 +465,7 @@ amis::dtb::smil::SmilMediaGroup* DtbWithHooks::loadSmilFromUrl(const ambulant::n
 		LPCTSTR str_ = A2T(full_path.get_url().c_str());
 		string log_msg = "Loading SMIL from URL: " + full_path.get_url();
 		amis::util::Log::Instance()->writeMessage("Loading SMIL from URL", &full_path, 
-			"DtbWithHooks::loadSmilFromUrl", "AmisGuiMFC2");
+			"DtbWithHooks::loadSmilFromUrl");
 		amis::gui::MainWndParts::Instance()->mpMmDoc->OnOpenDocument(str_);
 	}
 	//DanToDo: Is this the best place to set the PLAY/PAUSE status ? (is the book actually playing at this stage...probably not)
@@ -495,13 +495,13 @@ void DtbWithHooks::previousSection()
 		else 
 		{
 			std::string msg = "Previous section is NULL.  Reloading current. Current nav ID# = " + id;
-			p_log->writeMessage(msg, "DtbWithHooks::previousSection", "AmisGuiMFC2");
+			p_log->writeMessage(msg, "DtbWithHooks::previousSection");
 			loadNavNode(getCurrentNavNode());
 		}
 	}
 	else
 	{
-		p_log->writeWarning("current nav node is NULL", "DtbWithHooks::previousSection", "AmisGuiMFC2");
+		p_log->writeWarning("current nav node is NULL", "DtbWithHooks::previousSection");
 	}
 }
 void DtbWithHooks::nextSection()
@@ -525,12 +525,12 @@ void DtbWithHooks::nextSection()
 		else 
 		{
 			std::string msg = "Next section is NULL.  Current nav ID# = " + id;
-			p_log->writeMessage(msg, "DtbWithHooks::nextSection", "AmisGuiMFC2");
+			p_log->writeMessage(msg, "DtbWithHooks::nextSection");
 		}
 	}
 	else
 	{
-		p_log->writeWarning("current nav node is NULL", "DtbWithHooks::nextSection", "AmisGuiMFC2");
+		p_log->writeWarning("current nav node is NULL", "DtbWithHooks::nextSection");
 	}
 }
 void DtbWithHooks::previousPage()
@@ -549,12 +549,12 @@ void DtbWithHooks::previousPage()
 		else 
 		{
 			std::string msg = "Previous page is NULL.  Current nav ID# = " + id;
-			p_log->writeMessage(msg, "DtbWithHooks::previousPage", "AmisGuiMFC2");
+			p_log->writeMessage(msg, "DtbWithHooks::previousPage");
 		}
 	}
 	else
 	{
-		p_log->writeWarning("current nav node is NULL", "DtbWithHooks::previousPage", "AmisGuiMFC2");
+		p_log->writeWarning("current nav node is NULL", "DtbWithHooks::previousPage");
 	}
 }
 void DtbWithHooks::nextPage()
@@ -573,12 +573,12 @@ void DtbWithHooks::nextPage()
 		else 
 		{
 			std::string msg = "Next page is NULL.  Current nav ID# = " + id;
-			p_log->writeMessage(msg, "DtbWithHooks::nextPage", "AmisGuiMFC2");
+			p_log->writeMessage(msg, "DtbWithHooks::nextPage");
 		}
 	}
 	else
 	{
-		p_log->writeWarning("current nav node is NULL", "DtbWithHooks::nextPage", "AmisGuiMFC2");
+		p_log->writeWarning("current nav node is NULL", "DtbWithHooks::nextPage");
 	}
 }
 //always true until the nextPhrase + document_stopped event can be untangled in MmView

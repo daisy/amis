@@ -78,7 +78,7 @@ BOOL PublicationSummaryDialog::OnInitDialog()
 	{
 		amis::util::Log::Instance()->writeError(
 			"Publication summary dialog cannot load because mpBook is NULL", 
-			"PublicationSummaryDialog::OnInitDialog", "AmisGuiMFC2");
+			"PublicationSummaryDialog::OnInitDialog");
 		return TRUE;
 	}
 	if (calculateData() == true)
