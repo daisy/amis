@@ -140,10 +140,9 @@ Section "MainSection" SEC01
   ;copy the MSVC redistributables exe
   ;if you are making an installer, be sure to get the latest one from Microsoft.  
   ;the one included in Visual Studio 8, even SP1, is outdated.
-  ;TODO: find out if the user even needs these files or not
   SetOutPath $TEMP
   File "c:\devel\vcredist_x86.exe"
-	
+  
   ;to support Thai encoding, add this key in HKLM
   ;Software\Classes\MIME\Database\Charset\TIS-620 and set AliasForCharset to windows-874
    WriteRegStr HKLM "Software\Classes\MIME\Database\Charset\TIS-620" "AliasForCharset" "Windows-874"
@@ -310,12 +309,22 @@ Function RunMSVCRuntimeSetup
   Var /GLOBAL MSVC_RUNTIME_INSTALLER
 	
   StrCpy $MSVC_RUNTIME_INSTALLER "$TEMP\vcredist_x86.exe"
-   
-  ExecWait "$MSVC_RUNTIME_INSTALLER" $0
-  StrCmp $0 "0" End Error
+  
+  ;check and see if the user needs these files
+  Push $R0
+  ClearErrors
+  ReadRegDword $R0 HKLM "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{7299052b-02a4-4627-81f2-1818da5d550d}" "Version"
+  ; if VS 2005+ redist SP1 not installed, install it
+  IfErrors InstallVSRedist End
+  StrCpy $R0 "-1"
+
+	;actually install them
+	InstallVSRedist: 
+  	ExecWait "$MSVC_RUNTIME_INSTALLER" $0
+  	StrCmp $0 "0" End Error
   Error:
-    MessageBox MB_ICONEXCLAMATION "There was an error encountered while attempting to install the Microsoft runtime files.  Please download from http://www.microsoft.com/downloads/details.aspx?FamilyID=200B2FD9-AE1A-4A14-984D-389C36F85647&displaylang=en and install manually."
-    Goto End
+    	MessageBox MB_ICONEXCLAMATION "There was an error encountered while attempting to install the Microsoft runtime files.  Please download from http://www.microsoft.com/downloads/details.aspx?FamilyID=200B2FD9-AE1A-4A14-984D-389C36F85647&displaylang=en and install manually."
+    	Goto End
   End:
-  Delete "$MSVC_RUNTIME_INSTALLER"
+  	Delete "$MSVC_RUNTIME_INSTALLER"
 FunctionEnd
