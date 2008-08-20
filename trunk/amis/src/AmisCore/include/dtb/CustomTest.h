@@ -32,7 +32,9 @@ namespace amis
 {
 namespace dtb
 {
-//!Custom test object represents a custom test structure in a DTB
+//Custom test object represents a custom test structure in a DTB
+//if the state of a custom test is set to "true", it means it should be played
+//"false" means we want to skip it.
 class CustomTest
 {
 public:

@@ -227,45 +227,7 @@ void TextRenderBrain::showElementAtId(string elmId)
 	USES_CONVERSION;
 	CString cstr_elm_id = A2T(elmId.c_str());
 	CString msg;
-	//for debugging...
-	//get the previous (currently highlighted) text element ID
-	string prev_text_elm_id = "";
-	if (mpPreviousElm)
-	{
-		const char* c_attr_id = "id";
-		BSTR attr_id;
-		attr_id = A2BSTR(c_attr_id);
-		VARIANT attr_val;
-		VariantInit(&attr_val);
-		attr_val.vt = VT_BSTR;
-		mpPreviousElm->getAttribute(attr_id, 0, &attr_val);
-		if (attr_val.bstrVal != NULL)
-		{
-			CString temp_cstr(OLE2CW(attr_val.bstrVal));
-			LPCTSTR tmp;
-			tmp = (LPCTSTR)temp_cstr;
-			prev_text_elm_id = T2A(tmp);
-			SysFreeString(attr_val.bstrVal);
-		}
-	}
-	else
-	{
-		msg.Format(_T("^^^^^^^^^^ showElementAtId(%s): No previous element.\n"), cstr_elm_id);
-		TRACE(_T("%s"), msg);
-	}
 	
-	if (prev_text_elm_id == mTextElmId)
-	{
-		msg.Format(_T("^^^^^^^^^^ showElementAtId(%s): Warning: we should have already highlighted this element.\n"), cstr_elm_id);
-		TRACE(_T("%s"), msg);
-	}
-	else
-	{
-		msg.Format(_T("^^^^^^^^^^ showElementAtId(%s): This is a new element that I have never seen before in my life.\n"), cstr_elm_id);
-		TRACE(_T("%s"), msg);
-	}
-	//end for debugging...
-
 	if (elmId.size() == 0) return; 
 	IHTMLElement* p_elm = NULL;
 	p_elm = GetElementFromId(elmId, 0);

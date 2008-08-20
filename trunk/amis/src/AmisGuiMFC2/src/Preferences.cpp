@@ -89,7 +89,7 @@ Preferences::Preferences()
 	setLogLevel(amis::util::FULL_LOGGING);
 #else
 	setIsLoggingEnabled(false);
-	setLogLevel(amis::util::NORMAL_LOGGING);
+	setLogLevel(amis::util::LOW_LOGGING);
 #endif
 
 }
