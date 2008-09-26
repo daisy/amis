@@ -284,6 +284,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\src\io\SmilAudioExtract.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\src\io\SmilFileReader.cpp"
 					>
 					<FileConfiguration
@@ -297,6 +301,10 @@
 				</File>
 				<File
 					RelativePath=".\src\io\TextSearch.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\src\io\TitleAuthorParse.cpp"
 					>
 				</File>
 				<File
@@ -724,11 +732,19 @@
 					>
 				</File>
 				<File
+					RelativePath=".\include\io\SmilAudioExtract.h"
+					>
+				</File>
+				<File
 					RelativePath=".\include\io\SmilFileReader.h"
 					>
 				</File>
 				<File
 					RelativePath=".\include\io\TextSearch.h"
+					>
+				</File>
+				<File
+					RelativePath=".\include\io\TitleAuthorParse.h"
 					>
 				</File>
 				<File
