@@ -87,7 +87,7 @@ bool amis::io::XercesSaxParseBase::parseFile(const ambulant::net::url* filepath)
 	{
 		mError.setCode(amis::PARSE_ERROR);
 		string str;
-		str.assign("Could not creat input source for " + mFilepath.get_url());	
+		str.assign("Could not create input source for " + mFilepath.get_url());	
 		mError.setMessage(str);
 		delete p_input_source;
 		delete parser;

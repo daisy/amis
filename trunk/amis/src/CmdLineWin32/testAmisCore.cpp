@@ -14,6 +14,7 @@
 #include "util/FilePathTools.h"
 #include "util/Log.h"
 #include "BookList.h"
+#include "io/TitleAuthorParse.h"
 
 #include <tchar.h>
 #include <iostream>
@@ -32,16 +33,25 @@ void previousPhrase();
 void addBookmark();
 void searchText();
 ambulant::net::url chooseBook();
+void testTitleAuthorParse();
+void readBook();
 
 //helper functions
 bool handleInput(string);
 void output(amis::dtb::smil::SmilMediaGroup*);
 void printContextualInfo(amis::dtb::smil::SmilMediaGroup*);
+void printTitleAndAuthorInfo(const ambulant::net::url*);
 
 //a global variable of the book we are reading
 amis::dtb::Dtb* gBook;
 
 int _tmain(int argc, _TCHAR* argv[])
+{
+	//readBook();
+	testTitleAuthorParse();
+	return 0;
+}
+void readBook()
 {
 	amis::util::Log::Instance()->startLog("c:\\devel\\amis\\trunk\\amis\\bin\\amisLog.txt");
 	ambulant::net::url bookmarks_url = ambulant::net::url::from_filename("c:\\daisybooks\\bmk\\");
@@ -54,7 +64,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	if (!gBook->open(&book_url, &bookmarks_url, p_recent_books))
 	{
 		cout<<"Error opening book"<<endl;
-		return 0;
 	}
 	else
 	{
@@ -69,7 +78,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	delete p_recent_books;
 	amis::util::Log::Instance()->endLog();
 	amis::util::Log::Instance()->DestroyInstance();
-	return 0;
 }
 ambulant::net::url chooseBook()
 {
@@ -220,6 +228,49 @@ void output(amis::dtb::smil::SmilMediaGroup* pData)
 		pData->print();
 		printContextualInfo(pData);
 		delete pData;
+	}
+}
+
+void testTitleAuthorParse()
+{
+	amis::util::Log::Instance()->enable(true);
+	amis::util::Log::Instance()->setLevel(amis::util::FULL_LOGGING);
+	amis::util::Log::Instance()->startLog("C:\\devel\\amis\\amisLogTestCore.log");
+
+	ambulant::net::url url_202 = ambulant::net::url::from_filename("C:\\daisybooks\\Mountains_skip\\ncc.html");
+	ambulant::net::url url_zed = ambulant::net::url::from_filename("C:\\daisybooks\\voiceover_guide_zed\\06-SPEECHGEN.OPF");
+	
+	printTitleAndAuthorInfo(&url_202);
+	printTitleAndAuthorInfo(&url_zed);	
+
+	amis::util::Log::Instance()->endLog();
+	amis::util::Log::Instance()->DestroyInstance();
+}
+
+void printTitleAndAuthorInfo(const ambulant::net::url* book)
+{
+	amis::io::TitleAuthorParse parser;
+	if (parser.readFromFile(book) == true)
+	{
+		amis::MediaGroup* p_data = NULL;
+		p_data = parser.getAuthorInfo();
+		if (p_data != NULL)
+		{
+			cout<<"Author: "<<endl;
+			p_data->print();
+			delete p_data;
+		}
+		p_data = parser.getTitleInfo();
+		if (p_data != NULL)
+		{
+			cout<<"Title: "<<endl;
+			p_data->print();
+			delete p_data;
+		}
+	}
+	else
+	{
+		cout<<"Could not parse file! "<<book->get_file()<<endl;
 	}
 }
 

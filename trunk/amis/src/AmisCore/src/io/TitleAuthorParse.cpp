@@ -27,7 +27,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "Media.h"
 #include "dtb/DtbFileSet.h"
 #include "io/OpfFileReader.h"
-//#include "io/SmilAudioExtract.h"
+#include "io/SmilAudioExtract.h"
 
 
 
@@ -88,11 +88,11 @@ bool amis::io::TitleAuthorParse::readFromFile(const ambulant::net::url* filepath
 	mbTransferredTitleData = false;
 	mbTransferredAuthorData = false;
 
-	const ambulant::net::url* file_to_parse;
+	ambulant::net::url file_to_parse;
 
 	if (amis::dtb::DtbFileSet::isNccFile(filepath) == true)
 	{
-		file_to_parse = filepath;
+		file_to_parse = *filepath;
 		mFileType = NCC;
 	}
 	//for OPF files, we have to read them and find out the NCX filepath, and use that with our parser
@@ -101,7 +101,7 @@ bool amis::io::TitleAuthorParse::readFromFile(const ambulant::net::url* filepath
 		OpfFileReader opf_parse;
 		if (opf_parse.readFromFile(filepath) == true)
 		{
-			file_to_parse = opf_parse.getNavFilename();
+			file_to_parse = *opf_parse.getNavFilename();
 			mFileType = NCX;
 		}
 		else
@@ -117,7 +117,7 @@ bool amis::io::TitleAuthorParse::readFromFile(const ambulant::net::url* filepath
 	}
 
 	//start the parsing.. expect events soon
-	if (!this->parseFile(file_to_parse)) 
+	if (!this->parseFile(&file_to_parse)) 
 	{
 		amis::util::Log::Instance()->writeWarning("Parse failed", filepath, "TitleAuthorParse::readFromFile");
 		return false;
@@ -133,7 +133,7 @@ bool amis::io::TitleAuthorParse::readFromFile(const ambulant::net::url* filepath
 			smil_href = smil_href.join_to_base(*this->getFilepath());
 			//quickly parse the SMIL file and grab the audio closest to this ID
 			SmilAudioExtract smil_audio_extract;
-			p_audio = smil_audio_extract.getAudioAtId(smil_href);
+			p_audio = smil_audio_extract.getAudioAtId(&smil_href);
 			if (p_audio != NULL)
 				mpTitleInfo->addAudioClip(p_audio);
 			else
@@ -141,6 +141,8 @@ bool amis::io::TitleAuthorParse::readFromFile(const ambulant::net::url* filepath
 					"TitleAuthorParse::readFromFile");
 		}
 	}
+
+	return true;
 }
 
 amis::MediaGroup* amis::io::TitleAuthorParse::getAuthorInfo()
@@ -176,7 +178,7 @@ void amis::io::TitleAuthorParse::startElement(const   XMLCh* const    uri,
 					mbFlagGetChars = true;
 					mTempChars.erase();
 					mbFlagGetSmilHref = true;
-					mChardataElm = "<h1>";
+					mChardataElm = "h1";
 				}
 			}
 			//if this is a link element and we are looking to get an href value

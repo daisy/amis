@@ -139,6 +139,15 @@ void amis::MediaNode::print(bool verbose)
 	}
 	cout<<"\tID="<<mId<<endl;
 	cout<<"\tSRC="<<mSrc<<endl;
+	if (mMediaNodeType == TEXT)
+	{
+		amis::TextNode* t = (amis::TextNode*)this;
+		if (t->getTextString().length() > 0)
+		{
+ 			cout<<"\tSTRING=";
+			wcout<<t->getTextString()<<endl;
+		}
+	}
 	cout<<endl;
 }
 /*

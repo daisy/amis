@@ -24,7 +24,7 @@
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
-				CommandLine="..\..\bin\copyAmbulantDll.bat"
+				CommandLine=""
 			/>
 			<Tool
 				Name="VCCustomBuildTool"

@@ -23,10 +23,9 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #define SMILAUDIOEXTRACT_H
 
 #include "io/XercesSaxParseBase.h"
-#include "Media.h"
+
 #include <string>
 #include <vector>
-
 #include <xercesc/sax2/DefaultHandler.hpp>
 
 XERCES_CPP_NAMESPACE_USE
@@ -38,24 +37,16 @@ XERCES_CPP_NAMESPACE_END
 namespace amis
 {
 namespace io
-{//! The SmilAudioExtract parses a SMIL file to get audio data for a single element
-/*!
-	this class is based on the SmilAudioRetrieve Nav utility class
-	but differs because that class builds a list of all audio references, 
-	under the assumption that it may have to pull several references from the same 
-	file.  in that scenario, this saves parsing time.  but here we just want one
-	reference so building that list is unneccesary*/
-class SmilAudioExtract: public DefaultHandler
 {
-	
+class SmilAudioExtract: public XercesSaxParseBase
+{
 public:
 	
-	//LIFECYCLE
 	SmilAudioExtract();
 	~SmilAudioExtract();
 	
-	//!extract a single audio element from a par or text id
-	amis::AudioNode* getAudioAtId(string filepath);
+	//extract a single audio element from a par or text id
+	amis::AudioNode* getAudioAtId(const ambulant::net::url*);
 	
 	//SAX METHODS
 	void startElement(const   XMLCh* const    uri,
@@ -65,33 +56,21 @@ public:
     void endElement(const XMLCh* const uri,
 		const XMLCh* const localname,
 		const XMLCh* const qname);
-	void error(const SAXParseException&);
-	void fatalError(const SAXParseException&);
-	void warning(const SAXParseException&);
+	//we don't need this method but we need to implement it
+	void characters(const XMLCh *const, const unsigned int){}
 	/*end of sax methods*/
 
 private:
 
-	//!get an attribute value from the member variable mpAttributes
-	string getAttributeValue(string attributeName);
-
-	//!smil source path
-	string mFilePath;
-	//!audio information
 	amis::AudioNode* mpAudioInfo;
-	//!target id
 	string mId;
-	//!pointer to attributes collection for node being currently processed
-	const Attributes* mpAttributes;
-
-	//!flag if we are in a par element
-	bool mb_flagInPar;
-	//!if we found the id (on a text or par)
-	bool mb_flagFoundId;
-	//!if the search is done and the data has been collected
-	bool mb_flagFinished;
+	
+	//flags for parsing
+	bool mbFlagInPar;
+	bool mbFlagFoundId;
+	bool mbIsDataExtracted;
 };
 }
-
+}
 #endif
 
