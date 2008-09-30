@@ -23,6 +23,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #define FILEPATHTOOLS_H
 
 #include <string>
+#include "ambulant/net/url.h"
 
 using namespace std;
 
@@ -30,6 +31,7 @@ namespace amis
 {
 namespace util
 {
+std::string ambulantUrlToString(const ambulant::net::url*);
 //!File path tools: utility functions for working with file paths
 class FilePathTools
 {

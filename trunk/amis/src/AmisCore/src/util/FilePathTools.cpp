@@ -26,9 +26,16 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "util/FilePathTools.h"
 #include "AmisCore.h"
 
-//--------------------------------------------------
-//--------------------------------------------------
-//! return just the filename and extension
+//return a string representation of the ambulant URL, for both local and remote files
+string amis::util::ambulantUrlToString(const ambulant::net::url* pUrl)
+{
+	if (pUrl->is_local_file() == true)
+		return pUrl->get_file();
+	else
+		return pUrl->get_url();	
+}
+
+//return just the filename and extension
 string amis::util::FilePathTools::getFileName(string filepath)
 {
 	string file_name;
