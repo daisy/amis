@@ -354,14 +354,16 @@ BOOL SearchForBooksDialog::PreTranslateMessage(MSG* pMsg)
 				 {
 					pMsg->wParam = NULL;
 					OnStartsearch();
-					return CDialog::PreTranslateMessage(pMsg);
+					return FALSE;
+					//return CDialog::PreTranslateMessage(pMsg);
 				 }
 				 //if the files list has focus, open the selected book
 				 else if (id == IDC_FILESFOUND)
 				 {
 					 pMsg->wParam = NULL;
 					 loadBook();
-					 return CDialog::PreTranslateMessage(pMsg);
+					 return FALSE;
+					 //return CDialog::PreTranslateMessage(pMsg);
 				 }
 			}	
 		}

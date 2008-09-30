@@ -46,7 +46,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="0"
 				AdditionalIncludeDirectories="include;../../../../../ambulant/include/;&quot;../../../../../ambulant-private/pdtbplugin&quot;;&quot;../../../../../ambulant-private/pdtbplugin/PdtbIePlugin&quot;;../AmisCore/include;&quot;../../../../../xerces-c-src/src&quot;;&quot;$(VSInstallDir)\..\Microsoft Speech SDK 5.1\Include&quot;;&quot;$(VSInstallDir)\..\Visual Leak Detector&quot;;"
-				PreprocessorDefinitions="_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;_DEBUG;AMIS_COMPILER_MSVC;AMIS_PLATFORM_WINDOWS;WITH_EXTERNAL_SMIL_PLAYER;WITH_PROTECTED_BOOK_SUPPORT;WITH_PLUGINS;WITH_SMIL30"
+				PreprocessorDefinitions="_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;_DEBUG;AMIS_COMPILER_MSVC;AMIS_PLATFORM_WINDOWS;WITH_EXTERNAL_SMIL_PLAYER;WITH_PROTECTED_BOOK_SUPPORT;WITH_WINDOWS_PLUGINS;WITH_SMIL30"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"

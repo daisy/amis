@@ -78,6 +78,9 @@ public:
 	void setDisableScreensaver(bool);
 	bool getDisableScreensaver();
 
+	void setPreferFFMpeg(bool);
+	bool getPreferFFMpeg();
+
 	void setUserBmkDir(const ambulant::net::url*);
 	const ambulant::net::url* getUserBmkDir();
 	
@@ -137,6 +140,7 @@ private:
 	bool mbHighlightText;
 	bool mbDisableScreensaver;
 	bool mbIsFirstTime;
+	bool mbPreferFFMpeg;
 	util::Color mHighlightFG;
 	util::Color mHighlightBG;
 	std::string mSidebarFontName;

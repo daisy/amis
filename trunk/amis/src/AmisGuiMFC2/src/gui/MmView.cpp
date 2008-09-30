@@ -29,6 +29,7 @@
 #include "gui/HtmlView.h"
 #include "gui/AmisApp.h"
 #include "gui/TextRenderBrain.h"
+#include "Preferences.h"
 
 #include "io/UrlInputSource.h"
 
@@ -36,7 +37,6 @@
 #include "dtb/CustomTest.h"
 #include "DtbWithHooks.h"
 #include "../resource.h"
-
 #include <fstream>
 #include <string>
 
@@ -213,7 +213,7 @@ MmView::MmView()
 	prefs->m_parser_id = "xerces";
 	prefs->m_use_plugins = true;
 	prefs->m_plugin_dir = "";
-	prefs->m_prefer_ffmpeg = false;
+	prefs->m_prefer_ffmpeg = amis::Preferences::Instance()->getPreferFFMpeg();
 	prefs->m_dynamic_content_control = true;
 
 #ifdef WITHOUT_LOG_WINDOW

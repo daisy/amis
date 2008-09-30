@@ -240,6 +240,13 @@ void PreferencesFileIO::addEntry(string id, string value)
 		else
 			mpPrefs->setLogLevel(amis::util::LOW_LOGGING);
 	}
+	else if (id.compare("prefer-ffmpeg") == 0)
+	{
+		if (value.compare("yes") == 0)
+			mpPrefs->setPreferFFMpeg(true);
+		else
+			mpPrefs->setPreferFFMpeg(false);
+	}
 }
 
 
@@ -347,6 +354,9 @@ void PreferencesFileIO::writeData()
 	pGeneralSection->appendChild((DOMNode*)pEntry);
 
 	pEntry = createEntry("zed-2005-css-file", mpPrefs->getZed2005CssFile()->get_file());
+	pGeneralSection->appendChild((DOMNode*)pEntry);
+
+	pEntry = createEntry("prefer-ffmpeg", mpPrefs->getPreferFFMpeg());
 	pGeneralSection->appendChild((DOMNode*)pEntry);
 
 	//Directories

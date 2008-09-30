@@ -83,6 +83,7 @@ Preferences::Preferences()
 	mSidebarFontName = "Arial";
 
 	mbIsFirstTime = false;
+	mbPreferFFMpeg = false;
 
 #ifdef _DEBUG
 	setIsLoggingEnabled(true);
@@ -412,6 +413,15 @@ std::string Preferences::getSidebarFontName()
 {
 	return mSidebarFontName;
 }
+void Preferences::setPreferFFMpeg(bool value)
+{
+	mbPreferFFMpeg = value;
+}
+bool Preferences::getPreferFFMpeg()
+{
+	return mbPreferFFMpeg;
+}
+
 void Preferences::logAllPreferences()
 {
 	amis::util::Log* p_log = amis::util::Log::Instance();
