@@ -156,14 +156,13 @@ TextNode class
 amis::TextNode::TextNode()
 {
 	setMediaNodeType(amis::TEXT);
-	mText.erase();
 	mLangDir = amis::LTR;
 }
 
 amis::TextNode::~TextNode()
 {
-	mText.clear();
-	mText.erase();
+//	mText.clear();
+//	mText.erase();
 }
 
 void amis::TextNode::cloneContents(TextNode* p_new)

@@ -40,7 +40,8 @@ public:
 	void setTitleAudio(string, string, string);
 	wstring getTitleText();
 	amis::AudioNode* getTitleAudio();
-	
+	void setTitleMedia(amis::MediaGroup*);
+
 	std::wstring mUid;
 	ambulant::net::url mPath;
 	ambulant::net::url mBmkPath;

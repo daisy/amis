@@ -66,10 +66,12 @@ private:
 	void announceStatus(CString, SearchStatus); 
 	void populateListControl();
 	void loadBook();
-
+	amis::BookList* resolveTitles(amis::UrlList*);
 	bool mbShouldStopSearching;
 	amis::util::SearchForFilesMFC mSearcher;
 	ambulant::net::url mLoadBookOnDialogClose;
+	//the list of books is here, with the title text + audio
+	amis::BookList* mpBooks;
 
 	CString mCaptionWhileSearching;
 	CString mCaptionDefault;

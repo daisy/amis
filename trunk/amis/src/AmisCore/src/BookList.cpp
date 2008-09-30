@@ -59,6 +59,12 @@ void amis::BookEntry::setTitleAudio(string src, string clipbegin, string clipend
 	mpTitle->getAudio(0)->setClipBegin(clipbegin);
 	mpTitle->getAudio(0)->setClipEnd(clipend);
 }
+
+void amis::BookEntry::setTitleMedia(amis::MediaGroup* pData)
+{
+	mpTitle = pData;
+}
+
 wstring amis::BookEntry::getTitleText()
 {
 	if (mpTitle != NULL && mpTitle->getText() != NULL)
@@ -98,6 +104,7 @@ void amis::BookList::cleanUpVector()
 		p_tmp = mItems[i];
 		mItems.pop_back();
 		if (p_tmp != NULL) delete p_tmp;
+		p_tmp = NULL;
 	}
 }
 int amis::BookList::getNumberOfEntries()

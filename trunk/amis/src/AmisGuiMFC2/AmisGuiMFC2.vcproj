@@ -23,6 +23,7 @@
 			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
 			UseOfMFC="2"
 			CharacterSet="1"
+			WholeProgramOptimization="0"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -77,6 +78,7 @@
 				IgnoreDefaultLibraryNames="uafxcwd.lib"
 				GenerateDebugInformation="true"
 				SubSystem="2"
+				OptimizeForWindows98="1"
 				TargetMachine="1"
 			/>
 			<Tool

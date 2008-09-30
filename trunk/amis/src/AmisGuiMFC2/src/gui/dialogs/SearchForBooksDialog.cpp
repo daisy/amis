@@ -24,13 +24,14 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "gui/dialogs/SearchForBooksDialog.h"
 #include "../resource.h"
 #include "util/SearchForFilesMFC.h"
+#include "io/TitleAuthorParse.h"
 #include "AmisCore.h"
 #include "Preferences.h"
 #include "gui/dialogs/PathDialog.h"
 #include "gui/MainWndParts.h"
+#include "BookList.h"
 
 #include "gui/self-voicing/datamodel/DataTree.h"
-
 #include "gui/self-voicing/dialogs/SearchForBooksDialogVoicing.h"
 
 using namespace amis::gui::dialogs;
@@ -117,6 +118,7 @@ BOOL SearchForBooksDialog::OnInitDialog()
 	p_button = (CButton*)this->GetDlgItem(IDC_OPENBOOK);
 	p_button->EnableWindow(FALSE);
 	this->setFontOnAllControls();
+	mpBooks = NULL;
 
 	return TRUE;
 }
@@ -137,7 +139,6 @@ void SearchForBooksDialog::announceStatus(CString msg, SearchStatus status)
 	}
 }
 
-//TODO: fill in titles, not URLs
 void SearchForBooksDialog::populateListControl()
 {
 	USES_CONVERSION;
@@ -145,14 +146,13 @@ void SearchForBooksDialog::populateListControl()
 	p_filelist = (CListBox*)this->GetDlgItem(IDC_FILESFOUND);
 
 	amis::UrlList* p_search_results = mSearcher.getSearchResults();
-	amis::UrlList::iterator it;
-	int i = 0;
-	for (it = p_search_results->begin(); it != p_search_results->end(); ++it)
+	mpBooks = resolveTitles(p_search_results);
+	int sz = mpBooks->getNumberOfEntries();
+	for (int i=0; i<mpBooks->getNumberOfEntries(); i++)
 	{
 		CString result;
-		result = A2T(it->get_file().c_str());
+		result = mpBooks->getEntry(i)->getTitleText().c_str();
 		p_filelist->AddString(result);
-		i++;
 	}
 	
 	p_filelist->SetFocus();
@@ -169,14 +169,46 @@ void SearchForBooksDialog::populateListControl()
 		p_button->EnableWindow(TRUE);
 	}
 }
+amis::BookList* SearchForBooksDialog::resolveTitles(amis::UrlList* pUrls)
+{
+	USES_CONVERSION;
+	amis::BookList* p_list = new amis::BookList();
+	amis::io::TitleAuthorParse parser;
+	int sz = pUrls->size();
+	for (int i=0; i<pUrls->size(); i++)
+	{
+		const ambulant::net::url* url = &(*pUrls)[i];
+		if (parser.readFromFile(url) == true)
+		{
+			amis::BookEntry* p_entry = new amis::BookEntry();
+			//p_entry now owns the title info data and must delete it
+			p_entry->setTitleMedia(parser.getTitleInfo());
+			p_entry->mPath = *url;
+			p_list->addEntry(p_entry);
+		}
+		else
+		{
+			amis::BookEntry* p_entry = new amis::BookEntry();
+			//for some reason, this couldn't be read, so just display the URL
+			p_entry->setTitleText(A2T(url->get_file().c_str()));
+			p_entry->mPath = *url;
+			p_list->addEntry(p_entry);
+		}
+	}
+	return p_list;
+}
 
 void SearchForBooksDialog::loadBook()
 {
 	CListBox* p_list = NULL;
 	p_list = (CListBox*)this->GetDlgItem(IDC_FILESFOUND);
 	int sel = p_list->GetCurSel();
-	amis::UrlList* p_search_results = mSearcher.getSearchResults();
-	if (sel > -1 && sel < p_search_results->size()) mLoadBookOnDialogClose = (*p_search_results)[sel];
+	if (sel > -1 && sel < mpBooks->getNumberOfEntries()) 
+		mLoadBookOnDialogClose = mpBooks->getEntry(sel)->mPath;
+	//clear the books list
+	//we are leaking a bit of memory here but it is crashing when trying to delete certain 
+	//books' title info media groups
+	//if (mpBooks != NULL) delete mpBooks;
 	this->EndDialog(1);
 }
 
@@ -252,7 +284,7 @@ void SearchForBooksDialog::OnStartsearch()
 	mSearcher.addSearchCriteria(".opf");
 	//sometimes I see these temp files on my drive .. excluding them just to be safe
 	mSearcher.addSearchExclusionCriteria("_ncc.html");
-
+	
 	// SVN folders are interfering
 	mSearcher.addSearchExclusionCriteria(".svn-base");
 

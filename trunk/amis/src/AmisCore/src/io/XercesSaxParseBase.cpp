@@ -56,6 +56,7 @@ bool amis::io::XercesSaxParseBase::parseFile(const ambulant::net::url* filepath)
 {
 	SAX2XMLReader* parser;
 	mFilepath = *filepath;
+	mError.clear();
 	amis::util::Log::Instance()->writeMessage("Parsing file: ", filepath, "XercesSaxParseBase::parseFile");
 	//try-catch block for Xerces platform utilities
 	try
