@@ -198,7 +198,10 @@ void DtbWithHooks::nextSmilDocument()
 
 	const ambulant::net::url* filepath = this->getSpine()->getNextFile();
 	if (filepath) 
-		amis::gui::MainWndParts::Instance()->mpMmView->ScheduleReplaceDoc(filepath->get_file());
+	{
+		string str_filepath = amis::util::ambulantUrlToString(filepath);
+		amis::gui::MainWndParts::Instance()->mpMmView->ScheduleReplaceDoc(str_filepath);
+	}
 }
 
 void DtbWithHooks::previousSmilDocument()
@@ -207,8 +210,11 @@ void DtbWithHooks::previousSmilDocument()
 
 	const ambulant::net::url* filepath = this->getSpine()->getPreviousFile();
 	
-	if (filepath) 
-		amis::gui::MainWndParts::Instance()->mpMmView->ScheduleReplaceDoc(filepath->get_file());
+	if (filepath)
+	{
+		string str_filepath = amis::util::ambulantUrlToString(filepath);
+		amis::gui::MainWndParts::Instance()->mpMmView->ScheduleReplaceDoc(str_filepath);
+	}
 }
 
 void DtbWithHooks::loadNavNode(nav::NavNode* pNav)
