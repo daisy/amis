@@ -590,10 +590,8 @@ void amis::dtb::Dtb::setNewLastmark(ambulant::net::url positionUri)
 		if (mpNavModel->getNavMap() != NULL)
 		{
 			amis::dtb::nav::NavNode* p_node = NULL;
-			std::string uri_ref = p_pos_data->mUri.get_ref();
-			//TODO: make this work for arbitrarily nested SMIL files (don't assume ncx and smil in same dir)
-			std::string smil_file_name = amis::util::FilePathTools::getFileName(p_pos_data->mUri.get_url());
-			smil_file_name += "#" + uri_ref;
+			std::string smil_file_name = amis::util::calculateRelativeFilename
+				(&p_pos_data->mUri, this->getFileSet()->getNavFilepath());
 			p_node = mpNavModel->getNodeForSmilId(smil_file_name, mpNavModel->getNavMap());
 			if (p_node != NULL) 
 			{
