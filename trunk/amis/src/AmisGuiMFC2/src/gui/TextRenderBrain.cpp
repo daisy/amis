@@ -96,18 +96,11 @@ void TextRenderBrain::gotoUriTarget(std::string urlstr)
 
 	bool is_same_doc = url.same_document(mCurrentUrl);
 	// If it's identical ignore it (the previous call may still be waiting for the webDocumentComplete callback)
-	if (is_same_doc && text_elm_id == mTextElmId) 
-	{
-		msg.Format(_T("^^^^^^^^^^ gotoUriTarget(%s): same document, same element\n"), cstr_url);
-		TRACE(_T("%s"), msg);
-		return;
-	}
+	if (is_same_doc && text_elm_id == mTextElmId) return;
 	
 	// If it's a different document: load it.
 	if (!is_same_doc)
 	{	
-		msg.Format(_T("^^^^^^^^^^ gotoUriTarget(%s): Loading HTML document\n"), cstr_url);
-		TRACE(_T("%s"), msg);
 		//save the current ID
 		mTextElmId = text_elm_id;
 
@@ -130,15 +123,11 @@ void TextRenderBrain::gotoUriTarget(std::string urlstr)
 		//event from the first.
 		if (mbWaitForDocumentLoad == true)
 		{
-			msg.Format(_T("^^^^^^^^^^ gotoUriTarget(%s): still waiting for the document to load\n"), cstr_url);
-			TRACE(_T("%s"), msg);
 			//just update the ID and continue to wait
 			this->mTextElmId = text_elm_id;
 		}
 		else
 		{
-			msg.Format(_T("^^^^^^^^^^ gotoUriTarget(%s): document already loaded\n"), cstr_url);
-			TRACE(_T("%s"), msg);
 			//if we are already at this element, don't highlight it
 			//sometimes multiple events happen for a single text element
 			//like:

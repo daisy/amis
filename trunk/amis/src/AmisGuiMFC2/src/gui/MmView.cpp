@@ -339,6 +339,9 @@ void MmView::ScheduleReplaceDoc(std::string& urlstr)
 void MmView::SetMMDocument(LPCTSTR lpszPathName, bool autostart) 
 {
 	USES_CONVERSION;
+	CString msg;
+	msg.Format(_T("MMVIEW opening %s"), lpszPathName);
+	TRACE(msg);
 	dg_or_dx_player *dummy = player;
 	player = 0;
 	m_recent_media_node = NULL;
@@ -914,12 +917,12 @@ void MmView::node_started(const ambulant::lib::node* n)
 	const char *id = n->get_attribute("id");
 	ambulant::lib::xml_string tagname = n->get_local_name();
 	
-	CString msg;
+	/*CString msg;
 	msg.Format(_T("^^^^^^^^^^ Node started %s id=\"%s\" src=\"%s\"\n"), 
 		A2T(n->get_local_name().c_str()), 
 		A2T(n->get_attribute("id")),
 		A2T(n->get_attribute("src")));
-	TRACE(_T("%s"), msg);
+	TRACE(_T("%s"), msg);*/
 	
 	if (tagname == "audio")
 		m_recent_audio_node = n;
@@ -958,9 +961,9 @@ void MmView::node_started(const ambulant::lib::node* n)
 void MmView::node_stopped(const ambulant::lib::node *n)
 {
 	USES_CONVERSION;
-	CString msg;
+	/*CString msg;
 	msg.Format(_T("^^^^^^^^^^ Node stopped %s id=\"%s\"\n"), A2T(n->get_local_name().c_str()), A2T(n->get_attribute("id")));
-	TRACE(_T("%s"), msg);
+	TRACE(_T("%s"), msg);*/
 
 	//if we are ending a par and we were expecting audio
 	if (n->get_local_name() == "par" && m_recent_par_node != NULL && m_saw_audio == false)
