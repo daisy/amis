@@ -35,12 +35,14 @@ void searchText();
 ambulant::net::url chooseBook();
 void testTitleAuthorParse();
 void readBook();
+void testRelativePaths();
 
 //helper functions
 bool handleInput(string);
 void output(amis::dtb::smil::SmilMediaGroup*);
 void printContextualInfo(amis::dtb::smil::SmilMediaGroup*);
 void printTitleAndAuthorInfo(const ambulant::net::url*);
+void testRelativePaths(const ambulant::net::url*, const ambulant::net::url*, string);
 
 //a global variable of the book we are reading
 amis::dtb::Dtb* gBook;
@@ -48,7 +50,8 @@ amis::dtb::Dtb* gBook;
 int _tmain(int argc, _TCHAR* argv[])
 {
 	//readBook();
-	testTitleAuthorParse();
+	//testTitleAuthorParse();
+	testRelativePaths();
 	return 0;
 }
 void readBook()
@@ -272,6 +275,57 @@ void printTitleAndAuthorInfo(const ambulant::net::url* book)
 	{
 		cout<<"Could not parse file! "<<book->get_file()<<endl;
 	}
+}
+
+void testRelativePaths()
+{
+	// calculate relative paths should express the first path relative to the second
+
+	ambulant::net::url url1 = ambulant::net::url::from_filename("C:\\temp\\contents\\a_file.html#id");
+	ambulant::net::url url2 = ambulant::net::url::from_filename("C:\\temp\\b_file.txt");
+	testRelativePaths(&url1, &url2, "./contents/a_file.html#id");
+
+	url1 = ambulant::net::url::from_filename("C:\\temp\\a_file.html#id");
+	url2 = ambulant::net::url::from_filename("C:\\temp\\b_file.txt");
+	testRelativePaths(&url1, &url2, "a_file.html#id");
+
+	url1 = ambulant::net::url::from_filename("C:\\temp\\contents\\a_file.html#id");
+	url2 = ambulant::net::url::from_filename("C:\\temp\\contents\\stuff\\a_file.txt");
+	testRelativePaths(&url1, &url2, "file:///c:/temp/contents/a_file.html#id");
+
+	url1 = ambulant::net::url::from_filename("C:\\abcd\\a_file.html#id");
+	url2 = ambulant::net::url::from_filename("C:\\abc\\b_file.txt");
+	testRelativePaths(&url1, &url2, "file:///c:/abcd/a_file.html#id");
+
+	url1 = ambulant::net::url::from_filename("C:\\abcd\\a_file.html#id");
+	url2 = ambulant::net::url::from_filename("C:\\temp\\b_file.txt");
+	testRelativePaths(&url1, &url2, "file:///C:/abcd/a_file.html#id");
+
+	url1 = ambulant::net::url::from_filename("C:\\abcdefg\\contents\\a_file.html#id");
+	url2 = ambulant::net::url::from_filename("C:\\temp\\b_file.txt");
+	testRelativePaths(&url1, &url2, "file:///c:/abcdefg/contents/a_file.html#id");
+
+	url1 = ambulant::net::url::from_filename("C:\\abc\\a_file.html#id");
+	url2 = ambulant::net::url::from_filename("C:\\defg\\hijk\\b_file.txt");
+	testRelativePaths(&url1, &url2, "file:///c:/abc/a_file.html#id");
+	
+	//just make the output window hang around
+	string something;
+	cin>>something;
+	
+}
+
+void testRelativePaths(const ambulant::net::url* pUrl1, const ambulant::net::url* pUrl2, string expected)
+{
+	string result = amis::util::calculateRelativeFilename(pUrl1, pUrl2);
+	cout<<"Result = "<<result<<endl;
+	ambulant::net::url url1 = ambulant::net::url::from_filename(result);
+	ambulant::net::url url2 = ambulant::net::url::from_filename(expected);
+	if (url1.same_document(url2))
+		cout<<"Passed"<<endl;
+	else
+		cout<<"FAILED; expected "<<expected<<endl;
+	cout<<endl;
 }
 
 #endif

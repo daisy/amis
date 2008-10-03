@@ -34,7 +34,57 @@ string amis::util::ambulantUrlToString(const ambulant::net::url* pUrl)
 	else
 		return pUrl->get_url();	
 }
+string amis::util::ambulantUrlToStringWithRef(const ambulant::net::url* pUrl)
+{
+	string tmp = ambulantUrlToString(pUrl);
+	if (pUrl->get_ref().size() > 0)
+		tmp += "#" + pUrl->get_ref();
 
+	return tmp;
+}
+string amis::util::getFileNameWithRef(const ambulant::net::url* pUrl)
+{
+	string rel_filename = amis::util::FilePathTools::getFileName(ambulantUrlToString(pUrl));
+	string ref = pUrl->get_ref();
+	if (ref.size() > 0)
+		rel_filename += "#" + ref;
+	return rel_filename;
+}
+//this function will return path1 relative to path2
+//however, if path1 is outside of path2, it will just return all of path1
+string amis::util::calculateRelativeFilename(const ambulant::net::url* pUrl1, const ambulant::net::url* pUrl2)
+{
+	string f1 = ambulantUrlToString(&pUrl1->get_base());
+	string f2 = ambulantUrlToString(&pUrl2->get_base());
+	
+	//if f1 is not a subdirectory of f2
+	if (f1.size() < f2.size())
+	{
+		return ambulantUrlToStringWithRef(pUrl1);
+	}
+	//if the containing folders are the same, just return the filename
+	if (f1.compare(f2) == 0)
+	{
+		return getFileNameWithRef(pUrl1);
+	}
+
+	f1 = amis::util::FilePathTools::convertSlashesFwd(f1);
+	f2 = amis::util::FilePathTools::convertSlashesFwd(f2);
+	int pos = f1.find(f2);
+	// if f2 is the base path for f1, then return the rest of f1
+	if (pos != string::npos && pos + f2.size() < f1.size() && f1[pos + f2.size()] == '/')
+	{
+		string rel_filename = f1.substr(pos + f2.size());
+		rel_filename = "." + rel_filename + "/" + getFileNameWithRef(pUrl1);
+		return rel_filename;
+
+	}
+	//else, they are not related
+	else
+	{
+		return ambulantUrlToStringWithRef(pUrl1);
+	}
+}
 //return just the filename and extension
 string amis::util::FilePathTools::getFileName(string filepath)
 {
