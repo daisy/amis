@@ -104,6 +104,13 @@ Section "MainSection" SEC01
   File "${BIN_DIR}\libamplugin_pdtb.dll"
   File "${BIN_DIR}\PdtbIePlugin.dll"
   File "${BIN_DIR}\TransformSample.ax"
+  File "${BIN_DIR}\libamplugin_ffmpeg.dll"
+  File "${BIN_DIR}\avformat-52.dll"
+  File "${BIN_DIR}\avcodec-51.dll"
+  File "${BIN_DIR}\avutil-49.dll"
+  File "${BIN_DIR}\SDL.dll"
+  
+  
   
   ;copy the bookmark readme file
   SetOutPath "$SETTINGS_DIR\bmk"
