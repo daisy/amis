@@ -408,6 +408,14 @@ std::string CAmisApp::getAppSettingsPath()
 }
 void CAmisApp::initializePathsAndFiles()
 {
+	//call this twice
+	//first time to make sure we want to use plugins 
+	//(although the prefer_ffmpeg option will just be the default amis::Preferences value because
+	//the amisPrefs.xml file hasn't been read yet (that requires using an Ambulant data source
+	//which initializes the plugin engine, so we want to make sure it initializes with at least
+	//some of our values))
+	initializeAmbulantPreferences();
+
 	string settings_dir = getAppSettingsPath();
 
 	//read the preferences and mark the was-exit-clean flag as false
@@ -428,6 +436,21 @@ void CAmisApp::initializePathsAndFiles()
 	amis::io::BookListFileIO history_io;
 	if (history_io.readFromFile(&the_path)) mpHistory = history_io.getBookList();
 	else mpHistory = NULL;
+
+	//call this again to set any preferences that were dependent on our own amis preferences file
+	initializeAmbulantPreferences();
+}
+
+void CAmisApp::initializeAmbulantPreferences()
+{
+	ambulant::common::preferences *prefs = ambulant::common::preferences::get_preferences();
+	prefs->m_welcome_seen = true;
+	prefs->m_validation_scheme = "never";
+	prefs->m_parser_id = "xerces";
+	prefs->m_use_plugins = true;
+	prefs->m_plugin_dir = "";
+	prefs->m_prefer_ffmpeg = amis::Preferences::Instance()->getPreferFFMpeg();
+	prefs->m_dynamic_content_control = true;
 }
 
 void CAmisApp::initializeSelfVoicing()

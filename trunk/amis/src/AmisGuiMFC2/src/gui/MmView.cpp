@@ -207,15 +207,6 @@ MmView::MmView()
 	m_expecting_audio = false;
 	m_previous_in_progress = false;
 
-	ambulant::common::preferences *prefs = ambulant::common::preferences::get_preferences();
-	prefs->m_welcome_seen = true;
-	prefs->m_validation_scheme = "never";
-	prefs->m_parser_id = "xerces";
-	prefs->m_use_plugins = true;
-	prefs->m_plugin_dir = "";
-	prefs->m_prefer_ffmpeg = amis::Preferences::Instance()->getPreferFFMpeg();
-	prefs->m_dynamic_content_control = true;
-
 #ifdef WITHOUT_LOG_WINDOW
 #ifdef _DEBUG
 	lib::logger::get_logger()->set_ostream(new logwindow_atltrace());
@@ -340,7 +331,7 @@ void MmView::SetMMDocument(LPCTSTR lpszPathName, bool autostart)
 {
 	USES_CONVERSION;
 	CString msg;
-	msg.Format(_T("MMVIEW opening %s"), lpszPathName);
+	msg.Format(_T("MMVIEW opening %s\n"), lpszPathName);
 	TRACE(msg);
 	dg_or_dx_player *dummy = player;
 	player = 0;

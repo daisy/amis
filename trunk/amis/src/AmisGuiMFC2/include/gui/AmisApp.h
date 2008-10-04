@@ -140,6 +140,7 @@ private:
 	void updateFontSizeButtons();
 	void updateSpeedButtons();
 	void setIsWaiting(bool);
+	void initializeAmbulantPreferences();
 	
 	std::string mAppPath;
 	std::string mLocalizationDll;
