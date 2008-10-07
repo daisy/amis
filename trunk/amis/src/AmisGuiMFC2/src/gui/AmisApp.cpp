@@ -756,7 +756,7 @@ void CAmisApp::OnVolumeUpUI()
 		ambulantX::gui::dx::audio_playerX::change_global_level(VOLUME_RATIO);
 
 		AudioSequence* seq	= new AudioSequence();
-		AudioSequencePlayer::playPromptFromUiId(ID_AMIS_INCREASE_VOLUME, seq);
+		AudioSequencePlayer::playPromptFromUiId(ID_AMIS_INCREASE_VOLUME, seq, false);
 	}
 }
 
@@ -768,7 +768,7 @@ void CAmisApp::OnVolumeDownUI()
 		ambulantX::gui::dx::audio_playerX::change_global_level(1.0/VOLUME_RATIO);
 	
 		AudioSequence* seq	= new AudioSequence();
-		AudioSequencePlayer::playPromptFromUiId(ID_AMIS_DECREASE_VOLUME, seq);
+		AudioSequencePlayer::playPromptFromUiId(ID_AMIS_DECREASE_VOLUME, seq, false);
 	}
 }
 
@@ -1267,7 +1267,13 @@ void CAmisApp::OnPlayPause()
 	{
 		amis::util::Log::Instance()->writeMessage("Pausing", "CAmisApp::OnPlayPause");
 
-		amis::gui::CAmisApp::emitMessage("paused");
+		//TODO: The "paused" message is missing from the accessibleUi XML, but we can live with the "pause" prompt instead (from the action menu)
+		//amis::gui::CAmisApp::emitMessage("paused");
+		if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
+		{
+			AudioSequence* seq	= new AudioSequence();
+			AudioSequencePlayer::playPromptFromUiId(ID_AMIS_PLAYPAUSE, seq, false);
+		}
 
 		view->OnFilePause(); // this calls CAmisApp::setPauseState(), see above
 	}

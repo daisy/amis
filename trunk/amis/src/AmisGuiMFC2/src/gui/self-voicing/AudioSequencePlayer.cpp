@@ -370,7 +370,7 @@ bool AudioSequencePlayer::playAudioPrompt(amis::AudioNode* pAudio)
 	return ambulantX::gui::dx::audio_playerX::Instance()->play(strFull.c_str(), (char*)clipBegin.c_str(), (char*)clipEnd.c_str());
 }
 
-void AudioSequencePlayer::playPromptFromUiId(int nItemID, AudioSequence* seq)
+void AudioSequencePlayer::playPromptFromUiId(int nItemID, AudioSequence* seq, bool verbose)
 {
 	USES_CONVERSION;
 
@@ -428,23 +428,26 @@ void AudioSequencePlayer::playPromptFromUiId(int nItemID, AudioSequence* seq)
 			{
 				fillSequenceContentAndPrompt(seq, label, NULL);
 			}
-			if (mnemonic != NULL)
+			if (verbose)
 			{
-				fillSequenceContentAndPrompt(seq, mnemonic, NULL);
-			}
-			if (keyboardShortcutAccelerator != NULL)
-			{
-				fillSequenceContentAndPrompt(seq, keyboardShortcutAccelerator, NULL);
-			}
-			label = p_uiItem->getDescription();
-			if (label != NULL)
-			{
-				fillSequenceContentAndPrompt(seq, label, NULL);
-			}
-			LabelList * list = p_uiItem->getLabelList();
-			if (list != NULL)
-			{
-				fillSequenceContentAndPrompt(seq, list, NULL);
+				if (mnemonic != NULL)
+				{
+					fillSequenceContentAndPrompt(seq, mnemonic, NULL);
+				}
+				if (keyboardShortcutAccelerator != NULL)
+				{
+					fillSequenceContentAndPrompt(seq, keyboardShortcutAccelerator, NULL);
+				}
+				label = p_uiItem->getDescription();
+				if (label != NULL)
+				{
+					fillSequenceContentAndPrompt(seq, label, NULL);
+				}
+				LabelList * list = p_uiItem->getLabelList();
+				if (list != NULL)
+				{
+					fillSequenceContentAndPrompt(seq, list, NULL);
+				}
 			}
 		}
 		else 

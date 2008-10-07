@@ -75,7 +75,7 @@ namespace amis
 				void WaitForEndSeqAndRestartBook();
 				void waitForSequenceEnd();
 
-				static void playPromptFromUiId(int nItemID, AudioSequence* seq = NULL);
+				static void playPromptFromUiId(int nItemID, AudioSequence* seq = NULL, bool verbose = true);
 
 				
 				static std::wstring getTextForDialogControlFromUiIds(int dlgID, int ctrlId, PromptResolver* pResolver, string switchCondition);
