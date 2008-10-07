@@ -31,6 +31,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "gui/MainWndParts.h"
 #include "BookList.h"
 
+#include "gui/AmisApp.h"
+
 #include "gui/self-voicing/datamodel/DataTree.h"
 #include "gui/self-voicing/dialogs/SearchForBooksDialogVoicing.h"
 
@@ -236,6 +238,14 @@ void SearchForBooksDialog::OnBrowse()
 	sel_folder_instr.LoadString(IDS_SELFOLDER_INSTR);
 
 	CPathDialog path_dlg(sel_folder_title, sel_folder_instr, curr_path, NULL);
+
+	bool b = amis::gui::CAmisApp::beforeModalBox();
+
+	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
+	{
+		AudioSequencePlayer::playPromptFromStringId("BrowseForFolder_notSelfVoicing");
+	}
+
 	if (path_dlg.DoModal() == IDOK)
 	{
 		curr_path = path_dlg.GetPathName();
@@ -243,6 +253,8 @@ void SearchForBooksDialog::OnBrowse()
 		p_edit = (CEdit*)this->GetDlgItem(IDC_SEARCHPATH);
 		p_edit->SetWindowText(curr_path);
 	}
+	
+	theApp.afterModalBox(b);
 }
 
 void SearchForBooksDialog::OnStartsearch() 
