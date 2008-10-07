@@ -788,7 +788,7 @@ void AudioSequencePlayer::fillOK_CANCEL(AudioSequence * seq, UINT ctrlId)
 	}
 }
 
-AudioSequence * AudioSequencePlayer::playDialogControlFromUiIds(int dlgID, int ctrlId, PromptResolver* pResolver, bool playNow, string switchCondition)
+AudioSequence * AudioSequencePlayer::playDialogControlFromUiIds(int dlgID, int ctrlId, PromptResolver* pResolver, bool playNow, string switchCondition, bool verbose)
 {
 	if ((dlgID != -1 && ctrlId != -1)
 		|| (dlgID == -1 && (ctrlId == IDOK || ctrlId == IDCANCEL)))
@@ -806,7 +806,7 @@ AudioSequence * AudioSequencePlayer::playDialogControlFromUiIds(int dlgID, int c
 				DialogControl* control = p_dialog->findControl(ctrlId);
 				if (control != NULL)
 				{
-					fillSequenceCaptionAndDescription(seq, control, pResolver, switchCondition);
+					fillSequenceCaptionAndDescription(seq, control, pResolver, switchCondition, verbose);
 				}
 			}
 			else
@@ -858,21 +858,32 @@ void AudioSequencePlayer::fillSequencePrompt(AudioSequence* seq, Prompt* prompt,
 }
 
 
-void AudioSequencePlayer::fillSequenceCaptionAndDescription(AudioSequence* seq, UiItem* uiItem, PromptResolver * pResolver, string switchCondition)
+void AudioSequencePlayer::fillSequenceCaptionAndDescription(AudioSequence* seq, UiItem* uiItem, PromptResolver * pResolver, string switchCondition, bool verbose)
 {
-
 	Label* label = uiItem->getCaption();
-	if (label != NULL) fillSequenceContentAndPrompt(seq, label, pResolver);
+
+	if (verbose)
+	{
+		if (label != NULL) fillSequenceContentAndPrompt(seq, label, pResolver);
+	}
 	
 	LabelList * p_list = uiItem->getLabelList();
 
 	label = uiItem->getDescription();
-	if (p_list == NULL && label != NULL) fillSequenceContentAndPrompt(seq, label, pResolver);
+	
+	if (verbose)
+	{
+		if (p_list == NULL && label != NULL) fillSequenceContentAndPrompt(seq, label, pResolver);
+	}
 	
 	fillSequenceSwitch(seq, uiItem, pResolver, switchCondition);
 
 	if (p_list != NULL) fillSequenceContentAndPrompt(seq, p_list, pResolver);
-	if (p_list != NULL && label != NULL) fillSequenceContentAndPrompt(seq, label, pResolver);
+		
+	if (verbose)
+	{
+		if (p_list != NULL && label != NULL) fillSequenceContentAndPrompt(seq, label, pResolver);
+	}
 }
 
 

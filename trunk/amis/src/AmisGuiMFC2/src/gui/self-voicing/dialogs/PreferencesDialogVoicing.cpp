@@ -41,6 +41,24 @@ namespace amis
 				mpDialog = NULL;
 			}
 
+			void PreferencesDialogVoicing::playNoVerboseList()
+			{	
+				CWnd* cwnd = mpDialog->GetFocus();
+
+				AudioSequence * mSeq = AudioSequencePlayer::Instance()->playDialogControlFromUiIds(PreferencesDialog::IDD, (cwnd == NULL ? -1 : cwnd->GetDlgCtrlID()), mpDialog, false, "default", false);
+				if (mSeq != NULL)
+				{
+					if (mSeq->GetCount() == 0)
+					{
+						delete mSeq;
+					}
+					else
+					{
+						AudioSequencePlayer::Instance()->Play(mSeq);
+					}
+				}
+			}
+
 			void PreferencesDialogVoicing::resolvePromptVariables(Prompt* pPrompt) 
 			{
 				CButton* p_button = NULL;

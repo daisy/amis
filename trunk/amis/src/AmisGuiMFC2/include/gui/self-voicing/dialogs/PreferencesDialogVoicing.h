@@ -46,6 +46,8 @@ namespace amis
 			public:
 				PreferencesDialogVoicing(amis::gui::dialogs::PreferencesDialog * dlg);
 				~PreferencesDialogVoicing(void);
+				
+				void playNoVerboseList();
 
 				void resolvePromptVariables(Prompt* pPrompt);
 			};

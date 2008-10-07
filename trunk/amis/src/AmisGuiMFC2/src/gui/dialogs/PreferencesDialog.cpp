@@ -181,7 +181,22 @@ void PreferencesDialog::OnPaint()
 
 BOOL PreferencesDialog::PreTranslateMessage(MSG* pMsg)
 {
-	return AmisDialogBase::PreTranslateMessage(pMsg);
+	//return AmisDialogBase::PreTranslateMessage(pMsg);
+
+	if (Preferences::Instance()->getIsSelfVoicing() == false) 
+		return CDialog::PreTranslateMessage(pMsg);
+
+	if (pMsg->message == WM_KEYDOWN || pMsg->message == WM_KEYUP)
+	{
+		CWnd* cwnd = this->GetFocus();
+		if (cwnd) 
+		{
+			mCommonPreTranslateMessageHandler->handle
+				(this, pMsg, (cwnd == NULL ? -1 : cwnd->GetDlgCtrlID()), false, true);
+		}
+	}
+	
+	return CDialog::PreTranslateMessage(pMsg);
 }
 
 
@@ -194,6 +209,7 @@ void PreferencesDialog::OnBnClickedIsSelfVoicing()
 void PreferencesDialog::OnBnSetfocusIsSelfVoicing()
 {
 }
+
 void PreferencesDialog::OnCbnSelchangeTTSVoices()
 {
 	CComboBox* list = (CComboBox*)GetDlgItem(IDC_TTSVOICES);
@@ -201,7 +217,10 @@ void PreferencesDialog::OnCbnSelchangeTTSVoices()
 	int selected = list->GetCurSel();
 	mTTSVoiceIndex = selected;
 
-	OnBnClickedIsSelfVoicing();
+	mpPreferencesDialogVoicing->playNoVerboseList();
+
+	//Bypassing the default behaviour to uses less verbosity
+	//OnBnClickedIsSelfVoicing();
 }
 void PreferencesDialog::OnCbnSetfocusTTSVoices()
 {
@@ -238,7 +257,10 @@ void PreferencesDialog::OnCbnSelchangeInstalledLanguages()
 	for (int i = 0; i<sel; i++) it++;
 	mUiLanguageSelection = it->first;
 
-	OnBnClickedIsSelfVoicing();
+	mpPreferencesDialogVoicing->playNoVerboseList();
+
+	//Bypassing the default behaviour to uses less verbosity
+	//OnBnClickedIsSelfVoicing();
 }
 void PreferencesDialog::OnCbnSetfocusInstalledLanguages()
 {

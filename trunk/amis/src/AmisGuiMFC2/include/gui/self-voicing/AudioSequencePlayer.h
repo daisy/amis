@@ -90,11 +90,11 @@ namespace amis
 				static bool playDialogTextControlsFromUiId(int nItemID, PromptResolver* pResolver);
 				static bool playDialogWelcome(int nItemID, PromptResolver* pResolver, bool playfull);
 
-				static AudioSequence * playDialogControlFromUiIds(int dlgID, int ctrlId, PromptResolver* pResolver, bool playNow, string switchCondition);
+				static AudioSequence * playDialogControlFromUiIds(int dlgID, int ctrlId, PromptResolver* pResolver, bool playNow, string switchCondition, bool verbose = true);
 
 				static void fillSequenceContainerPromptFromId(AudioSequence* seq, string id);
 				static void fillSequencePrompt(AudioSequence* seq, Prompt* prompt, PromptResolver* pResolver);
-				static void fillSequenceCaptionAndDescription(AudioSequence* seq, UiItem* uiItem, PromptResolver * pResolver, string switchCondition);
+				static void fillSequenceCaptionAndDescription(AudioSequence* seq, UiItem* uiItem, PromptResolver * pResolver, string switchCondition, bool verbose = true);
 				static void fillSequenceSwitch(AudioSequence* seq, UiItem* uiItem, PromptResolver * pResolver, string switchCondition);
 
 				static void fillSequenceContentAndPrompt(AudioSequence* seq, Label* label, PromptResolver * pResolver);
