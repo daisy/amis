@@ -68,9 +68,28 @@ void SearchForBooksDialog::OnSelchangeFilelist()
 			{
 				//mLoadBookOnDialogClose = (*p_search_results)[sel];
 				AudioSequence * seq = new AudioSequence();
+
+				if (mpBooks != NULL)
+				{
+					amis::BookEntry * book = mpBooks->getEntry(sel);
+					amis::AudioNode * audio = book->getTitleAudio();
+					std::wstring str = book->getTitleText();
+					if (audio != NULL)
+					{
+						seq->append(audio->clone(), str.c_str());
+					}
+					else
+					{
+						seq->append(str.c_str());
+					}
+				}
+
+				/*
 				CString str;
 				p_filelist->GetText(sel, str);
 				seq->append(str);
+				*/
+				
 				AudioSequencePlayer::Instance()->Play(seq);
 			}
 		}
