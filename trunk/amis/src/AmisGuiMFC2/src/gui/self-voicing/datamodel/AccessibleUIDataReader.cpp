@@ -477,7 +477,11 @@ void DataReader::startElement(const   XMLCh* const    uri,
 					src.assign(SimpleAttrs::get("src", &attributes));
 					if (!src.empty())
 					{
-						p_audio->setSrc(src);
+						ambulant::net::url audio_src = ambulant::net::url::from_filename(src);
+						amis::ModuleDescData* p_langpack_data = amis::Preferences::Instance()->getCurrentLanguageData();
+						audio_src = audio_src.join_to_base(*p_langpack_data->getXmlFileName());
+
+						p_audio->setPath(audio_src.get_file());
 					}
 	
 					p_item->getContents()->setAudio(p_audio);
@@ -493,8 +497,11 @@ void DataReader::startElement(const   XMLCh* const    uri,
 			src.assign(SimpleAttrs::get("src", &attributes));
 			if (!src.empty())
 			{
+				ambulant::net::url audio_src = ambulant::net::url::from_filename(src);
+				amis::ModuleDescData* p_langpack_data = amis::Preferences::Instance()->getCurrentLanguageData();
+				audio_src = audio_src.join_to_base(*p_langpack_data->getXmlFileName());
 
-				p_audio->setSrc(src);
+				p_audio->setPath(audio_src.get_file());
 			}
 
 			TextAudioPair* p_pair = NULL;
@@ -528,8 +535,11 @@ void DataReader::startElement(const   XMLCh* const    uri,
 					src.assign(SimpleAttrs::get("src", &attributes));
 					if (!src.empty())
 					{
-						p_audio->setSrc(src);
+						ambulant::net::url audio_src = ambulant::net::url::from_filename(src);
+						amis::ModuleDescData* p_langpack_data = amis::Preferences::Instance()->getCurrentLanguageData();
+						audio_src = audio_src.join_to_base(*p_langpack_data->getXmlFileName());
 
+						p_audio->setPath(audio_src.get_file());
 					}
 
 
@@ -567,7 +577,7 @@ void DataReader::startElement(const   XMLCh* const    uri,
 		src.assign(SimpleAttrs::get("src", &attributes));
 		if (!src.empty())
 		{
-				p_image->setSrc(src);
+				p_image->setPath(src);
 			}
 
 

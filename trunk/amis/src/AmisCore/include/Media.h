@@ -60,11 +60,8 @@ public:
 	string getId();
 	void setId(string);
 
-	string getSrc();
-	void setSrc(string);
-
-	string getSrcExpanded();
-	void setSrcExpanded(string);
+	string getPath();
+	void setPath(string);
 
 	string getHref();
 	void setHref(string);
@@ -80,7 +77,6 @@ public:
 private:
 	string mId;
 	string mSrc;
-	string mSrcExpanded;
 	string mHref;
 	string mLangCode;
 	MediaNodeType mMediaNodeType;

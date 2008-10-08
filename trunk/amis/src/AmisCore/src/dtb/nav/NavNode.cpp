@@ -145,7 +145,7 @@ void amis::dtb::nav::NavNode::print(int level)
 	for (j=0; j<(int)this->mpLabel->getNumberOfAudioClips(); j++)
 	{
 		for (i=0; i<level; i++) cout<<"\t";
-		cout<<"AUDIO: "<<this->mpLabel->getAudio(j)->getSrc()<<" from "<<
+		cout<<"AUDIO: "<<this->mpLabel->getAudio(j)->getPath()<<" from "<<
 			this->mpLabel->getAudio(j)->getClipBegin()<<" to "<<
 			this->mpLabel->getAudio(j)->getClipEnd()<<endl;
 	}

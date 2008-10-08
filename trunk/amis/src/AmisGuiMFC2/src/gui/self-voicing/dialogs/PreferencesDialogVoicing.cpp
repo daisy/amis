@@ -192,9 +192,6 @@ namespace amis
 								amis::MediaGroup* p_media = p_data->getLabel();
 								//p_media->getText()->getTextString().c_str();
 
-								if (p_media->hasAudio())
-									AudioSequencePlayer::Instance()->computeExpandedSrc(p_media->getAudio(0), mpDialog->mUiLanguageSelection);
-
 								p_var->setContents(p_media);
 							}
 						}

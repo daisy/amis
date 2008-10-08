@@ -22,6 +22,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 
 #include "gui/self-voicing/Prompt.h"
+#include "Preferences.h"
 #include <fstream>
 
 using namespace amis::gui::spoken;
@@ -100,7 +101,12 @@ void PromptItemBase::setContents(std::wstring textString, std::string audioSrc)
 	if (!audioSrc.empty())
 	{
 		p_audio = new amis::AudioNode();
-		p_audio->setSrc(audioSrc);
+
+		ambulant::net::url audio_src = ambulant::net::url::from_filename(audioSrc);
+		amis::ModuleDescData* p_langpack_data = amis::Preferences::Instance()->getCurrentLanguageData();
+		audio_src = audio_src.join_to_base(*p_langpack_data->getXmlFileName());
+
+		p_audio->setPath(audio_src.get_file());
 		p_pair->setAudio(p_audio);
 	}
 
@@ -125,8 +131,7 @@ void PromptItemBase::setContents(amis::MediaGroup* pMediaGroup)
 	if (pMediaGroup->hasAudio() == true)
 	{
 		amis::AudioNode* p_audio = new amis::AudioNode();
-		p_audio->setSrc(pMediaGroup->getAudio(0)->getSrc());
-		p_audio->setSrcExpanded(pMediaGroup->getAudio(0)->getSrcExpanded());
+		p_audio->setPath(pMediaGroup->getAudio(0)->getPath());
 		p_audio->setClipBegin(pMediaGroup->getAudio(0)->getClipBegin());
 		p_audio->setClipEnd(pMediaGroup->getAudio(0)->getClipEnd());
 

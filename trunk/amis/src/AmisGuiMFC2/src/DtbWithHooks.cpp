@@ -250,7 +250,7 @@ void DtbWithHooks::addToHistory()
 		if (this->getTitle()->hasAudio() == true)
 		{
 			amis::AudioNode* p_audio = this->getTitle()->getAudio(0);
-			p_entry->setTitleAudio(p_audio->getSrc(), p_audio->getClipBegin(), p_audio->getClipEnd());
+			p_entry->setTitleAudio(p_audio->getPath(), p_audio->getClipBegin(), p_audio->getClipEnd());
 		}
 		p_history->addEntry(p_entry);
 
@@ -427,8 +427,7 @@ amis::dtb::Bookmark* DtbWithHooks::addBookmark()
 		ambulant::net::url url_src = ambulant::net::url::from_filename(src);
 		url_src = url_src.join_to_base(*this->getFileSet()->getSmilFile());
 
-		p_audio->setSrc(url_src.get_file());
-		p_audio->setSrcExpanded(url_src.get_file());
+		p_audio->setPath(url_src.get_file());
 
 		const char* clip_begin = amb_node->get_attribute("clipBegin");
 		const char* clip_end = amb_node->get_attribute("clipEnd");

@@ -220,7 +220,7 @@ void amis::io::TitleAuthorParse::startElement(const   XMLCh* const    uri,
 					src = amis::util::FilePathTools::goRelativePath(this->getFilepath()->get_file(), src);
 					amis::AudioNode* p_audio;
 					p_audio = new amis::AudioNode();
-					p_audio->setSrc(src);
+					p_audio->setPath(src);
 					p_audio->setClipBegin(clip_begin);
 					p_audio->setClipEnd(clip_end);
 

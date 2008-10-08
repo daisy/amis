@@ -866,6 +866,12 @@ bool gui::dx::audio_playerX::play(const char * url, char* clipBegin, char* clipE
 
 	hr = m_graph_builder->RenderFile(str, 0);
 	if(FAILED(hr)){
+		
+		amis::util::Log* p_log = amis::util::Log::Instance();
+		string log_msg = "CANNOT PLAY: ";	
+		log_msg.append(strFileName);
+		p_log->writeError(log_msg, "audio_playerX::play");
+
 		//m_graph_builder->Release();
 		//m_graph_builder = 0;
 		/* 

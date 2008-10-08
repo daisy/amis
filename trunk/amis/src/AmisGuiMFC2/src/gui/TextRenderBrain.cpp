@@ -74,7 +74,7 @@ TextRenderBrain::~TextRenderBrain()
 
 void TextRenderBrain::gotoUriTarget(amis::TextNode* pText)
 {
-	gotoUriTarget(pText->getSrc());
+	gotoUriTarget(pText->getPath());
 }
 
 //TODO: make sure this path comparison works for Japanese too

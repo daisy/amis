@@ -92,7 +92,7 @@ void amis::io::SmilAudioExtract::startElement(const   XMLCh* const    uri,
 			mpAudioInfo->setClipEnd(SimpleAttrs::get("clip-end", &attributes));
 			string src = SimpleAttrs::get("src", &attributes);
 			src = amis::util::FilePathTools::goRelativePath(this->getFilepath()->get_file(), src);
-			mpAudioInfo->setSrc(src);
+			mpAudioInfo->setPath(src);
 		}
 	}
 

@@ -264,8 +264,7 @@ void amis::io::NcxFileReader::processAudio(const Attributes* pAttrs)
 		src.assign(SimpleAttrs::get("src", pAttrs));
 		ambulant::net::url url_src = ambulant::net::url::from_filename(src);
 		url_src = url_src.join_to_base(*this->getFilepath());
-		p_audio->setSrc(url_src.get_file());
-		p_audio->setSrcExpanded(url_src.get_file());
+		p_audio->setPath(url_src.get_file());
 		
 		string clip_begin;
 		clip_begin.assign(SimpleAttrs::get("clipBegin", pAttrs));

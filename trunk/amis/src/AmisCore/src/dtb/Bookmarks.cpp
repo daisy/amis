@@ -296,7 +296,7 @@ void amis::dtb::BookmarkSet::printMediaGroup(amis::MediaGroup* pData)
 	}
 	if (pData->hasAudio() == true)
 	{
-		cout<<"\t"<<pData->getAudio(0)->getSrc()<<endl;
+		cout<<"\t"<<pData->getAudio(0)->getPath()<<endl;
 	}
 
 }

@@ -164,7 +164,7 @@ amis::dtb::smil::Node* amis::dtb::smil::NodeFactory::createAudioNode(const Attri
 
 	string src;
 	src.assign(SimpleAttrs::get("src", pAttrs));
-	p_audioMedia->setSrc(src);
+	p_audioMedia->setPath(src);
 
 	string clipBegin;
 	clipBegin.assign(SimpleAttrs::get("clip-begin", pAttrs));
@@ -206,7 +206,7 @@ amis::dtb::smil::Node* amis::dtb::smil::NodeFactory::createTextNode(const Attrib
 	//get and save the content src
 	string src;
 	src.assign(SimpleAttrs::get("src", pAttrs));
-	p_textMedia->setSrc(src);
+	p_textMedia->setPath(src);
 
 	//return a pointer to the new text node
 	return (Node*)p_text;
@@ -231,7 +231,7 @@ amis::dtb::smil::Node* amis::dtb::smil::NodeFactory::createImageNode(const Attri
 	//get and save the content src
 	string src;
 	src.assign(SimpleAttrs::get("src", pAttrs));
-	p_imageMedia->setSrc(src);
+	p_imageMedia->setPath(src);
 
 	//return the pointer to a new image node
 	return (Node*)p_image;

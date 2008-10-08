@@ -330,32 +330,9 @@ void AudioSequencePlayer::Play(AudioSequence* audioSequence, bool doNotRegisterI
 	}
 }
 
-std::string AudioSequencePlayer::computeExpandedSrc(amis::AudioNode* pAudio, std::string langID)
-{
-	string str = pAudio->getSrc();
-	if (str.length()==0) return "";
-
-	string strFull = pAudio->getSrcExpanded();
-	if (strFull.length()==0)
-	{
-		ambulant::net::url audio_src = ambulant::net::url::from_filename(str);
-	
-		amis::ModuleDescData* p_langpack_data = NULL;
-		if (langID.length() == 0)
-			p_langpack_data = amis::Preferences::Instance()->getCurrentLanguageData();
-		else
-			p_langpack_data = amis::Preferences::Instance()->getLanguageData(langID);
-
-		audio_src = audio_src.join_to_base(*p_langpack_data->getXmlFileName());
-		pAudio->setSrcExpanded(audio_src.get_file());
-		strFull = pAudio->getSrcExpanded();
-	}
-	return strFull;
-}
-
 bool AudioSequencePlayer::playAudioPrompt(amis::AudioNode* pAudio)
 {
-	string strFull = computeExpandedSrc(pAudio);
+	string strFull = pAudio->getPath();
 	if (strFull.length() == 0) return false;
 
 	string clipBegin = "";
@@ -927,7 +904,7 @@ void AudioSequencePlayer::fillSequenceContentAndPrompt(AudioSequence* seq, Label
 	{
 		amis::AudioNode* audio = pair->getAudio();
 		TextNodeSV* textN = pair->getText();
-		if (!Preferences::Instance()->getUseTTSNotAudio() && audio != NULL && audio->getSrc().length() != 0) 
+		if (!Preferences::Instance()->getUseTTSNotAudio() && audio != NULL && audio->getPath().length() != 0) 
 		{
 			seq->append(audio->clone(), (textN != NULL ? textN->getTextString().c_str() : L""));
 		} 
@@ -949,7 +926,7 @@ void AudioSequencePlayer::fillSequenceContents(AudioSequence* seq, PromptItemBas
 		amis::AudioNode* audio = pair->getAudio();
 		TextNodeSV * textN = pair->getText();
 
-		if (!Preferences::Instance()->getUseTTSNotAudio() && audio != NULL && audio->getSrc().length() != 0) 
+		if (!Preferences::Instance()->getUseTTSNotAudio() && audio != NULL && audio->getPath().length() != 0) 
 		{
 			seq->append(audio->clone(), (textN != NULL ? textN->getTextString().c_str() : L""));
 		} 

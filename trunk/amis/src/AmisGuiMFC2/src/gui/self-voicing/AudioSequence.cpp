@@ -124,7 +124,7 @@ void AudioSequence::append_prepend(CString strTTS, bool prepend)
 				amis::AudioNode* audio = pair->getAudio();
 				TextNodeSV * textN = pair->getText();
 
-				if (audio != NULL && audio->getSrc().length() != 0) 
+				if (audio != NULL && audio->getPath().length() != 0) 
 				{
 					//seq->append(audio->clone(), (textN != NULL ? textN->getTextString().c_str() : L""));
 
@@ -163,7 +163,7 @@ void AudioSequence::prepend(CString strTTS)
 }
 void AudioSequence::append(amis::AudioNode* audioClip, CString strTTS)
 {
-	if (audioClip->getSrc().length() == 0)
+	if (audioClip->getPath().length() == 0)
 	{
 		int here = 1;
 	}

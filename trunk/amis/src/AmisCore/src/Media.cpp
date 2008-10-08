@@ -32,7 +32,6 @@ amis::MediaNode::MediaNode()
 {
 	mId = "";
 	mSrc = "";
-	mSrcExpanded="";
 	mHref = "";
 	mLangCode = "";
 }
@@ -43,8 +42,6 @@ amis::MediaNode::~MediaNode()
 	mId.erase();
 	mSrc.clear();
 	mSrc.erase();
-	mSrcExpanded.clear();
-	mSrcExpanded.erase();
 	mHref.clear();
 	mHref.erase();
 	mLangCode.clear();
@@ -57,26 +54,16 @@ void amis::MediaNode::cloneContents(MediaNode* p_new)
 	p_new->setId(this->getId());
 	p_new->setLangCode(this->getLangCode());
 	p_new->setMediaNodeType(this->getMediaNodeType());
-	p_new->setSrc(this->getSrc());
-	p_new->setSrcExpanded(this->getSrcExpanded());
+	p_new->setPath(this->getPath());
 }
 void amis::MediaNode::setId(string id)
 {
 	mId.assign(id);
 }
 
-void amis::MediaNode::setSrc(string src)
+void amis::MediaNode::setPath(string src)
 {
 	mSrc.assign(src);
-	if (mSrc.length()==0 && mMediaNodeType==AUDIO)
-	{
-		int debug = 0;
-	}
-}
-
-void amis::MediaNode::setSrcExpanded(string src)
-{
-	mSrcExpanded.assign(src);
 }
 
 void amis::MediaNode::setHref(string href)
@@ -94,14 +81,9 @@ string amis::MediaNode::getId()
 	return mId;
 }
 
-string amis::MediaNode::getSrc()
+string amis::MediaNode::getPath()
 {
 	return mSrc;
-}
-
-string amis::MediaNode::getSrcExpanded()
-{
-	return mSrcExpanded;
 }
 
 string amis::MediaNode::getHref()

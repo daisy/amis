@@ -142,8 +142,7 @@ void amis::io::BookmarksFileIO::startElement(const   XMLCh* const    uri,
 			string clipEnd;
 
 			src.assign(SimpleAttrs::get("src", &attributes));
-			p_audio->setSrc(src);
-			p_audio->setSrcExpanded(src);
+			p_audio->setPath(src);
 
 			clipBegin.assign(SimpleAttrs::get("clipBegin", &attributes));
 			p_audio->setClipBegin(clipBegin);
@@ -585,7 +584,7 @@ void amis::io::BookmarksFileIO::writeMediaGroup(amis::MediaGroup* pMedia, DOMEle
 
 		//add src, clipBegin, and clipEnd attributes to "audio"
 		p_audio_elm->setAttribute(X("src"), 
-			X(p_audio_obj->getSrc().c_str()));
+			X(p_audio_obj->getPath().c_str()));
 
 		p_audio_elm->setAttribute(X("clipBegin"), 
 			X(p_audio_obj->getClipBegin().c_str()));

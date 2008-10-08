@@ -57,8 +57,6 @@ namespace amis
 
 				string stringReplaceAll(string sourceStr, string searchStr, string replaceStr);
 
-				std::string computeExpandedSrc(amis::AudioNode* pAudio, std::string langID = "");
-
 				bool playAudioPrompt(amis::AudioNode* pAudio);
 				void Play(AudioSequence* audioSequence, bool doNotRegisterInHistory = false, bool repeat = false, bool repeating = false);
 

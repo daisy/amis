@@ -352,7 +352,7 @@ void MenuVoicing::OnMenuSelect(UINT	nItemID, UINT nFlags, HMENU	hSysMenu)
 			amis::AudioNode* node = p_entry->getTitleAudio();
 			std::wstring title = p_entry->getTitleText();
 			CString strTitle(title.c_str());
-			if (node != NULL && node->getSrc().length() > 0) // todo: the src string length check is there because there seems to be a bug in getTitleAudio
+			if (node != NULL && node->getPath().length() > 0) // todo: the src string length check is there because there seems to be a bug in getTitleAudio
 			{
 				seq->append(node->clone(), strTitle);
 			}

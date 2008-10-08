@@ -284,7 +284,7 @@ void amis::io::BookListFileIO::writeBookEntry(amis::BookEntry* pEntry)
 	amis::AudioNode* p_audio = pEntry->getTitleAudio();
 	if (p_audio != NULL)
 	{
-		p_title_elm->setAttribute(X("src"), X(p_audio->getSrc().c_str()));
+		p_title_elm->setAttribute(X("src"), X(p_audio->getPath().c_str()));
 		p_title_elm->setAttribute(X("clipBegin"), X(p_audio->getClipBegin().c_str()));
 		p_title_elm->setAttribute(X("clipEnd"), X(p_audio->getClipEnd().c_str()));
 	}
