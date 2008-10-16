@@ -471,6 +471,8 @@ amis::dtb::smil::SmilMediaGroup* DtbWithHooks::loadSmilFromUrl(const ambulant::n
 		string log_msg = "Loading SMIL from URL: " + full_path.get_url();
 		amis::util::Log::Instance()->writeMessage("Loading SMIL from URL", &full_path, 
 			"DtbWithHooks::loadSmilFromUrl");
+		
+		amis::gui::MainWndParts::Instance()->mpMmView->OnFilePause();
 		amis::gui::MainWndParts::Instance()->mpMmDoc->OnOpenDocument(str_);
 	}
 	//DanToDo: Is this the best place to set the PLAY/PAUSE status ? (is the book actually playing at this stage...probably not)

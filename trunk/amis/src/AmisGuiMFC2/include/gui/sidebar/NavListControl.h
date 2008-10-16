@@ -43,8 +43,6 @@ public:
 	std::string getId();
 	void setId(std::string);
 	virtual ~CNavListControl();
-	amis::dtb::nav::NavTarget* nextItem();
-	amis::dtb::nav::NavTarget* previousItem();
 
 protected:
 	afx_msg void doItemSelect(NMHDR* pNMHDR, LRESULT* pResult);

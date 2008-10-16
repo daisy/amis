@@ -72,10 +72,8 @@ public:
 
 	afx_msg void OnSelchangeTab(NMHDR* pNMHDR, LRESULT* pResult);
 	afx_msg void OnSelchangeTree(NMHDR* pNMHDR, LRESULT* pResult);
-	//afx_msg void OnNavListSelect(NMHDR* pNMHDR, LRESULT* pResult, amis::dtb::nav::NavTarget* pData);
 	void OnNavListSelect(amis::dtb::nav::NavTarget* pData);
 	afx_msg void OnPageListClick(NMHDR* pNMHDR, LRESULT* pResult);
-	afx_msg void OnPageListKeyDown(NMHDR* pNMHDR, LRESULT* pResult);
 	afx_msg void OnPageListSetFocus(NMHDR* pNMHDR, LRESULT* pResult);
 	afx_msg void OnLvnItemchangedListPage(NMHDR *pNMHDR, LRESULT *pResult);
 
@@ -87,6 +85,7 @@ protected:
 private:
 	void setSelectedNode(amis::dtb::nav::NavPoint*);
 	void setSelectedNode(amis::dtb::nav::PageTarget*);
+	void setSelectedNode(amis::dtb::nav::NavTarget*);
 	void showPageList();
 	void showNavList(unsigned int);
 	void showNavMap();
@@ -95,7 +94,9 @@ private:
 	void changeView(int);
 	HTREEITEM findParentAtLevel(HTREEITEM, int);
 	int getLevel(HTREEITEM);
-
+	amis::dtb::nav::NavNode* nextItemInDisplayedList();
+	amis::dtb::nav::NavNode* previousItemInDisplayedList();
+	CListCtrl* getDisplayedList();
 	CRect mInitialRect;
 	CRect mInitialParentRect;
 	std::vector<CNavListControl*> mNavLists;
@@ -109,6 +110,8 @@ private:
 	int mFontSizeInPoints;
 	bool mbIgnoreTreeSelect;
 	bool mbIgnorePageListSelect;
+	bool mbIgnoreNavListSelect;
+	int mDummy;
 	DECLARE_MESSAGE_MAP();
 
 friend class AmisSidebarLoader;

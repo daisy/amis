@@ -56,7 +56,6 @@ void SearchForBooksDialog::OnSelchangeFilelist()
 {
 	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 	{
-		//TODO: this list treatment removes the default XML prompts, needs improvement
 		CListBox* p_filelist = NULL;
 		p_filelist = (CListBox*)this->GetDlgItem(IDC_FILESFOUND);
 
@@ -66,7 +65,6 @@ void SearchForBooksDialog::OnSelchangeFilelist()
 			amis::UrlList* p_search_results = mSearcher.getSearchResults();
 			if (sel > -1 && sel < p_search_results->size())
 			{
-				//mLoadBookOnDialogClose = (*p_search_results)[sel];
 				AudioSequence * seq = new AudioSequence();
 
 				if (mpBooks != NULL)
@@ -84,12 +82,6 @@ void SearchForBooksDialog::OnSelchangeFilelist()
 					}
 				}
 
-				/*
-				CString str;
-				p_filelist->GetText(sel, str);
-				seq->append(str);
-				*/
-				
 				AudioSequencePlayer::Instance()->Play(seq);
 			}
 		}
@@ -176,8 +168,6 @@ void SearchForBooksDialog::populateListControl()
 		p_filelist->AddString(result);
 	}
 	
-	p_filelist->SetFocus();
-
 	if (p_search_results->size() == 0)
 	{
 		CEdit* p_edit = (CEdit*)this->GetDlgItem(IDC_SEARCHPATH);
@@ -385,16 +375,14 @@ BOOL SearchForBooksDialog::PreTranslateMessage(MSG* pMsg)
 				 {
 					pMsg->wParam = NULL;
 					OnStartsearch();
-					return FALSE;
-					//return CDialog::PreTranslateMessage(pMsg);
+					return CDialog::PreTranslateMessage(pMsg);
 				 }
 				 //if the files list has focus, open the selected book
 				 else if (id == IDC_FILESFOUND)
 				 {
 					 pMsg->wParam = NULL;
 					 loadBook();
-					 return FALSE;
-					 //return CDialog::PreTranslateMessage(pMsg);
+					 return CDialog::PreTranslateMessage(pMsg);
 				 }
 			}	
 		}

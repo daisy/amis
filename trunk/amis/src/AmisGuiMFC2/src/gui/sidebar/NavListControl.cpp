@@ -58,6 +58,8 @@ END_MESSAGE_MAP()
 
 void CNavListControl::doItemSelect(NMHDR* pNMHDR, LRESULT* pResult)
 {
+	TRACE(_T("NAV LIST DO ITEM SELECT\n"));
+
 	CAmisSidebar* parent = NULL;
 	parent = (CAmisSidebar*)this->GetParent();
 
@@ -67,39 +69,15 @@ void CNavListControl::doItemSelect(NMHDR* pNMHDR, LRESULT* pResult)
 	if (curr_sel > -1)
 	{
 		p_target = (amis::dtb::nav::NavTarget*)this->GetItemData(curr_sel);
-		parent->OnNavListSelect(/*pNMHDR, pResult, */p_target);
+		parent->OnNavListSelect(p_target);
 		*pResult = 0;
 	}
-
 }
 
-amis::dtb::nav::NavTarget* CNavListControl::previousItem()
-{
-	amis::dtb::nav::NavTarget* p_target = NULL;
-	int curr_sel = this->GetSelectionMark();
-	if (curr_sel - 1 > -1 && curr_sel - 1 < this->GetItemCount())
-	{
-		curr_sel--;
-		p_target = (amis::dtb::nav::NavTarget*)this->GetItemData(curr_sel);
-	}
-
-	return p_target;
-}
-amis::dtb::nav::NavTarget* CNavListControl::nextItem()
-{
-	amis::dtb::nav::NavTarget* p_target = NULL;
-	int curr_sel = this->GetSelectionMark();
-	if (curr_sel + 1 > -1 && curr_sel + 1 < this->GetItemCount())
-	{
-		curr_sel++;
-		p_target = (amis::dtb::nav::NavTarget*)this->GetItemData(curr_sel);
-	}
-
-	return p_target;
-}
 
 int CNavListControl::OnCreate(LPCREATESTRUCT lpCreateStruct)
 {
+	lpCreateStruct->style |= LVS_SINGLESEL | LVS_SHOWSELALWAYS;
 	if (CListCtrl::OnCreate(lpCreateStruct) == -1)
 		return -1;
 	CWnd* p_parent = this->GetParent();
