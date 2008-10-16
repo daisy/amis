@@ -64,7 +64,8 @@ void CNavListControl::doItemSelect(NMHDR* pNMHDR, LRESULT* pResult)
 	parent = (CAmisSidebar*)this->GetParent();
 
 	amis::dtb::nav::NavTarget* p_target = NULL;
-	int curr_sel = this->GetSelectionMark();
+	int curr_sel = this->GetNextItem( -1, LVNI_SELECTED );
+	;
 
 	if (curr_sel > -1)
 	{

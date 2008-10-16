@@ -208,7 +208,8 @@ void CAmisSidebar::OnPageListClick(NMHDR* pNMHDR, LRESULT* pResult)
 	if (mbIgnorePageListSelect == true) return;
 	amis::dtb::nav::PageTarget* p_page = NULL;
 	int curr_sel;
-	curr_sel = mPageList.GetSelectionMark();
+	curr_sel = mPageList.GetNextItem( -1, LVNI_SELECTED );
+	
 
 	if (curr_sel > -1)
 	{
@@ -326,9 +327,11 @@ BOOL CAmisSidebar::PreTranslateMessage(MSG* pMsg)
 						setSelectedNode((amis::dtb::nav::PageTarget*)p_node);
 					else
 						setSelectedNode((amis::dtb::nav::NavTarget*)p_node);
-					pMsg->wParam = 0;
-					amis::dtb::DtbWithHooks::Instance()->loadNavNode(p_node);
-					return CDialog::PreTranslateMessage(pMsg);
+					//amis::dtb::DtbWithHooks::Instance()->loadNavNode(p_node);
+					CWnd* p_parent = this->GetTopLevelParent();
+					long l = (LPARAM)p_node;
+					p_parent->SendMessage(WM_MY_LOAD_NAV_NODE, 0, l);
+					return TRUE;
 				}
 			}
 		}
@@ -731,8 +734,8 @@ amis::dtb::nav::NavNode* CAmisSidebar::previousItemInDisplayedList()
 {
 	amis::dtb::nav::NavNode* p_node = NULL;
 	CListCtrl* p_list = getDisplayedList();
-	int curr_sel = p_list->GetSelectionMark();
-
+	int curr_sel = p_list->GetNextItem( -1, LVNI_SELECTED );
+	
 	if (curr_sel - 1 > -1 && curr_sel - 1 < p_list->GetItemCount())
 		curr_sel--;
 	else
@@ -747,7 +750,7 @@ amis::dtb::nav::NavNode* CAmisSidebar::nextItemInDisplayedList()
 	TRACE(_T("NEXT LIST ITEM\n"));
 	amis::dtb::nav::NavNode* p_node = NULL;
 	CListCtrl* p_list = getDisplayedList();
-	int curr_sel = p_list->GetSelectionMark();
+	int curr_sel = p_list->GetNextItem( -1, LVNI_SELECTED );
 	
 	if (curr_sel + 1 > -1 && curr_sel + 1 < p_list->GetItemCount())
 		curr_sel++;

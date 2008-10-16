@@ -123,7 +123,8 @@ BEGIN_MESSAGE_MAP(CMainFrame, CMDIFrameWnd)
 	
 	//}}AFX_MSG_MAP
 	ON_WM_SIZE()
-	ON_WM_SIZE()
+	ON_MESSAGE(WM_MY_LOAD_NAV_NODE, OnLoadSmil)
+
 END_MESSAGE_MAP()
 
 static UINT indicators[] =
@@ -755,4 +756,10 @@ void amis::gui::CMainFrame::OnSize(UINT nType, int cx, int cy)
 		//MainWndParts::Instance()->mpSidebar->GetWindowRect(&sr);
 		MainWndParts::Instance()->mpMmView->OnSize(nType, cx, cy);
 	}
+}
+
+LPARAM amis::gui::CMainFrame::OnLoadSmil(WPARAM wParam, LPARAM lParam)
+{
+	amis::dtb::DtbWithHooks::Instance()->loadNavNode((amis::dtb::nav::NavNode*)lParam);
+	return 0;
 }

@@ -334,7 +334,6 @@ LPARAM CAmisHtmlView::OnHighlightUrlTarget(WPARAM wParam, LPARAM lParam)
 #endif
 #endif
 	TextRenderBrain::Instance()->gotoUriTarget(newurl);
-	//Sleep(1000);
 	delete url;
 	return 0;
 }

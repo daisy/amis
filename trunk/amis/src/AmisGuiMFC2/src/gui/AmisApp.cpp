@@ -150,7 +150,6 @@ CAmisApp::CAmisApp()
 //THE APPLICATION!
 CAmisApp theApp;
 
-
 BOOL CAmisApp::InitInstance()
 {
 	USES_CONVERSION;
@@ -1430,3 +1429,4 @@ ambulant::net::url CAmisApp::findHelpBook()
 		return ambulant::net::url::from_filename("");
 	}
 }
+
