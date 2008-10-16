@@ -72,7 +72,8 @@ public:
 
 	afx_msg void OnSelchangeTab(NMHDR* pNMHDR, LRESULT* pResult);
 	afx_msg void OnSelchangeTree(NMHDR* pNMHDR, LRESULT* pResult);
-	afx_msg void OnNavListSelect(NMHDR* pNMHDR, LRESULT* pResult, amis::dtb::nav::NavTarget* pData);
+	//afx_msg void OnNavListSelect(NMHDR* pNMHDR, LRESULT* pResult, amis::dtb::nav::NavTarget* pData);
+	void OnNavListSelect(amis::dtb::nav::NavTarget* pData);
 	afx_msg void OnPageListClick(NMHDR* pNMHDR, LRESULT* pResult);
 	afx_msg void OnPageListKeyDown(NMHDR* pNMHDR, LRESULT* pResult);
 	afx_msg void OnPageListSetFocus(NMHDR* pNMHDR, LRESULT* pResult);

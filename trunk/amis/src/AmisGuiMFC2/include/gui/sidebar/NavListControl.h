@@ -28,6 +28,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 
 #include <string>
+#include "dtb/nav/NavTarget.h"
 
 namespace amis
 {
@@ -42,12 +43,12 @@ public:
 	std::string getId();
 	void setId(std::string);
 	virtual ~CNavListControl();
+	amis::dtb::nav::NavTarget* nextItem();
+	amis::dtb::nav::NavTarget* previousItem();
 
 protected:
-	//{{AFX_MSG(CNavListControl)
 	afx_msg void doItemSelect(NMHDR* pNMHDR, LRESULT* pResult);
-	afx_msg void OnKeyDown(NMHDR* pNMHDR, LRESULT* pResult);
-	//}}AFX_MSG
+
 private:
 	std::string mId;
 

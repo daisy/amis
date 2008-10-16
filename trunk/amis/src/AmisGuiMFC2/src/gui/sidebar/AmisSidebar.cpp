@@ -192,7 +192,7 @@ void CAmisSidebar::OnSelchangeTree(NMHDR* pNMHDR, LRESULT* pResult)
 }
 
 //this function is triggered by CNavListControl objects
-void CAmisSidebar::OnNavListSelect(NMHDR* pNMHDR, LRESULT* pResult, amis::dtb::nav::NavTarget* pData)
+void CAmisSidebar::OnNavListSelect(/*NMHDR* pNMHDR, LRESULT* pResult, */amis::dtb::nav::NavTarget* pData)
 {
 	if (theApp.isBookOpen() == false) return;
 	if (pData != NULL) amis::dtb::DtbWithHooks::Instance()->loadNavNode(pData);
@@ -322,8 +322,8 @@ BOOL CAmisSidebar::OnInitDialog()
 	return TRUE;  
 }
 
-//This handles remembering shift and control keymasks for anything in this dialog
-//including the sections tree, page list, and other lists
+//This handles remembering shift and control keymasks for anything in this dialog,
+//including TreeView and all lists.
 BOOL CAmisSidebar::PreTranslateMessage(MSG* pMsg)
 {
 	/*the key presses go something like this:
@@ -335,31 +335,64 @@ BOOL CAmisSidebar::PreTranslateMessage(MSG* pMsg)
 	6. send keyups to the same place as the keydown
 	*/
 
-	if (pMsg->message == WM_KEYDOWN) 
+	if (pMsg->message == WM_KEYDOWN || pMsg->message == WM_KEYUP) 
 	{
-		//let the arrow keys operate the tree view
-		if ((/*pMsg->wParam == VK_UP ||
-			pMsg->wParam == VK_DOWN ||*/
-			pMsg->wParam == VK_RETURN)&& 
-			mIsControlDown == false && 
-			mIsShiftDown == false)
+		//process the up/down arrows for list controls
+		if (pMsg->wParam == VK_UP || pMsg->wParam == VK_DOWN)
 		{
-			TRACE(_T("\n dialog key down, giving to dialog \n"));
-			return cdxCDynamicBarDlg::PreTranslateMessage(pMsg);
+			if (this->mTabSel != 0)
+			{
+				//if this is the page list
+				if (this->mTabSel == 1 && amis::dtb::DtbWithHooks::Instance()->getNavModel()->hasPages() == true)
+				{
+					if (pMsg->wParam == VK_UP)
+					{
+						amis::dtb::DtbWithHooks::Instance()->previousPage();
+						return FALSE;
+					}
+					else if (pMsg->wParam == VK_DOWN)
+					{
+						amis::dtb::DtbWithHooks::Instance()->nextPage();
+						return FALSE;
+					}
+				}
+				//otherwise it's a nav list
+				else
+				{
+					CNavListControl* p_nav = this->mNavLists[mTabSel - 2];
+					
+					amis::dtb::nav::NavTarget* p_node = NULL;
+					if (pMsg->wParam == VK_UP)
+					{
+						p_node = p_nav->previousItem();
+						if (p_node != NULL) amis::dtb::DtbWithHooks::Instance()->loadNavNode(p_node);
+						return FALSE;
+					}
+					else if (pMsg->wParam == VK_DOWN)
+					{
+						p_node = p_nav->nextItem();
+						if (p_node != NULL) amis::dtb::DtbWithHooks::Instance()->loadNavNode(p_node);
+						return FALSE;
+					}
+				}
+			}
 		}
-		
-		//pass other keys through
+		//pass other keys through to the main application
 		else
 		{
 			if (pMsg->wParam == VK_SHIFT)
 			{
-				mIsShiftDown = true;
-				TRACE(_T("\n Shift \n"));
+				if (pMsg->message == WM_KEYDOWN)
+					mIsShiftDown = true;
+				else
+					mIsShiftDown = false;
 			}
-			else if (pMsg->wParam == VK_CONTROL)
+			else if (pMsg->wParam == VK_CONTROL) 
 			{
-				mIsControlDown = true;
-				TRACE(_T("\n Control \n"));
+				if (pMsg->message == WM_KEYDOWN)
+					mIsControlDown = true;
+				else
+					mIsControlDown = false;
 			}
 			
 			TRACE(_T("\n dialog key down, pass through \n"));
@@ -369,37 +402,9 @@ BOOL CAmisSidebar::PreTranslateMessage(MSG* pMsg)
 			return FALSE;
 		}
 	}
-	else if (pMsg->message == WM_KEYUP)
-	{
-		if ((pMsg->wParam == VK_LEFT ||
-				pMsg->wParam == VK_RIGHT ||
-				pMsg->wParam == VK_UP ||
-				pMsg->wParam == VK_DOWN ||
-				pMsg->wParam == VK_RETURN)&& 
-				mIsControlDown == false && 
-				mIsShiftDown == false)
-		{
-			TRACE(_T("\nkeyup, sending to dialog\n"));
-			return cdxCDynamicBarDlg::PreTranslateMessage(pMsg);
-		}
-		else
-		{
-			TRACE(_T("\n dialog key up, pass through \n"));
-			if (pMsg->wParam == VK_SHIFT) mIsShiftDown = false;
-			else if (pMsg->wParam == VK_CONTROL) mIsControlDown = false;
 
-			//the parent is the main MDI window
-			CWnd* p_parent = this->GetTopLevelParent();
-			p_parent->SendMessage(pMsg->message, pMsg->wParam, pMsg->lParam);
-			return FALSE;
-		}
-	}
-	else
-	{
-		//pass other messages (not keydown/keyup) through
-		return cdxCDynamicBarDlg::PreTranslateMessage(pMsg);
-	}
-
+	//pass other messages (not keydown/keyup) through
+	return cdxCDynamicBarDlg::PreTranslateMessage(pMsg);
 }
 void CAmisSidebar::showPageList()
 {
@@ -415,7 +420,7 @@ void CAmisSidebar::showPageList()
 void CAmisSidebar::showNavList(unsigned int idx)
 {
 	if (idx >= mNavLists.size()) return;
-
+	
 	//something crashed here, hence the try/catch
 	try 
 	{
@@ -665,6 +670,7 @@ void CAmisSidebar::selectTab(int sel)
 void CAmisSidebar::changeView(int sel)
 {
 	mTabStrip.SetCurSel(sel);
+	mTabSel = sel;
 	MenuManip::Instance()->setCheckmarkOnForNavigationContainer(sel);
 	if (sel == 0) 
 	{

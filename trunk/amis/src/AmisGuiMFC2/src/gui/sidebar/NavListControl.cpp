@@ -23,7 +23,6 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "gui/sidebar/NavListControl.h"
 #include "gui/sidebar/AmisSidebar.h"
 #include "dtb/nav/NavTarget.h"
-#include "..\..\..\include\gui\sidebar\navlistcontrol.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -52,17 +51,10 @@ std::string CNavListControl::getId()
 }
 
 BEGIN_MESSAGE_MAP(CNavListControl, CListCtrl)
-	//{{AFX_MSG_MAP(CNavListControl)
 	ON_NOTIFY_REFLECT(NM_CLICK, doItemSelect)
-	ON_NOTIFY_REFLECT(LVN_KEYDOWN, OnKeyDown)
-	//}}AFX_MSG_MAP
 	ON_WM_CREATE()
 	ON_WM_SIZE()
 END_MESSAGE_MAP()
-
-/////////////////////////////////////////////////////////////////////////////
-// CNavListControl message handlers
-
 
 void CNavListControl::doItemSelect(NMHDR* pNMHDR, LRESULT* pResult)
 {
@@ -75,47 +67,35 @@ void CNavListControl::doItemSelect(NMHDR* pNMHDR, LRESULT* pResult)
 	if (curr_sel > -1)
 	{
 		p_target = (amis::dtb::nav::NavTarget*)this->GetItemData(curr_sel);
-		parent->OnNavListSelect(pNMHDR, pResult, p_target);
+		parent->OnNavListSelect(/*pNMHDR, pResult, */p_target);
 		*pResult = 0;
 	}
 
 }
 
-void CNavListControl::OnKeyDown(NMHDR* pNMHDR, LRESULT* pResult)
+amis::dtb::nav::NavTarget* CNavListControl::previousItem()
 {
-	//right now, the current selection mark has not been updated
-	//by the list control because the message hasn't gone through yet
-	//so we need to go either forward or back one, depending on what key the user pressed
-
-	NMLVKEYDOWN* pKeyDown = (NMLVKEYDOWN*)pNMHDR;
-
-	CAmisSidebar* parent = NULL;
-	parent = (CAmisSidebar*)this->GetParent();
-
 	amis::dtb::nav::NavTarget* p_target = NULL;
 	int curr_sel = this->GetSelectionMark();
-
-	if (pKeyDown->wVKey == VK_UP)
+	if (curr_sel - 1 > -1 && curr_sel - 1 < this->GetItemCount())
 	{
-		if (curr_sel - 1 > -1 && curr_sel - 1 < this->GetItemCount())
-		{
-			curr_sel--;
-			p_target = (amis::dtb::nav::NavTarget*)this->GetItemData(curr_sel);
-			parent->OnNavListSelect(pNMHDR, pResult, p_target);
-			*pResult = 0;
-		}
-	}
-	else if (pKeyDown->wVKey == VK_DOWN)
-	{
-		if (curr_sel + 1 > -1 && curr_sel + 1 < this->GetItemCount())
-		{
-			curr_sel++;
-			p_target = (amis::dtb::nav::NavTarget*)this->GetItemData(curr_sel);
-			parent->OnNavListSelect(pNMHDR, pResult, p_target);
-			*pResult = 0;
-		}
+		curr_sel--;
+		p_target = (amis::dtb::nav::NavTarget*)this->GetItemData(curr_sel);
 	}
 
+	return p_target;
+}
+amis::dtb::nav::NavTarget* CNavListControl::nextItem()
+{
+	amis::dtb::nav::NavTarget* p_target = NULL;
+	int curr_sel = this->GetSelectionMark();
+	if (curr_sel + 1 > -1 && curr_sel + 1 < this->GetItemCount())
+	{
+		curr_sel++;
+		p_target = (amis::dtb::nav::NavTarget*)this->GetItemData(curr_sel);
+	}
+
+	return p_target;
 }
 
 int CNavListControl::OnCreate(LPCREATESTRUCT lpCreateStruct)
