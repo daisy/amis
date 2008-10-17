@@ -123,8 +123,7 @@ BEGIN_MESSAGE_MAP(CMainFrame, CMDIFrameWnd)
 	
 	//}}AFX_MSG_MAP
 	ON_WM_SIZE()
-	ON_MESSAGE(WM_MY_LOAD_NAV_NODE, OnLoadSmil)
-
+	
 END_MESSAGE_MAP()
 
 static UINT indicators[] =
@@ -727,9 +726,6 @@ void amis::gui::CMainFrame::updateToolbarState(toolbar::Toolbar* pToolbar)
 	pToolbar->enable(ID_AMIS_INCREASE_SECTION_DEPTH, b_is_book_open);
 	pToolbar->enable(ID_AMIS_DECREASE_SECTION_DEPTH, b_is_book_open);
 
-	//pToolbar->enable(ID_AMIS_INCREASE_CONTENT_VOLUME, b_is_book_open);
-	//pToolbar->enable(ID_AMIS_DECREASE_CONTENT_VOLUME, b_is_book_open);
-
 	pToolbar->enable(ID_AMIS_FIND_IN_TEXT, b_is_book_open);
 }
 void amis::gui::CMainFrame::RecalcLayout(BOOL bNotify)
@@ -750,16 +746,7 @@ void amis::gui::CMainFrame::OnSize(UINT nType, int cx, int cy)
 	CMDIFrameWnd::OnSize(nType, cx, cy);
 	if (MainWndParts::Instance()->mpMmView != NULL)
 	{
-		//CRect sr;
-		//CRect r;
-		//this->GetWindowRect(&r);
-		//MainWndParts::Instance()->mpSidebar->GetWindowRect(&sr);
 		MainWndParts::Instance()->mpMmView->OnSize(nType, cx, cy);
 	}
 }
 
-LPARAM amis::gui::CMainFrame::OnLoadSmil(WPARAM wParam, LPARAM lParam)
-{
-	amis::dtb::DtbWithHooks::Instance()->loadNavNode((amis::dtb::nav::NavNode*)lParam);
-	return 0;
-}

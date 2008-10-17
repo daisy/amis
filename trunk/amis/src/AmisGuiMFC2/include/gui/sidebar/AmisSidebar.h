@@ -37,7 +37,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 #define AMIS_SIDEBAR_SMALLEST_FONT_SIZE	100
 #define AMIS_SIDEBAR_BIGGEST_FONT_SIZE	400
-#define WM_MY_LOAD_NAV_NODE	WM_USER + 3
+
 namespace amis
 {
 namespace gui
@@ -75,6 +75,7 @@ public:
 	afx_msg void OnSelchangeTree(NMHDR* pNMHDR, LRESULT* pResult);
 	void OnNavListSelect(amis::dtb::nav::NavTarget* pData);
 	afx_msg void OnPageListClick(NMHDR* pNMHDR, LRESULT* pResult);
+	afx_msg void OnPageListKeyDown(NMHDR* pNMHDR, LRESULT* pResult);
 	afx_msg void OnPageListSetFocus(NMHDR* pNMHDR, LRESULT* pResult);
 	afx_msg void OnLvnItemchangedListPage(NMHDR *pNMHDR, LRESULT *pResult);
 
@@ -86,7 +87,6 @@ protected:
 private:
 	void setSelectedNode(amis::dtb::nav::NavPoint*);
 	void setSelectedNode(amis::dtb::nav::PageTarget*);
-	void setSelectedNode(amis::dtb::nav::NavTarget*);
 	void showPageList();
 	void showNavList(unsigned int);
 	void showNavMap();
@@ -95,8 +95,6 @@ private:
 	void changeView(int);
 	HTREEITEM findParentAtLevel(HTREEITEM, int);
 	int getLevel(HTREEITEM);
-	amis::dtb::nav::NavNode* nextItemInDisplayedList();
-	amis::dtb::nav::NavNode* previousItemInDisplayedList();
 	CListCtrl* getDisplayedList();
 	CRect mInitialRect;
 	CRect mInitialParentRect;
@@ -111,8 +109,6 @@ private:
 	int mFontSizeInPoints;
 	bool mbIgnoreTreeSelect;
 	bool mbIgnorePageListSelect;
-	bool mbIgnoreNavListSelect;
-	int mDummy;
 	DECLARE_MESSAGE_MAP();
 
 friend class AmisSidebarLoader;

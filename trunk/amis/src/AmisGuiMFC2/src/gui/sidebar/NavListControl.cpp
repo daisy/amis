@@ -52,6 +52,7 @@ std::string CNavListControl::getId()
 
 BEGIN_MESSAGE_MAP(CNavListControl, CListCtrl)
 	ON_NOTIFY_REFLECT(NM_CLICK, doItemSelect)
+	ON_NOTIFY_REFLECT(LVN_KEYDOWN, OnKeyDown)
 	ON_WM_CREATE()
 	ON_WM_SIZE()
 END_MESSAGE_MAP()
@@ -64,7 +65,7 @@ void CNavListControl::doItemSelect(NMHDR* pNMHDR, LRESULT* pResult)
 	parent = (CAmisSidebar*)this->GetParent();
 
 	amis::dtb::nav::NavTarget* p_target = NULL;
-	int curr_sel = this->GetNextItem( -1, LVNI_SELECTED );
+	int curr_sel = this->GetNextItem(-1, LVNI_SELECTED);
 	;
 
 	if (curr_sel > -1)
@@ -98,4 +99,56 @@ void amis::gui::sidebar::CNavListControl::OnSize(UINT nType, int cx, int cy)
 	p_parent->GetClientRect(&rect);
 	int w = rect.Width();
 	this->SetColumnWidth(0, w);
+}
+
+amis::dtb::nav::NavTarget* CNavListControl::previousItem()
+{
+	amis::dtb::nav::NavTarget* p_target = NULL;
+	int curr_sel = this->GetNextItem(-1, LVNI_SELECTED);
+	
+	if (curr_sel - 1 > -1 && curr_sel - 1 < this->GetItemCount())
+		curr_sel--;
+	else
+		curr_sel = 0;
+		
+	p_target = (amis::dtb::nav::NavTarget*)this->GetItemData(curr_sel);
+	return p_target;
+}
+
+amis::dtb::nav::NavTarget* CNavListControl::nextItem()
+{
+	amis::dtb::nav::NavTarget* p_target = NULL;
+	int curr_sel = this->GetNextItem(-1, LVNI_SELECTED);
+	
+	if (curr_sel + 1 > -1 && curr_sel + 1 < this->GetItemCount())
+		curr_sel++;
+	else
+		curr_sel = this->GetItemCount() - 1;
+
+	p_target = (amis::dtb::nav::NavTarget*)this->GetItemData(curr_sel);
+	return p_target;
+}
+
+void CNavListControl::OnKeyDown(NMHDR* pNMHDR, LRESULT* pResult)
+{
+	TRACE(_T("NAV LIST KEY DOWN!!!!!\n"));
+	NMLVKEYDOWN* pKeyDown = (NMLVKEYDOWN*)pNMHDR;
+
+	CAmisSidebar* parent = NULL;
+	parent = (CAmisSidebar*)this->GetParent();
+
+	amis::dtb::nav::NavTarget* p_target = NULL;
+	
+	if (pKeyDown->wVKey == VK_UP)
+	{
+		p_target = this->previousItem();
+		parent->OnNavListSelect(p_target);
+		*pResult = 0;
+	}
+	else if (pKeyDown->wVKey == VK_DOWN)
+	{
+		p_target = this->nextItem();
+		parent->OnNavListSelect(p_target);
+		*pResult = 0;
+	}
 }

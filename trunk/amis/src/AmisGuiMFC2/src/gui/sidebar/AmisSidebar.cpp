@@ -48,6 +48,7 @@ BEGIN_MESSAGE_MAP(CAmisSidebar, cdxCDynamicBarDlg)
 	ON_NOTIFY(TVN_SELCHANGED, IDC_TREE, OnSelchangeTree)
 	ON_NOTIFY(NM_CLICK, IDC_LIST_PAGE, OnPageListClick)
 	ON_NOTIFY(NM_SETFOCUS, IDC_LIST_PAGE, OnPageListSetFocus)
+	ON_NOTIFY(LVN_KEYDOWN, IDC_LIST_PAGE, OnPageListKeyDown)
 END_MESSAGE_MAP()
 
 CAmisSidebar::CAmisSidebar(CWnd* pParent /*=NULL*/)
@@ -194,7 +195,6 @@ void CAmisSidebar::OnSelchangeTree(NMHDR* pNMHDR, LRESULT* pResult)
 void CAmisSidebar::OnNavListSelect(amis::dtb::nav::NavTarget* pData)
 {
 	USES_CONVERSION;
-	if (mbIgnoreNavListSelect == true) return;
 	if (theApp.isBookOpen() == false) return;
 	CString msg;
 	msg.Format(_T("ON NAV LIST SELECT: %s\n"), A2T(pData->getContent().c_str()));
@@ -208,7 +208,7 @@ void CAmisSidebar::OnPageListClick(NMHDR* pNMHDR, LRESULT* pResult)
 	if (mbIgnorePageListSelect == true) return;
 	amis::dtb::nav::PageTarget* p_page = NULL;
 	int curr_sel;
-	curr_sel = mPageList.GetNextItem( -1, LVNI_SELECTED );
+	curr_sel = mPageList.GetNextItem(-1, LVNI_SELECTED);
 	
 
 	if (curr_sel > -1)
@@ -286,82 +286,49 @@ BOOL CAmisSidebar::OnInitDialog()
 	mTree.ShowWindow(SW_HIDE);
 	mbIgnoreTreeSelect = false;
 	mbIgnorePageListSelect = false;
-	mbIgnoreNavListSelect = false;
-
-	mDummy = 0;
 	return TRUE;  
 }
 
-//This handles remembering shift and control keymasks for anything in this dialog,
-//including TreeView and all lists.
 BOOL CAmisSidebar::PreTranslateMessage(MSG* pMsg)
 {
 	if (pMsg->message == WM_KEYDOWN || pMsg->message == WM_KEYUP) 
 	{
-		//process the up/down arrows for list controls
-		if (pMsg->wParam == VK_UP || pMsg->wParam == VK_DOWN)
+		//don't process the up/down arrows for list controls
+		if ((pMsg->wParam == VK_UP || pMsg->wParam == VK_DOWN) && mTabSel != 0)
 		{
-			TRACE(_T("UP or DOWN\n"));
-			mDummy++;
-			if (mDummy > 2)
+			return cdxCDynamicBarDlg::PreTranslateMessage(pMsg);
+		}
+		else
+		{
+			//if the keystroke was interesting to page/nav lists, then we've already exited at this point
+			//pass other keys through to the main application
+			if (pMsg->wParam == VK_SHIFT)
 			{
-				int i = 3;
+				if (pMsg->message == WM_KEYDOWN)
+					mIsShiftDown = true;
+				else
+					mIsShiftDown = false;
 			}
-			if (mTabSel != 0)
+			else if (pMsg->wParam == VK_CONTROL) 
 			{
-				amis::dtb::nav::NavNode* p_node = NULL;
-				bool select_and_load = false;
-				if (pMsg->wParam == VK_UP)
-				{
-					p_node = previousItemInDisplayedList();
-					select_and_load = true;
-				}
-				else if (pMsg->wParam == VK_DOWN)
-				{
-					p_node = nextItemInDisplayedList();
-					select_and_load = true;
-				}
-				if (select_and_load)
-				{
-					if (p_node->getTypeOfNode() == amis::dtb::nav::NavNode::PAGE_TARGET)
-						setSelectedNode((amis::dtb::nav::PageTarget*)p_node);
-					else
-						setSelectedNode((amis::dtb::nav::NavTarget*)p_node);
-					//amis::dtb::DtbWithHooks::Instance()->loadNavNode(p_node);
-					CWnd* p_parent = this->GetTopLevelParent();
-					long l = (LPARAM)p_node;
-					p_parent->SendMessage(WM_MY_LOAD_NAV_NODE, 0, l);
-					return TRUE;
-				}
+				if (pMsg->message == WM_KEYDOWN)
+					mIsControlDown = true;
+				else
+					mIsControlDown = false;
 			}
+			
+			TRACE(_T("\n dialog key down, pass through \n"));
+			//the parent is the main MDI window
+			CWnd* p_parent = this->GetTopLevelParent();
+			p_parent->SendMessage(pMsg->message, pMsg->wParam, pMsg->lParam);
+			return FALSE;
 		}
-
-		//if the keystroke was interesting to page/nav lists, then we've already exited at this point
-		//pass other keys through to the main application
-		if (pMsg->wParam == VK_SHIFT)
-		{
-			if (pMsg->message == WM_KEYDOWN)
-				mIsShiftDown = true;
-			else
-				mIsShiftDown = false;
-		}
-		else if (pMsg->wParam == VK_CONTROL) 
-		{
-			if (pMsg->message == WM_KEYDOWN)
-				mIsControlDown = true;
-			else
-				mIsControlDown = false;
-		}
-		
-		TRACE(_T("\n dialog key down, pass through \n"));
-		//the parent is the main MDI window
-		CWnd* p_parent = this->GetTopLevelParent();
-		p_parent->SendMessage(pMsg->message, pMsg->wParam, pMsg->lParam);
-		return FALSE;
 	}
-
-	//pass other messages (not keydown/keyup) through
-	return cdxCDynamicBarDlg::PreTranslateMessage(pMsg);
+	else // not keyup/down
+	{
+		//pass other messages (not keydown/keyup) through
+		return cdxCDynamicBarDlg::PreTranslateMessage(pMsg);
+	}
 }
 void CAmisSidebar::showPageList()
 {
@@ -617,24 +584,6 @@ void CAmisSidebar::setSelectedNode(amis::dtb::nav::PageTarget* pNode)
 	idx = mPageList.GetSelectionMark();
 	mbIgnorePageListSelect = false;
 }
-void CAmisSidebar::setSelectedNode(amis::dtb::nav::NavTarget* pNode)
-{
-	TRACE(_T("SETTING THE SELECTION ON A NAV LIST ITEM\n"));
-
-	if (pNode == NULL) return;
-	
-	//find the nav list that contains this node
-	for (int i=0; i<mNavLists.size(); i++)
-	{
-		if (mNavLists[i]->getId() == pNode->getNavContainer()->getId())
-		{
-			mbIgnoreNavListSelect = true;
-			mNavLists[i]->SetItemState(pNode->getIndex(), LVIS_SELECTED, LVIS_SELECTED);
-			mbIgnoreNavListSelect = false;
-			break;
-		}
-	}
-}
 void CAmisSidebar::selectTab(int sel)
 {
 	if (sel > mTabStrip.GetItemCount() - 1) return;
@@ -722,41 +671,39 @@ int CAmisSidebar::getLevel(HTREEITEM hItem)
 	
 	return level;
 }
-CListCtrl* CAmisSidebar::getDisplayedList()
-{
-	if (mTabSel == 1 && amis::dtb::DtbWithHooks::Instance()->getNavModel()->hasPages() == true)
-		return &mPageList;
-	else
-		return this->mNavLists[mTabSel - 2];
-}
 
-amis::dtb::nav::NavNode* CAmisSidebar::previousItemInDisplayedList()
+void CAmisSidebar::OnPageListKeyDown(NMHDR* pNMHDR, LRESULT* pResult)
 {
-	amis::dtb::nav::NavNode* p_node = NULL;
-	CListCtrl* p_list = getDisplayedList();
-	int curr_sel = p_list->GetNextItem( -1, LVNI_SELECTED );
+	if (mbIgnorePageListSelect == true)
+	{
+		*pResult = 0;
+		return;
+	}
+
+	NMLVKEYDOWN* pKeyDown = (NMLVKEYDOWN*)pNMHDR;
+	amis::dtb::nav::PageTarget* p_page = NULL;
+	int curr_sel;
+	string content;
+	curr_sel = mPageList.GetNextItem(-1, LVNI_SELECTED);
+
 	
-	if (curr_sel - 1 > -1 && curr_sel - 1 < p_list->GetItemCount())
-		curr_sel--;
-	else
-		curr_sel = 0;
+	if (pKeyDown->wVKey == VK_UP && (!mIsControlDown || !mIsShiftDown))
+	{
+		if (curr_sel - 1 > -1 && curr_sel - 1 < mPageList.GetItemCount())
+		{
+			curr_sel--;
+			p_page = (amis::dtb::nav::PageTarget*)mPageList.GetItemData(curr_sel);
+		}
+	}
+	else if (pKeyDown->wVKey == VK_DOWN && (!mIsControlDown || !mIsShiftDown))
+	{
+		if (curr_sel + 1 > -1 && curr_sel + 1 < mPageList.GetItemCount())
+		{
+			curr_sel++;
+			p_page = (amis::dtb::nav::PageTarget*)mPageList.GetItemData(curr_sel);
+		}
+	}
 
-	p_node = (amis::dtb::nav::NavNode*)p_list->GetItemData(curr_sel);
-	return p_node;
-}
-
-amis::dtb::nav::NavNode* CAmisSidebar::nextItemInDisplayedList()
-{
-	TRACE(_T("NEXT LIST ITEM\n"));
-	amis::dtb::nav::NavNode* p_node = NULL;
-	CListCtrl* p_list = getDisplayedList();
-	int curr_sel = p_list->GetNextItem( -1, LVNI_SELECTED );
-	
-	if (curr_sel + 1 > -1 && curr_sel + 1 < p_list->GetItemCount())
-		curr_sel++;
-	else
-		curr_sel = p_list->GetItemCount() - 1;
-
-	p_node = (amis::dtb::nav::NavNode*)p_list->GetItemData(curr_sel);
-	return p_node;
+	if (p_page != NULL) amis::dtb::DtbWithHooks::Instance()->loadNavNode(p_page);
+	*pResult = 0;
 }

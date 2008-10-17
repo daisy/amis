@@ -92,7 +92,6 @@ protected:
 	afx_msg void OnUpdateCmdUiPreviousPage(CCmdUI*);
 	afx_msg void OnUpdateCmdUiNextPage(CCmdUI*);
 	afx_msg void OnClose();
-	LPARAM OnLoadSmil(WPARAM wParam, LPARAM lParam);
 	DECLARE_MESSAGE_MAP()
 public:
 	void updateToolbarState(toolbar::Toolbar*);

@@ -46,6 +46,7 @@ public:
 
 protected:
 	afx_msg void doItemSelect(NMHDR* pNMHDR, LRESULT* pResult);
+	afx_msg void OnKeyDown(NMHDR* pNMHDR, LRESULT* pResult);
 
 private:
 	std::string mId;
@@ -54,6 +55,8 @@ private:
 public:
 	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 	afx_msg void OnSize(UINT nType, int cx, int cy);
+	amis::dtb::nav::NavTarget* nextItem();
+	amis::dtb::nav::NavTarget* previousItem();
 };
 }
 }
