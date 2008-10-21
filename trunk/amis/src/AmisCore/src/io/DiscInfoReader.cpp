@@ -36,6 +36,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "util/FilePathTools.h"
 #include "io/DiscInfoReader.h"
 #include "util/xercesutils.h"
+#include "io/TitleAuthorParse.h"
+#include "Media.h"
 
 #include <iostream>
 #include <fstream>
@@ -77,6 +79,7 @@ bool amis::io::DiscInfoReader::readFromFile(const ambulant::net::url* filepath)
 	}
 	else
 	{
+		resolveAudio();
 		return true;
 	}
 }
@@ -118,4 +121,25 @@ void amis::io::DiscInfoReader::endElement(const XMLCh* const uri, const XMLCh* c
 void amis::io::DiscInfoReader::characters(const XMLCh *const chars, const unsigned int length)
 {
 	if (mbFlagGetChars == true) mTempWChars.append((wchar_t*)chars);
+}
+void amis::io::DiscInfoReader::resolveAudio()
+{
+	amis::io::TitleAuthorParse title_parser;
+
+	for (int i=0; i<mpBookList->getNumberOfEntries(); i++)
+	{
+		amis::BookEntry* p_entry = mpBookList->getEntry(i);
+		title_parser.readFromFile(&p_entry->mPath);
+		amis::MediaGroup* p_title_media = NULL;
+		p_title_media = title_parser.getTitleInfo();
+		if (p_title_media != NULL)
+		{
+			if (p_title_media->hasAudio())
+			{
+				amis::AudioNode* p_aud = p_title_media->getAudio(0);
+				p_entry->setTitleAudio(p_aud->getPath(), p_aud->getClipBegin(), p_aud->getClipEnd());
+			}
+			delete p_title_media;
+		}
+	}
 }

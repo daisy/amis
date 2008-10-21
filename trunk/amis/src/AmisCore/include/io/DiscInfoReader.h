@@ -66,6 +66,7 @@ public:
 	virtual void characters(const XMLCh *const, const unsigned int);
 	
 private:
+	void resolveAudio();
 	bool mbFlagGetChars;
 	wstring mTempWChars;
 	amis::BookEntry* mpCurrentEntry;
