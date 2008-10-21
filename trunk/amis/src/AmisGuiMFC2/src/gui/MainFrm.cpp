@@ -544,7 +544,8 @@ void CMainFrame::OnUpdateCmdUiPlayPause(CCmdUI* pCmdUi)
 }
 void amis::gui::CMainFrame::OnUpdateCmdUiPageStyle(CCmdUI* pCmdUi)
 {
-	if (theApp.isBookOpen() && Preferences::Instance()->getCustomCssFiles()->size() > 0)
+	if (theApp.isBookOpen() && amis::dtb::DtbWithHooks::Instance()->hasText() == true &&
+		Preferences::Instance()->getCustomCssFiles()->size() > 0)
 	{
 		int curr = TextRenderBrain::Instance()->getCurrentCustomStyleIndex();		
 		if (curr == -1)
@@ -718,7 +719,8 @@ void amis::gui::CMainFrame::updateToolbarState(toolbar::Toolbar* pToolbar)
 	pToolbar->enable(ID_AMIS_ESCAPE, b_is_book_open);
 	pToolbar->enable(ID_AMIS_RESET_SPEED, b_is_book_open);
 	pToolbar->enable(ID_AMIS_SHOW_PUBLICATION_SUMMARY, b_is_book_open);
-	if (b_is_book_open && Preferences::Instance()->getCustomCssFiles()->size() > 0)
+	if (b_is_book_open && amis::dtb::DtbWithHooks::Instance()->hasText() == true &&
+		Preferences::Instance()->getCustomCssFiles()->size() > 0)
 		pToolbar->enable(ID_AMIS_NEXT_PAGE_STYLE, true);
 	else
 		pToolbar->enable(ID_AMIS_NEXT_PAGE_STYLE, false);

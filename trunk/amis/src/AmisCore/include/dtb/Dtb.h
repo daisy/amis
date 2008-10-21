@@ -79,6 +79,7 @@ public:
 	amis::dtb::DaisyVersion getDaisyVersion();
 	bool isProtected();
 	void setCallbackForPreprocessingBookKey(ProtectedBookKeyHandlerFunctionPtr);
+	bool hasText();
 
 private:
 	ThreadYielder * mThreadYielder;

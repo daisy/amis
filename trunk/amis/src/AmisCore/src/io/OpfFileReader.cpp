@@ -115,9 +115,8 @@ void amis::io::OpfFileReader::startElement(const   XMLCh* const    uri,
 			mResourceFilename = temp.join_to_base(*mpFilename);
 		}
 
-		//we are assuming one text file
-		//text/xml hack for bookshare books
-		if (media_type == "application/x-dtbook+xml" || (media_type == "text/xml" && id != "ncx"))
+		//we are assuming one text file for daisy/niso books
+		if (media_type == "application/x-dtbook+xml")
 		{
 			string filename = SimpleAttrs::get("href", &attributes);
 			ambulant::net::url temp = ambulant::net::url::from_url(filename);

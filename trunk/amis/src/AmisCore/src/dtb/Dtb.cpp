@@ -810,3 +810,12 @@ amis::dtb::nav::NavNode* amis::dtb::Dtb::getCurrentNavNode()
 {
 	return mpCurrentNavNode;
 }
+
+//does this book contain text files (main body content; not the ncc/ncx)
+bool amis::dtb::Dtb::hasText()
+{
+	if (mpFiles->getTextFiles()->size() > 0)
+		return true;
+	else
+		return false;
+}

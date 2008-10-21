@@ -271,6 +271,7 @@ void amis::dtb::DtbFileSet::findTextFiles(amis::util::SearchForFiles* fileSearch
 		mpFileSearcher->addSearchExclusionCriteria("ncc.html");
 		mpFileSearcher->addSearchExclusionCriteria("._");
 		mpFileSearcher->addSearchExclusionCriteria(".svn-base");
+		mpFileSearcher->addSearchExclusionCriteria(".opf");
 		mpFileSearcher->setRecursiveSearch(true);
 		mpFileSearcher->startSearch(mBookDirectory.get_file());
 	
@@ -284,8 +285,11 @@ void amis::dtb::DtbFileSet::findTextFiles(amis::util::SearchForFiles* fileSearch
 void amis::dtb::DtbFileSet::setTextFile(const ambulant::net::url* file)
 {
 	mTextFiles.clear();
-	ambulant::net::url textfile = file->join_to_base(mBookDirectory);
-	mTextFiles.push_back(textfile);
+	if (!file->is_empty_path())
+	{
+		ambulant::net::url textfile = file->join_to_base(mBookDirectory);
+		mTextFiles.push_back(textfile);
+	}
 }
 
 amis::UrlList* amis::dtb::DtbFileSet::getTextFiles()
@@ -313,3 +317,4 @@ const ambulant::net::url* amis::dtb::DtbFileSet::getProtectedBookKeyFilepath()
 {
 	return &mProtectedBookKeyFilepath;
 }
+
