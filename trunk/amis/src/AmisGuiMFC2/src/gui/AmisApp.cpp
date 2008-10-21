@@ -1112,16 +1112,7 @@ void CAmisApp::OnShowFindInText()
 		CString tmp = dlg.getUserSearchString();
 		if (tmp.GetLength() == 0) return;
 
-		// todo: we're fetching data from the search for books dialog...not ideal but it works fine and avoids having to create new data in the l10n XML
-		//todo: now can use the prompt "searching_for_text"
-		std::wstring str2 = AudioSequencePlayer::getTextForDialogControlFromUiIds(IDD_SEARCHDAISY, IDC_SEARCHING, NULL, "WhileSearching");
-		if (str2.length() > 0)
-			MainWndParts::Instance()->mpMmView->SetStatusLine(str2.c_str());
-
-		if (Preferences::Instance()->getIsSelfVoicing() == true)
-		{
-			AudioSequencePlayer::Instance()->playDialogControlFromUiIds(IDD_SEARCHDAISY, IDC_SEARCHING, NULL, true, "WhileSearching");
-		}
+		amis::gui::CAmisApp::emitMessage("searching_for_text");
 
 		int dir = dlg.getSearchDirection();
 		wstring search_string = tmp;
@@ -1148,8 +1139,8 @@ void CAmisApp::OnShowFindInText()
 			{
 				AudioSequencePlayer::Instance()->waitForSequenceEnd();
 			}
-			//todo: now can use the prompt "not_found"
-			amis::gui::CAmisApp::emitMessage("not_available"); // todo: maybe this should be NOT_FOUND instead (does not exist yet in the l10n XML)
+
+			amis::gui::CAmisApp::emitMessage("not_found");
 			if (Preferences::Instance()->getIsSelfVoicing() == true)
 			{
 				AudioSequencePlayer::Instance()->waitForSequenceEnd();
@@ -1268,13 +1259,15 @@ void CAmisApp::OnPlayPause()
 	{
 		amis::util::Log::Instance()->writeMessage("Pausing", "CAmisApp::OnPlayPause");
 
-		//TODO: The "paused" message is missing from the accessibleUi XML, but we can live with the "pause" prompt instead (from the action menu)
-		//amis::gui::CAmisApp::emitMessage("paused");
-		//TODO: now can use "paused" prompt
 		if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 		{
-			AudioSequence* seq	= new AudioSequence();
-			AudioSequencePlayer::playPromptFromUiId(ID_AMIS_PLAYPAUSE, seq, false);
+			//AudioSequence* seq	= new AudioSequence();
+			//AudioSequencePlayer::playPromptFromUiId(ID_AMIS_PLAYPAUSE, seq, false);
+			//
+			//AudioSequencePlayer::playPromptFromStringId("paused");
+			//
+			amis::gui::CAmisApp::emitMessage("paused");
+
 		}
 
 		view->OnFilePause(); // this calls CAmisApp::setPauseState(), see above
@@ -1312,6 +1305,8 @@ std::wstring CAmisApp::emitMessage(std::string msgID, bool repeat)
 
 	if (str2.length() > 0)
 		MainWndParts::Instance()->mpMmView->SetStatusLine(str2.c_str());
+	else
+		int debug = 1;
 
 	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 	{

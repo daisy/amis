@@ -154,7 +154,7 @@ void MainWndParts::updateTitleSelfVoicing(bool selfVoiced)
 
 void MainWndParts::updateTitlePlayState(bool playing)
 {
-	updateTitleBar(TITLEBAR_PLAYSTATE, (playing ? L"Playing..." : L"Paused."));
+	updateTitleBar(TITLEBAR_PLAYSTATE, (playing ? L"Playing" : L"Paused"));
 }
 
 void MainWndParts::updateTitleBar(TitleBarFieldID field, CString str) 
