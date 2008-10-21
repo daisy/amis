@@ -1113,6 +1113,7 @@ void CAmisApp::OnShowFindInText()
 		if (tmp.GetLength() == 0) return;
 
 		// todo: we're fetching data from the search for books dialog...not ideal but it works fine and avoids having to create new data in the l10n XML
+		//todo: now can use the prompt "searching_for_text"
 		std::wstring str2 = AudioSequencePlayer::getTextForDialogControlFromUiIds(IDD_SEARCHDAISY, IDC_SEARCHING, NULL, "WhileSearching");
 		if (str2.length() > 0)
 			MainWndParts::Instance()->mpMmView->SetStatusLine(str2.c_str());
@@ -1147,6 +1148,7 @@ void CAmisApp::OnShowFindInText()
 			{
 				AudioSequencePlayer::Instance()->waitForSequenceEnd();
 			}
+			//todo: now can use the prompt "not_found"
 			amis::gui::CAmisApp::emitMessage("not_available"); // todo: maybe this should be NOT_FOUND instead (does not exist yet in the l10n XML)
 			if (Preferences::Instance()->getIsSelfVoicing() == true)
 			{
@@ -1268,6 +1270,7 @@ void CAmisApp::OnPlayPause()
 
 		//TODO: The "paused" message is missing from the accessibleUi XML, but we can live with the "pause" prompt instead (from the action menu)
 		//amis::gui::CAmisApp::emitMessage("paused");
+		//TODO: now can use "paused" prompt
 		if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 		{
 			AudioSequence* seq	= new AudioSequence();

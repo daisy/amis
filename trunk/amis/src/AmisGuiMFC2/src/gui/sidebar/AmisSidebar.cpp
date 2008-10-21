@@ -373,7 +373,6 @@ void CAmisSidebar::showNavMap()
 	mPageList.ShowWindow(SW_HIDE);
 	mTree.SetFocus();
 	this->RedrawWindow();
-	//TODO: amis should play an audio prompt "sections"
 }
 
 CNavListControl* CAmisSidebar::addNavListWidget()

@@ -155,8 +155,6 @@ void PreferencesDialog::initializeUiLanguageOption()
 }
 
 //This just appends the name of the current language to the dialog label
-//TODO: what we really need to do is resolve the prompt and build the string
-//"You are currently using AMIS in <LANGUAGE>"
 void PreferencesDialog::setCurrentLanguageLabel()
 {
 	amis::ModuleDescData* p_data = Preferences::Instance()->getCurrentLanguageData();
