@@ -1547,7 +1547,7 @@ Adaptive Multimedia Information System</text>
             </prompt>
             <control mfcid="IDC_FONT" widget="list autoplay">
                 <caption mfcid="IDC_FONTLABEL">
-                    <text id="t360">Sidebar font:</text>
+                    <text id="t360">Application font</text>
                     <audio from="" src="./audio/speechgen0234.mp3"/>
                 </caption>
                 <list repeat="yes">
