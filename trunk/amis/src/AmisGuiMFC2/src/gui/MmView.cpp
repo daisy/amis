@@ -242,9 +242,6 @@ MmView::~MmView()
 
 void MmView::SetStatusLine(const wchar_t *message)
 {
-	//TODO: testing only
-	return;
-
 	MainWndParts::Instance()->mpStatusBar->SetPaneText(0, message);
 
 	if (MainWndParts::Instance()->mpMainFrame)
