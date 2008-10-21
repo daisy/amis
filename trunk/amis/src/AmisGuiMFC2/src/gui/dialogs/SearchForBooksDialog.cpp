@@ -189,9 +189,7 @@ void SearchForBooksDialog::loadBook()
 	if (sel > -1 && sel < mpBooks->getNumberOfEntries()) 
 		mLoadBookOnDialogClose = mpBooks->getEntry(sel)->mPath;
 	//clear the books list
-	//we are leaking a bit of memory here but it is crashing when trying to delete certain 
-	//books' title info media groups
-	//if (mpBooks != NULL) delete mpBooks;
+	if (mpBooks != NULL) delete mpBooks;
 	this->EndDialog(1);
 }
 
