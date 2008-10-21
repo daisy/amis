@@ -1675,7 +1675,7 @@ Adaptive Multimedia Information System</text>
                 <audio from="" src="./audio/speechgen0247.mp3"/>
             </promptItem>
             <promptItem id="enter_to_close">
-                <text id="t259">Press to close the dialog.</text>
+                <text id="t259">Press enter to close this dialog</text>
                 <audio from="" src="./audio/speechgen0248.mp3"/>
             </promptItem>
             <promptItem id="ok_button_caption">
@@ -1683,7 +1683,7 @@ Adaptive Multimedia Information System</text>
                 <audio from="" src="./audio/speechgen0249.mp3"/>
             </promptItem>
             <promptItem id="ok_button_description">
-                <text id="t263">Press to close this dialog.</text>
+                <text id="t263">Press OK to close this dialog</text>
                 <audio from="" src="./audio/speechgen0250.mp3"/>
             </promptItem>
             <promptItem id="cancel_button_caption">
@@ -1691,7 +1691,7 @@ Adaptive Multimedia Information System</text>
                 <audio from="" src="./audio/speechgen0251.mp3"/>
             </promptItem>
             <promptItem id="cancel_button_description">
-                <text id="t265">Press to cancel this dialog.</text>
+                <text id="t265">Press cancel to cancel this dialog</text>
                 <audio from="" src="./audio/speechgen0252.mp3"/>
             </promptItem>
             <promptItem id="thisDialogNotSelfVoicing">
