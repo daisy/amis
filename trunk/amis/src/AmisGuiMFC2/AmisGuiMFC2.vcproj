@@ -504,6 +504,10 @@
 							>
 						</File>
 						<File
+							RelativePath=".\include\gui\self-voicing\dialogs\MultipleBooksOnVolumeDialogVoicing.h"
+							>
+						</File>
+						<File
 							RelativePath=".\include\gui\self-voicing\dialogs\PreferencesDialogVoicing.h"
 							>
 						</File>
@@ -1520,6 +1524,18 @@
 							</FileConfiguration>
 							<FileConfiguration
 								Name="Release|Win32"
+								>
+								<Tool
+									Name="VCCLCompilerTool"
+									UsePrecompiledHeader="0"
+								/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath=".\src\gui\self-voicing\dialogs\MultipleBooksOnVolumeDialogVoicing.cpp"
+							>
+							<FileConfiguration
+								Name="Debug|Win32"
 								>
 								<Tool
 									Name="VCCLCompilerTool"

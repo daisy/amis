@@ -20,10 +20,10 @@ License along with this library; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#ifndef SEARCHBOOKSDIALOG_VOICING_H
-#define SEARCHBOOKSDIALOG_VOICING_H
+#ifndef MULTIBOOKSDIALOG_VOICING_H
+#define MULTIBOOKSDIALOG_VOICING_H
 
-#include "gui/dialogs/SearchForBooksDialog.h";
+#include "gui/dialogs/MultipleBooksOnVolumeDialog.h";
 
 #include "gui/self-voicing/datamodel/DataTree.h"
 #include "gui/self-voicing/datamodel/Dialog.h"
@@ -38,21 +38,20 @@ namespace amis
 	{
 		namespace dialogs
 		{
-			class SearchForBooksDialogVoicing
+			class MultipleBooksOnVolumeDialogVoicing
 			{
 			private:
-				amis::gui::dialogs::SearchForBooksDialog * mpDialog;
+				amis::gui::dialogs::MultipleBooksOnVolumeDialog * mpDialog;
 
 			public:
-				SearchForBooksDialogVoicing(amis::gui::dialogs::SearchForBooksDialog * dlg);
-				~SearchForBooksDialogVoicing(void);
+				MultipleBooksOnVolumeDialogVoicing(amis::gui::dialogs::MultipleBooksOnVolumeDialog * dlg);
+				~MultipleBooksOnVolumeDialogVoicing(void);
 				
 				void OnSelchangeFilelist();
-				void announceStatus(CString, SearchStatus); 
 				void resolvePromptVariables(Prompt* pPrompt);
 			};
 		}
 	}
 }
 
-#endif //SEARCHBOOKSDIALOG_VOICING_H
+#endif //MULTIBOOKSDIALOG_VOICING_H

@@ -36,6 +36,8 @@ namespace dialogs
 {
 class MultipleBooksOnVolumeDialog : public AmisDialogBase
 {
+	friend class MultipleBooksOnVolumeDialogVoicing;
+
 public:
 	void resolvePromptVariables(Prompt*);
 

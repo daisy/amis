@@ -22,6 +22,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 #include "gui/self-voicing/dialogs/searchforbooksdialogvoicing.h"
 
+#include "BookList.h"
+
 namespace amis
 {
 	namespace gui
@@ -38,6 +40,71 @@ namespace amis
 				mpDialog = NULL;
 			}
 
+			void SearchForBooksDialogVoicing::OnSelchangeFilelist() 
+			{
+				CListBox* p_filelist = NULL;
+				p_filelist = (CListBox*)mpDialog->GetDlgItem(IDC_FILESFOUND);
+
+				int sel = p_filelist->GetCurSel();
+				if (sel >= 0)
+				{ 
+					amis::UrlList* p_search_results = mpDialog->mSearcher.getSearchResults();
+					if (sel > -1 && sel < p_search_results->size())
+					{
+
+						Dialog* p_dlg = DataTree::Instance()->findDialog(IDD_SEARCHDAISY);
+
+						if (p_dlg != NULL)
+						{
+							DialogControl* p_ctrl = p_dlg->findControl(IDC_FILESFOUND);
+							if (p_ctrl != NULL)
+							{
+								LabelList* p_list = p_ctrl->getLabelList();
+								if (p_list != NULL)
+								{
+									Prompt* p_prompt = p_list->getLabel(0)->getPrompt();
+									if (p_prompt != NULL)
+									{
+										AudioSequence* seq = new AudioSequence();
+										AudioSequencePlayer::Instance()->fillSequencePrompt(seq, p_prompt, mpDialog);
+										if (seq->IsEmpty()) 
+										{
+											delete seq;
+										}
+										else
+										{ 
+											AudioSequencePlayer::Instance()->Play(seq);
+										}
+									}
+								}
+							}
+						}
+
+						/*
+						// WORKING VERISON, BUT PYPASSES AmisAccessibleUi.xml (keep as a reference)
+
+						AudioSequence * seq = new AudioSequence();
+
+						if (mpDialog->mpBooks != NULL)
+						{
+							amis::BookEntry * book = mpDialog->mpBooks->getEntry(sel);
+							amis::AudioNode * audio = book->getTitleAudio();
+							std::wstring str = book->getTitleText();
+							if (audio != NULL)
+							{
+								seq->append(audio->clone(), str.c_str());
+							}
+							else
+							{
+								seq->append(str.c_str());
+							}
+						}
+
+						AudioSequencePlayer::Instance()->Play(seq);
+						*/
+					}
+				}
+			}
 			void SearchForBooksDialogVoicing::resolvePromptVariables(Prompt* pPrompt) 
 			{
 				PromptVar* p_var = NULL;
@@ -56,6 +123,29 @@ namespace amis
 							wstring str;
 							str = value;
 							p_var->setContents(str, "");
+						}
+						else
+						if (p_var->getName().compare("BOOK_TITLE") == 0)
+						{
+							CListBox* p_filelist = NULL;
+							p_filelist = (CListBox*)mpDialog->GetDlgItem(IDC_FILESFOUND);
+
+							int sel = p_filelist->GetCurSel();
+							if (sel >= 0)
+							{ 
+								amis::UrlList* p_search_results = mpDialog->mSearcher.getSearchResults();
+								if (sel > -1 && sel < p_search_results->size())
+								{
+									if (mpDialog->mpBooks != NULL)
+									{
+										amis::BookEntry * book = mpDialog->mpBooks->getEntry(sel);
+										amis::AudioNode * audio = book->getTitleAudio();
+										std::wstring str = book->getTitleText();
+
+										p_var->setContents(str, audio->clone());
+									}
+								}
+							}
 						}
 					}
 				}

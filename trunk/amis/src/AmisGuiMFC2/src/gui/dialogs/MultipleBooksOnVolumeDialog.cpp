@@ -26,7 +26,11 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "AmisCore.h"
 #include "Preferences.h"
 
+#include "gui/self-voicing/dialogs/MultipleBooksOnVolumeDialogVoicing.h"
+
 using namespace amis::gui::dialogs;
+
+amis::gui::dialogs::MultipleBooksOnVolumeDialogVoicing * mpMultipleBooksOnVolumeDialogVoicing = NULL;
 
 BEGIN_MESSAGE_MAP(MultipleBooksOnVolumeDialog, CDialog)
 	ON_WM_PAINT()
@@ -40,41 +44,33 @@ void MultipleBooksOnVolumeDialog::OnSelchangeFilelist()
 {
 	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 	{
-		//TODO: this list treatment removes the default XML prompts, needs improvement
-		CListBox* p_filelist = NULL;
-		p_filelist = (CListBox*)this->GetDlgItem(IDC_BOOKLIST);
-
-		int sel = p_filelist->GetCurSel();
-		if (sel >= 0)
-		{ 
-			if (sel > -1 && sel < mpBookList->getNumberOfEntries())
-			{
-				CString title = mpBookList->getEntry(sel)->getTitleText().c_str();
-				amis::AudioNode* node = mpBookList->getEntry(sel)->getTitleAudio();
-
-				AudioSequence * seq = new AudioSequence();
-				if (node != NULL)
-					seq->append(node->clone(), title);
-				else
-					seq->append(title);
-				AudioSequencePlayer::Instance()->Play(seq);
-			}
-		}
+		mpMultipleBooksOnVolumeDialogVoicing->OnSelchangeFilelist();
 	}
 }
 void MultipleBooksOnVolumeDialog::resolvePromptVariables(Prompt* pPrompt)
 {
-	return;
+	mpMultipleBooksOnVolumeDialogVoicing->resolvePromptVariables(pPrompt);
+	AmisDialogBase::resolvePromptVariables(pPrompt);
 }
 
 MultipleBooksOnVolumeDialog::MultipleBooksOnVolumeDialog(CWnd* pParent /*=NULL*/, amis::BookList* pBookList)
 	: AmisDialogBase(MultipleBooksOnVolumeDialog::IDD)
 {
 	mpBookList = pBookList;
+	
+	if (Preferences::Instance()->getIsSelfVoicing() == true)
+	{
+		mpMultipleBooksOnVolumeDialogVoicing = new amis::gui::dialogs::MultipleBooksOnVolumeDialogVoicing(this);
+	}
 }
 
 MultipleBooksOnVolumeDialog::~MultipleBooksOnVolumeDialog()
 {
+	if (mpMultipleBooksOnVolumeDialogVoicing != NULL)
+	{
+		delete mpMultipleBooksOnVolumeDialogVoicing;
+		mpMultipleBooksOnVolumeDialogVoicing = NULL;
+	}
 }
 
 BOOL MultipleBooksOnVolumeDialog::OnInitDialog() 

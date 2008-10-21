@@ -51,42 +51,14 @@ BEGIN_MESSAGE_MAP(SearchForBooksDialog, CDialog)
 	ON_LBN_SELCHANGE(IDC_FILESFOUND, OnSelchangeFilelist)
 END_MESSAGE_MAP()
 
-
 void SearchForBooksDialog::OnSelchangeFilelist() 
 {
 	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 	{
-		CListBox* p_filelist = NULL;
-		p_filelist = (CListBox*)this->GetDlgItem(IDC_FILESFOUND);
-
-		int sel = p_filelist->GetCurSel();
-		if (sel >= 0)
-		{ 
-			amis::UrlList* p_search_results = mSearcher.getSearchResults();
-			if (sel > -1 && sel < p_search_results->size())
-			{
-				AudioSequence * seq = new AudioSequence();
-
-				if (mpBooks != NULL)
-				{
-					amis::BookEntry * book = mpBooks->getEntry(sel);
-					amis::AudioNode * audio = book->getTitleAudio();
-					std::wstring str = book->getTitleText();
-					if (audio != NULL)
-					{
-						seq->append(audio->clone(), str.c_str());
-					}
-					else
-					{
-						seq->append(str.c_str());
-					}
-				}
-
-				AudioSequencePlayer::Instance()->Play(seq);
-			}
-		}
+		mpSearchForBooksDialogVoicing->OnSelchangeFilelist();
 	}
 }
+
 void SearchForBooksDialog::resolvePromptVariables(Prompt* pPrompt)
 {
 	mpSearchForBooksDialogVoicing->resolvePromptVariables(pPrompt);
