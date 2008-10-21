@@ -171,7 +171,7 @@ BOOL CAmisApp::InitInstance()
 	mbBookIsOpen = false;
 	mbIsWaitingToLoad = false;
 	mAppPath = "";
-	
+
 	//first read the preferences
 	initializePathsAndFiles();
 	//then start logging!  
@@ -1200,11 +1200,7 @@ void CAmisApp::OnResetHighlightColors()
 }
 void CAmisApp::OnToggleContentAudio()
 {
-	if (isBookOpen())
-	{
-		//TODO: this command doesn't work yet
-		//Need to find out how to do this with Ambulant
-	}
+	//this isn't "mute" so much as "stop rendering audio nodes"
 }
 void CAmisApp::OnShowHelpContents()
 {

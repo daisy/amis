@@ -154,7 +154,7 @@ private:
 	bool mbIsPlayingHelpBook;
 	std::string mLanguagePreference;
 	bool mbIsWaitingToLoad;
-
+	
 public:
 	DECLARE_MESSAGE_MAP()
 

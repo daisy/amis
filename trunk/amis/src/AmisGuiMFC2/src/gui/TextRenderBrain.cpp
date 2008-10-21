@@ -310,7 +310,7 @@ int TextRenderBrain::getCurrentCustomStyleIndex()
 }
 void TextRenderBrain::applyPageStyle(int idx)
 {
-	clearPageStyle();
+	if (mbStyleOn) clearPageStyle();
 	amis::util::Log::Instance()->writeMessage("Applying custom style", "TextRenderBrain::applyPageStyle");
 	mbStyleOn = true;
 	amis::UrlList* list = Preferences::Instance()->getCustomCssFiles();
@@ -327,7 +327,7 @@ void TextRenderBrain::applyNextPageStyle()
 		mCurrentStyleIdx < sz-1)
 	{
 		int tmp = mCurrentStyleIdx;
-		clearPageStyle();
+		if (mbStyleOn) clearPageStyle();
 		mCurrentStyleIdx = tmp + 1;
 		applyPageStyle(mCurrentStyleIdx);
 	}
@@ -342,6 +342,7 @@ void TextRenderBrain::clearPageStyle()
 	amis::util::Log::Instance()->writeMessage("Clearing page style", "TextRenderBrain::clearPageStyle");
 	mbStyleOn = false;
 	mCurrentStyleIdx = -1;
+	TRACE(_T("about to REMOVE the stylesheet\n"));
 	MainWndParts::Instance()->mpHtmlView->removeStylesheet(mpStyleCss);
 }
 
