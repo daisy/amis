@@ -5,7 +5,7 @@
 ; makensis /DCUSTOM_LANG_NAME="U.S. English" /DCUSTOM_LANG_ID="eng-US" setup-amis3.nsi
 
 !define PRODUCT_NAME "AMIS"
-!define PRODUCT_VERSION "3.0 Beta 3.1"
+!define PRODUCT_VERSION "3.0 Beta 4"
 !define PRODUCT_PUBLISHER "DAISY for All Project"
 !define PRODUCT_WEB_SITE "http://amisproject.org"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\AMIS.exe"
@@ -75,7 +75,7 @@ Page custom SapiPage
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION} (${CUSTOM_LANG_NAME})"
 ;this is the name of the installer that gets created.  
 ;for some reason, i vaguely remember that it shouldn't have spaces in the filename.
-OutFile "Setup-amis3-beta31-${CUSTOM_LANG_NAME}.exe"
+OutFile "Setup-amis3-beta4-${CUSTOM_LANG_NAME}.exe"
 InstallDir "$PROGRAMFILES\AMIS"
 InstallDirRegKey HKLM "${PRODUCT_DIR_REGKEY}" ""
 ShowInstDetails show
@@ -89,7 +89,7 @@ Section "MainSection" SEC01
 	;figure out the user's application data directory
 	;look for the "all users" context
 	SetShellVarContext all
-	StrCpy $SETTINGS_DIR $APPDATA\AMIS\settings"
+	StrCpy $SETTINGS_DIR $APPDATA\AMIS\settings
 	
 	SetOutPath "$INSTDIR"
   SetOverwrite try
@@ -293,7 +293,7 @@ Section Uninstall
 	;figure out the user's application data directory
 	;look for the "all users" context
 	SetShellVarContext all 
-	StrCpy $SETTINGS_DIR $APPDATA\AMIS\settings"
+	StrCpy $SETTINGS_DIR $APPDATA\AMIS\settings
 	MessageBox MB_OK "$SETTINGS_DIR"
 	
 	;TODO: none of this stuff gets deleted...
