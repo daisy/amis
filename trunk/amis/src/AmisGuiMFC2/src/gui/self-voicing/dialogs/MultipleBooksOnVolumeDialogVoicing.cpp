@@ -120,7 +120,7 @@ namespace amis
 									amis::AudioNode* node = mpDialog->mpBookList->getEntry(sel)->getTitleAudio();
 									wstring str;
 									str = title;
-									p_var->setContents(str, node->clone());
+									p_var->setContents(str, (node == NULL ? NULL : node->clone()));
 								}
 							}
 						}

@@ -142,7 +142,7 @@ namespace amis
 										amis::AudioNode * audio = book->getTitleAudio();
 										std::wstring str = book->getTitleText();
 
-										p_var->setContents(str, audio->clone());
+										p_var->setContents(str, (audio == NULL ? NULL : audio->clone()));
 									}
 								}
 							}
