@@ -166,7 +166,6 @@ bool PublicationSummaryDialog::calculateData()
 		mNarrator = p_meta->getMetadataContent("dc:Narrator");
 	}
 
-	//TODO: get the full multimedia data (should be available directly from the nav data model)
 	if (p_nav->getNavMap()->getLabel() != NULL)
 	{
 		mNavigableItems = p_nav->getNavMap()->getLabel()->getText()->getTextString();
