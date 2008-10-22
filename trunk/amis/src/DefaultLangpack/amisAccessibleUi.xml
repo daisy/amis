@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<ui next-id="t438" xml:lang="en" xmlns="http://amisproject.org">
+<ui next-id="t439" xml:lang="en" xmlns="http://amisproject.org">
     <containers>
         <container id="file">
             <note>This is the menu header &quot;File&quot;</note>
@@ -949,19 +949,19 @@ Adaptive Multimedia Information System</text>
             </control>
             <control mfcid="IDC_VERSION" translate="no" widget="textlabel autoplay">
                 <caption>
-                    <text id="t164">Version 3.0 beta 2</text>
+                    <text id="t164">Version 3.0 Beta 4</text>
                     <audio from="" src="./audio/speechgen0168.mp3"/>
                 </caption>
             </control>
             <control mfcid="IDC_VERSIONNOTE" translate="no" widget="textlabel autoplay">
                 <caption>
-                    <text id="t165">Release Date: 14 May 2008</text>
+                    <text id="t165">Release Date: 31 October 2008</text>
                     <audio from="" src="./audio/speechgen0169.mp3"/>
                 </caption>
             </control>
             <control mfcid="IDC_COPYRIGHT" translate="no" widget="textlabel autoplay">
                 <caption>
-                    <text id="t166">Copyright (c) 2008 DAISY for All</text>
+                    <text id="t166">Copyright (c) 2008 DAISY Consortium</text>
                     <audio from="" src="./audio/speechgen0170.mp3"/>
                 </caption>
             </control>
