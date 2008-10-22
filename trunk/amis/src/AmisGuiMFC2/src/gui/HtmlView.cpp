@@ -80,6 +80,7 @@ BEGIN_MESSAGE_MAP(CAmisHtmlView, CHtmlView)
 #endif
 	ON_MESSAGE(WM_MY_HIGHLIGHTURITARGET, OnHighlightUrlTarget)
 	ON_COMMAND(ID_EDIT_COPY, OnEditCopy)
+	ON_WM_SIZE()
 END_MESSAGE_MAP()
 
 CAmisHtmlView::CAmisHtmlView()
@@ -693,6 +694,12 @@ BOOL CAmisHtmlView::LoadFromResource(UINT nRes)
     return bRetVal;
 }
 
+void amis::gui::CAmisHtmlView::OnSize(UINT nType, int cx, int cy)
+{
+	TRACE(_T("CAmisHtmlView: OnSize\n"));
+	CHtmlView::OnSize(nType, cx, cy);
+}
+
 CAmisHtmlView *html_browser_imp::s_browser = NULL;
 
 html_browser_imp::html_browser_imp(int left, int top, int width, int height)
@@ -806,6 +813,8 @@ void html_browser_imp::show()
 
 void html_browser_imp::redraw() 
 {
+	TRACE(_T("html_browser_imp: redraw\n"));
+
 //	AM_DBG lib::logger::get_logger()->debug("html_browser_imp::redraw(0x%x)", this);
 	ShowWindow(s_browser->m_hWnd, SW_SHOWNA);
 }

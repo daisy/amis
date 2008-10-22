@@ -190,6 +190,7 @@ BEGIN_MESSAGE_MAP(MmView, CView)
 	ON_MESSAGE(WM_SET_CLIENT_RECT, OnSetClientRect)
 	ON_WM_MOUSEMOVE()
 	ON_MESSAGE(WM_REPLACE_DOC, OnReplaceDoc)
+	ON_WM_SIZE()
 END_MESSAGE_MAP()
 
 MmView::MmView()
@@ -242,6 +243,9 @@ MmView::~MmView()
 
 void MmView::SetStatusLine(const wchar_t *message)
 {
+	//TODO: this function crashes a lot ... why ??
+	return;
+
 	MainWndParts::Instance()->mpStatusBar->SetPaneText(0, message);
 
 	if (MainWndParts::Instance()->mpMainFrame)

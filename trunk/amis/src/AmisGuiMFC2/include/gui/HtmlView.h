@@ -67,6 +67,7 @@ public:
 	virtual void OnBeforeNavigate2(LPCTSTR, DWORD, LPCTSTR, CByteArray&, LPCTSTR, BOOL*);
 	virtual void OnNavigateComplete2(LPCTSTR);
 	virtual void CAmisHtmlView::OnNavigateError(LPCTSTR, LPCTSTR, DWORD, BOOL*);
+	afx_msg void OnSize(UINT nType, int cx, int cy);
 protected:
 	virtual void OnActivateView(BOOL, CView*, CView*);
 	virtual HRESULT OnFilterDataObject(LPDATAOBJECT, LPDATAOBJECT*);

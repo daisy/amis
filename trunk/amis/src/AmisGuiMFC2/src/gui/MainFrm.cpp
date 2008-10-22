@@ -732,23 +732,28 @@ void amis::gui::CMainFrame::updateToolbarState(toolbar::Toolbar* pToolbar)
 }
 void amis::gui::CMainFrame::RecalcLayout(BOOL bNotify)
 {
-	if (MainWndParts::Instance()->mpBasicToolbar == NULL) return;
-	//center the buttons on	a basic	toolbar
-	CRect rect;
-	GetClientRect(&rect);
-	mBasicToolbar.SetIndent (
-		(rect.Width() - (mBasicToolbar.GetButtonCount() * LOWORD(mBasicToolbar.GetButtonSize())))	
-		/ 2);
+	TRACE(_T("CMainFrame: Recalc Layout\n"));
 
+	if (MainWndParts::Instance()->mpBasicToolbar != NULL)
+	{
+		//center the buttons on	a basic	toolbar
+		CRect rect;
+		GetClientRect(&rect);
+		mBasicToolbar.SetIndent (
+			(rect.Width() - (mBasicToolbar.GetButtonCount() * LOWORD(mBasicToolbar.GetButtonSize())))	
+			/ 2);
+	}
 	CMDIFrameWnd::RecalcLayout(bNotify);
 }
 
 void amis::gui::CMainFrame::OnSize(UINT nType, int cx, int cy)
 {
-	CMDIFrameWnd::OnSize(nType, cx, cy);
+	TRACE(_T("CMainFrame: OnSize\n"));
+
 	if (MainWndParts::Instance()->mpMmView != NULL)
 	{
-		MainWndParts::Instance()->mpMmView->OnSize(nType, cx, cy);
+		//MainWndParts::Instance()->mpMmView->OnSize(nType, cx, cy);
 	}
+	CMDIFrameWnd::OnSize(nType, cx, cy);
 }
 
