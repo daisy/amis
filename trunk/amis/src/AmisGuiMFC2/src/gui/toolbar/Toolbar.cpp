@@ -1,7 +1,7 @@
 /*
 AMIS: Adaptive Multimedia Information System
 Software for playing DAISY books
-Homepage: http://amis.sf.net
+Homepage: http://amisproject.org
 
 Copyright (C) 2008  DAISY for All Project
 

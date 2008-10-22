@@ -1,9 +1,9 @@
 /*
 AMIS: Adaptive Multimedia Information System
 Software for playing DAISY books
-Homepage: http://amis.sf.net
+Homepage: http://amisproject.org
 
-Copyright (C) 2004-2007  DAISY for All Project
+Copyright (c) 2008  DAISY Consortium
 
 This library is free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public
@@ -19,6 +19,7 @@ You should have received a copy of the GNU Lesser General Public
 License along with this library; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
+
 //tree structure 
 
 #ifndef NAVMAP_H
