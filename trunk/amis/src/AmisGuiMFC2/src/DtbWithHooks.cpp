@@ -403,12 +403,29 @@ void DtbWithHooks::makeLabelHumanReadable(amis::MediaGroup* pLabel, std::string 
 
 amis::dtb::Bookmark* DtbWithHooks::addBookmark()
 {
+	USES_CONVERSION;
+
 	amis::MediaGroup* p_note = new amis::MediaGroup();
 	amis::TextNode* p_note_text = new amis::TextNode();
 	
 	wstring curr_text = amis::gui::TextRenderBrain::Instance()->getCurrentText();
-	//use the first 20 chars of the current text for the bookmark's note field
-	if (curr_text.size() > 20) curr_text = curr_text.substr(0, 20);
+	if (curr_text.size() == 0)
+	{
+		//the word "bookmark 1...n" can be the name for a bookmark with no text
+		CString bmk_word;
+		bmk_word.LoadStringW(IDS_BOOKMARK);
+		curr_text = bmk_word;
+		int count = getBookmarks()->getNumberOfItems() + 1;
+		curr_text.append(_T(" "));
+		wchar_t ch[3];
+		_itow(count, ch, 10);
+		curr_text.append(ch);
+	}
+	else
+	{
+		//use the first 20 chars of the current text for the bookmark's note field
+		if (curr_text.size() > 20) curr_text = curr_text.substr(0, 20);
+	}
 	
 	//temporarily convert to CString because the Replace function is better
 	CString cstr_curr_text = curr_text.c_str();

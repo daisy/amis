@@ -34,4 +34,4 @@ foreach $line (@lines)
 close(INFILE);
 close(OUTFILE);
 
-print "Created bin/settings/resource.h.ini\n";
+print "Created resource.h.ini\n";

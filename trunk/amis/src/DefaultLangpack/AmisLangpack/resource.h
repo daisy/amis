@@ -31,6 +31,7 @@
 #define IDS_NO_BOOKS_ON_CD              125
 #define IDS_PLEASE_RESTART              126
 #define ID_AMIS_FOCUS_ON_TEXT           127
+#define IDS_BOOKMARK                    127
 #define IDR_MAINFRAME                   128
 #define IDR_AMISTYPE                    129
 #define ID_AMIS_INCREASE_SECTION_DEPTH  130
