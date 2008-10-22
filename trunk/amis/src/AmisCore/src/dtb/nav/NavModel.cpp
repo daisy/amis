@@ -335,8 +335,8 @@ amis::dtb::nav::NavPoint* amis::dtb::nav::NavModel::nextSection(int currentPlayO
 amis::dtb::nav::PageTarget* amis::dtb::nav::NavModel::previousPage(int currentPlayOrder)
 {
 	int idx = currentPlayOrder - 2;
-	if (idx >= mPlayOrderList.size() || idx <= 0) return NULL;
-
+	if (idx >= mPlayOrderList.size() || idx < 0) return NULL;
+	
 	for (int i = idx; i >=0; i--)
 	{
 		if (mPlayOrderList[i]->getTypeOfNode() == NavNode::PAGE_TARGET)
@@ -345,7 +345,11 @@ amis::dtb::nav::PageTarget* amis::dtb::nav::NavModel::previousPage(int currentPl
 			return p_node;
 		}
 	}
-	return NULL;
+	//you can always go to the first page
+	if (hasPages() == true)
+		return (PageTarget*)getPageList()->getAtIndex(0);
+	else
+		return NULL;
 }
 amis::dtb::nav::PageTarget* amis::dtb::nav::NavModel::nextPage(int currentPlayOrder)
 {

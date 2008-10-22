@@ -602,7 +602,17 @@ void DtbWithHooks::nextPage()
 	}
 	else
 	{
-		p_log->writeWarning("current nav node is NULL", "DtbWithHooks::nextPage");
+		//go to the first page
+		if (getNavModel()->hasPages() == true)
+		{
+			p_node = getNavModel()->getPageList()->getAtIndex(0);
+			if (p_node != NULL)
+				loadNavNode(p_node);
+		}
+		else
+		{
+			p_log->writeWarning("current nav node is NULL and no page found", "DtbWithHooks::nextPage");
+		}
 	}
 }
 //always true until the nextPhrase + document_stopped event can be untangled in MmView
@@ -651,6 +661,13 @@ bool DtbWithHooks::canGoToNextPage()
 		p_node = getNavModel()->nextPage(p_node->getPlayOrder());
 		if (p_node != NULL) return true;
 		else return false;
+	}
+	//there actually is a case where there is front matter outside the NavModel, but
+	//the book has pages, so you should be able to go to the next page (i.e., the first page)
+	else
+	{
+		if (getNavModel()->hasPages() == true)
+			return true;
 	}
 	return false;
 }

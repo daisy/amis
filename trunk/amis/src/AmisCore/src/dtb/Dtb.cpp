@@ -594,10 +594,10 @@ void amis::dtb::Dtb::setNewLastmark(ambulant::net::url positionUri)
 				(&p_pos_data->mUri, this->getFileSet()->getNavFilepath());
 			p_node = mpNavModel->getNodeForSmilId(smil_file_name, mpNavModel->getNavMap());
 			if (p_node != NULL) 
-			{
-				mpCurrentNavNode = p_node;
 				p_pos_data->mNcxRef = p_node->getId();
-			}
+			
+			mpCurrentNavNode = p_node;
+			
 			//the current nav node could be a page target or nav point, depending on which has the greater
 			//play order value.  default to nav point.
  			if (mpNavModel->hasPages() == true)
@@ -605,6 +605,10 @@ void amis::dtb::Dtb::setNewLastmark(ambulant::net::url positionUri)
 				p_node = mpNavModel->getNodeForSmilId(smil_file_name, mpNavModel->getPageList());
 				if (p_node != NULL && mpCurrentNavNode != NULL &&
 					mpCurrentNavNode->getPlayOrder() < p_node->getPlayOrder())
+				{
+					mpCurrentNavNode = p_node;
+				}
+				else if (p_node != NULL && mpCurrentNavNode == NULL)
 				{
 					mpCurrentNavNode = p_node;
 				}
