@@ -75,7 +75,8 @@ protected:
 	virtual void OnEditCopy();
 	afx_msg int OnCreate(LPCREATESTRUCT);
 	DECLARE_MESSAGE_MAP()
-
+private:
+	void forceResizeHack();
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext&) const;

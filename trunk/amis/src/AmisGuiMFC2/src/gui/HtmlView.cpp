@@ -644,31 +644,22 @@ IHTMLStyleSheet* CAmisHtmlView::applyStylesheet(const ambulant::net::url* styles
 	//stylesheet doesn't override the default styling (i would like it to override this)
 	res = pDoc->createStyleSheet(css_path_bstr, 0, &pStyleSheet);
 	SysFreeString(css_path_bstr);
-	//without this line, the stylesheet gets a weird leftover border from the previous style
-	//it still happens sometimes though
-	//if you move the window or scroll, the weird border goes away
 	
-	MainWndParts::Instance()->mpMainFrame->RecalcLayout();
-	MainWndParts::Instance()->mpMainFrame->ShowWindow(SW_SHOWNA);
-	
+	forceResizeHack();
+
 	return pStyleSheet;
 }
 
 void CAmisHtmlView::removeStylesheet(IHTMLStyleSheet* pStyleSheet)
 {
 	if (!pStyleSheet) return;
-	//i don't know if an exception is even raised, but i've seen it crash here, though not consistently
-	try
-	{
-		amis::util::Log::Instance()->writeMessage("Removing stylesheet", "CAmisHtmlView::removeStylesheet");
-		pStyleSheet->put_disabled(VARIANT_TRUE);
-		pStyleSheet->Release();
-		pStyleSheet = NULL;
-	}
-	catch (...)
-	{
-		return;
-	}
+	
+	amis::util::Log::Instance()->writeMessage("Removing stylesheet", "CAmisHtmlView::removeStylesheet");
+	pStyleSheet->put_disabled(VARIANT_TRUE);
+	pStyleSheet->Release();
+	pStyleSheet = NULL;
+
+	forceResizeHack();
 }
 
 
@@ -698,6 +689,21 @@ void amis::gui::CAmisHtmlView::OnSize(UINT nType, int cx, int cy)
 {
 	TRACE(_T("CAmisHtmlView: OnSize\n"));
 	CHtmlView::OnSize(nType, cx, cy);
+}
+
+//added this to help with stylesheet rendering
+void amis::gui::CAmisHtmlView::forceResizeHack()
+{
+	//force a resize to avoid the gap between the CSS area and the HTML page margin
+	
+	CRect rect;
+	//get the current window size
+	MainWndParts::Instance()->mpMainFrame->GetWindowRect(&rect);
+	//shrink the window a little bit
+	//unfortunately, any value smaller than 9 for the offset results in no effect at all
+	MainWndParts::Instance()->mpMainFrame->SetWindowPos(&wndTop, 0, 0, rect.Width()-9, rect.Height(), SWP_NOMOVE); 
+	//set to the original size
+	MainWndParts::Instance()->mpMainFrame->SetWindowPos(&wndTop, 0, 0, rect.Width(), rect.Height(), SWP_NOMOVE); 
 }
 
 CAmisHtmlView *html_browser_imp::s_browser = NULL;

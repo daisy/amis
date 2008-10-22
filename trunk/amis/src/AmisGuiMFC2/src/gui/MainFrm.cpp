@@ -749,11 +749,6 @@ void amis::gui::CMainFrame::RecalcLayout(BOOL bNotify)
 void amis::gui::CMainFrame::OnSize(UINT nType, int cx, int cy)
 {
 	TRACE(_T("CMainFrame: OnSize\n"));
-
-	if (MainWndParts::Instance()->mpMmView != NULL)
-	{
-		//MainWndParts::Instance()->mpMmView->OnSize(nType, cx, cy);
-	}
 	CMDIFrameWnd::OnSize(nType, cx, cy);
 }
 
