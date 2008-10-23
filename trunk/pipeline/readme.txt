@@ -27,6 +27,7 @@ Run in this order to generate the narrated prompts for AMIS:
 1. init
 
 2. Edit amisPrompts.html to remove the xmlns attribute from the top
+vi: d 36 right
 
 3. Run the following Pipeline jobs (make sure you're using the latest pipeline release).
 
@@ -53,4 +54,4 @@ c. End
 
 Apply the chain to the files in ./audio/
 
-5. Copy ./audio/ and amisAccessibleUiWithAudio.xml into the DefaultLangpack directory of AMIS and commit them to SVN
+5. Copy ./audio/cleaned/*.mp3 and amisAccessibleUi.xml into the DefaultLangpack directory of AMIS and commit them to SVN

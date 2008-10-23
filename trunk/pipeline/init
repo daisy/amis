@@ -1,11 +1,27 @@
 #!/bin/bash
 
-echo "Copying amisAccessibleUi.xml from Default Langpack directory"
-cp ../amis/src/DefaultLangpack/amisAccessibleUi.xml ./
-echo "running XSLT to generate prompts as XHTML"
-xsltproc prompts.xslt amisAccessibleUi.xml > amisPrompts.html
-xmllint --format amisPrompts.html > temp.html
-mv temp.html amisPrompts.html
+echo "Please set the environment variable LION to point to your /lion/lionapp/trunk/lion directory"
+## Linux
+LSOF=$(lsof -p $$ | grep -E "/"$(basename $0)"$")
+THIS_FILE_PATH=$(echo $LSOF | sed -r s/'^([^\/]+)\/'/'\/'/1 2>/dev/null)
+if [ $? -ne 0 ]; then
+  ## OSX
+  THIS_FILE_PATH=$(echo $LSOF | sed -E s/'^([^\/]+)\/'/'\/'/1 2>/dev/null)
+fi
+THIS_DIR=$(dirname $THIS_FILE_PATH)
+
+cd ${LION}/daisylion/config
+python generate_config.py amis local > lion.cfg
+cd ${LION}/daisylion/scripts
+python printstrings.py -d eng-US > /tmp/strings.xml
+
+cd $THIS_DIR
+
+XSLT_FILE=prepare_prompts_for_pipeline.xslt
+
+xsltproc $XSLT_FILE /tmp/strings.xml > /tmp/strings.html
+
+xmllint --format /tmp/strings.html > amisPrompts.html
 rm -rf book
 rm -rf audio
 mkdir book
@@ -13,8 +29,6 @@ mkdir audio
 rm amisPrompts.xml
 rm amisPromptsFixed.xml
 rm amisAccessibleUiWithAudio.xml
-echo ""
-echo "**TODO: remove the namespace declaration from amisPrompts.html"
 echo ""
 echo "Now use the pipeline to generate the TTS"
 echo ""

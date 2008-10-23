@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns="http://www.w3.org/1999/xhtml" xmlns:amis="http://amisproject.org">
+<!-- Create the XHTML project import to record prompts in Obi. Uses the
+  - -strings input format from managedb. -->
+
+<xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:output method="xml" version="1.0" encoding="UTF-8"
+    omit-xml-declaration="no" indent="yes"
     doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
     doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"/>
 
-  <xsl:template match="/amis:ui">
-    <html>
-      <xsl:copy-of select="@xml:lang"/>
-      <xsl:copy-of select="@dir"/>
+  <xsl:template match="/">
+    <html xmlns="http://www.w3.org/1999/xhtml">
       <head>
-        <title>U.S. English</title>
+        <title>
+          <xsl:value-of select="concat('Prompts for ',strings/@langid)"/>
+        </title>
         <meta name="dtb:uid" content="amis-localization-beta"/>
         <meta name="dc:Publisher" content="md"/>
         <meta name="dc:Date" content="2008-04-15"/>
@@ -25,14 +28,10 @@
     </html>
   </xsl:template>
 
-  <xsl:template match="amis:text">
-    <h1>
-      <xsl:copy-of select="@xml:lang"/>
-      <xsl:copy-of select="@dir"/>
+  <xsl:template match="s">
+    <h1 xmlns="http://www.w3.org/1999/xhtml">
       <xsl:value-of select="."/>
     </h1>
   </xsl:template>
-
-  <xsl:template match="text()"/>
 
 </xsl:transform>

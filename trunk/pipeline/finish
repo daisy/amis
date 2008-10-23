@@ -1,12 +1,32 @@
 #!/bin/bash
 
-echo "Filling in amisAccessibleUi.xml with audio data"
-cd ../../../../lion/lionapp/trunk/lion/local/
-perl audio-files.pl -d --nobarf ../../../../../amis/amisapp/trunk/pipeline/book/daisy202/ncc.html  ../../../../../amis/amisapp/trunk/pipeline/amisAccessibleUi.xml  | perl -pe'BEGIN{binmode STDOUT, ":utf8"}s/&#x([^;]+);/chr(hex($1))/ge' > ../../../../../amis/amisapp/trunk/pipeline/amisAccessibleUiWithAudio.xml
-cd ../../../../../amis/amisapp/trunk/pipeline/
-xmllint --format amisAccessibleUiWithAudio.xml > out.xml
-mv out.xml amisAccessibleUiWithAudio.xml
-mv ./book/daisy202/*.mp3 ./audio
+echo "Please set the environment variable LION to point to your /lion/lionapp/trunk/lion directory"
+
+## Linux
+LSOF=$(lsof -p $$ | grep -E "/"$(basename $0)"$")
+THIS_FILE_PATH=$(echo $LSOF | sed -r s/'^([^\/]+)\/'/'\/'/1 2>/dev/null)
+if [ $? -ne 0 ]; then
+  ## OSX
+  THIS_FILE_PATH=$(echo $LSOF | sed -E s/'^([^\/]+)\/'/'\/'/1 2>/dev/null)
+fi
+THIS_DIR=$(dirname $THIS_FILE_PATH)
+
+NCX_FILE=$THIS_DIR/book/z3986-mp3/speechgen.ncx
+
+echo "IMPORTING AUDIO DATA TO THE LOCAL AMIS LION DB"
+cd ${LION}/daisylion/config
+python generate_config.py amis local > lion.cfg
+cd ${LION}/daisylion/scripts
+python import_audio_ncx.py -c ../config/lion.cfg eng-US $NCX_FILE
+
+echo "AUDIO FILES ARE IN THE AMIS LION DB"
+echo "EXPORTING XML FILE"
+
+python export_amis_xml.py -c ../config/lion.cfg eng-US > /tmp/amisXml.xml
+cd $THIS_DIR
+xmllint --format /tmp/amisXml.xml > amisAccessibleUi.xml
+
+mv ./book/z3986-mp3/*.mp3 ./audio
 echo "Done filling in audio data."
 echo ""
 echo "Now use Audacity to trim the mp3 files"
