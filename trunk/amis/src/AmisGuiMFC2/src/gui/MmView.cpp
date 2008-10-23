@@ -689,6 +689,8 @@ void MmView::nextPhrase()
 	while(!next);
 	
 	TRACE("nextPhrase: goto_node(%s)\n", next->get_sig().c_str());
+	if (isPlaying() == false)
+		OnFilePlay();
 	player->goto_node(next);
 }
 
@@ -759,6 +761,8 @@ top_of_do_while_loop:
 		goto top_of_do_while_loop;
 	}
 	TRACE("prevPhrase: goto_node(%s)\n", prev->get_sig().c_str());
+	if (isPlaying() == false)
+		OnFilePlay();
 	player->goto_node(prev);
 }
 

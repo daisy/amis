@@ -68,6 +68,9 @@ void MainWndParts::toggleViewMode()
 
 void MainWndParts::peekAndPump()
 {
+	//TODO: if this function is used, AMIS hangs
+	return;
+
 	HWND hwnd = (mpMainFrame ? mpMainFrame->m_hWnd : 0);
 	MSG msg;
 	while ( ::PeekMessage(&msg, hwnd, NULL, NULL, PM_REMOVE) )

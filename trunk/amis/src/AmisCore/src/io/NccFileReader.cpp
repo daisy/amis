@@ -161,7 +161,8 @@ void amis::io::NccFileReader::characters(const XMLCh *const chars, const unsigne
 			p_text->setTextString(mTempChars);
 			p_media_label->setText(p_text);
 		
-			//TODO: set other text properties that we don't use (RTL, lang, etc)
+			//At this point, we could set other text properties that we don't use (RTL, lang, etc)
+			//However: we don't use them, so ...
 		}
 	}
 }

@@ -299,8 +299,7 @@ LPARAM CAmisHtmlView::OnHighlightUrlTarget(WPARAM wParam, LPARAM lParam)
 	std::string newurl = *url;
 #ifdef HTML_LOAD_AMBULANT_PDTB
 #ifdef WITH_PROTECTED_BOOK_SUPPORT
-	//todo: move this flag into the Dtb class
-	if ( amis::dtb::DtbWithHooks::Instance()->isProtected())
+	if (amis::dtb::DtbWithHooks::Instance()->isProtected())
 	{
 		// Prepend ambulantpdtb: to the URL. This will change the protocol,
 		// and the PdtbIePlugin PluggableProtocol COM object has registered

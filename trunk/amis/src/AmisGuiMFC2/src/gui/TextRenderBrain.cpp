@@ -69,7 +69,10 @@ TextRenderBrain::TextRenderBrain()
 
 TextRenderBrain::~TextRenderBrain()
 {
-	//TODO: should delete variants
+	if (mUnhighlightedFG.vt == VT_BSTR)
+		SysFreeString(mUnhighlightedFG.bstrVal);
+	if (mUnhighlightedBG.vt == VT_BSTR)
+		SysFreeString(mUnhighlightedBG.bstrVal);
 }
 
 void TextRenderBrain::gotoUriTarget(amis::TextNode* pText)
@@ -262,6 +265,8 @@ void TextRenderBrain::unHighlightPreviousElement()
 		//set the properties
 		p_last_style->put_backgroundColor(copy_last_bg);
 		p_last_style->put_color(copy_last_fg);
+		SysFreeString(copy_last_bg.bstrVal);
+		SysFreeString(copy_last_fg.bstrVal);
 	}
 }
 //set the highlight colors on an element
@@ -303,6 +308,9 @@ void TextRenderBrain::setHighlightColors(IHTMLElement* pElm)
 	//this puts the preferred highlighting colors into pStyle
 	p_style->put_backgroundColor(var_bg);
 	p_style->put_color(var_fg);
+
+	SysFreeString(var_fg.bstrVal);
+	SysFreeString(var_bg.bstrVal);
 }
 int TextRenderBrain::getCurrentCustomStyleIndex()
 {
@@ -454,7 +462,10 @@ IHTMLElement* TextRenderBrain::GetElementFromId(string id_str, const GUID *iid)
 
 		hr = doc_all->item(vid,v0,&disp);       // this is like doing document.all["messages"]
 		delete[] ws;
-    
+
+		//We may be leaking a small amount of memory here because this crashes:
+		//SysFreeString(vid.bstrVal);
+		
 		if (hr == S_OK && disp != 0)
 		{ 
 			IHTMLElement* element = NULL;
@@ -538,6 +549,9 @@ void TextRenderBrain::redoHighlightColors()
 		//set the properties
 		pStyle->put_backgroundColor(var_bg);
 		pStyle->put_color(var_fg);
+
+		SysFreeString(var_fg.bstrVal);
+		SysFreeString(var_bg.bstrVal);
 	}
 }
 
