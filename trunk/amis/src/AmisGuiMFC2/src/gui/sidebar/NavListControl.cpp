@@ -59,8 +59,6 @@ END_MESSAGE_MAP()
 
 void CNavListControl::doItemSelect(NMHDR* pNMHDR, LRESULT* pResult)
 {
-	TRACE(_T("NAV LIST DO ITEM SELECT\n"));
-
 	CAmisSidebar* parent = NULL;
 	parent = (CAmisSidebar*)this->GetParent();
 
@@ -131,7 +129,6 @@ amis::dtb::nav::NavTarget* CNavListControl::nextItem()
 
 void CNavListControl::OnKeyDown(NMHDR* pNMHDR, LRESULT* pResult)
 {
-	TRACE(_T("NAV LIST KEY DOWN!!!!!\n"));
 	NMLVKEYDOWN* pKeyDown = (NMLVKEYDOWN*)pNMHDR;
 
 	CAmisSidebar* parent = NULL;

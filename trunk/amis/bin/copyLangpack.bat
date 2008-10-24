@@ -24,7 +24,6 @@ mkdir "%DESTINATION%help\img"
 mkdir "%DESTINATION%audio"
 
 copy "%2\AmisLangpack\%3\AmisLangpack.dll" "%DESTINATION%" /y
-copy "%2\AmisLangpack\resource.h.ini" "%DESTINATION%" /y
 copy "%2\moduleDesc.xml" "%DESTINATION%" /y
 copy "%2\thislang.mp3" "%DESTINATION%" /y
 copy "%2\flag.ico" "%DESTINATION%" /y

@@ -309,7 +309,6 @@ HICON Toolbar::makeIcon(ToolbarButton* pButton)
 	if (icon == NULL || icon < 0)
 	{
 		TRACE(_T("error loading icon: "));
-		TRACE(cstr_src);
 		return 0;
 	}
 	else

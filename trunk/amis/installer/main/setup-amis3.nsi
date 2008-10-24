@@ -5,8 +5,8 @@
 ; makensis /DCUSTOM_LANG_NAME="U.S. English" /DCUSTOM_LANG_ID="eng-US" setup-amis3.nsi
 
 !define PRODUCT_NAME "AMIS"
-!define PRODUCT_VERSION "3.0 Beta 4"
-!define PRODUCT_PUBLISHER "DAISY for All Project"
+!define PRODUCT_VERSION "3.0 Beta 3.2"
+!define PRODUCT_PUBLISHER "DAISY Consortium"
 !define PRODUCT_WEB_SITE "http://amisproject.org"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\AMIS.exe"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
@@ -75,7 +75,7 @@ Page custom SapiPage
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION} (${CUSTOM_LANG_NAME})"
 ;this is the name of the installer that gets created.  
 ;for some reason, i vaguely remember that it shouldn't have spaces in the filename.
-OutFile "Setup-amis3-beta4-${CUSTOM_LANG_NAME}.exe"
+OutFile "Setup-amis3-beta32-${CUSTOM_LANG_NAME}.exe"
 InstallDir "$PROGRAMFILES\AMIS"
 InstallDirRegKey HKLM "${PRODUCT_DIR_REGKEY}" ""
 ShowInstDetails show
@@ -123,9 +123,10 @@ Section "MainSection" SEC01
   File "${BIN_DIR}\settings\clean_settings_for_the_installer\amisHistory.xml"
   File "${BIN_DIR}\settings\defaultToolbar.xml"
   File "${BIN_DIR}\settings\basicToolbar.xml"
-  File "${BIN_DIR}\settings\resource.h.ini"
   File "${BIN_DIR}\settings\amisHistory.xml.default"
   File "${BIN_DIR}\settings\clearHistory.bat"
+  
+  File "${LOCAL_APP_DATA}\AMIS\settings\resource.h.ini"
   
   ;copy the css files
   SetOutPath "$SETTINGS_DIR\css"
@@ -294,9 +295,7 @@ Section Uninstall
 	;look for the "all users" context
 	SetShellVarContext all 
 	StrCpy $SETTINGS_DIR $APPDATA\AMIS\settings
-	MessageBox MB_OK "$SETTINGS_DIR"
 	
-	;TODO: none of this stuff gets deleted...
 	Delete "$SETTINGS_DIR\css\*.css"
 	Delete "$SETTINGS_DIR\css\font\*"
 	Delete "$SETTINGS_DIR\css\customStyles\*"

@@ -334,9 +334,6 @@ void MmView::ScheduleReplaceDoc(std::string& urlstr)
 void MmView::SetMMDocument(LPCTSTR lpszPathName, bool autostart) 
 {
 	USES_CONVERSION;
-	CString msg;
-	msg.Format(_T("MMVIEW opening %s\n"), lpszPathName);
-	TRACE(msg);
 	dg_or_dx_player *dummy = player;
 	player = 0;
 	m_recent_media_node = NULL;
