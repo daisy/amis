@@ -5,7 +5,7 @@
 ; makensis /DCUSTOM_LANG_NAME="U.S. English" /DCUSTOM_LANG_ID="eng-US" setup-amis3.nsi
 
 !define PRODUCT_NAME "AMIS"
-!define PRODUCT_VERSION "3.0 Beta 3.2"
+!define PRODUCT_VERSION "3.0 Beta 4"
 !define PRODUCT_PUBLISHER "DAISY Consortium"
 !define PRODUCT_WEB_SITE "http://amisproject.org"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\AMIS.exe"
@@ -75,7 +75,7 @@ Page custom SapiPage
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION} (${CUSTOM_LANG_NAME})"
 ;this is the name of the installer that gets created.  
 ;for some reason, i vaguely remember that it shouldn't have spaces in the filename.
-OutFile "Setup-amis3-beta32-${CUSTOM_LANG_NAME}.exe"
+OutFile "Setup-amis3-beta4-${CUSTOM_LANG_NAME}.exe"
 InstallDir "$PROGRAMFILES\AMIS"
 InstallDirRegKey HKLM "${PRODUCT_DIR_REGKEY}" ""
 ShowInstDetails show
@@ -213,6 +213,12 @@ Section -AdditionalIcons
   WriteIniStr "$INSTDIR\${PRODUCT_NAME}.url" "InternetShortcut" "URL" "${PRODUCT_WEB_SITE}"
   CreateShortCut "$SMPROGRAMS\AMIS\Website.lnk" "$INSTDIR\${PRODUCT_NAME}.url"
   CreateShortCut "$SMPROGRAMS\AMIS\Uninstall.lnk" "$INSTDIR\Uninstall-AMIS.exe"
+  ${If} ${CUSTOM_LANG_ID} != "eng-US"
+  	CreateShortCut "$SMPROGRAMS\AMIS\Help (${CUSTOM_LANG_NAME}).lnk" "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}\help\amishelp.html"
+  	CreateShortCut "$SMPROGRAMS\AMIS\Keyboard Shortcuts (${CUSTOM_LANG_NAME}).lnk" "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}\shortcuts\amiskeys.html"
+  ${EndIf}
+  CreateShortCut "$SMPROGRAMS\AMIS\Help (English).lnk" "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}\help\amishelp.html"
+  CreateShortCut "$SMPROGRAMS\AMIS\Keyboard Shortcuts (English).lnk" "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}\shortcuts\amiskeys.html"
 SectionEnd
 
 ;*******************************
