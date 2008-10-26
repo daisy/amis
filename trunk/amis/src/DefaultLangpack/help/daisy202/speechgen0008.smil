@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-SMIL/SMIL10.dtd" []>
+<smil>
+   <head>
+      <meta name="ncc:generator" content="DMFC z3986-2005 to Daisy 2.02 (smil2smil v0.2)" />
+      <meta name="dc:format" content="Daisy 2.02" />
+      <meta name="dc:identifier" content="amis-help-eng-US" />
+      <meta name="title" content="Features" />
+      <meta name="dc:title" content="AMIS User Guide" />
+      <meta name="ncc:totalElapsedTime" content="0:04:17" />
+      <meta name="ncc:timeInThisSmil" content="0:00:10" />
+      <layout>
+         <region id="txtView" />
+      </layout>
+   </head>
+   <body>
+      <seq dur="9.991s">
+         <par endsync="last" id="tcp50">
+            <text id="text50" src="content.html#dtb52" />
+            <audio src="speechgen0008.mp3" id="audd94e10" clip-begin="npt=0.000s" clip-end="npt=2.159s" />
+         </par>
+         <par endsync="last" id="tcp51">
+            <text id="text51" src="content.html#dtb53" />
+            <audio src="speechgen0008.mp3" id="audd94e13" clip-begin="npt=2.159s" clip-end="npt=9.991s" />
+         </par>
+      </seq>
+   </body>
+</smil>

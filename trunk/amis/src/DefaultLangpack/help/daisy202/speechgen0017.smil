@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-SMIL/SMIL10.dtd" []>
+<smil>
+   <head>
+      <meta name="ncc:generator" content="DMFC z3986-2005 to Daisy 2.02 (smil2smil v0.2)" />
+      <meta name="dc:format" content="Daisy 2.02" />
+      <meta name="dc:identifier" content="amis-help-eng-US" />
+      <meta name="title" content="Setting preferences" />
+      <meta name="dc:title" content="AMIS User Guide" />
+      <meta name="ncc:totalElapsedTime" content="0:07:43" />
+      <meta name="ncc:timeInThisSmil" content="0:00:38" />
+      <layout>
+         <region id="txtView" />
+      </layout>
+   </head>
+   <body>
+      <seq dur="37.567s">
+         <par endsync="last" id="tcp112">
+            <text id="text112" src="content.html#dtb122" />
+            <audio src="speechgen0017.mp3" id="audd218e10" clip-begin="npt=0.000s" clip-end="npt=2.775s" />
+         </par>
+         <par endsync="last" id="tcp113">
+            <text id="text113" src="content.html#dtb123" />
+            <audio src="speechgen0017.mp3" id="audd218e13" clip-begin="npt=2.775s" clip-end="npt=8.118s" />
+         </par>
+         <par endsync="last" id="tcp114">
+            <text id="text114" src="content.html#dtb125" />
+            <audio src="speechgen0017.mp3" id="audd218e17" clip-begin="npt=8.118s" clip-end="npt=10.837s" />
+         </par>
+         <par endsync="last" id="tcp115">
+            <text id="text115" src="content.html#dtb126" />
+            <audio src="speechgen0017.mp3" id="audd218e20" clip-begin="npt=10.837s" clip-end="npt=13.091s" />
+         </par>
+         <par endsync="last" id="tcp116">
+            <text id="text116" src="content.html#dtb127" />
+            <audio src="speechgen0017.mp3" id="audd218e23" clip-begin="npt=13.091s" clip-end="npt=16.115s" />
+         </par>
+         <par endsync="last" id="tcp117">
+            <text id="text117" src="content.html#dtb128" />
+            <audio src="speechgen0017.mp3" id="audd218e26" clip-begin="npt=16.115s" clip-end="npt=19.428s" />
+         </par>
+         <par endsync="last" id="tcp118">
+            <text id="text118" src="content.html#dtb129" />
+            <audio src="speechgen0017.mp3" id="audd218e29" clip-begin="npt=19.428s" clip-end="npt=22.178s" />
+         </par>
+         <par endsync="last" id="tcp119">
+            <text id="text119" src="content.html#dtb130" />
+            <audio src="speechgen0017.mp3" id="audd218e32" clip-begin="npt=22.178s" clip-end="npt=26.350s" />
+         </par>
+         <par endsync="last" id="tcp120">
+            <text id="text120" src="content.html#dtb131" />
+            <audio src="speechgen0017.mp3" id="audd218e35" clip-begin="npt=26.350s" clip-end="npt=29.971s" />
+         </par>
+         <par endsync="last" id="tcp121">
+            <text id="text121" src="content.html#dtb132" />
+            <audio src="speechgen0017.mp3" id="audd218e38" clip-begin="npt=29.971s" clip-end="npt=33.392s" />
+         </par>
+         <par endsync="last" id="tcp122">
+            <text id="text122" src="content.html#dtb133" />
+            <audio src="speechgen0017.mp3" id="audd218e41" clip-begin="npt=33.392s" clip-end="npt=37.567s" />
+         </par>
+      </seq>
+   </body>
+</smil>
