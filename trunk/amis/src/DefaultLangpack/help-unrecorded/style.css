@@ -14,21 +14,11 @@ li {
 	line-height : 150%;
 }
 
-.header img {
-    margin: 2%;
-}
-
 em {
     font-style: normal;
     font-weight: bold;
 }
 
-img.rect {
-    margin-bottom: 3%;
-}
-img.dclogo{
-    margin-bottom: .6%;
-}
 .command {
     font-style: italic;
 }
