@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="title" content="Keyboard shortcuts"/>
+		<meta name="dc:title" content="Keyboard shortcuts"/>
+		<layout>
+			<region id="txtView"/>
+		</layout>
+		<meta name="dc:identifier" content="amis-keyboard-shortcuts-eng-US"/>
+	</head>
+	<body>
+		<seq>
+				<par endsync="last" id="t137">
+					<text src="amiskeys.html#t137"/>
+					<audio src="speechgen0131.mp3"/>
+				</par>
+					<par endsync="last" id="t144">
+						<text src="amiskeys.html#t144"/>
+						<audio src="speechgen0120.mp3"/>
+					</par>
+				<par endsync="last" id="t138">
+					<text src="amiskeys.html#t138"/>
+					<audio src="speechgen0130.mp3"/>
+				</par>
+					<par endsync="last" id="t140">
+						<text src="amiskeys.html#t140"/>
+						<audio src="speechgen0128.mp3"/>
+					</par>
+				<par endsync="last" id="t373">
+					<text src="amiskeys.html#t373"/>
+					<audio src="speechgen0127.mp3"/>
+				</par>
+					<par endsync="last" id="t375">
+						<text src="amiskeys.html#t375"/>
+						<audio src="speechgen0125.mp3"/>
+					</par>
+				<par endsync="last" id="t141">
+					<text src="amiskeys.html#t141"/>
+					<audio src="speechgen0124.mp3"/>
+				</par>
+					<par endsync="last" id="t143">
+						<text src="amiskeys.html#t143"/>
+						<audio src="speechgen0122.mp3"/>
+					</par>
+		</seq>
+	</body>
+</smil>

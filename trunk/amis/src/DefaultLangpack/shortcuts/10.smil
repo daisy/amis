@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="title" content="Keyboard shortcuts"/>
+		<meta name="dc:title" content="Keyboard shortcuts"/>
+		<layout>
+			<region id="txtView"/>
+		</layout>
+		<meta name="dc:identifier" content="amis-keyboard-shortcuts-eng-US"/>
+	</head>
+	<body>
+		<seq>
+				<par endsync="last" id="t393">
+					<text src="amiskeys.html#t393"/>
+					<audio src="speechgen0237.mp3"/>
+				</par>
+				<par endsync="last" id="t394">
+					<text src="amiskeys.html#t394"/>
+					<audio src="speechgen0238.mp3"/>
+				</par>
+					<par endsync="last" id="t433">
+						<text src="amiskeys.html#t433"/>
+						<audio src="speechgen0277.mp3"/>
+					</par>
+				<par endsync="last" id="t396">
+					<text src="amiskeys.html#t396"/>
+					<audio src="speechgen0240.mp3"/>
+				</par>
+					<par endsync="last" id="t398">
+						<text src="amiskeys.html#t398"/>
+						<audio src="speechgen0242.mp3"/>
+					</par>
+				<par endsync="last" id="t399">
+					<text src="amiskeys.html#t399"/>
+					<audio src="speechgen0243.mp3"/>
+				</par>
+					<par endsync="last" id="t401">
+						<text src="amiskeys.html#t401"/>
+						<audio src="speechgen0245.mp3"/>
+					</par>
+				<par endsync="last" id="t402">
+					<text src="amiskeys.html#t402"/>
+					<audio src="speechgen0246.mp3"/>
+				</par>
+					<par endsync="last" id="t404">
+						<text src="amiskeys.html#t404"/>
+						<audio src="speechgen0248.mp3"/>
+					</par>
+				<par endsync="last" id="t405">
+					<text src="amiskeys.html#t405"/>
+					<audio src="speechgen0249.mp3"/>
+				</par>
+					<par endsync="last" id="t407">
+						<text src="amiskeys.html#t407"/>
+						<audio src="speechgen0251.mp3"/>
+					</par>
+				<par endsync="last" id="t408">
+					<text src="amiskeys.html#t408"/>
+					<audio src="speechgen0252.mp3"/>
+				</par>
+					<par endsync="last" id="t410">
+						<text src="amiskeys.html#t410"/>
+						<audio src="speechgen0254.mp3"/>
+					</par>
+				<par endsync="last" id="t411">
+					<text src="amiskeys.html#t411"/>
+					<audio src="speechgen0255.mp3"/>
+				</par>
+					<par endsync="last" id="t413">
+						<text src="amiskeys.html#t413"/>
+						<audio src="speechgen0257.mp3"/>
+					</par>
+				<par endsync="last" id="t414">
+					<text src="amiskeys.html#t414"/>
+					<audio src="speechgen0258.mp3"/>
+				</par>
+					<par endsync="last" id="t416">
+						<text src="amiskeys.html#t416"/>
+						<audio src="speechgen0260.mp3"/>
+					</par>
+				<par endsync="last" id="t417">
+					<text src="amiskeys.html#t417"/>
+					<audio src="speechgen0261.mp3"/>
+				</par>
+					<par endsync="last" id="t419">
+						<text src="amiskeys.html#t419"/>
+						<audio src="speechgen0263.mp3"/>
+					</par>
+				<par endsync="last" id="t420">
+					<text src="amiskeys.html#t420"/>
+					<audio src="speechgen0264.mp3"/>
+				</par>
+					<par endsync="last" id="t422">
+						<text src="amiskeys.html#t422"/>
+						<audio src="speechgen0266.mp3"/>
+					</par>
+				<par endsync="last" id="t423">
+					<text src="amiskeys.html#t423"/>
+					<audio src="speechgen0267.mp3"/>
+				</par>
+					<par endsync="last" id="t425">
+						<text src="amiskeys.html#t425"/>
+						<audio src="speechgen0269.mp3"/>
+					</par>
+				<par endsync="last" id="t426">
+					<text src="amiskeys.html#t426"/>
+					<audio src="speechgen0270.mp3"/>
+				</par>
+					<par endsync="last" id="t428">
+						<text src="amiskeys.html#t428"/>
+						<audio src="speechgen0272.mp3"/>
+					</par>
+				<par endsync="last" id="t429">
+					<text src="amiskeys.html#t429"/>
+					<audio src="speechgen0273.mp3"/>
+				</par>
+					<par endsync="last" id="t431">
+						<text src="amiskeys.html#t431"/>
+						<audio src="speechgen0275.mp3"/>
+					</par>
+		</seq>
+	</body>
+</smil>
