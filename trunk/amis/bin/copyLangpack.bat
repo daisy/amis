@@ -22,6 +22,7 @@ mkdir "%DESTINATION%"
 mkdir "%DESTINATION%help"
 mkdir "%DESTINATION%help\img"
 mkdir "%DESTINATION%audio"
+mkdir "%DESTINATION%shortcuts"
 
 copy "%2\AmisLangpack\%3\AmisLangpack.dll" "%DESTINATION%" /y
 copy "%2\moduleDesc.xml" "%DESTINATION%" /y
@@ -31,6 +32,7 @@ copy "%2\amisAccessibleUi.xml" "%DESTINATION%" /y
 copy "%2\help\*.*" "%DESTINATION%help\" /y
 copy "%2\help\img\*.*" "%DESTINATION%help\img\" /y
 copy "%2\audio\*.*" "%DESTINATION%audio\" /y
+copy "%2\shortcuts\*.*" "%DESTINATION%shortcuts\" /y
 
 pause
 

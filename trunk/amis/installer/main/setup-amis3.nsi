@@ -185,6 +185,10 @@ Section -CopyLangpacks
   File "${LOCAL_APP_DATA}\AMIS\settings\lang\${DEFAULT_LANG_ID}\help\*"
   SetOutPath "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}\help\img"
   File "${LOCAL_APP_DATA}\AMIS\settings\lang\${DEFAULT_LANG_ID}\help\img\*"
+  
+  ;copy the langpack shortcut book files
+  SetOutPath "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}\help"
+  File ${LOCAL_APP_DATA}\AMIS\settings\lang\${DEFAULT_LANG_ID}\shortcuts\*"
 
 	;***********************
   ; copy the custom langpack
@@ -203,6 +207,10 @@ Section -CopyLangpacks
   	File "${LOCAL_APP_DATA}\AMIS\settings\lang\${CUSTOM_LANG_ID}\help\*"
   	SetOutPath "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}\help\img"
   	File "${LOCAL_APP_DATA}\AMIS\settings\lang\${CUSTOM_LANG_ID}\help\img\*"  
+  	
+  	;copy the langpack shortcut book files
+  	SetOutPath "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}\help"
+  	File ${LOCAL_APP_DATA}\AMIS\settings\lang\${CUSTOM_LANG_ID}\shortcuts\*"
   ${EndIf}
  End:
 SectionEnd

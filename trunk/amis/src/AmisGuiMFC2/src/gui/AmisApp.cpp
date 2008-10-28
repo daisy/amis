@@ -138,6 +138,7 @@ BEGIN_MESSAGE_MAP(CAmisApp, CWinApp)
 	ON_COMMAND(ID_AMIS_RESET_HIGHLIGHT_COLORS, OnResetHighlightColors)
 	ON_COMMAND(ID_AMIS_TOGGLE_AUDIO_CONTENT_PLAYBACK, OnToggleContentAudio)
 	ON_COMMAND(ID_AMIS_SHOW_HELP_CONTENTS, OnShowHelpContents)
+	ON_COMMAND(ID_AMIS_SHOW_KEYBOARD_SHORTCUTS, OnShowKeyboardShortcuts)
 END_MESSAGE_MAP()
 
 
@@ -246,9 +247,10 @@ BOOL CAmisApp::InitInstance()
 	bool b_open_from_cmdline = false;
 	ambulant::net::url book_to_open;
 	mbIsPlayingHelpBook = false;
+	mbIsPlayingShortcutsBook = false;
 	if (Preferences::Instance()->getIsFirstTime() == true)
 	{
-		book_to_open = findHelpBook();
+		book_to_open = findBookInLangpackSubdir("./help");
 		Preferences::Instance()->setIsFirstTime(false);
 	}
 	if (cmd_file_name.GetLength() > 0)
@@ -723,9 +725,10 @@ void CAmisApp::OnFileClose()
 		
 		amis::gui::CAmisApp::emitMessage("ready");
 
-		if (mbIsPlayingHelpBook == true)
+		if (mbIsPlayingHelpBook || mbIsPlayingShortcutsBook)
 		{
 			mbIsPlayingHelpBook = false;
+			mbIsPlayingShortcutsBook = false;
 			//load the last-read book
 			if (mpHistory->getLastRead() != NULL)
 				openBook(&mpHistory->getLastRead()->mPath);
@@ -1204,11 +1207,30 @@ void CAmisApp::OnToggleContentAudio()
 }
 void CAmisApp::OnShowHelpContents()
 {
-	const ambulant::net::url url = findHelpBook();
+	const ambulant::net::url url = findBookInLangpackSubdir("./help");
 	if (url.is_empty_path() == false)
 	{
 		if (openBook(&url, false) == true)
 			mbIsPlayingHelpBook = true;
+	}
+	else
+	{
+		CString temp;
+		temp.LoadStringW(IDS_ERROR_OPENING);
+		if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
+		{
+			AudioSequencePlayer::playPromptFromStringId("generalBookError");
+		}
+		generalBookErrorMsgBox(temp);
+	}
+}
+void CAmisApp::OnShowKeyboardShortcuts()
+{
+	const ambulant::net::url url = findBookInLangpackSubdir("./shortcuts");
+	if (url.is_empty_path() == false)
+	{
+		if (openBook(&url, false) == true)
+			mbIsPlayingShortcutsBook = true;
 	}
 	else
 	{
@@ -1398,7 +1420,9 @@ bool CAmisApp::canDecreasePlaybackSpeed()
 	else return true;
 }
 
-ambulant::net::url CAmisApp::findHelpBook()
+//return the path to a book in the given subdirectory of the language pack directory
+//this is for finding the help and shortcuts books
+ambulant::net::url CAmisApp::findBookInLangpackSubdir(std::string dir)
 {
 	amis::util::SearchForFilesMFC searcher;
 	//search the langpack/help directory for opf or ncc file
@@ -1409,7 +1433,7 @@ ambulant::net::url CAmisApp::findHelpBook()
 	searcher.addSearchExclusionCriteria("_ncc.html");
 	searcher.setRecursiveSearch(false);
 
-	ambulant::net::url help_dir = ambulant::net::url::from_filename("./help");
+	ambulant::net::url help_dir = ambulant::net::url::from_filename(dir);
 	help_dir = help_dir.join_to_base(*amis::Preferences::Instance()->getCurrentLanguageData()->getXmlFileName());
 
 	int files_found = searcher.startSearch(help_dir.get_file());

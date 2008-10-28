@@ -128,7 +128,8 @@ public:
 	afx_msg void OnResetHighlightColors();
 	afx_msg void OnToggleContentAudio();
 	afx_msg void OnShowHelpContents();
-	
+	afx_msg void OnShowKeyboardShortcuts();
+
 protected:
 	HMENU m_hMDIMenu;
 	HACCEL m_hMDIAccel;
@@ -142,7 +143,8 @@ private:
 	void updateSpeedButtons();
 	void setIsWaiting(bool);
 	void initializeAmbulantPreferences();
-	
+	ambulant::net::url findBookInLangpackSubdir(std::string);
+
 	std::string mAppPath;
 	std::string mLocalizationDll;
 	ambulant::net::url mURL;
@@ -150,8 +152,8 @@ private:
 	bool mbBookIsOpen;
 	bool mbShouldIgnoreOpenDocEvent;
 	bool mbWasLastExitClean;
-	ambulant::net::url findHelpBook();
 	bool mbIsPlayingHelpBook;
+	bool mbIsPlayingShortcutsBook;
 	std::string mLanguagePreference;
 	bool mbIsWaitingToLoad;
 	
