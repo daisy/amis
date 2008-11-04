@@ -321,6 +321,11 @@ BOOL CAmisApp::InitInstance()
 		}
 	}
 
+	MainWndParts::Instance()->updateTitleBar(MainWndParts::TITLEBAR_APPNAME, CString(L"AMIS"));
+	MainWndParts::Instance()->updateTitleSelfVoicing(amis::Preferences::Instance()->getIsSelfVoicing());
+	MainWndParts::Instance()->updateTitleViewMode();
+	MainWndParts::Instance()->updateTitleBar(MainWndParts::TITLEBAR_PLAYSTATE, CString(L"-"));
+	
 	amis::gui::CAmisApp::emitMessage("ready");
 
 	//open a book if we decided to either open the command line parameter or last-read book
@@ -540,9 +545,7 @@ bool CAmisApp::openBook(const ambulant::net::url* filename, bool saveInHistory)
 			(filename, amis::Preferences::Instance()->getUserBmkDir(), saveInHistory))
 		{
 			//update the status in the title bar
-			MainWndParts::Instance()->updateTitleBar(MainWndParts::TITLEBAR_APPNAME, CString(L"AMIS"));
 			MainWndParts::Instance()->updateTitleViewMode();
-			MainWndParts::Instance()->updateTitleSelfVoicing(amis::Preferences::Instance()->getIsSelfVoicing());
 
 			mbBookIsOpen = true;
 			
@@ -574,6 +577,10 @@ bool CAmisApp::openBook(const ambulant::net::url* filename, bool saveInHistory)
 			}
 			else
 			{
+				//update the status in the title bar
+				MainWndParts::Instance()->updateTitleBar(MainWndParts::TITLEBAR_BOOKTITLE, CString(L""));
+				MainWndParts::Instance()->updateTitleBar(MainWndParts::TITLEBAR_PLAYSTATE, CString(L""));
+
 				setIsWaiting(false);
 				CString temp;
 				temp.LoadStringW(IDS_ERROR_OPENING);
