@@ -826,7 +826,6 @@ void html_browser_imp::redraw()
 
 bool html_browser_imp::uses_screen_reader()
 {
-	return false;
-	//return !MainWndParts::Instance()->mpMmView->expectingAudio();
+	return !MainWndParts::Instance()->mpMmView->expectingAudio();
 }
 

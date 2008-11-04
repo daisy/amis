@@ -374,10 +374,7 @@ void MmView::SetMMDocument(LPCTSTR lpszPathName, bool autostart)
 		return;
 	}
 
-	// Set the UI to paused, the document_started() callback will fix it.
-//	CAmisApp* pApp = (CAmisApp *) AfxGetApp();
-//	pApp->setPlayPauseState(false);
-
+	theApp.setIsWaiting(true);
 	dummy = create_player_instance(u, this);
 	m_curDocFilename = u.get_url().c_str();
 	player = dummy;
@@ -696,6 +693,7 @@ void MmView::prevPhrase()
 	if (!m_recent_media_node) 
 	{
 		TRACE("prevPhrase: m_recent_media_node==NULL, nowhere to go.\n");
+		amis::util::Log::Instance()->writeTrace("prevPhrase: nowhere to go");
 		return;
 	}
 	// Find the nearest ancestor that is a child of a <seq>
@@ -707,6 +705,7 @@ top_of_do_while_loop:
 		if (!phrase) 
 		{
 			TRACE("prevPhrase: no current phrase\n");
+			amis::util::Log::Instance()->writeTrace("prevPhrase: no current phrase");
 			m_previous_in_progress = true;
 			assert(player);
 			player->stop();
@@ -722,6 +721,7 @@ top_of_do_while_loop:
 			{
 				// Need to go to previous SMIL document.
 				TRACE("prevPhrase: top-of-tree, stop playback, handle in upper layer\n");
+				amis::util::Log::Instance()->writeTrace("prevPhrase: top of tree");
 				m_previous_in_progress = true;
 				assert(player);
 				player->stop();
@@ -741,6 +741,7 @@ top_of_do_while_loop:
 		}
 	} 
 	while(!prev);
+
 	// Now we need to find the last child of prev. Go down, and find
 	// the phrase for that node.
 	const ambulant::lib::node *ch = prev->get_last_child();
@@ -758,6 +759,8 @@ top_of_do_while_loop:
 		goto top_of_do_while_loop;
 	}
 	TRACE("prevPhrase: goto_node(%s)\n", prev->get_sig().c_str());
+	amis::util::Log::Instance()->writeTrace("prevPhrase: goto node");
+
 	if (isPlaying() == false)
 		OnFilePlay();
 	player->goto_node(prev);
@@ -870,14 +873,15 @@ void MmView::document_loaded(ambulant::lib::document *doc)
 void MmView::document_started()
 {
 	TRACE(_T("MmView::document_started()\n"));
-	CAmisApp* pApp = (CAmisApp *) AfxGetApp();
-	pApp->setPauseState(false);
+	theApp.setPauseState(false);
+	theApp.setIsWaiting(false);
 	amis::dtb::DtbWithHooks::Instance()->getFileSet()->setSmilFile(&player->get_url());
 }
 
 void MmView::document_stopped()
 {
 	TRACE(_T("MmView::document_stopped()\n"));
+	theApp.setIsWaiting(false);
 	m_recent_media_node = NULL;
 	this->m_recent_par_node = NULL;
 	this->m_saw_audio = false;
@@ -889,8 +893,7 @@ void MmView::document_stopped()
 		return;
 	}
 
-	CAmisApp* pApp = (CAmisApp*) AfxGetApp();
-	pApp->setPauseState(true);
+	theApp.setPauseState(true);
 	if (m_previous_in_progress) 
 	{
 		// This is step one in "goto previous sentence" across a smil boundary:

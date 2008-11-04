@@ -75,7 +75,8 @@ public:
 	bool canIncreasePlaybackSpeed();
 	bool canDecreasePlaybackSpeed();
 	bool getIsWaiting();
-
+	void setIsWaiting(bool);
+	
 	//Menu handlers
 	afx_msg void OnFileOpen();
 	afx_msg void OnPlayPause();
@@ -141,7 +142,6 @@ private:
 	void openLastReadBook();
 	void updateFontSizeButtons();
 	void updateSpeedButtons();
-	void setIsWaiting(bool);
 	void initializeAmbulantPreferences();
 	ambulant::net::url findBookInLangpackSubdir(std::string);
 
