@@ -802,8 +802,9 @@ void CAmisApp::OnSpeedUp()
 {
 	amis::util::Log::Instance()->writeMessage("Speed increase", "CAmisApp::OnSpeedUp");
 
-	long currentRate = amis::tts::TTSPlayer::Instance()->GetSpeechRate();
-	amis::tts::TTSPlayer::Instance()->SetSpeechRate(currentRate+1);
+	long currentRate = amis::tts::TTSPlayer::InstanceOne()->GetSpeechRate();
+	amis::tts::TTSPlayer::InstanceOne()->SetSpeechRate(currentRate+1);
+	amis::tts::TTSPlayer::InstanceTwo()->SetSpeechRate(currentRate+1);
 
 	double rate = ambulant::gui::dx::change_global_rate(0.7);
 	ambulantX::gui::dx::audio_playerX::Instance()->set_rate(rate);
@@ -815,8 +816,9 @@ void CAmisApp::OnSpeedDown()
 {
 	amis::util::Log::Instance()->writeMessage("Speed decrease", "CAmisApp::OnSpeedDown");
 
-	long currentRate = amis::tts::TTSPlayer::Instance()->GetSpeechRate();
-	amis::tts::TTSPlayer::Instance()->SetSpeechRate(currentRate-1);
+	long currentRate = amis::tts::TTSPlayer::InstanceOne()->GetSpeechRate();
+	amis::tts::TTSPlayer::InstanceOne()->SetSpeechRate(currentRate-1);
+	amis::tts::TTSPlayer::InstanceTwo()->SetSpeechRate(currentRate-1);
 
 	double rate = ambulant::gui::dx::change_global_rate(-0.7);
 	ambulantX::gui::dx::audio_playerX::Instance()->set_rate(rate);
@@ -827,7 +829,8 @@ void CAmisApp::OnSpeedNormal()
 {
 	amis::util::Log::Instance()->writeMessage("Speed reset to normal", "CAmisApp::OnSpeedNormal");
 	
-    amis::tts::TTSPlayer::Instance()->SetSpeechRate(0);
+    amis::tts::TTSPlayer::InstanceOne()->SetSpeechRate(0);
+	amis::tts::TTSPlayer::InstanceTwo()->SetSpeechRate(0);
 
 	ambulant::gui::dx::set_global_rate(1.0);
 	ambulantX::gui::dx::audio_playerX::Instance()->set_rate(1.0);
@@ -1071,7 +1074,8 @@ void CAmisApp::OnPreferences()
 	{
 		amis::util::Log::Instance()->writeMessage("Dialog cancelled", "CAmisApp::OnPreferences");	
 		// make sure to restore the original voice (which may have been changed in the preference dialog)
-		amis::tts::TTSPlayer::Instance()->ChangeVoice(Preferences::Instance()->getTTSVoiceIndex());
+		amis::tts::TTSPlayer::InstanceOne()->ChangeVoice(Preferences::Instance()->getTTSVoiceIndex());
+		amis::tts::TTSPlayer::InstanceTwo()->ChangeVoice(Preferences::Instance()->getTTSVoiceIndex());
 	}
 }
 void CAmisApp::OnPublicationSummary()

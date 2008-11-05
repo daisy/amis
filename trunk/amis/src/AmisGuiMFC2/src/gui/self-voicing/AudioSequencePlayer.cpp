@@ -90,7 +90,7 @@ AudioSequencePlayer::AudioSequencePlayer(void)
 	bIgnoreTTSEnd = false;
 
 	ambulantX::gui::dx::audio_playerX::Instance()->setCallback((sendMessageCallbackFn)clipFinishedCallback);
-	TTSPlayer::Instance()->setCallback((sendMessageCallbackFn)ttsFinishedCallback);
+	TTSPlayer::InstanceOne()->setCallback((sendMessageCallbackFn)ttsFinishedCallback);
 
 	InitializeCriticalSection(&m_csSequence);
 
@@ -140,7 +140,7 @@ void AudioSequencePlayer::DestroyInstance()
 		m_bAbort = TRUE;
 		Stop();
 		ambulantX::gui::dx::audio_playerX::Instance()->DestroyInstance();
-		TTSPlayer::Instance()->DestroyInstance();
+		TTSPlayer::InstanceOne()->DestroyInstanceOne();
 		delete pinstance;
 	}
 }
@@ -216,10 +216,10 @@ void AudioSequencePlayer::Stop(bool fromPlay)
 
 		amis::util::Log* p_log = amis::util::Log::Instance();
 
-		if (TTSPlayer::Instance()->IsSpeaking())
+		if (TTSPlayer::InstanceOne()->IsSpeaking())
 		{	
 			bIgnoreTTSEnd = true;
-			TTSPlayer::Instance()->Stop();
+			TTSPlayer::InstanceOne()->Stop();
 			p_log->writeTrace("Stop TTS", "AudioSequencePlayer::Stop");
 			TRACE(L"STOP TTS\n");
 		}
@@ -278,7 +278,7 @@ void AudioSequencePlayer::playNext(bool fromEndEvent)
 		if (!b && !comp->m_String.IsEmpty())
 		{
 			bIgnoreTTSEnd = false;
-			TTSPlayer::Instance()->Play(comp->m_String);
+			TTSPlayer::InstanceOne()->Play(comp->m_String);
 		}
 		delete comp;
 		comp=NULL;
@@ -293,7 +293,7 @@ void AudioSequencePlayer::playNext(bool fromEndEvent)
 		p_log->writeTrace(log_msg, "AudioSequencePlayer::playNext");
 	
 		bIgnoreTTSEnd = false;
-		TTSPlayer::Instance()->Play(comp->m_String);
+		TTSPlayer::InstanceOne()->Play(comp->m_String);
 		delete comp;
 		comp=NULL;
 	}

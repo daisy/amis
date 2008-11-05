@@ -50,15 +50,19 @@ void TTSPlayer::setCallback(sendMessageCallbackFn pFunction)
 	sendMessageCallback = pFunction;
 }
 
-TTSPlayer* TTSPlayer::pinstance = 0;
+TTSPlayer* TTSPlayer::pinstance_one = 0;
+TTSPlayer* TTSPlayer::pinstance_two = 0;
 
-TTSPlayer* TTSPlayer::Instance()
+TTSPlayer* TTSPlayer::InstanceOne()
 {
-	if (pinstance == 0)  // is it the first call?
-	{  
-		pinstance = new TTSPlayer; // create sole instance
-	}
-	return pinstance; // address of sole instance
+	if (pinstance_one == 0) pinstance_one = new TTSPlayer;
+	return pinstance_one;
+}
+
+TTSPlayer* TTSPlayer::InstanceTwo()
+{
+	if (pinstance_two == 0) pinstance_two = new TTSPlayer;
+	return pinstance_two;
 }
 
 // between -10 and 10. 0 is default rate (engine dependant).
@@ -266,9 +270,14 @@ TTSPlayer::TTSPlayer(void)
 	m_iV->SetVolume(70);
 }
 
-void TTSPlayer::DestroyInstance()
+void TTSPlayer::DestroyInstanceOne()
 {
-	if (pinstance != NULL) delete pinstance;
+	if (pinstance_one != NULL) delete pinstance_one;
+}
+
+void TTSPlayer::DestroyInstanceTwo()
+{
+	if (pinstance_two != NULL) delete pinstance_two;
 }
 
 TTSPlayer::~TTSPlayer(void)

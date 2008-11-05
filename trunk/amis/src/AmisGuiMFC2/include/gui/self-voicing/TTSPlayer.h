@@ -44,8 +44,9 @@ namespace amis
 
 		class TTSPlayer
 		{
-		public:
+		protected:
 			TTSPlayer(void);
+		public:
 			~TTSPlayer(void);
 
 			typedef void (*sendMessageCallbackFn)(void);
@@ -53,8 +54,10 @@ namespace amis
 			sendMessageCallbackFn sendMessageCallback;
 			void setCallback(sendMessageCallbackFn pFunction);
 
-			static void DestroyInstance();
-			static TTSPlayer* Instance();	
+			static void DestroyInstanceOne();
+			static void DestroyInstanceTwo();
+			static TTSPlayer* InstanceOne();
+			static TTSPlayer* InstanceTwo();
 
 #ifdef USE_WSTRING
 			void Play(std::wstring str);
@@ -79,7 +82,8 @@ namespace amis
 		private:
 
 			bool m_isSpeaking;
-			static TTSPlayer* pinstance;
+			static TTSPlayer* pinstance_one;
+			static TTSPlayer* pinstance_two;
 			CRITICAL_SECTION m_csSequence;
 			ULONG m_currentVoiceNumber;
 			bool mbDoNotProcessEndEvent;

@@ -202,8 +202,9 @@ namespace amis
 							int selected = list->GetCurSel();
 							mpDialog->mTTSVoiceIndex = selected;
 
-							amis::tts::TTSPlayer::Instance()->ChangeVoice(selected);
-
+							amis::tts::TTSPlayer::InstanceOne()->ChangeVoice(selected);
+							amis::tts::TTSPlayer::InstanceTwo()->ChangeVoice(selected);
+							
 							CString cstr;
 							list->GetWindowText(cstr);
 							wstring str = L"Daniel";
