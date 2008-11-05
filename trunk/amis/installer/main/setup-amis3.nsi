@@ -240,7 +240,10 @@ Section -Post
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayVersion" "${PRODUCT_VERSION}"
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "URLInfoAbout" "${PRODUCT_WEB_SITE}"
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "Publisher" "${PRODUCT_PUBLISHER}"
-  
+ 
+  ;register the timescale ocx component
+  RegDLL "$INSTDIR/TransformSample.ax"
+
   Call RunMSVCRuntimeSetup
 
 SectionEnd
@@ -331,7 +334,9 @@ Section Uninstall
   ; this deletes all the registry keys used by NSIS
   DeleteRegKey ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}"
   DeleteRegKey HKLM "${PRODUCT_DIR_REGKEY}"
-  
+ 
+ ; unregister the timescale ocx component
+ UnregDLL "$INSTDIR/TransformSample.ax"
   
   Delete "$SMPROGRAMS\AMIS\AMIS.lnk" 
   Delete "$DESKTOP\AMIS.lnk" 
