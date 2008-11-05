@@ -33,6 +33,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "util/Log.h"
 #include "gui/self-voicing/audiosequenceplayer.h"
 #include "Preferences.h"
+#include "gui/self-voicing/TTSPlayer.h"
 
 using namespace amis::dtb;
 
@@ -63,6 +64,7 @@ DtbWithHooks::DtbWithHooks()
 	mpFileSearcherTmp = new amis::util::SearchForFilesMFC();
 	setFileSearcher(mpFileSearcherTmp);
 	mbIsWaitingForLastmarkNode = false;
+	setShouldIgnoreTTSCallback(false);
 }
 
 DtbWithHooks::~DtbWithHooks()
@@ -182,12 +184,16 @@ smil::SmilMediaGroup* DtbWithHooks::startReading(bool loadLastmark)
 }
 smil::SmilMediaGroup* DtbWithHooks::nextPhrase()
 {
+	//this should reduce some stuttering
+	if (this->hasAudio() == false) stopTTS();
 	amis::gui::MainWndParts::Instance()->mpMmView->nextPhrase();
 	return NULL;
 }
 
 smil::SmilMediaGroup* DtbWithHooks::previousPhrase()
 {
+	//this should reduce some stuttering
+	if (this->hasAudio() == false) stopTTS();
 	amis::gui::MainWndParts::Instance()->mpMmView->prevPhrase();
 	return NULL;
 }
@@ -489,7 +495,7 @@ amis::dtb::smil::SmilMediaGroup* DtbWithHooks::loadSmilFromUrl(const ambulant::n
 		amis::util::Log::Instance()->writeMessage("Loading SMIL from URL", &full_path, 
 			"DtbWithHooks::loadSmilFromUrl");
 		
-		amis::gui::MainWndParts::Instance()->mpMmView->OnFilePause();
+		this->pause();
 		amis::gui::MainWndParts::Instance()->mpMmDoc->OnOpenDocument(str_);
 	}
 	//DanToDo: Is this the best place to set the PLAY/PAUSE status ? (is the book actually playing at this stage...probably not)
@@ -696,4 +702,80 @@ void DtbWithHooks::setIsWaitingForLastmarkNode(bool val)
 string DtbWithHooks::getIdOfLastmarkNode()
 {
 	return mIdOfLastmarkNode;
+}
+
+bool DtbWithHooks::hasAudio()
+{
+	return MainWndParts::Instance()->mpMmView->expectingAudio();
+}
+
+bool DtbWithHooks::isPlaying()
+{
+	MmView *view = MainWndParts::Instance()->mpMmView;
+	if (view==NULL) return false;
+	if (this->hasAudio())
+		return view->isPlaying();
+	else
+		return amis::tts::TTSPlayer::InstanceTwo()->IsSpeaking();
+}
+
+
+void DtbWithHooks::pause()
+{
+	MmView *view = MainWndParts::Instance()->mpMmView;
+	if (view==NULL) return;
+	if (this->hasAudio())
+		view->OnFilePause();
+	else
+		stopTTS();		
+}
+
+void DtbWithHooks::play()
+{
+	MmView *view = MainWndParts::Instance()->mpMmView;
+	if (view==NULL) {return;}
+	if (this->hasAudio())
+		view->OnFilePlay();
+	else
+	{
+		//this should be "resume"
+		playTTS(_T(""));
+	}
+}
+//explicitly stop the tts engine
+void DtbWithHooks::stopTTS()
+{
+	setShouldIgnoreTTSCallback(true);
+	amis::tts::TTSPlayer::InstanceTwo()->Stop();
+}
+void DtbWithHooks::playTTS(wstring str)
+{
+	//this is a hack that sort of approximates a pause/resume
+	if (str.size() == 0)
+		str = mLastString;
+	else
+		mLastString = str;
+	setShouldIgnoreTTSCallback(false);
+	amis::tts::TTSPlayer::InstanceTwo()->Play(str.c_str());
+}
+
+bool DtbWithHooks::getShouldIgnoreTTSCallback()
+{
+	return mbShouldIgnoreTTSCallback;
+}
+void DtbWithHooks::setShouldIgnoreTTSCallback(bool val)
+{
+	mbShouldIgnoreTTSCallback = val;
+}
+//this is for TTSPlayer::InstanceTwo
+void DtbWithHooks::ttsDone()
+{
+	if (amis::dtb::DtbWithHooks::Instance()->getShouldIgnoreTTSCallback() == false)
+	{
+		amis::dtb::DtbWithHooks::Instance()->nextPhrase();
+	}
+	else
+	{
+		amis::dtb::DtbWithHooks::Instance()->setShouldIgnoreTTSCallback(false);
+	}
 }

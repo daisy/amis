@@ -824,8 +824,10 @@ void html_browser_imp::redraw()
 	ShowWindow(s_browser->m_hWnd, SW_SHOWNA);
 }
 
+// the "screen reader" could also be our own TTS renderer implementation
+//the assumption is that if there is no audio in the book, something else will take over the voicing
 bool html_browser_imp::uses_screen_reader()
 {
-	return !MainWndParts::Instance()->mpMmView->expectingAudio();
+	return !amis::dtb::DtbWithHooks::Instance()->hasAudio();
 }
 

@@ -162,7 +162,8 @@ BOOL CAmisApp::InitInstance()
 	//this says "use the registry instead of ini files" (for windows-specific app preferences).  we use it for UAKs 
 	SetRegistryKey(_T("Amis"));
 
-	RegisterOCX();
+	//this was moved to the installer
+	//RegisterOCX();
 
 	// InitCommonControls() is required on Windows XP if an application
 	// manifest specifies use of ComCtl32.dll version 6 or later to enable
@@ -326,6 +327,8 @@ BOOL CAmisApp::InitInstance()
 	MainWndParts::Instance()->updateTitleViewMode();
 	MainWndParts::Instance()->updateTitleBar(MainWndParts::TITLEBAR_PLAYSTATE, CString(L"-"));
 	
+	amis::tts::TTSPlayer::InstanceTwo()->setCallback((sendMessageCallbackFn)amis::dtb::DtbWithHooks::ttsDone);
+
 	amis::gui::CAmisApp::emitMessage("ready");
 
 	//open a book if we decided to either open the command line parameter or last-read book
@@ -360,6 +363,7 @@ int CAmisApp::ExitInstance()
 	AudioSequencePlayer::Instance()->DestroyInstance();
 	DataTree::Instance()->DestroyInstance();
 	if (mpHistory != NULL) delete mpHistory;
+	amis::tts::TTSPlayer::DestroyInstanceTwo();
 
 	CoUninitialize();
 
@@ -367,7 +371,8 @@ int CAmisApp::ExitInstance()
 	amis::util::Log::Instance()->endLog();
 	amis::util::Log::Instance()->DestroyInstance();
 	
-	UnregisterOCX();
+	//This was moved to the uninstaller
+	//UnregisterOCX();
 
 	TRACE("\nEXIT.\n\n");
 
@@ -1463,4 +1468,3 @@ ambulant::net::url CAmisApp::findBookInLangpackSubdir(std::string dir)
 		return ambulant::net::url::from_filename("");
 	}
 }
-

@@ -140,7 +140,7 @@ void AudioSequencePlayer::DestroyInstance()
 		m_bAbort = TRUE;
 		Stop();
 		ambulantX::gui::dx::audio_playerX::Instance()->DestroyInstance();
-		TTSPlayer::InstanceOne()->DestroyInstanceOne();
+		TTSPlayer::DestroyInstanceOne();
 		delete pinstance;
 	}
 }

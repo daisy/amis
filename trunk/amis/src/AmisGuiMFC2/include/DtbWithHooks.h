@@ -73,6 +73,16 @@ public:
 	bool getIsWaitingForLastmarkNode();
 	void setIsWaitingForLastmarkNode(bool);
 
+	bool hasAudio();
+	bool isPlaying();
+	void pause();
+	void play();
+	static void ttsDone();
+	void stopTTS();
+	void playTTS(wstring);
+
+	bool getShouldIgnoreTTSCallback();
+	void setShouldIgnoreTTSCallback(bool);
 private:
 	void addToHistory();
 	void makeAllLabelsHumanReadable();
@@ -88,7 +98,8 @@ private:
 	//it only happens when we try to load the lastmark of a document (url#frag; ambulant not started playing yet)
 	bool mbIsWaitingForLastmarkNode;
 	string mIdOfLastmarkNode;
-
+	bool mbShouldIgnoreTTSCallback;
+	wstring mLastString;
 private:
 	static DtbWithHooks* pinstance;
 };

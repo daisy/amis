@@ -349,24 +349,10 @@ void CMainFrame::OnEnterMenuLoop(BOOL bIsTrackPopupMenu)
 {
 	CMDIFrameWnd::OnEnterMenuLoop(bIsTrackPopupMenu);
 
-	/* Nothing to do here.
-	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
-	{
-		mMenuVoicing->OnEnterMenuLoop(bIsTrackPopupMenu);
-	} */
-
-	MmView *view = MainWndParts::Instance()->mpMmView;
-	assert(view); // XXXJack: or what to do if view == NULL? Skip?
-	if (view==NULL)
-	{
-		return;
-	}
-	bool b_BookIsPlaying = view->isPlaying(); // BOOK Audio	Player
+	bool b_BookIsPlaying = amis::dtb::DtbWithHooks::Instance()->isPlaying();
 	mbWasPlayingWhenLostFocus =	b_BookIsPlaying;
 	if (mbWasPlayingWhenLostFocus)
-	{
-		view->OnFilePause();
-	}
+		amis::dtb::DtbWithHooks::Instance()->pause();
 }
 void CMainFrame::OnExitMenuLoop(BOOL bIsTrackPopupMenu)
 {
@@ -379,12 +365,7 @@ void CMainFrame::OnExitMenuLoop(BOOL bIsTrackPopupMenu)
 
 	if (mbWasPlayingWhenLostFocus)
 	{
-
-		MmView *view = MainWndParts::Instance()->mpMmView;
-		assert(view); // XXXJack: or what to do if view == NULL? Skip?
-		if (view==NULL) {return;}
-
-		view->OnFilePlay();
+		amis::dtb::DtbWithHooks::Instance()->play();
 	}
 	mbWasPlayingWhenLostFocus =	false;
 
@@ -417,26 +398,17 @@ void CMainFrame::OnActivate( UINT nState, CWnd*	pWndOther, BOOL	bMinimized )
 	//	and	the	dialog-related speech doesn't stop.
 	if (Preferences::Instance()->getPauseOnLostFocus() == true)
 	{
-		MmView *view = MainWndParts::Instance()->mpMmView;
-		assert(view); // XXXJack: or what to do if view == NULL? Skip?
-
-		if (view=NULL)
+		if	(nState ==	WA_INACTIVE)
 		{
-			return;
-		}
-		if	( nState ==	WA_INACTIVE	 )
-		{
-			if ( ! AfxGetMainWnd()->IsChild(pWndOther) )
+			if (! AfxGetMainWnd()->IsChild(pWndOther))
 			{
-				bool b_BookIsPlaying = view->isPlaying(); // BOOK Audio	Player
-
-				//mbWasPlayingWhenLostFocus	= b_BookIsPlaying || b_GuiIsPlaying;
+				bool b_BookIsPlaying = amis::dtb::DtbWithHooks::Instance()->isPlaying();
 				mbWasPlayingWhenLostFocus =	b_BookIsPlaying;
 
 				if (mbWasPlayingWhenLostFocus)
 				{
-					view->OnFilePause();
-
+					amis::dtb::DtbWithHooks::Instance()->pause();
+					
 					if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 					{
 						AudioSequencePlayer::Instance()->Stop();
@@ -448,13 +420,7 @@ void CMainFrame::OnActivate( UINT nState, CWnd*	pWndOther, BOOL	bMinimized )
 		{ //WA_ACTIVE
 			if (mbWasPlayingWhenLostFocus)
 			{
-
-				view->OnFilePlay();
-
-				/*if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
-				{
-					AudioSequencePlayer::Instance()->RepeatLast();
-				}*/
+				amis::dtb::DtbWithHooks::Instance()->play();
 			}
 			mbWasPlayingWhenLostFocus =	false;
 		}

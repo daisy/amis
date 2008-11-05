@@ -34,6 +34,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "dtb\Dtb.h"
 #include <fstream>
 #include "../resource.h"
+#include "gui/self-voicing/TTSPlayer.h"
 
 using namespace amis::gui;
 
@@ -244,7 +245,9 @@ void TextRenderBrain::showElementAtId(string elmId)
 		p_elm->scrollIntoView(v_bool);
 	}
 	mpPreviousElm = p_elm;
-	
+
+	if (amis::dtb::DtbWithHooks::Instance()->hasAudio() == false)
+		amis::dtb::DtbWithHooks::Instance()->playTTS(this->mCurrentElmText.c_str());
 }
 //reset the highlight from the previously highlighted element
 void TextRenderBrain::unHighlightPreviousElement()
