@@ -68,9 +68,6 @@ void MainWndParts::toggleViewMode()
 
 void MainWndParts::peekAndPump()
 {
-	//TODO: if this function is used, AMIS hangs
-	return;
-
 	HWND hwnd = (mpMainFrame ? mpMainFrame->m_hWnd : 0);
 	MSG msg;
 	while ( ::PeekMessage(&msg, hwnd, NULL, NULL, PM_REMOVE) )
@@ -147,19 +144,16 @@ bool MainWndParts::isBasicView()
 
 void MainWndParts::updateTitleViewMode()
 {
-	// TODO: move these hard-coded strings to language resources (accessibleUI.xml ?)
 	updateTitleBar(TITLEBAR_VIEWMODE, (isBasicView() ? L"Basic view mode" : L"Default view mode"));
 }
 
 void MainWndParts::updateTitleSelfVoicing(bool selfVoiced)
 {
-	// TODO: move these hard-coded strings to language resources (accessibleUI.xml ?)
 	updateTitleBar(TITLEBAR_SELFVOICING, (selfVoiced ? L"Self-voicing" : L"Not self-voicing"));
 }
 
 void MainWndParts::updateTitlePlayState(bool playing)
 {
-	// TODO: move these hard-coded strings to language resources (accessibleUI.xml ?)
 	updateTitleBar(TITLEBAR_PLAYSTATE, (playing ? L"Playing" : L"Paused"));
 }
 
@@ -193,7 +187,6 @@ void MainWndParts::updateTitleBar(TitleBarFieldID field, CString str)
 	title.Append(L" \"");
 	if (mStrTITLEBAR_BOOKTITLE.IsEmpty())
 	{
-		// TODO: move this hard-coded string to language resources (accessibleUI.xml ?)
 		title.Append(L"NO TITLE");
 	}
 	else

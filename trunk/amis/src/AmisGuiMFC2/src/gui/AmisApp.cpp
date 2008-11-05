@@ -589,6 +589,11 @@ bool CAmisApp::openBook(const ambulant::net::url* filename, bool saveInHistory)
 					AudioSequencePlayer::playPromptFromStringId("generalBookError");
 				}
 				generalBookErrorMsgBox(temp);
+				MainWndParts::Instance()->mpMainFrame->updateToolbarState
+					(MainWndParts::Instance()->mpBasicToolbar);
+				MainWndParts::Instance()->mpMainFrame->updateToolbarState
+					(MainWndParts::Instance()->mpDefaultToolbar);
+
 				return false;
 			}
 		}

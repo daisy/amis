@@ -631,7 +631,7 @@ void amis::gui::CMainFrame::updateUiCommandState(CCmdUI* pCmdUi, bool value)
 {
 	bool enable = value;
 	//don't do anything if we're waiting for a book to load
-	if (theApp.getIsWaiting() == true) enable = false;
+	if (theApp.isBookOpen() == false && theApp.getIsWaiting() == true) enable = false;
 
 	pCmdUi->Enable(enable);
 	mDefaultToolbar.enable(pCmdUi->m_nID, enable);
@@ -645,7 +645,8 @@ void amis::gui::CMainFrame::updateToolbarState(toolbar::Toolbar* pToolbar)
 {
 	bool b_is_book_open = theApp.isBookOpen();
 	
-	if (theApp.getIsWaiting() == true)
+	//if we're waiting for a book to open
+	if (b_is_book_open == false && theApp.getIsWaiting() == true)
 	{
 		pToolbar->enableAll(false);
 		return;
