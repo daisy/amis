@@ -241,17 +241,6 @@ MmView::~MmView()
 	ambulant::gui::dx::dx_player::cleanup();
 }
 
-void MmView::SetStatusLine(const wchar_t *message)
-{
-	//TODO: this function crashes a lot ... why ??
-	return;
-
-	MainWndParts::Instance()->mpStatusBar->SetPaneText(0, message);
-
-	//if (MainWndParts::Instance()->mpMainFrame)
-	//	MainWndParts::Instance()->mpMainFrame->PostMessage(WM_APP, 0, (LPARAM)message);
-}
-
 BOOL MmView::PreCreateWindow(CREATESTRUCT& cs)
 {
 	cs.style |= WS_CLIPCHILDREN; // reduce flicker
@@ -765,7 +754,9 @@ top_of_do_while_loop:
 		goto top_of_do_while_loop;
 	}
 	TRACE("prevPhrase: goto_node(%s)\n", prev->get_sig().c_str());
-	amis::util::Log::Instance()->writeTrace("prevPhrase: goto node");
+	string msg = "prevPhrase: goto node ";
+	msg.append(prev->get_sig().c_str());
+	amis::util::Log::Instance()->writeTrace(msg);
 
 	if (isPlaying() == false)
 		OnFilePlay();

@@ -1300,7 +1300,7 @@ void CAmisApp::setPauseState(bool pauseState)
 	std::wstring str2 = AudioSequencePlayer::getTextForPromptFromStringId((pauseState ? "paused" : "playing"));
 
 	if (str2.length() > 0)
-		MainWndParts::Instance()->mpMmView->SetStatusLine(str2.c_str());
+		MainWndParts::Instance()->mpStatusBar->SetPaneText(0, str2.c_str());
 
 	amis::gui::MenuManip::Instance()->setPauseState(pauseState);
 	MainWndParts::Instance()->updateTitlePlayState(!pauseState);
@@ -1363,7 +1363,7 @@ std::wstring CAmisApp::emitMessage(std::string msgID, bool repeat)
 	std::wstring str2 = AudioSequencePlayer::getTextForPromptFromStringId(msgID);
 
 	if (str2.length() > 0 && MainWndParts::Instance()->mpMmView != NULL)
-		MainWndParts::Instance()->mpMmView->SetStatusLine(str2.c_str());
+		MainWndParts::Instance()->mpStatusBar->SetPaneText(0, str2.c_str());
 	else
 		int debug = 1;
 

@@ -47,7 +47,6 @@ public:
 	
 // Operations
 public:
-	void SetStatusLine(const wchar_t *message);
 	void SetMMDocument(LPCTSTR lpszPathName, bool autostart);
 	void skipOptionsChanged();
 	void ScheduleReplaceDoc(std::string& url);
