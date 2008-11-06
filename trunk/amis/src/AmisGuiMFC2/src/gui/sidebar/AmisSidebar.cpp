@@ -49,6 +49,7 @@ BEGIN_MESSAGE_MAP(CAmisSidebar, cdxCDynamicBarDlg)
 	ON_NOTIFY(NM_CLICK, IDC_LIST_PAGE, OnPageListClick)
 	ON_NOTIFY(NM_SETFOCUS, IDC_LIST_PAGE, OnPageListSetFocus)
 	ON_NOTIFY(LVN_KEYDOWN, IDC_LIST_PAGE, OnPageListKeyDown)
+	ON_MESSAGE(WM_MY_UPDATESIDEBARSELECTION, OnUpdateSelection)
 END_MESSAGE_MAP()
 
 CAmisSidebar::CAmisSidebar(CWnd* pParent /*=NULL*/)
@@ -705,4 +706,10 @@ void CAmisSidebar::OnPageListKeyDown(NMHDR* pNMHDR, LRESULT* pResult)
 
 	if (p_page != NULL) amis::dtb::DtbWithHooks::Instance()->loadNavNode(p_page);
 	*pResult = 0;
+}
+
+LPARAM CAmisSidebar::OnUpdateSelection(WPARAM wParam, LPARAM lParam)
+{
+	updateSelection();
+	return 0;
 }

@@ -58,6 +58,7 @@
 #include "gui/MainWndParts.h"
 #include "util/FilePathTools.h"
 #include "DtbWithHooks.h"
+#include "gui/sidebar/AmisSidebar.h"
 
 #define WITHOUT_LOG_WINDOW
 
@@ -956,8 +957,9 @@ void MmView::node_started(const ambulant::lib::node* n)
 	amis::dtb::DtbWithHooks::Instance()->setNewLastmark(m_current_url);
 
 	//highlight the sidebar
-	amis::gui::MainWndParts::Instance()->mpSidebar->m_wndDlg.updateSelection();
-}
+	//a message is necessary because making a direct call gets caught up in thread locks
+	amis::gui::MainWndParts::Instance()->mpSidebar->m_wndDlg.PostMessageW(WM_MY_UPDATESIDEBARSELECTION);
+}	
 
 void MmView::node_stopped(const ambulant::lib::node *n)
 {

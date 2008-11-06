@@ -22,6 +22,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #ifndef AMISSIDEBAR_H
 #define AMISSIDEBAR_H
 
+
 #if _MSC_VER >= 1000
 #pragma once
 #endif // _MSC_VER >= 1000
@@ -37,6 +38,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 #define AMIS_SIDEBAR_SMALLEST_FONT_SIZE	100
 #define AMIS_SIDEBAR_BIGGEST_FONT_SIZE	400
+#define WM_MY_UPDATESIDEBARSELECTION	(WM_USER+3)
 
 namespace amis
 {
@@ -78,6 +80,7 @@ public:
 	afx_msg void OnPageListKeyDown(NMHDR* pNMHDR, LRESULT* pResult);
 	afx_msg void OnPageListSetFocus(NMHDR* pNMHDR, LRESULT* pResult);
 	afx_msg void OnLvnItemchangedListPage(NMHDR *pNMHDR, LRESULT *pResult);
+	LPARAM OnUpdateSelection(WPARAM wParam, LPARAM lParam);
 
 protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
