@@ -10,32 +10,60 @@
 #endif
 #include "util/FilePathTools.h"
 
+//count the number of UAKs in the registry
+int getKeyCount()
+{
+	HKEY hKey;
+	//"ERROR_SUCCESS" means it worked
+	if (RegOpenKeyEx(HKEY_CURRENT_USER, L"SOFTWARE\\Amis\\AMIS\\UAKs", 0, KEY_READ, &hKey) == ERROR_SUCCESS)
+	{
+		TCHAR acValueName[10] = TEXT("KEY##");
+		DWORD dwValueNameLen = sizeof(acValueName);
+		DWORD dwIdx = 0;
+
+		while (RegEnumValue(hKey, dwIdx, acValueName, &dwValueNameLen, NULL, NULL, NULL, NULL) == ERROR_SUCCESS)
+		{
+			dwIdx++;
+			dwValueNameLen = sizeof(acValueName);
+		}
+		RegCloseKey(hKey);
+		return dwIdx;
+
+	}
+	return 0;
+}
+
+
 //get the private key from the registry and load it in the ambulant plugin engine
 void addUserKeysToAmbulantPluginEngine()
 {
 #ifdef WITH_PROTECTED_BOOK_SUPPORT
-
-	// XXXJack this currently gets only a single UAK. That is silly...
 	CWinApp *app = AfxGetApp();
 	assert(app);
-	LPBYTE keydataptr;
-	UINT keydatalen;
-	BOOL ok = app->GetProfileBinary(_T("UAKs"), _T("Key#1"), &keydataptr, &keydatalen);
-	if (!ok) return;
-	std::string keydata((char *)keydataptr, keydatalen);
-	delete keydataptr;
 	ambulant::common::plugin_engine *pe = ambulant::common::plugin_engine::get_plugin_engine();
-	assert(pe);
-	pdtb_plugin_interface *pdata = (pdtb_plugin_interface *)pe->get_extra_data("pdtb_plugin");
-	if (!pdata)
+	assert(pe);	
+	int num_keys = getKeyCount();
+	for (int i = 0; i<num_keys; i++)
 	{
-		amis::util::Log::Instance()->writeError("Error loading UAK", 
+		LPBYTE keydataptr;
+		UINT keydatalen;
+		CString key_name;
+		key_name.Format(_T("Key#%d"), i+1);
+		BOOL ok = app->GetProfileBinary(_T("UAKs"), key_name, &keydataptr, &keydatalen);
+		if (!ok) continue;
+		std::string keydata((char *)keydataptr, keydatalen);
+		delete keydataptr;
+		pdtb_plugin_interface *pdata = (pdtb_plugin_interface *)pe->get_extra_data("pdtb_plugin");
+		if (!pdata)
+		{
+			amis::util::Log::Instance()->writeError("Error loading UAK", 
+				"pdtb.cpp, addUserKeysToAmbulantPluginEngine()");
+			continue; 
+		}
+		pdata->add_uak_data(keydata);
+		amis::util::Log::Instance()->writeMessage("Loaded UAK", 
 			"pdtb.cpp, addUserKeysToAmbulantPluginEngine()");
-		return; 
 	}
-	pdata->add_uak_data(keydata);
-	amis::util::Log::Instance()->writeMessage("Loaded UAK", 
-		"pdtb.cpp, addUserKeysToAmbulantPluginEngine()");
 #endif
 }
 
@@ -43,18 +71,28 @@ void addUserKeysToAmbulantPluginEngine()
 bool importUserKeysIntoRegistry(std::string filename)
 {
 #ifdef WITH_PROTECTED_BOOK_SUPPORT
-	// XXXJack this currently supports storage of only one UAK. That is silly...
 	FILE *fp = fopen(filename.c_str(), "rb");
-	if (fp == NULL) return false; //TODO give error message
+	if (fp == NULL)
+	{
+		amis::util::Log::Instance()->writeError("Error reading UAK", "ptdb.cpp, importUserKeysIntoRegistry");
+		return false; 
+	}
 
 	char buffer[4000];
 	size_t len = fread(buffer, 1, sizeof(buffer), fp);
 	fclose(fp);
-	if (len <= 0 || len >= sizeof(buffer)) return false; //TODO give error message
+	if (len <= 0 || len >= sizeof(buffer))
+	{
+		amis::util::Log::Instance()->writeError("Error reading UAK", "ptdb.cpp, importUserKeysIntoRegistry");
+		return false; 
+	}
 
 	CWinApp *app = AfxGetApp();
 	assert(app);
-	BOOL ok = app->WriteProfileBinary(_T("UAKs"), _T("Key#1"), (LPBYTE)buffer, len);
+	int key_idx = getKeyCount() + 1;
+	CString key_name;
+	key_name.Format(_T("Key#%d"), key_idx); 
+	BOOL ok = app->WriteProfileBinary(_T("UAKs"), key_name, (LPBYTE)buffer, len);
 	if (!ok)
 	{
 		amis::util::Log::Instance()->writeError("Could not import UAK into registry",
@@ -108,3 +146,4 @@ bool isUserKeyFile(string filename)
 	return false;
 #endif
 }
+

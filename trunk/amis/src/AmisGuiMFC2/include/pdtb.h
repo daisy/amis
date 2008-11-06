@@ -7,4 +7,5 @@ bool importUserKeysIntoRegistry(std::string);
 void addUserKeysToAmbulantPluginEngine();
 bool registerBookKeyFile(const ambulant::net::url*, const ambulant::net::url*);
 bool isUserKeyFile(std::string);
+int getKeyCount();
 #endif

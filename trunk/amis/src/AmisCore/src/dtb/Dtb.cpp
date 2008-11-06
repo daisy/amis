@@ -298,6 +298,7 @@ bool amis::dtb::Dtb::processNcc(const ambulant::net::url* filepath)
 				if (mpCustomTests) delete mpCustomTests;
 				mpNavModel = ncc_file_reader.getNavModel();
 				mpCustomTests = ncc_file_reader.getCustomTests();
+				p_title = ncc_file_reader.getTitle();
 			}
 		}
 		else
@@ -337,7 +338,7 @@ bool amis::dtb::Dtb::processNcc(const ambulant::net::url* filepath)
     this->mpTextSmilMap = resolve_smil_visitor.getSmilTextMap();	
 
 	//wait until after the smil data is parsed to set the title audio (otherwise it's not available)
-	if (this->isProtected() == false && p_title != NULL && p_title->getLabel() != NULL && p_title->getLabel()->hasAudio())
+	if (p_title != NULL && p_title->getLabel() != NULL && p_title->getLabel()->hasAudio())
 		mpTitle->addAudioClip(p_title->getLabel()->getAudio(0)->clone());
 
 	return true;
