@@ -365,7 +365,7 @@ void CMainFrame::OnExitMenuLoop(BOOL bIsTrackPopupMenu)
 
 	if (mbWasPlayingWhenLostFocus)
 	{
-		amis::dtb::DtbWithHooks::Instance()->play();
+		amis::dtb::DtbWithHooks::Instance()->resume();
 	}
 	mbWasPlayingWhenLostFocus =	false;
 
@@ -420,7 +420,7 @@ void CMainFrame::OnActivate( UINT nState, CWnd*	pWndOther, BOOL	bMinimized )
 		{ //WA_ACTIVE
 			if (mbWasPlayingWhenLostFocus)
 			{
-				amis::dtb::DtbWithHooks::Instance()->play();
+				amis::dtb::DtbWithHooks::Instance()->resume();
 			}
 			mbWasPlayingWhenLostFocus =	false;
 		}

@@ -247,7 +247,7 @@ void TextRenderBrain::showElementAtId(string elmId)
 	mpPreviousElm = p_elm;
 
 	if (amis::dtb::DtbWithHooks::Instance()->hasAudio() == false)
-		amis::dtb::DtbWithHooks::Instance()->playTTS(this->mCurrentElmText.c_str());
+		amis::dtb::DtbWithHooks::Instance()->speakTTS(this->mCurrentElmText.c_str());
 }
 //reset the highlight from the previously highlighted element
 void TextRenderBrain::unHighlightPreviousElement()

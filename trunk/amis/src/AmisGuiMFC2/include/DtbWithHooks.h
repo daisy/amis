@@ -39,6 +39,7 @@ protected:
 	DtbWithHooks();
 public:
 	static DtbWithHooks* Instance();
+	static void ttsTwoDone();
 	static bool isNull();
 	void DestroyInstance();
 	~DtbWithHooks();
@@ -76,14 +77,15 @@ public:
 	bool hasAudio();
 	bool isPlaying();
 	void pause();
-	void play();
-	static void ttsDone();
-	void stopTTS();
-	void playTTS(wstring);
-
-	bool getShouldIgnoreTTSCallback();
-	void setShouldIgnoreTTSCallback(bool);
+	void resume();
+	void speakTTS(wstring);
+	bool getTTSNextPhraseFlag();
+	void setTTSNextPhraseFlag(bool);
 private:
+	void pauseTTS();
+	void resumeTTS();
+	void stopTTS();
+
 	void addToHistory();
 	void makeAllLabelsHumanReadable();
 	void makeLabelHumanReadable(amis::MediaGroup*, std::string);
@@ -98,7 +100,7 @@ private:
 	//it only happens when we try to load the lastmark of a document (url#frag; ambulant not started playing yet)
 	bool mbIsWaitingForLastmarkNode;
 	string mIdOfLastmarkNode;
-	bool mbShouldIgnoreTTSCallback;
+	bool mbTTSNextPhraseFlag;
 	wstring mLastString;
 private:
 	static DtbWithHooks* pinstance;

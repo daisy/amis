@@ -64,7 +64,7 @@ DtbWithHooks::DtbWithHooks()
 	mpFileSearcherTmp = new amis::util::SearchForFilesMFC();
 	setFileSearcher(mpFileSearcherTmp);
 	mbIsWaitingForLastmarkNode = false;
-	setShouldIgnoreTTSCallback(false);
+	setTTSNextPhraseFlag(false);
 }
 
 DtbWithHooks::~DtbWithHooks()
@@ -724,58 +724,66 @@ void DtbWithHooks::pause()
 {
 	MmView *view = MainWndParts::Instance()->mpMmView;
 	if (view==NULL) return;
+	
+	CAmisApp* pApp = (CAmisApp *) AfxGetApp(); 
+	pApp->setPauseState(true);
+	
 	if (this->hasAudio())
 		view->OnFilePause();
 	else
-		stopTTS();		
+		pauseTTS();		
 }
 
-void DtbWithHooks::play()
+void DtbWithHooks::resume()
 {
 	MmView *view = MainWndParts::Instance()->mpMmView;
-	if (view==NULL) {return;}
+	if (view==NULL) return;
+
+	CAmisApp* pApp = (CAmisApp *) AfxGetApp(); 
+	pApp->setPauseState(false);
+
 	if (this->hasAudio())
 		view->OnFilePlay();
 	else
-	{
-		//this should be "resume"
-		playTTS(_T(""));
-	}
+		resumeTTS();
 }
-//explicitly stop the tts engine
 void DtbWithHooks::stopTTS()
 {
-	setShouldIgnoreTTSCallback(true);
+	setTTSNextPhraseFlag(false);
 	amis::tts::TTSPlayer::InstanceTwo()->Stop();
 }
-void DtbWithHooks::playTTS(wstring str)
+void DtbWithHooks::pauseTTS()
 {
-	//this is a hack that sort of approximates a pause/resume
-	if (str.size() == 0)
-		str = mLastString;
-	else
-		mLastString = str;
-	setShouldIgnoreTTSCallback(false);
+	setTTSNextPhraseFlag(false);
+	amis::tts::TTSPlayer::InstanceTwo()->Pause();
+}
+void DtbWithHooks::resumeTTS()
+{
+	setTTSNextPhraseFlag(true);
+	amis::tts::TTSPlayer::InstanceTwo()->Resume();
+}
+void DtbWithHooks::speakTTS(wstring str)
+{
+	setTTSNextPhraseFlag(true);
+	//if it was paused and we don't resume it, nothing is spoken
+	amis::tts::TTSPlayer::InstanceTwo()->Resume();
 	amis::tts::TTSPlayer::InstanceTwo()->Play(str.c_str());
 }
-
-bool DtbWithHooks::getShouldIgnoreTTSCallback()
+bool DtbWithHooks::getTTSNextPhraseFlag()
 {
-	return mbShouldIgnoreTTSCallback;
+	return mbTTSNextPhraseFlag;
 }
-void DtbWithHooks::setShouldIgnoreTTSCallback(bool val)
+void DtbWithHooks::setTTSNextPhraseFlag(bool val)
 {
-	mbShouldIgnoreTTSCallback = val;
+	mbTTSNextPhraseFlag = val;
 }
 //this is for TTSPlayer::InstanceTwo
-void DtbWithHooks::ttsDone()
+void DtbWithHooks::ttsTwoDone()
 {
-	if (amis::dtb::DtbWithHooks::Instance()->getShouldIgnoreTTSCallback() == false)
+	DtbWithHooks* p_inst = amis::dtb::DtbWithHooks::Instance();
+
+	if (p_inst->getTTSNextPhraseFlag())
 	{
-		amis::dtb::DtbWithHooks::Instance()->nextPhrase();
-	}
-	else
-	{
-		amis::dtb::DtbWithHooks::Instance()->setShouldIgnoreTTSCallback(false);
+		p_inst->nextPhrase();
 	}
 }

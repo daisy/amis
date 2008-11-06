@@ -356,3 +356,34 @@ std::string TTSPlayer::ChangeVoice(bool speakNotify)
 	delete [] szDescription;
 	return str2;
 }
+
+void TTSPlayer::Pause()
+{
+    EnterCriticalSection(&m_csSequence);
+
+    amis::util::Log* p_log = amis::util::Log::Instance();
+    p_log->writeTrace("Pause TTS", "TTSPlayer::Pause");
+    TRACE(_T("Pause TTS\r\n") );
+
+    m_iV->Pause();
+
+    m_isSpeaking = FALSE;
+
+    LeaveCriticalSection(&m_csSequence);
+}
+
+
+void TTSPlayer::Resume()
+{
+    EnterCriticalSection(&m_csSequence);
+
+    amis::util::Log* p_log = amis::util::Log::Instance();
+    p_log->writeTrace("Resume TTS", "TTSPlayer:: Resume");
+    TRACE(_T("Resume TTS\r\n") );
+
+    m_iV->Resume();
+
+    m_isSpeaking = TRUE;
+
+    LeaveCriticalSection(&m_csSequence);
+}

@@ -327,7 +327,7 @@ BOOL CAmisApp::InitInstance()
 	MainWndParts::Instance()->updateTitleViewMode();
 	MainWndParts::Instance()->updateTitleBar(MainWndParts::TITLEBAR_PLAYSTATE, CString(L"-"));
 	
-	amis::tts::TTSPlayer::InstanceTwo()->setCallback((sendMessageCallbackFn)amis::dtb::DtbWithHooks::ttsDone);
+	amis::tts::TTSPlayer::InstanceTwo()->setCallback((sendMessageCallbackFn)amis::dtb::DtbWithHooks::ttsTwoDone);
 
 	amis::gui::CAmisApp::emitMessage("ready");
 
@@ -353,6 +353,9 @@ int CAmisApp::ExitInstance()
 	amis::util::Log::Instance()->writeMessage("Exiting", "CAmisApp::ExitInstance");
 	if (m_hMDIMenu != NULL) FreeResource(m_hMDIMenu);
 	if (m_hMDIAccel != NULL)FreeResource(m_hMDIAccel);
+	
+	//this crashes ... maybe the TTSPlayer destructor destroys something necessary for both instances??
+	//amis::tts::TTSPlayer::DestroyInstanceTwo();
 
 	amis::dtb::DtbWithHooks::Instance()->DestroyInstance();
 	amis::Preferences::Instance()->DestroyInstance();
@@ -363,8 +366,7 @@ int CAmisApp::ExitInstance()
 	AudioSequencePlayer::Instance()->DestroyInstance();
 	DataTree::Instance()->DestroyInstance();
 	if (mpHistory != NULL) delete mpHistory;
-	amis::tts::TTSPlayer::DestroyInstanceTwo();
-
+	
 	CoUninitialize();
 
 	amis::util::Log::Instance()->writeTrace("AMIS EXIT done.", "CAmisApp::ExitInstance");
@@ -1292,9 +1294,7 @@ void CAmisApp::OnPlayPause()
 	if (MainWndParts::Instance()->mpMainFrame->mbWasPlayingWhenLostFocus) 
 		MainWndParts::Instance()->mpMainFrame->mbWasPlayingWhenLostFocus = false;
 
-	MmView *view = MainWndParts::Instance()->mpMmView;
-	assert(view); // XXXJack: or what to do if view == NULL? Skip?
-	if (view->isPlaying() == true)
+	if (amis::dtb::DtbWithHooks::Instance()->isPlaying() == true)
 	{
 		amis::util::Log::Instance()->writeMessage("Pausing", "CAmisApp::OnPlayPause");
 
@@ -1309,24 +1309,24 @@ void CAmisApp::OnPlayPause()
 
 		}
 
-		view->OnFilePause(); // this calls CAmisApp::setPauseState(), see above
+		amis::dtb::DtbWithHooks::Instance()->pause();
 	}
 	else
 	{
 		amis::util::Log::Instance()->writeMessage("Playing", "CAmisApp::OnPlayPause");
-
-		view->OnFilePlay(); // this calls CAmisApp::setPauseState(), see above
+		amis::dtb::DtbWithHooks::Instance()->resume();
 	}
 }
 
 std::wstring CAmisApp::pauseBookAndEmitMessage(std::string msgID)
 {
 	MmView *view = MainWndParts::Instance()->mpMmView;
-	bool b_was_playing = amis::Preferences::Instance()->getIsSelfVoicing() == true && view->isPlaying();
+	bool b_was_playing = amis::Preferences::Instance()->getIsSelfVoicing() == true 
+		&& amis::dtb::DtbWithHooks::Instance()->isPlaying();
 
 	if (b_was_playing == true)
 	{
-		view->OnFilePause();
+		amis::dtb::DtbWithHooks::Instance()->pause();
 	}
 
 	std::wstring str = emitMessage(msgID);
@@ -1342,7 +1342,7 @@ std::wstring CAmisApp::emitMessage(std::string msgID, bool repeat)
 {
 	std::wstring str2 = AudioSequencePlayer::getTextForPromptFromStringId(msgID);
 
-	if (str2.length() > 0)
+	if (str2.length() > 0 && MainWndParts::Instance()->mpMmView != NULL)
 		MainWndParts::Instance()->mpMmView->SetStatusLine(str2.c_str());
 	else
 		int debug = 1;
@@ -1364,11 +1364,11 @@ bool CAmisApp::beforeModalBox()
 	}
 
 	MmView *view = MainWndParts::Instance()->mpMmView;
-	bool b_was_playing = view->isPlaying();
+	bool b_was_playing = amis::dtb::DtbWithHooks::Instance()->isPlaying();
 	
 	if (b_was_playing == true)
 	{
-		view->OnFilePause();
+		amis::dtb::DtbWithHooks::Instance()->pause();
 	}
 
 	return b_was_playing;
@@ -1394,7 +1394,7 @@ void CAmisApp::afterModalBox(bool b_was_playing)
 			//MainWndParts::Instance()->mpMainFrame->PostMessage(WM_COMMAND, ID_AMBULANT_PLAY);
 
 			MmView *view = MainWndParts::Instance()->mpMmView;
-			view->OnFilePlay();
+			amis::dtb::DtbWithHooks::Instance()->resume();
 		}
 	}
 }

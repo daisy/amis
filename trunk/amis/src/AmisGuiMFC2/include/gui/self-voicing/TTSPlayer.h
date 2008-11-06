@@ -65,6 +65,8 @@ namespace amis
 			void Play(CString str);
 #endif
 			void Stop();
+			void Pause();
+			void Resume();
 
 			void callback();
 			void WaitUntilDone();
