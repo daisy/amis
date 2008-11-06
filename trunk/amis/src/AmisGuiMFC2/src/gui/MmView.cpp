@@ -932,7 +932,10 @@ void MmView::node_started(const ambulant::lib::node* n)
 	TRACE(_T("%s"), msg);*/
 	
 	if (tagname == "audio")
+	{
 		m_recent_audio_node = n;
+		if (theApp.getShouldNotRenderAudio() == true) return;
+	}
 
 	if (tagname != "par" && tagname != "text" && tagname != "audio") return;
 

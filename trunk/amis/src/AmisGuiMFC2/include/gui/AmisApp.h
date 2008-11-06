@@ -76,7 +76,8 @@ public:
 	bool canDecreasePlaybackSpeed();
 	bool getIsWaiting();
 	void setIsWaiting(bool);
-	
+	bool getShouldNotRenderAudio();
+
 	//Menu handlers
 	afx_msg void OnFileOpen();
 	afx_msg void OnPlayPause();
@@ -156,7 +157,7 @@ private:
 	bool mbIsPlayingShortcutsBook;
 	std::string mLanguagePreference;
 	bool mbIsWaitingToLoad;
-	
+	bool mbShouldNotRenderAudio;
 public:
 	DECLARE_MESSAGE_MAP()
 

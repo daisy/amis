@@ -828,6 +828,11 @@ void html_browser_imp::redraw()
 //the assumption is that if there is no audio in the book, something else will take over the voicing
 bool html_browser_imp::uses_screen_reader()
 {
-	return !amis::dtb::DtbWithHooks::Instance()->hasAudio();
+	//if we are explicitly disabling audio rendering
+	if (theApp.getShouldNotRenderAudio()) 
+		return true;
+	//if we can't find any audio to render
+	else 
+		return !amis::dtb::DtbWithHooks::Instance()->hasAudio();
 }
 

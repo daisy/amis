@@ -276,6 +276,7 @@ BOOL CAmisApp::InitInstance()
 		amis::util::Log::Instance()->writeError("Error processing shell command info", "CAmisApp::InitInstance");
 		return FALSE;
 	}
+	mbShouldNotRenderAudio = false;
 	mbShouldIgnoreOpenDocEvent = false;
 	//done with command line stuff .. phew
 
@@ -636,6 +637,10 @@ void CAmisApp::setIsWaiting(bool value)
 bool CAmisApp::getIsWaiting()
 {
 	return mbIsWaitingToLoad;
+}
+bool CAmisApp::getShouldNotRenderAudio()
+{
+	return mbShouldNotRenderAudio;
 }
 
 /*******************************
@@ -1227,6 +1232,20 @@ void CAmisApp::OnResetHighlightColors()
 void CAmisApp::OnToggleContentAudio()
 {
 	//this isn't "mute" so much as "stop rendering audio nodes"
+	mbShouldNotRenderAudio = !mbShouldNotRenderAudio;
+	
+	//resume paused audio if we are rendering audio now
+	if (mbShouldNotRenderAudio == false)
+	{
+		if (amis::dtb::DtbWithHooks::Instance()->isPlaying() == false) 
+			amis::dtb::DtbWithHooks::Instance()->resume();
+	}
+	//pause audio if we are stopping audio rendering
+	else
+	{
+		if (amis::dtb::DtbWithHooks::Instance()->isPlaying() == true)
+			amis::dtb::DtbWithHooks::Instance()->pause();
+	}
 }
 void CAmisApp::OnShowHelpContents()
 {
