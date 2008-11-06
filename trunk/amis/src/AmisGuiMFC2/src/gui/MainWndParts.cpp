@@ -213,3 +213,9 @@ void MainWndParts::updateTitleBar(TitleBarFieldID field, CString str)
 	mpMainFrame->SetTitle(title);
 	AfxGetApp()->m_pMainWnd->SetWindowText(title);
 }
+
+void MainWndParts::setStatusText(wstring str)
+{
+	if (mpStatusBar != NULL && ::IsWindow(mpStatusBar->GetSafeHwnd()))
+		mpStatusBar->SetPaneText(0, str.c_str());
+}

@@ -54,7 +54,7 @@ public:
 	bool isBasicView();
 
 	void peekAndPump();
-
+	void setStatusText(wstring);
 public:
 	amis::gui::sidebar::cdxCDynamicBarT<amis::gui::sidebar::CAmisSidebar>* mpSidebar;
 	CMainFrame* mpMainFrame;
@@ -63,10 +63,10 @@ public:
 	CReBar* mpBasicRebar;
 	CReBar* mpDefaultRebar;
 	CAmisHtmlView* mpHtmlView;
-	CStatusBar* mpStatusBar;
 	MmDoc* mpMmDoc;
 	MmView* mpMmView;
-
+	CStatusBar* mpStatusBar;
+	
 private:
 	bool mbBasicView;
 	CString mMainWindowTitle;
