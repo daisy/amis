@@ -276,10 +276,11 @@ BOOL CAmisApp::InitInstance()
 		amis::util::Log::Instance()->writeError("Error processing shell command info", "CAmisApp::InitInstance");
 		return FALSE;
 	}
-	mbShouldNotRenderAudio = false;
 	mbShouldIgnoreOpenDocEvent = false;
 	//done with command line stuff .. phew
 
+	mbShouldNotRenderAudio = false;
+	
 	// try to load shared MDI menus and accelerator table
 	HINSTANCE hInst = AfxGetResourceHandle();
 	m_hMDIMenu  = ::LoadMenu(hInst, MAKEINTRESOURCE(IDR_AMISTYPE));

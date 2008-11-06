@@ -17,6 +17,7 @@ int getKeyCount()
 	//"ERROR_SUCCESS" means it worked
 	if (RegOpenKeyEx(HKEY_CURRENT_USER, L"SOFTWARE\\Amis\\AMIS\\UAKs", 0, KEY_READ, &hKey) == ERROR_SUCCESS)
 	{
+		//this text is arbitrary
 		TCHAR acValueName[10] = TEXT("KEY##");
 		DWORD dwValueNameLen = sizeof(acValueName);
 		DWORD dwIdx = 0;
@@ -24,6 +25,7 @@ int getKeyCount()
 		while (RegEnumValue(hKey, dwIdx, acValueName, &dwValueNameLen, NULL, NULL, NULL, NULL) == ERROR_SUCCESS)
 		{
 			dwIdx++;
+			//reset this value; otherwise the next call to RegEnumValue fails
 			dwValueNameLen = sizeof(acValueName);
 		}
 		RegCloseKey(hKey);

@@ -27,14 +27,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 #include <string>
 
-//#define USE_WSTRING
-
-#ifdef USE_WSTRING
-#include <wstring>
-#else
 #ifndef __AFXWIN_H__
 #include <afxwin.h>
-#endif
 #endif
 
 namespace amis
@@ -59,11 +53,7 @@ namespace amis
 			static TTSPlayer* InstanceOne();
 			static TTSPlayer* InstanceTwo();
 
-#ifdef USE_WSTRING
-			void Play(std::wstring str);
-#else
 			void Play(CString str);
-#endif
 			void Stop();
 			void Pause();
 			void Resume();

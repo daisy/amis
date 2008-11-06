@@ -107,14 +107,9 @@ bool TTSPlayer::SetSpeechRate(long newRate)
 		return false; // Should never happen !
 	}
 }
-#ifdef USE_WSTRING
-void TTSPlayer::Play(std::wstring str)
-{
-#else
 void TTSPlayer::Play(CString str)
 {
 	USES_CONVERSION;
-#endif
 	EnterCriticalSection(&m_csSequence);
 	amis::util::Log* p_log = amis::util::Log::Instance();
 	p_log->writeTrace(T2A(str), "TTSPlayer::Play");
@@ -132,13 +127,7 @@ void TTSPlayer::Play(CString str)
 
 	mbDoNotProcessEndEvent = false;
 
-#ifdef USE_WSTRING
 	m_iV->Speak(str, SPF_ASYNC, NULL);	
-#else
-
-	//LPCWSTR str_ = T2W(str);
-	m_iV->Speak(str, SPF_ASYNC, NULL);	
-#endif
 	LeaveCriticalSection(&m_csSequence);
 }
 
