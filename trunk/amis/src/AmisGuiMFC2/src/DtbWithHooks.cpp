@@ -724,7 +724,8 @@ void DtbWithHooks::pause()
 	if (view==NULL) return;
 	
 	CAmisApp* pApp = (CAmisApp *) AfxGetApp(); 
-	pApp->setPauseState(true);
+	//pApp->setPauseState(true);
+	amis::gui::MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_SET_PAUSE_STATE, true);
 		
 	if (this->hasAudio())
 		view->OnFilePause();
@@ -736,10 +737,9 @@ void DtbWithHooks::resume()
 {
 	MmView *view = MainWndParts::Instance()->mpMmView;
 	if (view==NULL) return;
-	
-	CAmisApp* pApp = (CAmisApp *) AfxGetApp(); 
-	pApp->setPauseState(false);
-	
+
+	amis::gui::MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_SET_PAUSE_STATE, false);
+		
 	if (this->hasAudio())
 		view->OnFilePlay();
 	else

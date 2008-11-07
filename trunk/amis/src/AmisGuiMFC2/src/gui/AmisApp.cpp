@@ -535,7 +535,11 @@ bool CAmisApp::shouldIgnoreOpenDocEvent()
 bool CAmisApp::openBook(const ambulant::net::url* filename, bool saveInHistory)
 {
 	setIsWaiting(true);
-	updateToolbarState();
+	MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_UPDATE_TOOLBAR_STATE,
+		(WPARAM)MainWndParts::Instance()->mpBasicToolbar);
+	MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_UPDATE_TOOLBAR_STATE,
+		(WPARAM)MainWndParts::Instance()->mpDefaultToolbar);
+
 	bool b_a_book_was_open = false;
 	//close the open book
 	if (mbBookIsOpen == true) 
@@ -558,7 +562,11 @@ bool CAmisApp::openBook(const ambulant::net::url* filename, bool saveInHistory)
 
 			amis::dtb::DtbWithHooks::Instance()->startReading(true);
 			
-			updateToolbarState();
+			MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_UPDATE_TOOLBAR_STATE, 
+				(WPARAM)MainWndParts::Instance()->mpBasicToolbar);
+			MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_UPDATE_TOOLBAR_STATE,
+				(WPARAM)MainWndParts::Instance()->mpDefaultToolbar);
+
 			return true;
 		}
 		else
@@ -590,7 +598,11 @@ bool CAmisApp::openBook(const ambulant::net::url* filename, bool saveInHistory)
 					AudioSequencePlayer::playPromptFromStringId("generalBookError");
 				}
 				generalBookErrorMsgBox(temp);
-				updateToolbarState();
+				MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_UPDATE_TOOLBAR_STATE,
+					(WPARAM)MainWndParts::Instance()->mpBasicToolbar);
+				MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_UPDATE_TOOLBAR_STATE,
+					(WPARAM)MainWndParts::Instance()->mpDefaultToolbar);
+
 				return false;
 			}
 		}
@@ -1457,31 +1469,4 @@ ambulant::net::url CAmisApp::findBookInLangpackSubdir(std::string dir)
 	{
 		return ambulant::net::url::from_filename("");
 	}
-}
-
-//a convenience function
-void CAmisApp::updateToolbarState()
-{
-	MainWndParts::Instance()->mpMainFrame->updateToolbarState
-				(MainWndParts::Instance()->mpBasicToolbar);
-	MainWndParts::Instance()->mpMainFrame->updateToolbarState
-				(MainWndParts::Instance()->mpDefaultToolbar);
-}
-/**
- * 'pauseState' function parameter:
- * - FALSE => state is set to "PLAYING", the "PAUSE" action button is therefore shown
- * - TRUE  => state is set to "PAUSED", the "PLAY" action button is therefore shown
- */
-void CAmisApp::setPauseState(bool pauseState)
-{
-	std::wstring str2 = AudioSequencePlayer::getTextForPromptFromStringId((pauseState ? "paused" : "playing"));
-
-	if (str2.length() > 0)
-		MainWndParts::Instance()->setStatusText(str2);
-
-	amis::gui::MenuManip::Instance()->setPauseState(pauseState);
-	MainWndParts::Instance()->updateTitlePlayState(!pauseState);
-	
-	MainWndParts::Instance()->mpDefaultToolbar->togglePlayPause(pauseState);
-	MainWndParts::Instance()->mpBasicToolbar->togglePlayPause(pauseState);
 }
