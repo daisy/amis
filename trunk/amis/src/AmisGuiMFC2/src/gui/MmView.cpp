@@ -869,6 +869,7 @@ void MmView::document_started()
 	setPauseState(false);	
 	CAmisApp* pApp = (CAmisApp *) AfxGetApp(); 
 	pApp->setIsWaiting(false);
+	setPauseState(false);
 	amis::dtb::DtbWithHooks::Instance()->getFileSet()->setSmilFile(&player->get_url());
 }
 
@@ -888,7 +889,7 @@ void MmView::document_stopped()
 		return;
 	}
 
-	setPauseState(true);	
+	setPauseState(true);
 	if (m_previous_in_progress) 
 	{
 		// This is step one in "goto previous sentence" across a smil boundary:
@@ -980,8 +981,17 @@ const ambulant::net::url* MmView::getCurrentUrl()
 	return &m_current_url;
 }
 
+//this is a convenience function
+void MmView::setPauseState(bool val)
+{
+	CAmisApp* pApp = (CAmisApp *) AfxGetApp(); 
+	pApp->setPauseState(val);
+=======
+}
+
 //a convenience function for testing different approaches
 void MmView::setPauseState(bool val)
 {
 	amis::gui::MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_SET_PAUSE_STATE, val);
+>>>>>>> .r311
 }

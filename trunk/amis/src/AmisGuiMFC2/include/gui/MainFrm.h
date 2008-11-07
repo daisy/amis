@@ -103,6 +103,7 @@ private:
 	void setPauseState(bool play);
 	void updateToolbarState(toolbar::Toolbar*);
 	void updateUiCommandState(CCmdUI*, bool);
+
 public:
 	virtual void RecalcLayout(BOOL bNotify = TRUE);
 	afx_msg void OnSize(UINT nType, int cx, int cy);

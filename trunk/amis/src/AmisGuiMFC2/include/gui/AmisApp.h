@@ -76,7 +76,7 @@ public:
 	bool getIsWaiting();
 	void setIsWaiting(bool);
 	bool getShouldNotRenderAudio();
-
+	
 	//Menu handlers
 	afx_msg void OnFileOpen();
 	afx_msg void OnPlayPause();
@@ -144,6 +144,7 @@ private:
 	void updateSpeedButtons();
 	void initializeAmbulantPreferences();
 	ambulant::net::url findBookInLangpackSubdir(std::string);
+	void updateToolbarState();
 
 	std::string mAppPath;
 	std::string mLocalizationDll;

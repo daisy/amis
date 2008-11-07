@@ -121,6 +121,7 @@ public:
 private:
 	ambulant::gui::dx::dx_player *CreatePlayerInstance(const ambulant::net::url& u);
 	ambulant::net::url m_current_url;
+	void setPauseState(bool);
 public:
 	// player_feedback interface:
 	void document_loaded(ambulant::lib::document *doc);

@@ -535,11 +535,7 @@ bool CAmisApp::shouldIgnoreOpenDocEvent()
 bool CAmisApp::openBook(const ambulant::net::url* filename, bool saveInHistory)
 {
 	setIsWaiting(true);
-	MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_UPDATE_TOOLBAR_STATE,
-		(WPARAM)MainWndParts::Instance()->mpBasicToolbar);
-	MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_UPDATE_TOOLBAR_STATE,
-		(WPARAM)MainWndParts::Instance()->mpDefaultToolbar);
-
+	updateToolbarState();
 	bool b_a_book_was_open = false;
 	//close the open book
 	if (mbBookIsOpen == true) 
@@ -562,11 +558,7 @@ bool CAmisApp::openBook(const ambulant::net::url* filename, bool saveInHistory)
 
 			amis::dtb::DtbWithHooks::Instance()->startReading(true);
 			
-			MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_UPDATE_TOOLBAR_STATE, 
-				(WPARAM)MainWndParts::Instance()->mpBasicToolbar);
-			MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_UPDATE_TOOLBAR_STATE,
-				(WPARAM)MainWndParts::Instance()->mpDefaultToolbar);
-
+			updateToolbarState();
 			return true;
 		}
 		else
@@ -598,11 +590,7 @@ bool CAmisApp::openBook(const ambulant::net::url* filename, bool saveInHistory)
 					AudioSequencePlayer::playPromptFromStringId("generalBookError");
 				}
 				generalBookErrorMsgBox(temp);
-				MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_UPDATE_TOOLBAR_STATE,
-					(WPARAM)MainWndParts::Instance()->mpBasicToolbar);
-				MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_UPDATE_TOOLBAR_STATE,
-					(WPARAM)MainWndParts::Instance()->mpDefaultToolbar);
-
+				updateToolbarState();
 				return false;
 			}
 		}
@@ -1469,4 +1457,13 @@ ambulant::net::url CAmisApp::findBookInLangpackSubdir(std::string dir)
 	{
 		return ambulant::net::url::from_filename("");
 	}
+}
+
+//a convenience function
+void CAmisApp::updateToolbarState()
+{
+	MainWndParts::Instance()->mpMainFrame->updateToolbarState
+				(MainWndParts::Instance()->mpBasicToolbar);
+	MainWndParts::Instance()->mpMainFrame->updateToolbarState
+				(MainWndParts::Instance()->mpDefaultToolbar);
 }
