@@ -27,6 +27,9 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "gui/self-voicing/PreTranslateMessageHandler.h"
 #pragma once
 
+#define WM_MY_SET_PAUSE_STATE				(WM_USER + 4)
+#define WM_MY_UPDATE_TOOLBAR_STATE	(WM_USER + 5)
+
 namespace amis
 {
 namespace gui
@@ -46,6 +49,7 @@ public:
 	BOOL OnSetCursor(CWnd*, UINT, UINT);
 	virtual ~CMainFrame();
 	void restoreMenu();
+	LPARAM OnUpdateToolbarState(WPARAM wParam, LPARAM lParam);
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;
@@ -92,10 +96,12 @@ protected:
 	afx_msg void OnUpdateCmdUiPreviousPage(CCmdUI*);
 	afx_msg void OnUpdateCmdUiNextPage(CCmdUI*);
 	afx_msg void OnClose();
+	LPARAM OnSetPauseState(WPARAM wParam, LPARAM lParam);
+	
 	DECLARE_MESSAGE_MAP()
-public:
-	void updateToolbarState(toolbar::Toolbar*);
 private:
+	void setPauseState(bool play);
+	void updateToolbarState(toolbar::Toolbar*);
 	void updateUiCommandState(CCmdUI*, bool);
 public:
 	virtual void RecalcLayout(BOOL bNotify = TRUE);

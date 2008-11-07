@@ -498,8 +498,6 @@ amis::dtb::smil::SmilMediaGroup* DtbWithHooks::loadSmilFromUrl(const ambulant::n
 		this->pause();
 		amis::gui::MainWndParts::Instance()->mpMmDoc->OnOpenDocument(str_);
 	}
-	//DanToDo: Is this the best place to set the PLAY/PAUSE status ? (is the book actually playing at this stage...probably not)
-	//theApp.setPauseState(false);
 	return NULL;
 }
 
@@ -726,8 +724,9 @@ void DtbWithHooks::pause()
 	if (view==NULL) return;
 	
 	CAmisApp* pApp = (CAmisApp *) AfxGetApp(); 
-	pApp->setPauseState(true);
-	
+	//pApp->setPauseState(true);
+	amis::gui::MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_SET_PAUSE_STATE, true);
+		
 	if (this->hasAudio())
 		view->OnFilePause();
 	else
@@ -739,9 +738,8 @@ void DtbWithHooks::resume()
 	MmView *view = MainWndParts::Instance()->mpMmView;
 	if (view==NULL) return;
 
-	CAmisApp* pApp = (CAmisApp *) AfxGetApp(); 
-	pApp->setPauseState(false);
-
+	amis::gui::MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_SET_PAUSE_STATE, false);
+		
 	if (this->hasAudio())
 		view->OnFilePlay();
 	else

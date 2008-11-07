@@ -70,7 +70,6 @@ public:
 	std::string getAppSettingsPath();
 	amis::BookList* getHistory();
 	bool isBookOpen();
-	void setPauseState(bool play);
 	bool shouldIgnoreOpenDocEvent();
 	bool canIncreasePlaybackSpeed();
 	bool canDecreasePlaybackSpeed();
@@ -131,7 +130,7 @@ public:
 	afx_msg void OnToggleContentAudio();
 	afx_msg void OnShowHelpContents();
 	afx_msg void OnShowKeyboardShortcuts();
-
+	
 protected:
 	HMENU m_hMDIMenu;
 	HACCEL m_hMDIAccel;

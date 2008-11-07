@@ -129,6 +129,8 @@ public:
 	void node_started(const ambulant::lib::node *n);
 	void node_stopped(const ambulant::lib::node *n);
 	void node_focussed(const ambulant::lib::node *n);
+private:
+	void setPauseState(bool);
 };
 
 #ifndef _DEBUG  // debug version in MmView.cpp

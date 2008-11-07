@@ -412,8 +412,7 @@ void MmView::OnFilePlay()
 	/*DBG*/in_here++;
 	if(player) 
 	{
-		CAmisApp* pApp = (CAmisApp *) AfxGetApp(); 
-		pApp->setPauseState(false);
+		setPauseState(false);
 		player->play();
 		needs_done_redraw = true;
 		//InvalidateRect(NULL); REMOVED, otherwise crashes.
@@ -436,8 +435,7 @@ void MmView::OnFilePause()
 {
 	if(player)
 	{
-		CAmisApp* pApp = (CAmisApp *) AfxGetApp(); 
-		pApp->setPauseState(true);
+		setPauseState(true);
 		player->pause();
 	}
 }
@@ -644,8 +642,7 @@ void MmView::nextPhrase()
 			TRACE("nextPhrase: no current phrase");
 			assert(player);
 			player->stop();
-			CAmisApp* pApp = (CAmisApp *) AfxGetApp(); 
-			pApp->setPauseState(true);
+			setPauseState(true);
 			return;
 		}
 		next = phrase->next();
@@ -659,8 +656,7 @@ void MmView::nextPhrase()
 				TRACE("nextPhrase: top-of-tree, stop playback\n");
 				assert(player);
 				player->stop();
-				CAmisApp* pApp = (CAmisApp *) AfxGetApp(); 
-				pApp->setPauseState(true);
+				setPauseState(true);
 				return;
 			}
 			phrase = _curPhrase(parent);
@@ -694,7 +690,6 @@ void MmView::prevPhrase()
 	// Find the nearest ancestor that is a child of a <seq>
 	const ambulant::lib::node *phrase = _curPhrase(m_recent_media_node);
 	const ambulant::lib::node *prev;
-	CAmisApp* pApp = (CAmisApp *) AfxGetApp(); 
 	do 
 	{
 top_of_do_while_loop:
@@ -705,7 +700,7 @@ top_of_do_while_loop:
 			m_previous_in_progress = true;
 			assert(player);
 			player->stop();
-			pApp->setPauseState(true);
+			setPauseState(true);
 			return;
 		}
 		prev = phrase->previous();
@@ -721,7 +716,7 @@ top_of_do_while_loop:
 				m_previous_in_progress = true;
 				assert(player);
 				player->stop();
-				pApp->setPauseState(true);
+				setPauseState(true);
 				return;
 			}
 			phrase = _curPhrase(parent);
@@ -871,8 +866,8 @@ void MmView::document_loaded(ambulant::lib::document *doc)
 void MmView::document_started()
 {
 	TRACE(_T("MmView::document_started()\n"));
+	setPauseState(false);	
 	CAmisApp* pApp = (CAmisApp *) AfxGetApp(); 
-	pApp->setPauseState(false);
 	pApp->setIsWaiting(false);
 	amis::dtb::DtbWithHooks::Instance()->getFileSet()->setSmilFile(&player->get_url());
 }
@@ -893,7 +888,7 @@ void MmView::document_stopped()
 		return;
 	}
 
-	pApp->setPauseState(true);
+	setPauseState(true);	
 	if (m_previous_in_progress) 
 	{
 		// This is step one in "goto previous sentence" across a smil boundary:
@@ -958,7 +953,7 @@ void MmView::node_started(const ambulant::lib::node* n)
 
 	//highlight the sidebar
 	//a message is necessary because making a direct call gets caught up in thread locks
-	amis::gui::MainWndParts::Instance()->mpSidebar->m_wndDlg.PostMessageW(WM_MY_UPDATESIDEBARSELECTION);
+	amis::gui::MainWndParts::Instance()->mpSidebar->m_wndDlg.PostMessageW(WM_MY_UPDATE_SIDEBAR_SELECTION);
 }	
 
 void MmView::node_stopped(const ambulant::lib::node *n)
@@ -983,4 +978,10 @@ void MmView::node_focussed(const ambulant::lib::node *n)
 const ambulant::net::url* MmView::getCurrentUrl()
 {
 	return &m_current_url;
+}
+
+//a convenience function for testing different approaches
+void MmView::setPauseState(bool val)
+{
+	amis::gui::MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_SET_PAUSE_STATE, val);
 }

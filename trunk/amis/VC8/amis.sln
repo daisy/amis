@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AmisLangpack", "..\src\Defa
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libambulant_win32", "..\..\..\..\ambulant\projects\vc8-smil3\libambulant_win32.vcproj", "{DBD4EFC0-7551-4FBA-AF5A-BFBFDA7D6785}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "plugin_ffmpeg", "..\..\..\..\ambulant\projects\vc8-smil3\plugin_ffmpeg.vcproj", "{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -127,6 +129,22 @@ Global
 		{DBD4EFC0-7551-4FBA-AF5A-BFBFDA7D6785}.ReleaseNoXercesNoHtml|Win32.Build.0 = ReleaseNoXercesNoHtml|Win32
 		{DBD4EFC0-7551-4FBA-AF5A-BFBFDA7D6785}.ReleaseShlib|Win32.ActiveCfg = ReleaseShlib|Win32
 		{DBD4EFC0-7551-4FBA-AF5A-BFBFDA7D6785}.ReleaseShlib|Win32.Build.0 = ReleaseShlib|Win32
+		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}.Debug|Win32.Build.0 = Debug|Win32
+		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}.DebugNoXerces|Win32.ActiveCfg = Debug|Win32
+		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}.DebugNoXerces|Win32.Build.0 = Debug|Win32
+		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}.DebugNoXercesNoHtml|Win32.ActiveCfg = Debug|Win32
+		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}.DebugNoXercesNoHtml|Win32.Build.0 = Debug|Win32
+		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}.DebugShlib|Win32.ActiveCfg = Debug|Win32
+		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}.DebugShlib|Win32.Build.0 = Debug|Win32
+		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}.Release|Win32.ActiveCfg = Release|Win32
+		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}.Release|Win32.Build.0 = Release|Win32
+		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}.ReleaseNoXerces|Win32.ActiveCfg = Release|Win32
+		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}.ReleaseNoXerces|Win32.Build.0 = Release|Win32
+		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}.ReleaseNoXercesNoHtml|Win32.ActiveCfg = Release|Win32
+		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}.ReleaseNoXercesNoHtml|Win32.Build.0 = Release|Win32
+		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}.ReleaseShlib|Win32.ActiveCfg = Release|Win32
+		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}.ReleaseShlib|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
