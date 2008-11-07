@@ -109,8 +109,10 @@ Section "MainSection" SEC01
   File "${BIN_DIR}\avcodec-51.dll"
   File "${BIN_DIR}\avutil-49.dll"
   File "${BIN_DIR}\SDL.dll"
-  
-  
+  ; *** The pdtb plugin
+  File "${BIN_DIR}\libamplugin_pdtb.dll"
+  !insertmacro InstallLib REGDLLTLB NOTSHARED NOREBOOT_NOTPROTECTED "${BIN_DIR}\PdtbIePlugin.dll" "$INSTDIR\PdtbIePlugin.dll" "$INSTDIR"
+
   
   ;copy the bookmark readme file
   SetOutPath "$SETTINGS_DIR\bmk"
@@ -243,8 +245,7 @@ Section -Post
  
   ;register the timescale ocx component
   RegDLL "$INSTDIR/TransformSample.ax"
-
-  Call RunMSVCRuntimeSetup
+	Call RunMSVCRuntimeSetup
 
 SectionEnd
 
@@ -313,6 +314,11 @@ Section Uninstall
 	SetShellVarContext all 
 	StrCpy $SETTINGS_DIR $APPDATA\AMIS\settings
 	
+	; unregister the timescale ocx component
+  UnregDLL "$INSTDIR/TransformSample.ax"
+  ; unregister the pdtb dll
+  UnregDLL "$INSTDIR/PdtbIePlugin.dll"
+ 
 	Delete "$SETTINGS_DIR\css\*.css"
 	Delete "$SETTINGS_DIR\css\font\*"
 	Delete "$SETTINGS_DIR\css\customStyles\*"
@@ -335,8 +341,6 @@ Section Uninstall
   DeleteRegKey ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}"
   DeleteRegKey HKLM "${PRODUCT_DIR_REGKEY}"
  
- ; unregister the timescale ocx component
- UnregDLL "$INSTDIR/TransformSample.ax"
   
   Delete "$SMPROGRAMS\AMIS\AMIS.lnk" 
   Delete "$DESKTOP\AMIS.lnk" 
