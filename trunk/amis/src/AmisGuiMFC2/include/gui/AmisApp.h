@@ -76,7 +76,8 @@ public:
 	bool getIsWaiting();
 	void setIsWaiting(bool);
 	bool getShouldNotRenderAudio();
-	
+	void setPauseState(bool);
+
 	//Menu handlers
 	afx_msg void OnFileOpen();
 	afx_msg void OnPlayPause();

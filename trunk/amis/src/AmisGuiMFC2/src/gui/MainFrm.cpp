@@ -120,10 +120,9 @@ BEGIN_MESSAGE_MAP(CMainFrame, CMDIFrameWnd)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_FOCUS_ON_SIDEBAR, OnUpdateCmdUiAlmostAlwaysAvailable)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_TOGGLE_AUDIO_SELFVOICING_PLAYBACK, OnUpdateCmdUiAlmostAlwaysAvailable)
 	ON_UPDATE_COMMAND_UI(ID_AMIS_RESET_HIGHLIGHT_COLORS, OnUpdateCmdUiAlmostAlwaysAvailable)
-	ON_MESSAGE(WM_MY_UPDATE_TOOLBAR_STATE, OnUpdateToolbarState)
 	//}}AFX_MSG_MAP
 	ON_WM_SIZE()
-	ON_MESSAGE(WM_MY_SET_PAUSE_STATE, OnSetPauseState)
+	
 END_MESSAGE_MAP()
 
 static UINT indicators[] =
@@ -604,12 +603,6 @@ void amis::gui::CMainFrame::updateUiCommandState(CCmdUI* pCmdUi, bool value)
 	mBasicToolbar.enable(pCmdUi->m_nID, enable);
 }
 
-LPARAM amis::gui::CMainFrame::OnUpdateToolbarState(WPARAM wParam, LPARAM lParam)
-{
-	toolbar::Toolbar* p_tb = (toolbar::Toolbar*)wParam;
-	updateToolbarState(p_tb);
-	return 0;
-}
 //enable or disable the commands that only work when a book is open
 //note that although this function should be unnecessary when we have OnUpdateCommandUi,
 //we need it anyway.  i suspect that our custom toolbars bypass the effect of OnUpdateCommandUi
@@ -725,28 +718,3 @@ void amis::gui::CMainFrame::OnSize(UINT nType, int cx, int cy)
 	CMDIFrameWnd::OnSize(nType, cx, cy);
 }
 
-/**
- * 'pauseState' function parameter:
- * - FALSE => state is set to "PLAYING", the "PAUSE" action button is therefore shown
- * - TRUE  => state is set to "PAUSED", the "PLAY" action button is therefore shown
- */
-LPARAM amis::gui::CMainFrame::OnSetPauseState(WPARAM wParam, LPARAM lParam)
-{
-	TRACE(_T("on set pause state\n"));
-	bool val = (bool)wParam;
-	setPauseState(val);
-	return 0;
-}
-void amis::gui::CMainFrame::setPauseState(bool pauseState)
-{
-	std::wstring str2 = AudioSequencePlayer::getTextForPromptFromStringId((pauseState ? "paused" : "playing"));
-
-	if (str2.length() > 0)
-		MainWndParts::Instance()->setStatusText(str2);
-
-	amis::gui::MenuManip::Instance()->setPauseState(pauseState);
-	MainWndParts::Instance()->updateTitlePlayState(!pauseState);
-	
-	MainWndParts::Instance()->mpDefaultToolbar->togglePlayPause(pauseState);
-	MainWndParts::Instance()->mpBasicToolbar->togglePlayPause(pauseState);
-}

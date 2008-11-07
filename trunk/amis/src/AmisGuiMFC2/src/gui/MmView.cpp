@@ -986,12 +986,4 @@ void MmView::setPauseState(bool val)
 {
 	CAmisApp* pApp = (CAmisApp *) AfxGetApp(); 
 	pApp->setPauseState(val);
-=======
-}
-
-//a convenience function for testing different approaches
-void MmView::setPauseState(bool val)
-{
-	amis::gui::MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_SET_PAUSE_STATE, val);
->>>>>>> .r311
 }
