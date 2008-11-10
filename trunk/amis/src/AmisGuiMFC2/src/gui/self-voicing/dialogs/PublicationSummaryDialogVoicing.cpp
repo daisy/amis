@@ -24,6 +24,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "DtbWithHooks.h"
 #include "dtb/Dtb.h"
 
+#include "gui/self-voicing/dialogs/skipdialogvoicing.h"
+
 namespace amis
 {
 	namespace gui
@@ -81,17 +83,18 @@ namespace amis
 					}
 				}
 			}
+
 			void PublicationSummaryDialogVoicing::resolvePromptVariables(Prompt* pPrompt) 
 			{
-
 				PromptVar* p_var = NULL;
 				PromptItem* promptNotAvailable = DataTree::Instance()->findPromptItem("not_available");
 
-				for (int i=0; i<pPrompt->getNumberOfItems(); i++)
+				int itemsCount = pPrompt->getNumberOfItems();
+				for (int iItem=0; iItem<itemsCount; iItem++)
 				{
-					if (pPrompt->getItem(i)->getPromptItemType() == PROMPT_VARIABLE)
+					if (pPrompt->getItem(iItem)->getPromptItemType() == PROMPT_VARIABLE)
 					{
-						p_var = (PromptVar*)pPrompt->getItem(i);
+						p_var = (PromptVar*)pPrompt->getItem(iItem);
 
 						if (p_var->getName().compare("META_TITLE") == 0)
 						{
@@ -241,47 +244,107 @@ namespace amis
 						{
 							if (mpDialog->mNavigableItems.length() != 0)
 							{
+								amis::gui::spoken::PromptItem * p_item = new amis::gui::spoken::PromptItem();
+								p_item->setId(p_var->getName());
 
-								p_var->setContents(mpDialog->mNavigableItems, "");
+								pPrompt->swapItem(iItem, p_item);
+								delete p_var;
+								p_var = NULL;
 
-								/*
-								amis::dtb::nav::NavModel* p_nav = mpBook->getNavModel();
+								bool firstDone = false;
+
+								USES_CONVERSION;
+
+								amis::dtb::nav::NavModel* p_nav = mpDialog->mpBook->getNavModel();
 								if (p_nav->getNavMap()->getLabel() != NULL)
 								{
-								amis::AudioNode * node = p_nav->getNavMap()->getLabel()->getAudio(0);
-								p_var->setContents(p_nav->getNavMap()->getLabel()->getText()->getTextString(), node);
+									std::wstring str = p_nav->getNavMap()->getLabel()->getText()->getTextString();
+
+									if (p_nav->getNavMap()->getLabel()->hasAudio())
+									{
+										amis::AudioNode * node = p_nav->getNavMap()->getLabel()->getAudio(0);
+										p_item->setContents(str, node->clone());
+									}
+									else
+									{
+										std::string str_ = T2A(str.c_str());
+										PromptItem* prompt = SkipDialogVoicing::getPromptItemForReadingOptionName(str_);
+										if (prompt != NULL)
+										{
+											p_item->setContents(prompt->getContents()->clone());
+										}
+										else
+										{
+											p_item->setContents(str, "");
+										}
+									}
+
+									if (p_nav->hasPages())
+									{
+										amis::gui::spoken::PromptItem * p_item2 = new amis::gui::spoken::PromptItem();
+										pPrompt->insertItem(iItem+1, p_item2);
+										itemsCount ++;
+										iItem ++;
+
+										std::wstring str = p_nav->getPageList()->getLabel()->getText()->getTextString();
+
+										if (p_nav->getPageList()->getLabel()->hasAudio())
+										{
+											amis::AudioNode * node = p_nav->getPageList()->getLabel()->getAudio(0);
+											p_item2->setContents(str, node->clone());
+										}
+										else
+										{
+											std::string str_ = T2A(str.c_str());
+											PromptItem* prompt = SkipDialogVoicing::getPromptItemForReadingOptionName(str_);
+											if (prompt != NULL)
+											{
+												p_item2->setContents(prompt->getContents()->clone());
+											}
+											else
+											{
+												p_item2->setContents(str, "");
+											}
+										}
+									}
 								}
-								else
+								int sz = p_nav->getNumberOfNavLists();
+								for (int i=0; i<sz; i++)
 								{
-								p_var->setContents(mNavigableItems, "");
+									amis::gui::spoken::PromptItem * p_item3 = new amis::gui::spoken::PromptItem();
+									pPrompt->insertItem(iItem+1, p_item3);
+									itemsCount ++;
+									iItem ++;
+
+									if (p_nav->getNavList(i)->getLabel() != NULL)
+									{	
+										std::wstring str = p_nav->getNavList(i)->getLabel()->getText()->getTextString();
+
+										if (p_nav->getNavList(i)->getLabel()->hasAudio())
+										{
+											amis::AudioNode * node = p_nav->getNavList(i)->getLabel()->getAudio(0);
+											p_item3->setContents(str, node->clone());
+										}
+										else
+										{
+											std::string str_ = T2A(str.c_str());
+											PromptItem* prompt = SkipDialogVoicing::getPromptItemForReadingOptionName(str_);
+											if (prompt != NULL)
+											{
+												p_item3->setContents(prompt->getContents()->clone());
+											}
+											else
+											{
+												p_item3->setContents(str, "");
+											}
+										}
+									}
 								}
-								*/
 							}
 							else if (promptNotAvailable != NULL)
 							{
 								p_var->setContents(promptNotAvailable->getContents()->clone());
 							}
-
-							/*
-							//TODO: get the full multimedia data (should be available directly from the nav data model)
-
-							amis::dtb::nav::NavModel* p_nav = mpBook->getNavModel();
-							if (p_nav->getNavMap()->getLabel() != NULL)
-							{
-							mNavigableItems = p_nav->getNavMap()->getLabel()->getText()->getTextString();
-							if (p_nav->hasPages())
-							{	
-							mNavigableItems.append(L", ");
-							mNavigableItems.append(p_nav->getPageList()->getLabel()->getText()->getTextString());
-							}
-							}
-							int sz = p_nav->getNumberOfNavLists();
-							for (int i=0; i<sz; i++)
-							{
-							mNavigableItems.append(L", ");
-							if (p_nav->getNavList(i)->getLabel() != NULL)
-							mNavigableItems.append(p_nav->getNavList(i)->getLabel()->getText()->getTextString());
-							} */
 						} 
 
 						else if (p_var->getName().compare("CURRENT_PAGE") == 0)

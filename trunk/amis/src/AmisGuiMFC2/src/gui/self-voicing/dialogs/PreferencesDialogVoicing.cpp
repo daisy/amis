@@ -192,6 +192,7 @@ namespace amis
 								amis::MediaGroup* p_media = p_data->getLabel();
 								//p_media->getText()->getTextString().c_str();
 
+								// No need to clone here (MediaGroup memebers will be cloned inside the setContents method).
 								p_var->setContents(p_media);
 							}
 						}

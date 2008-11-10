@@ -313,6 +313,18 @@ PromptItemBase* Prompt::getItem(int idx)
 	}
 }
 
+void Prompt::swapItem(int idx, PromptItemBase* pItem)
+{
+    std::vector<PromptItemBase*>::iterator it = mItems.begin() + idx;
+    it = mItems.insert(it, pItem);
+	it = mItems.begin() + idx + 1;
+    mItems.erase(it);
+}
+void Prompt::insertItem(int idx, PromptItemBase* pItem)
+{
+    std::vector<PromptItemBase*>::iterator it = mItems.begin() + idx;
+    it = mItems.insert(it, pItem);
+}
 void Prompt::addItem(PromptItemBase* pItem)
 {
 	mItems.push_back(pItem);

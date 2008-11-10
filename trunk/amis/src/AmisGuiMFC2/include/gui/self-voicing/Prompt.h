@@ -68,10 +68,11 @@ namespace amis
 
 				PromptItem* clone();
 				void setReferenceContents(PromptItem*);
+				
+				void setId(std::string);
 
 			protected:
 				void setRefId(std::string);
-				void setId(std::string);
 
 			private:
 				std::string mRefId;
@@ -122,6 +123,8 @@ namespace amis
 				std::wstring concatAllText();
 				Prompt* clone();
 
+				void swapItem(int idx, PromptItemBase* pItem);
+				void insertItem(int idx, PromptItemBase* pItem);
 
 			protected:
 				void addItem(PromptItemBase*);

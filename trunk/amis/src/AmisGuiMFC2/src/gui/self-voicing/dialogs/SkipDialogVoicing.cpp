@@ -113,29 +113,33 @@ namespace amis
 				amis::gui::spoken::PromptItem* pi = NULL;
 
 				if (item_id.compare("prodnote") == 0 ||
-					item_id.compare("optional-prodnote") == 0)
+					item_id.compare("optional-prodnote") == 0 || item_id.compare("Producer notes") == 0)
 				{
 					pi = amis::gui::spoken::DataTree::Instance()->findPromptItem("prodnotes");
 
 				}
-				else if (item_id.compare("pages") == 0 || item_id.compare("pagenumber") == 0)
+				else if (item_id.compare("pages") == 0 || item_id.compare("Pages") == 0 || item_id.compare("pagenumber") == 0)
 				{
 					pi = amis::gui::spoken::DataTree::Instance()->findPromptItem("pages");
 
 				}
-				else if (item_id.compare("sections") == 0)
+				else if (item_id.compare("sections") == 0 || item_id.compare("Sections") == 0)
 				{
 					pi = amis::gui::spoken::DataTree::Instance()->findPromptItem("sections");
 
 				}
-				else if (item_id.compare("sidebar") == 0)
+				else if (item_id.compare("groups") == 0 || item_id.compare("Grouped items") == 0)
+				{
+					pi = amis::gui::spoken::DataTree::Instance()->findPromptItem("groups");
+
+				}
+				else if (item_id.compare("sidebar") == 0 || item_id.compare("Sidebars") == 0)
 				{
 
 					pi = amis::gui::spoken::DataTree::Instance()->findPromptItem("sidebars");
 
 				}
-				else if (item_id.compare("footnote") == 0 ||
-					item_id.compare("noteref") == 0)
+				else if (item_id.compare("footnote") == 0 || item_id.compare("Footnotes") == 0 || item_id.compare("noteref") == 0)
 				{
 
 					pi = amis::gui::spoken::DataTree::Instance()->findPromptItem("noterefs");
