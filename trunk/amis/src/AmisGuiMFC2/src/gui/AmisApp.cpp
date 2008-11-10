@@ -339,7 +339,7 @@ BOOL CAmisApp::InitInstance()
 	MainWndParts::Instance()->updateTitleViewMode();
 	MainWndParts::Instance()->updateTitleBar(MainWndParts::TITLEBAR_PLAYSTATE, CString(L"-"));
 	
-	//amis::tts::TTSPlayer::InstanceTwo()->setCallback((sendMessageCallbackFn)amis::dtb::DtbWithHooks::ttsTwoDone);
+	amis::tts::TTSPlayer::InstanceTwo()->setCallback((sendMessageCallbackFn)amis::dtb::DtbWithHooks::ttsTwoDone);
 
 	amis::gui::CAmisApp::emitMessage("ready");
 	
@@ -349,7 +349,7 @@ BOOL CAmisApp::InitInstance()
 	// amis::tts::TTSPlayer::InstanceOne()->Play(L"Instance One");
 
 	//open a book if we decided to either open the command line parameter or last-read book
-	//TODO RESTORE THIS !!! if (!book_to_open.is_empty_path()) openBook(&book_to_open);
+	if (!book_to_open.is_empty_path()) openBook(&book_to_open);
 	
 	return TRUE;
 }

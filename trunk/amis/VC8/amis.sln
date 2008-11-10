@@ -1,12 +1,28 @@
 Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pdtbplugin", "..\..\..\..\ambulant-private\pdtbplugin\pdtbplugin.vcproj", "{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PdtbIePlugin", "..\..\..\..\ambulant-private\pdtbplugin\PdtbIePlugin\PdtbIePlugin.vcproj", "{8B8E82A3-277F-4486-8D6A-4BCFB2DE3464}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AmisCore", "..\src\AmisCore\AmisCore.vcproj", "{E0F81CE5-9C15-4E36-BC71-42BE1C0F2406}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AmisGuiMFC2", "..\src\AmisGuiMFC2\AmisGuiMFC2.vcproj", "{A7A37247-BAAC-4376-8354-96A8C09F926A}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
 	ProjectSection(ProjectDependencies) = postProject
 		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A} = {EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}
 		{8B8E82A3-277F-4486-8D6A-4BCFB2DE3464} = {8B8E82A3-277F-4486-8D6A-4BCFB2DE3464}
@@ -17,10 +33,22 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AmisGuiMFC2", "..\src\AmisG
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AmisLangpack", "..\src\DefaultLangpack\AmisLangpack\AmisLangpack.vcproj", "{92F93B73-6D27-47ED-89F3-B82590338216}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libambulant_win32", "..\..\..\..\ambulant\projects\vc8-smil3\libambulant_win32.vcproj", "{DBD4EFC0-7551-4FBA-AF5A-BFBFDA7D6785}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "plugin_ffmpeg", "..\..\..\..\ambulant\projects\vc8-smil3\plugin_ffmpeg.vcproj", "{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -137,7 +165,6 @@ Global
 		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}.DebugNoXercesNoHtml|Win32.ActiveCfg = Debug|Win32
 		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}.DebugNoXercesNoHtml|Win32.Build.0 = Debug|Win32
 		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}.DebugShlib|Win32.ActiveCfg = Debug|Win32
-		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}.DebugShlib|Win32.Build.0 = Debug|Win32
 		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}.Release|Win32.ActiveCfg = Release|Win32
 		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}.Release|Win32.Build.0 = Release|Win32
 		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}.ReleaseNoXerces|Win32.ActiveCfg = Release|Win32

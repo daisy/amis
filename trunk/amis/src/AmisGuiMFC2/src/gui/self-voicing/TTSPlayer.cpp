@@ -27,7 +27,6 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "gui/self-voicing/TTSPlayer.h"
 
 #include <stdlib.h>
-#include <sapi.h>
 #include <sphelper.h>
 #include <spuihelp.h>
 
@@ -40,10 +39,6 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #endif
 
 using namespace amis::tts;
-
-static void __stdcall SpkCallback(WPARAM wParam, LPARAM lParam);
-
-static ISpVoice* m_iV; // Voice Interface
 
 void TTSPlayer::setCallback(sendMessageCallbackFn pFunction)
 {
@@ -95,7 +90,6 @@ long TTSPlayer::GetSpeechRate()
 // between -10 and 10. 0 is default rate (engine dependant).
 bool TTSPlayer::SetSpeechRate(long newRate)
 {
-
 	HRESULT hr = 0;
 	hr = m_iV->SetRate(newRate);
 	if (SUCCEEDED(hr))
@@ -114,11 +108,6 @@ bool TTSPlayer::SetSpeechRate(long newRate)
 }
 void TTSPlayer::Play(CString str)
 {
-if (this == pinstance_two) 
-{
-	int debug_breakpoint_here = 0;
-}
-
 	USES_CONVERSION;
 	EnterCriticalSection(&m_csSequence);
 	amis::util::Log* p_log = amis::util::Log::Instance();
@@ -203,22 +192,20 @@ void TTSPlayer::callback()
 			}
 			case SPEI_END_INPUT_STREAM:
 			{
-				if (m_isSpeaking)
+				if (mbDoNotProcessEndEvent)
 				{
-					m_isSpeaking = FALSE;
-					if (mbDoNotProcessEndEvent)
-					{
-						p_log->writeTrace("EndStream 1 mbDoNotProcessEndEvent", "TTSPlayer::callback");
-						TRACE(_T("\nEndStream 1 mbDoNotProcessEndEvent\r\n") );
-						mbDoNotProcessEndEvent = false;
-					}
-					else
-					{
-						p_log->writeTrace("EndStream 2 sendMessageCallback", "TTSPlayer::callback");
-						TRACE(_T("\nEndStream 2 sendMessageCallback\r\n") );
-						if (sendMessageCallback != 0) sendMessageCallback();
-					}
-				}			
+					p_log->writeTrace("EndStream 1 mbDoNotProcessEndEvent", "TTSPlayer::callback");
+					TRACE(_T("\nEndStream 1 mbDoNotProcessEndEvent\r\n") );
+					mbDoNotProcessEndEvent = false;
+				}
+				else
+				{
+					p_log->writeTrace("EndStream 2 sendMessageCallback", "TTSPlayer::callback");
+					TRACE(_T("\nEndStream 2 sendMessageCallback\r\n") );
+					if (sendMessageCallback != 0) sendMessageCallback();
+				}
+				
+				m_isSpeaking = FALSE;
 				break;     
 			}
 			case SPEI_VOICE_CHANGE:
@@ -262,7 +249,9 @@ TTSPlayer::TTSPlayer(void)
 
 	//HWND hWnd = amis::gui::MainWndParts::Instance()->mpMainFrame->GetSafeHwnd();
 	//m_iV->SetNotifyWindowMessage( hWnd, WM_TTSAPPCUSTOMEVENT, 0, 0 );
+
 	m_iV->SetNotifyCallbackFunction(SpkCallback, 0, (LPARAM)this );
+	
 	m_iV->SetInterest( SPFEI_ALL_TTS_EVENTS, SPFEI_ALL_TTS_EVENTS );
 
 	ChangeVoice(amis::Preferences::Instance()->getTTSVoiceIndex());
@@ -371,7 +360,6 @@ void TTSPlayer::Pause()
 
     LeaveCriticalSection(&m_csSequence);
 }
-
 
 void TTSPlayer::Resume()
 {

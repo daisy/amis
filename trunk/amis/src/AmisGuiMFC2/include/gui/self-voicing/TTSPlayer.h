@@ -31,6 +31,9 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include <afxwin.h>
 #endif
 
+
+#include <sapi.h>
+
 namespace amis
 {
 	namespace tts
@@ -79,6 +82,8 @@ namespace amis
 			CRITICAL_SECTION m_csSequence;
 			ULONG m_currentVoiceNumber;
 			bool mbDoNotProcessEndEvent;
+			
+			ISpVoice* m_iV; // Voice Interface
 		};
 	}
 }
