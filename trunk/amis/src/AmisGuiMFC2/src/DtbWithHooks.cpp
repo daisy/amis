@@ -747,11 +747,13 @@ void DtbWithHooks::resume()
 }
 void DtbWithHooks::stopTTS()
 {
+	if (!amis::tts::TTSPlayer::InstanceTwo()->IsSpeaking()) return;
 	setTTSNextPhraseFlag(false);
 	amis::tts::TTSPlayer::InstanceTwo()->Stop();
 }
 void DtbWithHooks::pauseTTS()
 {
+	if (!amis::tts::TTSPlayer::InstanceTwo()->IsSpeaking()) return;
 	setTTSNextPhraseFlag(false);
 	amis::tts::TTSPlayer::InstanceTwo()->Pause();
 }
@@ -766,7 +768,8 @@ void DtbWithHooks::speakTTS(wstring str)
 
 	setTTSNextPhraseFlag(true);
 	//if it was paused and we don't resume it, nothing is spoken
-	amis::tts::TTSPlayer::InstanceTwo()->Resume();
+	// TODO: Pause/Resume pairs are critical, they should be synced properly.
+	// amis::tts::TTSPlayer::InstanceTwo()->Resume();
 	amis::tts::TTSPlayer::InstanceTwo()->Play(str.c_str());
 }
 bool DtbWithHooks::getTTSNextPhraseFlag()

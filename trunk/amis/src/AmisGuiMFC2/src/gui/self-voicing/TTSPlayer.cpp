@@ -55,13 +55,18 @@ TTSPlayer* TTSPlayer::pinstance_two = 0;
 
 TTSPlayer* TTSPlayer::InstanceOne()
 {
-	if (pinstance_one == 0) pinstance_one = new TTSPlayer;
+	if (pinstance_one == 0) {
+		pinstance_one = new TTSPlayer;
+	}
 	return pinstance_one;
 }
 
 TTSPlayer* TTSPlayer::InstanceTwo()
 {
-	if (pinstance_two == 0) pinstance_two = new TTSPlayer;
+	if (pinstance_two == 0)
+	{
+		pinstance_two = new TTSPlayer;
+	}
 	return pinstance_two;
 }
 
@@ -109,6 +114,11 @@ bool TTSPlayer::SetSpeechRate(long newRate)
 }
 void TTSPlayer::Play(CString str)
 {
+if (this == pinstance_two) 
+{
+	int debug_breakpoint_here = 0;
+}
+
 	USES_CONVERSION;
 	EnterCriticalSection(&m_csSequence);
 	amis::util::Log* p_log = amis::util::Log::Instance();
@@ -206,7 +216,7 @@ void TTSPlayer::callback()
 					{
 						p_log->writeTrace("EndStream 2 sendMessageCallback", "TTSPlayer::callback");
 						TRACE(_T("\nEndStream 2 sendMessageCallback\r\n") );
-						sendMessageCallback();
+						if (sendMessageCallback != 0) sendMessageCallback();
 					}
 				}			
 				break;     
@@ -234,6 +244,7 @@ TTSPlayer::TTSPlayer(void)
 : m_currentVoiceNumber(-1)
 , m_isSpeaking(FALSE)
 {
+	sendMessageCallback = 0;
 	mbDoNotProcessEndEvent = false;
 	InitializeCriticalSection(&m_csSequence);
 
@@ -370,7 +381,7 @@ void TTSPlayer::Resume()
     p_log->writeTrace("Resume TTS", "TTSPlayer:: Resume");
     TRACE(_T("Resume TTS\r\n") );
 
-    m_iV->Resume();
+   m_iV->Resume();
 
     m_isSpeaking = TRUE;
 

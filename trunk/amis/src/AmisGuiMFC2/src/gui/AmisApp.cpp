@@ -174,6 +174,16 @@ BOOL CAmisApp::InitInstance()
 	mbIsWaitingToLoad = false;
 	mAppPath = "";
 
+	// Making sure both TTS instances are initialized from the right thread.
+	// InitInstance() is a convenient location.
+	amis::tts::TTSPlayer::InstanceOne();
+	amis::tts::TTSPlayer::InstanceTwo();
+
+	// TODO: These two TTS messages should overlap in theory ! (only the last one is heard, probably overidden by the first one)
+	// It's not actually a required feature in AMIS, but it is strange nonetheless and should probably be sorted.
+	//amis::tts::TTSPlayer::InstanceOne()->Play(L"Instance One");
+	//amis::tts::TTSPlayer::InstanceTwo()->Play(L"Instance Two");
+
 	//first read the preferences
 	initializePathsAndFiles();
 	//then start logging!  
@@ -329,12 +339,17 @@ BOOL CAmisApp::InitInstance()
 	MainWndParts::Instance()->updateTitleViewMode();
 	MainWndParts::Instance()->updateTitleBar(MainWndParts::TITLEBAR_PLAYSTATE, CString(L"-"));
 	
-	amis::tts::TTSPlayer::InstanceTwo()->setCallback((sendMessageCallbackFn)amis::dtb::DtbWithHooks::ttsTwoDone);
+	//amis::tts::TTSPlayer::InstanceTwo()->setCallback((sendMessageCallbackFn)amis::dtb::DtbWithHooks::ttsTwoDone);
 
 	amis::gui::CAmisApp::emitMessage("ready");
+	
+	// TODO: These two TTS messages should overlap in theory ! (only the last one is heard, probably overidden by the first one)
+	// It's not actually a required feature in AMIS, but it is strange nonetheless and should probably be sorted.
+	// amis::tts::TTSPlayer::InstanceTwo()->Play(L"Instance Two");
+	// amis::tts::TTSPlayer::InstanceOne()->Play(L"Instance One");
 
 	//open a book if we decided to either open the command line parameter or last-read book
-	if (!book_to_open.is_empty_path()) openBook(&book_to_open);
+	//TODO RESTORE THIS !!! if (!book_to_open.is_empty_path()) openBook(&book_to_open);
 	
 	return TRUE;
 }
@@ -1064,6 +1079,9 @@ void CAmisApp::OnPreferences()
 		Preferences::Instance()->setStartInBasicView(prefs.mbStartInBasicView);
 		Preferences::Instance()->setLoadLastBook(prefs.mbLoadLastBook);
 		Preferences::Instance()->setDisableScreensaver(prefs.mbDisableScreensaver);
+
+		MainWndParts::Instance()->updateTitleSelfVoicing(Preferences::Instance()->getIsSelfVoicing());
+
 		if (prefs.mbHighlightText != Preferences::Instance()->getHighlightText())
 		{
 			Preferences::Instance()->setHighlightText(prefs.mbHighlightText);
@@ -1078,7 +1096,6 @@ void CAmisApp::OnPreferences()
 			}
 			AfxMessageBox(IDS_PLEASE_RESTART);
 		}
-
 		amis::io::PreferencesFileIO prefs_io;
 		prefs_io.writeToFile(Preferences::Instance()->getSourceUrl()->get_file(), Preferences::Instance());
 		Preferences::Instance()->logUserControllablePreferences();
