@@ -767,9 +767,6 @@ void DtbWithHooks::speakTTS(wstring str)
 	if (theApp.getShouldNotRenderAudio() == true) return;
 
 	setTTSNextPhraseFlag(true);
-	//if it was paused and we don't resume it, nothing is spoken
-	// TODO: Pause/Resume pairs are critical, they should be synced properly.
-	// amis::tts::TTSPlayer::InstanceTwo()->Resume();
 	amis::tts::TTSPlayer::InstanceTwo()->Play(str.c_str());
 }
 bool DtbWithHooks::getTTSNextPhraseFlag()

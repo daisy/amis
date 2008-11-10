@@ -742,7 +742,9 @@ void amis::gui::CMainFrame::setPauseState(bool pauseState)
 	std::wstring str2 = AudioSequencePlayer::getTextForPromptFromStringId((pauseState ? "paused" : "playing"));
 
 	if (str2.length() > 0)
+	{
 		MainWndParts::Instance()->setStatusText(str2);
+	}
 
 	amis::gui::MenuManip::Instance()->setPauseState(pauseState);
 	MainWndParts::Instance()->updateTitlePlayState(!pauseState);

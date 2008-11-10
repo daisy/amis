@@ -119,8 +119,8 @@ BOOL PreferencesDialog::OnInitDialog()
 void PreferencesDialog::initializeTTSVoiceOption()
 {
 	// Make sure to initialize the voice (just in case TTSPlayer has been unused until now)
-	amis::tts::TTSPlayer::InstanceOne()->ChangeVoice(Preferences::Instance()->getTTSVoiceIndex());
-	amis::tts::TTSPlayer::InstanceTwo()->ChangeVoice(Preferences::Instance()->getTTSVoiceIndex());
+	amis::tts::TTSPlayer::InstanceOne()->SetVoice(Preferences::Instance()->getTTSVoiceIndex());
+	amis::tts::TTSPlayer::InstanceTwo()->SetVoice(Preferences::Instance()->getTTSVoiceIndex());
 
 	mTTSVoiceIndex = 0;
 	//fill the combo box for the tts voices, and return an index to the voice we are currently using

@@ -67,8 +67,9 @@ namespace amis
 			long GetSpeechRate();
 			bool SetSpeechRate(long newRate);
 
-			std::string ChangeVoice(bool speakNotify);
-			void ChangeVoice(int index);
+			std::string SwitchVoice(bool speakNotify);
+			std::string GetVoiceName();
+			void SetVoice(int index);
 
 			int initVoiceList(HWND);
 
@@ -82,8 +83,8 @@ namespace amis
 			CRITICAL_SECTION m_csSequence;
 			ULONG m_currentVoiceNumber;
 			bool mbDoNotProcessEndEvent;
-			
-			ISpVoice* m_iV; // Voice Interface
+			UINT m_pausedCount;
+			ISpVoice* m_iV;
 		};
 	}
 }

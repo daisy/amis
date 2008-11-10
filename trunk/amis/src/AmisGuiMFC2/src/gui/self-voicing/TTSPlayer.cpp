@@ -119,6 +119,12 @@ void TTSPlayer::Play(CString str)
 		p_log->writeMessage("IsSpeaking", "TTSPlayer::Play");
 		TRACE("IsSpeaking\n");
 	}
+	while (m_pausedCount > 0)
+	{
+		m_iV->Resume();
+		m_pausedCount--;
+	}
+
 	mbDoNotProcessEndEvent = true;
 
 	m_iV->Speak(NULL, SPF_PURGEBEFORESPEAK, NULL);
@@ -137,6 +143,12 @@ void TTSPlayer::Stop()
 	amis::util::Log* p_log = amis::util::Log::Instance();
 	p_log->writeTrace("Stop TTS", "TTSPlayer::Stop");
 	TRACE(_T("Stop TTS\r\n") );
+
+	while (m_pausedCount > 0)
+	{
+		m_iV->Resume();
+		m_pausedCount--;
+	}
 
 	mbDoNotProcessEndEvent = true;
 	m_iV->Speak(NULL, SPF_PURGEBEFORESPEAK, NULL);
@@ -231,6 +243,8 @@ TTSPlayer::TTSPlayer(void)
 : m_currentVoiceNumber(-1)
 , m_isSpeaking(FALSE)
 {
+	m_pausedCount = 0;
+
 	sendMessageCallback = 0;
 	mbDoNotProcessEndEvent = false;
 	InitializeCriticalSection(&m_csSequence);
@@ -252,9 +266,11 @@ TTSPlayer::TTSPlayer(void)
 
 	m_iV->SetNotifyCallbackFunction(SpkCallback, 0, (LPARAM)this );
 	
-	m_iV->SetInterest( SPFEI_ALL_TTS_EVENTS, SPFEI_ALL_TTS_EVENTS );
+	m_iV->SetInterest(SPFEI_ALL_TTS_EVENTS, SPFEI_ALL_TTS_EVENTS);
+	
+	m_iV->SetAlertBoundary(SPEI_PHONEME);
 
-	ChangeVoice(amis::Preferences::Instance()->getTTSVoiceIndex());
+	SetVoice(amis::Preferences::Instance()->getTTSVoiceIndex());
 
 	m_iV->SetVolume(70);
 }
@@ -284,14 +300,14 @@ int TTSPlayer::initVoiceList(HWND hWnd)
 	else return -1;
 }
 
-void TTSPlayer::ChangeVoice(int index)
+void TTSPlayer::SetVoice(int index)
 {
 	m_currentVoiceNumber = index-1; // Because ++ will be applied in ChangeVoice(). 0 is the start index for both 'index' and 'm_currentVoiceNumber'
-	ChangeVoice(false);
+	SwitchVoice(false);
 }
 
 
-std::string TTSPlayer::ChangeVoice(bool speakNotify)
+std::string TTSPlayer::SwitchVoice(bool speakNotify)
 {
 	USES_CONVERSION;
 
@@ -346,8 +362,54 @@ std::string TTSPlayer::ChangeVoice(bool speakNotify)
 	return str2;
 }
 
+std::string TTSPlayer::GetVoiceName()
+{
+	USES_CONVERSION;
+
+	HRESULT                             hr = S_OK;
+	CComPtr<ISpObjectToken>             cpVoiceToken;
+	CComPtr<IEnumSpObjectTokens>        cpEnum;
+	ULONG                               ulCount = 0;
+	CSpDynamicString*                szDescription;
+
+	//ISpObjectToken                  *pToken = NULL;
+	//WCHAR *pszCurTokenId = NULL;
+
+	if(SUCCEEDED(hr))
+		hr = SpEnumTokens(SPCAT_VOICES, NULL, NULL, &cpEnum);
+
+	if(SUCCEEDED(hr))
+		hr = cpEnum->GetCount(&ulCount);
+
+	szDescription = new CSpDynamicString [ulCount];
+
+	ULONG counter = -1;
+
+	while (SUCCEEDED(hr) && ulCount -- )
+	{
+		counter ++;
+		cpVoiceToken.Release();
+
+		if(SUCCEEDED(hr))
+			hr = cpEnum->Next( 1, &cpVoiceToken, NULL );
+		HRESULT hResult = SpGetDescription(cpVoiceToken, &szDescription[counter]);
+
+		if (counter == m_currentVoiceNumber) break;
+	}
+
+	cpVoiceToken.Release();
+
+	CString str = W2T(szDescription[m_currentVoiceNumber]);
+	string str2 = W2CA(str);
+
+	delete [] szDescription;
+	return str2;
+}
+
 void TTSPlayer::Pause()
 {
+	if (!m_isSpeaking) return;
+
     EnterCriticalSection(&m_csSequence);
 
     amis::util::Log* p_log = amis::util::Log::Instance();
@@ -356,6 +418,8 @@ void TTSPlayer::Pause()
 
     m_iV->Pause();
 
+	m_pausedCount++;
+
     m_isSpeaking = FALSE;
 
     LeaveCriticalSection(&m_csSequence);
@@ -363,13 +427,19 @@ void TTSPlayer::Pause()
 
 void TTSPlayer::Resume()
 {
+	if (m_isSpeaking) return;
+
     EnterCriticalSection(&m_csSequence);
 
     amis::util::Log* p_log = amis::util::Log::Instance();
     p_log->writeTrace("Resume TTS", "TTSPlayer:: Resume");
     TRACE(_T("Resume TTS\r\n") );
 
-   m_iV->Resume();
+	while (m_pausedCount > 0)
+	{
+		m_iV->Resume();
+		m_pausedCount--;
+	}
 
     m_isSpeaking = TRUE;
 

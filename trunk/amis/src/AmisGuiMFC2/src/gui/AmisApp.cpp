@@ -371,8 +371,7 @@ int CAmisApp::ExitInstance()
 	if (m_hMDIMenu != NULL) FreeResource(m_hMDIMenu);
 	if (m_hMDIAccel != NULL)FreeResource(m_hMDIAccel);
 	
-	//this crashes ... maybe the TTSPlayer destructor destroys something necessary for both instances??
-	//amis::tts::TTSPlayer::DestroyInstanceTwo();
+	amis::tts::TTSPlayer::DestroyInstanceTwo();
 
 	amis::dtb::DtbWithHooks::Instance()->DestroyInstance();
 	amis::Preferences::Instance()->DestroyInstance();
@@ -1104,8 +1103,8 @@ void CAmisApp::OnPreferences()
 	{
 		amis::util::Log::Instance()->writeMessage("Dialog cancelled", "CAmisApp::OnPreferences");	
 		// make sure to restore the original voice (which may have been changed in the preference dialog)
-		amis::tts::TTSPlayer::InstanceOne()->ChangeVoice(Preferences::Instance()->getTTSVoiceIndex());
-		amis::tts::TTSPlayer::InstanceTwo()->ChangeVoice(Preferences::Instance()->getTTSVoiceIndex());
+		amis::tts::TTSPlayer::InstanceOne()->SetVoice(Preferences::Instance()->getTTSVoiceIndex());
+		amis::tts::TTSPlayer::InstanceTwo()->SetVoice(Preferences::Instance()->getTTSVoiceIndex());
 	}
 }
 void CAmisApp::OnPublicationSummary()
@@ -1361,10 +1360,10 @@ std::wstring CAmisApp::emitMessage(std::string msgID, bool repeat)
 {
 	std::wstring str2 = AudioSequencePlayer::getTextForPromptFromStringId(msgID);
 
-	if (str2.length() > 0 && MainWndParts::Instance()->mpMmView != NULL)
+	if (str2.length() > 0)
+	{
 		MainWndParts::Instance()->setStatusText(str2);
-	else
-		int debug = 1;
+	}
 
 	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 	{

@@ -459,7 +459,7 @@ void Preferences::logAllPreferences()
 	log_msg += strTTSVoice;
 	//note that this is just getting the current voice
 	//no need to query both TTSPlayer instances
-	std::string strVoice = amis::tts::TTSPlayer::InstanceOne()->ChangeVoice(false);
+	std::string strVoice = amis::tts::TTSPlayer::InstanceOne()->GetVoiceName();
 	log_msg += " // ";
 	log_msg += strVoice;
 	p_log->writeMessage(log_msg, "Preferences::logAllPreferences");

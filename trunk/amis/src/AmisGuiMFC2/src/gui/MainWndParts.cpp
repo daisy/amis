@@ -217,5 +217,10 @@ void MainWndParts::updateTitleBar(TitleBarFieldID field, CString str)
 void MainWndParts::setStatusText(wstring str)
 {
 	if (mpStatusBar != NULL && ::IsWindow(mpStatusBar->GetSafeHwnd()))
+	{
 		mpStatusBar->SetPaneText(0, str.c_str());
+			
+		//std::wstring *strptr = new std::wstring(str);
+		//amis::gui::MainWndParts::Instance()->mpMainFrame->PostMessage(BFFM_SETSTATUSTEXT, (LPARAM)strptr);
+	}
 }
