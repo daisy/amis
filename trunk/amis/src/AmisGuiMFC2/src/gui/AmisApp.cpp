@@ -761,7 +761,10 @@ void CAmisApp::OnFileClose()
 		amis::gui::MenuManip::Instance()->clearBookmarks();
 		//update the status in the title bar
 		amis::gui::MainWndParts::Instance()->updateTitleBar(amis::gui::MainWndParts::TITLEBAR_BOOKTITLE, _T(""));
-		
+		MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_UPDATE_TOOLBAR_STATE,
+			(WPARAM)MainWndParts::Instance()->mpBasicToolbar);
+		MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_UPDATE_TOOLBAR_STATE,
+			(WPARAM)MainWndParts::Instance()->mpDefaultToolbar);		
 		amis::gui::CAmisApp::emitMessage("ready");
 
 		if (mbIsPlayingHelpBook || mbIsPlayingShortcutsBook)
@@ -772,6 +775,7 @@ void CAmisApp::OnFileClose()
 			if (mpHistory->getLastRead() != NULL)
 				openBook(&mpHistory->getLastRead()->mPath);
 		}
+		
 	}
 }
 

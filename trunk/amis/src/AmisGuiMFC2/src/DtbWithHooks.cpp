@@ -765,7 +765,7 @@ void DtbWithHooks::resumeTTS()
 void DtbWithHooks::speakTTS(wstring str)
 {
 	if (theApp.getShouldNotRenderAudio() == true) return;
-
+	TRACE(_T("Speaking %s\n"), str);
 	setTTSNextPhraseFlag(true);
 	amis::tts::TTSPlayer::InstanceTwo()->Play(str.c_str());
 }
