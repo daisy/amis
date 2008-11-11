@@ -244,20 +244,20 @@ namespace amis
 						{
 							if (mpDialog->mNavigableItems.length() != 0)
 							{
-								amis::gui::spoken::PromptItem * p_item = new amis::gui::spoken::PromptItem();
-								p_item->setId(p_var->getName());
-
-								pPrompt->swapItem(iItem, p_item);
-								delete p_var;
-								p_var = NULL;
-
-								bool firstDone = false;
-
 								USES_CONVERSION;
 
 								amis::dtb::nav::NavModel* p_nav = mpDialog->mpBook->getNavModel();
 								if (p_nav->getNavMap()->getLabel() != NULL)
-								{
+								{		
+									amis::gui::spoken::PromptItem * p_item = new amis::gui::spoken::PromptItem();
+									p_item->setId(p_var->getName());
+
+									/*
+									pPrompt->swapItem(iItem, p_item);
+									delete p_var;
+									p_var = NULL;
+									*/
+
 									std::wstring str = p_nav->getNavMap()->getLabel()->getText()->getTextString();
 
 									if (p_nav->getNavMap()->getLabel()->hasAudio())
@@ -279,12 +279,17 @@ namespace amis
 										}
 									}
 
+									p_var->appendSubItem(p_item);
+
 									if (p_nav->hasPages())
 									{
 										amis::gui::spoken::PromptItem * p_item2 = new amis::gui::spoken::PromptItem();
+										
+										/*
 										pPrompt->insertItem(iItem+1, p_item2);
 										itemsCount ++;
 										iItem ++;
+										*/
 
 										std::wstring str = p_nav->getPageList()->getLabel()->getText()->getTextString();
 
@@ -306,15 +311,20 @@ namespace amis
 												p_item2->setContents(str, "");
 											}
 										}
+										
+										p_var->appendSubItem(p_item2);
 									}
 								}
 								int sz = p_nav->getNumberOfNavLists();
 								for (int i=0; i<sz; i++)
 								{
 									amis::gui::spoken::PromptItem * p_item3 = new amis::gui::spoken::PromptItem();
+									
+									/*
 									pPrompt->insertItem(iItem+1, p_item3);
 									itemsCount ++;
 									iItem ++;
+									*/
 
 									if (p_nav->getNavList(i)->getLabel() != NULL)
 									{	
@@ -339,6 +349,8 @@ namespace amis
 											}
 										}
 									}
+									
+									p_var->appendSubItem(p_item3);
 								}
 							}
 							else if (promptNotAvailable != NULL)

@@ -826,8 +826,20 @@ void AudioSequencePlayer::fillSequencePrompt(AudioSequence* seq, Prompt* prompt,
 			case PROMPT_VARIABLE:
 			{
 				PromptVar* pv = (PromptVar*) pib;
-				//seq->append(pv->getName().c_str());
-				fillSequenceContents(seq, pv);
+				
+				if (pv->hasSubItems())
+				{
+					for (int j = 0; j < pv->subItemsCount(); j++)
+					{
+						PromptItem * pi = pv->getSubItem(j);
+						fillSequenceContents(seq, pi);
+					}
+					pv->clearSubItems();
+				}
+				else
+				{
+					fillSequenceContents(seq, pv);
+				}
 				break;
 			}
 		}

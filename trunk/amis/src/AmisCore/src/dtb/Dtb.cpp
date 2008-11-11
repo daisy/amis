@@ -649,8 +649,8 @@ wstring amis::dtb::Dtb::getLastTextSearchString()
 }
 string amis::dtb::Dtb::searchFullTextRelative(int dir)
 {
-	amis::io::TextSearch text_search;
 	UrlList* p_text_files = mpFiles->getTextFiles();
+	amis::io::TextSearch text_search;
 	UrlList::iterator it;
 	string result = "";
 	string last_file_name = amis::util::FilePathTools::clearTarget(mLastSearchedTextFile);

@@ -227,6 +227,7 @@ PromptVar::~PromptVar()
 	mParam.erase();
 	mName.clear();
 	mName.erase();
+	clearSubItems();
 }
 
 std::string PromptVar::getParam()
@@ -245,6 +246,39 @@ void PromptVar::setParam(std::string param)
 void PromptVar::setName(std::string name)
 {
 	mName.assign(name);
+}
+
+void PromptVar::appendSubItem(PromptItem* pi)
+{
+	mSubItems.push_back(pi);
+}
+
+int PromptVar::subItemsCount()
+{
+	int sz = mSubItems.size();
+	return sz;
+}
+
+PromptItem * PromptVar::getSubItem(int idx)
+{
+	return mSubItems[idx];
+}
+
+void PromptVar::clearSubItems()
+{
+	int sz = mSubItems.size();
+	for (int i = 0; i < sz; i++)
+	{
+		PromptItem * pi = mSubItems[i];
+		delete pi;
+	}
+	mSubItems.clear();
+	mSubItems.empty();
+}
+
+bool PromptVar::hasSubItems()
+{
+	return mSubItems.size() != 0;
 }
 
 //prompt variables don't copy their contents
@@ -313,6 +347,7 @@ PromptItemBase* Prompt::getItem(int idx)
 	}
 }
 
+/*
 void Prompt::swapItem(int idx, PromptItemBase* pItem)
 {
     std::vector<PromptItemBase*>::iterator it = mItems.begin() + idx;
@@ -325,6 +360,8 @@ void Prompt::insertItem(int idx, PromptItemBase* pItem)
     std::vector<PromptItemBase*>::iterator it = mItems.begin() + idx;
     it = mItems.insert(it, pItem);
 }
+*/
+
 void Prompt::addItem(PromptItemBase* pItem)
 {
 	mItems.push_back(pItem);

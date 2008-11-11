@@ -95,11 +95,20 @@ namespace amis
 
 				PromptVar* clone();
 
+				bool hasSubItems();
+				void appendSubItem(PromptItem*);
+				void clearSubItems();
+				int subItemsCount();
+				PromptItem * getSubItem(int idx);
+
 			protected:
 				void setParam(std::string);
 				void setName(std::string);
 
 			private:
+					
+				vector <PromptItem*> mSubItems;
+
 				std::string mParam;
 				std::string mName;
 
@@ -123,8 +132,10 @@ namespace amis
 				std::wstring concatAllText();
 				Prompt* clone();
 
+				/*
 				void swapItem(int idx, PromptItemBase* pItem);
 				void insertItem(int idx, PromptItemBase* pItem);
+				*/
 
 			protected:
 				void addItem(PromptItemBase*);
