@@ -495,8 +495,11 @@ amis::dtb::smil::SmilMediaGroup* DtbWithHooks::loadSmilFromUrl(const ambulant::n
 		amis::util::Log::Instance()->writeMessage("Loading SMIL from URL", &full_path, 
 			"DtbWithHooks::loadSmilFromUrl");
 
-		if (this->hasAudio())	
-			this->pause();
+		if (this->hasAudio())
+		{
+			MmView *view = MainWndParts::Instance()->mpMmView;
+			if (view != NULL) view->OnFilePause();
+		}
 		else
 			stopTTS();	
 
@@ -729,14 +732,16 @@ void DtbWithHooks::pause()
 	MmView *view = MainWndParts::Instance()->mpMmView;
 	if (view==NULL) return;
 	
-	CAmisApp* pApp = (CAmisApp *) AfxGetApp(); 
+	//CAmisApp* pApp = (CAmisApp *) AfxGetApp(); 
 	//pApp->setPauseState(true);
-	amis::gui::MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_SET_PAUSE_STATE, true);
 		
 	if (this->hasAudio())
 		view->OnFilePause();
 	else
-		pauseTTS();		
+	{
+		amis::gui::MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_SET_PAUSE_STATE, true);
+		pauseTTS();
+	}
 }
 
 void DtbWithHooks::resume()
@@ -744,12 +749,13 @@ void DtbWithHooks::resume()
 	MmView *view = MainWndParts::Instance()->mpMmView;
 	if (view==NULL) return;
 
-	amis::gui::MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_SET_PAUSE_STATE, false);
-		
 	if (this->hasAudio())
 		view->OnFilePlay();
 	else
+	{
+		amis::gui::MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_SET_PAUSE_STATE, false);
 		resumeTTS();
+	}
 }
 void DtbWithHooks::stopTTS()
 {
@@ -790,7 +796,7 @@ void DtbWithHooks::setTTSNextPhraseFlag(bool val)
 void DtbWithHooks::ttsTwoDone()
 {
 	DtbWithHooks* p_inst = amis::dtb::DtbWithHooks::Instance();
-	MainWndParts::Instance()->mpMainFrame->PostMessage(WM_COMMAND, (WPARAM)BOOK_PLAY_NEXT, (LPARAM)0);
+	MainWndParts::Instance()->mpMainFrame->SendMessage(WM_COMMAND, (WPARAM)BOOK_PLAY_NEXT, (LPARAM)0);
 	//p_inst->nextPhrase();
 
 	/*
