@@ -1322,13 +1322,7 @@ void CAmisApp::OnPlayPause()
 
 		if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 		{
-			//AudioSequence* seq	= new AudioSequence();
-			//AudioSequencePlayer::playPromptFromUiId(ID_AMIS_PLAYPAUSE, seq, false);
-			//
-			//AudioSequencePlayer::playPromptFromStringId("paused");
-			//
 			amis::gui::CAmisApp::emitMessage("paused");
-
 		}
 
 		amis::dtb::DtbWithHooks::Instance()->pause();

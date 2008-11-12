@@ -74,10 +74,10 @@ namespace amis
 			int initVoiceList(HWND);
 
 			bool IsSpeaking(void);
+			bool IsPaused(void);
+			bool IsPlaying(void);
 
 		private:
-
-			void resumeIfNeeded();
 
 			bool m_isSpeaking;
 			static TTSPlayer* pinstance_one;

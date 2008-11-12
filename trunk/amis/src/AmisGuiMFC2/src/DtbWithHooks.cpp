@@ -64,7 +64,7 @@ DtbWithHooks::DtbWithHooks()
 	mpFileSearcherTmp = new amis::util::SearchForFilesMFC();
 	setFileSearcher(mpFileSearcherTmp);
 	mbIsWaitingForLastmarkNode = false;
-	setTTSNextPhraseFlag(false);
+	//setTTSNextPhraseFlag(false);
 }
 
 DtbWithHooks::~DtbWithHooks()
@@ -494,8 +494,12 @@ amis::dtb::smil::SmilMediaGroup* DtbWithHooks::loadSmilFromUrl(const ambulant::n
 		string log_msg = "Loading SMIL from URL: " + full_path.get_url();
 		amis::util::Log::Instance()->writeMessage("Loading SMIL from URL", &full_path, 
 			"DtbWithHooks::loadSmilFromUrl");
-		
-		this->pause();
+
+		if (this->hasAudio())	
+			this->pause();
+		else
+			stopTTS();	
+
 		amis::gui::MainWndParts::Instance()->mpMmDoc->OnOpenDocument(str_);
 	}
 	return NULL;
@@ -716,7 +720,7 @@ bool DtbWithHooks::isPlaying()
 	if (this->hasAudio())
 		return view->isPlaying();
 	else
-		return amis::tts::TTSPlayer::InstanceTwo()->IsSpeaking();
+		return amis::tts::TTSPlayer::InstanceTwo()->IsPlaying();
 }
 
 
@@ -749,28 +753,29 @@ void DtbWithHooks::resume()
 }
 void DtbWithHooks::stopTTS()
 {
-	if (!amis::tts::TTSPlayer::InstanceTwo()->IsSpeaking()) return;
-	setTTSNextPhraseFlag(false);
+	//if (!amis::tts::TTSPlayer::InstanceTwo()->IsSpeaking()) return;
+	//setTTSNextPhraseFlag(false);
 	amis::tts::TTSPlayer::InstanceTwo()->Stop();
 }
 void DtbWithHooks::pauseTTS()
 {
-	if (!amis::tts::TTSPlayer::InstanceTwo()->IsSpeaking()) return;
-	setTTSNextPhraseFlag(false);
+	//if (!amis::tts::TTSPlayer::InstanceTwo()->IsSpeaking()) return;
+	//setTTSNextPhraseFlag(true);
 	amis::tts::TTSPlayer::InstanceTwo()->Pause();
 }
 void DtbWithHooks::resumeTTS()
 {
-	setTTSNextPhraseFlag(true);
+	//setTTSNextPhraseFlag(true);
 	amis::tts::TTSPlayer::InstanceTwo()->Resume();
 }
 void DtbWithHooks::speakTTS(wstring str)
 {
 	if (theApp.getShouldNotRenderAudio() == true) return;
 	TRACE(_T("Speaking %s\n"), str);
-	setTTSNextPhraseFlag(true);
+	//setTTSNextPhraseFlag(true);
 	amis::tts::TTSPlayer::InstanceTwo()->Play(str.c_str());
 }
+/*
 bool DtbWithHooks::getTTSNextPhraseFlag()
 {
 	return mbTTSNextPhraseFlag;
@@ -779,13 +784,22 @@ void DtbWithHooks::setTTSNextPhraseFlag(bool val)
 {
 	mbTTSNextPhraseFlag = val;
 }
+*/
+
 //this is for TTSPlayer::InstanceTwo
 void DtbWithHooks::ttsTwoDone()
 {
 	DtbWithHooks* p_inst = amis::dtb::DtbWithHooks::Instance();
+	MainWndParts::Instance()->mpMainFrame->PostMessage(WM_COMMAND, (WPARAM)BOOK_PLAY_NEXT, (LPARAM)0);
+	//p_inst->nextPhrase();
 
+	/*
 	if (p_inst->getTTSNextPhraseFlag())
 	{
-		p_inst->nextPhrase();
 	}
+	else
+	{
+		p_inst->setTTSNextPhraseFlag(true);
+	}
+	*/
 }

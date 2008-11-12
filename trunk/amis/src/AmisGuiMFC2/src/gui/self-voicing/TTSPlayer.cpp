@@ -122,11 +122,6 @@ void __stdcall SpkCallback(WPARAM wParam, LPARAM lParam)
 	((TTSPlayer *)lParam)->callback();
 }
 
-bool TTSPlayer::IsSpeaking(void)
-{
-	return m_isSpeaking;
-}
-
 TTSPlayer::TTSPlayer(void)
 : m_currentVoiceNumber(-1)
 , m_isSpeaking(FALSE)
@@ -155,6 +150,7 @@ TTSPlayer::TTSPlayer(void)
 	m_iV->SetNotifyCallbackFunction(SpkCallback, 0, (LPARAM)this );
 	
 	m_iV->SetInterest(SPFEI_ALL_TTS_EVENTS, SPFEI_ALL_TTS_EVENTS);
+	//m_iV->SetInterest(SPEI_START_INPUT_STREAM | SPEI_END_INPUT_STREAM | SPEI_VOICE_CHANGE, SPEI_START_INPUT_STREAM | SPEI_END_INPUT_STREAM | SPEI_VOICE_CHANGE);
 	
 	m_iV->SetAlertBoundary(SPEI_PHONEME);
 
@@ -299,29 +295,17 @@ void TTSPlayer::Play(CString str)
 {
 	EnterCriticalSection(&m_csSequence);
 
-	//if (m_isSpeaking) return;
-
 	USES_CONVERSION;
 
 	amis::util::Log* p_log = amis::util::Log::Instance();
 	p_log->writeTrace(T2A(str), "TTSPlayer::Play");
 	TRACE(str);
 	TRACE("\n");
-	if (m_isSpeaking)
-	{
-		p_log->writeMessage("IsSpeaking", "TTSPlayer::Play");
-		TRACE("IsSpeaking\n");
-	}
 
 	mbDoNotProcessEndEvent = true;
 
-	// OVERRIDE PAUSE COUNTER resumeIfNeeded();
-
-	if (m_isSpeaking)
-	{
-		m_iV->Speak(NULL, SPF_PURGEBEFORESPEAK, NULL);
-		WaitUntilDone();
-	}
+	m_iV->Speak(NULL, SPF_PURGEBEFORESPEAK, NULL);
+	WaitUntilDone();
 
 	mbDoNotProcessEndEvent = false;
 
@@ -329,21 +313,11 @@ void TTSPlayer::Play(CString str)
 	LeaveCriticalSection(&m_csSequence);
 }
 
-void TTSPlayer::resumeIfNeeded()
-{
-	while (m_pausedCount > 0)
-	{
-		m_iV->Resume();
-		m_pausedCount--;
-		if (m_pausedCount == 0) m_isSpeaking = true;
-	}
-}
-
 void TTSPlayer::Stop()
 {
 	EnterCriticalSection(&m_csSequence);
 
-	if (!m_isSpeaking && m_pausedCount <= 0) return;
+	//if (!m_isSpeaking && m_pausedCount <= 0) return;
 
 	amis::util::Log* p_log = amis::util::Log::Instance();
 	p_log->writeTrace("Stop TTS", "TTSPlayer::Stop");
@@ -351,23 +325,20 @@ void TTSPlayer::Stop()
 
 	mbDoNotProcessEndEvent = true;
 
-	// OVERRIDE PAUSE COUNTER resumeIfNeeded();
-
 	m_iV->Speak(NULL, SPF_PURGEBEFORESPEAK, NULL);
 	//m_iV->Speak(L"", SPF_PURGEBEFORESPEAK, NULL);
 	//m_iV->Speak(L"", SPF_ASYNC | SPF_PURGEBEFORESPEAK, NULL);
 
 	WaitUntilDone();
-	m_isSpeaking = FALSE;
 
 	LeaveCriticalSection(&m_csSequence);
 }
 
 void TTSPlayer::Pause()
 {
-    EnterCriticalSection(&m_csSequence);
+	if (!m_isSpeaking || m_pausedCount > 0) return;
 
-	if (m_pausedCount > 0) return;
+    EnterCriticalSection(&m_csSequence);
 
     amis::util::Log* p_log = amis::util::Log::Instance();
     p_log->writeTrace("Pause TTS", "TTSPlayer::Pause");
@@ -379,16 +350,14 @@ void TTSPlayer::Pause()
 
 	m_pausedCount++;
 
-    m_isSpeaking = FALSE;
-
     LeaveCriticalSection(&m_csSequence);
 }
 
 void TTSPlayer::Resume()
 {
-	EnterCriticalSection(&m_csSequence);
+	if (!m_isSpeaking || m_pausedCount <= 0) return;
 
-	if (m_pausedCount <= 0) return;
+	EnterCriticalSection(&m_csSequence);
 
     amis::util::Log* p_log = amis::util::Log::Instance();
     p_log->writeTrace("Resume TTS", "TTSPlayer:: Resume");
@@ -396,16 +365,33 @@ void TTSPlayer::Resume()
 
 	mbDoNotProcessEndEvent = false;
 
-	resumeIfNeeded();
-
-    m_isSpeaking = TRUE;
+	while (m_pausedCount > 0)
+	{
+		m_iV->Resume();
+		m_pausedCount--;
+	}
 
     LeaveCriticalSection(&m_csSequence);
 }
 
+bool TTSPlayer::IsPlaying(void)
+{
+	return IsSpeaking() && ! IsPaused();
+}
+
+bool TTSPlayer::IsSpeaking(void)
+{
+	return m_isSpeaking;
+}
+
+bool TTSPlayer::IsPaused(void)
+{
+	return m_pausedCount > 0;
+}
+
 void TTSPlayer::callback()
 {
-	EnterCriticalSection(&m_csSequence);
+	//EnterCriticalSection(&m_csSequence);
 
 	CSpEvent        event;  // helper class in sphelper.h for events that releases any 
 	// allocated memory in it's destructor - SAFER than SPEVENT
@@ -428,11 +414,13 @@ void TTSPlayer::callback()
 				p_log->writeTrace("StartStream event", "TTSPlayer::callback");
 				TRACE(_T("\nStartStream event\r\n") );
 				m_isSpeaking = TRUE;
+				m_pausedCount = 0;
 				break; 
 			}
 		case SPEI_END_INPUT_STREAM:
 			{
 				m_isSpeaking = FALSE;
+				m_pausedCount = 0;
 
 				if (mbDoNotProcessEndEvent)
 				{
@@ -462,5 +450,5 @@ void TTSPlayer::callback()
 		}
 	}
 
-	LeaveCriticalSection(&m_csSequence);
+	//LeaveCriticalSection(&m_csSequence);
 }

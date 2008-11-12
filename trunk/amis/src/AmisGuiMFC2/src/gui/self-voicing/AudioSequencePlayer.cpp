@@ -44,11 +44,11 @@ AudioSequencePlayer* AudioSequencePlayer::pinstance = 0;
 //The message callback function ... signals end of the tts
 static void ttsFinishedCallback()
 {
-	if (AudioSequencePlayer::Instance()->bIgnoreTTSEnd)
+	/*if (AudioSequencePlayer::Instance()->bIgnoreTTSEnd)
 	{
 		AudioSequencePlayer::Instance()->bIgnoreTTSEnd = false;
 		return;
-	}
+	}*/
 	AudioSequencePlayer::Instance()->checkEndSeq();
 	MainWndParts::Instance()->mpMainFrame->PostMessage(WM_COMMAND, (WPARAM)SELF_VOICING_PLAY_NEXT, (LPARAM)0);
 }
@@ -87,7 +87,7 @@ AudioSequencePlayer::AudioSequencePlayer(void)
 	m_hThread = NULL;
 	m_bAbort = false;
 
-	bIgnoreTTSEnd = false;
+	//bIgnoreTTSEnd = false;
 
 	ambulantX::gui::dx::audio_playerX::Instance()->setCallback((sendMessageCallbackFn)clipFinishedCallback);
 	TTSPlayer::InstanceOne()->setCallback((sendMessageCallbackFn)ttsFinishedCallback);
@@ -218,7 +218,7 @@ void AudioSequencePlayer::Stop(bool fromPlay)
 
 		if (TTSPlayer::InstanceOne()->IsSpeaking())
 		{	
-			bIgnoreTTSEnd = true;
+			//bIgnoreTTSEnd = true;
 			TTSPlayer::InstanceOne()->Stop();
 			p_log->writeTrace("Stop TTS", "AudioSequencePlayer::Stop");
 			TRACE(L"STOP TTS\n");
@@ -277,7 +277,7 @@ void AudioSequencePlayer::playNext(bool fromEndEvent)
 
 		if (!b && !comp->m_String.IsEmpty())
 		{
-			bIgnoreTTSEnd = false;
+			//bIgnoreTTSEnd = false;
 			TTSPlayer::InstanceOne()->Play(comp->m_String);
 		}
 		delete comp;
@@ -292,7 +292,7 @@ void AudioSequencePlayer::playNext(bool fromEndEvent)
 		string log_msg = T2A(strDebug);
 		p_log->writeTrace(log_msg, "AudioSequencePlayer::playNext");
 	
-		bIgnoreTTSEnd = false;
+		//bIgnoreTTSEnd = false;
 		TTSPlayer::InstanceOne()->Play(comp->m_String);
 		delete comp;
 		comp=NULL;

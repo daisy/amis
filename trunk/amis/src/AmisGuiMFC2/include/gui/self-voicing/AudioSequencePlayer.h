@@ -118,7 +118,7 @@ namespace amis
 
 				HANDLE m_hEventEnd;
 				
-				bool bIgnoreTTSEnd;
+				//bool bIgnoreTTSEnd;
 
 			private:
 				bool mRepeatLoop;

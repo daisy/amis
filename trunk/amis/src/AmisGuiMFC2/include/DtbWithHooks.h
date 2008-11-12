@@ -79,8 +79,8 @@ public:
 	void pause();
 	void resume();
 	void speakTTS(wstring);
-	bool getTTSNextPhraseFlag();
-	void setTTSNextPhraseFlag(bool);
+	//bool getTTSNextPhraseFlag();
+	//void setTTSNextPhraseFlag(bool);
 private:
 	void pauseTTS();
 	void resumeTTS();
