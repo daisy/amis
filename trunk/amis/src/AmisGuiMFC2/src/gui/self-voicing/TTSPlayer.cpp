@@ -106,61 +106,6 @@ bool TTSPlayer::SetSpeechRate(long newRate)
 		return false; // Should never happen !
 	}
 }
-void TTSPlayer::Play(CString str)
-{
-	USES_CONVERSION;
-	EnterCriticalSection(&m_csSequence);
-	amis::util::Log* p_log = amis::util::Log::Instance();
-	p_log->writeTrace(T2A(str), "TTSPlayer::Play");
-	TRACE(str);
-	TRACE("\n");
-	if (IsSpeaking())
-	{
-		p_log->writeMessage("IsSpeaking", "TTSPlayer::Play");
-		TRACE("IsSpeaking\n");
-	}
-	while (m_pausedCount > 0)
-	{
-		m_iV->Resume();
-		m_pausedCount--;
-	}
-
-	mbDoNotProcessEndEvent = true;
-
-	m_iV->Speak(NULL, SPF_PURGEBEFORESPEAK, NULL);
-	WaitUntilDone();
-
-	mbDoNotProcessEndEvent = false;
-
-	m_iV->Speak(str, SPF_ASYNC, NULL);	
-	LeaveCriticalSection(&m_csSequence);
-}
-
-void TTSPlayer::Stop()
-{
-	EnterCriticalSection(&m_csSequence);
-
-	amis::util::Log* p_log = amis::util::Log::Instance();
-	p_log->writeTrace("Stop TTS", "TTSPlayer::Stop");
-	TRACE(_T("Stop TTS\r\n") );
-
-	while (m_pausedCount > 0)
-	{
-		m_iV->Resume();
-		m_pausedCount--;
-	}
-
-	mbDoNotProcessEndEvent = true;
-	m_iV->Speak(NULL, SPF_PURGEBEFORESPEAK, NULL);
-	//m_iV->Speak(L"", SPF_PURGEBEFORESPEAK, NULL);
-	//m_iV->Speak(L"", SPF_ASYNC | SPF_PURGEBEFORESPEAK, NULL);
-
-	WaitUntilDone();
-	m_isSpeaking = FALSE;
-
-	LeaveCriticalSection(&m_csSequence);
-}
-
 void TTSPlayer::WaitUntilDone()
 {
 	amis::util::Log* p_log = amis::util::Log::Instance();
@@ -175,63 +120,6 @@ void TTSPlayer::WaitUntilDone()
 void __stdcall SpkCallback(WPARAM wParam, LPARAM lParam)
 {
 	((TTSPlayer *)lParam)->callback();
-}
-
-void TTSPlayer::callback()
-{
-	CSpEvent        event;  // helper class in sphelper.h for events that releases any 
-	// allocated memory in it's destructor - SAFER than SPEVENT
-	//SPVOICESTATUS   Stat;
-	WPARAM          nStart;
-	LPARAM          nEnd;
-	int             i = 0;
-	HRESULT 		hr = S_OK;
-
-	//ISpVoice* m_iV = TTSPlayer::Instance()->m_iV;
-	//ISpVoice* m_iV = ((TTSPlayer *)lParam)->m_iV;
-
-	amis::util::Log* p_log = amis::util::Log::Instance();
-	while( event.GetFrom(m_iV) == S_OK )
-	{
-		switch( event.eEventId )
-		{
-			case SPEI_START_INPUT_STREAM:
-			{
-				p_log->writeTrace("StartStream event", "TTSPlayer::callback");
-				TRACE(_T("\nStartStream event\r\n") );
-				m_isSpeaking = TRUE;
-				break; 
-			}
-			case SPEI_END_INPUT_STREAM:
-			{
-				if (mbDoNotProcessEndEvent)
-				{
-					p_log->writeTrace("EndStream 1 mbDoNotProcessEndEvent", "TTSPlayer::callback");
-					TRACE(_T("\nEndStream 1 mbDoNotProcessEndEvent\r\n") );
-					mbDoNotProcessEndEvent = false;
-				}
-				else
-				{
-					p_log->writeTrace("EndStream 2 sendMessageCallback", "TTSPlayer::callback");
-					TRACE(_T("\nEndStream 2 sendMessageCallback\r\n") );
-					if (sendMessageCallback != 0) sendMessageCallback();
-				}
-				
-				m_isSpeaking = FALSE;
-				break;     
-			}
-			case SPEI_VOICE_CHANGE:
-			{
-				p_log->writeTrace("Voicechange event", "TTSPlayer::callback");
-				TRACE(_T("\nVoicechange event\r\n") );
-				break;
-			}
-			default:
-			{
-				break;
-			}
-		}
-	}
 }
 
 bool TTSPlayer::IsSpeaking(void)
@@ -287,7 +175,8 @@ void TTSPlayer::DestroyInstanceTwo()
 
 TTSPlayer::~TTSPlayer(void)
 {
-	mbDoNotProcessEndEvent = false;
+	mbDoNotProcessEndEvent = true;
+	Stop();
 	if (m_iV != NULL) m_iV->Release();
 	DeleteCriticalSection(&m_csSequence);
 }
@@ -406,15 +295,85 @@ std::string TTSPlayer::GetVoiceName()
 	return str2;
 }
 
+void TTSPlayer::Play(CString str)
+{
+	EnterCriticalSection(&m_csSequence);
+
+	//if (m_isSpeaking) return;
+
+	USES_CONVERSION;
+
+	amis::util::Log* p_log = amis::util::Log::Instance();
+	p_log->writeTrace(T2A(str), "TTSPlayer::Play");
+	TRACE(str);
+	TRACE("\n");
+	if (m_isSpeaking)
+	{
+		p_log->writeMessage("IsSpeaking", "TTSPlayer::Play");
+		TRACE("IsSpeaking\n");
+	}
+
+	mbDoNotProcessEndEvent = true;
+
+	// OVERRIDE PAUSE COUNTER resumeIfNeeded();
+
+	if (m_isSpeaking)
+	{
+		m_iV->Speak(NULL, SPF_PURGEBEFORESPEAK, NULL);
+		WaitUntilDone();
+	}
+
+	mbDoNotProcessEndEvent = false;
+
+	m_iV->Speak(str, SPF_ASYNC, NULL);	
+	LeaveCriticalSection(&m_csSequence);
+}
+
+void TTSPlayer::resumeIfNeeded()
+{
+	while (m_pausedCount > 0)
+	{
+		m_iV->Resume();
+		m_pausedCount--;
+		if (m_pausedCount == 0) m_isSpeaking = true;
+	}
+}
+
+void TTSPlayer::Stop()
+{
+	EnterCriticalSection(&m_csSequence);
+
+	if (!m_isSpeaking && m_pausedCount <= 0) return;
+
+	amis::util::Log* p_log = amis::util::Log::Instance();
+	p_log->writeTrace("Stop TTS", "TTSPlayer::Stop");
+	TRACE(_T("Stop TTS\r\n") );
+
+	mbDoNotProcessEndEvent = true;
+
+	// OVERRIDE PAUSE COUNTER resumeIfNeeded();
+
+	m_iV->Speak(NULL, SPF_PURGEBEFORESPEAK, NULL);
+	//m_iV->Speak(L"", SPF_PURGEBEFORESPEAK, NULL);
+	//m_iV->Speak(L"", SPF_ASYNC | SPF_PURGEBEFORESPEAK, NULL);
+
+	WaitUntilDone();
+	m_isSpeaking = FALSE;
+
+	LeaveCriticalSection(&m_csSequence);
+}
+
 void TTSPlayer::Pause()
 {
-	if (!m_isSpeaking) return;
-
     EnterCriticalSection(&m_csSequence);
+
+	if (m_pausedCount > 0) return;
 
     amis::util::Log* p_log = amis::util::Log::Instance();
     p_log->writeTrace("Pause TTS", "TTSPlayer::Pause");
     TRACE(_T("Pause TTS\r\n") );
+
+	// PAUSE does not generate the end event. mbDoNotProcessEndEvent = true;
 
     m_iV->Pause();
 
@@ -427,21 +386,81 @@ void TTSPlayer::Pause()
 
 void TTSPlayer::Resume()
 {
-	if (m_isSpeaking) return;
+	EnterCriticalSection(&m_csSequence);
 
-    EnterCriticalSection(&m_csSequence);
+	if (m_pausedCount <= 0) return;
 
     amis::util::Log* p_log = amis::util::Log::Instance();
     p_log->writeTrace("Resume TTS", "TTSPlayer:: Resume");
     TRACE(_T("Resume TTS\r\n") );
 
-	while (m_pausedCount > 0)
-	{
-		m_iV->Resume();
-		m_pausedCount--;
-	}
+	mbDoNotProcessEndEvent = false;
+
+	resumeIfNeeded();
 
     m_isSpeaking = TRUE;
 
     LeaveCriticalSection(&m_csSequence);
+}
+
+void TTSPlayer::callback()
+{
+	EnterCriticalSection(&m_csSequence);
+
+	CSpEvent        event;  // helper class in sphelper.h for events that releases any 
+	// allocated memory in it's destructor - SAFER than SPEVENT
+	//SPVOICESTATUS   Stat;
+	WPARAM          nStart;
+	LPARAM          nEnd;
+	int             i = 0;
+	HRESULT 		hr = S_OK;
+
+	//ISpVoice* m_iV = TTSPlayer::Instance()->m_iV;
+	//ISpVoice* m_iV = ((TTSPlayer *)lParam)->m_iV;
+
+	amis::util::Log* p_log = amis::util::Log::Instance();
+	while( event.GetFrom(m_iV) == S_OK )
+	{
+		switch( event.eEventId )
+		{
+		case SPEI_START_INPUT_STREAM:
+			{
+				p_log->writeTrace("StartStream event", "TTSPlayer::callback");
+				TRACE(_T("\nStartStream event\r\n") );
+				m_isSpeaking = TRUE;
+				break; 
+			}
+		case SPEI_END_INPUT_STREAM:
+			{
+				m_isSpeaking = FALSE;
+
+				if (mbDoNotProcessEndEvent)
+				{
+					p_log->writeTrace("EndStream 1 mbDoNotProcessEndEvent", "TTSPlayer::callback");
+					TRACE(_T("\nEndStream 1 mbDoNotProcessEndEvent\r\n") );
+					mbDoNotProcessEndEvent = false;
+				}
+				else
+				{
+					p_log->writeTrace("EndStream 2 sendMessageCallback", "TTSPlayer::callback");
+					TRACE(_T("\nEndStream 2 sendMessageCallback\r\n") );
+					if (sendMessageCallback != 0) sendMessageCallback();
+				}
+
+				break;     
+			}
+		case SPEI_VOICE_CHANGE:
+			{
+				p_log->writeTrace("Voicechange event", "TTSPlayer::callback");
+				TRACE(_T("\nVoicechange event\r\n") );
+				break;
+			}
+		default:
+			{
+				break;
+			}
+		}
+	}
+
+	LeaveCriticalSection(&m_csSequence);
 }

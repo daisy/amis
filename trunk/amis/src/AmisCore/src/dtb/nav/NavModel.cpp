@@ -203,7 +203,7 @@ amis::dtb::nav::PageList* amis::dtb::nav::NavModel::getPageList()
 
 bool amis::dtb::nav::NavModel::hasPages()
 {
-	if (mpPageList->getLength() > 0) return true;
+	if (mpPageList != NULL && mpPageList->getLength() > 0) return true;
 	else return false;
 }
 

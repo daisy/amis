@@ -704,7 +704,9 @@ string DtbWithHooks::getIdOfLastmarkNode()
 
 bool DtbWithHooks::hasAudio()
 {
+	if (MainWndParts::Instance() != 0 && MainWndParts::Instance()->mpMmView != 0)
 	return MainWndParts::Instance()->mpMmView->expectingAudio();
+	else return false;
 }
 
 bool DtbWithHooks::isPlaying()

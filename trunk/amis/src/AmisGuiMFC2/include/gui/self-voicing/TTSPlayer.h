@@ -77,6 +77,8 @@ namespace amis
 
 		private:
 
+			void resumeIfNeeded();
+
 			bool m_isSpeaking;
 			static TTSPlayer* pinstance_one;
 			static TTSPlayer* pinstance_two;
