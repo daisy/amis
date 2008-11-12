@@ -796,7 +796,7 @@ void DtbWithHooks::setTTSNextPhraseFlag(bool val)
 void DtbWithHooks::ttsTwoDone()
 {
 	DtbWithHooks* p_inst = amis::dtb::DtbWithHooks::Instance();
-	MainWndParts::Instance()->mpMainFrame->SendMessage(WM_COMMAND, (WPARAM)BOOK_PLAY_NEXT, (LPARAM)0);
+	MainWndParts::Instance()->mpMainFrame->SendMessage(WM_COMMAND, (WPARAM)ID_AMIS_NEXT_PHRASE, (LPARAM)0);
 	//p_inst->nextPhrase();
 
 	/*

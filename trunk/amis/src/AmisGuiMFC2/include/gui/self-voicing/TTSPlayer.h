@@ -79,6 +79,7 @@ namespace amis
 
 		private:
 
+			bool m_pausedOnLastPhoneme;
 			bool m_isSpeaking;
 			static TTSPlayer* pinstance_one;
 			static TTSPlayer* pinstance_two;

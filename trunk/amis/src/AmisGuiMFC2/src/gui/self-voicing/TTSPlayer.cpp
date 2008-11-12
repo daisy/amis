@@ -157,6 +157,8 @@ TTSPlayer::TTSPlayer(void)
 	SetVoice(amis::Preferences::Instance()->getTTSVoiceIndex());
 
 	m_iV->SetVolume(70);
+
+	m_pausedOnLastPhoneme = false;
 }
 
 void TTSPlayer::DestroyInstanceOne()
@@ -307,9 +309,23 @@ void TTSPlayer::Play(CString str)
 	m_iV->Speak(NULL, SPF_PURGEBEFORESPEAK, NULL);
 	WaitUntilDone();
 
+	m_isSpeaking = FALSE;
+
 	mbDoNotProcessEndEvent = false;
 
-	m_iV->Speak(str, SPF_ASYNC, NULL);	
+	m_iV->Speak(str, SPF_ASYNC, NULL);
+
+	Sleep(100);
+
+	if (m_pausedCount > 0)
+	{
+		m_iV->Pause();
+	}
+	else
+	{
+		m_pausedCount = 0;
+		m_iV->Resume();
+	}
 	LeaveCriticalSection(&m_csSequence);
 }
 
@@ -331,14 +347,17 @@ void TTSPlayer::Stop()
 
 	WaitUntilDone();
 
+	m_isSpeaking = FALSE;
+	m_pausedCount = 0;
+
 	LeaveCriticalSection(&m_csSequence);
 }
 
 void TTSPlayer::Pause()
 {
-	if (!m_isSpeaking || m_pausedCount > 0) return;
-
     EnterCriticalSection(&m_csSequence);
+
+	if (!m_isSpeaking || m_pausedCount > 0) return;
 
     amis::util::Log* p_log = amis::util::Log::Instance();
     p_log->writeTrace("Pause TTS", "TTSPlayer::Pause");
@@ -355,9 +374,16 @@ void TTSPlayer::Pause()
 
 void TTSPlayer::Resume()
 {
-	if (!m_isSpeaking || m_pausedCount <= 0) return;
-
 	EnterCriticalSection(&m_csSequence);
+
+	if (m_pausedOnLastPhoneme && sendMessageCallback != 0)
+	{
+		m_pausedOnLastPhoneme = false;
+		sendMessageCallback();
+		return;
+	}
+
+	if (!m_isSpeaking || m_pausedCount <= 0) return;
 
     amis::util::Log* p_log = amis::util::Log::Instance();
     p_log->writeTrace("Resume TTS", "TTSPlayer:: Resume");
@@ -391,7 +417,7 @@ bool TTSPlayer::IsPaused(void)
 
 void TTSPlayer::callback()
 {
-	//EnterCriticalSection(&m_csSequence);
+	EnterCriticalSection(&m_csSequence);
 
 	CSpEvent        event;  // helper class in sphelper.h for events that releases any 
 	// allocated memory in it's destructor - SAFER than SPEVENT
@@ -413,13 +439,27 @@ void TTSPlayer::callback()
 			{
 				p_log->writeTrace("StartStream event", "TTSPlayer::callback");
 				TRACE(_T("\nStartStream event\r\n") );
+				m_pausedOnLastPhoneme = false;
 				m_isSpeaking = TRUE;
-				m_pausedCount = 0;
+				if (m_pausedCount > 0)
+				{
+					m_iV->Pause();
+				}
+				else
+					m_pausedCount = 0;
 				break; 
 			}
 		case SPEI_END_INPUT_STREAM:
 			{
 				m_isSpeaking = FALSE;
+				
+				if (m_pausedCount > 0)
+				{
+					m_pausedOnLastPhoneme = true;
+					m_pausedCount = 0;
+					break;
+				}
+
 				m_pausedCount = 0;
 
 				if (mbDoNotProcessEndEvent)
@@ -450,5 +490,5 @@ void TTSPlayer::callback()
 		}
 	}
 
-	//LeaveCriticalSection(&m_csSequence);
+	LeaveCriticalSection(&m_csSequence);
 }

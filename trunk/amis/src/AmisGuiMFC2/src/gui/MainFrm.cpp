@@ -165,10 +165,6 @@ BOOL CMainFrame::OnCommand(WPARAM wParam, LPARAM lParam)
 	{
 		mCommonPreTranslateMessageHandler->handleCommand(wParam);
 	}
-	if (BOOK_PLAY_NEXT == wParam)
-	{
-		amis::dtb::DtbWithHooks::Instance()->nextPhrase();
-	}
 	
 	return CMDIFrameWnd::OnCommand(wParam, lParam);
 }
