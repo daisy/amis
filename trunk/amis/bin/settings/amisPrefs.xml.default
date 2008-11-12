@@ -23,7 +23,7 @@
 <entry id="sidebar-font-name" value="Verdana"/>
 <entry id="is-first-time" value="yes"/>
 <entry id="is-logging-enabled" value="yes"/>
-<entry id="logging-level" value="FULL_LOGGING"/>
+<entry id="logging-level" value="MEDIUM_LOGGING"/>
 <entry id="prefer-ffmpeg" value="no"/>
 </section>
 </preferences>
