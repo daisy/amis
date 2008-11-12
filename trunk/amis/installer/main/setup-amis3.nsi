@@ -101,18 +101,15 @@ Section "MainSection" SEC01
   ;copy the DLLs
   File "${BIN_DIR}\libambulant_shwin32.dll"
   File "${BIN_DIR}\xerces-c_2_8.dll"
-  File "${BIN_DIR}\libamplugin_pdtb.dll"
-  File "${BIN_DIR}\PdtbIePlugin.dll"
   File "${BIN_DIR}\TransformSample.ax"
   File "${BIN_DIR}\libamplugin_ffmpeg.dll"
   File "${BIN_DIR}\avformat-52.dll"
   File "${BIN_DIR}\avcodec-51.dll"
   File "${BIN_DIR}\avutil-49.dll"
   File "${BIN_DIR}\SDL.dll"
-  ; *** The pdtb plugin
   File "${BIN_DIR}\libamplugin_pdtb.dll"
-  ;!insertmacro InstallLib REGDLLTLB NOTSHARED NOREBOOT_NOTPROTECTED "${BIN_DIR}\PdtbIePlugin.dll" "$INSTDIR\PdtbIePlugin.dll" "$INSTDIR"
-	RegDLL "$INSTDIR/PdtbIePlugin.dll"
+  File "${BIN_DIR}\PdtbIePlugin.dll"
+  RegDLL "$INSTDIR/PdtbIePlugin.dll"
   
   ;copy the bookmark readme file
   SetOutPath "$SETTINGS_DIR\bmk"
@@ -145,11 +142,6 @@ Section "MainSection" SEC01
   File "${BIN_DIR}\settings\img\defaultToolbar\*.ico"
   SetOutPath "$SETTINGS_DIR\img\basicToolbar"
   File "${BIN_DIR}\settings\img\basicToolbar\*.ico"
-  
-  ;copy a few default recordings, which give the version and release date
-  SetOutPath "$SETTINGS_DIR\lang"
-  File "${BIN_DIR}\settings\lang\version.mp3"
-  File "${BIN_DIR}\settings\lang\releasedate.mp3"
   
   ;copy the lang directory readme file
   SetOutPath "$SETTINGS_DIR\lang"
@@ -189,7 +181,7 @@ Section -CopyLangpacks
   File "${LOCAL_APP_DATA}\AMIS\settings\lang\${DEFAULT_LANG_ID}\help\img\*"
   
   ;copy the langpack shortcut book files
-  SetOutPath "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}\help"
+  SetOutPath "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}\shortcuts"
   File "${LOCAL_APP_DATA}\AMIS\settings\lang\${DEFAULT_LANG_ID}\shortcuts\*"
 
 	;***********************
@@ -227,8 +219,8 @@ Section -AdditionalIcons
   	CreateShortCut "$SMPROGRAMS\AMIS\Help (${CUSTOM_LANG_NAME}).lnk" "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}\help\amishelp.html"
   	CreateShortCut "$SMPROGRAMS\AMIS\Keyboard Shortcuts (${CUSTOM_LANG_NAME}).lnk" "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}\shortcuts\amiskeys.html"
   ${EndIf}
-  CreateShortCut "$SMPROGRAMS\AMIS\Help (English).lnk" "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}\help\amishelp.html"
-  CreateShortCut "$SMPROGRAMS\AMIS\Keyboard Shortcuts (English).lnk" "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}\shortcuts\amiskeys.html"
+  CreateShortCut "$SMPROGRAMS\AMIS\Help (${DEFAULT_LANG_NAME}).lnk" "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}\help\content.html"
+  CreateShortCut "$SMPROGRAMS\AMIS\Keyboard Shortcuts (${DEFAULT_LANG_NAME}).lnk" "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}\shortcuts\amiskeys.html"
 SectionEnd
 
 ;*******************************
@@ -333,6 +325,15 @@ Section Uninstall
 	RMDir "$SETTINGS_DIR\img\basicToolbar"
 	RMDir "$SETTINGS_DIR\img"
 	
+	Delete "$SETTINGS_DIR\amisPrefs.xml"
+  Delete "$SETTINGS_DIR\amisHistory.xml"
+  Delete "$SETTINGS_DIR\defaultToolbar.xml"
+  Delete "$SETTINGS_DIR\basicToolbar.xml"
+  Delete "$SETTINGS_DIR\amisHistory.xml.default"
+  Delete "$SETTINGS_DIR\clearHistory.bat"
+  Delete "$SETTINGS_DIR\resource.h.ini"
+  Delete "$SETTINGS_DIR\amisLog.txt"
+  
 	;We are leaving the bookmarks on purpose
 	
   Delete "$INSTDIR\*"
@@ -344,33 +345,53 @@ Section Uninstall
   
   Delete "$SMPROGRAMS\AMIS\AMIS.lnk" 
   Delete "$DESKTOP\AMIS.lnk" 
+  Delete "$SMPROGRAMS\AMIS\Website.lnk"
+  Delete "$SMPROGRAMS\AMIS\Uninstall.lnk"
+  ${If} ${CUSTOM_LANG_ID} != "eng-US"
+  	Delete "$SMPROGRAMS\AMIS\Help (${CUSTOM_LANG_NAME}).lnk"
+  	Delete "$SMPROGRAMS\AMIS\Keyboard Shortcuts (${CUSTOM_LANG_NAME}).lnk"
+  ${EndIf}
+  Delete "$SMPROGRAMS\AMIS\Help (${DEFAULT_LANG_NAME}).lnk"
+  Delete "$SMPROGRAMS\AMIS\Keyboard Shortcuts (${DEFAULT_LANG_NAME}).lnk"
+
   SetAutoClose true
 SectionEnd
 
 ;uninstall the langpacks
 Section -un.CopyLangpack
 	
-	Delete "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}\*"
-  Delete "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}\help\*"
+	Delete "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}\help\*"
   Delete "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}\help\img\*"
   Delete "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}\audio\*"
   
   RMDir "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}\help\img"
   RMDir "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}\help"
   RMDir "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}\audio"
-  RMDir "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}"
+  
+	Delete "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}\shortcuts\*"
+	RMDir "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}\shortcuts"
+
+	Delete "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}\*"
+	RMDir "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}"
 
 	${If} ${CUSTOM_LANG_ID} != ""
-		Delete "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}\*"
-	  Delete "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}\help\*"
+		Delete "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}\help\*"
 	  Delete "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}\help\img\*"
 	  Delete "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}\audio\*"
 	  
 	  RMDir "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}\help\img"
 	  RMDir "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}\help"
 	  RMDir "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}\audio"
+	 
+	 	Delete "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}\shortcuts\*"
+		RMDir "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}\shortcuts"
+
+		Delete "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}\*"
 	  RMDir "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}"
 	${EndIf}
+		
+		Delete "$SETTINGS_DIR\lang\readme.txt"
+		RMDir "$SETTINGS_DIR\lang"
 SectionEnd
 
 
