@@ -248,8 +248,6 @@ void TextRenderBrain::showElementAtId(string elmId)
 
 	if (amis::dtb::DtbWithHooks::Instance()->hasAudio() == false)
 	{
-		if (amis::dtb::DtbWithHooks::Instance()->isPlaying())
-			amis::dtb::DtbWithHooks::Instance()->stopTTS();
 		amis::dtb::DtbWithHooks::Instance()->speakTTS(this->mCurrentElmText.c_str());
 	}
 }
