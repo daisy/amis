@@ -111,8 +111,8 @@ Section "MainSection" SEC01
   File "${BIN_DIR}\SDL.dll"
   ; *** The pdtb plugin
   File "${BIN_DIR}\libamplugin_pdtb.dll"
-  !insertmacro InstallLib REGDLLTLB NOTSHARED NOREBOOT_NOTPROTECTED "${BIN_DIR}\PdtbIePlugin.dll" "$INSTDIR\PdtbIePlugin.dll" "$INSTDIR"
-
+  ;!insertmacro InstallLib REGDLLTLB NOTSHARED NOREBOOT_NOTPROTECTED "${BIN_DIR}\PdtbIePlugin.dll" "$INSTDIR\PdtbIePlugin.dll" "$INSTDIR"
+	RegDLL "$INSTDIR/PdtbIePlugin.dll"
   
   ;copy the bookmark readme file
   SetOutPath "$SETTINGS_DIR\bmk"

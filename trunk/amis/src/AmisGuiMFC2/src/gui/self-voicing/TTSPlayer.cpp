@@ -131,6 +131,8 @@ TTSPlayer::TTSPlayer(void)
 	sendMessageCallback = 0;
 	mbDoNotProcessEndEvent = false;
 	InitializeCriticalSection(&m_csSequence);
+	InitializeCriticalSection(&m_csSyncStartEnd);
+	mSpeakRequests = 0;
 
 	m_iV = NULL;
 	HRESULT hr = 0;
@@ -177,6 +179,7 @@ TTSPlayer::~TTSPlayer(void)
 	Stop();
 	if (m_iV != NULL) m_iV->Release();
 	DeleteCriticalSection(&m_csSequence);
+	DeleteCriticalSection(&m_csSyncStartEnd);
 }
 
 int TTSPlayer::initVoiceList(HWND hWnd)
@@ -312,6 +315,10 @@ void TTSPlayer::Play(CString str)
 	m_isSpeaking = FALSE;
 
 	mbDoNotProcessEndEvent = false;
+	
+	EnterCriticalSection(&m_csSyncStartEnd);
+	mSpeakRequests++;
+	LeaveCriticalSection(&m_csSyncStartEnd);
 
 	m_iV->Speak(str, SPF_ASYNC, NULL);
 
@@ -472,7 +479,18 @@ void TTSPlayer::callback()
 				{
 					p_log->writeTrace("EndStream 2 sendMessageCallback", "TTSPlayer::callback");
 					TRACE(_T("\nEndStream 2 sendMessageCallback\r\n") );
-					if (sendMessageCallback != 0) sendMessageCallback();
+					EnterCriticalSection(&m_csSyncStartEnd);
+					mSpeakRequests--;
+					if (mSpeakRequests > 0)
+					{
+						LeaveCriticalSection(&m_csSyncStartEnd);
+						break;
+					}
+					else
+					{	
+						LeaveCriticalSection(&m_csSyncStartEnd);
+						if (sendMessageCallback != 0) sendMessageCallback();
+					}
 				}
 
 				break;     

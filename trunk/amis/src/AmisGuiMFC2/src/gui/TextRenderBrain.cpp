@@ -161,7 +161,7 @@ void TextRenderBrain::webDocumentComplete()
 		MainWndParts::Instance()->mpHtmlView->RedrawWindow();
 		MainWndParts::Instance()->mpMainFrame->RecalcLayout();
 		mbWaitForDocumentLoad = false;
-
+		
 		//refresh font size and contrast settings for the newly loaded page
 		if (mFontSize > 0) setFontSize(mFontSize);
 		if (mbStyleOn) applyPageStyle(mCurrentStyleIdx);
@@ -247,7 +247,11 @@ void TextRenderBrain::showElementAtId(string elmId)
 	mpPreviousElm = p_elm;
 
 	if (amis::dtb::DtbWithHooks::Instance()->hasAudio() == false)
+	{
+		if (amis::dtb::DtbWithHooks::Instance()->isPlaying())
+			amis::dtb::DtbWithHooks::Instance()->stopTTS();
 		amis::dtb::DtbWithHooks::Instance()->speakTTS(this->mCurrentElmText.c_str());
+	}
 }
 //reset the highlight from the previously highlighted element
 void TextRenderBrain::unHighlightPreviousElement()

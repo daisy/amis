@@ -84,10 +84,12 @@ namespace amis
 			static TTSPlayer* pinstance_one;
 			static TTSPlayer* pinstance_two;
 			CRITICAL_SECTION m_csSequence;
+			CRITICAL_SECTION m_csSyncStartEnd;
 			ULONG m_currentVoiceNumber;
 			bool mbDoNotProcessEndEvent;
 			UINT m_pausedCount;
 			ISpVoice* m_iV;
+			int mSpeakRequests;
 		};
 	}
 }

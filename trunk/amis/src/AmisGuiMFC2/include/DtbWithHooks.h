@@ -81,11 +81,12 @@ public:
 	void speakTTS(wstring);
 	//bool getTTSNextPhraseFlag();
 	//void setTTSNextPhraseFlag(bool);
+	void stopTTS();
+
 private:
 	void pauseTTS();
 	void resumeTTS();
-	void stopTTS();
-
+	
 	void addToHistory();
 	void makeAllLabelsHumanReadable();
 	void makeLabelHumanReadable(amis::MediaGroup*, std::string);

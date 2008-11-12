@@ -89,13 +89,6 @@ private:
 	IHTMLStyleSheet* mpAmisCss;
 	int mCurrentStyleIdx;
 	bool mbStyleOn;
-
-	//part of a workaround to stop highlighting of text nodes
-	//this highlighting happens sometimes to nodes that should be skipped
-	//the node_started/node_stopped events are over before the highlighting commands get sent
-	//i don't know where they come from..
-	//it only happens when we try to load the lastmark of a document (url#frag; ambulant not started playing yet)
-	ambulant::net::url mTextSrcToWaitFor;
 	
 private:
 	static TextRenderBrain* pinstance;
