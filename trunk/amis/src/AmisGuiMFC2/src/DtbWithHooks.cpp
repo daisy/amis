@@ -759,38 +759,22 @@ void DtbWithHooks::resume()
 }
 void DtbWithHooks::stopTTS()
 {
-	//if (!amis::tts::TTSPlayer::InstanceTwo()->IsSpeaking()) return;
-	//setTTSNextPhraseFlag(false);
 	amis::tts::TTSPlayer::InstanceTwo()->Stop();
 }
 void DtbWithHooks::pauseTTS()
 {
-	//if (!amis::tts::TTSPlayer::InstanceTwo()->IsSpeaking()) return;
-	//setTTSNextPhraseFlag(true);
 	amis::tts::TTSPlayer::InstanceTwo()->Pause();
 }
 void DtbWithHooks::resumeTTS()
 {
-	//setTTSNextPhraseFlag(true);
 	amis::tts::TTSPlayer::InstanceTwo()->Resume();
 }
 void DtbWithHooks::speakTTS(wstring str)
 {
 	if (theApp.getShouldNotRenderAudio() == true) return;
 	TRACE(_T("Speaking %s\n"), str.c_str());
-	//setTTSNextPhraseFlag(true);
 	amis::tts::TTSPlayer::InstanceTwo()->Play(str.c_str());
 }
-/*
-bool DtbWithHooks::getTTSNextPhraseFlag()
-{
-	return mbTTSNextPhraseFlag;
-}
-void DtbWithHooks::setTTSNextPhraseFlag(bool val)
-{
-	mbTTSNextPhraseFlag = val;
-}
-*/
 
 //this is for TTSPlayer::InstanceTwo
 void DtbWithHooks::ttsTwoDone()
@@ -798,14 +782,4 @@ void DtbWithHooks::ttsTwoDone()
 	DtbWithHooks* p_inst = amis::dtb::DtbWithHooks::Instance();
 	MainWndParts::Instance()->mpMainFrame->SendMessage(WM_COMMAND, (WPARAM)ID_AMIS_NEXT_PHRASE, (LPARAM)0);
 	//p_inst->nextPhrase();
-
-	/*
-	if (p_inst->getTTSNextPhraseFlag())
-	{
-	}
-	else
-	{
-		p_inst->setTTSNextPhraseFlag(true);
-	}
-	*/
 }

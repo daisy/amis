@@ -216,7 +216,7 @@ void AudioSequencePlayer::Stop(bool fromPlay)
 
 		amis::util::Log* p_log = amis::util::Log::Instance();
 
-		if (TTSPlayer::InstanceOne()->IsSpeaking())
+		if (TTSPlayer::InstanceOne()->IsPlaying())
 		{	
 			//bIgnoreTTSEnd = true;
 			TTSPlayer::InstanceOne()->Stop();
