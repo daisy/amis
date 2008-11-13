@@ -1,5 +1,5 @@
-;Scripts for Amis, version2.6.1.1
-; For AMIS 2.6
+;Scripts for Amis, version  3.1 beta
+; For AMIS 3.0 Beta
 ; JAWS version 7.0 and above
 
 Include "Amis.jsm"
@@ -583,7 +583,7 @@ EndIf
 let StringHeading = stringStripAllBlanks (StringHeading)
 SayFormattedMessage (3, MsgMoveToTextWindow_l, MsgMoveToTextWindow_s)
 SpeechOff ()
-{Control+A}
+{Control+T}
 
 	Delay (2)2
 	PCCursor ()
@@ -666,7 +666,7 @@ Void Function ExitAmisTextReadingModes ()
 
 EndFunction
 
-Script SelectAllHook ()
+Script MoveToTextWindow ()
 	TypeCurrentScriptKey ()
 	Delay (2)
 	if GetJCFOption (OPT_VIRTUAL_PC_CURSOR)==1  then
