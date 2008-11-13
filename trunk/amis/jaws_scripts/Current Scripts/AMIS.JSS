@@ -1,4 +1,4 @@
-;Scripts for Amis, version  3.1 beta
+;Scripts for Amis, version  3.0.1 beta
 ; For AMIS 3.0 Beta
 ; JAWS version 7.0 and above
 
