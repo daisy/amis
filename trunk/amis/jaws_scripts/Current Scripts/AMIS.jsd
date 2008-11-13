@@ -1,0 +1,155 @@
+:function AmisActivateVirtualCursurSwitch
+
+:function ObjectCreate
+:Returns object No Return Description
+:Param object/SObjectName No Description
+
+:script FineNavigation
+:Synopsis Enter into fine Navigation mode
+:Description Enters into fine navigation mode after which arrow keys provide usual character, word , line level navigation
+
+:script HotKeyHelp
+:Synopsis Generates a virtual viewer containing commands for amis
+
+:script SlowerNum
+:Synopsis Slows speech rate
+
+:script TextOnlyModeExit
+:Synopsis Exits text only book reading mode
+
+:function IsAmisTextHighlighted
+:Returns int 1 if matches else 0
+:Synopsis Compares background color of focused text in html window with preference highlight background color and returns 1 if matches
+
+:script SelectAllHook
+:Synopsis Hook for set focus to Text Display window
+
+:script SpeakWindow
+
+:script NextPhrase
+:Synopsis Next Phrase
+
+:script PreviousSection
+:Synopsis Previous section
+
+:script FasterNum
+:Synopsis Increase speech rate
+
+:script VolumeDown
+:Synopsis Decrease volume
+
+:script ReadAsTextOnly
+:Synopsis Enter Text only book reading mode
+
+:function IsAMISHasNewBook
+:Returns int 1 if new book is openned else returns 0
+:Synopsis Checks if new book has been openned
+
+:script GlobalNavigationMode
+:Synopsis Switches to global navigation mode
+
+:script NextPage
+:Synopsis Next Page
+
+:script ToggleJawsSpeech
+:Synopsis Toggles jaws speech for amis on or off
+
+:script Try
+
+:function AutoStartEvent
+
+:function ExitAmisTextOnlyReadingMode
+
+:script NormalSpeed
+:Synopsis Resets speech rate to normal
+
+:script IncreaseVolume
+:Synopsis Increase volume
+
+:script FineNavigationMode
+:Synopsis Switches to fine navigation mode
+
+:function IsPlaying
+:Returns int No Return Description
+:Synopsis Return 1 if playing is going on else return 0
+:Description Use title bar info for decision
+
+:function DetectHighlight
+
+:script GoToSideBar
+:Synopsis Go to side navigation bar
+
+:function SayViews
+:Synopsis Checks the view and speak if it is default or basic view
+
+:script sayview
+:Synopsis Speaks the Current View
+
+:function UnMuteJawsSpeechOnOpenDialog
+
+:script Faster
+:Synopsis Increase speech rate
+
+:function CheckViewsFromTitle
+:Returns string No Return Description
+:Synopsis Check views using title of main window
+
+:function GetAmisHighlightBKColor
+:Returns string No Return Description
+:Synopsis Gets Highlight background color from Amis preference file
+
+:script PlayPause
+:Synopsis Plays and Pauses the Book
+
+:function WindowActivatedEvent
+:Param handle/hWindow No Description
+
+:function ExitTextModeOnNewBook
+:Synopsis Exit text mode Function to be called in delay thread to give time for loading new book
+
+:function ExitAmisTextReadingModes
+
+:script PrevPage
+:Synopsis Previous Page
+
+:script ToggleViews
+:Synopsis To toggle between default and basic view
+
+:script Slower
+:Synopsis Slows speech rate
+
+:function IsAmisSelfVoiceOnFromTitle
+:Returns int 1 if self voice is on else return 0
+
+:script NextSection
+:Synopsis Next Section
+
+:function GetFileTextInString
+:Returns string No Return Description
+:Param string/SFile No Description
+
+:function ExitAmisFineNavigationMode
+
+:function GetAmisPreferenceValue
+:Returns string No Return Description
+:Synopsis Returns value of element passed in parameter as string
+:Param string/Element No Description
+
+:function IsTargetHtmlHeading
+:Returns int 1 if target heading is found else 0
+:Param string/HeadingName No Description
+
+:function SayHighlight
+:Synopsis locate the first character with highlight background and speaks the line
+:Param int/BackColor No Description
+
+:script FineNavigationExit
+:Synopsis Exits the fine navigation mode
+
+:script PreviousPhrase
+:Synopsis Previous Phrase
+
+:function AutoFinishEvent
+
+:script SayTitleHook
+
