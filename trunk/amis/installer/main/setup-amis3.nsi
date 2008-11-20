@@ -236,7 +236,7 @@ Section -Post
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "Publisher" "${PRODUCT_PUBLISHER}"
  
   ;register the timescale ocx component
-  RegDLL "$INSTDIR/TransformSample.ax"
+  RegDLL "$INSTDIR\TransformSample.ax"
 	Call RunMSVCRuntimeSetup
 
 SectionEnd
@@ -307,9 +307,9 @@ Section Uninstall
 	StrCpy $SETTINGS_DIR $APPDATA\AMIS\settings
 	
 	; unregister the timescale ocx component
-  UnregDLL "$INSTDIR/TransformSample.ax"
+  UnregDLL "$INSTDIR\TransformSample.ax"
   ; unregister the pdtb dll
-  UnregDLL "$INSTDIR/PdtbIePlugin.dll"
+  UnregDLL "$INSTDIR\PdtbIePlugin.dll"
  
 	Delete "$SETTINGS_DIR\css\*.css"
 	Delete "$SETTINGS_DIR\css\font\*"
