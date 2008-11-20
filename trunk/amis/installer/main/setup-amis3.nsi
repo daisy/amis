@@ -262,17 +262,18 @@ Function .onInit
 	Pop $R0
 
 	CheckWinXP:
-		StrCmp $R0 "XP" End CheckWin2K
+		StrCmp $R0 "XP" NextCheck CheckWin2K
 	CheckWin2K:
-		StrCmp $R0 "2000" End CheckVista
+		StrCmp $R0 "2000" NextCheck CheckVista
 	CheckVista:
-		StrCmp $R0 "Vista" End OSNotSupported
+		StrCmp $R0 "Vista" NextCheck OSNotSupported
 
 	;the OS is not supported; warn the user instead of aborting
 	OSNotSupported:
 		MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "Warning: operating system not supported.  AMIS may not work.  Do you want to continue?" IDYES +2
 		Abort
 
+NextCheck:
 	;check for the directx version
 	Call GetDXVersion
 	Pop $R3

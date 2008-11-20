@@ -1,4 +1,5 @@
-!include "LogicLib.nsh"
+;Windows and DirectX versions
+;!include "getversions.nsh"
 
 !define SAPI_ONLINE "http://amis.sf.net/download/sapi51redist.msi"
 
@@ -8,17 +9,21 @@
 ;if not found, give the user options a. download it, b. locate manually, c. ignore it
 Function SapiPage
 
-    Var /GLOBAL SAPI_INSTALLER
-    Var /GLOBAL INI_VALUE
-  
-    ;find if SAPI is installed
-    ${If} ${FileExists} "$PROGRAMFILES\Common Files\Microsoft\Shared\Speech\sapi.dll"
-     ${OrIf} ${FileExists} "$PROGRAMFILES\Common Files\Microsoft Shared\Speech\sapi.dll"
-        Goto End 
-    ${Else}
-        Call showSapiPage
-    ${EndIf}
-   
+	Var /GLOBAL SAPI_INSTALLER
+  Var /GLOBAL INI_VALUE
+	
+	;check that the OS is XP, 2000, or Vista
+	;install SAPI if it's 2000, else assume that a compatible version of SAPI is already there
+	;XP has SAPI 5.1
+	;Vista has SAPI 5.3
+	
+	Call GetWindowsVersion
+	Pop $R0
+	StrCmp $R0 "2000" InstallSapi End
+	
+InstallSapi:
+	Call showSapiPage
+	
 End:
 FunctionEnd
 
