@@ -77,7 +77,8 @@ namespace amis
 
 				
 				static std::wstring getTextForDialogControlFromUiIds(int dlgID, int ctrlId, PromptResolver* pResolver, string switchCondition);
-	
+				
+				static std::wstring getMenuCaption(int nItemID);
 				static std::wstring getTextForPromptFromStringId(string promptId);
 				static std::wstring getTextForPromptItemFromStringId(string promptId);
 				

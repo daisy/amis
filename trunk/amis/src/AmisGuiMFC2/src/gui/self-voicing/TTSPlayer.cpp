@@ -157,9 +157,38 @@ TTSPlayer::TTSPlayer(void)
 
 	SetVoice(amis::Preferences::Instance()->getTTSVoiceIndex());
 
-	m_iV->SetVolume(70);
+	mVolume = 70;
+	m_iV->SetVolume(mVolume);
 
 	m_pausedOnLastPhoneme = false;
+}
+
+#define VOLUME_STEP 10
+
+void TTSPlayer::IncreaseVolume()
+{
+	mVolume += VOLUME_STEP;
+	if (mVolume <= 0) mVolume = 1;
+	if (mVolume > 100) mVolume = 100;
+	if (m_iV) 
+	{
+		//USHORT value = 0;
+		//m_iV->GetVolume(&value);
+		m_iV->SetVolume(mVolume);
+	}
+}
+
+void TTSPlayer::DecreaseVolume()
+{
+	if ((mVolume - VOLUME_STEP) >= 0) mVolume -= VOLUME_STEP;
+	if (mVolume <= 0) mVolume = 1;
+	if (mVolume > 100) mVolume = 100;
+	if (m_iV) 
+	{
+		//USHORT value = 0;
+		//m_iV->GetVolume(&value);
+		m_iV->SetVolume(mVolume);
+	}
 }
 
 void TTSPlayer::DestroyInstanceOne()
@@ -316,6 +345,8 @@ void TTSPlayer::Play(CString str)
 	
 	mSpeakRequests++;
 	
+	m_iV->SetVolume(mVolume);
+
 	m_iV->Speak(str, SPF_ASYNC, NULL);
 
 	Sleep(100);

@@ -557,6 +557,28 @@ std::wstring AudioSequencePlayer::getTextForPromptItemFromStringId(string prompt
 	}
 	return str;
 }
+
+std::wstring AudioSequencePlayer::getMenuCaption(int nItemID)
+{
+	UiItem* p_uiItem = DataTree::Instance()->findUiItemInContainers(nItemID, "");
+	if (p_uiItem != NULL)
+	{
+		Label* label = p_uiItem->getCaption();
+		if (label != NULL)
+		{
+			TextAudioPair * pair = label->getContents();
+			if (pair != NULL)
+			{
+				TextNodeSV * textNode = pair->getText();
+				if (textNode != NULL)
+				{
+					return textNode->getTextString();
+				}
+			}
+		}
+	}
+}
+
 std::wstring AudioSequencePlayer::getTextForPromptFromStringId(string promptId)
 {
 	std::wstring str;

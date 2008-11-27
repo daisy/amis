@@ -782,10 +782,10 @@ long gui::dx::audio_playerX::get_volume() {
 // -val is the attenuation in decibels 
 // can be 0 to 100
 void gui::dx::audio_playerX::set_volume(long val) {
+	if (val <= 0) val = 1;
+	if (val > 100) val = 100;
 	s_current_volume = val;
 	if(m_basic_audio == 0) return;
-	if (val < 0) val = 0;
-	if (val > 100) val = 100;
 	long cdb = (long)(20.0*log10((double)val/100.0)*100);
 	m_basic_audio->put_Volume(cdb);
 }

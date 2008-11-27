@@ -139,8 +139,8 @@ BEGIN_MESSAGE_MAP(CAmisApp, CWinApp)
 	ON_COMMAND(ID_AMIS_TOGGLE_AUDIO_CONTENT_PLAYBACK, OnToggleContentAudio)
 	ON_COMMAND(ID_AMIS_SHOW_HELP_CONTENTS, OnShowHelpContents)
 	ON_COMMAND(ID_AMIS_SHOW_KEYBOARD_SHORTCUTS, OnShowKeyboardShortcuts)
-	ON_COMMAND(ID_AMIS_DECREASE_TTS_VOLUME, OnDecreaseTtsVolume)
-	ON_COMMAND(ID_AMIS_INCREASE_TTS_VOLUME, OnIncreaseTtsVolume)
+	ON_COMMAND(ID_AMIS_DECREASE_TTS_VOLUME, OnVolumeDownTTS)
+	ON_COMMAND(ID_AMIS_INCREASE_TTS_VOLUME, OnVolumeUpTTS)
 END_MESSAGE_MAP()
 
 
@@ -787,22 +787,44 @@ void CAmisApp::OnVolumeUpBOOK()
 {
 	amis::util::Log::Instance()->writeMessage("Volume increase BOOK", "CAmisApp::OnVolumeUp");
 	ambulant::gui::dx::change_global_level(VOLUME_RATIO);
+
+	amis::tts::TTSPlayer::InstanceTwo()->IncreaseVolume();
 }
 
 void CAmisApp::OnVolumeDownBOOK()
 {
 	amis::util::Log::Instance()->writeMessage("Volume decrease BOOK", "CAmisApp::OnVolumeDown");
     ambulant::gui::dx::change_global_level(1.0/VOLUME_RATIO);
+
+	amis::tts::TTSPlayer::InstanceTwo()->DecreaseVolume();
 }
 
+void CAmisApp::OnVolumeDownTTS()
+{
+	amis::util::Log::Instance()->writeMessage("Volume decrease TTS", "CAmisApp::OnVolumeDown");
+	amis::tts::TTSPlayer::InstanceOne()->DecreaseVolume();
+	amis::tts::TTSPlayer::InstanceTwo()->DecreaseVolume();
+}
+void CAmisApp::OnVolumeUpTTS()
+{
+	amis::util::Log::Instance()->writeMessage("Volume increase TTS", "CAmisApp::OnVolumeUp");
+	amis::tts::TTSPlayer::InstanceOne()->IncreaseVolume();
+	amis::tts::TTSPlayer::InstanceTwo()->IncreaseVolume();
+}
 void CAmisApp::OnVolumeUpUI()
 {
 	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 	{
 		amis::util::Log::Instance()->writeMessage("Volume increase UI", "CAmisApp::OnVolumeUp");
+
+		amis::tts::TTSPlayer::InstanceOne()->IncreaseVolume();
+
 		ambulantX::gui::dx::audio_playerX::change_global_level(VOLUME_RATIO);
 
 		AudioSequence* seq	= new AudioSequence();
+		std::wstring str = AudioSequencePlayer::getMenuCaption(ID_AMIS_INCREASE_VOLUME);
+		if (str.size() > 0)
+			seq->append(str.c_str());
 		AudioSequencePlayer::playPromptFromUiId(ID_AMIS_INCREASE_VOLUME, seq, false);
 	}
 }
@@ -812,9 +834,15 @@ void CAmisApp::OnVolumeDownUI()
 	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 	{
 		amis::util::Log::Instance()->writeMessage("Volume decrease UI", "CAmisApp::OnVolumeDown");
+
+		amis::tts::TTSPlayer::InstanceOne()->DecreaseVolume();
+
 		ambulantX::gui::dx::audio_playerX::change_global_level(1.0/VOLUME_RATIO);
 	
 		AudioSequence* seq	= new AudioSequence();
+		std::wstring str = AudioSequencePlayer::getMenuCaption(ID_AMIS_DECREASE_VOLUME);
+		if (str.size() > 0)
+			seq->append(str.c_str());
 		AudioSequencePlayer::playPromptFromUiId(ID_AMIS_DECREASE_VOLUME, seq, false);
 	}
 }
@@ -1307,12 +1335,6 @@ void CAmisApp::OnShowKeyboardShortcuts()
 		}
 		generalBookErrorMsgBox(temp);
 	}
-}
-void CAmisApp::OnDecreaseTtsVolume()
-{
-}
-void CAmisApp::OnIncreaseTtsVolume()
-{
 }
 /***************************************************
 * (MED) I moved these functions out of the menu handler area

@@ -77,9 +77,13 @@ namespace amis
 			bool IsPaused(void);
 			bool IsPlaying(void);
 
+			void IncreaseVolume();
+			void DecreaseVolume();
+
 		private:
 
 			bool m_pausedOnLastPhoneme;
+			USHORT mVolume;
 			bool m_isSpeaking;
 			static TTSPlayer* pinstance_one;
 			static TTSPlayer* pinstance_two;

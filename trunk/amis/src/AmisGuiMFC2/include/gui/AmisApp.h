@@ -109,6 +109,8 @@ public:
 	afx_msg void OnVolumeDownBOOK();
 	afx_msg void OnVolumeUpUI();
 	afx_msg void OnVolumeDownUI();
+	afx_msg void OnVolumeDownTTS();
+	afx_msg void OnVolumeUpTTS();
 	afx_msg void OnSpeedUp();
 	afx_msg void OnSpeedDown();
 	afx_msg void OnSpeedNormal();
@@ -130,8 +132,6 @@ public:
 	afx_msg void OnToggleContentAudio();
 	afx_msg void OnShowHelpContents();
 	afx_msg void OnShowKeyboardShortcuts();
-	afx_msg void OnDecreaseTtsVolume();
-	afx_msg void OnIncreaseTtsVolume();
 protected:
 	HMENU m_hMDIMenu;
 	HACCEL m_hMDIAccel;
