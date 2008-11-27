@@ -130,7 +130,8 @@ public:
 	afx_msg void OnToggleContentAudio();
 	afx_msg void OnShowHelpContents();
 	afx_msg void OnShowKeyboardShortcuts();
-	
+	afx_msg void OnDecreaseTtsVolume();
+	afx_msg void OnIncreaseTtsVolume();
 protected:
 	HMENU m_hMDIMenu;
 	HACCEL m_hMDIAccel;

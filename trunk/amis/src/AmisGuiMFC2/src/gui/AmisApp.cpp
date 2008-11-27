@@ -139,6 +139,8 @@ BEGIN_MESSAGE_MAP(CAmisApp, CWinApp)
 	ON_COMMAND(ID_AMIS_TOGGLE_AUDIO_CONTENT_PLAYBACK, OnToggleContentAudio)
 	ON_COMMAND(ID_AMIS_SHOW_HELP_CONTENTS, OnShowHelpContents)
 	ON_COMMAND(ID_AMIS_SHOW_KEYBOARD_SHORTCUTS, OnShowKeyboardShortcuts)
+	ON_COMMAND(ID_AMIS_DECREASE_TTS_VOLUME, OnDecreaseTtsVolume)
+	ON_COMMAND(ID_AMIS_INCREASE_TTS_VOLUME, OnIncreaseTtsVolume)
 END_MESSAGE_MAP()
 
 
@@ -1305,6 +1307,12 @@ void CAmisApp::OnShowKeyboardShortcuts()
 		}
 		generalBookErrorMsgBox(temp);
 	}
+}
+void CAmisApp::OnDecreaseTtsVolume()
+{
+}
+void CAmisApp::OnIncreaseTtsVolume()
+{
 }
 /***************************************************
 * (MED) I moved these functions out of the menu handler area

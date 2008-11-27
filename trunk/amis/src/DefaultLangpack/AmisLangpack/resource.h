@@ -54,6 +54,8 @@
 #define IDD_PUBLICATIONSUMMARY          182
 #define IDI_LANGICON                    185
 #define IDB_BOOKSHELFMAG                186
+#define ID_AMIS_DECREASE_TTS_VOLUME     187
+#define ID_AMIS_INCREASE_TTS_VOLUME     188
 #define IDD_OPENURL                     190
 #define IDD_PREFERENCES                 191
 #define IDD_TEXTSTYLE                   192
@@ -117,7 +119,6 @@
 #define IDC_READING_OPTIONS_INSTRUCTIONS 1115
 #define IDC_OPTIONS_LIST                1116
 #define IDC_FIND_DESCRIPTION            1118
-#define IDC_LIST1                       1119
 #define SELF_VOICING_PLAY_NEXT          6969
 #define IDC_CURRLANG                    9002
 #define IDC_VERSION                     9006
@@ -157,7 +158,6 @@
 #define ID_AMIS_ABOUT                   32951
 #define ID_AMIS_SHOW_TEXTSTYLE          32953
 #define ID_AMIS_NO_PAGE_STYLES          32954
-#define ID_HELP_KEYBOARDSHORTCUTS       32957
 #define ID_AMIS_SHOW_KEYBOARD_SHORTCUTS 32958
 #define IDS_SELFOLDER_TITLE             61258
 #define IDS_SELFOLDER_INSTR             61259
@@ -174,6 +174,6 @@
 #define _APS_NEXT_RESOURCE_VALUE        194
 #define _APS_NEXT_COMMAND_VALUE         32964
 #define _APS_NEXT_CONTROL_VALUE         1120
-#define _APS_NEXT_SYMED_VALUE           149
+#define _APS_NEXT_SYMED_VALUE           151
 #endif
 #endif
