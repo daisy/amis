@@ -66,6 +66,7 @@ public:
 	//add a node to the big ordered list.  the node will not necessarily be next in sequence.
 	void addToPlayOrderList(NavNode*);
 	NavNodeList* getPlayOrderList();
+	int getPlayOrderListIndex(int);
 private:
 	NavMap* mpNavMap;
 	PageList* mpPageList;

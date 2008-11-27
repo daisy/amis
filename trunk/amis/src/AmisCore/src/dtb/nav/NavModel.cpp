@@ -95,9 +95,11 @@ amis::dtb::nav::NavList* amis::dtb::nav::NavModel::getNavList(unsigned int index
 void amis::dtb::nav::NavModel::addToPlayOrderList(amis::dtb::nav::NavNode* pNode)
 {
 	if (pNode == NULL) return;
-	//1 is the first playOrder value; mpBigOrderedList is ordered by play order
+	//1 is the first playOrder value; mpPlayOrderList is ordered by play order
 	int node_play_order = pNode->getPlayOrder();
-	if (node_play_order >= mPlayOrderList.size() + 1)
+	int sz = mPlayOrderList.size();
+	//if the new node has a greater or equal play order value to the last node in the list, just append it
+	if (sz == 0 || node_play_order >= mPlayOrderList[sz-1]->getPlayOrder())
 	{
 		mPlayOrderList.push_back(pNode);
 	}
@@ -107,7 +109,7 @@ void amis::dtb::nav::NavModel::addToPlayOrderList(amis::dtb::nav::NavNode* pNode
 		for (int i = 0; i<mPlayOrderList.size(); i++)
 		{
 			int play_order = mPlayOrderList[i]->getPlayOrder();
-			if (play_order == node_play_order - 1)
+			/*if (play_order == node_play_order - 1)
 			{
 				//insert after the current node
 				vector<amis::dtb::nav::NavNode*>::iterator it = mPlayOrderList.begin();
@@ -115,7 +117,7 @@ void amis::dtb::nav::NavModel::addToPlayOrderList(amis::dtb::nav::NavNode* pNode
 				mPlayOrderList.insert(it, pNode);
 				break;
 			}
-			else if (play_order == node_play_order + 1)
+			else*/ if (play_order == node_play_order + 1)
 			{
 				//insert before the current node
 				vector<amis::dtb::nav::NavNode*>::iterator it = mPlayOrderList.begin();
@@ -274,33 +276,32 @@ amis::dtb::nav::NavNode* amis::dtb::nav::NavModel::getNodeForSmilId(string id, N
 
 amis::dtb::nav::NavPoint* amis::dtb::nav::NavModel::previousSection(int currentPlayOrder)
 {
-	//minus 2 because: play order is 1-based while our list is 0-based
-	//so a node with a play order of 10 will be in position 9
-	//and we want to start looking backwards from position 8
-	int idx = currentPlayOrder - 2;
-	if (idx >= mPlayOrderList.size() || idx < 0) return NULL;
+	int idx = getPlayOrderListIndex(currentPlayOrder);
+	if (idx == -1) return NULL;
 
 	for (int i = idx; i >=0; i--)
 	{
 		if (mPlayOrderList[i]->getTypeOfNode() == NavNode::NAV_POINT)
 		{
 			NavPoint* p_node = (NavPoint*)mPlayOrderList[i];
-			return p_node;
+			if (p_node->getPlayOrder() < currentPlayOrder)
+				return p_node;
 		}
 	}
 	return NULL;
 }
 amis::dtb::nav::NavPoint* amis::dtb::nav::NavModel::nextSection(int currentPlayOrder)
 {
-	int idx = currentPlayOrder;
-	if (idx >= mPlayOrderList.size() || idx < 0) return NULL;
+	int idx = getPlayOrderListIndex(currentPlayOrder);
+	if (idx == -1) return NULL;
 
 	for (int i = idx; i < mPlayOrderList.size(); i++)
 	{
 		if (mPlayOrderList[i]->getTypeOfNode() == NavNode::NAV_POINT)
 		{
 			NavPoint* p_node = (NavPoint*)mPlayOrderList[i];
-			return p_node;
+			if (p_node->getPlayOrder() > currentPlayOrder)
+				return p_node;
 		}
 	}
 	return NULL;
@@ -334,15 +335,16 @@ amis::dtb::nav::NavPoint* amis::dtb::nav::NavModel::nextSection(int currentPlayO
 }
 amis::dtb::nav::PageTarget* amis::dtb::nav::NavModel::previousPage(int currentPlayOrder)
 {
-	int idx = currentPlayOrder - 2;
-	if (idx >= mPlayOrderList.size() || idx < 0) return NULL;
-	
+	int idx = getPlayOrderListIndex(currentPlayOrder);
+	if (idx == -1) return NULL;
+
 	for (int i = idx; i >=0; i--)
 	{
 		if (mPlayOrderList[i]->getTypeOfNode() == NavNode::PAGE_TARGET)
 		{
 			PageTarget* p_node = (PageTarget*)mPlayOrderList[i];
-			return p_node;
+			if (p_node->getPlayOrder() < currentPlayOrder)
+				return p_node;
 		}
 	}
 	//you can always go to the first page
@@ -353,16 +355,16 @@ amis::dtb::nav::PageTarget* amis::dtb::nav::NavModel::previousPage(int currentPl
 }
 amis::dtb::nav::PageTarget* amis::dtb::nav::NavModel::nextPage(int currentPlayOrder)
 {
-	//play order is 1-based; the array is 0-based
-	int idx = currentPlayOrder;
-	if (idx >= mPlayOrderList.size() || idx <= 0) return NULL;
+	int idx = getPlayOrderListIndex(currentPlayOrder);
+	if (idx == -1) return NULL;
 
 	for (int i = idx; i < mPlayOrderList.size(); i++)
 	{
 		if (mPlayOrderList[i]->getTypeOfNode() == NavNode::PAGE_TARGET)
 		{
 			PageTarget* p_node = (PageTarget*)mPlayOrderList[i];
-			return p_node;
+			if (p_node->getPlayOrder() > currentPlayOrder)
+				return p_node;
 		}
 	}
 	return NULL;
@@ -370,4 +372,28 @@ amis::dtb::nav::PageTarget* amis::dtb::nav::NavModel::nextPage(int currentPlayOr
 amis::dtb::nav::NavNodeList* amis::dtb::nav::NavModel::getPlayOrderList()
 {
 	return &mPlayOrderList;
+}
+
+//get the index in the play order list that has the given play order
+//for lists with multiple identical play order values,
+//return the index of the first of the set
+int amis::dtb::nav::NavModel::getPlayOrderListIndex(int playOrder)
+{
+	//case one: the play order list is sequential and each is unique
+	//1, 2, 3, 4, ...
+	//case two: there are duplicates
+	//1, 2, 3, 3, 4, 5, 5, ...
+	//the list will never be out of sequence or missing values
+	//in both cases, list[i] will be <= i+1
+	
+	int idx = playOrder - 1;
+	
+	if (idx < 0 || idx >= mPlayOrderList.size())
+		return -1;
+	
+	if (mPlayOrderList[idx]->getPlayOrder() < playOrder)
+	{
+		while (mPlayOrderList[idx]->getPlayOrder() < playOrder) idx++;
+	}
+	return idx;
 }
