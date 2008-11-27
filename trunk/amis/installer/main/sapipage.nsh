@@ -1,7 +1,7 @@
 ;Windows and DirectX versions
 ;!include "getversions.nsh"
 
-!define SAPI_ONLINE "http://amis.sf.net/download/sapi51redist.msi"
+!define SAPI_ONLINE "http://amisproject.org/download/sapi51redist.msi"
 
 ;************************
 ;see if SAPI is installed
