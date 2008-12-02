@@ -23,7 +23,6 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include <winbase.h>
 
 #include "util/RegOcx.h"
-#include "../resource.h"
 #include "AmisCore.h"
 #include "util/FilePathTools.h"
 #include "Preferences.h"
@@ -164,9 +163,6 @@ BOOL CAmisApp::InitInstance()
 	//this says "use the registry instead of ini files" (for windows-specific app preferences).  we use it for UAKs 
 	SetRegistryKey(_T("Amis"));
 
-	//this was moved to the installer
-	//RegisterOCX();
-
 	// InitCommonControls() is required on Windows XP if an application
 	// manifest specifies use of ComCtl32.dll version 6 or later to enable
 	// visual styles.  Otherwise, any window creation will fail.
@@ -181,13 +177,18 @@ BOOL CAmisApp::InitInstance()
 	amis::tts::TTSPlayer::InstanceOne();
 	amis::tts::TTSPlayer::InstanceTwo();
 
-	// TODO: These two TTS messages should overlap in theory ! (only the last one is heard, probably overidden by the first one)
-	// It's not actually a required feature in AMIS, but it is strange nonetheless and should probably be sorted.
-	//amis::tts::TTSPlayer::InstanceOne()->Play(L"Instance One");
-	//amis::tts::TTSPlayer::InstanceTwo()->Play(L"Instance Two");
-
 	//first read the preferences
 	initializePathsAndFiles();
+    
+	//set some volumes
+	amis::tts::TTSPlayer::InstanceOne()->setVolume(Preferences::Instance()->getTTSVolumePct());
+	amis::tts::TTSPlayer::InstanceTwo()->setVolume(Preferences::Instance()->getTTSVolumePct());
+	double audio_vol = 1.0;
+	if (Preferences::Instance()->getAudioVolumePct() > 0) 
+		audio_vol = (double)Preferences::Instance()->getAudioVolumePct()/100;
+	ambulantX::gui::dx::audio_playerX::Instance()->set_volume(audio_vol);
+	ambulant::gui::dx::set_global_level(audio_vol);
+   	
 	//then start logging!  
 	amis::util::Log::Instance()->startLog(this->getAppSettingsPath() + "amisLog.txt");
 	amis::util::Log::Instance()->enable(Preferences::Instance()->getIsLoggingEnabled());
@@ -362,6 +363,14 @@ int CAmisApp::ExitInstance()
   
 	p_log->writeTrace("Starting to EXIT", "CAmisApp::ExitInstance");
 	TRACE("\nStarting to EXIT\n\n");
+
+	//set some volumes
+	int tts_vol = amis::tts::TTSPlayer::InstanceOne()->getVolume();
+	double audio_vol = ambulant::gui::dx::change_global_level(1.0);
+	int audio_vol_pct = audio_vol * 100;
+	if (audio_vol_pct == 0) audio_vol_pct = 100;
+	Preferences::Instance()->setTTSVolumePct(tts_vol);
+	Preferences::Instance()->setAudioVolumePct(audio_vol_pct);
 
 	Preferences::Instance()->setWasExitClean(true);
 	Preferences::Instance()->setUiLangId(mLanguagePreference);
@@ -816,9 +825,7 @@ void CAmisApp::OnVolumeUpUI()
 	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 	{
 		amis::util::Log::Instance()->writeMessage("Volume increase UI", "CAmisApp::OnVolumeUp");
-
 		amis::tts::TTSPlayer::InstanceOne()->IncreaseVolume();
-
 		ambulantX::gui::dx::audio_playerX::change_global_level(VOLUME_RATIO);
 
 		AudioSequence* seq	= new AudioSequence();
@@ -1511,6 +1518,7 @@ ambulant::net::url CAmisApp::findBookInLangpackSubdir(std::string dir)
 	}
 	else
 	{
-		return ambulant::net::url::from_filename("");
+		ambulant::net::url empty;
+		return empty;
 	}
 }

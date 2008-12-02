@@ -1,6 +1,6 @@
 //{{NO_DEPENDENCIES}}
 // Microsoft Visual C++ generated include file.
-// Used by AmisGuiMFC2.rc
+// Used by AmisLangpack.rc
 //
 #define IDD_ABOUTBOX                    100
 #define IDS_PROPSHT_CAPTION             102
@@ -54,8 +54,6 @@
 #define IDD_PUBLICATIONSUMMARY          182
 #define IDI_LANGICON                    185
 #define IDB_BOOKSHELFMAG                186
-#define ID_AMIS_DECREASE_TTS_VOLUME     187
-#define ID_AMIS_INCREASE_TTS_VOLUME     188
 #define IDD_OPENURL                     190
 #define IDD_PREFERENCES                 191
 #define IDD_TEXTSTYLE                   192
@@ -159,6 +157,8 @@
 #define ID_AMIS_SHOW_TEXTSTYLE          32953
 #define ID_AMIS_NO_PAGE_STYLES          32954
 #define ID_AMIS_SHOW_KEYBOARD_SHORTCUTS 32958
+#define ID_AMIS_DECREASE_TTS_VOLUME     32967
+#define ID_AMIS_INCREASE_TTS_VOLUME     32968
 #define IDS_SELFOLDER_TITLE             61258
 #define IDS_SELFOLDER_INSTR             61259
 #define IDS_FOLDERDOESNOTEXIST          61279
@@ -172,7 +172,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_3D_CONTROLS                     1
 #define _APS_NEXT_RESOURCE_VALUE        194
-#define _APS_NEXT_COMMAND_VALUE         32966
+#define _APS_NEXT_COMMAND_VALUE         32969
 #define _APS_NEXT_CONTROL_VALUE         1120
 #define _APS_NEXT_SYMED_VALUE           151
 #endif

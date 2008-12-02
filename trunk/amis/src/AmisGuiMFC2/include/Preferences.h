@@ -119,6 +119,11 @@ public:
 	bool getIsFirstTime();
 	void setIsFirstTime(bool);
 
+	int getTTSVolumePct();
+	void setTTSVolumePct(int);
+	int getAudioVolumePct();
+	void setAudioVolumePct(int);
+
 	amis::util::LogLevel getLogLevel();
 	void setLogLevel(amis::util::LogLevel);
 	bool getIsLoggingEnabled();
@@ -141,6 +146,8 @@ private:
 	bool mbDisableScreensaver;
 	bool mbIsFirstTime;
 	bool mbPreferFFMpeg;
+	int mTTSVolumePct;
+	int mAudioVolumePct;
 	util::Color mHighlightFG;
 	util::Color mHighlightBG;
 	std::string mSidebarFontName;

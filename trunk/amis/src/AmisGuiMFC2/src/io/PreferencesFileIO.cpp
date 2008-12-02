@@ -247,6 +247,16 @@ void PreferencesFileIO::addEntry(string id, string value)
 		else
 			mpPrefs->setPreferFFMpeg(false);
 	}
+	else if (id.compare("tts-volume-pct") == 0)
+	{
+		int val = atoi(value.c_str());
+		mpPrefs->setTTSVolumePct(val);
+	}
+	else if (id.compare("audio-volume-pct") == 0)
+	{
+		int val = atoi(value.c_str());
+		mpPrefs->setAudioVolumePct(val);
+	}
 }
 
 
@@ -396,6 +406,20 @@ void PreferencesFileIO::writeData()
 		str_loglevel = "LOW_LOGGING";
 
 	pEntry = createEntry("logging-level", str_loglevel);
+	pGeneralSection->appendChild((DOMNode*)pEntry);
+
+	std::string tts_vol;
+	char tts_vol_buff[5];
+	itoa(mpPrefs->getTTSVolumePct(), tts_vol_buff, 10);
+	tts_vol.assign(tts_vol_buff);
+	pEntry = createEntry("tts-volume-pct", tts_vol);
+	pGeneralSection->appendChild((DOMNode*)pEntry);
+	
+	std::string audio_vol;
+	char audio_vol_buff[5];
+	itoa(mpPrefs->getAudioVolumePct(), audio_vol_buff, 10);
+	audio_vol.assign(audio_vol_buff);
+	pEntry = createEntry("audio-volume-pct", audio_vol);
 	pGeneralSection->appendChild((DOMNode*)pEntry);
 
 	//get a pointer to the root element

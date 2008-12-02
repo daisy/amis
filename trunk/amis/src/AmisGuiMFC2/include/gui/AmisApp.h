@@ -32,7 +32,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 ///This gets rid of some warnings
 #pragma warning(disable : 4049)
 
-#include "../resource.h"       // main symbols
+#include "../../resource.h"       // main symbols
 #include <string>
 
 #include "ambulant/net/url.h"

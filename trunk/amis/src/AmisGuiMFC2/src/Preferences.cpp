@@ -523,6 +523,15 @@ void Preferences::logAllPreferences()
 	else log_msg += "Full";
 	p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
 
+	log_msg = "\tTTS volume percent: ";
+	char tts_vol[5];
+	sprintf(tts_vol, "%d", getTTSVolumePct());
+	log_msg += tts_vol;
+
+	log_msg = "tAudio volume percent: ";
+	char audio_vol[5];
+	sprintf(audio_vol, "%d", getAudioVolumePct());
+	log_msg += tts_vol;
 }
 
 void Preferences::logUserControllablePreferences()
@@ -591,4 +600,22 @@ bool Preferences::getIsLoggingEnabled()
 void Preferences::setIsLoggingEnabled(bool value)
 {
 	mbLoggingEnabled = value;
+}
+
+int Preferences::getTTSVolumePct()
+{
+	return mTTSVolumePct;
+}
+
+void Preferences::setTTSVolumePct(int value)
+{
+	mTTSVolumePct = value;
+}
+int Preferences::getAudioVolumePct()
+{
+	return mAudioVolumePct;
+}
+void Preferences::setAudioVolumePct(int value)
+{
+	mAudioVolumePct = value;
 }

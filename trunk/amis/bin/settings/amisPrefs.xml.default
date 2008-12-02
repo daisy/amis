@@ -25,5 +25,7 @@
 <entry id="is-logging-enabled" value="yes"/>
 <entry id="logging-level" value="MEDIUM_LOGGING"/>
 <entry id="prefer-ffmpeg" value="no"/>
+<entry id="tts-volume-pct" value="70"/>
+<entry id="audio-volume-pct" value="100"/>
 </section>
 </preferences>

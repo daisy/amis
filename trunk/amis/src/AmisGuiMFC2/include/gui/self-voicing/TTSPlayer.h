@@ -79,7 +79,8 @@ namespace amis
 
 			void IncreaseVolume();
 			void DecreaseVolume();
-
+			void setVolume(int);
+			int getVolume();
 		private:
 
 			bool m_pausedOnLastPhoneme;

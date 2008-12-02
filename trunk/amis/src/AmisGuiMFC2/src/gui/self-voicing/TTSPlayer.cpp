@@ -190,7 +190,16 @@ void TTSPlayer::DecreaseVolume()
 		m_iV->SetVolume(mVolume);
 	}
 }
-
+void TTSPlayer::setVolume(int vol)
+{
+	if (vol <= 0) mVolume = 1;
+	else if (vol > 100) mVolume = 100;
+	else mVolume = vol;
+}
+int TTSPlayer::getVolume()
+{
+	return mVolume;
+}
 void TTSPlayer::DestroyInstanceOne()
 {
 	if (pinstance_one != NULL) delete pinstance_one;
