@@ -345,7 +345,7 @@ void PreferencesFileIO::writeData()
 	pGeneralSection->appendChild((DOMNode*)pEntry);
 
 	std::string voice;
-	char buff[5];
+	char buff[5] = "";
 	itoa(mpPrefs->getTTSVoiceIndex(), buff, 10);
 	voice.assign(buff);
 	pEntry = createEntry("tts-voice-index", voice);
@@ -409,14 +409,14 @@ void PreferencesFileIO::writeData()
 	pGeneralSection->appendChild((DOMNode*)pEntry);
 
 	std::string tts_vol;
-	char tts_vol_buff[5];
+	char tts_vol_buff[5] = "";
 	itoa(mpPrefs->getTTSVolumePct(), tts_vol_buff, 10);
 	tts_vol.assign(tts_vol_buff);
 	pEntry = createEntry("tts-volume-pct", tts_vol);
 	pGeneralSection->appendChild((DOMNode*)pEntry);
 	
 	std::string audio_vol;
-	char audio_vol_buff[5];
+	char audio_vol_buff[5] = "";
 	itoa(mpPrefs->getAudioVolumePct(), audio_vol_buff, 10);
 	audio_vol.assign(audio_vol_buff);
 	pEntry = createEntry("audio-volume-pct", audio_vol);

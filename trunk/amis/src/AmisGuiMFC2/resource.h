@@ -1,6 +1,6 @@
 //{{NO_DEPENDENCIES}}
 // Microsoft Visual C++ generated include file.
-// Used by AmisLangpack.rc
+// Used by AmisGuiMFC2.rc
 //
 #define IDD_ABOUTBOX                    100
 #define IDS_PROPSHT_CAPTION             102

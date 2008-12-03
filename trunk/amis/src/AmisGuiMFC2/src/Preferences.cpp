@@ -77,7 +77,8 @@ Preferences::Preferences()
 	mUserBmkDir = mUserBmkDir.join_to_base(app_path);
 	mAmisCssFile = mAmisCssFile.join_to_base(app_path);
 	mZed2005CssFile = mZed2005CssFile.join_to_base(app_path);
-
+	mAudioVolumePct = 100;
+	mTTSVolumePct = 70;
 	mHighlightFG.set("#000000");
 	mHighlightBG.set("#FFFF00");
 	mSidebarFontName = "Arial";
@@ -198,8 +199,6 @@ Preferences::~Preferences()
 	}
 }
 
-//************************************
-//ACCESSORS
 void Preferences::setUiLangId(string value)
 {
 	mUiLangId = value;

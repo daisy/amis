@@ -57,7 +57,10 @@ void amis::dtb::DtbFileSet::initWithNccOrOpf(const ambulant::net::url* filepath,
 	ambulant::net::url temp_url = filepath->get_base();
 	std::string book_dir = temp_url.get_url();
 	book_dir += "/";
-	mBookDirectory = ambulant::net::url::from_url(book_dir);
+	if (temp_url.is_local_file())
+		mBookDirectory = ambulant::net::url::from_filename(book_dir);
+	else
+		mBookDirectory = ambulant::net::url::from_url(book_dir);
 	mpFileSearcher = fileSearcher;
 
 	if (isNccFile(filepath))

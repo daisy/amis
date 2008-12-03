@@ -44,7 +44,12 @@ bool amis::dtb::nav::BuildSpineVisitor::preVisit(NavNode* n)
 	if (n->getContent() == "") return true;
 
 	//make a full path out of n->getContent()
-	ambulant::net::url smil_url = ambulant::net::url::from_url(n->getContent());
+	//if the book directory is a local file, then we can assume the ncc/ncx references are also local
+	ambulant::net::url smil_url;
+	if (mpBookDirectory->is_local_file())
+		smil_url = ambulant::net::url::from_filename(n->getContent());
+	else
+		smil_url = ambulant::net::url::from_url(n->getContent());
 	ambulant::net::url full_smil_url = smil_url.join_to_base(*mpBookDirectory);
 
 	mpSpine->addFile(&full_smil_url, false);
