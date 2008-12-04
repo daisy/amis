@@ -34,6 +34,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "gui/MenuManip.h"
 #include "Preferences.h"
 #include "gui/self-voicing/audiosequenceplayer.h"
+#include "gui/MainFrm.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -189,7 +190,8 @@ void CAmisSidebar::OnSelchangeTree(NMHDR* pNMHDR, LRESULT* pResult)
 	HTREEITEM item;
 	item = mTree.GetSelectedItem();
 	p_nav = (amis::dtb::nav::NavPoint*)mTree.GetItemData(item);
-	if (p_nav != NULL) amis::dtb::DtbWithHooks::Instance()->loadNavNode(p_nav);
+	if (p_nav != NULL) //amis::dtb::DtbWithHooks::Instance()->loadNavNode(p_nav);
+		amis::gui::MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_LOAD_NAV_NODE, (WPARAM)p_nav);
 }
 
 //this function is triggered by CNavListControl objects
@@ -200,7 +202,8 @@ void CAmisSidebar::OnNavListSelect(amis::dtb::nav::NavTarget* pData)
 	CString msg;
 	msg.Format(_T("ON NAV LIST SELECT: %s\n"), A2T(pData->getContent().c_str()));
 	TRACE(msg);
-	if (pData != NULL) amis::dtb::DtbWithHooks::Instance()->loadNavNode(pData);
+	if (pData != NULL) //amis::dtb::DtbWithHooks::Instance()->loadNavNode(pData);
+		amis::gui::MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_LOAD_NAV_NODE, (WPARAM)pData);
 }
 
 void CAmisSidebar::OnPageListClick(NMHDR* pNMHDR, LRESULT* pResult)

@@ -124,6 +124,7 @@ BEGIN_MESSAGE_MAP(CMainFrame, CMDIFrameWnd)
 	//}}AFX_MSG_MAP
 	ON_WM_SIZE()
 	ON_MESSAGE(WM_MY_SET_PAUSE_STATE, OnSetPauseState)
+	ON_MESSAGE(WM_MY_LOAD_NAV_NODE, OnLoadNavNode)
 END_MESSAGE_MAP()
 
 static UINT indicators[] =
@@ -751,4 +752,10 @@ void amis::gui::CMainFrame::setPauseState(bool pauseState)
 	
 	MainWndParts::Instance()->mpDefaultToolbar->togglePlayPause(pauseState);
 	MainWndParts::Instance()->mpBasicToolbar->togglePlayPause(pauseState);
+}
+
+LPARAM amis::gui::CMainFrame::OnLoadNavNode(WPARAM wParam, LPARAM lParam)
+{
+	amis::dtb::DtbWithHooks::Instance()->loadNavNode((amis::dtb::nav::NavNode*)wParam);
+	return 0;
 }

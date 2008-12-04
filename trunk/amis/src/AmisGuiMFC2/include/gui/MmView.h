@@ -113,7 +113,8 @@ public:
 	void nextPhrase();
 	void lastPhrase();
 	void escapeCurrent();
-	
+	void gotoId(std::string);
+
 	//returns smilfile#id (updated every time the id changes)
 	const ambulant::net::url* getCurrentUrl();
 

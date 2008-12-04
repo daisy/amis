@@ -29,6 +29,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 #define WM_MY_SET_PAUSE_STATE				(WM_USER + 4)
 #define WM_MY_UPDATE_TOOLBAR_STATE	(WM_USER + 5)
+#define WM_MY_LOAD_NAV_NODE	(WM_USER + 6)
 
 namespace amis
 {
@@ -50,6 +51,7 @@ public:
 	virtual ~CMainFrame();
 	void restoreMenu();
 	LPARAM OnUpdateToolbarState(WPARAM wParam, LPARAM lParam);
+	LPARAM OnLoadNavNode(WPARAM wParam, LPARAM lParam);
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;

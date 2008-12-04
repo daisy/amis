@@ -985,3 +985,19 @@ void MmView::setPauseState(bool val)
 {
 	amis::gui::MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_SET_PAUSE_STATE, val);
 }
+
+void MmView::gotoId(string id)
+{
+	if (id == "") return;
+	TRACE("goto ID =%s\n", id.c_str());
+	//start at the top of the document and go until the node with the given ID is found
+	ambulant::lib::document* doc = player->get_document();
+	const ambulant::lib::node* n = doc->get_node(id.c_str());
+	if (n)
+	{
+		if (isPlaying() == false)
+			OnFilePlay();
+		// sometimes it hangs here interminably ...
+		player->goto_node(n);
+	}
+}

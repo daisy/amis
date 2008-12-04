@@ -231,7 +231,11 @@ void DtbWithHooks::loadNavNode(nav::NavNode* pNav)
 		return;
 	}
 	amis::util::Log::Instance()->writeMessage("Loading nav node", "DtbWithHooks::loadNavNode");
-	ambulant::net::url rel_path = ambulant::net::url::from_url(pNav->getContent());
+	ambulant::net::url rel_path;
+	if (this->getFileSet()->getBookDirectory()->is_local_file())
+		rel_path = ambulant::net::url::from_filename(pNav->getContent());
+	else
+		rel_path = ambulant::net::url::from_url(pNav->getContent());
 	loadSmilFromUrl(&rel_path);
 }
 
@@ -503,7 +507,10 @@ amis::dtb::smil::SmilMediaGroup* DtbWithHooks::loadSmilFromUrl(const ambulant::n
 		else
 			stopTTS();	
 
-		amis::gui::MainWndParts::Instance()->mpMmDoc->OnOpenDocument(str_);
+		if(amis::gui::MainWndParts::Instance()->mpMmView->getCurrentUrl()->same_document(full_path))
+			amis::gui::MainWndParts::Instance()->mpMmView->gotoId(full_path.get_ref());
+		else
+			amis::gui::MainWndParts::Instance()->mpMmDoc->OnOpenDocument(str_);
 	}
 	return NULL;
 }
