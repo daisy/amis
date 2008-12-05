@@ -81,14 +81,13 @@ void TextRenderBrain::gotoUriTarget(amis::TextNode* pText)
 	gotoUriTarget(pText->getPath());
 }
 
-//TODO: make sure this path comparison works for Japanese too
 void TextRenderBrain::gotoUriTarget(std::string urlstr)
  {
 	USES_CONVERSION;
 	CString cstr_url = A2T(urlstr.c_str());
 	CString msg;
 	
-	ambulant::net::url url = ambulant::net::url::from_url(urlstr);
+	ambulant::net::url url = amis::util::makeUrlFromString(urlstr);
 	string text_elm_id = url.get_ref();
 	
 	//make sure our document still exists; otherwise force a reload by setting mCurrentUrl to ""

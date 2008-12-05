@@ -275,7 +275,7 @@ BOOL CAmisApp::InitInstance()
 			//override the cmd info data; otherwise MFC will do something clever with this URL and crash
 			cmdInfo.m_strFileName.Empty();
 			cmdInfo.m_nShellCommand = CCommandLineInfo::FileNew;
-			book_to_open = ambulant::net::url::from_url(T2A(cmd_file_name));
+			book_to_open = amis::util::makeUrlFromString(T2A(cmd_file_name));
 		}
 		//else it's a local file and there shouldn't be any problems
 		else
@@ -1219,7 +1219,7 @@ void CAmisApp::OnShowFindInText()
 			{
 				AudioSequencePlayer::Instance()->waitForSequenceEnd();
 			}
-			ambulant::net::url smil_url = ambulant::net::url::from_url(result);
+			ambulant::net::url smil_url = amis::util::makeUrlFromString(result);
 			amis::dtb::DtbWithHooks::Instance()->loadSmilFromUrl(&smil_url);
 		}
 		else
@@ -1243,7 +1243,7 @@ void CAmisApp::OnFindNextInText()
 	result = amis::dtb::DtbWithHooks::Instance()->searchFullTextNext();
 	if (result.size() > 0)
 	{		
-		ambulant::net::url smil_url = ambulant::net::url::from_url(result);
+		ambulant::net::url smil_url = amis::util::makeUrlFromString(result);
 		amis::dtb::DtbWithHooks::Instance()->loadSmilFromUrl(&smil_url);
 	}
 }
@@ -1253,7 +1253,7 @@ void CAmisApp::OnFindPreviousInText()
 	result = amis::dtb::DtbWithHooks::Instance()->searchFullTextPrevious();
 	if (result.size() > 0)
 	{
-		ambulant::net::url smil_url = ambulant::net::url::from_url(result);
+		ambulant::net::url smil_url = amis::util::makeUrlFromString(result);
 		amis::dtb::DtbWithHooks::Instance()->loadSmilFromUrl(&smil_url);
 	}
 }

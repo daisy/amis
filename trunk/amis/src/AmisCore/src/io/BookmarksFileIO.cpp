@@ -243,7 +243,7 @@ void amis::io::BookmarksFileIO::endElement( const XMLCh* const uri,
 	}
 	else if(strcmp(element_name, "uri") == 0)
 	{
-		mpCurrentPosData->mUri = ambulant::net::url::from_url(mTempChars);
+		mpCurrentPosData->mUri = amis::util::makeUrlFromString(mTempChars);
 	}
 	else if (strcmp(element_name, "timeOffset") == 0)
 	{

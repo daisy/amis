@@ -190,7 +190,7 @@ void CAmisSidebar::OnSelchangeTree(NMHDR* pNMHDR, LRESULT* pResult)
 	HTREEITEM item;
 	item = mTree.GetSelectedItem();
 	p_nav = (amis::dtb::nav::NavPoint*)mTree.GetItemData(item);
-	if (p_nav != NULL) //amis::dtb::DtbWithHooks::Instance()->loadNavNode(p_nav);
+	if (p_nav != NULL)
 		amis::gui::MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_LOAD_NAV_NODE, (WPARAM)p_nav);
 }
 
@@ -202,7 +202,7 @@ void CAmisSidebar::OnNavListSelect(amis::dtb::nav::NavTarget* pData)
 	CString msg;
 	msg.Format(_T("ON NAV LIST SELECT: %s\n"), A2T(pData->getContent().c_str()));
 	TRACE(msg);
-	if (pData != NULL) //amis::dtb::DtbWithHooks::Instance()->loadNavNode(pData);
+	if (pData != NULL)
 		amis::gui::MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_LOAD_NAV_NODE, (WPARAM)pData);
 }
 
@@ -218,7 +218,8 @@ void CAmisSidebar::OnPageListClick(NMHDR* pNMHDR, LRESULT* pResult)
 	if (curr_sel > -1)
 	{
 		p_page = (amis::dtb::nav::PageTarget*)mPageList.GetItemData(curr_sel);
-		if (p_page != NULL) amis::dtb::DtbWithHooks::Instance()->loadNavNode(p_page);
+		if (p_page != NULL) 
+			amis::gui::MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_LOAD_NAV_NODE, (WPARAM)p_page);
 	}
 }
 
@@ -707,7 +708,8 @@ void CAmisSidebar::OnPageListKeyDown(NMHDR* pNMHDR, LRESULT* pResult)
 		}
 	}
 
-	if (p_page != NULL) amis::dtb::DtbWithHooks::Instance()->loadNavNode(p_page);
+	if (p_page != NULL) 
+		amis::gui::MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_LOAD_NAV_NODE, (WPARAM)p_page);
 	*pResult = 0;
 }
 

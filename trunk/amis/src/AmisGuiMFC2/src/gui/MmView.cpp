@@ -192,6 +192,7 @@ BEGIN_MESSAGE_MAP(MmView, CView)
 	ON_WM_MOUSEMOVE()
 	ON_MESSAGE(WM_REPLACE_DOC, OnReplaceDoc)
 	ON_WM_SIZE()
+	ON_MESSAGE(WM_MY_GOTO_ID, OnGotoId)
 END_MESSAGE_MAP()
 
 MmView::MmView()
@@ -1000,4 +1001,12 @@ void MmView::gotoId(string id)
 		// sometimes it hangs here interminably ...
 		player->goto_node(n);
 	}
+}
+
+LPARAM MmView::OnGotoId(WPARAM wParam, LPARAM lParam)
+{
+	std::string *id = (std::string *)lParam;
+	std::string id2 = *id;
+	this->gotoId(id2);
+	return 0;
 }

@@ -35,6 +35,7 @@ std::string ambulantUrlToString(const ambulant::net::url*);
 string calculateRelativeFilename(const ambulant::net::url*, const ambulant::net::url*);
 string ambulantUrlToStringWithRef(const ambulant::net::url*);
 string getFileNameWithRef(const ambulant::net::url*);
+ambulant::net::url makeUrlFromString(std::string, bool forceToUrl = false, bool forceToLocal = false);
 
 //!File path tools: utility functions for working with file paths
 class FilePathTools

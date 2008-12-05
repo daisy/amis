@@ -106,14 +106,6 @@ bool amis::dtb::Spine::isFilePresent(const ambulant::net::url* filePath)
 	}
 	return false;
 }
-
-//wrapper
-/*void amis::dtb::Spine::addFile(string filePath, bool skipCheck)
-{
-	ambulant::net::url fileurl = ambulant::net::url::from_url(filePath);
-	addFile(&fileurl, skipCheck);
-}*/
-
 //if the file doesn't already exist, add it to the spine list
 //skipCheck allows to skip the isFilePresent check for very long lists
 //filePath should be a full path.

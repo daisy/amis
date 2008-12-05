@@ -112,7 +112,7 @@ void amis::io::BookListFileIO::startElement(const   XMLCh* const    uri,
 		mpCurrentEntry->mUid = tmp_wstr;
 
 		tmpstr.assign(SimpleAttrs::get("href", &attributes));
-		mpCurrentEntry->mPath = ambulant::net::url::from_url(tmpstr);
+		mpCurrentEntry->mPath = amis::util::makeUrlFromString(tmpstr);
 	}
 	else if(strcmp(element_name, "bookmarks") == 0)
 	{
@@ -120,7 +120,7 @@ void amis::io::BookListFileIO::startElement(const   XMLCh* const    uri,
 		{
 			string tmpstr;
 			tmpstr.assign(SimpleAttrs::get("href", &attributes));
-			mpCurrentEntry->mBmkPath = ambulant::net::url::from_url(tmpstr);
+			mpCurrentEntry->mBmkPath = amis::util::makeUrlFromString(tmpstr);
 		}
 	}
 	else if (strcmp(element_name, "title") == 0)

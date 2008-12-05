@@ -47,7 +47,7 @@ bool amis::dtb::nav::BuildSpineVisitor::preVisit(NavNode* n)
 	//if the book directory is a local file, then we can assume the ncc/ncx references are also local
 	ambulant::net::url smil_url;
 	if (mpBookDirectory->is_local_file())
-		smil_url = ambulant::net::url::from_filename(n->getContent());
+		smil_url = ambulant::net::url::from_filename(n->getContent(), true);
 	else
 		smil_url = ambulant::net::url::from_url(n->getContent());
 	ambulant::net::url full_smil_url = smil_url.join_to_base(*mpBookDirectory);
@@ -303,7 +303,8 @@ amis::dtb::nav::NavNodeList* amis::dtb::nav::WhoRefersToThisSmilFile::findOut(am
 
 bool amis::dtb::nav::WhoRefersToThisSmilFile::preVisit(NavNode* pNode)
 {
-	ambulant::net::url content = ambulant::net::url::from_url(pNode->getContent());
+	bool is_local = mFilename.is_local_file();
+	ambulant::net::url content = amis::util::makeUrlFromString(pNode->getContent(), !is_local, is_local);
 	//a bit of cheating ... content won't be a full path unless we join it to the base
 	//this is fine for now
 	content = content.join_to_base(mFilename);

@@ -48,12 +48,6 @@ amis::dtb::DtbFileSet::~DtbFileSet()
 
 void amis::dtb::DtbFileSet::initWithNccOrOpf(const ambulant::net::url* filepath, amis::util::SearchForFiles* fileSearcher)
 {
-	/*
-	this shows off a bug in the url code...but when it's fixed, this is an easier way to calculate the book directory
-
-	ambulant::net::url temp_url = ambulant::net::url::from_filename(".");
-	mBookDirectory = temp_url.join_to_base(*filepath);
-	*/
 	ambulant::net::url temp_url = filepath->get_base();
 	std::string book_dir = temp_url.get_url();
 	book_dir += "/";

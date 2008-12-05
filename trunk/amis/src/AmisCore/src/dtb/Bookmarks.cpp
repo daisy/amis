@@ -136,7 +136,7 @@ amis::dtb::PositionData* amis::dtb::PositionData::copy()
 	PositionData* p_data = new PositionData();
 	p_data->mNcxRef.assign(this->mNcxRef);
 	//how to safely copy ambulant urls otherwise?
-	p_data->mUri = ambulant::net::url::from_url(this->mUri.get_url());
+	p_data->mUri = amis::util::makeUrlFromString(this->mUri.get_url());
 	p_data->mTimeOffset.assign(this->mTimeOffset);
 	p_data->mCharOffset.assign(this->mCharOffset);
 	p_data->mbHasTimeOffset = this->mbHasTimeOffset;

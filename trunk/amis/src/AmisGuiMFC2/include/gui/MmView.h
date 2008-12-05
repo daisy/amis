@@ -29,6 +29,8 @@
 #include "MmDoc.h"
 #include <string>
 
+#define WM_MY_GOTO_ID	(WM_USER + 7)
+
 namespace amis
 {
 namespace gui
@@ -107,19 +109,21 @@ public:
 	virtual INT_PTR OnToolHitTest(CPoint point, TOOLINFO* pTI) const;
 	afx_msg LRESULT OnReplaceDoc(WPARAM wParam, LPARAM lParam);
 	afx_msg void OnSize(UINT nType, int cx, int cy);
+	LPARAM OnGotoId(WPARAM, LPARAM);
 
 	// Daisy local navigation support
 	void prevPhrase();
 	void nextPhrase();
 	void lastPhrase();
 	void escapeCurrent();
-	void gotoId(std::string);
-
+	
 	//returns smilfile#id (updated every time the id changes)
 	const ambulant::net::url* getCurrentUrl();
 
-	//pasted in by Marisa from AMIS' last copy of MmView.h
 private:
+	//Daisy local navigation support
+	void gotoId(std::string);
+
 	ambulant::gui::dx::dx_player *CreatePlayerInstance(const ambulant::net::url& u);
 	ambulant::net::url m_current_url;
 public:

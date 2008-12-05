@@ -99,19 +99,20 @@ void amis::io::OpfFileReader::startElement(const   XMLCh* const    uri,
 	//all the filenames gathered here are stored as full paths
 	else if (node_name.compare("item") == 0 && mbFlag_InManifest == true)
 	{
+		bool is_local = mpFilename->is_local_file();
 		string id = SimpleAttrs::get("id", &attributes);
 		string media_type = SimpleAttrs::get("media-type", &attributes);
 
 		if (id == "ncx")
 		{
 			string filename = SimpleAttrs::get("href", &attributes);
-			ambulant::net::url temp = ambulant::net::url::from_url(filename);
+			ambulant::net::url temp = amis::util::makeUrlFromString(filename, !is_local, is_local);
 			mNavFilename = temp.join_to_base(*mpFilename);
 		}
 		else if (id == "resource")
 		{
 			string filename = SimpleAttrs::get("href", &attributes);
-			ambulant::net::url temp = ambulant::net::url::from_url(filename);
+			ambulant::net::url temp = amis::util::makeUrlFromString(filename, !is_local, is_local);
 			mResourceFilename = temp.join_to_base(*mpFilename);
 		}
 
@@ -119,7 +120,7 @@ void amis::io::OpfFileReader::startElement(const   XMLCh* const    uri,
 		if (media_type == "application/x-dtbook+xml")
 		{
 			string filename = SimpleAttrs::get("href", &attributes);
-			ambulant::net::url temp = ambulant::net::url::from_url(filename);
+			ambulant::net::url temp = amis::util::makeUrlFromString(filename, !is_local, is_local);
 			mTextFilename = temp.join_to_base(*mpFilename);
 		}
 		//add the smil files to the manifest list
@@ -127,7 +128,7 @@ void amis::io::OpfFileReader::startElement(const   XMLCh* const    uri,
 		else if ((media_type == "application/smil" || media_type == "text/sml") && id.size() > 0)
 		{
 			string filename = SimpleAttrs::get("href", &attributes);
-			ambulant::net::url temp = ambulant::net::url::from_url(filename);
+			ambulant::net::url temp = amis::util::makeUrlFromString(filename, !is_local, is_local);
 			mUnsortedSmilFiles[id] = temp.join_to_base(*mpFilename);
 		}
 	}

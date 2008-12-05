@@ -85,6 +85,29 @@ string amis::util::calculateRelativeFilename(const ambulant::net::url* pUrl1, co
 		return ambulantUrlToStringWithRef(pUrl1);
 	}
 }
+
+//make an ambulant URL from a string and test to see if it should be local or a URL
+//if either forceToUrl or forceToLocal is set, then don't guess.
+ambulant::net::url amis::util::makeUrlFromString(std::string str, bool forceToUrl, bool forceToLocal)
+{
+	ambulant::net::url f;
+	if (forceToUrl)
+	{
+		f = ambulant::net::url::from_url(str);
+	}
+	else if (forceToLocal)
+	{
+		f = ambulant::net::url::from_filename(str, true);
+	}
+	else
+	{
+		f = ambulant::net::url::from_filename(str, true);
+		if (!f.is_local_file())
+			f = ambulant::net::url::from_url(str);
+	}
+	return f;
+}
+
 //return just the filename and extension
 string amis::util::FilePathTools::getFileName(string filepath)
 {

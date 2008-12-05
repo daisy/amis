@@ -129,7 +129,7 @@ bool amis::io::TitleAuthorParse::readFromFile(const ambulant::net::url* filepath
 		if (mSmilHref != "")
 		{
 			amis::AudioNode* p_audio = NULL;
-			ambulant::net::url smil_href = ambulant::net::url::from_filename(mSmilHref);
+			ambulant::net::url smil_href = amis::util::makeUrlFromString(mSmilHref);
 			smil_href = smil_href.join_to_base(*this->getFilepath());
 			//quickly parse the SMIL file and grab the audio closest to this ID
 			SmilAudioExtract smil_audio_extract;

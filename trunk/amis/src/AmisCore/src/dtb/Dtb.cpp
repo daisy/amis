@@ -161,8 +161,8 @@ amis::util::SearchForFiles* amis::dtb::Dtb::getFileSearcher()
 //--------------------------------------------------
 bool amis::dtb::Dtb::open(string filepath, string bookmarksDirectory, amis::BookList* history)
 {
-	ambulant::net::url fileUrl = ambulant::net::url::from_url(filepath);
-	ambulant::net::url bookmarksDirUrl = ambulant::net::url::from_url(bookmarksDirectory);
+	ambulant::net::url fileUrl = amis::util::makeUrlFromString(filepath);
+	ambulant::net::url bookmarksDirUrl = amis::util::makeUrlFromString(bookmarksDirectory);
 	return open(&fileUrl, &bookmarksDirUrl, history);
 }
 void amis::dtb::Dtb::setThreadYielder(ThreadYielder * ty)

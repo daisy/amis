@@ -508,9 +508,14 @@ amis::dtb::smil::SmilMediaGroup* DtbWithHooks::loadSmilFromUrl(const ambulant::n
 			stopTTS();	
 
 		if(amis::gui::MainWndParts::Instance()->mpMmView->getCurrentUrl()->same_document(full_path))
-			amis::gui::MainWndParts::Instance()->mpMmView->gotoId(full_path.get_ref());
+		{
+			std::string *strcopy = new std::string(full_path.get_ref());
+			amis::gui::MainWndParts::Instance()->mpMmView->PostMessage(WM_MY_GOTO_ID, 0, (LPARAM)strcopy);
+		}
 		else
+		{
 			amis::gui::MainWndParts::Instance()->mpMmDoc->OnOpenDocument(str_);
+		}
 	}
 	return NULL;
 }
