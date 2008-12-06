@@ -538,10 +538,6 @@ void CAmisApp::initializeSelfVoicing()
 		}
 	}
 }
-const ambulant::net::url& CAmisApp::getBookURL() const
-{
-	return this->mURL;
-}
 
 amis::BookList* CAmisApp::getHistory()
 {

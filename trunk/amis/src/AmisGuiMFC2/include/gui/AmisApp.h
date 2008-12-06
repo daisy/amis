@@ -65,7 +65,6 @@ public:
 
 	virtual BOOL InitInstance();
 	virtual int ExitInstance();
-	const ambulant::net::url& getBookURL() const;
 	std::string getAppPath();
 	std::string getAppSettingsPath();
 	amis::BookList* getHistory();
@@ -148,7 +147,6 @@ private:
 
 	std::string mAppPath;
 	std::string mLocalizationDll;
-	ambulant::net::url mURL;
 	amis::BookList* mpHistory;
 	bool mbBookIsOpen;
 	bool mbShouldIgnoreOpenDocEvent;

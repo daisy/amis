@@ -960,9 +960,10 @@ void MmView::node_started(const ambulant::lib::node* n)
 void MmView::node_stopped(const ambulant::lib::node *n)
 {
 	USES_CONVERSION;
-	/*CString msg;
+	
+	CString msg;
 	msg.Format(_T("^^^^^^^^^^ Node stopped %s id=\"%s\"\n"), A2T(n->get_local_name().c_str()), A2T(n->get_attribute("id")));
-	TRACE(_T("%s"), msg);*/
+	TRACE(_T("%s"), msg);
 
 	//if we are ending a par and we were expecting audio
 	if (n->get_local_name() == "par" && m_recent_par_node != NULL && m_saw_audio == false)

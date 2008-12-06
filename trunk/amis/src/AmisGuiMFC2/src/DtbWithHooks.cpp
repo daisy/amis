@@ -233,7 +233,7 @@ void DtbWithHooks::loadNavNode(nav::NavNode* pNav)
 	amis::util::Log::Instance()->writeMessage("Loading nav node", "DtbWithHooks::loadNavNode");
 	ambulant::net::url rel_path;
 	if (this->getFileSet()->getBookDirectory()->is_local_file())
-		rel_path = ambulant::net::url::from_filename(pNav->getContent());
+		rel_path = ambulant::net::url::from_filename(pNav->getContent(), true);
 	else
 		rel_path = ambulant::net::url::from_url(pNav->getContent());
 	loadSmilFromUrl(&rel_path);

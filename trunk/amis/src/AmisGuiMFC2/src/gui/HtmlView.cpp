@@ -253,26 +253,30 @@ void CAmisHtmlView::OnBeforeNavigate2(LPCTSTR lpszURL, DWORD nFlags,
 	{
 		thisUrl = ambulant::net::url::from_url(urlOrFile);
 	}
-	//if this URL is not in our current book directory, don't go there
-	const ambulant::net::url& bookUrl = theApp.getBookURL();
-
+	
 	ambulant::net::url thisDir = thisUrl.get_base();
-	ambulant::net::url bookDir = bookUrl.get_base();
-
-#if 0
-	// XXXJACK This test does not work if the URL we're navigating to
-	// is prefixed with ambulanturl:.
-	// Moreover, we shouldn't really say "cancel" but also show a dialog
-	// or something.
-	if (!thisDir.same_document(bookDir))
+	//we can't just use the book dir because it comes with a trailing slash .. so use the OPF or NCC instead
+	amis::dtb::DtbFileSet* p_files = amis::dtb::DtbWithHooks::Instance()->getFileSet();
+	ambulant::net::url bookDir;
+	if (p_files->getOpfFilepath() != NULL && p_files->getOpfFilepath()->is_empty_path() == false)
+		bookDir = *p_files->getOpfFilepath();
+	else
+		bookDir = *p_files->getNavFilepath();
+	bookDir = bookDir.get_base();
+	CString cstr_url(lpszURL);
+	// This test does not work if the URL we're navigating to is prefixed with ambulanturl:.
+	// Therefore, we can skip this for now if we're dealing with a protected book
+	if (amis::dtb::DtbWithHooks::Instance()->isProtected() == false && !thisDir.same_document(bookDir) &&
+		cstr_url.Compare(_T("about:blank")) != 0)
 	{
-		string log_msg = "Ignoring external link: " + thisUrl.get_url();
-		amis::util::Log::Instance()->writeWarning(log_msg);
+		string log_msg = "Launching external link externally: " + thisUrl.get_url();
+		amis::util::Log::Instance()->writeTrace(log_msg);
+		//this should open the link in the default browser
+		ShellExecute(NULL, _T("open"), lpszURL, NULL, NULL, SW_SHOWNORMAL);
 		*pbCancel = TRUE;
 	}
 	//else this path lies within our current book directory
 	else
-#endif
 	{
 		//if it's a smil file, load it via AMIS
 		if (thisUrl.guesstype() == "application/smil")
@@ -291,7 +295,6 @@ void CAmisHtmlView::OnBeforeNavigate2(LPCTSTR lpszURL, DWORD nFlags,
 		}
 	}
 }
-
 LPARAM CAmisHtmlView::OnHighlightUrlTarget(WPARAM wParam, LPARAM lParam)
 {
 	assert(wParam == 0);

@@ -91,6 +91,7 @@ string amis::util::calculateRelativeFilename(const ambulant::net::url* pUrl1, co
 ambulant::net::url amis::util::makeUrlFromString(std::string str, bool forceToUrl, bool forceToLocal)
 {
 	ambulant::net::url f;
+	if (str == "") return f;
 	if (forceToUrl)
 	{
 		f = ambulant::net::url::from_url(str);

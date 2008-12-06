@@ -213,8 +213,6 @@ void CAmisSidebar::OnPageListClick(NMHDR* pNMHDR, LRESULT* pResult)
 	amis::dtb::nav::PageTarget* p_page = NULL;
 	int curr_sel;
 	curr_sel = mPageList.GetNextItem(-1, LVNI_SELECTED);
-	
-
 	if (curr_sel > -1)
 	{
 		p_page = (amis::dtb::nav::PageTarget*)mPageList.GetItemData(curr_sel);
