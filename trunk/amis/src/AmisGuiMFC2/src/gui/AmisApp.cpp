@@ -186,7 +186,7 @@ BOOL CAmisApp::InitInstance()
 	double audio_vol = 1.0;
 	if (Preferences::Instance()->getAudioVolumePct() > 0) 
 		audio_vol = (double)Preferences::Instance()->getAudioVolumePct()/100;
-	ambulantX::gui::dx::audio_playerX::Instance()->set_volume(audio_vol);
+	ambulantX::gui::dx::audio_playerX::Instance()->set_global_level(audio_vol);
 	ambulant::gui::dx::set_global_level(audio_vol);
    	
 	//then start logging!  

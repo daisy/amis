@@ -782,7 +782,7 @@ long gui::dx::audio_playerX::get_volume() {
 // -val is the attenuation in decibels 
 // can be 0 to 100
 void gui::dx::audio_playerX::set_volume(long val) {
-	if (val <= 0) val = 1;
+	if (val < 0) val = 0;
 	if (val > 100) val = 100;
 	s_current_volume = val;
 	if(m_basic_audio == 0) return;
@@ -913,8 +913,6 @@ bool gui::dx::audio_playerX::play(const char * url, char* clipBegin, char* clipE
 			win_report_error("QueryInterface(IID_IBasicAudio, ...)", hr);	
 		}
 	}
-	
-	set_volume(s_current_volume);
 
 	SmilTimeCode startStop(clipBegin, clipBegin, clipEnd);
 	unsigned long begin = startStop.getStart();
@@ -976,6 +974,8 @@ bool gui::dx::audio_playerX::play(const char * url, char* clipBegin, char* clipE
 #ifdef SINGLE_THREAD_HACK
 	SetEvent(m_hEventWakeup);
 #endif
+
+	set_volume(s_current_volume);
 
 	hr = m_media_control->Run();
 	if(FAILED(hr)) {
