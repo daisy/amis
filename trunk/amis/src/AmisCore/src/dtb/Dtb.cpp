@@ -193,7 +193,7 @@ bool amis::dtb::Dtb::open(const ambulant::net::url* fileUrl,
 		amis::util::Log::Instance()->writeMessage("This is a DAISY 2.02 book", "Dtb::open");	
 		mDaisyVersion = DAISY_202;
 		if (mThreadYielder != 0) mThreadYielder->peekAndPump();
-		if (!processNcc(mpFiles->getNavFilepath()))
+		if (!processNcc(mpFiles->getNavFilepath(), fileUrl->is_local_file()))
 		{
 			return false;
 		}
@@ -207,7 +207,7 @@ bool amis::dtb::Dtb::open(const ambulant::net::url* fileUrl,
 		}
 		mDaisyVersion = DAISY_2005;
 		amis::util::Log::Instance()->writeMessage("This is a Daisy 2005 book", "Dtb::open");
-		if (!processNcx(mpFiles->getNavFilepath())) return false;
+		if (!processNcx(mpFiles->getNavFilepath(), fileUrl->is_local_file())) return false;
 		//if (!processDaisyResourceFile(mpFiles->getResourceFilepath())) return false;
 	}
 	else
@@ -217,6 +217,7 @@ bool amis::dtb::Dtb::open(const ambulant::net::url* fileUrl,
 			"Dtb::open");
 		return false;
 	}
+	
 	loadBookmarks(mpFiles->getBookmarksFilepath());
 	amis::util::Log::Instance()->writeMessage("Opened book successfully", "Dtb::open");
 	return true;
@@ -263,11 +264,12 @@ amis::dtb::smil::SmilMediaGroup* amis::dtb::Dtb::startReading(bool loadLastmarkI
 //--------------------------------------------------
 //process an NCC file
 //--------------------------------------------------
-bool amis::dtb::Dtb::processNcc(const ambulant::net::url* filepath)
+bool amis::dtb::Dtb::processNcc(const ambulant::net::url* filepath, bool isLocal)
 {
 	amis::io::NccFileReader ncc_file_reader;
 	amis::dtb::nav::BuildSpineVisitor spine_visitor;
-
+	//TODO: this might just apply for windows
+	ncc_file_reader.setAreFilenamesLowercase(isLocal);
 	if (!ncc_file_reader.readFromFile(filepath)) 
 	{
 		amis::util::Log::Instance()->writeError("Could not read NCC file!", "Dtb::processNcc");
@@ -347,9 +349,10 @@ bool amis::dtb::Dtb::processNcc(const ambulant::net::url* filepath)
 //--------------------------------------------------
 //process an NCX file
 //--------------------------------------------------
-bool amis::dtb::Dtb::processNcx(const ambulant::net::url* filepath)
+bool amis::dtb::Dtb::processNcx(const ambulant::net::url* filepath, bool isLocal)
 {
 	amis::io::NcxFileReader ncx_file_reader;
+	ncx_file_reader.setAreFilenamesLowercase(isLocal);
 	if (!ncx_file_reader.readFromFile(filepath)) return false;
 
 	mpNavModel = ncx_file_reader.getNavModel();

@@ -161,7 +161,7 @@ bool amis::dtb::DtbFileSet::isNccFile(const ambulant::net::url* filepath)
 {
 	string file_name = amis::util::FilePathTools::getFileName(filepath->get_path());
 	//convert the string to lower case before doing a comparison
-	 std::transform(file_name.begin(), file_name.end(), file_name.begin(), (int(*)(int))tolower);
+	std::transform(file_name.begin(), file_name.end(), file_name.begin(), (int(*)(int))tolower);
 	
 	if (file_name.compare("ncc.html") == 0 ||
 		file_name.compare("ncc.pdtb") == 0)
@@ -314,4 +314,3 @@ const ambulant::net::url* amis::dtb::DtbFileSet::getProtectedBookKeyFilepath()
 {
 	return &mProtectedBookKeyFilepath;
 }
-

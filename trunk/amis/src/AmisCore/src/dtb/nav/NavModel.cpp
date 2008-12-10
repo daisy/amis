@@ -43,6 +43,7 @@ amis::dtb::nav::NavModel::NavModel()
 	p_root->setLabel(NULL);
 	mpNavMap->setRoot(p_root);
 	mpSmilIdNodeMap = NULL;
+	mbLower = false;
 }
 
 amis::dtb::nav::NavModel::~NavModel()
@@ -396,4 +397,14 @@ int amis::dtb::nav::NavModel::getPlayOrderListIndex(int playOrder)
 		while (mPlayOrderList[idx]->getPlayOrder() < playOrder) idx++;
 	}
 	return idx;
+}
+
+void amis::dtb::nav::NavModel::setAreFilenamesLowercase(bool val)
+{
+	mbLower = val;
+}
+
+bool amis::dtb::nav::NavModel::getAreFilenamesLowercase()
+{
+	return mbLower;
 }

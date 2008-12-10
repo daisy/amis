@@ -41,7 +41,10 @@ void amis::dtb::nav::NavContainer::setNavModel(NavModel* pModel)
 {
 	mpNavModel = pModel;
 }
-
+amis::dtb::nav::NavModel* amis::dtb::nav::NavContainer::getNavModel()
+{
+	return mpNavModel;
+}
 void amis::dtb::nav::NavContainer::setLabel(amis::MediaGroup* pLabel)
 {
 	this->mpLabel = pLabel;

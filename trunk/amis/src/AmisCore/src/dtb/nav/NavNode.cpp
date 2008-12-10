@@ -24,6 +24,9 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 #include "dtb/nav/NavNode.h"
 #include "dtb/nav/NavModel.h"
+#include "util/FilePathTools.h"
+//for string transformations
+#include <algorithm>
 
 using namespace std;
 
@@ -61,7 +64,18 @@ void amis::dtb::nav::NavNode::setLabel(amis::MediaGroup* pLabel)
 
 void amis::dtb::nav::NavNode::setContent(string content)
 {
-	mContent = content;
+	if (getNavContainer()->getNavModel()->getAreFilenamesLowercase() == true)
+	{
+		//make the filename lowercase
+		std::string filename = amis::util::FilePathTools::clearTarget(content);
+		std::string target = amis::util::FilePathTools::getTarget(content);
+		std::transform(filename.begin(), filename.end(), filename.begin(), (int(*)(int))tolower);
+		mContent = filename + "#" + target;
+	}
+	else
+	{
+		mContent = content;
+	}
 }
 
 void amis::dtb::nav::NavNode::setId(string id)

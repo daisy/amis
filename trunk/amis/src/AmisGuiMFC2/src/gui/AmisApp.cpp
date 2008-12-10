@@ -790,6 +790,7 @@ void CAmisApp::OnFileClose()
 
 void CAmisApp::OnVolumeUpBOOK()
 {
+	if (isBookOpen() == false) return;
 	amis::util::Log::Instance()->writeMessage("Volume increase BOOK", "CAmisApp::OnVolumeUp");
 	ambulant::gui::dx::change_global_level(VOLUME_RATIO);
 
@@ -798,6 +799,7 @@ void CAmisApp::OnVolumeUpBOOK()
 
 void CAmisApp::OnVolumeDownBOOK()
 {
+	if (isBookOpen() == false) return;
 	amis::util::Log::Instance()->writeMessage("Volume decrease BOOK", "CAmisApp::OnVolumeDown");
     ambulant::gui::dx::change_global_level(1.0/VOLUME_RATIO);
 
@@ -1161,16 +1163,19 @@ void CAmisApp::OnClearPageStyle()
 }
 void CAmisApp::OnApplyPageStyle(UINT id)
 {
+	if (isBookOpen() == false) return;
 	int idx;
 	idx = id - AMIS_PAGE_STYLE_BASE_ID;
 	TextRenderBrain::Instance()->applyPageStyle(idx);
 }
 void CAmisApp::OnNextPageStyle()
 {
+	if (isBookOpen() == false) return;
 	TextRenderBrain::Instance()->applyNextPageStyle();
 }
 void CAmisApp::OnShowTextStyle()
 {
+	if (isBookOpen() == false) return;
 	amis::gui::dialogs::TextStyleDialog dlg;
 	if (dlg.do_modal() == IDOK)
 	{
@@ -1187,6 +1192,7 @@ void CAmisApp::OnChangeTab(UINT id)
 }
 void CAmisApp::OnShowFindInText()
 {
+	if (isBookOpen() == false) return;
 	amis::gui::dialogs::FindInTextDialog dlg;
 	CString last_val = 
 		amis::dtb::DtbWithHooks::Instance()->getLastTextSearchString().c_str();
@@ -1235,6 +1241,7 @@ void CAmisApp::OnShowFindInText()
 }
 void CAmisApp::OnFindNextInText()
 {
+	if (isBookOpen() == false) return;
 	string result;
 	result = amis::dtb::DtbWithHooks::Instance()->searchFullTextNext();
 	if (result.size() > 0)
@@ -1245,6 +1252,7 @@ void CAmisApp::OnFindNextInText()
 }
 void CAmisApp::OnFindPreviousInText()
 {
+	if (isBookOpen() == false) return;
 	string result;
 	result = amis::dtb::DtbWithHooks::Instance()->searchFullTextPrevious();
 	if (result.size() > 0)
@@ -1285,6 +1293,8 @@ void CAmisApp::OnResetHighlightColors()
 }
 void CAmisApp::OnToggleContentAudio()
 {
+	if (isBookOpen() == false) return;
+
 	//this isn't "mute" so much as "stop rendering audio nodes"
 	mbShouldNotRenderAudio = !mbShouldNotRenderAudio;
 	

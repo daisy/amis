@@ -84,8 +84,8 @@ public:
 private:
 	ThreadYielder * mThreadYielder;
 
-	bool processNcc(const ambulant::net::url*);
-	bool processNcx(const ambulant::net::url*);
+	bool processNcc(const ambulant::net::url*, bool);
+	bool processNcx(const ambulant::net::url*, bool);
 	bool processOpf(const ambulant::net::url*);
 	bool processDaisyResourceFile(const ambulant::net::url*);
 	bool processSmil(const ambulant::net::url*);

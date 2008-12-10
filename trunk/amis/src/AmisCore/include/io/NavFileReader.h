@@ -52,7 +52,7 @@ public:
 	bool readFromFile(const ambulant::net::url*);
 	amis::dtb::nav::NavModel* getNavModel();
 	amis::dtb::CustomTestSet* getCustomTests();
-	
+	void setAreFilenamesLowercase(bool);
 	//SAX METHODS
 	//!xerces start element event
 	virtual void startElement(const   XMLCh* const    uri,
@@ -82,6 +82,7 @@ protected:
 	//0 = nav map; 1 = nav list; 2 = page list
 	int mListType;
 	wstring mTempChars;
+	bool mbLower;
 };
 }
 }

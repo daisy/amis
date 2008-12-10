@@ -75,6 +75,7 @@ bool amis::io::NavFileReader::readFromFile(const ambulant::net::url* filepath)
 	this->mTempChars.erase();
 
 	mpNavModel = new amis::dtb::nav::NavModel();
+	mpNavModel->setAreFilenamesLowercase(mbLower);
 	mpCustomTests = new amis::dtb::CustomTestSet();
 
 	mOpenNodes.clear();
@@ -108,4 +109,9 @@ void amis::io::NavFileReader::addCustomTest(string id, bool override,
 	//if it already exists, the addCustomTest function returns false
 	//and we should delete the custom test we just created
 	if (!mpCustomTests->addCustomTest(p_custom_test)) delete p_custom_test;
+}
+
+void amis::io::NavFileReader::setAreFilenamesLowercase(bool val)
+{
+	mbLower = val;
 }

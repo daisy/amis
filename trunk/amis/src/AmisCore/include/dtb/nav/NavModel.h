@@ -67,12 +67,18 @@ public:
 	void addToPlayOrderList(NavNode*);
 	NavNodeList* getPlayOrderList();
 	int getPlayOrderListIndex(int);
+	//needed these function because local filenames are lowercased on windows by ambulant::net::url, whereas remote are not
+	//we need NavNode::mContent to be handled the same as the rest of the files
+	bool getAreFilenamesLowercase();
+	void setAreFilenamesLowercase(bool);
+
 private:
 	NavMap* mpNavMap;
 	PageList* mpPageList;
 	NodeRefMap* mpSmilIdNodeMap;
 	NavListList mNavLists;
 	NavNodeList mPlayOrderList;
+	bool mbLower;
 };
 }
 }

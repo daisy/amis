@@ -55,6 +55,7 @@ public:
 	string getId();
 
 	void setNavModel(NavModel*);
+	NavModel* getNavModel();
 
 	virtual void acceptDepthFirst(NavVisitor*) = 0;
 
