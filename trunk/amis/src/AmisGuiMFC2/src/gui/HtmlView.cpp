@@ -264,10 +264,17 @@ void CAmisHtmlView::OnBeforeNavigate2(LPCTSTR lpszURL, DWORD nFlags,
 		bookDir = *p_files->getNavFilepath();
 	bookDir = bookDir.get_base();
 	CString cstr_url(lpszURL);
-	// This test does not work if the URL we're navigating to is prefixed with ambulanturl:.
-	// Therefore, we can skip this for now if we're dealing with a protected book
-	if (amis::dtb::DtbWithHooks::Instance()->isProtected() == false && !thisDir.same_document(bookDir) &&
-		cstr_url.Compare(_T("about:blank")) != 0)
+	// This test does not work for URLs with ambulanturl:.
+	bool is_same_dir = thisDir.same_document(bookDir);
+	bool is_blank = !cstr_url.Compare(_T("about:blank"));
+	bool is_pdtb = amis::dtb::DtbWithHooks::Instance()->isProtected();
+	bool has_http = false;
+	if (thisUrl.get_protocol() == "http") has_http = true;
+	//if either:
+	//1. book NOT protected, link NOT part of book, link NOT to about:blank
+	//2. book IS protected, link IS web
+	//then launch the link externally
+	if ((!is_pdtb && !is_same_dir && !is_blank) || (is_pdtb && has_http))
 	{
 		string log_msg = "Launching external link externally: " + thisUrl.get_url();
 		amis::util::Log::Instance()->writeTrace(log_msg);
