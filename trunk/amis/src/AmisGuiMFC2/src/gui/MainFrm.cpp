@@ -214,7 +214,7 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	}
 	mDefaultToolbar.EnableToolTips(TRUE);
 	updateToolbarState(&mDefaultToolbar);
-
+	
 	//create the default rebar (toolbar container)
 	if (p_settings->getPlacement() == amis::gui::toolbar::TOP) align = CBRS_TOP;
 	else align = CBRS_BOTTOM;

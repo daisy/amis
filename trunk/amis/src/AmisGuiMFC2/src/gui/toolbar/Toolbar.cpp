@@ -57,6 +57,10 @@ ToolbarSeparator::~ToolbarSeparator()
 **/
 ToolbarButton::ToolbarButton() : ToolbarItem(amis::gui::toolbar::BUTTON)
 {
+	this->mId = "";
+	this->mMfcId = 0;
+	this->mTooltipId = 0;
+	this->mTooltipText = _T("");
 }
 ToolbarButton::~ToolbarButton()
 {
@@ -95,6 +99,22 @@ void ToolbarButton::setImageIndex(int idx)
 int ToolbarButton::getImageIndex()
 {
 	return mImageIndex;
+}
+void ToolbarButton::setTooltipId(UINT id)
+{
+	mTooltipId = id;
+}
+UINT ToolbarButton::getTooltipId()
+{
+	return mTooltipId;
+}
+void ToolbarButton::setTooltipText(CString txt)
+{
+	mTooltipText = txt;
+}
+CString ToolbarButton::getTooltipText()
+{
+	return mTooltipText;
 }
 /**
 * a toggle button
@@ -368,6 +388,7 @@ int Toolbar::OnCreate(LPCREATESTRUCT lpCreateStruct)
 			buttons[i].iBitmap = j;
 			buttons[i].fsState = TBSTATE_ENABLED;
 			buttons[i].fsStyle=TBSTYLE_BUTTON;
+			//not sure that iString does anything
 			buttons[i].iString = p_button->getCommandId();
 			buttons[i].idCommand = p_button->getCommandId();
 			j++;
@@ -380,6 +401,7 @@ int Toolbar::OnCreate(LPCREATESTRUCT lpCreateStruct)
 			p_button->getButtonTwo()->setImageIndex(j+1);
 			buttons[i].fsState = TBSTATE_ENABLED;
 			buttons[i].fsStyle=TBSTYLE_BUTTON;
+			//not sure that iString does anything
 			buttons[i].iString = p_button->getButtonOne()->getCommandId();
 			buttons[i].idCommand = p_button->getButtonOne()->getCommandId();
 			j+=2;
@@ -403,19 +425,29 @@ BOOL Toolbar::OnToolTipNotify( UINT id, NMHDR * pNMHDR, LRESULT * pResult )
 	   ToolbarItems items = mpSettings->getItems();
 	   for (unsigned int i=0; i<items.size(); i++)
 	   {
-		   if ((items[i]->getType() == BUTTON && 
-			   ((ToolbarButton*)items[i])->getCommandId() == nID)
-				||
-			   (items[i]->getType() == TOGGLE && 
-			   ((ToolbarToggleButton*)items[i])->getCurrent()->getCommandId() == nID)
-			   )
+			ToolbarButton* p_button = NULL;
+			if (items[i]->getType() == BUTTON)
+				p_button = (ToolbarButton*)items[i];
+			else if (items[i]->getType() == TOGGLE)
+				p_button = ((ToolbarToggleButton*)items[i])->getCurrent();
+			else
+				continue;
 
-		  {
-			pTTT->lpszText = (unsigned short*)nID;
-			pTTT->hinst = AfxGetResourceHandle();
-			break;
-		  }
-		}
+			if (p_button->getCommandId() == nID)
+			{
+				//first: see if there is tooltip text directly associated with the button
+				if (p_button->getTooltipText() != "")
+					pTTT->lpszText = (LPWSTR)(LPCWSTR)p_button->getTooltipText();
+				//second: if exists, use the resource string associated with this toolbar button as the tooltip text
+				else if (p_button->getTooltipId() != 0)
+					pTTT->lpszText = (unsigned short*)p_button->getTooltipId();
+				//finally: otherwise use the command's default tooltip text
+				else
+					pTTT->lpszText = (unsigned short*)nID;
+				pTTT->hinst = AfxGetResourceHandle();
+				break;
+			}
+	   }
 	   //Success
 	   return(TRUE);
    }

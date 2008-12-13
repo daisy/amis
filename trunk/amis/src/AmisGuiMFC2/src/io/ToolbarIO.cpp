@@ -80,6 +80,7 @@ void ToolbarIO::startElement(const   XMLCh* const    uri,
 		const   XMLCh* const    qname,
 		const   Attributes&	attributes)
 {
+	USES_CONVERSION;
 	char* node_name = XMLString::transcode(qname); 
 	
 	if (strcmp(node_name, "toolbar") == 0)
@@ -108,6 +109,8 @@ void ToolbarIO::startElement(const   XMLCh* const    uri,
 		string image_path = SimpleAttrs::get("src", &attributes);
 		string mfcid = SimpleAttrs::get("mfcid", &attributes);
 		string id = SimpleAttrs::get("id", &attributes);
+		string string_id = SimpleAttrs::get("tooltipid", &attributes);
+		string tooltip = SimpleAttrs::get("tooltip", &attributes);
 		ambulant::net::url image_url = ambulant::net::url::from_filename(image_path);
 		const ambulant::net::url* base_file = getFilepath();
 		image_url = image_url.join_to_base(*base_file);
@@ -115,6 +118,9 @@ void ToolbarIO::startElement(const   XMLCh* const    uri,
 		p_button->setImageSrc(image_url);
 		p_button->setCommandId(n_mfcid);
 		p_button->setId(id);
+		UINT n_string_id = getIdForCommandString(string_id);
+		p_button->setTooltipId(n_string_id);
+		p_button->setTooltipText(A2T(tooltip.c_str()));
 		if (mbFlagInToggle == true)
 			mpCurrentToggle->addButton(p_button);
 		else

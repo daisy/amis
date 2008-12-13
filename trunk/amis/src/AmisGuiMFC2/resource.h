@@ -73,6 +73,7 @@
 #define IDS_PRODUCER_NOTES              506
 #define IDS_SIDEBARS                    507
 #define IDS_GROUPED_ITEMS               508
+#define IDS_APPLY_NEXT_PAGE_STYLE       509
 #define ID_AMBULANT_PLAY                700
 #define IDC_TREE                        1000
 #define IDC_TAB                         1001

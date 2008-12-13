@@ -7,7 +7,7 @@
 	</toggle>
 	<button src="./img/basicToolbar/media_seek_forward.ico" mfcid="ID_AMIS_NEXT_PHRASE"/>
 	<separator/>
-	<button src="./img/basicToolbar/style.ico" mfcid="ID_AMIS_NEXT_PAGE_STYLE"/>
+	<button src="./img/basicToolbar/style.ico" mfcid="ID_AMIS_NEXT_PAGE_STYLE" tooltipid="IDS_APPLY_NEXT_PAGE_STYLE"/>
 	<separator/>
 	<button src="./img/basicToolbar/display.ico" mfcid="ID_AMIS_TOGGLE_VIEW"/>
 </toolbar>

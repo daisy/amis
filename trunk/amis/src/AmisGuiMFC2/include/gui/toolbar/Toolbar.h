@@ -67,11 +67,17 @@ public:
 	void setId(std::string);
 	void setImageIndex(int);
 	int getImageIndex();
+	void setTooltipId(UINT);
+	UINT getTooltipId();
+	void setTooltipText(CString);
+	CString getTooltipText();
 private:
 	ambulant::net::url mSrc;
 	UINT mMfcId;
 	std::string mId;
 	int mImageIndex;
+	UINT mTooltipId;
+	CString mTooltipText;
 };
 class ToolbarToggleButton : public ToolbarItem
 {
