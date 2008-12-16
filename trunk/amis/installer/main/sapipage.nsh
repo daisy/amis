@@ -85,7 +85,7 @@ FunctionEnd
 ;*************************
 ; skip sapi installation
 Function SkipSapi
-   MessageBox MB_ICONEXCLAMATION "Warning!  Skipping SAPI installation.  If AMIS does not run properly, re-install SAPI after downloading the necessary files from http://amis.sf.net/download/sapi51redist.msi"
+   MessageBox MB_ICONEXCLAMATION "Warning!  Skipping SAPI installation.  If AMIS does not run properly, re-install SAPI after downloading the necessary files from ${SAPI_ONLINE}"
 FunctionEnd
 
 ;***************************
