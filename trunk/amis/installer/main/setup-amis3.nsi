@@ -344,10 +344,10 @@ Section Uninstall
   Delete "$SETTINGS_DIR\resource.h.ini"
   Delete "$SETTINGS_DIR\amisLog.txt"
   
-	;We are leaving the bookmarks on purpose
+	;We are leaving the bookmarks and history files on purpose
 	
   Delete "$INSTDIR\*"
-  RMDir "$INSTDIR"
+  RMDir "$INSTDIR\"
   ; this deletes all the registry keys used by NSIS
   DeleteRegKey ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}"
   DeleteRegKey HKLM "${PRODUCT_DIR_REGKEY}"
