@@ -245,7 +245,8 @@ Section -Post
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "Publisher" "${PRODUCT_PUBLISHER}"
  
   ;register the timescale ocx component
-  RegDLL "$INSTDIR\TransformSample.ax"
+  ;RegDLL "$INSTDIR\TransformSample.ax"
+	ExecWait 'regsvr32.exe "$INSTDIR\TransformSample.ax"'
 	Call RunMSVCRuntimeSetup
 
 SectionEnd
