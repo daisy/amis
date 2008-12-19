@@ -1,28 +1,28 @@
-start /b copyOneResourceH afrikaans
-start /b copyOneResourceH arabic
-start /b copyOneResourceH bangla
-start /b copyOneResourceH chinese
-start /b copyOneResourceH dutch
-start /b copyOneResourceH filipino
-start /b copyOneResourceH finnish
-start /b copyOneResourceH gujarati
-start /b copyOneResourceH hindi
-start /b copyOneResourceH indonesian
-start /b copyOneResourceH japanese
-start /b copyOneResourceH kazakh
-start /b copyOneResourceH khmer
-start /b copyOneResourceH lao
-start /b copyOneResourceH malay
-start /b copyOneResourceH mongolian
-start /b copyOneResourceH nepali
-start /b copyOneResourceH norwegian-bokmal
-start /b copyOneResourceH norwegian-nynorsk
-start /b copyOneResourceH russian
-start /b copyOneResourceH sinhala
-start /b copyOneResourceH spanish
-start /b copyOneResourceH swedish
-start /b copyOneResourceH tamil
-start /b copyOneResourceH thai
-start /b copyOneResourceH urdu
-start /b copyOneResourceH vietnamese
+call copyOneResourceH afrikaans
+call copyOneResourceH arabic
+call copyOneResourceH bangla
+call copyOneResourceH chinese
+call copyOneResourceH dutch
+call copyOneResourceH filipino
+call copyOneResourceH finnish
+call copyOneResourceH gujarati
+call copyOneResourceH hindi
+call copyOneResourceH indonesian
+call copyOneResourceH japanese
+call copyOneResourceH kazakh
+call copyOneResourceH khmer
+call copyOneResourceH lao
+call copyOneResourceH malay
+call copyOneResourceH mongolian
+call copyOneResourceH nepali
+call copyOneResourceH norwegian-bokmal
+call copyOneResourceH norwegian-nynorsk
+call copyOneResourceH russian
+call copyOneResourceH sinhala
+call copyOneResourceH spanish
+call copyOneResourceH swedish
+call copyOneResourceH tamil
+call copyOneResourceH thai
+call copyOneResourceH urdu
+call copyOneResourceH vietnamese
 
