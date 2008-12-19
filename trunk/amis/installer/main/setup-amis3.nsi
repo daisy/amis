@@ -9,7 +9,7 @@
 ;/DCUSTOM_HELP = The name of the help file for the custom language pack.
 
 !define PRODUCT_NAME "AMIS"
-!define PRODUCT_VERSION "3.0 Beta 4"
+!define PRODUCT_VERSION "Release Candidate 1"
 !define PRODUCT_PUBLISHER "DAISY Consortium"
 !define PRODUCT_WEB_SITE "http://amisproject.org"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\AMIS.exe"
@@ -79,7 +79,7 @@ Page custom SapiPage
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION} (${CUSTOM_LANG_NAME})"
 ;this is the name of the installer that gets created.  
 ;for some reason, i vaguely remember that it shouldn't have spaces in the filename.
-OutFile "Setup-amis3-beta4-${CUSTOM_LANG_NAME}.exe"
+OutFile "Setup-amis3-rc1-${CUSTOM_LANG_NAME}.exe"
 InstallDir "$PROGRAMFILES\AMIS"
 InstallDirRegKey HKLM "${PRODUCT_DIR_REGKEY}" ""
 ShowInstDetails show
@@ -113,7 +113,7 @@ Section "MainSection" SEC01
   File "${BIN_DIR}\SDL.dll"
   File "${BIN_DIR}\libamplugin_pdtb.dll"
   File "${BIN_DIR}\PdtbIePlugin.dll"
-  RegDLL "$INSTDIR/PdtbIePlugin.dll"
+  ExecWait 'regsvr32.exe /s "$INSTDIR/PdtbIePlugin.dll"'
   
   ;copy the bookmark readme file
   SetOutPath "$SETTINGS_DIR\bmk"
@@ -245,8 +245,7 @@ Section -Post
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "Publisher" "${PRODUCT_PUBLISHER}"
  
   ;register the timescale ocx component
-  ;RegDLL "$INSTDIR\TransformSample.ax"
-	ExecWait 'regsvr32.exe "$INSTDIR\TransformSample.ax"'
+	ExecWait 'regsvr32.exe /s "$INSTDIR\TransformSample.ax"'
 	Call RunMSVCRuntimeSetup
 
 SectionEnd
