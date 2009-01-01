@@ -43,7 +43,6 @@ public:
 
 private:
 	int recursiveSearch(LPCTSTR);
-	void doEvents();
 	bool mbShouldStop;
 };
 }

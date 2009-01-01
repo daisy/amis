@@ -25,6 +25,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "ambulant/net/url.h"
 #include "util/VolMaster.h"
 #include "gui/MainWndParts.h"
+#include "util/Log.h"
 
 using namespace amis::util;
 
@@ -48,6 +49,7 @@ int SearchForFilesMFC::startSearch(std::string searchPath)
 	//make sure it has a trailing slash
 	if (search_path[search_path.length() - 1] != '\\') search_path += "\\";
 	search_path += "*.*";
+	amis::util::Log::Instance()->writeTrace("Start search");
 	//call the search routine, which returns the number of files found
 	return recursiveSearch(A2T(search_path.c_str()));
 }
@@ -99,9 +101,8 @@ int SearchForFilesMFC::recursiveSearch(LPCTSTR path)
 	while (b_is_working)
 	{
 		b_is_working = finder.FindNextFile();
-
+		
 		// handle messages
-		//doEvents();
 		amis::gui::MainWndParts::Instance()->peekAndPump();
 		
 		// received a stop signal
@@ -113,7 +114,11 @@ int SearchForFilesMFC::recursiveSearch(LPCTSTR path)
 		if (finder.IsDirectory() && isRecursiveSearch())
 		{
 			CString str = finder.GetFilePath();
-			files_found += recursiveSearch(str + _T("\\*.*"));
+			// this folder, which exists on vista, makes the search routine crash
+			if (str.Find(_T("winsxs")) != -1)
+				continue;
+			else
+				files_found += recursiveSearch(str + _T("\\*.*"));
 		}
 		else
 		{
@@ -137,21 +142,3 @@ int SearchForFilesMFC::recursiveSearch(LPCTSTR path)
 	return results->size();
 }
 
-//peek at the message queue
-void SearchForFilesMFC::doEvents()
-{
-	MSG msg;
-  
-    while ( ::PeekMessage(&msg, NULL, 0, 0, PM_NOREMOVE ) )
-    {  
-        if ( ::GetMessage(&msg, NULL, 0, 0))
-        {
-            ::TranslateMessage(&msg);
-            ::DispatchMessage(&msg);
-        }
-        else
-        {
-            break;
-        }
-    }
-}
