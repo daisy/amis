@@ -113,7 +113,8 @@ Section "MainSection" SEC01
   File "${BIN_DIR}\SDL.dll"
   File "${BIN_DIR}\libamplugin_pdtb.dll"
   File "${BIN_DIR}\PdtbIePlugin.dll"
-  ExecWait 'regsvr32.exe /s "$INSTDIR/PdtbIePlugin.dll"'
+  ;RegDLL "$INSTDIR/PdtbIePlugin.dll"
+  ExecWait 'regsvr32.exe /s "$INSTDIR\PdtbIePlugin.dll"'
   
   ;copy the bookmark readme file
   SetOutPath "$SETTINGS_DIR\bmk"
@@ -245,8 +246,8 @@ Section -Post
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "Publisher" "${PRODUCT_PUBLISHER}"
  
   ;register the timescale ocx component
-	ExecWait 'regsvr32.exe /s "$INSTDIR\TransformSample.ax"'
-	Call RunMSVCRuntimeSetup
+  ExecWait 'regsvr32.exe /s "$INSTDIR\TransformSample.ax"'
+  Call RunMSVCRuntimeSetup
 
 SectionEnd
 
@@ -317,10 +318,12 @@ Section Uninstall
 	StrCpy $SETTINGS_DIR $APPDATA\AMIS\settings
 	
 	; unregister the timescale ocx component
-  UnregDLL "$INSTDIR\TransformSample.ax"
-  ; unregister the pdtb dll
-  UnregDLL "$INSTDIR\PdtbIePlugin.dll"
- 
+       ;UnregDLL "$INSTDIR\TransformSample.ax"
+       ExecWait 'regsvr32.exe /u /s "$INSTDIR\TransformSample.ax"'
+       ; unregister the pdtb dll
+       ;UnregDLL "$INSTDIR\PdtbIePlugin.dll"
+       ExecWait 'regsvr32.exe /u /s "$INSTDIR\PtdbIePlugin.dll"'
+       
 	Delete "$SETTINGS_DIR\css\*.css"
 	Delete "$SETTINGS_DIR\css\font\*"
 	Delete "$SETTINGS_DIR\css\customStyles\*"
