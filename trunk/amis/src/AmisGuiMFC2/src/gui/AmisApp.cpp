@@ -876,8 +876,8 @@ void CAmisApp::OnSpeedUp()
 
 	amis::util::Log::Instance()->writeTrace("before ambulant increase rate");
 	double rate = ambulant::gui::dx::change_global_rate(0.7);
-	char ch_rate[5];
-	sprintf(ch_rate, "Rate = %d", rate);
+	char ch_rate[15];
+	sprintf(ch_rate, "Rate = %.3f", rate);
 	amis::util::Log::Instance()->writeTrace(ch_rate);
 	amis::util::Log::Instance()->writeTrace("after ambulant, before amis audio increase rate");
 	ambulantX::gui::dx::audio_playerX::Instance()->set_rate(rate);
@@ -895,9 +895,10 @@ void CAmisApp::OnSpeedDown()
 
 	amis::util::Log::Instance()->writeTrace("before ambulant decrease rate");
 	double rate = ambulant::gui::dx::change_global_rate(-0.7);
-	char ch_rate[5];
-	sprintf(ch_rate, "Rate = %d", rate);
+	char ch_rate[15];
+	sprintf(ch_rate, "Rate = %.3f", rate);
 	amis::util::Log::Instance()->writeTrace(ch_rate);
+	
 	amis::util::Log::Instance()->writeTrace("after ambulant, before amis audio increase rate");
 	ambulantX::gui::dx::audio_playerX::Instance()->set_rate(rate);
 	updateSpeedButtons();

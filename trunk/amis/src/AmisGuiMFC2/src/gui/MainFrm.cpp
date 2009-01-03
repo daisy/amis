@@ -617,7 +617,8 @@ LPARAM amis::gui::CMainFrame::OnUpdateToolbarState(WPARAM wParam, LPARAM lParam)
 void amis::gui::CMainFrame::updateToolbarState(toolbar::Toolbar* pToolbar)
 {
 	bool b_is_book_open = theApp.isBookOpen();
-	
+	amis::dtb::DtbWithHooks* p_dtb = amis::dtb::DtbWithHooks::Instance();
+
 	//if we're waiting for a book to open
 	if (b_is_book_open == false && theApp.getIsWaiting() == true)
 	{
@@ -636,17 +637,17 @@ void amis::gui::CMainFrame::updateToolbarState(toolbar::Toolbar* pToolbar)
 	//navigation
 	if (b_is_book_open)
 	{
-		if (amis::dtb::DtbWithHooks::Instance()->getNavModel()->hasPages())
+		if (p_dtb->getNavModel() != NULL && p_dtb->getNavModel()->hasPages())
 		{
-			pToolbar->enable(ID_AMIS_NEXT_PAGE, amis::dtb::DtbWithHooks::Instance()->canGoToNextPage());
-			pToolbar->enable(ID_AMIS_PREVIOUS_PAGE, amis::dtb::DtbWithHooks::Instance()->canGoToPreviousPage());
+			pToolbar->enable(ID_AMIS_NEXT_PAGE, p_dtb->canGoToNextPage());
+			pToolbar->enable(ID_AMIS_PREVIOUS_PAGE, p_dtb->canGoToPreviousPage());
 			pToolbar->enable(ID_AMIS_GOTO_PAGE, true);
 		}
-		pToolbar->enable(ID_AMIS_PREVIOUS_SECTION, amis::dtb::DtbWithHooks::Instance()->canGoToPreviousSection());
-		pToolbar->enable(ID_AMIS_NEXT_SECTION, amis::dtb::DtbWithHooks::Instance()->canGoToNextSection());
+		pToolbar->enable(ID_AMIS_PREVIOUS_SECTION, p_dtb->canGoToPreviousSection());
+		pToolbar->enable(ID_AMIS_NEXT_SECTION, p_dtb->canGoToNextSection());
 	
-		pToolbar->enable(ID_AMIS_PREVIOUS_PHRASE, amis::dtb::DtbWithHooks::Instance()->canGoToPreviousPhrase());
-		pToolbar->enable(ID_AMIS_NEXT_PHRASE, amis::dtb::DtbWithHooks::Instance()->canGoToNextPhrase());
+		pToolbar->enable(ID_AMIS_PREVIOUS_PHRASE, p_dtb->canGoToPreviousPhrase());
+		pToolbar->enable(ID_AMIS_NEXT_PHRASE, p_dtb->canGoToNextPhrase());
 	}
 	else
 	{
@@ -672,14 +673,12 @@ void amis::gui::CMainFrame::updateToolbarState(toolbar::Toolbar* pToolbar)
 	}
 
 	//reading options (aka "skippability")
-	if (b_is_book_open 
-		&& amis::dtb::DtbWithHooks::Instance()->getCustomTestSet() != NULL 
-		&& amis::dtb::DtbWithHooks::Instance()->getCustomTestSet()->getLength() > 0)
+	if (b_is_book_open && p_dtb->getCustomTestSet() != NULL && p_dtb->getCustomTestSet()->getLength() > 0)
 		pToolbar->enable(ID_AMIS_SHOW_READING_OPTIONS, true);
 	else
 		pToolbar->enable(ID_AMIS_SHOW_READING_OPTIONS, false);
 
-	if (b_is_book_open && amis::dtb::DtbWithHooks::Instance()->getBookmarks() != NULL)
+	if (b_is_book_open && p_dtb->getBookmarks() != NULL)
 		pToolbar->enable(ID_AMIS_ADD_BOOKMARK, true);
 	else
 		pToolbar->enable(ID_AMIS_ADD_BOOKMARK, false);
@@ -693,7 +692,7 @@ void amis::gui::CMainFrame::updateToolbarState(toolbar::Toolbar* pToolbar)
 	pToolbar->enable(ID_AMIS_ESCAPE, b_is_book_open);
 	pToolbar->enable(ID_AMIS_RESET_SPEED, b_is_book_open);
 	pToolbar->enable(ID_AMIS_SHOW_PUBLICATION_SUMMARY, b_is_book_open);
-	if (b_is_book_open && amis::dtb::DtbWithHooks::Instance()->hasText() == true &&
+	if (b_is_book_open && p_dtb->hasText() == true &&
 		Preferences::Instance()->getCustomCssFiles()->size() > 0)
 		pToolbar->enable(ID_AMIS_NEXT_PAGE_STYLE, true);
 	else

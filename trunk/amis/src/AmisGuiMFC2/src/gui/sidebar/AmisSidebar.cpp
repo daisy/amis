@@ -628,14 +628,15 @@ void CAmisSidebar::updateSelection()
 	amis::dtb::nav::NavModel* p_nav = amis::dtb::DtbWithHooks::Instance()->getNavModel();
 	amis::dtb::nav::PageTarget* p_page = NULL;
 	amis::dtb::nav::NavPoint* p_section = NULL;
-	if (p_nav->getPageList() != NULL)
+	if (p_nav && p_nav->getPageList() != NULL)
 		p_page = (amis::dtb::nav::PageTarget*)p_nav->getNodeForSmilId(file, p_nav->getPageList());
 	else
 		p_page = NULL;
-	p_section = (amis::dtb::nav::NavPoint*)p_nav->getNodeForSmilId(file, p_nav->getNavMap());
+	if (p_nav)
+		p_section = (amis::dtb::nav::NavPoint*)p_nav->getNodeForSmilId(file, p_nav->getNavMap());
 
-	setSelectedNode(p_page);
-	setSelectedNode(p_section);
+	if (p_page) setSelectedNode(p_page);
+	if (p_section) setSelectedNode(p_section);
 }
 
 HTREEITEM CAmisSidebar::findParentAtLevel(HTREEITEM hItem, int level)
