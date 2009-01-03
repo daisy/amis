@@ -266,6 +266,8 @@ BOOL CAmisApp::InitInstance()
 	{
 		book_to_open = findBookInLangpackSubdir("./help");
 		Preferences::Instance()->setIsFirstTime(false);
+		amis::io::PreferencesFileIO prefs_io;
+		prefs_io.writeToFile(Preferences::Instance()->getSourceUrl()->get_file(), Preferences::Instance());
 	}
 	if (cmd_file_name.GetLength() > 0)
 	{
@@ -872,7 +874,12 @@ void CAmisApp::OnSpeedUp()
 	amis::tts::TTSPlayer::InstanceOne()->SetSpeechRate(currentRate+1);
 	amis::tts::TTSPlayer::InstanceTwo()->SetSpeechRate(currentRate+1);
 
+	amis::util::Log::Instance()->writeTrace("before ambulant increase rate");
 	double rate = ambulant::gui::dx::change_global_rate(0.7);
+	char ch_rate[5];
+	sprintf(ch_rate, "Rate = %d", rate);
+	amis::util::Log::Instance()->writeTrace(ch_rate);
+	amis::util::Log::Instance()->writeTrace("after ambulant, before amis audio increase rate");
 	ambulantX::gui::dx::audio_playerX::Instance()->set_rate(rate);
 	updateSpeedButtons();
   //amis::gui::spoken::AudioSequencePlayer::Instance()->playPromptFromUiId(ID_MENU_PLAY_FASTER, true, NULL);
@@ -886,7 +893,12 @@ void CAmisApp::OnSpeedDown()
 	amis::tts::TTSPlayer::InstanceOne()->SetSpeechRate(currentRate-1);
 	amis::tts::TTSPlayer::InstanceTwo()->SetSpeechRate(currentRate-1);
 
+	amis::util::Log::Instance()->writeTrace("before ambulant decrease rate");
 	double rate = ambulant::gui::dx::change_global_rate(-0.7);
+	char ch_rate[5];
+	sprintf(ch_rate, "Rate = %d", rate);
+	amis::util::Log::Instance()->writeTrace(ch_rate);
+	amis::util::Log::Instance()->writeTrace("after ambulant, before amis audio increase rate");
 	ambulantX::gui::dx::audio_playerX::Instance()->set_rate(rate);
 	updateSpeedButtons();
 }

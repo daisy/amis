@@ -462,8 +462,8 @@ amis::dtb::Bookmark* DtbWithHooks::addBookmark()
 		if (!clip_begin) clip_begin = amb_node->get_attribute("clip-begin");
 		if (!clip_end) clip_end = amb_node->get_attribute("clip-end");
 	
-		p_audio->setClipBegin(clip_begin);
-		p_audio->setClipEnd(clip_end);
+		if (clip_begin) p_audio->setClipBegin(clip_begin);
+		if (clip_begin) p_audio->setClipEnd(clip_end);
 
 		//add the audio clip of the current position to the bookmark's note's audio field
 		p_note->addAudioClip(p_audio);
