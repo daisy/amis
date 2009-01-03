@@ -9,7 +9,7 @@
 ;/DCUSTOM_HELP = The name of the help file for the custom language pack.
 
 !define PRODUCT_NAME "AMIS"
-!define PRODUCT_VERSION "Release Candidate 1"
+!define PRODUCT_VERSION "3 RC 1"
 !define PRODUCT_PUBLISHER "DAISY Consortium"
 !define PRODUCT_WEB_SITE "http://amisproject.org"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\AMIS.exe"
