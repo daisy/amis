@@ -156,6 +156,7 @@ private:
 	std::string mLanguagePreference;
 	bool mbIsWaitingToLoad;
 	bool mbShouldNotRenderAudio;
+	bool mbOverrideReopen;
 public:
 	DECLARE_MESSAGE_MAP()
 

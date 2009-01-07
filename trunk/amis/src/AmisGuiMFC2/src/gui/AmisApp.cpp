@@ -171,6 +171,7 @@ BOOL CAmisApp::InitInstance()
 	mbBookIsOpen = false;
 	mbIsWaitingToLoad = false;
 	mAppPath = "";
+	mbOverrideReopen = false;
 
 	// Making sure both TTS instances are initialized from the right thread.
 	// InitInstance() is a convenient location.
@@ -568,9 +569,13 @@ bool CAmisApp::openBook(const ambulant::net::url* filename, bool saveInHistory)
 	if (mbBookIsOpen == true) 
 	{
 		b_a_book_was_open = true;
+		//if we were reading the help or shortcuts book, be sure to override
+		//OnFileClose's behavior of reloading the last-read book
+		//because we are actually trying to open another book
+		mbOverrideReopen = mbIsPlayingHelpBook || mbIsPlayingShortcutsBook;
 		OnFileClose();
 	}
-
+	mbOverrideReopen = false;
 	if (!filename->is_empty_path()) 
 	{
 	if (amis::dtb::DtbWithHooks::Instance()->open
@@ -776,7 +781,7 @@ void CAmisApp::OnFileClose()
 			(WPARAM)MainWndParts::Instance()->mpDefaultToolbar);		
 		amis::gui::CAmisApp::emitMessage("ready");
 
-		if (mbIsPlayingHelpBook || mbIsPlayingShortcutsBook)
+		if ((mbIsPlayingHelpBook || mbIsPlayingShortcutsBook) && !mbOverrideReopen)
 		{
 			mbIsPlayingHelpBook = false;
 			mbIsPlayingShortcutsBook = false;

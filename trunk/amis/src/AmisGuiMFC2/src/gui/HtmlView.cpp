@@ -257,6 +257,11 @@ void CAmisHtmlView::OnBeforeNavigate2(LPCTSTR lpszURL, DWORD nFlags,
 	ambulant::net::url thisDir = thisUrl.get_base();
 	//we can't just use the book dir because it comes with a trailing slash .. so use the OPF or NCC instead
 	amis::dtb::DtbFileSet* p_files = amis::dtb::DtbWithHooks::Instance()->getFileSet();
+	if (p_files == NULL)
+	{
+		*pbCancel = TRUE;
+		return;
+	}
 	ambulant::net::url bookDir;
 	if (p_files->getOpfFilepath() != NULL && p_files->getOpfFilepath()->is_empty_path() == false)
 		bookDir = *p_files->getOpfFilepath();
