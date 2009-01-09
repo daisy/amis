@@ -115,7 +115,8 @@ Section "MainSection" SEC01
   File "${BIN_DIR}\avutil-49.dll"
   File "${BIN_DIR}\SDL.dll"
   File "${BIN_DIR}\libamplugin_pdtb.dll"
-  File "${BIN_DIR}\PdtbIePlugin.dll"
+  
+  ;File "${BIN_DIR}\PdtbIePlugin.dll"
   ;RegDLL "$INSTDIR/PdtbIePlugin.dll"
   ;ExecWait 'regsvr32.exe /s "$INSTDIR\PdtbIePlugin.dll"'
   !insertmacro InstallLib REGDLLTLB NOTSHARED NOREBOOT_NOTPROTECTED "${BIN_DIR}\PdtbIePlugin.dll" "$INSTDIR\PdtbIePlugin.dll" "$INSTDIR"
@@ -326,8 +327,9 @@ Section Uninstall
        ExecWait 'regsvr32.exe /u /s "$INSTDIR\TransformSample.ax"'
        ; unregister the pdtb dll
        ;UnregDLL "$INSTDIR\PdtbIePlugin.dll"
-       ExecWait 'regsvr32.exe /u /s "$INSTDIR\PtdbIePlugin.dll"'
-       
+       ;ExecWait 'regsvr32.exe /u /s "$INSTDIR\PtdbIePlugin.dll"'
+       !insertmacro UnInstallLib REGDLLTLB NOTSHARED NOREBOOT_NOTPROTECTED "$INSTDIR\PdtbIePlugin.dll"
+  
 	Delete "$SETTINGS_DIR\css\*.css"
 	Delete "$SETTINGS_DIR\css\font\*"
 	Delete "$SETTINGS_DIR\css\customStyles\*"

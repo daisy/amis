@@ -282,6 +282,7 @@ bool amis::dtb::Dtb::processNcc(const ambulant::net::url* filepath, bool isLocal
 
 	//if this NCC file turned out to be a protected book, then we need to get custom tests and a nav model
 	//from an encrypted file
+	mbCanDecodePdtb = false;
 	if (checkForCopyProtection(mpMetadata))
 	{
 		amis::util::Log::Instance()->writeMessage("This is a protected book", "Dtb::processNcc");
@@ -294,13 +295,20 @@ bool amis::dtb::Dtb::processNcc(const ambulant::net::url* filepath, bool isLocal
 				) == true)
 			{
 				//reparse the ncc.pdtb file
-				if (!ncc_file_reader.readFromFile(getFileSet()->getProtectedNavFilepath())) return false;
-
-				if (mpNavModel) delete mpNavModel;
-				if (mpCustomTests) delete mpCustomTests;
-				mpNavModel = ncc_file_reader.getNavModel();
-				mpCustomTests = ncc_file_reader.getCustomTests();
-				p_title = ncc_file_reader.getTitle();
+				if (!ncc_file_reader.readFromFile(getFileSet()->getProtectedNavFilepath()))
+				{
+					mbCanDecodePdtb = false;
+					return false;
+				}
+				else
+				{
+					mbCanDecodePdtb = true;
+					if (mpNavModel) delete mpNavModel;
+					if (mpCustomTests) delete mpCustomTests;
+					mpNavModel = ncc_file_reader.getNavModel();
+					mpCustomTests = ncc_file_reader.getCustomTests();
+					p_title = ncc_file_reader.getTitle();
+				}
 			}
 		}
 		else
@@ -309,6 +317,7 @@ bool amis::dtb::Dtb::processNcc(const ambulant::net::url* filepath, bool isLocal
 					2. that function failed
 			then: playback of NCC.html continues and it will say "this book is protected... "
 			*/
+			mbCanDecodePdtb = false;
 			amis::util::Log::Instance()->writeError("Protected book could not be read", 
 				"Dtb::processNcc");
 		}
@@ -566,26 +575,30 @@ amis::dtb::smil::SmilMediaGroup* amis::dtb::Dtb::previousPhrase()
 	return p_smil_media;
 #endif
 }
-//--------------------------------------------------
-//set the lastmark
-//--------------------------------------------------
+
+//this function is only used when we aren't using an external smil player (e.g. ambulant)
+#ifndef WITH_EXTERNAL_SMIL_PLAYER
 void amis::dtb::Dtb::setNewLastmark(amis::dtb::smil::SmilMediaGroup* pMediaGroup)
 {
 	if (pMediaGroup == NULL)
 		return;
 	if (mpBookmarks == NULL)
 		return;
-
 	ambulant::net::url data_uri = calculateUriOfData(pMediaGroup);
 	setNewLastmark(data_uri);
 }
-
+#endif
 //this function does more than it seems .. it needs a better name
 //it turns out that this method signature is friendlier for ambulant than the other setNewLastmark function
 void amis::dtb::Dtb::setNewLastmark(ambulant::net::url positionUri)
 {
 	if (mpBookmarks == NULL) return;
-
+	
+	//if we couldn't decode a pdtb and are presumably playing the copyright notice, don't set a lastmark
+	//it confuses amis later on if the pdtb is opened after the user loads the key
+	if (isProtected() == true && mbCanDecodePdtb == false)
+		return;
+	
 	amis::dtb::PositionData* p_pos_data = new amis::dtb::PositionData();
 	p_pos_data->mUri = positionUri;
 
