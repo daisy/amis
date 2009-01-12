@@ -311,9 +311,7 @@ BOOL CAmisApp::InitInstance()
 
 	//load user keys into the ambulant plugin engine
 	addUserKeysToAmbulantPluginEngine();
-	//set the callback function to handle book key registration
-	amis::dtb::DtbWithHooks::Instance()->setCallbackForPreprocessingBookKey(registerBookKeyFile);
-
+	
 	if (Preferences::Instance()->getStartInBasicView() == true)
 		MainWndParts::Instance()->basicView();
 
@@ -564,6 +562,7 @@ bool CAmisApp::openBook(const ambulant::net::url* filename, bool saveInHistory)
 	MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_UPDATE_TOOLBAR_STATE,
 		(WPARAM)MainWndParts::Instance()->mpDefaultToolbar);
 
+	
 	bool b_a_book_was_open = false;
 	//close the open book
 	if (mbBookIsOpen == true) 
@@ -575,7 +574,11 @@ bool CAmisApp::openBook(const ambulant::net::url* filename, bool saveInHistory)
 		mbOverrideReopen = mbIsPlayingHelpBook || mbIsPlayingShortcutsBook;
 		OnFileClose();
 	}
+
 	mbOverrideReopen = false;
+	//set the callback function to handle book key registration
+	amis::dtb::DtbWithHooks::Instance()->setCallbackForPreprocessingBookKey(registerBookKeyFile);
+
 	if (!filename->is_empty_path()) 
 	{
 	if (amis::dtb::DtbWithHooks::Instance()->open
