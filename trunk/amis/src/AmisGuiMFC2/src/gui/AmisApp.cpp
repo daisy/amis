@@ -160,6 +160,13 @@ BOOL CAmisApp::InitInstance()
 	if (hr == S_FALSE) CoUninitialize();
 	assert(hr == S_OK);
 
+#ifdef _DEBUG
+
+	//This was moved to the installer
+	RegisterOCX();
+
+#endif
+
 	//this says "use the registry instead of ini files" (for windows-specific app preferences).  we use it for UAKs 
 	SetRegistryKey(_T("Amis"));
 
@@ -401,8 +408,13 @@ int CAmisApp::ExitInstance()
 	amis::util::Log::Instance()->endLog();
 	amis::util::Log::Instance()->DestroyInstance();
 	
+	
+#ifdef _DEBUG
+
 	//This was moved to the uninstaller
-	//UnregisterOCX();
+	UnregisterOCX();
+
+#endif
 
 	TRACE("\nEXIT.\n\n");
 
@@ -883,7 +895,7 @@ void CAmisApp::OnSpeedUp()
 	amis::tts::TTSPlayer::InstanceTwo()->SetSpeechRate(currentRate+1);
 
 	amis::util::Log::Instance()->writeTrace("before ambulant increase rate");
-	double rate = ambulant::gui::dx::change_global_rate(0.7);
+	double rate = ambulant::gui::dx::change_global_rate(0.5);
 	char ch_rate[15];
 	sprintf(ch_rate, "Rate = %.3f", rate);
 	amis::util::Log::Instance()->writeTrace(ch_rate);
@@ -902,7 +914,7 @@ void CAmisApp::OnSpeedDown()
 	amis::tts::TTSPlayer::InstanceTwo()->SetSpeechRate(currentRate-1);
 
 	amis::util::Log::Instance()->writeTrace("before ambulant decrease rate");
-	double rate = ambulant::gui::dx::change_global_rate(-0.7);
+	double rate = ambulant::gui::dx::change_global_rate(-0.5);
 	char ch_rate[15];
 	sprintf(ch_rate, "Rate = %.3f", rate);
 	amis::util::Log::Instance()->writeTrace(ch_rate);
