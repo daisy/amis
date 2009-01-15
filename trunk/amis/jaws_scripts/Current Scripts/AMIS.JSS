@@ -1,5 +1,5 @@
 ;Scripts for Amis, version  3.0.1 beta
-; For AMIS 3.0 Beta
+; For AMIS 3.0
 ; JAWS version 7.0 and above
 
 Include "Amis.jsm"
