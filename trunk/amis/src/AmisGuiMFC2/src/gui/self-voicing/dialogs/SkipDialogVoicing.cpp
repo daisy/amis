@@ -22,6 +22,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 #include "gui/self-voicing/dialogs/skipdialogvoicing.h"
 
+#include "gui/AmisApp.h"
+
 namespace amis
 {
 	namespace gui
@@ -107,46 +109,15 @@ namespace amis
 				}
 			}
 
-
 			amis::gui::spoken::PromptItem* SkipDialogVoicing::getPromptItemForReadingOptionName(string item_id)
 			{
 				amis::gui::spoken::PromptItem* pi = NULL;
-
-				if (item_id.compare("prodnote") == 0 ||
-					item_id.compare("optional-prodnote") == 0 || item_id.compare("Producer notes") == 0)
-				{
-					pi = amis::gui::spoken::DataTree::Instance()->findPromptItem("prodnotes");
-
-				}
-				else if (item_id.compare("pages") == 0 || item_id.compare("Pages") == 0 || item_id.compare("pagenumber") == 0)
-				{
-					pi = amis::gui::spoken::DataTree::Instance()->findPromptItem("pages");
-
-				}
-				else if (item_id.compare("sections") == 0 || item_id.compare("Sections") == 0)
-				{
-					pi = amis::gui::spoken::DataTree::Instance()->findPromptItem("sections");
-
-				}
-				else if (item_id.compare("groups") == 0 || item_id.compare("Grouped items") == 0)
-				{
-					pi = amis::gui::spoken::DataTree::Instance()->findPromptItem("groups");
-
-				}
-				else if (item_id.compare("sidebar") == 0 || item_id.compare("Sidebars") == 0)
-				{
-
-					pi = amis::gui::spoken::DataTree::Instance()->findPromptItem("sidebars");
-
-				}
-				else if (item_id.compare("footnote") == 0 || item_id.compare("Footnotes") == 0 || item_id.compare("noteref") == 0)
-				{
-
-					pi = amis::gui::spoken::DataTree::Instance()->findPromptItem("noterefs");
-
-				}
+				std::string str = amis::gui::CAmisApp::getPromptIDFromSideBarName(item_id);
+				if (str.length() != 0)
+					pi = amis::gui::spoken::DataTree::Instance()->findPromptItem(str);
 				return pi;
 			}
+
 			void SkipDialogVoicing::appendSeqListContent(AudioSequence* seq, amis::dtb::CustomTest* p_custom_test, int i)
 			{
 				string item_id = p_custom_test->getId();

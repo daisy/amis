@@ -55,8 +55,12 @@ class CAmisApp : public CWinApp
 {
 public:
 	CAmisApp();
+
+	static std::string getPromptIDFromSideBarName(std::string item_id);
 	
 	static std::wstring pauseBookAndEmitMessage(std::string msg);
+	static std::wstring pauseBookAndEmitMessage(std::string msg1, std::string msg2);
+
 	static std::wstring emitMessage(std::string msg, bool repeat = false);
 
 	static bool beforeModalBox();

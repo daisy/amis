@@ -1410,6 +1410,34 @@ void CAmisApp::OnPlayPause()
 	}
 }
 
+
+std::wstring CAmisApp::pauseBookAndEmitMessage(std::string msgID1, std::string msgID2)
+{
+	MmView *view = MainWndParts::Instance()->mpMmView;
+	bool b_was_playing = amis::Preferences::Instance()->getIsSelfVoicing() == true 
+		&& amis::dtb::DtbWithHooks::Instance()->isPlaying();
+
+	if (b_was_playing == true)
+	{
+		amis::dtb::DtbWithHooks::Instance()->pause();
+	}
+
+	std::wstring str = emitMessage(msgID1);
+
+	if (msgID2.length() != 0)
+	{
+		AudioSequencePlayer::Instance()->waitForSequenceEnd();
+		str = emitMessage(msgID2);
+	}
+
+	if (b_was_playing == true)
+	{
+		AudioSequencePlayer::Instance()->WaitForEndSeqAndRestartBook();
+	}
+	return str;
+}
+
+
 std::wstring CAmisApp::pauseBookAndEmitMessage(std::string msgID)
 {
 	MmView *view = MainWndParts::Instance()->mpMmView;
@@ -1560,4 +1588,34 @@ ambulant::net::url CAmisApp::findBookInLangpackSubdir(std::string dir)
 		ambulant::net::url empty;
 		return empty;
 	}
+}
+
+std::string CAmisApp::getPromptIDFromSideBarName(std::string item_id)
+{
+	if (item_id.compare("prodnote") == 0 ||
+		item_id.compare("optional-prodnote") == 0 || item_id.compare("Producer notes") == 0)
+	{
+		return "prodnotes";
+	}
+	else if (item_id.compare("pages") == 0 || item_id.compare("Pages") == 0 || item_id.compare("pagenumber") == 0)
+	{
+		return "pages";
+	}
+	else if (item_id.compare("sections") == 0 || item_id.compare("Sections") == 0)
+	{
+		return "sections";
+	}
+	else if (item_id.compare("groups") == 0 || item_id.compare("Grouped items") == 0)
+	{
+		return "groups";
+	}
+	else if (item_id.compare("sidebar") == 0 || item_id.compare("Sidebars") == 0)
+	{
+		return "sidebars";
+	}
+	else if (item_id.compare("footnote") == 0 || item_id.compare("Footnotes") == 0 || item_id.compare("noteref") == 0)
+	{
+		return "noterefs";
+	}
+	return "";
 }

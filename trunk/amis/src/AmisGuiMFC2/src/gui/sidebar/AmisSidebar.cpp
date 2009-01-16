@@ -591,27 +591,99 @@ void CAmisSidebar::selectTab(int sel)
 	if (sel > mTabStrip.GetItemCount() - 1) return;
 	changeView(sel);
 }
+
 void CAmisSidebar::changeView(int sel)
 {
 	mTabStrip.SetCurSel(sel);
 	mTabSel = sel;
 	MenuManip::Instance()->setCheckmarkOnForNavigationContainer(sel);
+
+	amis::dtb::nav::NavModel* p_model = NULL;
+	p_model = amis::dtb::DtbWithHooks::Instance()->getNavModel();
+
 	if (sel == 0) 
 	{
 		showNavMap();
+		if (p_model != NULL)
+		{
+			//CString cs = p_model->getNavMap()->getLabel()->getText()->getTextString().c_str();
+			//CT2CA pszConvertedAnsiString (cs);
+			//std::string str(pszConvertedAnsiString);
+
+			std::wstring wstr = p_model->getNavMap()->getLabel()->getText()->getTextString();
+			std::string str;
+			str.assign(wstr.begin(), wstr.end());
+			amis::gui::CAmisApp::pauseBookAndEmitMessage("sidebarHasFocus", amis::gui::CAmisApp::getPromptIDFromSideBarName(str));
+		}
+		else 
+		{
+			amis::gui::CAmisApp::pauseBookAndEmitMessage("sidebarHasFocus", "sections");
+		}
 	}
-	else if(sel == 1)
+	else if (sel == 1)
 	{
-		if (amis::dtb::DtbWithHooks::Instance()->getNavModel()->hasPages() == true) showPageList();
-		else showNavList(sel-1);
+		if (amis::dtb::DtbWithHooks::Instance()->getNavModel()->hasPages() == true)
+		{
+			showPageList();
+			if (p_model != NULL)
+			{
+				std::wstring wstr = p_model->getPageList()->getLabel()->getText()->getTextString();
+				std::string str;
+				str.assign(wstr.begin(), wstr.end());
+				amis::gui::CAmisApp::pauseBookAndEmitMessage("sidebarHasFocus", amis::gui::CAmisApp::getPromptIDFromSideBarName(str));
+			}
+			else 
+			{
+				amis::gui::CAmisApp::pauseBookAndEmitMessage("sidebarHasFocus", "pages");
+			}
+		}
+		else
+		{
+			showNavList(sel-1);
+
+			amis::dtb::nav::NavList* p_list = NULL;
+			p_list = p_model->getNavList(sel-1);
+			if (p_list != NULL)
+			{
+				std::wstring wstr = p_list->getLabel()->getText()->getTextString();
+				std::string str;
+				str.assign(wstr.begin(), wstr.end());
+				amis::gui::CAmisApp::pauseBookAndEmitMessage("sidebarHasFocus", amis::gui::CAmisApp::getPromptIDFromSideBarName(str));
+			}
+			else
+			{			
+				amis::gui::CAmisApp::pauseBookAndEmitMessage("sidebarHasFocus");
+			}
+		}
 	}
 	else
 	{
-		if (amis::dtb::DtbWithHooks::Instance()->getNavModel()->hasPages() == true) showNavList(sel-2);
-		else showNavList(sel-1);
-	}
+		int idx = 0;
+		if (amis::dtb::DtbWithHooks::Instance()->getNavModel()->hasPages() == true)
+		{
+			idx = sel-2;
+		}
+		else
+		{
+			idx = sel-1;
+		}
+		
+		showNavList(idx);
 	
-	amis::gui::CAmisApp::pauseBookAndEmitMessage("sidebarHasFocus");
+		amis::dtb::nav::NavList* p_list = NULL;
+		p_list = p_model->getNavList(idx);
+		if (p_list != NULL)
+		{
+			std::wstring wstr = p_list->getLabel()->getText()->getTextString();
+			std::string str;
+			str.assign(wstr.begin(), wstr.end());
+			amis::gui::CAmisApp::pauseBookAndEmitMessage("sidebarHasFocus", amis::gui::CAmisApp::getPromptIDFromSideBarName(str));
+		}
+		else
+		{			
+			amis::gui::CAmisApp::pauseBookAndEmitMessage("sidebarHasFocus");
+		}
+	}
 }
 void CAmisSidebar::setFocusToActiveList()
 {
