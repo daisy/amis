@@ -913,7 +913,7 @@ void MmView::node_started(const ambulant::lib::node* n)
 	ambulant::lib::xml_string tagname = n->get_local_name();
 	
 	CString msg;
-	msg.Format(_T("^^^^^^^^^^ Node started %s id=\"%s\" src=\"%s\"\n"), 
+	msg.Format(_T("Node started %s id=\"%s\" src=\"%s\"\n"), 
 		A2T(n->get_local_name().c_str()), 
 		A2T(n->get_attribute("id")),
 		A2T(n->get_attribute("src")));

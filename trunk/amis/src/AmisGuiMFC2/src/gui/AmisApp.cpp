@@ -899,10 +899,10 @@ void CAmisApp::OnSpeedUp()
 	char ch_rate[15];
 	sprintf(ch_rate, "Rate = %.3f", rate);
 	amis::util::Log::Instance()->writeTrace(ch_rate);
-	amis::util::Log::Instance()->writeTrace("after ambulant, before amis audio increase rate");
+
 	ambulantX::gui::dx::audio_playerX::Instance()->set_rate(rate);
+
 	updateSpeedButtons();
-  //amis::gui::spoken::AudioSequencePlayer::Instance()->playPromptFromUiId(ID_MENU_PLAY_FASTER, true, NULL);
 }
 
 void CAmisApp::OnSpeedDown()
@@ -913,13 +913,11 @@ void CAmisApp::OnSpeedDown()
 	amis::tts::TTSPlayer::InstanceOne()->SetSpeechRate(currentRate-1);
 	amis::tts::TTSPlayer::InstanceTwo()->SetSpeechRate(currentRate-1);
 
-	amis::util::Log::Instance()->writeTrace("before ambulant decrease rate");
 	double rate = ambulant::gui::dx::change_global_rate(-0.5);
 	char ch_rate[15];
 	sprintf(ch_rate, "Rate = %.3f", rate);
 	amis::util::Log::Instance()->writeTrace(ch_rate);
 	
-	amis::util::Log::Instance()->writeTrace("after ambulant, before amis audio increase rate");
 	ambulantX::gui::dx::audio_playerX::Instance()->set_rate(rate);
 	updateSpeedButtons();
 }
@@ -1550,6 +1548,7 @@ void CAmisApp::updateSpeedButtons()
 	MainWndParts::Instance()->mpDefaultToolbar->enable(ID_AMIS_SLOWER, can_decrease);
 	MainWndParts::Instance()->mpBasicToolbar->enable(ID_AMIS_SLOWER, can_decrease);
 }
+
 bool CAmisApp::canIncreasePlaybackSpeed()
 {
 	double rate = ambulantX::gui::dx::audio_playerX::Instance()->get_rate();

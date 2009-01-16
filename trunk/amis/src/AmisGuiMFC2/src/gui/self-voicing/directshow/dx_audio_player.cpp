@@ -754,6 +754,11 @@ double gui::dx::audio_playerX::get_rate() {
 void gui::dx::audio_playerX::set_rate(double rate) {
 	s_current_playback_rate = rate;
 	if (m_audio_speedup) {
+
+		char ch_rate[25];
+		sprintf(ch_rate, "AmbX Rate = %.3f", rate);
+		amis::util::Log::Instance()->writeTrace(ch_rate);
+
 		m_audio_speedup->setCycleSpeed((short)(rate*100));
 	}
 }

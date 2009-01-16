@@ -1,3 +1,4 @@
+;******
 ; Usage:
 ; makensis /DCUSTOM_LANG_NAME="language name" /DCUSTOM_LANG_ID="lang-code" setup-amis3.nsi /DCUSTOM_HELP help_file.html
 ;
@@ -7,15 +8,23 @@
 ;/DCUSTOM_LANG_NAME = Identifies the installer EXE and the name of the product during installation
 ;/DCUSTOM_LANG_ID = The language pack identifier.  If other than "eng-US", both the custom and default language packs are included
 ;/DCUSTOM_HELP = The name of the help file for the custom language pack.
+;**
 
+;******
+; product information
+;**
 !define PRODUCT_NAME "AMIS"
-!define PRODUCT_VERSION "3 RC 1"
+!define PRODUCT_VERSION "3.0 RC 1"
 !define PRODUCT_PUBLISHER "DAISY Consortium"
 !define PRODUCT_WEB_SITE "http://amisproject.org"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\AMIS.exe"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
 !define PRODUCT_UNINST_ROOT_KEY "HKLM"
 
+
+;******
+; pages, components, and script includes
+;**
 ; required for InstallLib
 !include "Library.nsh"
 
@@ -38,8 +47,10 @@
 
 ; Welcome page
 !insertmacro MUI_PAGE_WELCOME
+
 ; License page
 !insertmacro MUI_PAGE_LICENSE "lgpl.txt"
+
 ; Directory page
 !insertmacro MUI_PAGE_DIRECTORY
  
@@ -48,6 +59,7 @@ Page custom SapiPage
  
 ; Instfiles page
 !insertmacro MUI_PAGE_INSTFILES
+
 ; Finish page
 !define MUI_FINISHPAGE_RUN "$INSTDIR\AMIS.exe"
 !insertmacro MUI_PAGE_FINISH
@@ -60,7 +72,9 @@ Page custom SapiPage
 
 ; MUI end ------
 
-;**********custom defines**********
+;******
+; custom defines
+;**
 ;this is the path to where the AMIS executable lives
 !define BIN_DIR	"..\..\bin"
 
@@ -77,20 +91,23 @@ Page custom SapiPage
 ;this is the path to your Application Data directory
 !define LOCAL_APP_DATA "C:\Documents and Settings\All Users\Application Data"
 
-;**********end custom defines*******
-
+;******
+; directory, installer exe name, etc
+;**
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION} (${CUSTOM_LANG_NAME})"
 ;this is the name of the installer that gets created.  
-;for some reason, i vaguely remember that it shouldn't have spaces in the filename.
-OutFile "Setup-amis3-rc1-${CUSTOM_LANG_NAME}.exe"
+OutFile "Setup-amis30-rc1-${CUSTOM_LANG_NAME}.exe"
 InstallDir "$PROGRAMFILES\AMIS"
 InstallDirRegKey HKLM "${PRODUCT_DIR_REGKEY}" ""
 ShowInstDetails show
 ShowUnInstDetails show
 
+;******
+; copy all files, register DLLs, etc
+;**
 Section "MainSection" SEC01
 
-	;the settings dir will live here
+  ;the settings dir will live here
 	Var /GLOBAL SETTINGS_DIR
 
 	;figure out the user's application data directory
@@ -116,10 +133,11 @@ Section "MainSection" SEC01
   File "${BIN_DIR}\SDL.dll"
   File "${BIN_DIR}\libamplugin_pdtb.dll"
   
-  ;File "${BIN_DIR}\PdtbIePlugin.dll"
-  ;RegDLL "$INSTDIR/PdtbIePlugin.dll"
-  ;ExecWait 'regsvr32.exe /s "$INSTDIR\PdtbIePlugin.dll"'
+  ;register the pdtb-ie plugin
   !insertmacro InstallLib REGDLLTLB NOTSHARED NOREBOOT_NOTPROTECTED "${BIN_DIR}\PdtbIePlugin.dll" "$INSTDIR\PdtbIePlugin.dll" "$INSTDIR"
+  
+  ;register the timescale ocx component
+  ExecWait 'regsvr32.exe /s "$INSTDIR\TransformSample.ax"'
   
   ;copy the bookmark readme file
   SetOutPath "$SETTINGS_DIR\bmk"
@@ -162,11 +180,13 @@ Section "MainSection" SEC01
   SetOutPath "$SETTINGS_DIR\lang"
   File "${BIN_DIR}\settings\lang\readme.txt"
 
-  ;copy the MSVC redistributables exe
-  ;if you are making an installer, be sure to get the latest one from Microsoft.  
-  ;the one included in Visual Studio 8, even SP1, is outdated.
+  ;copy the MSVC redistributables installer
   SetOutPath $TEMP
-  File "c:\devel\vcredist_x86.exe"
+  File "${BIN_DIR}\vcredist_x86.exe"
+  
+  ;copy the jaws scripts installer
+  SetOutPath $TEMP
+  File "${BIN_DIR}\amis3_jfw_scripts.exe"
   
   ;to support Thai encoding, add this key in HKLM
   ;Software\Classes\MIME\Database\Charset\TIS-620 and set AliasForCharset to windows-874
@@ -174,13 +194,14 @@ Section "MainSection" SEC01
  
 SectionEnd
 
-;******************************
-;copy the files for the given langpack
+;******
+; copy the default (eng-US) and custom (if different) language packs
+;*
 Section -CopyLangpacks
-
-  ;***********************
-  ; copy the default langpack
-  ;************************ 
+  
+  ;***
+  ;copy the default langpack
+  ;***
   ;copy the langpack root files
   SetOutPath "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}"
   File "${LOCAL_APP_DATA}\AMIS\settings\lang\${DEFAULT_LANG_ID}\*"
@@ -199,11 +220,11 @@ Section -CopyLangpacks
   SetOutPath "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}\shortcuts"
   File "${LOCAL_APP_DATA}\AMIS\settings\lang\${DEFAULT_LANG_ID}\shortcuts\*"
 
-	;***********************
+  ;***
   ; copy the custom langpack
-  ;************************
+  ;***
   ${If} ${CUSTOM_LANG_ID} != "eng-US"
-		;copy the langpack root files
+	;copy the langpack root files
   	SetOutPath "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}"
   	File "${LOCAL_APP_DATA}\AMIS\settings\lang\${CUSTOM_LANG_ID}\*"
   	
@@ -224,8 +245,9 @@ Section -CopyLangpacks
  End:
 SectionEnd
 
-;************************
-;make some icons
+;******
+; Create shortcuts and icons
+;*
 Section -AdditionalIcons
   WriteIniStr "$INSTDIR\${PRODUCT_NAME}.url" "InternetShortcut" "URL" "${PRODUCT_WEB_SITE}"
   CreateShortCut "$SMPROGRAMS\AMIS\Website.lnk" "$INSTDIR\${PRODUCT_NAME}.url"
@@ -238,8 +260,10 @@ Section -AdditionalIcons
   CreateShortCut "$SMPROGRAMS\AMIS\Keyboard Shortcuts (${DEFAULT_LANG_NAME}).lnk" "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}\shortcuts\amiskeys.html"
 SectionEnd
 
-;*******************************
-;post-install stuff
+;******
+; write unintaller and registry strings
+; check if we need to install the msvc runtimes
+;**
 Section -Post
   WriteUninstaller "$INSTDIR\Uninstall-AMIS.exe"
   WriteRegStr HKLM "${PRODUCT_DIR_REGKEY}" "" "$INSTDIR\AMIS.exe"
@@ -250,14 +274,14 @@ Section -Post
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "URLInfoAbout" "${PRODUCT_WEB_SITE}"
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "Publisher" "${PRODUCT_PUBLISHER}"
  
-  ;register the timescale ocx component
-  ExecWait 'regsvr32.exe /s "$INSTDIR\TransformSample.ax"'
   Call RunMSVCRuntimeSetup
 
+  Call RunJFWScriptSetup
 SectionEnd
 
-;******************************
-;install init
+;******
+;NSIS init function
+;**
 Function .onInit
 
 	;load the sapi install screen file, as we may need it
@@ -268,53 +292,58 @@ Function .onInit
 	File /oname=$PLUGINSDIR\splash.bmp "${LOGO_DIR}\amis.bmp"
 	splash::show 1000 $PLUGINSDIR\splash
 
-	; $0 has '1' if the user closed the splash screen early,
-	; '0' if everything closed normally, and '-1' if some error occurred.
+	; possible values for $0:
+	; '1' if the user closed the splash screen early,
+	; '0' if everything closed normally, 
+	; '-1' if some error occurred.
 	Pop $0 
 			
 	;check that the OS is XP, 2000, or Vista
 	Call GetWindowsVersion
 	Pop $R0
 
-	CheckWinXP:
-		StrCmp $R0 "XP" NextCheck CheckWin2K
-	CheckWin2K:
-		StrCmp $R0 "2000" NextCheck CheckVista
-	CheckVista:
-		StrCmp $R0 "Vista" NextCheck OSNotSupported
+ CheckWinXP:	
+  StrCmp $R0 "XP" DxCheck CheckWin2K
+ CheckWin2K:
+	StrCmp $R0 "2000" DxCheck CheckVista
+ CheckVista:
+	StrCmp $R0 "Vista" DxCheck OSNotSupported
 
-	;the OS is not supported; warn the user instead of aborting
-	OSNotSupported:
-		MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "Warning: operating system not supported.  AMIS may not work.  Do you want to continue?" IDYES +2
+ ;the OS is not supported; warn the user instead of aborting
+ OSNotSupported:
+  MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "Warning: operating system not supported.  AMIS may not work.  Do you want to continue?" IDYES +2
 		Abort
 
-NextCheck:
+ DxCheck:
 	;check for the directx version
 	Call GetDXVersion
 	Pop $R3
 	IntCmp $R3 900 +3 0 +3
-	MessageBox "MB_OK" "Requires DirectX 9.0 or later.  Aborting installation."
-	Abort
+	MessageBox "MB_OK" "Requires DirectX 9.0 or later.  Please update your copy of DirectX."
 
-End:
+ End:
 FunctionEnd
 
-;**************************
-;uninstall success
-Function un.onUninstSuccess
-  HideWindow
-  MessageBox MB_ICONINFORMATION|MB_OK "$(^Name) was successfully removed from your computer."
-FunctionEnd
-
-;**************************
-;unintall init
+;******
+; uninstall init
+;**
 Function un.onInit
   MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "Are you sure you want to completely remove $(^Name) and all of its components?" IDYES +2
   Abort
 FunctionEnd
 
-;***************************
+;******
+; uninstall complete
+;**
+Function un.onUninstSuccess
+  HideWindow
+  MessageBox MB_ICONINFORMATION|MB_OK "$(^Name) was successfully removed from your computer."
+FunctionEnd
+
+
+;******
 ;uninstall process
+;**
 Section Uninstall
 
 	;figure out the user's application data directory
@@ -323,12 +352,9 @@ Section Uninstall
 	StrCpy $SETTINGS_DIR $APPDATA\AMIS\settings
 	
 	; unregister the timescale ocx component
-       ;UnregDLL "$INSTDIR\TransformSample.ax"
-       ExecWait 'regsvr32.exe /u /s "$INSTDIR\TransformSample.ax"'
-       ; unregister the pdtb dll
-       ;UnregDLL "$INSTDIR\PdtbIePlugin.dll"
-       ;ExecWait 'regsvr32.exe /u /s "$INSTDIR\PtdbIePlugin.dll"'
-       !insertmacro UnInstallLib REGDLLTLB NOTSHARED NOREBOOT_NOTPROTECTED "$INSTDIR\PdtbIePlugin.dll"
+  ExecWait 'regsvr32.exe /u /s "$INSTDIR\TransformSample.ax"'
+  ; unregister the pdtb dll
+  !insertmacro UnInstallLib REGDLLTLB NOTSHARED NOREBOOT_NOTPROTECTED "$INSTDIR\PdtbIePlugin.dll"
   
 	Delete "$SETTINGS_DIR\css\*.css"
 	Delete "$SETTINGS_DIR\css\font\*"
@@ -360,7 +386,6 @@ Section Uninstall
   DeleteRegKey ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}"
   DeleteRegKey HKLM "${PRODUCT_DIR_REGKEY}"
  
-  
   Delete "$SMPROGRAMS\AMIS\AMIS.lnk" 
   Delete "$DESKTOP\AMIS.lnk" 
   Delete "$SMPROGRAMS\AMIS\Website.lnk"
@@ -375,7 +400,9 @@ Section Uninstall
   SetAutoClose true
 SectionEnd
 
+;******
 ;uninstall the langpacks
+;**
 Section -un.CopyLangpack
 	
 	Delete "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}\help\*"
@@ -413,11 +440,12 @@ Section -un.CopyLangpack
 SectionEnd
 
 
-;*********************
-;install the MSVC runtimes setup
+;******
+;launch the MSVC runtimes installer
+;**
 Function RunMSVCRuntimeSetup
+
   Var /GLOBAL MSVC_RUNTIME_INSTALLER
-	
   StrCpy $MSVC_RUNTIME_INSTALLER "$TEMP\vcredist_x86.exe"
   
   ;check and see if the user needs these files
@@ -429,12 +457,43 @@ Function RunMSVCRuntimeSetup
   StrCpy $R0 "-1"
 
 	;actually install them
-	InstallVSRedist: 
-  	ExecWait "$MSVC_RUNTIME_INSTALLER" $0
-  	StrCmp $0 "0" End Error
-  Error:
-    	MessageBox MB_ICONEXCLAMATION "There was an error encountered while attempting to install the Microsoft runtime files.  Please download from http://www.microsoft.com/downloads/details.aspx?FamilyID=200B2FD9-AE1A-4A14-984D-389C36F85647&displaylang=en and install manually."
-    	Goto End
-  End:
-  	Delete "$MSVC_RUNTIME_INSTALLER"
+ InstallVSRedist: 
+  ExecWait "$MSVC_RUNTIME_INSTALLER" $0
+  StrCmp $0 "0" End Error
+ Error:
+  MessageBox MB_ICONEXCLAMATION "There was an error encountered while attempting to install the Microsoft runtime files.  Please download from http://www.microsoft.com/downloads/details.aspx?FamilyID=200B2FD9-AE1A-4A14-984D-389C36F85647&displaylang=en and install manually."
+  
+  Goto End
+
+ End:
+  Delete "$MSVC_RUNTIME_INSTALLER"
+
+FunctionEnd
+
+;******
+; launch the jaws scripts installer
+;**
+Function RunJFWScriptSetup
+  
+  Var /GLOBAL JFW_SCRIPTS_INSTALLER
+  StrCpy $JFW_SCRIPTS_INSTALLER "$TEMP\amis3_jfw_scripts.exe"
+  
+  ; check if the user has jaws installed, then ask if they want to install the scripts
+  ; TODO: check if jaws is installed
+  
+  ; ask if the user wants to install the scripts
+ AskUser:
+  MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON1 "Would you like to install Jaws for Windows scripts for AMIS" IDYES +2
+  Goto End
+  
+ InstallScripts:
+  ExecWait "$JFW_SCRIPTS_INSTALLER" $0
+  StrCmp $0 "0" End Error
+ 
+ Error:
+  MessageBox MB_ICONEXCLAMATION "There was an error encountered while attempting to install Jaws for Windows scripts for AMIS.  Please visit http://amisproject.org to download and install the scripts separately."
+  
+ End:
+  Delete "$JFW_SCRIPTS_INSTALLER"
+
 FunctionEnd
