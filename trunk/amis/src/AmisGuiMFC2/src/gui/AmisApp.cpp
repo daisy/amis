@@ -1426,7 +1426,10 @@ std::wstring CAmisApp::pauseBookAndEmitMessage(std::string msgID1, std::string m
 
 	if (msgID2.length() != 0)
 	{
-		AudioSequencePlayer::Instance()->waitForSequenceEnd();
+		if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
+		{
+			AudioSequencePlayer::Instance()->waitForSequenceEnd();
+		}
 		str = emitMessage(msgID2);
 	}
 
