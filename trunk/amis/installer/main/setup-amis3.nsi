@@ -190,7 +190,7 @@ Section "MainSection" SEC01
   
   ;to support Thai encoding, add this key in HKLM
   ;Software\Classes\MIME\Database\Charset\TIS-620 and set AliasForCharset to windows-874
-   WriteRegStr HKLM "Software\Classes\MIME\Database\Charset\TIS-620" "AliasForCharset" "Windows-874"
+  WriteRegStr HKLM "Software\Classes\MIME\Database\Charset\TIS-620" "AliasForCharset" "Windows-874"
  
 SectionEnd
 
@@ -452,7 +452,7 @@ Function RunMSVCRuntimeSetup
   Push $R0
   ClearErrors
   ReadRegDword $R0 HKLM "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{7299052b-02a4-4627-81f2-1818da5d550d}" "Version"
-  ; if VS 2005+ redist SP1 not installed, install it
+  ; if VS 2005+ redist SP1 not installed (if there was an error finding the key), install it
   IfErrors InstallVSRedist End
   StrCpy $R0 "-1"
 
@@ -479,7 +479,12 @@ Function RunJFWScriptSetup
   StrCpy $JFW_SCRIPTS_INSTALLER "$TEMP\amis3_jfw_scripts.exe"
   
   ; check if the user has jaws installed, then ask if they want to install the scripts
-  ; TODO: check if jaws is installed
+  Push $R0
+  ClearErrors
+  ReadRegDword $R0 HKCU "Software\Freedom Scientific\JAWS" "(Default)"
+  ; if the key exists (no errors), then ask the user if they want to install jaws scripts.  otherwise go to the end.
+  IfErrors End AskUser
+  StrCpy $R0 "-1"
   
   ; ask if the user wants to install the scripts
  AskUser:

@@ -6,7 +6,9 @@ REM   The one included in Visual Studio 8, even SP1, is outdated.
 REM   Then change the line under "Copying MSVC redistributable" to copy your local copy.
 
 ECHO Customizing preferences for %2
-perl setup-amis-prefs.pl ../../bin/settings/amisPrefs.xml.default ui-lang-id %1 > ../../bin/settings/clean_settings_for_the_installer/amisPrefs.xml 
+mkdir ..\..\bin\settings\clean_settings_for_the_installer
+perl setup-amis-prefs.pl ../../bin/settings/amisPrefs.xml.default ui-lang-id %1 > ../../bin/settings/clean_settings_for_the_installer/amisPrefs.xml
+copy ..\..\bin\settings\amisHistory.xml.default ..\..\bin\settings\clean_settings_for_the_installer\amisHistory.xml
 
 ECHO Copying MSVC redistributable
 copy c:\devel\vcredist_x86.exe ..\..\bin\vcredist_x86.exe

@@ -12,7 +12,9 @@ BOOL APIENTRY DllMain( HANDLE hModule,
 }
 */
 
+/*
 BOOL RunDllReg(LPTSTR lpFileName);
 BOOL RunDllUnreg(LPTSTR lpFileName);
 BOOL RegisterOCX();
 BOOL UnregisterOCX();
+*/

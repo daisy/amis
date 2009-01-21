@@ -22,7 +22,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "stdafx.h"
 #include <winbase.h>
 
-#include "util/RegOcx.h"
+//#include "util/RegOcx.h"
 #include "AmisCore.h"
 #include "util/FilePathTools.h"
 #include "Preferences.h"
@@ -162,8 +162,8 @@ BOOL CAmisApp::InitInstance()
 
 #ifdef _DEBUG
 
-	//This was moved to the installer
-	RegisterOCX();
+	//This was moved to the installer and the post-build process
+	//RegisterOCX();
 
 #endif
 
@@ -412,7 +412,7 @@ int CAmisApp::ExitInstance()
 #ifdef _DEBUG
 
 	//This was moved to the uninstaller
-	UnregisterOCX();
+	//UnregisterOCX();
 
 #endif
 

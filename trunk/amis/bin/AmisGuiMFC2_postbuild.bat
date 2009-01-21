@@ -11,3 +11,6 @@ copy ..\..\..\..\..\ambulant\bin\win32\libamplugin_ffmpeg.dll ..\..\bin\libamplu
 echo Creating resource.h.ini configuration file
 SET DESTINATION=%systemdrive%\Documents and Settings\All Users\Application Data\AMIS\settings\
 c:\Perl\bin\perl ..\..\bin\resource.h.ini.pl resource.h "%DESTINATION%resource.h.ini"
+
+echo Registering timescale component
+regsvr32 /s ..\..\bin\TransformSample.ax

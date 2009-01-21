@@ -1,6 +1,6 @@
 // RegOcx.cpp : Defines the entry point for the DLL application.
 //
-
+/*
 #include "windows.h"
 #include "malloc.h"
 #include <string>
@@ -10,7 +10,7 @@ using namespace std;
 typedef HRESULT (*DllRegisterServer) (void);
 typedef HRESULT (*DllUnregisterServer) (void);
 //typedef long (*DllRegisterServer) (void);
-
+*/
 /*
 BOOL APIENTRY DllMain( HANDLE hModule, 
                        DWORD  ul_reason_for_call, 
@@ -21,7 +21,7 @@ BOOL APIENTRY DllMain( HANDLE hModule,
     return TRUE;
 }
 */
-
+/*
 BOOL RunDllReg(LPTSTR lpFileName) {
 	LPTSTR lpSysDir = (LPTSTR) malloc(255);
 	GetSystemDirectory(lpSysDir, 255);
@@ -51,7 +51,7 @@ BOOL RunDllReg(LPTSTR lpFileName) {
 		}
 	}*/
 	
-	bool bResult = false;
+/*	bool bResult = false;
 	HMODULE hModule;
 
 	try {
@@ -97,7 +97,7 @@ BOOL RunDllUnreg(LPTSTR lpFileName) {
 	}
 	*/
 	
-	bool bResult = false;
+/*	bool bResult = false;
 	HMODULE hModule;
 
 	try {
@@ -144,3 +144,4 @@ BOOL UnregisterOCX() {
 
 	return true;
 }
+*/
