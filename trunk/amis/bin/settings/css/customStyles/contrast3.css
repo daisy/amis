@@ -1,5 +1,5 @@
 /*contrast CSS sheet*/
 /*Light yellow background and black text*/
 /*AMIS will pick up the background-color and color values for the body element and use them in the sidebar.*/
-body{ background-color: lightyellow !important; color: black !important;}
+body{ background-color: pink !important; color: black !important;}
 
