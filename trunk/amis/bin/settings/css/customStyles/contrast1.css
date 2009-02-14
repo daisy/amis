@@ -1,4 +1,4 @@
 /*contrast CSS sheet*/
-/*Navy background with yellow text*/
-/*AMIS will pick up the background-color and color values for the body element and use them in the sidebar.*/
 body{ background-color: silver !important; color: black !important;}
+a {color: black !important;}
+a:hover {color: black !important; background-color: lightyellow;}

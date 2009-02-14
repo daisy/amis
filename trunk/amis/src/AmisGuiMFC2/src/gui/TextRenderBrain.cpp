@@ -58,9 +58,6 @@ TextRenderBrain::TextRenderBrain()
 	mpPreviousElm = NULL;
 	mbStyleOn = false;
 	mCurrentStyleIdx = -1;
-	VariantInit(&mUnhighlightedFG);
-	VariantInit(&mUnhighlightedBG);
-
 	mCurrentUrl = ambulant::net::url();
 
 	mpFontCss = NULL;
@@ -70,22 +67,6 @@ TextRenderBrain::TextRenderBrain()
 
 TextRenderBrain::~TextRenderBrain()
 {
-	if (mUnhighlightedFG.vt == VT_BSTR)
-		SysFreeString(mUnhighlightedFG.bstrVal);
-	if (mUnhighlightedBG.vt == VT_BSTR)
-		SysFreeString(mUnhighlightedBG.bstrVal);
-
-	//we don't necessarily need to count backwards here
-	int sz = mChildrenUnhighlightedBG.size();
-	for (int j = sz-1; j>=0; j--)
-	{
-		if(mChildrenUnhighlightedBG[j].vt == VT_BSTR)
-			SysFreeString(mChildrenUnhighlightedBG[j].bstrVal);
-		if(mChildrenUnhighlightedFG[j].vt == VT_BSTR)
-			SysFreeString(mChildrenUnhighlightedFG[j].bstrVal);
-	}
-	mChildrenUnhighlightedBG.clear();
-	mChildrenUnhighlightedFG.clear();
 }
 
 void TextRenderBrain::gotoUriTarget(amis::TextNode* pText)
@@ -265,24 +246,12 @@ void TextRenderBrain::showElementAtId(string elmId)
 //reset the highlight from the previously highlighted element
 void TextRenderBrain::unHighlightPreviousElement()
 {
-	if (mpPreviousElm != NULL && mUnhighlightedBG.vt != VT_EMPTY && mUnhighlightedFG.vt != VT_EMPTY)
+	if (mpPreviousElm != NULL)
 	{
-		VARIANT copy_last_bg;
-		VARIANT copy_last_fg;
-		VariantInit(&copy_last_bg);
-		VariantInit(&copy_last_fg);
-		copy_last_bg.vt = VT_BSTR;
-		copy_last_fg.vt = VT_BSTR;
-		copy_last_bg.bstrVal = mUnhighlightedBG.bstrVal;
-		copy_last_fg.bstrVal = mUnhighlightedFG.bstrVal;
-
+	
 		IHTMLStyle* p_last_style = NULL;
 		mpPreviousElm->get_style(&p_last_style);
-		//set the properties
-		p_last_style->put_backgroundColor(copy_last_bg);
-		p_last_style->put_color(copy_last_fg);
-		SysFreeString(copy_last_bg.bstrVal);
-		SysFreeString(copy_last_fg.bstrVal);
+		p_last_style->put_cssText(mPreviousElmCss);
 
 		//set the properties on child elements too!  this restores the style on all child elements.
 		//the next 200 lines of code are for iterating over the child elements collection in IE :(
@@ -319,21 +288,17 @@ void TextRenderBrain::unHighlightPreviousElement()
 						p_child_elm->get_style(&p_child_style);
 						
 						//set the new style
-						p_child_style->put_backgroundColor(mChildrenUnhighlightedBG[i]);
-						p_child_style->put_color(mChildrenUnhighlightedFG[i]);
+						p_child_style->put_cssText(mPreviousChildrenCss[i]);
 					}
 					p_disp2->Release();
 				}
 			}
-			//we don't necessarily need to count backwards here
-			int sz = mChildrenUnhighlightedBG.size();
-			for (int j = sz-1; j>=0; j--)
+			for (int j = 0; j<mPreviousChildrenCss.size(); j++)
 			{
-				SysFreeString(mChildrenUnhighlightedBG[j].bstrVal);
-				SysFreeString(mChildrenUnhighlightedFG[j].bstrVal);
+				SysFreeString(mPreviousChildrenCss[j]);
 			}
-			mChildrenUnhighlightedBG.clear();
-			mChildrenUnhighlightedFG.clear();
+			mPreviousChildrenCss.clear();
+			SysFreeString(mPreviousElmCss);
 		}
 		//ok, we are done with the child elements
 	}
@@ -348,30 +313,21 @@ void TextRenderBrain::setHighlightColors(IHTMLElement* pElm)
 	IHTMLStyle* p_style = NULL;
 	//save the current style info before changing it
 	pElm->get_style(&p_style);
-	p_style->get_backgroundColor(&mUnhighlightedBG);
-	p_style->get_color(&mUnhighlightedFG);
+	p_style->get_cssText(&mPreviousElmCss);
 	
 	//variables for the highlight colors
 	string str_text_fg, str_text_bg;
-	VARIANT var_bg;
-	VARIANT var_fg;
-
-	VariantInit(&var_bg);
-	VariantInit(&var_fg);
-		
+	
 	//get as strings from the preferences for highlight values
 	str_text_fg = amis::Preferences::Instance()->getHighlightFGColor().getAsHtmlHexColor();
 	str_text_bg = amis::Preferences::Instance()->getHighlightBGColor().getAsHtmlHexColor();
 	
-	//convert to chars
-	const char* textfg_color = str_text_fg.c_str();
-	const char* textbg_color = str_text_bg.c_str();
+	string css_text = "color: " + str_text_fg + " !important; background-color: " + str_text_bg + " !important;";
 
-	//convert to bstr/variant 
-	var_fg.vt = VT_BSTR;
-	var_fg.bstrVal = A2BSTR(textfg_color);
-	var_bg.vt = VT_BSTR;
-	var_bg.bstrVal = A2BSTR(textbg_color);
+	//convert to chars
+	const char* ch_css_text = css_text.c_str();
+	BSTR bstr_css_text;
+	bstr_css_text = A2BSTR(ch_css_text);
 
 	//set the properties on child elements too!  this prevents the link color from overriding our highlight colors.
 	//the next 200 lines of code are for iterating over the child elements collection in IE :(
@@ -408,18 +364,12 @@ void TextRenderBrain::setHighlightColors(IHTMLElement* pElm)
 					p_child_elm->get_style(&p_child_style);
 					
 					//save the default style
-					VARIANT prev_bg;
-					VARIANT prev_fg;
-					VariantInit(&prev_bg);
-					VariantInit(&prev_fg);
-					p_style->get_backgroundColor(&prev_bg);
-					p_style->get_color(&prev_fg);
-					mChildrenUnhighlightedBG.push_back(prev_bg);
-					mChildrenUnhighlightedFG.push_back(prev_fg);
-	
+					BSTR css;
+					p_style->get_cssText(&css);
+					mPreviousChildrenCss.push_back(css);
+					
 					//set the new style
-					p_child_style->put_backgroundColor(var_bg);
-					p_child_style->put_color(var_fg);
+					p_child_style->put_cssText(bstr_css_text);
 				}
 				p_disp2->Release();
 			}
@@ -429,11 +379,8 @@ void TextRenderBrain::setHighlightColors(IHTMLElement* pElm)
 
 	//set the properties
 	//this puts the preferred highlighting colors into pStyle
-	p_style->put_backgroundColor(var_bg);
-	p_style->put_color(var_fg);
-	
-	SysFreeString(var_fg.bstrVal);
-	SysFreeString(var_bg.bstrVal);
+	p_style->put_cssText(bstr_css_text);
+	SysFreeString(bstr_css_text);
 }
 int TextRenderBrain::getCurrentCustomStyleIndex()
 {

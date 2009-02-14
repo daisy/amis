@@ -82,11 +82,10 @@ private:
 	string mTextElmId;
 	wstring mCurrentElmText;
 	IHTMLElement* mpPreviousElm;
-	VARIANT mUnhighlightedBG;
-	VARIANT mUnhighlightedFG;
-	//the child elements of the selected element could have their own styles
-	vector<VARIANT> mChildrenUnhighlightedBG;
-	vector<VARIANT> mChildrenUnhighlightedFG;
+	
+	vector<BSTR> mPreviousChildrenCss;
+	BSTR mPreviousElmCss;
+
 	IHTMLStyleSheet* mpFontCss;
 	IHTMLStyleSheet* mpStyleCss;
 	IHTMLStyleSheet* mpAmisCss;
