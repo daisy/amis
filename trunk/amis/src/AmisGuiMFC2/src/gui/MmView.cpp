@@ -925,7 +925,8 @@ void MmView::node_started(const ambulant::lib::node* n)
 		if (theApp.getShouldNotRenderAudio() == true) return;
 	}
 
-	if (tagname != "par" && tagname != "text" && tagname != "audio") return;
+	if (tagname != "par" && tagname != "text" && tagname != "audio" && tagname != "seq") 
+		return;
 
 	// Remember this node so we can later use it for local navigation
 	// (next, prev, escape).

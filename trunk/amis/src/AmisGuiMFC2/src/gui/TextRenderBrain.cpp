@@ -3,7 +3,7 @@ AMIS: Adaptive Multimedia Information System
 Software for playing DAISY books
 Homepage: http://amisproject.org
 
-Copyright (c) 2008  DAISY Consortium
+Copyright (c) 2004-2009  DAISY Consortium
 
 This library is free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public
@@ -74,6 +74,18 @@ TextRenderBrain::~TextRenderBrain()
 		SysFreeString(mUnhighlightedFG.bstrVal);
 	if (mUnhighlightedBG.vt == VT_BSTR)
 		SysFreeString(mUnhighlightedBG.bstrVal);
+
+	//we don't necessarily need to count backwards here
+	int sz = mChildrenUnhighlightedBG.size();
+	for (int j = sz-1; j>=0; j--)
+	{
+		if(mChildrenUnhighlightedBG[j].vt == VT_BSTR)
+			SysFreeString(mChildrenUnhighlightedBG[j].bstrVal);
+		if(mChildrenUnhighlightedFG[j].vt == VT_BSTR)
+			SysFreeString(mChildrenUnhighlightedFG[j].bstrVal);
+	}
+	mChildrenUnhighlightedBG.clear();
+	mChildrenUnhighlightedFG.clear();
 }
 
 void TextRenderBrain::gotoUriTarget(amis::TextNode* pText)
@@ -271,6 +283,59 @@ void TextRenderBrain::unHighlightPreviousElement()
 		p_last_style->put_color(copy_last_fg);
 		SysFreeString(copy_last_bg.bstrVal);
 		SysFreeString(copy_last_fg.bstrVal);
+
+		//set the properties on child elements too!  this restores the style on all child elements.
+		//the next 200 lines of code are for iterating over the child elements collection in IE :(
+		IDispatch *p_disp = NULL;
+		IHTMLElementCollection* p_children = NULL;
+		mpPreviousElm->get_children(&p_disp);
+		HRESULT res = p_disp->QueryInterface(IID_IHTMLElementCollection, (void**)&p_children);
+		p_disp->Release();
+		if (SUCCEEDED(res))
+		{
+			VARIANT name;
+			VARIANT idx;
+			VariantInit(&name);
+			VariantInit(&idx);
+			name.vt = VT_BSTR;
+			idx.vt = VT_UINT;
+		
+			long len;
+			p_children->get_length(&len);
+			for (int i = 0; i<len; i++)
+			{
+		 		idx.lVal = i;
+				IDispatch* p_disp2 = NULL;
+				p_children->item(idx, name, &p_disp2);
+				
+				if (p_disp2)
+				{
+					IHTMLElement* p_child_elm = NULL;
+					p_disp2->QueryInterface(IID_IHTMLElement, (void**)&p_child_elm);
+					
+					if (p_child_elm)
+					{
+						IHTMLStyle* p_child_style = NULL;
+						p_child_elm->get_style(&p_child_style);
+						
+						//set the new style
+						p_child_style->put_backgroundColor(mChildrenUnhighlightedBG[i]);
+						p_child_style->put_color(mChildrenUnhighlightedFG[i]);
+					}
+					p_disp2->Release();
+				}
+			}
+			//we don't necessarily need to count backwards here
+			int sz = mChildrenUnhighlightedBG.size();
+			for (int j = sz-1; j>=0; j--)
+			{
+				SysFreeString(mChildrenUnhighlightedBG[j].bstrVal);
+				SysFreeString(mChildrenUnhighlightedFG[j].bstrVal);
+			}
+			mChildrenUnhighlightedBG.clear();
+			mChildrenUnhighlightedFG.clear();
+		}
+		//ok, we are done with the child elements
 	}
 }
 //set the highlight colors on an element
@@ -297,7 +362,7 @@ void TextRenderBrain::setHighlightColors(IHTMLElement* pElm)
 	//get as strings from the preferences for highlight values
 	str_text_fg = amis::Preferences::Instance()->getHighlightFGColor().getAsHtmlHexColor();
 	str_text_bg = amis::Preferences::Instance()->getHighlightBGColor().getAsHtmlHexColor();
-		
+	
 	//convert to chars
 	const char* textfg_color = str_text_fg.c_str();
 	const char* textbg_color = str_text_bg.c_str();
@@ -308,11 +373,65 @@ void TextRenderBrain::setHighlightColors(IHTMLElement* pElm)
 	var_bg.vt = VT_BSTR;
 	var_bg.bstrVal = A2BSTR(textbg_color);
 
+	//set the properties on child elements too!  this prevents the link color from overriding our highlight colors.
+	//the next 200 lines of code are for iterating over the child elements collection in IE :(
+	IDispatch *p_disp = NULL;
+	IHTMLElementCollection* p_children = NULL;
+	pElm->get_children(&p_disp);
+	HRESULT res = p_disp->QueryInterface(IID_IHTMLElementCollection, (void**)&p_children);
+	p_disp->Release();
+	if (SUCCEEDED(res))
+	{
+		VARIANT name;
+		VARIANT idx;
+		VariantInit(&name);
+		VariantInit(&idx);
+		name.vt = VT_BSTR;
+		idx.vt = VT_UINT;
+	
+		long len;
+		p_children->get_length(&len);
+		for (int i = 0; i<len; i++)
+		{
+		 	idx.lVal = i;
+			IDispatch* p_disp2 = NULL;
+			p_children->item(idx, name, &p_disp2);
+			
+			if (p_disp2)
+			{
+				IHTMLElement* p_child_elm = NULL;
+				p_disp2->QueryInterface(IID_IHTMLElement, (void**)&p_child_elm);
+				
+				if (p_child_elm)
+				{
+					IHTMLStyle* p_child_style = NULL;
+					p_child_elm->get_style(&p_child_style);
+					
+					//save the default style
+					VARIANT prev_bg;
+					VARIANT prev_fg;
+					VariantInit(&prev_bg);
+					VariantInit(&prev_fg);
+					p_style->get_backgroundColor(&prev_bg);
+					p_style->get_color(&prev_fg);
+					mChildrenUnhighlightedBG.push_back(prev_bg);
+					mChildrenUnhighlightedFG.push_back(prev_fg);
+	
+					//set the new style
+					p_child_style->put_backgroundColor(var_bg);
+					p_child_style->put_color(var_fg);
+				}
+				p_disp2->Release();
+			}
+		}
+	}
+	//ok, we are done with the child elements
+
 	//set the properties
 	//this puts the preferred highlighting colors into pStyle
 	p_style->put_backgroundColor(var_bg);
 	p_style->put_color(var_fg);
-
+	
 	SysFreeString(var_fg.bstrVal);
 	SysFreeString(var_bg.bstrVal);
 }

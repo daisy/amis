@@ -3,7 +3,7 @@ AMIS: Adaptive Multimedia Information System
 Software for playing DAISY books
 Homepage: http://amisproject.org
 
-Copyright (c) 2008  DAISY Consortium
+Copyright (c) 2004-2009  DAISY Consortium
 
 This library is free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public
@@ -148,16 +148,7 @@ void AmisDialogBase::on_paint()
 	{
 		if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 		{
-			/*
-			CButton* p_butt =	(CButton*)GetDlgItem(IDCANCEL);
-			if (p_butt == NULL) p_butt = (CButton*)GetDlgItem(IDOK);
-			if (p_butt != NULL) p_butt->SetFocus();
-			*/
-
 			AudioSequencePlayer::playDialogWelcome(mId, this, true);
-
-			//AudioSequencePlayer::playDialogTextControlsFromUiId(mId, this);
-			//AudioSequencePlayer::Instance()->playDialogInstructionsFromUiId(mId);
 		}
 		mbFlag_FirstDraw = false;
 	}	

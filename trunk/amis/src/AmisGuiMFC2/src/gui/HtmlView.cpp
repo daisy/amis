@@ -3,7 +3,7 @@ AMIS: Adaptive Multimedia Information System
 Software for playing DAISY books
 Homepage: http://amisproject.org
 
-Copyright (c) 2008  DAISY Consortium
+Copyright (c) 2004-2009  DAISY Consortium
 
 This library is free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public
@@ -37,7 +37,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "util/Log.h"
 
 #define WITH_HTML_WIDGET
-#define AM_DBG if (1)
+#define AM_DBG if (0)
 
 typedef amis::gui::CAmisHtmlView HtmlView;
 
