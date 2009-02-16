@@ -1,34 +1,31 @@
-﻿body { 
+﻿/*whole document body*/
+body { 
 	font-size: medium; 
-	font-family: Helvetica, sans-serif; 
-	line-height: 115%;
-	margin: 3%;
+	margin-left: 2%; 
+	margin-right: 2%;
+	font-family: optima, sans-serif;
 }
 
+/*images within links*/
 a img{
 text-decoration: none;
 border-width: 0px;
 }
 
+/*all links*/
+a{
+	text-decoration: none;
+	color: black;
+}
+
+/*hover over a link*/
+a:hover{
+	
+}
+
+/*list item*/
 li {
 	line-height : 150%;
 }
 
-em {
-    font-style: normal;
-    font-weight: bold;
-}
 
-.command {
-    font-style: italic;
-}
-
-.caption {
-    font-style: italic;
-    font-size: smaller;
-}
-
-div.example {
-    padding: 1%;
-    margin: 2%;
-}
