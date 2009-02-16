@@ -14,11 +14,11 @@
 		<seq>
 				<par endsync="last" id="t391">
 					<text src="amiskeys.html#t391"/>
-					<audio src="./audio/eng-US_t391.mp3"/>
+					<audio src="eng-US_t391.mp3"/>
 				</par>
 				<par endsync="last" id="desc">
 					<text src="amiskeys.html#desc"/>
-					<audio src="./audio/eng-US_t439.mp3"/>
+					<audio src="eng-US_t439.mp3"/>
 				</par>
 		</seq>
 	</body>

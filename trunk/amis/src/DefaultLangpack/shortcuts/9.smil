@@ -14,35 +14,35 @@
 		<seq>
 				<par endsync="last" id="t137">
 					<text src="amiskeys.html#t137"/>
-					<audio src="./audio/eng-US_t137.mp3"/>
+					<audio src="eng-US_t137.mp3"/>
 				</par>
 					<par endsync="last" id="t144">
 						<text src="amiskeys.html#t144"/>
-						<audio src="./audio/eng-US_t144.mp3"/>
+						<audio src="eng-US_t144.mp3"/>
 					</par>
 				<par endsync="last" id="t138">
 					<text src="amiskeys.html#t138"/>
-					<audio src="./audio/eng-US_t138.mp3"/>
+					<audio src="eng-US_t138.mp3"/>
 				</par>
 					<par endsync="last" id="t140">
 						<text src="amiskeys.html#t140"/>
-						<audio src="./audio/eng-US_t140.mp3"/>
+						<audio src="eng-US_t140.mp3"/>
 					</par>
 				<par endsync="last" id="t373">
 					<text src="amiskeys.html#t373"/>
-					<audio src="./audio/eng-US_t373.mp3"/>
+					<audio src="eng-US_t373.mp3"/>
 				</par>
 					<par endsync="last" id="t375">
 						<text src="amiskeys.html#t375"/>
-						<audio src="./audio/eng-US_t375.mp3"/>
+						<audio src="eng-US_t375.mp3"/>
 					</par>
 				<par endsync="last" id="t141">
 					<text src="amiskeys.html#t141"/>
-					<audio src="./audio/eng-US_t141.mp3"/>
+					<audio src="eng-US_t141.mp3"/>
 				</par>
 					<par endsync="last" id="t143">
 						<text src="amiskeys.html#t143"/>
-						<audio src="./audio/eng-US_t143.mp3"/>
+						<audio src="eng-US_t143.mp3"/>
 					</par>
 		</seq>
 	</body>
