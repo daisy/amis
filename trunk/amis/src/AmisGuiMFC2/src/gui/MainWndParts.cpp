@@ -119,10 +119,10 @@ void MainWndParts::defaultView()
 		//update the menus
 		MenuManip::Instance()->addNavContainersToViewMenu();
 		MenuManip::Instance()->loadBookmarks(amis::dtb::DtbWithHooks::Instance()->getBookmarks());
-		MenuManip::Instance()->addPageStyles();
 		MenuManip::Instance()->setupNavigationOptions();
-		MenuManip::Instance()->refreshRecentBooksListMenu();
 	}
+	MenuManip::Instance()->refreshRecentBooksListMenu();
+	MenuManip::Instance()->addPageStyles();
 
 	mpMainFrame->ShowControlBar(mpStatusBar, TRUE, TRUE);
 	mpMainFrame->ShowControlBar(mpDefaultRebar, TRUE, TRUE);

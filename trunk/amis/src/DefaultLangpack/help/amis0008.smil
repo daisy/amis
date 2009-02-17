@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.22" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="Opening a book" />
+<meta name="dc:title" content="AMIS User Guide" />
+<meta name="ncc:timeInThisSmil" content="0:00:21" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="20.994s">
+<par endsync="last">
+<text src="amishelp.html#amis_0009" id="amis_0009" />
+<seq>
+<audio src="08_Opening_a_book.mp3" clip-begin="npt=0.000s" clip-end="npt=1.039s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_002d" id="xami_002d" />
+<seq>
+<audio src="08_Opening_a_book.mp3" clip-begin="npt=1.039s" clip-end="npt=2.970s" id="qwrt_0002" />
+<audio src="08_Opening_a_book.mp3" clip-begin="npt=2.970s" clip-end="npt=5.794s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_002e" id="xami_002e" />
+<seq>
+<audio src="08_Opening_a_book.mp3" clip-begin="npt=5.794s" clip-end="npt=7.343s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_002f" id="xami_002f" />
+<seq>
+<audio src="08_Opening_a_book.mp3" clip-begin="npt=7.343s" clip-end="npt=10.151s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0030" id="xami_0030" />
+<seq>
+<audio src="08_Opening_a_book.mp3" clip-begin="npt=10.151s" clip-end="npt=11.761s" id="qwrt_0006" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0031" id="xami_0031" />
+<seq>
+<audio src="08_Opening_a_book.mp3" clip-begin="npt=11.761s" clip-end="npt=16.516s" id="qwrt_0007" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0032" id="xami_0032" />
+<seq>
+<audio src="08_Opening_a_book.mp3" clip-begin="npt=16.516s" clip-end="npt=18.646s" id="qwrt_0008" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0033" id="xami_0033" />
+<seq>
+<audio src="08_Opening_a_book.mp3" clip-begin="npt=18.646s" clip-end="npt=20.994s" id="qwrt_0009" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>

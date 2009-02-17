@@ -63,6 +63,7 @@ TextRenderBrain::TextRenderBrain()
 	mpFontCss = NULL;
 	mpStyleCss = NULL;
 	mpAmisCss = NULL;
+	mPreviousElmCss = NULL;
 }
 
 TextRenderBrain::~TextRenderBrain()
@@ -282,7 +283,7 @@ void TextRenderBrain::unHighlightPreviousElement()
 					IHTMLElement* p_child_elm = NULL;
 					p_disp2->QueryInterface(IID_IHTMLElement, (void**)&p_child_elm);
 					
-					if (p_child_elm)
+					if (p_child_elm != NULL && mPreviousChildrenCss.size() >=  len)
 					{
 						IHTMLStyle* p_child_style = NULL;
 						p_child_elm->get_style(&p_child_style);
@@ -364,7 +365,7 @@ void TextRenderBrain::setHighlightColors(IHTMLElement* pElm)
 					p_child_elm->get_style(&p_child_style);
 					
 					//save the default style
-					BSTR css;
+					BSTR css = NULL;
 					p_style->get_cssText(&css);
 					mPreviousChildrenCss.push_back(css);
 					

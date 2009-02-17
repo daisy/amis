@@ -11,13 +11,12 @@
 <entry id="use-tts-not-audio" value="no"/>
 <entry id="highlight-text" value="yes"/>
 <entry id="was-exit-clean" value="yes"/>
-<entry id="disable-screensaver" value="yes"/>
+<entry id="disable-screensaver" value="no"/>
 <entry id="user-bmk-dir" value="./bmk/"/>
 <entry id="langpacks-dir" value="./lang/"/>
 <entry id="fontsize-css-dir" value="./css/font/"/>
 <entry id="custom-css-dir" value="./css/customStyles/"/>
 <entry id="amis-css-file" value="./css/amis.css"/>
-<entry id="zed-2005-css-file" value="./css/dtbook.2005.basic.css"/>
 <entry id="highlight-fg-color" value="#000000"/>
 <entry id="highlight-bg-color" value="#FFFF00"/>
 <entry id="sidebar-font-name" value="Verdana"/>
@@ -27,5 +26,7 @@
 <entry id="prefer-ffmpeg" value="no"/>
 <entry id="tts-volume-pct" value="70"/>
 <entry id="audio-volume-pct" value="100"/>
+<!-- zed 2005 css not implemented in AMIS due to IE limitations -->
+<entry id="zed-2005-css-file" value="./css/dtbook.2005.basic.css"/>
 </section>
 </preferences>
