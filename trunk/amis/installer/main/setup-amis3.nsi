@@ -115,6 +115,7 @@ Section "MainSection" SEC01
 	SetShellVarContext all
 	StrCpy $SETTINGS_DIR $APPDATA\AMIS\settings
 	
+  
 	SetOutPath "$INSTDIR"
   SetOverwrite try
   File "${BIN_DIR}\AMIS.exe"
@@ -157,6 +158,12 @@ Section "MainSection" SEC01
   File "${BIN_DIR}\settings\basicToolbar.xml"
   File "${BIN_DIR}\settings\amisHistory.xml.default"
   File "${BIN_DIR}\settings\clearHistory.bat"
+  
+  ;update file permissions so that any user can run AMIS
+  AccessControl::GrantOnFile "$SETTINGS_DIR\amisPrefs.xml" "(BU)" "FullAccess"
+  AccessControl::GrantOnFile "$SETTINGS_DIR\amisHistory.default.xml" "(BU)" "FullAccess"
+  AccessControl::GrantOnFile "$SETTINGS_DIR\amisHistory.xml" "(BU)" "FullAccess"
+  AccessControl::GrantOnFile "$SETTINGS_DIR\bmk" "(BU)" "FullAccess"
   
   File "${LOCAL_APP_DATA}\AMIS\settings\resource.h.ini"
   
@@ -277,6 +284,7 @@ Section -Post
   Call RunMSVCRuntimeSetup
 
   Call RunJFWScriptSetup
+  
 SectionEnd
 
 ;******
