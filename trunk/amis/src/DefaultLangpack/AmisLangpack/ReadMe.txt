@@ -3,7 +3,7 @@
 ========================================================================
 
 
-AppWizard has created this AmisLangpack DLL for you.  This DLL not only
+ AppWizard has created this AmisLangpack DLL for you.  This DLL not only
 demonstrates the basics of using the Microsoft Foundation classes but
 is also a starting point for writing your DLL.
 
