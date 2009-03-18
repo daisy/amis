@@ -1,9 +1,9 @@
 ;******
 ; Usage:
-; makensis /DCUSTOM_LANG_NAME="language name" /DCUSTOM_LANG_ID="lang-code" setup-amis3.nsi /DCUSTOM_HELP help_file.html
+; makensis /DCUSTOM_LANG_NAME="language name" /DCUSTOM_LANG_ID="lang-code" /DCUSTOM_HELP help_file.html setup-amis3.nsi
 ;
 ; example:
-; makensis /DCUSTOM_LANG_NAME="U.S. English" /DCUSTOM_LANG_ID="eng-US" setup-amis3.nsi /DCUSTOM_HELP="amishelp.html"
+; makensis /DCUSTOM_LANG_NAME="U.S. English" /DCUSTOM_LANG_ID="eng-US" /DCUSTOM_HELP="amishelp.html" setup-amis3.nsi
 ;
 ;/DCUSTOM_LANG_NAME = Identifies the installer EXE and the name of the product during installation
 ;/DCUSTOM_LANG_ID = The language pack identifier.  If other than "eng-US", both the custom and default language packs are included
