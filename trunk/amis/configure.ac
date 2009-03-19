@@ -20,7 +20,7 @@ AC_ARG_WITH(xerces,
           ;;
     esac
 ])
-dnl test for slurped version first
+dnl test for slurped version  first
 dnl
 if test "x$test_xerces" = "xtrue"; then
 	if test "x$XERCES_PREFIX" = "x";	
