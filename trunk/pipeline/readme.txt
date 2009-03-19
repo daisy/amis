@@ -35,12 +35,8 @@ a. XHTML to DTBook
 Input ./amisPrompts.html
 Output as ./amisPrompts.xml
 
-b. DTBook fixer
+b. Narrator
 Input ./amisPrompts.xml
-Output ./amisPromptsFixed.xml
-
-c. Narrator
-Input ./amisPromptsFixed.xml
 Output into ./book/
 
 4. finish

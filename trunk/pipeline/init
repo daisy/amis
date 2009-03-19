@@ -21,7 +21,21 @@ XSLT_FILE=prepare_prompts_for_pipeline.xslt
 
 xsltproc $XSLT_FILE /tmp/strings.xml > /tmp/strings.html
 
+# find and replace for correct TTS pronunciation
+sed s/DAISY/Daisy/g /tmp/strings.html > /tmp/strings1.html
+sed s/OK/okay/g /tmp/strings1.html > /tmp/strings2.html
+sed s/AMIS/"[[inpt PHON]]_AO+mIY>.[[inpt TEXT]]"/g /tmp/strings2.html > /tmp/strings3.html
+sed s/Max\./Maximum/g /tmp/strings3.html > /tmp/strings4.html
+sed s/Copyright[[:space:]]\(c\)/Copyright/g /tmp/strings4.html > /tmp/strings5.html
+sed s/Ctrl/Control/g /tmp/strings5.html > /tmp/strings6.html
+# fix release date and version number
+sed s/31[[:space:]]October[[:space:]]2008/"13 February 2009"/g /tmp/strings6.html > /tmp/strings7.html
+sed s/Beta[[:space:]]4/RC1/g /tmp/strings7.html > /tmp/strings8.html
+
+cp /tmp/strings8.html /tmp/strings.html
+
 xmllint --format /tmp/strings.html > amisPrompts.html
+
 rm -rf book
 rm -rf audio
 mkdir book

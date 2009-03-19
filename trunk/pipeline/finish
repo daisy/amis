@@ -13,6 +13,17 @@ THIS_DIR=$(dirname $THIS_FILE_PATH)
 
 NCX_FILE=$THIS_DIR/book/z3986-mp3/speechgen.ncx
 
+# replace the phonemic text with the text we started out with
+sed s/Daisy/DAISY/g $NCX_FILE > /tmp/ncx1
+sed s/okay/OK/g /tmp/ncx1 > /tmp/ncx2
+sed s/[[inpt PHON]]_AO+mIY>.[[inpt TEXT]]/AMIS/g /tmp/ncx2 > /tmp/ncx3
+sed s/Maximum/Max./g /tmp/ncx3 > /tmp/ncx4
+sed s/Copyright /Copyright (c) /g /tmp/ncx4 > /tmp/ncx5
+sed s/Control/Ctrl/g /tmp/ncx5 > /tmp/ncx6
+
+cp /tmp/ncx6 $NCX_FILE
+
+
 echo "IMPORTING AUDIO DATA TO THE LOCAL AMIS LION DB"
 cd ${LION}/daisylion/config
 python generate_config.py amis local > lion.cfg

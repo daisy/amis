@@ -16,7 +16,7 @@
         <title>
           <xsl:value-of select="concat('Prompts for ',strings/@langid)"/>
         </title>
-        <meta name="dtb:uid" content="amis-localization-beta"/>
+        <meta name="dtb:uid" content="amis-localization-rc1"/>
         <meta name="dc:Publisher" content="md"/>
         <meta name="dc:Date" content="2008-04-15"/>
         <meta name="dc:Language" content="en"/>
