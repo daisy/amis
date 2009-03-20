@@ -107,10 +107,9 @@ Section "MainSection" SEC01
   SetOutPath "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}\help"
   File "${LOCAL_APP_DATA}\AMIS\settings\lang\${CUSTOM_LANG_ID}\help\*"
   SetOutPath "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}\help\img"
-  File "${LOCAL_APP_DATA}\AMIS\settings\lang\${CUSTOM_LANG_ID}\help\img\*"  
-  	
+  File /nonfatal "${LOCAL_APP_DATA}\AMIS\settings\lang\${CUSTOM_LANG_ID}\help\img\*"  
   ;copy the langpack shortcut book files
-  SetOutPath "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}\help"
+  SetOutPath "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}\shortcuts"
   File "${LOCAL_APP_DATA}\AMIS\settings\lang\${CUSTOM_LANG_ID}\shortcuts\*"
   
 SectionEnd

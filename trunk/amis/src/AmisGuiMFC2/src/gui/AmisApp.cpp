@@ -336,7 +336,8 @@ BOOL CAmisApp::InitInstance()
 	if (mbWasLastExitClean == false)
 	{
 		amis::io::BookmarksFileIO bmk_io;
-		if (mpHistory->getLastRead() != NULL && bmk_io.readFromFile(&mpHistory->getLastRead()->mBmkPath))
+		if (mpHistory->getLastRead() != NULL && mpHistory->getLastRead()->mBmkPath.is_empty_path() == false 
+			&& bmk_io.readFromFile(&mpHistory->getLastRead()->mBmkPath))
 		{
 			amis::dtb::BookmarkSet* p_bmks = bmk_io.getBookmarkSet();
 			p_bmks->setLastmark(NULL);

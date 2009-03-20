@@ -994,7 +994,9 @@ void MmView::gotoId(string id)
 	if (id == "") return;
 	TRACE("goto ID =%s\n", id.c_str());
 	//start at the top of the document and go until the node with the given ID is found
-	ambulant::lib::document* doc = player->get_document();
+	ambulant::lib::document* doc = NULL;
+	doc = player->get_document();
+	if (doc == NULL) return;
 	const ambulant::lib::node* n = doc->get_node(id.c_str());
 	if (n)
 	{
