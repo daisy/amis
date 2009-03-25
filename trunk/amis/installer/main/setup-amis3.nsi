@@ -486,12 +486,11 @@ Function RunJFWScriptSetup
   StrCpy $JFW_SCRIPTS_INSTALLER "$TEMP\amis3_jfw_scripts.exe"
   
   ; check if the user has jaws installed, then ask if they want to install the scripts
-  Push $R0
   ClearErrors
-  ReadRegDword $R0 HKCU "Software\Freedom Scientific\JAWS" "(Default)"
-  ; if the key exists (no errors), then ask the user if they want to install jaws scripts.  otherwise go to the end.
-  IfErrors End AskUser
-  StrCpy $R0 "-1"
+  EnumRegKey $0 HKCU "Software\Freedom Scientific\JAWS" 0
+  ; if the key exists (no errors), then ask the user if they want to
+  ; install jaws scripts.  otherwise go to the end.
+  IfErrors End AskUser           
   
   ; ask if the user wants to install the scripts
  AskUser:
