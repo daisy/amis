@@ -198,7 +198,7 @@ Section "MainSection" SEC01
   ;to support Thai encoding, add this key in HKLM
   ;Software\Classes\MIME\Database\Charset\TIS-620 and set AliasForCharset to windows-874
   WriteRegStr HKLM "Software\Classes\MIME\Database\Charset\TIS-620" "AliasForCharset" "Windows-874"
- 
+  
 SectionEnd
 
 ;******
@@ -252,6 +252,70 @@ Section -CopyLangpacks
 SectionEnd
 
 ;******
+; Install MSVC runtime
+;*
+Section -MSVCRuntime
+  MessageBox MB_ICONEXCLAMATION "Checking for MSVC Runtime"
+  
+  Var /GLOBAL MSVC_RUNTIME_INSTALLER
+  StrCpy $MSVC_RUNTIME_INSTALLER "$TEMP\vcredist_x86.exe"
+  
+  ;check and see if the user needs these files
+  Push $R0
+  ClearErrors
+  ReadRegDword $R0 HKLM "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{7299052b-02a4-4627-81f2-1818da5d550d}" "Version"
+  ; if VS 2005+ redist SP1 not installed (if there was an error finding the key), install it
+  IfErrors InstallVSRedist End
+  StrCpy $R0 "-1"
+
+  ;actually install them
+ InstallVSRedist: 
+  ExecWait "$MSVC_RUNTIME_INSTALLER" $0
+  StrCmp $0 "0" End Error
+ Error:
+  MessageBox MB_ICONEXCLAMATION "There was an error encountered while attempting to install the Microsoft runtime files.  Please download from http://www.microsoft.com/downloads/details.aspx?FamilyID=200B2FD9-AE1A-4A14-984D-389C36F85647&displaylang=en and install manually."
+  
+  Goto End
+
+ End:
+  Delete "$MSVC_RUNTIME_INSTALLER"
+
+SectionEnd
+
+;******
+; Install Jaws scripts
+;*
+Section -JawsScripts
+  
+  MessageBox MB_ICONEXCLAMATION "Checking for Jaws"
+  
+  Var /GLOBAL JFW_SCRIPTS_INSTALLER
+  StrCpy $JFW_SCRIPTS_INSTALLER "$TEMP\amis3_jfw_scripts.exe"
+  
+  ; check if the user has jaws installed, then ask if they want to install the scripts
+  ClearErrors
+  EnumRegKey $0 HKCU "Software\Freedom Scientific\JAWS" 0
+  ; if the key exists (no errors), then ask the user if they want to install jaws scripts.  otherwise go to the end.
+  IfErrors End AskUser
+  
+  ; ask if the user wants to install the scripts
+ AskUser:
+  MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON1 "Would you like to install Jaws for Windows scripts for AMIS" IDYES +2
+  Goto End
+  
+ InstallScripts:
+  ExecWait "$JFW_SCRIPTS_INSTALLER" $0
+  StrCmp $0 "0" End Error
+ 
+ Error:
+  MessageBox MB_ICONEXCLAMATION "There was an error encountered while attempting to install Jaws for Windows scripts for AMIS.  Please visit http://amisproject.org to download and install the scripts separately."
+  
+ End:
+  Delete "$JFW_SCRIPTS_INSTALLER"
+
+SectionEnd
+
+;******
 ; Create shortcuts and icons
 ;*
 Section -AdditionalIcons
@@ -279,11 +343,6 @@ Section -Post
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayVersion" "${PRODUCT_VERSION}"
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "URLInfoAbout" "${PRODUCT_WEB_SITE}"
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "Publisher" "${PRODUCT_PUBLISHER}"
- 
-  Call RunMSVCRuntimeSetup
-
-  Call RunJFWScriptSetup
-  
 SectionEnd
 
 ;******
@@ -445,66 +504,3 @@ Section -un.CopyLangpack
 		Delete "$SETTINGS_DIR\lang\readme.txt"
 		RMDir "$SETTINGS_DIR\lang"
 SectionEnd
-
-
-;******
-;launch the MSVC runtimes installer
-;**
-Function RunMSVCRuntimeSetup
-
-  Var /GLOBAL MSVC_RUNTIME_INSTALLER
-  StrCpy $MSVC_RUNTIME_INSTALLER "$TEMP\vcredist_x86.exe"
-  
-  ;check and see if the user needs these files
-  Push $R0
-  ClearErrors
-  ReadRegDword $R0 HKLM "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{7299052b-02a4-4627-81f2-1818da5d550d}" "Version"
-  ; if VS 2005+ redist SP1 not installed (if there was an error finding the key), install it
-  IfErrors InstallVSRedist End
-  StrCpy $R0 "-1"
-
-	;actually install them
- InstallVSRedist: 
-  ExecWait "$MSVC_RUNTIME_INSTALLER" $0
-  StrCmp $0 "0" End Error
- Error:
-  MessageBox MB_ICONEXCLAMATION "There was an error encountered while attempting to install the Microsoft runtime files.  Please download from http://www.microsoft.com/downloads/details.aspx?FamilyID=200B2FD9-AE1A-4A14-984D-389C36F85647&displaylang=en and install manually."
-  
-  Goto End
-
- End:
-  Delete "$MSVC_RUNTIME_INSTALLER"
-
-FunctionEnd
-
-;******
-; launch the jaws scripts installer
-;**
-Function RunJFWScriptSetup
-  
-  Var /GLOBAL JFW_SCRIPTS_INSTALLER
-  StrCpy $JFW_SCRIPTS_INSTALLER "$TEMP\amis3_jfw_scripts.exe"
-  
-  ; check if the user has jaws installed, then ask if they want to install the scripts
-  ClearErrors
-  EnumRegKey $0 HKCU "Software\Freedom Scientific\JAWS" 0
-  ; if the key exists (no errors), then ask the user if they want to
-  ; install jaws scripts.  otherwise go to the end.
-  IfErrors End AskUser           
-  
-  ; ask if the user wants to install the scripts
- AskUser:
-  MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON1 "Would you like to install Jaws for Windows scripts for AMIS" IDYES +2
-  Goto End
-  
- InstallScripts:
-  ExecWait "$JFW_SCRIPTS_INSTALLER" $0
-  StrCmp $0 "0" End Error
- 
- Error:
-  MessageBox MB_ICONEXCLAMATION "There was an error encountered while attempting to install Jaws for Windows scripts for AMIS.  Please visit http://amisproject.org to download and install the scripts separately."
-  
- End:
-  Delete "$JFW_SCRIPTS_INSTALLER"
-
-FunctionEnd
