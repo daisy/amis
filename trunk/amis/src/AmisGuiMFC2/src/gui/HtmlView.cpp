@@ -644,6 +644,7 @@ IHTMLStyleSheet* CAmisHtmlView::applyStylesheet(const ambulant::net::url* styles
 	IHTMLDocument2 *pDoc;
 	res = pDisp->QueryInterface(IID_IHTMLDocument2, (void**)&pDoc);
 	if (!SUCCEEDED(res)) return NULL;
+	if (pDoc == NULL) return NULL;
 
 	BSTR css_path_bstr;
 	CString css_path_cstr = A2T(stylesheet->get_file().c_str());
@@ -653,14 +654,17 @@ IHTMLStyleSheet* CAmisHtmlView::applyStylesheet(const ambulant::net::url* styles
 	amis::util::Log::Instance()->writeMessage("Applying stylesheet", stylesheet, "CAmisHtmlView::applyStylesheet");
 	
 	IHTMLStyleSheet* pStyleSheet;
-	//i'm really not sure of the best value for the 2nd parameter
-	//i tried 0 and 1, and neither makes a difference in how the
-	//stylesheet doesn't override the default styling (i would like it to override this)
+	string log_msg2 = "About to call create stylesheet";
+	amis::util::Log::Instance()->writeTrace(log_msg2, "CAmisHtmlView::applyStylesheet");
 	res = pDoc->createStyleSheet(css_path_bstr, 0, &pStyleSheet);
+	string log_msg3 = "Created stylesheet: done";
+	amis::util::Log::Instance()->writeTrace(log_msg3, "CAmisHtmlView::applyStylesheet");
 	SysFreeString(css_path_bstr);
 	
 	forceResizeHack();
 
+	string log_msg4 = "About to exit function";
+	amis::util::Log::Instance()->writeTrace(log_msg4, "CAmisHtmlView::applyStylesheet");
 	return pStyleSheet;
 }
 

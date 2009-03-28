@@ -32,7 +32,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "dtb/DtbFileSet.h"
 #include "ambulant/net/url.h"
 #include "util/SearchForFiles.h"
-
+	
 #include "util/ThreadYielder.h"
 
 namespace amis
@@ -82,8 +82,10 @@ public:
 	bool hasText();
 
 private:
-	ThreadYielder * mThreadYielder;
-
+	void saveIndexData(bool check = false);
+	void readIndexData();
+	bool indexExistsOnDisk();
+	
 	bool processNcc(const ambulant::net::url*, bool);
 	bool processNcx(const ambulant::net::url*, bool);
 	bool processOpf(const ambulant::net::url*);
@@ -98,6 +100,7 @@ private:
 	bool checkForCopyProtection(amis::dtb::Metadata*);
 	
 private:
+	ThreadYielder * mThreadYielder;
 	amis::dtb::Metadata* mpMetadata;
 	amis::dtb::smil::SmilTree* mpSmilTree;
 	amis::dtb::Spine* mpSpine;

@@ -34,6 +34,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "io/OpfFileReader.h"
 #include "io/NcxFileReader.h"
 #include "util/Log.h"
+#include "util/FilePathTools.h"
+#include <fstream>
 
 #include "ambulant/common/plugin_engine.h"
 
@@ -220,6 +222,7 @@ bool amis::dtb::Dtb::open(const ambulant::net::url* fileUrl,
 	
 	loadBookmarks(mpFiles->getBookmarksFilepath());
 	amis::util::Log::Instance()->writeMessage("Opened book successfully", "Dtb::open");
+	
 	return true;
 }
 
@@ -344,9 +347,17 @@ bool amis::dtb::Dtb::processNcc(const ambulant::net::url* filepath, bool isLocal
 	if (mThreadYielder != 0) mThreadYielder->peekAndPump();
 
 	resolve_smil_visitor.setThreadYielder(mThreadYielder);
-
-	resolve_smil_visitor.resolve(mpNavModel, mpSpine, true);
-    this->mpTextSmilMap = resolve_smil_visitor.getSmilTextMap();	
+	
+	if (!indexExistsOnDisk())
+	{
+		resolve_smil_visitor.resolve(mpNavModel, mpSpine, true);
+		this->mpTextSmilMap = resolve_smil_visitor.getSmilTextMap();	
+		saveIndexData();
+	}
+	else
+	{
+		readIndexData();
+	}
 
 	//wait until after the smil data is parsed to set the title audio (otherwise it's not available)
 	if (p_title != NULL && p_title->getLabel() != NULL && p_title->getLabel()->hasAudio())
@@ -376,9 +387,18 @@ bool amis::dtb::Dtb::processNcx(const ambulant::net::url* filepath, bool isLocal
 	if (mThreadYielder != 0) mThreadYielder->peekAndPump();
 
 	resolve_smil_visitor.setThreadYielder(mThreadYielder);
+	
+	if (!indexExistsOnDisk())
+	{
+		resolve_smil_visitor.resolve(mpNavModel, mpSpine, false);
+		this->mpTextSmilMap = resolve_smil_visitor.getSmilTextMap();
+		saveIndexData();
+	}
+	else
+	{
+		readIndexData();
+	}
 
-	resolve_smil_visitor.resolve(mpNavModel, mpSpine, false);
-	this->mpTextSmilMap = resolve_smil_visitor.getSmilTextMap();
 	return true;
 }
 
@@ -839,4 +859,141 @@ bool amis::dtb::Dtb::hasText()
 		return true;
 	else
 		return false;
+}
+
+
+//save the smil id - nav node data
+//(one id, many nav nodes)
+void amis::dtb::Dtb::saveIndexData(bool check)
+{
+	//calculate this filepath from the bookmark filepath - it's unique
+	string filepath = this->getFileSet()->getBookmarksFilepath()->get_url();
+	filepath = amis::util::FilePathTools::getAsLocalFilePath(filepath);
+	filepath.replace(filepath.find(".bmk"), 4, ".idx");
+	if (check) filepath.append("1");
+
+	ofstream f;
+	f.open(filepath.c_str(), ios::out);
+	
+	amis::dtb::nav::NodeRefMap* p_map = this->getNavModel()->getSmilIdNodeMap();
+	
+	amis::dtb::nav::NodeRefMap::iterator it;
+	for (it = p_map->begin(); it != p_map->end(); it++)
+	{
+		f<<it->first<<endl;
+		
+		amis::dtb::nav::NavNodeList* p_list = it->second;
+		for (int i=0; i<p_list->size(); i++)
+		{
+			amis::dtb::nav::NavNode* p_n = (*p_list)[i];
+			f<<p_n->getId()<<endl;
+		}
+		f<<"*"<<endl;
+	}
+	f<<"**"<<endl;
+
+	amis::StringMap::iterator it2;
+	for (it2=mpTextSmilMap->begin(); it2 != mpTextSmilMap->end(); it2++)
+	{
+		f<<it2->first<<endl;
+		f<<it2->second<<endl;
+	}
+	f.close();
+}
+
+void amis::dtb::Dtb::readIndexData()
+{
+	//calculate this filepath from the bookmark filepath - it's unique
+	string filepath = this->getFileSet()->getBookmarksFilepath()->get_url();
+	filepath = amis::util::FilePathTools::getAsLocalFilePath(filepath);
+	filepath.replace(filepath.find(".bmk"), 4, ".idx");
+
+	amis::dtb::nav::NodeRefMap* p_smil_node_map = new amis::dtb::nav::NodeRefMap;
+	amis::StringMap* p_text_smil_map = new amis::StringMap;
+	//1 = smil_node, 2 = text_smil
+	int which_map = 1;
+
+	ifstream f;
+	f.open(filepath.c_str(), ios::in);
+	bool first_in_set = true;
+	string map_key = "";
+	amis::dtb::nav::NavNodeList* p_curr_node_list = NULL;
+
+	while (!f.eof())
+	{
+		string s = "";
+		getline(f, s);
+		if (s == "") continue;
+		//the delimiter for the two sections (one section per map)
+		if (s == "**")
+		{
+			which_map = 2;
+			continue;
+		}
+		//processing smil strings and nodes
+		if (which_map == 1)
+		{	
+			//if this is not the delimiter between data entries
+			if (s != "*")
+			{
+				if (first_in_set == true)
+				{
+					map_key = s;
+					p_curr_node_list = new amis::dtb::nav::NavNodeList();
+					first_in_set = false;
+				}
+				else
+				{
+					amis::dtb::nav::NavNode* p_n = mpNavModel->getNavNode(s);
+					if (p_n != NULL) 
+					{
+						p_curr_node_list->push_back(p_n);
+					}
+					else
+					{
+						int x =3;
+					}
+				}
+				continue;
+			}
+			else
+			{
+				(*p_smil_node_map)[map_key] = p_curr_node_list;
+				first_in_set = true;
+				continue;
+			}
+			
+
+		}
+		//processing text ids and smil strings
+		else
+		{
+			//read in another line
+			string s2 = "";
+			getline(f, s2);
+			if (s2 != "") (*p_text_smil_map)[s] = s2;
+		}
+	}
+
+	mpNavModel->setSmilIdNodeMap(p_smil_node_map);
+	mpTextSmilMap = p_text_smil_map;
+
+	f.close();
+
+	//just for testing - write the data again and see if we get the same result
+	//saveIndexData(true);
+}
+
+bool amis::dtb::Dtb::indexExistsOnDisk()
+{
+	//calculate this filepath from the bookmark filepath - it's unique
+	string filepath = this->getFileSet()->getBookmarksFilepath()->get_url();
+	filepath = amis::util::FilePathTools::getAsLocalFilePath(filepath);
+	filepath.replace(filepath.find(".bmk"), 4, ".idx");
+
+	ifstream f;
+	f.open(filepath.c_str(), ios::in);
+	f.close();
+	if (!f) return false;
+	else return true;
 }

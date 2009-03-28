@@ -22,6 +22,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "dtb/DtbIndex.h"
 #include "io/QuickDataSmilFileReader.h"
 #include "util/FilePathTools.h"
+#include "dtb/nav/NavNode.h"
 #include "AmisCore.h"
 
 using namespace std;
@@ -41,7 +42,7 @@ void amis::dtb::DtbIndex::initialize(amis::dtb::Dtb* pDtb)
 	empty_list.empty();
 	for (int i = 0; i<p_spine->getNumberOfSmilFiles(); i++)
 	{
-		mSmilFileToSmilIdMap[p_spine->getSmilFilePath(i)] = empty_list;
+		mSmilFileToSmilIdMap[p_spine->getSmilFilePath(i)]= empty_list;
 	}
 }
 //parse the file and add its data to the indices	

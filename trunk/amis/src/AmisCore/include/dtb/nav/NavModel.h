@@ -71,7 +71,8 @@ public:
 	//we need NavNode::mContent to be handled the same as the rest of the files
 	bool getAreFilenamesLowercase();
 	void setAreFilenamesLowercase(bool);
-
+	NodeRefMap* getSmilIdNodeMap();
+	NavNode* getNavNode(string);
 private:
 	NavMap* mpNavMap;
 	PageList* mpPageList;

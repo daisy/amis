@@ -408,3 +408,26 @@ bool amis::dtb::nav::NavModel::getAreFilenamesLowercase()
 {
 	return mbLower;
 }
+
+amis::dtb::nav::NodeRefMap* amis::dtb::nav::NavModel::getSmilIdNodeMap()
+{
+	return mpSmilIdNodeMap;
+}
+
+amis::dtb::nav::NavNode* amis::dtb::nav::NavModel::getNavNode(string id)
+{
+	// first look in the nav map
+	NavNode* p_node = NULL;
+	p_node = getNavMap()->goToId(id);
+	if (p_node != NULL) return p_node;
+
+	//then look at the page and nav lists
+	p_node = getPageList()->goToId(id);
+	if (p_node != NULL) return p_node;
+
+	for (int i = 0; i<this->getNumberOfNavLists(); i++)
+	{
+		p_node = getNavList(i)->goToId(id);
+		if (p_node != NULL) return p_node;
+	}
+}
