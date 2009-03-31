@@ -865,15 +865,21 @@ bool amis::dtb::Dtb::hasText()
 //save the smil id - nav node data
 //(one id, many nav nodes)
 void amis::dtb::Dtb::saveIndexData(bool check)
-{
+{	
+#ifdef AMIS_COMPILER_MSVC
+	USES_CONVERSION;
+#else
+	//TODO: something for other platforms
+#endif
 	//calculate this filepath from the bookmark filepath - it's unique
 	string filepath = this->getFileSet()->getBookmarksFilepath()->get_url();
 	filepath = amis::util::FilePathTools::getAsLocalFilePath(filepath);
 	filepath.replace(filepath.find(".bmk"), 4, ".idx");
 	if (check) filepath.append("1");
+	string temp_filepath = filepath + ".tmp";
 
 	ofstream f;
-	f.open(filepath.c_str(), ios::out);
+	f.open(temp_filepath.c_str(), ios::out);
 	
 	amis::dtb::nav::NodeRefMap* p_map = this->getNavModel()->getSmilIdNodeMap();
 	
@@ -899,6 +905,24 @@ void amis::dtb::Dtb::saveIndexData(bool check)
 		f<<it2->second<<endl;
 	}
 	f.close();
+
+	//now compress the file
+#ifdef AMIS_COMPILER_MSVC
+	string exe = "c:\\devel\\amis\\trunk\\amis\\bin\\lzop.exe ";
+	string params = "-o " + filepath;
+	string full_instruction = exe + " " + params + " " + temp_filepath;
+	
+	HINSTANCE retval = ShellExecute(NULL, NULL, A2T(full_instruction.c_str()), NULL, NULL, SW_SHOWNA);
+	
+	//success is greater than 32 ... 
+	if ((int)retval <= 32)
+	{
+		if ((int)retval == ERROR_FILE_NOT_FOUND)
+			int x = 3;
+	}
+#else
+	//TODO: something for other platforms
+#endif
 }
 
 void amis::dtb::Dtb::readIndexData()
@@ -949,10 +973,6 @@ void amis::dtb::Dtb::readIndexData()
 					{
 						p_curr_node_list->push_back(p_n);
 					}
-					else
-					{
-						int x =3;
-					}
 				}
 				continue;
 			}
@@ -980,8 +1000,7 @@ void amis::dtb::Dtb::readIndexData()
 
 	f.close();
 
-	//just for testing - write the data again and see if we get the same result
-	//saveIndexData(true);
+	
 }
 
 bool amis::dtb::Dtb::indexExistsOnDisk()
