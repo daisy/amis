@@ -424,6 +424,7 @@ int CAmisApp::ExitInstance()
 	return CWinApp::ExitInstance();
 }
 
+//this returns the application path with a trailing slash
 std::string CAmisApp::getAppPath()
 {
 	USES_CONVERSION;

@@ -58,7 +58,7 @@ void DtbWithHooks::DestroyInstance()
 	pinstance = NULL;
 }
 
-DtbWithHooks::DtbWithHooks()
+DtbWithHooks::DtbWithHooks():Dtb(theApp.getAppPath())
 {
 	mpFileSearcherTmp = NULL;
 	mpFileSearcherTmp = new amis::util::SearchForFilesMFC();

@@ -416,6 +416,7 @@ amis::dtb::nav::NodeRefMap* amis::dtb::nav::NavModel::getSmilIdNodeMap()
 
 amis::dtb::nav::NavNode* amis::dtb::nav::NavModel::getNavNode(string id)
 {
+	/*
 	// first look in the nav map
 	NavNode* p_node = NULL;
 	p_node = getNavMap()->goToId(id);
@@ -429,5 +430,14 @@ amis::dtb::nav::NavNode* amis::dtb::nav::NavModel::getNavNode(string id)
 	{
 		p_node = getNavList(i)->goToId(id);
 		if (p_node != NULL) return p_node;
-	}
+	}*/
+	amis::dtb::nav::NavNode* p_node = NULL;
+	p_node = mNodeIndex[id];
+	return p_node;
+}
+
+//add to the hash map of ID-NavNodes
+void amis::dtb::nav::NavModel::addIndex(amis::dtb::nav::NavNode* pNode, std::string id)
+{
+	mNodeIndex[id] = pNode;
 }

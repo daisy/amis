@@ -108,6 +108,7 @@ namespace amis
 #if defined(AMIS_COMPILER_MSVC)
 			//putting hash_map in stdext:: is MSVC-specific
 			typedef stdext::hash_map<std::string, NavNodeList*> NodeRefMap;
+			typedef stdext::hash_map<std::string, NavNode*>NodeMap;
 #elif defined(AMIS_COMPILER_GCC)
 			typedef __gnu_cxx::hash_map<std::string, NavNodeList*> NodeRefMap;
 #endif

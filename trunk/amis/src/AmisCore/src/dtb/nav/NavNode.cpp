@@ -25,6 +25,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "dtb/nav/NavNode.h"
 #include "dtb/nav/NavModel.h"
 #include "util/FilePathTools.h"
+#include "util/Log.h"
 //for string transformations
 #include <algorithm>
 
@@ -38,8 +39,6 @@ amis::dtb::nav::NavNode::NavNode()
 	mClass = "";
 	mpLabel = NULL;
 	mpNavModel = NULL;
-
-
 }
 
 amis::dtb::nav::NavNode::~NavNode()
@@ -55,6 +54,10 @@ amis::dtb::nav::NavNode::~NavNode()
 void amis::dtb::nav::NavNode::setNavModel(NavModel* pModel)
 {
 	mpNavModel = pModel;
+	if (mId != "")
+		mpNavModel->addIndex(this, mId);
+	else
+		amis::util::Log::Instance()->writeTrace("Warning: added nav model before adding ID to NavNode", "NavNode::setNavModel");
 }
 
 void amis::dtb::nav::NavNode::setLabel(amis::MediaGroup* pLabel)

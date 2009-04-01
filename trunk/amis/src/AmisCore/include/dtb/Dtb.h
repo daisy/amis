@@ -44,7 +44,7 @@ enum DaisyVersion {UNSUPPORTED, DAISY_202, DAISY_2005};
 class Dtb
 {
 public:
-	Dtb();
+	Dtb(string);
 	~Dtb();
 
 	void setThreadYielder(ThreadYielder * ty);
@@ -83,7 +83,7 @@ public:
 
 private:
 	void saveIndexData(bool check = false);
-	void readIndexData();
+	bool readIndexData();
 	bool indexExistsOnDisk();
 	
 	bool processNcc(const ambulant::net::url*, bool);
@@ -122,6 +122,7 @@ private:
 	bool mbIsProtected;
 	ProtectedBookKeyHandlerFunctionPtr mpCallbackForPreprocessingBookKey;
 	bool mbCanDecodePdtb;
+	string mAppPath;
 };
 }
 }

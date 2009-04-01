@@ -40,7 +40,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "ambulant/common/plugin_engine.h"
 
 //constructor
-amis::dtb::Dtb::Dtb()
+amis::dtb::Dtb::Dtb(string appPath)
 {
 	mThreadYielder = NULL;
 	mpFiles = NULL;
@@ -57,6 +57,7 @@ amis::dtb::Dtb::Dtb()
 	mUid.erase();
 	mDaisyVersion = UNSUPPORTED;
 	mpCallbackForPreprocessingBookKey = NULL;
+	mAppPath = appPath;
 }
 //destructor
 amis::dtb::Dtb::~Dtb()
@@ -356,7 +357,14 @@ bool amis::dtb::Dtb::processNcc(const ambulant::net::url* filepath, bool isLocal
 	}
 	else
 	{
-		readIndexData();
+		//try to read the saved index data.  if it couldn't be read, then re-calculate it.
+		if (!readIndexData())
+		{
+			amis::util::Log::Instance()->writeWarning("Could not read index file", "Dtb::processNcc");
+			resolve_smil_visitor.resolve(mpNavModel, mpSpine, true);
+			this->mpTextSmilMap = resolve_smil_visitor.getSmilTextMap();	
+			saveIndexData();
+		}
 	}
 
 	//wait until after the smil data is parsed to set the title audio (otherwise it's not available)
@@ -396,7 +404,14 @@ bool amis::dtb::Dtb::processNcx(const ambulant::net::url* filepath, bool isLocal
 	}
 	else
 	{
-		readIndexData();
+		//try to read the saved index data.  if it couldn't be read, then re-calculate it.
+		if (!readIndexData())
+		{
+			amis::util::Log::Instance()->writeWarning("Could not read index file", "Dtb::processNcc");
+			resolve_smil_visitor.resolve(mpNavModel, mpSpine, true);
+			this->mpTextSmilMap = resolve_smil_visitor.getSmilTextMap();	
+			saveIndexData();
+		}
 	}
 
 	return true;
@@ -905,40 +920,69 @@ void amis::dtb::Dtb::saveIndexData(bool check)
 		f<<it2->second<<endl;
 	}
 	f.close();
-
+	amis::util::Log::Instance()->writeTrace("created " + temp_filepath);
 	//now compress the file
 #ifdef AMIS_COMPILER_MSVC
-	string exe = "c:\\devel\\amis\\trunk\\amis\\bin\\lzop.exe ";
-	string params = "-o " + filepath;
-	string full_instruction = exe + " " + params + " " + temp_filepath;
+	string exe = mAppPath + "lzop.exe";
+	string params = "-o \"" + filepath + "\" \"" + temp_filepath + "\"";
 	
-	HINSTANCE retval = ShellExecute(NULL, NULL, A2T(full_instruction.c_str()), NULL, NULL, SW_SHOWNA);
-	
-	//success is greater than 32 ... 
-	if ((int)retval <= 32)
+	SHELLEXECUTEINFO sei = {sizeof(sei)};
+    sei.fMask = SEE_MASK_FLAG_DDEWAIT;
+    sei.nShow = SW_HIDE;
+    sei.lpVerb = _T("open");
+    sei.lpFile = A2T(exe.c_str());
+	sei.lpParameters = A2T(params.c_str());
+	if (ShellExecuteEx(&sei) == FALSE)
 	{
-		if ((int)retval == ERROR_FILE_NOT_FOUND)
-			int x = 3;
+		amis::util::Log::Instance()->writeTrace("error compressing " + temp_filepath);
 	}
+	else
+	{
+		amis::util::Log::Instance()->writeTrace("compressed " + filepath);
+	}
+	//remove(temp_filepath.c_str());
 #else
 	//TODO: something for other platforms
 #endif
 }
 
-void amis::dtb::Dtb::readIndexData()
+bool amis::dtb::Dtb::readIndexData()
 {
+#ifdef AMIS_COMPILER_MSVC
+	USES_CONVERSION;
+#else
+	//TODO: something on other platforms
+#endif
 	//calculate this filepath from the bookmark filepath - it's unique
 	string filepath = this->getFileSet()->getBookmarksFilepath()->get_url();
 	filepath = amis::util::FilePathTools::getAsLocalFilePath(filepath);
 	filepath.replace(filepath.find(".bmk"), 4, ".idx");
+	string temp_filepath = filepath + ".tmp";
 
+	//now decompress the file
+#ifdef AMIS_COMPILER_MSVC
+	string exe = mAppPath + "lzop.exe";
+	string params = "-d -o \"" + temp_filepath + "\" \"" + filepath + "\"";
+	
+	SHELLEXECUTEINFO sei = {sizeof(sei)};
+    sei.fMask = SEE_MASK_FLAG_DDEWAIT;
+    sei.nShow = SW_HIDE;
+    sei.lpVerb = _T("open");
+    sei.lpFile = A2T(exe.c_str());
+	sei.lpParameters = A2T(params.c_str());
+	ShellExecuteEx(&sei);
+#else
+	//TODO: something for other platforms
+#endif
 	amis::dtb::nav::NodeRefMap* p_smil_node_map = new amis::dtb::nav::NodeRefMap;
 	amis::StringMap* p_text_smil_map = new amis::StringMap;
 	//1 = smil_node, 2 = text_smil
 	int which_map = 1;
 
 	ifstream f;
-	f.open(filepath.c_str(), ios::in);
+	f.open(temp_filepath.c_str(), ios::in);
+	//if the IDX file couldn't be read, return false
+	if (f.fail()) return false;
 	bool first_in_set = true;
 	string map_key = "";
 	amis::dtb::nav::NavNodeList* p_curr_node_list = NULL;
@@ -969,6 +1013,7 @@ void amis::dtb::Dtb::readIndexData()
 				else
 				{
 					amis::dtb::nav::NavNode* p_n = mpNavModel->getNavNode(s);
+					//amis::dtb::nav::NavNode* p_n = NULL;
 					if (p_n != NULL) 
 					{
 						p_curr_node_list->push_back(p_n);
@@ -1000,7 +1045,12 @@ void amis::dtb::Dtb::readIndexData()
 
 	f.close();
 
-	
+#ifdef AMIS_COMPILER_MSVC
+	remove(temp_filepath.c_str());
+#else
+	//TODO: something on other platforms.  Is "remove" a standard stdio function?
+#endif
+	return true;
 }
 
 bool amis::dtb::Dtb::indexExistsOnDisk()
@@ -1013,6 +1063,6 @@ bool amis::dtb::Dtb::indexExistsOnDisk()
 	ifstream f;
 	f.open(filepath.c_str(), ios::in);
 	f.close();
-	if (!f) return false;
+	if (f.fail()) return false;
 	else return true;
 }

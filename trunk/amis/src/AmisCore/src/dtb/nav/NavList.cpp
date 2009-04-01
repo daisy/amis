@@ -118,6 +118,10 @@ amis::dtb::nav::NavNode* amis::dtb::nav::NavList::goToContentRef(string contentH
 
 amis::dtb::nav::NavNode* amis::dtb::nav::NavList::goToId(string id)
 {
+	//this is a bit redundant but easier than refactoring to remove this function entirely
+	return this->getNavModel()->getNavNode(id);
+
+	/*
 	bool b_found = false;
 	unsigned int i = 0;
 
@@ -133,7 +137,7 @@ amis::dtb::nav::NavNode* amis::dtb::nav::NavList::goToId(string id)
 	if (b_found == true)
 		return mNodes[i];
 	else
-		return NULL;
+		return NULL;*/
 }
 
 void amis::dtb::nav::NavList::print(bool printheader)

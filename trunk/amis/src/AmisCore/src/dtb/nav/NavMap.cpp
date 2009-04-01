@@ -23,6 +23,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include <iostream>
 #include "util/FilePathTools.h"
 #include "dtb/nav/NavMap.h"
+#include "dtb/nav/NavModel.h"
 
 using namespace std;
 
@@ -195,7 +196,10 @@ int amis::dtb::nav::NavMap::getNumberOfNavPoints()
 
 amis::dtb::nav::NavNode* amis::dtb::nav::NavMap::goToId(string id)
 {
-	NavPoint* p_node = mpRoot;
+	//this is a bit redundant but easier than refactoring to remove this function entirely
+	return this->getNavModel()->getNavNode(id);
+
+/*	NavPoint* p_node = mpRoot;
 	bool b_found = false;
 
 	while (b_found == false && p_node != NULL)
@@ -207,7 +211,7 @@ amis::dtb::nav::NavNode* amis::dtb::nav::NavMap::goToId(string id)
 	}
 
 	if (b_found == true) return p_node;
-	else return NULL;
+	else return NULL;*/
 }
 
 void amis::dtb::nav::NavMap::acceptDepthFirst(NavVisitor* v)

@@ -73,12 +73,14 @@ public:
 	void setAreFilenamesLowercase(bool);
 	NodeRefMap* getSmilIdNodeMap();
 	NavNode* getNavNode(string);
+	void addIndex(NavNode*, string);
 private:
 	NavMap* mpNavMap;
 	PageList* mpPageList;
 	NodeRefMap* mpSmilIdNodeMap;
 	NavListList mNavLists;
 	NavNodeList mPlayOrderList;
+	NodeMap mNodeIndex;
 	bool mbLower;
 };
 }
