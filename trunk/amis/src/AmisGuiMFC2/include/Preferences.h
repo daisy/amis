@@ -129,6 +129,9 @@ public:
 	bool getIsLoggingEnabled();
 	void setIsLoggingEnabled(bool);
 
+	bool getCacheIndex();
+	void setCacheIndex(bool);
+
 private:
 	void scanDirectoriesForCssFiles();
 	void scanDirectoriesForLanguagePackFiles();
@@ -172,6 +175,7 @@ private:
 	//the logging preferences
 	amis::util::LogLevel mLogLevel;
 	bool mbLoggingEnabled;
+	bool mCacheIndex;
 private:
 	static Preferences* pinstance;
 

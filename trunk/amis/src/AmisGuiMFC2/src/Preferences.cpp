@@ -94,6 +94,8 @@ Preferences::Preferences()
 	setLogLevel(amis::util::LOW_LOGGING);
 #endif
 
+	mCacheIndex = true;
+
 }
 
 //this function should be called after the preferences XML file has been parsed
@@ -617,4 +619,12 @@ int Preferences::getAudioVolumePct()
 void Preferences::setAudioVolumePct(int value)
 {
 	mAudioVolumePct = value;
+}
+bool Preferences::getCacheIndex()
+{
+	return mCacheIndex;
+}
+void Preferences::setCacheIndex(bool value)
+{
+	mCacheIndex = value;
 }

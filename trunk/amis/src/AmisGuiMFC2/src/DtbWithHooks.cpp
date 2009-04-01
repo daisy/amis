@@ -65,6 +65,7 @@ DtbWithHooks::DtbWithHooks():Dtb(theApp.getAppPath())
 	setFileSearcher(mpFileSearcherTmp);
 	mbIsWaitingForLastmarkNode = false;
 	//setTTSNextPhraseFlag(false);
+	setCacheIndex(Preferences::Instance()->getCacheIndex());
 }
 
 DtbWithHooks::~DtbWithHooks()

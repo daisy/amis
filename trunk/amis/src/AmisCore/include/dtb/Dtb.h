@@ -80,9 +80,9 @@ public:
 	bool isProtected();
 	void setCallbackForPreprocessingBookKey(ProtectedBookKeyHandlerFunctionPtr);
 	bool hasText();
-
+	void setCacheIndex(bool);
 private:
-	void saveIndexData(bool check = false);
+	void saveIndexData();
 	bool readIndexData();
 	bool indexExistsOnDisk();
 	
@@ -123,6 +123,7 @@ private:
 	ProtectedBookKeyHandlerFunctionPtr mpCallbackForPreprocessingBookKey;
 	bool mbCanDecodePdtb;
 	string mAppPath;
+	bool mCacheIndex;
 };
 }
 }

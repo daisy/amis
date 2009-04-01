@@ -26,6 +26,7 @@
 <entry id="prefer-ffmpeg" value="no"/>
 <entry id="tts-volume-pct" value="70"/>
 <entry id="audio-volume-pct" value="100"/>
+<entry id="cache-index" value="yes"/>
 <!-- zed 2005 css not implemented in AMIS due to IE limitations -->
 <entry id="zed-2005-css-file" value="./css/dtbook.2005.basic.css"/>
 </section>

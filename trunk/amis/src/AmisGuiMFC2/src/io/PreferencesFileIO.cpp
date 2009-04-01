@@ -257,6 +257,13 @@ void PreferencesFileIO::addEntry(string id, string value)
 		int val = atoi(value.c_str());
 		mpPrefs->setAudioVolumePct(val);
 	}
+	else if (id.compare("cache-index") == 0)
+	{
+		if (value == "yes")
+			mpPrefs->setCacheIndex(true);
+		else
+			mpPrefs->setCacheIndex(false);
+	}
 }
 
 
@@ -420,6 +427,9 @@ void PreferencesFileIO::writeData()
 	itoa(mpPrefs->getAudioVolumePct(), audio_vol_buff, 10);
 	audio_vol.assign(audio_vol_buff);
 	pEntry = createEntry("audio-volume-pct", audio_vol);
+	pGeneralSection->appendChild((DOMNode*)pEntry);
+
+	pEntry = createEntry("cache-index", mpPrefs->getCacheIndex());
 	pGeneralSection->appendChild((DOMNode*)pEntry);
 
 	//get a pointer to the root element

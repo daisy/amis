@@ -353,7 +353,7 @@ bool amis::dtb::Dtb::processNcc(const ambulant::net::url* filepath, bool isLocal
 	{
 		resolve_smil_visitor.resolve(mpNavModel, mpSpine, true);
 		this->mpTextSmilMap = resolve_smil_visitor.getSmilTextMap();	
-		saveIndexData();
+		if (mCacheIndex) saveIndexData();
 	}
 	else
 	{
@@ -363,7 +363,7 @@ bool amis::dtb::Dtb::processNcc(const ambulant::net::url* filepath, bool isLocal
 			amis::util::Log::Instance()->writeWarning("Could not read index file", "Dtb::processNcc");
 			resolve_smil_visitor.resolve(mpNavModel, mpSpine, true);
 			this->mpTextSmilMap = resolve_smil_visitor.getSmilTextMap();	
-			saveIndexData();
+			if (mCacheIndex) saveIndexData();
 		}
 	}
 
@@ -400,7 +400,7 @@ bool amis::dtb::Dtb::processNcx(const ambulant::net::url* filepath, bool isLocal
 	{
 		resolve_smil_visitor.resolve(mpNavModel, mpSpine, false);
 		this->mpTextSmilMap = resolve_smil_visitor.getSmilTextMap();
-		saveIndexData();
+		if (mCacheIndex) saveIndexData();
 	}
 	else
 	{
@@ -410,7 +410,7 @@ bool amis::dtb::Dtb::processNcx(const ambulant::net::url* filepath, bool isLocal
 			amis::util::Log::Instance()->writeWarning("Could not read index file", "Dtb::processNcc");
 			resolve_smil_visitor.resolve(mpNavModel, mpSpine, true);
 			this->mpTextSmilMap = resolve_smil_visitor.getSmilTextMap();	
-			saveIndexData();
+			if (mCacheIndex) saveIndexData();
 		}
 	}
 
@@ -879,7 +879,7 @@ bool amis::dtb::Dtb::hasText()
 
 //save the smil id - nav node data
 //(one id, many nav nodes)
-void amis::dtb::Dtb::saveIndexData(bool check)
+void amis::dtb::Dtb::saveIndexData()
 {	
 #ifdef AMIS_COMPILER_MSVC
 	USES_CONVERSION;
@@ -890,7 +890,6 @@ void amis::dtb::Dtb::saveIndexData(bool check)
 	string filepath = this->getFileSet()->getBookmarksFilepath()->get_url();
 	filepath = amis::util::FilePathTools::getAsLocalFilePath(filepath);
 	filepath.replace(filepath.find(".bmk"), 4, ".idx");
-	if (check) filepath.append("1");
 	string temp_filepath = filepath + ".tmp";
 
 	ofstream f;
@@ -1068,4 +1067,10 @@ bool amis::dtb::Dtb::indexExistsOnDisk()
 	f.close();
 	if (f.fail()) return false;
 	else return true;
+}
+
+//turn on or off index caching
+void amis::dtb::Dtb::setCacheIndex(bool shouldCache)
+{
+	mCacheIndex = shouldCache;
 }
