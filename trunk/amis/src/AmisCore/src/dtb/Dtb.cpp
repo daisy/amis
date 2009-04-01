@@ -927,20 +927,21 @@ void amis::dtb::Dtb::saveIndexData(bool check)
 	string params = "-o \"" + filepath + "\" \"" + temp_filepath + "\"";
 	
 	SHELLEXECUTEINFO sei = {sizeof(sei)};
-    sei.fMask = SEE_MASK_FLAG_DDEWAIT;
+    sei.fMask = SEE_MASK_NOCLOSEPROCESS;
     sei.nShow = SW_HIDE;
     sei.lpVerb = _T("open");
     sei.lpFile = A2T(exe.c_str());
 	sei.lpParameters = A2T(params.c_str());
+	ShellExecuteEx(&sei);
+	::WaitForSingleObject(sei.hProcess, INFINITE);
+	::CloseHandle(sei.hProcess);
+
 	if (ShellExecuteEx(&sei) == FALSE)
-	{
 		amis::util::Log::Instance()->writeTrace("error compressing " + temp_filepath);
-	}
 	else
-	{
 		amis::util::Log::Instance()->writeTrace("compressed " + filepath);
-	}
-	//remove(temp_filepath.c_str());
+
+	remove(temp_filepath.c_str());
 #else
 	//TODO: something for other platforms
 #endif
@@ -965,12 +966,14 @@ bool amis::dtb::Dtb::readIndexData()
 	string params = "-d -o \"" + temp_filepath + "\" \"" + filepath + "\"";
 	
 	SHELLEXECUTEINFO sei = {sizeof(sei)};
-    sei.fMask = SEE_MASK_FLAG_DDEWAIT;
+    sei.fMask = SEE_MASK_NOCLOSEPROCESS;
     sei.nShow = SW_HIDE;
     sei.lpVerb = _T("open");
     sei.lpFile = A2T(exe.c_str());
 	sei.lpParameters = A2T(params.c_str());
 	ShellExecuteEx(&sei);
+	::WaitForSingleObject(sei.hProcess, INFINITE);
+	::CloseHandle(sei.hProcess);
 #else
 	//TODO: something for other platforms
 #endif
