@@ -66,9 +66,9 @@ CString AmisFileDialog::getFileOpenFilter()
 	CString filter;
 	filter.LoadString(IDS_FILE_OPEN_DAISY_BOOKS);
 	filter += _T(" (");
-	filter += _T("ncc.*; *.opf");
+	filter += _T("ncc.html; ncc.htm; *.opf");
 	filter += _T(")|");
-	filter += _T("ncc.*; *.opf");
+	filter += _T("ncc.html; ncc.htm; *.opf");
 	filter += _T("|DAISY Pdtb Keys (*.uak)|*.uak");
 	filter += _T("||");
 

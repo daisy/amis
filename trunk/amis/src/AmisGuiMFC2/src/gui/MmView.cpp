@@ -311,6 +311,9 @@ void MmView::OnDestroy()
 		delete player;
 		player = 0;
 		m_recent_media_node = NULL;
+		//clear the current url
+		ambulant::net::url empty_url;
+		m_current_url = empty_url;
 	}
 	if(m_timer_id) KillTimer(m_timer_id);
 	CView::OnDestroy();

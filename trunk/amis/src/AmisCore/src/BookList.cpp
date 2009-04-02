@@ -175,14 +175,18 @@ void amis::BookList::deleteEntry(unsigned int idx)
 amis::BookEntry* amis::BookList::getLastRead()
 {
 	if (mItems.empty() == true) return NULL;
-
+	amis::BookEntry* p_last_read = NULL;
 	amis::BookEntry* p_tmp = NULL;
 	for (unsigned int i = 0; i<mItems.size(); i++)
 	{
 		p_tmp = mItems[i];
-		if (p_tmp->mbIsLastRead == true) break;
+		if (p_tmp->mbIsLastRead == true) 
+		{
+			p_last_read = p_tmp;
+			break;
+		}
 	}
-	return p_tmp;
+	return p_last_read;
 }
 
 void amis::BookList::setFilepath(const ambulant::net::url* pFilepath)
@@ -205,4 +209,11 @@ amis::BookEntry* amis::BookList::findByUid(wstring uid)
 		}
 	}
 	return NULL;
+}
+
+void amis::BookList::clearLastRead()
+{
+	amis::BookEntry* p_book = NULL;
+	p_book = getLastRead();
+	if (p_book != NULL) p_book->mbIsLastRead = false;
 }

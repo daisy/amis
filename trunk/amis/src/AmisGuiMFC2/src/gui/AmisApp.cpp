@@ -600,11 +600,8 @@ bool CAmisApp::openBook(const ambulant::net::url* filename, bool saveInHistory)
 		{
 			//update the status in the title bar
 			MainWndParts::Instance()->updateTitleViewMode();
-
 			mbBookIsOpen = true;
-			
 			setIsWaiting(false);
-
 			amis::dtb::DtbWithHooks::Instance()->startReading(true);
 			
 			MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_UPDATE_TOOLBAR_STATE, 
@@ -662,7 +659,7 @@ bool CAmisApp::openBook(const ambulant::net::url* filename, bool saveInHistory)
 void CAmisApp::openLastReadBook()
 {
 	//close any open book
-	OnFileClose();
+	if (mbBookIsOpen) OnFileClose();
 	
 	if (mpHistory->getLastRead())
 		openBook(&mpHistory->getLastRead()->mPath);
@@ -790,6 +787,12 @@ void CAmisApp::OnFileClose()
 		MainWndParts::Instance()->mpMmView->OnDestroy();
 		amis::gui::MainWndParts::Instance()->mpSidebar->m_wndDlg.clearAll();
 		amis::gui::MenuManip::Instance()->clearBookmarks();
+		//there is no longer a last-read book
+		mpHistory->clearLastRead();
+		amis::io::BookListFileIO io;
+		io.writeToFile(mpHistory->getFilepath(), mpHistory);
+
+
 		//update the status in the title bar
 		amis::gui::MainWndParts::Instance()->updateTitleBar(amis::gui::MainWndParts::TITLEBAR_BOOKTITLE, _T(""));
 		MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_UPDATE_TOOLBAR_STATE,

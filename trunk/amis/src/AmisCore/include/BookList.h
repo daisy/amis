@@ -66,6 +66,7 @@ public:
 	void setName(std::wstring);
 	std::wstring getName();
 	amis::BookEntry* findByUid(wstring);
+	void clearLastRead();
 private:
 	void cleanUpVector();
 	ambulant::net::url mFilepath;

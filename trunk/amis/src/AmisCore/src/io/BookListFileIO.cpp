@@ -99,14 +99,12 @@ void amis::io::BookListFileIO::startElement(const   XMLCh* const    uri,
 	{
 		mpCurrentEntry = new amis::BookEntry();
 		mpBookList->addEntry(mpCurrentEntry);
-
+		mpCurrentEntry->mbIsLastRead = false;
 		string tmpstr;
 		tmpstr.assign(SimpleAttrs::get("isLastRead", &attributes));
 		if (tmpstr.compare("yes") == 0) 
 			mpCurrentEntry->mbIsLastRead = true;
-		else 
-			mpCurrentEntry->mbIsLastRead = false;
-
+		
 		wstring tmp_wstr;
 		tmp_wstr.assign(SimpleAttrs::getw("uid", &attributes));
 		mpCurrentEntry->mUid = tmp_wstr;
