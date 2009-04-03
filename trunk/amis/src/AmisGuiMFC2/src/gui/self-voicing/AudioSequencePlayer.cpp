@@ -256,7 +256,10 @@ void AudioSequencePlayer::playNext(bool fromEndEvent)
 		m_currentAudioSequence = NULL;
 		
 		if (mRepeatLoop && m_previousAudioSequence)
+		{
+			Sleep(2000);
 			Play(m_previousAudioSequence, false, true, true);
+		}
 		return;
 	}
 

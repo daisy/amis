@@ -99,8 +99,6 @@ bool DtbWithHooks::open(const ambulant::net::url* filename, const ambulant::net:
 	updateCustomTestStates(true);
 	makeAllLabelsHumanReadable();
 	
-	amis::gui::sidebar::AmisSidebarLoader::Instance()->loadNavigationData
-		(this->getNavModel(), &amis::gui::MainWndParts::Instance()->mpSidebar->m_wndDlg);
 	
 	if (this->getTitle() != NULL)
 	{
@@ -117,11 +115,21 @@ bool DtbWithHooks::open(const ambulant::net::url* filename, const ambulant::net:
 	if (saveInHistory == true) addToHistory();
 	amis::dtb::BookmarkSet* p_bmks = NULL;
 	p_bmks = this->getBookmarks();
+
 	amis::gui::MenuManip::Instance()->setupNavigationOptions();
 	amis::gui::MenuManip::Instance()->addNavContainersToViewMenu();
 	amis::gui::MenuManip::Instance()->loadBookmarks(p_bmks);
 
+	// The DONE message is likely to be "skipped" because
+	// the loadNavigationData() happens right after and
+	// generates the prompt "Sidebar has focus" (which interrupts the previous one).
+	// After testing with a few books, this behaviour seems fine.
+	// We should leave the DONE prompt here anyway, just in case the self-voicing logic
+	// associated to loadNavigationData() changes in the future.
 	amis::gui::CAmisApp::emitMessage("done");
+
+	amis::gui::sidebar::AmisSidebarLoader::Instance()->loadNavigationData
+		(this->getNavModel(), &amis::gui::MainWndParts::Instance()->mpSidebar->m_wndDlg);
 
 	return true;
 }
