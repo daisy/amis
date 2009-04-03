@@ -257,6 +257,11 @@ void CAmisHtmlView::OnBeforeNavigate2(LPCTSTR lpszURL, DWORD nFlags,
 	ambulant::net::url thisDir = thisUrl.get_base();
 	//we can't just use the book dir because it comes with a trailing slash .. so use the OPF or NCC instead
 	amis::dtb::DtbFileSet* p_files = amis::dtb::DtbWithHooks::Instance()->getFileSet();
+	if (urlOrFile == "about:blank")
+	{
+		CHtmlView::OnBeforeNavigate2(lpszURL, nFlags,	lpszTargetFrameName, baPostedData, lpszHeaders, pbCancel);
+		return;
+	}
 	if (p_files == NULL)
 	{
 		*pbCancel = TRUE;
@@ -271,7 +276,7 @@ void CAmisHtmlView::OnBeforeNavigate2(LPCTSTR lpszURL, DWORD nFlags,
 	CString cstr_url(lpszURL);
 	// This test does not work for URLs with ambulanturl:.
 	bool is_same_dir = thisDir.same_document(bookDir);
-	bool is_blank = !cstr_url.Compare(_T("about:blank"));
+	//bool is_blank = !cstr_url.Compare(_T("about:blank"));
 	bool is_pdtb = amis::dtb::DtbWithHooks::Instance()->isProtected();
 	bool has_http = false;
 	if (thisUrl.get_protocol() == "http") has_http = true;
@@ -279,7 +284,7 @@ void CAmisHtmlView::OnBeforeNavigate2(LPCTSTR lpszURL, DWORD nFlags,
 	//1. book NOT protected, link NOT part of book, link NOT to about:blank
 	//2. book IS protected, link IS web
 	//then launch the link externally
-	if ((!is_pdtb && !is_same_dir && !is_blank) || (is_pdtb && has_http))
+	if ((!is_pdtb && !is_same_dir/* && !is_blank*/) || (is_pdtb && has_http))
 	{
 		string log_msg = "Launching external link externally: " + thisUrl.get_url();
 		amis::util::Log::Instance()->writeTrace(log_msg);

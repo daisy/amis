@@ -439,6 +439,7 @@ std::string CAmisApp::getAppPath()
 	}
 	return mAppPath;
 }
+//returned with trailing slash
 std::string CAmisApp::getAppSettingsPath()
 {
 	USES_CONVERSION;
@@ -791,8 +792,7 @@ void CAmisApp::OnFileClose()
 		mpHistory->clearLastRead();
 		amis::io::BookListFileIO io;
 		io.writeToFile(mpHistory->getFilepath(), mpHistory);
-
-
+		
 		//update the status in the title bar
 		amis::gui::MainWndParts::Instance()->updateTitleBar(amis::gui::MainWndParts::TITLEBAR_BOOKTITLE, _T(""));
 		MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_UPDATE_TOOLBAR_STATE,

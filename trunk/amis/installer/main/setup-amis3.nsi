@@ -14,7 +14,7 @@
 ; product information
 ;**
 !define PRODUCT_NAME "AMIS"
-!define PRODUCT_VERSION "3.0 RC 1"
+!define PRODUCT_VERSION "3.0 RC 2"
 !define PRODUCT_PUBLISHER "DAISY Consortium"
 !define PRODUCT_WEB_SITE "http://amisproject.org"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\AMIS.exe"
@@ -96,7 +96,7 @@ Page custom SapiPage
 ;**
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION} (${CUSTOM_LANG_NAME})"
 ;this is the name of the installer that gets created.  
-OutFile "Setup-amis30-rc1-${CUSTOM_LANG_NAME}.exe"
+OutFile "Setup-amis30-rc2-${CUSTOM_LANG_NAME}.exe"
 InstallDir "$PROGRAMFILES\AMIS"
 InstallDirRegKey HKLM "${PRODUCT_DIR_REGKEY}" ""
 ShowInstDetails show
@@ -133,6 +133,7 @@ Section "MainSection" SEC01
   File "${BIN_DIR}\avutil-49.dll"
   File "${BIN_DIR}\SDL.dll"
   File "${BIN_DIR}\libamplugin_pdtb.dll"
+  File "${BIN_DIR}\lzop.exe"
   
   ;register the pdtb-ie plugin
   !insertmacro InstallLib REGDLLTLB NOTSHARED NOREBOOT_NOTPROTECTED "${BIN_DIR}\PdtbIePlugin.dll" "$INSTDIR\PdtbIePlugin.dll" "$INSTDIR"
@@ -255,7 +256,6 @@ SectionEnd
 ; Install MSVC runtime
 ;*
 Section -MSVCRuntime
-  MessageBox MB_ICONEXCLAMATION "Checking for MSVC Runtime"
   
   Var /GLOBAL MSVC_RUNTIME_INSTALLER
   StrCpy $MSVC_RUNTIME_INSTALLER "$TEMP\vcredist_x86.exe"
@@ -286,8 +286,6 @@ SectionEnd
 ; Install Jaws scripts
 ;*
 Section -JawsScripts
-  
-  MessageBox MB_ICONEXCLAMATION "Checking for Jaws"
   
   Var /GLOBAL JFW_SCRIPTS_INSTALLER
   StrCpy $JFW_SCRIPTS_INSTALLER "$TEMP\amis3_jfw_scripts.exe"

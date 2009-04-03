@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
 <ui next-id="t447" xml:lang="en" xmlns="http://amisproject.org">
+    <created by="DAISY Lion" date="2009-04-01_18:55:48"/>
     <containers>
         <container id="file">
             <note>This is the menu header &quot;File&quot;</note>
@@ -949,13 +950,13 @@ Adaptive Multimedia Information System</text>
             </control>
             <control mfcid="IDC_VERSION" translate="no" widget="textlabel autoplay">
                 <caption>
-                    <text id="t164">Version 3.0 RC1</text>
+                    <text id="t164">Version 3.0 RC2</text>
                     <audio from="" src="./audio/eng-US_t164.mp3"/>
                 </caption>
             </control>
             <control mfcid="IDC_VERSIONNOTE" translate="no" widget="textlabel autoplay">
                 <caption>
-                    <text id="t165">Release Date: 16 February 2009</text>
+                    <text id="t165">Release Date: 2 April 2009</text>
                     <audio from="" src="./audio/eng-US_t165.mp3"/>
                 </caption>
             </control>
