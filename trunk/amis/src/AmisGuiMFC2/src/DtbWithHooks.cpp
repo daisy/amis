@@ -95,8 +95,6 @@ bool DtbWithHooks::open(const ambulant::net::url* filename, const ambulant::net:
 		return false;
 	}
 
-	//turn on all skippable options to start with
-	updateCustomTestStates(true);
 	makeAllLabelsHumanReadable();
 	
 	
@@ -148,7 +146,10 @@ void DtbWithHooks::updateCustomTestStates(bool playAll)
 		//append "-on" if this is a Daisy 202 book
 		if (this->getDaisyVersion() == DAISY_202) test_id.append("-on");
 		bool state = p_tests->getCustomTest(i)->getCurrentState() | playAll;
-		ambulant::smil2::test_attrs::set_current_system_component_value(test_id, state);
+		if (this->getDaisyVersion() == amis::dtb::DAISY_202)
+			ambulant::smil2::test_attrs::set_current_system_component_value(test_id, state);
+		else
+			ambulant::smil2::test_attrs::set_current_custom_test_value(test_id, state);
 		p_tests->getCustomTest(i)->setCurrentState(state);
 	}
 }
@@ -283,6 +284,8 @@ void DtbWithHooks::addToHistory()
 
 void DtbWithHooks::makeAllLabelsHumanReadable()
 {
+	USES_CONVERSION;
+
 	//update the navigation containers
 	nav::NavMap* p_map = getNavModel()->getNavMap();
 	//make a dummy label if there's nothing there
@@ -348,7 +351,7 @@ void DtbWithHooks::makeAllLabelsHumanReadable()
 			amis::dtb::CustomTest* p_custom_test = p_custom_tests->getCustomTest(i);
 			amis::MediaGroup* p_label = new amis::MediaGroup();
 			amis::TextNode* p_text = new amis::TextNode();
-			p_text->setTextString(L"customtest");
+			p_text->setTextString(A2T(p_custom_test->getId().c_str()));
 			p_label->setText(p_text);
 			p_custom_test->setLabel(p_label);
 			makeLabelHumanReadable(p_label, p_custom_test->getId());
@@ -359,7 +362,7 @@ void DtbWithHooks::makeAllLabelsHumanReadable()
 void DtbWithHooks::makeLabelHumanReadable(amis::MediaGroup* pLabel, std::string id)
 {
 	std::string amis_xml_item_id;
-	std::wstring item_name;
+	std::wstring item_name = pLabel->getText()->getTextString().c_str();
 
 	//replace NCC identifiers with more human-readable names
 	if (id.compare("sidebar") == 0 ||

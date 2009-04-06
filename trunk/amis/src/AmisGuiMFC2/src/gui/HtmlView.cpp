@@ -717,6 +717,8 @@ void amis::gui::CAmisHtmlView::OnSize(UINT nType, int cx, int cy)
 //added this to help with stylesheet rendering
 void amis::gui::CAmisHtmlView::forceResizeHack()
 {
+	if (MainWndParts::Instance()->mpMainFrame == NULL) return;
+
 	//force a resize to avoid the gap between the CSS area and the HTML page margin
 	
 	CRect rect;
