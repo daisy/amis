@@ -148,11 +148,18 @@ void TextRenderBrain::webDocumentComplete()
 	if (mbWaitForDocumentLoad)
 	{
 		//this is the user's css file
-		mpAmisCss = MainWndParts::Instance()->mpHtmlView->applyStylesheet
-			(Preferences::Instance()->getAmisCssFile());
+		if (MainWndParts::Instance()->mpHtmlView != NULL)
+		{
+			mpAmisCss = MainWndParts::Instance()->mpHtmlView->applyStylesheet
+				(Preferences::Instance()->getAmisCssFile());
+			MainWndParts::Instance()->mpHtmlView->RedrawWindow();
+			MainWndParts::Instance()->mpMainFrame->RecalcLayout();
+		}
+		else
+		{
+			amis::util::Log::Instance()->writeWarning("NULL Html View", "TextRenderBrain::webDocumentComplete");
+		}
 		
-		MainWndParts::Instance()->mpHtmlView->RedrawWindow();
-		MainWndParts::Instance()->mpMainFrame->RecalcLayout();
 		mbWaitForDocumentLoad = false;
 		
 		//refresh font size and contrast settings for the newly loaded page
@@ -173,6 +180,8 @@ void TextRenderBrain::saveElementText(IHTMLElement* pElm)
 	pElm->get_tagName(&tag_name);
 	string str_tag_name = OLE2A(tag_name);
 	
+	amis::util::Log::Instance()->writeTrace("Saving element text for " + str_tag_name, "TextRenderBrain::saveElementText");
+
 	//convert the string to lower case before doing a comparison
 	std::transform(str_tag_name.begin(), str_tag_name.end(), str_tag_name.begin(), (int(*)(int))tolower);
 	
@@ -211,14 +220,16 @@ void TextRenderBrain::saveElementText(IHTMLElement* pElm)
 void TextRenderBrain::showElementAtId(string elmId)
 {
 	USES_CONVERSION;
+	if (elmId.size() == 0) return; 
+	
 	CString cstr_elm_id = A2T(elmId.c_str());
 	CString msg;
 	
-	if (elmId.size() == 0) return; 
 	IHTMLElement* p_elm = NULL;
 	p_elm = GetElementFromId(elmId, 0);
 	if (p_elm == NULL) return;
 
+	amis::util::Log::Instance()->writeTrace("Displaying requested element " + elmId, "TextRenderBrain::showElementAtId");
 	//save the element text
 	//this is just a convenient place for this function call, since it minimizes DOM searching	
 	saveElementText(p_elm);
@@ -241,6 +252,7 @@ void TextRenderBrain::showElementAtId(string elmId)
 
 	if (amis::dtb::DtbWithHooks::Instance()->hasAudio() == false)
 	{
+		amis::util::Log::Instance()->writeTrace("Speaking element text", "TextRenderBrain::showElementAtId");
 		amis::dtb::DtbWithHooks::Instance()->speakTTS(this->mCurrentElmText.c_str());
 	}
 }
@@ -249,7 +261,7 @@ void TextRenderBrain::unHighlightPreviousElement()
 {
 	if (mpPreviousElm != NULL)
 	{
-	
+		amis::util::Log::Instance()->writeTrace("Unhighlighting the previous element", "TextRenderBrain::unHighlightPreviousElement");
 		IHTMLStyle* p_last_style = NULL;
 		mpPreviousElm->get_style(&p_last_style);
 		p_last_style->put_cssText(mPreviousElmCss);
@@ -310,7 +322,7 @@ void TextRenderBrain::setHighlightColors(IHTMLElement* pElm)
 	USES_CONVERSION;
 	
 	if (pElm == NULL) return;
-
+	amis::util::Log::Instance()->writeTrace("Setting highlight colors", "TextRenderBrain::setHighlightColors");
 	IHTMLStyle* p_style = NULL;
 	//save the current style info before changing it
 	pElm->get_style(&p_style);
@@ -395,7 +407,15 @@ void TextRenderBrain::applyPageStyle(int idx)
 	amis::UrlList* list = Preferences::Instance()->getCustomCssFiles();
 	ambulant::net::url url = (*list)[idx];
 	mCurrentStyleIdx = idx;
-	mpStyleCss = MainWndParts::Instance()->mpHtmlView->applyStylesheet(&url);
+	if (MainWndParts::Instance()->mpHtmlView != NULL)
+	{
+		mpStyleCss = MainWndParts::Instance()->mpHtmlView->applyStylesheet(&url);
+		amis::util::Log::Instance()->writeTrace("Done calling applyStylesheet", "TextRenderBrain::applyPageStyle");
+	}
+	else
+	{
+		amis::util::Log::Instance()->writeWarning("NULL Html View", "TextRenderBrain::applyPageStyle");
+	}
 }
 
 void TextRenderBrain::applyNextPageStyle()
@@ -466,6 +486,12 @@ void TextRenderBrain::resetFontSize()
 //represents a larger size)
 void TextRenderBrain::setFontSize(int fontsz)
 {
+	string msg;
+	char ch[10];
+	itoa(fontsz, ch, 10);
+	msg = "Setting fontsize to ";
+	msg.append(ch);
+	amis::util::Log::Instance()->writeMessage(msg, "TextRenderBrain::setFontSize");
 	if (fontsz > Preferences::Instance()->getFontsizeCssFiles()->size() || fontsz < 1) fontsz = 0;
 	mFontSize = fontsz;
 
@@ -482,7 +508,10 @@ void TextRenderBrain::setFontSize(int fontsz)
 	if (fontsz > 0 && fontsz <= Preferences::Instance()->getFontsizeCssFiles()->size())
 	{
 		css_url = &(*Preferences::Instance()->getFontsizeCssFiles())[fontsz - 1];
-		mpFontCss = MainWndParts::Instance()->mpHtmlView->applyStylesheet(css_url);
+		if (MainWndParts::Instance()->mpHtmlView != NULL)
+			mpFontCss = MainWndParts::Instance()->mpHtmlView->applyStylesheet(css_url);
+		else
+			amis::util::Log::Instance()->writeWarning("NULL Html View", "TextRenderBrain::setFontSize");
 	}
 	else
 	{
@@ -632,6 +661,7 @@ bool TextRenderBrain::isElementInView(IHTMLElement* pElm)
 {
 	if (pElm == NULL) return false;
 
+	amis::util::Log::Instance()->writeTrace("Testing to see if the element is in view", "TextRenderBrain::isElementInView");
 	//the IHTMLELEMENT measurements
 	long elm_width = 0;
 	long elm_height = 0;

@@ -2,9 +2,12 @@
 
 ECHO This script copies the AMIS settings folder to the system's application data directory
 
-IF "%1"=="" ECHO Using default Application Data directory
-IF "%1"=="" SET DESTINATION=%systemdrive%\Documents and Settings\All Users\Application Data\AMIS\
-IF NOT "%1"=="" SET DESTINATION=%1
+IF "%1"=="" (
+    ECHO Using default Application Data directory
+    SET DESTINATION=%systemdrive%\Documents and Settings\All Users\Application Data\AMIS\
+) ELSE (
+    SET DESTINATION=%1
+)
 ECHO %DESTINATION%
 
 echo Removing old files
