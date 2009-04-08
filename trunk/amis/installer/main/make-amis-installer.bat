@@ -1,14 +1,23 @@
-ECHO off
+rem ECHO off
 
-REM   make-amis-installer.bat langid langname helpfile
-REM   If you are making an installer, be sure to get the latest one from Microsoft.  
+REM   make-amis-installer.bat langid langname helpfile test
+REM   The last parameter is for creating an installer ready for testers (full logging in AMIS)
+REM   If you are making an installer, be sure to get the latest redist of MSVC libraries from Microsoft.  
 REM   The one included in Visual Studio 8, even SP1, is outdated.  
 REM   Then change the line under "Copying MSVC redistributable" to copy your local copy.
 
+SET SETTINGS_DIR=..\..\bin\settings\clean_settings_for_the_installer
+SET SETTINGS_DIR_PL=../../bin/settings/clean_settings_for_the_installer
+    
 ECHO Customizing preferences for %2
-mkdir ..\..\bin\settings\clean_settings_for_the_installer
-perl setup-amis-prefs.pl ../../bin/settings/amisPrefs.xml.default ui-lang-id %1 > ../../bin/settings/clean_settings_for_the_installer/amisPrefs.xml
-copy ..\..\bin\settings\amisHistory.xml.default ..\..\bin\settings\clean_settings_for_the_installer\amisHistory.xml
+
+mkdir "%SETTINGS_DIR%"
+IF "%4"=="test" (
+    perl setup-amis-prefs.pl ../../bin/settings/amisPrefs.xml.default ui-lang-id %1 logging-level FULL_LOGGING > %SETTINGS_DIR_PL%/amisPrefs.xml
+) ELSE (
+    perl setup-amis-prefs.pl ../../bin/settings/amisPrefs.xml.default ui-lang-id %1 > %SETTINGS_DIR_PL%/amisPrefs.xml
+)
+copy ..\..\bin\settings\amisHistory.xml.default %SETTINGS_DIR%\amisHistory.xml
 
 ECHO Copying MSVC redistributable
 copy c:\devel\vcredist_x86.exe ..\..\bin\vcredist_x86.exe
