@@ -921,6 +921,7 @@ void MmView::node_started(const ambulant::lib::node* n)
 		A2T(n->get_attribute("id")),
 		A2T(n->get_attribute("src")));
 	TRACE(_T("%s"), msg);
+	amis::util::Log::Instance()->writeTrace(T2A(msg), "MmView::node_started");
 	
 	if (tagname == "audio")
 	{
@@ -959,6 +960,8 @@ void MmView::node_started(const ambulant::lib::node* n)
 	//highlight the sidebar
 	//a message is necessary because making a direct call gets caught up in thread locks
 	amis::gui::MainWndParts::Instance()->mpSidebar->m_wndDlg.PostMessageW(WM_MY_UPDATE_SIDEBAR_SELECTION);
+
+	amis::util::Log::Instance()->writeTrace("end function", "MmView::node_started");
 }	
 
 void MmView::node_stopped(const ambulant::lib::node *n)
@@ -968,12 +971,13 @@ void MmView::node_stopped(const ambulant::lib::node *n)
 	CString msg;
 	msg.Format(_T("^^^^^^^^^^ Node stopped %s id=\"%s\"\n"), A2T(n->get_local_name().c_str()), A2T(n->get_attribute("id")));
 	TRACE(_T("%s"), msg);
-
+	amis::util::Log::Instance()->writeTrace(T2A(msg), "MmView::node_stopped");
 	//if we are ending a par and we were expecting audio
 	if (n->get_local_name() == "par" && m_recent_par_node != NULL && m_saw_audio == false)
 	{
 		player->pause();
 	}
+	amis::util::Log::Instance()->writeTrace("end function", "MmView::node_stopped");
 }
 
 void MmView::node_focussed(const ambulant::lib::node *n)

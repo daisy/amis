@@ -627,6 +627,7 @@ void amis::dtb::Dtb::setNewLastmark(amis::dtb::smil::SmilMediaGroup* pMediaGroup
 //it turns out that this method signature is friendlier for ambulant than the other setNewLastmark function
 void amis::dtb::Dtb::setNewLastmark(ambulant::net::url positionUri)
 {
+	amis::util::Log::Instance()->writeTrace("start function", "Dtb::setNewLastmark");
 	if (mpBookmarks == NULL) return;
 	
 	//if we couldn't decode a pdtb and are presumably playing the copyright notice, don't set a lastmark
@@ -671,6 +672,9 @@ void amis::dtb::Dtb::setNewLastmark(ambulant::net::url positionUri)
 	mpBookmarks->setLastmark(p_pos_data);
 	amis::io::BookmarksFileIO bmk_file_io;
 	bmk_file_io.writeToFile(mpFiles->getBookmarksFilepath(), mpBookmarks);
+
+	amis::util::Log::Instance()->writeTrace("end function", "Dtb::setNewLastmark");
+	
 }
 
 string amis::dtb::Dtb::searchFullText(wstring search, ambulant::net::url currentTextUrl, int dir)

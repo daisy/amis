@@ -138,6 +138,7 @@ void TextRenderBrain::gotoUriTarget(std::string urlstr)
 			//save the current ID
 			mTextElmId = text_elm_id;
 			showElementAtId(mTextElmId);
+			amis::util::Log::Instance()->writeTrace("End function", "TextRenderBrain::gotoUriTarget");
 		}
 	}
 }
@@ -167,6 +168,7 @@ void TextRenderBrain::webDocumentComplete()
 		if (mbStyleOn) applyPageStyle(mCurrentStyleIdx);
 
 		showElementAtId(mTextElmId);
+		amis::util::Log::Instance()->writeTrace("End function", "TextRenderBrain::webDocumentComplete");
 	}
 }
 
@@ -255,6 +257,7 @@ void TextRenderBrain::showElementAtId(string elmId)
 		amis::util::Log::Instance()->writeTrace("Speaking element text", "TextRenderBrain::showElementAtId");
 		amis::dtb::DtbWithHooks::Instance()->speakTTS(this->mCurrentElmText.c_str());
 	}
+	amis::util::Log::Instance()->writeTrace("Done showing element.", "TextRenderBrain::showElementAtId");
 }
 //reset the highlight from the previously highlighted element
 void TextRenderBrain::unHighlightPreviousElement()

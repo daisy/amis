@@ -355,6 +355,7 @@ LPARAM CAmisHtmlView::OnHighlightUrlTarget(WPARAM wParam, LPARAM lParam)
 #endif
 	TextRenderBrain::Instance()->gotoUriTarget(newurl);
 	delete url;
+	amis::util::Log::Instance()->writeTrace("End function", "HtmlView::OnHighlightUrlTarget");
 	return 0;
 }
 
@@ -815,6 +816,7 @@ void html_browser_imp::goto_url(std::string urlstr, ambulant::net::datasource_fa
 	
 	std::string *strcopy = new std::string(urlstr);
 	MainWndParts::Instance()->mpHtmlView->PostMessage(WM_MY_HIGHLIGHTURITARGET, 0, (LPARAM)strcopy);
+	amis::util::Log::Instance()->writeTrace("End function", "html_browser_imp::goto_url");
 	//Sleep(1000);
 }
 

@@ -545,4 +545,5 @@ void TTSPlayer::callback()
 	}
 
 	LeaveCriticalSection(&m_csSequence);
+	p_log->writeTrace("End function", "TTSPlayer::callback");
 }

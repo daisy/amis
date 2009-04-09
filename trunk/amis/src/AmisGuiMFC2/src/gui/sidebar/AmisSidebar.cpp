@@ -787,5 +787,7 @@ void CAmisSidebar::OnPageListKeyDown(NMHDR* pNMHDR, LRESULT* pResult)
 LPARAM CAmisSidebar::OnUpdateSelection(WPARAM wParam, LPARAM lParam)
 {
 	updateSelection();
+	amis::util::Log::Instance()->writeTrace("done updating sidebar selection", "CAmisSidebar::OnUpdateSelection");
+	
 	return 0;
 }
