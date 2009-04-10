@@ -453,6 +453,7 @@ void Preferences::logAllPreferences()
 	else log_msg += "No";
 	p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
 	
+#ifndef AVOID_SELF_VOICING_COM_STUFF
 	int indexTTSVoice = getTTSVoiceIndex();
 	log_msg = "\tTTS voice index ";
 	char strTTSVoice[3];
@@ -464,6 +465,7 @@ void Preferences::logAllPreferences()
 	log_msg += " // ";
 	log_msg += strVoice;
 	p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
+#endif
 	
 
 	log_msg = "\tUsing TTS or pre-recorded audio? ";

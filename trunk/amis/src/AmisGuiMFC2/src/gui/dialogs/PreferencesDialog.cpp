@@ -21,6 +21,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
 #include "stdafx.h"
+#include "gui/AmisApp.h"
 #include "gui/dialogs/PreferencesDialog.h"
 #include "../resource.h"
 #include "AmisCore.h"
@@ -110,7 +111,11 @@ BOOL PreferencesDialog::OnInitDialog()
 	
 	CDialog::OnInitDialog();
 	this->setFontOnAllControls();
+
+#ifndef AVOID_SELF_VOICING_COM_STUFF
 	initializeTTSVoiceOption();
+#endif
+
 	initializeUiLanguageOption();
 	
 	return TRUE;

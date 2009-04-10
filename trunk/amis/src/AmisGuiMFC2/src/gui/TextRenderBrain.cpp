@@ -252,11 +252,14 @@ void TextRenderBrain::showElementAtId(string elmId)
 	}
 	mpPreviousElm = p_elm;
 
+#ifndef AVOID_SELF_VOICING_COM_STUFF
 	if (amis::dtb::DtbWithHooks::Instance()->hasAudio() == false)
 	{
 		amis::util::Log::Instance()->writeTrace("Speaking element text", "TextRenderBrain::showElementAtId");
 		amis::dtb::DtbWithHooks::Instance()->speakTTS(this->mCurrentElmText.c_str());
 	}
+#endif
+
 	amis::util::Log::Instance()->writeTrace("Done showing element.", "TextRenderBrain::showElementAtId");
 }
 //reset the highlight from the previously highlighted element
