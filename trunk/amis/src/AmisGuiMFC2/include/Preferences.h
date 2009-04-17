@@ -32,6 +32,40 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 namespace amis
 {
+
+//many of the preferences were extracted to this list so that they could be overridden individually
+class OverrideablePreferences
+{
+public:
+	void initAll();
+	void log();
+
+	bool mbStartInBasicView;
+	bool mbLoadLastBook;
+	bool mbPauseOnLostFocus;
+	bool mbIsSelfVoicing;
+	int mTTSVoiceIndex;
+	bool mbUseTTSNotAudio;
+	bool mbHighlightText;
+	bool mbDisableScreensaver;
+	bool mbIsFirstTime;
+	bool mbPreferFFMpeg;
+	int mTTSVolumePct;
+	int mAudioVolumePct;
+	util::Color mHighlightFG;
+	util::Color mHighlightBG;
+	std::string mAppFontName;
+	
+	//the logging preferences
+	amis::util::LogLevel mLogLevel;
+	bool mbLoggingEnabled;
+	bool mbCacheIndex;
+	
+	//no amis direct x or TTS
+	bool mbSafeMode;
+
+};
+
 class Preferences
 {
 protected:
@@ -96,9 +130,6 @@ public:
 	void setAmisCssFile(const ambulant::net::url*);
 	const ambulant::net::url* getAmisCssFile();
 	
-	void setZed2005CssFile(const ambulant::net::url*);
-	const ambulant::net::url* getZed2005CssFile();
-
 	void setSourceUrl(const ambulant::net::url*);
 	const ambulant::net::url* getSourceUrl();
 
@@ -106,8 +137,8 @@ public:
 	amis::util::Color getHighlightBGColor();
 	void setHighlightFGColor(amis::util::Color);
 	amis::util::Color getHighlightFGColor();
-	void setSidebarFontName(std::string);
-	std::string getSidebarFontName();
+	void setAppFontName(std::string);
+	std::string getAppFontName();
 
 	amis::UrlList* getFontsizeCssFiles();
 	amis::UrlList* getCustomCssFiles();
@@ -132,35 +163,15 @@ public:
 	bool getCacheIndex();
 	void setCacheIndex(bool);
 
+	bool getSafeMode();
+	void setSafeMode(bool);
+
 private:
 	void scanDirectoriesForCssFiles();
 	void scanDirectoriesForLanguagePackFiles();
 	void processLanguagePackModuleDescData(amis::ModuleDescData*);
 	
-	string mUiLangId;
-	bool mbStartInBasicView;
-	bool mbLoadLastBook;
-	bool mbPauseOnLostFocus;
-	bool mbIsSelfVoicing;
-	int mTTSVoiceIndex;
-	bool mbUseTTSNotAudio;
-	bool mbWasExitClean;
-	bool mbHighlightText;
-	bool mbDisableScreensaver;
-	bool mbIsFirstTime;
-	bool mbPreferFFMpeg;
-	int mTTSVolumePct;
-	int mAudioVolumePct;
-	util::Color mHighlightFG;
-	util::Color mHighlightBG;
-	std::string mSidebarFontName;
-	ambulant::net::url mUserBmkDir;
-	ambulant::net::url mLangpacksDir;
-	ambulant::net::url mFontsizeCssDir;
-	ambulant::net::url mCustomCssDir;
-	ambulant::net::url mAmisCssFile;
-	ambulant::net::url mZed2005CssFile;
-
+	
 	//the following gets calculated at runtime
 	//1. map the id of the language to the module description (path, media label, etc) 
 	amis::StringModuleMap mInstalledLanguages;
@@ -171,11 +182,17 @@ private:
 	
 	//the source preferences XML file
 	ambulant::net::url mSourceUrl;
+	
+	ambulant::net::url mUserBmkDir;
+	ambulant::net::url mLangpacksDir;
+	ambulant::net::url mFontsizeCssDir;
+	ambulant::net::url mCustomCssDir;
+	ambulant::net::url mAmisCssFile;
+	
+	bool mbWasExitClean;
+	string mUiLangId;
 
-	//the logging preferences
-	amis::util::LogLevel mLogLevel;
-	bool mbLoggingEnabled;
-	bool mCacheIndex;
+	OverrideablePreferences mP;
 private:
 	static Preferences* pinstance;
 

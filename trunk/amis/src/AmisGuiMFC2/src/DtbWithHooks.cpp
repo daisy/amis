@@ -516,10 +516,13 @@ amis::dtb::smil::SmilMediaGroup* DtbWithHooks::loadSmilFromUrl(const ambulant::n
 			MmView *view = MainWndParts::Instance()->mpMmView;
 			if (view != NULL) view->OnFilePause();
 		}
-#ifndef AVOID_SELF_VOICING_COM_STUFF
+//#ifndef AVOID_SELF_VOICING_COM_STUFF
 		else
-			stopTTS();	
-#endif
+		{
+			if (!Preferences::Instance()->getSafeMode())
+				stopTTS();	
+		}
+//#endif
 
 		if(amis::gui::MainWndParts::Instance()->mpMmView->getCurrentUrl()->same_document(full_path))
 		{
@@ -750,11 +753,17 @@ bool DtbWithHooks::isPlaying()
 		return view->isPlaying();
 	else
 	{
-#ifndef AVOID_SELF_VOICING_COM_STUFF
-		return amis::tts::TTSPlayer::InstanceTwo()->IsPlaying();
-#else
-		return false;
-#endif
+//#ifndef AVOID_SELF_VOICING_COM_STUFF
+		if (!Preferences::Instance()->getSafeMode())
+		{
+			return amis::tts::TTSPlayer::InstanceTwo()->IsPlaying();
+		}
+//#else
+		else
+		{
+			return false;
+		}
+//#endif
 	}
 }
 

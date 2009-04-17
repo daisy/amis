@@ -19,7 +19,7 @@
 <entry id="amis-css-file" value="./css/amis.css"/>
 <entry id="highlight-fg-color" value="#000000"/>
 <entry id="highlight-bg-color" value="#FFFF00"/>
-<entry id="sidebar-font-name" value="Verdana"/>
+<entry id="app-font-name" value="Verdana"/>
 <entry id="is-first-time" value="yes"/>
 <entry id="is-logging-enabled" value="yes"/>
 <entry id="logging-level" value="MEDIUM_LOGGING"/>
@@ -27,7 +27,6 @@
 <entry id="tts-volume-pct" value="70"/>
 <entry id="audio-volume-pct" value="100"/>
 <entry id="cache-index" value="yes"/>
-<!-- zed 2005 css not implemented in AMIS due to IE limitations -->
-<entry id="zed-2005-css-file" value="./css/dtbook.2005.basic.css"/>
+<entry id="safe-mode" value="no"/>
 </section>
 </preferences>

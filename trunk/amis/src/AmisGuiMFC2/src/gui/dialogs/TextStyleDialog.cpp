@@ -65,7 +65,7 @@ BOOL CALLBACK EnumFontCallback (LPLOGFONT lplf, LPTEXTMETRIC lptm, DWORD dwType,
 	CComboBox* p_font_list = (CComboBox*)lpData;
 	int index = p_font_list->AddString(lplf->lfFaceName);
 	std::string font = T2A(lplf->lfFaceName);
-	if (font.compare(amis::Preferences::Instance()->getSidebarFontName()) == 0)
+	if (font.compare(amis::Preferences::Instance()->getAppFontName()) == 0)
 	{
 		p_font_list->SetCurSel(index);
 	}
@@ -190,7 +190,7 @@ void amis::gui::dialogs::TextStyleDialog::OnOK()
 	CString tmp;
 	CComboBox* p_font_list = (CComboBox*)GetDlgItem(IDC_FONT);
 	p_font_list->GetWindowText(tmp);
-	Preferences::Instance()->setSidebarFontName(T2A(tmp));
+	Preferences::Instance()->setAppFontName(T2A(tmp));
 	
 	CComboBox* p_background_list = (CComboBox*)GetDlgItem(IDC_HIGHLIGHTBACKGROUND);
 	p_background_list->GetWindowText(tmp);

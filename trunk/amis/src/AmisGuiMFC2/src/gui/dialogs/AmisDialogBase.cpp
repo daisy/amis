@@ -178,7 +178,7 @@ void AmisDialogBase::setFontOnAllControls()
 	CFont* p_font=this->GetFont();
 	LOGFONT lf;
 	p_font->GetLogFont(&lf);
-	CString font_name = A2T(amis::Preferences::Instance()->getSidebarFontName().c_str());
+	CString font_name = A2T(amis::Preferences::Instance()->getAppFontName().c_str());
 	lstrcpy(lf.lfFaceName, font_name);
 	lf.lfWeight = FW_NORMAL;
 	lf.lfHeight = 85;

@@ -173,12 +173,6 @@ void PreferencesFileIO::addEntry(string id, string value)
 		file = file.join_to_base(source_url);
 		mpPrefs->setAmisCssFile(&file);
 	}
-	else if (id.compare("zed-2005-css-file") == 0)
-	{
-		ambulant::net::url file = ambulant::net::url::from_filename(value);
-		file = file.join_to_base(source_url);
-		mpPrefs->setZed2005CssFile(&file);
-	}
 	else if (id.compare("langpacks-dir") == 0)
 	{
 		ambulant::net::url file = ambulant::net::url::from_filename(value);
@@ -213,9 +207,9 @@ void PreferencesFileIO::addEntry(string id, string value)
 		amis::util::Color c(value);
 		mpPrefs->setHighlightBGColor(c);
 	}
-	else if (id.compare("sidebar-font-name") == 0)
+	else if (id.compare("app-font-name") == 0)
 	{
-		mpPrefs->setSidebarFontName(value);
+		mpPrefs->setAppFontName(value);
 	}
 	else if (id.compare("is-first-time") == 0)
 	{
@@ -263,6 +257,13 @@ void PreferencesFileIO::addEntry(string id, string value)
 			mpPrefs->setCacheIndex(true);
 		else
 			mpPrefs->setCacheIndex(false);
+	}
+	else if (id.compare("safe-mode") == 0)
+	{
+		if (value == "yes")
+			mpPrefs->setSafeMode(true);
+		else
+			mpPrefs->setSafeMode(false);
 	}
 }
 
@@ -370,9 +371,6 @@ void PreferencesFileIO::writeData()
 	pEntry = createEntry("amis-css-file", mpPrefs->getAmisCssFile()->get_file());
 	pGeneralSection->appendChild((DOMNode*)pEntry);
 
-	pEntry = createEntry("zed-2005-css-file", mpPrefs->getZed2005CssFile()->get_file());
-	pGeneralSection->appendChild((DOMNode*)pEntry);
-
 	pEntry = createEntry("prefer-ffmpeg", mpPrefs->getPreferFFMpeg());
 	pGeneralSection->appendChild((DOMNode*)pEntry);
 
@@ -395,7 +393,7 @@ void PreferencesFileIO::writeData()
 	pEntry = createEntry("highlight-bg-color", mpPrefs->getHighlightBGColor().getAsHtmlHexColor());
 	pGeneralSection->appendChild((DOMNode*)pEntry);
 
-	pEntry = createEntry("sidebar-font-name", mpPrefs->getSidebarFontName());
+	pEntry = createEntry("app-font-name", mpPrefs->getAppFontName());
 	pGeneralSection->appendChild((DOMNode*)pEntry);
 
 	pEntry = createEntry("is-first-time", mpPrefs->getIsFirstTime());
@@ -430,6 +428,9 @@ void PreferencesFileIO::writeData()
 	pGeneralSection->appendChild((DOMNode*)pEntry);
 
 	pEntry = createEntry("cache-index", mpPrefs->getCacheIndex());
+	pGeneralSection->appendChild((DOMNode*)pEntry);
+
+	pEntry = createEntry("safe-mode", mpPrefs->getSafeMode());
 	pGeneralSection->appendChild((DOMNode*)pEntry);
 
 	//get a pointer to the root element

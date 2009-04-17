@@ -95,7 +95,7 @@ void AmisSidebarLoader::loadNavigationData(amis::dtb::nav::NavModel* pNavModel, 
 
 	//expand all sections
 	mpSidebar->expandAllSections();
-	mpSidebar->setFontName(Preferences::Instance()->getSidebarFontName());
+	mpSidebar->setFontName(Preferences::Instance()->getAppFontName());
 	amis::util::Log::Instance()->writeMessage("Data loaded into sidebar", "AmisSidebarLoader::loadNavigationData");
 	mpSidebar->selectTab(0);
 }

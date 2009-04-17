@@ -101,6 +101,19 @@ void PreferencesDialog::DoDataExchange(CDataExchange* pDX)
 }
 BOOL PreferencesDialog::OnInitDialog() 
 {
+	//disable the self-voicing checkmark if we are running in "safe" mode with
+	//the self-voicing com stuff disabled
+	if (Preferences::Instance()->getSafeMode())
+	{
+		CButton* p_self_voicing = (CButton*)this->GetDlgItem(IDC_ISSELFVOICING);
+		p_self_voicing->EnableWindow(0);
+
+		CComboBox* p_tts_list = (CComboBox*)this->GetDlgItem(IDC_TTSVOICES);
+		p_tts_list->EnableWindow(0);
+
+		CStatic* p_label = (CStatic*)this->GetDlgItem(IDC_SELTTSLABEL);
+		p_label->EnableWindow(0);
+	}
 	mbIsSelfVoicing = Preferences::Instance()->getIsSelfVoicing();
 	mbPauseOnLostFocus = Preferences::Instance()->getPauseOnLostFocus();
 	mbLoadLastBook = Preferences::Instance()->getLoadLastBook();
@@ -112,9 +125,10 @@ BOOL PreferencesDialog::OnInitDialog()
 	CDialog::OnInitDialog();
 	this->setFontOnAllControls();
 
-#ifndef AVOID_SELF_VOICING_COM_STUFF
-	initializeTTSVoiceOption();
-#endif
+//#ifndef AVOID_SELF_VOICING_COM_STUFF
+	if (!Preferences::Instance()->getSafeMode())
+		initializeTTSVoiceOption();
+//#endif
 
 	initializeUiLanguageOption();
 	

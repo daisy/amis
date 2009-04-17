@@ -41,7 +41,6 @@ Preferences* Preferences::Instance()
     return pinstance;
 }
 
-
 void Preferences::DestroyInstance()
 {
 	delete pinstance;
@@ -49,15 +48,9 @@ void Preferences::DestroyInstance()
 
 Preferences::Preferences()
 {
-	setUiLangId("eng-US");
-	setPauseOnLostFocus(true);
-	setIsSelfVoicing(false);
-	setUseTTSNotAudio(false);
-	setLoadLastBook(false);
-	setStartInBasicView(false);
-	setTTSVoiceIndex(0);
-	setWasExitClean(true);
-	setDisableScreensaver(true);
+	mP.initAll();
+	
+	mUiLangId = "eng-US";
 	mFontsizeCssFiles.clear();
 	mCustomCssFiles.clear();
 	//note that file paths here are hardcoded relative to the application directory
@@ -68,34 +61,14 @@ Preferences::Preferences()
 	mLangpacksDir = ambulant::net::url::from_filename("./settings/lang/");
 	mUserBmkDir = ambulant::net::url::from_filename("./settings/bmk/");
 	mAmisCssFile = ambulant::net::url::from_filename("./settings/css/amis.css");	
-	mZed2005CssFile = ambulant::net::url::from_filename("./settings/css/dtbook.2005.basic.css");
-
+	
 	ambulant::net::url app_path = ambulant::net::url::from_filename(theApp.getAppSettingsPath());
 	mFontsizeCssDir = mFontsizeCssDir.join_to_base(app_path);
 	mCustomCssDir = mCustomCssDir.join_to_base(app_path);
 	mLangpacksDir = mLangpacksDir.join_to_base(app_path);
 	mUserBmkDir = mUserBmkDir.join_to_base(app_path);
 	mAmisCssFile = mAmisCssFile.join_to_base(app_path);
-	mZed2005CssFile = mZed2005CssFile.join_to_base(app_path);
-	mAudioVolumePct = 100;
-	mTTSVolumePct = 70;
-	mHighlightFG.set("#000000");
-	mHighlightBG.set("#FFFF00");
-	mSidebarFontName = "Arial";
-
-	mbIsFirstTime = false;
-	mbPreferFFMpeg = false;
-
-#ifdef _DEBUG
-	setIsLoggingEnabled(true);
-	setLogLevel(amis::util::FULL_LOGGING);
-#else
-	setIsLoggingEnabled(false);
-	setLogLevel(amis::util::LOW_LOGGING);
-#endif
-
-	mCacheIndex = true;
-
+	
 }
 
 //this function should be called after the preferences XML file has been parsed
@@ -212,62 +185,62 @@ string Preferences::getUiLangId()
 
 void Preferences::setStartInBasicView(bool value)
 {
-	mbStartInBasicView = value;
+	mP.mbStartInBasicView = value;
 }
 
 bool Preferences::getStartInBasicView()
 {
-	return mbStartInBasicView;
+	return mP.mbStartInBasicView;
 }
 
 void Preferences::setLoadLastBook(bool value)
 {
-	mbLoadLastBook = value;
+	mP.mbLoadLastBook = value;
 }
 
 bool Preferences::getLoadLastBook()
 {
-	return mbLoadLastBook;
+	return mP.mbLoadLastBook;
 }
 
 void Preferences::setPauseOnLostFocus(bool value)
 {
-	mbPauseOnLostFocus = value;
+	mP.mbPauseOnLostFocus = value;
 }
 
 bool Preferences::getPauseOnLostFocus()
 {
-	return mbPauseOnLostFocus;
+	return mP.mbPauseOnLostFocus;
 }
 
 void Preferences::setIsSelfVoicing(bool value)
 {
-	mbIsSelfVoicing = value;
+	mP.mbIsSelfVoicing = value;
 }
 
 bool Preferences::getIsSelfVoicing()
 {
-	return mbIsSelfVoicing;
+	return mP.mbIsSelfVoicing;
 }
 
 void Preferences::setTTSVoiceIndex(int value)
 {
-	mTTSVoiceIndex = value;
+	mP.mTTSVoiceIndex = value;
 }
 
 int Preferences::getTTSVoiceIndex()
 {
-	return mTTSVoiceIndex;
+	return mP.mTTSVoiceIndex;
 }
 
 void Preferences::setUseTTSNotAudio(bool value)
 {
-	mbUseTTSNotAudio = value;
+	mP.mbUseTTSNotAudio = value;
 }
 
 bool Preferences::getUseTTSNotAudio()
 {
-	return mbUseTTSNotAudio;
+	return mP.mbUseTTSNotAudio;
 }
 
 void Preferences::setWasExitClean(bool value)
@@ -281,19 +254,19 @@ bool Preferences::getWasExitClean()
 }
 void Preferences::setHighlightText(bool value)
 {
-	mbHighlightText = value;
+	mP.mbHighlightText = value;
 }
 bool Preferences::getHighlightText()
 {
-	return mbHighlightText;
+	return mP.mbHighlightText;
 }
 void Preferences::setDisableScreensaver(bool value)
 {
-	mbDisableScreensaver = value;
+	mP.mbDisableScreensaver = value;
 }
 bool Preferences::getDisableScreensaver()
 {
-	return mbDisableScreensaver;
+	return mP.mbDisableScreensaver;
 }
 void Preferences::setUserBmkDir(const ambulant::net::url* value)
 {
@@ -345,15 +318,6 @@ const ambulant::net::url* Preferences::getAmisCssFile()
 	return &mAmisCssFile;
 }
 
-void Preferences::setZed2005CssFile(const ambulant::net::url* value)
-{
-	mZed2005CssFile = *value;
-}
-
-const ambulant::net::url* Preferences::getZed2005CssFile()
-{
-	return &mZed2005CssFile;
-}
 
 void Preferences::setSourceUrl(const ambulant::net::url* value)
 {
@@ -387,40 +351,40 @@ amis::ModuleDescData* Preferences::getLanguageData(std::string id)
 
 amis::ModuleDescData* Preferences::getCurrentLanguageData()
 {
-	amis::ModuleDescData* p_data = mInstalledLanguages[mUiLangId];
+	amis::ModuleDescData* p_data = mInstalledLanguages[getUiLangId()];
 	return p_data;
 }
 void Preferences::setHighlightBGColor(amis::util::Color value)
 {
-	mHighlightBG = value;
+	mP.mHighlightBG = value;
 }
 amis::util::Color Preferences::getHighlightBGColor()
 {
-	return mHighlightBG;
+	return mP.mHighlightBG;
 }
 void Preferences::setHighlightFGColor(amis::util::Color value)
 {
-	mHighlightFG = value;
+	mP.mHighlightFG = value;
 }
 amis::util::Color Preferences::getHighlightFGColor()
 {
-	return mHighlightFG;
+	return mP.mHighlightFG;
 }
-void Preferences::setSidebarFontName(std::string value)
+void Preferences::setAppFontName(std::string value)
 {
-	mSidebarFontName = value;
+	mP.mAppFontName = value;
 }
-std::string Preferences::getSidebarFontName()
+std::string Preferences::getAppFontName()
 {
-	return mSidebarFontName;
+	return mP.mAppFontName;
 }
 void Preferences::setPreferFFMpeg(bool value)
 {
-	mbPreferFFMpeg = value;
+	mP.mbPreferFFMpeg = value;
 }
 bool Preferences::getPreferFFMpeg()
 {
-	return mbPreferFFMpeg;
+	return mP.mbPreferFFMpeg;
 }
 
 void Preferences::logAllPreferences()
@@ -428,205 +392,307 @@ void Preferences::logAllPreferences()
 	amis::util::Log* p_log = amis::util::Log::Instance();
 	p_log->writeMessage("__Preferences (all)__", "Preferences::logAllPreferences");
 	
-	p_log->writeMessage("\tPreferences XML File: ", getSourceUrl(), "Preferences::logAllPreferences");
+	p_log->writeMessage("\tPreferences XML File: ", getSourceUrl(), "");
 	
-	string log_msg = "\tLanguage pack = " + getUiLangId();
-	p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
+	string log_msg = "\tLanguage pack = " + mUiLangId;
+	p_log->writeMessage(log_msg, "");
 
-	log_msg = "\tStartup view = ";
-	if (getStartInBasicView()) log_msg += "Basic";
-	else log_msg += "Default";
-	p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
-
-	log_msg = "\tWill load last book on startup? ";
-	if (getLoadLastBook()) log_msg += "Yes";
-	else log_msg += "No";
-	p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
-	
-	log_msg = "\tWill pause when AMIS loses application focus? ";
-	if (getPauseOnLostFocus()) log_msg += "Yes";
-	else log_msg += "No";
-	p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
-
-	log_msg = "\tIs self-voicing? ";
-	if (getIsSelfVoicing()) log_msg += "Yes";
-	else log_msg += "No";
-	p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
-	
-#ifndef AVOID_SELF_VOICING_COM_STUFF
-	int indexTTSVoice = getTTSVoiceIndex();
-	log_msg = "\tTTS voice index ";
-	char strTTSVoice[3];
-	sprintf(strTTSVoice, "%d", indexTTSVoice);
-	log_msg += strTTSVoice;
-	//note that this is just getting the current voice
-	//no need to query both TTSPlayer instances
-	std::string strVoice = amis::tts::TTSPlayer::InstanceOne()->GetVoiceName();
-	log_msg += " // ";
-	log_msg += strVoice;
-	p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
-#endif
-	
-
-	log_msg = "\tUsing TTS or pre-recorded audio? ";
-	if (getUseTTSNotAudio()) log_msg += "TTS";
-	else log_msg += "Audio";
-	p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
+	//log the overrideable preferences
+	mP.log();
 
 	log_msg = "\tDid AMIS exit cleanly last time? ";
 	if (getWasExitClean()) log_msg += "Yes";
 	else log_msg += "No";
 	p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
 
-	log_msg = "\tHighlight text? ";
-	if (getHighlightText()) log_msg += "Yes";
-	else log_msg += "No";
-	p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
-
-	log_msg = "\tDisable screensaver? ";
-	if (getDisableScreensaver()) log_msg += "Yes";
-	else log_msg += "No";
-	p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
-
-	log_msg = "\tFirst time running AMIS? ";
-	if (getIsFirstTime()) log_msg += "Yes";
-	else log_msg += "No";
-	p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
-
-	p_log->writeMessage("\tBookmark dir = ", &mUserBmkDir, "Preferences::logAllPreferences");
-	p_log->writeMessage("\tLangpacks dir = ", &mLangpacksDir, "Preferences::logAllPreferences");
-	p_log->writeMessage("\tFontsize css dir = ", &mFontsizeCssDir, "Preferences::logAllPreferences");
-	p_log->writeMessage("\tContrast css dir = ", &mCustomCssDir, "Preferences::logAllPreferences");
-	p_log->writeMessage("\tAmis css file = ", &mAmisCssFile, "Preferences::logAllPreferences");
-	p_log->writeMessage("\tZed2005 css file = ", &mZed2005CssFile, "Preferences::logAllPreferences");
-
-	p_log->writeMessage("\tInstalled language packs:", "Preferences::logAllPreferences");
+	p_log->writeMessage("\tBookmark dir = ", &mUserBmkDir, "");
+	p_log->writeMessage("\tLangpacks dir = ", &mLangpacksDir, "");
+	p_log->writeMessage("\tFontsize css dir = ", &mFontsizeCssDir, "");
+	p_log->writeMessage("\tContrast css dir = ", &mCustomCssDir, "");
+	p_log->writeMessage("\tAmis css file = ", &mAmisCssFile, "");
+	
+	p_log->writeMessage("\tInstalled language packs:", "");
 	amis::StringModuleMap::iterator it;
 	it = mInstalledLanguages.begin();
 	while (it != mInstalledLanguages.end())
 	{
 		string lang_id = it->first;
 		log_msg = "\t\t" + lang_id;
-		p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
+		p_log->writeMessage(log_msg, "");
 		it++;
 	}
 
-	p_log->writeMessage("\tFontsize CSS files:", "Preferences::logAllPreferences");
+	p_log->writeMessage("\tFontsize CSS files:", "");
 	for (int i = 0; i<mFontsizeCssFiles.size(); i++)
-		p_log->writeMessage("\t\t", &mFontsizeCssFiles[i], "Preferences::logAllPreferences");
+		p_log->writeMessage("\t\t", &mFontsizeCssFiles[i], "");
 
-
-	p_log->writeMessage("\tCustom CSS files:", "Preferences::logAllPreferences");
+	p_log->writeMessage("\tCustom CSS files:", "");
 	for (int i = 0; i<mCustomCssFiles.size(); i++)
-		p_log->writeMessage("\t\t", &mCustomCssFiles[i], "Preferences::logAllPreferences");
-
-	log_msg = "\tLogging level: ";
-	if (mLogLevel == amis::util::LOW_LOGGING) log_msg += "Low";
-	else if (mLogLevel == amis::util::MEDIUM_LOGGING) log_msg += "Medium";
-	else log_msg += "Full";
-	p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
-
-	log_msg = "\tTTS volume percent: ";
-	char tts_vol[5];
-	sprintf(tts_vol, "%d", getTTSVolumePct());
-	log_msg += tts_vol;
-
-	log_msg = "tAudio volume percent: ";
-	char audio_vol[5];
-	sprintf(audio_vol, "%d", getAudioVolumePct());
-	log_msg += tts_vol;
+		p_log->writeMessage("\t\t", &mCustomCssFiles[i], "");
+	
 }
 
 void Preferences::logUserControllablePreferences()
 {
 	amis::util::Log* p_log = amis::util::Log::Instance();
-	p_log->writeMessage("__Preferences (user-controllable only)__", "Preferences::logUserControllablePreferences");
+	p_log->writeMessage("__Preferences (dialog-controllable only)__", "Preferences::logUserControllablePreferences");
 
 	string log_msg = "\tLanguage pack = " + getUiLangId();
-	p_log->writeMessage(log_msg, "Preferences::logUserControllablePreferences");
+	p_log->writeMessage(log_msg, "");
 
 	log_msg = "\tStartup view = ";
 	if (getStartInBasicView()) log_msg += "Basic";
 	else log_msg += "Default";
-	p_log->writeMessage(log_msg, "Preferences::logUserControllablePreferences");
+	p_log->writeMessage(log_msg, "");
 
 	log_msg = "\tWill load last book on startup? ";
 	if (getLoadLastBook()) log_msg += "Yes";
 	else log_msg += "No";
-	p_log->writeMessage(log_msg, "Preferences::logUserControllablePreferences");
+	p_log->writeMessage(log_msg, "");
 	
 	log_msg = "\tWill pause when AMIS loses application focus? ";
 	if (getPauseOnLostFocus()) log_msg += "Yes";
 	else log_msg += "No";
-	p_log->writeMessage(log_msg, "Preferences::logUserControllablePreferences");
+	p_log->writeMessage(log_msg, "");
 
 	log_msg = "\tIs self-voicing? ";
 	if (getIsSelfVoicing()) log_msg += "Yes";
 	else log_msg += "No";
-	p_log->writeMessage(log_msg, "Preferences::logUserControllablePreferences");
+	p_log->writeMessage(log_msg, "");
+
+	if (!Preferences::Instance()->getSafeMode())
+	{
+		int indexTTSVoice = getTTSVoiceIndex();
+		log_msg = "\tTTS voice index ";
+		char strTTSVoice[3];
+		sprintf(strTTSVoice, "%d", indexTTSVoice);
+		log_msg += strTTSVoice;
+		//note that this is just getting the current voice
+		//no need to query both TTSPlayer instances
+		std::string strVoice = amis::tts::TTSPlayer::InstanceOne()->GetVoiceName();
+		log_msg += " // ";
+		log_msg += strVoice;
+		p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
+	}
 
 	log_msg = "\tHighlight text? ";
 	if (getHighlightText()) log_msg += "Yes";
 	else log_msg += "No";
-	p_log->writeMessage(log_msg, "Preferences::logUserControllablePreferences");
+	p_log->writeMessage(log_msg, "");
 
 	log_msg = "\tDisable screensaver? ";
 	if (getDisableScreensaver()) log_msg += "Yes";
 	else log_msg += "No";
-	p_log->writeMessage(log_msg, "Preferences::logUserControllablePreferences");
+	p_log->writeMessage(log_msg, "");
 }
 void Preferences::resetColors()
 {
-	mHighlightFG.set("#000000");
-	mHighlightBG.set("#FFFF00");
+	mP.mHighlightFG.set("#000000");
+	mP.mHighlightBG.set("#FFFF00");
 }
 void Preferences::setIsFirstTime(bool val)
 {
-	mbIsFirstTime = val;
+	mP.mbIsFirstTime = val;
 }
 bool Preferences::getIsFirstTime()
 {
-	return mbIsFirstTime;
+	return mP.mbIsFirstTime;
 }
 amis::util::LogLevel Preferences::getLogLevel()
 {
-	return mLogLevel;
+	return mP.mLogLevel;
 }
 void Preferences::setLogLevel(amis::util::LogLevel level)
 {
-	mLogLevel = level;
+	mP.mLogLevel = level;
 }
 bool Preferences::getIsLoggingEnabled()
 {
-	return mbLoggingEnabled;
+	return mP.mbLoggingEnabled;
 }
 void Preferences::setIsLoggingEnabled(bool value)
 {
-	mbLoggingEnabled = value;
+	mP.mbLoggingEnabled = value;
 }
 
 int Preferences::getTTSVolumePct()
 {
-	return mTTSVolumePct;
+	return mP.mTTSVolumePct;
 }
 
 void Preferences::setTTSVolumePct(int value)
 {
-	mTTSVolumePct = value;
+	mP.mTTSVolumePct = value;
 }
 int Preferences::getAudioVolumePct()
 {
-	return mAudioVolumePct;
+	return mP.mAudioVolumePct;
 }
 void Preferences::setAudioVolumePct(int value)
 {
-	mAudioVolumePct = value;
+	mP.mAudioVolumePct = value;
 }
 bool Preferences::getCacheIndex()
 {
-	return mCacheIndex;
+	return mP.mbCacheIndex;
 }
 void Preferences::setCacheIndex(bool value)
 {
-	mCacheIndex = value;
+	mP.mbCacheIndex = value;
+}
+
+bool Preferences::getSafeMode()
+{
+	return mP.mbSafeMode;
+}
+void Preferences::setSafeMode(bool value)
+{
+	mP.mbSafeMode = value;
+	if (mP.mbSafeMode)
+	{
+		mP.mbIsSelfVoicing = false;
+		mP.mbPreferFFMpeg = true;
+	}
+}
+
+void OverrideablePreferences::log()
+{
+	amis::util::Log* p_log = amis::util::Log::Instance();
+	p_log->writeMessage("__Preferences (overrideable)__", "OverrideablePreferences::log");
+
+	string log_msg = "\tStartup view = ";
+	if (mbStartInBasicView) log_msg += "Basic";
+	else log_msg += "Default";
+	p_log->writeMessage(log_msg, "");
+
+	log_msg = "\tWill load last book on startup? ";
+	if (mbLoadLastBook) log_msg += "Yes";
+	else log_msg += "No";
+	p_log->writeMessage(log_msg, "");
+	
+	log_msg = "\tWill pause when AMIS loses application focus? ";
+	if (mbPauseOnLostFocus) log_msg += "Yes";
+	else log_msg += "No";
+	p_log->writeMessage(log_msg, "");
+
+	log_msg = "\tIs self-voicing? ";
+	if (mbIsSelfVoicing) log_msg += "Yes";
+	else log_msg += "No";
+	p_log->writeMessage(log_msg, "");
+	
+	if (!Preferences::Instance()->getSafeMode())
+	{
+		int indexTTSVoice = mTTSVoiceIndex;
+		log_msg = "\tTTS voice index ";
+		char strTTSVoice[3];
+		sprintf(strTTSVoice, "%d", indexTTSVoice);
+		log_msg += strTTSVoice;
+		//note that this is just getting the current voice
+		//no need to query both TTSPlayer instances
+		std::string strVoice = amis::tts::TTSPlayer::InstanceOne()->GetVoiceName();
+		log_msg += " // ";
+		log_msg += strVoice;
+		p_log->writeMessage(log_msg, "");
+	}
+	
+	log_msg = "\tUsing TTS or pre-recorded audio? ";
+	if (mbUseTTSNotAudio) log_msg += "TTS";
+	else log_msg += "Audio";
+	p_log->writeMessage(log_msg, "");
+
+	log_msg = "\tHighlight text? ";
+	if (mbHighlightText) log_msg += "Yes";
+	else log_msg += "No";
+	p_log->writeMessage(log_msg, "");
+
+	log_msg = "\tHighlight FG: ";
+	log_msg += mHighlightFG.getAsHtmlHexColor();
+	p_log->writeMessage(log_msg, "");
+
+	log_msg = "\tHighlight BG: ";
+	log_msg += mHighlightBG.getAsHtmlHexColor();
+	p_log->writeMessage(log_msg, "");
+
+	log_msg = "\tDisable screensaver? ";
+	if (mbDisableScreensaver) log_msg += "Yes";
+	else log_msg += "No";
+	p_log->writeMessage(log_msg, "");
+
+	log_msg = "\tFirst time running AMIS? ";
+	if (mbIsFirstTime) log_msg += "Yes";
+	else log_msg += "No";
+	p_log->writeMessage(log_msg, "");
+
+	log_msg = "\tLogging enabled: ";
+	if (mbLoggingEnabled) log_msg += "Yes";
+	else log_msg += "No";
+	p_log->writeMessage(log_msg, "");
+
+	log_msg = "\tLogging level: ";
+	if (mLogLevel == amis::util::LOW_LOGGING) log_msg += "Low";
+	else if (mLogLevel == amis::util::MEDIUM_LOGGING) log_msg += "Medium";
+	else log_msg += "Full";
+	p_log->writeMessage(log_msg, "");
+
+	log_msg = "\tTTS volume percent: ";
+	char tts_vol[5];
+	sprintf(tts_vol, "%d", mTTSVolumePct);
+	log_msg += tts_vol;
+	p_log->writeMessage(log_msg, "");
+
+	log_msg = "\tAudio volume percent: ";
+	char audio_vol[5];
+	sprintf(audio_vol, "%d", mAudioVolumePct);
+	log_msg += tts_vol;
+	p_log->writeMessage(log_msg, "");
+
+	log_msg = "\tPrefer FFMpeg: ";
+	if (mbPreferFFMpeg) log_msg += "yes";
+	else log_msg += "no";
+	p_log->writeMessage(log_msg, "");
+
+	log_msg = "\tApplication font: ";
+	log_msg += mAppFontName;
+	p_log->writeMessage(log_msg, "");
+
+	log_msg = "\tCache index: ";
+	if (mbCacheIndex) log_msg += "yes";
+	else log_msg += "no";
+	p_log->writeMessage(log_msg, "");
+	
+	log_msg = "\tSafe mode (No DirectX or TTS in AMIS): ";
+	if (mbSafeMode) log_msg += "yes";
+	else log_msg += "no";
+	p_log->writeMessage(log_msg, "");
+	
+}
+
+//set everything to whatever the application default is
+void OverrideablePreferences::initAll()
+{
+	mbPauseOnLostFocus = true;
+	mbIsSelfVoicing = false;
+	mbUseTTSNotAudio = false;
+	mbLoadLastBook = false;
+	mbStartInBasicView = false;
+	mTTSVoiceIndex = 0;
+	mbDisableScreensaver = true;
+	mAudioVolumePct = 100;
+	mTTSVolumePct = 70;
+	mbHighlightText = true;
+	mHighlightFG.set("#000000");
+	mHighlightBG.set("#FFFF00");
+	mAppFontName = "Arial";
+	mbIsFirstTime = false;
+	mbPreferFFMpeg = false;
+
+#ifdef _DEBUG
+	mbLoggingEnabled = true;
+	mLogLevel = amis::util::FULL_LOGGING;
+#else
+	mbLoggingEnabled = false;
+	mLogLevel = amis::util::LOW_LOGGING;
+#endif
+	mbCacheIndex = true;
+	mbSafeMode = false;
 }

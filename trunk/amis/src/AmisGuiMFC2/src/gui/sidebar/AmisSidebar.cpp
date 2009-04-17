@@ -137,7 +137,7 @@ void CAmisSidebar::setFontName(std::string fontName)
 	LOGFONT lf;
 	p_font->GetLogFont(&lf);
 	CString font_name;
-	font_name = A2T(amis::Preferences::Instance()->getSidebarFontName().c_str());
+	font_name = A2T(amis::Preferences::Instance()->getAppFontName().c_str());
 	lstrcpy(lf.lfFaceName, font_name);
 	//font default size and boldness values
 	lf.lfHeight = mFontSizeInPoints;

@@ -574,6 +574,10 @@
 				Name="util"
 				>
 				<File
+					RelativePath=".\include\util\CmdLine.h"
+					>
+				</File>
+				<File
 					RelativePath=".\include\util\Color.h"
 					>
 				</File>
@@ -1669,6 +1673,10 @@
 			<Filter
 				Name="util"
 				>
+				<File
+					RelativePath=".\src\util\CmdLine.cpp"
+					>
+				</File>
 				<File
 					RelativePath=".\src\util\Color.cpp"
 					>

@@ -35,6 +35,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "gui/TextRenderBrain.h"
 #include "DtbWithHooks.h"
 #include "util/Log.h"
+#include "Preferences.h"
 
 #define WITH_HTML_WIDGET
 #define AM_DBG if (0)
@@ -638,11 +639,14 @@ IHTMLStyleSheet* CAmisHtmlView::applyStylesheet(const ambulant::net::url* styles
 	HRESULT res;
 	// Check that we are indeed in threading mode
 #ifdef _DEBUG
-#ifndef AVOID_SELF_VOICING_COM_STUFF
-	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-	if (hr == S_FALSE) CoUninitialize();
-	assert(hr == S_FALSE);
-#endif
+//#ifndef AVOID_SELF_VOICING_COM_STUFF
+	if (!amis::Preferences::Instance()->getSafeMode())
+	{
+		HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
+		if (hr == S_FALSE) CoUninitialize();
+		assert(hr == S_FALSE);
+	}
+//#endif
 #endif
 	if (stylesheet == NULL) return NULL;
 
