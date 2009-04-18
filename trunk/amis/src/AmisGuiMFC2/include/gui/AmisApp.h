@@ -144,7 +144,7 @@ protected:
 	HACCEL m_hMDIAccel;
 
 private:
-	void initializePathsAndFiles();
+	void initializePathsAndFiles(string preferencesFile="");
 	void initializeSelfVoicing();
 	bool openBook(const ambulant::net::url* url, bool saveInHistory = true);
 	void openLastReadBook();

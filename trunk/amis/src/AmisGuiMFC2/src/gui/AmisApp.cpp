@@ -156,6 +156,13 @@ BOOL CAmisApp::InitInstance()
 {
 	USES_CONVERSION;
 
+	string prefs_file = "";
+	// Parse command line for standard shell commands, DDE, file open
+	amis::util::CmdLine cmdInfo;
+	
+	ParseCommandLine(cmdInfo);
+	prefs_file = cmdInfo.getPrefsFile();
+
 	//this says "use the registry instead of ini files" (for windows-specific app preferences).  we use it for UAKs 
 	SetRegistryKey(_T("Amis"));
 
@@ -170,8 +177,8 @@ BOOL CAmisApp::InitInstance()
 	mbOverrideReopen = false;
 	
 	//read the preferences from disk
-	initializePathsAndFiles();
-
+	initializePathsAndFiles(prefs_file);
+	
 	//our initial language preference
 	mLanguagePreference = Preferences::Instance()->getUiLangId();
 
@@ -220,10 +227,7 @@ BOOL CAmisApp::InitInstance()
 	}
 	m_pMainWnd = pFrame;
 	
-	// Parse command line for standard shell commands, DDE, file open
-	CCommandLineInfo cmdInfo;
-	ParseCommandLine(cmdInfo);
-
+	
 	// Dispatch commands specified on the command line
 	//it turns out that this step is rather important even if you're not really interested in 
 	//the command line because mfc processes dynamic view creation somewhere in here.
@@ -232,12 +236,13 @@ BOOL CAmisApp::InitInstance()
 	//command parameters want to open a document. 
 	//our workaround is the mbShouldIgnoreOpenDoc event flag
 	mbShouldIgnoreOpenDocEvent = true;
-	//save the value in cmdInfo
-	CString cmd_file_name = cmdInfo.m_strFileName;
 	bool b_open_from_cmdline = false;
 	ambulant::net::url book_to_open;
 	mbIsPlayingHelpBook = false;
 	mbIsPlayingShortcutsBook = false;
+	//save the value in cmdInfo
+	CString cmd_file_name = cmdInfo.m_strFileName;
+	
 	if (cmd_file_name.GetLength() > 0)
 	{
 		b_open_from_cmdline = true;
@@ -506,7 +511,7 @@ std::string CAmisApp::getAppSettingsPath()
 		return "";
 	}
 }
-void CAmisApp::initializePathsAndFiles()
+void CAmisApp::initializePathsAndFiles(string preferencesFile)
 {
 	//call this twice
 	//first time to make sure we want to use plugins 
@@ -520,9 +525,21 @@ void CAmisApp::initializePathsAndFiles()
 
 	//read the preferences and mark the was-exit-clean flag as false
 	amis::io::PreferencesFileIO prefs_io;
-	string prefs_path = "amisPrefs.xml";
-	//the preferences file is writeable and lives in a common app settings directory
-	prefs_path = amis::util::FilePathTools::goRelativePath(settings_dir, prefs_path);
+	string prefs_path;
+	if (preferencesFile == "")
+	{
+		prefs_path= "amisPrefs.xml";
+		//the preferences file is writeable and lives in a common app settings directory
+		prefs_path = amis::util::FilePathTools::goRelativePath(settings_dir, prefs_path);
+	}
+	else
+	{
+		//just using ambulant url to find out if this path is absolute
+		ambulant::net::url prefs_url = ambulant::net::url::from_filename(preferencesFile);
+		//the preferences file can be expressed relative to the settings directory, or as an absolute path
+		if (prefs_url.is_absolute()) prefs_path = preferencesFile;
+		else prefs_path = amis::util::FilePathTools::goRelativePath(settings_dir, preferencesFile);
+	}
 	prefs_io.readFromFile(prefs_path);
 	mbWasLastExitClean = Preferences::Instance()->getWasExitClean();
 	Preferences::Instance()->setWasExitClean(false);

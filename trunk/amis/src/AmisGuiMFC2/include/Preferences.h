@@ -32,40 +32,6 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 namespace amis
 {
-
-//many of the preferences were extracted to this list so that they could be overridden individually
-class OverrideablePreferences
-{
-public:
-	void initAll();
-	void log();
-
-	bool mbStartInBasicView;
-	bool mbLoadLastBook;
-	bool mbPauseOnLostFocus;
-	bool mbIsSelfVoicing;
-	int mTTSVoiceIndex;
-	bool mbUseTTSNotAudio;
-	bool mbHighlightText;
-	bool mbDisableScreensaver;
-	bool mbIsFirstTime;
-	bool mbPreferFFMpeg;
-	int mTTSVolumePct;
-	int mAudioVolumePct;
-	util::Color mHighlightFG;
-	util::Color mHighlightBG;
-	std::string mAppFontName;
-	
-	//the logging preferences
-	amis::util::LogLevel mLogLevel;
-	bool mbLoggingEnabled;
-	bool mbCacheIndex;
-	
-	//no amis direct x or TTS
-	bool mbSafeMode;
-
-};
-
 class Preferences
 {
 protected:
@@ -81,7 +47,6 @@ public:
 	void logUserControllablePreferences();
 	void resetColors();
 
-	//ACCESSORS
 	void setUiLangId(string);
 	string getUiLangId();
 
@@ -190,9 +155,32 @@ private:
 	ambulant::net::url mAmisCssFile;
 	
 	bool mbWasExitClean;
+	
 	string mUiLangId;
+	bool mbStartInBasicView;
+	bool mbLoadLastBook;
+	bool mbPauseOnLostFocus;
+	bool mbIsSelfVoicing;
+	int mTTSVoiceIndex;
+	bool mbUseTTSNotAudio;
+	bool mbHighlightText;
+	bool mbDisableScreensaver;
+	bool mbIsFirstTime;
+	bool mbPreferFFMpeg;
+	int mTTSVolumePct;
+	int mAudioVolumePct;
+	util::Color mHighlightFG;
+	util::Color mHighlightBG;
+	std::string mAppFontName;
+	
+	//the logging preferences
+	amis::util::LogLevel mLogLevel;
+	bool mbLoggingEnabled;
+	bool mbCacheIndex;
+	
+	//no amis direct x or TTS
+	bool mbSafeMode;
 
-	OverrideablePreferences mP;
 private:
 	static Preferences* pinstance;
 
