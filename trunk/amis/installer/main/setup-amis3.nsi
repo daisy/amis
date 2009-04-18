@@ -120,14 +120,13 @@ Section "MainSection" SEC01
 	SetOverwrite try
 	File "${BIN_DIR}\AMIS.exe"
 	CreateDirectory "$SMPROGRAMS\AMIS"
-    CreateDirectory "$SMPROGRAMS\AMIS\Testing"
-	CreateShortCut "$SMPROGRAMS\AMIS\AMIS.lnk" "$INSTDIR\AMIS.exe"
+    CreateShortCut "$SMPROGRAMS\AMIS\AMIS.lnk" "$INSTDIR\AMIS.exe"
 	CreateShortCut "$DESKTOP\AMIS.lnk" "$INSTDIR\AMIS.exe"
   
     ; this creates a subdir in the start menu that will contain our modified shortcuts for safe/debug modes
-    CreateDirectory "$SMPROGRAMS\AMIS\Testing"
-    CreateShortCut "$SMPROGRAMS\AMIS\Testing\AMIS Debug.lnk" "$INSTDIR\AMIS.exe -prefs amisPrefsDebug.xml"
-    CreateShortCut "$SMPROGRAMS\AMIS\Testing\AMIS Safe Mode.lnk" "$INSTDIR\AMIS.exe -prefs amisPrefsSafeMode.xml"
+    CreateDirectory "$SMPROGRAMS\AMIS\Additional"
+    CreateShortCut "$SMPROGRAMS\AMIS\Additional\AMIS Debug.lnk" "$INSTDIR\AMIS.exe" "-prefs amisPrefsDebug.xml"
+    CreateShortCut "$SMPROGRAMS\AMIS\Additional\AMIS Safe Mode.lnk" "$INSTDIR\AMIS.exe" "-prefs amisPrefsSafeMode.xml"
     
 	;copy the DLLs
 	File "${BIN_DIR}\libambulant_shwin32.dll"
@@ -460,8 +459,8 @@ Section Uninstall
     DeleteRegKey HKLM "${PRODUCT_DIR_REGKEY}"
 
     Delete "$SMPROGRAMS\AMIS\AMIS.lnk"
-    Delete "$SMPROGRAMS\AMIS\Testing\AMIS Debug.lnk"
-    Delete "$SMPROGRAMS\AMIS\Testing\AMIS Safe Mode.lnk"
+    Delete "$SMPROGRAMS\AMIS\Additional\AMIS Debug.lnk"
+    Delete "$SMPROGRAMS\AMIS\Additional\AMIS Safe Mode.lnk"
         
     Delete "$DESKTOP\AMIS.lnk" 
     Delete "$SMPROGRAMS\AMIS\Website.lnk"

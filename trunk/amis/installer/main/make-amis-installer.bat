@@ -12,8 +12,8 @@ ECHO Customizing preferences for %2
 
 mkdir "%SETTINGS_DIR%"
 perl setup-amis-prefs.pl ../../bin/settings/amisPrefs.xml.default ui-lang-id %1 > %SETTINGS_DIR_PL%/amisPrefs.xml
-perl setup-amis-prefs.pl ../../bin/settings/amisPrefsSafeMode.xml.default ui-lang-id %1 %SETTINGS_DIR_PL%/amisPrefsSafeMode.xml
-perl setup-amis-prefs.pl ../../bin/settings/amisPrefsDebug.xml.default ui-lang-id %1 %SETTINGS_DIR_PL%/amisPrefsDebug.xml
+perl setup-amis-prefs.pl ../../bin/settings/amisPrefsSafeMode.xml.default ui-lang-id %1 > %SETTINGS_DIR_PL%/amisPrefsSafeMode.xml
+perl setup-amis-prefs.pl ../../bin/settings/amisPrefsDebug.xml.default ui-lang-id %1 > %SETTINGS_DIR_PL%/amisPrefsDebug.xml
 
 copy ..\..\bin\settings\amisHistory.xml.default %SETTINGS_DIR%\amisHistory.xml
 

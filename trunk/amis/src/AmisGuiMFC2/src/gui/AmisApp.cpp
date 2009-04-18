@@ -1213,8 +1213,11 @@ void CAmisApp::OnPreferences()
 	amis::util::Log::Instance()->writeMessage("Showing preferences dialog", "CAmisApp::OnPreferences");
 	if (prefs.do_modal() == IDOK)
 	{
-		Preferences::Instance()->setTTSVoiceIndex(prefs.mTTSVoiceIndex);
-		Preferences::Instance()->setIsSelfVoicing(prefs.mbIsSelfVoicing);
+		if (!Preferences::Instance()->getSafeMode())
+		{
+			Preferences::Instance()->setTTSVoiceIndex(prefs.mTTSVoiceIndex);
+			Preferences::Instance()->setIsSelfVoicing(prefs.mbIsSelfVoicing);
+		}
 		Preferences::Instance()->setPauseOnLostFocus(prefs.mbPauseOnLostFocus);
 		Preferences::Instance()->setStartInBasicView(prefs.mbStartInBasicView);
 		Preferences::Instance()->setLoadLastBook(prefs.mbLoadLastBook);
