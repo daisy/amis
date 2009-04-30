@@ -181,7 +181,7 @@ after_history_copy:
     SetOutPath "$SETTINGS_DIR\css"
     File "${BIN_DIR}\settings\css\*.css"
     SetOutPath "$SETTINGS_DIR\css\customStyles"
-    File "${BIN_DIR}\settings\css\customStyles\*.css"
+    File "${BIN_DIR}\settings\clean_settings_for_the_installer\customStyles\*.css"
     SetOutPath "$SETTINGS_DIR\css\font"
     File "${BIN_DIR}\settings\css\font\*.css"
   
