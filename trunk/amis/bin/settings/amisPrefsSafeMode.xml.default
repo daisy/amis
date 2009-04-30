@@ -5,10 +5,10 @@
 <entry id="ui-lang-id" value="eng-US"/>
 <entry id="start-in-basic-view" value="no"/>
 <entry id="load-last-book" value="yes"/>
-<entry id="is-self-voicing" value="no"/>
+<entry id="is-self-voicing" value="yes"/>
 <entry id="tts-voice-index" value="0"/>
 <entry id="pause-on-lost-focus" value="no"/>
-<entry id="use-tts-not-audio" value="no"/>
+<entry id="use-tts-not-audio" value="yes"/>
 <entry id="highlight-text" value="yes"/>
 <entry id="was-exit-clean" value="yes"/>
 <entry id="disable-screensaver" value="no"/>

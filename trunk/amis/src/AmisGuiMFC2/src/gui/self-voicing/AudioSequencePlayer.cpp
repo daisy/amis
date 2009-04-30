@@ -89,7 +89,8 @@ AudioSequencePlayer::AudioSequencePlayer(void)
 
 	//bIgnoreTTSEnd = false;
 
-	ambulantX::gui::dx::audio_playerX::Instance()->setCallback((sendMessageCallbackFn)clipFinishedCallback);
+	if (!Preferences::Instance()->getSafeMode())
+		ambulantX::gui::dx::audio_playerX::Instance()->setCallback((sendMessageCallbackFn)clipFinishedCallback);
 	TTSPlayer::InstanceOne()->setCallback((sendMessageCallbackFn)ttsFinishedCallback);
 
 	InitializeCriticalSection(&m_csSequence);
@@ -139,7 +140,8 @@ void AudioSequencePlayer::DestroyInstance()
 	{
 		m_bAbort = TRUE;
 		Stop();
-		ambulantX::gui::dx::audio_playerX::Instance()->DestroyInstance();
+		if (!Preferences::Instance()->getSafeMode())
+			ambulantX::gui::dx::audio_playerX::Instance()->DestroyInstance();
 		TTSPlayer::DestroyInstanceOne();
 		delete pinstance;
 	}
@@ -224,11 +226,14 @@ void AudioSequencePlayer::Stop(bool fromPlay)
 			TRACE(L"STOP TTS\n");
 		}
 
-		if (ambulantX::gui::dx::audio_playerX::Instance()->is_playing())
+		if (!Preferences::Instance()->getSafeMode())
 		{
-			ambulantX::gui::dx::audio_playerX::Instance()->stop(false);
-			p_log->writeTrace("Stop Audio", "AudioSequencePlayer::Stop");
-			TRACE(L"STOP AUDIO\n");
+			if (ambulantX::gui::dx::audio_playerX::Instance()->is_playing())
+			{
+				ambulantX::gui::dx::audio_playerX::Instance()->stop(false);
+				p_log->writeTrace("Stop Audio", "AudioSequencePlayer::Stop");
+				TRACE(L"STOP AUDIO\n");
+			}
 		}
 
 #ifdef CCS_ACTIVE
@@ -335,6 +340,8 @@ void AudioSequencePlayer::Play(AudioSequence* audioSequence, bool doNotRegisterI
 
 bool AudioSequencePlayer::playAudioPrompt(amis::AudioNode* pAudio)
 {
+	if (!Preferences::Instance()->getSafeMode()) return false;
+
 	string strFull = pAudio->getPath();
 	if (strFull.length() == 0) return false;
 

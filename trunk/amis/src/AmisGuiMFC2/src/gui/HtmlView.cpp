@@ -639,14 +639,9 @@ IHTMLStyleSheet* CAmisHtmlView::applyStylesheet(const ambulant::net::url* styles
 	HRESULT res;
 	// Check that we are indeed in threading mode
 #ifdef _DEBUG
-//#ifndef AVOID_SELF_VOICING_COM_STUFF
-	if (!amis::Preferences::Instance()->getSafeMode())
-	{
-		HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-		if (hr == S_FALSE) CoUninitialize();
-		assert(hr == S_FALSE);
-	}
-//#endif
+	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
+	if (hr == S_FALSE) CoUninitialize();
+	assert(hr == S_FALSE);
 #endif
 	if (stylesheet == NULL) return NULL;
 

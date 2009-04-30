@@ -252,16 +252,11 @@ void TextRenderBrain::showElementAtId(string elmId)
 	}
 	mpPreviousElm = p_elm;
 
-//#ifndef AVOID_SELF_VOICING_COM_STUFF
-	if (!Preferences::Instance()->getSafeMode())
+	if (amis::dtb::DtbWithHooks::Instance()->hasAudio() == false)
 	{
-		if (amis::dtb::DtbWithHooks::Instance()->hasAudio() == false)
-		{
-			amis::util::Log::Instance()->writeTrace("Speaking element text", "TextRenderBrain::showElementAtId");
-			amis::dtb::DtbWithHooks::Instance()->speakTTS(this->mCurrentElmText.c_str());
-		}
+		amis::util::Log::Instance()->writeTrace("Speaking element text", "TextRenderBrain::showElementAtId");
+		amis::dtb::DtbWithHooks::Instance()->speakTTS(this->mCurrentElmText.c_str());
 	}
-//#endif
 
 	amis::util::Log::Instance()->writeTrace("Done showing element.", "TextRenderBrain::showElementAtId");
 }

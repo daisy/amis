@@ -101,19 +101,6 @@ void PreferencesDialog::DoDataExchange(CDataExchange* pDX)
 }
 BOOL PreferencesDialog::OnInitDialog() 
 {
-	//disable the self-voicing checkmark if we are running in "safe" mode with
-	//the self-voicing com stuff disabled
-	if (Preferences::Instance()->getSafeMode())
-	{
-		CButton* p_self_voicing = (CButton*)this->GetDlgItem(IDC_ISSELFVOICING);
-		p_self_voicing->EnableWindow(0);
-
-		CComboBox* p_tts_list = (CComboBox*)this->GetDlgItem(IDC_TTSVOICES);
-		p_tts_list->EnableWindow(0);
-
-		CStatic* p_label = (CStatic*)this->GetDlgItem(IDC_SELTTSLABEL);
-		p_label->EnableWindow(0);
-	}
 	mbIsSelfVoicing = Preferences::Instance()->getIsSelfVoicing();
 	mbPauseOnLostFocus = Preferences::Instance()->getPauseOnLostFocus();
 	mbLoadLastBook = Preferences::Instance()->getLoadLastBook();
@@ -125,10 +112,7 @@ BOOL PreferencesDialog::OnInitDialog()
 	CDialog::OnInitDialog();
 	this->setFontOnAllControls();
 
-//#ifndef AVOID_SELF_VOICING_COM_STUFF
-	if (!Preferences::Instance()->getSafeMode())
-		initializeTTSVoiceOption();
-//#endif
+	initializeTTSVoiceOption();
 
 	initializeUiLanguageOption();
 	
@@ -145,7 +129,7 @@ void PreferencesDialog::initializeTTSVoiceOption()
 	//fill the combo box for the tts voices, and return an index to the voice we are currently using
 	//note that both instances of the tts player are assumed to use the same voice, so this code need only
 	//refer to InstanceOne
-	int index = amis::tts::TTSPlayer::InstanceOne()->initVoiceList(this->GetSafeHwnd());
+	int index = amis::tts::TTSPlayer::InstanceTwo()->initVoiceList(this->GetSafeHwnd());
 	if (index != -1) 
 	{
 		CComboBox* list = (CComboBox*)GetDlgItem(IDC_TTSVOICES);

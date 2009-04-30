@@ -442,21 +442,18 @@ void Preferences::logAllPreferences()
 	else log_msg += "No";
 	p_log->writeMessage(log_msg, "");
 	
-	if (!Preferences::Instance()->getSafeMode())
-	{
-		int indexTTSVoice = mTTSVoiceIndex;
-		log_msg = "\tTTS voice index ";
-		char strTTSVoice[3];
-		sprintf(strTTSVoice, "%d", indexTTSVoice);
-		log_msg += strTTSVoice;
-		//note that this is just getting the current voice
-		//no need to query both TTSPlayer instances
-		std::string strVoice = amis::tts::TTSPlayer::InstanceOne()->GetVoiceName();
-		log_msg += " // ";
-		log_msg += strVoice;
-		p_log->writeMessage(log_msg, "");
-	}
-	
+	int indexTTSVoice = mTTSVoiceIndex;
+	log_msg = "\tTTS voice index ";
+	char strTTSVoice[3];
+	sprintf(strTTSVoice, "%d", indexTTSVoice);
+	log_msg += strTTSVoice;
+	//note that this is just getting the current voice
+	//no need to query both TTSPlayer instances
+	std::string strVoice = amis::tts::TTSPlayer::InstanceOne()->GetVoiceName();
+	log_msg += " // ";
+	log_msg += strVoice;
+	p_log->writeMessage(log_msg, "");
+
 	log_msg = "\tUsing TTS or pre-recorded audio? ";
 	if (mbUseTTSNotAudio) log_msg += "TTS";
 	else log_msg += "Audio";
@@ -587,20 +584,17 @@ void Preferences::logUserControllablePreferences()
 	else log_msg += "No";
 	p_log->writeMessage(log_msg, "");
 
-	if (!Preferences::Instance()->getSafeMode())
-	{
-		int indexTTSVoice = getTTSVoiceIndex();
-		log_msg = "\tTTS voice index ";
-		char strTTSVoice[3];
-		sprintf(strTTSVoice, "%d", indexTTSVoice);
-		log_msg += strTTSVoice;
-		//note that this is just getting the current voice
-		//no need to query both TTSPlayer instances
-		std::string strVoice = amis::tts::TTSPlayer::InstanceOne()->GetVoiceName();
-		log_msg += " // ";
-		log_msg += strVoice;
-		p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
-	}
+	int indexTTSVoice = getTTSVoiceIndex();
+	log_msg = "\tTTS voice index ";
+	char strTTSVoice[3];
+	sprintf(strTTSVoice, "%d", indexTTSVoice);
+	log_msg += strTTSVoice;
+	//note that this is just getting the current voice
+	//no need to query both TTSPlayer instances
+	std::string strVoice = amis::tts::TTSPlayer::InstanceOne()->GetVoiceName();
+	log_msg += " // ";
+	log_msg += strVoice;
+	p_log->writeMessage(log_msg, "Preferences::logAllPreferences");
 
 	log_msg = "\tHighlight text? ";
 	if (getHighlightText()) log_msg += "Yes";
@@ -677,7 +671,8 @@ void Preferences::setSafeMode(bool value)
 	mbSafeMode = value;
 	if (mbSafeMode)
 	{
-		mbIsSelfVoicing = false;
+		//mbIsSelfVoicing = false;
 		mbPreferFFMpeg = true;
+		mbUseTTSNotAudio = true;
 	}
 }
