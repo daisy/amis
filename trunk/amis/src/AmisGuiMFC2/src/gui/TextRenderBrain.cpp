@@ -254,8 +254,11 @@ void TextRenderBrain::showElementAtId(string elmId)
 
 	if (amis::dtb::DtbWithHooks::Instance()->hasAudio() == false)
 	{
-		amis::util::Log::Instance()->writeTrace("Speaking element text", "TextRenderBrain::showElementAtId");
-		amis::dtb::DtbWithHooks::Instance()->speakTTS(this->mCurrentElmText.c_str());
+		if (!Preferences::Instance()->getMustAvoidTTS())
+		{
+			amis::util::Log::Instance()->writeTrace("Speaking element text", "TextRenderBrain::showElementAtId");
+			amis::dtb::DtbWithHooks::Instance()->speakTTS(this->mCurrentElmText.c_str());
+		}
 	}
 
 	amis::util::Log::Instance()->writeTrace("Done showing element.", "TextRenderBrain::showElementAtId");

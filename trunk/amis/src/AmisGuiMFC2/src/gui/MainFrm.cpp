@@ -157,7 +157,11 @@ CMainFrame::~CMainFrame()
 void CMainFrame::OnClose() 
 {
 	// That is a hack to remove a weird bug (crash after ExitInstance() when a self-voicing dialog was previously open)
-	AudioSequencePlayer::Instance()->Stop();
+	if (!Preferences::Instance()->getMustAvoidTTS() &&
+		!Preferences::Instance()->getMustAvoidDirectX())
+	{
+		AudioSequencePlayer::Instance()->Stop();
+	}
 	CMDIFrameWnd::OnClose();
 }
 BOOL CMainFrame::OnCommand(WPARAM wParam, LPARAM lParam) 

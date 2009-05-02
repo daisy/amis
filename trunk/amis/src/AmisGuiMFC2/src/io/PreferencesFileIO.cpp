@@ -131,12 +131,12 @@ void PreferencesFileIO::addEntry(string id, string value)
 		else 
 			mpPrefs->setHighlightText(false);
 	}
-	else if (id.compare("use-tts-not-audio") == 0)
+	else if (id.compare("is-self-voicing-tts-only") == 0)
 	{
 		if (value.compare("yes") == 0) 
-			mpPrefs->setUseTTSNotAudio(true);
+			mpPrefs->setIsSelfVoicingTTSOnly(true);
 		else 
-			mpPrefs->setUseTTSNotAudio(false);
+			mpPrefs->setIsSelfVoicingTTSOnly(false);
 	}
 	else if (id.compare("tts-voice-index") == 0)
 	{
@@ -234,12 +234,12 @@ void PreferencesFileIO::addEntry(string id, string value)
 		else
 			mpPrefs->setLogLevel(amis::util::LOW_LOGGING);
 	}
-	else if (id.compare("prefer-ffmpeg") == 0)
+	else if (id.compare("ambulant-prefers-ffmpeg") == 0)
 	{
 		if (value.compare("yes") == 0)
-			mpPrefs->setPreferFFMpeg(true);
+			mpPrefs->setAmbulantPrefersFFMpeg(true);
 		else
-			mpPrefs->setPreferFFMpeg(false);
+			mpPrefs->setAmbulantPrefersFFMpeg(false);
 	}
 	else if (id.compare("tts-volume-pct") == 0)
 	{
@@ -258,12 +258,19 @@ void PreferencesFileIO::addEntry(string id, string value)
 		else
 			mpPrefs->setCacheIndex(false);
 	}
-	else if (id.compare("safe-mode") == 0)
+	else if (id.compare("must-avoid-directx") == 0)
 	{
 		if (value == "yes")
-			mpPrefs->setSafeMode(true);
+			mpPrefs->setMustAvoidDirectX(true);
 		else
-			mpPrefs->setSafeMode(false);
+			mpPrefs->setMustAvoidDirectX(false);
+	}
+	else if (id.compare("must-avoid-tts") == 0)
+	{
+		if (value == "yes")
+			mpPrefs->setMustAvoidTTS(true);
+		else
+			mpPrefs->setMustAvoidTTS(false);
 	}
 }
 
@@ -362,7 +369,7 @@ void PreferencesFileIO::writeData()
 	pEntry = createEntry("pause-on-lost-focus", mpPrefs->getPauseOnLostFocus());
 	pGeneralSection->appendChild((DOMNode*)pEntry);
 
-	pEntry = createEntry("use-tts-not-audio", mpPrefs->getUseTTSNotAudio());
+	pEntry = createEntry("is-self-voicing-tts-only", mpPrefs->getIsSelfVoicingTTSOnly());
 	pGeneralSection->appendChild((DOMNode*)pEntry);
 
 	pEntry = createEntry("was-exit-clean", mpPrefs->getWasExitClean());
@@ -371,7 +378,7 @@ void PreferencesFileIO::writeData()
 	pEntry = createEntry("amis-css-file", mpPrefs->getAmisCssFile()->get_file());
 	pGeneralSection->appendChild((DOMNode*)pEntry);
 
-	pEntry = createEntry("prefer-ffmpeg", mpPrefs->getPreferFFMpeg());
+	pEntry = createEntry("ambulant-prefers-ffmpeg", mpPrefs->getAmbulantPrefersFFMpeg());
 	pGeneralSection->appendChild((DOMNode*)pEntry);
 
 	//Directories
@@ -430,7 +437,10 @@ void PreferencesFileIO::writeData()
 	pEntry = createEntry("cache-index", mpPrefs->getCacheIndex());
 	pGeneralSection->appendChild((DOMNode*)pEntry);
 
-	pEntry = createEntry("safe-mode", mpPrefs->getSafeMode());
+	pEntry = createEntry("must-avoid-directx", mpPrefs->getMustAvoidDirectX());
+	pGeneralSection->appendChild((DOMNode*)pEntry);
+
+	pEntry = createEntry("must-avoid-tts", mpPrefs->getMustAvoidTTS());
 	pGeneralSection->appendChild((DOMNode*)pEntry);
 
 	//get a pointer to the root element

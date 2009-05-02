@@ -5,10 +5,10 @@
 <entry id="ui-lang-id" value="eng-US"/>
 <entry id="start-in-basic-view" value="no"/>
 <entry id="load-last-book" value="yes"/>
-<entry id="is-self-voicing" value="yes"/>
+<entry id="is-self-voicing" value="no"/>
 <entry id="tts-voice-index" value="0"/>
 <entry id="pause-on-lost-focus" value="no"/>
-<entry id="use-tts-not-audio" value="yes"/>
+<entry id="is-self-voicing-tts-only" value="no"/>
 <entry id="highlight-text" value="yes"/>
 <entry id="was-exit-clean" value="yes"/>
 <entry id="disable-screensaver" value="no"/>
@@ -23,10 +23,11 @@
 <entry id="is-first-time" value="yes"/>
 <entry id="is-logging-enabled" value="yes"/>
 <entry id="logging-level" value="LOW_LOGGING"/>
-<entry id="prefer-ffmpeg" value="yes"/>
+<entry id="ambulant-prefers-ffmpeg" value="yes"/>
 <entry id="tts-volume-pct" value="70"/>
 <entry id="audio-volume-pct" value="100"/>
 <entry id="cache-index" value="yes"/>
-<entry id="safe-mode" value="yes"/>
+<entry id="must-avoid-directx" value="yes"/>
+<entry id="must-avoid-tts" value="yes"/>
 </section>
 </preferences>

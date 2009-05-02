@@ -89,9 +89,10 @@ AudioSequencePlayer::AudioSequencePlayer(void)
 
 	//bIgnoreTTSEnd = false;
 
-	if (!Preferences::Instance()->getSafeMode())
+	if (!Preferences::Instance()->getMustAvoidDirectX())
 		ambulantX::gui::dx::audio_playerX::Instance()->setCallback((sendMessageCallbackFn)clipFinishedCallback);
-	TTSPlayer::InstanceOne()->setCallback((sendMessageCallbackFn)ttsFinishedCallback);
+	if (!Preferences::Instance()->getMustAvoidTTS())
+		TTSPlayer::InstanceOne()->setCallback((sendMessageCallbackFn)ttsFinishedCallback);
 
 	InitializeCriticalSection(&m_csSequence);
 
@@ -140,9 +141,10 @@ void AudioSequencePlayer::DestroyInstance()
 	{
 		m_bAbort = TRUE;
 		Stop();
-		if (!Preferences::Instance()->getSafeMode())
+		if (!Preferences::Instance()->getMustAvoidDirectX())
 			ambulantX::gui::dx::audio_playerX::Instance()->DestroyInstance();
-		TTSPlayer::DestroyInstanceOne();
+		if (!Preferences::Instance()->getMustAvoidTTS())
+			TTSPlayer::DestroyInstanceOne();
 		delete pinstance;
 	}
 }
@@ -218,15 +220,18 @@ void AudioSequencePlayer::Stop(bool fromPlay)
 
 		amis::util::Log* p_log = amis::util::Log::Instance();
 
-		if (TTSPlayer::InstanceOne()->IsPlaying())
-		{	
-			//bIgnoreTTSEnd = true;
-			TTSPlayer::InstanceOne()->Stop();
-			p_log->writeTrace("Stop TTS", "AudioSequencePlayer::Stop");
-			TRACE(L"STOP TTS\n");
+		if (!Preferences::Instance()->getMustAvoidTTS())
+		{
+			if (TTSPlayer::InstanceOne()->IsPlaying())
+			{	
+				//bIgnoreTTSEnd = true;
+				TTSPlayer::InstanceOne()->Stop();
+				p_log->writeTrace("Stop TTS", "AudioSequencePlayer::Stop");
+				TRACE(L"STOP TTS\n");
+			}
 		}
 
-		if (!Preferences::Instance()->getSafeMode())
+		if (!Preferences::Instance()->getMustAvoidDirectX())
 		{
 			if (ambulantX::gui::dx::audio_playerX::Instance()->is_playing())
 			{
@@ -286,7 +291,8 @@ void AudioSequencePlayer::playNext(bool fromEndEvent)
 		if (!b && !comp->m_String.IsEmpty())
 		{
 			//bIgnoreTTSEnd = false;
-			TTSPlayer::InstanceOne()->Play(comp->m_String);
+			if (!Preferences::Instance()->getMustAvoidTTS())
+				TTSPlayer::InstanceOne()->Play(comp->m_String);
 		}
 		delete comp;
 		comp=NULL;
@@ -301,7 +307,8 @@ void AudioSequencePlayer::playNext(bool fromEndEvent)
 		p_log->writeTrace(log_msg, "AudioSequencePlayer::playNext");
 	
 		//bIgnoreTTSEnd = false;
-		TTSPlayer::InstanceOne()->Play(comp->m_String);
+		if (!Preferences::Instance()->getMustAvoidTTS())
+			TTSPlayer::InstanceOne()->Play(comp->m_String);
 		delete comp;
 		comp=NULL;
 	}
@@ -340,7 +347,7 @@ void AudioSequencePlayer::Play(AudioSequence* audioSequence, bool doNotRegisterI
 
 bool AudioSequencePlayer::playAudioPrompt(amis::AudioNode* pAudio)
 {
-	if (!Preferences::Instance()->getSafeMode()) return false;
+	if (Preferences::Instance()->getMustAvoidDirectX()) return false;
 
 	string strFull = pAudio->getPath();
 	if (strFull.length() == 0) return false;
@@ -948,7 +955,9 @@ void AudioSequencePlayer::fillSequenceContentAndPrompt(AudioSequence* seq, Label
 	{
 		amis::AudioNode* audio = pair->getAudio();
 		TextNodeSV* textN = pair->getText();
-		if (!Preferences::Instance()->getUseTTSNotAudio() && audio != NULL && audio->getPath().length() != 0) 
+		if (!Preferences::Instance()->getIsSelfVoicingTTSOnly() && 
+			audio != NULL && 
+			audio->getPath().length() != 0) 
 		{
 			seq->append(audio->clone(), (textN != NULL ? textN->getTextString().c_str() : L""));
 		} 
@@ -970,7 +979,9 @@ void AudioSequencePlayer::fillSequenceContents(AudioSequence* seq, PromptItemBas
 		amis::AudioNode* audio = pair->getAudio();
 		TextNodeSV * textN = pair->getText();
 
-		if (!Preferences::Instance()->getUseTTSNotAudio() && audio != NULL && audio->getPath().length() != 0) 
+		if (!Preferences::Instance()->getIsSelfVoicingTTSOnly() && 
+			audio != NULL && 
+			audio->getPath().length() != 0) 
 		{
 			seq->append(audio->clone(), (textN != NULL ? textN->getTextString().c_str() : L""));
 		} 

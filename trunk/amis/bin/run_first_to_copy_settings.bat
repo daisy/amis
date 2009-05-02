@@ -23,5 +23,8 @@ xcopy "%CD%\settings" "%DESTINATION%settings" /S /EXCLUDE:xcopy_exclude.txt
 echo creating fresh copies of prefs and history files
 copy "%DESTINATION%settings\amisHistory.xml.default" "%DESTINATION%settings\amisHistory.xml" /y
 copy "%CD%\settings\amisPrefs.xml.default" "%DESTINATION%settings\amisPrefs.xml" /y
-
+copy "%CD%\settings\amisPrefsCompatibilityMode.xml.default" "%DESTINATION%settings\amisPrefsCompatibilityMode.xml" /y
+copy "%CD%\settings\amisPrefsCompatibilityModeWithDX.xml.default" "%DESTINATION%settings\amisPrefsCompatibilityModeWithDX.xml" /y
+copy "%CD%\settings\amisPrefsCompatibilityModeWithTTS.xml.default" "%DESTINATION%settings\amisPrefsCompatibilityModeWithTTS.xml" /y
+copy "%CD%\settings\amisPrefsDebug.xml.default" "%DESTINATION%settings\amisPrefsDebug.xml" /y
 echo done

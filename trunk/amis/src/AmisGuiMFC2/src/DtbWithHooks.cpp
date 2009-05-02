@@ -518,7 +518,8 @@ amis::dtb::smil::SmilMediaGroup* DtbWithHooks::loadSmilFromUrl(const ambulant::n
 		}
 		else
 		{
-			stopTTS();	
+			if (!Preferences::Instance()->getMustAvoidTTS())
+				stopTTS();	
 		}
 
 		if(amis::gui::MainWndParts::Instance()->mpMmView->getCurrentUrl()->same_document(full_path))
@@ -752,7 +753,10 @@ bool DtbWithHooks::isPlaying()
 	}
 	else
 	{
-		return amis::tts::TTSPlayer::InstanceTwo()->IsPlaying();
+		if (!Preferences::Instance()->getMustAvoidTTS())
+			return amis::tts::TTSPlayer::InstanceTwo()->IsPlaying();
+		else
+			return false;
 	}
 }
 

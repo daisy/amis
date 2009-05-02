@@ -101,6 +101,22 @@ void PreferencesDialog::DoDataExchange(CDataExchange* pDX)
 }
 BOOL PreferencesDialog::OnInitDialog() 
 {
+	//disable self-voicing if we have no TTS and no DirectX
+	if (Preferences::Instance()->getMustAvoidTTS() && Preferences::Instance()->getMustAvoidDirectX()) 
+	{ 
+		CButton* p_self_voicing = (CButton*)this->GetDlgItem(IDC_ISSELFVOICING); 
+		p_self_voicing->EnableWindow(0); 
+	} 
+	//disable the TTS stuff if we're running without TTS
+	if (Preferences::Instance()->getMustAvoidTTS())
+	{
+		CComboBox* p_tts_list = (CComboBox*)this->GetDlgItem(IDC_TTSVOICES); 
+		p_tts_list->EnableWindow(0); 
+		
+		CStatic* p_label = (CStatic*)this->GetDlgItem(IDC_SELTTSLABEL); 
+		p_label->EnableWindow(0); 
+	}
+
 	mbIsSelfVoicing = Preferences::Instance()->getIsSelfVoicing();
 	mbPauseOnLostFocus = Preferences::Instance()->getPauseOnLostFocus();
 	mbLoadLastBook = Preferences::Instance()->getLoadLastBook();
@@ -121,6 +137,8 @@ BOOL PreferencesDialog::OnInitDialog()
 
 void PreferencesDialog::initializeTTSVoiceOption()
 {
+	if (Preferences::Instance()->getMustAvoidTTS() == true) return;
+
 	// Make sure to initialize the voice (just in case TTSPlayer has been unused until now)
 	amis::tts::TTSPlayer::InstanceOne()->SetVoice(Preferences::Instance()->getTTSVoiceIndex());
 	amis::tts::TTSPlayer::InstanceTwo()->SetVoice(Preferences::Instance()->getTTSVoiceIndex());
@@ -185,8 +203,6 @@ void PreferencesDialog::OnPaint()
 
 BOOL PreferencesDialog::PreTranslateMessage(MSG* pMsg)
 {
-	//return AmisDialogBase::PreTranslateMessage(pMsg);
-
 	if (Preferences::Instance()->getIsSelfVoicing() == false) 
 		return CDialog::PreTranslateMessage(pMsg);
 
@@ -216,6 +232,8 @@ void PreferencesDialog::OnBnSetfocusIsSelfVoicing()
 
 void PreferencesDialog::OnCbnSelchangeTTSVoices()
 {
+	if (Preferences::Instance()->getMustAvoidTTS()) return;
+
 	CComboBox* list = (CComboBox*)GetDlgItem(IDC_TTSVOICES);
 
 	int selected = list->GetCurSel();

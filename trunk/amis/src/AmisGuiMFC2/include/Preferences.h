@@ -43,8 +43,7 @@ public:
 	~Preferences();
 	//the preferences IO class should call this function after reading in the XML file
 	void scanAll();
-	void logAllPreferences();
-	void logUserControllablePreferences();
+	void logPreferences(bool logOnlyUserControllable = false);
 	void resetColors();
 
 	void setUiLangId(string);
@@ -65,8 +64,8 @@ public:
 	void setTTSVoiceIndex(int);
 	int getTTSVoiceIndex();
 
-	void setUseTTSNotAudio(bool);
-	bool getUseTTSNotAudio();
+	void setIsSelfVoicingTTSOnly(bool);
+	bool getIsSelfVoicingTTSOnly();
 
 	void setWasExitClean(bool);
 	bool getWasExitClean();
@@ -77,8 +76,8 @@ public:
 	void setDisableScreensaver(bool);
 	bool getDisableScreensaver();
 
-	void setPreferFFMpeg(bool);
-	bool getPreferFFMpeg();
+	void setAmbulantPrefersFFMpeg(bool);
+	bool getAmbulantPrefersFFMpeg();
 
 	void setUserBmkDir(const ambulant::net::url*);
 	const ambulant::net::url* getUserBmkDir();
@@ -128,8 +127,11 @@ public:
 	bool getCacheIndex();
 	void setCacheIndex(bool);
 
-	bool getSafeMode();
-	void setSafeMode(bool);
+	bool getMustAvoidDirectX();
+	void setMustAvoidDirectX(bool);
+
+	bool getMustAvoidTTS();
+	void setMustAvoidTTS(bool);
 
 private:
 	void scanDirectoriesForCssFiles();
@@ -162,11 +164,11 @@ private:
 	bool mbPauseOnLostFocus;
 	bool mbIsSelfVoicing;
 	int mTTSVoiceIndex;
-	bool mbUseTTSNotAudio;
+	bool mbIsSelfVoicingTTSOnly;
 	bool mbHighlightText;
 	bool mbDisableScreensaver;
 	bool mbIsFirstTime;
-	bool mbPreferFFMpeg;
+	bool mbAmbulantPrefersFFMpeg;
 	int mTTSVolumePct;
 	int mAudioVolumePct;
 	util::Color mHighlightFG;
@@ -177,10 +179,8 @@ private:
 	amis::util::LogLevel mLogLevel;
 	bool mbLoggingEnabled;
 	bool mbCacheIndex;
-	
-	//no amis direct x or TTS
-	bool mbSafeMode;
-
+	bool mbMustAvoidDirectX;
+	bool mbMustAvoidTTS;
 private:
 	static Preferences* pinstance;
 

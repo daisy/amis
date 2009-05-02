@@ -269,38 +269,34 @@ BOOL CAmisApp::InitInstance()
 	//done with command line stuff .. phew
 
 	
-	//TODO:
-	//now calculate the runtime prefs values based on the commandline values and the hardcoded prefs values 
-	
-	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-	if (hr == S_FALSE) CoUninitialize();
-	assert(hr == S_OK);
-	
-	// Making sure both TTS instances are initialized from the right thread.
-	// InitInstance() is a convenient location.
-	amis::tts::TTSPlayer::InstanceOne();
-	amis::tts::TTSPlayer::InstanceTwo();
+	if (!Preferences::Instance()->getMustAvoidTTS())
+	{
+		HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
+		if (hr == S_FALSE) CoUninitialize();
+		assert(hr == S_OK);
+		
+		// Making sure both TTS instances are initialized from the right thread.
+		// InitInstance() is a convenient location.
+		amis::tts::TTSPlayer::InstanceOne();
+		amis::tts::TTSPlayer::InstanceTwo();
 
-	//set some volumes
-	amis::tts::TTSPlayer::InstanceOne()->setVolume(Preferences::Instance()->getTTSVolumePct());
-	amis::tts::TTSPlayer::InstanceTwo()->setVolume(Preferences::Instance()->getTTSVolumePct());
-
+		//set some volumes
+		amis::tts::TTSPlayer::InstanceOne()->setVolume(Preferences::Instance()->getTTSVolumePct());
+		amis::tts::TTSPlayer::InstanceTwo()->setVolume(Preferences::Instance()->getTTSVolumePct());
+	}
 	double audio_vol = 1.0;
 	if (Preferences::Instance()->getAudioVolumePct() > 0) 
 		audio_vol = (double)Preferences::Instance()->getAudioVolumePct()/100;
 	ambulant::gui::dx::set_global_level(audio_vol);
   
-	if (!Preferences::Instance()->getSafeMode())
+	if (!Preferences::Instance()->getMustAvoidDirectX())
 		ambulantX::gui::dx::audio_playerX::Instance()->set_global_level(audio_vol);
 
 	//then start logging!  
 	amis::util::Log::Instance()->startLog(this->getAppSettingsPath() + "amisLog.txt");
 	amis::util::Log::Instance()->enable(Preferences::Instance()->getIsLoggingEnabled());
 	amis::util::Log::Instance()->setLevel(Preferences::Instance()->getLogLevel());
-	Preferences::Instance()->logAllPreferences();
-
-	//if (Preferences::Instance()->getSafeMode())
-	//	Preferences::Instance()->setIsSelfVoicing(false);
+	Preferences::Instance()->logPreferences();
 
 	initializeSelfVoicing();
 	
@@ -361,7 +357,8 @@ BOOL CAmisApp::InitInstance()
 	MainWndParts::Instance()->updateTitleViewMode();
 	MainWndParts::Instance()->updateTitleBar(MainWndParts::TITLEBAR_PLAYSTATE, CString(L"-"));
 
-	amis::tts::TTSPlayer::InstanceTwo()->setCallback((sendMessageCallbackFn)amis::dtb::DtbWithHooks::ttsTwoDone);
+	if (!Preferences::Instance()->getMustAvoidTTS())
+		amis::tts::TTSPlayer::InstanceTwo()->setCallback((sendMessageCallbackFn)amis::dtb::DtbWithHooks::ttsTwoDone);
 
 	amis::gui::CAmisApp::emitMessage("ready");
 	
@@ -378,8 +375,11 @@ int CAmisApp::ExitInstance()
 	p_log->writeTrace("Starting to EXIT", "CAmisApp::ExitInstance");
 	TRACE("\nStarting to EXIT\n\n");
 
-	int tts_vol = amis::tts::TTSPlayer::InstanceOne()->getVolume();
-	Preferences::Instance()->setTTSVolumePct(tts_vol);
+	if (!Preferences::Instance()->getMustAvoidTTS())
+	{
+		int tts_vol = amis::tts::TTSPlayer::InstanceOne()->getVolume();
+		Preferences::Instance()->setTTSVolumePct(tts_vol);
+	}
 	
 	//set some volumes
 	double audio_vol = ambulant::gui::dx::change_global_level(1.0);
@@ -397,7 +397,8 @@ int CAmisApp::ExitInstance()
 	if (m_hMDIMenu != NULL) FreeResource(m_hMDIMenu);
 	if (m_hMDIAccel != NULL)FreeResource(m_hMDIAccel);
 
-	amis::tts::TTSPlayer::DestroyInstanceTwo();
+	if (!Preferences::Instance()->getMustAvoidTTS())
+		amis::tts::TTSPlayer::DestroyInstanceTwo();
 
 	amis::dtb::DtbWithHooks::Instance()->DestroyInstance();
 	amis::Preferences::Instance()->DestroyInstance();
@@ -405,14 +406,23 @@ int CAmisApp::ExitInstance()
 	amis::gui::TextRenderBrain::Instance()->DestroyInstance();
 	amis::gui::MenuManip::Instance()->DestroyInstance();
 	amis::gui::MainWndParts::Instance()->DestroyInstance();
-
-	AudioSequencePlayer::Instance()->DestroyInstance();
+	
+	if (!Preferences::Instance()->getMustAvoidTTS() &&
+		!Preferences::Instance()->getMustAvoidDirectX())
+	{
+		AudioSequencePlayer::Instance()->DestroyInstance();
+	}
 
 	DataTree::Instance()->DestroyInstance();
 	if (mpHistory != NULL) delete mpHistory;
 
-	if (!Preferences::Instance()->getSafeMode())
+	//if neither TTS nor DirectX are used, then we should not call CoUninitialize
+	//TODO: however, if one or the other are not used, do we still call it?
+	if (!Preferences::Instance()->getMustAvoidTTS() && 
+		!Preferences::Instance()->getMustAvoidDirectX())
+	{
 		CoUninitialize();
+	}
 
 	amis::util::Log::Instance()->writeTrace("AMIS EXIT done.", "CAmisApp::ExitInstance");
 	amis::util::Log::Instance()->endLog();
@@ -526,7 +536,7 @@ void CAmisApp::initializeAmbulantPreferences()
 	prefs->m_parser_id = "xerces";
 	prefs->m_use_plugins = true;
 	prefs->m_plugin_dir = "";
-	prefs->m_prefer_ffmpeg = amis::Preferences::Instance()->getPreferFFMpeg();
+	prefs->m_prefer_ffmpeg = amis::Preferences::Instance()->getAmbulantPrefersFFMpeg();
 	prefs->m_dynamic_content_control = true;
 }
 
@@ -842,7 +852,8 @@ void CAmisApp::OnVolumeUpBOOK()
 	amis::util::Log::Instance()->writeMessage("Volume increase BOOK", "CAmisApp::OnVolumeUp");
 	ambulant::gui::dx::change_global_level(VOLUME_RATIO);
 
-	amis::tts::TTSPlayer::InstanceTwo()->IncreaseVolume();
+	if (!Preferences::Instance()->getMustAvoidTTS())
+		amis::tts::TTSPlayer::InstanceTwo()->IncreaseVolume();
 }
 
 void CAmisApp::OnVolumeDownBOOK()
@@ -850,29 +861,36 @@ void CAmisApp::OnVolumeDownBOOK()
 	if (isBookOpen() == false) return;
 	amis::util::Log::Instance()->writeMessage("Volume decrease BOOK", "CAmisApp::OnVolumeDown");
     ambulant::gui::dx::change_global_level(1.0/VOLUME_RATIO);
-
-	amis::tts::TTSPlayer::InstanceTwo()->DecreaseVolume();
+	if (!Preferences::Instance()->getMustAvoidTTS())
+		amis::tts::TTSPlayer::InstanceTwo()->DecreaseVolume();
 }
 
 void CAmisApp::OnVolumeDownTTS()
 {
 	amis::util::Log::Instance()->writeMessage("Volume decrease TTS", "CAmisApp::OnVolumeDown");
-	amis::tts::TTSPlayer::InstanceOne()->DecreaseVolume();
-	amis::tts::TTSPlayer::InstanceTwo()->DecreaseVolume();
+	if (!Preferences::Instance()->getMustAvoidTTS())
+	{
+		amis::tts::TTSPlayer::InstanceOne()->DecreaseVolume();
+		amis::tts::TTSPlayer::InstanceTwo()->DecreaseVolume();
+	}
 }
 void CAmisApp::OnVolumeUpTTS()
 {
 	amis::util::Log::Instance()->writeMessage("Volume increase TTS", "CAmisApp::OnVolumeUp");
-	amis::tts::TTSPlayer::InstanceOne()->IncreaseVolume();
-	amis::tts::TTSPlayer::InstanceTwo()->IncreaseVolume();
+	if (!Preferences::Instance()->getMustAvoidTTS())
+	{
+		amis::tts::TTSPlayer::InstanceOne()->IncreaseVolume();
+		amis::tts::TTSPlayer::InstanceTwo()->IncreaseVolume();
+	}
 }
 void CAmisApp::OnVolumeUpUI()
 {
 	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 	{
 		amis::util::Log::Instance()->writeMessage("Volume increase UI", "CAmisApp::OnVolumeUp");
-		amis::tts::TTSPlayer::InstanceOne()->IncreaseVolume();
-		if (!Preferences::Instance()->getSafeMode())
+		if (!Preferences::Instance()->getMustAvoidTTS())
+			amis::tts::TTSPlayer::InstanceOne()->IncreaseVolume();
+		if (!Preferences::Instance()->getMustAvoidDirectX())
 			ambulantX::gui::dx::audio_playerX::change_global_level(VOLUME_RATIO);
 
 		AudioSequence* seq	= new AudioSequence();
@@ -889,8 +907,9 @@ void CAmisApp::OnVolumeDownUI()
 	{
 		amis::util::Log::Instance()->writeMessage("Volume decrease UI", "CAmisApp::OnVolumeDown");
 
-		amis::tts::TTSPlayer::InstanceOne()->DecreaseVolume();
-		if (!Preferences::Instance()->getSafeMode())
+		if (!Preferences::Instance()->getMustAvoidTTS())
+			amis::tts::TTSPlayer::InstanceOne()->DecreaseVolume();
+		if (!Preferences::Instance()->getMustAvoidDirectX())
 			ambulantX::gui::dx::audio_playerX::change_global_level(1.0/VOLUME_RATIO);
 	
 		AudioSequence* seq	= new AudioSequence();
@@ -917,9 +936,12 @@ void CAmisApp::OnSpeedUp()
 {
 	amis::util::Log::Instance()->writeMessage("Speed increase", "CAmisApp::OnSpeedUp");
 
-	long currentRate = amis::tts::TTSPlayer::InstanceOne()->GetSpeechRate();
-	amis::tts::TTSPlayer::InstanceOne()->SetSpeechRate(currentRate+1);
-	amis::tts::TTSPlayer::InstanceTwo()->SetSpeechRate(currentRate+1);
+	if (!Preferences::Instance()->getMustAvoidTTS())
+	{
+		long currentRate = amis::tts::TTSPlayer::InstanceOne()->GetSpeechRate();
+		amis::tts::TTSPlayer::InstanceOne()->SetSpeechRate(currentRate+1);
+		amis::tts::TTSPlayer::InstanceTwo()->SetSpeechRate(currentRate+1);
+	}
 
 	amis::util::Log::Instance()->writeTrace("before ambulant increase rate");
 	double rate = ambulant::gui::dx::change_global_rate(0.5);
@@ -927,7 +949,7 @@ void CAmisApp::OnSpeedUp()
 	sprintf(ch_rate, "Rate = %.3f", rate);
 	amis::util::Log::Instance()->writeTrace(ch_rate);
 
-	if (!Preferences::Instance()->getSafeMode())
+	if (!Preferences::Instance()->getMustAvoidDirectX())
 		ambulantX::gui::dx::audio_playerX::Instance()->set_rate(rate);
 
 	updateSpeedButtons();
@@ -937,16 +959,19 @@ void CAmisApp::OnSpeedDown()
 {
 	amis::util::Log::Instance()->writeMessage("Speed decrease", "CAmisApp::OnSpeedDown");
 
-	long currentRate = amis::tts::TTSPlayer::InstanceOne()->GetSpeechRate();
-	amis::tts::TTSPlayer::InstanceOne()->SetSpeechRate(currentRate-1);
-	amis::tts::TTSPlayer::InstanceTwo()->SetSpeechRate(currentRate-1);
+	if (!Preferences::Instance()->getMustAvoidTTS())
+	{
+		long currentRate = amis::tts::TTSPlayer::InstanceOne()->GetSpeechRate();
+		amis::tts::TTSPlayer::InstanceOne()->SetSpeechRate(currentRate-1);
+		amis::tts::TTSPlayer::InstanceTwo()->SetSpeechRate(currentRate-1);
+	}
 
 	double rate = ambulant::gui::dx::change_global_rate(-0.5);
 	char ch_rate[15];
 	sprintf(ch_rate, "Rate = %.3f", rate);
 	amis::util::Log::Instance()->writeTrace(ch_rate);
 	
-	if (!Preferences::Instance()->getSafeMode())
+	if (!Preferences::Instance()->getMustAvoidDirectX())
 		ambulantX::gui::dx::audio_playerX::Instance()->set_rate(rate);
 	updateSpeedButtons();
 }
@@ -954,11 +979,14 @@ void CAmisApp::OnSpeedDown()
 void CAmisApp::OnSpeedNormal()
 {
 	amis::util::Log::Instance()->writeMessage("Speed reset to normal", "CAmisApp::OnSpeedNormal");
+	
+	if (!Preferences::Instance()->getMustAvoidTTS())
+	{
+		amis::tts::TTSPlayer::InstanceOne()->SetSpeechRate(0);
+		amis::tts::TTSPlayer::InstanceTwo()->SetSpeechRate(0);
+	}
 
-	amis::tts::TTSPlayer::InstanceOne()->SetSpeechRate(0);
-	amis::tts::TTSPlayer::InstanceTwo()->SetSpeechRate(0);
-		
-	if (!Preferences::Instance()->getSafeMode())
+	if (!Preferences::Instance()->getMustAvoidDirectX())
 		ambulantX::gui::dx::audio_playerX::Instance()->set_rate(1.0);
 	
 	ambulant::gui::dx::set_global_rate(1.0);
@@ -1173,9 +1201,11 @@ void CAmisApp::OnPreferences()
 	amis::util::Log::Instance()->writeMessage("Showing preferences dialog", "CAmisApp::OnPreferences");
 	if (prefs.do_modal() == IDOK)
 	{
-		Preferences::Instance()->setTTSVoiceIndex(prefs.mTTSVoiceIndex);
-		Preferences::Instance()->setIsSelfVoicing(prefs.mbIsSelfVoicing);
-		
+		if (!Preferences::Instance()->getMustAvoidTTS())
+		{
+			Preferences::Instance()->setTTSVoiceIndex(prefs.mTTSVoiceIndex);
+			Preferences::Instance()->setIsSelfVoicing(prefs.mbIsSelfVoicing);
+		}
 		Preferences::Instance()->setPauseOnLostFocus(prefs.mbPauseOnLostFocus);
 		Preferences::Instance()->setStartInBasicView(prefs.mbStartInBasicView);
 		Preferences::Instance()->setLoadLastBook(prefs.mbLoadLastBook);
@@ -1199,15 +1229,18 @@ void CAmisApp::OnPreferences()
 		}
 		amis::io::PreferencesFileIO prefs_io;
 		prefs_io.writeToFile(Preferences::Instance()->getSourceUrl()->get_file(), Preferences::Instance());
-		Preferences::Instance()->logUserControllablePreferences();
+		Preferences::Instance()->logPreferences(true);
 	}
 	else 
 	{
 		amis::util::Log::Instance()->writeMessage("Dialog cancelled", "CAmisApp::OnPreferences");
 
 		// make sure to restore the original voice (which may have been changed in the preference dialog)
-		amis::tts::TTSPlayer::InstanceOne()->SetVoice(Preferences::Instance()->getTTSVoiceIndex());
-		amis::tts::TTSPlayer::InstanceTwo()->SetVoice(Preferences::Instance()->getTTSVoiceIndex());
+		if (!Preferences::Instance()->getMustAvoidTTS())
+		{
+			amis::tts::TTSPlayer::InstanceOne()->SetVoice(Preferences::Instance()->getTTSVoiceIndex());
+			amis::tts::TTSPlayer::InstanceTwo()->SetVoice(Preferences::Instance()->getTTSVoiceIndex());
+		}
 	}
 }
 void CAmisApp::OnPublicationSummary()
@@ -1584,8 +1617,7 @@ void CAmisApp::updateSpeedButtons()
 
 bool CAmisApp::canIncreasePlaybackSpeed()
 {
-
-	if (!Preferences::Instance()->getSafeMode())
+	if (!Preferences::Instance()->getMustAvoidDirectX())
 	{
 		double rate = ambulantX::gui::dx::audio_playerX::Instance()->get_rate();
 		if (rate < AMIS_MAX_AUDIO_RATE) return true;
@@ -1598,7 +1630,7 @@ bool CAmisApp::canIncreasePlaybackSpeed()
 }
 bool CAmisApp::canDecreasePlaybackSpeed()
 {
-	if (!Preferences::Instance()->getSafeMode())
+	if (!Preferences::Instance()->getMustAvoidDirectX())
 	{
 		double rate = ambulantX::gui::dx::audio_playerX::Instance()->get_rate();
 		if (rate <= 1) return false;
