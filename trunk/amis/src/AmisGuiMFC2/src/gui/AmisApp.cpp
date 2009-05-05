@@ -1283,12 +1283,14 @@ void CAmisApp::OnNextPageStyle()
 }
 void CAmisApp::OnShowTextStyle()
 {
-	if (isBookOpen() == false) return;
 	amis::gui::dialogs::TextStyleDialog dlg;
 	if (dlg.do_modal() == IDOK)
-	{
-		TextRenderBrain::Instance()->redoPageColors();
-		MainWndParts::Instance()->mpSidebar->m_wndDlg.setFontName(Preferences::Instance()->getAppFontName());
+	{	
+		if (isBookOpen())
+		{
+			TextRenderBrain::Instance()->redoPageColors();
+			MainWndParts::Instance()->mpSidebar->m_wndDlg.setFontName(Preferences::Instance()->getAppFontName());
+		}
 	}
 }
 //the user selected "sections" or "pages" or a nav list id from the view menu
