@@ -72,6 +72,10 @@ SearchForBooksDialog::SearchForBooksDialog(CWnd* pParent /*=NULL*/)
 	{
 		mpSearchForBooksDialogVoicing = new amis::gui::dialogs::SearchForBooksDialogVoicing(this);
 	}
+	else
+	{
+		mpSearchForBooksDialogVoicing = NULL;
+	}
 
 	mCaptionWhileSearching.LoadStringW(IDS_SEARCHING);
 	mCaptionDefault.LoadStringW(AFX_IDS_IDLEMESSAGE);

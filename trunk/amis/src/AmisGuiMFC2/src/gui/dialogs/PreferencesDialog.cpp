@@ -74,6 +74,10 @@ PreferencesDialog::PreferencesDialog(CWnd* pParent /*=NULL*/)
 	{
 		mpPreferencesDialogVoicing = new amis::gui::dialogs::PreferencesDialogVoicing(this);
 	}
+	else
+	{
+		mpPreferencesDialogVoicing = NULL;
+	}
 }
 
 PreferencesDialog::~PreferencesDialog()
@@ -235,11 +239,13 @@ void PreferencesDialog::OnCbnSelchangeTTSVoices()
 	if (Preferences::Instance()->getMustAvoidTTS()) return;
 
 	CComboBox* list = (CComboBox*)GetDlgItem(IDC_TTSVOICES);
+	if (list == NULL) return;
 
 	int selected = list->GetCurSel();
 	mTTSVoiceIndex = selected;
 
-	mpPreferencesDialogVoicing->playNoVerboseList();
+	if (Preferences::Instance()->getIsSelfVoicing() == true)
+		mpPreferencesDialogVoicing->playNoVerboseList();
 
 	//Bypassing the default behaviour to uses less verbosity
 	//OnBnClickedIsSelfVoicing();
@@ -279,7 +285,8 @@ void PreferencesDialog::OnCbnSelchangeInstalledLanguages()
 	for (int i = 0; i<sel; i++) it++;
 	mUiLanguageSelection = it->first;
 
-	mpPreferencesDialogVoicing->playNoVerboseList();
+	if (Preferences::Instance()->getIsSelfVoicing() == true)
+		mpPreferencesDialogVoicing->playNoVerboseList();
 
 	//Bypassing the default behaviour to uses less verbosity
 	//OnBnClickedIsSelfVoicing();

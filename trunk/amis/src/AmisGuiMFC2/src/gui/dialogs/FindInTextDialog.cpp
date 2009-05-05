@@ -58,6 +58,10 @@ FindInTextDialog::FindInTextDialog(CWnd* pParent /*=NULL*/)
 	{
 		mpFindInTextDialogVoicing = new amis::gui::dialogs::FindInTextDialogVoicing(this);
 	}
+	else
+	{
+		mpFindInTextDialogVoicing = NULL;
+	}
 	mUserData.Empty();
 	mDir = 0;
 }

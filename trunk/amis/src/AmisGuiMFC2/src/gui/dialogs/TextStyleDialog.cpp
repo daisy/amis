@@ -79,6 +79,10 @@ TextStyleDialog::TextStyleDialog(CWnd* pParent /*=NULL*/)
 	{
 		mpTextStyleDialogVoicing = new amis::gui::dialogs::TextStyleDialogVoicing(this);
 	}
+	else
+	{
+		mpTextStyleDialogVoicing = NULL;
+	}
 }
 TextStyleDialog::~TextStyleDialog()
 {

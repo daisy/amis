@@ -49,8 +49,6 @@ namespace amis
 				{ 
 					if (sel > -1 && sel < mpDialog->mpBookList->getNumberOfEntries())
 					{
-
-						
 						Dialog* p_dlg = DataTree::Instance()->findDialog(IDD_CDSEARCH);
 
 						if (p_dlg != NULL)

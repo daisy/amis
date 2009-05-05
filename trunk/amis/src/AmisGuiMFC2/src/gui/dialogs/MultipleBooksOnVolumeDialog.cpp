@@ -62,6 +62,10 @@ MultipleBooksOnVolumeDialog::MultipleBooksOnVolumeDialog(CWnd* pParent /*=NULL*/
 	{
 		mpMultipleBooksOnVolumeDialogVoicing = new amis::gui::dialogs::MultipleBooksOnVolumeDialogVoicing(this);
 	}
+	else
+	{
+		mpMultipleBooksOnVolumeDialogVoicing = NULL;
+	}
 }
 
 MultipleBooksOnVolumeDialog::~MultipleBooksOnVolumeDialog()

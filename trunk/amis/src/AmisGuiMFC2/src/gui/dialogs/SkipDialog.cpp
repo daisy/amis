@@ -59,6 +59,10 @@ SkipDialog::SkipDialog(CWnd* pParent /*=NULL*/)
 	{
 		mpSkipDialogVoicing = new amis::gui::dialogs::SkipDialogVoicing(this);
 	}
+	else
+	{
+		mpSkipDialogVoicing = NULL;
+	}
 	mpCustomTests = NULL;
 }
 

@@ -55,6 +55,10 @@ PublicationSummaryDialog::PublicationSummaryDialog(CWnd* pParent /*=NULL*/)
 	{
 		mpPublicationSummaryDialogVoicing = new amis::gui::dialogs::PublicationSummaryDialogVoicing(this);
 	}
+	else
+	{
+		mpPublicationSummaryDialogVoicing = NULL;
+	}
 }
 
 PublicationSummaryDialog::~PublicationSummaryDialog()
