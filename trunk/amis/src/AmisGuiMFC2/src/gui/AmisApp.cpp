@@ -813,6 +813,13 @@ void CAmisApp::OnFileClose()
 	amis::util::Log::Instance()->writeMessage("Closing book", "CAmisApp::OnFileClose");
 	if (mbBookIsOpen)
 	{
+		//stop the book TTS, otherwise it could continue for a while
+		if (!Preferences::Instance()->getMustAvoidTTS() &&
+			amis::tts::TTSPlayer::InstanceTwo()->IsPlaying())
+		{
+			amis::tts::TTSPlayer::InstanceTwo()->Stop();
+		}
+
 		mbBookIsOpen = false;
 		//the order matters here
 		amis::dtb::DtbWithHooks::Instance()->DestroyInstance();
