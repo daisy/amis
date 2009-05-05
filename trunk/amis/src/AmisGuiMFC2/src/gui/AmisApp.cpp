@@ -381,6 +381,8 @@ int CAmisApp::ExitInstance()
 		Preferences::Instance()->setTTSVolumePct(tts_vol);
 	}
 	
+	AudioSequencePlayer::Instance()->Stop();
+
 	//set some volumes
 	double audio_vol = ambulant::gui::dx::change_global_level(1.0);
 	int audio_vol_pct = audio_vol * 100;
@@ -407,7 +409,7 @@ int CAmisApp::ExitInstance()
 	amis::gui::MenuManip::Instance()->DestroyInstance();
 	amis::gui::MainWndParts::Instance()->DestroyInstance();
 	
-	if (!Preferences::Instance()->getMustAvoidTTS() &&
+	if (!Preferences::Instance()->getMustAvoidTTS() ||
 		!Preferences::Instance()->getMustAvoidDirectX())
 	{
 		AudioSequencePlayer::Instance()->DestroyInstance();
