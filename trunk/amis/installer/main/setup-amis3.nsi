@@ -16,7 +16,7 @@
 !define PRODUCT_NAME "AMIS"
 !define PRODUCT_VERSION "3.0"
 !define PRODUCT_PUBLISHER "DAISY Consortium"
-!define PRODUCT_WEB_SITE "http://daisy.org/projects/amis"
+!define PRODUCT_WEB_SITE "http://amisproject.org"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\AMIS.exe"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
 !define PRODUCT_UNINST_ROOT_KEY "HKLM"
@@ -96,7 +96,7 @@ Page custom SapiPage
 ;**
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION} (${CUSTOM_LANG_NAME})"
 ;this is the name of the installer that gets created.  
-OutFile "Setup-amis30-rc2-${CUSTOM_LANG_NAME}.exe"
+OutFile "Setup-amis30-${CUSTOM_LANG_NAME}.exe"
 InstallDir "$PROGRAMFILES\AMIS"
 InstallDirRegKey HKLM "${PRODUCT_DIR_REGKEY}" ""
 ShowInstDetails show
