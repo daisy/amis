@@ -1211,8 +1211,11 @@ void CAmisApp::OnPreferences()
 		if (!Preferences::Instance()->getMustAvoidTTS())
 		{
 			Preferences::Instance()->setTTSVoiceIndex(prefs.mTTSVoiceIndex);
-			Preferences::Instance()->setIsSelfVoicing(prefs.mbIsSelfVoicing);
-		}
+    }
+    if (!Preferences::Instance()->getMustAvoidTTS() && !Preferences::Instance()->getMustAvoidDirectX())
+    {
+      Preferences::Instance()->setIsSelfVoicing(prefs.mbIsSelfVoicing);
+    }
 		Preferences::Instance()->setPauseOnLostFocus(prefs.mbPauseOnLostFocus);
 		Preferences::Instance()->setStartInBasicView(prefs.mbStartInBasicView);
 		Preferences::Instance()->setLoadLastBook(prefs.mbLoadLastBook);
