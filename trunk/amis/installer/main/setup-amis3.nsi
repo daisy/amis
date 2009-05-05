@@ -451,6 +451,11 @@ Section Uninstall
 	RMDir "$SETTINGS_DIR\img"
 	
 	Delete "$SETTINGS_DIR\amisPrefs.xml"
+  Delete "$SETTINGS_DIR\amisPrefsDebug.xml"
+  Delete "$SETTINGS_DIR\amisPrefsCompatibilityMode.xml"
+  Delete "$SETTINGS_DIR\amisPrefsCompatibiiltyModeWithDX.xml"
+  Delete "$SETTINGS_DIR\amisPrefsCompatibilityModeWithTTS.xml"
+  Delete "$SETTINGS_DIR\clearCache.bat"
     Delete "$SETTINGS_DIR\defaultToolbar.xml"
     Delete "$SETTINGS_DIR\basicToolbar.xml"
     Delete "$SETTINGS_DIR\amisHistory.xml.default"
