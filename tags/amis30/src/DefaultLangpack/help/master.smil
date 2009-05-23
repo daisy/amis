@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+    <meta name="ncc:generator" content="LpStudioGen 1.6" />
+    <meta name="dc:format" content="Daisy 2.02" />
+    <meta name="dc:title" content="AMIS User Guide" />
+    <meta name="ncc:timeInThisSmil" content="00:00:00" />
+    <layout>
+        <region id="txtView" />
+    </layout>
+</head>
+<body>
+    <ref title="AMIS User Guide" src="amis0001.smil" id="amis_0001" />
+    <ref title="What is AMIS?" src="amis0002.smil" id="amis_0003" />
+    <ref title="What is DAISY?" src="amis0003.smil" id="amis_0004" />
+    <ref title="Supported Formats" src="amis0004.smil" id="amis_0005" />
+    <ref title="System Requirements" src="amis0005.smil" id="amis_0006" />
+    <ref title="Screen Layout" src="amis0006.smil" id="amis_0007" />
+    <ref title="Features" src="amis0007.smil" id="amis_0008" />
+    <ref title="Opening a book" src="amis0008.smil" id="amis_0009" />
+    <ref title="Controlling playback" src="amis0009.smil" id="amis_000a" />
+    <ref title="Navigating" src="amis000a.smil" id="amis_000b" />
+    <ref title="Using the navigation window" src="amis000b.smil" id="amis_000c" />
+    <ref title="Setting bookmarks" src="amis000c.smil" id="amis_000d" />
+    <ref title="Getting information about the publication" src="amis000d.smil" id="amis_000e" />
+    <ref title="Getting help with AMIS" src="amis000e.smil" id="amis_000f" />
+    <ref title="Changing the look" src="amis000f.smil" id="amis_0010" />
+    <ref title="Setting preferences" src="amis0010.smil" id="amis_0011" />
+    <ref title="Setting text styles" src="amis0011.smil" id="amis_0012" />
+    <ref title="Contact Us" src="amis0012.smil" id="amis_0013" />
+</body>
+</smil>

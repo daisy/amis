@@ -1,0 +1,98 @@
+:script TextOnlyModeExit
+
+:script FineNavigation
+:Synopsis Enter into fine Navigation mode
+:Description Enters into fine navigation mode after which arrow keys provide usual character, word , line level navigation
+
+:script SlowerNum
+:Synopsis Slows speech rate
+
+:script HotKeyHelp
+:Synopsis Generates a virtual viewer containing commands for amis
+
+:script NextPhrase
+:Synopsis Next Phrase
+
+:script PreviousSection
+:Synopsis Previous section
+
+:script FasterNum
+:Synopsis Increase speech rate
+
+:script VolumeDown
+:Synopsis Decrease volume
+
+:script ReadAsTextOnly
+
+:script SelectAllHook
+
+:script GlobalNavigationMode
+:Synopsis Switches to global navigation mode
+
+:script Play
+:Synopsis Plays the Book
+
+:script NextPage
+:Synopsis Next Page
+
+:script ToggleJawsSpeech
+:Synopsis Toggles jaws speech for amis on or off
+
+:script Try
+
+:function CheckViews
+:Returns string Default or Basic
+:Synopsis Checks if Default or basic view is active
+
+:function AutoStartEvent
+
+:script NormalSpeed
+:Synopsis Resets speech rate to normal
+
+:script IncreaseVolume
+:Synopsis Increase volume
+
+:script FineNavigationMode
+:Synopsis Switches to fine navigation mode
+
+:function DetectHighlight
+
+:script GoToSideBar
+:Synopsis Go to side navigation bar
+
+:function SayViews
+:Synopsis Checks the view and speak if it is default or basic view
+
+:script sayview
+:Synopsis Speaks the Current View
+
+:script Faster
+:Synopsis Increase speech rate
+
+:script PrevPage
+:Synopsis Previous Page
+
+:script ToggleViews
+:Synopsis To toggle between default and basic view
+
+:script Slower
+:Synopsis Slows speech rate
+
+:script NextSection
+:Synopsis Next Section
+
+:function SayHighlight
+:Synopsis locate the first character with highlight background and speaks the line
+:Param int/BackColor No Description
+
+:script FineNavigationExit
+:Synopsis Exits the fine navigation mode
+
+:script Pause
+:Synopsis Pause the Playing book
+
+:script PreviousPhrase
+:Synopsis Previous Phrase
+
+:function AutoFinishEvent
+

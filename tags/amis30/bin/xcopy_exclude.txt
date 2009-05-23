@@ -1,0 +1,4 @@
+.svn
+amisPrefs.xml.default
+clearall.bat
+clearHistory.bat
