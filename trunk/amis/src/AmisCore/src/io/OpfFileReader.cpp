@@ -125,7 +125,10 @@ void amis::io::OpfFileReader::startElement(const   XMLCh* const    uri,
 		}
 		//add the smil files to the manifest list
 		//the media type "text/sml" is used in bookshare books
-		else if ((media_type == "application/smil" || media_type == "text/sml") && id.size() > 0)
+		//and "application/smil+xml" is used by a Pipeline script (at least in one example, though that
+		// may have been fixed)
+		else if ((media_type == "application/smil" || media_type == "text/sml" 
+					|| media_type == "application/smil+xml") && id.size() > 0)
 		{
 			string filename = SimpleAttrs::get("href", &attributes);
 			ambulant::net::url temp = amis::util::makeUrlFromString(filename, !is_local, is_local);
