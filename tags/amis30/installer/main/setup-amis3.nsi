@@ -274,6 +274,9 @@ SectionEnd
 ;*
 Section -MSVCRuntime
   
+    ; testing!
+    ;Goto End
+    
     Var /GLOBAL MSVC_RUNTIME_INSTALLER
     StrCpy $MSVC_RUNTIME_INSTALLER "$TEMP\vcredist_x86.exe"
 

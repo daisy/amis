@@ -10,7 +10,7 @@ SET SETTINGS_DIR_PL=../../bin/settings/clean_settings_for_the_installer
     
 ECHO Customizing preferences for %2
 
-del "%SETTINGS_DIR%" /q
+del /S/Q "%SETTINGS_DIR%"
 mkdir "%SETTINGS_DIR%"
 perl setup-amis-prefs.pl ../../bin/settings/amisPrefs.xml.default ui-lang-id %1 > %SETTINGS_DIR_PL%/amisPrefs.xml
 perl setup-amis-prefs.pl ../../bin/settings/amisPrefsCompatibilityMode.xml.default ui-lang-id %1 > %SETTINGS_DIR_PL%/amisPrefsCompatibilityMode.xml
