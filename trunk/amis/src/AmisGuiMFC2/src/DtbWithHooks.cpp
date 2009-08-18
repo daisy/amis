@@ -171,11 +171,30 @@ smil::SmilMediaGroup* DtbWithHooks::startReading(bool loadLastmark)
 	}
 	else
 	{
-		smilfile = &getBookmarks()->getLastmark()->mUri;
-		//set a flag to stop highlighting of all text nodes until we hit the one belonging to the smil node
-		//with ref = smilfile->get_ref()
-		mIdOfLastmarkNode = smilfile->get_ref();
-		setIsWaitingForLastmarkNode(true);
+		if (p_lastmark != NULL)
+		{
+			smilfile = &p_lastmark->mUri;
+			if (smilfile != NULL)
+			{
+				//set a flag to stop highlighting of all text nodes until we hit the one belonging to the smil node
+				//with ref = smilfile->get_ref()
+				mIdOfLastmarkNode = smilfile->get_ref();
+				setIsWaitingForLastmarkNode(true);
+			}
+			else
+			{
+				smilfile = getSpine()->getFirstFile();
+				mIdOfLastmarkNode = "";
+				setIsWaitingForLastmarkNode(false);
+			}
+		}
+		else
+		{
+			smilfile = getSpine()->getFirstFile();
+			mIdOfLastmarkNode = "";
+			setIsWaitingForLastmarkNode(false);
+		}
+		
 	}
 
 	loadSmilFromUrl(smilfile);
@@ -493,14 +512,18 @@ void DtbWithHooks::loadBookmark(int index)
 
 	p_mark = p_bmks->getItem(index);
 	if (!p_mark) return;
-	amis::util::Log::Instance()->writeMessage("Loading bookmark", "DtbWitHooks::loadBookmark");
+	amis::util::Log::Instance()->writeMessage("Loading bookmark", "DtbWithHooks::loadBookmark");
 	loadSmilFromUrl(&p_mark->mpStart->mUri);
 }
 
 amis::dtb::smil::SmilMediaGroup* DtbWithHooks::loadSmilFromUrl(const ambulant::net::url* pUri)
 {
 	USES_CONVERSION;
-	assert(pUri);
+	if (pUri == NULL)
+	{
+		amis::util::Log::Instance()->writeError("NULL SMIL file URI", "DtbWithHooks::loadSmilFromUrl");
+		return NULL;
+	}
 	ambulant::net::url full_path = pUri->join_to_base(*getFileSet()->getBookDirectory());
 	
 	//set the spine at this file.  this also makes sure that we're going to a file that is in the book.
