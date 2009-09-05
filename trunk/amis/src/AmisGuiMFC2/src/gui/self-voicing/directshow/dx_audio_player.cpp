@@ -752,15 +752,81 @@ double gui::dx::audio_playerX::get_rate() {
 	return s_current_playback_rate;
 }
 void gui::dx::audio_playerX::set_rate(double rate) {
-	s_current_playback_rate = rate;
-	if (m_audio_speedup) {
 
-		char ch_rate[25];
-		sprintf(ch_rate, "AmbX Rate = %.3f", rate);
-		amis::util::Log::Instance()->writeTrace(ch_rate);
+	 s_current_playback_rate = rate;
+	 if (m_audio_speedup) {
+	     char ch_rate[25];
+	     sprintf(ch_rate, "AmbX Rate = %.3f", rate);
+         amis::util::Log::Instance()->writeTrace(ch_rate);
 
-		m_audio_speedup->setCycleSpeed((short)(rate*100));
+		 //m_audio_speedup->setCycleSpeed((short)(rate*100));
+
+		/*
+		fncbSaveRegistryData "Vupp\Speed0", "60, 2500, 100, 20, 1000, 100"
+   fncbSaveRegistryData "Vupp\Speed1", "75, 3000, 100, 20, 1000, 100"
+   fncbSaveRegistryData "Vupp\Speed2", "80, 3000, 100, 20, 1000, 100"
+   fncbSaveRegistryData "Vupp\Speed3", "85, 3000, 100, 20, 1000, 100"
+   fncbSaveRegistryData "Vupp\Speed4", "90, 3000, 100, 20, 1000, 100"
+   fncbSaveRegistryData "Vupp\Speed5", "100, 3000, 100, 20, 1000, 100"
+   fncbSaveRegistryData "Vupp\Speed6", "100, 3000, 120, 20, 1000, 110"
+   fncbSaveRegistryData "Vupp\Speed7", "100, 3000, 140, 25, 1000, 150"
+   fncbSaveRegistryData "Vupp\Speed8", "100, 3000, 170, 25, 1000, 150"
+   fncbSaveRegistryData "Vupp\Speed9", "100, 3000, 200, 25, 1000, 150"
+   fncbSaveRegistryData "Vupp\Speed10", "105, 3000, 250, 30, 1000, 150"
+   fncbSaveRegistryData "Vupp\Speed11", "110, 3000, 300, 30, 1000, 150"
+   fncbSaveRegistryData "Vupp\Speed12", "115, 3000, 200, 30, 1000, 175"
+   fncbSaveRegistryData "Vupp\Speed13", "130, 3000, 200, 30, 1000, 175"
+   fncbSaveRegistryData "Vupp\Speed14", "150, 3000, 200, 30, 1000, 200"
+   fncbSaveRegistryData "Vupp\Speed15", "200, 3000, 300, 30, 500, 500"
+   */
+		if (rate <= 0)
+		{
+			//Vupp Speed 0
+			set_rate_values(.60, 2500, 100, 20, 1000, 100);
+		}
+		else if (rate == 0.5)
+		{
+			//Vupp Speed 3
+			set_rate_values(.85, 3000, 100, 20, 1000, 100);
+		}
+		else if (rate == 1.0)
+		{
+			//Vupp Speed 5
+			set_rate_values(1.00, 3000, 100, 20, 1000, 100);
+		}
+		else if (rate == 1.5)
+		{
+			//Vupp Speed 7
+			set_rate_values(1.00, 3000, 140, 25, 1000, 150);
+		}
+		else if (rate == 2.0)
+		{
+			//Vupp Speed 9
+			set_rate_values(1.00, 3000, 200, 25, 1000, 150);
+		}
+		else if (rate == 2.5)
+		{
+			//Vupp Speed 13
+			set_rate_values(1.30, 3000, 200, 30, 1000, 175);
+		}
+		else if (rate >= 3.0)
+		{
+			//Vupp Speed 15
+			set_rate_values(2.00, 3000, 300, 30, 500, 500);
+		}
+		
 	}
+}
+void gui::dx::audio_playerX::set_rate_values(double crossFadeSpeed, int crossFadeWindowLength, 
+											int cycleSpeed, int silenceLoudnessThreshold,
+											int silenceRemainderLength, int silenceSpeed)
+{	
+		m_audio_speedup->setCrossFadeSpeed(crossFadeSpeed);
+		m_audio_speedup->setWindowLength(crossFadeWindowLength);
+		m_audio_speedup->setCycleSpeed(cycleSpeed);
+		m_audio_speedup->setSilenceLoudnessThreshold(silenceLoudnessThreshold);
+		m_audio_speedup->setSilenceRemainderLength(silenceRemainderLength);
+		m_audio_speedup->setSilenceSpeed(silenceSpeed);
 }
 
 #endif

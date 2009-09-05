@@ -1635,7 +1635,7 @@ bool CAmisApp::canIncreasePlaybackSpeed()
 	if (!Preferences::Instance()->getMustAvoidDirectX())
 	{
 		double rate = ambulantX::gui::dx::audio_playerX::Instance()->get_rate();
-		if (rate < AMIS_MAX_AUDIO_RATE) return true;
+		if (rate < 3.0) return true;
 		else return false;
 	}
 	else
@@ -1648,7 +1648,7 @@ bool CAmisApp::canDecreasePlaybackSpeed()
 	if (!Preferences::Instance()->getMustAvoidDirectX())
 	{
 		double rate = ambulantX::gui::dx::audio_playerX::Instance()->get_rate();
-		if (rate <= 1) return false;
+		if (rate <= 0) return false;
 		else return true;
 	}
 	else

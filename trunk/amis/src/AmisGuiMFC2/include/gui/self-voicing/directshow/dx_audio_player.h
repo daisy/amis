@@ -225,6 +225,10 @@ private:
 	double get_rate();
 
   private:
+	void set_rate_values(double crossFadeSpeed, int crossFadeWindowLength, 
+		int cycleSpeed, int silenceLoudnessThreshold,
+		int silenceRemainderLength, int silenceSpeed);
+	
 	IVuppInterface *m_audio_speedup;
 	void initialize_speedup_filter();
 #endif
