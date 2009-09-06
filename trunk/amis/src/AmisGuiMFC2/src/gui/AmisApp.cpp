@@ -953,9 +953,9 @@ void CAmisApp::OnSpeedUp()
 	}
 
 	amis::util::Log::Instance()->writeTrace("before ambulant increase rate");
-	double rate = ambulant::gui::dx::change_global_rate(0.5);
+	int rate = ambulant::gui::dx::change_global_rate(1);
 	char ch_rate[15];
-	sprintf(ch_rate, "Rate = %.3f", rate);
+	sprintf(ch_rate, "Rate = %d", rate);
 	amis::util::Log::Instance()->writeTrace(ch_rate);
 
 	if (!Preferences::Instance()->getMustAvoidDirectX())
@@ -975,9 +975,9 @@ void CAmisApp::OnSpeedDown()
 		amis::tts::TTSPlayer::InstanceTwo()->SetSpeechRate(currentRate-1);
 	}
 
-	double rate = ambulant::gui::dx::change_global_rate(-0.5);
+	double rate = ambulant::gui::dx::change_global_rate(-1);
 	char ch_rate[15];
-	sprintf(ch_rate, "Rate = %.3f", rate);
+	sprintf(ch_rate, "Rate = %d", rate);
 	amis::util::Log::Instance()->writeTrace(ch_rate);
 	
 	if (!Preferences::Instance()->getMustAvoidDirectX())
@@ -1635,7 +1635,7 @@ bool CAmisApp::canIncreasePlaybackSpeed()
 	if (!Preferences::Instance()->getMustAvoidDirectX())
 	{
 		double rate = ambulantX::gui::dx::audio_playerX::Instance()->get_rate();
-		if (rate < 3.0) return true;
+		if (rate < 10) return true;
 		else return false;
 	}
 	else
@@ -1648,8 +1648,8 @@ bool CAmisApp::canDecreasePlaybackSpeed()
 	if (!Preferences::Instance()->getMustAvoidDirectX())
 	{
 		double rate = ambulantX::gui::dx::audio_playerX::Instance()->get_rate();
-		if (rate <= 0) return false;
-		else return true;
+		if (rate > -5) return true;
+		else return false;
 	}
 	else
 	{

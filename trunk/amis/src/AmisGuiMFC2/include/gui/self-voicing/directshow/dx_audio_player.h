@@ -221,8 +221,8 @@ private:
 
 #ifdef WITH_TPB_AUDIO_SPEEDUP
   public:
-	void set_rate(double rate);
-	double get_rate();
+	void set_rate(int rate);
+	int get_rate();
 
   private:
 	void set_rate_values(double crossFadeSpeed, int crossFadeWindowLength, 
