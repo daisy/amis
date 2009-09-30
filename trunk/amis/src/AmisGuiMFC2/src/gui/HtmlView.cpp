@@ -320,6 +320,7 @@ LPARAM CAmisHtmlView::OnHighlightUrlTarget(WPARAM wParam, LPARAM lParam)
 	std::string newurl = *url;
 #ifdef HTML_LOAD_AMBULANT_PDTB
 #ifdef WITH_PROTECTED_BOOK_SUPPORT
+	//Protected books OR DAISY 2005 format books require manual loading through IE
 	if (amis::dtb::DtbWithHooks::Instance()->isProtected())
 	{
 		// Prepend ambulantpdtb: to the URL. This will change the protocol,
