@@ -285,7 +285,9 @@ void CAmisHtmlView::OnBeforeNavigate2(LPCTSTR lpszURL, DWORD nFlags,
 	//1. book NOT protected, link NOT part of book, link NOT to about:blank
 	//2. book IS protected, link IS web
 	//then launch the link externally
-	if ((!is_pdtb && !is_same_dir/* && !is_blank*/) || (is_pdtb && has_http))
+	amis::dtb::DtbWithHooks* dtbobj = amis::dtb::DtbWithHooks::Instance();
+	if (((!is_pdtb && !is_same_dir/* && !is_blank*/) || (is_pdtb && has_http)) && 
+		dtbobj->getDaisyVersion() != amis::dtb::DAISY_2005)
 	{
 		string log_msg = "Launching external link externally: " + thisUrl.get_url();
 		amis::util::Log::Instance()->writeTrace(log_msg);
@@ -321,7 +323,8 @@ LPARAM CAmisHtmlView::OnHighlightUrlTarget(WPARAM wParam, LPARAM lParam)
 #ifdef HTML_LOAD_AMBULANT_PDTB
 #ifdef WITH_PROTECTED_BOOK_SUPPORT
 	//Protected books OR DAISY 2005 format books require manual loading through IE
-	if (amis::dtb::DtbWithHooks::Instance()->isProtected())
+	if (amis::dtb::DtbWithHooks::Instance()->isProtected() || 
+		amis::dtb::DtbWithHooks::Instance()->getDaisyVersion() == amis::dtb::DAISY_2005)
 	{
 		// Prepend ambulantpdtb: to the URL. This will change the protocol,
 		// and the PdtbIePlugin PluggableProtocol COM object has registered

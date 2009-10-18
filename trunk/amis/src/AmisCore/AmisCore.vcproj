@@ -312,6 +312,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\src\io\XercesDomWriter.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\src\io\XercesSaxParseBase.cpp"
 					>
 					<FileConfiguration
@@ -749,6 +753,10 @@
 				</File>
 				<File
 					RelativePath=".\include\io\UrlInputSource.h"
+					>
+				</File>
+				<File
+					RelativePath=".\include\io\XercesDomWriter.h"
 					>
 				</File>
 				<File

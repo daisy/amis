@@ -23,6 +23,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "io/BookListFileIO.h"
 #include "util/FilePathTools.h"
 #include "util/xercesutils.h"
+#include "io/XercesDomWriter.h"
 #include <iostream>
 
 #if defined(AMIS_COMPILER_MSVC)
@@ -45,11 +46,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include <xercesc/sax2/XMLReaderFactory.hpp>
 
 #include <xercesc/dom/DOM.hpp>
-#include <xercesc/dom/DOMWriter.hpp>
-#include <xercesc/framework/LocalFileFormatTarget.hpp>
-#include <xercesc/parsers/XercesDOMParser.hpp>
+
 #include <xercesc/sax2/Attributes.hpp>
-#include <xercesc/framework/StdOutFormatTarget.hpp>
 
 using namespace std;
 
@@ -159,15 +157,6 @@ bool amis::io::BookListFileIO::writeToFile(const ambulant::net::url* filepath, a
 {
 	if (filepath != NULL && filepath->is_local_file() == false) return false;
 
-	// Initialize the XML4C2 system.
-    try
-    {
-        XMLPlatformUtils::Initialize();
-    }
-    catch(...)//const XMLException& toCatch)
-    {
-        return false;
-    }
 	
 	if (pFile == NULL) return false;
 	if (!pFile->getFilepath()->is_local_file()) return false;
@@ -180,104 +169,44 @@ bool amis::io::BookListFileIO::writeToFile(const ambulant::net::url* filepath, a
 		local_file_name = amis::util::FilePathTools::getAsLocalFilePath(pFile->getFilepath()->get_file());
 	
 	mpBookList = pFile;
-
-	int i;
-	//the DOM implementation pointer (this is part of how Xerces does things)
-	DOMImplementation* pImpl;
-	//a pointer to the Document Writer.  This will save the document to file.
-	DOMWriter* pWriter;
-
-	//a DOMNode pointer - need this later for writing output
-	DOMNode* pDocNode;
-
-	//document output
-	XMLFormatTarget* pFormTarget; 
-
-	//You have to use the DOM Implementation class to get a pointer to the DOM object.  It's part of how Xerces works.
-	pImpl = DOMImplementationRegistry::getDOMImplementation(X("Core"));
-
-	//Now create a document using the DOM implementation's createDocument method 
-    mpDoc = pImpl->createDocument(
-				X("http://amisproject.org"),     // root element namespace URI.
-				X("bookList"),					// root element name
-                0);								// document type object (DTD).
-
-
-	DOMElement* p_root = mpDoc->getDocumentElement();
-	//add the root element attributes
+	amis::io::XercesDomWriter writer;
+	writer.initialize("bookList");
 	if (mpBookList->getName().size() > 0)
+	{
+		DOMElement* p_root = writer.getDocument()->getDocumentElement();
 		p_root->setAttribute(X("name"), mpBookList->getName().c_str());
-	
+	}
+
 	//start adding data to the DOM
 	amis::BookEntry* p_entry;
-	for (i=0; i<mpBookList->getNumberOfEntries(); i++)
+	for (int i=0; i<mpBookList->getNumberOfEntries(); i++)
 	{
 		p_entry = mpBookList->getEntry(i);
-		writeBookEntry(p_entry);
+		writeBookEntry(p_entry, writer.getDocument());
 	}
 
-
-	//initialize the DOM Writer
-	pWriter = ((DOMImplementationLS*)pImpl)->createDOMWriter();
-
-	//initialize the output stream and give it the name of our output file
-	//if no filepath was specified, use the one associated with the book list object
-	if (filepath->is_empty_path())
+	//make sure the path to the file exists
+	string dir = amis::util::FilePathTools::getParentDirectory(local_file_name);
+	if (access(dir.c_str(), 0) == -1)
 	{
-		//make sure the path to the file exists
-		string dir = amis::util::FilePathTools::getParentDirectory(local_file_name);
-		if (access(dir.c_str(), 0) == -1)
-		{
 #if defined(AMIS_COMPILER_MSVC)
-			_mkdir(dir.c_str());
+		_mkdir(dir.c_str());
 #elif defined(AMIS_COMPILER_GCC)
-			//todo: something that creates directories on other platforms
+		//todo: something that creates directories on other platforms
 #endif
-		}
-		pFormTarget = new LocalFileFormatTarget(local_file_name.c_str());
 	}
-	//otherwise save to the specified location
-	else
-	{
-		//make sure the path to the file exists
-		string dir = amis::util::FilePathTools::getParentDirectory(local_file_name);
-		if (access(dir.c_str(), 0) == -1)
-		{
-#if defined(AMIS_COMPILER_MSVC)
-			_mkdir(dir.c_str());
-#elif defined(AMIS_COMPILER_GCC)
-			//todo: something to make directories on other platforms
-#endif
-		}
-		pFormTarget = new LocalFileFormatTarget(local_file_name.c_str());
-	}
-
-	//get the document as a node pointer
-	pDocNode = (DOMNode*)mpDoc;
-
-	//process the document through the writer
-	//the writer sends output to the form target (which was configured to use our output file) 
-	pWriter->writeNode(pFormTarget, *pDocNode);
-	
-	//delete some pointers
-	delete pFormTarget;
-	delete pWriter;
-	delete mpDoc;
-
-	//terminate the XML platform utilities 
-    XMLPlatformUtils::Terminate();
-	return true;
+	writer.writeToFile(local_file_name);
 }
 
-void amis::io::BookListFileIO::writeBookEntry(amis::BookEntry* pEntry)
+DOMElement* amis::io::BookListFileIO::writeBookEntry(amis::BookEntry* pEntry, DOMDocument* pDoc)
 {
-	if (pEntry == NULL) return;
+	if (pEntry == NULL) return NULL;
 		
 	//create the title
-	DOMElement* p_book_elm = mpDoc->createElement(X("bookEntry"));
+	DOMElement* p_book_elm = pDoc->createElement(X("bookEntry"));
 	DOMElement* p_bmk_elm = NULL;
-	DOMElement* p_title_elm = mpDoc->createElement(X("title"));
-	DOMText* p_text_content = mpDoc->createTextNode(pEntry->getTitleText().c_str());
+	DOMElement* p_title_elm = pDoc->createElement(X("title"));
+	DOMText* p_text_content = pDoc->createTextNode(pEntry->getTitleText().c_str());
 	p_title_elm->appendChild(p_text_content);
 	amis::AudioNode* p_audio = pEntry->getTitleAudio();
 	if (p_audio != NULL)
@@ -290,7 +219,7 @@ void amis::io::BookListFileIO::writeBookEntry(amis::BookEntry* pEntry)
 
 	if (pEntry->mBmkPath.is_empty_path() == false)
 	{
-		p_bmk_elm = mpDoc->createElement(X("bookmarks"));
+		p_bmk_elm = pDoc->createElement(X("bookmarks"));
 		p_bmk_elm->setAttribute(X("href"), X(pEntry->mBmkPath.get_url().c_str()));
 	}
 	if (pEntry->mbIsLastRead == true)
@@ -301,6 +230,6 @@ void amis::io::BookListFileIO::writeBookEntry(amis::BookEntry* pEntry)
 
 	if (p_bmk_elm != NULL) p_book_elm->appendChild(p_bmk_elm);
 
-	DOMElement* p_root = mpDoc->getDocumentElement();
+	DOMElement* p_root = pDoc->getDocumentElement();
 	p_root->appendChild(p_book_elm);
 }

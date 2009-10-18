@@ -63,13 +63,11 @@ public:
 	void characters(const XMLCh *const, const unsigned int);
 	
 private:
-	void writeBookEntry(amis::BookEntry*);	
+	DOMElement* writeBookEntry(amis::BookEntry*, DOMDocument*);	
 	ambulant::net::url mFilePath;
 	//the books list file object model
 	amis::BookList* mpBookList;
 	amis::BookEntry* mpCurrentEntry;
-	//The DOM document pointer
-	xercesc_2_8::DOMDocument* mpDoc;
 	wstring mTempWChars;
 	bool mbFlagGetChars;
 };
