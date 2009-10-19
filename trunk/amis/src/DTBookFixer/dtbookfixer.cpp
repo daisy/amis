@@ -29,20 +29,12 @@
 
 using namespace std;
 
-bool is_dtbook(std::string& url)
-{
-	//TODO: check if this is actually a dtbook file (they're not all called "dtbook")
-    // Get the directory part
-	size_t slashpos = url.find_last_of("/");
-	if (slashpos <= 0)
-		return false;
-	std::string filename = url.substr(slashpos+1);
-	
-	if (!filename.compare("dtbook.xml")) return true;
-	else return false;
-}
 
-bool dtbookfixer(std::string& whole_file, std::ostream& os)
+//input:
+// wholeFile: a string containing the entire file
+// xsltpath: the path to the xslt file
+// outputStream: output stream that will receive the transformed output
+bool dtbookfixer(std::string& wholeFile, std::string xsltpath, std::ostream& outputStream)
 {
 	int	theResult = -1;
 	try
@@ -56,27 +48,22 @@ bool dtbookfixer(std::string& whole_file, std::ostream& os)
 		XalanTransformer::initialize();
 		
 		// Create a XalanTransformer.
-		XalanTransformer theXalanTransformer;
+		XalanTransformer xalan;
 
-		istrstream theXMLStream(whole_file.c_str(), strlen(whole_file.c_str()));
-		
-		//XALAN_USING_XALAN(XSLTInputSource)
+		istrstream input_stream(wholeFile.c_str(), strlen(wholeFile.c_str()));
 		XALAN_USING_XALAN(XSLTResultTarget)
 
-		XSLTResultTarget result(os);
+		XSLTResultTarget result(outputStream);
 
 		// Do the transform.
-		theResult = theXalanTransformer.transform(&theXMLStream, "c:\\devel\\dtbook2xhtml.xsl", os);
-
+		int success = xalan.transform(&input_stream, xsltpath.c_str(), outputStream);
+		
 		// Terminate Xalan...
 		XalanTransformer::terminate();
 
 		//this crashes.
 		// Terminate Xerces...
 		//XMLPlatformUtils::Terminate();
-
-		// Clean up the ICU, if it's integrated...
-		//XalanTransformer::ICUCleanUp();
 		
 		return true;
 	}

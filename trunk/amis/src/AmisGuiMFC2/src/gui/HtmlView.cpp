@@ -345,6 +345,12 @@ LPARAM CAmisHtmlView::OnHighlightUrlTarget(WPARAM wParam, LPARAM lParam)
 			if (SUCCEEDED(hr)) 
 			{
 				mpLoaderBridge->SetDatasourceFactory((DATASOURCEFACTORYPTR)df);
+
+				if (amis::dtb::DtbWithHooks::Instance()->getDaisyVersion() == amis::dtb::DAISY_2005)
+				{
+					mpLoaderBridge->SetDtbookProcessing(true);
+				}
+
 			}
 		}
 	} 

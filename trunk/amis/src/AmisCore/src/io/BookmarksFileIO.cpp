@@ -21,6 +21,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
 #include "io/BookmarksFileIO.h"
+#include "io/XercesDomWriter.h"
 #include "util/FilePathTools.h"
 #include "util/xercesutils.h"
 #include <iostream>
@@ -31,7 +32,6 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "direct.h"
 #endif
 
-//XERCES INCLUDES
 #include <xercesc/util/XMLString.hpp>
 #include <xercesc/sax2/Attributes.hpp>
 #include <xercesc/sax/SAXParseException.hpp>
@@ -42,13 +42,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include <xercesc/util/TransService.hpp>
 #include <xercesc/sax2/SAX2XMLReader.hpp>
 #include <xercesc/sax2/XMLReaderFactory.hpp>
-
 #include <xercesc/dom/DOM.hpp>
-#include <xercesc/dom/DOMWriter.hpp>
-#include <xercesc/framework/LocalFileFormatTarget.hpp>
-#include <xercesc/parsers/XercesDOMParser.hpp>
 #include <xercesc/sax2/Attributes.hpp>
-#include <xercesc/framework/StdOutFormatTarget.hpp>
 
 using namespace std;
 
@@ -57,10 +52,10 @@ amis::io::BookmarksFileIO::BookmarksFileIO()
 	this->mpBookmarks = NULL;
 	this->mpCurrentNote = NULL;
 	this->mpCurrentPosData = NULL;
-	this->mpDoc = NULL;
 	this->mpTitle = NULL;
 	this->mTempChars.erase();
 	this->mTempWChars.erase();
+	this->mpDoc = NULL;
 }
 
 amis::io::BookmarksFileIO::~BookmarksFileIO()
@@ -79,10 +74,10 @@ bool amis::io::BookmarksFileIO::readFromFile(const ambulant::net::url* filepath)
 	
 	this->mpCurrentNote = NULL;
 	this->mpCurrentPosData = NULL;
-	this->mpDoc = NULL;
 	this->mpTitle = NULL;
 	this->mTempChars.erase();
 	this->mTempWChars.erase();
+	this->mpDoc = NULL;
 
 	mElementStack.clear();
 
@@ -340,50 +335,15 @@ void amis::io::BookmarksFileIO::characters(const XMLCh *const chars, const unsig
 
 bool amis::io::BookmarksFileIO::writeToFile(const ambulant::net::url* filepath, amis::dtb::BookmarkSet* pBmks)
 {
-	// Xerces-specific stuff: try-catch block to initialize the XML platform utilities
-	// Initialize the XML4C2 system.
-    try
-    {
-        XMLPlatformUtils::Initialize();
-    }
-
-	// catch the error
-    catch(...)//const XMLException& toCatch)
-    {
-        return false;
-    }
-	// end of try-catch block
-
 	if (pBmks == NULL)
 		return false;
 
+	this->mpDoc = NULL;
 	mpBookmarks = pBmks;
 
-	unsigned int i;
-
-	//the DOM implementation pointer (this is part of how Xerces does things)
-	DOMImplementation* pImpl;
-
-	//a pointer to the Document Writer.  This will save the documet to file.
-	DOMWriter* pWriter;
-
-	//a DOMNode pointer - need this later for writing output
-	DOMNode* pDocNode;
-
-	//document output
-	 XMLFormatTarget* pFormTarget; 
-
-	//-------------
-	// initializing the document
-	//------------
-	//You have to use the DOM Implementation class to get a pointer to the DOM object.  It's part of how Xerces works.
-	pImpl = DOMImplementationRegistry::getDOMImplementation(X("Core"));
-
-	//Now create a document using the DOM implementation's createDocument method 
-    mpDoc = pImpl->createDocument(
-				X("http://amisproject.org"),     // root element namespace URI.
-				X("bookmarkSet"),				// root element name
-                0);								// document type object (DTD).
+	amis::io::XercesDomWriter writer;
+	writer.initialize("bookmarkSet");
+	mpDoc = writer.getDocument();
 
 	//start adding data to the DOM
 	writeTitle(mpBookmarks->getTitle());
@@ -394,10 +354,9 @@ bool amis::io::BookmarksFileIO::writeToFile(const ambulant::net::url* filepath, 
 	amis::dtb::Bookmark* p_bmk;
 	amis::dtb::Hilite* p_hilite;
 
-	for (i=0; i<mpBookmarks->getNumberOfItems(); i++)
+	for (int i=0; i<mpBookmarks->getNumberOfItems(); i++)
 	{	
 		p_pos = mpBookmarks->getItem(i);
-
 		if (p_pos->mType == amis::dtb::PositionMark::BOOKMARK)
 		{
 			p_bmk = (amis::dtb::Bookmark*)p_pos;
@@ -409,10 +368,6 @@ bool amis::io::BookmarksFileIO::writeToFile(const ambulant::net::url* filepath, 
 			writeHilite(p_hilite);
 		}
 	}
-
-	//initialize the DOM Writer
-	pWriter = ((DOMImplementationLS*)pImpl)->createDOMWriter();
-
 	ambulant::net::url base = filepath->get_base();
 	//make sure the path to the file exists
 	string dir = filepath->get_base().get_file();
@@ -425,25 +380,7 @@ bool amis::io::BookmarksFileIO::writeToFile(const ambulant::net::url* filepath, 
 #endif
 	}
 
-
-	//initialize the output stream and give it the name of our output file
-	pFormTarget = new LocalFileFormatTarget(filepath->get_file().c_str());
-
-	//get the document as a node pointer
-	pDocNode = (DOMNode*)mpDoc;
-
-	//process the document through the writer
-	//the writer sends output to the form target (which was configured to use our output file) 
-	pWriter->writeNode(pFormTarget, *pDocNode);
-	
-	//delete some pointers
-	delete pFormTarget;
-	delete pWriter;
-	delete mpDoc;
-
-	//terminate the XML platform utilities (part of how Xerces works)
-    XMLPlatformUtils::Terminate();
-
+	writer.writeToFile(filepath->get_file().c_str());
 	return true;
 }
 

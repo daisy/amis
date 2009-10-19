@@ -198,7 +198,7 @@ bool amis::io::BookListFileIO::writeToFile(const ambulant::net::url* filepath, a
 	writer.writeToFile(local_file_name);
 }
 
-DOMElement* amis::io::BookListFileIO::writeBookEntry(amis::BookEntry* pEntry, DOMDocument* pDoc)
+DOMElement* amis::io::BookListFileIO::writeBookEntry(amis::BookEntry* pEntry, xercesc_3_0::DOMDocument* pDoc)
 {
 	if (pEntry == NULL) return NULL;
 		

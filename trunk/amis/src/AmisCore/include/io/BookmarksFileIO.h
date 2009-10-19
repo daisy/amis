@@ -78,10 +78,7 @@ private:
 	string mTempChars;
 	bool mb_flagGetChars;
 	vector<string> mElementStack;
-	
-	//The DOM document pointer (for saving the file)
-	xercesc_2_8::DOMDocument* mpDoc;
-
+	xercesc_3_0::DOMDocument* mpDoc;
 	//the title element
 	amis::MediaGroup* mpTitle;
 	//the current bookmark or hilite element

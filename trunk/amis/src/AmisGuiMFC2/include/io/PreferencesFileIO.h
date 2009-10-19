@@ -66,7 +66,7 @@ private:
 	void addEntry(std::string, std::string);
 
 	amis::Preferences* mpPrefs;
-	xercesc_2_8::DOMDocument* mpDoc;
+	xercesc_3_0::DOMDocument* mpDoc;
 };
 }
 }

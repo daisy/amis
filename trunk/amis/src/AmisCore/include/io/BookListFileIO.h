@@ -63,7 +63,7 @@ public:
 	void characters(const XMLCh *const, const unsigned int);
 	
 private:
-	DOMElement* writeBookEntry(amis::BookEntry*, DOMDocument*);	
+	DOMElement* writeBookEntry(amis::BookEntry*, xercesc_3_0::DOMDocument*);	
 	ambulant::net::url mFilePath;
 	//the books list file object model
 	amis::BookList* mpBookList;

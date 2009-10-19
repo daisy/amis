@@ -21,7 +21,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
 #include "io/PreferencesFileIO.h"
-
+#include "io/XercesDomWriter.h"
 #include "util/FilePathTools.h"
 #include "util/xercesutils.h"
 #include <iostream>
@@ -43,14 +43,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include <xercesc/util/TransService.hpp>
 #include <xercesc/sax2/SAX2XMLReader.hpp>
 #include <xercesc/sax2/XMLReaderFactory.hpp>
-
 #include <xercesc/dom/DOM.hpp>
-#include <xercesc/dom/DOMWriter.hpp>
-#include <xercesc/framework/LocalFileFormatTarget.hpp>
-#include <xercesc/parsers/XercesDOMParser.hpp>
 #include <xercesc/sax2/Attributes.hpp>
-#include <xercesc/framework/StdOutFormatTarget.hpp>
-
 
 using namespace amis::io;
 
@@ -281,35 +275,13 @@ bool PreferencesFileIO::writeToFile(string filepath, amis::Preferences* pPrefs)
 		return false;
 
 	mpPrefs = pPrefs;
-
-	DOMImplementation* pImpl = NULL;
-	DOMWriter* pWriter = NULL;
-
-	xercesc_2_8::DOMDocument* pDoc = NULL;
-	XMLFormatTarget* pFormTarget = NULL; 
-
-	try
-    {
-        XMLPlatformUtils::Initialize();
-    }
-    catch(const XMLException& toCatch)
-    {
-        char *pMsg = XMLString::transcode(toCatch.getMessage());
-        XMLString::release(&pMsg); 
-        return false;
-    }
-	pImpl = DOMImplementationRegistry::getDOMImplementation(X("Core"));
-    pDoc = pImpl->createDocument(
-                X("http://amisproject.org"),                    
-				X("preferences"),   
-                (xercesc_2_8::DOMDocumentType*)0);   
-
-	mpDoc = pDoc;
+	
+	XercesDomWriter writer;
+	writer.initialize("preferences");
+	mpDoc = writer.getDocument();
 	writeData();
 	
-	//initialize the DOM Writer
-	pWriter = ((DOMImplementationLS*)pImpl)->createDOMWriter();
-
+	
 	//make sure the path to the file exists
 	string dir = amis::util::FilePathTools::getParentDirectory(filepath);
 	if (access(dir.c_str(), 0) == -1)
@@ -317,18 +289,7 @@ bool PreferencesFileIO::writeToFile(string filepath, amis::Preferences* pPrefs)
 		_mkdir(dir.c_str());
 	}
 
-	pFormTarget = new LocalFileFormatTarget(filepath.c_str());
-	DOMNode* pDocNode = (DOMNode*)mpDoc;
-	pWriter->writeNode(pFormTarget, *pDocNode);
-	
-	//delete some pointers
-	delete pFormTarget;
-	delete pWriter;
-	delete mpDoc;
-
-	//terminate the XML platform utilities (part of how Xerces works)
-    XMLPlatformUtils::Terminate();
-
+	writer.writeToFile(filepath);
 	return true;
 }
 
