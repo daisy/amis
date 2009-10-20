@@ -148,7 +148,7 @@ void amis::io::BookListFileIO::endElement(const XMLCh* const uri, const XMLCh* c
 
 	XMLString::release(&element_name);
 }
-void amis::io::BookListFileIO::characters(const XMLCh *const chars, const unsigned int length)
+void amis::io::BookListFileIO::characters(const XMLCh* const chars, const XMLSize_t length)
 {
 	if (mbFlagGetChars == true) mTempWChars.append((wchar_t*)chars);
 }

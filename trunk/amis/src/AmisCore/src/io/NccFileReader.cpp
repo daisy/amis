@@ -140,7 +140,7 @@ void amis::io::NccFileReader::endElement(const XMLCh* const uri,
 	XMLString::release(&element_name); 
 }
 
-void amis::io::NccFileReader::characters(const XMLCh *const chars, const unsigned int length)
+void amis::io::NccFileReader::characters(const XMLCh* const chars, const XMLSize_t length)
 {
 	if (mbFlag_GetChars == true)
 	{

@@ -64,7 +64,7 @@ public:
 		const XMLCh* const localname,
 		const XMLCh* const qname) = 0;
 	//!xerces character data event
-	virtual void characters(const XMLCh *const, const unsigned int) = 0;
+	virtual void characters(const XMLCh *const, const XMLSize_t) = 0;
 	
 protected:
 	void addCustomTest(string, bool, bool, string);

@@ -311,7 +311,7 @@ void amis::io::BookmarksFileIO::endElement( const XMLCh* const uri,
 //--------------------------------------------------
 //xerces character data event
 //--------------------------------------------------
-void amis::io::BookmarksFileIO::characters(const XMLCh *const chars, const unsigned int length)
+void amis::io::BookmarksFileIO::characters(const XMLCh* const chars, const XMLSize_t length)
 {
 	if (mb_flagGetChars == true)
 	{

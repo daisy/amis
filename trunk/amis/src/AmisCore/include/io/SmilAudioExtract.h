@@ -57,7 +57,7 @@ public:
 		const XMLCh* const localname,
 		const XMLCh* const qname);
 	//we don't need this method but we need to implement it
-	void characters(const XMLCh *const, const unsigned int){}
+	void characters(const XMLCh *const chars, const XMLSize_t len){}
 	/*end of sax methods*/
 
 private:

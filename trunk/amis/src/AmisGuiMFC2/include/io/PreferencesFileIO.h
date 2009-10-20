@@ -56,7 +56,7 @@ public:
 	void endElement(const XMLCh* const uri,
 		const XMLCh* const localname,
 		const XMLCh* const qname){/*we don't need this function*/}
-	void characters(const XMLCh *const, const unsigned int){/*we don't need this function*/}
+	void characters(const XMLCh *const, const XMLSize_t){/*we don't need this function*/}
 
 private:
 	void writeData();

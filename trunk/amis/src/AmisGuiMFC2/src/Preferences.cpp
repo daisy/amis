@@ -82,11 +82,11 @@ Preferences::Preferences()
 	//note that file paths here are hardcoded relative to the application directory
 	//whereas in the prefs XML file, they are relative to the prefs XML file
 	//they get overridden by reading in the preferences file; these defaults are just here as a safety measure
-	mFontsizeCssDir = ambulant::net::url::from_filename("./settings/css/font/");
-	mCustomCssDir = ambulant::net::url::from_filename("./settings/css/customStyles/");
-	mLangpacksDir = ambulant::net::url::from_filename("./settings/lang/");
-	mUserBmkDir = ambulant::net::url::from_filename("./settings/bmk/");
-	mAmisCssFile = ambulant::net::url::from_filename("./settings/css/amis.css");	
+	mFontsizeCssDir = ambulant::net::url::from_filename("./css/font/");
+	mCustomCssDir = ambulant::net::url::from_filename("./css/customStyles/");
+	mLangpacksDir = ambulant::net::url::from_filename("./lang/");
+	mUserBmkDir = ambulant::net::url::from_filename("./bmk/");
+	mAmisCssFile = ambulant::net::url::from_filename("./css/amis.css");	
 	
 	ambulant::net::url app_path = ambulant::net::url::from_filename(theApp.getAppSettingsPath());
 	mFontsizeCssDir = mFontsizeCssDir.join_to_base(app_path);

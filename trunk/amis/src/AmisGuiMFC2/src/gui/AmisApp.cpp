@@ -512,7 +512,12 @@ void CAmisApp::initializePathsAndFiles(string preferencesFile)
 		if (prefs_url.is_absolute()) prefs_path = preferencesFile;
 		else prefs_path = amis::util::FilePathTools::goRelativePath(settings_dir, preferencesFile);
 	}
-	prefs_io.readFromFile(prefs_path);
+	bool could_read_prefs = prefs_io.readFromFile(prefs_path);
+	if (!could_read_prefs)
+	{
+		amis::util::Log::Instance()->writeError("Could not read prefs", prefs_path, 
+			"AmisApp::initializePathsAndFiles");
+	}
 	mbWasLastExitClean = Preferences::Instance()->getWasExitClean();
 	Preferences::Instance()->setWasExitClean(false);
 	prefs_io.writeToFile(prefs_path, Preferences::Instance());

@@ -134,7 +134,7 @@ void amis::io::QuickDataSmilFileReader::endElement( const XMLCh* const uri,
 }
 
 
-void amis::io::QuickDataSmilFileReader::characters(const XMLCh *const chars, const unsigned int length)
+void amis::io::QuickDataSmilFileReader::characters(const XMLCh* const chars, const XMLSize_t length)
 {
 }
 

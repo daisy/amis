@@ -158,7 +158,7 @@ void amis::io::TextSearch::endElement( const XMLCh* const uri,
 }
 
 
-void amis::io::TextSearch::characters(const XMLCh *const chars, const unsigned int length)
+void amis::io::TextSearch::characters(const XMLCh* const chars, const XMLSize_t length)
 {
 	if (mbFlag_GetChars == true)
 	{

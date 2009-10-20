@@ -943,7 +943,7 @@ void DataReader::endElement( const XMLCh* const uri,
 
 }
 
-void DataReader::characters(const XMLCh *const chars, const unsigned int length)
+void DataReader::characters(const XMLCh *const chars, const XMLSize_t length)
 {
 	if (mbFlag_GetChars == true)
 	{

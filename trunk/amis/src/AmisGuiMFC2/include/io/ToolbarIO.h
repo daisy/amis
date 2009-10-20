@@ -55,7 +55,7 @@ public:
 	void endElement(const XMLCh* const uri,
 		const XMLCh* const localname,
 		const XMLCh* const qname);
-	void characters(const XMLCh *const, const unsigned int){/*this function is not used here*/}
+	void characters(const XMLCh *const, const XMLSize_t){/*this function is not used here*/}
 
 private:
 	UINT getIdForCommandString(string);

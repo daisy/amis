@@ -62,7 +62,7 @@ public:
     void endElement(const XMLCh* const uri,
 		const XMLCh* const localname,
 		const XMLCh* const qname);
-	void characters(const XMLCh *const chars, const unsigned int length);
+	void characters(const XMLCh *const, const XMLSize_t);
 private:
 	string readFromFile(const ambulant::net::url*);
 	wstring mSearchString;

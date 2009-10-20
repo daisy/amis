@@ -258,7 +258,7 @@ void amis::io::TitleAuthorParse::endElement( const XMLCh* const uri,
 }
 
 
-void amis::io::TitleAuthorParse::characters(const XMLCh *const chars, const unsigned int length)
+void amis::io::TitleAuthorParse::characters(const XMLCh* const chars, const XMLSize_t length)
 {
 	if (mbFlagGetChars == true)
 	{

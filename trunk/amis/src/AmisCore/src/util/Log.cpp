@@ -111,6 +111,12 @@ void amis::util::Log::writeError(string msg, const ambulant::net::url* file, str
 	else log_msg += "*NULL file name*";
 	writeError(log_msg, origin);
 }
+void amis::util::Log::writeError(string msg, string file, string origin)
+{
+	string log_msg = msg;
+	log_msg += file;
+	writeError(log_msg, origin);
+}
 
 //WARNING logging functions
 void amis::util::Log::writeWarning(string msg, string origin)

@@ -63,7 +63,7 @@ public:
 		const XMLCh* const localname,
 		const XMLCh* const qname);
 	//!xerces character data event
-	virtual void characters(const XMLCh *const, const unsigned int);
+	virtual void characters(const XMLCh *const, const XMLSize_t);
 	
 private:
 	bool mbFlagGetChars;

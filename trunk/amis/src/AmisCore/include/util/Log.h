@@ -60,7 +60,8 @@ public:
 	void writeError(string msg, string origin);
 	void writeError(string msg, const ambulant::net::url* path, string origin);
 	void writeError(amis::Error err, string origin);
-	
+	void writeError(string msg, string file, string origin);
+
 	//traces are for anything else
 	void writeTrace(string msg, string origin="");
 	void writeTrace(string msg, const ambulant::net::url* path, string origin="");

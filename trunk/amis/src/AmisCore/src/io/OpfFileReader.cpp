@@ -209,7 +209,7 @@ void amis::io::OpfFileReader::endElement(const XMLCh* const uri,
 	}
 }
 
-void amis::io::OpfFileReader::characters(const XMLCh *const chars, const unsigned int length)
+void amis::io::OpfFileReader::characters(const XMLCh* const chars, const XMLSize_t length)
 {
 	if (mbFlag_GetChars == true) mTempChars.append((wchar_t*)chars);
 }

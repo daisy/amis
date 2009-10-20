@@ -71,7 +71,7 @@ public:
     void endElement(const XMLCh* const uri,
 		const XMLCh* const localname,
 		const XMLCh* const qname);
-	void characters(const XMLCh *const, const unsigned int);
+	void characters(const XMLCh *const, const XMLSize_t);
 
 private:
 	//!see if the node name is interesting to us
