@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE dtbook PUBLIC "-//NISO//DTD dtbook 2005-3//EN" "http://www.daisy.org/z3986/2005/dtbook-2005-3.dtd">
+<?xml-stylesheet href="dtbookbasic.css" type="text/css"?>
+<dtbook xmlns="http://www.daisy.org/z3986/2005/dtbook/" version="2005-3" xml:lang="en-US">
+	<head>
+		<meta content="AUTO-UID-5059463624137734586" name="dtb:uid" />
+		<meta content="2.0.0.0 Beta" name="dt:version" />
+		<meta content="Selections from &quot;Great Pictures, As Seen and Described by Famous Writers&quot;" name="dc:Title" />
+		<meta name="dc:Creator" content="Esther Singleton" />
+		<meta content="2009-02-07" name="dc:Date" />
+		<meta name="dc:Publisher" content="Marisa DeMeglio" />
+		<meta content="AUTO-UID-5059463624137734586" name="dc:Identifier" />
+		<meta content="en-US" name="dc:Language" />
+	</head>
+	<book showin="blp">
+		<frontmatter>
+			<doctitle><sent smilref="speechgen0001.smil#tcp1" id="dtb1">Selections from "Great Pictures, As Seen and Described by Famous Writers"</sent></doctitle>
+			<docauthor><sent smilref="speechgen0001.smil#tcp2" id="dtb2">Esther Singleton</sent></docauthor>
+		</frontmatter>
+		<bodymatter id="bodymatter_0001">
+			<level1>
+				<pagenum smilref="speechgen0001.smil#tcp3" page="normal" id="page1">1</pagenum>
+				<h1><sent id="dtb3" smilref="speechgen0002.smil#tcp4">  Selections from “Great Pictures, as Seen and Described by Famous Writers”
+</sent></h1>
+				<p><sent id="dtb4" smilref="speechgen0002.smil#tcp5">The selections here have been taken from “<em>Great Pictures, as Seen and Described by Famous Writers</em>, Edited and Translated By Esther Singleton, 1899”</sent></p>
+			</level1>
+		</bodymatter>
+	</book>
+</dtbook>
