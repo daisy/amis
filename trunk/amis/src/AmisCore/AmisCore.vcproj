@@ -407,6 +407,10 @@
 						/>
 					</FileConfiguration>
 				</File>
+				<File
+					RelativePath=".\src\dtb\TransformDTBook.cpp"
+					>
+				</File>
 				<Filter
 					Name="nav"
 					>
@@ -793,6 +797,10 @@
 				</File>
 				<File
 					RelativePath=".\include\dtb\Spine.h"
+					>
+				</File>
+				<File
+					RelativePath=".\include\dtb\TransformDTBook.h"
 					>
 				</File>
 				<Filter
