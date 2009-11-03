@@ -60,9 +60,10 @@ bool amis::io::XercesDomWriter::initialize(std::string rootElementName)
         return false;
     }
 	
-	
-	mpImpl = DOMImplementationRegistry::getDOMImplementation(X("Core"));
-	mpDoc = mpImpl->createDocument(X("http://amisproject.org"), X(rootElementName.c_str()), 0);							
+	string core = "Core";
+	string ns = "http://amisproject.org";
+	mpImpl = DOMImplementationRegistry::getDOMImplementation(X(core.c_str()));
+	mpDoc = mpImpl->createDocument(X(ns.c_str()), X(rootElementName.c_str()), 0);							
 
 	return true;	
 }
@@ -76,14 +77,9 @@ void amis::io::XercesDomWriter::writeToFile(string localFileName)
 	p_output->setEncoding(X("utf-8"));
 	p_output->setSystemId(X("amis"));
 	p_output->setByteStream(p_form_target);
-
-  /*  DOMConfiguration* dc = pWriter->getDomConfig();
-    dc->setParameter(XMLUni::fgDOMErrorHandler,errorHandler);
-    dc->setParameter(XMLUni::fgDOMWRTDiscardDefaultContent,true); 
-*/
 	
 	p_writer->write(mpDoc, p_output);
-
+	
 	p_output->release();
 	p_writer->release();
 	delete p_form_target;
@@ -94,7 +90,8 @@ void amis::io::XercesDomWriter::writeToFile(string localFileName)
 //useful function to write any DOM to file, not just the one created by XercesDomWriter
 void amis::io::XercesDomWriter::writeToFile(xercesc_3_0::DOMDocument* doc, string localFileName)
 {
+	string core = "Core";
 	mpDoc = doc;
-	mpImpl = DOMImplementationRegistry::getDOMImplementation(X("Core"));
+	mpImpl = DOMImplementationRegistry::getDOMImplementation(X(core.c_str()));
 	writeToFile(localFileName);
 }

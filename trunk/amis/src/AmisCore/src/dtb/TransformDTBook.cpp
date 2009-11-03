@@ -6,19 +6,32 @@
 #include "util/Log.h"
 #include "util/xercesutils.h"
 
-#include "io/XercesDomWriter.h"
 #include <iostream>
 
-void print_subtree(DOMNode*);
-
-//pass the entire file
-bool amis::dtb::TransformDTBook::transform(string dtbook)
+amis::dtb::TransformDTBook::TransformDTBook()
 {
+	mpDoc = NULL;
+}
+amis::dtb::TransformDTBook::~TransformDTBook()
+{
+}
+string amis::dtb::TransformDTBook::getResults()
+{
+	string html = "<html>";
+	//erase everything that comes before the <html> start tag
+	int pos = mResults.find(html);
+	mResults.replace(0, pos, "");
+	return mResults;
+}
+//pass the entire file
+bool amis::dtb::TransformDTBook::transform(string dtbook, string stylesheet)
+{
+	mStylesheet = stylesheet;
+	
 	try
     {
         XMLPlatformUtils::Initialize();
     }
-
     catch(const XMLException &toCatch)
     {
        return false;
@@ -48,48 +61,35 @@ bool amis::dtb::TransformDTBook::transform(string dtbook)
 	parser->setIncludeIgnorableWhitespace(false);
 	parser->setLoadExternalDTD(false);
 	parser->setSkipDTDValidation(true);
-//    DOMTreeErrorReporter *errReporter = new DOMTreeErrorReporter();
-//    parser->setErrorHandler(errReporter);
 
-    //
-    //  Parse the XML file, catching any XML exceptions that might propogate
-    //  out of it.
-    //
     bool errorsOccurred = false;
-
     try
     {
         parser->parse(*memBufIS);
     }
     catch (const OutOfMemoryException&)
     {
-//        XERCES_STD_QUALIFIER cerr << "OutOfMemoryException" << XERCES_STD_QUALIFIER endl;
-        errorsOccurred = true;
+		amis::util::Log::Instance()->writeError("Parse error: out of memory", "TransformDTBook::transform");
+		errorsOccurred = true;
     }
     catch (const XMLException& e)
     {
-//        XERCES_STD_QUALIFIER cerr << "An error occurred during parsing\n   Message: "
-//             << StrX(e.getMessage()) << XERCES_STD_QUALIFIER endl;
-        errorsOccurred = true;
+		char* exception = XMLString::transcode(e.getMessage());
+		string msg = "Parse error: ";
+		msg += exception;
+		amis::util::Log::Instance()->writeError(msg, "TransformDTBook::transform");
+		errorsOccurred = true;
+		XMLString::release(&exception);
     }
 
     catch (const DOMException& e)
     {
- //       const unsigned int maxChars = 2047;
- //       XMLCh errText[maxChars + 1];
-
- //       XERCES_STD_QUALIFIER cerr << "\nDOM Error during parsing: '" << gXmlFile << "'\n"
- //            << "DOMException code is:  " << e.code << XERCES_STD_QUALIFIER endl;
-
-   //     if (DOMImplementation::loadDOMExceptionMsg(e.code, errText, maxChars))
-   //          XERCES_STD_QUALIFIER cerr << "Message is: " << StrX(errText) << XERCES_STD_QUALIFIER endl;
-
+		amis::util::Log::Instance()->writeError("Parse error: DOMException", "TransformDTBook::transform");
         errorsOccurred = true;
     }
-
     catch (...)
     {
-     //   XERCES_STD_QUALIFIER cerr << "An error occurred during parsing\n " << XERCES_STD_QUALIFIER endl;
+		amis::util::Log::Instance()->writeError("General xerces error", "TransformDTBook::transform");
         errorsOccurred = true;
     }
 
@@ -97,78 +97,124 @@ bool amis::dtb::TransformDTBook::transform(string dtbook)
 	{
 		delete parser;
 		delete memBufIS;
-		// And call the termination method
 		XMLPlatformUtils::Terminate();
 		return false;
 	}
 	else
 	{
-		process(parser->getDocument());
+		mpDoc = parser->getDocument();
+		process();
+		domToString();
 	}
+	return true;
 }
 
 //make dtbook IE-friendly
-void amis::dtb::TransformDTBook::process(xercesc_3_0::DOMDocument* doc)
+void amis::dtb::TransformDTBook::process()
 {
-	DOMElement* dtbook = (DOMElement*)doc->getElementsByTagName(X("dtbook"))->item(0);
-	DOMElement* head = (DOMElement*)doc->getElementsByTagName(X("head"))->item(0);
-	DOMElement* book = (DOMElement*)doc->getElementsByTagName(X("book"))->item(0);
-
 	string html_tag = "html";
 	string body_tag = "body";
+	string head_tag = "head";
+	string dtbook_tag = "dtbook";
+	string book_tag = "book";
+	string frontmatter_tag = "frontmatter";
+	string bodymatter_tag = "bodymatter";
+	string rearmatter_tag = "rearmatter";
+
+	DOMElement* dtbook = (DOMElement*)mpDoc->getElementsByTagName(X(dtbook_tag.c_str()))->item(0);
+	DOMElement* head = (DOMElement*)mpDoc->getElementsByTagName(X(head_tag.c_str()))->item(0);
+	DOMElement* book = (DOMElement*)mpDoc->getElementsByTagName(X(book_tag.c_str()))->item(0);
 
 	//replace <dtbook> by <html>
-	DOMElement* html = doc->createElement(X(html_tag.c_str()));
+	DOMElement* html = mpDoc->createElement(X(html_tag.c_str()));
 	//replace <book> by <body>
-	DOMElement* body = doc->createElement(X(body_tag.c_str()));
+	DOMElement* body = mpDoc->createElement(X(body_tag.c_str()));
 
-	//move the <book> child nodes to <body>
-	DOMNodeList* book_children = book->getChildNodes();
-	for (int i = 0; i<book_children->getLength(); i++)
-	{
-		DOMNode* child = book_children->item(i);
-		DOMElement* clone = (DOMElement*)child->cloneNode(true);
-		
-		print_subtree(child);
+	DOMNodeList* frontmatters = book->getElementsByTagName(X(frontmatter_tag.c_str()));
+	DOMNodeList* bodymatters = book->getElementsByTagName(X(bodymatter_tag.c_str()));
+	DOMNodeList* rearmatters = book->getElementsByTagName(X(rearmatter_tag.c_str()));
 
-		book->removeChild(child);
-		body->appendChild(clone);
-		child->release();
-	}
-	
+	if (frontmatters->getLength() > 0)
+		moveNode((DOMElement*)frontmatters->item(0), book, body);
+	if (bodymatters->getLength() > 0)
+		moveNode((DOMElement*)bodymatters->item(0), book, body);
+	if (rearmatters->getLength() > 0)
+		moveNode((DOMElement*)rearmatters->item(0), book, body);
 	
 	//remove <book> from <dtbook>
 	dtbook->removeChild(book);
 	book->release();
 
 	//clone <head> and move to <html>
-	DOMElement* head_clone = (DOMElement*)head->cloneNode(true);
-	dtbook->removeChild(head);
-	html->appendChild((DOMNode*)head_clone);
-	head->release();
+	moveNode(head, dtbook, html);
 
 	//attach <body> to <html>
 	html->appendChild(body);
 	//remove <dtbook> from the document
-	doc->removeChild(dtbook);
+	mpDoc->removeChild(dtbook);
 	dtbook->release();
 	//add <html> as the new root element
-	doc->appendChild(html);
+	mpDoc->appendChild(html);
+
+	//add http-equiv
+	//<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	string meta_tagname = "meta";
+	string http_equiv_attr = "http-equiv";
+	string http_equiv_value="content-type";
+	string content_attr = "content";
+	string content_value = "text/html;charset=";
+	char* encoding = XMLString::transcode(mpDoc->getXmlEncoding());
+	content_value += encoding;
+	XMLString::release(&encoding);
+
+	DOMElement* meta_http_equiv = mpDoc->createElement(X(meta_tagname.c_str()));
+	meta_http_equiv->setAttribute(X(http_equiv_attr.c_str()), X(http_equiv_value.c_str()));
+	meta_http_equiv->setAttribute(X(content_attr.c_str()), X(content_value.c_str()));
+
+	//add a stylesheet link
+	//<link rel="stylesheet" type="text/css" href="dtbookbasic.css"/>
+	string link_tagname = "link";
+	string rel_attr = "rel";
+	string rel_attr_value="stylesheet";
+	string type_attr = "type";
+	string type_attr_value = "text/css";
+	string href_attr = "href";
+	string href_attr_value = mStylesheet;
+	
+	DOMElement* link = mpDoc->createElement(X(link_tagname.c_str()));
+	link->setAttribute(X(rel_attr.c_str()), X(rel_attr_value.c_str()));
+	link->setAttribute(X(type_attr.c_str()), X(type_attr_value.c_str()));
+	link->setAttribute(X(href_attr.c_str()), X(href_attr_value.c_str()));
+
+	DOMElement* head_elm = (DOMElement*)mpDoc->getElementsByTagName(X(head_tag.c_str()))->item(0);
+	head_elm->appendChild(meta_http_equiv);
+	head_elm->appendChild(link);
 
 	//get rid of the doctype declaration
-	DOMDocumentType* doctype = doc->getDoctype();
-	doc->removeChild(doctype);
+	DOMDocumentType* doctype = mpDoc->getDoctype();
+	mpDoc->removeChild(doctype);
 	doctype->release();
-	
-	//TODO: add css reference
-
-	amis::io::XercesDomWriter w;
-	w.writeToFile(doc, "c:\\devel\\dtbook_transform.html");
-
-	
 }
 
-void print_subtree(DOMNode* node)
+void amis::dtb::TransformDTBook::domToString()
+{
+	string core = "Core";
+	DOMImplementation* impl = DOMImplementationRegistry::getDOMImplementation(X(core.c_str()));
+	DOMLSSerializer* p_writer = ((DOMImplementationLS*)impl)->createLSSerializer();
+	XMLCh* docstring = p_writer->writeToString(mpDoc);
+	mResults = XMLString::transcode(docstring);
+}
+
+//clone, remove, append, release
+void amis::dtb::TransformDTBook::moveNode(DOMElement* node, DOMElement* oldParent, DOMElement* newParent)
+{
+	DOMElement* clone = (DOMElement*)node->cloneNode(true);
+	oldParent->removeChild(node);
+	newParent->appendChild(clone);
+	node->release();
+}
+
+void amis::dtb::TransformDTBook::printSubtree(DOMNode* node)
 {
 	DOMElement* elm = (DOMElement*) node;
 	const char* name = XMLString::transcode(elm->getTagName());
@@ -176,7 +222,7 @@ void print_subtree(DOMNode* node)
 	if (name)
 		cout<<name<<endl;
 	for (int i = 0; i<node->getChildNodes()->getLength(); i++)
-		print_subtree(node->getChildNodes()->item(i));
+		printSubtree(node->getChildNodes()->item(i));
 	
 	cout<<endl;
 }

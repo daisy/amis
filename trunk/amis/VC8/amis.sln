@@ -59,8 +59,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "plugin_ffmpeg", "..\..\..\.
 		Release.AspNetCompiler.Debug = "False"
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DTBookFixer", "..\src\DTBookFixer\DTBookFixer.vcproj", "{607C64C1-39DA-443B-9B19-7F7FB4FFD875}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -182,22 +180,6 @@ Global
 		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}.ReleaseNoXercesNoHtml|Win32.Build.0 = Release|Win32
 		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}.ReleaseShlib|Win32.ActiveCfg = Release|Win32
 		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}.ReleaseShlib|Win32.Build.0 = Release|Win32
-		{607C64C1-39DA-443B-9B19-7F7FB4FFD875}.Debug|Win32.ActiveCfg = Debug|Win32
-		{607C64C1-39DA-443B-9B19-7F7FB4FFD875}.Debug|Win32.Build.0 = Debug|Win32
-		{607C64C1-39DA-443B-9B19-7F7FB4FFD875}.DebugNoXerces|Win32.ActiveCfg = Debug|Win32
-		{607C64C1-39DA-443B-9B19-7F7FB4FFD875}.DebugNoXerces|Win32.Build.0 = Debug|Win32
-		{607C64C1-39DA-443B-9B19-7F7FB4FFD875}.DebugNoXercesNoHtml|Win32.ActiveCfg = Debug|Win32
-		{607C64C1-39DA-443B-9B19-7F7FB4FFD875}.DebugNoXercesNoHtml|Win32.Build.0 = Debug|Win32
-		{607C64C1-39DA-443B-9B19-7F7FB4FFD875}.DebugShlib|Win32.ActiveCfg = Debug|Win32
-		{607C64C1-39DA-443B-9B19-7F7FB4FFD875}.DebugShlib|Win32.Build.0 = Debug|Win32
-		{607C64C1-39DA-443B-9B19-7F7FB4FFD875}.Release|Win32.ActiveCfg = Release|Win32
-		{607C64C1-39DA-443B-9B19-7F7FB4FFD875}.Release|Win32.Build.0 = Release|Win32
-		{607C64C1-39DA-443B-9B19-7F7FB4FFD875}.ReleaseNoXerces|Win32.ActiveCfg = Release|Win32
-		{607C64C1-39DA-443B-9B19-7F7FB4FFD875}.ReleaseNoXerces|Win32.Build.0 = Release|Win32
-		{607C64C1-39DA-443B-9B19-7F7FB4FFD875}.ReleaseNoXercesNoHtml|Win32.ActiveCfg = Release|Win32
-		{607C64C1-39DA-443B-9B19-7F7FB4FFD875}.ReleaseNoXercesNoHtml|Win32.Build.0 = Release|Win32
-		{607C64C1-39DA-443B-9B19-7F7FB4FFD875}.ReleaseShlib|Win32.ActiveCfg = Release|Win32
-		{607C64C1-39DA-443B-9B19-7F7FB4FFD875}.ReleaseShlib|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

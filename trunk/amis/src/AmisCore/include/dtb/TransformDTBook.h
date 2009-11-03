@@ -16,13 +16,19 @@ namespace dtb
 	class TransformDTBook
 	{
 	public:
-		TransformDTBook(){};
-		~TransformDTBook(){};
-		bool transform(string);
+		TransformDTBook();
+		~TransformDTBook();
+		bool transform(string, string);
 		string getResults();
 	private:
-		void process(xercesc_3_0::DOMDocument*);
+		void process();
+		void printSubtree(DOMNode*);
+		void moveNode(DOMElement* node, DOMElement* oldParent, DOMElement* newParent);
+		void domToString();
+		
+		string mStylesheet;
 		string mResults;
+		xercesc_3_0::DOMDocument* mpDoc;
 	};
 }
 }
