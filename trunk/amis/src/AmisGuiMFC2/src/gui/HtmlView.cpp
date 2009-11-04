@@ -321,57 +321,63 @@ LPARAM CAmisHtmlView::OnHighlightUrlTarget(WPARAM wParam, LPARAM lParam)
 	assert(wParam == 0);
 	std::string *url = (std::string *)lParam;
 	std::string newurl = *url;
-
-	//the catch here: if you build AMIS without protected book support, you don't get
-	//nice-looking transformed dtbook
+	
+	//make sure we aren't processing the same document
+	ambulant::net::url amb_url = ambulant::net::url::from_url(newurl);
+	if (!amb_url.same_document(TextRenderBrain::Instance()->getCurrentUrl()))
+	{
+		//the catch here: if you build AMIS without protected book support, you don't get
+		//nice-looking transformed dtbook
 #ifdef HTML_LOAD_AMBULANT_PDTB
 #ifdef WITH_PROTECTED_BOOK_SUPPORT
-	amis::UrlList* text_urls = amis::dtb::DtbWithHooks::Instance()->getFileSet()->getTextFiles();
-	bool is_daisy_text_file = amis::util::FilePathTools::urlListContains(*url, text_urls);
-	//Protected books OR DAISY 2005 format books require manual loading through IE
-	if (amis::dtb::DtbWithHooks::Instance()->isProtected() || 
-		(amis::dtb::DtbWithHooks::Instance()->getDaisyVersion() == amis::dtb::DAISY_2005
-		&&
-		is_daisy_text_file))
-	{
-		// Prepend ambulantpdtb: to the URL. This will change the protocol,
-		// and the PdtbIePlugin PluggableProtocol COM object has registered
-		// that protocol. It will then be used to get the data, and it will
-		// do the right thing wrt. decoding.
-		if (newurl.substr(0, 13) != "ambulantpdtb:")
-			newurl = "ambulantpdtb:" + newurl;
-		// Also, we need to inform the PdtbPluggableProtocol about
-		// our datasource factory. This is done with the PdtbBridge
-		// object, which remembers the factory until disposed of.
-		if (mpLoaderBridge == NULL) 
+		amis::UrlList* text_urls = amis::dtb::DtbWithHooks::Instance()->getFileSet()->getTextFiles();
+		string url_no_target = amis::util::FilePathTools::clearTarget(*url);
+		bool is_daisy_text_file = amis::util::FilePathTools::urlListContains(url_no_target, text_urls);
+		//Protected books OR DAISY 2005 format books require manual loading through IE
+		if (amis::dtb::DtbWithHooks::Instance()->isProtected() || 
+			(amis::dtb::DtbWithHooks::Instance()->getDaisyVersion() == amis::dtb::DAISY_2005
+			&&
+			is_daisy_text_file))
 		{
-			ambulant::net::datasource_factory *df = 
-				MainWndParts::Instance()->mpMmView->getDatasourceFactory();
-			assert(df);
-			HRESULT hr = CoCreateInstance(CLSID_CPdtbBridge, 0, 
-				CLSCTX_INPROC_SERVER, IID_PdtbBridge, (void **)&mpLoaderBridge);
-			if (SUCCEEDED(hr)) 
+			// Prepend ambulantpdtb: to the URL. This will change the protocol,
+			// and the PdtbIePlugin PluggableProtocol COM object has registered
+			// that protocol. It will then be used to get the data, and it will
+			// do the right thing wrt. decoding.
+			if (newurl.substr(0, 13) != "ambulantpdtb:")
+				newurl = "ambulantpdtb:" + newurl;
+			// Also, we need to inform the PdtbPluggableProtocol about
+			// our datasource factory. This is done with the PdtbBridge
+			// object, which remembers the factory until disposed of.
+			if (mpLoaderBridge == NULL) 
 			{
-				mpLoaderBridge->SetDatasourceFactory((DATASOURCEFACTORYPTR)df);
-
-				if (amis::dtb::DtbWithHooks::Instance()->getDaisyVersion() == amis::dtb::DAISY_2005)
+				ambulant::net::datasource_factory *df = 
+					MainWndParts::Instance()->mpMmView->getDatasourceFactory();
+				assert(df);
+				HRESULT hr = CoCreateInstance(CLSID_CPdtbBridge, 0, 
+					CLSCTX_INPROC_SERVER, IID_PdtbBridge, (void **)&mpLoaderBridge);
+				if (SUCCEEDED(hr)) 
 				{
-					mpLoaderBridge->SetDtbookProcessing(true);
-				}
+					mpLoaderBridge->SetDatasourceFactory((DATASOURCEFACTORYPTR)df);
 
+					if (amis::dtb::DtbWithHooks::Instance()->getDaisyVersion() == amis::dtb::DAISY_2005)
+					{
+						mpLoaderBridge->SetDtbookProcessing(true);
+					}
+
+				}
+			}
+		} 
+		else 
+		{
+			if (mpLoaderBridge) 
+			{
+				mpLoaderBridge->Release();
+				mpLoaderBridge = NULL;
 			}
 		}
-	} 
-	else 
-	{
-		if (mpLoaderBridge) 
-		{
-			mpLoaderBridge->Release();
-			mpLoaderBridge = NULL;
-		}
+#endif
+#endif
 	}
-#endif
-#endif
 	TextRenderBrain::Instance()->gotoUriTarget(newurl);
 	delete url;
 	amis::util::Log::Instance()->writeTrace("End function", "HtmlView::OnHighlightUrlTarget");
