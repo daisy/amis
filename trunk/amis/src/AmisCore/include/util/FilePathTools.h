@@ -24,6 +24,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 #include <string>
 #include "ambulant/net/url.h"
+#include "AmisCore.h"
 
 using namespace std;
 
@@ -60,6 +61,7 @@ public:
 	//!get the parent directory.  input can be a file or directory path.
 	static string getParentDirectory(string);
 	static string getAsUrlPath(string);
+	static bool urlListContains(string, amis::UrlList*);
 };
 }
 }

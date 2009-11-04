@@ -24,7 +24,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include <string>
 //#include <vector>
 #include "util/FilePathTools.h"
-#include "AmisCore.h"
+
 
 //return a string representation of the ambulant URL, for both local and remote files
 string amis::util::ambulantUrlToString(const ambulant::net::url* pUrl)
@@ -449,4 +449,15 @@ string amis::util::FilePathTools::getAsUrlPath(string filepath)
 
 	return filepath;
 
+}
+
+bool amis::util::FilePathTools::urlListContains(string url, amis::UrlList* urlList)
+{
+	for (int i = 0; i<urlList->size(); i++)
+	{
+		ambulant::net::url item = ((amis::UrlList)*urlList)[i];
+		if (item.get_url() == url)
+			return true;
+	}
+	return false;
 }

@@ -36,6 +36,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "DtbWithHooks.h"
 #include "util/Log.h"
 #include "Preferences.h"
+#include "util/FilePathTools.h"
 
 #define WITH_HTML_WIDGET
 #define AM_DBG if (0)
@@ -320,11 +321,18 @@ LPARAM CAmisHtmlView::OnHighlightUrlTarget(WPARAM wParam, LPARAM lParam)
 	assert(wParam == 0);
 	std::string *url = (std::string *)lParam;
 	std::string newurl = *url;
+
+	//the catch here: if you build AMIS without protected book support, you don't get
+	//nice-looking transformed dtbook
 #ifdef HTML_LOAD_AMBULANT_PDTB
 #ifdef WITH_PROTECTED_BOOK_SUPPORT
+	amis::UrlList* text_urls = amis::dtb::DtbWithHooks::Instance()->getFileSet()->getTextFiles();
+	bool is_daisy_text_file = amis::util::FilePathTools::urlListContains(*url, text_urls);
 	//Protected books OR DAISY 2005 format books require manual loading through IE
 	if (amis::dtb::DtbWithHooks::Instance()->isProtected() || 
-		amis::dtb::DtbWithHooks::Instance()->getDaisyVersion() == amis::dtb::DAISY_2005)
+		(amis::dtb::DtbWithHooks::Instance()->getDaisyVersion() == amis::dtb::DAISY_2005
+		&&
+		is_daisy_text_file))
 	{
 		// Prepend ambulantpdtb: to the URL. This will change the protocol,
 		// and the PdtbIePlugin PluggableProtocol COM object has registered
@@ -524,8 +532,8 @@ HRESULT CAmisHtmlView::OnFilterDataObject(LPDATAOBJECT pDataObject, LPDATAOBJECT
 HRESULT CAmisHtmlView::OnShowContextMenu(DWORD dwID, LPPOINT ppt,LPUNKNOWN pcmdtReserved, 
 						  LPDISPATCH pdispReserved)
 {
-	return S_FALSE;  // Enable the HtmlView popup menu
-	//return S_OK;	 // Disable the standard HtmlView popup menu
+	//return S_FALSE;  // Enable the HtmlView popup menu
+	return S_OK;	 // Disable the standard HtmlView popup menu
 }
 
 void CAmisHtmlView::OnEditCopy() 
