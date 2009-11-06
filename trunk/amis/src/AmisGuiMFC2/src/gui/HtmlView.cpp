@@ -538,8 +538,8 @@ HRESULT CAmisHtmlView::OnFilterDataObject(LPDATAOBJECT pDataObject, LPDATAOBJECT
 HRESULT CAmisHtmlView::OnShowContextMenu(DWORD dwID, LPPOINT ppt,LPUNKNOWN pcmdtReserved, 
 						  LPDISPATCH pdispReserved)
 {
-	//return S_FALSE;  // Enable the HtmlView popup menu
-	return S_OK;	 // Disable the standard HtmlView popup menu
+	return S_FALSE;  // Enable the HtmlView popup menu
+	//return S_OK;	 // Disable the standard HtmlView popup menu
 }
 
 void CAmisHtmlView::OnEditCopy() 

@@ -408,6 +408,8 @@ int TextRenderBrain::getCurrentCustomStyleIndex()
 }
 void TextRenderBrain::applyPageStyle(int idx)
 {
+	return;
+
 	if (mbStyleOn) clearPageStyle();
 	amis::util::Log::Instance()->writeMessage("Applying custom style", "TextRenderBrain::applyPageStyle");
 	mbStyleOn = true;
