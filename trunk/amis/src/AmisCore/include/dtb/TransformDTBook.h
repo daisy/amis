@@ -3,31 +3,31 @@
 
 
 #include <string>
+#if 0
 #include <xercesc/dom/DOM.hpp>
 #include <xercesc/parsers/XercesDOMParser.hpp>
 #include  <xercesc/dom/DOMErrorHandler.hpp>
 #include <xercesc/sax/ErrorHandler.hpp>
 #include <xercesc/sax/SaxParseException.hpp>
-using namespace std;
 
 XERCES_CPP_NAMESPACE_USE
+#endif
+
+using namespace std;
 
 namespace amis
 {
 namespace dtb
 {
-	class TransformDTBook : public DOMErrorHandler //public ErrorHandler
+	class TransformDTBook //add for xerces parsing: public DOMErrorHandler 
 	{
 	public:
 		TransformDTBook();
 		~TransformDTBook();
 		bool transform(string, string);
 		string getResults();
+#if 0
 		bool handleError (const DOMError &domError); 
-		/*void error(const SAXParseException&);
-		void fatalError(const SAXParseException&);
-		void warning(const SAXParseException&);
-		void resetErrors() {}*/
 	private:
 		void process();
 		void printSubtree(DOMNode*);
@@ -35,9 +35,11 @@ namespace dtb
 		void domToString();
 		
 		string mStylesheet;
-		string mResults;
 		xercesc_3_0::DOMDocument* mpDoc;
 		DOMImplementation* mpImpl;
+#endif
+		string mResults;
+		string mBin;
 	};
 }
 }

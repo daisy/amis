@@ -1,33 +1,81 @@
+#if defined(AMIS_COMPILER_MSVC)
+//windows header containing charset conversion macros
+#include <afxpriv.h>
+#endif
+
+#if 0
 #include <xercesc/util/PlatformUtils.hpp>
 #include <xercesc/util/OutOfMemoryException.hpp>
 #include <xercesc/framework/MemBufInputSource.hpp>
 #include <xercesc/framework/MemBufFormatTarget.hpp>
+#include "util/xercesutils.h"
+#endif
+
 #include "dtb/TransformDTBook.h"
 #include "util/Log.h"
-#include "util/xercesutils.h"
-
+#include "util/FilePathTools.h"
+#include <fstream>
 #include <iostream>
+
 
 amis::dtb::TransformDTBook::TransformDTBook()
 {
+#if 0
 	mpDoc = NULL;
+#endif
 }
 amis::dtb::TransformDTBook::~TransformDTBook()
 {
 }
 string amis::dtb::TransformDTBook::getResults()
 {
-	string html = "<html>";
-//	erase everything that comes before the <html> start tag
-/*	int pos = mResults.find(html);
-	mResults.replace(0, pos, "");
-	mResults.insert(0, "<?xml version=\"1.0\" encoding=\"utf-8\"?>");
-*/
+	ifstream f;
+	string filepath = mBin + "\\tmpdtb";
+	f.open(filepath);
+	mResults = "";
+	while (!f.eof())
+	{
+		string tmp;
+		getline(f, tmp);
+		mResults += tmp;
+	}
 	return mResults;
 }
-//pass the entire file
-bool amis::dtb::TransformDTBook::transform(string dtbook, string stylesheet)
+
+bool amis::dtb::TransformDTBook::transform(string filepath, string bindir)
 {
+#ifdef AMIS_COMPILER_MSVC
+	USES_CONVERSION;
+	mBin = bindir;
+	string bookdir = amis::util::FilePathTools::getParentDirectory(filepath);
+	bookdir += "/";
+	string local_dtbook = amis::util::FilePathTools::getAsLocalFilePath(filepath);
+
+	string exe =  bindir + "\\dtbook_xslt.bat";
+	string params = "\"" + local_dtbook + "\" \"" + bookdir + "\" \"" + bindir + "\"";
+	
+	SHELLEXECUTEINFO sei = {sizeof(sei)};
+    sei.fMask = SEE_MASK_NOCLOSEPROCESS;
+    sei.nShow = SW_HIDE;
+    sei.lpVerb = _T("open");
+    sei.lpFile = A2T(exe.c_str());
+	sei.lpParameters = A2T(params.c_str());
+	ShellExecuteEx(&sei);
+	::WaitForSingleObject(sei.hProcess, INFINITE);
+	::CloseHandle(sei.hProcess);
+
+	if (ShellExecuteEx(&sei) == FALSE)
+		amis::util::Log::Instance()->writeTrace("error converting dtbook ");
+	else
+		amis::util::Log::Instance()->writeTrace("converted dtbook ");
+#else
+	//TODO: something for other platforms
+#endif
+	
+
+	return true;
+
+#if 0
 	mStylesheet = stylesheet;
 	
 	try
@@ -41,31 +89,7 @@ bool amis::dtb::TransformDTBook::transform(string dtbook, string stylesheet)
 
 	string core = "Core";
 	mpImpl = DOMImplementationRegistry::getDOMImplementation(X(core.c_str()));
-
-	//
-    //  Create MemBufferInputSource from the buffer containing the XML
-    //  statements.
-    //
-    //  NOTE: We are using strlen() here, since we know that the chars in
-    //  our hard coded buffer are single byte chars!!! The parameter wants
-    //  the number of BYTES, not chars, so when you create a memory buffer
-    //  give it the byte size (which just happens to be the same here.)
-    //
-   /* MemBufInputSource* memBufIS = new MemBufInputSource
-    (
-	(const XMLByte*)dtbook.c_str()
-		, strlen(dtbook.c_str())
-        , "dtbook"
-        , false
-    );
-*/
-	/*DOMLSInput* input = ((DOMImplementationLS*)mpImpl)->createLSInput();
-	const XMLCh* input_string = XMLString::transcode(dtbook.c_str());
-//	input->setEncoding(X("utf-8"));
-	input->setStringData(input_string);
-	*/
-
-	//XercesDOMParser *parser = new XercesDOMParser;
+	
 	DOMLSParser* parser = ((DOMImplementationLS*)mpImpl)->createLSParser(xercesc_3_0::DOMImplementationLS::MODE_SYNCHRONOUS,
 		NULL);
 	DOMConfiguration  *config = parser->getDomConfig();
@@ -83,21 +107,10 @@ bool amis::dtb::TransformDTBook::transform(string dtbook, string stylesheet)
 	if (config->canSetParameter(XMLUni::fgXercesSkipDTDValidation, true))
 		config->setParameter(XMLUni::fgXercesSkipDTDValidation, true);
 	
-    /*
-	parser->setDoNamespaces(false);
-    parser->setDoSchema(false);
-    parser->setValidationSchemaFullChecking(false);
-	parser->setIncludeIgnorableWhitespace(false);
-	parser->setLoadExternalDTD(false);
-	parser->setSkipDTDValidation(true);
-	parser->setErrorHandler(this);
-	*/
 	bool errorsOccurred = false;
     try
     {
-	//	parser->parse(*memBufIS);
-		//mpDoc= parser->parse(input);
-		mpDoc = parser->parseURI(X(dtbook.c_str()));
+		mpDoc = parser->parseURI(X(filepath.c_str()));
     }
     catch (const OutOfMemoryException&)
     {
@@ -127,7 +140,6 @@ bool amis::dtb::TransformDTBook::transform(string dtbook, string stylesheet)
 
 	if (!errorsOccurred)
 	{
-		//mpDoc = parser->getDocument();
 		if (mpDoc->getDocumentElement())
 		{
 			const XMLCh* enc = mpDoc->getXmlEncoding();
@@ -151,7 +163,6 @@ bool amis::dtb::TransformDTBook::transform(string dtbook, string stylesheet)
 	if (errorsOccurred)
 	{
 		delete parser;
-//		delete memBufIS;
 		XMLPlatformUtils::Terminate();
 		return false;
 	}
@@ -159,8 +170,11 @@ bool amis::dtb::TransformDTBook::transform(string dtbook, string stylesheet)
 	{
 		return true;
 	}
+#endif
 }
 
+
+#if 0
 //make dtbook IE-friendly
 void amis::dtb::TransformDTBook::process()
 {
@@ -257,12 +271,9 @@ void amis::dtb::TransformDTBook::process()
 
 void amis::dtb::TransformDTBook::domToString()
 {
+
 	DOMLSSerializer* p_writer = ((DOMImplementationLS*)mpImpl)->createLSSerializer();
 	
-	/*XMLCh* docstring = p_writer->writeToString(mpDoc);
-	mResults = XMLString::transcode(docstring);
-	int pos = mResults.find("UTF-16");
-	*/
 	DOMLSOutput* theOutput = ((DOMImplementationLS*)mpImpl)->createLSOutput();
 	theOutput->setEncoding(mpDoc->getXmlEncoding());
 	MemBufFormatTarget memTarget;
@@ -271,25 +282,6 @@ void amis::dtb::TransformDTBook::domToString()
 
 	mResults = (char*)memTarget.getRawBuffer();
 	// remember that the result will be deallocated as soon as you destroy memTarget 
-	
-	/*
-	string core = "Core";
-	DOMImplementation* impl = DOMImplementationRegistry::getDOMImplementation(X(core.c_str()));
-	DOMLSSerializer* p_writer = ((DOMImplementationLS*)impl)->createLSSerializer();
-	DOMLSOutput* p_output = ((DOMImplementationLS*)impl)->createLSOutput(); 
-	XMLFormatTarget* p_form_target = new MemBufFormatTarget();
-	p_output->setEncoding(X("utf-8"));
-	p_output->setSystemId(X("amis")); 
-	p_output->setByteStream(p_form_target);
-	p_writer->write(mpDoc, p_output);
-	
-	char* theXMLString_Encoded = (char*)((MemBufFormatTarget*)p_form_target)->getRawBuffer();
-
-	p_output->release();
-	p_writer->release();
-
-	mResults = theXMLString_Encoded;
-	*/
 }
 
 //clone, remove, append, release
@@ -322,42 +314,4 @@ bool amis::dtb::TransformDTBook::handleError (const DOMError &domError)
 	return true;	
 }
 
-/*
-void amis::dtb::TransformDTBook::warning(const SAXParseException& e)
-{
-	char* xerces_msg = XMLString::transcode(e.getMessage());
-	long line = e.getLineNumber();
-	char ch_line[10];
-	itoa(line, ch_line, 10);
-	string msg = "Parse warning: \n\t" + mFilepath.get_url() + "\n\tline: " + ch_line +  "\n\t" + xerces_msg;
-	amis::util::Log::Instance()->writeWarning(msg, "XercesSaxParseBase::error");
-	
-	XMLString::release(&xerces_msg);
-}
-
-void amis::dtb::TransformDTBook::error(const SAXParseException& e)
-{
-	char* xerces_msg = XMLString::transcode(e.getMessage());
-	long line = e.getLineNumber();
-	char ch_line[10];
-	itoa(line, ch_line, 10);
-	string msg = "Parse error: \n\t" + mFilepath.get_url() + "\n\tline: " + ch_line +  "\n\t" + xerces_msg;
-	amis::util::Log::Instance()->writeError(msg, "XercesSaxParseBase::error");
-	
-	XMLString::release(&xerces_msg);
-}
-
-void amis::dtb::TransformDTBook::fatalError(const SAXParseException& e)
-{	
-	char* xerces_msg = XMLString::transcode(e.getMessage());
-	long line = e.getLineNumber();
-	char ch_line[10];
-	itoa(line, ch_line, 10);
-	string msg = "Parse fatal error: \n\t" + mFilepath.get_url() + "\n\tline: " + ch_line +  "\n\t" + xerces_msg;
-	amis::util::Log::Instance()->writeError(msg, "XercesSaxParseBase::error");
-	mError.setCode(amis::PARSE_ERROR);
-	mError.setMessage(msg);
-	
-	XMLString::release(&xerces_msg);
-}
-*/
+#endif

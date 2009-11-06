@@ -934,7 +934,7 @@ void amis::dtb::Dtb::saveIndexData()
     sei.nShow = SW_HIDE;
     sei.lpVerb = _T("open");
     sei.lpFile = A2T(exe.c_str());
-	sei.lpParameters = A2T(params.c_str());
+	//sei.lpParameters = A2T(params.c_str());
 	ShellExecuteEx(&sei);
 	::WaitForSingleObject(sei.hProcess, INFINITE);
 	::CloseHandle(sei.hProcess);
