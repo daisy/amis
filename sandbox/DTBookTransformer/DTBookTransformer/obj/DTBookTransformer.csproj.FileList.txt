@@ -1,0 +1,13 @@
+bin\Debug\DTBookTransformer.exe
+bin\Debug\DTBookTransformer.pdb
+bin\Debug\saxon9he-api.dll
+bin\Debug\IKVM.OpenJDK.Util.dll
+bin\Debug\IKVM.OpenJDK.XML.API.dll
+bin\Debug\IKVM.Runtime.dll
+bin\Debug\saxon9he.dll
+bin\Debug\IKVM.OpenJDK.Text.dll
+bin\Debug\IKVM.OpenJDK.Core.dll
+bin\Debug\IKVM.OpenJDK.Charsets.dll
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\DTBookTransformer.exe
+obj\Debug\DTBookTransformer.pdb

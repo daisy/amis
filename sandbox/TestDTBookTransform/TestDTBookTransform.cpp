@@ -10,7 +10,7 @@ using namespace std;
 
  int main()
 {
-	amis::util::Log::Instance()->startLog("c:\\devel\\amisdtbooktestlog.txt");
+	amis::util::Log::Instance()->startLog("C:\\devel\\amis\\sandbox\\TestDTBookTransform\\amisdtbooktestlog.txt");
 	
 	string dtbstring, tmp;
 	//ifstream input("c:\\daisybooks\\greatpainters_zed\\dtbook.xml");
@@ -21,7 +21,7 @@ using namespace std;
 		dtbstring += tmp;
 	}
 	amis::dtb::TransformDTBook* xform = new amis::dtb::TransformDTBook();
-	xform->transform(dtbstring);
+	xform->transform(dtbstring, "dtbookbasic.css");
 
 	amis::util::Log::Instance()->endLog();
 

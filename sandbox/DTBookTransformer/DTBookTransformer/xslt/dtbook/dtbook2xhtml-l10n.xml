@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<strings>
+	<str xml:lang="en" name="beginofthebook" >Begin of the book</str>
+	<str xml:lang="fr" name="beginofthebook" >Début de l'ouvrage</str>
+	
+	<str xml:lang="en" name="TableofContents" >Table of Contents</str>
+	<str xml:lang="fr" name="TableofContents" >Table des Matières</str>
+	
+	<str xml:lang="en" name="backtotableofcontents" >Back to table of contents</str>
+	<str xml:lang="fr" name="backtotableofcontents" >Retour à la table des matières</str>
+	
+	<str xml:lang="en" name="tableofcontents" >Table of Contents</str>
+	<str xml:lang="fr" name="tableofcontents" >Table des Matières</str>
+	
+	<str xml:lang="en" name="nav-home" >Home</str>
+	<str xml:lang="fr" name="nav-home" >Sommaire</str>
+	
+	<str xml:lang="en" name="nav-next" >Next</str>
+	<str xml:lang="fr" name="nav-next" >Suivant</str>
+	
+	<str xml:lang="en" name="nav-next-sibling" >Fast Forward</str>
+	<str xml:lang="fr" name="nav-next-sibling" >Avance rapide</str>
+	
+	<str xml:lang="en" name="nav-prev" >Prev</str>
+	<str xml:lang="fr" name="nav-prev" >Précédent</str>
+	
+	<str xml:lang="en" name="nav-prev-sibling" >Fast Backward</str>
+	<str xml:lang="fr" name="nav-prev-sibling" >Arrière rapide</str>
+	
+	<str xml:lang="en" name="nav-up" >Up</str>
+	<str xml:lang="fr" name="nav-up" >Niveau supérieur</str>
+	
+	<str xml:lang="en" name="nav-toc" >ToC</str>
+	<str xml:lang="fr" name="nav-toc" >TdM</str>
+	
+</strings>

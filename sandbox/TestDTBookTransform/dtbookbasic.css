@@ -236,6 +236,7 @@ div {
 p {
   display: block;
   margin-top: 0.7em;
+  background-color: red;
 }
 
 prodnote, notice {
