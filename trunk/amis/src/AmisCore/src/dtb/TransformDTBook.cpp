@@ -30,8 +30,10 @@ amis::dtb::TransformDTBook::~TransformDTBook()
 string amis::dtb::TransformDTBook::getResults()
 {
 	ifstream f;
-	string filepath = mBin + "\\tmpdtb";
-	f.open(filepath);
+	string filepath = mBin + "tmpdtbook.xml";
+	f.open(filepath.c_str());
+	if (f.fail()) return "";
+
 	mResults = "";
 	while (!f.eof())
 	{
@@ -42,18 +44,37 @@ string amis::dtb::TransformDTBook::getResults()
 	return mResults;
 }
 
-bool amis::dtb::TransformDTBook::transform(string filepath, string bindir)
+bool amis::dtb::TransformDTBook::transform(string filepath)
 {
 #ifdef AMIS_COMPILER_MSVC
 	USES_CONVERSION;
-	mBin = bindir;
+
+	TCHAR szBuffer[256];
+	GetModuleFileName(NULL, szBuffer, 256);
+	CString cstr_app_path = szBuffer;
+	int pos = cstr_app_path.ReverseFind('\\');
+	if (pos >= 0) cstr_app_path = cstr_app_path.Mid(0, pos + 1);
+	mBin = W2CA(cstr_app_path);
+
+	//dtbook_xslt.bat c:\daisy\book\dtbook.xml file:///c:/daisy/book/ c:\amis\bin\
+	//dtbook_xslt.bat local_dtbook bookdir mBin
 	string bookdir = amis::util::FilePathTools::getParentDirectory(filepath);
 	bookdir += "/";
 	string local_dtbook = amis::util::FilePathTools::getAsLocalFilePath(filepath);
+/*
+	string params = "\"" + local_dtbook + "\" \"" + bookdir + "\" \"" + mBin + "\"";
+	*/
+	string params = " -cp \"" + 
+		mBin + "xslt\\org.daisy.util.jar\" org.daisy.util.xml.xslt.Stylesheet \"" + 
+		local_dtbook + "\" \"" + 
+		mBin + "tmpdtbook.xml\" \"" + 
+		mBin + "xslt\\dtbook\\dtbook2xhtml.xsl\" baseDir=\"" + 
+		bookdir + "\"";
 
-	string exe =  bindir + "\\dtbook_xslt.bat";
-	string params = "\"" + local_dtbook + "\" \"" + bookdir + "\" \"" + bindir + "\"";
+	string exe =  "java";//mBin + "dtbook_xslt.bat";
 	
+	
+
 	SHELLEXECUTEINFO sei = {sizeof(sei)};
     sei.fMask = SEE_MASK_NOCLOSEPROCESS;
     sei.nShow = SW_HIDE;

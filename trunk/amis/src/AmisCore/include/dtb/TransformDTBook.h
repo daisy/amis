@@ -24,7 +24,7 @@ namespace dtb
 	public:
 		TransformDTBook();
 		~TransformDTBook();
-		bool transform(string, string);
+		bool transform(string);
 		string getResults();
 #if 0
 		bool handleError (const DOMError &domError); 
