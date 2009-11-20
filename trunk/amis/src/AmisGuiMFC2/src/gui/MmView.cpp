@@ -69,7 +69,7 @@
 using namespace amis::gui;
 
 #ifdef WITHOUT_LOG_WINDOW
-const TCHAR log_name[] = TEXT("amlog.txt");
+const TCHAR log_name[] = TEXT("ambulantlog.txt");
 
 #ifdef _DEBUG
 class logwindow_atltrace : public ambulant::lib::ostream 
