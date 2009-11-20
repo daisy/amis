@@ -151,6 +151,7 @@ CAmisApp::CAmisApp()
 
 //THE APPLICATION!
 CAmisApp theApp;
+bool has_java();
 
 BOOL CAmisApp::InitInstance()
 {
@@ -181,6 +182,8 @@ BOOL CAmisApp::InitInstance()
 	
 	//our initial language preference
 	mLanguagePreference = Preferences::Instance()->getUiLangId();
+
+	mbHasJava = has_java();
 
 	//load the resource dll
 	// one of the first things in the init code
@@ -1719,4 +1722,41 @@ std::string CAmisApp::getPromptIDFromSideBarName(std::string item_id)
 		return "noterefs";
 	}
 	return "";
+}
+
+bool CAmisApp::hasJava()
+{
+	return mbHasJava;
+}
+
+bool has_java()
+{
+	USES_CONVERSION;
+	HKEY hKey;
+	//"ERROR_SUCCESS" means it worked
+	if (RegOpenKeyEx(HKEY_LOCAL_MACHINE, 
+		L"SOFTWARE\\JavaSoft\\Java Runtime Environment", 
+		0, KEY_READ, &hKey) == ERROR_SUCCESS)
+	{
+		char buf[255] = {0};
+		DWORD type = REG_SZ;
+		DWORD size = 255;
+		if (RegQueryValueEx(hKey, L"CurrentVersion", 
+			NULL, &type, (LPBYTE)buf, &size) == ERROR_SUCCESS)
+		{
+			string v = "";
+			for (int i = 0; i<255; i++)
+				if (buf[i]) v += buf[i];
+			
+			RegCloseKey(hKey);
+			float version = atof(v.c_str());
+			if (version >= REQUIRED_JAVA_VERSION)
+				return true;
+		}
+		else
+		{	
+			RegCloseKey(hKey);
+		}
+	}
+	return false;
 }

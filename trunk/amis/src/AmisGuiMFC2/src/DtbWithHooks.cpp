@@ -524,6 +524,7 @@ amis::dtb::smil::SmilMediaGroup* DtbWithHooks::loadSmilFromUrl(const ambulant::n
 		amis::util::Log::Instance()->writeError("NULL SMIL file URI", "DtbWithHooks::loadSmilFromUrl");
 		return NULL;
 	}
+	string ref = pUri->get_ref();
 	ambulant::net::url full_path = pUri->join_to_base(*getFileSet()->getBookDirectory());
 	
 	//set the spine at this file.  this also makes sure that we're going to a file that is in the book.
@@ -547,7 +548,7 @@ amis::dtb::smil::SmilMediaGroup* DtbWithHooks::loadSmilFromUrl(const ambulant::n
 
 		if(amis::gui::MainWndParts::Instance()->mpMmView->getCurrentUrl()->same_document(full_path))
 		{
-			std::string *strcopy = new std::string(full_path.get_ref());
+			std::string *strcopy = new std::string(ref);
 			amis::gui::MainWndParts::Instance()->mpMmView->PostMessage(WM_MY_GOTO_ID, 0, (LPARAM)strcopy);
 		}
 		else

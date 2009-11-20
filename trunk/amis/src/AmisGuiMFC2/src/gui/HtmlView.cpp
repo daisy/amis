@@ -237,6 +237,11 @@ void CAmisHtmlView::OnBeforeNavigate2(LPCTSTR lpszURL, DWORD nFlags,
 	// Guess: if there's a : in the string and it is not in second position
 	// this is a URL.
 	string urlOrFile = T2A(lpszURL);
+
+	//strip the ambulantpdtb protocol if it's there
+	if (urlOrFile.substr(0, 13) == "ambulantpdtb:")
+		urlOrFile.replace(0, 13, "");
+
 	ambulant::net::url thisUrl;
 	string::size_type colonPos = urlOrFile.find(':');
 	if (colonPos == string::npos || colonPos == 1) 
@@ -249,7 +254,10 @@ void CAmisHtmlView::OnBeforeNavigate2(LPCTSTR lpszURL, DWORD nFlags,
 		ambulant::net::url tmpurl = ambulant::net::url::from_url(urlOrFile);
 		assert(tmpurl.is_local_file());
 		std::string tmpfile = tmpurl.get_file();
-		thisUrl = ambulant::net::url::from_filename(tmpfile);
+		std::string ref = amis::util::FilePathTools::getTarget(urlOrFile);
+		if (ref != "")
+			tmpfile += "#" + ref;
+		thisUrl = ambulant::net::url::from_filename(tmpfile, true);
 	} 
 	else 
 	{
@@ -276,7 +284,7 @@ void CAmisHtmlView::OnBeforeNavigate2(LPCTSTR lpszURL, DWORD nFlags,
 		bookDir = *p_files->getNavFilepath();
 	bookDir = bookDir.get_base();
 	CString cstr_url(lpszURL);
-	// This test does not work for URLs with ambulanturl:.
+	
 	bool is_same_dir = thisDir.same_document(bookDir);
 	//bool is_blank = !cstr_url.Compare(_T("about:blank"));
 	bool is_pdtb = amis::dtb::DtbWithHooks::Instance()->isProtected();
@@ -337,7 +345,7 @@ LPARAM CAmisHtmlView::OnHighlightUrlTarget(WPARAM wParam, LPARAM lParam)
 		if (amis::dtb::DtbWithHooks::Instance()->isProtected() || 
 			(amis::dtb::DtbWithHooks::Instance()->getDaisyVersion() == amis::dtb::DAISY_2005
 			&&
-			is_daisy_text_file))
+			is_daisy_text_file && theApp.hasJava()))
 		{
 			// Prepend ambulantpdtb: to the URL. This will change the protocol,
 			// and the PdtbIePlugin PluggableProtocol COM object has registered
@@ -892,4 +900,3 @@ bool html_browser_imp::uses_screen_reader()
 	else 
 		return !amis::dtb::DtbWithHooks::Instance()->hasAudio();
 }
-

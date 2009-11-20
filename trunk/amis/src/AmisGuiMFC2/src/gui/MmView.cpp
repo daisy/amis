@@ -1016,6 +1016,7 @@ void MmView::gotoId(string id)
 
 LPARAM MmView::OnGotoId(WPARAM wParam, LPARAM lParam)
 {
+//	CString str = (LPCSTR)lParam;
 	std::string *id = (std::string *)lParam;
 	std::string id2 = *id;
 	this->gotoId(id2);
