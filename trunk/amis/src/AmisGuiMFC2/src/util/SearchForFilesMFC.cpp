@@ -117,6 +117,9 @@ int SearchForFilesMFC::recursiveSearch(LPCTSTR path)
 			// this folder, which exists on vista, makes the search routine crash
 			if (str.Find(_T("winsxs")) != -1)
 				continue;
+			//this is the recycle bin, which should also not be searched (causes a crash)
+			else if (str.Find(_T("recycler")) != -1)
+				continue;
 			else
 				files_found += recursiveSearch(str + _T("\\*.*"));
 		}
