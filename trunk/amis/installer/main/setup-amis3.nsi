@@ -329,6 +329,37 @@ End:
 SectionEnd
 
 ;******
+; Check if Java is installed
+;*
+Section -JavaCheck
+     ; check if the user has jaws installed, then ask if they want to install the scripts
+    ClearErrors
+    EnumRegKey $0 HKLM "SOFTWARE\JavaSoft\Java Runtime Environment" "CurrentVersion"
+    ; if the key exists (no errors), then check the version.  Else give the user a message.
+    IfErrors MessageToUser1
+
+CheckVersion:
+    Pop $0
+    ${If} $0 < 1.6
+        Goto MessageToUser2
+    ${Else}
+        Goto End
+    ${EndIf}
+    
+    ; ask if the user wants to install the scripts
+MessageToUser1:
+    MessageBox "MB_OK" "The Java Runtime was not found on your system.  Java support is required for enhanced DAISY 3 text display. After the AMIS installation is complete, you may download Java from http://www.java.com and install it at any time."
+    Goto End
+
+MessageToUser2:
+    MessageBox "MB_OK" "Please upgrade your Java Runtime to version 1.6 or higher.  Java support is required for enhanced DAISY 3 text display. After the AMIS installation is complete, you may download Java from http://www.java.com and install it at any time."
+    Goto End
+
+
+End:
+SectionEnd
+
+;******
 ; Create shortcuts and icons
 ;*
 Section -AdditionalIcons
