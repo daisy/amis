@@ -467,7 +467,7 @@ Section Uninstall
     ; unregister the pdtb dll
     !insertmacro UnInstallLib REGDLLTLB NOTSHARED NOREBOOT_NOTPROTECTED "$INSTDIR\PdtbIePlugin.dll"
   
-	Delete "$SETTINGS_DIR\css\*.css"
+	Delete "$SETTINGS_DIR\css\*"
 	Delete "$SETTINGS_DIR\css\font\*"
 	Delete "$SETTINGS_DIR\css\customStyles\*"
 	RMDir "$SETTINGS_DIR\css\font"
@@ -482,11 +482,11 @@ Section Uninstall
 	RMDir "$SETTINGS_DIR\img"
 	
 	Delete "$SETTINGS_DIR\amisPrefs.xml"
-  Delete "$SETTINGS_DIR\amisPrefsDebug.xml"
-  Delete "$SETTINGS_DIR\amisPrefsCompatibilityMode.xml"
-  Delete "$SETTINGS_DIR\amisPrefsCompatibilityModeWithDX.xml"
-  Delete "$SETTINGS_DIR\amisPrefsCompatibilityModeWithTTS.xml"
-  Delete "$SETTINGS_DIR\clearCache.bat"
+    Delete "$SETTINGS_DIR\amisPrefsDebug.xml"
+    Delete "$SETTINGS_DIR\amisPrefsCompatibilityMode.xml"
+    Delete "$SETTINGS_DIR\amisPrefsCompatibilityModeWithDX.xml"
+    Delete "$SETTINGS_DIR\amisPrefsCompatibilityModeWithTTS.xml"
+    Delete "$SETTINGS_DIR\clearCache.bat"
     Delete "$SETTINGS_DIR\defaultToolbar.xml"
     Delete "$SETTINGS_DIR\basicToolbar.xml"
     Delete "$SETTINGS_DIR\amisHistory.xml.default"
@@ -495,7 +495,12 @@ Section Uninstall
     Delete "$SETTINGS_DIR\amisLog.txt"
 
     ;We are leaving the bookmarks and history files on purpose
-	
+	MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "Remove bookmarks and history?" IDYES Continue
+    Delete "$SETTINGS_DIR\amisHistory.xml"
+    Delete "$SETTINGS_DIR\bmk\*"
+    RMDir "$SETTINGS_DIR\bmk"
+    
+ Continue:
     Delete "$INSTDIR\*"
     RMDir "$INSTDIR\"
     ; this deletes all the registry keys used by NSIS
