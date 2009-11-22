@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
-<ui next-id="t447" xml:lang="en" xmlns="http://amisproject.org">
-    <created by="DAISY Lion" date="2009-05-01_18:37:17"/>
+<ui next-id="t451" xml:lang="en" xmlns="http://amisproject.org">
+    <created by="DAISY Lion" date="2009-11-22_00:43:03"/>
     <containers>
         <container id="file">
             <note>This is the menu header &quot;File&quot;</note>
@@ -949,15 +949,35 @@ Adaptive Multimedia Information System</text>
                 </caption>
             </control>
             <control mfcid="IDC_VERSION" translate="no" widget="textlabel autoplay">
-                <caption>
-                    <text id="t164">Version 3.0</text>
-                    <audio from="" src="./audio/eng-US_t164.mp3"/>
+              <caption>
+                <!-- removed text id=164-->
+                  <prompt>
+                    <promptItem>
+                      <text id="t448">Version:</text>
+                      <audio from="" src="./audio/eng-US_t448.mp3"/>
+                    </promptItem>
+                    <promptItem>
+                      <text id="t449">3.1 beta</text>
+                      <!-- no audio src for this one; it's to be rendered with TTS -->
+                      <audio from="" src=""/>
+                    </promptItem>
+                </prompt>
                 </caption>
             </control>
             <control mfcid="IDC_VERSIONNOTE" translate="no" widget="textlabel autoplay">
                 <caption>
-                    <text id="t165">Release Date: 5 May 2009</text>
-                    <audio from="" src="./audio/eng-US_t165.mp3"/>
+                  <prompt>
+                    <promptItem>
+                      <!-- removed text id=165-->
+                      <text id="t447">Release date:</text>
+                      <audio from="" src="./audio/eng-US_t447.mp3"/>
+                    </promptItem>
+                    <promptItem>
+                      <text id="t450">2009-11-22</text>
+                      <!-- no audio src for this one; it's to be rendered with TTS -->
+                      <audio from="" src=""/>
+                    </promptItem>
+                  </prompt>
                 </caption>
             </control>
             <control mfcid="IDC_COPYRIGHT" translate="no" widget="textlabel autoplay">
