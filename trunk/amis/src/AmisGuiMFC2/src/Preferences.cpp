@@ -110,8 +110,22 @@ void Preferences::scanDirectoriesForCssFiles()
 	searcher.addSearchCriteria(".css");
 	//these files will only bother developers
 	searcher.addSearchExclusionCriteria(".svn");
-	searcher.setRecursiveSearch(true);
-	if (searcher.startSearch(mFontsizeCssDir.get_file()) > 0)
+	searcher.setRecursiveSearch(false);
+	
+	ambulant::net::url url;
+	//if the version is IE8, reset the directory to be the IE8 subfolder
+	int ieversion = theApp.getIeVersion();
+	if (ieversion >=8)
+	{
+		url = ambulant::net::url::from_filename("./ie8/");
+		url = url.join_to_base(mFontsizeCssDir);
+	}
+	else
+	{
+		url = mFontsizeCssDir;
+	}
+	
+	if (searcher.startSearch(url.get_file()) > 0)
 	{
 		mFontsizeCssFiles = *searcher.getSearchResults();
 	}
@@ -119,7 +133,7 @@ void Preferences::scanDirectoriesForCssFiles()
 	{
 		TRACE(_T("No fontsize css files found\n"));
 		amis::util::Log::Instance()->writeWarning("No fontsize css files found in directory",
-			&mFontsizeCssDir, "Preferences::scanDirectoriesForCssFiles");
+			&url, "Preferences::scanDirectoriesForCssFiles");
 	}
 	
 	searcher.clearSearchResults();
@@ -314,6 +328,8 @@ const ambulant::net::url* Preferences::getLangpacksDir()
 	return &mLangpacksDir;
 }
 
+//set the base font css dir
+//there may be subdirs, such as the one for ie8 css files
 void Preferences::setFontsizeCssDir(const ambulant::net::url* value)
 {
 	mFontsizeCssDir = *value;
@@ -323,7 +339,6 @@ const ambulant::net::url* Preferences::getFontsizeCssDir()
 {
 	return &mFontsizeCssDir;
 }
-
 void Preferences::setCustomCssDir(const ambulant::net::url* value)
 {
 	mCustomCssDir = *value;

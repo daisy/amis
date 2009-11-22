@@ -152,6 +152,7 @@ CAmisApp::CAmisApp()
 //THE APPLICATION!
 CAmisApp theApp;
 bool has_java();
+int get_ie_version();
 
 BOOL CAmisApp::InitInstance()
 {
@@ -184,6 +185,7 @@ BOOL CAmisApp::InitInstance()
 	mLanguagePreference = Preferences::Instance()->getUiLangId();
 
 	mbHasJava = has_java();
+	mIeVersion = get_ie_version();
 
 	//load the resource dll
 	// one of the first things in the init code
@@ -1728,7 +1730,10 @@ bool CAmisApp::hasJava()
 {
 	return mbHasJava;
 }
-
+int CAmisApp::getIeVersion()
+{
+	return 8;//mIeVersion;
+}
 bool has_java()
 {
 	USES_CONVERSION;
@@ -1759,4 +1764,42 @@ bool has_java()
 		}
 	}
 	return false;
+}
+
+int get_ie_version()
+{
+	USES_CONVERSION;
+	HKEY hKey;
+	//"ERROR_SUCCESS" means it worked
+	if (RegOpenKeyEx(HKEY_LOCAL_MACHINE, 
+		L"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Internet Explorer",
+		0, KEY_READ, &hKey) == ERROR_SUCCESS)
+	{
+		char buf[255] = {0};
+		DWORD type = REG_SZ;
+		DWORD size = 255;
+		if (RegQueryValueEx(hKey, L"Version", 
+			NULL, &type, (LPBYTE)buf, &size) == ERROR_SUCCESS)
+		{
+			//we only want to read until the "."
+			string v = "";
+			for (int i = 0; i<255; i++)
+			{
+				if (buf[i])
+				{
+					if (buf[i] == '.') break;
+					v += buf[i];
+				}
+			}
+			
+			RegCloseKey(hKey);
+			int version = atoi(v.c_str());
+			return version;
+		}
+		else
+		{	
+			RegCloseKey(hKey);
+		}
+	}
+	return 0;
 }

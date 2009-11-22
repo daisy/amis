@@ -14,7 +14,7 @@
 ; product information
 ;**
 !define PRODUCT_NAME "AMIS"
-!define PRODUCT_VERSION "3.0"
+!define PRODUCT_VERSION "3.1 Beta"
 !define PRODUCT_PUBLISHER "DAISY Consortium"
 !define PRODUCT_WEB_SITE "http://amisproject.org"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\AMIS.exe"
@@ -192,7 +192,9 @@ after_history_copy:
     File "${BIN_DIR}\settings\clean_settings_for_the_installer\customStyles\*.css"
     SetOutPath "$SETTINGS_DIR\css\font"
     File "${BIN_DIR}\settings\css\font\*.css"
-  
+    SetOutPath "$SETTINGS_DIR\css\font\ie8"
+    File "${BIN_DIR}\settings\css\font\ie8\*.css"
+    
     ;copy the images
     SetOutPath "$SETTINGS_DIR\img"
     File "${BIN_DIR}\settings\img\*.ico"
@@ -469,8 +471,10 @@ Section Uninstall
   
 	Delete "$SETTINGS_DIR\css\*"
 	Delete "$SETTINGS_DIR\css\font\*"
+    Delete "$SETTINGS_DIR\css\font\ie8\*"
 	Delete "$SETTINGS_DIR\css\customStyles\*"
-	RMDir "$SETTINGS_DIR\css\font"
+    RMDir "$SETTINGS_DIR\css\font\ie8\"
+    RMDir "$SETTINGS_DIR\css\font"
 	RMDir "$SETTINGS_DIR\css\customStyles"
 	RMDir "$SETTINGS_DIR\css"
 	

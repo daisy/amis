@@ -80,6 +80,7 @@ public:
 	void setIsWaiting(bool);
 	bool getShouldNotRenderAudio();
 	bool hasJava();
+	int getIeVersion();
 
 	//Menu handlers
 	afx_msg void OnFileOpen();
@@ -163,6 +164,7 @@ private:
 	bool mbShouldNotRenderAudio;
 	bool mbOverrideReopen;
 	bool mbHasJava;
+	int mIeVersion;
 public:
 	DECLARE_MESSAGE_MAP()
 
