@@ -96,7 +96,7 @@ Page custom SapiPage
 ;**
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION} (${CUSTOM_LANG_NAME})"
 ;this is the name of the installer that gets created.  
-OutFile "Setup-amis30-${CUSTOM_LANG_NAME}.exe"
+OutFile "Setup-amis31beta-${CUSTOM_LANG_NAME}.exe"
 InstallDir "$PROGRAMFILES\AMIS"
 InstallDirRegKey HKLM "${PRODUCT_DIR_REGKEY}" ""
 ShowInstDetails show
@@ -132,7 +132,7 @@ Section "MainSection" SEC01
     
 	;copy the DLLs
 	File "${BIN_DIR}\libambulant_shwin32.dll"
-	File "${BIN_DIR}\xerces-c_2_8.dll"
+	File "${BIN_DIR}\xerces-c_3_0.dll"
 	File "${BIN_DIR}\TransformSample.ax"
 	File "${BIN_DIR}\libamplugin_ffmpeg.dll"
 	File "${BIN_DIR}\avformat-52.dll"
@@ -141,7 +141,20 @@ Section "MainSection" SEC01
 	File "${BIN_DIR}\SDL.dll"
 	File "${BIN_DIR}\libamplugin_pdtb.dll"
     File "${BIN_DIR}\lzop.exe"
-  
+    
+    ;copy the xslt and stylesheet jar files
+    SetOutPath "$INSTDIR\xslt"
+    File "${BIN_DIR}\xslt\org.daisy.util.jar"
+    File "${BIN_DIR}\xslt\saxon8.jar"
+    File "${BIN_DIR}\xslt\stax-api-1.0.1.jar"
+    File "${BIN_DIR}\xslt\wstx-lgpl-3.2.8.jar"
+    
+    SetOutPath "$INSTDIR\xslt\dtbook"
+    File "${BIN_DIR}\xslt\dtbook\dtbook2xhtml.xsl"
+    
+    SetOutPath "$INSTDIR\xslt\l10n"
+    File "${BIN_DIR}\xslt\l10n\l10n.xsl"
+    
     ;register the pdtb-ie plugin
     !insertmacro InstallLib REGDLLTLB NOTSHARED NOREBOOT_NOTPROTECTED "${BIN_DIR}\PdtbIePlugin.dll" "$INSTDIR\PdtbIePlugin.dll" "$INSTDIR"
   
@@ -505,6 +518,12 @@ Section Uninstall
     RMDir "$SETTINGS_DIR\bmk"
     
  Continue:
+    Delete "$INSTDIR\xslt\l10n\*"
+    RMDir "$INSTDIR\xslt\l10n\"
+    Delete "$INSTDIR\xslt\dtbook\*"
+    RMDir "$INSTDIR\xslt\dtbook\"
+    Delete "$INSTDIR\xslt\*"
+    RMDir "$INSTDIR\xslt"    
     Delete "$INSTDIR\*"
     RMDir "$INSTDIR\"
     ; this deletes all the registry keys used by NSIS
