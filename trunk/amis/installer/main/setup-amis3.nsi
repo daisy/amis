@@ -511,13 +511,6 @@ Section Uninstall
     Delete "$SETTINGS_DIR\resource.h.ini"
     Delete "$SETTINGS_DIR\amisLog.txt"
 
-    ;We are leaving the bookmarks and history files on purpose
-	MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "Remove bookmarks and history?" IDYES Continue
-    Delete "$SETTINGS_DIR\amisHistory.xml"
-    Delete "$SETTINGS_DIR\bmk\*"
-    RMDir "$SETTINGS_DIR\bmk"
-    
- Continue:
     Delete "$INSTDIR\xslt\l10n\*"
     RMDir "$INSTDIR\xslt\l10n\"
     Delete "$INSTDIR\xslt\dtbook\*"
@@ -590,4 +583,13 @@ Section -un.CopyLangpack
 
     Delete "$SETTINGS_DIR\lang\readme.txt"
     RMDir "$SETTINGS_DIR\lang"
+SectionEnd
+
+Section -un.RemoveHistoryBookmarks
+    MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "Remove bookmarks and history?" IDYES End
+    Delete "$SETTINGS_DIR\amisHistory.xml"
+    Delete "$SETTINGS_DIR\bmk\*"
+    RMDir "$SETTINGS_DIR\bmk"
+    MessageBox MB_OK "hi"    
+End:
 SectionEnd
