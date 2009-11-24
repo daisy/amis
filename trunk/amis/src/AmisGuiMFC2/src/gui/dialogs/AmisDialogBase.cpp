@@ -32,26 +32,7 @@ IMPLEMENT_DYNAMIC(AmisDialogBase, CDialog)
 
 void AmisDialogBase::resolvePromptVariables(Prompt* pPrompt)
 {
-	USES_CONVERSION;
-	for (int i = 0; i<pPrompt->getNumberOfItems(); i++)
-	{
-		PromptItemBase* p = pPrompt->getItem(i);
-		if (p->getPromptItemType() == amis::gui::spoken::PROMPT_VARIABLE)
-		{
-			PromptVar* pvar = (PromptVar*)p;
-			if (pvar->getName() == "VERSION_NUMBER")
-			{
-				wstring val = A2T(theApp.getVersion().c_str());
-				pvar->setContents(val, "");
-			}
-			else if (pvar->getName() == "RELEASE_DATE")
-			{
-				wstring val = A2T(theApp.getReleaseDate().c_str());
-				pvar->setContents(val, "");
-			}
-
-		}
-	}
+	return;
 }
 
 void AmisDialogBase::triggerVirtualKeyStroke(CWnd* cwnd)

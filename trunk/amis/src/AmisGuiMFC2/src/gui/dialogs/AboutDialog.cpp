@@ -29,7 +29,25 @@ using namespace amis::gui::dialogs;
 
 void AboutDialog::resolvePromptVariables(Prompt* pPrompt)
 {
-	return;
+	USES_CONVERSION;
+	for (int i = 0; i<pPrompt->getNumberOfItems(); i++)
+	{
+		PromptItemBase* p = pPrompt->getItem(i);
+		if (p->getPromptItemType() == amis::gui::spoken::PROMPT_VARIABLE)
+		{
+			PromptVar* pvar = (PromptVar*)p;
+			if (pvar->getName() == "VERSION_NUMBER")
+			{
+				wstring val = A2T(theApp.getVersion().c_str());
+				pvar->setContents(val, "");
+			}
+			else if (pvar->getName() == "RELEASE_DATE")
+			{
+				wstring val = A2T(theApp.getReleaseDate().c_str());
+				pvar->setContents(val, "");
+			}
+		}
+	}
 }
 AboutDialog::AboutDialog() : AmisDialogBase(AboutDialog::IDD)
 {
