@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <ui next-id="t451" xml:lang="en" xmlns="http://amisproject.org">
-    <created by="DAISY Lion" date="2009-11-22_00:43:03"/>
+    <created by="DAISY Lion" date="2009-11-23_18:51:33"/>
     <containers>
         <container id="file">
             <note>This is the menu header &quot;File&quot;</note>
@@ -949,18 +949,14 @@ Adaptive Multimedia Information System</text>
                 </caption>
             </control>
             <control mfcid="IDC_VERSION" translate="no" widget="textlabel autoplay">
-              <caption>
+                <caption>
                 <!-- removed text id=164-->
                   <prompt>
                     <promptItem>
                       <text id="t448">Version:</text>
                       <audio from="" src="./audio/eng-US_t448.mp3"/>
                     </promptItem>
-                    <promptItem>
-                      <text id="t449">3.1 beta</text>
-                      <!-- no audio src for this one; it's to be rendered with TTS -->
-                      <audio from="" src=""/>
-                    </promptItem>
+                    <promptVar name="VERSION_NUMBER"/>
                 </prompt>
                 </caption>
             </control>
@@ -972,11 +968,7 @@ Adaptive Multimedia Information System</text>
                       <text id="t447">Release date:</text>
                       <audio from="" src="./audio/eng-US_t447.mp3"/>
                     </promptItem>
-                    <promptItem>
-                      <text id="t450">2009-11-22</text>
-                      <!-- no audio src for this one; it's to be rendered with TTS -->
-                      <audio from="" src=""/>
-                    </promptItem>
+                    <promptVar name="RELEASE_DATE"/>
                   </prompt>
                 </caption>
             </control>
