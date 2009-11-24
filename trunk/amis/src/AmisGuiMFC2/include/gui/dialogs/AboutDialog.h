@@ -39,6 +39,7 @@ public:
 	AboutDialog();
 	~AboutDialog(){};
 	enum { IDD = IDD_ABOUTBOX };
+	BOOL OnInitDialog();
 protected:
 	afx_msg void OnPaint();
 	DECLARE_MESSAGE_MAP()

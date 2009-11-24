@@ -23,6 +23,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "../resource.h"
 #include "gui/dialogs/AboutDialog.h"
 
+#include "gui/AmisApp.h"
+
 using namespace amis::gui::dialogs;
 
 void AboutDialog::resolvePromptVariables(Prompt* pPrompt)
@@ -44,4 +46,31 @@ void AboutDialog::OnPaint()
 	CWnd::DefWindowProc( WM_PAINT, (WPARAM)dc.m_hDC, 0 );
 	//call the base class on_paint function
 	on_paint();
+}
+BOOL AboutDialog::OnInitDialog()
+{
+	USES_CONVERSION;
+	CDialog::OnInitDialog();
+
+	//IDC_VERSION
+	 CStatic* p_version = (CStatic*)this->GetDlgItem(IDC_VERSION);
+	 CString tmp = A2T(theApp.getVersion().c_str());
+	 CString version;
+	 p_version->GetWindowText(version);
+	 version.Append(L" ");
+	 version.Append(tmp);
+	 p_version->SetWindowText(version);
+
+    //IDC_VERSIONNOTE
+	 CStatic* p_releasedate = (CStatic*)this->GetDlgItem(IDC_VERSIONNOTE);
+	 tmp = A2T(theApp.getReleaseDate().c_str());
+	 CString release_date;
+	 p_releasedate->GetWindowText(release_date);
+	 release_date.Append(L" ");
+	 release_date.Append(tmp);
+	 p_releasedate->SetWindowText(release_date);
+
+	this->setFontOnAllControls();
+		
+	return TRUE;
 }

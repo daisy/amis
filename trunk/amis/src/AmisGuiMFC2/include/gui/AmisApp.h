@@ -81,6 +81,9 @@ public:
 	bool getShouldNotRenderAudio();
 	bool hasJava();
 	int getIeVersion();
+	std::string getVersion();
+	std::string getReleaseDate();
+	
 
 	//Menu handlers
 	afx_msg void OnFileOpen();

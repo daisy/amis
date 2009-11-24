@@ -1732,7 +1732,15 @@ bool CAmisApp::hasJava()
 }
 int CAmisApp::getIeVersion()
 {
-	return 8;//mIeVersion;
+	return mIeVersion;
+}
+std::string CAmisApp::getVersion()
+{
+	return "3.1 beta";
+}
+std::string CAmisApp::getReleaseDate()
+{
+	return "2009-11-22";
 }
 bool has_java()
 {
