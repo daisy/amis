@@ -328,7 +328,7 @@ Section -JawsScripts
   
     ; ask if the user wants to install the scripts
 AskUser:
-    MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON1 "Would you like to install Jaws for Windows scripts for AMIS" IDYES +2
+    MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON1 "Would you like to install Jaws for Windows scripts for AMIS?" IDYES InstallScripts
     Goto End
 
 InstallScripts:
@@ -436,7 +436,7 @@ CheckVista:
 
     ;the OS is not supported; warn the user instead of aborting
 OSNotSupported:
-    MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "Warning: operating system not supported.  AMIS may not work.  Do you want to continue?" IDYES +2
+    MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "Warning: operating system not supported.  AMIS may not work.  Do you want to continue?" IDYES DxCheck
     Abort
 
 DxCheck:
@@ -518,7 +518,7 @@ Section Uninstall
     Delete "$INSTDIR\xslt\*"
     RMDir "$INSTDIR\xslt"    
     Delete "$INSTDIR\*"
-    RMDir "$INSTDIR\"
+    RMDir "$INSTDIR"
     ; this deletes all the registry keys used by NSIS
     DeleteRegKey ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}"
     DeleteRegKey HKLM "${PRODUCT_DIR_REGKEY}"
@@ -586,10 +586,13 @@ Section -un.CopyLangpack
 SectionEnd
 
 Section -un.RemoveHistoryBookmarks
-    MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "Remove bookmarks and history?" IDYES End
+    MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "Remove bookmarks and history?" IDYES Remove IDNO End
+Remove:
     Delete "$SETTINGS_DIR\amisHistory.xml"
     Delete "$SETTINGS_DIR\bmk\*"
     RMDir "$SETTINGS_DIR\bmk"
-    MessageBox MB_OK "hi"    
+    ; the settings dir should now be empty
+    RMDir "$SETTINGS_DIR"
+    RMDir "$APPDATA\AMIS\"
 End:
 SectionEnd
