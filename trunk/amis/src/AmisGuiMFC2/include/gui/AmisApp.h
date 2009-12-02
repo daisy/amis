@@ -45,7 +45,6 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #define WITH_DAISY_PDTB
 #define AMIS_MAX_ANYTHING					49
 #define AMIS_MAX_RECENT_BOOKS				5
-#define REQUIRED_JAVA_VERSION				1.6
 
 namespace amis
 {
@@ -79,7 +78,6 @@ public:
 	bool getIsWaiting();
 	void setIsWaiting(bool);
 	bool getShouldNotRenderAudio();
-	bool hasJava();
 	int getIeVersion();
 	std::string getVersion();
 	std::string getReleaseDate();
@@ -166,7 +164,6 @@ private:
 	bool mbIsWaitingToLoad;
 	bool mbShouldNotRenderAudio;
 	bool mbOverrideReopen;
-	bool mbHasJava;
 	int mIeVersion;
 public:
 	DECLARE_MESSAGE_MAP()

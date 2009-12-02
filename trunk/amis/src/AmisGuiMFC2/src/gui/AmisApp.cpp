@@ -151,7 +151,6 @@ CAmisApp::CAmisApp()
 
 //THE APPLICATION!
 CAmisApp theApp;
-bool has_java();
 int get_ie_version();
 
 BOOL CAmisApp::InitInstance()
@@ -184,7 +183,6 @@ BOOL CAmisApp::InitInstance()
 	//our initial language preference
 	mLanguagePreference = Preferences::Instance()->getUiLangId();
 
-	mbHasJava = has_java();
 	mIeVersion = get_ie_version();
 
 	//load the resource dll
@@ -1731,10 +1729,6 @@ std::string CAmisApp::getPromptIDFromSideBarName(std::string item_id)
 	return "";
 }
 
-bool CAmisApp::hasJava()
-{
-	return mbHasJava;
-}
 int CAmisApp::getIeVersion()
 {
 	return mIeVersion;
@@ -1747,38 +1741,6 @@ std::string CAmisApp::getReleaseDate()
 {
 	return "2009-11-22";
 }
-bool has_java()
-{
-	USES_CONVERSION;
-	HKEY hKey;
-	//"ERROR_SUCCESS" means it worked
-	if (RegOpenKeyEx(HKEY_LOCAL_MACHINE, 
-		L"SOFTWARE\\JavaSoft\\Java Runtime Environment", 
-		0, KEY_READ, &hKey) == ERROR_SUCCESS)
-	{
-		char buf[255] = {0};
-		DWORD type = REG_SZ;
-		DWORD size = 255;
-		if (RegQueryValueEx(hKey, L"CurrentVersion", 
-			NULL, &type, (LPBYTE)buf, &size) == ERROR_SUCCESS)
-		{
-			string v = "";
-			for (int i = 0; i<255; i++)
-				if (buf[i]) v += buf[i];
-			
-			RegCloseKey(hKey);
-			float version = atof(v.c_str());
-			if (version >= REQUIRED_JAVA_VERSION)
-				return true;
-		}
-		else
-		{	
-			RegCloseKey(hKey);
-		}
-	}
-	return false;
-}
-
 int get_ie_version()
 {
 	USES_CONVERSION;

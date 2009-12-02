@@ -22,7 +22,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 //FilePathTools
 #include <string>
-//#include <vector>
+#include <algorithm>
 #include "util/FilePathTools.h"
 
 
@@ -453,10 +453,21 @@ string amis::util::FilePathTools::getAsUrlPath(string filepath)
 
 bool amis::util::FilePathTools::urlListContains(string url, amis::UrlList* urlList)
 {
+	string str_url = url;
+
+//windows filenames are case-insensitive, so convert to lower
+#ifdef AMIS_PLATFORM_WINDOWS
+	std::transform(str_url.begin(), str_url.end(), str_url.begin(), (int(*)(int))tolower);
+#endif
 	for (int i = 0; i<urlList->size(); i++)
 	{
 		ambulant::net::url item = ((amis::UrlList)*urlList)[i];
-		if (item.get_url() == url)
+		string item_url = item.get_url();
+//windows filenames are case-insensitive, so convert to lower 
+#ifdef AMIS_PLATFORM_WINDOWS
+		std::transform(item_url.begin(), item_url.end(), item_url.begin(), (int(*)(int))tolower);
+#endif
+		if (item_url == str_url)
 			return true;
 	}
 	return false;

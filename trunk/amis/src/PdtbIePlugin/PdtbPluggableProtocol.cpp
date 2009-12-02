@@ -1,3 +1,26 @@
+/*
+AMIS: Adaptive Multimedia Information System
+Software for playing DAISY books
+Homepage: http://amisproject.org
+
+Originally created by CWI (http://www.cwi.nl)
+
+Copyright (c) 2009  DAISY Consortium
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+*/
 // PdtbPluggableProtocol.cpp : Implementation of CPdtbPluggableProtocol
 
 #include "stdafx.h"
@@ -40,16 +63,25 @@ STDMETHODIMP CPdtbPluggableProtocol::Start(
 		bool ok = ambulant::net::read_data_from_url(url, df, &buffer, &size);
 		if (ok) {
 			
-			/*Marisa*/
+			//if we should process dtbook and this is an XML file,
+			//then assume it is our dtbook file that requires transformation
 			if (CPdtbBridge::s_process_dtbook == TRUE && 
 				amis::util::FilePathTools::getExtension(url.get_url()) == "xml")
 			{
-				//std::string whole_file = (char*)buffer;
-				amis::dtb::TransformDTBook dtbook_xform;
-				if(dtbook_xform.transform(url.get_url()))
+				//amis::dtb::TransformDTBook dtbook_xform;
+				//if(dtbook_xform.transform(url.get_url()))
+				//{
+					//m_whole_file = dtbook_xform.getResults();
+				m_whole_file = amis::dtb::TransformDTBook::Instance()->getResults();
+				
+				//free up some memory
+				amis::dtb::TransformDTBook::DestroyInstance();
+				
+				long sz = m_whole_file.size();
+					
+				//}
+				if (!m_whole_file.empty())
 				{
-					m_whole_file = dtbook_xform.getResults();
-					long sz = m_whole_file.size();
 					m_buffer = (BYTE*)m_whole_file.c_str();
 					m_bufsize = sz;
 					mimetype = "text/html";

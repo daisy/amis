@@ -81,6 +81,7 @@ public:
 	void setCallbackForPreprocessingBookKey(ProtectedBookKeyHandlerFunctionPtr);
 	bool hasText();
 	void setCacheIndex(bool);
+	bool wasDtbookTransformed();
 private:
 	void saveIndexData();
 	bool readIndexData();
@@ -124,6 +125,7 @@ private:
 	bool mbCanDecodePdtb;
 	string mAppPath;
 	bool mCacheIndex;
+	bool mbDtbookTransformSucceeded;
 };
 }
 }

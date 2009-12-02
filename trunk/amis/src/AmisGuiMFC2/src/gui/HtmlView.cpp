@@ -332,12 +332,22 @@ LPARAM CAmisHtmlView::OnHighlightUrlTarget(WPARAM wParam, LPARAM lParam)
 #ifdef WITH_PROTECTED_BOOK_SUPPORT
 		amis::UrlList* text_urls = amis::dtb::DtbWithHooks::Instance()->getFileSet()->getTextFiles();
 		string url_no_target = amis::util::FilePathTools::clearTarget(*url);
-		bool is_daisy_text_file = amis::util::FilePathTools::urlListContains(url_no_target, text_urls);
+
+		//The DTBook file was transformed in the background
+		//it should be loaded if all of these are true: 
+		//this file request is our DTBook file
+		//this is a DAISY 2005 book
+		//the DTBook transformation was successful
+		bool should_load_transformed_dtbook = 
+			amis::util::FilePathTools::urlListContains(url_no_target, text_urls)
+			&& 
+			(amis::dtb::DtbWithHooks::Instance()->getDaisyVersion() == amis::dtb::DAISY_2005)
+			&&
+			amis::dtb::DtbWithHooks::Instance()->wasDtbookTransformed();
+
 		//Protected books OR DAISY 2005 format books require manual loading through IE
 		if (amis::dtb::DtbWithHooks::Instance()->isProtected() || 
-			(amis::dtb::DtbWithHooks::Instance()->getDaisyVersion() == amis::dtb::DAISY_2005
-			&&
-			is_daisy_text_file && theApp.hasJava()))
+			should_load_transformed_dtbook)
 		{
 			// Prepend amisie: to the URL. This will change the protocol,
 			// and the IeDtbPlugin PluggableProtocol COM object has registered

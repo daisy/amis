@@ -36,6 +36,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "util/Log.h"
 #include "util/FilePathTools.h"
 #include <fstream>
+#include "dtb/TransformDTBook.h"
 
 #include "ambulant/common/plugin_engine.h"
 
@@ -469,6 +470,13 @@ bool amis::dtb::Dtb::processOpf(const ambulant::net::url* filepath)
 	
 	mpFiles->setAdditionalDataAfterInitialParse(mUid, navfile, resfile, mpHistory);
 	mpFiles->setTextFile(txtfile);
+
+	//pre-transform the textfile, since it's easier to make the user wait now than
+	//have the SMIL start playing while IE transforms on the fly
+	//the textfile will be transformed and ready to be loaded (in bin/tmpdtbook.xml)
+//	amis::dtb::TransformDTBook dtbook_xform;
+//	mbDtbookTransformSucceeded = dtbook_xform.transform(txtfile->get_url());
+	mbDtbookTransformSucceeded = TransformDTBook::Instance()->transform(txtfile->get_url());	
 	return true;
 }
 //--------------------------------------------------
@@ -1077,4 +1085,9 @@ bool amis::dtb::Dtb::indexExistsOnDisk()
 void amis::dtb::Dtb::setCacheIndex(bool shouldCache)
 {
 	mCacheIndex = shouldCache;
+}
+
+bool amis::dtb::Dtb::wasDtbookTransformed()
+{
+	return mbDtbookTransformSucceeded;
 }
