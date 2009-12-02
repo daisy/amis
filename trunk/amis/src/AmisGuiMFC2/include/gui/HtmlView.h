@@ -31,13 +31,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 // #define this to load html through the AmbulantPdtbIE plugin for protected books
 #define HTML_LOAD_AMBULANT_PDTB
 
-#ifdef HTML_LOAD_AMBULANT_PDTB
-// The PdtbBridge COM object allows us to communicate our datasource
-// factory to the PluggableProtocol
-#ifdef WITH_PROTECTED_BOOK_SUPPORT
 #include "PdtbBridge.h"
-#endif
-#endif
 
 namespace amis
 {
@@ -108,11 +102,7 @@ public:
 private:
 	CString mNavStringUrl;
 #endif
-#ifdef HTML_LOAD_AMBULANT_PDTB
-#ifdef WITH_PROTECTED_BOOK_SUPPORT
-	IPdtbBridge *mpLoaderBridge;
-#endif
-#endif
+IPdtbBridge *mpLoaderBridge;
 
 //Add the following functions. This action prevents the leak because the
 //CHtmlView versions of LoadFromResource() call CHtmlView::Navigate().

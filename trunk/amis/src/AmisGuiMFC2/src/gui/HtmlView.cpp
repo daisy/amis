@@ -59,14 +59,14 @@ static char THIS_FILE[] = __FILE__;
 
 #ifdef HTML_LOAD_AMBULANT_PDTB
 // XXXJack
-// Grmpf: GUIDs don't get defined. Copied here (from PdtbBridge.h)
+// Grmpf: GUIDs don't get defined. Copied here (from IeDtbBridge.h)
 // for the time being. Even the procedure outlined in Q130869 does
 // not seem to work:-(
 #include <initguid.h>
 /*
-DEFINE_GUID(CLSID_CPdtbBridge,
+DEFINE_GUID(CLSID_CIeDtbBridge,
 			0xF326B6FD,0x40F5,0x44D7,0xA8,0x7A,0xE6,0x90,0x50,0x0C,0x27,0xF1);
-DEFINE_GUID(IID_PdtbBridge,
+DEFINE_GUID(IID_IeDtbBridge,
 			0x659B0CA3,0x0746,0x4050,0x85,0x05,0x9C,0x13,0x2A,0x3B,0xBC,0xC5);
 */
 #endif
@@ -87,20 +87,12 @@ END_MESSAGE_MAP()
 
 CAmisHtmlView::CAmisHtmlView()
 {
-#ifdef HTML_LOAD_AMBULANT_PDTB
-#ifdef WITH_PROTECTED_BOOK_SUPPORT
 	mpLoaderBridge = NULL;
-#endif
-#endif
 }
 
 CAmisHtmlView::CAmisHtmlView(const RECT& rect, CWnd* parent)
 {
-#ifdef HTML_LOAD_AMBULANT_PDTB
-#ifdef WITH_PROTECTED_BOOK_SUPPORT
 	mpLoaderBridge = NULL;
-#endif
-#endif
 	Create(NULL,_T("HtmlWidget"),WS_VISIBLE,rect,parent,AFX_IDW_PANE_FIRST);
 }
 
@@ -238,8 +230,8 @@ void CAmisHtmlView::OnBeforeNavigate2(LPCTSTR lpszURL, DWORD nFlags,
 	// this is a URL.
 	string urlOrFile = T2A(lpszURL);
 
-	//strip the ambulantpdtb protocol if it's there
-	if (urlOrFile.substr(0, 13) == "ambulantpdtb:")
+	//strip the amisie protocol if it's there
+	if (urlOrFile.substr(0, 13) == "amisie:")
 		urlOrFile.replace(0, 13, "");
 
 	ambulant::net::url thisUrl;
@@ -347,14 +339,14 @@ LPARAM CAmisHtmlView::OnHighlightUrlTarget(WPARAM wParam, LPARAM lParam)
 			&&
 			is_daisy_text_file && theApp.hasJava()))
 		{
-			// Prepend ambulantpdtb: to the URL. This will change the protocol,
-			// and the PdtbIePlugin PluggableProtocol COM object has registered
+			// Prepend amisie: to the URL. This will change the protocol,
+			// and the IeDtbPlugin PluggableProtocol COM object has registered
 			// that protocol. It will then be used to get the data, and it will
 			// do the right thing wrt. decoding.
-			if (newurl.substr(0, 13) != "ambulantpdtb:")
-				newurl = "ambulantpdtb:" + newurl;
-			// Also, we need to inform the PdtbPluggableProtocol about
-			// our datasource factory. This is done with the PdtbBridge
+			if (newurl.substr(0, 7) != "amisie:")
+				newurl = "amisie:" + newurl;
+			// Also, we need to inform the IeDtbPluggableProtocol about
+			// our datasource factory. This is done with the IeDtbBridge
 			// object, which remembers the factory until disposed of.
 			if (mpLoaderBridge == NULL) 
 			{

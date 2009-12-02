@@ -299,8 +299,13 @@ BOOL CAmisApp::InitInstance()
 
 	//then start logging!  
 	amis::util::Log::Instance()->startLog(this->getAppSettingsPath() + "amisLog.txt");
+#if _DEBUG
+	amis::util::Log::Instance()->enable(true);
+	amis::util::Log::Instance()->setLevel(amis::util::FULL_LOGGING);
+#else
 	amis::util::Log::Instance()->enable(Preferences::Instance()->getIsLoggingEnabled());
 	amis::util::Log::Instance()->setLevel(Preferences::Instance()->getLogLevel());
+#endif
 	Preferences::Instance()->logPreferences();
 
 	initializeSelfVoicing();

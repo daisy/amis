@@ -42,7 +42,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="./include;&quot;../../../../../xerces-c-src/src&quot;;../../../../../ambulant/include;&quot;c:\program files\visual leak detector&quot;"
+				AdditionalIncludeDirectories="./include;&quot;../../../../../xerces-c-src/src&quot;;../../../../../ambulant/include;&quot;$(VSInstallDir)\..\Visual Leak Detector&quot;"
 				PreprocessorDefinitions="_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_WINDOWS;AMIS_COMPILER_MSVC;AMIS_PLATFORM_WINDOWS;WITH_SMIL30"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
