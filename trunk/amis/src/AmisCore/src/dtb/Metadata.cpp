@@ -61,6 +61,7 @@ amis::dtb::MetaItem* amis::dtb::Metadata::getMetadata(string metaname)
 wstring amis::dtb::Metadata::getMetadataContent(string metaname)
 {
 	wstring return_value;
+	return_value.erase();
 	MetaItem* p_item = getMetadata(metaname);
 	if (p_item != NULL) return_value = p_item->mContent;
 	return return_value;

@@ -345,7 +345,7 @@ LPARAM CAmisHtmlView::OnHighlightUrlTarget(WPARAM wParam, LPARAM lParam)
 			&&
 			amis::dtb::DtbWithHooks::Instance()->wasDtbookTransformed();
 
-		//Protected books OR DAISY 2005 format books require manual loading through IE
+		//Protected book files OR DTBook files require manual loading through IE
 		if (amis::dtb::DtbWithHooks::Instance()->isProtected() || 
 			should_load_transformed_dtbook)
 		{

@@ -64,6 +64,8 @@ public:
 	NavContainer* getNavContainer();
 	void setNavContainer(NavContainer*);
 	virtual void acceptDepthFirst(NavVisitor*) = 0;
+	string getRel();
+	void setRel(string);
 
 protected:
 	NavModel* mpNavModel;
@@ -76,7 +78,7 @@ private:
 	string mId;
 	int mPlayOrder;
 	string mClass;
-	
+	string mRel;	
 
 };
 }

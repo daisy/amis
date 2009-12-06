@@ -68,18 +68,12 @@ STDMETHODIMP CPdtbPluggableProtocol::Start(
 			if (CPdtbBridge::s_process_dtbook == TRUE && 
 				amis::util::FilePathTools::getExtension(url.get_url()) == "xml")
 			{
-				//amis::dtb::TransformDTBook dtbook_xform;
-				//if(dtbook_xform.transform(url.get_url()))
-				//{
-					//m_whole_file = dtbook_xform.getResults();
-				m_whole_file = amis::dtb::TransformDTBook::Instance()->getResults();
-				
-				//free up some memory
-				amis::dtb::TransformDTBook::DestroyInstance();
+				amis::dtb::TransformDTBook dtbook_xform;
+				m_whole_file = dtbook_xform.getResults();
 				
 				long sz = m_whole_file.size();
 					
-				//}
+				
 				if (!m_whole_file.empty())
 				{
 					m_buffer = (BYTE*)m_whole_file.c_str();

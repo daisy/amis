@@ -356,6 +356,10 @@
 					</FileConfiguration>
 				</File>
 				<File
+					RelativePath=".\src\dtb\DistInfo.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\src\dtb\Dtb.cpp"
 					>
 					<FileConfiguration
@@ -777,6 +781,10 @@
 				</File>
 				<File
 					RelativePath=".\include\dtb\CustomTest.h"
+					>
+				</File>
+				<File
+					RelativePath=".\include\dtb\DistInfo.h"
 					>
 				</File>
 				<File

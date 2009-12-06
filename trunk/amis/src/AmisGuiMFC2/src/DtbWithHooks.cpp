@@ -66,6 +66,7 @@ DtbWithHooks::DtbWithHooks():Dtb(theApp.getAppPath())
 	mbIsWaitingForLastmarkNode = false;
 	//setTTSNextPhraseFlag(false);
 	setCacheIndex(Preferences::Instance()->getCacheIndex());
+	mpBmkNavPoint = NULL;
 }
 
 DtbWithHooks::~DtbWithHooks()
@@ -252,7 +253,7 @@ void DtbWithHooks::previousSmilDocument()
 	}
 }
 
-void DtbWithHooks::loadNavNode(nav::NavNode* pNav)
+void DtbWithHooks::loadNavNode(nav::NavNode* pNav, bool overrideCheck)
 {
 	if (pNav == NULL) 
 	{
@@ -265,7 +266,7 @@ void DtbWithHooks::loadNavNode(nav::NavNode* pNav)
 		rel_path = ambulant::net::url::from_filename(pNav->getContent(), true);
 	else
 		rel_path = ambulant::net::url::from_url(pNav->getContent());
-	loadSmilFromUrl(&rel_path);
+	loadSmilFromUrl(&rel_path, overrideCheck);
 }
 
 void DtbWithHooks::addToHistory()
@@ -504,6 +505,8 @@ amis::dtb::Bookmark* DtbWithHooks::addBookmark()
 
 void DtbWithHooks::loadBookmark(int index)
 {
+	USES_CONVERSION;
+
 	amis::dtb::BookmarkSet* p_bmks = NULL;
 	amis::dtb::PositionMark* p_mark = NULL;
 	
@@ -513,10 +516,13 @@ void DtbWithHooks::loadBookmark(int index)
 	p_mark = p_bmks->getItem(index);
 	if (!p_mark) return;
 	amis::util::Log::Instance()->writeMessage("Loading bookmark", "DtbWithHooks::loadBookmark");
+	
+	mpBmkNavPoint = (amis::dtb::nav::NavPoint*)getNavModel()->getNavMap()->goToId(p_mark->mpStart->mNcxRef);
 	loadSmilFromUrl(&p_mark->mpStart->mUri);
 }
 
-amis::dtb::smil::SmilMediaGroup* DtbWithHooks::loadSmilFromUrl(const ambulant::net::url* pUri)
+amis::dtb::smil::SmilMediaGroup* DtbWithHooks::loadSmilFromUrl(const ambulant::net::url* pUri, 
+															   bool overrideCheck)
 {
 	USES_CONVERSION;
 	if (pUri == NULL)
@@ -528,8 +534,8 @@ amis::dtb::smil::SmilMediaGroup* DtbWithHooks::loadSmilFromUrl(const ambulant::n
 	ambulant::net::url full_path = pUri->join_to_base(*getFileSet()->getBookDirectory());
 	
 	//set the spine at this file.  this also makes sure that we're going to a file that is in the book.
-	if (getSpine()->goToFile(&full_path))
-	{
+	//if (getSpine()->goToFile(&full_path) && !overrideCheck)
+	//{
 		LPCTSTR str_ = A2T(full_path.get_url().c_str());
 		string log_msg = "Loading SMIL from URL: " + full_path.get_url();
 		amis::util::Log::Instance()->writeMessage("Loading SMIL from URL", &full_path, 
@@ -553,9 +559,9 @@ amis::dtb::smil::SmilMediaGroup* DtbWithHooks::loadSmilFromUrl(const ambulant::n
 		}
 		else
 		{
-			amis::gui::MainWndParts::Instance()->mpMmDoc->OnOpenDocument(str_);
+			loadNewSmilFile(&full_path, overrideCheck);
 		}
-	}
+	//}
 	return NULL;
 }
 
@@ -840,4 +846,59 @@ void DtbWithHooks::ttsTwoDone()
 	DtbWithHooks* p_inst = amis::dtb::DtbWithHooks::Instance();
 	MainWndParts::Instance()->mpMainFrame->SendMessage(WM_COMMAND, (WPARAM)ID_AMIS_NEXT_PHRASE, (LPARAM)0);
 	//p_inst->nextPhrase();
+}
+
+//called when a new file is requested (as opposed to a position in the current file)
+void DtbWithHooks::loadNewSmilFile(const ambulant::net::url* smilurl, bool overrideCheck)
+{
+	USES_CONVERSION;
+
+	LPCTSTR str_ = A2T(smilurl->get_url().c_str());
+	
+	bool is_smil_in_this_volume = false;
+	bool is_multi_volume = false;
+	if (getDaisyVersion() == amis::dtb::DAISY_202)
+	{
+		is_smil_in_this_volume = getSpine()->goToFile(smilurl);
+		amis::dtb::MetaItem* p_setinfo = NULL;
+		p_setinfo = getMetadata()->getMetadata("ncc:setInfo");
+		//if this is a set of more than one volume
+		if (p_setinfo)
+		{
+			string metastr = T2A(p_setinfo->mContent.c_str());
+			if (metastr != "1 of 1" && metastr != "1 OF 1")
+				is_multi_volume = true;
+		}
+	}
+	else
+	{
+		//TODO: DAISY 2005
+		//TODO: check distInfo to see which volume this SMIL URL belongs to
+	}
+	
+	if (!is_smil_in_this_volume && is_multi_volume)
+	{
+		//if not our current volume:
+		// Daisy 202: load nav node associated with the bookmark
+		//the nav node should contain the change disc msg
+		//if the navnode doesn't exist, there's not much we can do
+		if (getDaisyVersion() == amis::dtb::DAISY_202 && mpBmkNavPoint) 
+		{
+			loadNavNode(mpBmkNavPoint);
+		}
+		// Daisy 2005: play change disc message(audio sequence = changeMsg + media #)
+		else
+		{
+
+		}
+		
+	}
+	else if (is_smil_in_this_volume)
+	{
+		amis::gui::MainWndParts::Instance()->mpMmDoc->OnOpenDocument(str_);
+	}
+	else //!is_smil_in_this_volume && !is_multi_volume
+	{
+		amis::util::Log::Instance()->writeError("Url not found in book", smilurl, "DtbWithHooks::loadNewSmilFile");
+	}
 }

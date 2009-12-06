@@ -474,9 +474,8 @@ bool amis::dtb::Dtb::processOpf(const ambulant::net::url* filepath)
 	//pre-transform the textfile, since it's easier to make the user wait now than
 	//have the SMIL start playing while IE transforms on the fly
 	//the textfile will be transformed and ready to be loaded (in bin/tmpdtbook.xml)
-//	amis::dtb::TransformDTBook dtbook_xform;
-//	mbDtbookTransformSucceeded = dtbook_xform.transform(txtfile->get_url());
-	mbDtbookTransformSucceeded = TransformDTBook::Instance()->transform(txtfile->get_url());	
+	amis::dtb::TransformDTBook dtbook_xform;
+	mbDtbookTransformSucceeded = dtbook_xform.transform(txtfile->get_url());
 	return true;
 }
 //--------------------------------------------------

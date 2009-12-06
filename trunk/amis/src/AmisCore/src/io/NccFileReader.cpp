@@ -87,21 +87,27 @@ void amis::io::NccFileReader::startElement(const   XMLCh* const    uri,
 		string href;
 		href.assign(SimpleAttrs::get("href", &attributes));
 	
+		string rel;
+		rel.assign(SimpleAttrs::get("rel", &attributes));
+
 		mbFlag_GetChars = true;
 		mTempChars.erase();
 
 		if (mListType == 0)
 		{
+			mpCurrentNavPoint->setRel(rel);
 			mpCurrentNavPoint->setContent(href);	
 		}
 		else if (mListType == 1)
 		{
 			//nav list
+			mpCurrentNavTarget->setRel(rel);
 			mpCurrentNavTarget->setContent(href);	
 		}
 		else if (mListType == 2)
 		{
 			//page list
+			mpCurrentPageTarget->setRel(rel);
 			mpCurrentPageTarget->setContent(href);
 		}
 	}
@@ -199,7 +205,7 @@ void amis::io::NccFileReader::processHeading(int level, const Attributes* pAttrs
 
 	id.assign(SimpleAttrs::get("id", pAttrs)); 
 	mpCurrentNavPoint->setId(id);
-
+	
 	mpCurrentNavPoint->setLevel(level);
 
 	if (classname == "title")

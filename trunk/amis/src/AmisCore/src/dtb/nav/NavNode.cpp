@@ -37,6 +37,7 @@ amis::dtb::nav::NavNode::NavNode()
 	mId = "";
 	mPlayOrder = -1;
 	mClass = "";
+	mRel = "";
 	mpLabel = NULL;
 	mpNavModel = NULL;
 }
@@ -137,6 +138,15 @@ void amis::dtb::nav::NavNode::setNavContainer(NavContainer* pContainer)
 	mpNavContainer = pContainer;
 }
 
+//rel is used in Daisy 2 to give the volume number of a section
+void amis::dtb::nav::NavNode::setRel(string rel)
+{
+	mRel = rel;
+}
+string amis::dtb::nav::NavNode::getRel()
+{
+	return mRel;
+}
 //--------------------------------------------------
 /*! 
 	Print information about this node to the screen.

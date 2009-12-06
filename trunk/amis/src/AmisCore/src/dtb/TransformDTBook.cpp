@@ -42,6 +42,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 bool has_java();
 
+#if 0
 amis::dtb::TransformDTBook* amis::dtb::TransformDTBook::pinstance = 0;
 
 amis::dtb::TransformDTBook* amis::dtb::TransformDTBook::Instance()
@@ -54,11 +55,23 @@ void amis::dtb::TransformDTBook::DestroyInstance()
 {
 	delete pinstance;
 }
-
+#endif
 amis::dtb::TransformDTBook::TransformDTBook()
 {
 #if 0
 	mpDoc = NULL;
+#endif
+#ifdef AMIS_COMPILER_MSVC
+	USES_CONVERSION;
+
+	TCHAR szBuffer[256];
+	GetModuleFileName(NULL, szBuffer, 256);
+	CString cstr_app_path = szBuffer;
+	int pos = cstr_app_path.ReverseFind('\\');
+	if (pos >= 0) cstr_app_path = cstr_app_path.Mid(0, pos + 1);
+	mBin = W2CA(cstr_app_path);
+#else
+	mBin = "";
 #endif
 }
 amis::dtb::TransformDTBook::~TransformDTBook()
@@ -66,6 +79,7 @@ amis::dtb::TransformDTBook::~TransformDTBook()
 }
 string amis::dtb::TransformDTBook::getResults()
 {
+	readResults();
 	return mResults;
 }
 //put the results into mResults
@@ -102,13 +116,6 @@ bool amis::dtb::TransformDTBook::transform(string filepath)
 	bool retval = false;
 #ifdef AMIS_COMPILER_MSVC
 	USES_CONVERSION;
-
-	TCHAR szBuffer[256];
-	GetModuleFileName(NULL, szBuffer, 256);
-	CString cstr_app_path = szBuffer;
-	int pos = cstr_app_path.ReverseFind('\\');
-	if (pos >= 0) cstr_app_path = cstr_app_path.Mid(0, pos + 1);
-	mBin = W2CA(cstr_app_path);
 	string bookdir = amis::util::FilePathTools::getParentDirectory(filepath);
 	bookdir += "/";
 	string local_dtbook = amis::util::FilePathTools::getAsLocalFilePath(filepath);
@@ -143,7 +150,6 @@ bool amis::dtb::TransformDTBook::transform(string filepath)
 	else
 	{
 		amis::util::Log::Instance()->writeTrace("converted dtbook ");
-		readResults();
 		retval = true;
 	}
 #else

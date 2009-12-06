@@ -44,11 +44,17 @@ namespace dtb
 {
 	class TransformDTBook //add for xerces parsing: public DOMErrorHandler 
 	{
+#if 0
 	protected:
 		TransformDTBook();	
 	public:
 		static TransformDTBook* Instance();
-		void DestroyInstance();
+		static void DestroyInstance();
+#else
+	public:
+		TransformDTBook();
+#endif
+	public:
 		~TransformDTBook();
 		bool transform(string);
 		string getResults();
@@ -68,7 +74,9 @@ namespace dtb
 		void readResults();
 		string mResults;
 		string mBin;
+#if 0
 		static TransformDTBook* pinstance;
+#endif
 	};
 }
 }
