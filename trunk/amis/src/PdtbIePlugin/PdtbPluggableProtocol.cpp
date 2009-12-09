@@ -30,6 +30,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "ambulant/lib/textptr.h"
 #include "dtb/TransformDTBook.h"
 #include "util/FilePathTools.h"
+#include "util/Log.h"
 
 // CPdtbPluggableProtocol
 
@@ -49,7 +50,8 @@ STDMETHODIMP CPdtbPluggableProtocol::Start(
 	}
 	
 	ambulant::net::datasource_factory *df = (ambulant::net::datasource_factory *)CPdtbBridge::s_datasource_factory;
-	if (df) {
+	if (df) 
+	{
 		// Convert the URL to the form we need, and strip "amisie:" prefix.
 		ambulant::lib::textptr urlconv(szUrl);
 		std::string urlstr = urlconv;
@@ -57,45 +59,47 @@ STDMETHODIMP CPdtbPluggableProtocol::Start(
 			urlstr = urlstr.substr(7);
 		ambulant::net::url url = ambulant::net::url::from_url(urlstr);
 		
-		// Get the data and store it
-		char *buffer;
-		size_t size;
-		bool ok = ambulant::net::read_data_from_url(url, df, &buffer, &size);
-		if (ok) {
-			
-			//if we should process dtbook and this is an XML file,
-			//then assume it is our dtbook file that requires transformation
-			if (CPdtbBridge::s_process_dtbook == TRUE && 
-				amis::util::FilePathTools::getExtension(url.get_url()) == "xml")
-			{
-				amis::dtb::TransformDTBook dtbook_xform;
-				m_whole_file = dtbook_xform.getResults();
+		
+		if (CPdtbBridge::s_process_dtbook == TRUE && 
+			amis::util::FilePathTools::getExtension(url.get_url()) == "xml")
+		{
+			amis::dtb::TransformDTBook dtbook_xform;
+			m_whole_file = dtbook_xform.getResults();
 				
-				long sz = m_whole_file.size();
+			long sz = m_whole_file.size();
 					
-				
-				if (!m_whole_file.empty())
-				{
-					m_buffer = (BYTE*)m_whole_file.c_str();
-					m_bufsize = sz;
-					mimetype = "text/html";
-				}
-				else
-				{
-					mimetype = url.guesstype();
-				}
+			if (!m_whole_file.empty())
+			{
+				m_buffer = (BYTE*)m_whole_file.c_str();
+				m_bufsize = sz;
+				mimetype = "text/html";
 			}
-			/* end Marisa*/
-			else{
+			else
+			{
+				mimetype = url.guesstype();
+			}
+		}
+		else //this is a pdtb
+		{
+			// Get the data and store it
+			char *buffer;
+			size_t size;
+			bool ok = ambulant::net::read_data_from_url(url, df, &buffer, &size);
+			if (ok) 
+			{
 				mimetype = url.guesstype();
 				m_buffer = (BYTE *)buffer;
 				m_bufsize = size;
 			}
-		} else {
-			m_buffer = (BYTE *)strdup("<pre>PDTB-reader could not open document</pre>");
-			m_bufsize = strlen((char *)m_buffer);
+			else 
+			{
+				m_buffer = (BYTE *)strdup("<pre>PDTB-reader could not open document</pre>");
+				m_bufsize = strlen((char *)m_buffer);
+			}
 		}
-	} else {
+	} 
+	else //called from outside AMIS
+	{
 		m_buffer = (BYTE *)strdup("<pre>\"amisie:\" URLs only work from within AMIS!</pre>");
 		m_bufsize = strlen((char *)m_buffer);
 	}

@@ -899,6 +899,7 @@ void amis::dtb::Dtb::saveIndexData()
 #endif
 	//calculate this filepath from the bookmark filepath - it's unique
 	string filepath = this->getFileSet()->getBookmarksFilepath()->get_url();
+	if (filepath.empty()) return;
 	filepath = amis::util::FilePathTools::getAsLocalFilePath(filepath);
 	filepath.replace(filepath.find(".bmk"), 4, ".idx");
 	string temp_filepath = filepath + ".tmp";
@@ -966,6 +967,7 @@ bool amis::dtb::Dtb::readIndexData()
 #endif
 	//calculate this filepath from the bookmark filepath - it's unique
 	string filepath = this->getFileSet()->getBookmarksFilepath()->get_url();
+	if (filepath.empty()) return false;
 	filepath = amis::util::FilePathTools::getAsLocalFilePath(filepath);
 	filepath.replace(filepath.find(".bmk"), 4, ".idx");
 	string temp_filepath = filepath + ".tmp";
@@ -1070,6 +1072,7 @@ bool amis::dtb::Dtb::indexExistsOnDisk()
 {
 	//calculate this filepath from the bookmark filepath - it's unique
 	string filepath = this->getFileSet()->getBookmarksFilepath()->get_url();
+	if (filepath.empty()) return false;
 	filepath = amis::util::FilePathTools::getAsLocalFilePath(filepath);
 	filepath.replace(filepath.find(".bmk"), 4, ".idx");
 

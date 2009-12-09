@@ -3,7 +3,7 @@
 
 
 /* --- BODY - GENERAL STYLING --- */
-body {font-family: arial, helvetica, verdana, sans-serif; margin-left: 5%; margin-right: 5%;}
+body {font-family: arial, helvetica, verdana, sans-serif; margin-left: 3%; margin-right: 3%;}
 
 * a {color: #000000; text-decoration: none;}
 a:hover, a:active, a:focus {text-decoration : none; color : #CC3333; background-color: #FFFFCC;}

@@ -80,7 +80,7 @@ void TextRenderBrain::gotoUriTarget(std::string urlstr)
 	USES_CONVERSION;
 	CString cstr_url = A2T(urlstr.c_str());
 	CString msg;
-	
+	amis::util::Log::Instance()->writeTrace(urlstr, "TextRenderBrain::gotoUriTarget");
 	ambulant::net::url url = amis::util::makeUrlFromString(urlstr);
 	string text_elm_id = url.get_ref();
 	

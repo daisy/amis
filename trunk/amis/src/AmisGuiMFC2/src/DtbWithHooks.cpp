@@ -874,6 +874,9 @@ void DtbWithHooks::loadNewSmilFile(const ambulant::net::url* smilurl, bool overr
 	{
 		//TODO: DAISY 2005
 		//TODO: check distInfo to see which volume this SMIL URL belongs to
+		//assume single-volume for now
+		is_smil_in_this_volume = true;
+	
 	}
 	
 	if (!is_smil_in_this_volume && is_multi_volume)

@@ -175,7 +175,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				IgnoreImportLibrary="true"
-				AdditionalDependencies="comsvcs.lib xerces-c_3D.lib  libambulant_shwin32_D.lib AmisCoreD.lib"
+				AdditionalDependencies="comsvcs.lib xerces-c_3.lib  libambulant_shwin32.lib AmisCore.lib"
 				OutputFile="$(OutDir)/IeDtbPlugin.dll"
 				LinkIncremental="1"
 				AdditionalLibraryDirectories="../../lib"
