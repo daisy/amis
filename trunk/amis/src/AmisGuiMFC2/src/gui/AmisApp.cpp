@@ -274,15 +274,9 @@ BOOL CAmisApp::InitInstance()
 	mbShouldIgnoreOpenDocEvent = false;
 	//done with command line stuff .. phew
 
-	
 	if (!Preferences::Instance()->getMustAvoidTTS())
 	{
-		HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-		if (hr == S_FALSE) CoUninitialize();
-		assert(hr == S_OK);
-		
-		// Making sure both TTS instances are initialized from the right thread.
-		// InitInstance() is a convenient location.
+		// The TTS constructor takes care of CoInitEx
 		amis::tts::TTSPlayer::InstanceOne();
 		amis::tts::TTSPlayer::InstanceTwo();
 
@@ -290,13 +284,17 @@ BOOL CAmisApp::InitInstance()
 		amis::tts::TTSPlayer::InstanceOne()->setVolume(Preferences::Instance()->getTTSVolumePct());
 		amis::tts::TTSPlayer::InstanceTwo()->setVolume(Preferences::Instance()->getTTSVolumePct());
 	}
+
 	double audio_vol = 1.0;
 	if (Preferences::Instance()->getAudioVolumePct() > 0) 
 		audio_vol = (double)Preferences::Instance()->getAudioVolumePct()/100;
 	ambulant::gui::dx::set_global_level(audio_vol);
   
 	if (!Preferences::Instance()->getMustAvoidDirectX())
+	{
+		// The DX audio constructor takes care of CoInitEx
 		ambulantX::gui::dx::audio_playerX::Instance()->set_global_level(audio_vol);
+	}
 
 	//then start logging!  
 	amis::util::Log::Instance()->startLog(this->getAppSettingsPath() + "amisLog.txt");

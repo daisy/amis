@@ -139,6 +139,7 @@ amis::TextNode::TextNode()
 {
 	setMediaNodeType(amis::TEXT);
 	mLangDir = amis::LTR;
+	mText.erase();
 }
 
 amis::TextNode::~TextNode()

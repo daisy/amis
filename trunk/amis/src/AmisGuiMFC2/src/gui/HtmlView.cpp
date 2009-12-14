@@ -428,12 +428,17 @@ CAmisHtmlView::PrepareNavigateString(LPCSTR url)
 	CString urlstr(url);
 	if (mNavStringUrl.Compare(urlstr) == 0) return false;
 	HRESULT res;
-	// Check that we are indeed in threading mode
-#ifdef _DEBUG
-		HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-	if (hr == S_FALSE) CoUninitialize();
-	assert(hr == S_FALSE);
-#endif
+	
+	// Ensuring that we're ready for CoCreateInstance in this current thread context.
+	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
+	if (hr == S_FALSE)
+	{
+		// If it fails, so be it, but we must cleanup.
+		// (it may be that we're already ready,
+		// due to another init call somewhere else in the app from the same thread context)
+		CoUninitialize();
+	}
+
 	// First we need to get a pointer to the DOM
 	IDispatch *pDisp = GetHtmlDocument();
 	if (pDisp == NULL) return false;
@@ -452,12 +457,17 @@ bool
 CAmisHtmlView::DoNavigateString(LPCSTR document)
 {
 	HRESULT res;
-	// Check that we are indeed in threading mode
-#ifdef _DEBUG
+
+	// Ensuring that we're ready for CoCreateInstance in this current thread context.
 	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-	if (hr == S_FALSE) CoUninitialize();
-	assert(hr == S_FALSE);
-#endif
+	if (hr == S_FALSE)
+	{
+		// If it fails, so be it, but we must cleanup.
+		// (it may be that we're already ready,
+		// due to another init call somewhere else in the app from the same thread context)
+		CoUninitialize();
+	}
+
 	// First we need to get a pointer to the DOM
 	IDispatch *pDisp = GetHtmlDocument();
 	if (pDisp == NULL) return false;
@@ -671,16 +681,20 @@ IHTMLStyleSheet* CAmisHtmlView::applyStylesheet(const ambulant::net::url* styles
 
 	//copied this pDoc-getting code from another function in this file
 	HRESULT res;
-	// Check that we are indeed in threading mode
-#ifdef _DEBUG
-	if (!amis::Preferences::Instance()->getMustAvoidDirectX()  && 
-		!amis::Preferences::Instance()->getMustAvoidTTS())
+
+//amis::Preferences::Instance()->getMustAvoidDirectX()
+//amis::Preferences::Instance()->getMustAvoidTTS()
+
+	// Ensuring that we're ready for CoCreateInstance in this current thread context.
+	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
+	if (hr == S_FALSE)
 	{
-		HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-		if (hr == S_FALSE) CoUninitialize();
-		assert(hr == S_FALSE);
+		// If it fails, so be it, but we must cleanup.
+		// (it may be that we're already ready,
+		// due to another init call somewhere else in the app from the same thread context)
+		CoUninitialize();
 	}
-#endif
+
 	if (stylesheet == NULL) return NULL;
 
 	// First we need to get a pointer to the DOM

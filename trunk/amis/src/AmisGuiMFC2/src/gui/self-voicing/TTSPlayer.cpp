@@ -50,7 +50,8 @@ TTSPlayer* TTSPlayer::pinstance_two = 0;
 
 TTSPlayer* TTSPlayer::InstanceOne()
 {
-	if (pinstance_one == 0) {
+	if (pinstance_one == 0)
+	{
 		pinstance_one = new TTSPlayer;
 	}
 	return pinstance_one;
@@ -126,6 +127,10 @@ TTSPlayer::TTSPlayer(void)
 : m_currentVoiceNumber(-1)
 , m_isSpeaking(FALSE)
 {
+#ifdef _DEBUG
+	assert(!amis::Preferences::Instance()->getMustAvoidTTS());
+#endif
+	
 	m_pausedCount = 0;
 
 	sendMessageCallback = 0;
@@ -134,13 +139,17 @@ TTSPlayer::TTSPlayer(void)
 	mSpeakRequests = 0;
 
 	m_iV = NULL;
-	HRESULT hr = 0;
-#ifdef _DEBUG
-	hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-	if (hr == S_FALSE) CoUninitialize();
-	assert(hr == S_FALSE);
-#endif
 
+	// Ensuring that we're ready for CoCreateInstance in this current thread context.
+	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
+	if (hr == S_FALSE)
+	{
+		// If it fails, so be it, but we must cleanup.
+		// (it may be that we're already ready,
+		// due to another init call somewhere else in the app from the same thread context)
+		CoUninitialize();
+	}
+		
 	hr = CoCreateInstance(CLSID_SpVoice, NULL, CLSCTX_INPROC_SERVER,
 		IID_ISpVoice, (void**) &m_iV);
 	_ASSERT(hr == S_OK);	// If this assertion is hit then the Speech runtime is probably not installed

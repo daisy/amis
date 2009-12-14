@@ -61,6 +61,7 @@
 #include "util/FilePathTools.h"
 #include "DtbWithHooks.h"
 #include "gui/sidebar/AmisSidebar.h"
+#include "Preferences.h"
 
 #define WITHOUT_LOG_WINDOW
 

@@ -38,6 +38,8 @@ See below for license details.
 
 #include "gui\self-voicing\mffmTimeCode\SmilTimeCode.H"
 
+#include "preferences.h"
+
 //#include "ambulant/lib/logger.h"
 //#include "ambulant/lib/textptr.h"
 #include <math.h>
@@ -237,6 +239,10 @@ m_audio_speedup(0),
 m_basic_audio(0),
 hEventHandler(0)
 {
+#ifdef _DEBUG
+	assert(!amis::Preferences::Instance()->getMustAvoidDirectX());
+#endif
+
 	set_rate(0);
 	set_volume(100);
 
@@ -573,13 +579,16 @@ void gui::dx::audio_playerX::initialize_speedup_filter() {
 	// it and remember whether it worked.
 	IBaseFilter *pNewFilter = NULL;
 
-
-
-#ifdef _DEBUG
+	// Ensuring that we're ready for CoCreateInstance in this current thread context.
 	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-	if (hr == S_FALSE) CoUninitialize();
-	_ASSERT(hr == S_FALSE);
-#endif
+	if (hr == S_FALSE)
+	{
+		// If it fails, so be it, but we must cleanup.
+		// (it may be that we're already ready,
+		// due to another init call somewhere else in the app from the same thread context)
+		CoUninitialize();
+	}
+
 	HRESULT res;
 	res = CoCreateInstance(CLSID_TPBVupp69, NULL, CLSCTX_INPROC_SERVER,
 		IID_IBaseFilter, (void**)&pNewFilter);
@@ -900,18 +909,22 @@ bool gui::dx::audio_playerX::play(const char * url, char* clipBegin, char* clipE
 
 	EnterCriticalSection(&m_csSequence);
 
-	HRESULT hr = 0;
-#ifdef _DEBUG
-	hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-	if (hr == S_FALSE) CoUninitialize();
-	//_ASSERT(hr == S_FALSE);
-#endif
-
 	TRACE(L"\n####### -- PLAY DX\n");
 	amis::util::Log* p_log = amis::util::Log::Instance();
 	p_log->writeTrace("Play DX", "audio_playerX::play");
 
 	m_url.assign(url);
+
+	// Ensuring that we're ready for CoCreateInstance in this current thread context.
+	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
+	if (hr == S_FALSE)
+	{
+		// If it fails, so be it, but we must cleanup.
+		// (it may be that we're already ready,
+		// due to another init call somewhere else in the app from the same thread context)
+		CoUninitialize();
+	}
+
 	if (m_graph_builder != NULL) { 
 		stop(true);
 	}

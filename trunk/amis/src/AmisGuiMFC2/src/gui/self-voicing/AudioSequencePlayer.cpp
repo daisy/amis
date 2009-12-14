@@ -91,6 +91,7 @@ AudioSequencePlayer::AudioSequencePlayer(void)
 
 	if (!Preferences::Instance()->getMustAvoidDirectX())
 		ambulantX::gui::dx::audio_playerX::Instance()->setCallback((sendMessageCallbackFn)clipFinishedCallback);
+
 	if (!Preferences::Instance()->getMustAvoidTTS())
 		TTSPlayer::InstanceOne()->setCallback((sendMessageCallbackFn)ttsFinishedCallback);
 
@@ -276,14 +277,6 @@ void AudioSequencePlayer::playNext(bool fromEndEvent)
 	AudioSequenceComponent* comp = m_currentAudioSequence->RemoveTail();
 	if (comp->m_isAudioClip)
 	{
-#ifdef _DEBUG
-		if (fromEndEvent)
-		{
-			HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-			if (hr == S_FALSE) CoUninitialize();
-			_ASSERT(hr == S_FALSE);
-		}
-#endif
 		p_log->writeTrace("Play audio clip", "AudioSequencePlayer::playNext");
 		TRACE(L"PLAY AUDIO CLIP\n");
 		bool b = playAudioPrompt(comp->m_AudioClip);
@@ -296,7 +289,6 @@ void AudioSequencePlayer::playNext(bool fromEndEvent)
 		}
 		delete comp;
 		comp=NULL;
-
 	} 
 	else 
 	{
