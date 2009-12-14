@@ -54,6 +54,8 @@
 #include "ambulant/lib/string_util.h"
 #include "ambulant/version.h"
 
+#include "ambulant/lib/byte_buffer.h"
+
 //AMIS
 #include "gui/MainWndParts.h"
 #include "util/FilePathTools.h"

@@ -69,8 +69,13 @@ namespace amis
 								{
 									p_var->setContents(pi->getContents()->clone());
 								}
+								else
+								{
+									p_var->setContents(LPCTSTR(item_id.c_str()), "");
+								}
 							}
-						} else if (p_var->getName().compare("WILL_SKIP_OR_NOT") == 0)
+						}
+						else if (p_var->getName().compare("WILL_SKIP_OR_NOT") == 0)
 						{
 							//SKIPPABLE_ITEM_ID
 
@@ -125,6 +130,10 @@ namespace amis
 				if (pi != NULL)
 				{
 					AudioSequencePlayer::fillSequenceContents(seq, pi);
+				}
+				else
+				{
+					seq->append(item_id.c_str());
 				}
 
 				string strSelect;
