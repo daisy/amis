@@ -156,7 +156,7 @@ Section "MainSection" SEC01
     File "${BIN_DIR}\xslt\l10n\l10n.xsl"
     
     ;register the pdtb-ie plugin
-    !insertmacro InstallLib REGDLLTLB NOTSHARED NOREBOOT_NOTPROTECTED "${BIN_DIR}\PdtbIePlugin.dll" "$INSTDIR\PdtbIePlugin.dll" "$INSTDIR"
+    !insertmacro InstallLib REGDLLTLB NOTSHARED NOREBOOT_NOTPROTECTED "${BIN_DIR}\IeDtbPlugin.dll" "$INSTDIR\IeDtbPlugin.dll" "$INSTDIR"
   
     ;register the timescale ocx component
     ExecWait 'regsvr32.exe /s "$INSTDIR\TransformSample.ax"'

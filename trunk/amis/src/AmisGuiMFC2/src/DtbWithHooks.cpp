@@ -154,7 +154,42 @@ void DtbWithHooks::updateCustomTestStates(bool playAll)
 		p_tests->getCustomTest(i)->setCurrentState(state);
 	}
 }
-
+void DtbWithHooks::startReadingMultivolumePosition(amis::dtb::nav::NavNode* node)
+{
+	if (node != NULL)
+	{
+		//set a flag to stop highlighting of all text nodes until we hit the one belonging to the smil node
+		//with ref = smilfile->get_ref()
+		mIdOfLastmarkNode = amis::util::FilePathTools::getTarget(node->getContent());
+		setIsWaitingForLastmarkNode(true);
+		loadNavNode(node);		
+	}
+	else
+	{
+		const ambulant::net::url* smilfile = getSpine()->getFirstFile();
+		mIdOfLastmarkNode = "";
+		setIsWaitingForLastmarkNode(false);
+		loadSmilFromUrl(smilfile);
+	}
+}
+void DtbWithHooks::startReadingMultivolumePosition(const ambulant::net::url* position)
+{
+	if (position != NULL)
+	{
+		//set a flag to stop highlighting of all text nodes until we hit the one belonging to the smil node
+		//with ref = smilfile->get_ref()
+		mIdOfLastmarkNode = position->get_ref();
+		setIsWaitingForLastmarkNode(true);
+		loadSmilFromUrl(position);
+	}
+	else
+	{
+		const ambulant::net::url* smilfile = getSpine()->getFirstFile();
+		mIdOfLastmarkNode = "";
+		setIsWaitingForLastmarkNode(false);
+		loadSmilFromUrl(smilfile);
+	}
+}
 smil::SmilMediaGroup* DtbWithHooks::startReading(bool loadLastmark)
 {
 	USES_CONVERSION;
@@ -175,7 +210,7 @@ smil::SmilMediaGroup* DtbWithHooks::startReading(bool loadLastmark)
 		if (p_lastmark != NULL)
 		{
 			smilfile = &p_lastmark->mUri;
-			if (smilfile != NULL)
+			if (smilfile != NULL && getSpine()->isFilePresent(smilfile))
 			{
 				//set a flag to stop highlighting of all text nodes until we hit the one belonging to the smil node
 				//with ref = smilfile->get_ref()
@@ -253,7 +288,7 @@ void DtbWithHooks::previousSmilDocument()
 	}
 }
 
-void DtbWithHooks::loadNavNode(nav::NavNode* pNav, bool overrideCheck)
+void DtbWithHooks::loadNavNode(nav::NavNode* pNav)
 {
 	if (pNav == NULL) 
 	{
@@ -266,7 +301,7 @@ void DtbWithHooks::loadNavNode(nav::NavNode* pNav, bool overrideCheck)
 		rel_path = ambulant::net::url::from_filename(pNav->getContent(), true);
 	else
 		rel_path = ambulant::net::url::from_url(pNav->getContent());
-	loadSmilFromUrl(&rel_path, overrideCheck);
+	loadSmilFromUrl(&rel_path);
 }
 
 void DtbWithHooks::addToHistory()
@@ -521,8 +556,7 @@ void DtbWithHooks::loadBookmark(int index)
 	loadSmilFromUrl(&p_mark->mpStart->mUri);
 }
 
-amis::dtb::smil::SmilMediaGroup* DtbWithHooks::loadSmilFromUrl(const ambulant::net::url* pUri, 
-															   bool overrideCheck)
+amis::dtb::smil::SmilMediaGroup* DtbWithHooks::loadSmilFromUrl(const ambulant::net::url* pUri)
 {
 	USES_CONVERSION;
 	if (pUri == NULL)
@@ -533,35 +567,31 @@ amis::dtb::smil::SmilMediaGroup* DtbWithHooks::loadSmilFromUrl(const ambulant::n
 	string ref = pUri->get_ref();
 	ambulant::net::url full_path = pUri->join_to_base(*getFileSet()->getBookDirectory());
 	
-	//set the spine at this file.  this also makes sure that we're going to a file that is in the book.
-	//if (getSpine()->goToFile(&full_path) && !overrideCheck)
-	//{
-		LPCTSTR str_ = A2T(full_path.get_url().c_str());
-		string log_msg = "Loading SMIL from URL: " + full_path.get_url();
-		amis::util::Log::Instance()->writeMessage("Loading SMIL from URL", &full_path, 
-			"DtbWithHooks::loadSmilFromUrl");
+	LPCTSTR str_ = A2T(full_path.get_url().c_str());
+	string log_msg = "Loading SMIL from URL: " + full_path.get_url();
+	amis::util::Log::Instance()->writeMessage("Loading SMIL from URL", &full_path, 
+		"DtbWithHooks::loadSmilFromUrl");
 
-		if (this->hasAudio())
-		{
-			MmView *view = MainWndParts::Instance()->mpMmView;
-			if (view != NULL) view->OnFilePause();
-		}
-		else
-		{
-			if (!Preferences::Instance()->getMustAvoidTTS())
-				stopTTS();	
-		}
+	if (this->hasAudio())
+	{
+		MmView *view = MainWndParts::Instance()->mpMmView;
+		if (view != NULL) view->OnFilePause();
+	}
+	else
+	{
+		if (!Preferences::Instance()->getMustAvoidTTS())
+			stopTTS();	
+	}
 
-		if(amis::gui::MainWndParts::Instance()->mpMmView->getCurrentUrl()->same_document(full_path))
-		{
-			std::string *strcopy = new std::string(ref);
-			amis::gui::MainWndParts::Instance()->mpMmView->PostMessage(WM_MY_GOTO_ID, 0, (LPARAM)strcopy);
-		}
-		else
-		{
-			loadNewSmilFile(&full_path, overrideCheck);
-		}
-	//}
+	if(amis::gui::MainWndParts::Instance()->mpMmView->getCurrentUrl()->same_document(full_path))
+	{
+		std::string *strcopy = new std::string(ref);
+		amis::gui::MainWndParts::Instance()->mpMmView->PostMessage(WM_MY_GOTO_ID, 0, (LPARAM)strcopy);
+	}
+	else
+	{
+		loadNewSmilFile(&full_path);
+	}
 	return NULL;
 }
 
@@ -849,7 +879,7 @@ void DtbWithHooks::ttsTwoDone()
 }
 
 //called when a new file is requested (as opposed to a position in the current file)
-void DtbWithHooks::loadNewSmilFile(const ambulant::net::url* smilurl, bool overrideCheck)
+void DtbWithHooks::loadNewSmilFile(const ambulant::net::url* smilurl)
 {
 	USES_CONVERSION;
 
@@ -887,12 +917,13 @@ void DtbWithHooks::loadNewSmilFile(const ambulant::net::url* smilurl, bool overr
 		//if the navnode doesn't exist, there's not much we can do
 		if (getDaisyVersion() == amis::dtb::DAISY_202 && mpBmkNavPoint) 
 		{
+			theApp.setMultivolumeLoadPoint(getUid(), smilurl);
 			loadNavNode(mpBmkNavPoint);
 		}
 		// Daisy 2005: play change disc message(audio sequence = changeMsg + media #)
 		else
 		{
-
+			//TODO
 		}
 		
 	}

@@ -81,7 +81,8 @@ public:
 	int getIeVersion();
 	std::string getVersion();
 	std::string getReleaseDate();
-	
+	void setMultivolumeLoadPoint(std::wstring, const ambulant::net::url*);	
+	void setMultivolumeLoadPoint(std::wstring, amis::dtb::nav::NavNode*);
 
 	//Menu handlers
 	afx_msg void OnFileOpen();
@@ -165,6 +166,11 @@ private:
 	bool mbShouldNotRenderAudio;
 	bool mbOverrideReopen;
 	int mIeVersion;
+	bool mbMultivolumeFlag;
+	const ambulant::net::url* mpMultivolumePosition;
+	std::string mMultivolumeNavId;
+	std::wstring mMultivolumeUid;
+
 public:
 	DECLARE_MESSAGE_MAP()
 

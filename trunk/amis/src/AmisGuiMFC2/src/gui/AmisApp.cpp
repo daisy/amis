@@ -176,7 +176,9 @@ BOOL CAmisApp::InitInstance()
 	mbIsWaitingToLoad = false;
 	mAppPath = "";
 	mbOverrideReopen = false;
-	
+	mpMultivolumePosition = NULL;
+	mMultivolumeNavId = "";
+
 	//read the preferences from disk
 	initializePathsAndFiles(prefs_file);
 	
@@ -243,6 +245,7 @@ BOOL CAmisApp::InitInstance()
 	ambulant::net::url book_to_open;
 	mbIsPlayingHelpBook = false;
 	mbIsPlayingShortcutsBook = false;
+	mbMultivolumeFlag = false;
 	//save the value in cmdInfo
 	CString cmd_file_name = cmdInfo.m_strFileName;
 	
@@ -649,13 +652,33 @@ bool CAmisApp::openBook(const ambulant::net::url* filename, bool saveInHistory)
 			MainWndParts::Instance()->updateTitleViewMode();
 			mbBookIsOpen = true;
 			setIsWaiting(false);
-			amis::dtb::DtbWithHooks::Instance()->startReading(true);
-			
 			MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_UPDATE_TOOLBAR_STATE, 
 				(WPARAM)MainWndParts::Instance()->mpBasicToolbar);
 			MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_UPDATE_TOOLBAR_STATE,
 				(WPARAM)MainWndParts::Instance()->mpDefaultToolbar);
 
+			if (mbMultivolumeFlag && 
+				amis::dtb::DtbWithHooks::Instance()->getUid() == mMultivolumeUid)
+			{
+				mbMultivolumeFlag = false;
+				if (mMultivolumeNavId != "")
+				{
+					amis::dtb::nav::NavNode* p_node = NULL;
+					p_node = amis::dtb::DtbWithHooks::Instance()->
+						getNavModel()->getNavNode(mMultivolumeNavId);
+					amis::dtb::DtbWithHooks::Instance()->startReading(p_node);
+				}
+				else if (mpMultivolumePosition)
+				{
+					amis::dtb::DtbWithHooks::Instance()->startReading(mpMultivolumePosition);
+				}
+				else
+					amis::dtb::DtbWithHooks::Instance()->startReading(true);
+			}
+			else
+			{
+				amis::dtb::DtbWithHooks::Instance()->startReading(true);
+			}
 			return true;
 		}
 		else
@@ -1740,6 +1763,22 @@ std::string CAmisApp::getVersion()
 std::string CAmisApp::getReleaseDate()
 {
 	return "2009-11-22";
+}
+//when the next volume for this book is loaded, then load this URL
+void CAmisApp::setMultivolumeLoadPoint(std::wstring uid, const ambulant::net::url* url)
+{
+	mbMultivolumeFlag = true;
+	mMultivolumeUid = uid;
+	mMultivolumeNavId = "";
+	mpMultivolumePosition = url;
+}
+//when the next volume for this book is loaded, then load this URL
+void CAmisApp::setMultivolumeLoadPoint(std::wstring uid, amis::dtb::nav::NavNode* node)
+{
+	mbMultivolumeFlag = true;
+	mMultivolumeUid = uid;
+	mpMultivolumePosition = NULL;
+	mMultivolumeNavId = node->getId();
 }
 int get_ie_version()
 {

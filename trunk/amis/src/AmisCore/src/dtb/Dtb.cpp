@@ -801,7 +801,12 @@ amis::dtb::Bookmark* amis::dtb::Dtb::addBookmark(amis::MediaGroup* pNote)
 	amis::dtb::Bookmark* p_bmk = new amis::dtb::Bookmark();
 	amis::dtb::PositionData* p_pos = mpBookmarks->getLastmark()->copy();
 	//TODO: get file and target
-	string filetarget = p_pos->mUri.get_file();
+	string filetarget = amis::util::FilePathTools::getFileName(p_pos->mUri.get_url());
+	if (p_pos->mUri.get_ref() != "")
+	{
+		filetarget += "#";
+		filetarget += p_pos->mUri.get_ref();
+	}
 	amis::dtb::nav::NavNode* p_node = mpNavModel->getNodeForSmilId
 		(filetarget, mpNavModel->getNavMap());
 	if (p_node != NULL) 

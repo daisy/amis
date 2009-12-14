@@ -53,19 +53,21 @@ public:
 	void previousPage();
 	void nextSmilDocument();
 	void previousSmilDocument();
-	void loadNavNode(nav::NavNode*, bool overrideCheck = false);
+	void loadNavNode(nav::NavNode*);
 	void updateCustomTestStates(bool playAll = false);
 	amis::dtb::Bookmark* addBookmark();
 	void loadBookmark(int);
-	amis::dtb::smil::SmilMediaGroup* loadSmilFromUrl(const ambulant::net::url*, bool overrideCheck = false);
-	void loadNewSmilFile(const ambulant::net::url*, bool overrideCheck = false);
+	amis::dtb::smil::SmilMediaGroup* loadSmilFromUrl(const ambulant::net::url*);
+	void loadNewSmilFile(const ambulant::net::url*);
 	bool canGoToNextPhrase();
 	bool canGoToPreviousPhrase();
 	bool canGoToNextSection();
 	bool canGoToPreviousSection();
 	bool canGoToNextPage();
 	bool canGoToPreviousPage();
-
+	void startReadingMultivolumePosition(amis::dtb::nav::NavNode*);
+	void startReadingMultivolumePosition(const ambulant::net::url*);
+	
 	//part of a workaround to stop highlighting of text nodes
 	//this highlighting happens sometimes to nodes that should be skipped
 	//the node_started/node_stopped events are over before the highlighting commands get sent

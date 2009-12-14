@@ -37,7 +37,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include <string>
 
 #define AMIS_SIDEBAR_SMALLEST_FONT_SIZE	100
-#define AMIS_SIDEBAR_BIGGEST_FONT_SIZE	400
+#define AMIS_SIDEBAR_BIGGEST_FONT_SIZE	300
 #define WM_MY_UPDATE_SIDEBAR_SELECTION	(WM_USER+3)
 
 namespace amis
