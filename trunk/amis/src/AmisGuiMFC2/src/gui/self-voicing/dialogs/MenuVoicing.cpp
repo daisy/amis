@@ -414,7 +414,15 @@ void MenuVoicing::OnMenuSelect(UINT	nItemID, UINT nFlags, HMENU	hSysMenu)
 			//amis::dtb::PositionMark* p_mark = p_bmks->getItem(idx);
 
 			AudioSequence* seq = createSeqPrepend(nFlags);
-			amis::MediaGroup* p_note = amis::dtb::DtbWithHooks::Instance()->getBookmarks()->getItem(idx)->mpNote;
+			
+            Container* p_container = DataTree::Instance()->findContainer("bookmarks");
+            if (p_container != NULL)
+            {
+				Label* label = p_container->getCaption();
+                if (label != NULL) AudioSequencePlayer::fillSequenceContentAndPrompt(seq, label, NULL);
+			}
+
+      amis::MediaGroup* p_note = amis::dtb::DtbWithHooks::Instance()->getBookmarks()->getItem(idx)->mpNote;
 			if (p_note!=NULL)
 			{
 				if (p_note->hasAudio() == true)
