@@ -141,7 +141,7 @@ void SearchForBooksDialog::populateListControl()
 	{
 		CString result;
 		result = mpBooks->getEntry(i)->getTitleText().c_str();
-		p_filelist->AddString(result);
+		p_filelist->AddString(result.Trim());
 	}
 	
 	if (p_search_results->size() == 0)
