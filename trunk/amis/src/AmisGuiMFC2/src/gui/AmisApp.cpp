@@ -1199,6 +1199,20 @@ void CAmisApp::OnLoadCd()
 			{
 				single_book = &p_list->getEntry(0)->mPath;
 			}
+			//show an error.  corrupt discinfo files can lead to having nothing to display.
+			else if (p_list->getNumberOfEntries() == 0)
+			{
+				string msg = "No entries found on discinfo.html";
+				amis::util::Log::Instance()->writeError(msg, "CAmisApp::OnLoadCd()");
+				amis::util::Log::Instance()->writeWarning("No DAISY books on CD-ROM", "CAmisApp::OnLoadCd");
+				CString temp;
+				temp.LoadStringW(IDS_NO_BOOKS_ON_CD);
+				if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
+				{
+					AudioSequencePlayer::playPromptFromStringId("noBooksFoundOnCd");
+				}
+				generalBookErrorMsgBox(temp);
+			}
 			//otherwise, show the user a dialog so they can select which book to open
 			else
 			{
