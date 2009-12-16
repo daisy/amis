@@ -157,6 +157,20 @@ BOOL CAmisApp::InitInstance()
 {
 	USES_CONVERSION;
 
+	// Ensuring that we're ready in this current thread context.
+	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
+	if (hr == S_FALSE)
+	{
+		// If it fails, so be it, but we must cleanup.
+		// (it may be that we're already ready,
+		// due to another init call somewhere else in the app from the same thread context)
+		CoUninitialize();
+	}
+
+#ifdef _DEBUG
+	assert(hr == S_OK);
+#endif
+
 	string prefs_file = "";
 	// Parse command line for standard shell commands, DDE, file open
 	amis::util::CmdLine cmdInfo;
@@ -276,7 +290,7 @@ BOOL CAmisApp::InitInstance()
 
 	if (!Preferences::Instance()->getMustAvoidTTS())
 	{
-		// The TTS constructor takes care of CoInitEx
+		// The TTS constructor takes care of CoInitEx (we're on the main message pump / event dispatch thread)
 		amis::tts::TTSPlayer::InstanceOne();
 		amis::tts::TTSPlayer::InstanceTwo();
 
@@ -292,7 +306,7 @@ BOOL CAmisApp::InitInstance()
   
 	if (!Preferences::Instance()->getMustAvoidDirectX())
 	{
-		// The DX audio constructor takes care of CoInitEx
+		// The DX audio constructor takes care of CoInitEx (we're on the main message pump / event dispatch thread)
 		ambulantX::gui::dx::audio_playerX::Instance()->set_global_level(audio_vol);
 	}
 
@@ -427,13 +441,15 @@ int CAmisApp::ExitInstance()
 	DataTree::Instance()->DestroyInstance();
 	if (mpHistory != NULL) delete mpHistory;
 
-	//if neither TTS nor DirectX are used, then we should not call CoUninitialize
-	//TODO: however, if one or the other are not used, do we still call it?
-	if (!Preferences::Instance()->getMustAvoidTTS() && 
+	CoUninitialize();
+
+	/*if (
+		!Preferences::Instance()->getMustAvoidTTS()
+		|| 
 		!Preferences::Instance()->getMustAvoidDirectX())
 	{
 		CoUninitialize();
-	}
+	}*/
 
 	amis::util::Log::Instance()->writeTrace("AMIS EXIT done.", "CAmisApp::ExitInstance");
 	amis::util::Log::Instance()->endLog();

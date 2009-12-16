@@ -87,12 +87,24 @@ END_MESSAGE_MAP()
 
 CAmisHtmlView::CAmisHtmlView()
 {
+	//// Ensuring that we're ready for CoCreateInstance/QueryInterface/etc. in this current thread context.
+	//HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
+	//if (hr == S_FALSE)
+	//{
+	//	// If it fails, so be it, but we must cleanup.
+	//	// (it may be that we're already ready,
+	//	// due to another init call somewhere else in the app from the same thread context)
+	//	CoUninitialize();
+	//}
+
 	mpLoaderBridge = NULL;
 }
 
 CAmisHtmlView::CAmisHtmlView(const RECT& rect, CWnd* parent)
 {
-	mpLoaderBridge = NULL;
+	CAmisHtmlView();
+	//mpLoaderBridge = NULL;
+
 	Create(NULL,_T("HtmlWidget"),WS_VISIBLE,rect,parent,AFX_IDW_PANE_FIRST);
 }
 
@@ -363,6 +375,20 @@ LPARAM CAmisHtmlView::OnHighlightUrlTarget(WPARAM wParam, LPARAM lParam)
 				ambulant::net::datasource_factory *df = 
 					MainWndParts::Instance()->mpMmView->getDatasourceFactory();
 				assert(df);
+
+//#ifdef _DEBUG
+//	// Checking that we're ready for CoCreateInstance in this current thread context.
+//	// We should be ! (see constructor)
+//	// So we expect this to fail:
+//	HRESULT hres = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
+//	assert(hres == S_FALSE);
+//	if (hres == S_FALSE)
+//	{
+//		// Let's cleanup.
+//		CoUninitialize();
+//	}
+//#endif
+
 				HRESULT hr = CoCreateInstance(CLSID_CPdtbBridge, 0, 
 					CLSCTX_INPROC_SERVER, IID_PdtbBridge, (void **)&mpLoaderBridge);
 				if (SUCCEEDED(hr)) 
@@ -428,16 +454,19 @@ CAmisHtmlView::PrepareNavigateString(LPCSTR url)
 	CString urlstr(url);
 	if (mNavStringUrl.Compare(urlstr) == 0) return false;
 	HRESULT res;
-	
-	// Ensuring that we're ready for CoCreateInstance in this current thread context.
-	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-	if (hr == S_FALSE)
-	{
-		// If it fails, so be it, but we must cleanup.
-		// (it may be that we're already ready,
-		// due to another init call somewhere else in the app from the same thread context)
-		CoUninitialize();
-	}
+
+//#ifdef _DEBUG
+//	// Checking that we're ready for QueryInterface in this current thread context.
+//	// We should be ! (see constructor)
+//	// So we expect this to fail:
+//	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
+//	assert(hr == S_FALSE);
+//	if (hr == S_FALSE)
+//	{
+//		// Let's cleanup.
+//		CoUninitialize();
+//	}
+//#endif
 
 	// First we need to get a pointer to the DOM
 	IDispatch *pDisp = GetHtmlDocument();
@@ -458,15 +487,18 @@ CAmisHtmlView::DoNavigateString(LPCSTR document)
 {
 	HRESULT res;
 
-	// Ensuring that we're ready for CoCreateInstance in this current thread context.
-	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-	if (hr == S_FALSE)
-	{
-		// If it fails, so be it, but we must cleanup.
-		// (it may be that we're already ready,
-		// due to another init call somewhere else in the app from the same thread context)
-		CoUninitialize();
-	}
+//#ifdef _DEBUG
+//	// Checking that we're ready for QueryInterface in this current thread context.
+//	// We should be ! (see constructor)
+//	// So we expect this to fail:
+//	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
+//	assert(hr == S_FALSE);
+//	if (hr == S_FALSE)
+//	{
+//		// Let's cleanup.
+//		CoUninitialize();
+//	}
+//#endif
 
 	// First we need to get a pointer to the DOM
 	IDispatch *pDisp = GetHtmlDocument();
@@ -682,20 +714,20 @@ IHTMLStyleSheet* CAmisHtmlView::applyStylesheet(const ambulant::net::url* styles
 	//copied this pDoc-getting code from another function in this file
 	HRESULT res;
 
-//amis::Preferences::Instance()->getMustAvoidDirectX()
-//amis::Preferences::Instance()->getMustAvoidTTS()
-
-	// Ensuring that we're ready for CoCreateInstance in this current thread context.
-	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-	if (hr == S_FALSE)
-	{
-		// If it fails, so be it, but we must cleanup.
-		// (it may be that we're already ready,
-		// due to another init call somewhere else in the app from the same thread context)
-		CoUninitialize();
-	}
-
 	if (stylesheet == NULL) return NULL;
+
+//#ifdef _DEBUG
+//	// Checking that we're ready for QueryInterface in this current thread context.
+//	// We should be ! (see constructor)
+//	// So we expect this to fail:
+//	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
+//	assert(hr == S_FALSE);
+//	if (hr == S_FALSE)
+//	{
+//		// Let's cleanup.
+//		CoUninitialize();
+//	}
+//#endif
 
 	// First we need to get a pointer to the DOM
 	IDispatch *pDisp = GetHtmlDocument();

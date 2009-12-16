@@ -140,17 +140,17 @@ TTSPlayer::TTSPlayer(void)
 
 	m_iV = NULL;
 
-	// Ensuring that we're ready for CoCreateInstance in this current thread context.
-	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-	if (hr == S_FALSE)
-	{
-		// If it fails, so be it, but we must cleanup.
-		// (it may be that we're already ready,
-		// due to another init call somewhere else in the app from the same thread context)
-		CoUninitialize();
-	}
+	//// Ensuring that we're ready for CoCreateInstance in this current thread context.
+	//HRESULT hres = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
+	//if (hres == S_FALSE)
+	//{
+	//	// If it fails, so be it, but we must cleanup.
+	//	// (it may be that we're already ready,
+	//	// due to another init call somewhere else in the app from the same thread context)
+	//	CoUninitialize();
+	//}
 		
-	hr = CoCreateInstance(CLSID_SpVoice, NULL, CLSCTX_INPROC_SERVER,
+	HRESULT hr = CoCreateInstance(CLSID_SpVoice, NULL, CLSCTX_INPROC_SERVER,
 		IID_ISpVoice, (void**) &m_iV);
 	_ASSERT(hr == S_OK);	// If this assertion is hit then the Speech runtime is probably not installed
 
