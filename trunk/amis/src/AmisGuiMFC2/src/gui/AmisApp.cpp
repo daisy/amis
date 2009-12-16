@@ -86,6 +86,9 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "direct.h"
 #endif
 
+//define this to use the CoInitialize/Uninitialize stuff from rev 611
+#undef COINIT_STUFF
+
 using namespace amis::gui;
 
 BEGIN_MESSAGE_MAP(CAmisApp, CWinApp)
@@ -157,6 +160,7 @@ BOOL CAmisApp::InitInstance()
 {
 	USES_CONVERSION;
 
+#ifdef COINIT_STUFF
 	// Ensuring that we're ready in this current thread context.
 	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
 	if (hr == S_FALSE)
@@ -169,6 +173,7 @@ BOOL CAmisApp::InitInstance()
 
 #ifdef _DEBUG
 	assert(hr == S_OK);
+#endif
 #endif
 
 	string prefs_file = "";
@@ -440,6 +445,7 @@ int CAmisApp::ExitInstance()
 	DataTree::Instance()->DestroyInstance();
 	if (mpHistory != NULL) delete mpHistory;
 
+#ifdef COINIT_STUFF
 	CoUninitialize();
 
 	/*if (
@@ -450,7 +456,7 @@ int CAmisApp::ExitInstance()
 		//if no book was open during AMIS execution, this crashes on exit.
 		//CoUninitialize();
 	}*/
-
+#endif
 	amis::util::Log::Instance()->writeTrace("AMIS EXIT done.", "CAmisApp::ExitInstance");
 	amis::util::Log::Instance()->endLog();
 	amis::util::Log::Instance()->DestroyInstance();

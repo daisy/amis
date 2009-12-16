@@ -41,6 +41,9 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #define WITH_HTML_WIDGET
 #define AM_DBG if (0)
 
+//define this to use the CoInitialize/Uninitialize stuff from rev 611
+#undef COINIT_STUFF
+
 typedef amis::gui::CAmisHtmlView HtmlView;
 
 using namespace std;
@@ -87,6 +90,7 @@ END_MESSAGE_MAP()
 
 CAmisHtmlView::CAmisHtmlView()
 {
+#ifdef COINIT_STUFF
 	//// Ensuring that we're ready for CoCreateInstance/QueryInterface/etc. in this current thread context.
 	//HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
 	//if (hr == S_FALSE)
@@ -96,14 +100,13 @@ CAmisHtmlView::CAmisHtmlView()
 	//	// due to another init call somewhere else in the app from the same thread context)
 	//	CoUninitialize();
 	//}
-
+#endif
 	mpLoaderBridge = NULL;
 }
 
 CAmisHtmlView::CAmisHtmlView(const RECT& rect, CWnd* parent)
 {
-	CAmisHtmlView();
-	//mpLoaderBridge = NULL;
+	mpLoaderBridge = NULL;
 
 	Create(NULL,_T("HtmlWidget"),WS_VISIBLE,rect,parent,AFX_IDW_PANE_FIRST);
 }
@@ -243,8 +246,8 @@ void CAmisHtmlView::OnBeforeNavigate2(LPCTSTR lpszURL, DWORD nFlags,
 	string urlOrFile = T2A(lpszURL);
 
 	//strip the amisie protocol if it's there
-	if (urlOrFile.substr(0, 13) == "amisie:")
-		urlOrFile.replace(0, 13, "");
+	if (urlOrFile.substr(0, 7) == "amisie:")
+		urlOrFile.replace(0, 7, "");
 
 	ambulant::net::url thisUrl;
 	string::size_type colonPos = urlOrFile.find(':');
@@ -376,6 +379,7 @@ LPARAM CAmisHtmlView::OnHighlightUrlTarget(WPARAM wParam, LPARAM lParam)
 					MainWndParts::Instance()->mpMmView->getDatasourceFactory();
 				assert(df);
 
+#ifdef COINIT_STUFF
 //#ifdef _DEBUG
 //	// Checking that we're ready for CoCreateInstance in this current thread context.
 //	// We should be ! (see constructor)
@@ -388,7 +392,7 @@ LPARAM CAmisHtmlView::OnHighlightUrlTarget(WPARAM wParam, LPARAM lParam)
 //		CoUninitialize();
 //	}
 //#endif
-
+#endif
 				HRESULT hr = CoCreateInstance(CLSID_CPdtbBridge, 0, 
 					CLSCTX_INPROC_SERVER, IID_PdtbBridge, (void **)&mpLoaderBridge);
 				if (SUCCEEDED(hr)) 
@@ -455,6 +459,8 @@ CAmisHtmlView::PrepareNavigateString(LPCSTR url)
 	if (mNavStringUrl.Compare(urlstr) == 0) return false;
 	HRESULT res;
 
+#ifdef COINIT_STUFF
+
 //#ifdef _DEBUG
 //	// Checking that we're ready for QueryInterface in this current thread context.
 //	// We should be ! (see constructor)
@@ -467,6 +473,18 @@ CAmisHtmlView::PrepareNavigateString(LPCSTR url)
 //		CoUninitialize();
 //	}
 //#endif
+
+#else
+   // Ensuring that we're ready for CoCreateInstance in this current thread context.
+	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
+	if (hr == S_FALSE)
+	{
+		// If it fails, so be it, but we must cleanup.
+		// (it may be that we're already ready,
+		// due to another init call somewhere else in the app from the same thread context)
+		CoUninitialize();
+	}
+#endif
 
 	// First we need to get a pointer to the DOM
 	IDispatch *pDisp = GetHtmlDocument();
@@ -486,6 +504,7 @@ bool
 CAmisHtmlView::DoNavigateString(LPCSTR document)
 {
 	HRESULT res;
+#ifdef COINIT_STUFF
 
 //#ifdef _DEBUG
 //	// Checking that we're ready for QueryInterface in this current thread context.
@@ -499,6 +518,18 @@ CAmisHtmlView::DoNavigateString(LPCSTR document)
 //		CoUninitialize();
 //	}
 //#endif
+
+#else
+	// Ensuring that we're ready for CoCreateInstance in this current thread context.
+	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
+	if (hr == S_FALSE)
+	{
+		// If it fails, so be it, but we must cleanup.
+		// (it may be that we're already ready,
+		// due to another init call somewhere else in the app from the same thread context)
+		CoUninitialize();
+	}
+#endif
 
 	// First we need to get a pointer to the DOM
 	IDispatch *pDisp = GetHtmlDocument();
@@ -716,6 +747,8 @@ IHTMLStyleSheet* CAmisHtmlView::applyStylesheet(const ambulant::net::url* styles
 
 	if (stylesheet == NULL) return NULL;
 
+#ifdef COINIT_STUFF
+
 //#ifdef _DEBUG
 //	// Checking that we're ready for QueryInterface in this current thread context.
 //	// We should be ! (see constructor)
@@ -728,6 +761,17 @@ IHTMLStyleSheet* CAmisHtmlView::applyStylesheet(const ambulant::net::url* styles
 //		CoUninitialize();
 //	}
 //#endif
+#else
+	// Ensuring that we're ready for CoCreateInstance in this current thread context.
+	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
+	if (hr == S_FALSE)
+	{
+		// If it fails, so be it, but we must cleanup.
+		// (it may be that we're already ready,
+		// due to another init call somewhere else in the app from the same thread context)
+		CoUninitialize();
+	}
+#endif
 
 	// First we need to get a pointer to the DOM
 	IDispatch *pDisp = GetHtmlDocument();
