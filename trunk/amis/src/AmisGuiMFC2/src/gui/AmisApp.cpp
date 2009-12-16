@@ -448,7 +448,8 @@ int CAmisApp::ExitInstance()
 		|| 
 		!Preferences::Instance()->getMustAvoidDirectX())
 	{
-		CoUninitialize();
+		//if no book was open during AMIS execution, this crashes on exit.
+		//CoUninitialize();
 	}*/
 
 	amis::util::Log::Instance()->writeTrace("AMIS EXIT done.", "CAmisApp::ExitInstance");

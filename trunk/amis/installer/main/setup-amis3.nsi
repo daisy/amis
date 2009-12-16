@@ -14,7 +14,7 @@
 ; product information
 ;**
 !define PRODUCT_NAME "AMIS"
-!define PRODUCT_VERSION "3.1 Beta"
+!define PRODUCT_VERSION "3.1"
 !define PRODUCT_PUBLISHER "DAISY Consortium"
 !define PRODUCT_WEB_SITE "http://amisproject.org"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\AMIS.exe"
@@ -91,12 +91,15 @@ Page custom SapiPage
 ;this is the path to your Application Data directory
 !define LOCAL_APP_DATA "C:\Documents and Settings\All Users\Application Data"
 
+;this is the path to your Visual Studio redistributables directory
+!define VS_DIR "C:\Program Files\Microsoft Visual Studio 8\SDK\v2.0\BootStrapper\Packages\vcredist_x86"
+
 ;******
 ; directory, installer exe name, etc
 ;**
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION} (${CUSTOM_LANG_NAME})"
 ;this is the name of the installer that gets created.  
-OutFile "Setup-amis31beta-${CUSTOM_LANG_NAME}.exe"
+OutFile "Setup-amis31-${CUSTOM_LANG_NAME}.exe"
 InstallDir "$PROGRAMFILES\AMIS"
 InstallDirRegKey HKLM "${PRODUCT_DIR_REGKEY}" ""
 ShowInstDetails show
@@ -106,22 +109,23 @@ ShowUnInstDetails show
 ; copy all files, register DLLs, etc
 ;**
 Section "MainSection" SEC01
+	 
+    LogText "Testing"
 
-	;the settings dir will live here
-	Var /GLOBAL SETTINGS_DIR
+    ;the settings dir will live here
+	  Var /GLOBAL SETTINGS_DIR
 
-	;figure out the user's application data directory
-	;look for the "all users" context
-	SetShellVarContext all
-	StrCpy $SETTINGS_DIR $APPDATA\AMIS\settings
+	  ;figure out the user's application data directore
+	  ;look for the "all users" context
+	  SetShellVarContext all
+	  StrCpy $SETTINGS_DIR $APPDATA\AMIS\settings
 	
-  
-	SetOutPath "$INSTDIR"
-	SetOverwrite try
-	File "${BIN_DIR}\AMIS.exe"
-	CreateDirectory "$SMPROGRAMS\AMIS"
+	  SetOutPath "$INSTDIR"
+	  SetOverwrite try
+	  File "${BIN_DIR}\AMIS.exe"
+	  CreateDirectory "$SMPROGRAMS\AMIS"
     CreateShortCut "$SMPROGRAMS\AMIS\AMIS.lnk" "$INSTDIR\AMIS.exe"
-	CreateShortCut "$DESKTOP\AMIS.lnk" "$INSTDIR\AMIS.exe"
+	  CreateShortCut "$DESKTOP\AMIS.lnk" "$INSTDIR\AMIS.exe"
   
     ; this creates a subdir in the start menu that will contain our modified shortcuts for compatibility/debug modes
     CreateDirectory "$SMPROGRAMS\AMIS\Additional"
@@ -130,16 +134,16 @@ Section "MainSection" SEC01
     CreateShortCut "$SMPROGRAMS\AMIS\Additional\AMIS Compatibility Mode With DirectX.lnk" "$INSTDIR\AMIS.exe" "-prefs amisPrefsCompatibilityModeWithDX.xml"
     CreateShortCut "$SMPROGRAMS\AMIS\Additional\AMIS Compatibility Mode With TTS.lnk" "$INSTDIR\AMIS.exe" "-prefs amisPrefsCompatibilityModeWithTTS.xml"
     
-	;copy the DLLs
-	File "${BIN_DIR}\libambulant_shwin32.dll"
-	File "${BIN_DIR}\xerces-c_3_0.dll"
-	File "${BIN_DIR}\TransformSample.ax"
-	File "${BIN_DIR}\libamplugin_ffmpeg.dll"
-	File "${BIN_DIR}\avformat-52.dll"
-	File "${BIN_DIR}\avcodec-51.dll"
-	File "${BIN_DIR}\avutil-49.dll"
-	File "${BIN_DIR}\SDL.dll"
-	File "${BIN_DIR}\libamplugin_pdtb.dll"
+	  ;copy the DLLs
+	  File "${BIN_DIR}\libambulant_shwin32.dll"
+	  File "${BIN_DIR}\xerces-c_3_0.dll"
+	  File "${BIN_DIR}\TransformSample.ax"
+	  File "${BIN_DIR}\libamplugin_ffmpeg.dll"
+	  File "${BIN_DIR}\avformat-52.dll"
+	  File "${BIN_DIR}\avcodec-51.dll"
+	  File "${BIN_DIR}\avutil-49.dll"
+	  File "${BIN_DIR}\SDL.dll"
+	  File "${BIN_DIR}\libamplugin_pdtb.dll"
     File "${BIN_DIR}\lzop.exe"
     
     ;copy the xslt and stylesheet jar files
@@ -222,7 +226,7 @@ after_history_copy:
 
     ;copy the MSVC redistributables installer
     SetOutPath $TEMP
-    File "${BIN_DIR}\vcredist_x86.exe"
+    File "${VS_DIR}\vcredist_x86.exe"
   
     ;copy the jaws scripts installer
     SetOutPath $TEMP
@@ -295,8 +299,8 @@ Section -MSVCRuntime
     ;check and see if the user needs these files
     Push $R0
     ClearErrors
-    ReadRegDword $R0 HKLM "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{7299052b-02a4-4627-81f2-1818da5d550d}" "Version"
-    ; if VS 2005+ redist SP1 not installed (if there was an error finding the key), install it
+    ReadRegDword $R0 HKLM "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{837b34e3-7c30-493c-8f6a-2b0f04e2912c}" "Version"
+    ; if VS 2005 redist not installed (if there was an error finding the key), install it
     IfErrors InstallVSRedist End
     StrCpy $R0 "-1"
 
@@ -305,7 +309,7 @@ InstallVSRedist:
     ExecWait "$MSVC_RUNTIME_INSTALLER" $0
     StrCmp $0 "0" End Error
 Error:
-    MessageBox MB_ICONEXCLAMATION "There was an error encountered while attempting to install the Microsoft runtime files.  Please download from http://www.microsoft.com/downloads/details.aspx?FamilyID=200B2FD9-AE1A-4A14-984D-389C36F85647&displaylang=en and install manually."
+    MessageBox MB_ICONEXCLAMATION "There was an error encountered while attempting to install the Microsoft runtime files.  Please contact technical support if you experience problems running AMIS."
     Goto End
 End:
     Delete "$MSVC_RUNTIME_INSTALLER"
@@ -408,6 +412,10 @@ SectionEnd
 ;NSIS init function
 ;**
 Function .onInit
+  
+  ;turn logging on
+  LogSet on
+
 	;load the sapi install screen file, as we may need it
 	!insertmacro MUI_INSTALLOPTIONS_EXTRACT "sapipage.ini"
 	!insertmacro MUI_INSTALLOPTIONS_EXTRACT "filebrowse.ini"
@@ -480,7 +488,7 @@ Section Uninstall
 	; unregister the timescale ocx component
     ExecWait 'regsvr32.exe /u /s "$INSTDIR\TransformSample.ax"'
     ; unregister the pdtb dll
-    !insertmacro UnInstallLib REGDLLTLB NOTSHARED NOREBOOT_NOTPROTECTED "$INSTDIR\PdtbIePlugin.dll"
+    !insertmacro UnInstallLib REGDLLTLB NOTSHARED NOREBOOT_NOTPROTECTED "$INSTDIR\IeDtbPlugin.dll"
   
 	Delete "$SETTINGS_DIR\css\*"
 	Delete "$SETTINGS_DIR\css\font\*"

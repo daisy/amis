@@ -111,7 +111,13 @@ void amis::dtb::TransformDTBook::readResults()
 }
 bool amis::dtb::TransformDTBook::transform(string filepath)
 {	
-	if (!has_java) return false;
+	if (!has_java())
+	{
+		amis::util::Log::Instance()->writeWarning(
+			"Could not transform DTBook because Java was not found", 
+			"amis::dtb::Dtb::TransformDTBook()");
+		return false;
+	}
 
 	bool retval = false;
 #ifdef AMIS_COMPILER_MSVC
