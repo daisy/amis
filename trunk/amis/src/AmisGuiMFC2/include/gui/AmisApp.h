@@ -167,7 +167,7 @@ private:
 	bool mbOverrideReopen;
 	int mIeVersion;
 	bool mbMultivolumeFlag;
-	const ambulant::net::url* mpMultivolumePosition;
+	ambulant::net::url mMultivolumePosition;
 	std::string mMultivolumeNavId;
 	std::wstring mMultivolumeUid;
 

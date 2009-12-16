@@ -50,6 +50,14 @@ string amis::util::getFileNameWithRef(const ambulant::net::url* pUrl)
 		rel_filename += "#" + ref;
 	return rel_filename;
 }
+string amis::util::getFileNameWithRef(string url)
+{
+	string rel_filename = amis::util::FilePathTools::getFileName(url);
+	string ref = amis::util::FilePathTools::getTarget(url);
+	if (ref.size() > 0)
+		rel_filename += "#" + ref;
+	return rel_filename;
+}
 //this function will return path1 relative to path2
 //however, if path1 is outside of path2, it will just return all of path1
 string amis::util::calculateRelativeFilename(const ambulant::net::url* pUrl1, const ambulant::net::url* pUrl2)

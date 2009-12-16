@@ -26,6 +26,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "dtb/nav/NavMap.h"
 #include "dtb/nav/NavList.h"
 #include "dtb/nav/PageList.h"
+#include "dtb/DtbFileSet.h"
 
 #include "Media.h"
 #include "dtb/CustomTest.h"
@@ -74,6 +75,8 @@ public:
 	NodeRefMap* getSmilIdNodeMap();
 	NavNode* getNavNode(string);
 	void addIndex(NavNode*, string);
+	NavNode* findFirstNodeThatRefersToThisSmilFile(string);
+	void setFileset(amis::dtb::DtbFileSet*);
 private:
 	NavMap* mpNavMap;
 	PageList* mpPageList;
@@ -81,6 +84,7 @@ private:
 	NavListList mNavLists;
 	NavNodeList mPlayOrderList;
 	NodeMap mNodeIndex;
+	amis::dtb::DtbFileSet* mpFileset;
 	bool mbLower;
 };
 }

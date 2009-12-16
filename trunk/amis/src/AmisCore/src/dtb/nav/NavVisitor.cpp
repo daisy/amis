@@ -304,9 +304,12 @@ amis::dtb::nav::NavNodeList* amis::dtb::nav::WhoRefersToThisSmilFile::findOut(am
 bool amis::dtb::nav::WhoRefersToThisSmilFile::preVisit(NavNode* pNode)
 {
 	bool is_local = mFilename.is_local_file();
+	if (pNode->getContent() == "") return true;
+
 	ambulant::net::url content = amis::util::makeUrlFromString(pNode->getContent(), !is_local, is_local);
 	//a bit of cheating ... content won't be a full path unless we join it to the base
 	//this is fine for now
+
 	content = content.join_to_base(mFilename);
 	if (mFilename.same_document(content))
 	{
@@ -338,6 +341,34 @@ bool amis::dtb::nav::VisitTheTitle::preVisit(NavNode* pNode)
 		if (pNode->getLabel()->getNumberOfAudioClips() > 0)
 			mpTitle->addAudioClip((amis::AudioNode*)pNode->getLabel()->getAudio(0)->clone());
 
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+/************************************************/
+/* visit the node with ref="the_ref"
+/************************************************/
+amis::dtb::nav::NavPoint* amis::dtb::nav::VisitTheRel::getFirstMatch(NavModel* pModel, std::string rel)
+{
+	if (pModel == NULL) return NULL;
+	if (pModel->getNavMap() == NULL) return NULL;
+	if (rel == "") return NULL;
+
+	mRel = rel;
+	pModel->getNavMap()->acceptDepthFirst(this);
+
+	return mpNode;
+}
+
+bool amis::dtb::nav::VisitTheRel::preVisit(NavNode* pNode)
+{
+	if (pNode->getRel() == mRel)
+	{
+		mpNode = (NavPoint*)pNode;
 		return false;
 	}
 	else

@@ -198,9 +198,7 @@ bool PublicationSummaryDialog::calculateData()
 	mTotalNumPages = p_nav->getPageList()->getLength();
 	//the address for the currently-playing node
 	const ambulant::net::url* p_url = MainWndParts::Instance()->mpMmView->getCurrentUrl();
-	string id = p_url->get_ref();
-	string file = amis::util::FilePathTools::getFileName(p_url->get_url());
-	file = file + "#" + id;
+	string file = amis::util::getFileNameWithRef(p_url);
 	
 	amis::dtb::nav::PageTarget* p_page = NULL;
 	amis::dtb::nav::NavPoint* p_section = NULL;

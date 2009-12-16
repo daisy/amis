@@ -190,7 +190,6 @@ BOOL CAmisApp::InitInstance()
 	mbIsWaitingToLoad = false;
 	mAppPath = "";
 	mbOverrideReopen = false;
-	mpMultivolumePosition = NULL;
 	mMultivolumeNavId = "";
 
 	//read the preferences from disk
@@ -676,19 +675,27 @@ bool CAmisApp::openBook(const ambulant::net::url* filename, bool saveInHistory)
 				amis::dtb::DtbWithHooks::Instance()->getUid() == mMultivolumeUid)
 			{
 				mbMultivolumeFlag = false;
-				if (mMultivolumeNavId != "")
+				if (!mMultivolumePosition.is_empty_path())
+				{
+					ambulant::net::url to_load = mMultivolumePosition;
+					//need to clear this variable once it's been used
+					ambulant::net::url dummy;
+					mMultivolumePosition = dummy;
+					amis::dtb::DtbWithHooks::Instance()->startReadingMultivolumePosition(&to_load);
+					
+				}
+				else if (mMultivolumeNavId != "")
 				{
 					amis::dtb::nav::NavNode* p_node = NULL;
 					p_node = amis::dtb::DtbWithHooks::Instance()->
 						getNavModel()->getNavNode(mMultivolumeNavId);
-					amis::dtb::DtbWithHooks::Instance()->startReading(p_node);
-				}
-				else if (mpMultivolumePosition)
-				{
-					amis::dtb::DtbWithHooks::Instance()->startReading(mpMultivolumePosition);
+					mMultivolumeNavId = "";
+					amis::dtb::DtbWithHooks::Instance()->startReadingMultivolumePosition(p_node);
 				}
 				else
+				{
 					amis::dtb::DtbWithHooks::Instance()->startReading(true);
+				}
 			}
 			else
 			{
@@ -1787,26 +1794,24 @@ int CAmisApp::getIeVersion()
 }
 std::string CAmisApp::getVersion()
 {
-	return "3.1 beta";
+	return "3.1";
 }
 std::string CAmisApp::getReleaseDate()
 {
-	return "2009-11-22";
+	return "2009-12-18";
 }
 //when the next volume for this book is loaded, then load this URL
 void CAmisApp::setMultivolumeLoadPoint(std::wstring uid, const ambulant::net::url* url)
 {
 	mbMultivolumeFlag = true;
 	mMultivolumeUid = uid;
-	mMultivolumeNavId = "";
-	mpMultivolumePosition = url;
+	mMultivolumePosition = *url;
 }
 //when the next volume for this book is loaded, then load this URL
 void CAmisApp::setMultivolumeLoadPoint(std::wstring uid, amis::dtb::nav::NavNode* node)
 {
 	mbMultivolumeFlag = true;
 	mMultivolumeUid = uid;
-	mpMultivolumePosition = NULL;
 	mMultivolumeNavId = node->getId();
 }
 int get_ie_version()

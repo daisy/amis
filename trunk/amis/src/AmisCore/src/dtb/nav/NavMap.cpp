@@ -151,15 +151,10 @@ amis::dtb::nav::NavNode* amis::dtb::nav::NavMap::goToContentRef(string contentHr
 	bool b_found = false;
 
 	string content_href;
-	string content_target;
-
+	
 	while (b_found == false && p_node != NULL)
 	{
-		content_href = p_node->getContent();
-		content_target = amis::util::FilePathTools::getTarget(content_href);
-		content_href = amis::util::FilePathTools::getFileName(content_href);
-		content_href += "#";
-		content_href += content_target;
+		content_href = amis::util::getFileNameWithRef(p_node->getContent());
 
 		if (content_href.compare(contentHref) == 0) 
 			b_found = true;

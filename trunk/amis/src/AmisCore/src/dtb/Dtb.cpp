@@ -281,6 +281,7 @@ bool amis::dtb::Dtb::processNcc(const ambulant::net::url* filepath, bool isLocal
 		return false;
 	}
 	mpNavModel = ncc_file_reader.getNavModel();
+	mpNavModel->setFileset(getFileSet());
 	mpMetadata = ncc_file_reader.getMetadata();
 	mpCustomTests = ncc_file_reader.getCustomTests();
 	amis::dtb::nav::NavPoint* p_title = ncc_file_reader.getTitle();
@@ -385,6 +386,7 @@ bool amis::dtb::Dtb::processNcx(const ambulant::net::url* filepath, bool isLocal
 	if (!ncx_file_reader.readFromFile(filepath)) return false;
 
 	mpNavModel = ncx_file_reader.getNavModel();
+	mpNavModel->setFileset(getFileSet());
 	mpCustomTests = ncx_file_reader.getCustomTests();
 	
 	mpTitle = ncx_file_reader.getTitle();
@@ -691,9 +693,7 @@ string amis::dtb::Dtb::searchFullText(wstring search, ambulant::net::url current
 	UrlList::iterator it;
 	string result = "";
 	mLastSearchString.assign(search);
-	string file_name = amis::util::FilePathTools::getFileName(currentTextUrl.get_url());
-	string elm_id = currentTextUrl.get_ref();
-	mLastSearchedTextFile = file_name + "#" + elm_id;
+	mLastSearchedTextFile = amis::util::getFileNameWithRef(&currentTextUrl);
 	return searchFullTextRelative(dir);
 }
 string amis::dtb::Dtb::searchFullTextNext()
@@ -742,8 +742,8 @@ string amis::dtb::Dtb::searchFullTextRelative(int dir)
 	//we should now have the text id of the item
 	if (result != "")
 	{
-		mLastSearchedTextFile  = amis::util::FilePathTools::getFileName(it->get_path());
-		mLastSearchedTextFile += "#" + result;
+		mLastSearchedTextFile  = amis::util::getFileNameWithRef(it->get_url());
+		
 		mLastSearchResult = (*mpTextSmilMap)[mLastSearchedTextFile];
 		//now we have just the filename#id, so we can compare it to our hash map
 		return mLastSearchResult;
@@ -800,13 +800,8 @@ amis::dtb::Bookmark* amis::dtb::Dtb::addBookmark(amis::MediaGroup* pNote)
 
 	amis::dtb::Bookmark* p_bmk = new amis::dtb::Bookmark();
 	amis::dtb::PositionData* p_pos = mpBookmarks->getLastmark()->copy();
-	//TODO: get file and target
-	string filetarget = amis::util::FilePathTools::getFileName(p_pos->mUri.get_url());
-	if (p_pos->mUri.get_ref() != "")
-	{
-		filetarget += "#";
-		filetarget += p_pos->mUri.get_ref();
-	}
+	
+	string filetarget = amis::util::getFileNameWithRef(&p_pos->mUri);
 	amis::dtb::nav::NavNode* p_node = mpNavModel->getNodeForSmilId
 		(filetarget, mpNavModel->getNavMap());
 	if (p_node != NULL) 
@@ -903,6 +898,9 @@ bool amis::dtb::Dtb::hasText()
 //(one id, many nav nodes)
 void amis::dtb::Dtb::saveIndexData()
 {	
+	//don't support indexing on multivolume books
+	if (isMultivolume()) return;
+
 #ifdef AMIS_COMPILER_MSVC
 	USES_CONVERSION;
 #else
@@ -971,6 +969,9 @@ void amis::dtb::Dtb::saveIndexData()
 
 bool amis::dtb::Dtb::readIndexData()
 {
+	//don't support indexing on multivolume books
+	if (isMultivolume()) return false;
+
 #ifdef AMIS_COMPILER_MSVC
 	USES_CONVERSION;
 #else
@@ -1103,4 +1104,71 @@ void amis::dtb::Dtb::setCacheIndex(bool shouldCache)
 bool amis::dtb::Dtb::wasDtbookTransformed()
 {
 	return mbDtbookTransformSucceeded;
+}
+
+//only supported on DAISY 2.02 books
+bool amis::dtb::Dtb::isMultivolume()
+{
+#if defined(AMIS_COMPILER_MSVC)
+	//windows utility for converting wstring to string
+	USES_CONVERSION;
+#endif
+
+	bool is_multivolume = false;
+	string metastr = "";
+	if (getDaisyVersion() == amis::dtb::DAISY_202)
+	{
+		amis::dtb::MetaItem* p_setinfo = NULL;
+		p_setinfo = getMetadata()->getMetadata("ncc:setInfo");
+		//if this is a set of more than one volume
+		if (p_setinfo)
+		{
+#if defined(AMIS_COMPILER_MSVC)
+			metastr = T2A(p_setinfo->mContent.c_str());
+#else
+			//TODO: something for other platforms
+#endif
+			if (metastr != "1 of 1" && metastr != "1 OF 1")
+				is_multivolume = true;
+		}
+	}
+	if (is_multivolume)
+	{
+		string msg = "This is a multivolume book.  Currently at ";
+		msg += metastr;
+		amis::util::Log::Instance()->writeMessage(msg, "Dtb::isMultivolume");
+	}
+	return is_multivolume;
+}
+std::string amis::dtb::Dtb::getSetInfo()
+{
+#if defined(AMIS_COMPILER_MSVC)
+	//windows utility for converting wstring to string
+	USES_CONVERSION;
+#endif
+
+	if (isMultivolume())
+	{
+		wstring wsetinfo = getMetadata()->getMetadataContent("ncc:setinfo").c_str();
+#ifdef AMIS_COMPILER_MSVC
+		if (!wsetinfo.empty()) 
+		{
+			string setinfo = T2A(wsetinfo.c_str());
+			return setinfo;
+		}
+		else
+		{
+			return "";
+		}
+		
+#else
+		//TODO: something for other platforms
+		return "";
+#endif
+	
+	}
+	else
+	{
+		return "";
+	}
 }

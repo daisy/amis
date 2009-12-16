@@ -117,6 +117,24 @@ public:
 private:
 	amis::MediaGroup* mpTitle;
 };
+
+//return a match for the value of @rel on a nav node
+//we know that only daisy 2.02 heading links have @rel specified.
+//it's a multivolume book thing.
+class VisitTheRel : public NavVisitor
+{
+public:
+	VisitTheRel(){mRel = ""; mpNode = NULL;};
+	~VisitTheRel(){};
+
+	amis::dtb::nav::NavPoint* getFirstMatch(amis::dtb::nav::NavModel*, std::string);
+	bool preVisit(NavNode*);
+private:
+	amis::dtb::nav::NavPoint* mpNode;
+	std::string mRel;
+};
+
+
 }
 }
 }

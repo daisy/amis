@@ -515,8 +515,7 @@ void CMainFrame::OnUpdateCmdUiPlayPause(CCmdUI* pCmdUi)
 }
 void amis::gui::CMainFrame::OnUpdateCmdUiPageStyle(CCmdUI* pCmdUi)
 {
-	if (theApp.isBookOpen() && amis::dtb::DtbWithHooks::Instance()->hasText() == true &&
-		Preferences::Instance()->getCustomCssFiles()->size() > 0)
+	if (TextRenderBrain::Instance()->canApplyPageStyle())
 	{
 		int curr = TextRenderBrain::Instance()->getCurrentCustomStyleIndex();		
 		if (curr == -1)
@@ -532,7 +531,9 @@ void amis::gui::CMainFrame::OnUpdateCmdUiPageStyle(CCmdUI* pCmdUi)
 		updateUiCommandState(pCmdUi, true);
 	}
 	else
+	{
 		updateUiCommandState(pCmdUi, false);
+	}
 }
 void amis::gui::CMainFrame::OnUpdateCmdUiSmallerFont(CCmdUI* pCmdUi)
 {
@@ -696,11 +697,7 @@ void amis::gui::CMainFrame::updateToolbarState(toolbar::Toolbar* pToolbar)
 	pToolbar->enable(ID_AMIS_ESCAPE, b_is_book_open);
 	pToolbar->enable(ID_AMIS_RESET_SPEED, b_is_book_open);
 	pToolbar->enable(ID_AMIS_SHOW_PUBLICATION_SUMMARY, b_is_book_open);
-	if (b_is_book_open && p_dtb->hasText() == true &&
-		Preferences::Instance()->getCustomCssFiles()->size() > 0)
-		pToolbar->enable(ID_AMIS_NEXT_PAGE_STYLE, true);
-	else
-		pToolbar->enable(ID_AMIS_NEXT_PAGE_STYLE, false);
+	pToolbar->enable(ID_AMIS_NEXT_PAGE_STYLE, TextRenderBrain::Instance()->canApplyPageStyle());
 
 	pToolbar->enable(ID_AMIS_INCREASE_SECTION_DEPTH, b_is_book_open);
 	pToolbar->enable(ID_AMIS_DECREASE_SECTION_DEPTH, b_is_book_open);

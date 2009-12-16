@@ -906,8 +906,13 @@ void MmView::document_stopped()
 	} 
 	else 
 	{
-		if (amis::dtb::DtbWithHooks::isNull() == false) 
-			amis::dtb::DtbWithHooks::Instance()->nextSmilDocument();
+		if (amis::dtb::DtbWithHooks::isNull() == false)
+		{
+			if (amis::dtb::DtbWithHooks::Instance()->getStopAfterCurrentSmilFile() == false)
+				amis::dtb::DtbWithHooks::Instance()->nextSmilDocument();
+			else
+				amis::dtb::DtbWithHooks::Instance()->setStopAfterCurrentSmilFile(false);
+		}
 	}
 }
 

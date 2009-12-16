@@ -66,7 +66,8 @@ DtbWithHooks::DtbWithHooks():Dtb(theApp.getAppPath())
 	mbIsWaitingForLastmarkNode = false;
 	//setTTSNextPhraseFlag(false);
 	setCacheIndex(Preferences::Instance()->getCacheIndex());
-	mpBmkNavPoint = NULL;
+	mpUserRequestedNavPoint = NULL;
+	mbStopAfterCurrentSmilFile = false;
 }
 
 DtbWithHooks::~DtbWithHooks()
@@ -156,33 +157,94 @@ void DtbWithHooks::updateCustomTestStates(bool playAll)
 }
 void DtbWithHooks::startReadingMultivolumePosition(amis::dtb::nav::NavNode* node)
 {
+	const ambulant::net::url* dummy = NULL;
 	if (node != NULL)
 	{
-		//set a flag to stop highlighting of all text nodes until we hit the one belonging to the smil node
-		//with ref = smilfile->get_ref()
-		mIdOfLastmarkNode = amis::util::FilePathTools::getTarget(node->getContent());
-		setIsWaitingForLastmarkNode(true);
-		loadNavNode(node);		
+		ambulant::net::url rel_path;
+		if (this->getFileSet()->getBookDirectory()->is_local_file())
+			rel_path = ambulant::net::url::from_filename(node->getContent(), true);
+		else
+			rel_path = ambulant::net::url::from_url(node->getContent());
+
+		startReadingMultivolumePosition(&rel_path);
 	}
 	else
 	{
-		const ambulant::net::url* smilfile = getSpine()->getFirstFile();
-		mIdOfLastmarkNode = "";
-		setIsWaitingForLastmarkNode(false);
-		loadSmilFromUrl(smilfile);
+		//can't pass NULL (ambiguous)
+		startReadingMultivolumePosition(dummy);
 	}
 }
 void DtbWithHooks::startReadingMultivolumePosition(const ambulant::net::url* position)
 {
+	USES_CONVERSION;
+	bool try_again = false;
+	ambulant::net::url position_;
 	if (position != NULL)
+		position_ = position->join_to_base(*getFileSet()->getBookDirectory());
+	//load this position if it's in this volume
+	if (getSpine()->isFilePresent(&position_))
 	{
+		try_again = false;
 		//set a flag to stop highlighting of all text nodes until we hit the one belonging to the smil node
 		//with ref = smilfile->get_ref()
-		mIdOfLastmarkNode = position->get_ref();
+		mIdOfLastmarkNode = position_.get_ref();
 		setIsWaitingForLastmarkNode(true);
-		loadSmilFromUrl(position);
+		loadSmilFromUrl(&position_);
 	}
-	else
+	else {try_again = true;}
+
+	//try to load the lastmark
+	if (try_again)
+	{
+		//get the lastmark data
+		amis::dtb::PositionData* p_lastmark = NULL;
+		const ambulant::net::url* smilfile = NULL;
+		if (getBookmarks()) p_lastmark = getBookmarks()->getLastmark();
+		if (p_lastmark != NULL) smilfile = &p_lastmark->mUri;
+		
+		if (smilfile != NULL && getSpine()->isFilePresent(smilfile))
+		{
+			try_again = false;
+			//set a flag to stop highlighting of all text nodes until we hit the one belonging to the smil node
+			//with ref = smilfile->get_ref()
+			mIdOfLastmarkNode = position->get_ref();
+			setIsWaitingForLastmarkNode(true);
+			loadSmilFromUrl(position);
+		}
+		else{try_again = true;}
+	}
+	//try to load the first NCC heading for this volume
+	//the trouble with this, though, is that it's usually just the title
+	//then AMIS autoplays through the SMIL file list, resulting in disc announcements
+	if (try_again)
+	{
+		amis::dtb::nav::NavPoint* p_node = NULL;
+		amis::dtb::nav::VisitTheRel visitor;
+		wstring w_this_set = getMetadata()->getMetadataContent("ncc:setinfo");
+		string this_set = "";
+		if (!w_this_set.empty())
+			this_set = T2A(w_this_set.c_str());
+		p_node = visitor.getFirstMatch(getNavModel(), this_set);
+		if (p_node)
+		{
+			ambulant::net::url rel_path;
+			if (this->getFileSet()->getBookDirectory()->is_local_file())
+				rel_path = ambulant::net::url::from_filename(p_node->getContent(), true);
+			else
+				rel_path = ambulant::net::url::from_url(p_node->getContent());
+
+			try_again = false;
+			//set a flag to stop highlighting of all text nodes until we hit the one belonging to the smil node
+			//with ref = smilfile->get_ref()
+			mIdOfLastmarkNode = position->get_ref();
+			setIsWaitingForLastmarkNode(true);
+			loadSmilFromUrl(position);
+
+		}
+		else {try_again = true;}
+	}
+	//last resort: load the first SMIL file
+	if (try_again)
 	{
 		const ambulant::net::url* smilfile = getSpine()->getFirstFile();
 		mIdOfLastmarkNode = "";
@@ -266,8 +328,49 @@ smil::SmilMediaGroup* DtbWithHooks::previousPhrase()
 void DtbWithHooks::nextSmilDocument()
 {
 	if (theApp.isBookOpen() == false) return;
+	const ambulant::net::url* filepath = NULL;
+	bool b_firsttime = true;
+	const ambulant::net::url* filepath_ = NULL;
+	//find the next SMIL document that is in this set and that is not a change disc message
+	if (isMultivolume())
+	{
+		bool b_found = false;
+		while (!b_found)
+		{
+			filepath = getSpine()->getNextFile();
+			if (b_firsttime)
+			{
+				//record this as the "natural" next file
+				filepath_ = filepath;
+				b_firsttime = false;
+			}
+			if (!filepath) break;
 
-	const ambulant::net::url* filepath = this->getSpine()->getNextFile();
+			string filetarget = amis::util::getFileNameWithRef(filepath);
+			amis::dtb::nav::NavNode* p_node = getNavModel()->getNodeForSmilId(filetarget, 
+				getNavModel()->getNavMap());
+			if (p_node && p_node->getRel() == "" || p_node->getRel() == getSetInfo())
+				b_found = true;
+		}
+		//if nothing was found, just play the "natural" next file.  it's probably a disc
+		//change announcement
+		if (b_found == false)
+		{
+			filepath = filepath_;
+			
+			string filetarget = amis::util::getFileNameWithRef(filepath);
+			amis::dtb::nav::NavNode* p_node = getNavModel()->getNodeForSmilId(filetarget, 
+				getNavModel()->getNavMap());
+			getSpine()->goToFile(filepath);
+			//when the user does open the correct subsequent volume, go to this nav ID
+			theApp.setMultivolumeLoadPoint(getUid(), p_node);
+			this->setStopAfterCurrentSmilFile(true);
+		}
+	}
+	else
+	{
+		filepath = this->getSpine()->getNextFile();
+	}
 	if (filepath) 
 	{
 		string str_filepath = amis::util::ambulantUrlToString(filepath);
@@ -278,7 +381,7 @@ void DtbWithHooks::nextSmilDocument()
 void DtbWithHooks::previousSmilDocument()
 {
 	if (theApp.isBookOpen() == false) return;
-
+	
 	const ambulant::net::url* filepath = this->getSpine()->getPreviousFile();
 	
 	if (filepath)
@@ -290,12 +393,14 @@ void DtbWithHooks::previousSmilDocument()
 
 void DtbWithHooks::loadNavNode(nav::NavNode* pNav)
 {
+	USES_CONVERSION;
+
 	if (pNav == NULL) 
 	{
 		amis::util::Log::Instance()->writeWarning("Tried to load NULL nav node", "DtbWithHooks::loadNavNode");
 		return;
 	}
-	amis::util::Log::Instance()->writeMessage("Loading nav node", "DtbWithHooks::loadNavNode");
+	amis::util::Log::Instance()->writeMessage("Loading nav node", "DtbWithHooks::loadNavNode");	
 	ambulant::net::url rel_path;
 	if (this->getFileSet()->getBookDirectory()->is_local_file())
 		rel_path = ambulant::net::url::from_filename(pNav->getContent(), true);
@@ -552,7 +657,7 @@ void DtbWithHooks::loadBookmark(int index)
 	if (!p_mark) return;
 	amis::util::Log::Instance()->writeMessage("Loading bookmark", "DtbWithHooks::loadBookmark");
 	
-	mpBmkNavPoint = (amis::dtb::nav::NavPoint*)getNavModel()->getNavMap()->goToId(p_mark->mpStart->mNcxRef);
+	mpUserRequestedNavPoint = (amis::dtb::nav::NavPoint*)getNavModel()->getNavMap()->goToId(p_mark->mpStart->mNcxRef);
 	loadSmilFromUrl(&p_mark->mpStart->mUri);
 }
 
@@ -885,54 +990,61 @@ void DtbWithHooks::loadNewSmilFile(const ambulant::net::url* smilurl)
 
 	LPCTSTR str_ = A2T(smilurl->get_url().c_str());
 	
-	bool is_smil_in_this_volume = false;
-	bool is_multi_volume = false;
-	if (getDaisyVersion() == amis::dtb::DAISY_202)
-	{
-		is_smil_in_this_volume = getSpine()->goToFile(smilurl);
-		amis::dtb::MetaItem* p_setinfo = NULL;
-		p_setinfo = getMetadata()->getMetadata("ncc:setInfo");
-		//if this is a set of more than one volume
-		if (p_setinfo)
-		{
-			string metastr = T2A(p_setinfo->mContent.c_str());
-			if (metastr != "1 of 1" && metastr != "1 OF 1")
-				is_multi_volume = true;
-		}
-	}
-	else
-	{
-		//TODO: DAISY 2005
-		//TODO: check distInfo to see which volume this SMIL URL belongs to
-		//assume single-volume for now
-		is_smil_in_this_volume = true;
+	bool is_multivolume = isMultivolume();
 	
-	}
-	
-	if (!is_smil_in_this_volume && is_multi_volume)
+	if (is_multivolume)
 	{
 		//if not our current volume:
-		// Daisy 202: load nav node associated with the bookmark
-		//the nav node should contain the change disc msg
-		//if the navnode doesn't exist, there's not much we can do
-		if (getDaisyVersion() == amis::dtb::DAISY_202 && mpBmkNavPoint) 
+		if (!getSpine()->isFilePresent(smilurl))
 		{
+			//the nav node should contain the change disc msg
+			setStopAfterCurrentSmilFile(true);
 			theApp.setMultivolumeLoadPoint(getUid(), smilurl);
-			loadNavNode(mpBmkNavPoint);
+			if (mpUserRequestedNavPoint)
+				loadNavNode(mpUserRequestedNavPoint);
+			else //we can't do much else here
+				amis::gui::MainWndParts::Instance()->mpMmDoc->OnOpenDocument(str_);
 		}
-		// Daisy 2005: play change disc message(audio sequence = changeMsg + media #)
+		//else, the SMIL file is in this volume; however, it may just be a disc change message
 		else
 		{
-			//TODO
+			string filetarget = amis::util::FilePathTools::getFileName(smilurl->get_url());
+			amis::dtb::nav::NavNode* p_node = getNavModel()->findFirstNodeThatRefersToThisSmilFile
+				(filetarget);
+			//if the corresponding nav node has a rel value that is non-empty and
+			//does not equal our current setinfo
+			if (p_node && p_node->getRel() != "" && 
+				p_node->getRel() != getSetInfo())
+			{
+				setStopAfterCurrentSmilFile(true);
+				theApp.setMultivolumeLoadPoint(getUid(), p_node);
+				getSpine()->goToFile(smilurl);
+				amis::gui::MainWndParts::Instance()->mpMmDoc->OnOpenDocument(str_);
+			}
+			else
+			{
+				getSpine()->goToFile(smilurl);
+				amis::gui::MainWndParts::Instance()->mpMmDoc->OnOpenDocument(str_);
+			}
 		}
 		
 	}
-	else if (is_smil_in_this_volume)
+	else
 	{
+		getSpine()->goToFile(smilurl);
 		amis::gui::MainWndParts::Instance()->mpMmDoc->OnOpenDocument(str_);
 	}
-	else //!is_smil_in_this_volume && !is_multi_volume
-	{
-		amis::util::Log::Instance()->writeError("Url not found in book", smilurl, "DtbWithHooks::loadNewSmilFile");
-	}
+}
+bool amis::dtb::DtbWithHooks::getStopAfterCurrentSmilFile()
+{
+	return mbStopAfterCurrentSmilFile;
+}
+void amis::dtb::DtbWithHooks::setStopAfterCurrentSmilFile(bool b)
+{
+	string msg = "setStopAfterCurrentSmilFile = ";
+	if (b) msg += "true";
+	else msg += "false";
+
+	amis::util::Log::Instance()->writeMessage(msg, "DtbWithHooks::setStopAfterCurrentSmilFile");
+	mbStopAfterCurrentSmilFile = b;
 }

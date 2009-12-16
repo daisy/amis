@@ -88,8 +88,7 @@ string amis::io::TextSearch::readFromFile(const ambulant::net::url* filepath)
 	{
 		if (mFound != "" )
 		{
-			string ret_val = amis::util::FilePathTools::getFileName(filepath->get_path());
-			ret_val = ret_val + "#" + mFound;
+			string ret_val = amis::util::getFileNameWithRef(filepath);
 		}
 		return mFound;
 	}

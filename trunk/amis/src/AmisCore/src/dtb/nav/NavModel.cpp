@@ -21,6 +21,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
 #include "dtb/nav/NavModel.h"
+#include "util/FilePathTools.h"
 #include <iostream>
 using namespace std;
 
@@ -44,6 +45,7 @@ amis::dtb::nav::NavModel::NavModel()
 	mpNavMap->setRoot(p_root);
 	mpSmilIdNodeMap = NULL;
 	mbLower = false;
+	mpFileset = NULL;
 }
 
 amis::dtb::nav::NavModel::~NavModel()
@@ -253,26 +255,33 @@ void amis::dtb::nav::NavModel::testMap()
 
 amis::dtb::nav::NavNode* amis::dtb::nav::NavModel::getNodeForSmilId(string id, NavContainer* pContainer)
 {
-	NavNode* p_node = NULL;
-	if (mpSmilIdNodeMap != NULL)
+	if (amis::util::FilePathTools::getTarget(id) != "")
 	{
-		NavNodeList* node_list = NULL;
-		node_list = (*mpSmilIdNodeMap)[id];
-		if (node_list != NULL)
+		NavNode* p_node = NULL;
+		if (mpSmilIdNodeMap != NULL)
 		{
-			for (int i = 0; i<node_list->size(); i++)
+			NavNodeList* node_list = NULL;
+			node_list = (*mpSmilIdNodeMap)[id];
+			if (node_list != NULL)
 			{
-				NavNode* p_n = (*node_list)[i];
-				if (p_n->getNavContainer() == pContainer)
+				for (int i = 0; i<node_list->size(); i++)
 				{
-					p_node = p_n;
-					break;
+					NavNode* p_n = (*node_list)[i];
+					if (p_n->getNavContainer() == pContainer)
+					{
+						p_node = p_n;
+						break;
+					}
 				}
 			}
 		}
+		
+		return p_node;
 	}
-	
-	return p_node;
+	else
+	{
+		return findFirstNodeThatRefersToThisSmilFile(id);
+	}
 }
 
 amis::dtb::nav::NavPoint* amis::dtb::nav::NavModel::previousSection(int currentPlayOrder)
@@ -440,4 +449,25 @@ amis::dtb::nav::NavNode* amis::dtb::nav::NavModel::getNavNode(string id)
 void amis::dtb::nav::NavModel::addIndex(amis::dtb::nav::NavNode* pNode, std::string id)
 {
 	mNodeIndex[id] = pNode;
+}
+//find the first navmap node that refers to this SMIL file (regardless of target)
+amis::dtb::nav::NavNode* amis::dtb::nav::NavModel::findFirstNodeThatRefersToThisSmilFile(string id)
+{
+	amis::dtb::nav::WhoRefersToThisSmilFile who;
+	
+	ambulant::net::url url = ambulant::net::url::from_filename(id);
+	const ambulant::net::url* base = mpFileset->getBookDirectory();
+	url = url.join_to_base(*base);
+	amis::dtb::nav::NavNodeList* list = NULL;
+	list = who.findOut(this, &url);
+	//the first list entry will be in the navmap
+	if (list != NULL && list->size() > 0)
+		return (*list)[0];
+	else
+		return NULL;
+	
+}
+void amis::dtb::nav::NavModel::setFileset(amis::dtb::DtbFileSet* set)
+{
+	mpFileset = set;
 }

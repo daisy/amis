@@ -470,18 +470,63 @@ void TextRenderBrain::decreaseFontSize()
 }
 bool TextRenderBrain::canIncreaseFontSize()
 {
-	if (mFontSize < Preferences::Instance()->getFontsizeCssFiles()->size())
+	//if we were unable to transform the dtbook file, then page styling and font size 
+	//command are not available
+	bool dtbook_check = 
+		(
+			(amis::dtb::DtbWithHooks::Instance()->getDaisyVersion() == amis::dtb::DAISY_2005) 
+			&&
+			(amis::dtb::DtbWithHooks::Instance()->wasDtbookTransformed() == true)
+		) 
+		||
+		amis::dtb::DtbWithHooks::Instance()->getDaisyVersion() == amis::dtb::DAISY_202;
+
+	if (mFontSize < Preferences::Instance()->getFontsizeCssFiles()->size() && dtbook_check)
 		return true;
 	else
 		return false;
 }
 bool TextRenderBrain::canDecreaseFontSize()
 {
-	if (mFontSize > 0)
+	
+	//if we were unable to transform the dtbook file, then page styling and font size 
+	//command are not available
+	bool dtbook_check = 
+		(
+			(amis::dtb::DtbWithHooks::Instance()->getDaisyVersion() == amis::dtb::DAISY_2005) 
+			&&
+			(amis::dtb::DtbWithHooks::Instance()->wasDtbookTransformed() == true)
+		) 
+		||
+		amis::dtb::DtbWithHooks::Instance()->getDaisyVersion() == amis::dtb::DAISY_202;
+	if (mFontSize > 0 && dtbook_check)
 		return true;
 	else
 		return false;
 }
+bool TextRenderBrain::canApplyPageStyle()
+{
+	//if we were unable to transform the dtbook file, then page styling and font size 
+	//command are not available
+	bool dtbook_check = 
+		(
+			(amis::dtb::DtbWithHooks::Instance()->getDaisyVersion() == amis::dtb::DAISY_2005) 
+			&&
+			(amis::dtb::DtbWithHooks::Instance()->wasDtbookTransformed() == true)
+		) 
+		||
+		amis::dtb::DtbWithHooks::Instance()->getDaisyVersion() == amis::dtb::DAISY_202;
+
+	bool retval = theApp.isBookOpen() 
+		&& 
+		amis::dtb::DtbWithHooks::Instance()->hasText()
+		&&
+		Preferences::Instance()->getCustomCssFiles()->size() > 0 
+		&& 
+		dtbook_check;
+	return retval;
+}
+
 void TextRenderBrain::resetFontSize()
 {
 	amis::util::Log::Instance()->writeMessage("Font size reset", "TextRenderBrain::resetFontSize");

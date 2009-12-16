@@ -694,8 +694,7 @@ void CAmisSidebar::updateSelection()
 {
 	const ambulant::net::url* p_url = MainWndParts::Instance()->mpMmView->getCurrentUrl();
 	string id = p_url->get_ref();
-	string file = amis::util::FilePathTools::getFileName(p_url->get_url());
-	file = file + "#" + id;
+	string file = amis::util::getFileNameWithRef(p_url);
 	
 	amis::dtb::nav::NavModel* p_nav = amis::dtb::DtbWithHooks::Instance()->getNavModel();
 	amis::dtb::nav::PageTarget* p_page = NULL;

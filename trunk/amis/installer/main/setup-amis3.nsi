@@ -358,8 +358,9 @@ Section -JavaCheck
     IfErrors MessageToUser1
 
 CheckVersion:
-    Pop $0
+    ;Pop $0
     ${If} $0 < 1.6
+        MessageBox MB_OK "$0 is less than 1.6"
         Goto MessageToUser2
     ${Else}
         Goto End
@@ -367,11 +368,11 @@ CheckVersion:
     
     ; ask if the user wants to install the scripts
 MessageToUser1:
-    MessageBox "MB_OK" "The Java Runtime was not found on your system.  Java support is required for enhanced DAISY 3 text display. After the AMIS installation is complete, you may download Java from http://www.java.com and install it at any time."
+    MessageBox MB_OK "The Java Runtime was not found on your system.  Java support is required for enhanced DAISY 3 text display. After the AMIS installation is complete, you may download Java from http://www.java.com and install it at any time."
     Goto End
 
 MessageToUser2:
-    MessageBox "MB_OK" "Please upgrade your Java Runtime to version 1.6 or higher.  Java support is required for enhanced DAISY 3 text display. After the AMIS installation is complete, you may download Java from http://www.java.com and install it at any time."
+    MessageBox MB_OK "Please upgrade your Java Runtime to version 1.6 or higher.  Java support is required for enhanced DAISY 3 text display. After the AMIS installation is complete, you may download Java from http://www.java.com and install it at any time."
     Goto End
 
 
@@ -414,7 +415,7 @@ SectionEnd
 Function .onInit
   
   ;turn logging on
-  LogSet on
+  LogSet On
 
 	;load the sapi install screen file, as we may need it
 	!insertmacro MUI_INSTALLOPTIONS_EXTRACT "sapipage.ini"
@@ -453,7 +454,7 @@ DxCheck:
     Pop $0
     IntCmp $0 900 End DxWarning End
 DxWarning:
-    MessageBox "MB_OK" "Requires DirectX 9.0 or later.  Please update your copy of DirectX."
+    MessageBox MB_OK "Requires DirectX 9.0 or later.  Please update your copy of DirectX."
 
 End:	
 FunctionEnd

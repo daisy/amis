@@ -82,6 +82,9 @@ public:
 	bool hasText();
 	void setCacheIndex(bool);
 	bool wasDtbookTransformed();
+	bool isMultivolume();
+	std::string getSetInfo();
+	
 private:
 	void saveIndexData();
 	bool readIndexData();

@@ -60,11 +60,13 @@ public:
 	void clearPageStyle();
 	void applyNextPageStyle();
 	int getCurrentCustomStyleIndex();
+	bool canApplyPageStyle();
 
 	void redoPageColors();
 	wstring getCurrentText();
 	void webDocumentComplete();
 	ambulant::net::url getCurrentUrl();
+
 private:
 	void saveElementText(IHTMLElement*);
 	void setFontSize(int);

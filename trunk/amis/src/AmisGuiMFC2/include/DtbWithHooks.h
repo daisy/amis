@@ -85,7 +85,8 @@ public:
 	//bool getTTSNextPhraseFlag();
 	//void setTTSNextPhraseFlag(bool);
 	void stopTTS();
-
+	bool getStopAfterCurrentSmilFile();
+	void setStopAfterCurrentSmilFile(bool);
 private:
 	void pauseTTS();
 	void resumeTTS();
@@ -106,7 +107,10 @@ private:
 	string mIdOfLastmarkNode;
 	bool mbTTSNextPhraseFlag;
 	wstring mLastString;
-	amis::dtb::nav::NavPoint* mpBmkNavPoint;
+	//for bookmark loading or section navigation
+	amis::dtb::nav::NavPoint* mpUserRequestedNavPoint;
+	bool mbStopAfterCurrentSmilFile;
+
 private:
 	static DtbWithHooks* pinstance;
 };
