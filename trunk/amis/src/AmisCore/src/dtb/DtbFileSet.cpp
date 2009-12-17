@@ -273,7 +273,7 @@ void amis::dtb::DtbFileSet::findTextFiles(amis::util::SearchForFiles* fileSearch
 		mpFileSearcher->startSearch(mBookDirectory.get_file());
 	
 		mTextFiles = (*(mpFileSearcher->getSearchResults()));
-
+		
 		//if we didn't find any text files, then use the nav file as our text file
 		if (mTextFiles.size() == 0) mTextFiles.push_back(this->mNavFilepath);
 	}

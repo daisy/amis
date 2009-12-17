@@ -111,22 +111,24 @@ Function .onInit
     
     LogEx::Init true "$INSTDIR\install.log"
     LogEx::Write "${PRODUCT_NAME} ${PRODUCT_VERSION} (${CUSTOM_LANG_NAME})"  
-    
-	;load the sapi install screen file, as we may need it
-	!insertmacro MUI_INSTALLOPTIONS_EXTRACT "sapipage.ini"
-	!insertmacro MUI_INSTALLOPTIONS_EXTRACT "filebrowse.ini"
-	
+    	
 	;show the splash screen
 	File /oname=$PLUGINSDIR\splash.bmp "${LOGO_DIR}\amis.bmp"
 	splash::show 1000 $PLUGINSDIR\splash
 	Pop $0 
 
     ${If} ${AtLeastWinXP}
-        LogEx::Write "Using Windows XP or higher"
+    ${AndIf} ${AtLeastServicePack} 2
+        LogEx::Write "Using Windows XP SP2 or higher"
         Goto DxCheck
     ${Else}
-        LogEx::Write "Operating system not supported"
+        ;find out exactly which OS version was detected
+        Push $R0
+        Call GetWindowsVersion
+        Pop $R0
+        LogEx::Write "Operating system not supported.  $R0"
         MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "Warning: operating system not supported.  AMIS may not work.  Do you want to continue?" IDYES DxCheck
+        LogEx::Write "User chose to abort installation (wrong OS)"
         Abort
     ${EndIf}
         
@@ -136,9 +138,25 @@ DxCheck:
     Pop $0
     LogEx::Write "DirectX version $0"
     ${If} $0 < 900
-        MessageBox MB_OK "Requires DirectX 9.0 or later.  Please update your copy of DirectX."
+        MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "Warning: AMIS requires DirectX 9.0 or later.  You may continue with AMIS installation; however, it is recommended that you update your system first.  Continue?" IDYES IeCheck
+      LogEx::Write "User chose to abort installation (wrong DX version)"
+      Abort  
     ${EndIf}
-
+    
+IeCheck:
+    ;check for IE version 7 or higher
+    Call GetIEVersion
+    Pop $0
+    LogEx::Write "IE version $0"
+    ${If} $0 == 6
+        LogEx::Write "Warning user about IE6"
+        MessageBox MB_OK "You have Internet Explorer 6.  Version 7 or higher is recommended for best performance.  You may update your system at any time after AMIS is installed."
+    ${ElseIf} $0 < 6
+        MessageBox MB_OK "Your version of Internet Explorer is outdated. AMIS may not work.  Do you want to continue?" IDYES End
+        LogEx::Write "User chose to abort (wrong IE version)"
+        Abort
+    ${EndIf}
+End:
 FunctionEnd
 
 ;******

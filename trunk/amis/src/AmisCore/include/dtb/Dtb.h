@@ -97,6 +97,7 @@ private:
 	bool processSmil(const ambulant::net::url*);
 	void loadBookmarks(const ambulant::net::url*);
 	void cleanUpObjects();
+	
 #ifndef WITH_EXTERNAL_SMIL_PLAYER
 	void setNewLastmark(amis::dtb::smil::SmilMediaGroup*);
 #endif
