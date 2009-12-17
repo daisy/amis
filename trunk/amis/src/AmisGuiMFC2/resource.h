@@ -119,6 +119,7 @@
 #define IDC_OPTIONS_LIST                1116
 #define IDC_FIND_DESCRIPTION            1118
 #define SELF_VOICING_PLAY_NEXT          6969
+#define BOOK_SEARCH_DONE				6868
 #define IDC_CURRLANG                    9002
 #define IDC_VERSION                     9006
 #define IDC_VERSIONNOTE                 9007

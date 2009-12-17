@@ -154,8 +154,9 @@ namespace amis
 			{
 				if (status == SEARCHING) 
 				{
-					AudioSequencePlayer::Instance()->playDialogControlFromUiIds(IDD_SEARCHDAISY, IDC_SEARCHING, mpDialog, true, "WhileSearching");
-				} 
+					AudioSequence * seq = AudioSequencePlayer::Instance()->playDialogControlFromUiIds(IDD_SEARCHDAISY, IDC_SEARCHING, mpDialog, false, "WhileSearching");
+					AudioSequencePlayer::Instance()->Play(seq, false, true);
+				}
 				else if (status == NONE_FOUND) 
 				{
 					AudioSequencePlayer::Instance()->playDialogControlFromUiIds(IDD_SEARCHDAISY, IDC_SEARCHING, mpDialog, true, "SearchCompleteNoFilesFound");
@@ -180,20 +181,48 @@ namespace amis
 					seq->appendAll(seq2);
 					delete seq2;
 
-					int sel = p_filelist->GetCurSel();
-					if (sel >= 0) 
-					{ 
-						amis::UrlList* p_search_results = mpDialog->mSearcher.getSearchResults();
-						if (sel > -1 && sel < p_search_results->size()) 
-						{
-							//mLoadBookOnDialogClose = (*p_search_results)[sel];	
-							CString str;
-							p_filelist->GetText(sel, str);
-							seq->append(str);
-						}
-					}
 					AudioSequencePlayer::Instance()->Play(seq);
 
+					//int sel = p_filelist->GetCurSel();
+					//if (sel >= 0) 
+					//{ 
+					//	amis::UrlList* p_search_results = mpDialog->mSearcher.getSearchResults();
+					//	if (sel > -1 && sel < p_search_results->size()) 
+					//	{
+					//		//mLoadBookOnDialogClose = (*p_search_results)[sel];	
+					//		CString str;
+					//		p_filelist->GetText(sel, str);
+					//		seq->append(str);
+					//	}
+					//}
+
+					/*PromptItem* promptSKIP = DataTree::Instance()->findPromptItem("ready");
+					AudioSequence * seqSkipFirst = new AudioSequence;
+					AudioSequencePlayer::Instance()->fillSequenceContents(seqSkipFirst, promptSKIP);
+					seqSkipFirst->appendAll(seq);
+					delete seq;
+					AudioSequencePlayer::Instance()->Play(seqSkipFirst);*/
+
+					/*PromptItem* promptVOID = DataTree::Instance()->findPromptItem("ready");
+					AudioSequence * seqVOID = new AudioSequence;
+					AudioSequencePlayer::Instance()->fillSequenceContents(seqVOID, promptVOID);
+					AudioSequencePlayer::Instance()->Play(seqVOID, true);*/
+
+					//AudioSequencePlayer::Instance()->Stop(false);
+					
+					//Prompt* promptDONE = DataTree::Instance()->findPrompt("done");
+
+					/*PromptItem* promptSKIP = DataTree::Instance()->findPromptItem("ready");
+					AudioSequence * seqSkipFirst = new AudioSequence;
+					AudioSequencePlayer::Instance()->fillSequenceContents(seqSkipFirst, promptSKIP);
+					seq->appendAll(seqSkipFirst);
+					delete seqSkipFirst;
+					
+					promptSKIP = DataTree::Instance()->findPromptItem("not_available");
+					seqSkipFirst = new AudioSequence;
+					AudioSequencePlayer::Instance()->fillSequenceContents(seqSkipFirst, promptSKIP);
+					seq->appendAll(seqSkipFirst);
+					delete seqSkipFirst;*/
 				} 
 				else if (status == STOPPED) 
 				{

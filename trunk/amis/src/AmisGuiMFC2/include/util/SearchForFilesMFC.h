@@ -26,6 +26,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include <string>
 #include "util/SearchForFiles.h"
 
+#include "util/ThreadYielder.h"
+
 namespace amis
 {
 namespace util
@@ -36,12 +38,15 @@ public:
 	SearchForFilesMFC();
 	~SearchForFilesMFC();
 
+	void setThreadYielder(ThreadYielder * ty);
+
 	//the parameter is a folder path, with or without a trailing slash, e.g. "c:\daisybooks"
 	int startSearch(std::string);
 	void stopSearch();
 	int startSearchOnCdRom();
 
 private:
+	ThreadYielder * mThreadYielder;
 	int recursiveSearch(LPCTSTR);
 	bool mbShouldStop;
 };

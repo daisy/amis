@@ -23,6 +23,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "gui/MenuManip.h"
 #include "gui/AmisApp.h"
 #include "DtbWithHooks.h"
+#include "util/Log.h"
 
 using namespace amis::gui;
 
@@ -66,12 +67,25 @@ void MainWndParts::toggleViewMode()
 	else defaultView();
 }
 
+void MainWndParts::peekAndPump(HWND hwnd)
+{
+	MSG msg;
+	while ( ::PeekMessage(&msg, hwnd, NULL, NULL, PM_REMOVE) )
+	{
+		::TranslateMessage(&msg);
+		::DispatchMessage(&msg);
+	}
+
+	peekAndPump();
+}
+
 void MainWndParts::peekAndPump()
 {
 	HWND hwnd = (mpMainFrame ? mpMainFrame->m_hWnd : 0);
 	MSG msg;
 	while ( ::PeekMessage(&msg, hwnd, NULL, NULL, PM_REMOVE) )
 	{
+		//CWinThread::PumpMessage();
 		::TranslateMessage(&msg);
 		::DispatchMessage(&msg);
 	}

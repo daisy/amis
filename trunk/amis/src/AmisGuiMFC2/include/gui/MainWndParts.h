@@ -53,6 +53,7 @@ public:
 	void toggleViewMode();
 	bool isBasicView();
 
+	void peekAndPump(HWND hwnd);
 	void peekAndPump();
 	void setStatusText(wstring);
 public:

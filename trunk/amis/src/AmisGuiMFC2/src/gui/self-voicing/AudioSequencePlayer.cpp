@@ -268,7 +268,8 @@ void AudioSequencePlayer::playNext(bool fromEndEvent)
 		
 		if (mRepeatLoop && m_previousAudioSequence)
 		{
-			Sleep(2000);
+			Sleep(100);
+			p_log->writeTrace("Repeating audio", "AudioSequencePlayer::playNext");
 			Play(m_previousAudioSequence, false, true, true);
 		}
 		return;
@@ -333,7 +334,7 @@ void AudioSequencePlayer::Play(AudioSequence* audioSequence, bool doNotRegisterI
 #ifdef CCS_ACTIVE
 		LeaveCriticalSection(&m_csSequence);
 #endif
-		MainWndParts::Instance()->mpMainFrame->SendMessage(WM_COMMAND, (WPARAM)SELF_VOICING_PLAY_NEXT, (LPARAM)0);
+		MainWndParts::Instance()->mpMainFrame->PostMessage(WM_COMMAND, (WPARAM)SELF_VOICING_PLAY_NEXT, (LPARAM)0);
 	}
 }
 
@@ -826,7 +827,6 @@ AudioSequence * AudioSequencePlayer::playDialogControlFromUiIds(int dlgID, int c
 		{
 			delete seq;
 			return NULL;
-
 		}
 		else if (playNow)
 		{

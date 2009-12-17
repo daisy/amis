@@ -27,6 +27,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "../resource.h"
 #include "ambulant/net/url.h"
 
+#include "util/ThreadYielder.h"
+
 namespace amis
 {
 namespace gui
@@ -37,14 +39,14 @@ enum SearchStatus
 {
 	SEARCHING, READY, STOPPED, NONE_FOUND, ONE_FOUND, MANY_FOUND
 };
-class SearchForBooksDialog : public AmisDialogBase
+class SearchForBooksDialog : public AmisDialogBase, public ThreadYielder
 {
 //friend class amis::gui::spoken::SearchForBooksDialogVoicing;
 friend class SearchForBooksDialogVoicing;
 
 public:
 	void resolvePromptVariables(Prompt*);
-
+	void peekAndPump();
 	SearchForBooksDialog(CWnd* pParent = NULL);
 	~SearchForBooksDialog();
 	ambulant::net::url getBookToLoad();
@@ -59,7 +61,15 @@ protected:
 	afx_msg void OnStartsearch();
 	afx_msg void OnStopsearch();
 	afx_msg void OnSelchangeFilelist();
+	//virtual BOOL OnCommand(WPARAM wParam, LPARAM lParam);
 	DECLARE_MESSAGE_MAP()
+
+	CString search_string;
+	//static UINT ThreadProc(LPVOID lpParam);
+	//DWORD __stdcall ThreadProc(LPVOID lpParam);
+		void SearchDone();
+public:
+		void SearchLoop();
 
 private:
 	int mFilesFound;

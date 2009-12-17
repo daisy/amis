@@ -111,13 +111,13 @@ void AudioSequence::append_prepend(CString strTTS, bool prepend)
 	{
 		strPrompt = "numeric_zero";
 	}
+
 	if (strPrompt.length() != 0)
 	{
 		PromptItem* pi = DataTree::Instance()->findPromptItem(strPrompt);
 
 		if (pi != NULL)
 		{
-
 			TextAudioPair* pair = pi->getContents();
 			if (pair != NULL)
 			{
@@ -149,18 +149,19 @@ void AudioSequence::append_prepend(CString strTTS, bool prepend)
 
 void AudioSequence::appendAll(AudioSequence * seq)
 {
-	for (size_t i = 0; i < seq->m_AudioSequence.GetCount(); i++)
+	//for (size_t i = 0; i < seq->m_AudioSequence.GetCount(); i++)
+	for (int i = seq->m_AudioSequence.GetCount() - 1; i >= 0; i--)
 	{
-		AudioSequenceComponent* comp = seq->m_AudioSequence.GetAt(seq->m_AudioSequence.FindIndex(i))->clone();
+		AudioSequenceComponent* comp = seq->m_AudioSequence.GetAt(seq->m_AudioSequence.FindIndex((size_t)i))->clone();
 		m_AudioSequence.AddHead(comp);
 	}
 }
 
 void AudioSequence::prepend(CString strTTS)
-{
-	
+{	
 	append_prepend(strTTS, true);
 }
+
 void AudioSequence::append(amis::AudioNode* audioClip, CString strTTS)
 {
 	if (audioClip->getPath().length() == 0)

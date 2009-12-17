@@ -36,6 +36,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "gui/self-voicing/datamodel/DataTree.h"
 #include "gui/self-voicing/dialogs/SearchForBooksDialogVoicing.h"
 
+//#define USE_THREAD_FOR_SEARCH
+
 using namespace amis::gui::dialogs;
 using namespace amis::gui::spoken;
 
@@ -150,11 +152,6 @@ void SearchForBooksDialog::populateListControl()
 		p_edit->SetWindowText(_T(""));
 		p_edit->SetFocus();
 	}
-	else
-	{
-		CButton* p_button = (CButton*)this->GetDlgItem(IDC_OPENBOOK);
-		p_button->EnableWindow(TRUE);
-	}
 }
 amis::BookList* SearchForBooksDialog::resolveTitles(amis::UrlList* pUrls)
 {
@@ -240,9 +237,29 @@ void SearchForBooksDialog::OnBrowse()
 	theApp.afterModalBox(b);
 }
 
+#ifdef USE_THREAD_FOR_SEARCH
+//unsigned __stdcall ThreadProc(void* lpParam) {
+DWORD __stdcall ThreadProc(LPVOID lpParam) 
+{
+	SearchForBooksDialog *pThis = (SearchForBooksDialog*)lpParam;
+	pThis->SearchLoop();
+
+	TRACE(L"\n== ThreadProc END\n");
+
+	//_endthreadex( 0 );
+	return 0;
+}
+#endif //USE_THREAD_FOR_SEARCH
+
+//UINT SearchForBooksDialog::ThreadProc(LPVOID lpParam)
+//{
+//    SearchForBooksDialog *pThis = reinterpret_cast<SearchForBooksDialog *>(lpParam);
+//    pThis->SearchLoop();
+//    return 1;
+//}
+
 void SearchForBooksDialog::OnStartsearch() 
 {
-	USES_CONVERSION;
 	CButton* p_button = (CButton*)this->GetDlgItem(IDC_OPENBOOK);
 	p_button->EnableWindow(FALSE);
 
@@ -256,7 +273,7 @@ void SearchForBooksDialog::OnStartsearch()
 	
 	CEdit* p_edit = NULL;
 	p_edit = (CEdit*)this->GetDlgItem(IDC_SEARCHPATH);
-	CString search_string;
+	
 	p_edit->GetWindowText(search_string);
 	search_string.TrimLeft();
 	search_string.TrimRight();
@@ -266,12 +283,15 @@ void SearchForBooksDialog::OnStartsearch()
 	//change the text on the side to say "searching"
 	announceStatus(mCaptionWhileSearching, SEARCHING);
 
+	peekAndPump();
+
 	//gray-out the search button and enable the stop button
 	p_button = (CButton*)this->GetDlgItem(IDC_STARTSEARCH);
 	p_button->EnableWindow(FALSE);
 
 	p_button = (CButton*)this->GetDlgItem(IDC_STOPSEARCH);
 	p_button->EnableWindow(TRUE);
+	p_button->SetFocus();
 
 	//prepare the search tool
 	mSearcher.clearAll();
@@ -284,9 +304,75 @@ void SearchForBooksDialog::OnStartsearch()
 	mSearcher.addSearchExclusionCriteria(".svn-base");
 
 	mSearcher.setRecursiveSearch(true);
-	//start the search
+
+#ifdef USE_THREAD_FOR_SEARCH
+	//AfxBeginThread(ThreadProc, reinterpret_cast<LPVOID>(this), THREAD_PRIORITY_NORMAL);
+
+	unsigned long lpdwThreadID;
+	//hEventHandler = (HANDLE) _beginthreadex(NULL, 0, eventHandler, (void*) this, 0, &lpdwThreadID);
+	HANDLE hEventHandler = ::CreateThread(NULL, 0, &ThreadProc, this, 0, &lpdwThreadID);
+	//GetCurrentThreadId
+	TRACE("\nTHREAD ID (SEARCH BOOKS): %x\n", lpdwThreadID);
+	
+	amis::util::Log* p_log = amis::util::Log::Instance();
+	string log_msg = "Thread ID: ";
+	char strID[10];
+	sprintf(strID, "%x", lpdwThreadID);			
+	log_msg.append(strID);
+	p_log->writeTrace(log_msg, "SearchForBooksDialog::OnStartsearch");
+#else
+	mSearcher.setThreadYielder(this);
+#endif //USE_THREAD_FOR_SEARCH
+
+	SearchLoop();
+}
+
+//BOOL SearchForBooksDialog::OnCommand(WPARAM wParam, LPARAM lParam) 
+//{
+//	//if (wParam == BOOK_SEARCH_DONE)
+//	//{
+//	//
+//	//}
+//	//else if (wParam = SELF_VOICING_PLAY_NEXT)
+//	//{
+//	//	int debug = 1;
+//	//}
+//	
+//	return AmisDialogBase::OnCommand(wParam, lParam);
+//}
+
+
+
+void SearchForBooksDialog::SearchLoop() 
+{
+	/*for (int i = 0; i < 1000; i++)
+	{
+		Sleep(10);
+		peekAndPump();
+	}*/
+
+	USES_CONVERSION;
+
+	// START LONG OP
 	mFilesFound = mSearcher.startSearch(T2A(search_string));
+	// END LONG OP
+
+#ifdef USE_THREAD_FOR_SEARCH
+	this->PostMessageW(WM_COMMAND, (WPARAM)BOOK_SEARCH_DONE, (LPARAM)0);
+#else
+	SearchDone();
+#endif //USE_THREAD_FOR_SEARCH
+}
+
+void SearchForBooksDialog::SearchDone() 
+{
 	populateListControl();
+			
+	CListBox* p_filelist = NULL;
+	p_filelist = (CListBox*)this->GetDlgItem(IDC_FILESFOUND);
+	p_filelist->SetFocus();
+
+	peekAndPump();
 
 	if (mFilesFound == 0) announceStatus(this->mCaptionSearchCompleteNoFilesFound, NONE_FOUND);
 	else if (mFilesFound == 1) announceStatus(this->mCaptionSearchCompleteOneFileFound, ONE_FOUND);
@@ -298,18 +384,36 @@ void SearchForBooksDialog::OnStartsearch()
 	}
 
 	//reverse the gray-out button states
-	p_button = (CButton*)this->GetDlgItem(IDC_STARTSEARCH);
+	CButton* p_button = (CButton*)this->GetDlgItem(IDC_STARTSEARCH);
 	p_button->EnableWindow(TRUE);
 
 	p_button = (CButton*)this->GetDlgItem(IDC_STOPSEARCH);
 	p_button->EnableWindow(FALSE);
+
+	p_button = (CButton*)this->GetDlgItem(IDC_OPENBOOK);
+	p_button->EnableWindow(TRUE);
 }
 
+void SearchForBooksDialog::peekAndPump()
+{
+	amis::gui::MainWndParts::Instance()->peekAndPump(this->m_hWnd);
+}
 
 void SearchForBooksDialog::OnStopsearch() 
 {
 	mbShouldStopSearching = true;
 	mSearcher.stopSearch();
+	
+	//reverse the gray-out button states
+	CButton* p_button = (CButton*)this->GetDlgItem(IDC_STARTSEARCH);
+	p_button->EnableWindow(TRUE);
+
+	p_button = (CButton*)this->GetDlgItem(IDC_STOPSEARCH);
+	p_button->EnableWindow(FALSE);
+
+	p_button = (CButton*)this->GetDlgItem(IDC_OPENBOOK);
+	p_button->EnableWindow(TRUE);
+
 	announceStatus(mCaptionSearchAborted, STOPPED);
 }
 
@@ -325,6 +429,18 @@ void SearchForBooksDialog::OnDblclkFilelist()
 
 BOOL SearchForBooksDialog::PreTranslateMessage(MSG* pMsg)
 {
+	
+#ifdef USE_THREAD_FOR_SEARCH
+	if (pMsg->wParam == BOOK_SEARCH_DONE)
+	{
+		SearchDone();
+	}
+#endif //USE_THREAD_FOR_SEARCH
+	
+	//else if (pMsg->wParam = SELF_VOICING_PLAY_NEXT)
+	//{
+	//	int debug = 1;
+	//}
 	if (pMsg->message == WM_KEYDOWN || pMsg->message == WM_KEYUP)
 	{
 		CWnd* p_wnd = this->GetFocus();
