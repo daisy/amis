@@ -57,9 +57,6 @@ See below for license details.
 
 //#include <process.h>
 
-//define this to use the CoInitialize/Uninitialize stuff from rev 611
-#undef COINIT_STUFF
-
 using namespace ambulantX;
 
 //using ambulant::lib::win32::win_report_error;
@@ -246,17 +243,6 @@ hEventHandler(0)
 	assert(!amis::Preferences::Instance()->getMustAvoidDirectX());
 #endif
 
-#ifdef COINIT_STUFF
-	//// Ensuring that we're ready for CoCreateInstance in this current thread context.
-	//HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-	//if (hr == S_FALSE)
-	//{
-	//	// If it fails, so be it, but we must cleanup.
-	//	// (it may be that we're already ready,
-	//	// due to another init call somewhere else in the app from the same thread context)
-	//	CoUninitialize();
-	//}
-#endif
 	set_rate(0);
 	set_volume(100);
 
@@ -593,34 +579,6 @@ void gui::dx::audio_playerX::initialize_speedup_filter() {
 	// it and remember whether it worked.
 	IBaseFilter *pNewFilter = NULL;
 
-#ifdef COINIT_STUFF
-
-//
-//#ifdef _DEBUG
-//	// Checking that we're ready for CoCreateInstance in this current thread context.
-//	// We should be ! (see constructor)
-//	// So we expect this to fail:
-//	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-//	assert(hr == S_FALSE);
-//	if (hr == S_FALSE)
-//	{
-//		// Let's cleanup.
-//		CoUninitialize();
-//	}
-//#endif
-
-#else
-	// Ensuring that we're ready for CoCreateInstance in this current thread context.
-	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-	if (hr == S_FALSE)
-	{
-		// If it fails, so be it, but we must cleanup.
-		// (it may be that we're already ready,
-		// due to another init call somewhere else in the app from the same thread context)
-		CoUninitialize();
-	}
-#endif
-
 	HRESULT res;
 	res = CoCreateInstance(CLSID_TPBVupp69, NULL, CLSCTX_INPROC_SERVER,
 		IID_IBaseFilter, (void**)&pNewFilter);
@@ -947,23 +905,6 @@ bool gui::dx::audio_playerX::play(const char * url, char* clipBegin, char* clipE
 
 	m_url.assign(url);
 
-	HRESULT hr;
-
-//if NOT defined (different from the others)
-#ifndef COINIT_STUFF
-
-// Ensuring that we're ready for CoCreateInstance in this current thread context.
-	hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-	if (hr == S_FALSE)
-	{
-		// If it fails, so be it, but we must cleanup.
-		// (it may be that we're already ready,
-		// due to another init call somewhere else in the app from the same thread context)
-		CoUninitialize();
-	}
-
-#endif
-
 	if (m_graph_builder != NULL)
 	{ 
 		stop(true);
@@ -971,24 +912,7 @@ bool gui::dx::audio_playerX::play(const char * url, char* clipBegin, char* clipE
 
 	if (m_graph_builder == NULL)
 	{
-#ifdef COINIT_STUFF
-
-//#ifdef _DEBUG
-//	// Checking that we're ready for CoCreateInstance in this current thread context.
-//	// We should be ! (see constructor)
-//	// So we expect this to fail:
-//	HRESULT hres = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-//	assert(hres == S_FALSE);
-//	if (hres == S_FALSE)
-//	{
-//		// Let's cleanup.
-//		CoUninitialize();
-//	}
-//#endif
-
-#endif
-
-		hr = CoCreateInstance(CLSID_FilterGraph,0,CLSCTX_INPROC_SERVER,
+		HRESULT hr = CoCreateInstance(CLSID_FilterGraph,0,CLSCTX_INPROC_SERVER,
 			IID_IGraphBuilder,(void**)&m_graph_builder);
 		if(FAILED(hr))
 		{
@@ -1008,7 +932,7 @@ bool gui::dx::audio_playerX::play(const char * url, char* clipBegin, char* clipE
 	USES_CONVERSION;
 	LPCWSTR str = A2CW(strFileName.c_str());
 
-	hr = m_graph_builder->RenderFile(str, 0);
+	HRESULT hr = m_graph_builder->RenderFile(str, 0);
 	if(FAILED(hr)){
 		
 		amis::util::Log* p_log = amis::util::Log::Instance();
@@ -1035,7 +959,7 @@ bool gui::dx::audio_playerX::play(const char * url, char* clipBegin, char* clipE
 #endif
 
 	if (m_media_control == NULL) { 
-		hr = m_graph_builder->QueryInterface(IID_IMediaControl, (void **) &m_media_control);
+		HRESULT hr = m_graph_builder->QueryInterface(IID_IMediaControl, (void **) &m_media_control);
 		if(FAILED(hr)) {
 			win_report_error("QueryInterface(IID_IMediaControl, ...)", hr);	
 

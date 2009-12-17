@@ -86,9 +86,6 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "direct.h"
 #endif
 
-//define this to use the CoInitialize/Uninitialize stuff from rev 611
-#undef COINIT_STUFF
-
 using namespace amis::gui;
 
 BEGIN_MESSAGE_MAP(CAmisApp, CWinApp)
@@ -160,20 +157,17 @@ BOOL CAmisApp::InitInstance()
 {
 	USES_CONVERSION;
 
-#ifdef COINIT_STUFF
-	// Ensuring that we're ready in this current thread context.
+	// Ensuring that we're ready for COM in this current thread context.
+	// Note: this is legal, we are not in DllMain. We will exit COM at the end of ExitInstance()
 	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
 	if (hr == S_FALSE)
 	{
-		// If it fails, so be it, but we must cleanup.
-		// (it may be that we're already ready,
-		// due to another init call somewhere else in the app from the same thread context)
+		// Cleanup
 		CoUninitialize();
 	}
 
 #ifdef _DEBUG
 	assert(hr == S_OK);
-#endif
 #endif
 
 	string prefs_file = "";
@@ -294,7 +288,6 @@ BOOL CAmisApp::InitInstance()
 
 	if (!Preferences::Instance()->getMustAvoidTTS())
 	{
-		// The TTS constructor takes care of CoInitEx (we're on the main message pump / event dispatch thread)
 		amis::tts::TTSPlayer::InstanceOne();
 		amis::tts::TTSPlayer::InstanceTwo();
 
@@ -310,7 +303,6 @@ BOOL CAmisApp::InitInstance()
   
 	if (!Preferences::Instance()->getMustAvoidDirectX())
 	{
-		// The DX audio constructor takes care of CoInitEx (we're on the main message pump / event dispatch thread)
 		ambulantX::gui::dx::audio_playerX::Instance()->set_global_level(audio_vol);
 	}
 
@@ -445,18 +437,6 @@ int CAmisApp::ExitInstance()
 	DataTree::Instance()->DestroyInstance();
 	if (mpHistory != NULL) delete mpHistory;
 
-#ifdef COINIT_STUFF
-	CoUninitialize();
-
-	/*if (
-		!Preferences::Instance()->getMustAvoidTTS()
-		|| 
-		!Preferences::Instance()->getMustAvoidDirectX())
-	{
-		//if no book was open during AMIS execution, this crashes on exit.
-		//CoUninitialize();
-	}*/
-#endif
 	amis::util::Log::Instance()->writeTrace("AMIS EXIT done.", "CAmisApp::ExitInstance");
 	amis::util::Log::Instance()->endLog();
 	amis::util::Log::Instance()->DestroyInstance();
@@ -468,6 +448,8 @@ int CAmisApp::ExitInstance()
 	//UnregisterOCX();
 
 #endif
+
+	CoUninitialize();
 
 	TRACE("\nEXIT.\n\n");
 

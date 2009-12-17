@@ -41,9 +41,6 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #define WITH_HTML_WIDGET
 #define AM_DBG if (0)
 
-//define this to use the CoInitialize/Uninitialize stuff from rev 611
-#undef COINIT_STUFF
-
 typedef amis::gui::CAmisHtmlView HtmlView;
 
 using namespace std;
@@ -90,17 +87,6 @@ END_MESSAGE_MAP()
 
 CAmisHtmlView::CAmisHtmlView()
 {
-#ifdef COINIT_STUFF
-	//// Ensuring that we're ready for CoCreateInstance/QueryInterface/etc. in this current thread context.
-	//HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-	//if (hr == S_FALSE)
-	//{
-	//	// If it fails, so be it, but we must cleanup.
-	//	// (it may be that we're already ready,
-	//	// due to another init call somewhere else in the app from the same thread context)
-	//	CoUninitialize();
-	//}
-#endif
 	mpLoaderBridge = NULL;
 }
 
@@ -247,7 +233,7 @@ void CAmisHtmlView::OnBeforeNavigate2(LPCTSTR lpszURL, DWORD nFlags,
 
 	//strip the amisie protocol if it's there
 	if (urlOrFile.substr(0, 7) == "amisie:")
-		urlOrFile.replace(0, 7, "");
+		urlOrFile = urlOrFile.replace(0, 7, "");
 
 	ambulant::net::url thisUrl;
 	string::size_type colonPos = urlOrFile.find(':');
@@ -335,7 +321,8 @@ LPARAM CAmisHtmlView::OnHighlightUrlTarget(WPARAM wParam, LPARAM lParam)
 {
 	assert(wParam == 0);
 	std::string *url = (std::string *)lParam;
-	std::string newurl = *url;
+	std::string newurl; // = *url;
+	newurl.assign(*url);
 	
 	//make sure we aren't processing the same document
 	ambulant::net::url amb_url = ambulant::net::url::from_url(newurl);
@@ -364,12 +351,6 @@ LPARAM CAmisHtmlView::OnHighlightUrlTarget(WPARAM wParam, LPARAM lParam)
 		if (amis::dtb::DtbWithHooks::Instance()->isProtected() || 
 			should_load_transformed_dtbook)
 		{
-			// Prepend amisie: to the URL. This will change the protocol,
-			// and the IeDtbPlugin PluggableProtocol COM object has registered
-			// that protocol. It will then be used to get the data, and it will
-			// do the right thing wrt. decoding.
-			if (newurl.substr(0, 7) != "amisie:")
-				newurl = "amisie:" + newurl;
 			// Also, we need to inform the IeDtbPluggableProtocol about
 			// our datasource factory. This is done with the IeDtbBridge
 			// object, which remembers the factory until disposed of.
@@ -379,23 +360,12 @@ LPARAM CAmisHtmlView::OnHighlightUrlTarget(WPARAM wParam, LPARAM lParam)
 					MainWndParts::Instance()->mpMmView->getDatasourceFactory();
 				assert(df);
 
-#ifdef COINIT_STUFF
-//#ifdef _DEBUG
-//	// Checking that we're ready for CoCreateInstance in this current thread context.
-//	// We should be ! (see constructor)
-//	// So we expect this to fail:
-//	HRESULT hres = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-//	assert(hres == S_FALSE);
-//	if (hres == S_FALSE)
-//	{
-//		// Let's cleanup.
-//		CoUninitialize();
-//	}
-//#endif
+				HRESULT hres = CoCreateInstance(CLSID_CPdtbBridge, 0, CLSCTX_INPROC_SERVER, IID_PdtbBridge, (void **)&mpLoaderBridge);
+
+#ifdef _DEBUG
+	assert(SUCCEEDED(hres));
 #endif
-				HRESULT hr = CoCreateInstance(CLSID_CPdtbBridge, 0, 
-					CLSCTX_INPROC_SERVER, IID_PdtbBridge, (void **)&mpLoaderBridge);
-				if (SUCCEEDED(hr)) 
+				if (SUCCEEDED(hres)) 
 				{
 					mpLoaderBridge->SetDatasourceFactory((DATASOURCEFACTORYPTR)df);
 
@@ -403,9 +373,15 @@ LPARAM CAmisHtmlView::OnHighlightUrlTarget(WPARAM wParam, LPARAM lParam)
 					{
 						mpLoaderBridge->SetDtbookProcessing(true);
 					}
-
 				}
 			}
+			
+			// Prepend amisie: to the URL. This will change the protocol,
+			// and the IeDtbPlugin PluggableProtocol COM object has registered
+			// that protocol. It will then be used to get the data, and it will
+			// do the right thing wrt. decoding.
+			if (newurl.substr(0, 7) != "amisie:")
+				newurl = "amisie:" + newurl;
 		} 
 		else 
 		{
@@ -457,39 +433,12 @@ CAmisHtmlView::PrepareNavigateString(LPCSTR url)
 	// If we are already displaying this document return false.
 	CString urlstr(url);
 	if (mNavStringUrl.Compare(urlstr) == 0) return false;
-	HRESULT res;
-
-#ifdef COINIT_STUFF
-
-//#ifdef _DEBUG
-//	// Checking that we're ready for QueryInterface in this current thread context.
-//	// We should be ! (see constructor)
-//	// So we expect this to fail:
-//	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-//	assert(hr == S_FALSE);
-//	if (hr == S_FALSE)
-//	{
-//		// Let's cleanup.
-//		CoUninitialize();
-//	}
-//#endif
-
-#else
-   // Ensuring that we're ready for CoCreateInstance in this current thread context.
-	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-	if (hr == S_FALSE)
-	{
-		// If it fails, so be it, but we must cleanup.
-		// (it may be that we're already ready,
-		// due to another init call somewhere else in the app from the same thread context)
-		CoUninitialize();
-	}
-#endif
 
 	// First we need to get a pointer to the DOM
 	IDispatch *pDisp = GetHtmlDocument();
 	if (pDisp == NULL) return false;
 	IHTMLDocument2 *pDoc;
+	HRESULT res;
 	res = pDisp->QueryInterface(IID_IHTMLDocument2, (void**)&pDoc);
 	if (!SUCCEEDED(res)) 
 	{
@@ -503,38 +452,11 @@ CAmisHtmlView::PrepareNavigateString(LPCSTR url)
 bool
 CAmisHtmlView::DoNavigateString(LPCSTR document)
 {
-	HRESULT res;
-#ifdef COINIT_STUFF
-
-//#ifdef _DEBUG
-//	// Checking that we're ready for QueryInterface in this current thread context.
-//	// We should be ! (see constructor)
-//	// So we expect this to fail:
-//	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-//	assert(hr == S_FALSE);
-//	if (hr == S_FALSE)
-//	{
-//		// Let's cleanup.
-//		CoUninitialize();
-//	}
-//#endif
-
-#else
-	// Ensuring that we're ready for CoCreateInstance in this current thread context.
-	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-	if (hr == S_FALSE)
-	{
-		// If it fails, so be it, but we must cleanup.
-		// (it may be that we're already ready,
-		// due to another init call somewhere else in the app from the same thread context)
-		CoUninitialize();
-	}
-#endif
-
 	// First we need to get a pointer to the DOM
 	IDispatch *pDisp = GetHtmlDocument();
 	if (pDisp == NULL) return false;
 	IHTMLDocument2 *pDoc;
+	HRESULT res;
 	res = pDisp->QueryInterface(IID_IHTMLDocument2, (void**)&pDoc);
 	if (!SUCCEEDED(res)) 
 	{
@@ -742,41 +664,15 @@ IHTMLStyleSheet* CAmisHtmlView::applyStylesheet(const ambulant::net::url* styles
 {
 	USES_CONVERSION;
 
-	//copied this pDoc-getting code from another function in this file
-	HRESULT res;
-
 	if (stylesheet == NULL) return NULL;
 
-#ifdef COINIT_STUFF
-
-//#ifdef _DEBUG
-//	// Checking that we're ready for QueryInterface in this current thread context.
-//	// We should be ! (see constructor)
-//	// So we expect this to fail:
-//	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-//	assert(hr == S_FALSE);
-//	if (hr == S_FALSE)
-//	{
-//		// Let's cleanup.
-//		CoUninitialize();
-//	}
-//#endif
-#else
-	// Ensuring that we're ready for CoCreateInstance in this current thread context.
-	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-	if (hr == S_FALSE)
-	{
-		// If it fails, so be it, but we must cleanup.
-		// (it may be that we're already ready,
-		// due to another init call somewhere else in the app from the same thread context)
-		CoUninitialize();
-	}
-#endif
+	//copied this pDoc-getting code from another function in this file
 
 	// First we need to get a pointer to the DOM
 	IDispatch *pDisp = GetHtmlDocument();
 	if (pDisp == NULL) return NULL;
 	IHTMLDocument2 *pDoc;
+	HRESULT res;
 	res = pDisp->QueryInterface(IID_IHTMLDocument2, (void**)&pDoc);
 	if (!SUCCEEDED(res)) return NULL;
 	if (pDoc == NULL) return NULL;

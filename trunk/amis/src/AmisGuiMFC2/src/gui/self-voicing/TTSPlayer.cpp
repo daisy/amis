@@ -38,9 +38,6 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #define TRACE ATLTRACE
 #endif
 
-//define this to use the CoInitialize/Uninitialize stuff from rev 611
-#undef COINIT_STUFF
-
 using namespace amis::tts;
 
 void TTSPlayer::setCallback(sendMessageCallbackFn pFunction)
@@ -143,27 +140,6 @@ TTSPlayer::TTSPlayer(void)
 
 	m_iV = NULL;
 
-#ifdef COINIT_STUFF
-	//// Ensuring that we're ready for CoCreateInstance in this current thread context.
-	//HRESULT hres = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-	//if (hres == S_FALSE)
-	//{
-	//	// If it fails, so be it, but we must cleanup.
-	//	// (it may be that we're already ready,
-	//	// due to another init call somewhere else in the app from the same thread context)
-	//	CoUninitialize();
-	//}
-#else
-    // Ensuring that we're ready for CoCreateInstance in this current thread context.
-	HRESULT hrr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-	if (hrr == S_FALSE)
-	{
-		// If it fails, so be it, but we must cleanup.
-		// (it may be that we're already ready,
-		// due to another init call somewhere else in the app from the same thread context)
-		CoUninitialize();
-	}
-#endif
 	HRESULT hr = CoCreateInstance(CLSID_SpVoice, NULL, CLSCTX_INPROC_SERVER,
 		IID_ISpVoice, (void**) &m_iV);
 	_ASSERT(hr == S_OK);	// If this assertion is hit then the Speech runtime is probably not installed
