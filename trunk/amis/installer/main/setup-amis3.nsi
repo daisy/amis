@@ -25,6 +25,10 @@
 ;******
 ; pages, components, and script includes
 ;**
+
+!include "Registry.nsh"
+!include WinVer.nsh
+
 ; required for InstallLib
 !include "Library.nsh"
 
@@ -34,11 +38,9 @@
 ; Support for conditional logic (should be in c:\program files\nsis\include by default)
 !include "LogicLib.nsh"
 
-;SAPI page
-!include "sapipage.nsh"
-
 ;Windows and DirectX versions
 !include "getversions.nsh"
+!include "WinVer.nsh"
 
 ; MUI Settings
 !define MUI_ABORTWARNING
@@ -53,9 +55,6 @@
 
 ; Directory page
 !insertmacro MUI_PAGE_DIRECTORY
- 
-;this function is in the sapipage.nsh header
-Page custom SapiPage
  
 ; Instfiles page
 !insertmacro MUI_PAGE_INSTFILES
@@ -106,44 +105,81 @@ ShowInstDetails show
 ShowUnInstDetails show
 
 ;******
+; installer init
+;**
+Function .onInit
+    
+    LogEx::Init true "$INSTDIR\install.log"
+    LogEx::Write "${PRODUCT_NAME} ${PRODUCT_VERSION} (${CUSTOM_LANG_NAME})"  
+    
+	;load the sapi install screen file, as we may need it
+	!insertmacro MUI_INSTALLOPTIONS_EXTRACT "sapipage.ini"
+	!insertmacro MUI_INSTALLOPTIONS_EXTRACT "filebrowse.ini"
+	
+	;show the splash screen
+	File /oname=$PLUGINSDIR\splash.bmp "${LOGO_DIR}\amis.bmp"
+	splash::show 1000 $PLUGINSDIR\splash
+	Pop $0 
+
+    ${If} ${AtLeastWinXP}
+        LogEx::Write "Using Windows XP or higher"
+        Goto DxCheck
+    ${Else}
+        LogEx::Write "Operating system not supported"
+        MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "Warning: operating system not supported.  AMIS may not work.  Do you want to continue?" IDYES DxCheck
+        Abort
+    ${EndIf}
+        
+DxCheck:
+    ;check for the directx version
+    Call GetDXVersion
+    Pop $0
+    LogEx::Write "DirectX version $0"
+    ${If} $0 < 900
+        MessageBox MB_OK "Requires DirectX 9.0 or later.  Please update your copy of DirectX."
+    ${EndIf}
+
+FunctionEnd
+
+;******
 ; copy all files, register DLLs, etc
 ;**
 Section "MainSection" SEC01
-	 
-    LogText "Testing"
+	;the settings dir will live here
+    Var /GLOBAL SETTINGS_DIR
 
-    ;the settings dir will live here
-	  Var /GLOBAL SETTINGS_DIR
+    ;figure out the user's application data directore
+    ;look for the "all users" context
+    SetShellVarContext all
+    StrCpy $SETTINGS_DIR $APPDATA\AMIS\settings
 
-	  ;figure out the user's application data directore
-	  ;look for the "all users" context
-	  SetShellVarContext all
-	  StrCpy $SETTINGS_DIR $APPDATA\AMIS\settings
-	
-	  SetOutPath "$INSTDIR"
-	  SetOverwrite try
-	  File "${BIN_DIR}\AMIS.exe"
-	  CreateDirectory "$SMPROGRAMS\AMIS"
+    LogEx::Write "Installing AMIS in $INSTDIR"
+    LogEx::Write "Installing AMIS settings in $SETTINGS_DIR"
+    
+    SetOutPath "$INSTDIR"
+    SetOverwrite try
+    File "${BIN_DIR}\AMIS.exe"
+    CreateDirectory "$SMPROGRAMS\AMIS"
     CreateShortCut "$SMPROGRAMS\AMIS\AMIS.lnk" "$INSTDIR\AMIS.exe"
-	  CreateShortCut "$DESKTOP\AMIS.lnk" "$INSTDIR\AMIS.exe"
+    CreateShortCut "$DESKTOP\AMIS.lnk" "$INSTDIR\AMIS.exe"
   
-    ; this creates a subdir in the start menu that will contain our modified shortcuts for compatibility/debug modes
+    ;this creates a subdir in the start menu that will contain our modified shortcuts for compatibility/debug modes
     CreateDirectory "$SMPROGRAMS\AMIS\Additional"
     CreateShortCut "$SMPROGRAMS\AMIS\Additional\AMIS Debug Mode.lnk" "$INSTDIR\AMIS.exe" "-prefs amisPrefsDebug.xml"
     CreateShortCut "$SMPROGRAMS\AMIS\Additional\AMIS Compatibility Mode.lnk" "$INSTDIR\AMIS.exe" "-prefs amisPrefsCompatibilityMode.xml"
     CreateShortCut "$SMPROGRAMS\AMIS\Additional\AMIS Compatibility Mode With DirectX.lnk" "$INSTDIR\AMIS.exe" "-prefs amisPrefsCompatibilityModeWithDX.xml"
     CreateShortCut "$SMPROGRAMS\AMIS\Additional\AMIS Compatibility Mode With TTS.lnk" "$INSTDIR\AMIS.exe" "-prefs amisPrefsCompatibilityModeWithTTS.xml"
     
-	  ;copy the DLLs
-	  File "${BIN_DIR}\libambulant_shwin32.dll"
-	  File "${BIN_DIR}\xerces-c_3_0.dll"
-	  File "${BIN_DIR}\TransformSample.ax"
-	  File "${BIN_DIR}\libamplugin_ffmpeg.dll"
-	  File "${BIN_DIR}\avformat-52.dll"
-	  File "${BIN_DIR}\avcodec-51.dll"
-	  File "${BIN_DIR}\avutil-49.dll"
-	  File "${BIN_DIR}\SDL.dll"
-	  File "${BIN_DIR}\libamplugin_pdtb.dll"
+    ;copy the DLLs
+    File "${BIN_DIR}\libambulant_shwin32.dll"
+    File "${BIN_DIR}\xerces-c_3_0.dll"
+    File "${BIN_DIR}\TransformSample.ax"
+    File "${BIN_DIR}\libamplugin_ffmpeg.dll"
+    File "${BIN_DIR}\avformat-52.dll"
+    File "${BIN_DIR}\avcodec-51.dll"
+    File "${BIN_DIR}\avutil-49.dll"
+    File "${BIN_DIR}\SDL.dll"
+    File "${BIN_DIR}\libamplugin_pdtb.dll"
     File "${BIN_DIR}\lzop.exe"
     
     ;copy the xslt and stylesheet jar files
@@ -161,10 +197,12 @@ Section "MainSection" SEC01
     
     ;register the pdtb-ie plugin
     !insertmacro InstallLib REGDLLTLB NOTSHARED NOREBOOT_NOTPROTECTED "${BIN_DIR}\IeDtbPlugin.dll" "$INSTDIR\IeDtbPlugin.dll" "$INSTDIR"
-  
+    LogEx::Write "Installed IeDtbPlugin"
+    
     ;register the timescale ocx component
     ExecWait 'regsvr32.exe /s "$INSTDIR\TransformSample.ax"'
-  
+    LogEx::Write "Registered TransformSample.ax"
+    
     ;copy the bookmark readme file
     SetOutPath "$SETTINGS_DIR\bmk"
     File "${BIN_DIR}\settings\bmk\readme.txt"
@@ -179,10 +217,10 @@ Section "MainSection" SEC01
     File "${BIN_DIR}\settings\clean_settings_for_the_installer\amisPrefsDebug.xml"
     
     ;preserve the history file if exists
-    IfFileExists "$SETTINGS_DIR\amisHistory.xml" after_history_copy
-    File "${BIN_DIR}\settings\clean_settings_for_the_installer\amisHistory.xml"
+    ${IfNot} ${FileExists} "$SETTINGS_DIR\amisHistory.xml"
+        File "${BIN_DIR}\settings\clean_settings_for_the_installer\amisHistory.xml"
+    ${EndIf}
 
-after_history_copy:
     File "${BIN_DIR}\settings\defaultToolbar.xml"
     File "${BIN_DIR}\settings\basicToolbar.xml"
     File "${BIN_DIR}\settings\amisHistory.xml.default"
@@ -195,7 +233,6 @@ after_history_copy:
     AccessControl::GrantOnFile "$SETTINGS_DIR\amisPrefsCompatibilityModeWithDX.xml" "(BU)" "FullAccess"
     AccessControl::GrantOnFile "$SETTINGS_DIR\amisPrefsCompatibilityModeWithTTS.xml" "(BU)" "FullAccess"
     AccessControl::GrantOnFile "$SETTINGS_DIR\amisPrefsDebug.xml" "(BU)" "FullAccess"
-    
     AccessControl::GrantOnFile "$SETTINGS_DIR\amisHistory.default.xml" "(BU)" "FullAccess"
     AccessControl::GrantOnFile "$SETTINGS_DIR\amisHistory.xml" "(BU)" "FullAccess"
     AccessControl::GrantOnFile "$SETTINGS_DIR\bmk" "(BU)" "FullAccess"
@@ -235,7 +272,8 @@ after_history_copy:
     ;to support Thai encoding, add this key in HKLM
     ;Software\Classes\MIME\Database\Charset\TIS-620 and set AliasForCharset to windows-874
     WriteRegStr HKLM "Software\Classes\MIME\Database\Charset\TIS-620" "AliasForCharset" "Windows-874"
- 
+    LogEx::Write "Registered charset alias Windows-874 for TIS-620"
+    
 SectionEnd
 
 ;******
@@ -243,6 +281,8 @@ SectionEnd
 ;*
 Section -CopyLangpacks
   
+    LogEx::Write "Copying default language pack files: ${DEFAULT_LANG_ID}"
+    
     ;***
     ;copy the default langpack
     ;***
@@ -268,6 +308,8 @@ Section -CopyLangpacks
     ; copy the custom langpack
     ;***
     ${If} ${CUSTOM_LANG_ID} != "eng-US"
+        LogEx::Write "Copying custom language pack files ${CUSTOM_LANG_ID}"
+        
         ;copy the langpack root files
         SetOutPath "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}"
         File "${LOCAL_APP_DATA}\AMIS\settings\lang\${CUSTOM_LANG_ID}\*"
@@ -285,6 +327,7 @@ Section -CopyLangpacks
         SetOutPath "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}\shortcuts"
         File "${LOCAL_APP_DATA}\AMIS\settings\lang\${CUSTOM_LANG_ID}\shortcuts\*"
     ${EndIf}
+    
 End:
 SectionEnd
 
@@ -295,23 +338,25 @@ Section -MSVCRuntime
   
     Var /GLOBAL MSVC_RUNTIME_INSTALLER
     StrCpy $MSVC_RUNTIME_INSTALLER "$TEMP\vcredist_x86.exe"
-
+    LogEx::Write "MSVC Runtime Installer copied to temp dir $TEMP"
+    
     ;check and see if the user needs these files
-    Push $R0
-    ClearErrors
-    ReadRegDword $R0 HKLM "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{837b34e3-7c30-493c-8f6a-2b0f04e2912c}" "Version"
-    ; if VS 2005 redist not installed (if there was an error finding the key), install it
-    IfErrors InstallVSRedist End
-    StrCpy $R0 "-1"
-
-    ;actually install them
-InstallVSRedist: 
-    ExecWait "$MSVC_RUNTIME_INSTALLER" $0
-    StrCmp $0 "0" End Error
-Error:
-    MessageBox MB_ICONEXCLAMATION "There was an error encountered while attempting to install the Microsoft runtime files.  Please contact technical support if you experience problems running AMIS."
-    Goto End
-End:
+    ${registry::KeyExists} "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{837b34e3-7c30-493c-8f6a-2b0f04e2912c}" $0
+    
+    ${If} $0 == 0
+        LogEx::Write "MSVC Runtime already installed on this machine"
+    ${Else}
+        LogEx::Write "Attempting to install MSVC Runtime"
+        ExecWait "$MSVC_RUNTIME_INSTALLER" $0
+        
+        ${If} $0 != "0"
+            LogEx::Write "Error installing MSVC Runtime"
+            MessageBox MB_ICONEXCLAMATION "There was an error encountered while attempting to install the Microsoft runtime files.  Please contact technical support if you experience problems running AMIS."
+        ${Else}
+            LogEx::Write "MSVC Runtime installed successfully"
+        ${EndIf}
+    ${EndIf}
+    
     Delete "$MSVC_RUNTIME_INSTALLER"
 
 SectionEnd
@@ -323,60 +368,52 @@ Section -JawsScripts
   
     Var /GLOBAL JFW_SCRIPTS_INSTALLER
     StrCpy $JFW_SCRIPTS_INSTALLER "$TEMP\amis3_jfw_scripts.exe"
-
+    LogEx::Write "Jaws Scripts Installer copied to temp dir $TEMP"
+    
     ; check if the user has jaws installed, then ask if they want to install the scripts
-    ClearErrors
-    EnumRegKey $0 HKCU "Software\Freedom Scientific\JAWS" 0
-    ; if the key exists (no errors), then ask the user if they want to install jaws scripts.  otherwise go to the end.
-    IfErrors End AskUser
-  
-    ; ask if the user wants to install the scripts
-AskUser:
-    MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON1 "Would you like to install Jaws for Windows scripts for AMIS?" IDYES InstallScripts
-    Goto End
+    ${registry::KeyExists} "HKEY_CURRENT_USER\SOFTWARE\Freedom Scientific\JAWS" $0
+    
+    ${If} $0 == 0
+        LogEx::Write "JAWS found on this machine"
+        
+        MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON1 "Would you like to install Jaws for Windows scripts for AMIS?" IDYES InstallScripts IDNO DoNotInstallScripts
 
-InstallScripts:
-    ExecWait "$JFW_SCRIPTS_INSTALLER" $0
-    StrCmp $0 "0" End Error
-
-Error:
-    MessageBox MB_ICONEXCLAMATION "There was an error encountered while attempting to install Jaws for Windows scripts for AMIS.  Please visit http://amisproject.org to download and install the scripts separately."
-
+    InstallScripts:
+        LogEx::Write "Attempting to install JAWS scripts"
+        ExecWait "$JFW_SCRIPTS_INSTALLER" $0
+        
+        ${If} $0 != "0"
+            LogEx::Write "Error installing JAWS scripts"
+            MessageBox MB_ICONEXCLAMATION "There was an error encountered while attempting to install Jaws for Windows scripts for AMIS.  Please visit http://amisproject.org to download and install the scripts separately."
+        ${EndIf}
+        Goto End
+    
+    DoNotInstallScripts:
+        LogEx::Write "User declined JAWS scripts installation"
+        Goto End
+    
+    ${Else}
+        LogEx::Write "JAWS not found on this machine."
+    ${EndIf}
+    
 End:
     Delete "$JFW_SCRIPTS_INSTALLER"
-
 SectionEnd
 
 ;******
 ; Check if Java is installed
 ;*
 Section -JavaCheck
-     ; check if the user has jaws installed, then ask if they want to install the scripts
-    ClearErrors
-    EnumRegKey $0 HKLM "SOFTWARE\JavaSoft\Java Runtime Environment" "CurrentVersion"
-    ; if the key exists (no errors), then check the version.  Else give the user a message.
-    IfErrors MessageToUser1
-
-CheckVersion:
-    ;Pop $0
-    ${If} $0 < 1.6
-        MessageBox MB_OK "$0 is less than 1.6"
-        Goto MessageToUser2
+    
+    ${registry::Read} "HKEY_LOCAL_MACHINE\SOFTWARE\JavaSoft\Java Runtime Environment" "CurrentVersion" $R0 $R1
+    
+    ${If} $R0 < 1.6
+        LogEx::Write "Incorrect Java version or Java not installed (registry key read = $R0)"
+        MessageBox MB_OK "Please upgrade your Java Runtime to version 1.6 or higher.  Java support is required for enhanced DAISY 3 text display. After the AMIS installation is complete, you may download Java from http://www.java.com and install it at any time."
     ${Else}
-        Goto End
+        LogEx::Write "Correct Java version installed (registry key read = $R0)"
     ${EndIf}
     
-    ; ask if the user wants to install the scripts
-MessageToUser1:
-    MessageBox MB_OK "The Java Runtime was not found on your system.  Java support is required for enhanced DAISY 3 text display. After the AMIS installation is complete, you may download Java from http://www.java.com and install it at any time."
-    Goto End
-
-MessageToUser2:
-    MessageBox MB_OK "Please upgrade your Java Runtime to version 1.6 or higher.  Java support is required for enhanced DAISY 3 text display. After the AMIS installation is complete, you may download Java from http://www.java.com and install it at any time."
-    Goto End
-
-
-End:
 SectionEnd
 
 ;******
@@ -407,57 +444,21 @@ Section -Post
     WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayVersion" "${PRODUCT_VERSION}"
     WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "URLInfoAbout" "${PRODUCT_WEB_SITE}"
     WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "Publisher" "${PRODUCT_PUBLISHER}"
+    
+    LogEx::Write "Summary of files copied:"
+    LogEx::Write ""
+    ExecDos::exec 'cmd /C dir "$INSTDIR" /b/s/l/a' "" "$INSTDIR\output.log"
+    LogEx::AddFile "   >" "$INSTDIR\output.log"
+    
+    LogEx::Write ""
+    ExecDos::exec 'cmd /C dir "$SETTINGS_DIR" /b/s/l/a' "" "$INSTDIR\output.log"
+    LogEx::AddFile "   >" "$INSTDIR\output.log"
+    
+    LogEx::Close
+    
+    Delete $INSTDIR\output.log
 SectionEnd
 
-;******
-;NSIS init function
-;**
-Function .onInit
-  
-  ;turn logging on
-  LogSet On
-
-	;load the sapi install screen file, as we may need it
-	!insertmacro MUI_INSTALLOPTIONS_EXTRACT "sapipage.ini"
-	!insertmacro MUI_INSTALLOPTIONS_EXTRACT "filebrowse.ini"
-	
-	;show the splash screen
-	File /oname=$PLUGINSDIR\splash.bmp "${LOGO_DIR}\amis.bmp"
-	splash::show 1000 $PLUGINSDIR\splash
-    
-	; possible values for $0:
-	; '1' if the user closed the splash screen early,
-	; '0' if everything closed normally, 
-	; '-1' if some error occurred.
-	;
-	Pop $0 
-
-	;check that the OS is XP, 2000, or Vista
-	Call GetWindowsVersion
-	Pop $R0
-	
-CheckWinXP:	
-    StrCmp $R0 "XP" DxCheck CheckWin2K
-CheckWin2K:
-    StrCmp $R0 "2000" DxCheck CheckVista
-CheckVista:
-    StrCmp $R0 "Vista" DxCheck OSNotSupported
-
-    ;the OS is not supported; warn the user instead of aborting
-OSNotSupported:
-    MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "Warning: operating system not supported.  AMIS may not work.  Do you want to continue?" IDYES DxCheck
-    Abort
-
-DxCheck:
-    ;check for the directx version
-    Call GetDXVersion
-    Pop $0
-    IntCmp $0 900 End DxWarning End
-DxWarning:
-    MessageBox MB_OK "Requires DirectX 9.0 or later.  Please update your copy of DirectX."
-
-End:	
-FunctionEnd
 
 ;******
 ; uninstall init

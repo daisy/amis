@@ -1,5 +1,9 @@
+!include WinVer.nsh
+
 ; MUI 1.67 compatible ------
 !include "MUI.nsh"
+
+!include "Registry.nsh"
 
 ; MUI Settings
 !define MUI_ABORTWARNING
@@ -41,23 +45,67 @@ ShowUnInstDetails show
 ;installation
 ;*******************
 Function .onInit  
-  ;turn logging on
-  LogSet On
+  LogEx::Init true "$INSTDIR\install.log"
+  LogEx::Write "Init"  
+  
+  ${IfNot} ${AtLeastWin2000}
+      MessageBox MB_OK "XP and above required"
+      LogEx::Write "Need better windows!"
+      Abort
+  ${Else}
+      LogEx::Write "Windows version ok"
+    ${EndIf}    
 FunctionEnd
 
 Section "MainSection" SEC01
-    MessageBox MB_OK "Hello, world!"
-    
+  
     SetOutPath "$INSTDIR"
 	SetOverwrite try
 	File "lgpl.txt"
     
+    SetOutPath "$INSTDIR\stuff"
+    SetOverwrite try
+    File "lgpl.txt"
+    
+    Var /GLOBAL TEST
+    StrCpy $TEST "C:\Program Files\NSIS"
+    
+    LogEx::Write "Files in $TEST"
+    ExecDos::exec 'cmd /C dir "$TEST" /b/s/l/a' "" "output.log"
+    LogEx::AddFile "   >" "output.log"
+    
+        
+    ${registry::KeyExists} "HKEY_LOCAL_MACHINE\Software\Axialis\IconWorkshop" $0
+    
+    MessageBox MB_OK "$0"
+    ${If} $0 == 0
+        MessageBox MB_OK "Found"
+    ${Else}
+        MessageBox MB_OK "Not found"
+    ${EndIf}
+    
+End:
+SectionEnd
+;******
+; Check if Java is installed
+;*
+Section -JavaCheck
+    
+    ${registry::Read} "HKEY_LOCAL_MACHINE\SOFTWARE\JavaSoft\Java Runtime Environment" "CurrentVersion" $R0 $R1
+    
+    ${If} $R0 < 1.6
+        LogEx::Write "Incorrect Java version or Java not installed (registry key read = $R0)"
+        MessageBox MB_OK "Please upgrade your Java Runtime to version 1.6 or higher.  Java support is required for enhanced DAISY 3 text display. After the AMIS installation is complete, you may download Java from http://www.java.com and install it at any time."
+    ${Else}
+        LogEx::Write "Correct Java version installed (registry key read = $R0)"
+    ${EndIf}
+    
 SectionEnd
 
 Section -Post
-    MessageBox MB_OK "I am post"
     WriteUninstaller "$INSTDIR\Uninstall-nsistest.exe"
-    
+    Delete "$INSTDIR\output.log"
+    LogEx::Close
 SectionEnd
 
 ;*******************
