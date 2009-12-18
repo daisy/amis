@@ -141,7 +141,7 @@ BOOL PreferencesDialog::OnInitDialog()
 
 void PreferencesDialog::initializeTTSVoiceOption()
 {
-	if (Preferences::Instance()->getMustAvoidTTS() == true) return;
+	if (Preferences::Instance()->getMustAvoidTTS()) return;
 
 	// Make sure to initialize the voice (just in case TTSPlayer has been unused until now)
 	amis::tts::TTSPlayer::InstanceOne()->SetVoice(Preferences::Instance()->getTTSVoiceIndex());

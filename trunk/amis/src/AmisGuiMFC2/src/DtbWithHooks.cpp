@@ -958,18 +958,23 @@ void DtbWithHooks::resume()
 }
 void DtbWithHooks::stopTTS()
 {
-	amis::tts::TTSPlayer::InstanceTwo()->Stop();
+	if (!Preferences::Instance()->getMustAvoidTTS())
+		amis::tts::TTSPlayer::InstanceTwo()->Stop();
 }
 void DtbWithHooks::pauseTTS()
 {
-	amis::tts::TTSPlayer::InstanceTwo()->Pause();
+	if (!Preferences::Instance()->getMustAvoidTTS())
+		amis::tts::TTSPlayer::InstanceTwo()->Pause();
 }
 void DtbWithHooks::resumeTTS()
 {
-	amis::tts::TTSPlayer::InstanceTwo()->Resume();
+	if (!Preferences::Instance()->getMustAvoidTTS())
+		amis::tts::TTSPlayer::InstanceTwo()->Resume();
 }
 void DtbWithHooks::speakTTS(wstring str)
 {
+	if (Preferences::Instance()->getMustAvoidTTS()) return;
+
 	if (theApp.getShouldNotRenderAudio() == true) return;
 	TRACE(_T("Speaking %s\n"), str.c_str());
 	amis::tts::TTSPlayer::InstanceTwo()->Play(str.c_str());

@@ -366,7 +366,7 @@ void cdxCDynamicWnd::Layout()
 															rectNew.left,rectNew.top,rectNew.Width(),rectNew.Height(),
 															swpFlags) ))
 					{
-						TRACE(_T("*** ERROR[cdxCDynamicWnd::ReorganizeControls()]: DeferWindowPos() failed ??\n"));
+						TRACE(L"%s", _T("*** ERROR[cdxCDynamicWnd::ReorganizeControls()]: DeferWindowPos() failed ??\n"));
 						bRepeat	=	true;
 						break;		// error; we'll repeat the loop by using SetWindòwPos()
 										// this won't look good, but work :)
@@ -513,7 +513,7 @@ void cdxCDynamicWnd::DoInitWindow(CWnd & rWnd, const CSize & szInitial)
 #ifdef _DEBUG
 	if(!(rWnd.GetStyle() & WS_CLIPCHILDREN) && !(m_nFlags & flSWPCopyBits))
 	{
-/*		TRACE(_T("***\n"
+/*		TRACE(L"%s", _T("***\n"
 					"*** cdxCDynamicWnd class note: If your window flickers too much, add the WS_CLIPCHILDREN style to it\n"
 					"***                            or try to set the flSWPCopyBits flags !!!\n"
 					"***\n"));

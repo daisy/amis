@@ -106,7 +106,7 @@ void TextRenderBrain::gotoUriTarget(std::string urlstr)
 		CString load_url(temp_url.c_str());
 		mCurrentUrl = url.get_document();
 
-		if (mbWaitForDocumentLoad) TRACE(_T("Warning: already waiting for a document to load\n"));
+		if (mbWaitForDocumentLoad) TRACE(L"%s", _T("Warning: already waiting for a document to load\n"));
 
 		mbWaitForDocumentLoad = true;
 		MainWndParts::Instance()->mpHtmlView->Navigate2(load_url, NULL, NULL);
@@ -448,7 +448,7 @@ void TextRenderBrain::clearPageStyle()
 	amis::util::Log::Instance()->writeMessage("Clearing page style", "TextRenderBrain::clearPageStyle");
 	mbStyleOn = false;
 	mCurrentStyleIdx = -1;
-	TRACE(_T("about to REMOVE the stylesheet\n"));
+	TRACE(L"%s", _T("about to REMOVE the stylesheet\n"));
 	MainWndParts::Instance()->mpHtmlView->removeStylesheet(mpStyleCss);
 }
 
@@ -802,8 +802,8 @@ bool TextRenderBrain::isElementInView(IHTMLElement* pElm)
 	CString screen_data;
 	screen_data.Format(_T("******\nScreen \ttop = %d \tbottom = %d \tleft = %d \tright = %d \n****\n"), 
 		top_visible, bottom_visible, left_visible, right_visible);
-	TRACE(screen_data);
-	TRACE(element_data);	
+	TRACE(L"%s", screen_data);
+	TRACE(L"%s", element_data);	
 */
 	if (elm_top < top_visible || elm_bottom > bottom_visible) return false;
 	if (elm_left < left_visible || elm_right > right_visible) return false;

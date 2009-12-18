@@ -264,7 +264,7 @@ gui::dx::audio_playerX::~audio_playerX()
 	
 	amis::util::Log* p_log = amis::util::Log::Instance();
 	p_log->writeTrace("SetEvent(m_hEventWakeup)", "audio_playerX::~audio_playerX");
-	TRACE(L"\n####### ~audio_playerX || SetEvent(m_hEventWakeup)\n");
+	TRACE(L"%s", L"\n####### ~audio_playerX || SetEvent(m_hEventWakeup)\n");
 	//end_thread();
 	bDestroyBreak = true;
 	SetEvent(m_hEventWakeup);
@@ -299,7 +299,7 @@ void gui::dx::audio_playerX::end_thread()
 
 	amis::util::Log* p_log = amis::util::Log::Instance();
 	//p_log->writeMessage("Wait for thread end.", "audio_playerX::end_thread");
-	TRACE("\nWAIT for thread end.\n");
+	TRACE(L"%s", "\nWAIT for thread end.\n");
 
 	IMediaEventSink *pIMES = NULL;
 	m_graph_builder->QueryInterface(IID_IMediaEventSink, (void**) &pIMES);
@@ -334,7 +334,7 @@ void gui::dx::audio_playerX::end_thread()
 		}
 	}
 	p_log->writeTrace("Wait for thread end: DONE.", "audio_playerX::end_thread");
-	TRACE("\nWAIT for thread end DONE.\n");
+	TRACE(L"%s", "\nWAIT for thread end DONE.\n");
 	hEventHandler = NULL;
 }
 
@@ -392,24 +392,24 @@ void gui::dx::audio_playerX::stop(bool fromPlay, bool fromThread)
 
 		amis::util::Log* p_log = amis::util::Log::Instance();
 		p_log->writeTrace("Stop DX", "audio_playerX::stop");
-		TRACE(L"\n####### -- STOP DX\n");
+		TRACE(L"%s", L"\n####### -- STOP DX\n");
 
 		if(m_media_control == 0) 
 		{			
-			TRACE(L"\n####### -- STOP DX || m_media_control == 0\n");
+			TRACE(L"%s", L"\n####### -- STOP DX || m_media_control == 0\n");
 			p_log->writeTrace("Stop DX, m_media_control == 0", "audio_playerX::stop");
 			return;
 		}
 		{ //TODO: what is this curly brace for??  i left it in ...
 		if (!fromPlay) 
 		{
-			TRACE(L"\n####### -- STOP DX || CS IN\n");
+			TRACE(L"%s", L"\n####### -- STOP DX || CS IN\n");
 			p_log->writeTrace("Stop DX, CS IN", "audio_playerX::stop");
 			EnterCriticalSection(&m_csSequence);
 		}
 
 #ifndef SINGLE_THREAD_HACK
-		TRACE(L"\n####### -- STOP DX || BEFORE END THREAD\n");
+		TRACE(L"%s", L"\n####### -- STOP DX || BEFORE END THREAD\n");
 		end_thread();
 #else
 	IMediaEventSink *pIMES = NULL;
@@ -421,7 +421,7 @@ void gui::dx::audio_playerX::stop(bool fromPlay, bool fromThread)
 
 	//Sleep(100);
 
-	TRACE(L"\n####### -- STOP DX || AFTER END THREAD\n");
+	TRACE(L"%s", L"\n####### -- STOP DX || AFTER END THREAD\n");
 	//p_log->writeMessage("Stop DX, after thread end", "audio_playerX::stop");
 
 	HRESULT hr = m_media_control->Stop();
@@ -429,7 +429,7 @@ void gui::dx::audio_playerX::stop(bool fromPlay, bool fromThread)
 	{
 		win_report_error("IMediaControl::stop()", hr);	
 	}
-	TRACE(L"\n####### -- STOP DX || AFTER STOP\n");
+	TRACE(L"%s", L"\n####### -- STOP DX || AFTER STOP\n");
 	p_log->writeTrace("Stop DX, After stop", "audio_playerX::stop");
 
 	if (m_media_control->StopWhenReady() != S_OK) 
@@ -445,17 +445,17 @@ void gui::dx::audio_playerX::stop(bool fromPlay, bool fromThread)
 			int debug = 0;
 		}
 	}
-	TRACE(L"\n####### -- STOP DX || AFTER STOP WHEN READY\n");
+	TRACE(L"%s", L"\n####### -- STOP DX || AFTER STOP WHEN READY\n");
 	//p_log->writeMessage("Stop DX, After stop when ready", "audio_playerX::stop");
 	release_player();
 	//p_log->writeMessage("Stop DX, After release", "audio_playerX::stop");
-	TRACE(L"\n####### -- STOP DX || AFTER RELEASE\n");
+	TRACE(L"%s", L"\n####### -- STOP DX || AFTER RELEASE\n");
 
 	if (!fromPlay) 
 	{
 		LeaveCriticalSection(&m_csSequence);	
 		//p_log->writeMessage("Stop DX, CS out", "audio_playerX::stop");
-		TRACE(L"\n####### -- STOP DX ||  CS OUT\n");
+		TRACE(L"%s", L"\n####### -- STOP DX ||  CS OUT\n");
 	}
 	} //counterpart to mysterious lone curly brace seen earlier
 }
@@ -845,27 +845,28 @@ void gui::dx::audio_playerX::set_rate_values(double crossFadeSpeed, int crossFad
 
 #endif
 
-void
-gui::dx::audio_playerX::set_global_level(double level)
-{
-	s_global_level = level;
-	ambulantX::gui::dx::audio_playerX::Instance()->set_volume((long)(s_global_level*100));
-}
+//void
+//gui::dx::audio_playerX::set_global_level(double level)
+//{
+//	s_global_level = level;
+//	ambulantX::gui::dx::audio_playerX::Instance()->set_volume((long)(s_global_level*100));
+//}
+//
+//double
+//gui::dx::audio_playerX::change_global_level(double factor)
+//{
+//	s_global_level *= factor;
+//	set_global_level(s_global_level);
+//	return s_global_level;
+//}
 
-double
-gui::dx::audio_playerX::change_global_level(double factor)
-{
-	s_global_level *= factor;
-	set_global_level(s_global_level);
-	return s_global_level;
-}
 
-
+// 0 - 100
 long gui::dx::audio_playerX::get_volume() {
 	return s_current_volume;
 }
-// -val is the attenuation in decibels 
-// can be 0 to 100
+
+// 0 - 100
 void gui::dx::audio_playerX::set_volume(long val) {
 	if (val < 0) val = 0;
 	if (val > 100) val = 100;
@@ -899,7 +900,7 @@ bool gui::dx::audio_playerX::play(const char * url, char* clipBegin, char* clipE
 
 	EnterCriticalSection(&m_csSequence);
 
-	TRACE(L"\n####### -- PLAY DX\n");
+	TRACE(L"%s", L"\n####### -- PLAY DX\n");
 	amis::util::Log* p_log = amis::util::Log::Instance();
 	p_log->writeTrace("Play DX", "audio_playerX::play");
 

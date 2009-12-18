@@ -201,7 +201,7 @@ void CAmisSidebar::OnNavListSelect(amis::dtb::nav::NavTarget* pData)
 	if (theApp.isBookOpen() == false) return;
 	CString msg;
 	msg.Format(_T("ON NAV LIST SELECT: %s\n"), A2T(pData->getContent().c_str()));
-	TRACE(msg);
+	TRACE(L"%s", msg);
 	if (pData != NULL)
 		amis::gui::MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_LOAD_NAV_NODE, (WPARAM)pData);
 }
@@ -320,7 +320,7 @@ BOOL CAmisSidebar::PreTranslateMessage(MSG* pMsg)
 					mIsControlDown = false;
 			}
 			
-			TRACE(_T("\n dialog key down, pass through \n"));
+			TRACE(L"%s", _T("\n dialog key down, pass through \n"));
 			//the parent is the main MDI window
 			CWnd* p_parent = this->GetTopLevelParent();
 			p_parent->SendMessage(pMsg->message, pMsg->wParam, pMsg->lParam);

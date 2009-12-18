@@ -71,7 +71,7 @@ std::string	MenuVoicing::computeRootMenuFromFirstChildID(unsigned int firstItemI
 
 	CString	dbg;
 	dbg.Format(_T("firstItemId %d\n"),	firstItemId);
-	TRACE(dbg);
+	TRACE(L"%s", dbg);
 
 	amis::util::Log* p_log = amis::util::Log::Instance();
 	p_log->writeTrace(T2A(dbg), "MenuVoicing::computeRootMenuFromFirstChildID");
@@ -153,7 +153,7 @@ void MenuVoicing::OnMenuSelect(UINT	nItemID, UINT nFlags, HMENU	hSysMenu)
 		{
 			amis::util::Log* p_log = amis::util::Log::Instance();
 			p_log->writeTrace("System Menu", "MenuVoicing::OnMenuSelect");
-			TRACE("System Menu !");
+			TRACE(L"%s", "System Menu !");
 			isSysMenu = true;
 		}
 	}
@@ -178,7 +178,7 @@ void MenuVoicing::OnMenuSelect(UINT	nItemID, UINT nFlags, HMENU	hSysMenu)
 		CString str;
 
 		//pSysMenu->GetMenuString(nItemID, str, nFlags);
-		//TRACE(str);
+		//TRACE(L"%s", str);
 		str.Append(lpszText);
 
 		str.Replace(L"&", L"");
@@ -220,7 +220,7 @@ void MenuVoicing::OnMenuSelect(UINT	nItemID, UINT nFlags, HMENU	hSysMenu)
 			std::string	prompt = computeRootMenuFromFirstChildID(nID, false);
 
 			s.Format(_T("\nMenuVoicing::OnMenuSelect(%d) '%s'\n"), nItemID, prompt.c_str());
-			TRACE(s);
+			TRACE(L"%s", s);
 			amis::util::Log* p_log = amis::util::Log::Instance();
 			p_log->writeTrace(T2A(s));
 
@@ -277,7 +277,7 @@ void MenuVoicing::OnMenuSelect(UINT	nItemID, UINT nFlags, HMENU	hSysMenu)
 		else if ((nItemID >=0 && nItemID <=6) && (m_lastOpenPopupMenu == NULL))  //TODO:	Yuuk ! UGLY	! This is only a temporary workaround !	//(nFlags & MF_GRAYED)
 		{
 			s.Format(_T("\nMenuVoicing::OnMenuSelect(%d)\n"), nItemID);
-			TRACE(s);
+			TRACE(L"%s", s);
 			amis::util::Log* p_log = amis::util::Log::Instance();
 			p_log->writeMessage(T2A(s), "MenuVoicing::OnMenuSelect");
 
@@ -336,7 +336,7 @@ void MenuVoicing::OnMenuSelect(UINT	nItemID, UINT nFlags, HMENU	hSysMenu)
 	else
 	{
 		s.Format(_T("MenuVoicing::OnMenuSelect(%d is	selected)\n"), nItemID);
-		TRACE(s);
+		TRACE(L"%s", s);
 		amis::util::Log* p_log = amis::util::Log::Instance();
 		p_log->writeTrace(T2A(s), "MenuVoicing::OnMenuSelect");
 

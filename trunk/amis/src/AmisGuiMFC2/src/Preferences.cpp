@@ -131,7 +131,7 @@ void Preferences::scanDirectoriesForCssFiles()
 	}
 	else 
 	{
-		TRACE(_T("No fontsize css files found\n"));
+		TRACE(L"%s", _T("No fontsize css files found\n"));
 		amis::util::Log::Instance()->writeWarning("No fontsize css files found in directory",
 			&url, "Preferences::scanDirectoriesForCssFiles");
 	}
@@ -143,7 +143,7 @@ void Preferences::scanDirectoriesForCssFiles()
 	}
 	else 
 	{
-		TRACE(_T("No contrast css files found\n"));
+		TRACE(L"%s", _T("No contrast css files found\n"));
 		string log_msg = "No contrast css files found in " + mCustomCssDir.get_url();
 	}
 }
@@ -169,7 +169,7 @@ void Preferences::scanDirectoriesForLanguagePackFiles()
 				amis::ModuleDescData* p_data = reader.getModuleDescData();
 				if (p_data == NULL)
 				{
-					TRACE(_T("No data available for language pack\n"));
+					TRACE(L"%s", _T("No data available for language pack\n"));
 					string log_msg = "No data available for language pack " + list[i].get_url();
 					amis::util::Log::Instance()->writeError("No data available for language pack", 
 						&list[i], "Preferences::scanDirectoriesForLanguagePackFiles");
@@ -188,7 +188,7 @@ void Preferences::scanDirectoriesForLanguagePackFiles()
 			}
 			else
 			{
-				TRACE(_T("Could not read language pack file\n"));
+				TRACE(L"%s", _T("Could not read language pack file\n"));
 				amis::util::Log::Instance()->writeError("Could not read language pack file: ", &list[i], 
 					"Preferences::scanDirectoriesForLanguagePackFiles");
 			}
@@ -196,7 +196,7 @@ void Preferences::scanDirectoriesForLanguagePackFiles()
 	}
 	else
 	{
-		TRACE(_T("No language pack files found\n"));
+		TRACE(L"%s", _T("No language pack files found\n"));
 		amis::util::Log::Instance()->writeError("No language pack files found", 
 			"Preferences::scanDirectoriesForLanguagePackFiles");
 	}

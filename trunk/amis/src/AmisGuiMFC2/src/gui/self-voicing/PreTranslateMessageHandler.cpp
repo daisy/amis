@@ -268,7 +268,7 @@ void PreTranslateMessageHandler::handle(PromptResolver * pResolver, MSG* pMsg, i
 			{
 				//if (seq != NULL && !(seq->IsEmpty()) && playNow) AudioSequencePlayer::Instance()->Play(seq, true);
 				//else AudioSequencePlayer::Instance()->Stop();
-				TRACE(L"\n @@@ CONTROL KEY STOP\n");
+				TRACE(L"%s", L"\n @@@ CONTROL KEY STOP\n");
 				amis::util::Log* p_log = amis::util::Log::Instance();
 				p_log->writeTrace("CONTROL KEY STOP", "PreTranslateMessageHandler::handle");
 				AudioSequencePlayer::Instance()->Stop();

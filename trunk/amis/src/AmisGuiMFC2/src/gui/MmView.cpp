@@ -635,7 +635,7 @@ void MmView::nextPhrase()
 {
 	if (!m_recent_media_node) 
 	{
-		TRACE("nextPhrase: m_recent_media_node==NULL, nowhere to go.\n");	
+		TRACE(L"%s", "nextPhrase: m_recent_media_node==NULL, nowhere to go.\n");	
 		return;
 	}
 	TRACE("nextPhrase: m_recent_media_node=%s\n", m_recent_media_node->get_sig().c_str());
@@ -646,7 +646,7 @@ void MmView::nextPhrase()
 	{
 		if (!phrase) 
 		{
-			TRACE("nextPhrase: no current phrase");
+			TRACE(L"%s", "nextPhrase: no current phrase");
 			assert(player);
 			player->stop();
 			setPauseState(true);
@@ -660,7 +660,7 @@ void MmView::nextPhrase()
 			if (!parent) 
 			{
 				// Need to go to next SMIL document.
-				TRACE("nextPhrase: top-of-tree, stop playback\n");
+				TRACE(L"%s", "nextPhrase: top-of-tree, stop playback\n");
 				assert(player);
 				player->stop();
 				setPauseState(true);
@@ -690,7 +690,7 @@ void MmView::prevPhrase()
 {
 	if (!m_recent_media_node) 
 	{
-		TRACE("prevPhrase: m_recent_media_node==NULL, nowhere to go.\n");
+		TRACE(L"%s", "prevPhrase: m_recent_media_node==NULL, nowhere to go.\n");
 		amis::util::Log::Instance()->writeTrace("prevPhrase: nowhere to go");
 		return;
 	}
@@ -702,7 +702,7 @@ void MmView::prevPhrase()
 top_of_do_while_loop:
 		if (!phrase) 
 		{
-			TRACE("prevPhrase: no current phrase\n");
+			TRACE(L"%s", "prevPhrase: no current phrase\n");
 			amis::util::Log::Instance()->writeTrace("prevPhrase: no current phrase");
 			m_previous_in_progress = true;
 			assert(player);
@@ -718,7 +718,7 @@ top_of_do_while_loop:
 			if (!parent) 
 			{
 				// Need to go to previous SMIL document.
-				TRACE("prevPhrase: top-of-tree, stop playback, handle in upper layer\n");
+				TRACE(L"%s", "prevPhrase: top-of-tree, stop playback, handle in upper layer\n");
 				amis::util::Log::Instance()->writeTrace("prevPhrase: top of tree");
 				m_previous_in_progress = true;
 				assert(player);
@@ -821,7 +821,7 @@ ambulant::net::datasource_factory* MmView::getDatasourceFactory()
 
 void MmView::document_loaded(ambulant::lib::document *doc)
 {
-	TRACE(_T("MmView::document_loaded()\n"));
+	TRACE(L"%s", _T("MmView::document_loaded()\n"));
 	// Hack: some FNB Daisy SMIL documents have <seq dur="0.000s">
 	// that we want to fix.
 #define AMBULANT_SEEK_WORKAROUND
@@ -872,7 +872,7 @@ void MmView::document_loaded(ambulant::lib::document *doc)
 
 void MmView::document_started()
 {
-	TRACE(_T("MmView::document_started()\n"));
+	TRACE(L"%s", _T("MmView::document_started()\n"));
 	setPauseState(false);	
 	CAmisApp* pApp = (CAmisApp *) AfxGetApp(); 
 	pApp->setIsWaiting(false);
@@ -881,7 +881,7 @@ void MmView::document_started()
 
 void MmView::document_stopped()
 {
-	TRACE(_T("MmView::document_stopped()\n"));
+	TRACE(L"%s", _T("MmView::document_stopped()\n"));
 	CAmisApp* pApp = (CAmisApp *) AfxGetApp(); 
 	pApp->setIsWaiting(false);
 	m_recent_media_node = NULL;

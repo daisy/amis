@@ -107,7 +107,7 @@ void AudioSequencePlayer::waitForSequenceEnd()
 {
 	amis::util::Log* p_log = amis::util::Log::Instance();
 	p_log->writeTrace("Wait for seq end.", "AudioSequencePlayer::waitForSequenceEnd");
-	TRACE("\nWAIT for SEQ end.\n");
+	TRACE(L"%s", "\nWAIT for SEQ end.\n");
 	DWORD hr = WaitForSingleObject(m_hEventEnd, 3000);
 	switch (hr) 
 	{
@@ -134,7 +134,7 @@ void AudioSequencePlayer::waitForSequenceEnd()
 	}
 
 	p_log->writeTrace("Wait for seq end: DONE." "AudioSequencePlayer::waitForSequenceEnd");
-	TRACE("\nWAIT for SEQ end DONE.\n");
+	TRACE(L"%s", "\nWAIT for SEQ end DONE.\n");
 }
 void AudioSequencePlayer::DestroyInstance()
 {
@@ -228,7 +228,7 @@ void AudioSequencePlayer::Stop(bool fromPlay)
 				//bIgnoreTTSEnd = true;
 				TTSPlayer::InstanceOne()->Stop();
 				p_log->writeTrace("Stop TTS", "AudioSequencePlayer::Stop");
-				TRACE(L"STOP TTS\n");
+				TRACE(L"%s", L"STOP TTS\n");
 			}
 		}
 
@@ -238,7 +238,7 @@ void AudioSequencePlayer::Stop(bool fromPlay)
 			{
 				ambulantX::gui::dx::audio_playerX::Instance()->stop(false);
 				p_log->writeTrace("Stop Audio", "AudioSequencePlayer::Stop");
-				TRACE(L"STOP AUDIO\n");
+				TRACE(L"%s", L"STOP AUDIO\n");
 			}
 		}
 
@@ -259,7 +259,7 @@ void AudioSequencePlayer::playNext(bool fromEndEvent)
 
 	amis::util::Log* p_log = amis::util::Log::Instance();
 	p_log->writeTrace("Play next", "AudioSequencePlayer::playNext");
-	TRACE(L"PLAY NEXT\n");
+	TRACE(L"%s", L"PLAY NEXT\n");
 
 	if (m_currentAudioSequence->GetCount() == 0)
 	{
@@ -279,7 +279,7 @@ void AudioSequencePlayer::playNext(bool fromEndEvent)
 	if (comp->m_isAudioClip)
 	{
 		p_log->writeTrace("Play audio clip", "AudioSequencePlayer::playNext");
-		TRACE(L"PLAY AUDIO CLIP\n");
+		TRACE(L"%s", L"PLAY AUDIO CLIP\n");
 		bool b = playAudioPrompt(comp->m_AudioClip);
 
 		if (!b && !comp->m_String.IsEmpty())
@@ -295,7 +295,7 @@ void AudioSequencePlayer::playNext(bool fromEndEvent)
 	{
 		CString strDebug;
 		strDebug.Format(_T("Play audio TTS: %s\n"), comp->m_String);
-		TRACE(strDebug);
+		TRACE(L"%s", strDebug);
 		string log_msg = T2A(strDebug);
 		p_log->writeTrace(log_msg, "AudioSequencePlayer::playNext");
 	
@@ -320,7 +320,7 @@ void AudioSequencePlayer::Play(AudioSequence* audioSequence, bool doNotRegisterI
 #endif
 		amis::util::Log* p_log = amis::util::Log::Instance();
 		p_log->writeTrace("Play seq", "AudioSequencePlayer::Play");
-		TRACE(L"PLAY SEQ\n");
+		TRACE(L"%s", L"PLAY SEQ\n");
 		Stop(true);
 		if (!doNotRegisterInHistory)
 		{
@@ -456,7 +456,7 @@ void AudioSequencePlayer::playPromptFromUiId(int nItemID, AudioSequence* seq, bo
 
 					CString strDebug;
 					strDebug.Format(_T("%s\n"), str);
-					TRACE(strDebug);
+					TRACE(L"%s", strDebug);
 					p_log->writeTrace(T2A(strDebug), "AudioSequencePlayer::playPromptFromUiId");
 					
 					if (! str.IsEmpty()) seq->append(str);
@@ -467,7 +467,7 @@ void AudioSequencePlayer::playPromptFromUiId(int nItemID, AudioSequence* seq, bo
 
 			CString strDebug;
 			strDebug.Format(_T("%s\n"), strText);
-			TRACE(strDebug);
+			TRACE(L"%s", strDebug);
 			p_log->writeTrace(T2A(strDebug), "AudioSequencePlayer::playPromptFromUiId");
 
 			if (! strText.IsEmpty()) seq->append(strText);

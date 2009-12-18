@@ -111,11 +111,11 @@ void TTSPlayer::WaitUntilDone()
 {
 	amis::util::Log* p_log = amis::util::Log::Instance();
 	p_log->writeTrace("TTS before wait", "TTSPlayer::WaitUntilDone");
-	TRACE(_T("//// TTS BEFORE WAIT \r\n") );
+	TRACE(L"%s", _T("//// TTS BEFORE WAIT \r\n") );
 	m_iV->WaitUntilDone(INFINITE);
 
 	p_log->writeTrace("TTS after wait", "TTSPlayer::WaitUntilDone");
-	TRACE(_T("//// TTS AFTER WAIT \r\n") );
+	TRACE(L"%s", _T("//// TTS AFTER WAIT \r\n") );
 }
 
 void __stdcall SpkCallback(WPARAM wParam, LPARAM lParam)
@@ -194,6 +194,12 @@ void TTSPlayer::setVolume(int vol)
 	if (vol <= 0) mVolume = 1;
 	else if (vol > 100) mVolume = 100;
 	else mVolume = vol;
+	if (m_iV) 
+	{
+		//USHORT value = 0;
+		//m_iV->GetVolume(&value);
+		m_iV->SetVolume(mVolume);
+	}
 }
 int TTSPlayer::getVolume()
 {
@@ -339,8 +345,8 @@ void TTSPlayer::Play(CString str)
 
 	amis::util::Log* p_log = amis::util::Log::Instance();
 	p_log->writeTrace(T2A(str), "TTSPlayer::Play");
-	TRACE(str);
-	TRACE("\n");
+	TRACE(L"%s", str);
+	TRACE(L"%s", "\n");
 
 	mbDoNotProcessEndEvent = true;
 
@@ -379,7 +385,7 @@ void TTSPlayer::Stop()
 
 	amis::util::Log* p_log = amis::util::Log::Instance();
 	p_log->writeTrace("Stop TTS", "TTSPlayer::Stop");
-	TRACE(_T("Stop TTS\r\n") );
+	TRACE(L"%s", _T("Stop TTS\r\n") );
 
 	mbDoNotProcessEndEvent = true;
 
@@ -405,7 +411,7 @@ void TTSPlayer::Pause()
 
     amis::util::Log* p_log = amis::util::Log::Instance();
     p_log->writeTrace("Pause TTS", "TTSPlayer::Pause");
-    TRACE(_T("Pause TTS\r\n") );
+    TRACE(L"%s", _T("Pause TTS\r\n") );
 
 	// PAUSE does not generate the end event. mbDoNotProcessEndEvent = true;
 
@@ -431,7 +437,7 @@ void TTSPlayer::Resume()
 
     amis::util::Log* p_log = amis::util::Log::Instance();
     p_log->writeTrace("Resume TTS", "TTSPlayer:: Resume");
-    TRACE(_T("Resume TTS\r\n") );
+    TRACE(L"%s", _T("Resume TTS\r\n") );
 
 	mbDoNotProcessEndEvent = false;
 
@@ -482,7 +488,7 @@ void TTSPlayer::callback()
 		case SPEI_START_INPUT_STREAM:
 			{
 				p_log->writeTrace("StartStream event", "TTSPlayer::callback");
-				TRACE(_T("\nStartStream event\r\n") );
+				TRACE(L"%s", _T("\nStartStream event\r\n") );
 				m_pausedOnLastPhoneme = false;
 				m_isSpeaking = TRUE;
 				if (m_pausedCount > 0)
@@ -509,13 +515,13 @@ void TTSPlayer::callback()
 				if (mbDoNotProcessEndEvent)
 				{
 					p_log->writeTrace("EndStream 1 mbDoNotProcessEndEvent", "TTSPlayer::callback");
-					TRACE(_T("\nEndStream 1 mbDoNotProcessEndEvent\r\n") );
+					TRACE(L"%s", _T("\nEndStream 1 mbDoNotProcessEndEvent\r\n") );
 					mbDoNotProcessEndEvent = false;
 				}
 				else
 				{
 					p_log->writeTrace("EndStream 2 sendMessageCallback", "TTSPlayer::callback");
-					TRACE(_T("\nEndStream 2 sendMessageCallback\r\n") );
+					TRACE(L"%s", _T("\nEndStream 2 sendMessageCallback\r\n") );
 					
 					mSpeakRequests--;
 					if (mSpeakRequests > 0)
@@ -533,7 +539,7 @@ void TTSPlayer::callback()
 		case SPEI_VOICE_CHANGE:
 			{
 				p_log->writeTrace("Voicechange event", "TTSPlayer::callback");
-				TRACE(_T("\nVoicechange event\r\n") );
+				TRACE(L"%s", _T("\nVoicechange event\r\n") );
 				break;
 			}
 		default:

@@ -166,7 +166,7 @@ void CAmisHtmlView::OnDocumentComplete(LPCTSTR lpszURL)
 	CHtmlView::OnDocumentComplete(lpszURL);
 	CString url = lpszURL;
 	if (url.Compare(_T("about:blank")) != 0) TextRenderBrain::Instance()->webDocumentComplete();
-	else TRACE(_T("AMIS ignoring document complete for about:blank\n"));
+	else TRACE(L"%s", _T("AMIS ignoring document complete for about:blank\n"));
 }
 
 BOOL CAmisHtmlView::Create(LPCTSTR lpszClassName, LPCTSTR lpszWindowName, DWORD dwStyle, const RECT& rect, CWnd* pParentWnd, UINT nID, CCreateContext* pContext) 
@@ -307,7 +307,7 @@ void CAmisHtmlView::OnBeforeNavigate2(LPCTSTR lpszURL, DWORD nFlags,
 			string log_msg = "Loading smil file link: " + thisUrl.get_url();
 			amis::util::Log::Instance()->writeMessage("Loading smil file via hyperlink", &thisUrl, 
 				"CAmisHtmlView::OnBeforeNavigate2");
-			TRACE("AMIS following HTML hyperlink\n");
+			TRACE(L"%s", "AMIS following HTML hyperlink\n");
 			amis::dtb::DtbWithHooks::Instance()->loadSmilFromUrl(&thisUrl);
 		}
 		//else it's probably a text-file loading request that we sent ourselves
@@ -736,7 +736,7 @@ BOOL CAmisHtmlView::LoadFromResource(UINT nRes)
 
 void amis::gui::CAmisHtmlView::OnSize(UINT nType, int cx, int cy)
 {
-	TRACE(_T("CAmisHtmlView: OnSize\n"));
+	TRACE(L"%s", _T("CAmisHtmlView: OnSize\n"));
 	CHtmlView::OnSize(nType, cx, cy);
 }
 
@@ -871,7 +871,7 @@ void html_browser_imp::show()
 
 void html_browser_imp::redraw() 
 {
-	TRACE(_T("html_browser_imp: redraw\n"));
+	TRACE(L"%s", _T("html_browser_imp: redraw\n"));
 
 //	AM_DBG lib::logger::get_logger()->debug("html_browser_imp::redraw(0x%x)", this);
 	ShowWindow(s_browser->m_hWnd, SW_SHOWNA);

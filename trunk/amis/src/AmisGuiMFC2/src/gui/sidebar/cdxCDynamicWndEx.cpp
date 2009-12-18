@@ -195,7 +195,7 @@ bool cdxCDynamicWndEx::StoreWindowPosition(LPCTSTR lpszProfile)
 
 	if(!app->m_pszRegistryKey || !*app->m_pszRegistryKey)
 	{
-		TRACE(_T("*** NOTE[cdxCDynamicWndEx::StoreWindowPosition()]: To properly store and restore a window's position, please call CWinApp::SetRegistryKey() in you app's InitInstance() !\n"));
+		TRACE(L"%s", _T("*** NOTE[cdxCDynamicWndEx::StoreWindowPosition()]: To properly store and restore a window's position, please call CWinApp::SetRegistryKey() in you app's InitInstance() !\n"));
 		return false;
 	}
 
@@ -227,7 +227,7 @@ bool cdxCDynamicWndEx::RestoreWindowPosition(LPCTSTR lpszProfile, UINT restoreFl
 
 	if(!app->m_pszRegistryKey || !*app->m_pszRegistryKey)
 	{
-		TRACE(_T("*** NOTE[cdxCDynamicWndEx::RestoreWindowPosition()]: To properly store and restore a window's position, please call CWinApp::SetRegistryKey() in you app's InitInstance() !\n"));
+		TRACE(L"%s", _T("*** NOTE[cdxCDynamicWndEx::RestoreWindowPosition()]: To properly store and restore a window's position, please call CWinApp::SetRegistryKey() in you app's InitInstance() !\n"));
 		return false;
 	}
 

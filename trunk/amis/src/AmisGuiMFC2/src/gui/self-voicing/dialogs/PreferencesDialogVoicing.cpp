@@ -203,8 +203,11 @@ namespace amis
 							int selected = list->GetCurSel();
 							mpDialog->mTTSVoiceIndex = selected;
 
-							amis::tts::TTSPlayer::InstanceOne()->SetVoice(selected);
-							amis::tts::TTSPlayer::InstanceTwo()->SetVoice(selected);
+							if (!Preferences::Instance()->getMustAvoidTTS())
+							{
+								amis::tts::TTSPlayer::InstanceOne()->SetVoice(selected);
+								amis::tts::TTSPlayer::InstanceTwo()->SetVoice(selected);
+							}
 							
 							CString cstr;
 							list->GetWindowText(cstr);

@@ -328,7 +328,7 @@ HICON Toolbar::makeIcon(ToolbarButton* pButton)
 		mpSettings->getButtonWidth(), mpSettings->getButtonHeight(), LR_LOADFROMFILE);
 	if (icon == NULL || icon < 0)
 	{
-		TRACE(_T("error loading icon: "));
+		TRACE(L"%s", _T("error loading icon: "));
 		return 0;
 	}
 	else

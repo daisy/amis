@@ -185,9 +185,9 @@ class audio_playerX {
 	// can be 0 to 100
 	void set_volume(long val);
 	long get_volume();
-		
+		/*
 static void set_global_level(double level);
-static double change_global_level(double factor);
+static double change_global_level(double factor);*/
 
 	// can be -100 to 100
 	// 0 sets a neutral balance

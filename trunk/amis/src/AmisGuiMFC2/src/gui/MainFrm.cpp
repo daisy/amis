@@ -317,7 +317,7 @@ void CMainFrame::OnMenuSelect( UINT	nItemID, UINT nFlags, HMENU	hSysMenu )
 	amis::util::Log* p_log = amis::util::Log::Instance();
   
 	p_log->writeTrace("CMainFrame::OnMenuSelect()");
-	TRACE("\nCMainFrame::OnMenuSelect()\n");
+	TRACE(L"%s", "\nCMainFrame::OnMenuSelect()\n");
 	CMDIFrameWnd::OnMenuSelect(nItemID, nFlags, hSysMenu);
 
 	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
@@ -331,7 +331,7 @@ void CMainFrame::OnInitMenuPopup(CMenu*	pPopupMenu,	UINT nIndex, BOOL bSysMenu)
 	amis::util::Log* p_log = amis::util::Log::Instance();
 
 	p_log->writeTrace("CMainFrame::OnInitMenuPopup()");
-	TRACE("\nCMainFrame::OnInitMenuPopup()\n");
+	TRACE(L"%s", "\nCMainFrame::OnInitMenuPopup()\n");
 
 	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 	{
@@ -345,7 +345,7 @@ void CMainFrame::OnInitMenu(CMenu* pMenu)
 {
 	amis::util::Log* p_log = amis::util::Log::Instance();
 	p_log->writeTrace("CMainFrame::OnInitMenu()");
-	TRACE("\nCMainFrame::OnInitMenu()\n");
+	TRACE(L"%s", "\nCMainFrame::OnInitMenu()\n");
 	CMDIFrameWnd::OnInitMenu(pMenu);
 }
 
@@ -706,7 +706,7 @@ void amis::gui::CMainFrame::updateToolbarState(toolbar::Toolbar* pToolbar)
 }
 void amis::gui::CMainFrame::RecalcLayout(BOOL bNotify)
 {
-	TRACE(_T("CMainFrame: Recalc Layout\n"));
+	TRACE(L"%s", _T("CMainFrame: Recalc Layout\n"));
 
 	if (MainWndParts::Instance()->mpBasicToolbar != NULL)
 	{
@@ -722,7 +722,7 @@ void amis::gui::CMainFrame::RecalcLayout(BOOL bNotify)
 
 void amis::gui::CMainFrame::OnSize(UINT nType, int cx, int cy)
 {
-	TRACE(_T("CMainFrame: OnSize\n"));
+	TRACE(L"%s", _T("CMainFrame: OnSize\n"));
 	CMDIFrameWnd::OnSize(nType, cx, cy);
 }
 
@@ -733,7 +733,7 @@ void amis::gui::CMainFrame::OnSize(UINT nType, int cx, int cy)
  */
 LPARAM amis::gui::CMainFrame::OnSetPauseState(WPARAM wParam, LPARAM lParam)
 {
-	TRACE(_T("on set pause state\n"));
+	TRACE(L"%s", _T("on set pause state\n"));
 	bool val = (bool)wParam;
 	setPauseState(val);
 	return 0;

@@ -244,7 +244,7 @@ DWORD __stdcall ThreadProc(LPVOID lpParam)
 	SearchForBooksDialog *pThis = (SearchForBooksDialog*)lpParam;
 	pThis->SearchLoop();
 
-	TRACE(L"\n== ThreadProc END\n");
+	TRACE(L"%s", L"\n== ThreadProc END\n");
 
 	//_endthreadex( 0 );
 	return 0;

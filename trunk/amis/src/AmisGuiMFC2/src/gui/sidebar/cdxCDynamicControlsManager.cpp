@@ -444,7 +444,7 @@ void cdxCDynamicControlsManager::ReorganizeControlsAdvanced(const CRect & rectWi
 
 	if(!( layout.hDWP = ::BeginDeferWindowPos(GetTotalChildCnt()) ))
 	{
-		TRACE(_T("*** ERROR[cdxCDynamicControlsManager::ReorganizeControlsAdvanced()]: BeginDeferWindowPos() failed.\n"));
+		TRACE(L"%s", _T("*** ERROR[cdxCDynamicControlsManager::ReorganizeControlsAdvanced()]: BeginDeferWindowPos() failed.\n"));
 	}
 	else
 	{
@@ -453,7 +453,7 @@ void cdxCDynamicControlsManager::ReorganizeControlsAdvanced(const CRect & rectWi
 
 		if(!::EndDeferWindowPos(layout.hDWP))
 		{
-			TRACE(_T("*** ERROR[cdxCDynamicControlsManager::ReorganizeControlsAdvanced()]: EndDeferWindowPos() failed.\n"));
+			TRACE(L"%s", _T("*** ERROR[cdxCDynamicControlsManager::ReorganizeControlsAdvanced()]: EndDeferWindowPos() failed.\n"));
 		}
 		else
 			bManual	=	false;

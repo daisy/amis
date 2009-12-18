@@ -296,14 +296,16 @@ BOOL CAmisApp::InitInstance()
 		amis::tts::TTSPlayer::InstanceTwo()->setVolume(Preferences::Instance()->getTTSVolumePct());
 	}
 
-	double audio_vol = 1.0;
-	if (Preferences::Instance()->getAudioVolumePct() > 0) 
-		audio_vol = (double)Preferences::Instance()->getAudioVolumePct()/100;
-	ambulant::gui::dx::set_global_level(audio_vol);
+	double audio_vol = 100;
+	double prefVolumeLevel = (double)Preferences::Instance()->getAudioVolumePct();
+	if (prefVolumeLevel >= 0 && prefVolumeLevel <= 100) 
+		audio_vol = prefVolumeLevel;
+
+	ambulant::gui::dx::set_global_level(audio_vol/100);
   
 	if (!Preferences::Instance()->getMustAvoidDirectX())
 	{
-		ambulantX::gui::dx::audio_playerX::Instance()->set_global_level(audio_vol);
+		ambulantX::gui::dx::audio_playerX::Instance()->set_volume(audio_vol);
 	}
 
 	//then start logging!  
@@ -392,7 +394,7 @@ int CAmisApp::ExitInstance()
 	amis::util::Log* p_log = amis::util::Log::Instance();
   
 	p_log->writeTrace("Starting to EXIT", "CAmisApp::ExitInstance");
-	TRACE("\nStarting to EXIT\n\n");
+	TRACE(L"%s", "\nStarting to EXIT\n\n");
 
 	if (!Preferences::Instance()->getMustAvoidTTS())
 	{
@@ -402,10 +404,23 @@ int CAmisApp::ExitInstance()
 	
 	AudioSequencePlayer::Instance()->Stop();
 
-	//set some volumes
+	// 0-1 range
 	double audio_vol = ambulant::gui::dx::change_global_level(1.0);
+	
+	if (audio_vol < 0) audio_vol = 0;
+	if (audio_vol > 1) audio_vol = 1;
+
 	int audio_vol_pct = audio_vol * 100;
-	if (audio_vol_pct == 0) audio_vol_pct = 100;
+
+	if (!Preferences::Instance()->getMustAvoidDirectX())
+	{
+		// 0-100 range
+		double currentLevel = ambulantX::gui::dx::audio_playerX::Instance()->get_volume();
+		#if _DEBUG
+			assert(audio_vol_pct == currentLevel);
+		#endif
+	}
+
 	Preferences::Instance()->setAudioVolumePct(audio_vol_pct);
 
 	Preferences::Instance()->setWasExitClean(true);
@@ -451,7 +466,7 @@ int CAmisApp::ExitInstance()
 
 	CoUninitialize();
 
-	TRACE("\nEXIT.\n\n");
+	TRACE(L"%s", "\nEXIT.\n\n");
 
 	Sleep(1000);
 
@@ -492,7 +507,7 @@ std::string CAmisApp::getAppSettingsPath()
 	}
 	else
 	{
-		TRACE(_T("app data directory not found"));
+		TRACE(L"%s", _T("app data directory not found"));
 		return "";
 	}
 }
@@ -899,13 +914,21 @@ void CAmisApp::OnFileClose()
 	}
 }
 
-#define VOLUME_RATIO 1.8
+// increment for the 0-1 volume level range
+#define DX_VOLUME_LEVEL_STEP 0.1
 
 void CAmisApp::OnVolumeUpBOOK()
 {
-	if (isBookOpen() == false) return;
+	//if (isBookOpen() == false) return;
+
 	amis::util::Log::Instance()->writeMessage("Volume increase BOOK", "CAmisApp::OnVolumeUp");
-	ambulant::gui::dx::change_global_level(VOLUME_RATIO);
+	
+	// 0-1 range
+	double currentLevel = ambulant::gui::dx::change_global_level(1.0);
+	currentLevel += DX_VOLUME_LEVEL_STEP;
+	if (currentLevel > 1) currentLevel = 1;
+	if (currentLevel <= 0) currentLevel = 0.01;
+	ambulant::gui::dx::set_global_level(currentLevel);
 
 	if (!Preferences::Instance()->getMustAvoidTTS())
 		amis::tts::TTSPlayer::InstanceTwo()->IncreaseVolume();
@@ -913,9 +936,17 @@ void CAmisApp::OnVolumeUpBOOK()
 
 void CAmisApp::OnVolumeDownBOOK()
 {
-	if (isBookOpen() == false) return;
+	//if (isBookOpen() == false) return;
+	
 	amis::util::Log::Instance()->writeMessage("Volume decrease BOOK", "CAmisApp::OnVolumeDown");
-    ambulant::gui::dx::change_global_level(1.0/VOLUME_RATIO);
+    
+	// 0-1 range
+	double currentLevel = ambulant::gui::dx::change_global_level(1.0);
+	currentLevel -= DX_VOLUME_LEVEL_STEP;
+	if (currentLevel > 1) currentLevel = 1;
+	if (currentLevel <= 0) currentLevel = 0.01;
+	ambulant::gui::dx::set_global_level(currentLevel);
+
 	if (!Preferences::Instance()->getMustAvoidTTS())
 		amis::tts::TTSPlayer::InstanceTwo()->DecreaseVolume();
 }
@@ -927,6 +958,29 @@ void CAmisApp::OnVolumeDownTTS()
 	{
 		amis::tts::TTSPlayer::InstanceOne()->DecreaseVolume();
 		amis::tts::TTSPlayer::InstanceTwo()->DecreaseVolume();
+		
+		if (amis::Preferences::Instance()->getIsSelfVoicing() && !Preferences::Instance()->getMustAvoidTTS())
+		{	
+			AudioSequence* seq	= new AudioSequence();
+			std::wstring str = AudioSequencePlayer::getMenuCaption(ID_AMIS_DECREASE_VOLUME);
+
+			std::string volume_level_str;
+			char volume_level_char[5] = "";
+			int vol = amis::tts::TTSPlayer::InstanceOne()->getVolume();
+			itoa(vol, volume_level_char, 10);
+			volume_level_str.assign(volume_level_char);
+			seq->append(CString(volume_level_str.c_str())+L"%");
+
+			if (str.size() > 0)
+				seq->append(str.c_str());
+
+			AudioSequencePlayer::playPromptFromUiId(ID_AMIS_DECREASE_VOLUME, seq, false);
+
+		/*
+			std::wstring str = AudioSequencePlayer::getMenuCaption(ID_AMIS_DECREASE_VOLUME);
+			if (str.size() > 0)
+				amis::tts::TTSPlayer::InstanceOne()->Play(str.c_str());*/
+		}
 	}
 }
 void CAmisApp::OnVolumeUpTTS()
@@ -936,6 +990,29 @@ void CAmisApp::OnVolumeUpTTS()
 	{
 		amis::tts::TTSPlayer::InstanceOne()->IncreaseVolume();
 		amis::tts::TTSPlayer::InstanceTwo()->IncreaseVolume();
+
+		if (amis::Preferences::Instance()->getIsSelfVoicing() && !Preferences::Instance()->getMustAvoidTTS())
+		{	
+			AudioSequence* seq	= new AudioSequence();
+			std::wstring str = AudioSequencePlayer::getMenuCaption(ID_AMIS_INCREASE_VOLUME);
+
+			std::string volume_level_str;
+			char volume_level_char[5] = "";
+			int vol = amis::tts::TTSPlayer::InstanceOne()->getVolume();
+			itoa(vol, volume_level_char, 10);
+			volume_level_str.assign(volume_level_char);
+			seq->append(CString(volume_level_str.c_str())+L"%");
+
+			if (str.size() > 0)
+				seq->append(str.c_str());
+
+			AudioSequencePlayer::playPromptFromUiId(ID_AMIS_INCREASE_VOLUME, seq, false);
+
+		/*
+			std::wstring str = AudioSequencePlayer::getMenuCaption(ID_AMIS_INCREASE_VOLUME);
+			if (str.size() > 0)
+				amis::tts::TTSPlayer::InstanceOne()->Play(str.c_str());*/
+		}
 	}
 }
 void CAmisApp::OnVolumeUpUI()
@@ -943,15 +1020,44 @@ void CAmisApp::OnVolumeUpUI()
 	if (amis::Preferences::Instance()->getIsSelfVoicing() == true)
 	{
 		amis::util::Log::Instance()->writeMessage("Volume increase UI", "CAmisApp::OnVolumeUp");
+
 		if (!Preferences::Instance()->getMustAvoidTTS())
 			amis::tts::TTSPlayer::InstanceOne()->IncreaseVolume();
+		
 		if (!Preferences::Instance()->getMustAvoidDirectX())
-			ambulantX::gui::dx::audio_playerX::change_global_level(VOLUME_RATIO);
+		{
+			// 0-100 range
+			double currentLevel = ambulantX::gui::dx::audio_playerX::Instance()->get_volume();
+			currentLevel += (DX_VOLUME_LEVEL_STEP * 100);
+			if (currentLevel > 100) currentLevel = 100;
+			if (currentLevel <= 0) currentLevel = 1;
+			ambulantX::gui::dx::audio_playerX::Instance()->set_volume(currentLevel);
+		}
 
 		AudioSequence* seq	= new AudioSequence();
 		std::wstring str = AudioSequencePlayer::getMenuCaption(ID_AMIS_INCREASE_VOLUME);
-		if (str.size() > 0)
-			seq->append(str.c_str());
+
+		if (!Preferences::Instance()->getMustAvoidTTS())
+		{
+			std::string volume_level_str;
+			char volume_level_char[5] = "";
+			int vol = amis::tts::TTSPlayer::InstanceOne()->getVolume();
+			itoa(vol, volume_level_char, 10);
+			volume_level_str.assign(volume_level_char);
+			seq->append(CString(volume_level_str.c_str())+L"%");
+
+			if (str.size() > 0)
+				seq->append(str.c_str());
+
+			if (!Preferences::Instance()->getMustAvoidDirectX())
+			{
+				long volume = ambulantX::gui::dx::audio_playerX::Instance()->get_volume();
+				itoa(volume, volume_level_char, 10);
+				volume_level_str.assign(volume_level_char);
+				seq->append(CString(volume_level_str.c_str())+L"%");
+			}
+		}
+
 		AudioSequencePlayer::playPromptFromUiId(ID_AMIS_INCREASE_VOLUME, seq, false);
 	}
 }
@@ -964,13 +1070,41 @@ void CAmisApp::OnVolumeDownUI()
 
 		if (!Preferences::Instance()->getMustAvoidTTS())
 			amis::tts::TTSPlayer::InstanceOne()->DecreaseVolume();
+
 		if (!Preferences::Instance()->getMustAvoidDirectX())
-			ambulantX::gui::dx::audio_playerX::change_global_level(1.0/VOLUME_RATIO);
+		{
+			// 0-100 range
+			double currentLevel = ambulantX::gui::dx::audio_playerX::Instance()->get_volume();
+			currentLevel -= (DX_VOLUME_LEVEL_STEP * 100);
+			if (currentLevel > 100) currentLevel = 100;
+			if (currentLevel <= 0) currentLevel = 1;
+			ambulantX::gui::dx::audio_playerX::Instance()->set_volume(currentLevel);
+		}
 	
 		AudioSequence* seq	= new AudioSequence();
 		std::wstring str = AudioSequencePlayer::getMenuCaption(ID_AMIS_DECREASE_VOLUME);
-		if (str.size() > 0)
-			seq->append(str.c_str());
+
+		if (!Preferences::Instance()->getMustAvoidTTS())
+		{
+			std::string volume_level_str;
+			char volume_level_char[5] = "";
+			int vol = amis::tts::TTSPlayer::InstanceOne()->getVolume();
+			itoa(vol, volume_level_char, 10);
+			volume_level_str.assign(volume_level_char);
+			seq->append(CString(volume_level_str.c_str())+L"%");
+
+			if (str.size() > 0)
+				seq->append(str.c_str());
+
+			if (!Preferences::Instance()->getMustAvoidDirectX())
+			{
+				long volume = ambulantX::gui::dx::audio_playerX::Instance()->get_volume();
+				itoa(volume, volume_level_char, 10);
+				volume_level_str.assign(volume_level_char);
+				seq->append(CString(volume_level_str.c_str())+L"%");
+			}
+		}
+
 		AudioSequencePlayer::playPromptFromUiId(ID_AMIS_DECREASE_VOLUME, seq, false);
 	}
 }
