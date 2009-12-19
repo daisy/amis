@@ -334,7 +334,7 @@ void AudioSequencePlayer::Play(AudioSequence* audioSequence, bool doNotRegisterI
 #ifdef CCS_ACTIVE
 		LeaveCriticalSection(&m_csSequence);
 #endif
-		MainWndParts::Instance()->mpMainFrame->PostMessage(WM_COMMAND, (WPARAM)SELF_VOICING_PLAY_NEXT, (LPARAM)0);
+		MainWndParts::Instance()->mpMainFrame->SendMessage(WM_COMMAND, (WPARAM)SELF_VOICING_PLAY_NEXT, (LPARAM)0);
 	}
 }
 
