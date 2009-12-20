@@ -26,6 +26,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include <fstream>
 
 #include "Error.h"
+#include "AmisCore.h"
 using namespace std;
 
 namespace amis
@@ -48,6 +49,7 @@ public:
 
 	void startLog(string);
 	
+	void cacheMessage(string);
 	//messages are for logging reporting information
 	void writeMessage(string msg, string origin);
 	void writeMessage(string msg, const ambulant::net::url* path, string origin);
@@ -76,6 +78,7 @@ private:
 	bool mbIsFileOpen;
 	bool mbEnabled;
 	LogLevel mLevel;
+	amis::StdStringList mCachedMessages;
 };
 }
 }

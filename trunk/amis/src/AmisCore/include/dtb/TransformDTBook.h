@@ -52,7 +52,7 @@ namespace dtb
 		static void DestroyInstance();
 #else
 	public:
-		TransformDTBook();
+		TransformDTBook(string);
 #endif
 	public:
 		~TransformDTBook();
@@ -74,6 +74,7 @@ namespace dtb
 		void readResults();
 		string mResults;
 		string mBin;
+		string mTempdir;
 #if 0
 		static TransformDTBook* pinstance;
 #endif

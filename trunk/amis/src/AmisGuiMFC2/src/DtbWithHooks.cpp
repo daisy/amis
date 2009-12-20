@@ -60,6 +60,8 @@ void DtbWithHooks::DestroyInstance()
 
 DtbWithHooks::DtbWithHooks():Dtb(theApp.getAppPath())
 {
+	USES_CONVERSION;
+
 	mpFileSearcherTmp = NULL;
 	mpFileSearcherTmp = new amis::util::SearchForFilesMFC();
 	setFileSearcher(mpFileSearcherTmp);
@@ -68,6 +70,16 @@ DtbWithHooks::DtbWithHooks():Dtb(theApp.getAppPath())
 	setCacheIndex(Preferences::Instance()->getCacheIndex());
 	mpUserRequestedNavPoint = NULL;
 	mbStopAfterCurrentSmilFile = false;
+
+	TCHAR temp_path[MAX_PATH];
+	GetTempPath(MAX_PATH, temp_path);
+	
+	std::string str_temp_path = T2A(temp_path);
+	setSystemTempDir(str_temp_path);
+	
+	string log_msg = "System temp dir = ";
+	log_msg.append(str_temp_path);
+	amis::util::Log::Instance()->writeMessage(log_msg, "DtbWithHooks::DtbWithHooks()");
 }
 
 DtbWithHooks::~DtbWithHooks()

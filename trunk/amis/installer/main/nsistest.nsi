@@ -4,7 +4,7 @@
 !include "MUI.nsh"
 
 !include "Registry.nsh"
-
+!include "getversions.nsh"
 ; MUI Settings
 !define MUI_ABORTWARNING
 !define MUI_ICON "${NSISDIR}\Contrib\Graphics\Icons\modern-install.ico"
@@ -44,17 +44,42 @@ ShowUnInstDetails show
 ;*******************
 ;installation
 ;*******************
-Function .onInit  
+Function .onInit
+  SetOutPath "$INSTDIR"
+  
   LogEx::Init true "$INSTDIR\install.log"
   LogEx::Write "Init"  
   
-  ${IfNot} ${AtLeastWin2000}
-      MessageBox MB_OK "XP and above required"
-      LogEx::Write "Need better windows!"
-      Abort
+  ${If} ${AtLeastWinXP}
+  ${AndIf} ${AtLeastServicePack} 2
+  ${OrIf} ${AtLeastWinVista}
+      LogEx::Write "Using Windows XP SP2 or higher"
+      Goto DxCheck
   ${Else}
-      LogEx::Write "Windows version ok"
-    ${EndIf}    
+      ;find out exactly which OS version was detected
+      Push $R0
+      Call GetWindowsVersion
+      Pop $R0
+      LogEx::Write "Operating system not supported.  $R0"
+      MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "Warning: operating system not supported.  AMIS may not work.  Do you want to continue?" IDYES DxCheck
+      LogEx::Write "User chose to abort installation (wrong OS)"
+      Abort
+  ${EndIf}
+    DxCheck:
+    IeCheck:
+        ;check for IE version 7 or higher
+        Call GetIEVersion
+        Pop $0
+        LogEx::Write "IE version $0"
+        ${If} $0 == 6.00
+            LogEx::Write "Warning user about IE6"
+            MessageBox MB_OK "You have Internet Explorer 6.  Version 7 or higher is recommended for best performance.  You may update your system at any time after AMIS is installed."
+        ${ElseIf} $0 < 10
+            MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "Your version of Internet Explorer is outdated. AMIS may not work.  Do you want to continue?" IDYES End
+            LogEx::Write "User chose to abort (wrong IE version)"
+            Abort
+        ${EndIf} 
+End:
 FunctionEnd
 
 Section "MainSection" SEC01
@@ -74,15 +99,6 @@ Section "MainSection" SEC01
     ExecDos::exec 'cmd /C dir "$TEST" /b/s/l/a' "" "output.log"
     LogEx::AddFile "   >" "output.log"
     
-        
-    ${registry::KeyExists} "HKEY_LOCAL_MACHINE\Software\Axialis\IconWorkshop" $0
-    
-    MessageBox MB_OK "$0"
-    ${If} $0 == 0
-        MessageBox MB_OK "Found"
-    ${Else}
-        MessageBox MB_OK "Not found"
-    ${EndIf}
     
 End:
 SectionEnd
@@ -91,13 +107,21 @@ SectionEnd
 ;*
 Section -JavaCheck
     
-    ${registry::Read} "HKEY_LOCAL_MACHINE\SOFTWARE\JavaSoft\Java Runtime Environment" "CurrentVersion" $R0 $R1
+    ${registry::KeyExists} "HKEY_LOCAL_MACHINE\Software\Axialis\IconWorkshop" $0
     
-    ${If} $R0 < 1.6
-        LogEx::Write "Incorrect Java version or Java not installed (registry key read = $R0)"
-        MessageBox MB_OK "Please upgrade your Java Runtime to version 1.6 or higher.  Java support is required for enhanced DAISY 3 text display. After the AMIS installation is complete, you may download Java from http://www.java.com and install it at any time."
+    ${If} $0 == 0
+        ${registry::Read} "HKEY_LOCAL_MACHINE\SOFTWARE\JavaSoft\Java Runtime Environment" "CurrentVersion" $R0 $R1
+    
+        MessageBox MB_OK "$R0 , $R1"
+        ${If} $R0 < 1.6
+            LogEx::Write "Incorrect Java version or Java not installed (registry key read = $R0)"
+            MessageBox MB_OK "Please upgrade your Java Runtime to version 1.6 or higher.  Java support is required for enhanced DAISY 3 text display. After the AMIS installation is complete, you may download Java from http://www.java.com and install it at any time."
+        ${Else}
+            LogEx::Write "Correct Java version installed (registry key read = $R0)"
+        ${EndIf}
     ${Else}
-        LogEx::Write "Correct Java version installed (registry key read = $R0)"
+        MessageBox MB_OK "Java not found"
+        LogEx::Write "Java not found"
     ${EndIf}
     
 SectionEnd

@@ -41,6 +41,8 @@ STDMETHODIMP CPdtbPluggableProtocol::Start(
 	DWORD grfSTI,
 	DWORD dwReserved)
 {
+	USES_CONVERSION;
+
 	HRESULT hr = S_OK;
 	std::string mimetype("text/html");
 	if (m_buffer) {
@@ -63,7 +65,11 @@ STDMETHODIMP CPdtbPluggableProtocol::Start(
 		if (CPdtbBridge::s_process_dtbook == TRUE && 
 			amis::util::FilePathTools::getExtension(url.get_url()) == "xml")
 		{
-			amis::dtb::TransformDTBook dtbook_xform;
+			TCHAR temp_path[MAX_PATH];
+			GetTempPath(MAX_PATH, temp_path);
+			std::string str_temp_path = T2A(temp_path);
+
+			amis::dtb::TransformDTBook dtbook_xform(str_temp_path);
 			m_whole_file = dtbook_xform.getResults();
 				
 			long sz = m_whole_file.size();

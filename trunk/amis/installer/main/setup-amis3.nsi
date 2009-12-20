@@ -108,6 +108,7 @@ ShowUnInstDetails show
 ; installer init
 ;**
 Function .onInit
+    SetOutPath "$INSTDIR"
     
     LogEx::Init true "$INSTDIR\install.log"
     LogEx::Write "${PRODUCT_NAME} ${PRODUCT_VERSION} (${CUSTOM_LANG_NAME})"  
@@ -117,20 +118,35 @@ Function .onInit
 	splash::show 1000 $PLUGINSDIR\splash
 	Pop $0 
 
+    ; the recommendation is at least WinXP SP3
     ${If} ${AtLeastWinXP}
-    ${AndIf} ${AtLeastServicePack} 2
-        LogEx::Write "Using Windows XP SP2 or higher"
-        Goto DxCheck
+      ${AndIf} ${AtLeastServicePack} 3
+      ${OrIf} ${AtLeastWinVista}
+          LogEx::Write "Using Windows XP SP3 or higher"
+          Goto DxCheck
+      
+    ; XP SP2 is acceptable but not as good as SP3
+    ${ElseIf} ${AtLeastWinXP}
+      ${AndIf} ${AtMostWinXP}
+      ${AndIf} ${AtMostServicePack} 2
+      ${AndIf} ${AtLeastServicePack} 2
+         LogEx::Write "Using Windows XP SP2, warning user"
+         MessageBox MB_OK "You have Windows XP Service Pack 2.  Newer service packs are available and it is recommended to run Windows Update to upgrade your system."
+         Goto DxCheck
+         
+    ; Other versions of windows are unsupported  
+    ; (though Win2K SP4 and various 64 bit versions of windows might work, they have not been tested at this time)
+    ; so give the user a chance to abort installation
     ${Else}
-        ;find out exactly which OS version was detected
-        Push $R0
-        Call GetWindowsVersion
-        Pop $R0
-        LogEx::Write "Operating system not supported.  $R0"
-        MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "Warning: operating system not supported.  AMIS may not work.  Do you want to continue?" IDYES DxCheck
-        LogEx::Write "User chose to abort installation (wrong OS)"
-        Abort
-    ${EndIf}
+          ;find out exactly which OS version was detected
+          Push $R0
+          Call GetWindowsVersion
+          Pop $R0
+          LogEx::Write "Operating system not supported.  $R0"
+          MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "Warning: operating system not supported.  AMIS may not work.  Do you want to continue?" IDYES DxCheck
+          LogEx::Write "User chose to abort installation (wrong OS)"
+          Abort
+      ${EndIf}
         
 DxCheck:
     ;check for the directx version
@@ -148,11 +164,11 @@ IeCheck:
     Call GetIEVersion
     Pop $0
     LogEx::Write "IE version $0"
-    ${If} $0 == 6
+    ${If} $0 == 6.00
         LogEx::Write "Warning user about IE6"
         MessageBox MB_OK "You have Internet Explorer 6.  Version 7 or higher is recommended for best performance.  You may update your system at any time after AMIS is installed."
     ${ElseIf} $0 < 6
-        MessageBox MB_OK "Your version of Internet Explorer is outdated. AMIS may not work.  Do you want to continue?" IDYES End
+        MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "Your version of Internet Explorer is outdated. AMIS may not work.  Do you want to continue?" IDYES End
         LogEx::Write "User chose to abort (wrong IE version)"
         Abort
     ${EndIf}
@@ -199,6 +215,7 @@ Section "MainSection" SEC01
     File "${BIN_DIR}\SDL.dll"
     File "${BIN_DIR}\libamplugin_pdtb.dll"
     File "${BIN_DIR}\lzop.exe"
+    File "${BIN_DIR}\IeDtbPlugin.dll"
     
     ;copy the xslt and stylesheet jar files
     SetOutPath "$INSTDIR\xslt"
@@ -213,13 +230,9 @@ Section "MainSection" SEC01
     SetOutPath "$INSTDIR\xslt\l10n"
     File "${BIN_DIR}\xslt\l10n\l10n.xsl"
     
-    ;register the pdtb-ie plugin
-    !insertmacro InstallLib REGDLLTLB NOTSHARED NOREBOOT_NOTPROTECTED "${BIN_DIR}\IeDtbPlugin.dll" "$INSTDIR\IeDtbPlugin.dll" "$INSTDIR"
-    LogEx::Write "Installed IeDtbPlugin"
-    
     ;register the timescale ocx component
+    LogEx::Write "Registering TransformSample.ax"
     ExecWait 'regsvr32.exe /s "$INSTDIR\TransformSample.ax"'
-    LogEx::Write "Registered TransformSample.ax"
     
     ;copy the bookmark readme file
     SetOutPath "$SETTINGS_DIR\bmk"
@@ -246,15 +259,9 @@ Section "MainSection" SEC01
     File "${BIN_DIR}\settings\clearCache.bat"
   
     ;update file permissions so that any user can run AMIS
-    AccessControl::GrantOnFile "$SETTINGS_DIR\amisPrefs.xml" "(BU)" "FullAccess"
-    AccessControl::GrantOnFile "$SETTINGS_DIR\amisPrefsCompatibilityMode.xml" "(BU)" "FullAccess"
-    AccessControl::GrantOnFile "$SETTINGS_DIR\amisPrefsCompatibilityModeWithDX.xml" "(BU)" "FullAccess"
-    AccessControl::GrantOnFile "$SETTINGS_DIR\amisPrefsCompatibilityModeWithTTS.xml" "(BU)" "FullAccess"
-    AccessControl::GrantOnFile "$SETTINGS_DIR\amisPrefsDebug.xml" "(BU)" "FullAccess"
-    AccessControl::GrantOnFile "$SETTINGS_DIR\amisHistory.default.xml" "(BU)" "FullAccess"
-    AccessControl::GrantOnFile "$SETTINGS_DIR\amisHistory.xml" "(BU)" "FullAccess"
     AccessControl::GrantOnFile "$SETTINGS_DIR\bmk" "(BU)" "FullAccess"
-  
+    AccessControl::GrantOnFile "$SETTINGS_DIR" "(BU)" "FullAccess"
+    
     File "${LOCAL_APP_DATA}\AMIS\settings\resource.h.ini"
   
     ;copy the css files
@@ -422,14 +429,21 @@ SectionEnd
 ; Check if Java is installed
 ;*
 Section -JavaCheck
+
+    ${registry::KeyExists} "HKEY_LOCAL_MACHINE\SOFTWARE\JavaSoft\Java Runtime Environment" $0
     
-    ${registry::Read} "HKEY_LOCAL_MACHINE\SOFTWARE\JavaSoft\Java Runtime Environment" "CurrentVersion" $R0 $R1
+    ${If} $0 == 0
+        ${registry::Read} "HKEY_LOCAL_MACHINE\SOFTWARE\JavaSoft\Java Runtime Environment" "CurrentVersion" $R0 $R1
     
-    ${If} $R0 < 1.6
-        LogEx::Write "Incorrect Java version or Java not installed (registry key read = $R0)"
-        MessageBox MB_OK "Please upgrade your Java Runtime to version 1.6 or higher.  Java support is required for enhanced DAISY 3 text display. After the AMIS installation is complete, you may download Java from http://www.java.com and install it at any time."
+        ${If} $R0 < 1.6
+            LogEx::Write "Incorrect Java version ($R0)"
+            MessageBox MB_OK "Please upgrade your Java Runtime to version 1.6 or higher.  Java support is required for enhanced DAISY 3 text display. After the AMIS installation is complete, you may download Java from http://www.java.com and install it at any time."
+        ${Else}
+            LogEx::Write "Correct Java version installed ($R0)"
+        ${EndIf}
     ${Else}
-        LogEx::Write "Correct Java version installed (registry key read = $R0)"
+        LogEx::Write "Java not found"
+        MessageBox MB_OK "Java 1.6 or higher is required for enhanced DAISY 3 text display. You may update your system at any time after AMIS is installed by downloading and installing Java from http://www.java.com ."
     ${EndIf}
     
 SectionEnd
@@ -454,6 +468,12 @@ SectionEnd
 ; check if we need to install the msvc runtimes
 ;**
 Section -Post
+
+    ;register the pdtb-ie plugin
+    LogEx::Write "Installing IeDtbPlugin"
+    ExecWait 'regsvr32.exe /s "$INSTDIR\IeDtbPlugin.dll"'    
+    
+
     WriteUninstaller "$INSTDIR\Uninstall-AMIS.exe"
     WriteRegStr HKLM "${PRODUCT_DIR_REGKEY}" "" "$INSTDIR\AMIS.exe"
     WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayName" "$(^Name)"
@@ -463,11 +483,11 @@ Section -Post
     WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "URLInfoAbout" "${PRODUCT_WEB_SITE}"
     WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "Publisher" "${PRODUCT_PUBLISHER}"
     
-    LogEx::Write "Summary of files copied:"
+    LogEx::Write "Summary of files:"
     LogEx::Write ""
     ExecDos::exec 'cmd /C dir "$INSTDIR" /b/s/l/a' "" "$INSTDIR\output.log"
     LogEx::AddFile "   >" "$INSTDIR\output.log"
-    
+
     LogEx::Write ""
     ExecDos::exec 'cmd /C dir "$SETTINGS_DIR" /b/s/l/a' "" "$INSTDIR\output.log"
     LogEx::AddFile "   >" "$INSTDIR\output.log"
@@ -506,6 +526,7 @@ Section Uninstall
 	StrCpy $SETTINGS_DIR $APPDATA\AMIS\settings
 	
 	; unregister the timescale ocx component
+	; this works on both XP and Vista
     ExecWait 'regsvr32.exe /u /s "$INSTDIR\TransformSample.ax"'
     ; unregister the pdtb dll
     !insertmacro UnInstallLib REGDLLTLB NOTSHARED NOREBOOT_NOTPROTECTED "$INSTDIR\IeDtbPlugin.dll"

@@ -22,7 +22,7 @@
 <entry id="app-font-name" value="Verdana"/>
 <entry id="is-first-time" value="yes"/>
 <entry id="is-logging-enabled" value="yes"/>
-<entry id="logging-level" value="LOW_LOGGING"/>
+<entry id="logging-level" value="FULL_LOGGING"/>
 <entry id="ambulant-prefers-ffmpeg" value="no"/>
 <entry id="tts-volume-pct" value="70"/>
 <entry id="audio-volume-pct" value="100"/>

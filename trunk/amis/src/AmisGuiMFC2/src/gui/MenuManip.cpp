@@ -210,8 +210,10 @@ void MenuManip::setItemCheckmark(MainMenu menuName, bool isChecked, UINT itemId,
 	if (submenuName != AMIS_SUBMENU_NONE)
 		p_menu = p_menu->GetSubMenu(submenuName);
 	
-	if (isChecked == true) p_menu->CheckMenuItem(itemId, MF_CHECKED);
-	else p_menu->CheckMenuItem(itemId, MF_UNCHECKED);
+	if (isChecked == true) 
+		p_menu->CheckMenuItem(itemId, MF_CHECKED);
+	else 
+		p_menu->CheckMenuItem(itemId, MF_UNCHECKED);
 }
 
 void MenuManip::setSectionDepthCheckmark(UINT itemId)
@@ -228,7 +230,7 @@ void MenuManip::setSectionDepthCheckmark(UINT itemId)
 	//turn off the checkmark for all navigation container items
 	//all the navigation containers are below a separator whose index is 7)
 	int count = p_menu->GetMenuItemCount();
-	for (int i = 0; i<count; i++)
+	for (int i = 1; i<=count; i++)
 		setItemCheckmark(AMIS_NAVIGATE, false, AMIS_SECTION_DEPTH_BASE_ID + i, AMIS_SECTION_DEPTH);
 
 	//turn on the checkmark for the given index

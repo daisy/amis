@@ -139,6 +139,8 @@ public:
 	afx_msg void OnToggleContentAudio();
 	afx_msg void OnShowHelpContents();
 	afx_msg void OnShowKeyboardShortcuts();
+	afx_msg void OnIncreaseSectionDepth();
+    afx_msg void OnDecreaseSectionDepth();
 protected:
 	HMENU m_hMDIMenu;
 	HACCEL m_hMDIAccel;
@@ -152,6 +154,7 @@ private:
 	void updateSpeedButtons();
 	void initializeAmbulantPreferences();
 	ambulant::net::url findBookInLangpackSubdir(std::string);
+	void setSectionDepth(int);
 
 	std::string mAppPath;
 	std::string mLocalizationDll;
@@ -170,7 +173,7 @@ private:
 	ambulant::net::url mMultivolumePosition;
 	std::string mMultivolumeNavId;
 	std::wstring mMultivolumeUid;
-
+    
 public:
 	DECLARE_MESSAGE_MAP()
 

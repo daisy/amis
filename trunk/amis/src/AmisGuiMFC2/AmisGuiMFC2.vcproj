@@ -1105,26 +1105,6 @@
 					Name="self-voicing"
 					>
 					<File
-						RelativePath=".\src\gui\self-voicing\AudioSequence.cpp"
-						>
-						<FileConfiguration
-							Name="Debug|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-						<FileConfiguration
-							Name="Release|Win32"
-							>
-							<Tool
-								Name="VCCLCompilerTool"
-								UsePrecompiledHeader="0"
-							/>
-						</FileConfiguration>
-					</File>
-					<File
 						RelativePath=".\src\gui\self-voicing\AudioSequenceComponent.cpp"
 						>
 						<FileConfiguration
@@ -1491,6 +1471,26 @@
 					<Filter
 						Name="dialogs"
 						>
+						<File
+							RelativePath=".\src\gui\self-voicing\AudioSequence.cpp"
+							>
+							<FileConfiguration
+								Name="Debug|Win32"
+								>
+								<Tool
+									Name="VCCLCompilerTool"
+									UsePrecompiledHeader="0"
+								/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Release|Win32"
+								>
+								<Tool
+									Name="VCCLCompilerTool"
+									UsePrecompiledHeader="0"
+								/>
+							</FileConfiguration>
+						</File>
 						<File
 							RelativePath=".\src\gui\self-voicing\dialogs\FindInTextDialogVoicing.cpp"
 							>

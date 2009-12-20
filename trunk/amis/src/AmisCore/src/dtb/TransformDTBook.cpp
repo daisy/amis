@@ -56,7 +56,7 @@ void amis::dtb::TransformDTBook::DestroyInstance()
 	delete pinstance;
 }
 #endif
-amis::dtb::TransformDTBook::TransformDTBook()
+amis::dtb::TransformDTBook::TransformDTBook(string tempdir)
 {
 #if 0
 	mpDoc = NULL;
@@ -73,6 +73,8 @@ amis::dtb::TransformDTBook::TransformDTBook()
 #else
 	mBin = "";
 #endif
+
+	mTempdir = tempdir;
 }
 amis::dtb::TransformDTBook::~TransformDTBook()
 {
@@ -86,7 +88,7 @@ string amis::dtb::TransformDTBook::getResults()
 void amis::dtb::TransformDTBook::readResults()
 {
 	ifstream f;
-	string filepath = mBin + "tmpdtbook.xml";
+	string filepath = mTempdir + "tmpdtbook.xml";
 	f.open(filepath.c_str());
 	if (f.fail())
 	{
@@ -131,7 +133,7 @@ bool amis::dtb::TransformDTBook::transform(string filepath)
 	string params = " -cp \"" + 
 		mBin + "xslt\\org.daisy.util.jar\" org.daisy.util.xml.xslt.Stylesheet \"" + 
 		local_dtbook + "\" \"" + 
-		mBin + "tmpdtbook.xml\" \"" + 
+		mTempdir + "tmpdtbook.xml\" \"" + 
 		mBin + "xslt\\dtbook\\dtbook2xhtml.xsl\" baseDir=\"" + 
 		bookdir + "\"";
 

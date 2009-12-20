@@ -98,6 +98,8 @@ BEGIN_MESSAGE_MAP(CAmisApp, CWinApp)
 	ON_COMMAND(ID_AMIS_PREVIOUS_SECTION, OnNavPreviousSection)
 	ON_COMMAND_RANGE(AMIS_RECENT_BOOK_BASE_ID, AMIS_RECENT_BOOK_BASE_ID + AMIS_MAX_ANYTHING, OnFileRecentBook)
 	ON_COMMAND_RANGE(AMIS_SECTION_DEPTH_BASE_ID, AMIS_SECTION_DEPTH_BASE_ID + AMIS_MAX_ANYTHING, OnNavShowSectionDepth)
+	ON_COMMAND(ID_AMIS_INCREASE_SECTION_DEPTH, OnIncreaseSectionDepth)
+	ON_COMMAND(ID_AMIS_DECREASE_SECTION_DEPTH, OnDecreaseSectionDepth)    
 	ON_COMMAND(ID_AMIS_NEXT_PAGE, OnNavNextPage)
 	ON_COMMAND(ID_AMIS_PREVIOUS_PAGE, OnNavPrevPage)
 	ON_COMMAND(ID_AMIS_CLOSE_BOOK, OnFileClose)
@@ -258,7 +260,7 @@ BOOL CAmisApp::InitInstance()
 	mbIsPlayingHelpBook = false;
 	mbIsPlayingShortcutsBook = false;
 	mbMultivolumeFlag = false;
-	//save the value in cmdInfo
+    //save the value in cmdInfo
 	CString cmd_file_name = cmdInfo.m_strFileName;
 	
 	if (cmd_file_name.GetLength() > 0)
@@ -673,6 +675,9 @@ bool CAmisApp::openBook(const ambulant::net::url* filename, bool saveInHistory)
 				(WPARAM)MainWndParts::Instance()->mpBasicToolbar);
 			MainWndParts::Instance()->mpMainFrame->PostMessageW(WM_MY_UPDATE_TOOLBAR_STATE,
 				(WPARAM)MainWndParts::Instance()->mpDefaultToolbar);
+			
+			int max = amis::dtb::DtbWithHooks::Instance()->getNavModel()->getNavMap()->getMaxDepth();
+			amis::gui::MenuManip::Instance()->setSectionDepthCheckmark(max + AMIS_SECTION_DEPTH_BASE_ID);
 
 			if (mbMultivolumeFlag && 
 				amis::dtb::DtbWithHooks::Instance()->getUid() == mMultivolumeUid)
@@ -853,10 +858,49 @@ void CAmisApp::OnNavPreviousSection()
 void CAmisApp::OnNavShowSectionDepth(UINT id)
 {
 	int level = id - AMIS_SECTION_DEPTH_BASE_ID;
-	string log_msg = "Setting section depth to " + level;
-	amis::util::Log::Instance()->writeMessage(log_msg, "CAmisApp::OnNavShowSectionDepth");
+	setSectionDepth(level);
+}
+void CAmisApp::setSectionDepth(int level)
+{
+	int max = amis::dtb::DtbWithHooks::Instance()->getNavModel()->getNavMap()->getMaxDepth();
+	if (level < 1)
+		level = 1;
+	else if (level > max)
+		level = max; 
+
+	char ch[3];
+	itoa(level, ch, 10);
+	string log_msg = "Setting section depth to ";
+	log_msg.append(ch);
+	amis::util::Log::Instance()->writeMessage(log_msg, "CAmisApp::setSectionDepth");
 	amis::gui::MainWndParts::Instance()->mpSidebar->m_wndDlg.expandSections(level);
-	amis::gui::MenuManip::Instance()->setSectionDepthCheckmark(id);
+	amis::gui::MenuManip::Instance()->setSectionDepthCheckmark(level + AMIS_SECTION_DEPTH_BASE_ID);
+}
+void CAmisApp::OnIncreaseSectionDepth()
+{
+    int curr = amis::gui::MainWndParts::Instance()->mpSidebar->m_wndDlg.getExposedDepth();
+    int max = amis::dtb::DtbWithHooks::Instance()->getNavModel()->getNavMap()->getMaxDepth();
+    curr++;
+    if (curr < 1)
+        curr = 1;
+    else if (curr > max)
+        curr = max;
+    
+    setSectionDepth(curr);
+}
+void CAmisApp::OnDecreaseSectionDepth()
+{
+    int curr = amis::gui::MainWndParts::Instance()->mpSidebar->m_wndDlg.getExposedDepth();
+    int max = amis::dtb::DtbWithHooks::Instance()->getNavModel()->getNavMap()->getMaxDepth();
+    
+    curr--;
+    if (curr < 1)
+        curr = 1;
+    else if (curr > max)
+        curr = max;
+    
+    setSectionDepth(curr);
+    
 }
 
 void CAmisApp::OnNavNextPage()

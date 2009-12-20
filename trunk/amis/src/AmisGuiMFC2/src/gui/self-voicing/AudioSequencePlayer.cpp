@@ -268,7 +268,7 @@ void AudioSequencePlayer::playNext(bool fromEndEvent)
 		
 		if (mRepeatLoop && m_previousAudioSequence)
 		{
-			Sleep(1500);
+			Sleep(1000);
 			p_log->writeTrace("Repeating audio", "AudioSequencePlayer::playNext");
 			Play(m_previousAudioSequence, false, true, true);
 		}

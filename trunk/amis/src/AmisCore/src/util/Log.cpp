@@ -40,6 +40,7 @@ amis::util::Log::Log()
 	mbIsFileOpen = false;
 	mbEnabled = true;
 	mLevel = amis::util::MEDIUM_LOGGING;
+	mCachedMessages.clear();
 }
 amis::util::Log::~Log()
 {
@@ -52,12 +53,24 @@ void amis::util::Log::DestroyInstance()
 void amis::util::Log::enable(bool value)
 {
 	mbEnabled = value;
+
+	if (mbEnabled)
+	{
+		for (int i = 0; i<mCachedMessages.size(); i++)
+		{
+			writeMessage(mCachedMessages[i], "Cached log message");
+		}
+		mCachedMessages.clear();
+	}
 }
 void amis::util::Log::setLevel(amis::util::LogLevel value)
 {
 	mLevel = value;
 }
-
+void amis::util::Log::cacheMessage(std::string msg)
+{
+	mCachedMessages.push_back(msg);
+}
 void amis::util::Log::startLog(string filename)
 {
 	if (!mbEnabled) return;
@@ -74,7 +87,7 @@ void amis::util::Log::startLog(string filename)
 #else
 	//TODO: timestamp for other platforms
 #endif
-	mFile<<"-------------------------------------"<<endl;
+	mFile<<"-------------------------------------"<<endl;	
 }
 
 void amis::util::Log::endLog()
@@ -165,9 +178,18 @@ void amis::util::Log::writeTrace(string msg, const ambulant::net::url* file, str
 //generic data-writing functions (all others end up here eventually)
 void amis::util::Log::writeData(string type, string msg, string origin)
 {
-	if (!mbEnabled) return;
-	if (!mbIsFileOpen) return;
-
+	if (!mbEnabled || !mbIsFileOpen)
+	{
+		string tmp = type;
+		tmp.append(": ");
+		tmp.append(msg);
+		tmp.append(" [");
+		tmp.append(origin);
+		tmp.append("]");
+		mCachedMessages.push_back(tmp);
+		return;
+	};
+	
 	if (type != "") mFile<<type<<": ";
 	mFile<<msg; 
 	if (origin != "") mFile<<" ["<<origin;

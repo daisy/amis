@@ -476,7 +476,7 @@ bool amis::dtb::Dtb::processOpf(const ambulant::net::url* filepath)
 	//pre-transform the textfile, since it's easier to make the user wait now than
 	//have the SMIL start playing while IE transforms on the fly
 	//the textfile will be transformed and ready to be loaded (in bin/tmpdtbook.xml)
-	amis::dtb::TransformDTBook dtbook_xform;
+	amis::dtb::TransformDTBook dtbook_xform(mTempdir);
 	mbDtbookTransformSucceeded = dtbook_xform.transform(txtfile->get_url());
 	return true;
 }
@@ -742,8 +742,8 @@ string amis::dtb::Dtb::searchFullTextRelative(int dir)
 	//we should now have the text id of the item
 	if (result != "")
 	{
-		mLastSearchedTextFile  = amis::util::getFileNameWithRef(it->get_url());
-		
+		mLastSearchedTextFile  = amis::util::FilePathTools::getFileName(it->get_path()); 
+	 	mLastSearchedTextFile += "#" + result; 
 		mLastSearchResult = (*mpTextSmilMap)[mLastSearchedTextFile];
 		//now we have just the filename#id, so we can compare it to our hash map
 		return mLastSearchResult;
@@ -898,9 +898,6 @@ bool amis::dtb::Dtb::hasText()
 //(one id, many nav nodes)
 void amis::dtb::Dtb::saveIndexData()
 {	
-	//don't support indexing on multivolume books
-	if (isMultivolume()) return;
-
 #ifdef AMIS_COMPILER_MSVC
 	USES_CONVERSION;
 #else
@@ -910,9 +907,18 @@ void amis::dtb::Dtb::saveIndexData()
 	string filepath = this->getFileSet()->getBookmarksFilepath()->get_url();
 	if (filepath.empty()) return;
 	filepath = amis::util::FilePathTools::getAsLocalFilePath(filepath);
-	filepath.replace(filepath.find(".bmk"), 4, ".idx");
-	string temp_filepath = filepath + ".tmp";
+	filepath.replace(filepath.find(".bmk"), 4, "");
+	//append the volume number (setinfo)
+	if (isMultivolume())
+	{
+        filepath.append(getSetInfo());
+	}
+    filepath.append(".idx");
+	string temp_filepath = filepath;
+	temp_filepath.append(".tmp");
 
+	amis::util::Log::Instance()->writeTrace("saving index data", filepath);
+		
 	ofstream f;
 	f.open(temp_filepath.c_str(), ios::out);
 	
@@ -969,9 +975,6 @@ void amis::dtb::Dtb::saveIndexData()
 
 bool amis::dtb::Dtb::readIndexData()
 {
-	//don't support indexing on multivolume books
-	if (isMultivolume()) return false;
-
 #ifdef AMIS_COMPILER_MSVC
 	USES_CONVERSION;
 #else
@@ -981,8 +984,18 @@ bool amis::dtb::Dtb::readIndexData()
 	string filepath = this->getFileSet()->getBookmarksFilepath()->get_url();
 	if (filepath.empty()) return false;
 	filepath = amis::util::FilePathTools::getAsLocalFilePath(filepath);
-	filepath.replace(filepath.find(".bmk"), 4, ".idx");
-	string temp_filepath = filepath + ".tmp";
+	filepath.replace(filepath.find(".bmk"), 4, "");
+	//append the volume number (setinfo)
+	if (isMultivolume())
+	{
+        filepath.append(getSetInfo());
+	}
+    filepath.append(".idx");
+	string temp_filepath = filepath;
+	temp_filepath.append(".tmp");
+
+	
+	amis::util::Log::Instance()->writeTrace("will try to read index data", filepath);
 
 	//now decompress the file
 #ifdef AMIS_COMPILER_MSVC
@@ -1072,6 +1085,9 @@ bool amis::dtb::Dtb::readIndexData()
 
 	f.close();
 
+	
+	amis::util::Log::Instance()->writeTrace("read index data", filepath);
+
 #ifdef AMIS_COMPILER_MSVC
 	remove(temp_filepath.c_str());
 #else
@@ -1086,13 +1102,27 @@ bool amis::dtb::Dtb::indexExistsOnDisk()
 	string filepath = this->getFileSet()->getBookmarksFilepath()->get_url();
 	if (filepath.empty()) return false;
 	filepath = amis::util::FilePathTools::getAsLocalFilePath(filepath);
-	filepath.replace(filepath.find(".bmk"), 4, ".idx");
+	filepath.replace(filepath.find(".bmk"), 4, "");
+	//append the volume number (setinfo)
+	if (isMultivolume())
+	{
+        filepath.append(getSetInfo());
+	}
+    filepath.append(".idx");
 
 	ifstream f;
 	f.open(filepath.c_str(), ios::in);
 	f.close();
-	if (f.fail()) return false;
-	else return true;
+	if (f.fail())
+	{
+		amis::util::Log::Instance()->writeTrace("index not found for this book", filepath);
+		return false;
+	}
+	else
+	{
+		amis::util::Log::Instance()->writeTrace("index found for this book", filepath);
+		return true;
+	}
 }
 
 //turn on or off index caching
@@ -1171,4 +1201,11 @@ std::string amis::dtb::Dtb::getSetInfo()
 	{
 		return "";
 	}
+
 }
+
+void amis::dtb::Dtb::setSystemTempDir(string tempdir)
+{
+	mTempdir = tempdir;
+}
+

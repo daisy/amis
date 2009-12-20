@@ -84,6 +84,7 @@ public:
 	bool wasDtbookTransformed();
 	bool isMultivolume();
 	std::string getSetInfo();
+	void setSystemTempDir(string);
 	
 private:
 	void saveIndexData();
@@ -130,6 +131,7 @@ private:
 	string mAppPath;
 	bool mCacheIndex;
 	bool mbDtbookTransformSucceeded;
+	string mTempdir;
 };
 }
 }
