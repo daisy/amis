@@ -1,0 +1,42 @@
+[desktop Keys]
+Control+UpArrow=IncreaseVolume
+Control+DownArrow=VolumeDown
+Control+NumPadMinus=SlowerNum
+Control+Alt+T=sayview
+Space=PlayPause
+JAWSKey+H=HotKeyHelp
+Control+Shift+I=FineNavigation
+Control+Shift+G=ToggleJawsSpeech
+[Common Keys]
+Control+UpArrow=IncreaseVolume
+Control+DownArrow=VolumeDown
+Control+NumPadPlus=FasterNum
+Control+NumPadMinus=SlowerNum
+Control+Equals=Faster
+Control+-=Slower
+Control+0=NormalSpeed
+LeftArrow=PreviousPhrase
+DownArrow=NextSection
+UpArrow=PreviousSection
+RightArrow=NextPhrase
+Control+N=GoToSideBar
+Control+LeftArrow=PrevPage
+Control+RightArrow=NextPage
+JAWSKey+H=HotKeyHelp
+F11=ToggleViews
+Space=PlayPause
+Control+Shift+I=FineNavigation
+Control+Shift+T=ReadAsTextOnly
+Control+Shift+G=ToggleJawsSpeech
+Control+Alt+T=sayview
+Insert+T=SayTitleHook
+Control+T=MoveToTextWindow
+[Laptop Keys]
+Control+Shift+I=FineNavigation
+Control+Alt+T=sayview
+Space=PlayPause
+Control+UpArrow=IncreaseVolume
+Control+DownArrow=VolumeDown
+Control+NumPadMinus=SlowerNum
+Control+Shift+G=ToggleJawsSpeech
+Control+T=MoveToTextWindow

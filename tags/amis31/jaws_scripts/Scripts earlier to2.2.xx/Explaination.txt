@@ -1,0 +1,8 @@
+
+On pressing control+shift+i, it enters fine navigation mode and on control+shift+u exits fine navigation mode.
+The following happens on entering fine navigation mode
+Reading of book is paused
+the cursor is placed in starting of the highlighted text.
+JAWS speak the firstline of highlighted text.
+Now the Line, word, character navigation keys of jaws start functioning  normally (which are normally overriden by amis keys) i.e Now JAWS reads the whole page as a text file.
+spelling in fine navigation mode can be read by using same num pad insert + 5 twice.

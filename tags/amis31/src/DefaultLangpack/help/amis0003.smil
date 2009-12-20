@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+<head>
+<meta name="ncc:generator" content="SigtunaDAR3 3.0.22" />
+<meta name="dc:format" content="Daisy 2.02" />
+<meta name="title" content="What is DAISY?" />
+<meta name="dc:title" content="AMIS User Guide" />
+<meta name="ncc:timeInThisSmil" content="0:01:11" />
+<layout>
+<region id="txtView" />
+</layout>
+</head>
+<body>
+<seq dur="71.347s">
+<par endsync="last">
+<text src="amishelp.html#amis_0004" id="amis_0004" />
+<seq>
+<audio src="03_What_is_DAISY.mp3" clip-begin="npt=0.000s" clip-end="npt=1.476s" id="qwrt_0001" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_000d" id="xami_000d" />
+<seq>
+<audio src="03_What_is_DAISY.mp3" clip-begin="npt=1.476s" clip-end="npt=2.967s" id="qwrt_0002" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_000f" id="xami_000f" />
+<seq>
+<audio src="03_What_is_DAISY.mp3" clip-begin="npt=2.967s" clip-end="npt=4.451s" id="qwrt_0003" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0010" id="xami_0010" />
+<seq>
+<audio src="03_What_is_DAISY.mp3" clip-begin="npt=4.451s" clip-end="npt=5.121s" id="qwrt_0004" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0011" id="xami_0011" />
+<seq>
+<audio src="03_What_is_DAISY.mp3" clip-begin="npt=5.121s" clip-end="npt=5.688s" id="qwrt_0005" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0012" id="xami_0012" />
+<seq>
+<audio src="03_What_is_DAISY.mp3" clip-begin="npt=5.688s" clip-end="npt=6.280s" id="qwrt_0006" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0013" id="xami_0013" />
+<seq>
+<audio src="03_What_is_DAISY.mp3" clip-begin="npt=6.280s" clip-end="npt=7.193s" id="qwrt_0007" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0014" id="xami_0014" />
+<seq>
+<audio src="03_What_is_DAISY.mp3" clip-begin="npt=7.193s" clip-end="npt=7.848s" id="qwrt_0008" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0015" id="xami_0015" />
+<seq>
+<audio src="03_What_is_DAISY.mp3" clip-begin="npt=7.848s" clip-end="npt=8.787s" id="qwrt_0009" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0016" id="xami_0016" />
+<seq>
+<audio src="03_What_is_DAISY.mp3" clip-begin="npt=8.787s" clip-end="npt=9.793s" id="qwrt_000A" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0017" id="xami_0017" />
+<seq>
+<audio src="03_What_is_DAISY.mp3" clip-begin="npt=9.793s" clip-end="npt=10.899s" id="qwrt_000B" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0018" id="xami_0018" />
+<seq>
+<audio src="03_What_is_DAISY.mp3" clip-begin="npt=10.899s" clip-end="npt=14.817s" id="qwrt_000C" />
+<audio src="03_What_is_DAISY.mp3" clip-begin="npt=14.817s" clip-end="npt=21.818s" id="qwrt_000D" />
+<audio src="03_What_is_DAISY.mp3" clip-begin="npt=21.818s" clip-end="npt=25.967s" id="qwrt_000E" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_0019" id="xami_0019" />
+<seq>
+<audio src="03_What_is_DAISY.mp3" clip-begin="npt=25.967s" clip-end="npt=29.684s" id="qwrt_000F" />
+<audio src="03_What_is_DAISY.mp3" clip-begin="npt=29.684s" clip-end="npt=35.418s" id="qwrt_0010" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_001a" id="xami_001a" />
+<seq>
+<audio src="03_What_is_DAISY.mp3" clip-begin="npt=35.418s" clip-end="npt=43.804s" id="qwrt_0011" />
+<audio src="03_What_is_DAISY.mp3" clip-begin="npt=43.804s" clip-end="npt=49.152s" id="qwrt_0012" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_001b" id="xami_001b" />
+<seq>
+<audio src="03_What_is_DAISY.mp3" clip-begin="npt=49.152s" clip-end="npt=61.081s" id="qwrt_0013" />
+</seq>
+</par>
+<par endsync="last">
+<text src="amishelp.html#xami_001c" id="xami_001c" />
+<seq>
+<audio src="03_What_is_DAISY.mp3" clip-begin="npt=61.081s" clip-end="npt=71.347s" id="qwrt_0014" />
+</seq>
+</par>
+</seq>
+</body>
+</smil>
