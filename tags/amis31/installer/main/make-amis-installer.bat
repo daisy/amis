@@ -1,4 +1,4 @@
-rem ECHO off
+ECHO off
 
 REM   make-amis-installer.bat langid langname helpfile contrast_translation
 
