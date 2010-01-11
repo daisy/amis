@@ -1,25 +1,16 @@
 ECHO off
 SET LANGID=%1
 
-["afrikaans", "afr-ZA"],
-["australian", "eng-AU"],
-["chinese", "zho-CN"],
-["icelandic", "ice-IS"],
-["tamil", "tam-IN"],
-["french", "fra-FR"],
-["norwegian-bokmal", "nob-NO"],
-["norwegian-nynorsk", "nno-NO"]
-
 echo %LANGID%
 
 IF %LANGID%==afr-ZA (
     echo "Building Afrikaans"
-    call make-amis-installer.bat afr-ZA Afrikaans amishelp-afrikaans.html teenstelling
-    call setup-amis-langpack.bat afr-ZA Afrikaans amishelp-afrikaans.html
+    call make-amis-installer.bat afr-ZA Afrikaans amishelp-afrikaans.html kontras
+    call setup-langpack.bat afr-ZA Afrikaans amishelp-afrikaans.html
 ) ELSE IF %LANGID%==eng-AU (
     echo "Building English (Australia)"
     call make-amis-installer.bat eng-AU "English (Australia)" amishelp.html contrast
-    call setup-amis-langpack.bat eng-AU "English (Australia)" amishelp.html
+    call setup-langpack.bat eng-AU "English (Australia)" amishelp.html
 ) ELSE IF %LANGID%==zho-CN (
     echo "Building Chinese"
     call make-amis-installer.bat zho-CN Chinese amis.html contrast
@@ -38,12 +29,20 @@ IF %LANGID%==afr-ZA (
     call setup-langpack.bat fra-FR French content.html
 ) ELSE IF %LANGID%==nob-NO (
     echo "Building Norwegian (Bokmål)"
-    call make-amis-installer.bat nob-NO "Norwegian (Bokmål)" amis_brukerveiledning_bkm.html kontrast
-    call setup-langpack.bat nob-NO "Norwegian (Bokmål)" amis_brukerveiledning_bkm.html
+    call make-amis-installer.bat nob-NO "Norwegian (Bokmaal)" amis_brukerveiledning_bkm.html kontrast
+    call setup-langpack.bat nob-NO "Norwegian (Bokmaal)" amis_brukerveiledning_bkm.html
 ) ELSE IF %LANGID%==nno-NO (
     echo "Building Norwegian (Nynorsk)"
-    call make-amis-installer.bat ice-IS Icelandic amis_brukarrettleiing_nynorsk_bilete.html kontrast
-    call setup-langpack.bat ice-IS Icelandic amis_brukarrettleiing_nynorsk_bilete.html
+    call make-amis-installer.bat nno-NO "Norwegian (Nynorsk)" amis_brukarrettleiing_nynorsk_bilete.html kontrast
+    call setup-langpack.bat nno-NO "Norwegian (Nynorsk)" amis_brukarrettleiing_nynorsk_bilete.html
+) ELSE IF %LANGID%==jpn-JP (
+    echo "Building Japanese"
+    call make-amis-installer.bat jpn-JP Japanese amishelp.html contrast
+    call setup-langpack.bat jpn-JP Japanese amishelp.html
+) ELSE IF %LANGID%==spa (
+    echo "Building Spanish (Latin America)"
+    call make-amis-installer.bat spa "Espanol A L" amis_guia_del_usuario.html contraste
+    call setup-langpack.bat spa "Espanol A L" amis_guia_del_usuario.html
 ) ELSE (
     echo "Language ID %LANGID% not recognized!"
 )
