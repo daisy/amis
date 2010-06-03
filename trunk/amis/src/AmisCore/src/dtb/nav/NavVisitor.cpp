@@ -137,7 +137,7 @@ void amis::dtb::nav::ResolveSmilDataVisitor::resolve(amis::dtb::nav::NavModel* p
 	}
 
 	pModel->setSmilIdNodeMap(mpMap);
-	
+	//printMap(true);
 }
 //then assign each NavNode a list of file#id values
 //a NavPoint's range is from its contentHref until the next NavPoint's contentHref
@@ -185,8 +185,18 @@ amis::StdStringList amis::dtb::nav::ResolveSmilDataVisitor::getRange(string a, s
 	//the starting point cannot be empty
 	if (a == "")
 	{
-		StdStringList empty_list;
-		return empty_list;
+		if (b == "")
+		{
+			StdStringList empty_list;
+			return empty_list;
+		}
+		else
+		{
+			StdStringList list;
+			list.push_back(b);
+			return list;
+		}
+		
 	}
 
 	//look for the start of the range
@@ -249,7 +259,7 @@ void amis::dtb::nav::ResolveSmilDataVisitor::printMap(bool toFile)
 	std::ofstream fileout;
 	if (toFile == true)
 	{
-		fileout.open("map_printout.txt");
+		fileout.open("y:\\Devel\\amis\\map_printout.txt");
 		std::streambuf * filebuf = fileout.rdbuf();
 		cout.rdbuf(filebuf);
 	}

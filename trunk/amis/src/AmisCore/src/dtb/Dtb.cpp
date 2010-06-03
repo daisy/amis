@@ -930,12 +930,15 @@ void amis::dtb::Dtb::saveIndexData()
 		f<<it->first<<endl;
 		
 		amis::dtb::nav::NavNodeList* p_list = it->second;
-		for (int i=0; i<p_list->size(); i++)
+		if (p_list != NULL && p_list->size() > 0)
 		{
-			amis::dtb::nav::NavNode* p_n = (*p_list)[i];
-			f<<p_n->getId()<<endl;
+			for (int i=0; i<p_list->size(); i++)
+			{
+				amis::dtb::nav::NavNode* p_n = (*p_list)[i];
+				f<<p_n->getId()<<endl;
+			}
+			f<<"*"<<endl;
 		}
-		f<<"*"<<endl;
 	}
 	f<<"**"<<endl;
 
