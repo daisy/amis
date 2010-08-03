@@ -41,6 +41,7 @@ public:
 	{
 		NONE,
 		LANGPACK,
+		LANGPACK_RTL,
 		PLUGIN
 	};
 
