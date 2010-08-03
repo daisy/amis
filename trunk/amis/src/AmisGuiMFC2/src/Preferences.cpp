@@ -176,7 +176,8 @@ void Preferences::scanDirectoriesForLanguagePackFiles()
 				}
 				else
 				{
-					if (p_data->isEnabled() && p_data->getModuleType() == amis::ModuleDescData::LANGPACK)
+					if (p_data->isEnabled() && (p_data->getModuleType() == amis::ModuleDescData::LANGPACK ||
+						p_data->getModuleType() == amis::ModuleDescData::LANGPACK_RTL))
 					{
 						string id = p_data->getId();
 						mInstalledLanguages[id] = p_data;
