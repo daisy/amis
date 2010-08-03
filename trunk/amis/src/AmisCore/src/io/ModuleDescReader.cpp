@@ -95,10 +95,13 @@ void amis::io::ModuleDescReader::startElement(const   XMLCh* const    uri,
 
 		string type;
 		type.assign(SimpleAttrs::get("type", &attributes));
+
 		if (type.compare("plugin") == 0)
 			this->mpData->setModuleType(amis::ModuleDescData::PLUGIN);
 		else if (type.compare("langpack") == 0)
 			this->mpData->setModuleType(amis::ModuleDescData::LANGPACK);
+		else if (type.compare("langpack_rtl") == 0)
+			this->mpData->setModuleType(amis::ModuleDescData::LANGPACK_RTL);
 		
 		string enabled;
 		enabled.assign(SimpleAttrs::get("enabled", &attributes));
