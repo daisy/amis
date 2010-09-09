@@ -287,7 +287,8 @@ Section "MainSection" SEC01
     File "${BIN_DIR}\settings\lang\readme.txt"
 
     ;copy the MSVC redistributables installer
-    SetOutPath $TEMP
+    ;SetOutPath $TEMP
+	SetOutPath $INSTDIR
     File "${VS_DIR}\vcredist_x86.exe"
   
     ;copy the jaws scripts installer
@@ -362,8 +363,11 @@ SectionEnd
 Section -MSVCRuntime
   
     Var /GLOBAL MSVC_RUNTIME_INSTALLER
-    StrCpy $MSVC_RUNTIME_INSTALLER "$TEMP\vcredist_x86.exe"
-    LogEx::Write "MSVC Runtime Installer copied to temp dir $TEMP"
+    ;StrCpy $MSVC_RUNTIME_INSTALLER "$TEMP\vcredist_x86.exe"
+    ;LogEx::Write "MSVC Runtime Installer copied to temp dir $TEMP"
+	
+	StrCpy $MSVC_RUNTIME_INSTALLER "$INSTDIR\vcredist_x86.exe"
+	LogEx::Write "MSVC Runtime Installer copied to temp dir $INSTDIR"
     
     ;check and see if the user needs these files
     ${registry::KeyExists} "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{837b34e3-7c30-493c-8f6a-2b0f04e2912c}" $0

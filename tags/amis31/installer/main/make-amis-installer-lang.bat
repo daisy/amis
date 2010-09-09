@@ -43,6 +43,30 @@ IF %LANGID%==afr-ZA (
     echo "Building Spanish (Latin America)"
     call make-amis-installer.bat spa "Espanol A L" amis_guia_del_usuario.html contraste
     call setup-langpack.bat spa "Espanol A L" amis_guia_del_usuario.html
+) ELSE IF %LANGID%==swe-SE (
+    echo "Building Swedish"
+    call make-amis-installer.bat swe-SE "Svenska" amishelp.html kontrast
+    call setup-langpack.bat swe-SE "Svenska" amishelp.html
+) ELSE IF %LANGID%==fin-FI ( 
+	echo "Building Finnish"
+    call make-amis-installer.bat fin-FI "Suomi" kopiokopiokorj.html kontrasti
+    call setup-langpack.bat fin-FI "Suomi" kopiokopiokorj.html
+) ELSE IF %LANGID%==vie-VN ( 
+	echo "Building Vietnamese"
+    call make-amis-installer.bat vie-VN "Vietnamese" ncc.html contrast
+    call setup-langpack.bat vie-VN "Vietnamese" ncc.html
+) ELSE IF %LANGID%==zho-TW ( 
+	echo "Building Chinese (Traditional)"
+    call make-amis-installer.bat zho-TW "Traditional Chinese" amis.htm contrast
+    call setup-langpack.bat zho-TW "Traditional Chinese" amis.htm
+) ELSE IF %LANGID%==srp-RS (
+	echo "Building Serbian"
+	call make-amis-installer.bat srp-RS "Serbian" dtbook.xml contrast
+	call setup-langpack.bat srp-RS "Serbian" dtbook.xml
+) ELSE IF %LANGID%==nld-NL (
+  echo "Building Dutch"
+  call make-amis-installer.bat nld-NL "Nederlands" amis_gebruikers_handleiding.html contrast
+  call setup-langpack.bat nld-NL "Nederlands" amis_gebruikers_handleiding.html
 ) ELSE (
     echo "Language ID %LANGID% not recognized!"
 )

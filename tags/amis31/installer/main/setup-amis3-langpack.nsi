@@ -74,7 +74,7 @@
 ;**
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
 ;this is the name of the installer that gets created.  
-OutFile "Setup-amis3-langpack-${CUSTOM_LANG_NAME}.exe"
+OutFile "Setup-amis31-langpack-${CUSTOM_LANG_NAME}.exe"
 
 ;InstallDir "$APPDATA\AMIS\settings"
 	
