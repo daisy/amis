@@ -384,13 +384,12 @@ BOOL CAmisApp::InitInstance()
 		amis::tts::TTSPlayer::InstanceTwo()->setCallback((sendMessageCallbackFn)amis::dtb::DtbWithHooks::ttsTwoDone);
 
 	amis::gui::CAmisApp::emitMessage("ready");
-	
-	//example of how to test for RTL
-	if (Preferences::Instance()->getCurrentLanguageData()->getModuleType() == amis::ModuleDescData::LANGPACK_RTL)
+//example of how to test for RTL
+/*	if (Preferences::Instance()->getCurrentLanguageData()->getModuleType() == amis::ModuleDescData::LANGPACK_RTL)
 	{
 		AfxMessageBox(_T("RTL"));
 	}
-
+*/
 	//open a book if we decided to either open the command line parameter or last-read book
 	if (!book_to_open.is_empty_path()) openBook(&book_to_open);
 	
