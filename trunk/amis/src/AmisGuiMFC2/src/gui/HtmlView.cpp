@@ -59,14 +59,14 @@ static char THIS_FILE[] = __FILE__;
 
 #ifdef HTML_LOAD_AMBULANT_PDTB
 // XXXJack
-// Grmpf: GUIDs don't get defined. Copied here (from IeDtbBridge.h)
+// Grmpf: GUIDs don't get defined. Copied here (from PdtbBridge.h)
 // for the time being. Even the procedure outlined in Q130869 does
 // not seem to work:-(
 #include <initguid.h>
 /*
-DEFINE_GUID(CLSID_CIeDtbBridge,
+DEFINE_GUID(CLSID_CPdtbBridge,
 			0xF326B6FD,0x40F5,0x44D7,0xA8,0x7A,0xE6,0x90,0x50,0x0C,0x27,0xF1);
-DEFINE_GUID(IID_IeDtbBridge,
+DEFINE_GUID(IID_PdtbBridge,
 			0x659B0CA3,0x0746,0x4050,0x85,0x05,0x9C,0x13,0x2A,0x3B,0xBC,0xC5);
 */
 #endif
@@ -351,8 +351,8 @@ LPARAM CAmisHtmlView::OnHighlightUrlTarget(WPARAM wParam, LPARAM lParam)
 		if (amis::dtb::DtbWithHooks::Instance()->isProtected() || 
 			should_load_transformed_dtbook)
 		{
-			// Also, we need to inform the IeDtbPluggableProtocol about
-			// our datasource factory. This is done with the IeDtbBridge
+			// Also, we need to inform the PdtbPluggableProtocol about
+			// our datasource factory. This is done with the PdtbBridge
 			// object, which remembers the factory until disposed of.
 			if (mpLoaderBridge == NULL) 
 			{
@@ -377,7 +377,7 @@ LPARAM CAmisHtmlView::OnHighlightUrlTarget(WPARAM wParam, LPARAM lParam)
 			}
 			
 			// Prepend amisie: to the URL. This will change the protocol,
-			// and the IeDtbPlugin PluggableProtocol COM object has registered
+			// and the PdtbPlugin PluggableProtocol COM object has registered
 			// that protocol. It will then be used to get the data, and it will
 			// do the right thing wrt. decoding.
 			if (newurl.substr(0, 7) != "amisie:")

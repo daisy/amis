@@ -71,6 +71,10 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 #include "util/CmdLine.h"
 
+#ifdef WITH_PROTECTED_BOOK_SUPPORT
+#include "AmisPdtbExtras.h"
+#endif
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
