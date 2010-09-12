@@ -69,7 +69,9 @@ CString AmisFileDialog::getFileOpenFilter()
 	filter += _T("ncc.html; ncc.htm; *.opf");
 	filter += _T(")|");
 	filter += _T("ncc.html; ncc.htm; *.opf");
+#ifdef WITH_PROTECTED_BOOK_SUPPORT
 	filter += _T("|DAISY Pdtb Keys (*.uak)|*.uak");
+#endif
 	filter += _T("||");
 
 	return filter;

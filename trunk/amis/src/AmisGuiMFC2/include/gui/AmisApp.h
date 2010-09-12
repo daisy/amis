@@ -42,7 +42,6 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "gui/self-voicing/AudioSequencePlayer.h"
 #include "gui/self-voicing/datamodel/AccessibleUIDataReader.h"
 
-#define WITH_DAISY_PDTB
 #define AMIS_MAX_ANYTHING					49
 #define AMIS_MAX_RECENT_BOOKS				5
 

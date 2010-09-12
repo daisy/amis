@@ -26,8 +26,6 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "HtmlDoc.h"
 #include "ambulant/gui/dx/html_bridge.h"
 
-//#define this to load html manually (duh!) for protected books
-#undef HTML_LOAD_MANUALLY
 // #define this to load html through the AmbulantPdtbIE plugin for protected books
 #define HTML_LOAD_AMBULANT_PDTB
 
@@ -95,14 +93,7 @@ public:
                   DWORD dwPostDataLen = 0);
 	LPARAM OnHighlightUrlTarget(WPARAM wParam, LPARAM lParam);
 	void smilPlayerDeleted();
-#ifdef HTML_LOAD_MANUALLY
-	LPARAM OnNavigateString(WPARAM wParam, LPARAM lParam);
-	bool DoNavigateString(LPCSTR document);
-	bool PrepareNavigateString(LPCSTR url);
-private:
-	CString mNavStringUrl;
-#endif
-IPdtbBridge *mpLoaderBridge;
+	IPdtbBridge *mpLoaderBridge;
 
 //Add the following functions. This action prevents the leak because the
 //CHtmlView versions of LoadFromResource() call CHtmlView::Navigate().

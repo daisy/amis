@@ -57,7 +57,7 @@ using namespace amis::gui;
 static char THIS_FILE[] = __FILE__;
 #endif
 
-#ifdef HTML_LOAD_AMBULANT_PDTB
+#ifdef WITH_PROTECTED_BOOK_SUPPORT
 // XXXJack
 // Grmpf: GUIDs don't get defined. Copied here (from PdtbBridge.h)
 // for the time being. Even the procedure outlined in Q130869 does
@@ -77,9 +77,6 @@ IMPLEMENT_DYNCREATE(CAmisHtmlView, CHtmlView)
 
 BEGIN_MESSAGE_MAP(CAmisHtmlView, CHtmlView)
 	ON_WM_CREATE()
-#ifdef HTML_LOAD_MANUALLY
-	ON_MESSAGE(WM_MY_NAVIGATESTRING, OnNavigateString)
-#endif
 	ON_MESSAGE(WM_MY_HIGHLIGHTURITARGET, OnHighlightUrlTarget)
 	ON_COMMAND(ID_EDIT_COPY, OnEditCopy)
 	ON_WM_SIZE()
@@ -99,14 +96,12 @@ CAmisHtmlView::CAmisHtmlView(const RECT& rect, CWnd* parent)
 
 CAmisHtmlView::~CAmisHtmlView()
 {
-#ifdef HTML_LOAD_AMBULANT_PDTB
 #ifdef WITH_PROTECTED_BOOK_SUPPORT
 	if (mpLoaderBridge) 
 	{
 		mpLoaderBridge->Release();
 		mpLoaderBridge = NULL;
 	}
-#endif
 #endif
 }
 
@@ -330,7 +325,6 @@ LPARAM CAmisHtmlView::OnHighlightUrlTarget(WPARAM wParam, LPARAM lParam)
 	{
 		//the catch here: if you build AMIS without protected book support, you don't get
 		//nice-looking transformed dtbook
-#ifdef HTML_LOAD_AMBULANT_PDTB
 #ifdef WITH_PROTECTED_BOOK_SUPPORT
 		amis::UrlList* text_urls = amis::dtb::DtbWithHooks::Instance()->getFileSet()->getTextFiles();
 		string url_no_target = amis::util::FilePathTools::clearTarget(*url);
@@ -392,7 +386,6 @@ LPARAM CAmisHtmlView::OnHighlightUrlTarget(WPARAM wParam, LPARAM lParam)
 			}
 		}
 #endif
-#endif
 	}
 	TextRenderBrain::Instance()->gotoUriTarget(newurl);
 	delete url;
@@ -403,7 +396,6 @@ LPARAM CAmisHtmlView::OnHighlightUrlTarget(WPARAM wParam, LPARAM lParam)
 void
 CAmisHtmlView::smilPlayerDeleted()
 {
-#ifdef HTML_LOAD_AMBULANT_PDTB
 #ifdef WITH_PROTECTED_BOOK_SUPPORT
 	if (mpLoaderBridge) 
 	{
@@ -411,128 +403,10 @@ CAmisHtmlView::smilPlayerDeleted()
 		mpLoaderBridge = NULL;
 	}
 #endif
-#endif
 	//this->Navigate2(_T("about:blank"));
 	if (theApp.isBookOpen() == false) TextRenderBrain::Instance()->gotoUriTarget("about:blank");
 }
 
-#ifdef HTML_LOAD_MANUALLY
-
-LPARAM CAmisHtmlView::OnNavigateString(WPARAM wParam, LPARAM lParam)
-{
-	assert(wParam == 0);
-	LPCSTR document = (LPCSTR)lParam;
-	DoNavigateString(document);
-	free((void*)document);
-	return 0;
-}
-
-bool
-CAmisHtmlView::PrepareNavigateString(LPCSTR url)
-{
-	// If we are already displaying this document return false.
-	CString urlstr(url);
-	if (mNavStringUrl.Compare(urlstr) == 0) return false;
-
-	// First we need to get a pointer to the DOM
-	IDispatch *pDisp = GetHtmlDocument();
-	if (pDisp == NULL) return false;
-	IHTMLDocument2 *pDoc;
-	HRESULT res;
-	res = pDisp->QueryInterface(IID_IHTMLDocument2, (void**)&pDoc);
-	if (!SUCCEEDED(res)) 
-	{
-		// XXXJack leaks?
-		return false;
-	}
-	mNavStringUrl = urlstr;
-	return true;
-}
-
-bool
-CAmisHtmlView::DoNavigateString(LPCSTR document)
-{
-	// First we need to get a pointer to the DOM
-	IDispatch *pDisp = GetHtmlDocument();
-	if (pDisp == NULL) return false;
-	IHTMLDocument2 *pDoc;
-	HRESULT res;
-	res = pDisp->QueryInterface(IID_IHTMLDocument2, (void**)&pDoc);
-	if (!SUCCEEDED(res)) 
-	{
-		// XXXJack leaks?
-		return false;
-	}
-
-	// Set the href
-	CComBSTR bUrl(mNavStringUrl);
-	CComBSTR bUrl2("");
-	IHTMLLocation *pLocation;
-	res = pDoc->get_location(&pLocation);
-	if (!SUCCEEDED(res)) return false;
-	res = pLocation->get_href(&bUrl2);
-	if (!SUCCEEDED(res)) return false;
-
-	// Now we open the document for writing, passing in the URL
-	CComVariant dummy;
-	res = pDoc->open((BSTR)"", dummy, dummy, dummy, NULL);
-	if (!SUCCEEDED(res)) 
-	{
-		// XXXJack leaks
-		return false;
-	}
-	res = pLocation->get_href(&bUrl2);
-	if (!SUCCEEDED(res)) return false;
-	
-	// Now store the HTML data in some funky data structure
-	size_t doclen = strlen(document);
-	CComBSTR bData(doclen, document);
-	CComVariant *vData = new CComVariant(bData);
-
-	SAFEARRAYBOUND bounds = {1, 0};
-	SAFEARRAY *pDataArray = SafeArrayCreate(VT_VARIANT, 1, &bounds);
-	if (!pDataArray) 
-	{
-		// XXXJack leaks
-		return false;
-	}
-
-	VARIANT *vDataArrayAccess;
-	res = SafeArrayAccessData(pDataArray, (void**)&vDataArrayAccess);
-	if (!SUCCEEDED(res)) 
-	{
-		// XXXJack leaks
-		return false;
-	}
-	vDataArrayAccess[0] = *vData;
-	SafeArrayUnaccessData(pDataArray);
-
-	// And finally push the data into the DOM and render it
-	res = pDoc->write(pDataArray);
-	if (!SUCCEEDED(res)) 
-	{
-		// XXXJack leaks
-		return false;
-	}
-	res = pDoc->close();
-	if (!SUCCEEDED(res)) 
-	{
-		// XXXJack leaks
-		return false;
-	}
-	SafeArrayDestroy(pDataArray);
-	// XXXJack leaks
-//	res = pLocation->put_href(bUrl);
-//	if (!SUCCEEDED(res)) {
-//		return false;
-//	}
-	res = pLocation->get_href(&bUrl2);
-	if (!SUCCEEDED(res)) {
-		return false;
-	}
-	return true;
-}
-#endif
 
 HRESULT CAmisHtmlView::OnFilterDataObject(LPDATAOBJECT pDataObject, LPDATAOBJECT* ppDataObject)
 {
@@ -800,44 +674,6 @@ html_browser_imp::~html_browser_imp()
 void html_browser_imp::goto_url(std::string urlstr, ambulant::net::datasource_factory *df) 
 {
 	USES_CONVERSION;
-#ifdef HTML_LOAD_MANUALLY
-	// First get the URL for the document (strip the fragment id)
-	ambulant::net::url url = ambulant::net::url::from_url(urlstr);
-	std::string docurl = url.get_document().get_url();
-	LPCSTR lpUrl = docurl.c_str(); // XXX Correct, or do we need to do t2a stuff?
-	
-	// Now check whether we've already loaded this document. If we have not
-	// loaded it yet PrepareNavigateString will also remember the URL for
-	if (MainWndParts::Instance()->mpHtmlView->PrepareNavigateString(lpUrl)) 
-	{
-		// We haven't got this document yet. Load it, and send the data to the widget.
-		char *data = NULL;
-		size_t datasize = 0;
-		if (!ambulant::net::read_data_from_url(url, df, &data, &datasize)) 
-		{
-			MainWndParts::Instance()->mpHtmlView->PrepareNavigateString("about:blank");
-			return;
-		}
-		// XXXJack: Hack to insert base tag, so relative url's will work
-		std::string datastr(data, datasize);
-		int titlepos = datastr.find("<title>");
-		if (titlepos == std::string::npos)
-			titlepos = datastr.find("<TITLE>");
-		if (titlepos != std::string::npos) 
-		{
-			std::string basetag = "<base href=\"";
-			basetag += docurl;
-			basetag += "\">";
-			datastr.insert(titlepos, basetag);
-			free((void*)data);
-			data = (char *)malloc(datastr.size()+1);
-			assert(data);
-			strcpy(data, datastr.c_str());
-		}
-		MainWndParts::Instance()->mpHtmlView->PostMessage(WM_MY_NAVIGATESTRING, 0, (LPARAM)data);
-		// Fall through so we also do the highlighting thing.
-	}
-#endif // HTML_LOAD_MANUALLY
 	
 	std::string *strcopy = new std::string(urlstr);
 	MainWndParts::Instance()->mpHtmlView->PostMessage(WM_MY_HIGHLIGHTURITARGET, 0, (LPARAM)strcopy);

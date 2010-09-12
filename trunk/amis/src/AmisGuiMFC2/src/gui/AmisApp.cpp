@@ -33,7 +33,9 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "io/BookmarksFileIO.h"
 #include "util/SearchForFilesMFC.h"
 #include "util/Log.h"
-#include "pdtb.h"
+#ifdef WITH_PROTECTED_BOOK_SUPPORT
+	#include "AmisPdtbExtras.h"
+#endif
 #include "dtb/nav/NavModel.h"
 #include "DtbWithHooks.h"
 
@@ -349,9 +351,11 @@ BOOL CAmisApp::InitInstance()
 	pFrame->ShowWindow(SW_SHOWMAXIMIZED);
 	pFrame->UpdateWindow();
 
+#ifdef WITH_PROTECTED_BOOK_SUPPORT
 	//load user keys into the ambulant plugin engine
 	addUserKeysToAmbulantPluginEngine();
-	
+#endif
+
 	if (Preferences::Instance()->getStartInBasicView() == true)
 		MainWndParts::Instance()->basicView();
 
@@ -668,8 +672,11 @@ bool CAmisApp::openBook(const ambulant::net::url* filename, bool saveInHistory)
 	}
 
 	mbOverrideReopen = false;
-	//set the callback function to handle book key registration
-	amis::dtb::DtbWithHooks::Instance()->setCallbackForPreprocessingBookKey(registerBookKeyFile);
+
+#ifdef WITH_PROTECTED_BOOK_SUPPORT
+		//set the callback function to handle book key registration
+		amis::dtb::DtbWithHooks::Instance()->setCallbackForPreprocessingBookKey(registerBookKeyFile);
+#endif
 
 	if (!filename->is_empty_path()) 
 	{
@@ -810,6 +817,7 @@ void CAmisApp::OnFileOpen()
 		return;
 	}
 
+#ifdef WITH_PROTECTED_BOOK_SUPPORT
 	//the user is able to open UAK files through AMIS
 	if (isUserKeyFile(filename))
 	{
@@ -820,6 +828,11 @@ void CAmisApp::OnFileOpen()
 		ambulant::net::url book_path = ambulant::net::url::from_filename(filename);
 		openBook(&book_path);
 	}
+#else
+	ambulant::net::url book_path = ambulant::net::url::from_filename(filename);
+	openBook(&book_path);
+#endif
+
 }
 
 void CAmisApp::OnNavPrevPhrase()
