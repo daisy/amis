@@ -98,6 +98,8 @@ Section "MainSection" SEC01
     LogEx::Write "Files in $TEST"
     ExecDos::exec 'cmd /C dir "$TEST" /b/s/l/a' "" "output.log"
     LogEx::AddFile "   >" "output.log"
+
+	DeleteRegKey HKCU "Software\Amis\AMIS\UAKs"
     
     
 End:

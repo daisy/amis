@@ -9,4 +9,4 @@ ECHO Using directory %DESTINATION% (NOT your development directory)
 copy "%DESTINATION%settings\amisHistory.xml.default" "%DESTINATION%settings\amisHistory.xml" /y
 copy "%DESTINATION%settings\amisPrefs.xml.default' "%DESTINATION%settings\amisPrefs.xml" /y
 del  "%DESTINATION%settings\bmk\*.bmk" 
-
+del  "%DESTINATION%settings\bmk\*.idx"

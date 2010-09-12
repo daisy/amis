@@ -2,8 +2,8 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="8.00"
-	Name="PdtbIePlugin"
-	ProjectGUID="{1403026A-E522-44D2-85F3-B146AC4D88C1}"
+	Name="IeDtbPlugin"
+	ProjectGUID="{6217A316-F7E8-4EDA-831E-A3C7217FA0A9}"
 	RootNamespace="PdtbIePlugin"
 	Keyword="AtlProj"
 	>

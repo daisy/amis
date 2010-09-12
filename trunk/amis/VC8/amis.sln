@@ -1,35 +1,26 @@
 Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pdtbplugin", "..\..\..\..\ambulant-private\pdtbplugin\pdtbplugin.vcproj", "{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}"
-	ProjectSection(ProjectDependencies) = postProject
-		{DBD4EFC0-7551-4FBA-AF5A-BFBFDA7D6785} = {DBD4EFC0-7551-4FBA-AF5A-BFBFDA7D6785}
-	EndProjectSection
-	ProjectSection(WebsiteProperties) = preProject
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.Debug = "False"
-	EndProjectSection
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AmisCore", "..\src\AmisCore\AmisCore.vcproj", "{E0F81CE5-9C15-4E36-BC71-42BE1C0F2406}"
-	ProjectSection(ProjectDependencies) = postProject
-		{DBD4EFC0-7551-4FBA-AF5A-BFBFDA7D6785} = {DBD4EFC0-7551-4FBA-AF5A-BFBFDA7D6785}
-	EndProjectSection
 	ProjectSection(WebsiteProperties) = preProject
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{DBD4EFC0-7551-4FBA-AF5A-BFBFDA7D6785} = {DBD4EFC0-7551-4FBA-AF5A-BFBFDA7D6785}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AmisGuiMFC2", "..\src\AmisGuiMFC2\AmisGuiMFC2.vcproj", "{A7A37247-BAAC-4376-8354-96A8C09F926A}"
-	ProjectSection(ProjectDependencies) = postProject
-		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840} = {D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}
-		{1403026A-E522-44D2-85F3-B146AC4D88C1} = {1403026A-E522-44D2-85F3-B146AC4D88C1}
-		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A} = {EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}
-		{92F93B73-6D27-47ED-89F3-B82590338216} = {92F93B73-6D27-47ED-89F3-B82590338216}
-		{E0F81CE5-9C15-4E36-BC71-42BE1C0F2406} = {E0F81CE5-9C15-4E36-BC71-42BE1C0F2406}
-		{DBD4EFC0-7551-4FBA-AF5A-BFBFDA7D6785} = {DBD4EFC0-7551-4FBA-AF5A-BFBFDA7D6785}
-	EndProjectSection
 	ProjectSection(WebsiteProperties) = preProject
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{C216680B-E128-4B33-9F71-28231A9B0589} = {C216680B-E128-4B33-9F71-28231A9B0589}
+		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840} = {D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}
+		{DBD4EFC0-7551-4FBA-AF5A-BFBFDA7D6785} = {DBD4EFC0-7551-4FBA-AF5A-BFBFDA7D6785}
+		{E0F81CE5-9C15-4E36-BC71-42BE1C0F2406} = {E0F81CE5-9C15-4E36-BC71-42BE1C0F2406}
+		{92F93B73-6D27-47ED-89F3-B82590338216} = {92F93B73-6D27-47ED-89F3-B82590338216}
+		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A} = {EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AmisLangpack", "..\src\DefaultLangpack\AmisLangpack\AmisLangpack.vcproj", "{92F93B73-6D27-47ED-89F3-B82590338216}"
@@ -45,18 +36,30 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libambulant_win32", "..\..\
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "plugin_ffmpeg", "..\..\..\..\ambulant\projects\vc8-smil3\plugin_ffmpeg.vcproj", "{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
 	ProjectSection(ProjectDependencies) = postProject
 		{DBD4EFC0-7551-4FBA-AF5A-BFBFDA7D6785} = {DBD4EFC0-7551-4FBA-AF5A-BFBFDA7D6785}
 	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IeDtbPlugin", "..\src\IeDtbPlugin\IeDtbPlugin.vcproj", "{6217A316-F7E8-4EDA-831E-A3C7217FA0A9}"
 	ProjectSection(WebsiteProperties) = preProject
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.Debug = "False"
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PdtbIePlugin", "..\src\PdtbIePlugin\PdtbIePlugin.vcproj", "{1403026A-E522-44D2-85F3-B146AC4D88C1}"
-	ProjectSection(ProjectDependencies) = postProject
-		{DBD4EFC0-7551-4FBA-AF5A-BFBFDA7D6785} = {DBD4EFC0-7551-4FBA-AF5A-BFBFDA7D6785}
-		{E0F81CE5-9C15-4E36-BC71-42BE1C0F2406} = {E0F81CE5-9C15-4E36-BC71-42BE1C0F2406}
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AmisPdtbExtras", "..\src\AmisPdtbExtras\AmisPdtbExtras.vcproj", "{C216680B-E128-4B33-9F71-28231A9B0589}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pdtbplugin", "..\..\..\..\ambulant-private\pdtbplugin\pdtbplugin.vcproj", "{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
 	EndProjectSection
 EndProject
 Global
@@ -71,21 +74,6 @@ Global
 		ReleaseShlib|Win32 = ReleaseShlib|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.Debug|Win32.ActiveCfg = Debug|Win32
-		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.DebugNoXerces|Win32.ActiveCfg = Debug|Win32
-		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.DebugNoXerces|Win32.Build.0 = Debug|Win32
-		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.DebugNoXercesNoHtml|Win32.ActiveCfg = Debug|Win32
-		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.DebugNoXercesNoHtml|Win32.Build.0 = Debug|Win32
-		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.DebugShlib|Win32.ActiveCfg = Debug|Win32
-		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.DebugShlib|Win32.Build.0 = Debug|Win32
-		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.Release|Win32.ActiveCfg = Release|Win32
-		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.Release|Win32.Build.0 = Release|Win32
-		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.ReleaseNoXerces|Win32.ActiveCfg = Release|Win32
-		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.ReleaseNoXerces|Win32.Build.0 = Release|Win32
-		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.ReleaseNoXercesNoHtml|Win32.ActiveCfg = Release|Win32
-		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.ReleaseNoXercesNoHtml|Win32.Build.0 = Release|Win32
-		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.ReleaseShlib|Win32.ActiveCfg = Release|Win32
-		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.ReleaseShlib|Win32.Build.0 = Release|Win32
 		{E0F81CE5-9C15-4E36-BC71-42BE1C0F2406}.Debug|Win32.ActiveCfg = Debug|Win32
 		{E0F81CE5-9C15-4E36-BC71-42BE1C0F2406}.Debug|Win32.Build.0 = Debug|Win32
 		{E0F81CE5-9C15-4E36-BC71-42BE1C0F2406}.DebugNoXerces|Win32.ActiveCfg = Debug|Win32
@@ -165,22 +153,54 @@ Global
 		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}.ReleaseNoXercesNoHtml|Win32.Build.0 = Release|Win32
 		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}.ReleaseShlib|Win32.ActiveCfg = Release|Win32
 		{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}.ReleaseShlib|Win32.Build.0 = Release|Win32
-		{1403026A-E522-44D2-85F3-B146AC4D88C1}.Debug|Win32.ActiveCfg = Debug|Win32
-		{1403026A-E522-44D2-85F3-B146AC4D88C1}.Debug|Win32.Build.0 = Debug|Win32
-		{1403026A-E522-44D2-85F3-B146AC4D88C1}.DebugNoXerces|Win32.ActiveCfg = Debug|Win32
-		{1403026A-E522-44D2-85F3-B146AC4D88C1}.DebugNoXerces|Win32.Build.0 = Debug|Win32
-		{1403026A-E522-44D2-85F3-B146AC4D88C1}.DebugNoXercesNoHtml|Win32.ActiveCfg = Debug|Win32
-		{1403026A-E522-44D2-85F3-B146AC4D88C1}.DebugNoXercesNoHtml|Win32.Build.0 = Debug|Win32
-		{1403026A-E522-44D2-85F3-B146AC4D88C1}.DebugShlib|Win32.ActiveCfg = Debug|Win32
-		{1403026A-E522-44D2-85F3-B146AC4D88C1}.DebugShlib|Win32.Build.0 = Debug|Win32
-		{1403026A-E522-44D2-85F3-B146AC4D88C1}.Release|Win32.ActiveCfg = Release|Win32
-		{1403026A-E522-44D2-85F3-B146AC4D88C1}.Release|Win32.Build.0 = Release|Win32
-		{1403026A-E522-44D2-85F3-B146AC4D88C1}.ReleaseNoXerces|Win32.ActiveCfg = Release|Win32
-		{1403026A-E522-44D2-85F3-B146AC4D88C1}.ReleaseNoXerces|Win32.Build.0 = Release|Win32
-		{1403026A-E522-44D2-85F3-B146AC4D88C1}.ReleaseNoXercesNoHtml|Win32.ActiveCfg = Release|Win32
-		{1403026A-E522-44D2-85F3-B146AC4D88C1}.ReleaseNoXercesNoHtml|Win32.Build.0 = Release|Win32
-		{1403026A-E522-44D2-85F3-B146AC4D88C1}.ReleaseShlib|Win32.ActiveCfg = Release|Win32
-		{1403026A-E522-44D2-85F3-B146AC4D88C1}.ReleaseShlib|Win32.Build.0 = Release|Win32
+		{6217A316-F7E8-4EDA-831E-A3C7217FA0A9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6217A316-F7E8-4EDA-831E-A3C7217FA0A9}.Debug|Win32.Build.0 = Debug|Win32
+		{6217A316-F7E8-4EDA-831E-A3C7217FA0A9}.DebugNoXerces|Win32.ActiveCfg = Debug|Win32
+		{6217A316-F7E8-4EDA-831E-A3C7217FA0A9}.DebugNoXerces|Win32.Build.0 = Debug|Win32
+		{6217A316-F7E8-4EDA-831E-A3C7217FA0A9}.DebugNoXercesNoHtml|Win32.ActiveCfg = Debug|Win32
+		{6217A316-F7E8-4EDA-831E-A3C7217FA0A9}.DebugNoXercesNoHtml|Win32.Build.0 = Debug|Win32
+		{6217A316-F7E8-4EDA-831E-A3C7217FA0A9}.DebugShlib|Win32.ActiveCfg = Debug|Win32
+		{6217A316-F7E8-4EDA-831E-A3C7217FA0A9}.DebugShlib|Win32.Build.0 = Debug|Win32
+		{6217A316-F7E8-4EDA-831E-A3C7217FA0A9}.Release|Win32.ActiveCfg = Release|Win32
+		{6217A316-F7E8-4EDA-831E-A3C7217FA0A9}.Release|Win32.Build.0 = Release|Win32
+		{6217A316-F7E8-4EDA-831E-A3C7217FA0A9}.ReleaseNoXerces|Win32.ActiveCfg = Release|Win32
+		{6217A316-F7E8-4EDA-831E-A3C7217FA0A9}.ReleaseNoXerces|Win32.Build.0 = Release|Win32
+		{6217A316-F7E8-4EDA-831E-A3C7217FA0A9}.ReleaseNoXercesNoHtml|Win32.ActiveCfg = Release|Win32
+		{6217A316-F7E8-4EDA-831E-A3C7217FA0A9}.ReleaseNoXercesNoHtml|Win32.Build.0 = Release|Win32
+		{6217A316-F7E8-4EDA-831E-A3C7217FA0A9}.ReleaseShlib|Win32.ActiveCfg = Release|Win32
+		{6217A316-F7E8-4EDA-831E-A3C7217FA0A9}.ReleaseShlib|Win32.Build.0 = Release|Win32
+		{C216680B-E128-4B33-9F71-28231A9B0589}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C216680B-E128-4B33-9F71-28231A9B0589}.Debug|Win32.Build.0 = Debug|Win32
+		{C216680B-E128-4B33-9F71-28231A9B0589}.DebugNoXerces|Win32.ActiveCfg = Debug|Win32
+		{C216680B-E128-4B33-9F71-28231A9B0589}.DebugNoXerces|Win32.Build.0 = Debug|Win32
+		{C216680B-E128-4B33-9F71-28231A9B0589}.DebugNoXercesNoHtml|Win32.ActiveCfg = Debug|Win32
+		{C216680B-E128-4B33-9F71-28231A9B0589}.DebugNoXercesNoHtml|Win32.Build.0 = Debug|Win32
+		{C216680B-E128-4B33-9F71-28231A9B0589}.DebugShlib|Win32.ActiveCfg = Debug|Win32
+		{C216680B-E128-4B33-9F71-28231A9B0589}.DebugShlib|Win32.Build.0 = Debug|Win32
+		{C216680B-E128-4B33-9F71-28231A9B0589}.Release|Win32.ActiveCfg = Release|Win32
+		{C216680B-E128-4B33-9F71-28231A9B0589}.Release|Win32.Build.0 = Release|Win32
+		{C216680B-E128-4B33-9F71-28231A9B0589}.ReleaseNoXerces|Win32.ActiveCfg = Release|Win32
+		{C216680B-E128-4B33-9F71-28231A9B0589}.ReleaseNoXerces|Win32.Build.0 = Release|Win32
+		{C216680B-E128-4B33-9F71-28231A9B0589}.ReleaseNoXercesNoHtml|Win32.ActiveCfg = Release|Win32
+		{C216680B-E128-4B33-9F71-28231A9B0589}.ReleaseNoXercesNoHtml|Win32.Build.0 = Release|Win32
+		{C216680B-E128-4B33-9F71-28231A9B0589}.ReleaseShlib|Win32.ActiveCfg = Release|Win32
+		{C216680B-E128-4B33-9F71-28231A9B0589}.ReleaseShlib|Win32.Build.0 = Release|Win32
+		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.Debug|Win32.Build.0 = Debug|Win32
+		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.DebugNoXerces|Win32.ActiveCfg = Debug|Win32
+		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.DebugNoXerces|Win32.Build.0 = Debug|Win32
+		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.DebugNoXercesNoHtml|Win32.ActiveCfg = Debug|Win32
+		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.DebugNoXercesNoHtml|Win32.Build.0 = Debug|Win32
+		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.DebugShlib|Win32.ActiveCfg = Debug|Win32
+		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.DebugShlib|Win32.Build.0 = Debug|Win32
+		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.Release|Win32.ActiveCfg = Release|Win32
+		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.Release|Win32.Build.0 = Release|Win32
+		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.ReleaseNoXerces|Win32.ActiveCfg = Release|Win32
+		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.ReleaseNoXerces|Win32.Build.0 = Release|Win32
+		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.ReleaseNoXercesNoHtml|Win32.ActiveCfg = Release|Win32
+		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.ReleaseNoXercesNoHtml|Win32.Build.0 = Release|Win32
+		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.ReleaseShlib|Win32.ActiveCfg = Release|Win32
+		{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}.ReleaseShlib|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

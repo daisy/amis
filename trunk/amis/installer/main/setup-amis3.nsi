@@ -299,6 +299,9 @@ Section "MainSection" SEC01
     WriteRegStr HKLM "Software\Classes\MIME\Database\Charset\TIS-620" "AliasForCharset" "Windows-874"
     LogEx::Write "Registered charset alias Windows-874 for TIS-620"
     
+	;remove keys - the formatting has changed between this version and the last one
+	DeleteRegKey HKCU "Software\Amis\AMIS\UAKs"
+	
 SectionEnd
 
 ;******
