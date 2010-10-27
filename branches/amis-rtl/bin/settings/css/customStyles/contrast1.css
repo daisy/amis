@@ -1,0 +1,4 @@
+/*contrast CSS sheet*/
+body{ background-color: silver !important; color: black !important;}
+a {color: black !important;}
+a:hover {color: black !important; background-color: lightyellow;}

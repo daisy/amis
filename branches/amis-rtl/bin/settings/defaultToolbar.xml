@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!--
+the id's "play" and "pause" are keywords to identify which image is the play button and which is the pause button
+
+button attributes:
+
+src = icon image
+mfcid = command 
+tooltipid = string resource to use as the tooltip.
+tooltip = text to use as the tooltip
+
+tooltips are evaluated in the following order:
+1. use tooltip attribute
+2. use tooltipid attribute
+3. use default tooltip for the command (it will have one if it is a command from the menu)
+-->
+<toolbar xmlns="http://amisproject.org" view="default" placement="top" buttonHeight="32" buttonWidth="32">
+	<button src="./img/defaultToolbar/document_open.ico" mfcid="ID_AMIS_OPEN_FILE"/>
+	<button src="./img/defaultToolbar/media_optical.ico" mfcid="ID_AMIS_LOAD_CD"/>
+	<separator/>
+	<button src="./img/defaultToolbar/media_seek_backward.ico" mfcid="ID_AMIS_PREVIOUS_PHRASE"/>
+	<toggle>
+		<button src="./img/defaultToolbar/media_playback_start.ico" mfcid="ID_AMIS_PLAYPAUSE" id="play"/>
+		<button src="./img/defaultToolbar/media_playback_pause.ico" mfcid="ID_AMIS_PLAYPAUSE" id="pause"/>
+	</toggle>
+	<button src="./img/defaultToolbar/media_seek_forward.ico" mfcid="ID_AMIS_NEXT_PHRASE"/>
+	<separator/>
+	<button src="./img/defaultToolbar/slower.ico" mfcid="ID_AMIS_SLOWER"/>
+	<button src="./img/defaultToolbar/faster.ico" mfcid="ID_AMIS_FASTER"/>
+	<button src="./img/defaultToolbar/smaller_font.ico" mfcid="ID_AMIS_SMALLER_FONT"/>
+	<button src="./img/defaultToolbar/bigger_font.ico" mfcid="ID_AMIS_BIGGER_FONT"/>
+	<button src="./img/defaultToolbar/style.ico" mfcid="ID_AMIS_NEXT_PAGE_STYLE" tooltipid="IDS_APPLY_NEXT_PAGE_STYLE"/>
+	<separator/>
+	<button src="./img/defaultToolbar/bookmark_new.ico" mfcid="ID_AMIS_ADD_BOOKMARK"/>
+</toolbar>

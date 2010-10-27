@@ -1,0 +1,11 @@
+﻿/*font size CSS sheet*/
+/*one level increase in fontsize and line spacing*/
+/*AMIS will pick up the font-size value for the body element and use it in the sidebar.*/
+body { 
+	font-size: 120% !important;
+	line-spacing: 100% !important;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-size: 120% !important;
+}

@@ -1,0 +1,36 @@
+HKCR
+{
+	PdtbProtocol.PluggableProtocol.1 = s 'Pdtb Pluggable Protocol'
+	{
+		CLSID = s '{183A003A-3D01-4E94-A2C5-AD0108C68370}'
+	}
+	PdtbProtocol.PluggableProtocol = s 'Pdtb Pluggable Protocol'
+	{
+		CLSID = s '{183A003A-3D01-4E94-A2C5-AD0108C68370}'
+		CurVer = s 'PdtbProtocol.PluggableProtocol.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {183A003A-3D01-4E94-A2C5-AD0108C68370} = s 'Pdtb Pluggable Protocol'
+		{
+			ProgID = s 'PdtbProtocol.PluggableProtocol.1'
+			VersionIndependentProgID = s 'PdtbProtocol.PluggableProtocol'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{929C9C6A-5978-4CEB-B13F-A2852D54DEAC}'
+		}
+	}
+	NoRemove PROTOCOLS
+	{
+		NoRemove Handler
+		{
+			ForceRemove amisie = s 'amisie: pluggable protocol'
+			{
+				val CLSID = s '{183A003A-3D01-4E94-A2C5-AD0108C68370}'
+			}
+		}
+	}
+}

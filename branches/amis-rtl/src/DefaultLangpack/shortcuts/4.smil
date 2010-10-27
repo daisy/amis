@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-smil/SMIL10.dtd">
+<smil>
+	<head>
+		<meta name="dc:format" content="Daisy 2.02"/>
+		<meta name="title" content="Keyboard shortcuts"/>
+		<meta name="dc:title" content="Keyboard shortcuts"/>
+		<layout>
+			<region id="txtView"/>
+		</layout>
+		<meta name="dc:identifier" content="amis-keyboard-shortcuts-eng-US"/>
+	</head>
+	<body>
+		<seq>
+				<par endsync="last" id="t26">
+					<text src="amiskeys.html#t26"/>
+					<audio src="eng-US_t26.mp3"/>
+				</par>
+					<par endsync="last" id="t44">
+						<text src="amiskeys.html#t44"/>
+						<audio src="eng-US_t44.mp3"/>
+					</par>
+				<par endsync="last" id="t27">
+					<text src="amiskeys.html#t27"/>
+					<audio src="eng-US_t27.mp3"/>
+				</par>
+					<par endsync="last" id="t29">
+						<text src="amiskeys.html#t29"/>
+						<audio src="eng-US_t29.mp3"/>
+					</par>
+				<par endsync="last" id="t30">
+					<text src="amiskeys.html#t30"/>
+					<audio src="eng-US_t30.mp3"/>
+				</par>
+					<par endsync="last" id="t32">
+						<text src="amiskeys.html#t32"/>
+						<audio src="eng-US_t32.mp3"/>
+					</par>
+				<par endsync="last" id="t334">
+					<text src="amiskeys.html#t334"/>
+					<audio src="eng-US_t334.mp3"/>
+				</par>
+					<par endsync="last" id="t336">
+						<text src="amiskeys.html#t336"/>
+						<audio src="eng-US_t336.mp3"/>
+					</par>
+				<par endsync="last" id="t38">
+					<text src="amiskeys.html#t38"/>
+					<audio src="eng-US_t38.mp3"/>
+				</par>
+					<par endsync="last" id="t40">
+						<text src="amiskeys.html#t40"/>
+						<audio src="eng-US_t40.mp3"/>
+					</par>
+				<par endsync="last" id="t337">
+					<text src="amiskeys.html#t337"/>
+					<audio src="eng-US_t337.mp3"/>
+				</par>
+					<par endsync="last" id="t339">
+						<text src="amiskeys.html#t339"/>
+						<audio src="eng-US_t339.mp3"/>
+					</par>
+				<par endsync="last" id="t340">
+					<text src="amiskeys.html#t340"/>
+					<audio src="eng-US_t340.mp3"/>
+				</par>
+					<par endsync="last" id="t342">
+						<text src="amiskeys.html#t342"/>
+						<audio src="eng-US_t342.mp3"/>
+					</par>
+		</seq>
+	</body>
+</smil>

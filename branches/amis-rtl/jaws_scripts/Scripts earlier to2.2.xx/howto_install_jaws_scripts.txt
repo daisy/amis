@@ -1,0 +1,6 @@
+Instructions for installing jaws scripts for AMIS
+
+1.For JAWS 6.0 and above:  Copy the related AMIS files to "C:\Documents and settings\User Name\Application Data\Freedom Scientific\JAWS xx\ Settings\enu\" Folder. 
+2.One can reach to above stated folder using the following path also:    Start Menu>Program>JAWS xx>Explore JAWS>Explore My Settings.
+3.For JAWS 5 and earlier copy the scripts directly to the JAWS folder itself.
+4.The scripts are currently made using Jaws 6.0. To use these scripts with any other version of Jaws, launch AMIS and open script manager by pressing INSERT+0. Press CTRL+S to compile the JAWS Scripts.  Close the script manager.
