@@ -188,6 +188,8 @@ BOOL CAmisApp::InitInstance()
 	//this says "use the registry instead of ini files" (for windows-specific app preferences).  we use it for UAKs 
 	SetRegistryKey(_T("Amis"));
 
+	// Here, cannot check PREFERENCES_IS_RTL - access violation
+
 	// InitCommonControls() is required on Windows XP if an application
 	// manifest specifies use of ComCtl32.dll version 6 or later to enable
 	// visual styles.  Otherwise, any window creation will fail.
@@ -199,9 +201,16 @@ BOOL CAmisApp::InitInstance()
 	mbOverrideReopen = false;
 	mMultivolumeNavId = "";
 
+	// Here, cannot check PREFERENCES_IS_RTL - access violation
+
 	//read the preferences from disk
 	initializePathsAndFiles(prefs_file);
-	
+
+	if (PREFERENCES_IS_RTL)
+	{
+		SetProcessDefaultLayout(LAYOUT_RTL);
+	}
+
 	//our initial language preference
 	mLanguagePreference = Preferences::Instance()->getUiLangId();
 
@@ -1982,11 +1991,11 @@ int CAmisApp::getIeVersion()
 }
 std::string CAmisApp::getVersion()
 {
-	return "3.1";
+	return "3.1.0.4";
 }
 std::string CAmisApp::getReleaseDate()
 {
-	return "2009-12-18";
+	return "2010-11-23";
 }
 //when the next volume for this book is loaded, then load this URL
 void CAmisApp::setMultivolumeLoadPoint(std::wstring uid, const ambulant::net::url* url)

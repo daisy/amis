@@ -187,4 +187,14 @@ private:
 };
 }
 
+// Convenience macros.
+// Use them also to make it easier to modify their implementation in the future.
+
+// Is the GUI supposed to be in RTL mode.
+// Usage:
+//   if (PREFERENCES_IS_RTL) {work in RTL mode} else {work in LTR mode}
+//   PREFERENCES_IS_RTL ? (RTL value) : (LTR value)
+#define PREFERENCES_IS_RTL (Preferences::Instance()->getCurrentLanguageData()->getModuleType() == amis::ModuleDescData::LANGPACK_RTL)
+
+
 #endif
