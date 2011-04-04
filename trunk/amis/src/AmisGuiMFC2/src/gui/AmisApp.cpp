@@ -202,6 +202,11 @@ BOOL CAmisApp::InitInstance()
 	//read the preferences from disk
 	initializePathsAndFiles(prefs_file);
 	
+	if (Preferences::Instance()->getCurrentLanguageData()->getModuleType() == amis::ModuleDescData::LANGPACK_RTL) 
+	{ 
+ 		SetProcessDefaultLayout(LAYOUT_RTL); 
+ 	} 
+
 	//our initial language preference
 	mLanguagePreference = Preferences::Instance()->getUiLangId();
 
@@ -392,12 +397,6 @@ BOOL CAmisApp::InitInstance()
 		amis::tts::TTSPlayer::InstanceTwo()->setCallback((sendMessageCallbackFn)amis::dtb::DtbWithHooks::ttsTwoDone);
 
 	amis::gui::CAmisApp::emitMessage("ready");
-//example of how to test for RTL
-/*	if (Preferences::Instance()->getCurrentLanguageData()->getModuleType() == amis::ModuleDescData::LANGPACK_RTL)
-	{
-		AfxMessageBox(_T("RTL"));
-	}
-*/
 	//open a book if we decided to either open the command line parameter or last-read book
 	if (!book_to_open.is_empty_path()) openBook(&book_to_open);
 	
@@ -1982,11 +1981,11 @@ int CAmisApp::getIeVersion()
 }
 std::string CAmisApp::getVersion()
 {
-	return "3.1";
+	return "3.1.1";
 }
 std::string CAmisApp::getReleaseDate()
 {
-	return "2009-12-18";
+	return "2011-04-04";
 }
 //when the next volume for this book is loaded, then load this URL
 void CAmisApp::setMultivolumeLoadPoint(std::wstring uid, const ambulant::net::url* url)
