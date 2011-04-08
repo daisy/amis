@@ -14,7 +14,7 @@
 ; product information
 ;**
 !define PRODUCT_NAME "AMIS"
-!define PRODUCT_VERSION "3.1"
+!define PRODUCT_VERSION "3.1.1"
 !define PRODUCT_PUBLISHER "DAISY Consortium"
 !define PRODUCT_WEB_SITE "http://amisproject.org"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\AMIS.exe"
@@ -98,7 +98,7 @@
 ;**
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION} (${CUSTOM_LANG_NAME})"
 ;this is the name of the installer that gets created.  
-OutFile "Setup-amis31-${CUSTOM_LANG_NAME}.exe"
+OutFile "Setup-amis311-${CUSTOM_LANG_NAME}.exe"
 InstallDir "$PROGRAMFILES\AMIS"
 InstallDirRegKey HKLM "${PRODUCT_DIR_REGKEY}" ""
 ShowInstDetails show

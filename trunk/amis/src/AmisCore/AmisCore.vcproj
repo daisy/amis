@@ -26,6 +26,7 @@
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
+				CommandLine="..\..\bin\AmisCore_prebuild.bat"
 			/>
 			<Tool
 				Name="VCCustomBuildTool"
@@ -95,6 +96,7 @@
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
+				CommandLine="..\..\bin\AmisCore_prebuild.bat"
 			/>
 			<Tool
 				Name="VCCustomBuildTool"
