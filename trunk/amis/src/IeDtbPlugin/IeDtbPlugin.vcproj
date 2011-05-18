@@ -52,7 +52,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="../../../../../ambulant/include/;../AmisCore/include;../../../../../xerces-c-src/src"
+				AdditionalIncludeDirectories="../../../../../../ambulant/include/;../AmisCore/include;../../../../../../xerces-c-src/src"
 				PreprocessorDefinitions="INTERFACES_AND_IMPLEMENTATIONS;WIN32;_WINDOWS;_DEBUG;_USRDLL;_ATL_ATTRIBUTES;WITH_SMIL30"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -81,7 +81,7 @@
 				AdditionalDependencies="comsvcs.lib xerces-c_3D.lib  libambulant_shwin32_D.lib AmisCoreD.lib"
 				OutputFile="$(OutDir)/IeDtbPlugin.dll"
 				LinkIncremental="2"
-				AdditionalLibraryDirectories="../../lib"
+				AdditionalLibraryDirectories="$(SolutionDir)/../lib"
 				MergedIDLBaseFileName="_PdtbIePlugin.idl"
 				GenerateDebugInformation="true"
 				SubSystem="2"
@@ -151,7 +151,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../../../../ambulant/include/;../AmisCore/include;../../../../../xerces-c-src/src"
+				AdditionalIncludeDirectories="../../../../../../ambulant/include/;../AmisCore/include;../../../../../../xerces-c-src/src"
 				PreprocessorDefinitions="INTERFACES_AND_IMPLEMENTATIONS;WIN32;_WINDOWS;NDEBUG;_USRDLL;_ATL_ATTRIBUTES;WITH_SMIL30"
 				RuntimeLibrary="2"
 				TreatWChar_tAsBuiltInType="false"
@@ -178,7 +178,7 @@
 				AdditionalDependencies="comsvcs.lib xerces-c_3.lib  libambulant_shwin32.lib AmisCore.lib"
 				OutputFile="$(OutDir)/IeDtbPlugin.dll"
 				LinkIncremental="1"
-				AdditionalLibraryDirectories="../../lib"
+				AdditionalLibraryDirectories="$(SolutionDir)/../lib"
 				MergedIDLBaseFileName="_PdtbIePlugin.idl"
 				GenerateDebugInformation="true"
 				SubSystem="2"

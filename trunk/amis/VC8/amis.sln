@@ -29,13 +29,13 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AmisLangpack", "..\src\Defa
 		Release.AspNetCompiler.Debug = "False"
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libambulant_win32", "..\..\..\..\ambulant\projects\vc8-smil3\libambulant_win32.vcproj", "{DBD4EFC0-7551-4FBA-AF5A-BFBFDA7D6785}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libambulant_win32", "..\..\..\..\..\ambulant\projects\vc8-smil3\libambulant_win32.vcproj", "{DBD4EFC0-7551-4FBA-AF5A-BFBFDA7D6785}"
 	ProjectSection(WebsiteProperties) = preProject
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.Debug = "False"
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "plugin_ffmpeg", "..\..\..\..\ambulant\projects\vc8-smil3\plugin_ffmpeg.vcproj", "{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "plugin_ffmpeg", "..\..\..\..\..\ambulant\projects\vc8-smil3\plugin_ffmpeg.vcproj", "{EED7FDFC-068B-4035-BF6C-855E9CCC9A3A}"
 	ProjectSection(WebsiteProperties) = preProject
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.Debug = "False"
@@ -49,17 +49,27 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IeDtbPlugin", "..\src\IeDtb
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.Debug = "False"
 	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{E0F81CE5-9C15-4E36-BC71-42BE1C0F2406} = {E0F81CE5-9C15-4E36-BC71-42BE1C0F2406}
+		{DBD4EFC0-7551-4FBA-AF5A-BFBFDA7D6785} = {DBD4EFC0-7551-4FBA-AF5A-BFBFDA7D6785}
+	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AmisPdtbExtras", "..\src\AmisPdtbExtras\AmisPdtbExtras.vcproj", "{C216680B-E128-4B33-9F71-28231A9B0589}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AmisPdtbExtras", "..\..\..\..\amis-private\AmisPdtbExtras\AmisPdtbExtras.vcproj", "{C216680B-E128-4B33-9F71-28231A9B0589}"
 	ProjectSection(WebsiteProperties) = preProject
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.Debug = "False"
 	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{DBD4EFC0-7551-4FBA-AF5A-BFBFDA7D6785} = {DBD4EFC0-7551-4FBA-AF5A-BFBFDA7D6785}
+	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pdtbplugin", "..\..\..\..\ambulant-private\pdtbplugin\pdtbplugin.vcproj", "{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pdtbplugin", "..\..\..\..\amis-private\pdtbplugin\pdtbplugin.vcproj", "{D909EB3F-6D3E-43D5-ADFF-190F3F9EA840}"
 	ProjectSection(WebsiteProperties) = preProject
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{DBD4EFC0-7551-4FBA-AF5A-BFBFDA7D6785} = {DBD4EFC0-7551-4FBA-AF5A-BFBFDA7D6785}
 	EndProjectSection
 EndProject
 Global

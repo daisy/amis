@@ -1,4 +1,6 @@
 @echo off
+
+
 if "%1"=="help" echo Usage: copyLangpack LanguageID SourceDirectory BuildType[release or debug]
 IF "%1"=="help" GOTO end
 

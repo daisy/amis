@@ -17,7 +17,7 @@
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="../../bin"
+			OutputDirectory="$(SolutionDir)/../bin"
 			IntermediateDirectory="Debug"
 			ConfigurationType="1"
 			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
@@ -45,7 +45,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="include;../../../../../ambulant/include/;&quot;../../../../../ambulant-private/pdtbplugin&quot;;&quot;../IeDtbPlugin&quot;;../AmisCore/include;../AmisPdtbExtras/include/;&quot;../../../../../xerces-c-src/src&quot;;&quot;$(VSInstallDir)\..\Microsoft Speech SDK 5.1\Include&quot;;&quot;$(VSInstallDir)\..\Visual Leak Detector&quot;;"
+				AdditionalIncludeDirectories="include;../../../../../../ambulant/include/;&quot;../../../../../amis-private/pdtbplugin&quot;;&quot;../IeDtbPlugin&quot;;../AmisCore/include;../../../../../amis-private/AmisPdtbExtras/include/;&quot;../../../../../../xerces-c-src/src&quot;;&quot;$(VSInstallDir)\..\Microsoft Speech SDK 5.1\Include&quot;;&quot;$(VSInstallDir)\..\Visual Leak Detector&quot;;"
 				PreprocessorDefinitions="_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;_DEBUG;AMIS_COMPILER_MSVC;AMIS_PLATFORM_WINDOWS;WITH_EXTERNAL_SMIL_PLAYER;WITH_WINDOWS_PLUGINS;WITH_SMIL30;WITH_PROTECTED_BOOK_SUPPORT"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -74,7 +74,7 @@
 				AdditionalDependencies="xerces-c_3D.lib AmisCoreD.lib libambulant_shwin32_D.lib strmiids.lib uuid.lib AmisPdtbExtrasD.lib"
 				OutputFile="$(OutDir)/AMISD.exe"
 				LinkIncremental="2"
-				AdditionalLibraryDirectories="../../lib;&quot;$(VSInstallDir)\..\Microsoft Speech SDK 5.1\Lib\i386&quot;;&quot;$(VSInstallDir)\..\Visual Leak Detector&quot;"
+				AdditionalLibraryDirectories="$(SolutionDir)/../lib;&quot;$(VSInstallDir)\..\Microsoft Speech SDK 5.1\Lib\i386&quot;;&quot;$(VSInstallDir)\..\Visual Leak Detector&quot;"
 				IgnoreDefaultLibraryNames="uafxcwd.lib"
 				GenerateDebugInformation="true"
 				SubSystem="2"
@@ -104,12 +104,12 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="..\..\bin\AmisGuiMFC2_postbuild.bat"
+				CommandLine="$(SolutionDir)\..\bin\AmisGuiMFC2_postbuild.bat"
 			/>
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
-			OutputDirectory="../../bin"
+			OutputDirectory="$(SolutionDir)/../bin"
 			IntermediateDirectory="Release"
 			ConfigurationType="1"
 			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
@@ -135,7 +135,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="include;../../../../../ambulant/include/;&quot;../../../../../ambulant-private/pdtbplugin&quot;;&quot;../IeDtbPlugin&quot;;../AmisCore/include;../AmisPdtbExtras/include;&quot;../../../../../xerces-c-src/src&quot;;&quot;$(VSInstallDir)\..\Microsoft Speech SDK 5.1\Include&quot;"
+				AdditionalIncludeDirectories="include;../../../../../../ambulant/include/;&quot;../../../../../amis-private/pdtbplugin&quot;;&quot;../IeDtbPlugin&quot;;../AmisCore/include;../../../../../amis-private/AmisPdtbExtras/include/;&quot;../../../../../../xerces-c-src/src&quot;;&quot;$(VSInstallDir)\..\Microsoft Speech SDK 5.1\Include&quot;;&quot;$(VSInstallDir)\..\Visual Leak Detector&quot;;"
 				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;AMIS_COMPILER_MSVC;AMIS_PLATFORM_WINDOWS;WITH_EXTERNAL_SMIL_PLAYER; WITH_PROTECTED_BOOK_SUPPORT;WITH_SMIL30"
 				MinimalRebuild="false"
 				RuntimeLibrary="2"
@@ -162,7 +162,7 @@
 				AdditionalDependencies="xerces-c_3.lib AmisCore.lib libambulant_shwin32.lib strmiids.lib uuid.lib AmisPdtbExtras.lib"
 				OutputFile="$(OutDir)/AMIS.exe"
 				LinkIncremental="1"
-				AdditionalLibraryDirectories="../../lib;&quot;$(VSInstallDir)\..\Microsoft Speech SDK 5.1\Lib\i386&quot;"
+				AdditionalLibraryDirectories="$(SolutionDir)/../lib;&quot;$(VSInstallDir)\..\Microsoft Speech SDK 5.1\Lib\i386&quot;"
 				IgnoreAllDefaultLibraries="false"
 				IgnoreDefaultLibraryNames="uafxcw.lib"
 				GenerateDebugInformation="false"
