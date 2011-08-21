@@ -104,7 +104,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="$(SolutionDir)\..\bin\AmisGuiMFC2_postbuild.bat"
+				CommandLine="..\..\bin\AmisGuiMFC2_postbuild.bat"
 			/>
 		</Configuration>
 		<Configuration

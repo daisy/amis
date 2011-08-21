@@ -300,8 +300,9 @@ bool amis::dtb::Dtb::processNcc(const ambulant::net::url* filepath, bool isLocal
 				getFileSet()->getProtectedBookKeyFilepath()
 				) == true)
 			{
+				const ambulant::net::url* protectedNavFilepath = getFileSet()->getProtectedNavFilepath();
 				//reparse the ncc.pdtb file
-				if (!ncc_file_reader.readFromFile(getFileSet()->getProtectedNavFilepath()))
+				if (!ncc_file_reader.readFromFile(protectedNavFilepath))
 				{
 					mbCanDecodePdtb = false;
 					return false;
