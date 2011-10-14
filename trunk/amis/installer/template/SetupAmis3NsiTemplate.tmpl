@@ -16,7 +16,7 @@
 !define PRODUCT_NAME "AMIS"
 !define PRODUCT_VERSION "3.1.2"
 !define PRODUCT_PUBLISHER "DAISY Consortium"
-!define PRODUCT_WEB_SITE "http://amisproject.org"
+!define PRODUCT_WEB_SITE "http://daisy.org/amis"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\AMIS.exe"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\\${PRODUCT_NAME}"
 !define PRODUCT_UNINST_ROOT_KEY "HKLM"
@@ -39,7 +39,7 @@
 !include "LogicLib.nsh"
 
 ;Windows and DirectX versions
-!include "getversions.nsh"
+!include "..\src\getversions.nsh"
 !include "WinVer.nsh"
 
 ; MUI Settings

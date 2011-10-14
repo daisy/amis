@@ -16,7 +16,7 @@
 !define PRODUCT_NAME "AMIS 3 Language Pack \${CUSTOM_LANG_NAME}"
 !define PRODUCT_VERSION "1.0"
 !define PRODUCT_PUBLISHER "DAISY Consortium"
-!define PRODUCT_WEB_SITE "http://amisproject.org"
+!define PRODUCT_WEB_SITE "http://daisy.org/amis"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\AMIS.exe"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\\${PRODUCT_NAME}"
 !define PRODUCT_UNINST_ROOT_KEY "HKLM"
@@ -136,17 +136,12 @@ SectionEnd
 ;**
 Function .onInit
 
-	!insertmacro MUI_INSTALLOPTIONS_EXTRACT "filebrowse.ini"
-
+	
 	;show the splash screen
 	File /oname=\$PLUGINSDIR\splash.bmp "\${LOGO_DIR}\amis.bmp"
 	splash::show 1000 \$PLUGINSDIR\splash
-
-	; possible values for \$0:
-	; '1' if the user closed the splash screen early,
-	; '0' if everything closed normally, 
-	; '-1' if some error occurred.
 	Pop \$0 
+	
 	
 	SetShellVarContext all
 	StrCpy \$SETTINGS_DIR \$APPDATA\AMIS\settings

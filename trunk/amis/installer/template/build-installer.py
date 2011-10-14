@@ -27,7 +27,7 @@ def export_nsi(xmlfile):
 
 def write_file(data, filename):
     f = open(filename, "w")
-    f.write(data)
+    f.write(data.encode('utf-8'))
     f.close()
 
 def main():
