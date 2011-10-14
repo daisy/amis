@@ -8,13 +8,13 @@
       <meta name="title" content="What is AMIS?" />
       <meta name="dc:title" content="AMIS User Guide" />
       <meta name="ncc:totalElapsedTime" content="0:00:21" />
-      <meta name="ncc:timeInThisSmil" content="0:00:35" />
+      <meta name="ncc:timeInThisSmil" content="0:00:36" />
       <layout>
          <region id="txtView" />
       </layout>
    </head>
    <body>
-      <seq dur="35.423s">
+      <seq dur="36.104s">
          <par endsync="last" id="tcp5">
             <text id="text5" src="amishelp.html#dtb5" />
             <audio src="speechgen0003.mp3" id="audd17e10" clip-begin="npt=0.000s" clip-end="npt=3.950s" />
@@ -29,31 +29,31 @@
          </par>
          <par endsync="last" id="tcp8">
             <text id="text8" src="amishelp.html#dtb8" />
-            <audio src="speechgen0003.mp3" id="audd17e19" clip-begin="npt=9.140s" clip-end="npt=13.381s" />
+            <audio src="speechgen0003.mp3" id="audd17e19" clip-begin="npt=9.140s" clip-end="npt=13.373s" />
          </par>
          <par endsync="last" id="tcp9">
             <text id="text9" src="amishelp.html#dtb9" />
-            <audio src="speechgen0003.mp3" id="audd17e22" clip-begin="npt=13.381s" clip-end="npt=21.900s" />
+            <audio src="speechgen0003.mp3" id="audd17e22" clip-begin="npt=13.373s" clip-end="npt=21.892s" />
          </par>
          <par endsync="last" id="tcp10">
             <text id="text10" src="amishelp.html#dtb10" />
-            <audio src="speechgen0003.mp3" id="audd17e25" clip-begin="npt=21.900s" clip-end="npt=25.958s" />
+            <audio src="speechgen0003.mp3" id="audd17e25" clip-begin="npt=21.892s" clip-end="npt=25.950s" />
          </par>
          <par endsync="last" id="tcp11">
             <text id="text11" src="amishelp.html#dtb11" />
-            <audio src="speechgen0003.mp3" id="audd17e28" clip-begin="npt=25.958s" clip-end="npt=29.150s" />
+            <audio src="speechgen0003.mp3" id="audd17e28" clip-begin="npt=25.950s" clip-end="npt=29.142s" />
          </par>
          <par endsync="last" id="tcp12">
             <text id="text12" src="amishelp.html#dtb12" />
-            <audio src="speechgen0003.mp3" id="audd17e31" clip-begin="npt=29.150s" clip-end="npt=29.938s" />
+            <audio src="speechgen0003.mp3" id="audd17e31" clip-begin="npt=29.142s" clip-end="npt=29.930s" />
          </par>
          <par endsync="last" id="tcp13">
             <text id="text13" src="amishelp.html#dtb13" />
-            <audio src="speechgen0003.mp3" id="audd17e34" clip-begin="npt=29.938s" clip-end="npt=33.359s" />
+            <audio src="speechgen0003.mp3" id="audd17e34" clip-begin="npt=29.930s" clip-end="npt=34.040s" />
          </par>
          <par endsync="last" id="tcp14">
             <text id="text14" src="amishelp.html#dtb14" />
-            <audio src="speechgen0003.mp3" id="audd17e37" clip-begin="npt=33.359s" clip-end="npt=35.423s" />
+            <audio src="speechgen0003.mp3" id="audd17e37" clip-begin="npt=34.040s" clip-end="npt=36.104s" />
          </par>
       </seq>
    </body>

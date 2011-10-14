@@ -1,7 +1,7 @@
 /*
 AMIS: Adaptive Multimedia Information System
 Software for playing DAISY books
-Homepage: http://amisproject.org
+Homepage: http://daisy.org/amis
 
 This is a modified version of an Ambulant component.
 See below for license details.

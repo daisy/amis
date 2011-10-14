@@ -7,14 +7,14 @@
       <meta name="dc:identifier" content="amis-help-eng-US" />
       <meta name="title" content="Screen Layout" />
       <meta name="dc:title" content="AMIS User Guide" />
-      <meta name="ncc:totalElapsedTime" content="0:02:49" />
+      <meta name="ncc:totalElapsedTime" content="0:02:50" />
       <meta name="ncc:timeInThisSmil" content="0:01:45" />
       <layout>
          <region id="txtView" />
       </layout>
    </head>
    <body>
-      <seq dur="105.497s">
+      <seq dur="105.498s">
          <par endsync="last" id="tcp39">
             <text id="text39" src="amishelp.html#dtb41" />
             <audio src="speechgen0007.mp3" id="audd77e10" clip-begin="npt=0.000s" clip-end="npt=4.035s" />
@@ -29,183 +29,183 @@
          </par>
          <par endsync="last" id="tcp42">
             <text id="text42" src="amishelp.html#dtb44" />
-            <audio src="speechgen0007.mp3" id="audd77e19" clip-begin="npt=15.382s" clip-end="npt=25.444s" />
+            <audio src="speechgen0007.mp3" id="audd77e19" clip-begin="npt=15.382s" clip-end="npt=25.445s" />
          </par>
          <par endsync="last" id="tcp43">
             <text id="text43" src="amishelp.html#dtb45" />
-            <audio src="speechgen0007.mp3" id="audd77e22" clip-begin="npt=25.444s" clip-end="npt=27.503s" />
+            <audio src="speechgen0007.mp3" id="audd77e22" clip-begin="npt=25.445s" clip-end="npt=27.504s" />
          </par>
          <par endsync="last" id="tcp44">
             <text id="text44" src="amishelp.html#dtb46" />
-            <audio src="speechgen0007.mp3" id="audd77e25" clip-begin="npt=27.503s" clip-end="npt=29.030s" />
+            <audio src="speechgen0007.mp3" id="audd77e25" clip-begin="npt=27.504s" clip-end="npt=29.031s" />
          </par>
          <par endsync="last" id="tcp45">
             <text id="text45" src="amishelp.html#dtb47" />
-            <audio src="speechgen0007.mp3" id="audd77e28" clip-begin="npt=29.030s" clip-end="npt=31.994s" />
+            <audio src="speechgen0007.mp3" id="audd77e28" clip-begin="npt=29.031s" clip-end="npt=31.995s" />
          </par>
          <par endsync="last" id="tcp46">
             <text id="text46" src="amishelp.html#dtb48" />
-            <audio src="speechgen0007.mp3" id="audd77e31" clip-begin="npt=31.994s" clip-end="npt=33.072s" />
+            <audio src="speechgen0007.mp3" id="audd77e31" clip-begin="npt=31.995s" clip-end="npt=33.073s" />
          </par>
          <par endsync="last" id="tcp47">
             <text id="text47" src="amishelp.html#dtb49" />
-            <audio src="speechgen0007.mp3" id="audd77e34" clip-begin="npt=33.072s" clip-end="npt=33.272s" />
+            <audio src="speechgen0007.mp3" id="audd77e34" clip-begin="npt=33.073s" clip-end="npt=33.273s" />
          </par>
          <par endsync="last" id="tcp48">
             <text id="text48" src="amishelp.html#dtb50" />
-            <audio src="speechgen0007.mp3" id="audd77e37" clip-begin="npt=33.272s" clip-end="npt=34.575s" />
+            <audio src="speechgen0007.mp3" id="audd77e37" clip-begin="npt=33.273s" clip-end="npt=34.576s" />
          </par>
          <par endsync="last" id="tcp49">
             <text id="text49" src="amishelp.html#dtb51" />
-            <audio src="speechgen0007.mp3" id="audd77e40" clip-begin="npt=34.575s" clip-end="npt=34.775s" />
+            <audio src="speechgen0007.mp3" id="audd77e40" clip-begin="npt=34.576s" clip-end="npt=34.776s" />
          </par>
          <par endsync="last" id="tcp50">
             <text id="text50" src="amishelp.html#dtb52" />
-            <audio src="speechgen0007.mp3" id="audd77e44" clip-begin="npt=34.775s" clip-end="npt=36.694s" />
+            <audio src="speechgen0007.mp3" id="audd77e44" clip-begin="npt=34.776s" clip-end="npt=36.695s" />
          </par>
          <par endsync="last" id="tcp51">
             <text id="text51" src="amishelp.html#dtb53" />
-            <audio src="speechgen0007.mp3" id="audd77e47" clip-begin="npt=36.694s" clip-end="npt=36.894s" />
+            <audio src="speechgen0007.mp3" id="audd77e47" clip-begin="npt=36.695s" clip-end="npt=36.895s" />
          </par>
          <par endsync="last" id="tcp52">
             <text id="text52" src="amishelp.html#dtb54" />
-            <audio src="speechgen0007.mp3" id="audd77e50" clip-begin="npt=36.894s" clip-end="npt=37.978s" />
+            <audio src="speechgen0007.mp3" id="audd77e50" clip-begin="npt=36.895s" clip-end="npt=37.979s" />
          </par>
          <par endsync="last" id="tcp53">
             <text id="text53" src="amishelp.html#dtb55" />
-            <audio src="speechgen0007.mp3" id="audd77e53" clip-begin="npt=37.978s" clip-end="npt=38.178s" />
+            <audio src="speechgen0007.mp3" id="audd77e53" clip-begin="npt=37.979s" clip-end="npt=38.179s" />
          </par>
          <par endsync="last" id="tcp54">
             <text id="text54" src="amishelp.html#dtb56" />
-            <audio src="speechgen0007.mp3" id="audd77e56" clip-begin="npt=38.178s" clip-end="npt=39.838s" />
+            <audio src="speechgen0007.mp3" id="audd77e56" clip-begin="npt=38.179s" clip-end="npt=39.839s" />
          </par>
          <par endsync="last" id="tcp55">
             <text id="text55" src="amishelp.html#dtb57" />
-            <audio src="speechgen0007.mp3" id="audd77e59" clip-begin="npt=39.838s" clip-end="npt=40.038s" />
+            <audio src="speechgen0007.mp3" id="audd77e59" clip-begin="npt=39.839s" clip-end="npt=40.039s" />
          </par>
          <par endsync="last" id="tcp56">
             <text id="text56" src="amishelp.html#dtb58" />
-            <audio src="speechgen0007.mp3" id="audd77e62" clip-begin="npt=40.038s" clip-end="npt=41.179s" />
+            <audio src="speechgen0007.mp3" id="audd77e62" clip-begin="npt=40.039s" clip-end="npt=41.180s" />
          </par>
          <par endsync="last" id="tcp57">
             <text id="text57" src="amishelp.html#dtb59" />
-            <audio src="speechgen0007.mp3" id="audd77e65" clip-begin="npt=41.179s" clip-end="npt=41.379s" />
+            <audio src="speechgen0007.mp3" id="audd77e65" clip-begin="npt=41.180s" clip-end="npt=41.380s" />
          </par>
          <par endsync="last" id="tcp58">
             <text id="text58" src="amishelp.html#dtb60" />
-            <audio src="speechgen0007.mp3" id="audd77e68" clip-begin="npt=41.379s" clip-end="npt=42.306s" />
+            <audio src="speechgen0007.mp3" id="audd77e68" clip-begin="npt=41.380s" clip-end="npt=42.307s" />
          </par>
          <par endsync="last" id="tcp59">
             <text id="text59" src="amishelp.html#dtb61" />
-            <audio src="speechgen0007.mp3" id="audd77e71" clip-begin="npt=42.306s" clip-end="npt=42.506s" />
+            <audio src="speechgen0007.mp3" id="audd77e71" clip-begin="npt=42.307s" clip-end="npt=42.507s" />
          </par>
          <par endsync="last" id="tcp60">
             <text id="text60" src="amishelp.html#dtb62" />
-            <audio src="speechgen0007.mp3" id="audd77e74" clip-begin="npt=42.506s" clip-end="npt=43.698s" />
+            <audio src="speechgen0007.mp3" id="audd77e74" clip-begin="npt=42.507s" clip-end="npt=43.699s" />
          </par>
          <par endsync="last" id="tcp61">
             <text id="text61" src="amishelp.html#dtb63" />
-            <audio src="speechgen0007.mp3" id="audd77e78" clip-begin="npt=43.698s" clip-end="npt=43.898s" />
+            <audio src="speechgen0007.mp3" id="audd77e78" clip-begin="npt=43.699s" clip-end="npt=43.899s" />
          </par>
          <par endsync="last" id="tcp62">
             <text id="text62" src="amishelp.html#dtb64" />
-            <audio src="speechgen0007.mp3" id="audd77e81" clip-begin="npt=43.898s" clip-end="npt=44.978s" />
+            <audio src="speechgen0007.mp3" id="audd77e81" clip-begin="npt=43.899s" clip-end="npt=44.979s" />
          </par>
          <par endsync="last" id="tcp63">
             <text id="text63" src="amishelp.html#dtb65" />
-            <audio src="speechgen0007.mp3" id="audd77e84" clip-begin="npt=44.978s" clip-end="npt=45.178s" />
+            <audio src="speechgen0007.mp3" id="audd77e84" clip-begin="npt=44.979s" clip-end="npt=45.179s" />
          </par>
          <par endsync="last" id="tcp64">
             <text id="text64" src="amishelp.html#dtb66" />
-            <audio src="speechgen0007.mp3" id="audd77e87" clip-begin="npt=45.178s" clip-end="npt=46.963s" />
+            <audio src="speechgen0007.mp3" id="audd77e87" clip-begin="npt=45.179s" clip-end="npt=46.964s" />
          </par>
          <par endsync="last" id="tcp65">
             <text id="text65" src="amishelp.html#dtb67" />
-            <audio src="speechgen0007.mp3" id="audd77e90" clip-begin="npt=46.963s" clip-end="npt=47.754s" />
+            <audio src="speechgen0007.mp3" id="audd77e90" clip-begin="npt=46.964s" clip-end="npt=47.755s" />
          </par>
          <par endsync="last" id="tcp66">
             <text id="text66" src="amishelp.html#dtb68" />
-            <audio src="speechgen0007.mp3" id="audd77e93" clip-begin="npt=47.754s" clip-end="npt=49.012s" />
+            <audio src="speechgen0007.mp3" id="audd77e93" clip-begin="npt=47.755s" clip-end="npt=49.013s" />
          </par>
          <par endsync="last" id="tcp67">
             <text id="text67" src="amishelp.html#dtb69" />
-            <audio src="speechgen0007.mp3" id="audd77e96" clip-begin="npt=49.012s" clip-end="npt=51.287s" />
+            <audio src="speechgen0007.mp3" id="audd77e96" clip-begin="npt=49.013s" clip-end="npt=51.288s" />
          </par>
          <par endsync="last" id="tcp68">
             <text id="text68" src="amishelp.html#dtb70" />
-            <audio src="speechgen0007.mp3" id="audd77e99" clip-begin="npt=51.287s" clip-end="npt=52.356s" />
+            <audio src="speechgen0007.mp3" id="audd77e99" clip-begin="npt=51.288s" clip-end="npt=52.357s" />
          </par>
          <par endsync="last" id="tcp69">
             <text id="text69" src="amishelp.html#dtb71" />
-            <audio src="speechgen0007.mp3" id="audd77e102" clip-begin="npt=52.356s" clip-end="npt=58.077s" />
+            <audio src="speechgen0007.mp3" id="audd77e102" clip-begin="npt=52.357s" clip-end="npt=58.078s" />
          </par>
          <par endsync="last" id="tcp70">
             <text id="text70" src="amishelp.html#dtb72" />
-            <audio src="speechgen0007.mp3" id="audd77e105" clip-begin="npt=58.077s" clip-end="npt=61.746s" />
+            <audio src="speechgen0007.mp3" id="audd77e105" clip-begin="npt=58.078s" clip-end="npt=61.747s" />
          </par>
          <par endsync="last" id="tcp71">
             <text id="text71" src="amishelp.html#dtb73" />
-            <audio src="speechgen0007.mp3" id="audd77e108" clip-begin="npt=61.746s" clip-end="npt=66.002s" />
+            <audio src="speechgen0007.mp3" id="audd77e108" clip-begin="npt=61.747s" clip-end="npt=66.003s" />
          </par>
          <par endsync="last" id="tcp72">
             <text id="text72" src="amishelp.html#dtb74" />
-            <audio src="speechgen0007.mp3" id="audd77e112" clip-begin="npt=66.002s" clip-end="npt=75.753s" />
+            <audio src="speechgen0007.mp3" id="audd77e112" clip-begin="npt=66.003s" clip-end="npt=75.754s" />
          </par>
          <par endsync="last" id="tcp73">
             <text id="text73" src="amishelp.html#dtb75" />
-            <audio src="speechgen0007.mp3" id="audd77e115" clip-begin="npt=75.753s" clip-end="npt=78.147s" />
+            <audio src="speechgen0007.mp3" id="audd77e115" clip-begin="npt=75.754s" clip-end="npt=78.148s" />
          </par>
          <par endsync="last" id="tcp74">
             <text id="text74" src="amishelp.html#dtb76" />
-            <audio src="speechgen0007.mp3" id="audd77e118" clip-begin="npt=78.147s" clip-end="npt=79.817s" />
+            <audio src="speechgen0007.mp3" id="audd77e118" clip-begin="npt=78.148s" clip-end="npt=79.818s" />
          </par>
          <par endsync="last" id="tcp75">
             <text id="text75" src="amishelp.html#dtb77" />
-            <audio src="speechgen0007.mp3" id="audd77e121" clip-begin="npt=79.817s" clip-end="npt=87.700s" />
+            <audio src="speechgen0007.mp3" id="audd77e121" clip-begin="npt=79.818s" clip-end="npt=87.701s" />
          </par>
          <par endsync="last" id="tcp76">
             <text id="text76" src="amishelp.html#dtb78" />
-            <audio src="speechgen0007.mp3" id="audd77e124" clip-begin="npt=87.700s" clip-end="npt=90.095s" />
+            <audio src="speechgen0007.mp3" id="audd77e124" clip-begin="npt=87.701s" clip-end="npt=90.096s" />
          </par>
          <par endsync="last" id="tcp77">
             <text id="text77" src="amishelp.html#dtb79" />
-            <audio src="speechgen0007.mp3" id="audd77e127" clip-begin="npt=90.095s" clip-end="npt=92.014s" />
+            <audio src="speechgen0007.mp3" id="audd77e127" clip-begin="npt=90.096s" clip-end="npt=92.015s" />
          </par>
          <par endsync="last" id="tcp78">
             <text id="text78" src="amishelp.html#dtb80" />
-            <audio src="speechgen0007.mp3" id="audd77e130" clip-begin="npt=92.014s" clip-end="npt=92.214s" />
+            <audio src="speechgen0007.mp3" id="audd77e130" clip-begin="npt=92.015s" clip-end="npt=92.215s" />
          </par>
          <par endsync="last" id="tcp79">
             <text id="text79" src="amishelp.html#dtb81" />
-            <audio src="speechgen0007.mp3" id="audd77e133" clip-begin="npt=92.214s" clip-end="npt=93.298s" />
+            <audio src="speechgen0007.mp3" id="audd77e133" clip-begin="npt=92.215s" clip-end="npt=93.299s" />
          </par>
          <par endsync="last" id="tcp80">
             <text id="text80" src="amishelp.html#dtb82" />
-            <audio src="speechgen0007.mp3" id="audd77e136" clip-begin="npt=93.298s" clip-end="npt=93.498s" />
+            <audio src="speechgen0007.mp3" id="audd77e136" clip-begin="npt=93.299s" clip-end="npt=93.499s" />
          </par>
          <par endsync="last" id="tcp81">
             <text id="text81" src="amishelp.html#dtb83" />
-            <audio src="speechgen0007.mp3" id="audd77e139" clip-begin="npt=93.498s" clip-end="npt=95.158s" />
+            <audio src="speechgen0007.mp3" id="audd77e139" clip-begin="npt=93.499s" clip-end="npt=95.159s" />
          </par>
          <par endsync="last" id="tcp82">
             <text id="text82" src="amishelp.html#dtb84" />
-            <audio src="speechgen0007.mp3" id="audd77e142" clip-begin="npt=95.158s" clip-end="npt=95.358s" />
+            <audio src="speechgen0007.mp3" id="audd77e142" clip-begin="npt=95.159s" clip-end="npt=95.359s" />
          </par>
          <par endsync="last" id="tcp83">
             <text id="text83" src="amishelp.html#dtb85" />
-            <audio src="speechgen0007.mp3" id="audd77e146" clip-begin="npt=95.358s" clip-end="npt=97.664s" />
+            <audio src="speechgen0007.mp3" id="audd77e146" clip-begin="npt=95.359s" clip-end="npt=97.665s" />
          </par>
          <par endsync="last" id="tcp84">
             <text id="text84" src="amishelp.html#dtb86" />
-            <audio src="speechgen0007.mp3" id="audd77e149" clip-begin="npt=97.664s" clip-end="npt=101.527s" />
+            <audio src="speechgen0007.mp3" id="audd77e149" clip-begin="npt=97.665s" clip-end="npt=101.528s" />
          </par>
          <par endsync="last" id="tcp85">
             <text id="text85" src="amishelp.html#dtb87" />
-            <audio src="speechgen0007.mp3" id="audd77e152" clip-begin="npt=101.527s" clip-end="npt=103.532s" />
+            <audio src="speechgen0007.mp3" id="audd77e152" clip-begin="npt=101.528s" clip-end="npt=103.533s" />
          </par>
          <par endsync="last" id="tcp86">
             <text id="text86" src="amishelp.html#dtb88" />
-            <audio src="speechgen0007.mp3" id="audd77e155" clip-begin="npt=103.532s" clip-end="npt=105.497s" />
+            <audio src="speechgen0007.mp3" id="audd77e155" clip-begin="npt=103.533s" clip-end="npt=105.498s" />
          </par>
       </seq>
    </body>
