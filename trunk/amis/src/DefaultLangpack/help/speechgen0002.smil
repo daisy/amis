@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-SMIL/SMIL10.dtd" []>
+<smil>
+   <head>
+      <meta name="ncc:generator" content="DMFC z3986-2005 to Daisy 2.02 (smil2smil v0.2)" />
+      <meta name="dc:format" content="Daisy 2.02" />
+      <meta name="dc:identifier" content="amis-help-eng-US" />
+      <meta name="title" content="AMIS User Guide" />
+      <meta name="dc:title" content="AMIS User Guide" />
+      <meta name="ncc:totalElapsedTime" content="0:00:02" />
+      <meta name="ncc:timeInThisSmil" content="0:00:19" />
+      <layout>
+         <region id="txtView" />
+      </layout>
+   </head>
+   <body>
+      <seq dur="18.974s">
+         <par endsync="last" id="tcp2">
+            <text id="text2" src="amishelp.html#dtb2" />
+            <audio src="speechgen0002.mp3" id="audd8e10" clip-begin="npt=0.000s" clip-end="npt=4.180s" />
+         </par>
+         <par endsync="last" id="tcp3">
+            <text id="text3" src="amishelp.html#dtb3" />
+            <audio src="speechgen0002.mp3" id="audd8e13" clip-begin="npt=4.180s" clip-end="npt=11.290s" />
+         </par>
+         <par endsync="last" id="tcp4">
+            <text id="text4" src="amishelp.html#dtb4" />
+            <audio src="speechgen0002.mp3" id="audd8e16" clip-begin="npt=11.290s" clip-end="npt=18.974s" />
+         </par>
+      </seq>
+   </body>
+</smil>

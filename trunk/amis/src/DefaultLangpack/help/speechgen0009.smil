@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-SMIL/SMIL10.dtd" []>
+<smil>
+   <head>
+      <meta name="ncc:generator" content="DMFC z3986-2005 to Daisy 2.02 (smil2smil v0.2)" />
+      <meta name="dc:format" content="Daisy 2.02" />
+      <meta name="dc:identifier" content="amis-help-eng-US" />
+      <meta name="title" content="Opening a book" />
+      <meta name="dc:title" content="AMIS User Guide" />
+      <meta name="ncc:totalElapsedTime" content="0:04:44" />
+      <meta name="ncc:timeInThisSmil" content="0:00:26" />
+      <layout>
+         <region id="txtView" />
+      </layout>
+   </head>
+   <body>
+      <seq dur="26.230s">
+         <par endsync="last" id="tcp89">
+            <text id="text89" src="amishelp.html#dtb91" />
+            <audio src="speechgen0009.mp3" id="audd139e10" clip-begin="npt=0.000s" clip-end="npt=3.979s" />
+         </par>
+         <par endsync="last" id="tcp90">
+            <text id="text90" src="amishelp.html#dtb92" />
+            <audio src="speechgen0009.mp3" id="audd139e13" clip-begin="npt=3.979s" clip-end="npt=9.056s" />
+         </par>
+         <par endsync="last" id="tcp91">
+            <text id="text91" src="amishelp.html#dtb94" />
+            <audio src="speechgen0009.mp3" id="audd139e17" clip-begin="npt=9.056s" clip-end="npt=10.825s" />
+         </par>
+         <par endsync="last" id="tcp92">
+            <text id="text92" src="amishelp.html#dtb95" />
+            <audio src="speechgen0009.mp3" id="audd139e20" clip-begin="npt=10.825s" clip-end="npt=13.945s" />
+         </par>
+         <par endsync="last" id="tcp93">
+            <text id="text93" src="amishelp.html#dtb96" />
+            <audio src="speechgen0009.mp3" id="audd139e23" clip-begin="npt=13.945s" clip-end="npt=16.174s" />
+         </par>
+         <par endsync="last" id="tcp94">
+            <text id="text94" src="amishelp.html#dtb97" />
+            <audio src="speechgen0009.mp3" id="audd139e26" clip-begin="npt=16.174s" clip-end="npt=21.253s" />
+         </par>
+         <par endsync="last" id="tcp95">
+            <text id="text95" src="amishelp.html#dtb98" />
+            <audio src="speechgen0009.mp3" id="audd139e29" clip-begin="npt=21.253s" clip-end="npt=23.915s" />
+         </par>
+         <par endsync="last" id="tcp96">
+            <text id="text96" src="amishelp.html#dtb99" />
+            <audio src="speechgen0009.mp3" id="audd139e32" clip-begin="npt=23.915s" clip-end="npt=26.230s" />
+         </par>
+      </seq>
+   </body>
+</smil>

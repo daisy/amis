@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 1.0//EN" "http://www.w3.org/TR/REC-SMIL/SMIL10.dtd" []>
+<smil>
+   <head>
+      <meta name="ncc:generator" content="DMFC z3986-2005 to Daisy 2.02 (smil2smil v0.2)" />
+      <meta name="dc:format" content="Daisy 2.02" />
+      <meta name="dc:identifier" content="amis-help-eng-US" />
+      <meta name="title" content="Controlling playback" />
+      <meta name="dc:title" content="AMIS User Guide" />
+      <meta name="ncc:totalElapsedTime" content="0:05:11" />
+      <meta name="ncc:timeInThisSmil" content="0:00:20" />
+      <layout>
+         <region id="txtView" />
+      </layout>
+   </head>
+   <body>
+      <seq dur="19.604s">
+         <par endsync="last" id="tcp97">
+            <text id="text97" src="amishelp.html#dtb100" />
+            <audio src="speechgen0010.mp3" id="audd154e10" clip-begin="npt=0.000s" clip-end="npt=4.444s" />
+         </par>
+         <par endsync="last" id="tcp98">
+            <text id="text98" src="amishelp.html#dtb101" />
+            <audio src="speechgen0010.mp3" id="audd154e13" clip-begin="npt=4.444s" clip-end="npt=7.881s" />
+         </par>
+         <par endsync="last" id="tcp99">
+            <text id="text99" src="amishelp.html#dtb102" />
+            <audio src="speechgen0010.mp3" id="audd154e16" clip-begin="npt=7.881s" clip-end="npt=10.839s" />
+         </par>
+         <par endsync="last" id="tcp100">
+            <text id="text100" src="amishelp.html#dtb104" />
+            <audio src="speechgen0010.mp3" id="audd154e20" clip-begin="npt=10.839s" clip-end="npt=12.590s" />
+         </par>
+         <par endsync="last" id="tcp101">
+            <text id="text101" src="amishelp.html#dtb105" />
+            <audio src="speechgen0010.mp3" id="audd154e23" clip-begin="npt=12.590s" clip-end="npt=14.544s" />
+         </par>
+         <par endsync="last" id="tcp102">
+            <text id="text102" src="amishelp.html#dtb106" />
+            <audio src="speechgen0010.mp3" id="audd154e26" clip-begin="npt=14.544s" clip-end="npt=19.604s" />
+         </par>
+      </seq>
+   </body>
+</smil>
