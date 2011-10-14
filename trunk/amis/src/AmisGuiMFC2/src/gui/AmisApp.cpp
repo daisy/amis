@@ -1981,11 +1981,11 @@ int CAmisApp::getIeVersion()
 }
 std::string CAmisApp::getVersion()
 {
-	return "3.1.1";
+	return "3.1.2 beta";
 }
 std::string CAmisApp::getReleaseDate()
 {
-	return "2011-08-18";
+	return "2011-10-13";
 }
 //when the next volume for this book is loaded, then load this URL
 void CAmisApp::setMultivolumeLoadPoint(std::wstring uid, const ambulant::net::url* url)

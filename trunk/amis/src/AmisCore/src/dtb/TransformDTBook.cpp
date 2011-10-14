@@ -69,7 +69,19 @@ amis::dtb::TransformDTBook::TransformDTBook(string tempdir)
 	CString cstr_app_path = szBuffer;
 	int pos = cstr_app_path.ReverseFind('\\');
 	if (pos >= 0) cstr_app_path = cstr_app_path.Mid(0, pos + 1);
+	
 	mBin = W2CA(cstr_app_path);
+
+	
+#if _DEBUG
+	// for development purposes: replace the networked VMWare path with a local path
+	string search = "\\\\vmware-host\\shared folders";
+	string replacement = "z:";
+	int pos2 = mBin.find(search);
+	if (pos2 >= 0) mBin.replace(pos2, strlen(search.c_str()), replacement);
+ 
+#endif
+
 #else
 	mBin = "";
 #endif

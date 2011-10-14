@@ -61,9 +61,10 @@ STDMETHODIMP CPdtbPluggableProtocol::Start(
 			urlstr = urlstr.substr(7);
 		ambulant::net::url url = ambulant::net::url::from_url(urlstr);
 		
+		std::string extension = amis::util::FilePathTools::getExtension(url.get_url());
 		
 		if (CPdtbBridge::s_process_dtbook == TRUE && 
-			amis::util::FilePathTools::getExtension(url.get_url()) == "xml")
+			extension == "xml")
 		{
 			TCHAR temp_path[MAX_PATH];
 			GetTempPath(MAX_PATH, temp_path);
@@ -84,6 +85,11 @@ STDMETHODIMP CPdtbPluggableProtocol::Start(
 			{
 				mimetype = url.guesstype();
 			}
+		}
+		else if (extension == "jpg" || extension == "png" || extension == "svg")
+		{
+			ATLTRACE(_T("Image file detected\n"));
+			//mimetype = url.guesstype();
 		}
 		else //this is a pdtb
 		{
@@ -197,7 +203,16 @@ STDMETHODIMP CPdtbPluggableProtocol::Seek(
 STDMETHODIMP CPdtbPluggableProtocol::CombineUrl(LPCWSTR pwzBaseUrl, LPCWSTR pwzRelativeUrl, DWORD dwCombineFlags,
 												LPWSTR pwzResult, DWORD cchResult, DWORD *pcchResult, DWORD dwReserved)
 {
-	ambulant::lib::textptr base_tp(pwzBaseUrl);
+	USES_CONVERSION;
+
+	//ambulant::lib::textptr base_tp(pwzBaseUrl);
+	//try stripping out the amisie: prefix
+	std::string adjustedBase;
+	adjustedBase.assign(T2A(pwzBaseUrl));
+	int pos = adjustedBase.find("amisie:");
+	adjustedBase = adjustedBase.substr(pos+7);
+	ambulant::lib::textptr base_tp(adjustedBase.c_str());
+
 	ambulant::lib::textptr rel_tp(pwzRelativeUrl);
 	ambulant::net::url base_url = ambulant::net::url::from_url(std::string(base_tp));
 	ambulant::net::url rel_url;
