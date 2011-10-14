@@ -30,6 +30,15 @@ copy ..\..\bin\settings\css\customStyles\contrast3.css "%SETTINGS_DIR%\customSty
 
 
 ECHO Creating installer
-"C:\Program Files\NSIS\makensis" /DCUSTOM_LANG_ID=%1 /DCUSTOM_LANG_NAME=%2 /DCUSTOM_HELP=%3 setup-amis3.nsi
+IF NOT EXIST ..\%1 GOTO DEFAULT
+:CUSTOM
+"C:\Program Files\NSIS\makensis" /DCUSTOM_LANG_ID=%1 /DCUSTOM_LANG_NAME=%2 /DCUSTOM_HELP=%3 ..\%1\setup-amis3.nsi
+GOTO END
 
+:DEFAULT
+ECHO "default"
+"C:\Program Files\NSIS\makensis" /DCUSTOM_LANG_ID=%1 /DCUSTOM_LANG_NAME=%2 /DCUSTOM_HELP=%3 ..\eng-US\setup-amis3.nsi
+GOTO END
+
+:END
 ECHO Done

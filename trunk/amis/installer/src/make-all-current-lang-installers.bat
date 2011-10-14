@@ -20,9 +20,10 @@ call make-amis-installer.bat vie-VN Vietnamese ncc.html contrast
 call make-amis-installer.bat fin-FI Suomi kopiokopiokorj.html kontrasti
 call make-amis-installer.bat srp-RS Serbian amishelp.html contrast
 call make-amis-installer.bat swe-SE Svenska amishelp.html kontrast
-call make-amis-installer.bat hun-HU Magyar amis-hun-help3.html kontrasztos
 call make-amis-installer.bat nld-NL Nederlands amis_gebruikers_handleiding.html contrast
 call make-amis-installer.bat heb-IL Hebrew amishelp.html contrast
+call make-amis-installer.bat hun-HU Magyar amis-hun-help3.html kontrasztos
+
 
 REM the langpacks
 call setup-langpack.bat afr-ZA Afrikaans amishelp-afrikaans.html
@@ -40,9 +41,8 @@ call setup-langpack.bat vie-VN Vietnamese ncc.html
 call setup-langpack.bat fin-FI Suomi kopiokopiokorj.html
 call setup-langpack.bat srp-RS Serbian amishelp.html
 call setup-langpack.bat swe-SE Svenska amishelp.html
-call setup-langpack.bat hun-HU Magyar amis-hun-help3.html
 call setup-langpack.bat nld-NL Nederlands amis_gebruikers_handleiding.html
 call setup-langpack.bat heb-IL Hebrew amishelp.html
-
+call setup-langpack.bat hun-HU Magyar amis-hun-help3.html
 
 ECHO Done
