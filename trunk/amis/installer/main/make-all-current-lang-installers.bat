@@ -26,23 +26,23 @@ call make-amis-installer.bat hun-HU Magyar amis-hun-help3.html kontrasztos
 
 
 REM the langpacks
-call setup-langpack.bat afr-ZA Afrikaans amishelp-afrikaans.html
-call setup-langpack.bat eng-AU "Australian English" amishelp.html
-call setup-langpack.bat zho-CN Chinese amis.html 
-call setup-langpack.bat ice-IS Icelandic amis_frumbirtingarmynd_april09.html
-call setup-langpack.bat tam-IN Tamil amistamil.htm
-call setup-langpack.bat fra-FR French content.html
-call setup-langpack.bat nob-NO "Norwegian (Bokmaal)" amis_brukerveiledning_bkm.html
-call setup-langpack.bat nno-NO "Norwegian (Nynorsk)" amis_brukarrettleiing_nynorsk_bilete.html
-call setup-langpack.bat jpn-JP Japanese amishelp.html
-call setup-langpack.bat spa "Espanol A L" amis_guia_del_usuario.html
-call setup-langpack.bat zho-TW "Traditional Chinese" amis.htm
-call setup-langpack.bat vie-VN Vietnamese ncc.html
-call setup-langpack.bat fin-FI Suomi kopiokopiokorj.html
-call setup-langpack.bat srp-RS Serbian amishelp.html
-call setup-langpack.bat swe-SE Svenska amishelp.html
-call setup-langpack.bat nld-NL Nederlands amis_gebruikers_handleiding.html
-call setup-langpack.bat heb-IL Hebrew amishelp.html
-call setup-langpack.bat hun-HU Magyar amis-hun-help3.html
+call make-amis-langpack.bat afr-ZA Afrikaans amishelp-afrikaans.html
+call make-amis-langpack.bat eng-AU "Australian English" amishelp.html
+call make-amis-langpack.bat zho-CN Chinese amis.html 
+call make-amis-langpack.bat ice-IS Icelandic amis_frumbirtingarmynd_april09.html
+call make-amis-langpack.bat tam-IN Tamil amistamil.htm
+call make-amis-langpack.bat fra-FR French content.html
+call make-amis-langpack.bat nob-NO "Norwegian (Bokmaal)" amis_brukerveiledning_bkm.html
+call make-amis-langpack.bat nno-NO "Norwegian (Nynorsk)" amis_brukarrettleiing_nynorsk_bilete.html
+call make-amis-langpack.bat jpn-JP Japanese amishelp.html
+call make-amis-langpack.bat spa "Espanol A L" amis_guia_del_usuario.html
+call make-amis-langpack.bat zho-TW "Traditional Chinese" amis.htm
+call make-amis-langpack.bat vie-VN Vietnamese ncc.html
+call make-amis-langpack.bat fin-FI Suomi kopiokopiokorj.html
+call make-amis-langpack.bat srp-RS Serbian amishelp.html
+call make-amis-langpack.bat swe-SE Svenska amishelp.html
+call make-amis-langpack.bat nld-NL Nederlands amis_gebruikers_handleiding.html
+call make-amis-langpack.bat heb-IL Hebrew amishelp.html
+call make-amis-langpack.bat hun-HU Magyar amis-hun-help3.html
 
 ECHO Done

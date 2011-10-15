@@ -74,7 +74,7 @@
 ;**
 Name "\${PRODUCT_NAME} \${PRODUCT_VERSION}"
 ;this is the name of the installer that gets created.  
-OutFile "Setup-amis3-langpack-\${CUSTOM_LANG_NAME}.exe"
+OutFile "..\build\Setup-amis3-langpack-\${CUSTOM_LANG_NAME}.exe"
 
 ;InstallDir "\$APPDATA\AMIS\settings"
 	
@@ -136,12 +136,17 @@ SectionEnd
 ;**
 Function .onInit
 
-	
-	;show the splash screen
-	File /oname=\$PLUGINSDIR\splash.bmp "\${LOGO_DIR}\amis.bmp"
-	splash::show 1000 \$PLUGINSDIR\splash
-	Pop \$0 
-	
+	!insertmacro MUI_INSTALLOPTIONS_EXTRACT "filebrowse.ini"
+
+		;show the splash screen
+		File /oname=\$PLUGINSDIR\splash.bmp "\${LOGO_DIR}\amis.bmp"
+		splash::show 1000 \$PLUGINSDIR\splash
+
+		; possible values for $0:
+		; '1' if the user closed the splash screen early,
+		; '0' if everything closed normally, 
+		; '-1' if some error occurred.
+		Pop \$0
 	
 	SetShellVarContext all
 	StrCpy \$SETTINGS_DIR \$APPDATA\AMIS\settings
@@ -150,6 +155,7 @@ Function .onInit
 	IfFileExists "\$SETTINGS_DIR" End Error
 	
 	Error:
+		IfSilent +2
 		MessageBox MB_ICONSTOP "$text201"
 		Abort
 	
@@ -161,8 +167,10 @@ FunctionEnd
 ; uninstall init
 ;**
 Function un.onInit
+  IfSilent End
   MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "$text202" IDYES +2
   Abort
+End:
 FunctionEnd
 
 ;******
@@ -170,7 +178,9 @@ FunctionEnd
 ;**
 Function un.onUninstSuccess
   HideWindow
+  IfSilent End
   MessageBox MB_ICONINFORMATION|MB_OK "$text203"
+End:
 FunctionEnd
 
 

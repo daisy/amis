@@ -1,4 +1,3 @@
-from optparse import OptionParser
 from lxml import etree
 import SetupAmis3NsiTemplate
 import SetupAmis3LangpackNsiTemplate
@@ -31,20 +30,15 @@ def write_file(data, filename):
     f.close()
 
 def main():
-    parser = OptionParser("build-installer.py XMLFile OutputDir")
-    (options, args) = parser.parse_args()
-    if len(args) < 2:
-        print "Required: path to XML file and output directory"
-        sys.exit(1)
+    # the languages for which we need to build custom installers
+    langlist = ["eng-US", "hun-HU"]
     
-    main, langpack = export_nsi(args[0])
-    
-    outdir = args[1]
-    if not outdir.endswith("/"):
-        outdir += "/"
-        
-    write_file(main, outdir + "setup-amis3.nsi")
-    write_file(langpack, outdir + "setup-amis3-langpack.nsi")
+    for lang in langlist:
+        xmlfile = "../%s/installer-data.xml" % lang
+        main, langpack = export_nsi(xmlfile)
+        outdir = "../%s/" % lang
+        write_file(main, outdir + "setup-amis3.nsi")
+        write_file(langpack, outdir + "setup-amis3-langpack.nsi")
 
     
 if __name__ == "__main__":
