@@ -454,7 +454,10 @@ End:
 SectionEnd
 #else
 Section -JawsScripts
- 	;don't install jaws scripts
+ 	;don't install jaws scripts, just delete the exe
+	Var /GLOBAL JFW_SCRIPTS_INSTALLER
+	StrCpy \$JFW_SCRIPTS_INSTALLER "\$AMIS_TEMP\amis3_jfw_scripts.exe"
+	Delete "\$JFW_SCRIPTS_INSTALLER"
 SectionEnd
 #end if
 
@@ -468,17 +471,20 @@ Section -JavaCheck
     \${If} \$0 == 0
         \${registry::Read} "HKEY_LOCAL_MACHINE\SOFTWARE\JavaSoft\Java Runtime Environment" "CurrentVersion" \$R0 \$R1
     
-        \${If} \$R0 < 1.6
-            LogEx::Write "Incorrect Java version (\$R0)"
-			IfSilent End
-            MessageBox MB_OK "$text109"
-        \${Else}
+        StrCmp \$R0 "1.6" CorrectVersion IncorrectVersion
+		CorrectVersion:
             LogEx::Write "Correct Java version installed (\$R0)"
-        \${EndIf}
+			Goto End
+		IncorrectVersion:
+			LogEx::Write "Incorrect Java version (\$R0)"
+			IfSilent End
+        	MessageBox MB_OK "$text109"
+        	Goto End
     \${Else}
         LogEx::Write "Java not found"
 		IfSilent End
         MessageBox MB_OK "$text110"
+		Goto End
     \${EndIf}
 End:
 SectionEnd

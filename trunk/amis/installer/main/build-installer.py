@@ -26,7 +26,10 @@ def export_nsi(xmlfile):
 
 def write_file(data, filename):
     f = open(filename, "w")
-    f.write(data.encode('utf-8'))
+    # TODO: NSIS does not support unicode (although a forked version, Unicode NSIS, does; but we're not using that version at the moment.)
+    # so, write the NSIS file as latin-1 encoding, with the caveat that we will probably have to switch NSIS versions if people start creating unicode installers.
+    # at present, the text for all the existing installers (english, hungarian) can be represented with latin-1
+    f.write(data.encode('latin-1'))
     f.close()
 
 def main():
@@ -34,6 +37,7 @@ def main():
     langlist = ["eng-US", "hun-HU"]
     
     for lang in langlist:
+        print "Processing %s" % lang
         xmlfile = "../%s/installer-data.xml" % lang
         main, langpack = export_nsi(xmlfile)
         outdir = "../%s/" % lang

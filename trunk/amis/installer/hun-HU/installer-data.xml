@@ -4,23 +4,23 @@
 		nsis_language="Hungarian"
 	/>
 	<setup-program id="main-installer">
-		<string id="text101">Az ön számítógépére a Windows XP Service Pack 2 van telepítve.  A Szervízcsomag újabb verziója elérhetõ a Windows Update webhelyen. Azt ajánljuk, hogy telepítse rendszerére az elérhetõ frissítéseket.</string>
+		<string id="text101">Az ön számítógépére a Windows XP Service Pack 2 van telepítve.  A Szervízcsomag újabb verziója elérheto a Windows Update webhelyen. Azt ajánljuk, hogy telepítse rendszerére az elérheto frissítéseket.</string>
 		<string id="text102">Figyelmeztetés: Lehetséges, hogy az ön által használt operációs rendszeren az AMIS nem futtatható.  Folytatja a telepítést?</string>
-		<string id="text103">Figyelmeztetés: Az AMIS A DirectX 9.0 vagy magasabb verzióját igényli.  Folytathatja most a telepítést, azonban a telepítés elõtt ajánlott a rendszer frissítése.  Folytatja?</string>
-		<string id="text104">Ön az Internet Explorer 6-os verziójával rendelkezik.  A 7-es verzió vagy magasabb szükséges az optimális teljesítmény eléréséhez.  Az AMIS telepítése után azt ajánljuk, hogy frissítse a rendszerén futó Internet Explorer böngészõt.</string>
-		<string id="text105">Az Internet Explorer verziója elavult. Elképzelhető, hogy az AMIS nem fog megfelelően működni. Kívánja folytatni?</string>
-		<string id="text106">Hiba történt A Microsoft futásidejû környezet telepítése közben.  Ha problémát észlel az AMIS futtatása közben, vegye fel a kapcsolatot az $\"Informatika a látássérültekért$\" Alapítvány ügyfélszolgálatával!</string>
+		<string id="text103">Figyelmeztetés: Az AMIS A DirectX 9.0 vagy magasabb verzióját igényli.  Folytathatja most a telepítést, azonban a telepítés elott ajánlott a rendszer frissítése.  Folytatja?</string>
+		<string id="text104">Ön az Internet Explorer 6-os verziójával rendelkezik.  A 7-es verzió vagy magasabb szükséges az optimális teljesítmény eléréséhez.  Az AMIS telepítése után azt ajánljuk, hogy frissítse a rendszerén futó Internet Explorer böngészot.</string>
+		<string id="text105">Az Internet Explorer verziója elavult. Elképzelhetõ, hogy az AMIS nem fog megfelelõen mûködni. Kívánja folytatni?</string>
+		<string id="text106">Hiba történt A Microsoft futásideju környezet telepítése közben.  Ha problémát észlel az AMIS futtatása közben, vegye fel a kapcsolatot az $\"Informatika a látássérültekért$\" Alapítvány ügyfélszolgálatával!</string>
 		<string id="text107">Would you like to install Jaws for Windows scripts for AMIS?</string>
 		<string id="text108">There was an error encountered while attempting to install Jaws for Windows scripts for AMIS.  Please visit http://daisy.org/amis to download and install the scripts separately.</string>
-		<string id="text109">A Java Futtatókörnyezet frissítése az 1.6 vagy magasabb verzióra történõ frissítése szükséges a DAISY 3 könyvek szövegének teljeskörû megjelenítéséhez. Az AMIS telepítése után Bármikor letöltheti a futtatókörnyezetet a http://www.java.com oldalról, majd telepítheti azt.</string>
-		<string id="text110">A Java Futtatókörnyezet 1.6 vagy magasabb verziójának telepítése szükséges a DAISY 3 könyvek szövegének teljeskörû megjelenítéséhez. Az AMIS telepítése után Bármikor letöltheti a futtatókörnyezetet a http://www.java.com oldalról, majd telepítheti azt.</string>
-		<string id="text111">Biztos, hogy el kívánja távolítani az $(^Name) programot minden összetevõjével együtt?</string>
+		<string id="text109">A Java Futtatókörnyezet frissítése az 1.6 vagy magasabb verzióra történo frissítése szükséges a DAISY 3 könyvek szövegének teljesköru megjelenítéséhez. Az AMIS telepítése után Bármikor letöltheti a futtatókörnyezetet a http://www.java.com oldalról, majd telepítheti azt.</string>
+		<string id="text110">A Java Futtatókörnyezet 1.6 vagy magasabb verziójának telepítése szükséges a DAISY 3 könyvek szövegének teljesköru megjelenítéséhez. Az AMIS telepítése után Bármikor letöltheti a futtatókörnyezetet a http://www.java.com oldalról, majd telepítheti azt.</string>
+		<string id="text111">Biztos, hogy el kívánja távolítani az $(^Name) programot minden összetevojével együtt?</string>
 		<string id="text112">Az $(^Name) eltávolítása sikeresen megtörtént.</string>
-		<string id="text113">El kívánja távolítani a könyvjelzõket és a legutoljára megnyitott könyvek listáját?</string>
+		<string id="text113">El kívánja távolítani a könyvjelzoket és a legutoljára megnyitott könyvek listáját?</string>
 	</setup-program>
 	<setup-program id="langpack-installer">
 		<string id="text201">Az AMIS beállításait tartalmazó $SETTINGS_DIR mappa nem található.</string>
-		<string id="text202">Biztosan eltávolítja az $(^Name) programot annak minden összetevõjével együtt?</string>
-		<string id="text203">az $(^Name) eltávolítása a számítógéprõl sikeresen befejezõdött.</string>
+		<string id="text202">Biztosan eltávolítja az $(^Name) programot annak minden összetevojével együtt?</string>
+		<string id="text203">az $(^Name) eltávolítása a számítógéprol sikeresen befejezodött.</string>
 	</setup-program>
 </installer-data>
