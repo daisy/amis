@@ -74,7 +74,7 @@
 ;**
 Name "\${PRODUCT_NAME} \${PRODUCT_VERSION}"
 ;this is the name of the installer that gets created.  
-OutFile "..\build\Setup-amis3-langpack-\${CUSTOM_LANG_NAME}.exe"
+OutFile "..\build\Setup-amis-langpack-\${CUSTOM_LANG_NAME}.exe"
 
 ;InstallDir "\$APPDATA\AMIS\settings"
 	
@@ -127,7 +127,7 @@ SectionEnd
 ; check if we need to install the msvc runtimes
 ;**
 Section -Post
-  WriteUninstaller "\$SETTINGS_DIR\lang\\${CUSTOM_LANG_ID}\Uninstall-amis3-langpack-\${CUSTOM_LANG_NAME}.exe"
+  WriteUninstaller "\$SETTINGS_DIR\lang\\${CUSTOM_LANG_ID}\Uninstall-amis-langpack-\${CUSTOM_LANG_NAME}.exe"
 
 SectionEnd
 
