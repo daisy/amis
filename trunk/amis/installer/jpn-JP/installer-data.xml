@@ -1,0 +1,26 @@
+<installer-data langid="jpn-JP">
+	<options
+		include_jaws_scripts="yes"
+		nsis_language="Japanese"
+	/>
+	<setup-program id="main-installer">
+		<string id="text101">Windows XP Service Pack 2が検知されました。新しい Service Pack がありますので、Windows Updateをして、最新の Service Pack をインストールしてください。</string>
+		<string id="text102">警告：OSがサポートされていません。AMISは正常に動作しないかもしれません。インストールを続行しますか？</string>
+		<string id="text103">警告：AMISを使用するには、DirectX 9.0 以上が必要です。インストールを続ける前に、システムをアップデートすることをお勧めします。インストールを継続しますか？</string>
+		<string id="text104">Explorer 6が検知されました。最適な状態でAMISをお使いいただくには、バージョン７以降が推奨です。AMISのインストールが終了したら、Internet Explorerをアップデートしてください。</string>
+		<string id="text105">Internet Explorerのバージョンが古くて、AMISが動かない可能性があります。インストールを継続しますか？</string>
+		<string id="text106">Microsoft runtimeファイルのインストールでエラーが発生しました。AMISの使用中に問題が発生する場合は、テクニカルサポートにご連絡ください。</string>
+		<string id="text107">AMIS用のJawsスクリプトをインストールしますか?</string>
+		<string id="text108">AMIS用のJawsスクリプトのインストールでエラーが発生しました。次のページから、スクリプトのダウンロードとインストールをすることができます。http://daisy.org/amis</string>
+		<string id="text109">Java Runtimeのバージョンを、 1.6以上にアップグレードしてください。DAISY3のテキスト表示に必要です。AMISのインストール終了後に、次のページからJAVAをダウンロードしてインストールしてください。http://www.java.com </string>
+		<string id="text110">Java Runtimeのバージョンを、 1.6以上にアップグレードしてください。DAISY3のテキスト表示に必要です。AMISのインストール終了後に、次のページからJAVAをダウンロードしてインストールしてください。http://www.java.com </string>
+		<string id="text111"> $(^Name) とそのコンポーネントをすべて削除しますか？</string>
+		<string id="text112">$(^Name) を削除しました。</string>
+		<string id="text113">ブックマークと履歴を削除しますか？</string>
+	</setup-program>
+	<setup-program id="langpack-installer">
+		<string id="text201">AMISの設定ディレクトリ $SETTINGS_DIR が見つかりません。</string>
+		<string id="text202">$(^Name) とそのコンポーネントをすべて削除しますか？</string>
+		<string id="text203">$(^Name) を削除しました。</string>
+	</setup-program>
+</installer-data>

@@ -29,12 +29,12 @@ def write_file(data, filename):
     # TODO: NSIS does not support unicode (although a forked version, Unicode NSIS, does; but we're not using that version at the moment.)
     # so, write the NSIS file as latin-1 encoding, with the caveat that we will probably have to switch NSIS versions if people start creating unicode installers.
     # at present, the text for all the existing installers (english, hungarian) can be represented with latin-1
-    f.write(data.encode('latin-1'))
+    f.write(data.encode('utf-8'))
     f.close()
 
 def main():
     # the languages for which we need to build custom installers
-    langlist = ["eng-US", "hun-HU"]
+    langlist = ["eng-US", "hun-HU", "jpn-JP"]
     
     for lang in langlist:
         print "Processing %s" % lang
