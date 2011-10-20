@@ -1,4 +1,4 @@
-<installer-data langid="eng-US">
+<installer-data langid="hun-HU">
 	<options
 		include_jaws_scripts="no"
 		nsis_language="Hungarian"
@@ -17,10 +17,20 @@
 		<string id="text111">Biztos, hogy el kívánja távolítani az $(^Name) programot minden összetevõjével együtt?</string>
 		<string id="text112">Az $(^Name) eltávolítása sikeresen megtörtént.</string>
 		<string id="text113">El kívánja távolítani a könyvjelzõket és a legutoljára megnyitott könyvek listáját?</string>
+		<string id="text114">További lehetőségek</string>
+		<string id="text115">AMIS hibakeresési mód</string>
+		<string id="text116">AMIS Kompatibilitási mód</string>
+		<string id="text117">AMIS Kompatibilitási mód DirectX támogatással</string>
+		<string id="text118">AMIS Kompatibilitási mód TTS támogatással</string>
+		<string id="text119">Weboldal</string>
+		<string id="text120">Eltávolítás</string>
+		<string id="text121">Súgó</string>
+		<string id="text122">Billentyűparancsok</string>
+		<string id="text123">Angol</string>
 	</setup-program>
 	<setup-program id="langpack-installer">
 		<string id="text201">Az AMIS beállításait tartalmazó $SETTINGS_DIR mappa nem található.</string>
 		<string id="text202">Biztosan eltávolítja az $(^Name) programot annak minden összetevõjével együtt?</string>
-		<string id="text203">az $(^Name) eltávolítása a számítógéprõl sikeresen befejezõdött.</string>
+		<string id="text203">Az $(^Name) eltávolítása a számítógéprõl sikeresen befejezõdött.</string>
 	</setup-program>
 </installer-data>

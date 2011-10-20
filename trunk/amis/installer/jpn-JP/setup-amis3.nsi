@@ -614,21 +614,6 @@ Section Uninstall
 	Delete "$SMPROGRAMS\AMIS\Additional\*"
 	Delete "$SMPROGRAMS\AMIS\*"
 	
-    ;Delete "$SMPROGRAMS\AMIS\AMIS.lnk"
-    ;Delete "$SMPROGRAMS\AMIS\Additional\AMIS Debug Mode.lnk"
-    ;Delete "$SMPROGRAMS\AMIS\Additional\AMIS Compatibility Mode.lnk"    
-    ;Delete "$SMPROGRAMS\AMIS\Additional\AMIS Compatibility Mode With DirectX.lnk"    
-    ;Delete "$SMPROGRAMS\AMIS\Additional\AMIS Compatibility Mode With TTS.lnk"    
-    
-    ;Delete "$SMPROGRAMS\AMIS\Website.lnk"
-    ;Delete "$SMPROGRAMS\AMIS\Uninstall.lnk"
-    ;${If} ${CUSTOM_LANG_ID} != "eng-US"
-    ;    Delete "$SMPROGRAMS\AMIS\Help (${CUSTOM_LANG_NAME}).lnk"
-    ;    Delete "$SMPROGRAMS\AMIS\Keyboard Shortcuts (${CUSTOM_LANG_NAME}).lnk"
-    ;${EndIf}
-    ;Delete "$SMPROGRAMS\AMIS\Help (${DEFAULT_LANG_NAME}).lnk"
-    ;Delete "$SMPROGRAMS\AMIS\Keyboard Shortcuts (${DEFAULT_LANG_NAME}).lnk"
-
     RMDir "$SMPROGRAMS\AMIS\Additional\"
     RMDir "$SMPROGRAMS\AMIS\"
     

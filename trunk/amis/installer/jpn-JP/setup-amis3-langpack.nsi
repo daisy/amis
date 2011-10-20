@@ -195,7 +195,7 @@ Section Uninstall
 	StrCpy $SETTINGS_DIR $APPDATA\AMIS\settings
 	
 	Delete "$SMPROGRAMS\AMIS\Help (${CUSTOM_LANG_NAME}).lnk"
-  Delete "$SMPROGRAMS\AMIS\Keyboard Shortcuts (${CUSTOM_LANG_NAME}).lnk"
+  	Delete "$SMPROGRAMS\AMIS\Keyboard Shortcuts (${CUSTOM_LANG_NAME}).lnk"
 
 	Delete "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}\help\*"
 	Delete "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}\help\img\*"

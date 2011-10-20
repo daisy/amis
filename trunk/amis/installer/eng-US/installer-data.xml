@@ -17,6 +17,16 @@
 		<string id="text111">Are you sure you want to completely remove $(^Name) and all of its components?</string>
 		<string id="text112">$(^Name) was successfully removed from your computer.</string>
 		<string id="text113">Remove bookmarks and history?</string>
+		<string id="text114">Additional</string>
+		<string id="text115">AMIS Debug Mode</string>
+		<string id="text116">AMIS Compatibility Mode</string>
+		<string id="text117">AMIS Compatibility Mode With DirectX</string>
+		<string id="text118">AMIS Compatibility Mode With TTS</string>
+		<string id="text119">Website</string>
+		<string id="text120">Uninstall</string>
+		<string id="text121">Help</string>
+		<string id="text122">Keyboard Shortcuts</string>
+		<string id="text123">U.S. English</string>
 	</setup-program>
 	<setup-program id="langpack-installer">
 		<string id="text201">AMIS settings directory $SETTINGS_DIR not found.</string>

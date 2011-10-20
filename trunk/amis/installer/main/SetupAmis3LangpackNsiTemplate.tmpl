@@ -118,8 +118,8 @@ SectionEnd
 ; Create shortcuts to the documentation (found in the language pack)
 ;*
 Section -AdditionalIcons
-  CreateShortCut "\$SMPROGRAMS\AMIS\Help (\${CUSTOM_LANG_NAME}).lnk" "\$SETTINGS_DIR\lang\\${CUSTOM_LANG_ID}\help\\${CUSTOM_HELP}"
-  CreateShortCut "\$SMPROGRAMS\AMIS\Keyboard Shortcuts (\${CUSTOM_LANG_NAME}).lnk" "\$SETTINGS_DIR\lang\\${CUSTOM_LANG_ID}\shortcuts\amiskeys.html"
+  CreateShortCut "<%="$SMPROGRAMS\\AMIS\\"%>$text121 (\${CUSTOM_LANG_NAME}).lnk" "\$SETTINGS_DIR\lang\\${CUSTOM_LANG_ID}\help\\${CUSTOM_HELP}"
+  CreateShortCut "<%="$SMPROGRAMS\\AMIS\\"%>$text122 (\${CUSTOM_LANG_NAME}).lnk" "\$SETTINGS_DIR\lang\\${CUSTOM_LANG_ID}\shortcuts\amiskeys.html"
 SectionEnd
 
 ;******
@@ -194,8 +194,8 @@ Section Uninstall
 	SetShellVarContext all 
 	StrCpy \$SETTINGS_DIR \$APPDATA\AMIS\settings
 	
-	Delete "\$SMPROGRAMS\AMIS\Help (\${CUSTOM_LANG_NAME}).lnk"
-  Delete "\$SMPROGRAMS\AMIS\Keyboard Shortcuts (\${CUSTOM_LANG_NAME}).lnk"
+	Delete "<%="$SMPROGRAMS\\AMIS\\"%>$text121 (\${CUSTOM_LANG_NAME}).lnk"
+  	Delete "<%="$SMPROGRAMS\\AMIS\\"%>$text122 (\${CUSTOM_LANG_NAME}).lnk"
 
 	Delete "\$SETTINGS_DIR\lang\\${CUSTOM_LANG_ID}\help\*"
 	Delete "\$SETTINGS_DIR\lang\\${CUSTOM_LANG_ID}\help\img\*"
