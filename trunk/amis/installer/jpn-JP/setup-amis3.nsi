@@ -82,7 +82,7 @@
 
 ;the default language setting
 !define DEFAULT_LANG_ID "eng-US"
-!define DEFAULT_LANG_NAME "U.S. English"
+!define DEFAULT_LANG_NAME "米国 英語"
 
 ;this is the path to your windows system 32 directory
 !define WIN32_DIR "c:\windows\system32"
@@ -216,10 +216,10 @@ Section "MainSection" SEC01
   
     ;this creates a subdir in the start menu that will contain our modified shortcuts for compatibility/debug modes
     CreateDirectory "$SMPROGRAMS\AMIS\Additional"
-    CreateShortCut "$SMPROGRAMS\AMIS\Additional\AMIS Debug Mode.lnk" "$INSTDIR\AMIS.exe" "-prefs amisPrefsDebug.xml"
-    CreateShortCut "$SMPROGRAMS\AMIS\Additional\AMIS Compatibility Mode.lnk" "$INSTDIR\AMIS.exe" "-prefs amisPrefsCompatibilityMode.xml"
-    CreateShortCut "$SMPROGRAMS\AMIS\Additional\AMIS Compatibility Mode With DirectX.lnk" "$INSTDIR\AMIS.exe" "-prefs amisPrefsCompatibilityModeWithDX.xml"
-    CreateShortCut "$SMPROGRAMS\AMIS\Additional\AMIS Compatibility Mode With TTS.lnk" "$INSTDIR\AMIS.exe" "-prefs amisPrefsCompatibilityModeWithTTS.xml"
+    CreateShortCut "$SMPROGRAMS\AMIS\Additional\AMIS デバッグモード.lnk" "$INSTDIR\AMIS.exe" "-prefs amisPrefsDebug.xml"
+    CreateShortCut "$SMPROGRAMS\AMIS\Additional\AMIS コンパティビリティモード.lnk" "$INSTDIR\AMIS.exe" "-prefs amisPrefsCompatibilityMode.xml"
+    CreateShortCut "$SMPROGRAMS\AMIS\Additional\AMIS コンパティビリティモード（DirectX）.lnk" "$INSTDIR\AMIS.exe" "-prefs amisPrefsCompatibilityModeWithDX.xml"
+    CreateShortCut "$SMPROGRAMS\AMIS\Additional\AMIS コンパティビリティモード（TTS）.lnk" "$INSTDIR\AMIS.exe" "-prefs amisPrefsCompatibilityModeWithTTS.xml"
     
     ;copy the DLLs
     File "${BIN_DIR}\libambulant_shwin32.dll"
@@ -485,14 +485,14 @@ SectionEnd
 ;*
 Section -AdditionalIcons
     WriteIniStr "$INSTDIR\${PRODUCT_NAME}.url" "InternetShortcut" "URL" "${PRODUCT_WEB_SITE}"
-    CreateShortCut "$SMPROGRAMS\AMIS\Website.lnk" "$INSTDIR\${PRODUCT_NAME}.url"
-    CreateShortCut "$SMPROGRAMS\AMIS\Uninstall.lnk" "$INSTDIR\Uninstall-AMIS.exe"
+    CreateShortCut "$SMPROGRAMS\AMIS\ウェブサイト.lnk" "$INSTDIR\${PRODUCT_NAME}.url"
+    CreateShortCut "$SMPROGRAMS\AMIS\アンインストール.lnk" "$INSTDIR\Uninstall-AMIS.exe"
     ${If} ${CUSTOM_LANG_ID} != "eng-US"
-        CreateShortCut "$SMPROGRAMS\AMIS\Help (${CUSTOM_LANG_NAME}).lnk" "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}\help\${CUSTOM_HELP}"
-        CreateShortCut "$SMPROGRAMS\AMIS\Keyboard Shortcuts (${CUSTOM_LANG_NAME}).lnk" "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}\shortcuts\amiskeys.html"
+        CreateShortCut "$SMPROGRAMS\AMIS\ヘルプ (${CUSTOM_LANG_NAME}).lnk" "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}\help\${CUSTOM_HELP}"
+        CreateShortCut "$SMPROGRAMS\AMIS\ショートカットキー (${CUSTOM_LANG_NAME}).lnk" "$SETTINGS_DIR\lang\${CUSTOM_LANG_ID}\shortcuts\amiskeys.html"
     ${EndIf}
-    CreateShortCut "$SMPROGRAMS\AMIS\Help (${DEFAULT_LANG_NAME}).lnk" "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}\help\amishelp.html"
-    CreateShortCut "$SMPROGRAMS\AMIS\Keyboard Shortcuts (${DEFAULT_LANG_NAME}).lnk" "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}\shortcuts\amiskeys.html"
+    CreateShortCut "$SMPROGRAMS\AMIS\ヘルプ (${DEFAULT_LANG_NAME}).lnk" "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}\help\amishelp.html"
+    CreateShortCut "$SMPROGRAMS\AMIS\ショートカットキー (${DEFAULT_LANG_NAME}).lnk" "$SETTINGS_DIR\lang\${DEFAULT_LANG_ID}\shortcuts\amiskeys.html"
 SectionEnd
 
 ;******
