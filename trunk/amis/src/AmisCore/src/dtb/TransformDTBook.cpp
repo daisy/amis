@@ -125,6 +125,10 @@ void amis::dtb::TransformDTBook::readResults()
 }
 bool amis::dtb::TransformDTBook::transform(string filepath)
 {	
+	if (filepath == "") {
+		return false;
+	}
+
 	if (!has_java())
 	{
 		amis::util::Log::Instance()->writeWarning(

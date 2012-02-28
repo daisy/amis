@@ -14,7 +14,7 @@
 ; product information
 ;**
 !define PRODUCT_NAME "AMIS"
-!define PRODUCT_VERSION "3.1.2"
+!define PRODUCT_VERSION "3.1.3"
 !define PRODUCT_PUBLISHER "DAISY Consortium"
 !define PRODUCT_WEB_SITE "http://daisy.org/amis"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\AMIS.exe"

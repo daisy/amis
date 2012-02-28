@@ -474,11 +474,19 @@ bool amis::dtb::Dtb::processOpf(const ambulant::net::url* filepath)
 	mpFiles->setAdditionalDataAfterInitialParse(mUid, navfile, resfile, mpHistory);
 	mpFiles->setTextFile(txtfile);
 
-	//pre-transform the textfile, since it's easier to make the user wait now than
-	//have the SMIL start playing while IE transforms on the fly
-	//the textfile will be transformed and ready to be loaded (in bin/tmpdtbook.xml)
-	amis::dtb::TransformDTBook dtbook_xform(mTempdir);
-	mbDtbookTransformSucceeded = dtbook_xform.transform(txtfile->get_url());
+	// some DAISY 3 books might not have text files (ncx-only)
+	if (txtfile != "") 
+	{
+		//pre-transform the textfile, since it's easier to make the user wait now than
+		//have the SMIL start playing while IE transforms on the fly
+		//the textfile will be transformed and ready to be loaded (in bin/tmpdtbook.xml)
+		amis::dtb::TransformDTBook dtbook_xform(mTempdir);
+		mbDtbookTransformSucceeded = dtbook_xform.transform(txtfile->get_url());
+	}
+	else 
+	{
+		mbDtbookTransformSucceeded = false;
+	}
 	return true;
 }
 //--------------------------------------------------

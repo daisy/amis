@@ -75,7 +75,7 @@
 <xsl:template name="copyCncatts">
 	<xsl:copy-of select="@id|@title|@xml:lang"/>
 </xsl:template>
-
+	
 <xsl:template name="copyAttsNoId">
 	<xsl:copy-of select="@class|@title|@xml:lang"/>
 </xsl:template>
@@ -92,12 +92,14 @@
 
 
 <xsl:template name="write_doctype">
+	<xsl:text>&#xa;</xsl:text><!--line break-->
 	<xsl:choose>
 		<xsl:when test="$svg_mathml='true'">
 			<xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0 plus SVG 1.1//EN" "http://www.w3.org/2002/04/xhtml-math-svg/xhtml-math-svg.dtd"</xsl:text>
 		</xsl:when>
 		<xsl:otherwise>
-			<xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"</xsl:text>
+<!--			<xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"</xsl:text>-->
+			<xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"</xsl:text>
 		</xsl:otherwise>
 	</xsl:choose>
 	<xsl:if test="$daisy_noteref='true'">
@@ -106,6 +108,7 @@
 ]</xsl:text>
 	</xsl:if>
 	<xsl:text disable-output-escaping="yes">&gt;</xsl:text>
+	<xsl:text>&#xa;</xsl:text><!--line break-->
 </xsl:template>
 
 
@@ -202,26 +205,7 @@
 
    <xsl:template match="dtb:book">
      <body>
-     
-			<xsl:for-each select="(//dtb:doctitle)[1]">
-				<h1 class="title" id="h1classtitle">
-					<xsl:choose>
-						<xsl:when test="$first_smil and $hrefTarget='TEXT'">
-							<a href="{$smilPrefix}{$first_smil}#doctitleText">
-								<xsl:value-of select="."/>
-							</a>
-						</xsl:when>
-						<xsl:when test="$first_smil">
-							<a href="{$smilPrefix}{$first_smil}#doctitle">
-								<xsl:value-of select="."/>
-							</a>
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:value-of select="."/>
-						</xsl:otherwise>
-					</xsl:choose>
-				</h1>
-			</xsl:for-each>
+     	   <!--TODO make sure the first element is a heading, even if no doctitle is here --> 
 			<xsl:if test="$toc_gen='true'">
 				<xsl:call-template name="tocgen"/>
 			</xsl:if>
@@ -422,6 +406,7 @@
    
    <xsl:template match="dtb:list[not(@type)]">
      <ul>
+     	 <xsl:copy-of select="@start"/>
        <xsl:call-template name="copyCatts"/>
        <xsl:apply-templates/>
      </ul>
@@ -565,6 +550,12 @@
     </div>
    </xsl:template>
 
+  <xsl:template match="dtb:doctitle[1]">
+    <h1 class="title">
+    	<xsl:call-template name="copyCncatts"/>
+    	<xsl:call-template name="maybeSmilref"/>
+    </h1>
+  </xsl:template>
   <xsl:template match="dtb:doctitle">
     <div class="doctitle">
     	<xsl:call-template name="copyCncatts"/>
@@ -583,7 +574,6 @@
      <div class="epigraph">
        <xsl:call-template name="copyCncatts"/>
        <xsl:call-template name="maybeSmilref"/>
-       <xsl:apply-templates/>
      </div>
    </xsl:template>
 
@@ -678,6 +668,7 @@
 
    <xsl:template match="dtb:list[@type='ol']">
      <ol> 
+     	<xsl:copy-of select="@start"/>
 		<xsl:choose>
 			<xsl:when test="@enum='i'">
 				<xsl:attribute name="class">lower-roman</xsl:attribute>
@@ -702,13 +693,17 @@
 
 
    <xsl:template match="dtb:list[@type='ul']">
-     <ul> <xsl:call-template name="copyCatts"/>
+     <ul>
+     	 <xsl:copy-of select="@start"/>
+     	 <xsl:call-template name="copyCatts"/>
        <xsl:apply-templates/>
      </ul> 
    </xsl:template>
 
    <xsl:template match="dtb:list[@type='pl']">
-     <ul class="plain"> <xsl:call-template name="copyCncatts"/>
+     <ul class="plain">
+     	 <xsl:copy-of select="@start"/>
+     	 <xsl:call-template name="copyCncatts"/>
        <xsl:apply-templates/>
      </ul>
    </xsl:template>
@@ -898,18 +893,21 @@
 
    <xsl:template match="dtb:poem/dtb:title">
      <p class="title">
+       <xsl:call-template name="copyCncatts"/>
        <xsl:call-template name="maybeSmilref"/>
      </p>
    </xsl:template>
 
    <xsl:template match="dtb:cite/dtb:title">
      <span class="title">
+       <xsl:call-template name="copyCncatts"/>
        <xsl:call-template name="maybeSmilref"/>
      </span>
    </xsl:template>
 
 	<xsl:template match="dtb:cite/dtb:author">
      <span class="author">
+       <xsl:call-template name="copyCncatts"/>
        <xsl:call-template name="maybeSmilref"/>
      </span>
    </xsl:template>
@@ -1228,6 +1226,9 @@
 		<xsl:variable name="fragment" select="substring-after($smilref, '#')"/>
 		<xsl:variable name="smilElem" select="document(concat($baseDir, $url))//*[@id=$fragment]"/>
 	  	<xsl:choose>
+	  		<xsl:when test="$smilElem[self::s:seq]">
+				<xsl:value-of select="concat(concat($smilPrefix,$url),'#',$smilElem/s:par/s:text/@id)"/>
+	  		</xsl:when>
 	  		<xsl:when test="$smilElem[self::s:par] and $hrefTarget='TEXT'">
 				<xsl:value-of select="concat(concat($smilPrefix,$url),'#',$smilElem/s:text/@id)"/>
 	  		</xsl:when>
