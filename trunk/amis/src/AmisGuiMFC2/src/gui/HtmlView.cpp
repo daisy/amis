@@ -25,7 +25,9 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include <string>
 #include <cassert>
 
+
 #include "stdafx.h"
+#include "comutil.h"
 
 #include "gui/AmisApp.h"
 #include "gui/HtmlDoc.h"
@@ -540,8 +542,6 @@ IHTMLStyleSheet* CAmisHtmlView::applyStylesheet(const ambulant::net::url* styles
 
 	if (stylesheet == NULL) return NULL;
 
-	//copied this pDoc-getting code from another function in this file
-
 	// First we need to get a pointer to the DOM
 	IDispatch *pDisp = GetHtmlDocument();
 	if (pDisp == NULL) return NULL;
@@ -561,10 +561,13 @@ IHTMLStyleSheet* CAmisHtmlView::applyStylesheet(const ambulant::net::url* styles
 	IHTMLStyleSheet* pStyleSheet;
 	string log_msg2 = "About to call create stylesheet";
 	amis::util::Log::Instance()->writeTrace(log_msg2, "CAmisHtmlView::applyStylesheet");
+	
 	res = pDoc->createStyleSheet(css_path_bstr, 0, &pStyleSheet);
 	string log_msg3 = "Created stylesheet: done";
 	amis::util::Log::Instance()->writeTrace(log_msg3, "CAmisHtmlView::applyStylesheet");
 	SysFreeString(css_path_bstr);
+	
+	long len = stylesheetCount();
 	
 	forceResizeHack();
 
@@ -578,14 +581,53 @@ void CAmisHtmlView::removeStylesheet(IHTMLStyleSheet* pStyleSheet)
 	if (!pStyleSheet) return;
 	
 	amis::util::Log::Instance()->writeMessage("Removing stylesheet", "CAmisHtmlView::removeStylesheet");
+	
 	pStyleSheet->put_disabled(VARIANT_TRUE);
+	
+#if 0
+	// this should remove the stylesheet from the document... 
+	// unfortunately, IHTMLStyleSheet doesn't seem to support the IHTMLDOMNode interface, though, so this code doesn't work
+	// leaving this code here in case I figure it out someday
+	IHTMLDOMNode* pNode;
+	HRESULT hr = pStyleSheet->QueryInterface(IID_IHTMLDOMNode, (void**)&pNode);
+	if (S_OK(hr))
+	{
+		IHTMLDOMNode* pParent;
+		IHTMLDOMNode* pRemoved;
+		if (pNode->get_parentNode(&pParent) == S_OK) {
+			pParent->removeChild(pNode, pRemovedNode);
+		}
+		pParent->Release();
+		pNode->Release();
+		pRemovedNode->Release();
+	}
+#endif
+
 	pStyleSheet->Release();
 	pStyleSheet = NULL;
-
+	
 	forceResizeHack();
 }
 
+// returns the number of stylesheets currently applied to the document
+// note that there shouldn't ever be more than 3 (amis.css, font, and page contrast)
+long CAmisHtmlView::stylesheetCount()
+{
+	// First we need to get a pointer to the DOM
+	IDispatch *pDisp = GetHtmlDocument();
+	if (pDisp == NULL) return 0;
+	IHTMLDocument2 *pDoc;
+	HRESULT res;
+	res = pDisp->QueryInterface(IID_IHTMLDocument2, (void**)&pDoc);
+	if (!SUCCEEDED(res)) return 0;
+	if (pDoc == NULL) return 0;
 
+	IHTMLStyleSheetsCollection* pStyleSheetsCollection;
+	pDoc->get_styleSheets(&pStyleSheetsCollection);
+	long length;
+	pStyleSheetsCollection->get_length(&length);
+	return length;
+}
 
 BOOL CAmisHtmlView::LoadFromResource(UINT nRes)
 {
