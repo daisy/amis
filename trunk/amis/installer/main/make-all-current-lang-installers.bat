@@ -24,7 +24,6 @@ call make-amis-installer.bat nld-NL Nederlands amis_gebruikers_handleiding.html 
 call make-amis-installer.bat heb-IL Hebrew amishelp.html contrast
 call make-amis-installer.bat hun-HU Magyar amis-hun-help3.html kontrasztos
 
-
 REM the langpacks
 call make-amis-langpack.bat afr-ZA Afrikaans amishelp-afrikaans.html
 call make-amis-langpack.bat eng-AU "Australian English" amishelp.html

@@ -475,7 +475,7 @@ bool amis::dtb::Dtb::processOpf(const ambulant::net::url* filepath)
 	mpFiles->setTextFile(txtfile);
 
 	// some DAISY 3 books might not have text files (ncx-only)
-	if (txtfile != "") 
+	if (!txtfile->is_empty_path()) 
 	{
 		//pre-transform the textfile, since it's easier to make the user wait now than
 		//have the SMIL start playing while IE transforms on the fly

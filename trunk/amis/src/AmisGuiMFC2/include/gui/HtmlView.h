@@ -49,7 +49,7 @@ public:
 	//returns a pointer to the stylesheet
 	IHTMLStyleSheet* applyStylesheet(const ambulant::net::url*);
 	void removeStylesheet(IHTMLStyleSheet*);
-
+	
 	virtual void OnDraw(CDC*);  // overridden to draw this view
 	virtual BOOL PreCreateWindow(CREATESTRUCT&);
 	virtual void OnInitialUpdate();
@@ -69,6 +69,8 @@ protected:
 	DECLARE_MESSAGE_MAP()
 private:
 	void forceResizeHack();
+	long stylesheetCount();
+	void removeDisabledStylesheets();
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext&) const;
