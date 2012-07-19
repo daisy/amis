@@ -60,7 +60,7 @@ public:
 	void setSmilFile(const ambulant::net::url*);
 	const ambulant::net::url* getSmilFile();
 	void print();
-	void setTextFile(const ambulant::net::url*);
+	void setTextFiles(const amis::UrlList*);
 	amis::UrlList* getTextFiles();
 	
 	void setProtectedNavFilepath(const ambulant::net::url*);
@@ -82,7 +82,7 @@ private:
 	ambulant::net::url mProtectedNavFilepath;
 	ambulant::net::url mProtectedBookKeyFilepath;
 	amis::util::SearchForFiles* mpFileSearcher;
-	UrlList mTextFiles;
+	amis::UrlList mTextFiles;
 };
 }
 }

@@ -949,6 +949,7 @@ void CAmisApp::OnFileClose()
 		}
 
 		mbBookIsOpen = false;
+		
 		//the order matters here
 		amis::dtb::DtbWithHooks::Instance()->DestroyInstance();
 		MainWndParts::Instance()->mpMmView->OnDestroy();
@@ -958,6 +959,7 @@ void CAmisApp::OnFileClose()
 		mpHistory->clearLastRead();
 		amis::io::BookListFileIO io;
 		io.writeToFile(mpHistory->getFilepath(), mpHistory);
+
 		
 		//update the status in the title bar
 		amis::gui::MainWndParts::Instance()->updateTitleBar(amis::gui::MainWndParts::TITLEBAR_BOOKTITLE, _T(""));
@@ -1981,11 +1983,11 @@ int CAmisApp::getIeVersion()
 }
 std::string CAmisApp::getVersion()
 {
-	return "3.1.3";
+	return "3.1.4 beta";
 }
 std::string CAmisApp::getReleaseDate()
 {
-	return "2011-11-18";
+	return "2012-07-19";
 }
 //when the next volume for this book is loaded, then load this URL
 void CAmisApp::setMultivolumeLoadPoint(std::wstring uid, const ambulant::net::url* url)

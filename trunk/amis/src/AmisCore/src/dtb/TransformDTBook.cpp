@@ -25,43 +25,26 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include <afxpriv.h>
 #endif
 
-#if 0
-#include <xercesc/util/PlatformUtils.hpp>
-#include <xercesc/util/OutOfMemoryException.hpp>
-#include <xercesc/framework/MemBufInputSource.hpp>
-#include <xercesc/framework/MemBufFormatTarget.hpp>
-#include "util/xercesutils.h"
-#endif
-
 #include "dtb/TransformDTBook.h"
 #include "util/Log.h"
 #include "util/FilePathTools.h"
 #include <fstream>
 #include <iostream>
 
-
 bool has_java();
+string createTempFileName();
 
-#if 0
-amis::dtb::TransformDTBook* amis::dtb::TransformDTBook::pinstance = 0;
-
-amis::dtb::TransformDTBook* amis::dtb::TransformDTBook::Instance()
+amis::dtb::TransformDTBook::TransformDTBook()
 {
-	if (pinstance == 0) pinstance = new amis::dtb::TransformDTBook(); 
-    return pinstance;
+	this->TEMPFILEINDEX.assign("dtbtemps");
+}
+amis::dtb::TransformDTBook::~TransformDTBook()
+{
 }
 
-void amis::dtb::TransformDTBook::DestroyInstance()
+void amis::dtb::TransformDTBook::setTempDir(string tempdir) 
 {
-	delete pinstance;
-}
-#endif
-amis::dtb::TransformDTBook::TransformDTBook(string tempdir)
-{
-#if 0
-	mpDoc = NULL;
-#endif
-#ifdef AMIS_COMPILER_MSVC
+	#ifdef AMIS_COMPILER_MSVC
 	USES_CONVERSION;
 
 	TCHAR szBuffer[256];
@@ -71,7 +54,7 @@ amis::dtb::TransformDTBook::TransformDTBook(string tempdir)
 	if (pos >= 0) cstr_app_path = cstr_app_path.Mid(0, pos + 1);
 	
 	mBin = W2CA(cstr_app_path);
-
+	mTempFiles.clear();
 	
 #if _DEBUG
 	// for development purposes: replace the networked VMWare path with a local path
@@ -87,20 +70,55 @@ amis::dtb::TransformDTBook::TransformDTBook(string tempdir)
 #endif
 
 	mTempdir = tempdir;
+
 }
-amis::dtb::TransformDTBook::~TransformDTBook()
+
+void amis::dtb::TransformDTBook::removeTempFiles() 
 {
+	if (mTempFiles.size() == 0)
+	{
+		loadTempFileReferences();
+	}
+	// delete any temp files that we've created
+	StringMap::iterator it;
+	for (it = mTempFiles.begin(); it != mTempFiles.end(); it++)
+	{
+		string filepath = it->second;
+		
+#ifdef AMIS_COMPILER_MSVC
+		remove(filepath.c_str());
+#else
+		//todo: something for other platforms
+#endif
+		
+	}
+
+string dtbtempsfile = mTempdir + this->TEMPFILEINDEX;
+#ifdef AMIS_COMPILER_MSVC
+	remove(dtbtempsfile.c_str());
+#else
+	//todo: something for other platforms
+#endif
+	
 }
-string amis::dtb::TransformDTBook::getResults()
+// get results for a filename
+string amis::dtb::TransformDTBook::getResults(string filename)
 {
-	readResults();
+	//amis::util::Log::Instance()->writeTrace("*** Retrieving transformation " + filename);
+	readResults(filename);
 	return mResults;
 }
-//put the results into mResults
-void amis::dtb::TransformDTBook::readResults()
+//put the transformed version of a file into mResults
+void amis::dtb::TransformDTBook::readResults(string filename)
 {
+	if (mTempFiles.size() == 0)
+	{
+		loadTempFileReferences(); // read the temp file index from disk	
+	}
 	ifstream f;
-	string filepath = mTempdir + "tmpdtbook.xml";
+	// filename is a key to the mTempFiles map
+	string filepath = getTempFileName(filename);
+	
 	f.open(filepath.c_str());
 	if (f.fail())
 	{
@@ -116,13 +134,11 @@ void amis::dtb::TransformDTBook::readResults()
 		mResults += tmp;
 	}
 	f.close();
-#ifdef AMIS_COMPILER_MSVC
-	remove(filepath.c_str());
-#else
-	//todo: something for other platforms
-#endif
 
 }
+
+// transform the file at @filepath and save it as tempdir/tempfilename.
+// the correlation between the input filename and the temp filename is stored in mTempFiles
 bool amis::dtb::TransformDTBook::transform(string filepath)
 {	
 	if (filepath == "") {
@@ -143,13 +159,16 @@ bool amis::dtb::TransformDTBook::transform(string filepath)
 	string bookdir = amis::util::FilePathTools::getParentDirectory(filepath);
 	bookdir += "/";
 	string local_dtbook = amis::util::FilePathTools::getAsLocalFilePath(filepath);
+	string tempfilename = mTempdir + createTempFileName();
+
+	mTempFiles[filepath] = tempfilename;
 
 	//the parameters to our java dtbook-transformation program are:
 	//-cp jarfile mainFunction path/to/book/dtbook.xml output.xml transform.xsl baseDir=path/to/book/
 	string params = " -cp \"" + 
 		mBin + "xslt\\org.daisy.util.jar\" org.daisy.util.xml.xslt.Stylesheet \"" + 
 		local_dtbook + "\" \"" + 
-		mTempdir + "tmpdtbook.xml\" \"" + 
+		tempfilename + "\" \"" + 
 		mBin + "xslt\\dtbook\\dtbook2xhtml.xsl\" baseDir=\"" + 
 		bookdir + "\"";
 
@@ -182,6 +201,10 @@ bool amis::dtb::TransformDTBook::transform(string filepath)
 	return retval;
 }
 
+string amis::dtb::TransformDTBook::getTempFileName(string filenameKey)
+{
+	return mTempFiles[filenameKey];
+}
 
 bool has_java()
 {
@@ -216,4 +239,54 @@ bool has_java()
 	return false;
 #endif
 	return false;
+}
+// this class needs to share data between two different processes
+// the 2 processes will not overlap so it's ok to use a temp file to store the data
+// the format is:
+// line 1: orig. filepath
+// line 2: temp file path
+// ...etc...
+void amis::dtb::TransformDTBook::loadTempFileReferences()
+{
+	string path = mTempdir + this->TEMPFILEINDEX;
+	ifstream f;
+	f.open(path.c_str(), ios::in);
+	if (f.fail()) return;
+
+	while (!f.eof())
+	{
+		string s1 = "";
+		string s2 = "";
+		getline(f, s1);
+		getline(f, s2);
+		// put the file data into the hash map
+		mTempFiles[s1] = s2;
+	}
+
+	f.close();
+}
+
+// call when done transforming all a book's files
+// it will write a temp file containing an index of the temp files generated
+void amis::dtb::TransformDTBook::writeTempFileReferences()
+{
+	string path = mTempdir + this->TEMPFILEINDEX;
+	ofstream f;
+	f.open(path.c_str(), ios::out);
+	if (f.fail()) return;
+	
+	amis::StringMap::iterator it;
+	for (it = mTempFiles.begin(); it != mTempFiles.end(); it++)
+	{
+		f<<it->first<<endl;
+		f<<it->second<<endl;
+	}
+	f.close();
+}
+string createTempFileName() 
+{
+	char buffer[256];
+	tmpnam (buffer);
+	string name(buffer);
+	return name;
 }

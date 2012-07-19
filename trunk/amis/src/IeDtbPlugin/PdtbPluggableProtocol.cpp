@@ -62,7 +62,8 @@ STDMETHODIMP CPdtbPluggableProtocol::Start(
 		ambulant::net::url url = ambulant::net::url::from_url(urlstr);
 		
 		std::string extension = amis::util::FilePathTools::getExtension(url.get_url());
-		
+		//std::string filename = amis::util::FilePathTools::getFileName(url.get_url());
+
 		if (CPdtbBridge::s_process_dtbook == TRUE && 
 			extension == "xml")
 		{
@@ -70,8 +71,9 @@ STDMETHODIMP CPdtbPluggableProtocol::Start(
 			GetTempPath(MAX_PATH, temp_path);
 			std::string str_temp_path = T2A(temp_path);
 
-			amis::dtb::TransformDTBook dtbook_xform(str_temp_path);
-			m_whole_file = dtbook_xform.getResults();
+			amis::dtb::TransformDTBook dtbook_xform;
+			dtbook_xform.setTempDir(str_temp_path);
+			m_whole_file = dtbook_xform.getResults(url.get_url());
 				
 			long sz = m_whole_file.size();
 					

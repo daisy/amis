@@ -85,7 +85,7 @@ public:
 	bool isMultivolume();
 	std::string getSetInfo();
 	void setSystemTempDir(string);
-	
+	string getSystemTempDir();
 private:
 	void saveIndexData();
 	bool readIndexData();

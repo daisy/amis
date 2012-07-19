@@ -283,14 +283,20 @@ void amis::dtb::DtbFileSet::findTextFiles(amis::util::SearchForFiles* fileSearch
 	}
 }
 
-void amis::dtb::DtbFileSet::setTextFile(const ambulant::net::url* file)
+void amis::dtb::DtbFileSet::setTextFiles(const amis::UrlList* files)
 {
 	mTextFiles.clear();
-	if (!file->is_empty_path())
+	for (int i = 0; i<files->size(); i++) 
 	{
-		ambulant::net::url textfile = file->join_to_base(mBookDirectory);
-		mTextFiles.push_back(textfile);
+		const ambulant::net::url* file = &((*files)[i]);
+		if (!file->is_empty_path())
+		{
+			ambulant::net::url textfile = file->join_to_base(mBookDirectory);
+			mTextFiles.push_back(textfile);
+		}
 	}
+
+	
 }
 
 amis::UrlList* amis::dtb::DtbFileSet::getTextFiles()

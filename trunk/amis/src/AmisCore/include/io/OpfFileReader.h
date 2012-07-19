@@ -53,7 +53,7 @@ public:
 	amis::dtb::Metadata* getMetadata();
 	const ambulant::net::url* getNavFilename();
 	const ambulant::net::url* getResourceFilename();
-	const ambulant::net::url* getTextFilename();
+	const amis::UrlList* getTextFilenames();
 
 	//SAX METHODS
 	void startElement(const   XMLCh* const    uri,
@@ -78,7 +78,7 @@ private:
 	amis::dtb::Spine* mpSpine;
 	ambulant::net::url mResourceFilename;
 	ambulant::net::url mNavFilename;
-	ambulant::net::url mTextFilename;
+	amis::UrlList mTextFilenames;
 
 	//the smil files from the manifest
 	amis::UrlMap mUnsortedSmilFiles;

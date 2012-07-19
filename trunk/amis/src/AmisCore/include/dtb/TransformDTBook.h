@@ -24,15 +24,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 
 #include <string>
-#if 0
-#include <xercesc/dom/DOM.hpp>
-#include <xercesc/parsers/XercesDOMParser.hpp>
-#include  <xercesc/dom/DOMErrorHandler.hpp>
-#include <xercesc/sax/ErrorHandler.hpp>
-#include <xercesc/sax/SaxParseException.hpp>
-
-XERCES_CPP_NAMESPACE_USE
-#endif
+#include <vector>
+#include "AmisCore.h"
 
 using namespace std;
 
@@ -42,42 +35,30 @@ namespace amis
 {
 namespace dtb
 {
-	class TransformDTBook //add for xerces parsing: public DOMErrorHandler 
+	class TransformDTBook
 	{
-#if 0
-	protected:
+	public:
 		TransformDTBook();	
-	public:
-		static TransformDTBook* Instance();
-		static void DestroyInstance();
-#else
-	public:
-		TransformDTBook(string);
-#endif
-	public:
 		~TransformDTBook();
+
+		void setTempDir(string);
 		bool transform(string);
-		string getResults();
-#if 0
-		bool handleError (const DOMError &domError); 
+		string getResults(string);
+		void removeTempFiles();
+		void writeTempFileReferences();
 	private:
-		void process();
-		void printSubtree(DOMNode*);
-		void moveNode(DOMElement* node, DOMElement* oldParent, DOMElement* newParent);
-		void domToString();
+		void readResults(string);
+		string getTempFileName(string);
+		void loadTempFileReferences();
 		
-		string mStylesheet;
-		xercesc_3_0::DOMDocument* mpDoc;
-		DOMImplementation* mpImpl;
-#endif
-	private:
-		void readResults();
 		string mResults;
 		string mBin;
 		string mTempdir;
-#if 0
-		static TransformDTBook* pinstance;
-#endif
+		// mTempFiles is a hash map of transformed files. the original file location is the key and the mangled temporary file is the value.
+		amis::StringMap mTempFiles;
+
+		string TEMPFILEINDEX;
+
 	};
 }
 }

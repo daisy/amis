@@ -44,9 +44,9 @@ bool amis::io::OpfFileReader::readFromFile(const ambulant::net::url* filename)
 	mpSpine = new amis::dtb::Spine();
 	mUnsortedSmilFiles.clear();
 	mItemRefs.clear();
+	mTextFilenames.clear();
 	mpFilename = filename;
 	bool b_return_value = amis::io::XercesSaxParseBase::parseFile(filename);
-
 	sortSpine();
 
 	return b_return_value;
@@ -72,9 +72,9 @@ const ambulant::net::url* amis::io::OpfFileReader::getResourceFilename()
 	return &mResourceFilename;
 }
 
-const ambulant::net::url* amis::io::OpfFileReader::getTextFilename()
+const amis::UrlList* amis::io::OpfFileReader::getTextFilenames()
 {
-	return &mTextFilename;
+	return &mTextFilenames;
 }
 
 //!xerces start element event
@@ -116,12 +116,11 @@ void amis::io::OpfFileReader::startElement(const   XMLCh* const    uri,
 			mResourceFilename = temp.join_to_base(*mpFilename);
 		}
 
-		//we are assuming one text file for daisy/niso books
 		if (media_type == "application/x-dtbook+xml")
 		{
 			string filename = SimpleAttrs::get("href", &attributes);
 			ambulant::net::url temp = amis::util::makeUrlFromString(filename, !is_local, is_local);
-			mTextFilename = temp.join_to_base(*mpFilename);
+			mTextFilenames.push_back(temp.join_to_base(*mpFilename));
 		}
 		//add the smil files to the manifest list
 		//the media type "text/sml" is used in bookshare books

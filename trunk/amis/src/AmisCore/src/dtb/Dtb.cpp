@@ -468,25 +468,25 @@ bool amis::dtb::Dtb::processOpf(const ambulant::net::url* filepath)
 
 	const ambulant::net::url* navfile = opf_file_reader.getNavFilename();
 	const ambulant::net::url* resfile = opf_file_reader.getResourceFilename();
-	const ambulant::net::url* txtfile = opf_file_reader.getTextFilename();
+	amis::UrlList* textfiles = (amis::UrlList*)opf_file_reader.getTextFilenames();
 	mUid = getUid();
 	
 	mpFiles->setAdditionalDataAfterInitialParse(mUid, navfile, resfile, mpHistory);
-	mpFiles->setTextFile(txtfile);
+	mpFiles->setTextFiles(textfiles);
 
-	// some DAISY 3 books might not have text files (ncx-only)
-	if (!txtfile->is_empty_path()) 
+	mbDtbookTransformSucceeded = false;
+	//pre-transform all the textfiles, since it's easier to make the user wait now than
+	//have the SMIL start playing while IE transforms on the fly
+	//the textfile will be transformed and ready to be loaded (in bin/tmpdtbook.xml)
+	amis::dtb::TransformDTBook transformDTBook;
+	transformDTBook.setTempDir(mTempdir);
+	UrlList::iterator it;
+	for (it = textfiles->begin(); it != textfiles->end(); ++it)
 	{
-		//pre-transform the textfile, since it's easier to make the user wait now than
-		//have the SMIL start playing while IE transforms on the fly
-		//the textfile will be transformed and ready to be loaded (in bin/tmpdtbook.xml)
-		amis::dtb::TransformDTBook dtbook_xform(mTempdir);
-		mbDtbookTransformSucceeded = dtbook_xform.transform(txtfile->get_url());
+		mbDtbookTransformSucceeded = transformDTBook.transform(it->get_url());
 	}
-	else 
-	{
-		mbDtbookTransformSucceeded = false;
-	}
+	transformDTBook.writeTempFileReferences();
+
 	return true;
 }
 //--------------------------------------------------
@@ -699,7 +699,6 @@ string amis::dtb::Dtb::searchFullText(wstring search, ambulant::net::url current
 {
 	amis::io::TextSearch text_search;
 	UrlList* p_text_files = mpFiles->getTextFiles();
-	UrlList::iterator it;
 	string result = "";
 	mLastSearchString.assign(search);
 	mLastSearchedTextFile = amis::util::getFileNameWithRef(&currentTextUrl);
@@ -1221,3 +1220,7 @@ void amis::dtb::Dtb::setSystemTempDir(string tempdir)
 	mTempdir = tempdir;
 }
 
+string amis::dtb::Dtb::getSystemTempDir()
+{
+	return mTempdir;
+}

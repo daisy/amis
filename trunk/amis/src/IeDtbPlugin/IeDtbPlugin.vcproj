@@ -53,7 +53,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="0"
 				AdditionalIncludeDirectories="../../../../../../ambulant/include/;../AmisCore/include;../../../../../../xerces-c-src/src"
-				PreprocessorDefinitions="INTERFACES_AND_IMPLEMENTATIONS;WIN32;_WINDOWS;_DEBUG;_USRDLL;_ATL_ATTRIBUTES;WITH_SMIL30"
+				PreprocessorDefinitions="INTERFACES_AND_IMPLEMENTATIONS;WIN32;_WINDOWS;_DEBUG;_USRDLL;_ATL_ATTRIBUTES;WITH_SMIL30;AMIS_COMPILER_MSVC"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
@@ -152,7 +152,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				AdditionalIncludeDirectories="../../../../../../ambulant/include/;../AmisCore/include;../../../../../../xerces-c-src/src"
-				PreprocessorDefinitions="INTERFACES_AND_IMPLEMENTATIONS;WIN32;_WINDOWS;NDEBUG;_USRDLL;_ATL_ATTRIBUTES;WITH_SMIL30"
+				PreprocessorDefinitions="INTERFACES_AND_IMPLEMENTATIONS;WIN32;_WINDOWS;NDEBUG;_USRDLL;_ATL_ATTRIBUTES;WITH_SMIL30;AMIS_COMPILER_MSVC"
 				RuntimeLibrary="2"
 				TreatWChar_tAsBuiltInType="false"
 				UsePrecompiledHeader="2"

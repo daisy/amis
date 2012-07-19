@@ -34,6 +34,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "gui/self-voicing/audiosequenceplayer.h"
 #include "Preferences.h"
 #include "gui/self-voicing/TTSPlayer.h"
+#include "dtb/TransformDTBook.h"
 
 using namespace amis::dtb;
 
@@ -85,6 +86,15 @@ DtbWithHooks::DtbWithHooks():Dtb(theApp.getAppPath())
 DtbWithHooks::~DtbWithHooks()
 {
 	if (mpFileSearcherTmp != NULL) delete mpFileSearcherTmp;
+
+	// remove any temporary files created by dtbook transform
+	if (amis::dtb::DtbWithHooks::Instance()->getDaisyVersion() == amis::dtb::DAISY_2005)
+	{
+		// this should probably be in amis::dtb::Dtb but that class doesn't have any cleanup routines that would get triggered here.
+		amis::dtb::TransformDTBook transform;
+		transform.setTempDir(getSystemTempDir());
+		transform.removeTempFiles();
+	}
 }
 
 bool DtbWithHooks::open(const ambulant::net::url* filename, const ambulant::net::url* bookmarksPath, bool saveInHistory)
