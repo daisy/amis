@@ -1,0 +1,17 @@
+Installer creation README
+
+Installer scripts are created from templates in main/. Install Python 2.x and Cheetah (http://www.cheetahtemplate.org/), and compile the templates:
+
+  $./compile-templates.
+
+This produces *.py files containing the compiled templates.
+
+The localization data is contained in folders with the language ID. To create *.nsi files for each language:
+
+ $./python build-installer.py 
+
+(no parameters required; all available installers will be created).
+
+Then, from Windows, run the resulting NSIS script as described here:
+http://daisy-trac.cvsdude.com/amis/wiki/CreateAmisInstaller
+

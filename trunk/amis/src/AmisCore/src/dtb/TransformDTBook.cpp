@@ -23,6 +23,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #if defined(AMIS_COMPILER_MSVC)
 //windows header containing charset conversion macros
 #include <afxpriv.h>
+#include <algorithm>
 #endif
 
 #include "dtb/TransformDTBook.h"
@@ -161,7 +162,10 @@ bool amis::dtb::TransformDTBook::transform(string filepath)
 	string local_dtbook = amis::util::FilePathTools::getAsLocalFilePath(filepath);
 	string tempfilename = mTempdir + createTempFileName();
 
-	mTempFiles[filepath] = tempfilename;
+	string lcFilepath = filepath;
+	std::transform(lcFilepath.begin(), lcFilepath.end(), lcFilepath.begin(), (int(*)(int))tolower);
+	std::transform(tempfilename.begin(), tempfilename.end(), tempfilename.begin(), (int(*)(int))tolower);
+	mTempFiles[lcFilepath] = tempfilename;
 
 	//the parameters to our java dtbook-transformation program are:
 	//-cp jarfile mainFunction path/to/book/dtbook.xml output.xml transform.xsl baseDir=path/to/book/
@@ -203,7 +207,9 @@ bool amis::dtb::TransformDTBook::transform(string filepath)
 
 string amis::dtb::TransformDTBook::getTempFileName(string filenameKey)
 {
-	return mTempFiles[filenameKey];
+	string lckey = filenameKey;
+	std::transform(lckey.begin(), lckey.end(), lckey.begin(), (int(*)(int))tolower);
+	return mTempFiles[lckey];
 }
 
 bool has_java()
@@ -260,7 +266,10 @@ void amis::dtb::TransformDTBook::loadTempFileReferences()
 		getline(f, s1);
 		getline(f, s2);
 		// put the file data into the hash map
-		mTempFiles[s1] = s2;
+		if (s1 != "" && s2 != "")
+		{
+			mTempFiles[s1] = s2;
+		}
 	}
 
 	f.close();

@@ -471,7 +471,10 @@ Section -JavaCheck
     \${If} \$0 == 0
         \${registry::Read} "HKEY_LOCAL_MACHINE\SOFTWARE\JavaSoft\Java Runtime Environment" "CurrentVersion" \$R0 \$R1
     
-        StrCmp \$R0 "1.6" CorrectVersion IncorrectVersion
+        StrCmp \$R0 "1.6" CorrectVersion Check17
+        
+        Check17:
+            StrCmp \$R0 "1.7" CorrectVersion IncorrectVersion
 		CorrectVersion:
             LogEx::Write "Correct Java version installed (\$R0)"
 			Goto End
