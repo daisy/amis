@@ -562,6 +562,7 @@ void CAmisApp::initializePathsAndFiles(string preferencesFile)
 	}
 	mbWasLastExitClean = Preferences::Instance()->getWasExitClean();
 	Preferences::Instance()->setWasExitClean(false);
+
 	prefs_io.writeToFile(prefs_path, Preferences::Instance());
 	
 	//read the recent books list
@@ -1987,7 +1988,7 @@ std::string CAmisApp::getVersion()
 }
 std::string CAmisApp::getReleaseDate()
 {
-	return "2012-09-25";
+	return "2012-10-16";
 }
 //when the next volume for this book is loaded, then load this URL
 void CAmisApp::setMultivolumeLoadPoint(std::wstring uid, const ambulant::net::url* url)
