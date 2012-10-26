@@ -40,3 +40,19 @@ trunk/amis/bin*
 *.idl
 
 
+
+trunk/amis/lib/libambulant_shwin32.lib
+
+trunk/amis/src/IeDtbPlugin/_PdtbIePlugin.h
+
+trunk/amis/src/IeDtbPlugin/_PdtbIePlugin_i.c
+
+trunk/amis/src/IeDtbPlugin/_PdtbIePlugin_p.c
+
+trunk/amis/installer/build/Setup-amis-3.1.4-BETA2.exe
+
+trunk/amis/installer/main/out
+
+*.lib
+
+*.dll
