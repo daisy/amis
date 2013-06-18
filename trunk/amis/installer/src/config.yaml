@@ -1,0 +1,13 @@
+#relative to the location of this file
+self.amis_bin_dir = ""
+
+# relative to amis bin dir
+self.jaws_scripts_installer = ""
+
+# just the filename
+self.helpfile_name = ""
+
+# a single word
+self.contrast_translation = ""
+
+        
