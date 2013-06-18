@@ -167,7 +167,7 @@ bool PublicationSummaryDialog::calculateData()
 	else if (version == amis::dtb::DAISY_2005)
 	{
 		mTotalTime = p_meta->getMetadataContent("dtb:totalTime");
-		mNarrator = p_meta->getMetadataContent("dc:Narrator");
+		mNarrator = p_meta->getMetadataContent("dtb:narrator");
 	}
 
 	if (p_nav->getNavMap()->getLabel() != NULL)
