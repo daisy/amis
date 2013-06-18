@@ -3,7 +3,7 @@ AMIS: Adaptive Multimedia Information System
 Software for playing DAISY books
 Homepage: http://daisy.org/amis
 
-Copyright (c) 2004-2009  DAISY Consortium
+Copyright (c) 2004 DAISY Consortium
 
 This library is free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public
@@ -61,7 +61,7 @@ bool amis::io::XercesDomWriter::initialize(std::string rootElementName)
     }
 	
 	string core = "Core";
-	string ns = "http://amisproject.org";
+	string ns = "http://www.daisy.org/ns/amis";
 	mpImpl = DOMImplementationRegistry::getDOMImplementation(X(core.c_str()));
 	mpDoc = mpImpl->createDocument(X(ns.c_str()), X(rootElementName.c_str()), 0);							
 

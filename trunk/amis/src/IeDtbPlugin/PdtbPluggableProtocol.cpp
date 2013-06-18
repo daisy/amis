@@ -5,7 +5,7 @@ Homepage: http://daisy.org/amis
 
 Originally created by CWI (http://www.cwi.nl)
 
-Copyright (c) 2009  DAISY Consortium
+Copyright (c) 2004 DAISY Consortium
 
 This library is free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public

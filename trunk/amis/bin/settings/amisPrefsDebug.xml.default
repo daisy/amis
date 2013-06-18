@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<preferences xmlns="http://amisproject.org">
+<preferences xmlns="http://daisy.org/ns/amis">
 <!--paths are relative to the location of this file-->
 <section name="general">
 <entry id="ui-lang-id" value="eng-US"/>

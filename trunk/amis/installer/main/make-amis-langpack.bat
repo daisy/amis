@@ -1,4 +1,4 @@
-ECHO setup-langpack langid langname helpfile
+ECHO make-amis-langpack.bat langid langname helpfile
 
 REM if there isn't a custom directory for this language, just use the english installer
 IF NOT EXIST ..\%1 GOTO DEFAULT

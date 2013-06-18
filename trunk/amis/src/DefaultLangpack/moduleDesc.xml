@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<moduleDesc xmlns="http://amisproject.org" id="eng-US" filename="./AmisLangpack.dll" type="langpack" enabled="yes">
+<moduleDesc xmlns="http://daisy.org/ns/amis" id="eng-US" filename="./AmisLangpack.dll" type="langpack" enabled="yes">
 	<label>
 			<text>U.S. English</text>
 			<audio src="./thislang.mp3"/>

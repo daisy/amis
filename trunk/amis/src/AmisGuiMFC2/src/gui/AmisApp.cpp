@@ -3,7 +3,7 @@ AMIS: Adaptive Multimedia Information System
 Software for playing DAISY books
 Homepage: http://daisy.org/amis
 
-Copyright (c) 2004-2009  DAISY Consortium
+Copyright (c) 2004 DAISY Consortium
 
 This library is free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public
@@ -1984,11 +1984,11 @@ int CAmisApp::getIeVersion()
 }
 std::string CAmisApp::getVersion()
 {
-	return "3.1.4 beta 2";
+	return "3.1.4 beta 3";
 }
 std::string CAmisApp::getReleaseDate()
 {
-	return "2012-10-16";
+	return "2013-01-15";
 }
 //when the next volume for this book is loaded, then load this URL
 void CAmisApp::setMultivolumeLoadPoint(std::wstring uid, const ambulant::net::url* url)

@@ -14,7 +14,7 @@ tooltips are evaluated in the following order:
 2. use tooltipid attribute
 3. use default tooltip for the command (it will have one if it is a command from the menu)
 -->
-<toolbar xmlns="http://amisproject.org" view="default" placement="top" buttonHeight="32" buttonWidth="32">
+<toolbar xmlns="http://daisy.org/ns/amis" view="default" placement="top" buttonHeight="32" buttonWidth="32">
 	<button src="./img/defaultToolbar/document_open.ico" mfcid="ID_AMIS_OPEN_FILE"/>
 	<button src="./img/defaultToolbar/media_optical.ico" mfcid="ID_AMIS_LOAD_CD"/>
 	<separator/>

@@ -2,9 +2,9 @@
 /*
 AMIS: Adaptive Multimedia Information System
 Software for playing DAISY books
-Homepage: http://amis.sf.net
+Homepage: http://daisy.org/amis
 
-Copyright (C) 2004-2006  DAISY for All Project
+Copyright (c) 2004 DAISY Consortium (c) 2004  DAISY Consortium
 
 This library is free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public

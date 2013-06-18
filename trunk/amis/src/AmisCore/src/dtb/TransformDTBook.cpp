@@ -3,7 +3,7 @@ AMIS: Adaptive Multimedia Information System
 Software for playing DAISY books
 Homepage: http://daisy.org/amis
 
-Copyright (c) 2004-2009  DAISY Consortium
+Copyright (c) 2004 DAISY Consortium
 
 This library is free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public
@@ -167,6 +167,11 @@ bool amis::dtb::TransformDTBook::transform(string filepath)
 	std::transform(tempfilename.begin(), tempfilename.end(), tempfilename.begin(), (int(*)(int))tolower);
 	mTempFiles[lcFilepath] = tempfilename;
 
+	// networked filepaths, e.g. \\vmware-host\shared, come out of the 'getAsLocalFilePath' function as
+	// \vmware-host\shared
+	if (local_dtbook[0] == '\\' && local_dtbook[1] != '\\') {
+		local_dtbook = "\\" + local_dtbook;
+	}
 	//the parameters to our java dtbook-transformation program are:
 	//-cp jarfile mainFunction path/to/book/dtbook.xml output.xml transform.xsl baseDir=path/to/book/
 	string params = " -cp \"" + 

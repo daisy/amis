@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<toolbar xmlns="http://amisproject.org" view="basic" placement="bottom" buttonHeight="72" buttonWidth="72">
+<toolbar xmlns="http://daisy.org/ns/amis" view="basic" placement="bottom" buttonHeight="72" buttonWidth="72">
 	<button src="./img/basicToolbar/media_seek_backward.ico" mfcid="ID_AMIS_PREVIOUS_PHRASE"/>
 	<toggle>
 		<button src="./img/basicToolbar/media_playback_start.ico" mfcid="ID_AMIS_PLAYPAUSE" id="play"/>

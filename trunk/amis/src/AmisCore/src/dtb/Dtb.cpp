@@ -3,7 +3,7 @@ AMIS: Adaptive Multimedia Information System
 Software for playing DAISY books
 Homepage: http://daisy.org/amis
 
-Copyright (c) 2004-2009  DAISY Consortium
+Copyright (c) 2004 DAISY Consortium
 
 This library is free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public
@@ -648,7 +648,7 @@ void amis::dtb::Dtb::setNewLastmark(ambulant::net::url positionUri)
 	amis::util::Log::Instance()->writeTrace("start function", "Dtb::setNewLastmark");
 	if (mpBookmarks == NULL) return;
 	
-	//if we couldn't decode a pdtb and are presumably playing the copyright notice, don't set a lastmark
+	//if we couldn't decode a pdtb and are presumably playing the Copyright (c) 2004 DAISY Consortium notice, don't set a lastmark
 	//it confuses amis later on if the pdtb is opened after the user loads the key
 	if (isProtected() == true && mbCanDecodePdtb == false)
 		return;
