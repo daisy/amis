@@ -1,0 +1,32 @@
+<preferences xmlns="http://daisy.org/ns/amis">
+<!--paths are relative to the location of this file-->
+<section name="general">
+<entry id="ui-lang-id" value="eng-US"/>
+<entry id="start-in-basic-view" value="no"/>
+<entry id="load-last-book" value="yes"/>
+<entry id="is-self-voicing" value="yes"/>
+<entry id="tts-voice-index" value="0"/>
+<entry id="pause-on-lost-focus" value="no"/>
+<entry id="is-self-voicing-tts-only" value="no"/>
+<entry id="highlight-text" value="yes"/>
+<entry id="was-exit-clean" value="yes"/>
+<entry id="disable-screensaver" value="no"/>
+<entry id="user-bmk-dir" value="./bmk/"/>
+<entry id="langpacks-dir" value="./lang/"/>
+<entry id="fontsize-css-dir" value="./css/font/"/>
+<entry id="custom-css-dir" value="./css/customStyles/"/>
+<entry id="amis-css-file" value="./css/amis.css"/>
+<entry id="highlight-fg-color" value="#000000"/>
+<entry id="highlight-bg-color" value="#FFFF00"/>
+<entry id="app-font-name" value="Verdana"/>
+<entry id="is-first-time" value="yes"/>
+<entry id="is-logging-enabled" value="yes"/>
+<entry id="logging-level" value="LOW_LOGGING"/>
+<entry id="ambulant-prefers-ffmpeg" value="no"/>
+<entry id="tts-volume-pct" value="70"/>
+<entry id="audio-volume-pct" value="100"/>
+<entry id="cache-index" value="yes"/>
+<entry id="must-avoid-directx" value="no"/>
+<entry id="must-avoid-tts" value="no"/>
+</section>
+</preferences>

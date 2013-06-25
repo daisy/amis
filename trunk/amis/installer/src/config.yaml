@@ -1,13 +1,136 @@
-#relative to the location of this file
-self.amis_bin_dir = ""
+# this file uses _underscores_ for direct use in python templates
+# global settings
+Global:
+    # must be absolute
+    makensis: C:\Program Files\NSIS-Unicode\makensis.exe
+    settings_source: ../../bin/settings/
+    # files get copied here and used by the installer
+    data_dir: ../data/
+    translations: ../translations/
+    #languages for which a translation is available
+    installer_translations: [eng-US, hun-HU, jpn-JP]
+    # if True, build all languages in Langs section
+    # if False, must specify build-lang
+    build_all: False
+    build_lang: eng-US
 
-# relative to amis bin dir
-self.jaws_scripts_installer = ""
+# these settings are required by the installer script template
+# relative paths are relative to the location of this config file
+Installer:
+    # AMIS bin dir
+    bin_dir: ../../bin/
+    # AMIS logo dir
+    logo_dir: ../../logo/
+    jaws_scripts: ..\..\jaws_scripts\Installers\AmisJFWScripts301.exe
+    build_dir: ../build/
+    win_32_dir: c:\windows\system32
+    # your local application data directory
+    appdata_dir: C:\Documents and Settings\All Users\Application Data
+    # your Visual Studio redistributables directory
+    vs_dir: C:\Program Files\Microsoft Visual Studio 8\SDK\v2.0\BootStrapper\Packages\vcredist_x86
+    product_name: AMIS
+    product_version: 3.1.4 beta 3
+    product_publisher: DAISY Consortium
+    product_website: http://daisy.org/amis
 
-# just the filename
-self.helpfile_name = ""
 
-# a single word
-self.contrast_translation = ""
+# settings for all languages that are ready to be built
+# reason for including contrast_translation here: it only applies to languages that use latin script (for now)
+# eventually, it can be moved into the Lion DB / amisAccessibleUi.xml
+#
+# reason for including language name here: want latin name for installer file creation
+Langs:
+    - langid: eng-US
+      langname: U.S. English
+      helpfile_name: amishelp.html
+      contrast_translation: contrast
 
-        
+    - langid: afr-ZA
+      langname: Afrikaans
+      helpfile_name: amishelp-afrikaans.html
+      contrast_translation: kontras
+
+    - langid: eng-AU
+      langname: Australian English
+      helpfile_name: amishelp.html
+      contrast_translation: contrast
+
+    - langid: zho-CN
+      langname: Chinese
+      helpfile_name: amis.html
+      contrast_translation: contrast
+
+    - langid: ice-IS
+      langname: Icelandic
+      helpfile_name: amis_frumbirtingarmynd_april09.html
+      contrast_translation: litasamsetning
+
+    - langid: tam-IN
+      langname: Tamil
+      helpfile_name: amistamil.htm
+      contrast_translation: contrast
+
+    - langid: fra-FR
+      langname: French
+      helpfile_name: content.html
+      contrast_translation: contraste
+
+    - langid: nob-NO
+      langname: Norwegian (Bokmaal)
+      helpfile_name: amis_brukerveiledning_bkm.html
+      contrast_translation: kontrast
+
+    - langid:  nno-NO
+      langname: Norwegian (Nynorsk)
+      helpfile_name: amis_brukarrettleiing_nynorsk_bilete.html
+      contrast_translation: kontrast
+
+    - langid:  jpn-JP
+      langname: Japanese
+      helpfile_name: amishelp.html
+      contrast_translation: contrast
+
+    - langid: spa
+      langname: Espanol A L
+      helpfile_name: amis_guia_del_usuario.html
+      contrast_translation: contraste
+
+    - langid:  zho-TW
+      langname: Traditional Chinese
+      helpfile_name: amis.htm
+      contrast_translation: contrast
+
+    - langid: vie-VN
+      langname: Vietnamese
+      helpfile_name: ncc.html
+      contrast_translation: contrast
+
+    - langid: fin-FI
+      langname: Suomi
+      helpfile_name: kopiokopiokorj.html
+      contrast_translation: kontrasti
+
+    - langid: srp-RS
+      langname: Serbian
+      helpfile_name: amishelp.html
+      contrast_translation: contrast
+
+    - langid: swe-SE
+      langname: Svenska
+      helpfile_name: amishelp.html
+      contrast_translation: kontrast
+
+    - langid: nld-NL
+      langname: Nederlands
+      helpfile_name: amis_gebruikers_handleiding.html
+      contrast_translation: contrast
+
+    - langid: heb-IL
+      langname: Hebrew
+      helpfile_name: amishelp.html
+      contrast_translation: contrast
+
+    - langid: hun-HU
+      langname: Magyar
+      helpfile_name: amis-hun-help3.html
+      contrast_translation: kontrasztos

@@ -1,0 +1,36 @@
+<installer-data langid="eng-US">
+	<options
+		include_jaws_scripts="yes"
+		nsis_language="English"
+	/>
+	<setup-program id="main-installer">
+		<string id="text101">You have Windows XP Service Pack 2.  Newer service packs are available and it is recommended to run Windows Update to upgrade your system.</string>
+		<string id="text102">Warning: operating system not supported.  AMIS may not work.  Do you want to continue?</string>
+		<string id="text103">Warning: AMIS requires DirectX 9.0 or later.  You may continue with AMIS installation; however, it is recommended that you update your system first.  Continue?</string>
+		<string id="text104">You have Internet Explorer 6.  Version 7 or higher is recommended for best performance.  You may update your system at any time after AMIS is installed.</string>
+		<string id="text105">Your version of Internet Explorer is outdated. AMIS may not work.  Do you want to continue?</string>
+		<string id="text106">There was an error encountered while attempting to install the Microsoft runtime files.  Please contact technical support if you experience problems running AMIS.</string>
+		<string id="text107">Would you like to install Jaws for Windows scripts for AMIS?</string>
+		<string id="text108">There was an error encountered while attempting to install Jaws for Windows scripts for AMIS.  Please visit http://daisy.org/amis to download and install the scripts separately.</string>
+		<string id="text109">Please upgrade your Java Runtime to version 1.6 or higher.  Java support is required for enhanced DAISY 3 text display. After the AMIS installation is complete, you may download Java from http://www.java.com and install it at any time.</string>
+		<string id="text110">Java 1.6 or higher is required for enhanced DAISY 3 text display. You may update your system at any time after AMIS is installed by downloading and installing Java from http://www.java.com .</string>
+		<string id="text111">Are you sure you want to completely remove $(^Name) and all of its components?</string>
+		<string id="text112">$(^Name) was successfully removed from your computer.</string>
+		<string id="text113">Remove bookmarks and history?</string>
+		<string id="text114">Additional</string>
+		<string id="text115">AMIS Debug Mode</string>
+		<string id="text116">AMIS Compatibility Mode</string>
+		<string id="text117">AMIS Compatibility Mode With DirectX</string>
+		<string id="text118">AMIS Compatibility Mode With TTS</string>
+		<string id="text119">Website</string>
+		<string id="text120">Uninstall</string>
+		<string id="text121">Help</string>
+		<string id="text122">Keyboard Shortcuts</string>
+		<string id="text123">U.S. English</string>
+	</setup-program>
+	<setup-program id="langpack-installer">
+		<string id="text201">AMIS settings directory $SETTINGS_DIR not found.</string>
+		<string id="text202">Are you sure you want to completely remove $(^Name) and all of its components?</string>
+		<string id="text203">$(^Name) was successfully removed from your computer.</string>
+	</setup-program>
+</installer-data>

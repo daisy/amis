@@ -1,4 +1,0 @@
-#!/bin/bash
-# compile the cheetah templates before using them
-f=`dirname "$0"`
-cheetah compile $f/*.tmpl

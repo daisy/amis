@@ -1,26 +1,25 @@
 ;******
 ; Usage:
-; makensis /DCUSTOM_LANG_NAME="language name" /DCUSTOM_LANG_ID="lang-code" /DCUSTOM_HELP help_file.html setup-amis3-langpack.nsi 
-;
-; example:
-; makensis /DCUSTOM_LANG_NAME="U.S. English" /DCUSTOM_LANG_ID="eng-US" /DCUSTOM_HELP="amishelp.html" setup-amis3-langpack.nsi 
-;
-;/DCUSTOM_LANG_NAME = Identifies the installer EXE and the name of the product during installation
-;/DCUSTOM_LANG_ID = The language pack identifier.  If other than "eng-US", both the custom and default language packs are included
-;/DCUSTOM_HELP = The name of the help file for the custom language pack.
+; makensis setup-amis3-langpack.nsi
 ;**
 
+## the idea was to use only python vars, but in some cases, it was easier to copy them into NSIS vars
+## because the python template compiler (cheetah) has an escape sequence ("\$var") that conflicts
+## with path names
+## so "a\b\$c" comes out as "a\b$c"
+## and there's no elegant way around it
+## so we have a few custom defines
 ;******
-; product information
+; custom defines
 ;**
-!define PRODUCT_NAME "AMIS 3 Language Pack \${CUSTOM_LANG_NAME}"
-!define PRODUCT_VERSION "1.0"
-!define PRODUCT_PUBLISHER "DAISY Consortium"
-!define PRODUCT_WEB_SITE "http://daisy.org/amis"
-!define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\AMIS.exe"
-!define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\\${PRODUCT_NAME}"
-!define PRODUCT_UNINST_ROOT_KEY "HKLM"
+!define LANGID "$langid"
+!define PRODUCT_NAME "$product_name"
+!define HELPFILE_NAME "$helpfile_name"
+!define LANGNAME "$langname"
 
+!define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\AMIS.exe"
+!define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
+!define PRODUCT_UNINST_ROOT_KEY "HKLM"
 
 ;******
 ; pages, components, and script includes
@@ -59,25 +58,15 @@
 
 ; MUI end ------
 
-;******
-; custom defines
-;**
-
-;this is the path to the logo file
-!define LOGO_DIR "..\..\logo"
-
-;this is the path to your Application Data directory
-!define LOCAL_APP_DATA "C:\Documents and Settings\All Users\Application Data"
 
 ;******
 ; directory, installer exe name, etc
 ;**
-Name "\${PRODUCT_NAME} \${PRODUCT_VERSION}"
-;this is the name of the installer that gets created.  
-OutFile "..\build\Setup-amis-langpack-\${CUSTOM_LANG_NAME}.exe"
+Name "$product_name $product_version"
+;this is the name of the installer that gets created.
+OutFile "$build_dir\Setup-amis-langpack-\${LANGNAME}.exe"
 
 ;InstallDir "\$APPDATA\AMIS\settings"
-	
 
 ShowInstDetails show
 ShowUnInstDetails show
@@ -89,37 +78,37 @@ Section "MainSection" SEC01
 
   ;the settings dir will live here
 	Var /GLOBAL SETTINGS_DIR
-	
+
 	;figure out the user's application data directory
 	;look for the "all users" context
 	SetShellVarContext all
 	StrCpy \$SETTINGS_DIR \$APPDATA\AMIS\settings
-	
+
   ;copy the langpack root files
-  SetOutPath "\$SETTINGS_DIR\lang\\${CUSTOM_LANG_ID}"
-  File "\${LOCAL_APP_DATA}\AMIS\settings\lang\\${CUSTOM_LANG_ID}\*"
-  	
+  SetOutPath "\$SETTINGS_DIR\lang\\${LANGID}"
+  File "$appdata_dir\AMIS\settings\lang\\${LANGID}\*"
+
   ;copy the langpack audio
-  SetOutPath "\$SETTINGS_DIR\lang\\${CUSTOM_LANG_ID}\audio"
-  File "\${LOCAL_APP_DATA}\AMIS\settings\lang\\${CUSTOM_LANG_ID}\audio\*"
-  	
+  SetOutPath "\$SETTINGS_DIR\lang\\${LANGID}\audio"
+  File "$appdata_dir\AMIS\settings\lang\\${LANGID}\audio\*"
+
   ;copy the langpack help book files (and images)
-  SetOutPath "\$SETTINGS_DIR\lang\\${CUSTOM_LANG_ID}\help"
-  File "\${LOCAL_APP_DATA}\AMIS\settings\lang\\${CUSTOM_LANG_ID}\help\*"
-  SetOutPath "\$SETTINGS_DIR\lang\\${CUSTOM_LANG_ID}\help\img"
-  File /nonfatal "\${LOCAL_APP_DATA}\AMIS\settings\lang\\${CUSTOM_LANG_ID}\help\img\*"  
+  SetOutPath "\$SETTINGS_DIR\lang\\${LANGID}\help"
+  File "$appdata_dir\AMIS\settings\lang\\${LANGID}\help\*"
+  SetOutPath "\$SETTINGS_DIR\lang\\${LANGID}\help\img"
+  File /nonfatal "$appdata_dir\AMIS\settings\lang\\${LANGID}\help\img\*"
   ;copy the langpack shortcut book files
-  SetOutPath "\$SETTINGS_DIR\lang\\${CUSTOM_LANG_ID}\shortcuts"
-  File "\${LOCAL_APP_DATA}\AMIS\settings\lang\\${CUSTOM_LANG_ID}\shortcuts\*"
-  
+  SetOutPath "\$SETTINGS_DIR\lang\\${LANGID}\shortcuts"
+  File "$appdata_dir\AMIS\settings\lang\\${LANGID}\shortcuts\*"
+
 SectionEnd
 
 ;******
 ; Create shortcuts to the documentation (found in the language pack)
 ;*
 Section -AdditionalIcons
-  CreateShortCut "<%="$SMPROGRAMS\\AMIS\\"%>$text121 (\${CUSTOM_LANG_NAME}).lnk" "\$SETTINGS_DIR\lang\\${CUSTOM_LANG_ID}\help\\${CUSTOM_HELP}"
-  CreateShortCut "<%="$SMPROGRAMS\\AMIS\\"%>$text122 (\${CUSTOM_LANG_NAME}).lnk" "\$SETTINGS_DIR\lang\\${CUSTOM_LANG_ID}\shortcuts\amiskeys.html"
+  CreateShortCut "<%="$SMPROGRAMS\\AMIS\\"%>$text121 ($langname).lnk" "\$SETTINGS_DIR\lang\\${LANGID}\help\\${HELPFILE_NAME}"
+  CreateShortCut "<%="$SMPROGRAMS\\AMIS\\"%>$text122 ($langname).lnk" "\$SETTINGS_DIR\lang\\${LANGID}\shortcuts\amiskeys.html"
 SectionEnd
 
 ;******
@@ -127,7 +116,7 @@ SectionEnd
 ; check if we need to install the msvc runtimes
 ;**
 Section -Post
-  WriteUninstaller "\$SETTINGS_DIR\lang\\${CUSTOM_LANG_ID}\Uninstall-amis-langpack-\${CUSTOM_LANG_NAME}.exe"
+  WriteUninstaller "\$SETTINGS_DIR\lang\\${LANGID}\Uninstall-amis-langpack-\${LANGNAME}.exe"
 
 SectionEnd
 
@@ -136,30 +125,30 @@ SectionEnd
 ;**
 Function .onInit
 
-	!insertmacro MUI_INSTALLOPTIONS_EXTRACT "filebrowse.ini"
+	!insertmacro MUI_INSTALLOPTIONS_EXTRACT "..\filebrowse.ini"
 
 		;show the splash screen
-		File /oname=\$PLUGINSDIR\splash.bmp "\${LOGO_DIR}\amis.bmp"
+		File /oname=\$PLUGINSDIR\splash.bmp "$logo_dir\amis.bmp"
 		splash::show 1000 \$PLUGINSDIR\splash
 
 		; possible values for $0:
 		; '1' if the user closed the splash screen early,
-		; '0' if everything closed normally, 
+		; '0' if everything closed normally,
 		; '-1' if some error occurred.
 		Pop \$0
-	
+
 	SetShellVarContext all
 	StrCpy \$SETTINGS_DIR \$APPDATA\AMIS\settings
 
 	; make sure the target directory exists
 	IfFileExists "\$SETTINGS_DIR" End Error
-	
+
 	Error:
 		IfSilent +2
 		MessageBox MB_ICONSTOP "$text201"
 		Abort
-	
-	
+
+
  End:
 FunctionEnd
 
@@ -191,25 +180,25 @@ Section Uninstall
 
 	;figure out the user's application data directory
 	;look for the "all users" context
-	SetShellVarContext all 
+	SetShellVarContext all
 	StrCpy \$SETTINGS_DIR \$APPDATA\AMIS\settings
-	
-	Delete "<%="$SMPROGRAMS\\AMIS\\"%>$text121 (\${CUSTOM_LANG_NAME}).lnk"
-  	Delete "<%="$SMPROGRAMS\\AMIS\\"%>$text122 (\${CUSTOM_LANG_NAME}).lnk"
 
-	Delete "\$SETTINGS_DIR\lang\\${CUSTOM_LANG_ID}\help\*"
-	Delete "\$SETTINGS_DIR\lang\\${CUSTOM_LANG_ID}\help\img\*"
-	Delete "\$SETTINGS_DIR\lang\\${CUSTOM_LANG_ID}\audio\*"
-	  
-	RMDir "\$SETTINGS_DIR\lang\\${CUSTOM_LANG_ID}\help\img"
-	RMDir "\$SETTINGS_DIR\lang\\${CUSTOM_LANG_ID}\help"
-	RMDir "\$SETTINGS_DIR\lang\\${CUSTOM_LANG_ID}\audio"
-	 
-	Delete "\$SETTINGS_DIR\lang\\${CUSTOM_LANG_ID}\shortcuts\*"
-	RMDir "\$SETTINGS_DIR\lang\\${CUSTOM_LANG_ID}\shortcuts"
+	Delete "<%="$SMPROGRAMS\\AMIS\\"%>$text121 ($langname).lnk"
+  	Delete "<%="$SMPROGRAMS\\AMIS\\"%>$text122 ($langname).lnk"
 
-	Delete "\$SETTINGS_DIR\lang\\${CUSTOM_LANG_ID}\*"
-	RMDir "\$SETTINGS_DIR\lang\\${CUSTOM_LANG_ID}"  
-  
+	Delete "\$SETTINGS_DIR\lang\\${LANGID}\help\*"
+	Delete "\$SETTINGS_DIR\lang\\${LANGID}\help\img\*"
+	Delete "\$SETTINGS_DIR\lang\\${LANGID}\audio\*"
+
+	RMDir "\$SETTINGS_DIR\lang\\${LANGID}\help\img"
+	RMDir "\$SETTINGS_DIR\lang\\${LANGID}\help"
+	RMDir "\$SETTINGS_DIR\lang\\${LANGID}\audio"
+
+	Delete "\$SETTINGS_DIR\lang\\${LANGID}\shortcuts\*"
+	RMDir "\$SETTINGS_DIR\lang\\${LANGID}\shortcuts"
+
+	Delete "\$SETTINGS_DIR\lang\\${LANGID}\*"
+	RMDir "\$SETTINGS_DIR\lang\\${LANGID}"
+
   SetAutoClose true
 SectionEnd
