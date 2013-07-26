@@ -20,7 +20,7 @@ License along with this library; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 #include "AmisCore.h"
-#include "io/urlinputsource.h"
+#include "io/UrlInputSource.h"
 #include "ambulant/net/datasource.h"
 #include "ambulant/common/factory.h"
 #include "ambulant/common/plugin_engine.h"
@@ -48,7 +48,7 @@ amis::io::UrlInputSource* amis::io::NewUrlInputSource(const ambulant::net::url& 
 		//gives a linker error: where are the ambulant posix datasources now?
 		//UrlInputSource::s_df->add_raw_factory(ambulant::net::create_posix_datasource_factory());
 		#endif
-		
+
 		ambulant::common::factories *fact = new ambulant::common::factories();
 		fact->init_factories();
 		fact->set_datasource_factory(UrlInputSource::s_df);
