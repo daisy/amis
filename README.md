@@ -4,4 +4,4 @@ It is pronounced "Ah-mee", as in the French word for "friend".
 
 * Learn about [DAISY](http://www.daisy.org)
 * Learn about [AMIS](http://www.daisy.org/amis)
-* Go to the [AMIS development wiki](http://daisy-trac.cvsdude.com/amis)
+* Go to the [AMIS development wiki](https://github.com/daisy-consortium/amis/wiki/_pages)
