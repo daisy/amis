@@ -1,0 +1,36 @@
+<installer-data langid="gre-GR">
+	<options
+		include_jaws_scripts="yes"
+		nsis_language="Greek"
+	/>
+	<setup-program id="main-installer">
+		<string id="text101">Διαθέτετε Windows XP Service Pack 2.  Υπάρχουν νεότερα service packs και συνιστάται να τρέξετε το Windows Update (αναβάθμιση των Windows) για να ναβαθμιστεί το σύστημά σας.</string>
+		<string id="text102">Προειδοίηση: το λειτουργικό σύστημα που δεν υποστηρίζεται.  Το AMIS μάλλον δεν θα λειτουργεί. Θέλετε να συνεχίσετε;</string>
+		<string id="text103">Προειδοποίηση: Το AMIS απαιτεί DirectX 9.0 ή νεότερη έκδοσή του. Μπορείτε να συνεχίσετε με την εγκατάσταση του AMIS, όπμως συνιστάται να αναβαθμίσετε πρώτα το σύστημά σας. Συνέχεια;</string>
+		<string id="text104">Έχετε το Internet Explorer 6. Απαιτείται έκδοση 7 ή νεότερη για καλύτερη απόδοση. Μπορείτε να αναβαθμίσετε το σύστημά σας οποιαδήποτε στιγμή μετά την εγκατάσταση του AMIS.</string>
+		<string id="text105">Η έκδοση του Internet Explorer είναι παλαιά. Το AMIS μπορεί να μην λειτουργεί. Θέλετε να συνεχίσετε;</string>
+		<string id="text106">Υπήρξε ένα σφάλμα κατά την εγκατάσταση των αρχείων της Microsoft.  Παρακαλούμε καλέστε την τεχνική βοήθεια αν έχετε προβλήματα εγκατάστασης και λειτουργίας του AMIS.</string>
+		<string id="text107">Θέλετε να εγκαταστήσετε το Jaws για τα γραπτά κείμενα των Windows στο AMIS;</string>
+		<string id="text108">Υπήρξε ένα σφάλμα κατά την εγκατάσταση του Jaws για γραπτά κείμενα των Windows στο AMIS.  Παρακαλούμε επισκεφτείτε την http://daisy.org/amis για να κατεβάσετε και να εγκαταστήσετε τα γραπτά κείμενα χωριστά.</string>
+		<string id="text109">Παρακαλούμε αναβαθμίστε την Java Runtime σε έκδοση 1.6 ή νεότερη.  Η υποστήριξη της Java είναι απαραίτητη για την βελτίωση της απεικόνισης κειμένου με το DAISY 3. Μετά το τέλος της εγκατάστασης του AMIS, μπορείτε οποιαδήποτε στιγμή να κατεβάσετε και να εγκαταστήσετε την Java από την http://www.java.com.</string>
+		<string id="text110">Απαιτείται Java 1.6 ή νεότερη έκδοση για να βελτιωθεί η απεικόνιση κειμένου με το enhanced DAISY 3. Μπορείτε να αναβαθμίσετε το σύστημά σας oποιαδήποτε στιγμή μετά την εγκατάσταση του AMIS κατεβάζοντας και εγκαθιστώντας την Java από την http://www.java.com .</string>
+		<string id="text111">Είστε σίγουροι ότι θέλετε να αφαιρέσετε πλήρως το $(^Name) και όλα τα συστατικά του;</string>
+		<string id="text112">Η εφαρμογή $(^Name) αφαιρέθηκε με επιτυχία από τον υπολογιστή σας.</string>
+		<string id="text113">Θέλετε να αφαιρέσετε τους σελιδοδείκτες (bookmarks) και το ιστορικό?</string>
+		<string id="text114">Επιπρόσθετα/string>
+		<string id="text115">Λειτουργία αποσφαλμάτωσης του AMIS</string>
+		<string id="text116">Λειτουργία συμβατότητας του AMIS</string>
+		<string id="text117">Λειτουργία συμβατότητας του AMIS με το DirectX</string>
+		<string id="text118">Λειτουργία συμβατότητας του AMIS με το TTS</string>
+		<string id="text119">Ιστοθέση</string>
+		<string id="text120">Απεκαντάσταση</string>
+		<string id="text121">Βοήθεια</string>
+		<string id="text122">Συμπτύξεις πληκτρολογίου</string>
+		<string id="text123">Ελληνικά</string>
+	</setup-program>
+	<setup-program id="langpack-installer">
+		<string id="text201">Ο φάκελλος $SETTINGS_DIR με τις ρυθμίσεις του AMIS δεν βρέθηκε.</string>
+		<string id="text202">Είστε σίγουροι ότι θέλετε να αφαιρέσετε πλήρως το $(^Name) και όλα τα συστατικά του;</string>
+		<string id="text203">Το $(^Name) απεκαντεστάθηκα με επιτυχία από τον υπολογιστή σας.</string>
+	</setup-program>
+</installer-data>

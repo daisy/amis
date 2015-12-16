@@ -9,7 +9,7 @@ import os
 from nsi_from_template import NsiFromTemplate
 
 AMIS_NS = "http://daisy.org/ns/amis"
-NSMAP = {None: AMIS_NS}
+NSMAP = {"a": AMIS_NS} # arbitrary prefix; see http://lxml.de/FAQ.html#how-can-i-specify-a-default-namespace-for-xpath-expressions
 
 class InstallScript:
     def __init__(self, config, lang):
@@ -66,7 +66,7 @@ class InstallScript:
             prefs_dest = os.path.join(self.data_dir, "settings/{0}".format(p))
             InstallScript.copy_file(prefs_source, prefs_dest)
             prefsdoc = AmisPrefsDocument(prefs_dest)
-            prefsdoc.set_property("ui-lang", self.lang["langid"])
+            prefsdoc.set_property("ui-lang-id", self.lang["langid"])
             prefsdoc.store(prefs_dest)
 
         # copy resource files
@@ -92,7 +92,8 @@ class AmisPrefsDocument:
 
     # set value in <entry id="name" value="value"/>
     def set_property(self, name, value):
-        res = self.xmldoc.xpath("//entry[@id='{0}']".format(name))
+        xpath_expr = "//a:entry[@id='{0}']".format(name)
+        res = self.xmldoc.xpath(xpath_expr, namespaces = NSMAP)
         if len(res) == 0:
             return
         res[0].attrib['value'] = value

@@ -1984,7 +1984,7 @@ int CAmisApp::getIeVersion()
 }
 std::string CAmisApp::getVersion()
 {
-	return "3.1.4 beta 3";
+	return "3.1.3";
 }
 std::string CAmisApp::getReleaseDate()
 {

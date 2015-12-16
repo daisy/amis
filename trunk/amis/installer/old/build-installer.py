@@ -34,7 +34,7 @@ def write_file(data, filename):
 
 def main():
     # the languages for which we need to build custom installers
-    langlist = ["eng-US", "hun-HU", "jpn-JP"]
+    langlist = ["eng-US", "hun-HU", "jpn-JP", "ger-DE"]
     
     for lang in langlist:
         print "Processing %s" % lang

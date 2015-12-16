@@ -8,7 +8,7 @@ Global:
     data_dir: ../data/
     translations: ../translations/
     #languages for which a translation is available
-    installer_translations: [eng-US, hun-HU, jpn-JP]
+    installer_translations: [eng-US, hun-HU, jpn-JP, ger-DE]
     # if True, build all languages in Langs section
     # if False, must specify build-lang
     build_all: False
@@ -29,7 +29,7 @@ Installer:
     # your Visual Studio redistributables directory
     vs_dir: C:\Program Files\Microsoft Visual Studio 8\SDK\v2.0\BootStrapper\Packages\vcredist_x86
     product_name: AMIS
-    product_version: 3.1.4 beta 3
+    product_version: 3.1.3
     product_publisher: DAISY Consortium
     product_website: http://daisy.org/amis
 
@@ -134,3 +134,14 @@ Langs:
       langname: Magyar
       helpfile_name: amis-hun-help3.html
       contrast_translation: kontrasztos
+
+    - langid: ger-DE
+      langname: Deutsch
+      helpfile_name: amishelp.html
+      contrast_translation: kontrast
+
+    - langid: gre-GR
+      langname: Greek
+      helpfile_name: amishelp.html
+      contrast_translation: contrast
+

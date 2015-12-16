@@ -1,0 +1,36 @@
+<installer-data langid="deu">
+	<options
+		include_jaws_scripts="yes"
+		nsis_language="German"
+	/>
+	<setup-program id="main-installer">
+		<string id="text101">Sie haben Windows XP Service Pack 2 installiert. Es wird empfohlen, Windows Update auszuführen, um das System zu aktualisieren.</string>
+		<string id="text102">Warnung: Ihr Betriebssystem wird nicht unterstützt. AMIS wird möglicherweise nicht funktionieren. Wollen Sie fortfahren?</string>
+		<string id="text103">Warnung: AMIS benötigt DirectX 9.0 oder höher. Sie können mit der Installation von AMIS fortfahren. Es wird jedoch empfohlen, dass Sie Ihr System vorher aktualisieren. Wollen Sie fortfahren?</string>
+		<string id="text104">Sie verwenden Internet Explorer 6. Für optimale Leistung wird Version 7 oder höher empfohlen. Sie können Ihr System aber auch nach der Installation von AMIS jederzeit aktualisieren.</string>
+		<string id="text105">Ihre Internet-Explorer-Version ist veraltet. AMIS wird möglicherweise nicht funktionieren. Möchten Sie fortfahren?</string>
+		<string id="text106">Beim Installieren der Microsoft-Laufzeitdateien ist ein Fehler aufgetreteten. Bitte wenden Sie sich an den technischen Support, falls Sie beim Ausführen von AMIS Probleme haben.</string>
+		<string id="text107">Möchten Sie für AMIS die Windows-Scripte von Jaws installieren?</string>
+		<string id="text108">Beim Installieren der Windows-Scripte von Jaws für AMIS ist ein Fehler aufgetreten. Bitte gehen Sie auf http://daisy.org/amis, um die Scripte herunterzuladen und gesondert zu installieren.</string>
+		<string id="text109">Bitte aktualisieren Sie Ihre Java-Laufzeitumgebung (JRE) auf Version 1.6 oder höher. Java wird zur erweiterten Textdarstellung von DAISY 3 benötigt. Sie können Java auch nach der Installation von AMIS jederzeit von http://www.java.com herunterladen und installieren.</string>
+		<string id="text110">Java 1.6 ist erforderlich zur erweiterten Textdarstellung von DAISY 3. Sie können Java nach der Installation von AMIS aktualisieren, indem Sie die neueste Version von http://www.java.com herunterladen und installieren.</string>
+		<string id="text111">Sind Sie sicher, dass Sie $(^Name) mit allen seinen Komponenten entfernen möchten?</string>
+		<string id="text112">$(^Name) wurde erfolgreich vom Rechner entfernt.</string>
+		<string id="text113">Lesezeichen und Historie entfernen?</string>
+		<string id="text114">Zusätzliche Start-Modi</string>
+		<string id="text115">AMIS Debug Modus</string>
+		<string id="text116">AMIS Kompatibilitäts-Modus</string>
+		<string id="text117">AMIS Kompatibilitäts-Modus mit DirectX</string>
+		<string id="text118">AMIS Kompatibilitäts-Modus mit Text-to-Speech</string>
+		<string id="text119">Webseite</string>
+		<string id="text120">Uninstall</string>
+		<string id="text121">Hilfe</string>
+		<string id="text122">Tastenkombinationen</string>
+		<string id="text123">Deutsch</string>
+	</setup-program>
+	<setup-program id="langpack-installer">
+		<string id="text201">Das Einstellungen-Verzeichnis $SETTINGS_DIR von AMIS wurde nicht gefunden.</string>
+		<string id="text202">Sind Sie sicher, dass Sie $(^Name) mit allen seinen Komponenten entfernen möchten?</string>
+		<string id="text203">$(^Name) wurde erfolgreich vom Rechner entfernt.</string>
+	</setup-program>
+</installer-data>
