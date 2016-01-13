@@ -8,7 +8,8 @@ Global:
     data_dir: ../data/
     translations: ../translations/
     #languages for which a translation is available
-    installer_translations: [eng-US, hun-HU, jpn-JP, ger-DE]
+    #note: this is a hack, we don't have vietnamese translated, but the script won't build unless you add a dir for it
+    installer_translations: [eng-US, hun-HU, jpn-JP, ger-DE, gre-GR, vie-VN] 
     # if True, build all languages in Langs section
     # if False, must specify build-lang
     build_all: False
@@ -142,6 +143,6 @@ Langs:
 
     - langid: gre-GR
       langname: Greek
-      helpfile_name: amishelp.html
+      helpfile_name: amis_dtbook.html
       contrast_translation: contrast
 

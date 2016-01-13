@@ -26,7 +26,7 @@
 		<string id="text120">アンインストール</string>
 		<string id="text121">ヘルプ</string>
 		<string id="text122">ショートカットキー</string>
-		<string id="text123">米国 英語</string>
+		<string id="text123">日本　日本語</string>
 	</setup-program>
 	<setup-program id="langpack-installer">
 		<string id="text201">AMISの設定ディレクトリ $SETTINGS_DIR が見つかりません。</string>

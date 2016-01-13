@@ -1,7 +1,7 @@
 <preferences xmlns="http://daisy.org/ns/amis">
 <!--paths are relative to the location of this file-->
 <section name="general">
-<entry id="ui-lang-id" value="jpn-JP"/>
+<entry id="ui-lang-id" value="gre-GR"/>
 <entry id="start-in-basic-view" value="no"/>
 <entry id="load-last-book" value="yes"/>
 <entry id="is-self-voicing" value="yes"/>

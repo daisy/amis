@@ -25,7 +25,7 @@
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\AMIS.exe"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\\${PRODUCT_NAME}"
 !define PRODUCT_UNINST_ROOT_KEY "HKLM"
-
+!define COMPATIBILITY_REG_KEY "Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers"
 
 ;******
 ; pages, components, and script includes
@@ -264,6 +264,9 @@ Section "MainSection" SEC01
     ;update file permissions so that any user can run AMIS
     AccessControl::GrantOnFile "\$SETTINGS_DIR\bmk" "(BU)" "FullAccess"
     AccessControl::GrantOnFile "\$SETTINGS_DIR" "(BU)" "FullAccess"
+    ; set permissions on this too; same as above but works better for non-english/more recent windows versions
+    AccessControl::GrantOnFile "\$SETTINGS_DIR\bmk" "(S-1-5-32-545)" "FullAccess"
+    AccessControl::GrantOnFile "\$SETTINGS_DIR" "(S-1-5-32-545)" "FullAccess"
 
     File "$appdata_dir\AMIS\settings\resource.h.ini"
 
@@ -312,7 +315,29 @@ SectionEnd
 ;*
 Section -CopyLangpacks
 
-    LogEx::Write "Copying default language pack files: $langid"
+    ; TODO checking if the default lang = 'eng-US' would make this a little more efficient
+    
+    LogEx::Write "Copying language pack files: eng-US"
+    
+    ;copy the langpack root files
+    SetOutPath "\$SETTINGS_DIR\lang\eng-US"
+    File "$appdata_dir\AMIS\settings\lang\eng-US\*"
+
+    ;copy the langpack audio
+    SetOutPath "\$SETTINGS_DIR\lang\eng-US\audio"
+    File "$appdata_dir\AMIS\settings\lang\eng-US\audio\*"
+
+    ;copy the langpack help book files (and images)
+    SetOutPath "\$SETTINGS_DIR\lang\eng-US\help"
+    File "$appdata_dir\AMIS\settings\lang\eng-US\help\*"
+    SetOutPath "\$SETTINGS_DIR\lang\eng-US\help\img"
+    File "$appdata_dir\AMIS\settings\lang\eng-US\help\img\*"
+
+    ;copy the langpack shortcut book files
+    SetOutPath "\$SETTINGS_DIR\lang\eng-US\shortcuts"
+    File "$appdata_dir\AMIS\settings\lang\eng-US\shortcuts\*"
+
+    LogEx::Write "Copying language pack files: $langid"
 
     ;copy the langpack root files
     SetOutPath "\$SETTINGS_DIR\lang\\${LANGID}"
@@ -481,6 +506,7 @@ Section -Post
     WriteRegStr \${PRODUCT_UNINST_ROOT_KEY} "\${PRODUCT_UNINST_KEY}" "DisplayVersion" "$product_version"
     WriteRegStr \${PRODUCT_UNINST_ROOT_KEY} "\${PRODUCT_UNINST_KEY}" "URLInfoAbout" "$product_website"
     WriteRegStr \${PRODUCT_UNINST_ROOT_KEY} "\${PRODUCT_UNINST_KEY}" "Publisher" "$product_publisher"
+    WriteRegStr HKLM "\${COMPATIBILITY_REG_KEY}" "\$INSTDIR\AMIS.exe" "~ WIN7RTM" 
 
     LogEx::Write "Summary of files:"
     LogEx::Write ""
@@ -591,6 +617,23 @@ SectionEnd
 ;uninstall the langpacks
 ;**
 Section -un.CopyLangpack
+
+    ; uninstall eng-US
+    Delete "\$SETTINGS_DIR\lang\eng-US\help\*"
+    Delete "\$SETTINGS_DIR\lang\eng-US\help\img\*"
+    Delete "\$SETTINGS_DIR\lang\eng-US\audio\*"
+
+    RMDir "\$SETTINGS_DIR\lang\eng-US\help\img"
+    RMDir "\$SETTINGS_DIR\lang\eng-US\help"
+    RMDir "\$SETTINGS_DIR\lang\eng-US\audio"
+
+    Delete "\$SETTINGS_DIR\lang\eng-US\shortcuts\*"
+    RMDir "\$SETTINGS_DIR\lang\eng-US\shortcuts"
+
+    Delete "\$SETTINGS_DIR\lang\eng-US\*"
+    RMDir "\$SETTINGS_DIR\lang\eng-US"
+
+    ; uninstall custom language
 
 	Delete "\$SETTINGS_DIR\lang\\${LANGID}\help\*"
     Delete "\$SETTINGS_DIR\lang\\${LANGID}\help\img\*"
